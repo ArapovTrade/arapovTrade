@@ -21,7 +21,14 @@ const routes: Routes = [
     loadChildren: () =>
       import('./en-module/en-module.module').then((m) => m.EnModuleModule),
   },
-  { path: '**', redirectTo: 'uk/home', pathMatch: 'full' },
+  {
+    path: '**',
+    redirectTo: (url: any) => {
+      const path = url.url.join('');
+      return path.endsWith('/') ? path.slice(0, -1) : path;
+    },
+    pathMatch: 'full',
+  },
 ];
 
 @NgModule({
