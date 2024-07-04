@@ -8,14 +8,14 @@ const routes: Routes = [
   { path: '', component: EnTradingHomepageComponent },
   // { path: 'adviceForBeginners', component: EnTradingArticleOneComponent },
   {
-    path: 'adviceForBeginners',
+    path: 'adviceforbeginners',
     loadChildren: () =>
       import('./one-en-article/one-en-article.module').then(
         (m) => m.OneEnArticleModule
       ),
   },
   {
-    path: 'marketBasics',
+    path: 'marketbasics',
     loadChildren: () =>
       import('./two-en-article/two-en-article.module').then(
         (m) => m.TwoEnArticleModule
@@ -29,7 +29,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: 'exchangeMarket',
+    path: 'exchangemarket',
     loadChildren: () =>
       import('./four-en-article/four-en-article.module').then(
         (m) => m.FourEnArticleModule
@@ -43,28 +43,28 @@ const routes: Routes = [
       ),
   },
   {
-    path: 'exchangeParticipants',
+    path: 'exchangeparticipants',
     loadChildren: () =>
       import('./six-en-article/six-en-article.module').then(
         (m) => m.SixEnArticleModule
       ),
   },
   {
-    path: 'forexMarket',
+    path: 'forexmarket',
     loadChildren: () =>
       import('./seven-en-article/seven-en-article.module').then(
         (m) => m.SevenEnArticleModule
       ),
   },
   {
-    path: 'currenciesAndQuotes',
+    path: 'currenciesandquotes',
     loadChildren: () =>
       import('./eight-en-article/eight-en-article.module').then(
         (m) => m.EightEnArticleModule
       ),
   },
   {
-    path: 'formationExchange',
+    path: 'formationexchange',
     loadChildren: () =>
       import('./nine-en-artickle/nine-en-artickle.module').then(
         (m) => m.NineEnArtickleModule
@@ -72,49 +72,49 @@ const routes: Routes = [
   },
 
   {
-    path: 'currencyPosition',
+    path: 'currencyposition',
     loadChildren: () =>
       import('./ten-en-artickle/ten-en-artickle.module').then(
         (m) => m.TenEnArtickleModule
       ),
   },
   {
-    path: 'forexValueDate',
+    path: 'forexvaluedate',
     loadChildren: () =>
       import('./eleven-en-artickle/eleven-en-artickle.module').then(
         (m) => m.ElevenEnArtickleModule
       ),
   },
   {
-    path: 'howToMakeMoney',
+    path: 'howtomakemoney',
     loadChildren: () =>
       import('./twelve-en-artickle/twelve-en-artickle.module').then(
         (m) => m.TwelveEnArtickleModule
       ),
   },
   {
-    path: 'riskCurrencyExchange',
+    path: 'riskcurrencyexchange',
     loadChildren: () =>
       import('./thirteen-en-artickle/thirteen-en-artickle.module').then(
         (m) => m.ThirteenEnArtickleModule
       ),
   },
   {
-    path: 'forexLeverageRisk',
+    path: 'forexleveragerisk',
     loadChildren: () =>
       import('./fourteen-en-artickle/fourteen-en-artickle.module').then(
         (m) => m.FourteenEnArtickleModule
       ),
   },
   {
-    path: 'majorBankFrs',
+    path: 'majorbankfrs',
     loadChildren: () =>
       import('./fifteen-en-artickle/fifteen-en-artickle.module').then(
         (m) => m.FifteenEnArtickleModule
       ),
   },
   {
-    path: 'behavioralRisks',
+    path: 'behavioralrisks',
     loadChildren: () =>
       import('./sixteen-en-artickle/sixteen-en-artickle.module').then(
         (m) => m.SixteenEnArtickleModule
