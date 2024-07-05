@@ -31,6 +31,17 @@ export class UkHomePageComponent implements OnInit {
     //   href: 'https://arapov-trading.vercel.app/uk/home',
     // });
     this.setCanonicalURL('https://arapov.trade/uk/home');
+    this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+    this.meta.addTag({
+      name: 'description',
+      content:
+        'Авторські ⏩ курси трейдингу від Ігоря Арапова. ⭐ Навчання трейдингу з нуля від ArapovTrade.',
+    });
+    this.meta.addTag({
+      name: 'keywords',
+      content:
+        'курси трейдингу, трейдинг, біржа, фінанси, акції, валюти, навчання трейдингу, курси, безкоштовне навчання трейдингу',
+    });
   }
 
   setCanonicalURL(url: string) {

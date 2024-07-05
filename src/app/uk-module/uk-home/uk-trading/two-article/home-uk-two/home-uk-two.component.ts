@@ -22,16 +22,5 @@ export class HomeUkTwoComponent implements OnInit {
       name: 'keywords',
       content: 'Основи ринку, словник ткрмінів',
     });
-    // this.cs.setCanonicalURL(
-    //   'https://arapov-trading.vercel.app/uk/trading/marketBasics'
-    // );
-    // this.metaService.addTag({
-    //   rel: 'canonical',
-    //   href: 'https://arapov-trading.vercel.app/uk/trading/marketBasics',
-    // });
-    this.metaService.updateTag({
-      rel: 'canonical',
-      href: 'https://arapov-trading.vercel.app/uk/trading/marketBasics',
-    });
   }
 }

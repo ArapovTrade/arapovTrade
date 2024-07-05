@@ -1,13 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-ru-studying-home',
   templateUrl: './ru-studying-home.component.html',
   styleUrl: './ru-studying-home.component.scss',
 })
-export class RuStudyingHomeComponent {
-  constructor(private router: Router) {
+export class RuStudyingHomeComponent implements OnInit {
+  constructor(
+    private router: Router,
+    private meta: Meta,
+    private titleService: Title
+  ) {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         if (typeof window !== 'undefined') {
@@ -16,7 +21,22 @@ export class RuStudyingHomeComponent {
       }
     });
   }
-
+  ngOnInit(): void {
+    this.titleService.setTitle(
+      ' Авторское обучение трейдингу онлайн | Курсы трейдинга | Игорь Арапов'
+    );
+    this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+    this.meta.addTag({
+      name: 'description',
+      content:
+        'Авторское ⏩ обучение трейдингу от ArapovTrade. ⭐ Дистанционное обучение трейдингу онлайн с нуля от Игоря Арапова.',
+    });
+    this.meta.addTag({
+      name: 'keywords',
+      content:
+        'курсы трейдинга, трейдинг, обучение трейдингу, обучение трейдингу онлайн, бесплатное обучение трейдингу, дистанционное обучение трейдингу ',
+    });
+  }
   navigateToHomeWithId() {
     this.router
       .navigateByUrl('/ru/home')
