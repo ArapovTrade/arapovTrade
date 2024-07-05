@@ -26,11 +26,11 @@ export class AppComponent implements OnInit {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle('Трейдинг');
-    this.setCanonicalURL('https://arapov-trading.vercel.app/uk/home');
+    this.setCanonicalURL('https://arapov.trade/uk/home');
   }
   setCanonicalURL(url?: string) {
     const canURL = url === undefined ? window.location.href : url;
-    this.meta.updateTag({ name: 'canonical', href: canURL });
+    this.meta.updateTag({ rel: 'canonical', href: canURL });
   }
   changeLanguage(lang: string) {
     // Получение текущего пути и параметров маршрута

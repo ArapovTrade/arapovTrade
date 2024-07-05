@@ -13,12 +13,12 @@ export class UkHomePageComponent implements OnInit {
     //   rel: 'canonical',
     //   href: 'https://arapov-trading.vercel.app/uk/home',
     // });
-    this.setCanonicalURL('https://arapov-trading.vercel.app/uk/home');
+    this.setCanonicalURL('https://arapov.trade/uk/home');
   }
 
   setCanonicalURL(url?: string) {
     const canURL = url === undefined ? window.location.href : url;
-    this.meta.updateTag({ name: 'canonical', href: canURL });
+    this.meta.updateTag({ rel: 'canonical', href: canURL });
   }
 
   scrollToRegistration() {
