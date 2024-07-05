@@ -30,7 +30,7 @@ export class AppComponent implements OnInit {
   }
   setCanonicalURL(url?: string) {
     const canURL = url === undefined ? window.location.href : url;
-    this.meta.updateTag({ name: 'canonical', content: canURL });
+    this.meta.updateTag({ name: 'canonical', href: canURL });
   }
   changeLanguage(lang: string) {
     // Получение текущего пути и параметров маршрута

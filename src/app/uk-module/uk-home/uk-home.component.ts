@@ -28,7 +28,7 @@ export class UkHomeComponent implements OnInit {
   }
   setCanonicalURL(url?: string) {
     const canURL = url === undefined ? window.location.href : url;
-    this.meta.updateTag({ name: 'canonical', content: canURL });
+    this.meta.updateTag({ name: 'canonical', href: canURL });
   }
   isMenuOpen = false;
 
