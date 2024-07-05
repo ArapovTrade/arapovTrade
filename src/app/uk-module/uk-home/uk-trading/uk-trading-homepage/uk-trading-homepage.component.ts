@@ -26,10 +26,10 @@ export class UkTradingHomepageComponent implements OnInit {
       ' Безкоштовне навчання трейдингу від Ігора Арапова'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
-      name: 'description',
-      content: 'Безкоштовне навчання трейдингу онлайн від Ігоря Арапова. ⭐',
-    });
+    // this.meta.addTag({
+    //   name: 'description',
+    //   content: 'Безкоштовне навчання трейдингу онлайн від Ігоря Арапова. ⭐',
+    // });
     this.meta.addTag({
       name: 'keywords',
       content: 'безкоштовне навчання трейдингу, трейдинг, навчання трейдингу',
