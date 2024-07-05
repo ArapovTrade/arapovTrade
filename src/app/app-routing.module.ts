@@ -1,15 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { UkModuleModule } from './uk-module/uk-module.module';
-
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 const routes: Routes = [
   { path: '', redirectTo: 'uk/home', pathMatch: 'full' },
   {
     path: 'uk',
     loadChildren: () =>
       import('./uk-module/uk-module.module').then((m) => m.UkModuleModule),
-    // path: 'uk',
-    // loadChildren: () => UkModuleModule,
   },
   {
     path: 'ru',
@@ -21,15 +19,8 @@ const routes: Routes = [
     loadChildren: () =>
       import('./en-module/en-module.module').then((m) => m.EnModuleModule),
   },
-  // {
-  //   path: '**',
-  //   redirectTo: (url: any) => {
-  //     const path = url.url.join('');
-  //     return path.endsWith('/') ? path.slice(0, -1) : path;
-  //   },
-  //   pathMatch: 'full',
-  // },
-  { path: '**', redirectTo: 'uk/home', pathMatch: 'full' },
+
+  { path: '**', component: PageNotFoundComponent },
 ];
 
 @NgModule({
