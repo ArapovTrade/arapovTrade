@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Meta, Title } from '@angular/platform-browser';
+
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -7,7 +7,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   dropdownOpen = false;
 
   toggleDropdown() {
@@ -18,26 +18,7 @@ export class AppComponent implements OnInit {
     this.dropdownOpen = true;
   }
 
-  constructor(
-    private router: Router,
-    private route: ActivatedRoute,
-    private meta: Meta,
-    private titleService: Title
-  ) {}
-  ngOnInit(): void {
-    this.titleService.setTitle('Трейдинг');
-    this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
-      name: 'description',
-      content:
-        'Авторські ⏩ курси трейдингу від Ігоря Арапова. ⭐ Навчання трейдингу з нуля від ArapovTrade.',
-    });
-    this.meta.addTag({
-      name: 'keywords',
-      content:
-        'курси трейдингу, трейдинг, біржа, фінанси, акції, валюти, навчання трейдингу, курси, безкоштовне навчання трейдингу',
-    });
-  }
+  constructor(private router: Router, private route: ActivatedRoute) {}
 
   changeLanguage(lang: string) {
     // Получение текущего пути и параметров маршрута
