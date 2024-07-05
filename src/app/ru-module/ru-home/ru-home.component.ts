@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { Meta, Title } from '@angular/platform-browser';
+import { Component } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
@@ -7,12 +6,8 @@ import { NavigationEnd, Router } from '@angular/router';
   templateUrl: './ru-home.component.html',
   styleUrl: './ru-home.component.scss',
 })
-export class RuHomeComponent implements OnInit {
-  constructor(
-    private router: Router,
-    private meta: Meta,
-    private titleService: Title
-  ) {
+export class RuHomeComponent {
+  constructor(private router: Router) {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         if (typeof window !== 'undefined') {
@@ -22,22 +17,7 @@ export class RuHomeComponent implements OnInit {
       }
     });
   }
-  ngOnInit(): void {
-    this.titleService.setTitle(
-      'Курсы трейдинга Авторское обучение трейдингу онлайн | Игорь Арапов'
-    );
-    this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
-      name: 'description',
-      content:
-        'Авторские ⏩ курсы трейдинга от Игоря Арапова. ⭐ Обучение трейдингу с нуля от ArapovTrade.',
-    });
-    this.meta.addTag({
-      name: 'keywords',
-      content:
-        'курсы трейдинга, трейдинг, биржа, финансы, акции, валюты, обучение трейдингу, курсы, бесплатное обучение трейдингу',
-    });
-  }
+
   isMenuOpen = false;
 
   openMenu() {
