@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
@@ -6,8 +7,12 @@ import { NavigationEnd, Router } from '@angular/router';
   templateUrl: './uk-home.component.html',
   styleUrl: './uk-home.component.scss',
 })
-export class UkHomeComponent {
-  constructor(private router: Router) {
+export class UkHomeComponent implements OnInit {
+  constructor(
+    private router: Router,
+    private meta: Meta,
+    private titleService: Title
+  ) {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         if (typeof window !== 'undefined') {
@@ -17,7 +22,14 @@ export class UkHomeComponent {
       }
     });
   }
-
+  ngOnInit(): void {
+    this.titleService.setTitle('Навчання трейдингу');
+    this.setCanonicalURL('https://arapov-trading.vercel.app/uk/home');
+  }
+  setCanonicalURL(url?: string) {
+    const canURL = url === undefined ? window.location.href : url;
+    this.meta.updateTag({ name: 'canonical', content: canURL });
+  }
   isMenuOpen = false;
 
   openMenu() {

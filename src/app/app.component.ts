@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -6,7 +7,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   dropdownOpen = false;
 
   toggleDropdown() {
@@ -17,8 +18,20 @@ export class AppComponent {
     this.dropdownOpen = true;
   }
 
-  constructor(private router: Router, private route: ActivatedRoute) {}
-
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    private meta: Meta,
+    private titleService: Title
+  ) {}
+  ngOnInit(): void {
+    this.titleService.setTitle('Трейдинг');
+    this.setCanonicalURL('https://arapov-trading.vercel.app/uk/home');
+  }
+  setCanonicalURL(url?: string) {
+    const canURL = url === undefined ? window.location.href : url;
+    this.meta.updateTag({ name: 'canonical', content: canURL });
+  }
   changeLanguage(lang: string) {
     // Получение текущего пути и параметров маршрута
     const currentPath = this.router.url;
