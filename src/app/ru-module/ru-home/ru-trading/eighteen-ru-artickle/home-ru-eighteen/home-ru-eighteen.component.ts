@@ -1,10 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home-ru-eighteen',
   templateUrl: './home-ru-eighteen.component.html',
-  styleUrl: './home-ru-eighteen.component.scss'
+  styleUrl: './home-ru-eighteen.component.scss',
 })
-export class HomeRuEighteenComponent {
-
+export class HomeRuEighteenComponent implements OnInit {
+  constructor(private meta: Meta) {}
+  ngOnInit(): void {
+    this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+    this.meta.addTag({
+      name: 'description',
+      content: 'Психология трейдинга',
+    });
+  }
 }
