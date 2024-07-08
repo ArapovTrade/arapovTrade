@@ -978,8 +978,11 @@ header {
     background: url(/assets/img/content/bg-hero.jpeg) no-repeat bottom right;
     background-size: 100% 100%;
     color: white;
+    
 }
-
+.hero-content{
+    padding-bottom: 50px;
+}
 @media (min-width: 768px) {
     .hero-section {
         background: url(/assets/img/content/bg-hero.png) no-repeat bottom right;

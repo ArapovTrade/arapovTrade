@@ -121,14 +121,14 @@ const routes: Routes = [
       ),
   },
   {
-    path: 'f17',
+    path: 'nonmarketrisks',
     loadChildren: () =>
       import('./seventeen-uk-artickle/seventeen-uk-artickle.module').then(
         (m) => m.SeventeenUkArtickleModule
       ),
   },
   {
-    path: 'f18',
+    path: 'psychorisks',
     loadChildren: () =>
       import('./eighteen-uk-artickle/eighteen-uk-artickle.module').then(
         (m) => m.EighteenUkArtickleModule

@@ -123,14 +123,14 @@ const routes: Routes = [
       ),
   },
   {
-    path: 'f17',
+    path: 'nonmarketrisks',
     loadChildren: () =>
       import('./seventeen-ru-artickle/seventeen-ru-artickle.module').then(
         (m) => m.SeventeenRuArtickleModule
       ),
   },
   {
-    path: 'f18',
+    path: 'psychorisks',
     loadChildren: () =>
       import('./eighteen-ru-artickle/eighteen-ru-artickle.module').then(
         (m) => m.EighteenRuArtickleModule
