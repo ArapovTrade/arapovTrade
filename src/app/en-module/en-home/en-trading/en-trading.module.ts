@@ -148,6 +148,76 @@ const routes: Routes = [
         (m) => m.TwentyEnArtickleModule
       ),
   },
+  {
+    path: '21',
+    loadChildren: () =>
+      import('./twenty-one-en-artickle/twenty-one-en-artickle.module').then(
+        (m) => m.TwentyOneEnArtickleModule
+      ),
+  },
+  {
+    path: '22',
+    loadChildren: () =>
+      import('./twenty-two-en-artickle/twenty-two-en-artickle.module').then(
+        (m) => m.TwentyTwoEnArtickleModule
+      ),
+  },
+  {
+    path: '23',
+    loadChildren: () =>
+      import('./twenty-three-en-artickle/twenty-three-en-artickle.module').then(
+        (m) => m.TwentyThreeEnArtickleModule
+      ),
+  },
+  {
+    path: '24',
+    loadChildren: () =>
+      import('./twenty-four-en-artickle/twenty-four-en-artickle.module').then(
+        (m) => m.TwentyFourEnArtickleModule
+      ),
+  },
+  {
+    path: '25',
+    loadChildren: () =>
+      import('./twenty-five-en-artickle/twenty-five-en-artickle.module').then(
+        (m) => m.TwentyFiveEnArtickleModule
+      ),
+  },
+  {
+    path: '26',
+    loadChildren: () =>
+      import('./twenty-six-en-artickle/twenty-six-en-artickle.module').then(
+        (m) => m.TwentySixEnArtickleModule
+      ),
+  },
+  {
+    path: '27',
+    loadChildren: () =>
+      import('./twenty-seven-en-artickle/twenty-seven-en-artickle.module').then(
+        (m) => m.TwentySevenEnArtickleModule
+      ),
+  },
+  {
+    path: '28',
+    loadChildren: () =>
+      import('./twenty-eight-en-artickle/twenty-eight-en-artickle.module').then(
+        (m) => m.TwentyEightEnArtickleModule
+      ),
+  },
+  {
+    path: '29',
+    loadChildren: () =>
+      import('./twenty-nine-en-artickle/twenty-nine-en-artickle.module').then(
+        (m) => m.TwentyNineEnArtickleModule
+      ),
+  },
+  {
+    path: '30',
+    loadChildren: () =>
+      import('./thirty-en-artickle/thirty-en-artickle.module').then(
+        (m) => m.ThirtyEnArtickleModule
+      ),
+  },
 ];
 
 @NgModule({
