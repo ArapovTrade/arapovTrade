@@ -158,7 +158,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: '22',
+    path: 'econimicfactors',
     loadChildren: () =>
       import('./twenty-two-ru-artickle/twenty-two-ru-artickle.module').then(
         (m) => m.TwentyTwoRuArtickleModule
