@@ -149,7 +149,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: '21',
+    path: 'marketanalysisforex',
     loadChildren: () =>
       import('./twenty-one-uk-artickle/twenty-one-uk-artickle.module').then(
         (m) => m.TwentyOneUkArtickleModule
