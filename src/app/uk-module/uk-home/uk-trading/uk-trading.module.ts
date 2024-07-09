@@ -135,14 +135,14 @@ const routes: Routes = [
       ),
   },
   {
-    path: 'f19',
+    path: 'howtotradeonforex',
     loadChildren: () =>
       import('./nineteen-uk-artickle/nineteen-uk-artickle.module').then(
         (m) => m.NineteenUkArtickleModule
       ),
   },
   {
-    path: 'f20',
+    path: 'marketanalysis',
     loadChildren: () =>
       import('./twenty-uk-artickle/twenty-uk-artickle.module').then(
         (m) => m.TwentyUkArtickleModule
