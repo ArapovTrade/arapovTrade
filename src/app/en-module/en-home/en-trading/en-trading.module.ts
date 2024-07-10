@@ -177,14 +177,14 @@ const routes: Routes = [
       ),
   },
   {
-    path: '25',
+    path: 'keyeconomicgrowth',
     loadChildren: () =>
       import('./twenty-five-en-artickle/twenty-five-en-artickle.module').then(
         (m) => m.TwentyFiveEnArtickleModule
       ),
   },
   {
-    path: '26',
+    path: 'technicalanalysis',
     loadChildren: () =>
       import('./twenty-six-en-artickle/twenty-six-en-artickle.module').then(
         (m) => m.TwentySixEnArtickleModule

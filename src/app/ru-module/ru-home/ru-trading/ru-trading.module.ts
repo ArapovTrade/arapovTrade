@@ -179,14 +179,14 @@ const routes: Routes = [
       ),
   },
   {
-    path: '25',
+    path: 'keyeconomicgrowth',
     loadChildren: () =>
       import('./twenty-five-ru-artickle/twenty-five-ru-artickle.module').then(
         (m) => m.TwentyFiveRuArtickleModule
       ),
   },
   {
-    path: '26',
+    path: 'technicalanalysis',
     loadChildren: () =>
       import('./twenty-six-ru-artickle/twenty-six-ru-artickle.module').then(
         (m) => m.TwentySixRuArtickleModule
