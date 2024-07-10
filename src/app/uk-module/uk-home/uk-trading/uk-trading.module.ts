@@ -163,14 +163,14 @@ const routes: Routes = [
       ),
   },
   {
-    path: '23',
+    path: 'worldstockindicates',
     loadChildren: () =>
       import('./twenty-three-uk-artickle/twenty-three-uk-artickle.module').then(
         (m) => m.TwentyThreeUkArtickleModule
       ),
   },
   {
-    path: '24',
+    path: 'economicstate',
     loadChildren: () =>
       import('./twenty-four-uk-artickle/twenty-four-uk-artickle.module').then(
         (m) => m.TwentyFourUkArtickleModule

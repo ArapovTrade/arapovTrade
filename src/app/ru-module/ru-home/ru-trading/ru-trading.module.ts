@@ -165,14 +165,14 @@ const routes: Routes = [
       ),
   },
   {
-    path: '23',
+    path: 'worldstockindicates',
     loadChildren: () =>
       import('./twenty-three-ru-artickle/twenty-three-ru-artickle.module').then(
         (m) => m.TwentyThreeRuArtickleModule
       ),
   },
   {
-    path: '24',
+    path: 'economicstate',
     loadChildren: () =>
       import('./twenty-four-ru-artickle/twenty-four-ru-artickle.module').then(
         (m) => m.TwentyFourRuArtickleModule
