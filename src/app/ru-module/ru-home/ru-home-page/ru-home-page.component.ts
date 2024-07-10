@@ -1,13 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-ru-home-page',
   templateUrl: './ru-home-page.component.html',
   styleUrl: './ru-home-page.component.scss',
 })
 export class RuHomePageComponent implements OnInit {
-  constructor(private meta: Meta, private titleService: Title) {}
+  constructor(
+    private meta: Meta,
+    private titleService: Title,
+    private router: Router
+  ) {}
   scrollToRegistrationRu() {
     const element = document.getElementById('registrationRu');
     if (element) {
@@ -29,5 +33,9 @@ export class RuHomePageComponent implements OnInit {
       content:
         'курсы трейдинга, трейдинг, биржа, финансы, акции, валюты, обучение трейдингу, курсы, бесплатное обучение трейдингу',
     });
+  }
+
+  navigateToStudy() {
+    this.router.navigateByUrl('/ru/studying');
   }
 }

@@ -1,13 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.scss',
 })
 export class HomePageComponent implements OnInit {
-  constructor(private meta: Meta, private titleService: Title) {}
+  constructor(
+    private meta: Meta,
+    private titleService: Title,
+    private router: Router
+  ) {}
   scrollToRegistrationEn() {
     const element = document.getElementById('registrationEn');
     if (element) {
@@ -29,5 +33,9 @@ export class HomePageComponent implements OnInit {
       content:
         'trading courses, trading, exchange, finance, stocks, currencies, trading training, courses, free trading training',
     });
+  }
+
+  navigateToStudy() {
+    this.router.navigateByUrl('/en/studying');
   }
 }

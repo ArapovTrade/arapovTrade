@@ -7,6 +7,7 @@ import {
 } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { DOCUMENT } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-uk-home-page',
@@ -18,6 +19,8 @@ export class UkHomePageComponent implements OnInit {
 
   constructor(
     private meta: Meta,
+    private router: Router,
+
     private titleService: Title,
     private rendererFactory: RendererFactory2,
     @Inject(DOCUMENT) private document: Document
@@ -63,5 +66,9 @@ export class UkHomePageComponent implements OnInit {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
+  }
+
+  navigateToStudy() {
+    this.router.navigateByUrl('/uk/studying');
   }
 }
