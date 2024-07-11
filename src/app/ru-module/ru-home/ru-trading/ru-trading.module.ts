@@ -193,7 +193,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: '27',
+    path: 'technicalmarketcharts',
     loadChildren: () =>
       import('./twenty-seven-ru-artickle/twenty-seven-ru-artickle.module').then(
         (m) => m.TwentySevenRuArtickleModule
