@@ -198,21 +198,21 @@ const routes: Routes = [
       ),
   },
   {
-    path: '28',
+    path: 'keypricepattern',
     loadChildren: () =>
       import('./twenty-eight-en-artickle/twenty-eight-en-artickle.module').then(
         (m) => m.TwentyEightEnArtickleModule
       ),
   },
   {
-    path: '29',
+    path: 'volumemarketanalysis',
     loadChildren: () =>
       import('./twenty-nine-en-artickle/twenty-nine-en-artickle.module').then(
         (m) => m.TwentyNineEnArtickleModule
       ),
   },
   {
-    path: '30',
+    path: 'typesoforders',
     loadChildren: () =>
       import('./thirty-en-artickle/thirty-en-artickle.module').then(
         (m) => m.ThirtyEnArtickleModule

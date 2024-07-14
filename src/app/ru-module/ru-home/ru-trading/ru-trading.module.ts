@@ -200,21 +200,21 @@ const routes: Routes = [
       ),
   },
   {
-    path: '28',
+    path: 'keypricepattern',
     loadChildren: () =>
       import('./twenty-eight-ru-artickle/twenty-eight-ru-artickle.module').then(
         (m) => m.TwentyEightRuArtickleModule
       ),
   },
   {
-    path: '29',
+    path: 'volumemarketanalysis',
     loadChildren: () =>
       import('./twenty-nine-ru-artickle/twenty-nine-ru-artickle.module').then(
         (m) => m.TwentyNineRuArtickleModule
       ),
   },
   {
-    path: '30',
+    path: 'typesoforders',
     loadChildren: () =>
       import('./thirty-ru-artickle/thirty-ru-artickle.module').then(
         (m) => m.ThirtyRuArtickleModule
