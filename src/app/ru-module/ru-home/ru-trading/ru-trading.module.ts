@@ -221,14 +221,14 @@ const routes: Routes = [
       ),
   },
   {
-    path: '31',
+    path: 'marketorder',
     loadChildren: () =>
       import('./thirty-one-ru-artickle/thirty-one-ru-artickle.module').then(
         (m) => m.ThirtyOneRuArtickleModule
       ),
   },
   {
-    path: '32',
+    path: 'stoporder',
     loadChildren: () =>
       import('./thirty-two-ru-artickle/thirty-two-ru-artickle.module').then(
         (m) => m.ThirtyTwoRuArtickleModule
