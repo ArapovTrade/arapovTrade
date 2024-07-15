@@ -220,6 +220,76 @@ const routes: Routes = [
         (m) => m.ThirtyRuArtickleModule
       ),
   },
+  {
+    path: '31',
+    loadChildren: () =>
+      import('./thirty-one-ru-artickle/thirty-one-ru-artickle.module').then(
+        (m) => m.ThirtyOneRuArtickleModule
+      ),
+  },
+  {
+    path: '32',
+    loadChildren: () =>
+      import('./thirty-two-ru-artickle/thirty-two-ru-artickle.module').then(
+        (m) => m.ThirtyTwoRuArtickleModule
+      ),
+  },
+  {
+    path: '33',
+    loadChildren: () =>
+      import('./thirty-three-ru-artickle/thirty-three-ru-artickle.module').then(
+        (m) => m.ThirtyThreeRuArtickleModule
+      ),
+  },
+  {
+    path: '34',
+    loadChildren: () =>
+      import('./thirty-four-ru-artickle/thirty-four-ru-artickle.module').then(
+        (m) => m.ThirtyFourRuArtickleModule
+      ),
+  },
+  {
+    path: '35',
+    loadChildren: () =>
+      import('./thirty-five-ru-artickle/thirty-five-ru-artickle.module').then(
+        (m) => m.ThirtyFiveRuArtickleModule
+      ),
+  },
+  {
+    path: '36',
+    loadChildren: () =>
+      import('./thirty-six-ru-artickle/thirty-six-ru-artickle.module').then(
+        (m) => m.ThirtySixRuArtickleModule
+      ),
+  },
+  {
+    path: '37',
+    loadChildren: () =>
+      import('./thirty-seven-ru-artickle/thirty-seven-ru-artickle.module').then(
+        (m) => m.ThirtySevenRuArtickleModule
+      ),
+  },
+  {
+    path: '38',
+    loadChildren: () =>
+      import('./thirty-eight-ru-artickle/thirty-eight-ru-artickle.module').then(
+        (m) => m.ThirtyEightRuArtickleModule
+      ),
+  },
+  {
+    path: '39',
+    loadChildren: () =>
+      import('./thirty-nine-ru-artickle/thirty-nine-ru-artickle.module').then(
+        (m) => m.ThirtyNineRuArtickleModule
+      ),
+  },
+  {
+    path: '40',
+    loadChildren: () =>
+      import('./fourty-ru-artickle/fourty-ru-artickle.module').then(
+        (m) => m.FourtyRuArtickleModule
+      ),
+  },
 ];
 
 @NgModule({
