@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Meta } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home-ru-eight',
@@ -7,8 +7,10 @@ import { Meta } from '@angular/platform-browser';
   styleUrl: './home-ru-eight.component.scss',
 })
 export class HomeRuEightComponent implements OnInit {
-  constructor(private meta: Meta) {}
+  constructor(private meta: Meta, private titleService: Title) {}
   ngOnInit(): void {
+    this.titleService.setTitle('Валюты и их котировки  - Arapov.trade');
+
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Meta } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home-en-six',
@@ -7,8 +7,12 @@ import { Meta } from '@angular/platform-browser';
   styleUrl: './home-en-six.component.scss',
 })
 export class HomeEnSixComponent implements OnInit {
-  constructor(private meta: Meta) {}
+  constructor(private meta: Meta, private titleService: Title) {}
   ngOnInit(): void {
+    this.titleService.setTitle(
+      'Main participants of the exchange - Arapov.trade'
+    );
+
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',

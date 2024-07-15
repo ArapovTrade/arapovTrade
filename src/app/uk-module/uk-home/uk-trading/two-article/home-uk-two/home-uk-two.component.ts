@@ -7,8 +7,9 @@ import { Title, Meta } from '@angular/platform-browser';
   styleUrl: './home-uk-two.component.scss',
 })
 export class HomeUkTwoComponent implements OnInit {
-  constructor(private meta: Meta) {}
+  constructor(private meta: Meta, private titleService: Title) {}
   ngOnInit(): void {
+    this.titleService.setTitle('Основи ринку. Словник термінів - Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',

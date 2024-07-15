@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Meta } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home-uk-three',
@@ -7,8 +7,11 @@ import { Meta } from '@angular/platform-browser';
   styleUrl: './home-uk-three.component.scss',
 })
 export class HomeUkThreeComponent implements OnInit {
-  constructor(private meta: Meta) {}
+  constructor(private meta: Meta, private titleService: Title) {}
   ngOnInit(): void {
+    this.titleService.setTitle(
+      'Знайомство з біржею та як вона влаштована - Arapov.trade'
+    );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
