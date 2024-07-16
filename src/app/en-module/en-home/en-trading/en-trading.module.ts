@@ -233,21 +233,21 @@ const routes: Routes = [
       ),
   },
   {
-    path: '33',
+    path: 'requotes',
     loadChildren: () =>
       import('./thirty-three-en-artickle/thirty-three-en-artickle.module').then(
         (m) => m.ThirtyThreeEnArtickleModule
       ),
   },
   {
-    path: '34',
+    path: 'stoplimitorder',
     loadChildren: () =>
       import('./thirty-four-en-artickle/thirty-four-en-artickle.module').then(
         (m) => m.ThirtyFourEnArtickleModule
       ),
   },
   {
-    path: '35',
+    path: 'tradingsystem',
     loadChildren: () =>
       import('./thirty-five-en-artickle/thirty-five-en-artickle.module').then(
         (m) => m.ThirtyFiveEnArtickleModule
