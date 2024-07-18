@@ -290,6 +290,48 @@ const routes: Routes = [
         (m) => m.FourtyRuArtickleModule
       ),
   },
+  {
+    path: 'tradingplan',
+    loadChildren: () =>
+      import('./fourty-one-ru-artickle/fourty-one-ru-artickle.module').then(
+        (m) => m.FourtyOneRuArtickleModule
+      ),
+  },
+  {
+    path: 'timeframes',
+    loadChildren: () =>
+      import('./fourty-two-ru-artickle/fourty-two-ru-artickle.module').then(
+        (m) => m.FourtyTwoRuArtickleModule
+      ),
+  },
+  {
+    path: '43',
+    loadChildren: () =>
+      import('./fourty-three-ru-artickle/fourty-three-ru-artickle.module').then(
+        (m) => m.FourtyThreeRuArtickleModule
+      ),
+  },
+  {
+    path: '44',
+    loadChildren: () =>
+      import('./fourty-four-ru-artickle/fourty-four-ru-artickle.module').then(
+        (m) => m.FourtyFourRuArtickleModule
+      ),
+  },
+  {
+    path: '45',
+    loadChildren: () =>
+      import('./fourty-five-ru-artickle/fourty-five-ru-artickle.module').then(
+        (m) => m.FourtyFiveRuArtickleModule
+      ),
+  },
+  {
+    path: '46',
+    loadChildren: () =>
+      import('./fourty-six-ru-artickle/fourty-six-ru-artickle.module').then(
+        (m) => m.FourtySixRuArtickleModule
+      ),
+  },
 ];
 
 @NgModule({

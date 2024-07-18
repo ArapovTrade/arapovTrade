@@ -288,6 +288,48 @@ const routes: Routes = [
         (m) => m.FourtyUkArtickleModule
       ),
   },
+  {
+    path: 'tradingplan',
+    loadChildren: () =>
+      import('./fourty-one-uk-artickle/fourty-one-uk-artickle.module').then(
+        (m) => m.FourtyOneUkArtickleModule
+      ),
+  },
+  {
+    path: 'timeframes',
+    loadChildren: () =>
+      import('./fourty-two-uk-artickle/fourty-two-uk-artickle.module').then(
+        (m) => m.FourtyTwoUkArtickleModule
+      ),
+  },
+  {
+    path: '43',
+    loadChildren: () =>
+      import('./fourty-three-uk-artickle/fourty-three-uk-artickle.module').then(
+        (m) => m.FourtyThreeUkArtickleModule
+      ),
+  },
+  {
+    path: '44',
+    loadChildren: () =>
+      import('./fourty-four-uk-artickle/fourty-four-uk-artickle.module').then(
+        (m) => m.FourtyFourUkArtickleModule
+      ),
+  },
+  {
+    path: '45',
+    loadChildren: () =>
+      import('./fourty-five-uk-artickle/fourty-five-uk-artickle.module').then(
+        (m) => m.FourtyFiveUkArtickleModule
+      ),
+  },
+  {
+    path: '46',
+    loadChildren: () =>
+      import('./fourty-six-uk-artickle/fourty-six-uk-artickle.module').then(
+        (m) => m.FourtySixUkArtickleModule
+      ),
+  },
 ];
 
 @NgModule({
