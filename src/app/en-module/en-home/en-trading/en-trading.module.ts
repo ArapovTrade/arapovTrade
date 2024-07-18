@@ -268,21 +268,21 @@ const routes: Routes = [
       ),
   },
   {
-    path: '38',
+    path: 'capitalmanagement',
     loadChildren: () =>
       import('./thirty-eight-en-artickle/thirty-eight-en-artickle.module').then(
         (m) => m.ThirtyEightEnArtickleModule
       ),
   },
   {
-    path: '39',
+    path: 'profitandlossratio',
     loadChildren: () =>
       import('./thirty-nine-en-artickle/thirty-nine-en-artickle.module').then(
         (m) => m.ThirtyNineEnArtickleModule
       ),
   },
   {
-    path: '40',
+    path: 'beginnermistakes',
     loadChildren: () =>
       import('./fourty-en-artickle/fourty-en-artickle.module').then(
         (m) => m.FourtyEnArtickleModule

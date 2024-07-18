@@ -270,21 +270,21 @@ const routes: Routes = [
       ),
   },
   {
-    path: '38',
+    path: 'capitalmanagement',
     loadChildren: () =>
       import('./thirty-eight-ru-artickle/thirty-eight-ru-artickle.module').then(
         (m) => m.ThirtyEightRuArtickleModule
       ),
   },
   {
-    path: '39',
+    path: 'profitandlossratio',
     loadChildren: () =>
       import('./thirty-nine-ru-artickle/thirty-nine-ru-artickle.module').then(
         (m) => m.ThirtyNineRuArtickleModule
       ),
   },
   {
-    path: '40',
+    path: 'beginnermistakes',
     loadChildren: () =>
       import('./fourty-ru-artickle/fourty-ru-artickle.module').then(
         (m) => m.FourtyRuArtickleModule
