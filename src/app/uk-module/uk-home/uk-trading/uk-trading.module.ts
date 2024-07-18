@@ -254,14 +254,14 @@ const routes: Routes = [
       ),
   },
   {
-    path: '36',
+    path: 'tradingsystemsseparation',
     loadChildren: () =>
       import('./thirty-six-uk-artickle/thirty-six-uk-artickle.module').then(
         (m) => m.ThirtySixUkArtickleModule
       ),
   },
   {
-    path: '37',
+    path: 'tradingsystemautomation',
     loadChildren: () =>
       import('./thirty-seven-uk-artickle/thirty-seven-uk-artickle.module').then(
         (m) => m.ThirtySevenUkArtickleModule

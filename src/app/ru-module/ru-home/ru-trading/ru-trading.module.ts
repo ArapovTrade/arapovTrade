@@ -256,14 +256,14 @@ const routes: Routes = [
       ),
   },
   {
-    path: '36',
+    path: 'tradingsystemsseparation',
     loadChildren: () =>
       import('./thirty-six-ru-artickle/thirty-six-ru-artickle.module').then(
         (m) => m.ThirtySixRuArtickleModule
       ),
   },
   {
-    path: '37',
+    path: 'tradingsystemautomation',
     loadChildren: () =>
       import('./thirty-seven-ru-artickle/thirty-seven-ru-artickle.module').then(
         (m) => m.ThirtySevenRuArtickleModule
