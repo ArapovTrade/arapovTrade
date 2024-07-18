@@ -303,28 +303,28 @@ const routes: Routes = [
       ),
   },
   {
-    path: '43',
+    path: 'selectingtimeframe',
     loadChildren: () =>
       import('./fourty-three-uk-artickle/fourty-three-uk-artickle.module').then(
         (m) => m.FourtyThreeUkArtickleModule
       ),
   },
   {
-    path: '44',
+    path: 'timeframeforbeginner',
     loadChildren: () =>
       import('./fourty-four-uk-artickle/fourty-four-uk-artickle.module').then(
         (m) => m.FourtyFourUkArtickleModule
       ),
   },
   {
-    path: '45',
+    path: 'typeoftimeframes',
     loadChildren: () =>
       import('./fourty-five-uk-artickle/fourty-five-uk-artickle.module').then(
         (m) => m.FourtyFiveUkArtickleModule
       ),
   },
   {
-    path: '46',
+    path: 'reasonforloosingmoney',
     loadChildren: () =>
       import('./fourty-six-uk-artickle/fourty-six-uk-artickle.module').then(
         (m) => m.FourtySixUkArtickleModule

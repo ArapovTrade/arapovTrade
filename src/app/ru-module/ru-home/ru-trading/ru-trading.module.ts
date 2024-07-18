@@ -305,28 +305,28 @@ const routes: Routes = [
       ),
   },
   {
-    path: '43',
+    path: 'selectingtimeframe',
     loadChildren: () =>
       import('./fourty-three-ru-artickle/fourty-three-ru-artickle.module').then(
         (m) => m.FourtyThreeRuArtickleModule
       ),
   },
   {
-    path: '44',
+    path: 'timeframeforbeginner',
     loadChildren: () =>
       import('./fourty-four-ru-artickle/fourty-four-ru-artickle.module').then(
         (m) => m.FourtyFourRuArtickleModule
       ),
   },
   {
-    path: '45',
+    path: 'typeoftimeframes',
     loadChildren: () =>
       import('./fourty-five-ru-artickle/fourty-five-ru-artickle.module').then(
         (m) => m.FourtyFiveRuArtickleModule
       ),
   },
   {
-    path: '46',
+    path: 'reasonforloosingmoney',
     loadChildren: () =>
       import('./fourty-six-ru-artickle/fourty-six-ru-artickle.module').then(
         (m) => m.FourtySixRuArtickleModule
