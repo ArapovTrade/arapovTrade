@@ -4,7 +4,14 @@ import { RuBlogHomepageComponent } from './ru-blog-homepage/ru-blog-homepage.com
 import { RouterModule } from '@angular/router';
 import { Routes } from '@angular/router';
 
-const routes: Routes = [{ path: '', component: RuBlogHomepageComponent }];
+const routes: Routes = [
+  { path: '', component: RuBlogHomepageComponent },
+  {
+    path: '1',
+    loadChildren: () =>
+      import('./one-ru-blog/one-ru-blog.module').then((m) => m.OneRuBlogModule),
+  },
+];
 
 @NgModule({
   declarations: [RuBlogHomepageComponent],

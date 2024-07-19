@@ -1,0 +1,63 @@
+.hero-section {
+    background: url(/assets/img/content/blogauthor.jpg) no-repeat bottom right;
+    background-size: 100% 100%;
+    color: white;
+    height: 250px;
+}
+
+.section-i {
+    padding: 0;
+}
+
+
+@media (min-width: 768px) {
+    .hero-section {
+        height: 500px;
+    }
+
+    .programm__list {
+        width: 370px !important;
+
+    }
+}
+
+.pad {
+    padding-bottom: 20px;
+}
+
+.black {
+    background-color: #1A1A1A;
+}
+
+.programm__list {
+    width: 300px;
+
+}
+
+.programm__in {
+    padding: 0;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.programm__item {
+    padding: 20px;
+}
+
+.programm__title {
+    text-align: center;
+}
+
+@media (min-width: 900px) {
+    h1 {
+        text-align: center !important;
+    }
+
+    .hero-section {
+        height: 600px;
+    }
+}
