@@ -1,10 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home-ru-twenty-six',
   templateUrl: './home-ru-twenty-six.component.html',
-  styleUrl: './home-ru-twenty-six.component.scss'
+  styleUrl: './home-ru-twenty-six.component.scss',
 })
-export class HomeRuTwentySixComponent {
-
+export class HomeRuTwentySixComponent implements OnInit {
+  constructor(private meta: Meta, private titleService: Title) {}
+  ngOnInit(): void {
+    this.titleService.setTitle('Технический анализ рынка - Arapov.trade');
+    this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+    this.meta.addTag({
+      name: 'description',
+      content: 'Технический анализ рынка. Трейдинг ',
+    });
+  }
 }
