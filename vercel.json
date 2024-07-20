@@ -26,11 +26,20 @@
           "value": "font/ttf"
         }
       ]
+    },
+    {
+      "source": "/(.*).otf",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "font/otf"
+        }
+      ]
     }
   ],
   "routes": [
     {
-      "src": "/(.*).(png|jpg|jpeg|gif|svg|webp|ico|css|js|woff|woff2|ttf)$",
+      "src": "/(.*).(png|jpg|jpeg|gif|svg|webp|ico|css|js|woff|woff2|ttf|otf)$",
       "dest": "/$1.$2"
     },
     {
