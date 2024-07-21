@@ -7,7 +7,7 @@ import { Routes } from '@angular/router';
 const routes: Routes = [
   { path: '', component: UkBlogHomepageComponent },
   {
-    path: '1',
+    path: 'blogmarketphases',
     loadChildren: () =>
       import('./one-uk-blog/one-uk-blog.module').then((m) => m.OneUkBlogModule),
   },
