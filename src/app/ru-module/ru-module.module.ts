@@ -38,7 +38,7 @@ const routes: Routes = [
           ),
       },
       {
-        path: 'blog',
+        path: 'freestudying',
         loadChildren: () =>
           import('./ru-home/ru-blog/ru-blog.module').then(
             (m) => m.RuBlogModule

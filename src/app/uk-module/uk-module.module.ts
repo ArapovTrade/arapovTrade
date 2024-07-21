@@ -36,7 +36,7 @@ const routes: Routes = [
           ),
       },
       {
-        path: 'blog',
+        path: 'freestudying',
         loadChildren: () =>
           import('./uk-home/ukblog/ukblog.module').then((m) => m.UkblogModule),
       },
