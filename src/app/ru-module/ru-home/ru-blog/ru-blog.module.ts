@@ -24,7 +24,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: '4',
+    path: 'reasonfordepositeloose',
     loadChildren: () =>
       import('./four-ru-blog/four-ru-blog.module').then(
         (m) => m.FourRuBlogModule
