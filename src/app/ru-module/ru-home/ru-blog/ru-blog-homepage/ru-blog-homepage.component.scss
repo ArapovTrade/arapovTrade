@@ -62,7 +62,9 @@
     h1 {
         text-align: center !important;
     }
-
+.hero-image-place {
+    padding-top: 50px;
+}
     .hero-section {
         height: 600px;
     }
@@ -81,10 +83,10 @@
 .hero-image img{
     width: 95%;
 }
-.blog-text {
-    padding-top: 10px;
+// .blog-text {
+//     padding-top: 10px;
     
-}
+// }
 
 .black{
     padding-top: 50px;
@@ -103,5 +105,5 @@
 
         
                                 .hero-content {
-                                    padding-bottom: 20px !important;
+                                    padding-bottom: 10px  ;
                                 }
