@@ -13,7 +13,7 @@ export class HomeRuBlogOneComponent implements OnInit {
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
-      content: 'Фазы рынка в трейдинге.',
+      content: 'Фазы рынка в трейдинге , какие они бывают они ?',
     });
   }
 }

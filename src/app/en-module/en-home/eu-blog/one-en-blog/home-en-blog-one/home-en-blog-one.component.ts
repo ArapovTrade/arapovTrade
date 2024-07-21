@@ -13,7 +13,7 @@ export class HomeEnBlogOneComponent implements OnInit {
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
-      content: 'Market phases in trading',
+      content: 'Market phases in trading, what are they?',
     });
   }
 }

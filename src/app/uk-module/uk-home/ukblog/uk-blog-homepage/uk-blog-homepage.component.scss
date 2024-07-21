@@ -5,6 +5,12 @@
     height: 200px;
 }
 
+@media (min-width: 900px) {}
+
+// .hero-image-place {
+//     padding-top: 40px;
+// }
+
 .section-i {
     padding: 0;
 }
@@ -56,7 +62,56 @@
     h1 {
         text-align: center !important;
     }
-         .hero-section {
-             height: 600px;
-         }
+        .h11 {
+        margin-top: 80px;
+        padding-bottom: 40px;
+        }
+    .hero-image-place {
+        padding-top: 50px;
+    }
+
+    .hero-section {
+        height: 600px;
+    }
+
+    .blog-text {
+        width: 600px;
+    }
+}
+
+.h11 {
+    margin-bottom: 20px;
+}
+
+.dec {
+    text-decoration: underline;
+}
+
+.hero-image img {
+    width: 95%;
+}
+
+
+.black {
+    padding-top: 50px;
+}
+
+
+
+
+.blog-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.hero-image-place {
+    flex: auto;
+}
+
+
+.hero-content {
+    padding-bottom: 10px;
+}
+.blog-text{
+    padding-top: 1px;
 }
