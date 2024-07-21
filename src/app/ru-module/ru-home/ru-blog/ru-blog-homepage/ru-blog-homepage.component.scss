@@ -60,6 +60,9 @@
     .hero-section {
         height: 600px;
     }
+    .blog-text{
+        width: 600px;
+    }
 }
 
 // .blog-author-text{
@@ -69,3 +72,32 @@
 // .m-right{
 //     position: relative;
 // }
+.hero-image img{
+    width: 90%;
+}
+.blog-text {
+    padding-top: 20px;
+    
+}
+
+.black{
+    padding-top: 50px;
+}
+
+
+ 
+ 
+ .blog-content{
+    display: flex;
+    flex-wrap: wrap;
+ }
+ .hero-image-place{
+    flex:auto;
+ }
+
+        
+                @media (min-width: 900px) {
+                    .hero-image-place {
+                            padding-top: 40px;
+                        }
+                }
