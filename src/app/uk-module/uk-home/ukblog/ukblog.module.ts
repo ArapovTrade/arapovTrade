@@ -11,6 +11,63 @@ const routes: Routes = [
     loadChildren: () =>
       import('./one-uk-blog/one-uk-blog.module').then((m) => m.OneUkBlogModule),
   },
+  {
+    path: 'divergenceonindecators',
+    loadChildren: () =>
+      import('./two-uk-blog/two-uk-blog.module').then((m) => m.TwoUkBlogModule),
+  },
+  {
+    path: 'volatility',
+    loadChildren: () =>
+      import('./three-uk-blog/three-uk-blog.module').then(
+        (m) => m.ThreeUkBlogModule
+      ),
+  },
+  {
+    path: '4',
+    loadChildren: () =>
+      import('./four-uk-blog/four-uk-blog.module').then(
+        (m) => m.FourUkBlogModule
+      ),
+  },
+  {
+    path: '5',
+    loadChildren: () =>
+      import('./five-uk-blog/five-uk-blog.module').then(
+        (m) => m.FiveUkBlogModule
+      ),
+  },
+  {
+    path: '6',
+    loadChildren: () =>
+      import('./six-uk-blog/six-uk-blog.module').then((m) => m.SixUkBlogModule),
+  },
+  {
+    path: '7',
+    loadChildren: () =>
+      import('./seven-uk-blog/seven-uk-blog.module').then(
+        (m) => m.SevenUkBlogModule
+      ),
+  },
+  {
+    path: '8',
+    loadChildren: () =>
+      import('./eight-uk-blog/eight-uk-blog.module').then(
+        (m) => m.EightUkBlogModule
+      ),
+  },
+  {
+    path: '9',
+    loadChildren: () =>
+      import('./nine-uk-blog/nine-uk-blog.module').then(
+        (m) => m.NineUkBlogModule
+      ),
+  },
+  {
+    path: '10',
+    loadChildren: () =>
+      import('./ten-uk-blog/ten-uk-blog.module').then((m) => m.TenUkBlogModule),
+  },
 ];
 
 @NgModule({
