@@ -2794,3 +2794,11 @@ html, body { height: 100%; }
     width: 12px !important;
         height: 12px !important;
 }
+.flex-arrow{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+.arrow-right{
+    transform: rotateZ(180deg);
+}
