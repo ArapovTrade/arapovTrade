@@ -7,24 +7,24 @@ import { Routes } from '@angular/router';
 const routes: Routes = [
   { path: '', component: UkBlogHomepageComponent },
   {
-    path: 'blogmarketphases',
+    path: 'blogmarketphases', //1
     loadChildren: () =>
       import('./one-uk-blog/one-uk-blog.module').then((m) => m.OneUkBlogModule),
   },
   {
-    path: 'divergenceonindecators',
+    path: 'divergenceonindecators', //2
     loadChildren: () =>
       import('./two-uk-blog/two-uk-blog.module').then((m) => m.TwoUkBlogModule),
   },
   {
-    path: 'volatility',
+    path: 'volatility', //3
     loadChildren: () =>
       import('./three-uk-blog/three-uk-blog.module').then(
         (m) => m.ThreeUkBlogModule
       ),
   },
   {
-    path: 'reasonfordepositeloose',
+    path: 'reasonfordepositeloose', //4
     loadChildren: () =>
       import('./four-uk-blog/four-uk-blog.module').then(
         (m) => m.FourUkBlogModule
