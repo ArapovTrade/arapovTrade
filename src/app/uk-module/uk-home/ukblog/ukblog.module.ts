@@ -31,14 +31,14 @@ const routes: Routes = [
       ),
   },
   {
-    path: '5',
+    path: 'pricingandliquidity', //5
     loadChildren: () =>
       import('./five-uk-blog/five-uk-blog.module').then(
         (m) => m.FiveUkBlogModule
       ),
   },
   {
-    path: '6',
+    path: 'smartestmoney', //6
     loadChildren: () =>
       import('./six-uk-blog/six-uk-blog.module').then((m) => m.SixUkBlogModule),
   },
