@@ -50,7 +50,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: '8',
+    path: 'imbalanceintrading',
     loadChildren: () =>
       import('./eight-ru-blog/eight-ru-blog.module').then(
         (m) => m.EightRuBlogModule
