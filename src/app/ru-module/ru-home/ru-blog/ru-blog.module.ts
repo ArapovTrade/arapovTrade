@@ -43,7 +43,7 @@ const routes: Routes = [
       import('./six-ru-blog/six-ru-blog.module').then((m) => m.SixRuBlogModule),
   },
   {
-    path: '7',
+    path: 'makingmoneyintrading',
     loadChildren: () =>
       import('./seven-ru-blog/seven-ru-blog.module').then(
         (m) => m.SevenRuBlogModule
