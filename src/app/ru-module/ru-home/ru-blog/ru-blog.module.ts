@@ -64,7 +64,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: '10',
+    path: 'mainreasonforlosses',
     loadChildren: () =>
       import('./ten-ru-blog/ten-ru-blog.module').then((m) => m.TenRuBlogModule),
   },
