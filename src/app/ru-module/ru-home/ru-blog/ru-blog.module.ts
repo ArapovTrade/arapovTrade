@@ -68,6 +68,76 @@ const routes: Routes = [
     loadChildren: () =>
       import('./ten-ru-blog/ten-ru-blog.module').then((m) => m.TenRuBlogModule),
   },
+  {
+    path: '11', //11
+    loadChildren: () =>
+      import('./eleven-ru-blog/eleven-ru-blog.module').then(
+        (m) => m.ElevenRuBlogModule
+      ),
+  },
+  {
+    path: '12', //12
+    loadChildren: () =>
+      import('./twelve-ru-blog/twelve-ru-blog.module').then(
+        (m) => m.TwelveRuBlogModule
+      ),
+  },
+  {
+    path: '13', //13
+    loadChildren: () =>
+      import('./thirteen-ru-blog/thirteen-ru-blog.module').then(
+        (m) => m.ThirteenRuBlogModule
+      ),
+  },
+  {
+    path: '14', //14
+    loadChildren: () =>
+      import('./fourteen-ru-blog/fourteen-ru-blog.module').then(
+        (m) => m.FourteenRuBlogModule
+      ),
+  },
+  {
+    path: '15', //15
+    loadChildren: () =>
+      import('./fiveteen-ru-blog/fiveteen-ru-blog.module').then(
+        (m) => m.FiveteenRuBlogModule
+      ),
+  },
+  {
+    path: '16', //16
+    loadChildren: () =>
+      import('./sixteen-ru-blog/sixteen-ru-blog.module').then(
+        (m) => m.SixteenRuBlogModule
+      ),
+  },
+  {
+    path: '17', //17
+    loadChildren: () =>
+      import('./seventeen-ru-blog/seventeen-ru-blog.module').then(
+        (m) => m.SeventeenRuBlogModule
+      ),
+  },
+  {
+    path: '18', //18
+    loadChildren: () =>
+      import('./eighteen-ru-blog/eighteen-ru-blog.module').then(
+        (m) => m.EighteenRuBlogModule
+      ),
+  },
+  {
+    path: '19', //19
+    loadChildren: () =>
+      import('./nineteen-ru-blog/nineteen-ru-blog.module').then(
+        (m) => m.NineteenRuBlogModule
+      ),
+  },
+  {
+    path: '20', //20
+    loadChildren: () =>
+      import('./twenty-ru-blog/twenty-ru-blog.module').then(
+        (m) => m.TwentyRuBlogModule
+      ),
+  },
 ];
 
 @NgModule({

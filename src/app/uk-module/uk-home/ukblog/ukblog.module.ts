@@ -68,6 +68,76 @@ const routes: Routes = [
     loadChildren: () =>
       import('./ten-uk-blog/ten-uk-blog.module').then((m) => m.TenUkBlogModule),
   },
+  {
+    path: '11', //11
+    loadChildren: () =>
+      import('./eleven-uk-blog/eleven-uk-blog.module').then(
+        (m) => m.ElevenUkBlogModule
+      ),
+  },
+  {
+    path: '12', //12
+    loadChildren: () =>
+      import('./twelve-uk-blog/twelve-uk-blog.module').then(
+        (m) => m.TwelveUkBlogModule
+      ),
+  },
+  {
+    path: '13', //13
+    loadChildren: () =>
+      import('./thirteen-uk-blog/thirteen-uk-blog.module').then(
+        (m) => m.ThirteenUkBlogModule
+      ),
+  },
+  {
+    path: '14', //14
+    loadChildren: () =>
+      import('./fourteen-uk-blog/fourteen-uk-blog.module').then(
+        (m) => m.FourteenUkBlogModule
+      ),
+  },
+  {
+    path: '15', //15
+    loadChildren: () =>
+      import('./fiveteen-uk-blog/fiveteen-uk-blog.module').then(
+        (m) => m.FiveteenUkBlogModule
+      ),
+  },
+  {
+    path: '16', //16
+    loadChildren: () =>
+      import('./sixteen-uk-blog/sixteen-uk-blog.module').then(
+        (m) => m.SixteenUkBlogModule
+      ),
+  },
+  {
+    path: '17', //17
+    loadChildren: () =>
+      import('./seventeen-uk-blog/seventeen-uk-blog.module').then(
+        (m) => m.SeventeenUkBlogModule
+      ),
+  },
+  {
+    path: '18', //18
+    loadChildren: () =>
+      import('./eighteen-uk-blog/eighteen-uk-blog.module').then(
+        (m) => m.EighteenUkBlogModule
+      ),
+  },
+  {
+    path: '19', //19
+    loadChildren: () =>
+      import('./nineteen-uk-blog/nineteen-uk-blog.module').then(
+        (m) => m.NineteenUkBlogModule
+      ),
+  },
+  {
+    path: '20', //20
+    loadChildren: () =>
+      import('./twenty-uk-blog/twenty-uk-blog.module').then(
+        (m) => m.TwentyUkBlogModule
+      ),
+  },
 ];
 
 @NgModule({
