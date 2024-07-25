@@ -1,10 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home-uk-blog-nine',
   templateUrl: './home-uk-blog-nine.component.html',
-  styleUrl: './home-uk-blog-nine.component.scss'
+  styleUrl: './home-uk-blog-nine.component.scss',
 })
-export class HomeUkBlogNineComponent {
-
+export class HomeUkBlogNineComponent implements OnInit {
+  constructor(private meta: Meta, private titleService: Title) {}
+  ngOnInit(): void {
+    this.titleService.setTitle('Як прогнозувати ціну на ринку?- Arapov.trade');
+    this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+    this.meta.addTag({
+      name: 'description',
+      content: 'Як прогнозувати ціну на ринку? Про Трейдинг для Початківців',
+    });
+  }
 }

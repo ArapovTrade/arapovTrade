@@ -57,7 +57,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: '9',
+    path: 'predictmarketprice', //9
     loadChildren: () =>
       import('./nine-uk-blog/nine-uk-blog.module').then(
         (m) => m.NineUkBlogModule
