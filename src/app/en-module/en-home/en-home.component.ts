@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
@@ -7,8 +7,12 @@ import { NavigationEnd, Router } from '@angular/router';
   templateUrl: './en-home.component.html',
   styleUrl: './en-home.component.scss',
 })
-export class EnHomeComponent {
-  constructor(private router: Router) {
+export class EnHomeComponent implements OnInit {
+  constructor(
+    private router: Router,
+    private meta: Meta,
+    private titleService: Title
+  ) {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         if (typeof window !== 'undefined') {
@@ -18,7 +22,18 @@ export class EnHomeComponent {
       }
     });
   }
+  ngOnInit(): void {
+    this.titleService.setTitle(
+      "Trading courses Author's online trading education| Igor Arapov"
+    );
+    this.meta.updateTag({ name: 'robots', content: 'index, nofollow' });
 
+    this.meta.addTag({
+      name: 'keywords',
+      content:
+        'trading courses, trading, currencies, trading training, free trading training, free trading training, cryptocurrency trading training, free trading courses, trading from scratch, trading courses',
+    });
+  }
   isMenuOpen = false;
 
   openMenu() {
