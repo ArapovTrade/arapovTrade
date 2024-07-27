@@ -26,7 +26,7 @@ export class EnHomeComponent implements OnInit {
     this.titleService.setTitle(
       "Trading courses Author's online trading education| Igor Arapov"
     );
-    this.meta.updateTag({ name: 'robots', content: 'index, nofollow' });
+    this.meta.updateTag({ name: 'robots', content: 'index, follow' });
 
     this.meta.addTag({
       name: 'keywords',

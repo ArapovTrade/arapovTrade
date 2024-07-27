@@ -26,7 +26,7 @@ export class RuHomeComponent implements OnInit {
     this.titleService.setTitle(
       'Курсы трейдинга Авторское обучение трейдингу  '
     );
-    this.meta.updateTag({ name: 'robots', content: 'index, nofollow' });
+    this.meta.updateTag({ name: 'robots', content: 'index, follow' });
 
     this.meta.addTag({
       name: 'keywords',
