@@ -30,7 +30,7 @@ export class EnBlogHomepageComponent implements OnInit {
     this.meta.addTag({
       name: 'keywords',
       content:
-        'Free trading training, free trading training from scratch, free trading courses, free trading training',
+        'cryptocurrency trading training, trading from scratch, Free trading training, free trading training from scratch, free trading courses, free trading training',
     });
   }
 }

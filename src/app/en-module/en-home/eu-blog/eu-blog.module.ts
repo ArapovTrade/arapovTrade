@@ -69,7 +69,7 @@ const routes: Routes = [
       import('./ten-en-blog/ten-en-blog.module').then((m) => m.TenEnBlogModule),
   },
   {
-    path: '11', //11
+    path: 'starterdeposit', //11
     loadChildren: () =>
       import('./eleven-en-blog/eleven-en-blog.module').then(
         (m) => m.ElevenEnBlogModule

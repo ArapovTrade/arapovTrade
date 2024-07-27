@@ -31,7 +31,7 @@ export class HomePageComponent implements OnInit {
     this.meta.addTag({
       name: 'keywords',
       content:
-        'trading courses, trading, exchange, finance, stocks, currencies, trading training, courses, free trading training',
+        'trading courses, trading, currencies, trading training, free trading training, free trading training, cryptocurrency trading training, free trading courses, trading from scratch, trading courses',
     });
   }
 
