@@ -76,7 +76,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: '12', //12
+    path: 'tradingoflevels', //12
     loadChildren: () =>
       import('./twelve-ru-blog/twelve-ru-blog.module').then(
         (m) => m.TwelveRuBlogModule
