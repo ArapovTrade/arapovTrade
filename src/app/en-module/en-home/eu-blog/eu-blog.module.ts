@@ -104,7 +104,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: '16', //16
+    path: 'trandingchannels', //16
     loadChildren: () =>
       import('./sixteen-en-blog/sixteen-en-blog.module').then(
         (m) => m.SixteenEnBlogModule
