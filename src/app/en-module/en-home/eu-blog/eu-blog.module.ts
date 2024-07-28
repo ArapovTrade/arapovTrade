@@ -97,7 +97,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: '15', //15
+    path: 'futurestrading', //15
     loadChildren: () =>
       import('./fiveteen-en-blog/fiveteen-en-blog.module').then(
         (m) => m.FiveteenEnBlogModule
