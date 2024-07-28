@@ -83,14 +83,14 @@ const routes: Routes = [
       ),
   },
   {
-    path: '13', //13
+    path: 'wavesofelliott', //13
     loadChildren: () =>
       import('./thirteen-ru-blog/thirteen-ru-blog.module').then(
         (m) => m.ThirteenRuBlogModule
       ),
   },
   {
-    path: '14', //14
+    path: 'tradingandinvestments', //14
     loadChildren: () =>
       import('./fourteen-ru-blog/fourteen-ru-blog.module').then(
         (m) => m.FourteenRuBlogModule
