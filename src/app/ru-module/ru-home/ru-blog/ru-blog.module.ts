@@ -111,7 +111,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: '17', //17
+    path: 'tradingmyths', //17
     loadChildren: () =>
       import('./seventeen-ru-blog/seventeen-ru-blog.module').then(
         (m) => m.SeventeenRuBlogModule
