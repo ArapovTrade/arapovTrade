@@ -146,7 +146,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: '22', //22
+    path: 'pricepatterns', //22
     loadChildren: () =>
       import('./twenty-two-uk-blog/twenty-two-uk-blog.module').then(
         (m) => m.TwentyTwoUkBlogModule
