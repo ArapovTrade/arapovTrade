@@ -118,7 +118,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: '18', //18
+    path: 'volmarketanalisys', //18
     loadChildren: () =>
       import('./eighteen-uk-blog/eighteen-uk-blog.module').then(
         (m) => m.EighteenUkBlogModule
