@@ -132,7 +132,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: '20', //20
+    path: 'besttimefortrading', //20
     loadChildren: () =>
       import('./twenty-ru-blog/twenty-ru-blog.module').then(
         (m) => m.TwentyRuBlogModule
