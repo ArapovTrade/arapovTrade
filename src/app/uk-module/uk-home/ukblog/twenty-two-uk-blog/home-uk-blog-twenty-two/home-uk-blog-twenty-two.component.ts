@@ -9,11 +9,11 @@ import { Meta, Title } from '@angular/platform-browser';
 export class HomeUkBlogTwentyTwoComponent implements OnInit {
   constructor(private meta: Meta, private titleService: Title) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Цінові фігури в трейдингу - Arapov.trade');
+    this.titleService.setTitle('Цінові фігури у трейдингу - Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
-      content: 'Про цінові фігури в трейдингу',
+      content: 'Про цінові фігури у трейдингу',
     });
   }
 }
