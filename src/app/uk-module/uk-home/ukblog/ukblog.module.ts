@@ -153,7 +153,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: '23', //23
+    path: 'liqudityintrading', //23
     loadChildren: () =>
       import('./twenty-three-uk-blog/twenty-three-uk-blog.module').then(
         (m) => m.TwentyThreeUkBlogModule
