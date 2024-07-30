@@ -125,7 +125,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: '19', //19
+    path: 'smartmoneyeducation', //19
     loadChildren: () =>
       import('./nineteen-ru-blog/nineteen-ru-blog.module').then(
         (m) => m.NineteenRuBlogModule
