@@ -139,7 +139,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: '21', //21
+    path: 'marketmaker', //21
     loadChildren: () =>
       import('./twenty-one-en-blog/twenty-one-en-blog.module').then(
         (m) => m.TwentyOneEnBlogModule
