@@ -167,7 +167,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: '25', //25
+    path: 'simpletradingsystem', //25
     loadChildren: () =>
       import('./twenty-five-uk-blog/twenty-five-uk-blog.module').then(
         (m) => m.TwentyFiveUkBlogModule
