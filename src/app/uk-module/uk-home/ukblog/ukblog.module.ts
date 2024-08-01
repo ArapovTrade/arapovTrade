@@ -174,7 +174,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: '26', //26
+    path: 'ordertypes', //26
     loadChildren: () =>
       import('./twenty-six-uk-blog/twenty-six-uk-blog.module').then(
         (m) => m.TwentySixUkBlogModule
