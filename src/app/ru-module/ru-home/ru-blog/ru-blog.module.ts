@@ -160,7 +160,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: '24', //24
+    path: 'flagfigure', //24
     loadChildren: () =>
       import('./twenty-four-ru-blog/twenty-four-ru-blog.module').then(
         (m) => m.TwentyFourRuBlogModule
