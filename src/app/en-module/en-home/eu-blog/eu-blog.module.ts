@@ -195,7 +195,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: '29', //29
+    path: 'tradingquickstart', //29
     loadChildren: () =>
       import('./twenty-nine-en-blog/twenty-nine-en-blog.module').then(
         (m) => m.TwentyNineEnBlogModule
