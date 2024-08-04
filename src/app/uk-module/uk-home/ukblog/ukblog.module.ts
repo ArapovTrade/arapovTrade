@@ -202,7 +202,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: '30', //30
+    path: 'cryptocurrencybasics', //30
     loadChildren: () =>
       import('./thirty-uk-blog/thirty-uk-blog.module').then(
         (m) => m.ThirtyUkBlogModule
