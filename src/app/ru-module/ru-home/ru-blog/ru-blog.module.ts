@@ -181,7 +181,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: '27', //27
+    path: 'japanesecandle', //27
     loadChildren: () =>
       import('./twenty-seven-ru-blog/twenty-seven-ru-blog.module').then(
         (m) => m.TwentySevenRuBlogModule
