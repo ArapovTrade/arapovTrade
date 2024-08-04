@@ -208,6 +208,76 @@ const routes: Routes = [
         (m) => m.ThirtyRuBlogModule
       ),
   },
+  {
+    path: 'cryptocurrencybasics', //31
+    loadChildren: () =>
+      import('./thirty-one-ru-blog/thirty-one-ru-blog.module').then(
+        (m) => m.ThirtyOneRuBlogModule
+      ),
+  },
+  {
+    path: 'cryptocurrencybasics', //32
+    loadChildren: () =>
+      import('./thirty-two-ru-blog/thirty-two-ru-blog.module').then(
+        (m) => m.ThirtyTwoRuBlogModule
+      ),
+  },
+  {
+    path: 'cryptocurrencybasics', //33
+    loadChildren: () =>
+      import('./thirty-three-ru-blog/thirty-three-ru-blog.module').then(
+        (m) => m.ThirtyThreeRuBlogModule
+      ),
+  },
+  {
+    path: 'cryptocurrencybasics', //34
+    loadChildren: () =>
+      import('./thirty-four-ru-blog/thirty-four-ru-blog.module').then(
+        (m) => m.ThirtyFourRuBlogModule
+      ),
+  },
+  {
+    path: 'cryptocurrencybasics', //35
+    loadChildren: () =>
+      import('./thirty-five-ru-blog/thirty-five-ru-blog.module').then(
+        (m) => m.ThirtyFiveRuBlogModule
+      ),
+  },
+  {
+    path: 'cryptocurrencybasics', //36
+    loadChildren: () =>
+      import('./thirty-six-ru-blog/thirty-six-ru-blog.module').then(
+        (m) => m.ThirtySixRuBlogModule
+      ),
+  },
+  {
+    path: 'cryptocurrencybasics', //37
+    loadChildren: () =>
+      import('./thirty-seven-ru-blog/thirty-seven-ru-blog.module').then(
+        (m) => m.ThirtySevenRuBlogModule
+      ),
+  },
+  {
+    path: 'cryptocurrencybasics', //38
+    loadChildren: () =>
+      import('./thirty-eight-ru-blog/thirty-eight-ru-blog.module').then(
+        (m) => m.ThirtyEightRuBlogModule
+      ),
+  },
+  {
+    path: 'cryptocurrencybasics', //39
+    loadChildren: () =>
+      import('./thirty-nine-ru-blog/thirty-nine-ru-blog.module').then(
+        (m) => m.ThirtyNineRuBlogModule
+      ),
+  },
+  {
+    path: 'cryptocurrencybasics', //40
+    loadChildren: () =>
+      import('./fourty-ru-blog/fourty-ru-blog.module').then(
+        (m) => m.FourtyRuBlogModule
+      ),
+  },
 ];
 
 @NgModule({
