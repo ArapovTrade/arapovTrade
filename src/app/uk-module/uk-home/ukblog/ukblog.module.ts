@@ -237,7 +237,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: '35', //35
+    path: 'tradingbasics', //35
     loadChildren: () =>
       import('./thirty-five-uk-blog/thirty-five-uk-blog.module').then(
         (m) => m.ThirtyFiveUkBlogModule
