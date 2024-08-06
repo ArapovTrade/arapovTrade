@@ -223,7 +223,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: '33', //33
+    path: 'pinbar', //33
     loadChildren: () =>
       import('./thirty-three-uk-blog/thirty-three-uk-blog.module').then(
         (m) => m.ThirtyThreeUkBlogModule
