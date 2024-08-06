@@ -244,7 +244,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: '36', //36
+    path: 'cryptocurrencytrading', //36
     loadChildren: () =>
       import('./thirty-six-uk-blog/thirty-six-uk-blog.module').then(
         (m) => m.ThirtySixUkBlogModule
