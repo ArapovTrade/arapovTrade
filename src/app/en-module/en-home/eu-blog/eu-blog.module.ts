@@ -230,7 +230,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: '34', //34
+    path: 'stoploss', //34
     loadChildren: () =>
       import('./thirty-four-eu-blog/thirty-four-eu-blog.module').then(
         (m) => m.ThirtyFourEuBlogModule
