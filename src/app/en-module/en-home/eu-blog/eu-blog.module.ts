@@ -216,7 +216,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: '32', //32
+    path: 'purchasingcourses', //32
     loadChildren: () =>
       import('./thirty-two-eu-blog/thirty-two-eu-blog.module').then(
         (m) => m.ThirtyTwoEuBlogModule
