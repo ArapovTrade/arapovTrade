@@ -258,7 +258,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: '38', //38
+    path: 'smartmoneyconcept', //38
     loadChildren: () =>
       import('./thirty-eight-ru-blog/thirty-eight-ru-blog.module').then(
         (m) => m.ThirtyEightRuBlogModule

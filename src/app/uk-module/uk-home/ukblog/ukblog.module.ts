@@ -258,21 +258,21 @@ const routes: Routes = [
       ),
   },
   {
-    path: '38', //38
+    path: 'smartmoneyconcept', //38
     loadChildren: () =>
       import('./thirty-eight-uk-blog/thirty-eight-uk-blog.module').then(
         (m) => m.ThirtyEightUkBlogModule
       ),
   },
   {
-    path: '40', //39
+    path: '39', //39
     loadChildren: () =>
       import('./thirty-nine-uk-blog/thirty-nine-uk-blog.module').then(
         (m) => m.ThirtyNineUkBlogModule
       ),
   },
   {
-    path: '41', //40
+    path: '40', //40
     loadChildren: () =>
       import('./fourty-uk-blog/fourty-uk-blog.module').then(
         (m) => m.FourtyUkBlogModule
