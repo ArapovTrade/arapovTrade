@@ -251,7 +251,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: '37', //37
+    path: 'drawdowns', //37
     loadChildren: () =>
       import('./thirty-seven-ru-blog/thirty-seven-ru-blog.module').then(
         (m) => m.ThirtySevenRuBlogModule
