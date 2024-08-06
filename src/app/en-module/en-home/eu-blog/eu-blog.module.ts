@@ -209,70 +209,70 @@ const routes: Routes = [
       ),
   },
   {
-    path: 'cryptocurrencybasics', //31
+    path: '31', //31
     loadChildren: () =>
       import('./thirty-one-eu-blog/thirty-one-eu-blog.module').then(
         (m) => m.ThirtyOneEuBlogModule
       ),
   },
   {
-    path: 'cryptocurrencybasics', //32
+    path: '32', //32
     loadChildren: () =>
       import('./thirty-two-eu-blog/thirty-two-eu-blog.module').then(
         (m) => m.ThirtyTwoEuBlogModule
       ),
   },
   {
-    path: 'cryptocurrencybasics', //33
+    path: '33', //33
     loadChildren: () =>
       import('./thirty-three-eu-blog/thirty-three-eu-blog.module').then(
         (m) => m.ThirtyThreeEuBlogModule
       ),
   },
   {
-    path: 'cryptocurrencybasics', //34
+    path: '34', //34
     loadChildren: () =>
       import('./thirty-four-eu-blog/thirty-four-eu-blog.module').then(
         (m) => m.ThirtyFourEuBlogModule
       ),
   },
   {
-    path: 'cryptocurrencybasics', //35
+    path: '35', //35
     loadChildren: () =>
       import('./thirty-five-eu-blog/thirty-five-eu-blog.module').then(
         (m) => m.ThirtyFiveEuBlogModule
       ),
   },
   {
-    path: 'cryptocurrencybasics', //36
+    path: '36', //36
     loadChildren: () =>
       import('./thirty-six-eu-blog/thirty-six-eu-blog.module').then(
         (m) => m.ThirtySixEuBlogModule
       ),
   },
   {
-    path: 'cryptocurrencybasics', //37
+    path: '37', //37
     loadChildren: () =>
       import('./thirty-seven-eu-blog/thirty-seven-eu-blog.module').then(
         (m) => m.ThirtySevenEuBlogModule
       ),
   },
   {
-    path: 'cryptocurrencybasics', //38
+    path: '38', //38
     loadChildren: () =>
       import('./thirty-eight-eu-blog/thirty-eight-eu-blog.module').then(
         (m) => m.ThirtyEightEuBlogModule
       ),
   },
   {
-    path: 'cryptocurrencybasics', //39
+    path: '39', //39
     loadChildren: () =>
       import('./thirty-nine-eu-blog/thirty-nine-eu-blog.module').then(
         (m) => m.ThirtyNineEuBlogModule
       ),
   },
   {
-    path: 'cryptocurrencybasics', //40
+    path: '40', //40
     loadChildren: () =>
       import('./fourty-eu-blog/fourty-eu-blog.module').then(
         (m) => m.FourtyEuBlogModule
