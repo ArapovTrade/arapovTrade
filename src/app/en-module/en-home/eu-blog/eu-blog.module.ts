@@ -209,7 +209,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: '31', //31
+    path: 'levelofsupport', //31
     loadChildren: () =>
       import('./thirty-one-eu-blog/thirty-one-eu-blog.module').then(
         (m) => m.ThirtyOneEuBlogModule
