@@ -300,7 +300,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: '44', //44
+    path: 'basicsoftrading', //44
     loadChildren: () =>
       import('./fourty-four-uk-blog/fourty-four-uk-blog.module').then(
         (m) => m.FourtyFourUkBlogModule
