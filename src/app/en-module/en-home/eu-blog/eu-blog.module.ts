@@ -279,7 +279,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: '41', //41
+    path: 'successfultrading', //41
     loadChildren: () =>
       import('./fourty-one-en-blog/fourty-one-en-blog.module').then(
         (m) => m.FourtyOneEnBlogModule
