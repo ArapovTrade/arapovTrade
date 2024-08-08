@@ -272,7 +272,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: '40', //40
+    path: 'difficulttrading', //40
     loadChildren: () =>
       import('./fourty-eu-blog/fourty-eu-blog.module').then(
         (m) => m.FourtyEuBlogModule
