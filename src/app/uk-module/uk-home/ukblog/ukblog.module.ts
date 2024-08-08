@@ -307,7 +307,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: '45', //45
+    path: 'movingaverages', //45
     loadChildren: () =>
       import('./fourty-five-uk-blog/fourty-five-uk-blog.module').then(
         (m) => m.FourtyFiveUkBlogModule
