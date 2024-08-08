@@ -328,7 +328,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: '48', //48
+    path: 'selfstudying', //48
     loadChildren: () =>
       import('./fourty-eight-en-blog/fourty-eight-en-blog.module').then(
         (m) => m.FourtyEightEnBlogModule
