@@ -293,7 +293,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: '43', //43
+    path: 'smartmoneystrategyforbanks', //43
     loadChildren: () =>
       import('./fourty-three-ru-blog/fourty-three-ru-blog.module').then(
         (m) => m.FourtyThreeRuBlogModule
