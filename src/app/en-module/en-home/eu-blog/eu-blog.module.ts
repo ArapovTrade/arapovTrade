@@ -314,7 +314,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: '46', //46
+    path: 'freeeducation', //46
     loadChildren: () =>
       import('./fourty-six-en-blog/fourty-six-en-blog.module').then(
         (m) => m.FourtySixEnBlogModule
