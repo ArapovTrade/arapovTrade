@@ -286,7 +286,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: '42', //42
+    path: 'cryptocurrencyrisks', //42
     loadChildren: () =>
       import('./fourty-two-ru-blog/fourty-two-ru-blog.module').then(
         (m) => m.FourtyTwoRuBlogModule
