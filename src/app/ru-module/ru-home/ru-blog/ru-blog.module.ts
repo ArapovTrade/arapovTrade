@@ -321,7 +321,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: '47', //47
+    path: 'fundamentalanalysis', //47
     loadChildren: () =>
       import('./fourty-seven-ru-blog/fourty-seven-ru-blog.module').then(
         (m) => m.FourtySevenRuBlogModule
