@@ -335,7 +335,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: '49', //49
+    path: 'choosingtradingplatform', //49
     loadChildren: () =>
       import('./fourty-nine-en-blog/fourty-nine-en-blog.module').then(
         (m) => m.FourtyNineEnBlogModule
