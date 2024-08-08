@@ -265,7 +265,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: '39', //39
+    path: 'volumetricmarketanalysis', //39
     loadChildren: () =>
       import('./thirty-nine-uk-blog/thirty-nine-uk-blog.module').then(
         (m) => m.ThirtyNineUkBlogModule
