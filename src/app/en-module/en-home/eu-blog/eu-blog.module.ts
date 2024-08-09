@@ -412,7 +412,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: '60', //60
+    path: 'tradingvsoptions', //60
     loadChildren: () =>
       import('./sixty-eu-blog/sixty-eu-blog.module').then(
         (m) => m.SixtyEuBlogModule
