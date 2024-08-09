@@ -384,7 +384,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: '56', //56
+    path: 'benefitsoftradingbooks', //56
     loadChildren: () =>
       import('./fifty-six-uk-blog/fifty-six-uk-blog.module').then(
         (m) => m.FiftySixUkBlogModule
