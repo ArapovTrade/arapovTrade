@@ -10,13 +10,12 @@ export class HomeUkBlogFourtyNineComponent implements OnInit {
   constructor(private meta: Meta, private titleService: Title) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Як вибрати торгову платформу для трейдингу - Arapov.trade'
+      'Як обрати торгову платформу для трейдингу - Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
-      content: 'Як вибрати торгову платформу для трейдингу',
+      content: 'Як обрати торгову платформу для трейдингу',
     });
   }
 }
-

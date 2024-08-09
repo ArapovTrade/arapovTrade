@@ -342,7 +342,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: '50', //50
+    path: 'algorithmicorders', //50
     loadChildren: () =>
       import('./fifty-uk-blog/fifty-uk-blog.module').then(
         (m) => m.FiftyUkBlogModule
