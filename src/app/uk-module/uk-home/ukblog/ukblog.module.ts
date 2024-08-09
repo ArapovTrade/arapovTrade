@@ -405,7 +405,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: '59', //59
+    path: 'levelbreakoutstrategy', //59
     loadChildren: () =>
       import('./fifty-nine-uk-blog/fifty-nine-uk-blog.module').then(
         (m) => m.FiftyNineUkBlogModule
