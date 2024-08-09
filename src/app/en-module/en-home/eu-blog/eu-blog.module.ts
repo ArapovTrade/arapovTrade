@@ -391,7 +391,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: '57', //57
+    path: 'tradingindicators', //57
     loadChildren: () =>
       import('./fifty-seven-eu-blog/fifty-seven-eu-blog.module').then(
         (m) => m.FiftySevenEuBlogModule
