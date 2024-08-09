@@ -363,7 +363,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: '53', //53
+    path: 'orderblockintrading', //53
     loadChildren: () =>
       import('./fifty-three-ru-blog/fifty-three-ru-blog.module').then(
         (m) => m.FiftyThreeRuBlogModule
