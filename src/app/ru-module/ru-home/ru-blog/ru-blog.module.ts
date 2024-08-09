@@ -398,7 +398,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: '58', //58
+    path: 'averagingintrading', //58
     loadChildren: () =>
       import('./fifty-eight-ru-blog/fifty-eight-ru-blog.module').then(
         (m) => m.FiftyEightRuBlogModule
