@@ -348,6 +348,76 @@ const routes: Routes = [
         (m) => m.FiftyRuBlogModule
       ),
   },
+  {
+    path: '51', //51
+    loadChildren: () =>
+      import('./fifty-one-ru-blog/fifty-one-ru-blog.module').then(
+        (m) => m.FiftyOneRuBlogModule
+      ),
+  },
+  {
+    path: '52', //52
+    loadChildren: () =>
+      import('./fifty-two-ru-blog/fifty-two-ru-blog.module').then(
+        (m) => m.FiftyTwoRuBlogModule
+      ),
+  },
+  {
+    path: '53', //53
+    loadChildren: () =>
+      import('./fifty-three-ru-blog/fifty-three-ru-blog.module').then(
+        (m) => m.FiftyThreeRuBlogModule
+      ),
+  },
+  {
+    path: '54', //54
+    loadChildren: () =>
+      import('./fifty-four-ru-blog/fifty-four-ru-blog.module').then(
+        (m) => m.FiftyFourRuBlogModule
+      ),
+  },
+  {
+    path: '55', //55
+    loadChildren: () =>
+      import('./fifty-five-ru-blog/fifty-five-ru-blog.module').then(
+        (m) => m.FiftyFiveRuBlogModule
+      ),
+  },
+  {
+    path: '56', //56
+    loadChildren: () =>
+      import('./fifty-six-ru-blog/fifty-six-ru-blog.module').then(
+        (m) => m.FiftySixRuBlogModule
+      ),
+  },
+  {
+    path: '57', //57
+    loadChildren: () =>
+      import('./fifty-seven-ru-blog/fifty-seven-ru-blog.module').then(
+        (m) => m.FiftySevenRuBlogModule
+      ),
+  },
+  {
+    path: '58', //58
+    loadChildren: () =>
+      import('./fifty-eight-ru-blog/fifty-eight-ru-blog.module').then(
+        (m) => m.FiftyEightRuBlogModule
+      ),
+  },
+  {
+    path: '59', //59
+    loadChildren: () =>
+      import('./fifty-nine-ru-blog/fifty-nine-ru-blog.module').then(
+        (m) => m.FiftyNineRuBlogModule
+      ),
+  },
+  {
+    path: '60', //60
+    loadChildren: () =>
+      import('./sixty-ru-blog/sixty-ru-blog.module').then(
+        (m) => m.SixtyRuBlogModule
+      ),
+  },
 ];
 
 @NgModule({
