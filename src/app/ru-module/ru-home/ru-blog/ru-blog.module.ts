@@ -349,7 +349,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: '51', //51
+    path: 'candlestickpatterns', //51
     loadChildren: () =>
       import('./fifty-one-ru-blog/fifty-one-ru-blog.module').then(
         (m) => m.FiftyOneRuBlogModule
