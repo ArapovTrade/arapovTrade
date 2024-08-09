@@ -370,7 +370,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: '54', //54
+    path: 'featuresofcrypto', //54
     loadChildren: () =>
       import('./fifty-four-eu-blog/fifty-four-eu-blog.module').then(
         (m) => m.FiftyFourEuBlogModule
