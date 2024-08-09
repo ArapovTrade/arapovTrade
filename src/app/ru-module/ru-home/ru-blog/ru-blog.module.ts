@@ -377,7 +377,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: '55', //55
+    path: 'scalpingintrading', //55
     loadChildren: () =>
       import('./fifty-five-ru-blog/fifty-five-ru-blog.module').then(
         (m) => m.FiftyFiveRuBlogModule
