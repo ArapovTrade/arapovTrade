@@ -356,7 +356,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: '52', //52
+    path: 'anatomyofmarkettrends', //52
     loadChildren: () =>
       import('./fifty-two-eu-blog/fifty-two-eu-blog.module').then(
         (m) => m.FiftyTwoEuBlogModule
