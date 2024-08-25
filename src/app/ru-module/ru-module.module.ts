@@ -4,6 +4,7 @@ import { RuHomeComponent } from './ru-home/ru-home.component';
 import { Routes } from '@angular/router';
 import { RouterModule } from '@angular/router';
 import { RuHomePageComponent } from './ru-home/ru-home-page/ru-home-page.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes = [
   // { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -50,6 +51,11 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [RuHomeComponent, RuHomePageComponent],
-  imports: [CommonModule, RouterModule.forChild(routes)],
+  imports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule.forChild(routes),
+  ],
 })
 export class RuModuleModule {}

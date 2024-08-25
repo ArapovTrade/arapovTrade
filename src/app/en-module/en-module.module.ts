@@ -4,6 +4,7 @@ import { EnHomeComponent } from './en-home/en-home.component';
 import { Routes } from '@angular/router';
 import { RouterModule } from '@angular/router';
 import { HomePageComponent } from './en-home/home-page/home-page.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes = [
   // { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -46,6 +47,11 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [EnHomeComponent, HomePageComponent],
-  imports: [CommonModule, RouterModule.forChild(routes)],
+  imports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule.forChild(routes),
+  ],
 })
 export class EnModuleModule {}

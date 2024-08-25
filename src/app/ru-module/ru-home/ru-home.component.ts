@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { NavigationEnd, Router } from '@angular/router';
+import { FormGroup } from '@angular/forms';
+import { FormControl, Validators } from '@angular/forms';
+import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
 
 @Component({
   selector: 'app-ru-home',
@@ -22,7 +25,15 @@ export class RuHomeComponent implements OnInit {
       }
     });
   }
+
+  registForm: any;
+
   ngOnInit(): void {
+    this.registForm = new FormGroup({
+      userName: new FormControl('', Validators.required),
+      userEmail: new FormControl(null, [Validators.email, Validators.required]),
+      userMessage: new FormControl('', Validators.required),
+    });
     this.titleService.setTitle(
       'Курсы трейдинга Авторское обучение трейдингу  '
     );
@@ -46,5 +57,51 @@ export class RuHomeComponent implements OnInit {
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  //popup
+  flag: boolean = false;
+  flagTrue: boolean = true;
+  popuptoggle() {
+    this.flag = !this.flag;
+    this.flagTrue = !this.flagTrue;
+    // this.registForm.reset();
+  }
+
+  onSubmit(registForm: FormGroup) {
+    if (
+      registForm.value.userName &&
+      registForm.value.userEmail &&
+      registForm.value.userMessage
+    ) {
+      const templateParams = {
+        userName: registForm.value.userName,
+        userEmail: registForm.value.userEmail,
+        userMessage: registForm.value.userMessage,
+      };
+
+      emailjs
+        .send(
+          'service_qomgf4f',
+          'template_jif62uq',
+          templateParams,
+          'zvCuOnVqiMJMycGQ0'
+        )
+        .then(
+          (result: EmailJSResponseStatus) => {
+            console.log(result.text);
+            this.registForm.reset(); // Сброс формы после успешной отправки
+          },
+          (error) => {
+            console.error(error.text);
+          }
+        );
+    }
+  }
+  close() {
+    this.registForm.reset();
+
+    this.flag = true;
+    this.flagTrue = false;
   }
 }
