@@ -68,10 +68,10 @@ export class UkHomeComponent implements OnInit {
 
       emailjs
         .send(
-          'service_xt4hw6v',
+          'service_qomgf4f',
           'template_jif62uq',
           templateParams,
-          'SLmwh30xAbHlvU6Ix'
+          'zvCuOnVqiMJMycGQ0'
         )
         .then(
           (result: EmailJSResponseStatus) => {
