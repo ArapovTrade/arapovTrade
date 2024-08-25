@@ -1,13 +1,16 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
+import { FormControl, Validators } from '@angular/forms';
 import { NavigationEnd, Router } from '@angular/router';
+
+import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
 
 @Component({
   selector: 'app-uk-home',
   templateUrl: './uk-home.component.html',
   styleUrl: './uk-home.component.scss',
 })
-export class UkHomeComponent {
+export class UkHomeComponent implements OnInit {
   constructor(private router: Router) {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
@@ -31,5 +34,60 @@ export class UkHomeComponent {
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  //popup
+  flag: boolean = false;
+  flagTrue: boolean = true;
+  popuptoggle() {
+    this.flag = !this.flag;
+    this.flagTrue = !this.flagTrue;
+    // this.registForm.reset();
+  }
+
+  registForm: any;
+  ngOnInit() {
+    this.registForm = new FormGroup({
+      userName: new FormControl('', Validators.required),
+      userEmail: new FormControl(null, [Validators.email, Validators.required]),
+      userMessage: new FormControl('', Validators.required),
+    });
+  }
+
+  onSubmit(registForm: FormGroup) {
+    if (
+      registForm.value.userName &&
+      registForm.value.userEmail &&
+      registForm.value.userMessage
+    ) {
+      const templateParams = {
+        userName: registForm.value.userName,
+        userEmail: registForm.value.userEmail,
+        userMessage: registForm.value.userMessage,
+      };
+
+      emailjs
+        .send(
+          'service_xt4hw6v',
+          'template_jif62uq',
+          templateParams,
+          'SLmwh30xAbHlvU6Ix'
+        )
+        .then(
+          (result: EmailJSResponseStatus) => {
+            console.log(result.text);
+            this.registForm.reset(); // Сброс формы после успешной отправки
+          },
+          (error) => {
+            console.error(error.text);
+          }
+        );
+    }
+  }
+  close() {
+    this.registForm.reset();
+
+    this.flag = true;
+    this.flagTrue = false;
   }
 }

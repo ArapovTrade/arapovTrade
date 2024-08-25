@@ -13,6 +13,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UkModuleModule } from './uk-module/uk-module.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent, PageNotFoundComponent],
@@ -23,6 +24,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     MatFormFieldModule,
     MatSelectModule,
     UkModuleModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [provideClientHydration(), provideAnimationsAsync(), Title, Meta],
   bootstrap: [AppComponent],
