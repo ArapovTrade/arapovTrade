@@ -37,10 +37,12 @@
             <div class="groups-block">
 
                 <div *ngFor="let group of enGroups" class="inpFlex">
-                    <input type="checkbox" [checked]="this.grr.includes(group)" [value]="group"
-                        (change)="onGroupChange($event)" [class.checked-class]="checkedGroup.includes(group)" /> {{
-                    group
-                    }}
+                    <label>
+                        <input type="checkbox" [checked]="this.grr.includes(group)" [value]="group"
+                            (change)="onGroupChange($event)" [class.checked-class]="checkedGroup.includes(group)" /> {{
+                        group
+                        }}
+                    </label>
                 </div>
             </div>
             <div class="section-content">

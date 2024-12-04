@@ -52,14 +52,11 @@
     .nav900 {
 
         position: fixed;
-        top: 0;
-        // right: 300px;
-
-        display: flex;
-        width: 950px;
-
-        align-content: stretch;
-        justify-content: flex-end;
+            top: 0;
+            left: 400px;
+            display: block;
+            width: 700px;
+            margin: 0 auto;
 
         ul {
             display: flex;
