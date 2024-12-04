@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { MatPaginatorIntl } from '@angular/material/paginator';
+import { MatPaginator, MatPaginatorIntl } from '@angular/material/paginator';
 import { NavigationEnd, Router } from '@angular/router';
 import { Meta, Title } from '@angular/platform-browser';
 import { ArticlesService } from '../../../../servises/articles.service';
@@ -12,6 +12,7 @@ import { PageEvent } from '@angular/material/paginator';
 })
 export class UkBlogHomepageComponent implements OnInit {
   @ViewChild('scrollToTop') scrollToTop!: ElementRef;
+  @ViewChild(MatPaginator) paginatorr!: MatPaginator;
   constructor(
     private artickleServ: ArticlesService,
     private router: Router,
@@ -64,6 +65,8 @@ export class UkBlogHomepageComponent implements OnInit {
       this.filteredArticles = this.artickleServ.ukrainiansArticles();
       this.updatePaginatedArticles();
     }
+
+    this.paginatorr.firstPage();
   }
   paginatedArticles = []; // Статьи для отображения на текущей странице
   currentPage = 0;
