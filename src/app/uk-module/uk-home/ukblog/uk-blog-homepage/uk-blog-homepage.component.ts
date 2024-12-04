@@ -67,7 +67,7 @@ export class UkBlogHomepageComponent implements OnInit {
   }
   paginatedArticles = []; // Статьи для отображения на текущей странице
   currentPage = 0;
-  pageSize = 9;
+  pageSize = 106;
   onPageChange(event: PageEvent) {
     this.currentPage = event.pageIndex;
     this.pageSize = event.pageSize;
