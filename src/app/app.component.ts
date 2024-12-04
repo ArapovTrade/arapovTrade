@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { ActivatedRoute, Router } from '@angular/router';
+import { ArticlesService } from './servises/articles.service';
 
 @Component({
   selector: 'app-root',
@@ -18,7 +19,11 @@ export class AppComponent {
     this.dropdownOpen = true;
   }
 
-  constructor(private router: Router, private route: ActivatedRoute) {}
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    private artickle: ArticlesService
+  ) {}
 
   changeLanguage(lang: string) {
     // Получение текущего пути и параметров маршрута
@@ -38,7 +43,7 @@ export class AppComponent {
 
     // Построение нового пути
     const newPath = pathSegments.join('/');
-
+    this.artickle.selectedGroups = [];
     // Перенаправление на новый путь
     this.router.navigateByUrl(newPath).then(() => {
       // После перехода выполнить прокрутку страницы в самый верх

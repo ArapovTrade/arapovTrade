@@ -1,25 +1,21 @@
-<section class="" id="hero">
+<section class="hero-section" id="hero">
     <div class="container">
         <div class="section-i">
-            <div class="section-content blog-content">
+            <div class="section-content">
                 <div class="hero-content">
+                    <h1 class="orange h11">
+                        Бесплатное обучение трейдингу
+                    </h1>
+                    <p>Бесплатные обучающие материалы , подробные <a class="orange dec"
+                            href="https://youtube.com/playlist?list=PLdXB70rGX5_zqH_X84Q_z0wj5pQYhdqfk&si=Hquku7z09eOtp4fp">видеоуроки</a>
+                        и статьи - собранные в полноценные
+                        курсы по ключевым темам
+                        трейдинга для самостоятельного обучения от Игоря Арапова.
+                    </p>
 
 
-
-                    <div class="blog-text">
-                        <h1 class="orange h11">
-                            Бесплатное обучение трейдингу
-                        </h1>
-                        <p>Бесплатные обучающие материалы , подробные <a class="orange dec"
-                                href="https://youtube.com/playlist?list=PLdXB70rGX5_zqH_X84Q_z0wj5pQYhdqfk&si=Hquku7z09eOtp4fp">видеоуроки</a>
-                            и статьи - собранные в полноценные
-                            курсы по ключевым темам
-                            трейдинга для самостоятельного обучения от Игоря Арапова.
-                        </p>
-                    </div>
                 </div>
                 <div class="hero-image-place  m-right">
-
                     <picture class="hero-image">
                         <source srcset="/assets/img/content/sticker.webp" media="(min-width: 600px)">
                         <img src="/assets/img/content/sticker.webp" alt="author">
@@ -30,6 +26,73 @@
         </div>
     </div>
 </section>
+
+
+
+<section class="separator" #scrollToTop>
+    <div class="line"></div>
+</section>
+
+<section class="" id="hero">
+    <div class="container black">
+        <div class="section-i padd3">
+            <div class="groups-block">
+
+                <div *ngFor="let group of rusGroups" class="inpFlex">
+                    <input type="checkbox" [checked]="this.grr.includes(group)" [value]="group"
+                        (change)="onGroupChange($event)" [class.checked-class]="checkedGroup.includes(group)" /> {{
+                    group
+                    }}
+                </div>
+            </div>
+            <div class="section-content">
+                <div class="hero-content flex">
+
+
+
+                    <ng-template #articleTemplate let-article>
+                        <div class="article">
+                            <div class="programm__list">
+                                <div class="programm__item">
+                                    <span class="programm__close"></span>
+                                    <div class="programm__in box">
+                                        <a routerLink="{{article.linkUkr}}">
+                                            <img class="article-img" src="{{article.imgUkr}}" alt="requotes">
+                                        </a>
+                                        <div class="programm__title orange">
+                                            <a routerLink="{{article.linkUkr}}" class="orange">
+                                                <h3>{{article.titleRus}}</h3>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-template>
+
+                    <div *ngFor="let article of paginatedArticles">
+
+                        <ng-container *ngTemplateOutlet="articleTemplate; context: { $implicit: article }">
+
+                        </ng-container>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- <mat-paginator [length]="filteredArticles.length" [pageSize]="pageSize" [hidePageSize]="true"
+                aria-label="Select page" (page)="onPageChange($event)">>
+            </mat-paginator> -->
+            <mat-paginator [length]="filteredArticles.length" [pageSize]="pageSize"
+                [pageSizeOptions]="[6, 12, 18, 24 ,100 ]" aria-label="Select page" (page)="onPageChange($event)">>
+            </mat-paginator>
+        </div>
+    </div>
+</section>
+
+
+<!-- 
 <section class="separator">
     <div class="line"></div>
 </section>
@@ -39,46 +102,8 @@
             <div class="section-content">
                 <div class="hero-content flex">
 
-                    <div class="programm__list">
-                        <div class="programm__item">
-
-                            <div class="programm__in">
-                                <span class="programm__close"></span>
-                                <div>
-                                    <a routerLink="blogmarketphases">
-                                        <img class="article-img" src="/assets/img/content/blogmarketphases44.jpg"
-                                            alt="requotes">
-                                    </a>
-                                </div>
-                                <div class="programm__title orange">
-                                    <a routerLink="blogmarketphases" class="orange">
-                                        <h3>Фазы рынка в трейдинге</h3>
-
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="programm__list">
-                        <div class="programm__item">
-
-                            <div class="programm__in">
-                                <span class="programm__close"></span>
-                                <div>
-                                    <a routerLink="divergenceonindecators">
-                                        <img class="article-img" src="/assets/img/content/divergenceonindecators44.png"
-                                            alt="requotes">
-                                    </a>
-                                </div>
-                                <div class="programm__title orange">
-                                    <a routerLink="divergenceonindecators" class="orange">
-                                        <h3>Дивергенция на индикаторах</h3>
-
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                     
+                     
                     <div class="programm__list">
                         <div class="programm__item">
 
@@ -1252,4 +1277,4 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->

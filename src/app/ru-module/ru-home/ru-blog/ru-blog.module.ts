@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RuBlogHomepageComponent } from './ru-blog-homepage/ru-blog-homepage.component';
 import { RouterModule } from '@angular/router';
 import { Routes } from '@angular/router';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 const routes: Routes = [
   { path: '', component: RuBlogHomepageComponent },
@@ -418,10 +419,334 @@ const routes: Routes = [
         (m) => m.SixtyRuBlogModule
       ),
   },
+  {
+    path: 'adviceforbeginners',
+    loadChildren: () =>
+      import('../ru-trading/one-ru-article/one-ru-article.module').then(
+        (m) => m.OneRUArticleModule
+      ),
+  },
+
+  {
+    path: 'marketbasics',
+    loadChildren: () =>
+      import('../ru-trading/two-ru-article/two-ru-article.module').then(
+        (m) => m.TwoRuArticleModule
+      ),
+  },
+  {
+    path: 'exchange',
+    loadChildren: () =>
+      import('../ru-trading/three-ru-article/three-ru-article.module').then(
+        (m) => m.ThreeRuArticleModule
+      ),
+  },
+  {
+    path: 'exchangemarket',
+    loadChildren: () =>
+      import('../ru-trading/four-ru-article/four-ru-article.module').then(
+        (m) => m.FourRuArticleModule
+      ),
+  },
+  {
+    path: 'derivatives',
+    loadChildren: () =>
+      import('../ru-trading/five-ru-article/five-ru-article.module').then(
+        (m) => m.FiveRuArticleModule
+      ),
+  },
+  {
+    path: 'exchangeparticipants',
+    loadChildren: () =>
+      import('../ru-trading/six-ru-article/six-ru-article.module').then(
+        (m) => m.SixRuArticleModule
+      ),
+  },
+  {
+    path: 'forexmarket',
+    loadChildren: () =>
+      import('../ru-trading/seven-ru-article/seven-ru-article.module').then(
+        (m) => m.SevenRuArticleModule
+      ),
+  },
+  {
+    path: 'currenciesandquotes',
+    loadChildren: () =>
+      import('../ru-trading/eight-ru-article/eight-ru-article.module').then(
+        (m) => m.EightRuArticleModule
+      ),
+  },
+  {
+    path: 'formationexchange',
+    loadChildren: () =>
+      import('../ru-trading/nine-ru-article/nine-ru-article.module').then(
+        (m) => m.NineRuArticleModule
+      ),
+  },
+
+  {
+    path: 'currencyposition',
+    loadChildren: () =>
+      import('../ru-trading/ten-ru-artickle/ten-ru-artickle.module').then(
+        (m) => m.TenRuArtickleModule
+      ),
+  },
+  {
+    path: 'forexvaluedate',
+    loadChildren: () =>
+      import('../ru-trading/eleven-ru-artickle/eleven-ru-artickle.module').then(
+        (m) => m.ElevenRuArtickleModule
+      ),
+  },
+  {
+    path: 'howtomakemoney',
+    loadChildren: () =>
+      import('../ru-trading/twelve-ru-artickle/twelve-ru-artickle.module').then(
+        (m) => m.TwelveRuArtickleModule
+      ),
+  },
+  {
+    path: 'riskcurrencyexchange',
+    loadChildren: () =>
+      import(
+        '../ru-trading/thirteen-ru-artickle/thirteen-ru-artickle.module'
+      ).then((m) => m.ThirteenRuArtickleModule),
+  },
+  {
+    path: 'forexleveragerisk',
+    loadChildren: () =>
+      import(
+        '../ru-trading/fourteen-ru-artickle/fourteen-ru-artickle.module'
+      ).then((m) => m.FourteenRuArtickleModule),
+  },
+  {
+    path: 'majorbankfrs',
+    loadChildren: () =>
+      import(
+        '../ru-trading/fifteen-ru-artickle/fifteen-ru-artickle.module'
+      ).then((m) => m.FifteenRuArtickleModule),
+  },
+  {
+    path: 'behavioralrisks',
+    loadChildren: () =>
+      import(
+        '../ru-trading/sixteen-ru-artickle/sixteen-ru-artickle.module'
+      ).then((m) => m.SixteenRuArtickleModule),
+  },
+  {
+    path: 'nonmarketrisks',
+    loadChildren: () =>
+      import(
+        '../ru-trading/seventeen-ru-artickle/seventeen-ru-artickle.module'
+      ).then((m) => m.SeventeenRuArtickleModule),
+  },
+  {
+    path: 'psychorisks',
+    loadChildren: () =>
+      import(
+        '../ru-trading/eighteen-ru-artickle/eighteen-ru-artickle.module'
+      ).then((m) => m.EighteenRuArtickleModule),
+  },
+  {
+    path: 'howtotradeonforex',
+    loadChildren: () =>
+      import(
+        '../ru-trading/nineteen-ru-artickle/nineteen-ru-artickle.module'
+      ).then((m) => m.NineteenRuArtickleModule),
+  },
+  {
+    path: 'marketanalysis',
+    loadChildren: () =>
+      import('../ru-trading/twenty-ru-artickle/twenty-ru-artickle.module').then(
+        (m) => m.TwentyRuArtickleModule
+      ),
+  },
+  {
+    path: 'marketanalysisforex',
+    loadChildren: () =>
+      import(
+        '../ru-trading/twenty-one-ru-artickle/twenty-one-ru-artickle.module'
+      ).then((m) => m.TwentyOneRuArtickleModule),
+  },
+  {
+    path: 'econimicfactors',
+    loadChildren: () =>
+      import(
+        '../ru-trading/twenty-two-ru-artickle/twenty-two-ru-artickle.module'
+      ).then((m) => m.TwentyTwoRuArtickleModule),
+  },
+  {
+    path: 'worldstockindicates',
+    loadChildren: () =>
+      import(
+        '../ru-trading/twenty-three-ru-artickle/twenty-three-ru-artickle.module'
+      ).then((m) => m.TwentyThreeRuArtickleModule),
+  },
+  {
+    path: 'economicstate',
+    loadChildren: () =>
+      import(
+        '../ru-trading/twenty-four-ru-artickle/twenty-four-ru-artickle.module'
+      ).then((m) => m.TwentyFourRuArtickleModule),
+  },
+  {
+    path: 'keyeconomicgrowth',
+    loadChildren: () =>
+      import(
+        '../ru-trading/twenty-five-ru-artickle/twenty-five-ru-artickle.module'
+      ).then((m) => m.TwentyFiveRuArtickleModule),
+  },
+  {
+    path: 'technicalanalysis',
+    loadChildren: () =>
+      import(
+        '../ru-trading/twenty-six-ru-artickle/twenty-six-ru-artickle.module'
+      ).then((m) => m.TwentySixRuArtickleModule),
+  },
+  {
+    path: 'technicalmarketcharts',
+    loadChildren: () =>
+      import(
+        '../ru-trading/twenty-seven-ru-artickle/twenty-seven-ru-artickle.module'
+      ).then((m) => m.TwentySevenRuArtickleModule),
+  },
+  {
+    path: 'keypricepattern',
+    loadChildren: () =>
+      import(
+        '../ru-trading/twenty-eight-ru-artickle/twenty-eight-ru-artickle.module'
+      ).then((m) => m.TwentyEightRuArtickleModule),
+  },
+  {
+    path: 'volumemarketanalysis',
+    loadChildren: () =>
+      import(
+        '../ru-trading/twenty-nine-ru-artickle/twenty-nine-ru-artickle.module'
+      ).then((m) => m.TwentyNineRuArtickleModule),
+  },
+  {
+    path: 'typesoforders',
+    loadChildren: () =>
+      import('../ru-trading/thirty-ru-artickle/thirty-ru-artickle.module').then(
+        (m) => m.ThirtyRuArtickleModule
+      ),
+  },
+  {
+    path: 'marketorder',
+    loadChildren: () =>
+      import(
+        '../ru-trading/thirty-one-ru-artickle/thirty-one-ru-artickle.module'
+      ).then((m) => m.ThirtyOneRuArtickleModule),
+  },
+  {
+    path: 'stoporder',
+    loadChildren: () =>
+      import(
+        '../ru-trading/thirty-two-ru-artickle/thirty-two-ru-artickle.module'
+      ).then((m) => m.ThirtyTwoRuArtickleModule),
+  },
+  {
+    path: 'requotes',
+    loadChildren: () =>
+      import(
+        '../ru-trading/thirty-three-ru-artickle/thirty-three-ru-artickle.module'
+      ).then((m) => m.ThirtyThreeRuArtickleModule),
+  },
+  {
+    path: 'stoplimitorder',
+    loadChildren: () =>
+      import(
+        '../ru-trading/thirty-four-ru-artickle/thirty-four-ru-artickle.module'
+      ).then((m) => m.ThirtyFourRuArtickleModule),
+  },
+  {
+    path: 'tradingsystem',
+    loadChildren: () =>
+      import(
+        '../ru-trading/thirty-five-ru-artickle/thirty-five-ru-artickle.module'
+      ).then((m) => m.ThirtyFiveRuArtickleModule),
+  },
+  {
+    path: 'tradingsystemsseparation',
+    loadChildren: () =>
+      import(
+        '../ru-trading/thirty-six-ru-artickle/thirty-six-ru-artickle.module'
+      ).then((m) => m.ThirtySixRuArtickleModule),
+  },
+  {
+    path: 'tradingsystemautomation',
+    loadChildren: () =>
+      import(
+        '../ru-trading/thirty-seven-ru-artickle/thirty-seven-ru-artickle.module'
+      ).then((m) => m.ThirtySevenRuArtickleModule),
+  },
+  {
+    path: 'capitalmanagement',
+    loadChildren: () =>
+      import(
+        '../ru-trading/thirty-eight-ru-artickle/thirty-eight-ru-artickle.module'
+      ).then((m) => m.ThirtyEightRuArtickleModule),
+  },
+  {
+    path: 'profitandlossratio',
+    loadChildren: () =>
+      import(
+        '../ru-trading/thirty-nine-ru-artickle/thirty-nine-ru-artickle.module'
+      ).then((m) => m.ThirtyNineRuArtickleModule),
+  },
+  {
+    path: 'beginnermistakes',
+    loadChildren: () =>
+      import('../ru-trading/fourty-ru-artickle/fourty-ru-artickle.module').then(
+        (m) => m.FourtyRuArtickleModule
+      ),
+  },
+  {
+    path: 'tradingplan',
+    loadChildren: () =>
+      import(
+        '../ru-trading/fourty-one-ru-artickle/fourty-one-ru-artickle.module'
+      ).then((m) => m.FourtyOneRuArtickleModule),
+  },
+  {
+    path: 'timeframes',
+    loadChildren: () =>
+      import(
+        '../ru-trading/fourty-two-ru-artickle/fourty-two-ru-artickle.module'
+      ).then((m) => m.FourtyTwoRuArtickleModule),
+  },
+  {
+    path: 'selectingtimeframe',
+    loadChildren: () =>
+      import(
+        '../ru-trading/fourty-three-ru-artickle/fourty-three-ru-artickle.module'
+      ).then((m) => m.FourtyThreeRuArtickleModule),
+  },
+  {
+    path: 'timeframeforbeginner',
+    loadChildren: () =>
+      import(
+        '../ru-trading/fourty-four-ru-artickle/fourty-four-ru-artickle.module'
+      ).then((m) => m.FourtyFourRuArtickleModule),
+  },
+  {
+    path: 'typeoftimeframes',
+    loadChildren: () =>
+      import(
+        '../ru-trading/fourty-five-ru-artickle/fourty-five-ru-artickle.module'
+      ).then((m) => m.FourtyFiveRuArtickleModule),
+  },
+  {
+    path: 'reasonforloosingmoney',
+    loadChildren: () =>
+      import(
+        '../ru-trading/fourty-six-ru-artickle/fourty-six-ru-artickle.module'
+      ).then((m) => m.FourtySixRuArtickleModule),
+  },
 ];
 
 @NgModule({
   declarations: [RuBlogHomepageComponent],
-  imports: [CommonModule, RouterModule.forChild(routes)],
+  imports: [CommonModule, MatPaginatorModule, RouterModule.forChild(routes)],
 })
 export class RuBlogModule {}

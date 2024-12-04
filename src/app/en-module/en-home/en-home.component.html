@@ -1,7 +1,22 @@
 <header>
     <div class="b-top">
         <div class="container">
-            <div class="top-i">
+            <nav class="nav900">
+                <ul>
+                    <li><a routerLink="home" routerLinkActive="active" (click)="closeMenu()">Main Page</a>
+                    </li>
+                    <li><a routerLink="studying" routerLinkActive="active" (click)="closeMenu()">Trading
+                            Courses</a>
+                    </li>
+
+                    <li><a routerLink="freestudying" routerLinkActive="active" (click)="closeMenu()">Free
+                            Trading
+                            Training</a>
+                    </li>
+
+                </ul>
+            </nav>
+            <div class="top-i nav800">
                 <div class="top-slogan">
                 </div>
                 <div class="lang">
@@ -12,9 +27,9 @@
 
                             <svg width="18" height="16" viewBox="0 0 18 16" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
-                                <rect width="18" height="2" rx="1" fill="#999999" />
-                                <rect y="6" width="18" height="2" rx="1" fill="#999999" />
-                                <rect y="12" width="18" height="2" rx="1" fill="#999999" />
+                                <rect width="18" height="2" rx="1" fill="#005DB8" />
+                                <rect y="6" width="18" height="2" rx="1" fill="#005DB8" />
+                                <rect y="12" width="18" height="2" rx="1" fill="#005DB8" />
                             </svg>
                         </label>
                         <nav class="menu" [ngClass]="{'open': isMenuOpen}">
@@ -24,9 +39,9 @@
                                 <li><a routerLink="studying" routerLinkActive="active" (click)="closeMenu()">Trading
                                         Courses</a>
                                 </li>
-                                <li><a routerLink="trading" routerLinkActive="active" (click)="closeMenu()">Fundamentals
+                                <!-- <li><a routerLink="trading" routerLinkActive="active" (click)="closeMenu()">Fundamentals
                                         of Trading</a>
-                                </li>
+                                </li> -->
                                 <!-- <li><a routerLink="crypto" routerLinkActive="active"
                                         (click)="closeMenu()">Сryptocurrency</a>
                                 </li> -->

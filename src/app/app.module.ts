@@ -14,7 +14,7 @@ import { AppComponent } from './app.component';
 import { UkModuleModule } from './uk-module/uk-module.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { MatPaginatorModule } from '@angular/material/paginator';
 @NgModule({
   declarations: [AppComponent, PageNotFoundComponent],
   imports: [
@@ -26,6 +26,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     UkModuleModule,
     FormsModule,
     ReactiveFormsModule,
+    MatPaginatorModule,
   ],
   providers: [provideClientHydration(), provideAnimationsAsync(), Title, Meta],
   bootstrap: [AppComponent],

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { EnBlogHomepageComponent } from './en-blog-homepage/en-blog-homepage.component';
 import { RouterModule } from '@angular/router';
 import { Routes } from '@angular/router';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 const routes: Routes = [
   { path: '', component: EnBlogHomepageComponent },
@@ -418,10 +419,333 @@ const routes: Routes = [
         (m) => m.SixtyEuBlogModule
       ),
   },
+  {
+    path: 'adviceforbeginners',
+    loadChildren: () =>
+      import('../en-trading/one-en-article/one-en-article.module').then(
+        (m) => m.OneEnArticleModule
+      ),
+  },
+  {
+    path: 'marketbasics',
+    loadChildren: () =>
+      import('../en-trading/two-en-article/two-en-article.module').then(
+        (m) => m.TwoEnArticleModule
+      ),
+  },
+  {
+    path: 'exchange',
+    loadChildren: () =>
+      import('../en-trading/three-en-article/three-en-article.module').then(
+        (m) => m.ThreeEnArticleModule
+      ),
+  },
+  {
+    path: 'exchangemarket',
+    loadChildren: () =>
+      import('../en-trading/four-en-article/four-en-article.module').then(
+        (m) => m.FourEnArticleModule
+      ),
+  },
+  {
+    path: 'derivatives',
+    loadChildren: () =>
+      import('../en-trading/five-en-article/five-en-article.module').then(
+        (m) => m.FiveEnArticleModule
+      ),
+  },
+  {
+    path: 'exchangeparticipants',
+    loadChildren: () =>
+      import('../en-trading/six-en-article/six-en-article.module').then(
+        (m) => m.SixEnArticleModule
+      ),
+  },
+  {
+    path: 'forexmarket',
+    loadChildren: () =>
+      import('../en-trading/seven-en-article/seven-en-article.module').then(
+        (m) => m.SevenEnArticleModule
+      ),
+  },
+  {
+    path: 'currenciesandquotes',
+    loadChildren: () =>
+      import('../en-trading/eight-en-article/eight-en-article.module').then(
+        (m) => m.EightEnArticleModule
+      ),
+  },
+  {
+    path: 'formationexchange',
+    loadChildren: () =>
+      import('../en-trading/nine-en-artickle/nine-en-artickle.module').then(
+        (m) => m.NineEnArtickleModule
+      ),
+  },
+
+  {
+    path: 'currencyposition',
+    loadChildren: () =>
+      import('../en-trading/ten-en-artickle/ten-en-artickle.module').then(
+        (m) => m.TenEnArtickleModule
+      ),
+  },
+  {
+    path: 'forexvaluedate',
+    loadChildren: () =>
+      import('../en-trading/eleven-en-artickle/eleven-en-artickle.module').then(
+        (m) => m.ElevenEnArtickleModule
+      ),
+  },
+  {
+    path: 'howtomakemoney',
+    loadChildren: () =>
+      import('../en-trading/twelve-en-artickle/twelve-en-artickle.module').then(
+        (m) => m.TwelveEnArtickleModule
+      ),
+  },
+  {
+    path: 'riskcurrencyexchange',
+    loadChildren: () =>
+      import(
+        '../en-trading/thirteen-en-artickle/thirteen-en-artickle.module'
+      ).then((m) => m.ThirteenEnArtickleModule),
+  },
+  {
+    path: 'forexleveragerisk',
+    loadChildren: () =>
+      import(
+        '../en-trading/fourteen-en-artickle/fourteen-en-artickle.module'
+      ).then((m) => m.FourteenEnArtickleModule),
+  },
+  {
+    path: 'majorbankfrs',
+    loadChildren: () =>
+      import(
+        '../en-trading/fifteen-en-artickle/fifteen-en-artickle.module'
+      ).then((m) => m.FifteenEnArtickleModule),
+  },
+  {
+    path: 'behavioralrisks',
+    loadChildren: () =>
+      import(
+        '../en-trading/sixteen-en-artickle/sixteen-en-artickle.module'
+      ).then((m) => m.SixteenEnArtickleModule),
+  },
+  {
+    path: 'nonmarketrisks',
+    loadChildren: () =>
+      import(
+        '../en-trading/seventeen-en-artickle/seventeen-en-artickle.module'
+      ).then((m) => m.SeventeenEnArtickleModule),
+  },
+  {
+    path: 'psychorisks',
+    loadChildren: () =>
+      import(
+        '../en-trading/eighteen-en-artickle/eighteen-en-artickle.module'
+      ).then((m) => m.EighteenEnArtickleModule),
+  },
+  {
+    path: 'howtotradeonforex',
+    loadChildren: () =>
+      import(
+        '../en-trading/nineteen-en-artickle/nineteen-en-artickle.module'
+      ).then((m) => m.NineteenEnArtickleModule),
+  },
+  {
+    path: 'marketanalysis',
+    loadChildren: () =>
+      import('../en-trading/twenty-en-artickle/twenty-en-artickle.module').then(
+        (m) => m.TwentyEnArtickleModule
+      ),
+  },
+  {
+    path: 'marketanalysisforex',
+    loadChildren: () =>
+      import(
+        '../en-trading/twenty-one-en-artickle/twenty-one-en-artickle.module'
+      ).then((m) => m.TwentyOneEnArtickleModule),
+  },
+  {
+    path: 'econimicfactors',
+    loadChildren: () =>
+      import(
+        '../en-trading/twenty-two-en-artickle/twenty-two-en-artickle.module'
+      ).then((m) => m.TwentyTwoEnArtickleModule),
+  },
+  {
+    path: 'worldstockindicates',
+    loadChildren: () =>
+      import(
+        '../en-trading/twenty-three-en-artickle/twenty-three-en-artickle.module'
+      ).then((m) => m.TwentyThreeEnArtickleModule),
+  },
+  {
+    path: 'economicstate',
+    loadChildren: () =>
+      import(
+        '../en-trading/twenty-four-en-artickle/twenty-four-en-artickle.module'
+      ).then((m) => m.TwentyFourEnArtickleModule),
+  },
+  {
+    path: 'keyeconomicgrowth',
+    loadChildren: () =>
+      import(
+        '../en-trading/twenty-five-en-artickle/twenty-five-en-artickle.module'
+      ).then((m) => m.TwentyFiveEnArtickleModule),
+  },
+  {
+    path: 'technicalanalysis',
+    loadChildren: () =>
+      import(
+        '../en-trading/twenty-six-en-artickle/twenty-six-en-artickle.module'
+      ).then((m) => m.TwentySixEnArtickleModule),
+  },
+  {
+    path: 'technicalmarketcharts',
+    loadChildren: () =>
+      import(
+        '../en-trading/twenty-seven-en-artickle/twenty-seven-en-artickle.module'
+      ).then((m) => m.TwentySevenEnArtickleModule),
+  },
+  {
+    path: 'keypricepattern',
+    loadChildren: () =>
+      import(
+        '../en-trading/twenty-eight-en-artickle/twenty-eight-en-artickle.module'
+      ).then((m) => m.TwentyEightEnArtickleModule),
+  },
+  {
+    path: 'volumemarketanalysis',
+    loadChildren: () =>
+      import(
+        '../en-trading/twenty-nine-en-artickle/twenty-nine-en-artickle.module'
+      ).then((m) => m.TwentyNineEnArtickleModule),
+  },
+  {
+    path: 'typesoforders',
+    loadChildren: () =>
+      import('../en-trading/thirty-en-artickle/thirty-en-artickle.module').then(
+        (m) => m.ThirtyEnArtickleModule
+      ),
+  },
+  {
+    path: 'marketorder',
+    loadChildren: () =>
+      import(
+        '../en-trading/thirty-one-en-artickle/thirty-one-en-artickle.module'
+      ).then((m) => m.ThirtyOneEnArtickleModule),
+  },
+  {
+    path: 'stoporder',
+    loadChildren: () =>
+      import(
+        '../en-trading/thirty-two-en-artickle/thirty-two-en-artickle.module'
+      ).then((m) => m.ThirtyTwoEnArtickleModule),
+  },
+  {
+    path: 'requotes',
+    loadChildren: () =>
+      import(
+        '../en-trading/thirty-three-en-artickle/thirty-three-en-artickle.module'
+      ).then((m) => m.ThirtyThreeEnArtickleModule),
+  },
+  {
+    path: 'stoplimitorder',
+    loadChildren: () =>
+      import(
+        '../en-trading/thirty-four-en-artickle/thirty-four-en-artickle.module'
+      ).then((m) => m.ThirtyFourEnArtickleModule),
+  },
+  {
+    path: 'tradingsystem',
+    loadChildren: () =>
+      import(
+        '../en-trading/thirty-five-en-artickle/thirty-five-en-artickle.module'
+      ).then((m) => m.ThirtyFiveEnArtickleModule),
+  },
+  {
+    path: 'tradingsystemsseparation',
+    loadChildren: () =>
+      import(
+        '../en-trading/thirty-six-en-artickle/thirty-six-en-artickle.module'
+      ).then((m) => m.ThirtySixEnArtickleModule),
+  },
+  {
+    path: 'tradingsystemautomation',
+    loadChildren: () =>
+      import(
+        '../en-trading/thirty-seven-en-artickle/thirty-seven-en-artickle.module'
+      ).then((m) => m.ThirtySevenEnArtickleModule),
+  },
+  {
+    path: 'capitalmanagement',
+    loadChildren: () =>
+      import(
+        '../en-trading/thirty-eight-en-artickle/thirty-eight-en-artickle.module'
+      ).then((m) => m.ThirtyEightEnArtickleModule),
+  },
+  {
+    path: 'profitandlossratio',
+    loadChildren: () =>
+      import(
+        '../en-trading/thirty-nine-en-artickle/thirty-nine-en-artickle.module'
+      ).then((m) => m.ThirtyNineEnArtickleModule),
+  },
+  {
+    path: 'beginnermistakes',
+    loadChildren: () =>
+      import('../en-trading/fourty-en-artickle/fourty-en-artickle.module').then(
+        (m) => m.FourtyEnArtickleModule
+      ),
+  },
+  {
+    path: 'tradingplan',
+    loadChildren: () =>
+      import(
+        '../en-trading/fourty-one-en-artickle/fourty-one-en-artickle.module'
+      ).then((m) => m.FourtyOneEnArtickleModule),
+  },
+  {
+    path: 'timeframes',
+    loadChildren: () =>
+      import(
+        '../en-trading/fourty-two-en-artickle/fourty-two-en-artickle.module'
+      ).then((m) => m.FourtyTwoEnArtickleModule),
+  },
+  {
+    path: 'selectingtimeframe',
+    loadChildren: () =>
+      import(
+        '../en-trading/fourty-three-en-artickle/fourty-three-en-artickle.module'
+      ).then((m) => m.FourtyThreeEnArtickleModule),
+  },
+  {
+    path: 'timeframeforbeginner',
+    loadChildren: () =>
+      import(
+        '../en-trading/fourty-four-en-artickle/fourty-four-en-artickle.module'
+      ).then((m) => m.FourtyFourEnArtickleModule),
+  },
+  {
+    path: 'typeoftimeframes',
+    loadChildren: () =>
+      import(
+        '../en-trading/fourty-five-en-artickle/fourty-five-en-artickle.module'
+      ).then((m) => m.FourtyFiveEnArtickleModule),
+  },
+  {
+    path: 'reasonforloosingmoney',
+    loadChildren: () =>
+      import(
+        '../en-trading/fourty-six-en-artickle/fourty-six-en-artickle.module'
+      ).then((m) => m.FourtySixEnArtickleModule),
+  },
 ];
 
 @NgModule({
   declarations: [EnBlogHomepageComponent],
-  imports: [CommonModule, RouterModule.forChild(routes)],
+  imports: [CommonModule, MatPaginatorModule, RouterModule.forChild(routes)],
 })
 export class EuBlogModule {}
