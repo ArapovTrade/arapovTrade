@@ -18,7 +18,8 @@ export class HomeEnBlogFourtySevenComponent implements OnInit {
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
-      content: 'Fundamental Analysis | Volumetric market analysis',
+      content:
+        'The basics of fundamental analysis, its advantages, disadvantages, and its role in trading.',
     });
     this.gerRandom();
   }

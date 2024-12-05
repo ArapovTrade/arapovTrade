@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ArticlesService } from '../../../../../servises/articles.service';
 
 @Component({
   selector: 'app-home-en-twenty-one',
@@ -7,13 +8,24 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './home-en-twenty-one.component.scss',
 })
 export class HomeEnTwentyOneComponent implements OnInit {
-  constructor(private meta: Meta, private titleService: Title) {}
+  constructor(
+    private meta: Meta,
+    private titleService: Title,
+    private articleServ: ArticlesService
+  ) {}
   ngOnInit(): void {
     this.titleService.setTitle('Analysis of the FOREX Market - Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
-      content: 'Forex market analysis',
+      content:
+        'FOREX Market Analysis: Key aspects influencing decision-making for traders.',
     });
+
+    this.gerRandom();
+  }
+  randomArticleRus: any = [];
+  gerRandom() {
+    this.randomArticleRus = this.articleServ.getRandomUkArticles();
   }
 }
