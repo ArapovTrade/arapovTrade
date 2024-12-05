@@ -1,17 +1,26 @@
-<header>
+<header class="header">
     <div class="b-top">
         <div class="container">
-            <nav class="nav900">
+            <nav class="nav900" aria-label="Breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
                 <ul>
-                    <li><a routerLink="home" routerLinkActive="active" (click)="closeMenu()">Главная
-                            страница</a>
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a itemprop="item" routerLink="home" routerLinkActive="active" (click)="closeMenu()"> <span
+                                itemprop="name">Главная
+                                страница</span> </a>
+                        <meta itemprop="position" content="1" />
                     </li>
-                    <li><a routerLink="studying" routerLinkActive="active" (click)="closeMenu()">Курсы по
-                            трейдингу</a>
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a itemprop="item"
+                            routerLink="studying" routerLinkActive="active" (click)="closeMenu()">
+                            <span itemprop="name">Курсы по
+                                трейдингу</span> </a>
+                        <meta itemprop="position" content="2" />
                     </li>
 
-                    <li><a routerLink="freestudying" routerLinkActive="active" (click)="closeMenu()">Бесплатное
-                            обучение трейдингу</a>
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a itemprop="item"
+                            routerLink="freestudying" routerLinkActive="active" (click)="closeMenu()">
+                            <span itemprop="name">Бесплатное
+                                обучение трейдингу</span></a>
+                        <meta itemprop="position" content="3" />
                     </li>
 
                 </ul>

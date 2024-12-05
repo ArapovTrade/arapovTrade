@@ -13,7 +13,8 @@ export class HomeRuBlogFourtySevenComponent implements OnInit {
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
-      content: 'Фундаментальный Анализ | Объемный анализ рынка',
+      content:
+        'Фундаментальный анализ рынка: основы, преимущества и недостатки метода, влияние на трейдинг.',
     });
   }
 }
