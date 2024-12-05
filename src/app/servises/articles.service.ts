@@ -79,6 +79,11 @@ export class ArticlesService {
   getEnglishGroups() {
     return this.groupsEn;
   }
+  getRandomUkArticles() {
+    const shuffled = [...this.ukrArtickles].sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, 4);
+  }
+
   ukrArtickles: artickle[] = [
     {
       titleUkr: 'Фази ринку у трейдингу',

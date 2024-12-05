@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ArticlesService } from '../../../../../servises/articles.service';
 
 @Component({
   selector: 'app-home-ru-blog-fourty-seven',
@@ -7,7 +8,11 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './home-ru-blog-fourty-seven.component.scss',
 })
 export class HomeRuBlogFourtySevenComponent implements OnInit {
-  constructor(private meta: Meta, private titleService: Title) {}
+  constructor(
+    private meta: Meta,
+    private titleService: Title,
+    private articleServ: ArticlesService
+  ) {}
   ngOnInit(): void {
     this.titleService.setTitle('Фундаментальный Анализ рынка - Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
@@ -16,5 +21,10 @@ export class HomeRuBlogFourtySevenComponent implements OnInit {
       content:
         'Фундаментальный анализ рынка: основы, преимущества и недостатки метода, влияние на трейдинг.',
     });
+    this.gerRandom();
+  }
+  randomArticleRus: any = [];
+  gerRandom() {
+    this.randomArticleRus = this.articleServ.getRandomUkArticles();
   }
 }
