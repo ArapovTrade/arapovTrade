@@ -552,13 +552,13 @@ const routes: Routes = [
         '../uk-trading/nineteen-uk-artickle/nineteen-uk-artickle.module'
       ).then((m) => m.NineteenUkArtickleModule),
   },
-  {
-    path: 'marketanalysis', //20
-    loadChildren: () =>
-      import('../uk-trading/twenty-uk-artickle/twenty-uk-artickle.module').then(
-        (m) => m.TwentyUkArtickleModule
-      ),
-  },
+  // {
+  //   path: 'marketanalysis', //20
+  //   loadChildren: () =>
+  //     import('../uk-trading/twenty-uk-artickle/twenty-uk-artickle.module').then(
+  //       (m) => m.TwentyUkArtickleModule
+  //     ),
+  // },
   {
     path: 'marketanalysisforex', //21
     loadChildren: () =>
@@ -580,13 +580,13 @@ const routes: Routes = [
         '../uk-trading/twenty-three-uk-artickle/twenty-three-uk-artickle.module'
       ).then((m) => m.TwentyThreeUkArtickleModule),
   },
-  {
-    path: 'economicstate', //24
-    loadChildren: () =>
-      import(
-        '../uk-trading/twenty-four-uk-artickle/twenty-four-uk-artickle.module'
-      ).then((m) => m.TwentyFourUkArtickleModule),
-  },
+  // {
+  //   path: 'economicstate', //24
+  //   loadChildren: () =>
+  //     import(
+  //       '../uk-trading/twenty-four-uk-artickle/twenty-four-uk-artickle.module'
+  //     ).then((m) => m.TwentyFourUkArtickleModule),
+  // },
   {
     path: 'keyeconomicgrowth', //25
     loadChildren: () =>
