@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ArticlesService } from '../../../../../servises/articles.service';
 
 @Component({
   selector: 'app-home-en-twenty-seven',
@@ -7,7 +8,11 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './home-en-twenty-seven.component.scss',
 })
 export class HomeEnTwentySevenComponent implements OnInit {
-  constructor(private meta: Meta, private titleService: Title) {}
+  constructor(
+    private meta: Meta,
+    private titleService: Title,
+    private articleServ: ArticlesService
+  ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
       'Technical Market Analysis. Main Types of Chart - Arapov.trade'
@@ -15,7 +20,13 @@ export class HomeEnTwentySevenComponent implements OnInit {
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
-      content: 'Main types of chart display in trading',
+      content:
+        'A detailed overview of the basics of technical market analysis: chart types, trends, and support and resistance levels.',
     });
+    this.gerRandom();
+  }
+  randomArticleRus: any = [];
+  gerRandom() {
+    this.randomArticleRus = this.articleServ.getRandomUkArticles();
   }
 }
