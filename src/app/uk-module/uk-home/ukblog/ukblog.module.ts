@@ -580,13 +580,13 @@ const routes: Routes = [
         '../uk-trading/twenty-three-uk-artickle/twenty-three-uk-artickle.module'
       ).then((m) => m.TwentyThreeUkArtickleModule),
   },
-  // {
-  //   path: 'economicstate', //24
-  //   loadChildren: () =>
-  //     import(
-  //       '../uk-trading/twenty-four-uk-artickle/twenty-four-uk-artickle.module'
-  //     ).then((m) => m.TwentyFourUkArtickleModule),
-  // },
+  {
+    path: 'fibonacciLevels', //24
+    loadChildren: () =>
+      import(
+        '../uk-trading/twenty-four-uk-artickle/twenty-four-uk-artickle.module'
+      ).then((m) => m.TwentyFourUkArtickleModule),
+  },
   {
     path: 'keyeconomicgrowth', //25
     loadChildren: () =>

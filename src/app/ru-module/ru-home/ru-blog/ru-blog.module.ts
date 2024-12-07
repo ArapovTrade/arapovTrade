@@ -582,13 +582,13 @@ const routes: Routes = [
         '../ru-trading/twenty-three-ru-artickle/twenty-three-ru-artickle.module'
       ).then((m) => m.TwentyThreeRuArtickleModule),
   },
-  // {
-  //   path: 'economicstate',
-  //   loadChildren: () =>
-  //     import(
-  //       '../ru-trading/twenty-four-ru-artickle/twenty-four-ru-artickle.module'
-  //     ).then((m) => m.TwentyFourRuArtickleModule),
-  // },
+  {
+    path: 'fibonacciLevels',
+    loadChildren: () =>
+      import(
+        '../ru-trading/twenty-four-ru-artickle/twenty-four-ru-artickle.module'
+      ).then((m) => m.TwentyFourRuArtickleModule),
+  },
   {
     path: 'keyeconomicgrowth',
     loadChildren: () =>

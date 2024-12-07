@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ArticlesService } from '../../../../../servises/articles.service';
 
 @Component({
   selector: 'app-home-uk-twenty-four',
@@ -7,13 +8,25 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './home-uk-twenty-four.component.scss',
 })
 export class HomeUkTwentyFourComponent implements OnInit {
-  constructor(private meta: Meta, private titleService: Title) {}
+  constructor(
+    private meta: Meta,
+    private titleService: Title,
+    private articleServ: ArticlesService
+  ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Економічний стан держави - Arapov.trade');
+    this.titleService.setTitle(
+      'Рівні Фібоначчі: принципи та застосування - Arapov.trade'
+    );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
-      content: 'Економіка Держави',
+      content:
+        'Детальний аналіз рівнів Фібоначчі: що це таке, як вони працюють і їхня роль у технічному аналізі.',
     });
+    this.gerRandom();
+  }
+  randomArticleRus: any = [];
+  gerRandom() {
+    this.randomArticleRus = this.articleServ.getRandomUkArticles();
   }
 }
