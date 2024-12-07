@@ -230,10 +230,10 @@ export class ArticlesService {
       id: 12,
     },
     {
-      titleUkr: 'Хвилі Елліотта та Рівні Фібоначчі',
-      titleRus: 'Волны Эллиотта и Уровни Фибоначчи',
+      titleUkr: 'Хвилі Елліотта: Основи, структура та застосування',
+      titleRus: 'Волны Эллиотта: Основы, структура и применение',
 
-      titleEn: 'Elliott Waves and Fibonacci Levels',
+      titleEn: 'Elliott Waves: Basics, Structure, and Applications',
       linkUkr: 'wavesofelliott',
       imgUkr: '/assets/img/content/wavesofelliott44.png',
       groupsRus: ['Технический анализ'],
