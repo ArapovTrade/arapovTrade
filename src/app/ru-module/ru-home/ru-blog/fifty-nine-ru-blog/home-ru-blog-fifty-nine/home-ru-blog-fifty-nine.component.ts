@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ArticlesService } from '../../../../../servises/articles.service';
 
 @Component({
   selector: 'app-home-ru-blog-fifty-nine',
@@ -7,15 +8,23 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './home-ru-blog-fifty-nine.component.scss',
 })
 export class HomeRuBlogFiftyNineComponent implements OnInit {
-  constructor(private meta: Meta, private titleService: Title) {}
+  constructor(
+    private meta: Meta,
+    private titleService: Title,
+    private articleServ: ArticlesService
+  ) {}
   ngOnInit(): void {
-    this.titleService.setTitle(
-      'Как торговать Пробой уровня в трейдинге - Arapov.trade'
-    );
+    this.titleService.setTitle('Как торговать Пробой уровня в трейдинге');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
-      content: ' Как торговать Пробой уровня в трейдинге',
+      content:
+        ' Детальное руководство по торговле на пробой уровня в трейдинге. Узнайте, как определять уровни, работать с пин-баром и объемами.',
     });
+    this.gerRandom();
+  }
+  randomArticleRus: any = [];
+  gerRandom() {
+    this.randomArticleRus = this.articleServ.getRandomUkArticles();
   }
 }
