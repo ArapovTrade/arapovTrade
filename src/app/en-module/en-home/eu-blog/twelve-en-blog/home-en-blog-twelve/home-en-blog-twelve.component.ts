@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ArticlesService } from '../../../../../servises/articles.service';
 
 @Component({
   selector: 'app-home-en-blog-twelve',
@@ -7,13 +8,23 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './home-en-blog-twelve.component.scss',
 })
 export class HomeEnBlogTwelveComponent implements OnInit {
-  constructor(private meta: Meta, private titleService: Title) {}
+  constructor(
+    private meta: Meta,
+    private titleService: Title,
+    private articleServ: ArticlesService
+  ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Trading of levels - Arapov.trade');
+    this.titleService.setTitle('Level Trading: A Complete Guide');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
-      content: 'Trading levels - basic rules of operation',
+      content:
+        'A detailed guide to level trading for beginner traders. Learn how to identify, utilize, and trade key levels.',
     });
+    this.gerRandom();
+  }
+  randomArticleRus: any = [];
+  gerRandom() {
+    this.randomArticleRus = this.articleServ.getRandomUkArticles();
   }
 }
