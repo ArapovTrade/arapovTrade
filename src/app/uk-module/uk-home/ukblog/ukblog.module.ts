@@ -145,13 +145,13 @@ const routes: Routes = [
         (m) => m.TwentyOneUkBlogModule
       ),
   },
-  {
-    path: 'pricepatterns', //22
-    loadChildren: () =>
-      import('./twenty-two-uk-blog/twenty-two-uk-blog.module').then(
-        (m) => m.TwentyTwoUkBlogModule
-      ),
-  },
+  // {
+  //   path: 'pricepatterns', //22
+  //   loadChildren: () =>
+  //     import('./twenty-two-uk-blog/twenty-two-uk-blog.module').then(
+  //       (m) => m.TwentyTwoUkBlogModule
+  //     ),
+  // },
   {
     path: 'liqudityintrading', //23
     loadChildren: () =>

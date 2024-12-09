@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ArticlesService } from '../../../../../servises/articles.service';
 
 @Component({
   selector: 'app-home-uk-twenty-eight',
@@ -7,15 +8,25 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './home-uk-twenty-eight.component.scss',
 })
 export class HomeUkTwentyEightComponent implements OnInit {
-  constructor(private meta: Meta, private titleService: Title) {}
+  constructor(
+    private meta: Meta,
+    private titleService: Title,
+    private articleServ: ArticlesService
+  ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Основні цінові фігури в технічному аналізі - Arapov.trade'
+      'Цінові фігури у технічному аналізі: повний посібник'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
-      content: 'Цінові фігури технічного аналізу',
+      content:
+        'Детальний огляд ключових цінових фігур у технічному аналізі: розворотні та продовжувальні моделі, їх застосування та обмеження.',
     });
+    this.gerRandom();
+  }
+  randomArticleRus: any = [];
+  gerRandom() {
+    this.randomArticleRus = this.articleServ.getRandomUkArticles();
   }
 }
