@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ArticlesService } from '../../../../../servises/articles.service';
 
 @Component({
   selector: 'app-home-ru-blog-thirty-one',
@@ -7,16 +8,23 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './home-ru-blog-thirty-one.component.scss',
 })
 export class HomeRuBlogThirtyOneComponent implements OnInit {
-  constructor(private meta: Meta, private titleService: Title) {}
+  constructor(
+    private meta: Meta,
+    private titleService: Title,
+    private articleServ: ArticlesService
+  ) {}
   ngOnInit(): void {
-    this.titleService.setTitle(
-      'Уровни Поддержки и Сопротивления - Arapov.trade'
-    );
+    this.titleService.setTitle('Уровни Поддержки и Сопротивления');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Уровни Поддержки и Сопротивления ! Как определить ! Обучение трейдингу',
+        'Детальное руководство по уровням поддержки и сопротивления. Узнайте, как их строить, определять и эффективно использовать в трейдинге.',
     });
+    this.gerRandom();
+  }
+  randomArticleRus: any = [];
+  gerRandom() {
+    this.randomArticleRus = this.articleServ.getRandomUkArticles();
   }
 }
