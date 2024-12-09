@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ArticlesService } from '../../../../../servises/articles.service';
 
 @Component({
   selector: 'app-home-en-blog-twenty-four',
@@ -7,13 +8,25 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './home-en-blog-twenty-four.component.scss',
 })
 export class HomeEnBlogTwentyFourComponent implements OnInit {
-  constructor(private meta: Meta, private titleService: Title) {}
+  constructor(
+    private meta: Meta,
+    private titleService: Title,
+    private articleServ: ArticlesService
+  ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Flag figure in trading - Arapov.trade');
+    this.titleService.setTitle(
+      "The 'Flag' Pattern in Trading: A Comprehensive Guide"
+    );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
-      content: 'How to use the Flag figure in trading?',
+      content:
+        "Everything you need to know about the 'Flag' pattern in trading: how to identify, trade, and avoid mistakes.",
     });
+    this.gerRandom();
+  }
+  randomArticleRus: any = [];
+  gerRandom() {
+    this.randomArticleRus = this.articleServ.getRandomUkArticles();
   }
 }
