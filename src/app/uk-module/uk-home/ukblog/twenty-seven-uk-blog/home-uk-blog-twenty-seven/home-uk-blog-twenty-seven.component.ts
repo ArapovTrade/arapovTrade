@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ArticlesService } from '../../../../../servises/articles.service';
 
 @Component({
   selector: 'app-home-uk-blog-twenty-seven',
@@ -7,13 +8,23 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './home-uk-blog-twenty-seven.component.scss',
 })
 export class HomeUkBlogTwentySevenComponent implements OnInit {
-  constructor(private meta: Meta, private titleService: Title) {}
+  constructor(
+    private meta: Meta,
+    private titleService: Title,
+    private articleServ: ArticlesService
+  ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Як читати японські свічки? - Arapov.trade');
+    this.titleService.setTitle('Як читати японські свічки');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
-      content: 'Як читати японські свічки? Правильний спосіб для початківців',
+      content:
+        "Детальний посібник з японських свічок: їх читання, формації та застосування у трейдингу. Дізнайтеся більше про 'молот', 'повішеного' та інші ключові патерни.",
     });
+    this.gerRandom();
+  }
+  randomArticleRus: any = [];
+  gerRandom() {
+    this.randomArticleRus = this.articleServ.getRandomUkArticles();
   }
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ArticlesService } from '../../../../../servises/articles.service';
 
 @Component({
   selector: 'app-home-en-blog-twenty-seven',
@@ -7,15 +8,23 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './home-en-blog-twenty-seven.component.scss',
 })
 export class HomeEnBlogTwentySevenComponent implements OnInit {
-  constructor(private meta: Meta, private titleService: Title) {}
+  constructor(
+    private meta: Meta,
+    private titleService: Title,
+    private articleServ: ArticlesService
+  ) {}
   ngOnInit(): void {
-    this.titleService.setTitle(
-      'How to read Japanese candlesticks? - Arapov.trade'
-    );
+    this.titleService.setTitle('How to Read Japanese Candlesticks');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
-      content: 'How to read Japanese candlesticks? The right way for beginners',
+      content:
+        "A detailed guide to Japanese candlesticks: how to read, identify formations, and apply them in trading. Learn more about 'Hammer,' 'Hanging Man,' and other key patterns.",
     });
+    this.gerRandom();
+  }
+  randomArticleRus: any = [];
+  gerRandom() {
+    this.randomArticleRus = this.articleServ.getRandomUkArticles();
   }
 }

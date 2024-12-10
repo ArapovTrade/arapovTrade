@@ -398,9 +398,9 @@ export class ArticlesService {
       id: 26,
     },
     {
-      titleUkr: 'Як читати японські свічки?',
-      titleEn: 'How to read Japanese candlesticks?',
-      titleRus: 'Как читать японские свечи?',
+      titleUkr: 'Як читати японські свічки',
+      titleEn: 'How to read Japanese candlesticks',
+      titleRus: 'Как читать японские свечи',
 
       linkUkr: 'japanesecandle',
       imgUkr: '/assets/img/content/japanesecandle44.jpg',
