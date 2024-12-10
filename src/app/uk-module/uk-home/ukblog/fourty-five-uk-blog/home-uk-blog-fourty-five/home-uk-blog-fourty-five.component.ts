@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ArticlesService } from '../../../../../servises/articles.service';
 
 @Component({
   selector: 'app-home-uk-blog-fourty-five',
@@ -7,15 +8,25 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './home-uk-blog-fourty-five.component.scss',
 })
 export class HomeUkBlogFourtyFiveComponent implements OnInit {
-  constructor(private meta: Meta, private titleService: Title) {}
+  constructor(
+    private meta: Meta,
+    private titleService: Title,
+    private articleServ: ArticlesService
+  ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Як застосовувати ковзні середні у Трейдингу? - Arapov.trade'
+      'Як використовувати ковзні середні у трейдингу?'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
-      content: 'Як застосовувати ковзні середні у Трейдингу?',
+      content:
+        'Дізнайтеся, як використовувати ковзні середні в трейдингу: їх типи, стратегії та приклади застосування для аналізу трендів і прийняття рішень.',
     });
+    this.gerRandom();
+  }
+  randomArticleRus: any = [];
+  gerRandom() {
+    this.randomArticleRus = this.articleServ.getRandomUkArticles();
   }
 }
