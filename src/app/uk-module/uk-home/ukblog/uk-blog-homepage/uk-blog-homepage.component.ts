@@ -72,13 +72,18 @@ export class UkBlogHomepageComponent implements OnInit {
   currentPage = 0;
   pageSize = 6;
   onPageChange(event: PageEvent) {
-    this.scrollToTop.nativeElement.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-    });
     this.currentPage = event.pageIndex;
     this.pageSize = event.pageSize;
     this.updatePaginatedArticles();
+    // this.scrollToTop.nativeElement.scrollIntoView({
+    //   behavior: 'smooth',
+    //   block: 'start',
+    // });
+    const topPosition = this.scrollToTop.nativeElement.offsetTop;
+    window.scrollTo({
+      top: topPosition,
+      behavior: 'smooth',
+    });
   }
   updatePaginatedArticles() {
     const startIndex = this.currentPage * this.pageSize;
