@@ -1,7 +1,7 @@
 <section class="hero-section" id="hero">
     <div class="container">
         <div class="section-i">
-            <div class="section-content" #scrollToTop>
+            <div class="section-content">
                 <div class="hero-content">
                     <h1 class="orange h11">
                         Безкоштовне навчання трейдингу
@@ -32,7 +32,7 @@
 
 
 
-<section class="separator">
+<section class="separator" #scrollToTop>
     <div class="line"></div>
 </section>
 
@@ -61,9 +61,9 @@
                                 <div class="programm__item">
                                     <span class="programm__close"></span>
                                     <div class="programm__in box">
+                                        <!-- loading="lazy" -->
                                         <a routerLink="{{article.linkUkr}}">
-                                            <img class="article-img" src="{{article.imgUkr}}" alt="requotes"
-                                                loading="lazy">
+                                            <img class="article-img" src="{{article.imgUkr}}" alt="requotes">
                                         </a>
                                         <div class="programm__title orange">
                                             <a routerLink="{{article.linkUkr}}" class="orange">
