@@ -72,13 +72,13 @@ export class UkBlogHomepageComponent implements OnInit {
   currentPage = 0;
   pageSize = 6;
   onPageChange(event: PageEvent) {
-    this.currentPage = event.pageIndex;
-    this.pageSize = event.pageSize;
-    this.updatePaginatedArticles();
     this.scrollToTop.nativeElement.scrollIntoView({
       behavior: 'smooth',
       block: 'start',
     });
+    this.currentPage = event.pageIndex;
+    this.pageSize = event.pageSize;
+    this.updatePaginatedArticles();
   }
   updatePaginatedArticles() {
     const startIndex = this.currentPage * this.pageSize;
