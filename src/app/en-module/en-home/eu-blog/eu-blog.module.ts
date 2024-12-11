@@ -454,13 +454,13 @@ const routes: Routes = [
         (m) => m.FiveEnArticleModule
       ),
   },
-  {
-    path: 'exchangeparticipants',
-    loadChildren: () =>
-      import('../en-trading/six-en-article/six-en-article.module').then(
-        (m) => m.SixEnArticleModule
-      ),
-  },
+  // {
+  //   path: 'exchangeparticipants',
+  //   loadChildren: () =>
+  //     import('../en-trading/six-en-article/six-en-article.module').then(
+  //       (m) => m.SixEnArticleModule
+  //     ),
+  // },
   {
     path: 'forexmarket',
     loadChildren: () =>

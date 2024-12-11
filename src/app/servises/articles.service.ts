@@ -847,7 +847,7 @@ export class ArticlesService {
       titleEn: 'Introduction to the exchange',
       titleRus: 'Знакомство с биржей',
 
-      imgUkr: '/assets/img/content/znakomstvosbirgey44.jpg',
+      imgUkr: '/assets/img/content/znakomstvosbirgey44.png',
       groupsRus: ['Словарь трейдера'],
       groupsEn: ['Trader`s Dictionary'],
       groupsUkr: ['Словник трейдера'],
@@ -877,18 +877,18 @@ export class ArticlesService {
       groupsUkr: ['Словник трейдера'],
       id: 66,
     },
-    {
-      titleUkr: 'Основні учасники біржі',
-      linkUkr: 'exchangeparticipants',
-      titleEn: 'Main participants of the exchange',
-      titleRus: 'Основные участники биржи',
+    // {
+    //   titleUkr: 'Основні учасники біржі',
+    //   linkUkr: 'exchangeparticipants',
+    //   titleEn: 'Main participants of the exchange',
+    //   titleRus: 'Основные участники биржи',
 
-      imgUkr: '/assets/img/content/uchastnikiBirgi44.png',
-      groupsRus: ['Словарь трейдера'],
-      groupsEn: ['Trader`s Dictionary'],
-      groupsUkr: ['Словник трейдера'],
-      id: 67,
-    },
+    //   imgUkr: '/assets/img/content/uchastnikiBirgi44.png',
+    //   groupsRus: ['Словарь трейдера'],
+    //   groupsEn: ['Trader`s Dictionary'],
+    //   groupsUkr: ['Словник трейдера'],
+    //   id: 67,
+    // },
     {
       titleUkr: 'Ринок FOREX',
       linkUkr: 'forexmarket',

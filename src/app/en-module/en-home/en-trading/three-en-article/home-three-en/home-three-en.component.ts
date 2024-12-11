@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ArticlesService } from '../../../../../servises/articles.service';
 
 @Component({
   selector: 'app-home-three-en',
@@ -7,17 +8,26 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './home-three-en.component.scss',
 })
 export class HomeThreeEnComponent implements OnInit {
-  constructor(private meta: Meta, private titleService: Title) {}
+  constructor(
+    private meta: Meta,
+    private titleService: Title,
+    private articleServ: ArticlesService
+  ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Getting to know the stock exchange and how it works - Arapov.trade'
+      'Introduction to the Exchange: Comprehensive Guide'
     );
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Getting to know the stock exchange. How the stock exchange works.',
+        'Learn what an exchange is, its types, functions, and trading features. A complete guide for beginners and professionals.',
     });
+    this.gerRandom();
+  }
+  randomArticleRus: any = [];
+  gerRandom() {
+    this.randomArticleRus = this.articleServ.getRandomUkArticles();
   }
 }

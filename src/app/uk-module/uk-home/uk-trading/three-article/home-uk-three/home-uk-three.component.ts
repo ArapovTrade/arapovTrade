@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ArticlesService } from '../../../../../servises/articles.service';
 
 @Component({
   selector: 'app-home-uk-three',
@@ -7,15 +8,23 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './home-uk-three.component.scss',
 })
 export class HomeUkThreeComponent implements OnInit {
-  constructor(private meta: Meta, private titleService: Title) {}
+  constructor(
+    private meta: Meta,
+    private titleService: Title,
+    private articleServ: ArticlesService
+  ) {}
   ngOnInit(): void {
-    this.titleService.setTitle(
-      'Знайомство з біржею та як вона влаштована - Arapov.trade'
-    );
+    this.titleService.setTitle('Знайомство з біржею: Повний гід');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
-      content: 'Знайомство з біржею. Як улаштована біржа.',
+      content:
+        'Дізнайтеся, що таке біржа, її види, функції та особливості торгівлі. Повний гід для початківців і професіоналів.',
     });
+    this.gerRandom();
+  }
+  randomArticleRus: any = [];
+  gerRandom() {
+    this.randomArticleRus = this.articleServ.getRandomUkArticles();
   }
 }
