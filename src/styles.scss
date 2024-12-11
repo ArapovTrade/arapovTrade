@@ -3223,3 +3223,13 @@ user-select: none;}
             transform: scale(1.05);
             border-color:#005DB8;
         }
+
+
+        .box img{
+            height: 258.4px;
+        }
+        @media (min-width: 768px) {
+            .box img {
+                    height: 328.4px;
+                }
+         }        
