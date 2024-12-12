@@ -50,4 +50,27 @@ export class AppComponent {
       window.scrollTo(0, 0);
     });
   }
+
+  isMenuOpen = false;
+
+  openMenu() {
+    this.isMenuOpen = true;
+  }
+
+  closeMenu() {
+    this.isMenuOpen = false;
+  }
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+  checkLang: number = 1;
+  setUkraine() {
+    this.checkLang = 1;
+  }
+  setRussian() {
+    this.checkLang = 2;
+  }
+  setEnglish() {
+    this.checkLang = 3;
+  }
 }
