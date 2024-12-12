@@ -859,7 +859,7 @@ export class ArticlesService {
       titleEn: 'Exchange and over-the-counter markets',
       titleRus: 'Биржевой и внебиржевой рынки',
 
-      imgUkr: '/assets/img/content/exchangemarkets44.jpg',
+      imgUkr: '/assets/img/content/exchangemarkets44.png',
       groupsRus: ['Словарь трейдера'],
       groupsEn: ['Trader`s Dictionary'],
       groupsUkr: ['Словник трейдера'],
