@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ArticlesService } from '../../../../../servises/articles.service';
 
 @Component({
   selector: 'app-home-en-seven',
@@ -7,14 +8,24 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './home-en-seven.component.scss',
 })
 export class HomeEnSevenComponent implements OnInit {
-  constructor(private meta: Meta, private titleService: Title) {}
+  constructor(
+    private meta: Meta,
+    private titleService: Title,
+    private articleServ: ArticlesService
+  ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Forex market - Arapov.trade');
+    this.titleService.setTitle('The FOREX Market');
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
-      content: 'What is the Forex market? Why is it needed?',
+      content:
+        'A comprehensive guide to the FOREX market. Learn about its features, participants, trading sessions, and key strategies for beginners and professionals.',
     });
+    this.gerRandom();
+  }
+  randomArticleRus: any = [];
+  gerRandom() {
+    this.randomArticleRus = this.articleServ.getRandomUkArticles();
   }
 }
