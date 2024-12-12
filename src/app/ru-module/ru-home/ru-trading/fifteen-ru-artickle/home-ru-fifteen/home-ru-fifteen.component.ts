@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ArticlesService } from '../../../../../servises/articles.service';
 
 @Component({
   selector: 'app-home-ru-fifteen',
@@ -7,14 +8,24 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './home-ru-fifteen.component.scss',
 })
 export class HomeRuFifteenComponent implements OnInit {
-  constructor(private meta: Meta, private titleService: Title) {}
+  constructor(
+    private meta: Meta,
+    private titleService: Title,
+    private articleServ: ArticlesService
+  ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Основные центральные банки - Arapov.trade');
+    this.titleService.setTitle('Основные центральные банки');
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
-      content: 'Основные центральные банки рынка Форекс',
+      content:
+        'Узнайте о ключевых центральных банках мира, их функциях, заседаниях и влиянии на мировую экономику. Подробное руководство для трейдеров и инвесторов.',
     });
+    this.gerRandom();
+  }
+  randomArticleRus: any = [];
+  gerRandom() {
+    this.randomArticleRus = this.articleServ.getRandomUkArticles();
   }
 }
