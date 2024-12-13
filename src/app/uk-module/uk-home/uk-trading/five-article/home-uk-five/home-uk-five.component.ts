@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ArticlesService } from '../../../../../servises/articles.service';
 
 @Component({
   selector: 'app-home-uk-five',
@@ -7,13 +8,23 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './home-uk-five.component.scss',
 })
 export class HomeUkFiveComponent implements OnInit {
-  constructor(private meta: Meta, private titleService: Title) {}
+  constructor(
+    private meta: Meta,
+    private titleService: Title,
+    private articleServ: ArticlesService
+  ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Деривативи та їх види - Arapov.trade');
+    this.titleService.setTitle('Деривативи та їх види');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
-      content: "Що таке ф'ючерси. Деривативи та їх види",
+      content:
+        'Дізнайтеся, що таке деривативи, їх основні види, застосування та вплив на фінансові ринки. Повний посібник для трейдерів та інвесторів.',
     });
+    this.gerRandom();
+  }
+  randomArticleRus: any = [];
+  gerRandom() {
+    this.randomArticleRus = this.articleServ.getRandomUkArticles();
   }
 }

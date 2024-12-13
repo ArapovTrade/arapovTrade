@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ArticlesService } from '../../../../../servises/articles.service';
 
 @Component({
   selector: 'app-home-five-en',
@@ -7,14 +8,24 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './home-five-en.component.scss',
 })
 export class HomeFiveEnComponent implements OnInit {
-  constructor(private meta: Meta, private titleService: Title) {}
+  constructor(
+    private meta: Meta,
+    private titleService: Title,
+    private articleServ: ArticlesService
+  ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Derivatives and their types - Arapov.trade');
+    this.titleService.setTitle('Derivatives and Their Types');
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
-      content: 'What are futures? Derivatives and their types',
+      content:
+        'Learn about derivatives, their main types, applications, and impact on financial markets. A complete guide for traders and investors.',
     });
+    this.gerRandom();
+  }
+  randomArticleRus: any = [];
+  gerRandom() {
+    this.randomArticleRus = this.articleServ.getRandomUkArticles();
   }
 }
