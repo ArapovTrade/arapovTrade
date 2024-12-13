@@ -4,6 +4,7 @@ import { NavigationEnd, Router } from '@angular/router';
 import { FormGroup } from '@angular/forms';
 import { FormControl, Validators } from '@angular/forms';
 import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
+import { LangService } from '../../servises/lang.service';
 
 @Component({
   selector: 'app-ru-home',
@@ -14,7 +15,8 @@ export class RuHomeComponent implements OnInit {
   constructor(
     private router: Router,
     private meta: Meta,
-    private titleService: Title
+    private titleService: Title,
+    private lang: LangService
   ) {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
@@ -29,6 +31,8 @@ export class RuHomeComponent implements OnInit {
   registForm: any;
 
   ngOnInit(): void {
+    this.lang.setNumber(2);
+
     this.registForm = new FormGroup({
       userName: new FormControl('', Validators.required),
       userEmail: new FormControl(null, [Validators.email, Validators.required]),

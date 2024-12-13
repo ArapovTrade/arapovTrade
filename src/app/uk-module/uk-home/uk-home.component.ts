@@ -4,6 +4,7 @@ import { FormControl, Validators } from '@angular/forms';
 import { NavigationEnd, Router } from '@angular/router';
 
 import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
+import { LangService } from '../../servises/lang.service';
 
 @Component({
   selector: 'app-uk-home',
@@ -11,7 +12,7 @@ import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
   styleUrl: './uk-home.component.scss',
 })
 export class UkHomeComponent implements OnInit {
-  constructor(private router: Router) {
+  constructor(private router: Router, private lang: LangService) {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         if (typeof window !== 'undefined') {
@@ -47,6 +48,7 @@ export class UkHomeComponent implements OnInit {
 
   registForm: any;
   ngOnInit() {
+    this.lang.setNumber(1);
     this.registForm = new FormGroup({
       userName: new FormControl('', Validators.required),
       userEmail: new FormControl(null, [Validators.email, Validators.required]),

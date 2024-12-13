@@ -1,14 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  DoCheck,
+  ChangeDetectorRef,
+  AfterViewChecked,
+} from '@angular/core';
 
 import { ActivatedRoute, Router } from '@angular/router';
 import { ArticlesService } from './servises/articles.service';
+import { LangService } from './servises/lang.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent {
+export class AppComponent implements OnInit, AfterViewChecked {
   dropdownOpen = false;
 
   toggleDropdown() {
@@ -22,7 +29,9 @@ export class AppComponent {
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private artickle: ArticlesService
+    private artickle: ArticlesService,
+    private lan: LangService,
+    private cdr: ChangeDetectorRef
   ) {}
 
   changeLanguage(lang: string) {
@@ -63,14 +72,34 @@ export class AppComponent {
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
   }
-  checkLang: number = 1;
+  checkLang!: number;
   setUkraine() {
-    this.checkLang = 1;
+    this.lan.setNumber(1);
+    // this.getLang();
   }
   setRussian() {
-    this.checkLang = 2;
+    this.lan.setNumber(2);
+    // this.getLang();
   }
   setEnglish() {
-    this.checkLang = 3;
+    this.lan.setNumber(3);
+    // this.getLang();
   }
+  ngOnInit(): void {
+    this.getLang();
+  }
+
+  getLang() {
+    // this.checkLang = this.lan.getNumber();
+    this.lan.getNumber().subscribe((value) => {
+      this.checkLang = value;
+    });
+  }
+  ngAfterViewChecked() {
+    this.cdr.detectChanges();
+  }
+  // ngDoCheck() {
+  //   this.getLang();
+  //   console.log(this.checkLang);
+  // }
 }
