@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ArticlesService } from '../../../../../servises/articles.service';
 
 @Component({
   selector: 'app-home-en-blog-fiveteen',
@@ -7,15 +8,23 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './home-en-blog-fiveteen.component.scss',
 })
 export class HomeEnBlogFiveteenComponent implements OnInit {
-  constructor(private meta: Meta, private titleService: Title) {}
+  constructor(
+    private meta: Meta,
+    private titleService: Title,
+    private articleServ: ArticlesService
+  ) {}
   ngOnInit(): void {
-    this.titleService.setTitle(
-      'The whole truth about futures trading - Arapov.trade'
-    );
+    this.titleService.setTitle('The Truth About Futures Trading');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
-      content: 'The whole truth about futures trading',
+      content:
+        'Discover the truth about futures trading: its advantages, risks, and secrets to successful trading. A comprehensive guide for traders.',
     });
+    this.gerRandom();
+  }
+  randomArticleRus: any = [];
+  gerRandom() {
+    this.randomArticleRus = this.articleServ.getRandomUkArticles();
   }
 }
