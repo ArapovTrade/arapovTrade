@@ -907,7 +907,7 @@ export class ArticlesService {
       titleEn: 'Currencies and their quotes',
       titleRus: 'Валюты и их котировки',
 
-      imgUkr: '/assets/img/content/currencies44.jpg',
+      imgUkr: '/assets/img/content/currencies44.png',
       groupsRus: ['Словарь трейдера'],
       groupsEn: ['Trader`s Dictionary'],
       groupsUkr: ['Словник трейдера'],
