@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ArticlesService } from '../../../../../servises/articles.service';
 
 @Component({
   selector: 'app-home-ru-ten',
@@ -7,14 +8,26 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './home-ru-ten.component.scss',
 })
 export class HomeRuTenComponent implements OnInit {
-  constructor(private meta: Meta, private titleService: Title) {}
+  constructor(
+    private meta: Meta,
+    private titleService: Title,
+    private articleServ: ArticlesService
+  ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Валютная позиция. Виды - Arapov.trade');
+    this.titleService.setTitle(
+      'Позиции в трейдинге: виды, перенос и дата валютирования'
+    );
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
-      content: 'Биржевая сделка. Понятия, виды и типы',
+      content:
+        'Узнайте, что такое позиции в трейдинге, их типы, механизм переноса и дату валютирования. Полное руководство для трейдеров и инвесторов, содержащее уникальную информацию и примеры.',
     });
+    this.gerRandom();
+  }
+  randomArticleRus: any = [];
+  gerRandom() {
+    this.randomArticleRus = this.articleServ.getRandomUkArticles();
   }
 }
