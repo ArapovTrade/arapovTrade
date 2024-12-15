@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ArticlesService } from '../../../../../servises/articles.service';
 
 @Component({
   selector: 'app-home-ru-blog-ten',
@@ -7,15 +8,23 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './home-ru-blog-ten.component.scss',
 })
 export class HomeRuBlogTenComponent implements OnInit {
-  constructor(private meta: Meta, private titleService: Title) {}
+  constructor(
+    private meta: Meta,
+    private titleService: Title,
+    private articleServ: ArticlesService
+  ) {}
   ngOnInit(): void {
-    this.titleService.setTitle(
-      'Основная причина потерь в Трейдинге - Arapov.trade'
-    );
+    this.titleService.setTitle('Причины потери депозита');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
-      content: 'Основная причина потерь в Трейдинге | Почему Трейдеры Теряют?',
+      content:
+        'Узнайте основные причины потери депозита трейдерами, включая ошибки стратегии, отсутствие дисциплины и переоценку возможностей. Советы по предотвращению потерь.',
     });
+    this.gerRandom();
+  }
+  randomArticleRus: any = [];
+  gerRandom() {
+    this.randomArticleRus = this.articleServ.getRandomUkArticles();
   }
 }
