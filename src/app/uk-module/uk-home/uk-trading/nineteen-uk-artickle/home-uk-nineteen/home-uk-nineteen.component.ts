@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ArticlesService } from '../../../../../servises/articles.service';
 
 @Component({
   selector: 'app-home-uk-nineteen',
@@ -7,15 +8,23 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './home-uk-nineteen.component.scss',
 })
 export class HomeUkNineteenComponent implements OnInit {
-  constructor(private meta: Meta, private titleService: Title) {}
+  constructor(
+    private meta: Meta,
+    private titleService: Title,
+    private articleServ: ArticlesService
+  ) {}
   ngOnInit(): void {
-    this.titleService.setTitle(
-      'Як торгувати на валютному ринку FOREX через інтернет - Arapov.trade'
-    );
+    this.titleService.setTitle('Як торгувати на валютному ринку FOREX');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
-      content: 'Як правильно торгувати на Форекс?',
+      content:
+        'Дізнайтеся, як почати торгувати на валютному ринку FOREX. Детальний посібник для новачків із порадами, стратегіями та прикладами.',
     });
+    this.gerRandom();
+  }
+  randomArticleRus: any = [];
+  gerRandom() {
+    this.randomArticleRus = this.articleServ.getRandomUkArticles();
   }
 }

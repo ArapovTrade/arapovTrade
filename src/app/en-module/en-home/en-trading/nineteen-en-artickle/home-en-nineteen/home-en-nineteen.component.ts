@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ArticlesService } from '../../../../../servises/articles.service';
 
 @Component({
   selector: 'app-home-en-nineteen',
@@ -7,15 +8,23 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './home-en-nineteen.component.scss',
 })
 export class HomeEnNineteenComponent implements OnInit {
-  constructor(private meta: Meta, private titleService: Title) {}
+  constructor(
+    private meta: Meta,
+    private titleService: Title,
+    private articleServ: ArticlesService
+  ) {}
   ngOnInit(): void {
-    this.titleService.setTitle(
-      'How to Trade on the FOREX Currency Market Online - Arapov.trade'
-    );
+    this.titleService.setTitle('How to Trade on the FOREX Market');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
-      content: 'How to trade Forex correctly?',
+      content:
+        'Learn how to start trading on the FOREX market. A detailed guide for beginners with tips, strategies, and examples.',
     });
+    this.gerRandom();
+  }
+  randomArticleRus: any = [];
+  gerRandom() {
+    this.randomArticleRus = this.articleServ.getRandomUkArticles();
   }
 }
