@@ -524,20 +524,20 @@ const routes: Routes = [
         '../uk-trading/fifteen-uk-artickle/fifteen-uk-artickle.module'
       ).then((m) => m.FifteenUkArtickleModule),
   },
-  {
-    path: 'behavioralrisks', //16
-    loadChildren: () =>
-      import(
-        '../uk-trading/sixteen-uk-artickle/sixteen-uk-artickle.module'
-      ).then((m) => m.SixteenUkArtickleModule),
-  },
-  {
-    path: 'nonmarketrisks', //17
-    loadChildren: () =>
-      import(
-        '../uk-trading/seventeen-uk-artickle/seventeen-uk-artickle.module'
-      ).then((m) => m.SeventeenUkArtickleModule),
-  },
+  // {
+  //   path: 'behavioralrisks', //16
+  //   loadChildren: () =>
+  //     import(
+  //       '../uk-trading/sixteen-uk-artickle/sixteen-uk-artickle.module'
+  //     ).then((m) => m.SixteenUkArtickleModule),
+  // },
+  // {
+  //   path: 'nonmarketrisks', //17
+  //   loadChildren: () =>
+  //     import(
+  //       '../uk-trading/seventeen-uk-artickle/seventeen-uk-artickle.module'
+  //     ).then((m) => m.SeventeenUkArtickleModule),
+  // },
   {
     path: 'psychorisks', //18
     loadChildren: () =>

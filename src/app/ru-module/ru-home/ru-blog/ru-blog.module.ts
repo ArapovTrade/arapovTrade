@@ -526,20 +526,20 @@ const routes: Routes = [
         '../ru-trading/fifteen-ru-artickle/fifteen-ru-artickle.module'
       ).then((m) => m.FifteenRuArtickleModule),
   },
-  {
-    path: 'behavioralrisks',
-    loadChildren: () =>
-      import(
-        '../ru-trading/sixteen-ru-artickle/sixteen-ru-artickle.module'
-      ).then((m) => m.SixteenRuArtickleModule),
-  },
-  {
-    path: 'nonmarketrisks',
-    loadChildren: () =>
-      import(
-        '../ru-trading/seventeen-ru-artickle/seventeen-ru-artickle.module'
-      ).then((m) => m.SeventeenRuArtickleModule),
-  },
+  // {
+  //   path: 'behavioralrisks',
+  //   loadChildren: () =>
+  //     import(
+  //       '../ru-trading/sixteen-ru-artickle/sixteen-ru-artickle.module'
+  //     ).then((m) => m.SixteenRuArtickleModule),
+  // },
+  // {
+  //   path: 'nonmarketrisks',
+  //   loadChildren: () =>
+  //     import(
+  //       '../ru-trading/seventeen-ru-artickle/seventeen-ru-artickle.module'
+  //     ).then((m) => m.SeventeenRuArtickleModule),
+  // },
   {
     path: 'psychorisks',
     loadChildren: () =>
