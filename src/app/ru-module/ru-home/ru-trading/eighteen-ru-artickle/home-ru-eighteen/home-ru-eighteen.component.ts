@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ArticlesService } from '../../../../../servises/articles.service';
 
 @Component({
   selector: 'app-home-ru-eighteen',
@@ -7,14 +8,24 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './home-ru-eighteen.component.scss',
 })
 export class HomeRuEighteenComponent implements OnInit {
-  constructor(private meta: Meta, private titleService: Title) {}
+  constructor(
+    private meta: Meta,
+    private titleService: Title,
+    private articleServ: ArticlesService
+  ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Психологические риски FOREX - Arapov.trade');
+    this.titleService.setTitle('Психологические риски FOREX');
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
-      content: 'Психология трейдинга',
+      content:
+        'Узнайте о психологических рисках, связанных с торговлей на FOREX, и как их минимизировать. Полное руководство для трейдеров с примерами и советами.',
     });
+    this.gerRandom();
+  }
+  randomArticleRus: any = [];
+  gerRandom() {
+    this.randomArticleRus = this.articleServ.getRandomUkArticles();
   }
 }
