@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ArticlesService } from '../../../../../servises/articles.service';
 
 @Component({
   selector: 'app-home-one-en',
@@ -7,15 +8,25 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './home-one-en.component.scss',
 })
 export class HomeOneEnComponent implements OnInit {
-  constructor(private meta: Meta, private titleService: Title) {}
+  constructor(
+    private meta: Meta,
+    private titleService: Title,
+    private articleServ: ArticlesService
+  ) {}
 
   ngOnInit(): void {
-    this.titleService.setTitle('Tips for beginner traders - Arapov.trade');
+    this.titleService.setTitle('10 Tips for Beginner Traders');
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
-      content: '10 tips for beginning traders from Igor Arapov',
+      content:
+        'Useful tips for beginner traders. Learn how to manage risks, develop strategies, and avoid mistakes in trading.',
     });
+    this.gerRandom();
+  }
+  randomArticleRus: any = [];
+  gerRandom() {
+    this.randomArticleRus = this.articleServ.getRandomUkArticles();
   }
 }

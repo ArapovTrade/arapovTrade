@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ArticlesService } from '../../../../../servises/articles.service';
 
 @Component({
   selector: 'app-home',
@@ -7,14 +8,24 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './home.component.scss',
 })
 export class HomeComponent implements OnInit {
-  constructor(private meta: Meta, private titleService: Title) {}
+  constructor(
+    private meta: Meta,
+    private titleService: Title,
+    private articleServ: ArticlesService
+  ) {}
 
   ngOnInit(): void {
-    this.titleService.setTitle('Поради трейдерам початківцям - Arapov.trade');
+    this.titleService.setTitle('10 порад початківцям трейдерам');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
-      content: '10 порад трейдерам-початківцям від Ігоря Арапова ',
+      content:
+        'Корисні поради для початківців трейдерів. Дізнайтеся, як керувати ризиками, розробляти стратегію та уникати помилок у трейдингу.',
     });
+    this.gerRandom();
+  }
+  randomArticleRus: any = [];
+  gerRandom() {
+    this.randomArticleRus = this.articleServ.getRandomUkArticles();
   }
 }

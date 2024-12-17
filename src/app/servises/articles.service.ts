@@ -806,12 +806,12 @@ export class ArticlesService {
       id: 60,
     },
     {
-      titleUkr: 'Поради трейдерам-початківцям ',
+      titleUkr: '10 порад трейдерам-початківцям',
       linkUkr: 'adviceforbeginners',
-      titleEn: 'Tips for beginner traders',
-      titleRus: 'Советы начинающим трейдерам',
+      titleEn: '10 tips for beginning traders',
+      titleRus: '10 советов начинающим трейдерам',
 
-      imgUkr: ' /assets/img/content/TipsForStarters.webp',
+      imgUkr: ' /assets/img/content/TipsForStarters.png',
       groupsRus: ['Трейдинг для начинающих'],
       groupsEn: ['Trading for Beginners'],
       groupsUkr: ['Трейдинг для початківців'],
