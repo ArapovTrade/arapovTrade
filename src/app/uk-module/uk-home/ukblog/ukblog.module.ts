@@ -299,13 +299,13 @@ const routes: Routes = [
         (m) => m.FourtyThreeUkBlogModule
       ),
   },
-  {
-    path: 'basicsoftrading', //44
-    loadChildren: () =>
-      import('./fourty-four-uk-blog/fourty-four-uk-blog.module').then(
-        (m) => m.FourtyFourUkBlogModule
-      ),
-  },
+  // {
+  //   path: 'basicsoftrading', //44
+  //   loadChildren: () =>
+  //     import('./fourty-four-uk-blog/fourty-four-uk-blog.module').then(
+  //       (m) => m.FourtyFourUkBlogModule
+  //     ),
+  // },
   {
     path: 'movingaverages', //45
     loadChildren: () =>
