@@ -1291,7 +1291,7 @@ export class ArticlesService {
       titleEn: 'Beginner Trader Mistakes',
       titleRus: 'Ошибки начинающих трейдеров',
 
-      imgUkr: '/assets/img/content/beginnermistakes44.png',
+      imgUkr: '/assets/img/content/beginnermistakes44.webp',
       groupsRus: ['Трейдинг для начинающих'],
       groupsEn: ['Trading for Beginners'],
       groupsUkr: ['Трейдинг для початківців'],
