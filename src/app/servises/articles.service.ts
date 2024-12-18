@@ -655,7 +655,7 @@ export class ArticlesService {
       linkUkr: 'selfstudying',
       titleRus: 'Инструкция по самостоятельному обучению Трейдингу',
 
-      imgUkr: '/assets/img/content/selfstudying44.png',
+      imgUkr: '/assets/img/content/selfstudying44.webp',
       groupsRus: ['Трейдинг для начинающих'],
       groupsEn: ['Trading for Beginners'],
       groupsUkr: ['Трейдинг для початківців'],
