@@ -734,13 +734,13 @@ const routes: Routes = [
         '../uk-trading/fourty-five-uk-artickle/fourty-five-uk-artickle.module'
       ).then((m) => m.FourtyFiveUkArtickleModule),
   },
-  {
-    path: 'reasonforloosingmoney', //46
-    loadChildren: () =>
-      import(
-        '../uk-trading/fourty-six-uk-artickle/fourty-six-uk-artickle.module'
-      ).then((m) => m.FourtySixUkArtickleModule),
-  },
+  // {
+  //   path: 'reasonforloosingmoney', //46
+  //   loadChildren: () =>
+  //     import(
+  //       '../uk-trading/fourty-six-uk-artickle/fourty-six-uk-artickle.module'
+  //     ).then((m) => m.FourtySixUkArtickleModule),
+  // },
 ];
 
 @NgModule({
