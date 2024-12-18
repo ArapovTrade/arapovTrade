@@ -194,9 +194,9 @@ export class ArticlesService {
       id: 9,
     },
     {
-      titleUkr: 'Основна причина втрат у Трейдінгу',
-      titleRus: 'Основная причина потерь в Трейдинге',
-      titleEn: 'The main reason for losses in Trading',
+      titleUkr: 'Основні причини втрат у Трейдінгу',
+      titleRus: 'Основные причины потерь в Трейдинге',
+      titleEn: 'The main causes of losses in Trading',
 
       linkUkr: 'mainreasonforlosses',
       imgUkr: '/assets/img/content/mainreasonforlosses44.png',
