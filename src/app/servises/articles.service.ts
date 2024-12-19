@@ -751,7 +751,7 @@ export class ArticlesService {
       linkUkr: 'benefitsoftradingbooks',
       titleRus: 'Книги по трейдингу в чем польза для начинающих ?',
 
-      imgUkr: '/assets/img/content/benefitsoftradingbooks44.jpg',
+      imgUkr: '/assets/img/content/benefitsoftradingbooks44.png',
       groupsRus: ['Трейдинг для начинающих'],
       groupsEn: ['Trading for Beginners'],
       groupsUkr: ['Трейдинг для початківців'],

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ArticlesService } from '../../../../../servises/articles.service';
 
 @Component({
   selector: 'app-home-uk-blog-fifty-six',
@@ -7,15 +8,25 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './home-uk-blog-fifty-six.component.scss',
 })
 export class HomeUkBlogFiftySixComponent implements OnInit {
-  constructor(private meta: Meta, private titleService: Title) {}
+  constructor(
+    private meta: Meta,
+    private titleService: Title,
+    private articleServ: ArticlesService
+  ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Книги з трейдингу - в чому користь для початківців? - Arapov.trade'
+      'Книги з трейдингу: у чому користь для початківців?'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
-      content: 'Книги з трейдингу - в чому користь для початківців?',
+      content:
+        'Розглянемо, як книги з трейдингу допомагають початківцям трейдерам. Корисні рекомендації та найкращі книги для старту у світі фінансових ринків.',
     });
+    this.gerRandom();
+  }
+  randomArticleRus: any = [];
+  gerRandom() {
+    this.randomArticleRus = this.articleServ.getRandomUkArticles();
   }
 }
