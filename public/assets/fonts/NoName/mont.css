@@ -1,0 +1,279 @@
+@font-face {
+  font-family: "Mont";
+  src: url("mont/Mont-Thin.eot");
+  src: local("Mont Thin"), local("Mont-Thin"),
+    url("mont/Mont-Thin.eot?#iefix") format("embedded-opentype"),
+    url("mont/Mont-Thin.woff2") format("woff2"),
+    url("mont/Mont-Thin.woff") format("woff"),
+    url("mont/Mont-Thin.ttf") format("truetype"),
+    url("mont/Mont-Thin.svg#Mont-Thin") format("svg");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Mont";
+  src: url("mont/Mont-RegularItalic.eot");
+  src: local("Mont Regular Italic"), local("Mont-RegularItalic"),
+    url("mont/Mont-RegularItalic.eot?#iefix") format("embedded-opentype"),
+    url("mont/Mont-RegularItalic.woff2") format("woff2"),
+    url("mont/Mont-RegularItalic.woff") format("woff"),
+    url("mont/Mont-RegularItalic.ttf") format("truetype"),
+    url("mont/Mont-RegularItalic.svg#Mont-RegularItalic") format("svg");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Mont";
+  src: url("mont/Mont-Bold.eot");
+  src: local("Mont Bold"), local("Mont-Bold"),
+    url("mont/Mont-Bold.eot?#iefix") format("embedded-opentype"),
+    url("mont/Mont-Bold.woff2") format("woff2"),
+    url("mont/Mont-Bold.woff") format("woff"),
+    url("mont/Mont-Bold.ttf") format("truetype"),
+    url("mont/Mont-Bold.svg#Mont-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Mont";
+  src: url("mont/Mont-Light.eot");
+  src: local("Mont Light"), local("Mont-Light"),
+    url("mont/Mont-Light.eot?#iefix") format("embedded-opentype"),
+    url("mont/Mont-Light.woff2") format("woff2"),
+    url("mont/Mont-Light.woff") format("woff"),
+    url("mont/Mont-Light.ttf") format("truetype"),
+    url("mont/Mont-Light.svg#Mont-Light") format("svg");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Mont";
+  src: url("mont/Mont-LightItalic.eot");
+  src: local("Mont Light Italic"), local("Mont-LightItalic"),
+    url("mont/Mont-LightItalic.eot?#iefix") format("embedded-opentype"),
+    url("mont/Mont-LightItalic.woff2") format("woff2"),
+    url("mont/Mont-LightItalic.woff") format("woff"),
+    url("mont/Mont-LightItalic.ttf") format("truetype"),
+    url("mont/Mont-LightItalic.svg#Mont-LightItalic") format("svg");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Mont";
+  src: url("mont/Mont-BlackItalic.eot");
+  src: local("Mont Black Italic"), local("Mont-BlackItalic"),
+    url("mont/Mont-BlackItalic.eot?#iefix") format("embedded-opentype"),
+    url("mont/Mont-BlackItalic.woff2") format("woff2"),
+    url("mont/Mont-BlackItalic.woff") format("woff"),
+    url("mont/Mont-BlackItalic.ttf") format("truetype"),
+    url("mont/Mont-BlackItalic.svg#Mont-BlackItalic") format("svg");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Mont";
+  src: url("mont/Mont-SemiBoldItalic.eot");
+  src: local("Mont SemiBold Italic"), local("Mont-SemiBoldItalic"),
+    url("mont/Mont-SemiBoldItalic.eot?#iefix") format("embedded-opentype"),
+    url("mont/Mont-SemiBoldItalic.woff2") format("woff2"),
+    url("mont/Mont-SemiBoldItalic.woff") format("woff"),
+    url("mont/Mont-SemiBoldItalic.ttf") format("truetype"),
+    url("mont/Mont-SemiBoldItalic.svg#Mont-SemiBoldItalic") format("svg");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Mont Book";
+  src: url("mont/Mont-Book.eot");
+  src: local("Mont Book"), local("Mont-Book"),
+    url("mont/Mont-Book.eot?#iefix") format("embedded-opentype"),
+    url("mont/Mont-Book.woff2") format("woff2"),
+    url("mont/Mont-Book.woff") format("woff"),
+    url("mont/Mont-Book.ttf") format("truetype"),
+    url("mont/Mont-Book.svg#Mont-Book") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Mont Book";
+  src: url("mont/Mont-BookItalic.eot");
+  src: local("Mont Book Italic"), local("Mont-BookItalic"),
+    url("mont/Mont-BookItalic.eot?#iefix") format("embedded-opentype"),
+    url("mont/Mont-BookItalic.woff2") format("woff2"),
+    url("mont/Mont-BookItalic.woff") format("woff"),
+    url("mont/Mont-BookItalic.ttf") format("truetype"),
+    url("mont/Mont-BookItalic.svg#Mont-BookItalic") format("svg");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Mont";
+  src: url("mont/Mont-SemiBold.eot");
+  src: local("Mont SemiBold"), local("Mont-SemiBold"),
+    url("mont/Mont-SemiBold.eot?#iefix") format("embedded-opentype"),
+    url("mont/Mont-SemiBold.woff2") format("woff2"),
+    url("mont/Mont-SemiBold.woff") format("woff"),
+    url("mont/Mont-SemiBold.ttf") format("truetype"),
+    url("mont/Mont-SemiBold.svg#Mont-SemiBold") format("svg");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Mont";
+  src: url("mont/Mont-BoldItalic.eot");
+  src: local("Mont Bold Italic"), local("Mont-BoldItalic"),
+    url("mont/Mont-BoldItalic.eot?#iefix") format("embedded-opentype"),
+    url("mont/Mont-BoldItalic.woff2") format("woff2"),
+    url("mont/Mont-BoldItalic.woff") format("woff"),
+    url("mont/Mont-BoldItalic.ttf") format("truetype"),
+    url("mont/Mont-BoldItalic.svg#Mont-BoldItalic") format("svg");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Mont";
+  src: url("mont/Mont-ExtraLight.eot");
+  src: local("Mont ExtraLight"), local("Mont-ExtraLight"),
+    url("mont/Mont-ExtraLight.eot?#iefix") format("embedded-opentype"),
+    url("mont/Mont-ExtraLight.woff2") format("woff2"),
+    url("mont/Mont-ExtraLight.woff") format("woff"),
+    url("mont/Mont-ExtraLight.ttf") format("truetype"),
+    url("mont/Mont-ExtraLight.svg#Mont-ExtraLight") format("svg");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Mont";
+  src: url("mont/Mont-ExtraLightItalic.eot");
+  src: local("Mont ExtraLight Italic"), local("Mont-ExtraLightItalic"),
+    url("mont/Mont-ExtraLightItalic.eot?#iefix") format("embedded-opentype"),
+    url("mont/Mont-ExtraLightItalic.woff2") format("woff2"),
+    url("mont/Mont-ExtraLightItalic.woff") format("woff"),
+    url("mont/Mont-ExtraLightItalic.ttf") format("truetype"),
+    url("mont/Mont-ExtraLightItalic.svg#Mont-ExtraLightItalic") format("svg");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Mont";
+  src: url("mont/Mont-HeavyItalic.eot");
+  src: local("Mont Heavy Italic"), local("Mont-HeavyItalic"),
+    url("mont/Mont-HeavyItalic.eot?#iefix") format("embedded-opentype"),
+    url("mont/Mont-HeavyItalic.woff2") format("woff2"),
+    url("mont/Mont-HeavyItalic.woff") format("woff"),
+    url("mont/Mont-HeavyItalic.ttf") format("truetype"),
+    url("mont/Mont-HeavyItalic.svg#Mont-HeavyItalic") format("svg");
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Mont";
+  src: url("mont/Mont-ThinItalic.eot");
+  src: local("Mont Thin Italic"), local("Mont-ThinItalic"),
+    url("mont/Mont-ThinItalic.eot?#iefix") format("embedded-opentype"),
+    url("mont/Mont-ThinItalic.woff2") format("woff2"),
+    url("mont/Mont-ThinItalic.woff") format("woff"),
+    url("mont/Mont-ThinItalic.ttf") format("truetype"),
+    url("mont/Mont-ThinItalic.svg#Mont-ThinItalic") format("svg");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Mont Hairline";
+  src: url("mont/Mont-HairlineItalic.eot");
+  src: local("Mont Hairline Italic"), local("Mont-HairlineItalic"),
+    url("mont/Mont-HairlineItalic.eot?#iefix") format("embedded-opentype"),
+    url("mont/Mont-HairlineItalic.woff2") format("woff2"),
+    url("mont/Mont-HairlineItalic.woff") format("woff"),
+    url("mont/Mont-HairlineItalic.ttf") format("truetype"),
+    url("mont/Mont-HairlineItalic.svg#Mont-HairlineItalic") format("svg");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Mont";
+  src: url("mont/Mont-Regular.eot");
+  src: local("Mont Regular"), local("Mont-Regular"),
+    url("mont/Mont-Regular.eot?#iefix") format("embedded-opentype"),
+    url("mont/Mont-Regular.woff2") format("woff2"),
+    url("mont/Mont-Regular.woff") format("woff"),
+    url("mont/Mont-Regular.ttf") format("truetype"),
+    url("mont/Mont-Regular.svg#Mont-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Mont";
+  src: url("mont/Mont-Black.eot");
+  src: local("Mont Black"), local("Mont-Black"),
+    url("mont/Mont-Black.eot?#iefix") format("embedded-opentype"),
+    url("mont/Mont-Black.woff2") format("woff2"),
+    url("mont/Mont-Black.woff") format("woff"),
+    url("mont/Mont-Black.ttf") format("truetype"),
+    url("mont/Mont-Black.svg#Mont-Black") format("svg");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Mont";
+  src: url("mont/Mont-Heavy.eot");
+  src: local("Mont Heavy"), local("Mont-Heavy"),
+    url("mont/Mont-Heavy.eot?#iefix") format("embedded-opentype"),
+    url("mont/Mont-Heavy.woff2") format("woff2"),
+    url("mont/Mont-Heavy.woff") format("woff"),
+    url("mont/Mont-Heavy.ttf") format("truetype"),
+    url("mont/Mont-Heavy.svg#Mont-Heavy") format("svg");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Mont Hairline";
+  src: url("mont/Mont-Hairline.eot");
+  src: local("Mont Hairline"), local("Mont-Hairline"),
+    url("mont/Mont-Hairline.eot?#iefix") format("embedded-opentype"),
+    url("mont/Mont-Hairline.woff2") format("woff2"),
+    url("mont/Mont-Hairline.woff") format("woff"),
+    url("mont/Mont-Hairline.ttf") format("truetype"),
+    url("mont/Mont-Hairline.svg#Mont-Hairline") format("svg");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
