@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ArticlesService } from '../../../../../servises/articles.service';
 
 @Component({
   selector: 'app-home-uk-blog-sixty',
@@ -7,15 +8,24 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './home-uk-blog-sixty.component.scss',
 })
 export class HomeUkBlogSixtyComponent implements OnInit {
-  constructor(private meta: Meta, private titleService: Title) {}
+  constructor(
+    private meta: Meta,
+    private titleService: Title,
+    private articleServ: ArticlesService
+  ) {}
   ngOnInit(): void {
-    this.titleService.setTitle(
-      'Трейдинг Vs Опціони порівняння інструментів - Arapov.trade'
-    );
+    this.titleService.setTitle('Трейдинг Vs Опціони: порівняння інструментів');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
-      content: 'Трейдинг Vs Опціони порівняння інструментів',
+      content:
+        'Порівняння трейдингу та опціонів. Розбираємо переваги та недоліки інструментів, стратегії, ризики та застосування для різних типів трейдерів.',
     });
+
+    this.gerRandom();
+  }
+  randomArticleRus: any = [];
+  gerRandom() {
+    this.randomArticleRus = this.articleServ.getRandomUkArticles();
   }
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ArticlesService } from '../../../../../servises/articles.service';
 
 @Component({
   selector: 'app-home-eu-blog-sixty',
@@ -7,15 +8,25 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './home-eu-blog-sixty.component.scss',
 })
 export class HomeEuBlogSixtyComponent implements OnInit {
-  constructor(private meta: Meta, private titleService: Title) {}
+  constructor(
+    private meta: Meta,
+    private titleService: Title,
+    private articleServ: ArticlesService
+  ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Trading Vs Options comparison of instruments - Arapov.trade'
+      'Trading Vs Options: Comparing Financial Instruments'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
-      content: 'Trading Vs Options comparison of instruments',
+      content:
+        'A comprehensive comparison of trading and options. Discover the advantages, disadvantages, strategies, and risks of these financial instruments.',
     });
+    this.gerRandom();
+  }
+  randomArticleRus: any = [];
+  gerRandom() {
+    this.randomArticleRus = this.articleServ.getRandomUkArticles();
   }
 }
