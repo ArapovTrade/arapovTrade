@@ -314,13 +314,13 @@ const routes: Routes = [
         (m) => m.FourtyFiveEnBlogModule
       ),
   },
-  {
-    path: 'freeeducation', //46
-    loadChildren: () =>
-      import('./fourty-six-en-blog/fourty-six-en-blog.module').then(
-        (m) => m.FourtySixEnBlogModule
-      ),
-  },
+  // {
+  //   path: 'freeeducation', //46
+  //   loadChildren: () =>
+  //     import('./fourty-six-en-blog/fourty-six-en-blog.module').then(
+  //       (m) => m.FourtySixEnBlogModule
+  //     ),
+  // },
   {
     path: 'fundamentalanalysis', //47
     loadChildren: () =>
