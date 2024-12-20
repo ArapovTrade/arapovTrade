@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ArticlesService } from '../../../../../servises/articles.service';
 
 @Component({
   selector: 'app-home-uk-blog-fourty-nine',
@@ -7,15 +8,23 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './home-uk-blog-fourty-nine.component.scss',
 })
 export class HomeUkBlogFourtyNineComponent implements OnInit {
-  constructor(private meta: Meta, private titleService: Title) {}
+  constructor(
+    private meta: Meta,
+    private titleService: Title,
+    private articleServ: ArticlesService
+  ) {}
   ngOnInit(): void {
-    this.titleService.setTitle(
-      'Як обрати торгову платформу для трейдингу - Arapov.trade'
-    );
+    this.titleService.setTitle('Як обрати торгову платформу для трейдингу?');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
-      content: 'Як обрати торгову платформу для трейдингу',
+      content:
+        'Дізнайтеся, як обрати ідеальну торгову платформу для трейдингу. Корисні поради, критерії вибору та список найкращих платформ для початківців і професіоналів.',
     });
+    this.gerRandom();
+  }
+  randomArticleRus: any = [];
+  gerRandom() {
+    this.randomArticleRus = this.articleServ.getRandomUkArticles();
   }
 }
