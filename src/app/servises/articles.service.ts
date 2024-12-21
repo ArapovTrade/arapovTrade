@@ -463,7 +463,7 @@ export class ArticlesService {
       titleEn: 'Is it worth purchasing trading courses?',
       titleRus: 'Стоит ли покупать обучение трейдингу?',
 
-      imgUkr: '/assets/img/content/purchasingcourses44.png',
+      imgUkr: '/assets/img/content/purchasingcourses44.jpg',
       groupsRus: ['Трейдинг для начинающих'],
       groupsEn: ['Trading for Beginners'],
       groupsUkr: ['Трейдинг для початківців'],

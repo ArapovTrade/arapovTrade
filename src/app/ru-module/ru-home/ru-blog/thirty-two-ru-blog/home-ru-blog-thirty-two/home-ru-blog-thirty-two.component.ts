@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ArticlesService } from '../../../../../servises/articles.service';
 
 @Component({
   selector: 'app-home-ru-blog-thirty-two',
@@ -7,15 +8,23 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './home-ru-blog-thirty-two.component.scss',
 })
 export class HomeRuBlogThirtyTwoComponent implements OnInit {
-  constructor(private meta: Meta, private titleService: Title) {}
+  constructor(
+    private meta: Meta,
+    private titleService: Title,
+    private articleServ: ArticlesService
+  ) {}
   ngOnInit(): void {
-    this.titleService.setTitle(
-      'Стоит ли покупать обучение трейдингу? - Arapov.trade'
-    );
+    this.titleService.setTitle('Стоит ли покупать обучение трейдингу?');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
-      content: 'Стоит ли покупать обучение трейдингу?',
+      content:
+        'Рассмотрим преимущества платного обучения трейдингу. Узнайте, почему инвестирование в обучение может стать первым шагом к успешной карьере трейдера.',
     });
+    this.gerRandom();
+  }
+  randomArticleRus: any = [];
+  gerRandom() {
+    this.randomArticleRus = this.articleServ.getRandomUkArticles();
   }
 }
