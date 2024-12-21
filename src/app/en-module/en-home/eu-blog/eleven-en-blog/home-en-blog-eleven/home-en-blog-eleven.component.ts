@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ArticlesService } from '../../../../../servises/articles.service';
 
 @Component({
   selector: 'app-home-en-blog-eleven',
@@ -7,13 +8,26 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './home-en-blog-eleven.component.scss',
 })
 export class HomeEnBlogElevenComponent implements OnInit {
-  constructor(private meta: Meta, private titleService: Title) {}
+  constructor(
+    private meta: Meta,
+    private titleService: Title,
+    private articleServ: ArticlesService
+  ) {}
   ngOnInit(): void {
-    this.titleService.setTitle("Trader's starting deposit - Arapov.trade");
+    this.titleService.setTitle(
+      "Trader's Starting Deposit: How Much Do You Need to Begin?"
+    );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
-      content: "Trader's starting deposit: what amount is best to start with?",
+      content:
+        'Find out how much starting deposit a trader needs, how to calculate it correctly, and manage capital. Useful tips for beginners and experienced traders.',
     });
+
+    this.gerRandom();
+  }
+  randomArticleRus: any = [];
+  gerRandom() {
+    this.randomArticleRus = this.articleServ.getRandomUkArticles();
   }
 }

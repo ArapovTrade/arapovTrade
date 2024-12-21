@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ArticlesService } from '../../../../../servises/articles.service';
 
 @Component({
   selector: 'app-home-uk-blog-eleven',
@@ -7,13 +8,26 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './home-uk-blog-eleven.component.scss',
 })
 export class HomeUkBlogElevenComponent implements OnInit {
-  constructor(private meta: Meta, private titleService: Title) {}
+  constructor(
+    private meta: Meta,
+    private titleService: Title,
+    private articleServ: ArticlesService
+  ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Стартовий депозит Трейдера - Arapov.trade');
+    this.titleService.setTitle(
+      'Стартовий депозит трейдера: скільки потрібно для початку?'
+    );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
-      content: 'Стартовий депозит Трейдера: з якої суми краще починати?',
+      content:
+        'Дізнайтеся, який стартовий депозит потрібен трейдеру, як його правильно розрахувати і управляти капіталом. Корисні поради для початківців і досвідчених трейдерів.',
     });
+
+    this.gerRandom();
+  }
+  randomArticleRus: any = [];
+  gerRandom() {
+    this.randomArticleRus = this.articleServ.getRandomUkArticles();
   }
 }
