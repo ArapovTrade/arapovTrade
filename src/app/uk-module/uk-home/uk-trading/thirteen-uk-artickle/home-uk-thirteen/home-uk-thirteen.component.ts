@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ArticlesService } from '../../../../../servises/articles.service';
 
 @Component({
   selector: 'app-home-uk-thirteen',
@@ -7,15 +8,24 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './home-uk-thirteen.component.scss',
 })
 export class HomeUkThirteenComponent implements OnInit {
-  constructor(private meta: Meta, private titleService: Title) {}
+  constructor(
+    private meta: Meta,
+    private titleService: Title,
+    private articleServ: ArticlesService
+  ) {}
   ngOnInit(): void {
-    this.titleService.setTitle(
-      'Ризик зміни курсу на ринку Форекс  - Arapov.trade'
-    );
+    this.titleService.setTitle('Ризик зміни курсу');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
-      content: 'Ризик зміни валютного курсу на ринку',
+      content:
+        'Дізнайтеся, що таке ризик зміни курсу, як він впливає на фінансові операції, та які стратегії допоможуть мінімізувати його.',
     });
+
+    this.gerRandom();
+  }
+  randomArticleRus: any = [];
+  gerRandom() {
+    this.randomArticleRus = this.articleServ.getRandomUkArticles();
   }
 }

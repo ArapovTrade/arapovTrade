@@ -967,7 +967,7 @@ export class ArticlesService {
       titleEn: 'Currency Exchange Risk',
       titleRus: 'Риск изменения курса',
 
-      imgUkr: '/assets/img/content/riskCurrencyExchange44.png',
+      imgUkr: '/assets/img/content/riskCurrencyExchange44.webp',
       groupsRus: ['Трейдинг для начинающих'],
       groupsEn: ['Trading for Beginners'],
       groupsUkr: ['Трейдинг для початківців'],
@@ -991,7 +991,7 @@ export class ArticlesService {
       titleEn: 'Major central banks',
       titleRus: 'Основные центральные банки',
 
-      imgUkr: '/assets/img/content/majorBankFrs44.png',
+      imgUkr: '/assets/img/content/majorBankFrs_JQ44.png',
       groupsRus: ['Словарь трейдера'],
       groupsEn: ['Trader`s Dictionary'],
       groupsUkr: ['Словник трейдера'],
