@@ -157,7 +157,7 @@ export class ArticlesService {
       id: 6,
     },
     {
-      titleUkr: 'Як заробляють у трейдінгу?',
+      titleUkr: 'Як заробляють у трейдингу?',
       titleRus: 'Как зарабатывают в трейдинге?',
       titleEn: 'How to make money from trading?',
 
