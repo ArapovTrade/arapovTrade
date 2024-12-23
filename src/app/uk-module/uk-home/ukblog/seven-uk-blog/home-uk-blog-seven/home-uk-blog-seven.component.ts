@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ArticlesService } from '../../../../../servises/articles.service';
 
 @Component({
   selector: 'app-home-uk-blog-seven',
@@ -7,13 +8,23 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './home-uk-blog-seven.component.scss',
 })
 export class HomeUkBlogSevenComponent implements OnInit {
-  constructor(private meta: Meta, private titleService: Title) {}
+  constructor(
+    private meta: Meta,
+    private titleService: Title,
+    private articleServ: ArticlesService
+  ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Як Заробляють у Трейдінгу? - Arapov.trade');
+    this.titleService.setTitle('Як Заробляють у Трейдингу?');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
-      content: 'Як Заробляють у Трейдінгу? | Основи Трейдингу для Початківців',
+      content:
+        'Дізнайтеся, як заробляти у трейдингу, які інструменти та стратегії допоможуть вам досягти успіху. Розглянемо, що таке Форекс і як використовувати кредитне плече.',
     });
+    this.gerRandom();
+  }
+  randomArticleRus: any = [];
+  gerRandom() {
+    this.randomArticleRus = this.articleServ.getRandomUkArticles();
   }
 }
