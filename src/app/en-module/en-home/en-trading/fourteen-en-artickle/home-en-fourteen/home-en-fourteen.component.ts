@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ArticlesService } from '../../../../../servises/articles.service';
 
 @Component({
   selector: 'app-home-en-fourteen',
@@ -7,14 +8,25 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './home-en-fourteen.component.scss',
 })
 export class HomeEnFourteenComponent implements OnInit {
-  constructor(private meta: Meta, private titleService: Title) {}
+  constructor(
+    private meta: Meta,
+    private titleService: Title,
+    private articleServ: ArticlesService
+  ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Leverage Risk on FOREX - Arapov.trade');
+    this.titleService.setTitle('Forex Leverage Risk');
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
-      content: 'What is leverage in trading? Main risks',
+      content:
+        'Discover the risks associated with using leverage on Forex and how to manage them to minimize losses.',
     });
+
+    this.gerRandom();
+  }
+  randomArticleRus: any = [];
+  gerRandom() {
+    this.randomArticleRus = this.articleServ.getRandomUkArticles();
   }
 }
