@@ -439,7 +439,7 @@ export class ArticlesService {
       titleEn: 'Cryptocurrency Basics for Beginner Traders',
       titleRus: 'Основы Криптовалют для Начинающих Трейдеров',
 
-      imgUkr: '/assets/img/content/cryptocurrencybasics44.png',
+      imgUkr: '/assets/img/content/cryptocurrencybasics44.webp',
       groupsRus: ['Трейдинг для начинающих'],
       groupsEn: ['Trading for Beginners'],
       groupsUkr: ['Трейдинг для початківців'],
