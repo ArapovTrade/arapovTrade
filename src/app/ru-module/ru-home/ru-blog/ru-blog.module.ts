@@ -583,7 +583,7 @@ const routes: Routes = [
       ).then((m) => m.TwentyThreeRuArtickleModule),
   },
   {
-    path: 'fibonacciLevels',
+    path: 'fibonaccilevels',
     loadChildren: () =>
       import(
         '../ru-trading/twenty-four-ru-artickle/twenty-four-ru-artickle.module'

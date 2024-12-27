@@ -1095,7 +1095,7 @@ export class ArticlesService {
     },
     {
       titleUkr: 'Рівні Фібоначчі у технічному аналізі',
-      linkUkr: 'fibonacciLevels',
+      linkUkr: 'fibonaccilevels',
       titleEn: 'Fibonacci levels in technical analysis',
       titleRus: 'Уровни Фибоначчи в техническом анализе',
 
