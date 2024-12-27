@@ -506,9 +506,9 @@ export class ArticlesService {
       id: 35,
     },
     {
-      titleUkr: 'Навчання Трейдінгу Криптовалют',
-      titleEn: 'Cryptocurrency Trading Training',
-      titleRus: 'Обучение Трейдингу Криптовалют',
+      titleUkr: 'Особливості ринку криптовалют',
+      titleEn: 'Features of the cryptocurrency market',
+      titleRus: 'Особенности рынка криптовалют',
 
       linkUkr: 'cryptocurrencytrading',
       imgUkr: '/assets/img/content/cryptocurrencytrading44.png',
@@ -721,18 +721,18 @@ export class ArticlesService {
       groupsUkr: ['Концепція Смарт Мані'],
       id: 53,
     },
-    {
-      titleUkr: 'Особливості ринку Криптовалют',
-      titleEn: 'Features of the Cryptocurrency market',
-      titleRus: 'Особенности рынка Криптовалют',
+    // {
+    //   titleUkr: 'Особливості ринку Криптовалют',
+    //   titleEn: 'Features of the Cryptocurrency market',
+    //   titleRus: 'Особенности рынка Криптовалют',
 
-      linkUkr: 'featuresofcrypto',
-      imgUkr: '/assets/img/content/featuresofcrypto44.png',
-      groupsRus: ['Трейдинг для начинающих'],
-      groupsEn: ['Trading for Beginners'],
-      groupsUkr: ['Трейдинг для початківців'],
-      id: 54,
-    },
+    //   linkUkr: 'featuresofcrypto',
+    //   imgUkr: '/assets/img/content/featuresofcrypto44.png',
+    //   groupsRus: ['Трейдинг для начинающих'],
+    //   groupsEn: ['Trading for Beginners'],
+    //   groupsUkr: ['Трейдинг для початківців'],
+    //   id: 54,
+    // },
     {
       titleEn: 'Scalping in trading',
       titleUkr: 'Скальпінг у трейдингу',
