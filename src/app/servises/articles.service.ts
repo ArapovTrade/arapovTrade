@@ -283,7 +283,7 @@ export class ArticlesService {
       titleRus: 'Топ мифов о Трейдинге',
 
       linkUkr: 'tradingmyths',
-      imgUkr: '/assets/img/content/tradingmyths.png',
+      imgUkr: '/assets/img/content/tradingmyths44.png',
       groupsRus: ['Трейдинг для начинающих'],
       groupsEn: ['Trading for Beginners'],
       groupsUkr: ['Трейдинг для початківців'],
