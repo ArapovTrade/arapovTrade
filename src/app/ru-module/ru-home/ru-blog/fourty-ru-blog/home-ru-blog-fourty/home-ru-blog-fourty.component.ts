@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ArticlesService } from '../../../../../servises/articles.service';
 
 @Component({
   selector: 'app-home-ru-blog-fourty',
@@ -7,7 +8,11 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './home-ru-blog-fourty.component.scss',
 })
 export class HomeRuBlogFourtyComponent implements OnInit {
-  constructor(private meta: Meta, private titleService: Title) {}
+  constructor(
+    private meta: Meta,
+    private titleService: Title,
+    private articleServ: ArticlesService
+  ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
       'Почему трейдинг такой сложный ? - Arapov.trade'
@@ -15,7 +20,14 @@ export class HomeRuBlogFourtyComponent implements OnInit {
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
-      content: 'Почему трейдинг такой сложный ?  Психология рынка',
+      content:
+        'Узнайте, почему трейдинг считается сложной профессией и какие факторы делают его таким. Советы по преодолению трудностей и достижению успеха',
     });
+
+    this.gerRandom();
+  }
+  randomArticleRus: any = [];
+  gerRandom() {
+    this.randomArticleRus = this.articleServ.getRandomUkArticles();
   }
 }
