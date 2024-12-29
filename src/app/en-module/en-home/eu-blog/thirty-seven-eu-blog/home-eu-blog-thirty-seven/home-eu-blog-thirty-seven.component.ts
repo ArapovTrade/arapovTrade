@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ArticlesService } from '../../../../../servises/articles.service';
 
 @Component({
   selector: 'app-home-eu-blog-thirty-seven',
@@ -7,13 +8,25 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './home-eu-blog-thirty-seven.component.scss',
 })
 export class HomeEuBlogThirtySevenComponent implements OnInit {
-  constructor(private meta: Meta, private titleService: Title) {}
+  constructor(
+    private meta: Meta,
+    private titleService: Title,
+    private articleServ: ArticlesService
+  ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Drawdowns in trading - Arapov.trade');
+    this.titleService.setTitle(
+      'Drawdowns in Trading: How to Manage Risks and Preserve Profits'
+    );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
-      content: 'Drawdowns in trading | The main mistakes of new traders',
+      content:
+        'Learn what drawdowns in trading are, how to analyze and manage them to achieve consistent profitability',
     });
+    this.gerRandom();
+  }
+  randomArticleRus: any = [];
+  gerRandom() {
+    this.randomArticleRus = this.articleServ.getRandomUkArticles();
   }
 }
