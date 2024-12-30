@@ -114,7 +114,7 @@ export class ArticlesService {
       titleRus: 'Волатильность в трейдинге',
 
       linkUkr: 'volatility',
-      imgUkr: '/assets/img/content/volatility.jpg',
+      imgUkr: '/assets/img/content/volatility.png',
       groupsRus: ['Трейдинг для начинающих'],
       groupsEn: ['Trading for Beginners'],
       groupsUkr: ['Трейдинг для початківців'],
