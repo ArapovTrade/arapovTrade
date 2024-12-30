@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ArticlesService } from '../../../../../servises/articles.service';
 
 @Component({
   selector: 'app-home-uk-thirty-three',
@@ -7,13 +8,24 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './home-uk-thirty-three.component.scss',
 })
 export class HomeUkThirtyThreeComponent implements OnInit {
-  constructor(private meta: Meta, private titleService: Title) {}
+  constructor(
+    private meta: Meta,
+    private titleService: Title,
+    private articleServ: ArticlesService
+  ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Реквоти - Arapov.trade');
+    this.titleService.setTitle('Реквоти в трейдингу - Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
-      content: 'Реквоти у трейдингу',
+      content:
+        'Дізнайтеся, що таке реквоти в трейдингу, чому вони виникають та як їх уникнути. Поради щодо покращення торгівлі та роботи з брокерами.',
     });
+
+    this.gerRandom();
+  }
+  randomArticleRus: any = [];
+  gerRandom() {
+    this.randomArticleRus = this.articleServ.getRandomUkArticles();
   }
 }

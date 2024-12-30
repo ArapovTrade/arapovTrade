@@ -1202,10 +1202,10 @@ export class ArticlesService {
       id: 93,
     },
     {
-      titleUkr: 'Реквоти',
+      titleUkr: 'Реквоти у трейдингу',
       linkUkr: 'requotes',
-      titleEn: 'Requotes',
-      titleRus: 'Реквоты',
+      titleEn: 'Requotes in trading',
+      titleRus: 'Реквоты в трейдинге',
 
       imgUkr: '/assets/img/content/requotes44.png',
       groupsRus: ['Трейдинг для начинающих'],
