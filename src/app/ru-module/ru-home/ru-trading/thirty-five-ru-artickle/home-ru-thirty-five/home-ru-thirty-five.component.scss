@@ -2,13 +2,15 @@
     background: url(/assets/img/content/tradingsystem.webp) no-repeat bottom right;
     background-size: 100% 100%;
     color: white;
-    height: 300px;
+    height: 250px;
 }
 
 .section-i {
     padding: 0;
 }
-
+.pictureImgBig{
+    width: 800px;
+}
 .pictureImg {
 
     min-width: 300px;
@@ -33,16 +35,19 @@ h1 {
     }
 
     .img_content {
-        max-width: 70%;
+        max-width: 65%;
         min-width: 300px;
     }
 
     .pictureImg {
-        max-width: 30%;
+        max-width: 25%;
         min-width: 300px;
         // float: right;
         // margin-left: 20px;
     }
+        .pictureImgBig {
+            width: 800px;
+        }
 }
 
 @media (min-width: 900px) {
@@ -64,7 +69,7 @@ h1 {
 .flex {
 
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     flex-direction: row-reverse;
     flex-wrap: wrap;

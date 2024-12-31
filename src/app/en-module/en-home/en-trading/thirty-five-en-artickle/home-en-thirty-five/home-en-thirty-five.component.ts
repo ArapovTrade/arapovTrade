@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ArticlesService } from '../../../../../servises/articles.service';
 
 @Component({
   selector: 'app-home-en-thirty-five',
@@ -7,13 +8,25 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './home-en-thirty-five.component.scss',
 })
 export class HomeEnThirtyFiveComponent implements OnInit {
-  constructor(private meta: Meta, private titleService: Title) {}
+  constructor(
+    private meta: Meta,
+    private titleService: Title,
+    private articleServ: ArticlesService
+  ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Trading System - Arapov.trade');
+    this.titleService.setTitle(
+      'Trading System: Types and Optimization - Arapov.trade'
+    );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
-      content: 'Trader trading system, why is it needed?',
+      content:
+        'Learn what a trading system is, its types, the features of automation, and how to choose a strategy that suits your trading goals.',
     });
+    this.gerRandom();
+  }
+  randomArticleRus: any = [];
+  gerRandom() {
+    this.randomArticleRus = this.articleServ.getRandomUkArticles();
   }
 }

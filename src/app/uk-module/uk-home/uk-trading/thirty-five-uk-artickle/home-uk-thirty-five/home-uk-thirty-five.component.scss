@@ -2,24 +2,30 @@
     background: url(/assets/img/content/tradingsystem.webp) no-repeat bottom right;
     background-size: 100% 100%;
     color: white;
-    height: 300px;
+    height: 250px;
 }
 
 .section-i {
     padding: 0;
 }
 
+.pictureImgBig {
+    width: 800px;
+}
+
 .pictureImg {
-     
+
     min-width: 300px;
     // float: right;
     // margin-left: 20px;
 }
- .img_content {
-     max-width: 100%;
-     min-width: 300px;
-     margin-top: 20px;
- }
+
+.img_content {
+    max-width: 100%;
+    min-width: 300px;
+    margin-top: 20px;
+}
+
 h2,
 h1 {
     align-self: center;
@@ -29,15 +35,21 @@ h1 {
     .hero-section {
         height: 400px;
     }
-    .img_content{
-        max-width: 70%;
-            min-width: 300px;
+
+    .img_content {
+        max-width: 65%;
+        min-width: 300px;
     }
+
     .pictureImg {
-       max-width: 30%;
-       min-width: 300px;
+        max-width: 25%;
+        min-width: 300px;
         // float: right;
         // margin-left: 20px;
+    }
+
+    .pictureImgBig {
+        width: 800px;
     }
 }
 
@@ -58,12 +70,12 @@ h1 {
 }
 
 .flex {
-    
-        display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-direction: row-reverse;
-            flex-wrap: wrap;      
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
 
 }
 

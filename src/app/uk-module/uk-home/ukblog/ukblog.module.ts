@@ -664,20 +664,20 @@ const routes: Routes = [
         '../uk-trading/thirty-five-uk-artickle/thirty-five-uk-artickle.module'
       ).then((m) => m.ThirtyFiveUkArtickleModule),
   },
-  {
-    path: 'tradingsystemsseparation', //36
-    loadChildren: () =>
-      import(
-        '../uk-trading/thirty-six-uk-artickle/thirty-six-uk-artickle.module'
-      ).then((m) => m.ThirtySixUkArtickleModule),
-  },
-  {
-    path: 'tradingsystemautomation', //37
-    loadChildren: () =>
-      import(
-        '../uk-trading/thirty-seven-uk-artickle/thirty-seven-uk-artickle.module'
-      ).then((m) => m.ThirtySevenUkArtickleModule),
-  },
+  // {
+  //   path: 'tradingsystemsseparation', //36
+  //   loadChildren: () =>
+  //     import(
+  //       '../uk-trading/thirty-six-uk-artickle/thirty-six-uk-artickle.module'
+  //     ).then((m) => m.ThirtySixUkArtickleModule),
+  // },
+  // {
+  //   path: 'tradingsystemautomation', //37
+  //   loadChildren: () =>
+  //     import(
+  //       '../uk-trading/thirty-seven-uk-artickle/thirty-seven-uk-artickle.module'
+  //     ).then((m) => m.ThirtySevenUkArtickleModule),
+  // },
   {
     path: 'capitalmanagement', //38
     loadChildren: () =>
