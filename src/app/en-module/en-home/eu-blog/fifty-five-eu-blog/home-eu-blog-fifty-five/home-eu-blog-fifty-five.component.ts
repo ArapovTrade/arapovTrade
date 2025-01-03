@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ArticlesService } from '../../../../../servises/articles.service';
 
 @Component({
   selector: 'app-home-eu-blog-fifty-five',
@@ -7,13 +8,26 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './home-eu-blog-fifty-five.component.scss',
 })
 export class HomeEuBlogFiftyFiveComponent implements OnInit {
-  constructor(private meta: Meta, private titleService: Title) {}
+  constructor(
+    private meta: Meta,
+    private titleService: Title,
+    private articleServ: ArticlesService
+  ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Scalping in trading - Arapov.trade');
+    this.titleService.setTitle(
+      'Scalping in Trading: A Complete Guide - Arapov.trade'
+    );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
-      content: 'Scalping in trading: what do beginners need to know?',
+      content:
+        'A detailed guide to scalping in trading: strategies, indicators, risks, and automation. Learn how to profit from short-term trades!',
     });
+
+    this.gerRandom();
+  }
+  randomArticleRus: any = [];
+  gerRandom() {
+    this.randomArticleRus = this.articleServ.getRandomUkArticles();
   }
 }

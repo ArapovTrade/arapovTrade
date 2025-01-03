@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ArticlesService } from '../../../../../servises/articles.service';
 
 @Component({
   selector: 'app-home-uk-blog-fifty-five',
@@ -7,13 +8,26 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './home-uk-blog-fifty-five.component.scss',
 })
 export class HomeUkBlogFiftyFiveComponent implements OnInit {
-  constructor(private meta: Meta, private titleService: Title) {}
+  constructor(
+    private meta: Meta,
+    private titleService: Title,
+    private articleServ: ArticlesService
+  ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Скальпінг у трейдингу - Arapov.trade');
+    this.titleService.setTitle(
+      'Скальпінг у трейдингу: Повний посібник - Arapov.trade'
+    );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
-      content: 'Скальпінг у трейдингу що потрібно знати початківцям?',
+      content:
+        'Детальний посібник зі скальпінгу у трейдингу: стратегії, індикатори, ризики та автоматизація. Навчіться заробляти на короткострокових угодах!',
     });
+
+    this.gerRandom();
+  }
+  randomArticleRus: any = [];
+  gerRandom() {
+    this.randomArticleRus = this.articleServ.getRandomUkArticles();
   }
 }

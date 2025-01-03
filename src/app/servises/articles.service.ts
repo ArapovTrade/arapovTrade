@@ -686,9 +686,9 @@ export class ArticlesService {
       id: 50,
     },
     {
-      titleUkr: 'Cвічні патерни в Price Action',
+      titleUkr: 'Свічні патерни в Price Action',
       titleEn: 'Candlestick patterns in Price Action',
-      titleRus: 'Cвечные паттерны в Price Action',
+      titleRus: 'Свечные паттерны в Price Action',
 
       linkUkr: 'candlestickpatterns',
       imgUkr: '/assets/img/content/candlestickpatterns44.png',
