@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ArticlesService } from '../../../../../servises/articles.service';
 
 @Component({
   selector: 'app-home-ru-blog-fourty-one',
@@ -7,7 +8,11 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './home-ru-blog-fourty-one.component.scss',
 })
 export class HomeRuBlogFourtyOneComponent implements OnInit {
-  constructor(private meta: Meta, private titleService: Title) {}
+  constructor(
+    private meta: Meta,
+    private titleService: Title,
+    private articleServ: ArticlesService
+  ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
       'Правила для Успешного Трейдинга - Arapov.trade'
@@ -15,7 +20,14 @@ export class HomeRuBlogFourtyOneComponent implements OnInit {
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
-      content: 'Простые Правила для Успешного Трейдинга | Логика Ликвидности',
+      content:
+        'Полное руководство по успешному трейдингу: стратегии, управление рисками, выбор брокера, технический и фундаментальный анализ. Узнайте, как стать успешным трейдером!',
     });
+
+    this.gerRandom();
+  }
+  randomArticleRus: any = [];
+  gerRandom() {
+    this.randomArticleRus = this.articleServ.getRandomUkArticles();
   }
 }

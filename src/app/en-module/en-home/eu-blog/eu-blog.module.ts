@@ -167,13 +167,13 @@ const routes: Routes = [
         (m) => m.TwentyFourEnBlogModule
       ),
   },
-  {
-    path: 'simpletradingsystem', //25
-    loadChildren: () =>
-      import('./twenty-five-en-blog/twenty-five-en-blog.module').then(
-        (m) => m.TwentyFiveEnBlogModule
-      ),
-  },
+  // {
+  //   path: 'simpletradingsystem', //25
+  //   loadChildren: () =>
+  //     import('./twenty-five-en-blog/twenty-five-en-blog.module').then(
+  //       (m) => m.TwentyFiveEnBlogModule
+  //     ),
+  // },
   {
     path: 'ordertypes', //26
     loadChildren: () =>

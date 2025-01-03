@@ -6,7 +6,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 })
 export class LangService {
   constructor() {}
-  private numberSubject = new BehaviorSubject<number>(1);
+  private numberSubject = new BehaviorSubject<number>(0);
 
   // number = 1;
   // getNumber() {
