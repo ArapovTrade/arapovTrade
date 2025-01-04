@@ -1267,7 +1267,7 @@ export class ArticlesService {
       titleEn: 'Specifics of Capital Management in Trading',
       titleRus: 'Специфика управления капиталом в трейдинге',
 
-      imgUkr: '/assets/img/content/capitalmanagement44.jpg',
+      imgUkr: '/assets/img/content/capitalmanagement44.png',
       groupsRus: ['Трейдинг для начинающих'],
       groupsEn: ['Trading for Beginners'],
       groupsUkr: ['Трейдинг для початківців'],

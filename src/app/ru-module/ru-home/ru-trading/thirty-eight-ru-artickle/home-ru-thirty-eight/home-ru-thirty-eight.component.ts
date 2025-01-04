@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ArticlesService } from '../../../../../servises/articles.service';
 
 @Component({
   selector: 'app-home-ru-thirty-eight',
@@ -7,7 +8,11 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './home-ru-thirty-eight.component.scss',
 })
 export class HomeRuThirtyEightComponent implements OnInit {
-  constructor(private meta: Meta, private titleService: Title) {}
+  constructor(
+    private meta: Meta,
+    private titleService: Title,
+    private articleServ: ArticlesService
+  ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
       'Специфика управления капиталом в трейдинге - Arapov.trade'
@@ -15,7 +20,13 @@ export class HomeRuThirtyEightComponent implements OnInit {
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
-      content: 'Управление капиталом в трейдинге',
+      content:
+        'Полное руководство по управлению капиталом в трейдинге. Риск-менеджмент, мани-менеджмент, контроль убытков и эффективные стратегии управления депозитом.',
     });
+    this.gerRandom();
+  }
+  randomArticleRus: any = [];
+  gerRandom() {
+    this.randomArticleRus = this.articleServ.getRandomUkArticles();
   }
 }

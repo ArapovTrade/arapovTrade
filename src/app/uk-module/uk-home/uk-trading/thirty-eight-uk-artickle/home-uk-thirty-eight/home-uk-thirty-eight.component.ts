@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ArticlesService } from '../../../../../servises/articles.service';
 
 @Component({
   selector: 'app-home-uk-thirty-eight',
@@ -7,7 +8,11 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './home-uk-thirty-eight.component.scss',
 })
 export class HomeUkThirtyEightComponent implements OnInit {
-  constructor(private meta: Meta, private titleService: Title) {}
+  constructor(
+    private meta: Meta,
+    private titleService: Title,
+    private articleServ: ArticlesService
+  ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
       'Специфіка управління капіталом у трейдингу - Arapov.trade'
@@ -15,7 +20,14 @@ export class HomeUkThirtyEightComponent implements OnInit {
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
-      content: 'Управління капіталом у трейдингу',
+      content:
+        'Повний посібник з управління капіталом у трейдингу. Ризик-менеджмент, мані-менеджмент, контроль збитків та ефективні стратегії управління депозитом.',
     });
+
+    this.gerRandom();
+  }
+  randomArticleRus: any = [];
+  gerRandom() {
+    this.randomArticleRus = this.articleServ.getRandomUkArticles();
   }
 }
