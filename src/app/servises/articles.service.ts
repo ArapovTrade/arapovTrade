@@ -1279,7 +1279,7 @@ export class ArticlesService {
       titleEn: 'Profit and Loss Ratio',
       titleRus: 'Соотношение прибыли и убытка',
 
-      imgUkr: '/assets/img/content/profitandlossratio44.png',
+      imgUkr: '/assets/img/content/profitandlossratio44.webp',
       groupsRus: ['Трейдинг для начинающих'],
       groupsEn: ['Trading for Beginners'],
       groupsUkr: ['Трейдинг для початківців'],
