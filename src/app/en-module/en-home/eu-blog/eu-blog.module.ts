@@ -132,13 +132,13 @@ const routes: Routes = [
         (m) => m.NineteenEnBlogModule
       ),
   },
-  {
-    path: 'besttimefortrading', //20
-    loadChildren: () =>
-      import('./twenty-en-blog/twenty-en-blog.module').then(
-        (m) => m.TwentyEnBlogModule
-      ),
-  },
+  // {
+  //   path: 'besttimefortrading', //20
+  //   loadChildren: () =>
+  //     import('./twenty-en-blog/twenty-en-blog.module').then(
+  //       (m) => m.TwentyEnBlogModule
+  //     ),
+  // },
   {
     path: 'marketmaker', //21
     loadChildren: () =>
@@ -714,27 +714,27 @@ const routes: Routes = [
         '../en-trading/fourty-two-en-artickle/fourty-two-en-artickle.module'
       ).then((m) => m.FourtyTwoEnArtickleModule),
   },
-  {
-    path: 'selectingtimeframe',
-    loadChildren: () =>
-      import(
-        '../en-trading/fourty-three-en-artickle/fourty-three-en-artickle.module'
-      ).then((m) => m.FourtyThreeEnArtickleModule),
-  },
-  {
-    path: 'timeframeforbeginner',
-    loadChildren: () =>
-      import(
-        '../en-trading/fourty-four-en-artickle/fourty-four-en-artickle.module'
-      ).then((m) => m.FourtyFourEnArtickleModule),
-  },
-  {
-    path: 'typeoftimeframes',
-    loadChildren: () =>
-      import(
-        '../en-trading/fourty-five-en-artickle/fourty-five-en-artickle.module'
-      ).then((m) => m.FourtyFiveEnArtickleModule),
-  },
+  // {
+  //   path: 'selectingtimeframe',
+  //   loadChildren: () =>
+  //     import(
+  //       '../en-trading/fourty-three-en-artickle/fourty-three-en-artickle.module'
+  //     ).then((m) => m.FourtyThreeEnArtickleModule),
+  // },
+  // {
+  //   path: 'timeframeforbeginner',
+  //   loadChildren: () =>
+  //     import(
+  //       '../en-trading/fourty-four-en-artickle/fourty-four-en-artickle.module'
+  //     ).then((m) => m.FourtyFourEnArtickleModule),
+  // },
+  // {
+  //   path: 'typeoftimeframes',
+  //   loadChildren: () =>
+  //     import(
+  //       '../en-trading/fourty-five-en-artickle/fourty-five-en-artickle.module'
+  //     ).then((m) => m.FourtyFiveEnArtickleModule),
+  // },
   // {
   //   path: 'reasonforloosingmoney',
   //   loadChildren: () =>

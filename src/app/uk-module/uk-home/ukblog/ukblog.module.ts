@@ -131,13 +131,13 @@ const routes: Routes = [
         (m) => m.NineteenUkBlogModule
       ),
   },
-  {
-    path: 'besttimefortrading', //20
-    loadChildren: () =>
-      import('./twenty-uk-blog/twenty-uk-blog.module').then(
-        (m) => m.TwentyUkBlogModule
-      ),
-  },
+  // {
+  //   path: 'besttimefortrading', //20
+  //   loadChildren: () =>
+  //     import('./twenty-uk-blog/twenty-uk-blog.module').then(
+  //       (m) => m.TwentyUkBlogModule
+  //     ),
+  // },
   {
     path: 'marketmaker', //21
     loadChildren: () =>
@@ -713,27 +713,27 @@ const routes: Routes = [
         '../uk-trading/fourty-two-uk-artickle/fourty-two-uk-artickle.module'
       ).then((m) => m.FourtyTwoUkArtickleModule),
   },
-  {
-    path: 'selectingtimeframe', //43
-    loadChildren: () =>
-      import(
-        '../uk-trading/fourty-three-uk-artickle/fourty-three-uk-artickle.module'
-      ).then((m) => m.FourtyThreeUkArtickleModule),
-  },
-  {
-    path: 'timeframeforbeginner', //44
-    loadChildren: () =>
-      import(
-        '../uk-trading/fourty-four-uk-artickle/fourty-four-uk-artickle.module'
-      ).then((m) => m.FourtyFourUkArtickleModule),
-  },
-  {
-    path: 'typeoftimeframes', //45
-    loadChildren: () =>
-      import(
-        '../uk-trading/fourty-five-uk-artickle/fourty-five-uk-artickle.module'
-      ).then((m) => m.FourtyFiveUkArtickleModule),
-  },
+  // {
+  //   path: 'selectingtimeframe', //43
+  //   loadChildren: () =>
+  //     import(
+  //       '../uk-trading/fourty-three-uk-artickle/fourty-three-uk-artickle.module'
+  //     ).then((m) => m.FourtyThreeUkArtickleModule),
+  // },
+  // {
+  //   path: 'timeframeforbeginner', //44
+  //   loadChildren: () =>
+  //     import(
+  //       '../uk-trading/fourty-four-uk-artickle/fourty-four-uk-artickle.module'
+  //     ).then((m) => m.FourtyFourUkArtickleModule),
+  // },
+  // {
+  //   path: 'typeoftimeframes', //45
+  //   loadChildren: () =>
+  //     import(
+  //       '../uk-trading/fourty-five-uk-artickle/fourty-five-uk-artickle.module'
+  //     ).then((m) => m.FourtyFiveUkArtickleModule),
+  // },
   // {
   //   path: 'reasonforloosingmoney', //46
   //   loadChildren: () =>
