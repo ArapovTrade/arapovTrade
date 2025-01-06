@@ -16,6 +16,8 @@
     display: none;
     position: absolute;
     list-style-type: none;
+    right:-15px;///////new
+    top:40px;///////new
     padding: 0;
     margin: 0;
     background-color: white;
@@ -24,7 +26,14 @@
 }
 
 .language-dropdown.open {
-    display: block;
+    display: flex;
+        width: 150px;
+        flex-direction: column;
+        align-items: flex-start;
+}
+.li_block {
+    display: flex;
+    align-items: center;
 }
 
 .language-dropdown li {
