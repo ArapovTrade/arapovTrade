@@ -124,13 +124,13 @@ const routes: Routes = [
         (m) => m.EighteenUkBlogModule
       ),
   },
-  {
-    path: 'smartmoneyeducation', //19
-    loadChildren: () =>
-      import('./nineteen-uk-blog/nineteen-uk-blog.module').then(
-        (m) => m.NineteenUkBlogModule
-      ),
-  },
+  // {
+  //   path: 'smartmoneyeducation', //19
+  //   loadChildren: () =>
+  //     import('./nineteen-uk-blog/nineteen-uk-blog.module').then(
+  //       (m) => m.NineteenUkBlogModule
+  //     ),
+  // },
   // {
   //   path: 'besttimefortrading', //20
   //   loadChildren: () =>
@@ -187,13 +187,13 @@ const routes: Routes = [
         (m) => m.TwentySevenUkBlogModule
       ),
   },
-  {
-    path: 'smartmoneystrategy', //28
-    loadChildren: () =>
-      import('./twenty-eight-uk-blog/twenty-eight-uk-blog.module').then(
-        (m) => m.TwentyEightUkBlogModule
-      ),
-  },
+  // {
+  //   path: 'smartmoneystrategy', //28
+  //   loadChildren: () =>
+  //     import('./twenty-eight-uk-blog/twenty-eight-uk-blog.module').then(
+  //       (m) => m.TwentyEightUkBlogModule
+  //     ),
+  // },
   {
     path: 'tradingquickstart', //29
     loadChildren: () =>
@@ -257,13 +257,13 @@ const routes: Routes = [
         (m) => m.ThirtySevenUkBlogModule
       ),
   },
-  {
-    path: 'smartmoneyconcept', //38
-    loadChildren: () =>
-      import('./thirty-eight-uk-blog/thirty-eight-uk-blog.module').then(
-        (m) => m.ThirtyEightUkBlogModule
-      ),
-  },
+  // {
+  //   path: 'smartmoneyconcept', //38
+  //   loadChildren: () =>
+  //     import('./thirty-eight-uk-blog/thirty-eight-uk-blog.module').then(
+  //       (m) => m.ThirtyEightUkBlogModule
+  //     ),
+  // },
   {
     path: 'volumetricmarketanalysis', //39
     loadChildren: () =>
@@ -292,13 +292,13 @@ const routes: Routes = [
         (m) => m.FourtyTwoUkBlogModule
       ),
   },
-  {
-    path: 'smartmoneystrategyforbanks', //43
-    loadChildren: () =>
-      import('./fourty-three-uk-blog/fourty-three-uk-blog.module').then(
-        (m) => m.FourtyThreeUkBlogModule
-      ),
-  },
+  // {
+  //   path: 'smartmoneystrategyforbanks', //43
+  //   loadChildren: () =>
+  //     import('./fourty-three-uk-blog/fourty-three-uk-blog.module').then(
+  //       (m) => m.FourtyThreeUkBlogModule
+  //     ),
+  // },
   // {
   //   path: 'basicsoftrading', //44
   //   loadChildren: () =>

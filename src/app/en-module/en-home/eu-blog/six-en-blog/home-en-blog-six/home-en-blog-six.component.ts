@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ArticlesService } from '../../../../../servises/articles.service';
 
 @Component({
   selector: 'app-home-en-blog-six',
@@ -7,14 +8,25 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './home-en-blog-six.component.scss',
 })
 export class HomeEnBlogSixComponent implements OnInit {
-  constructor(private meta: Meta, private titleService: Title) {}
+  constructor(
+    private meta: Meta,
+    private titleService: Title,
+    private articleServ: ArticlesService
+  ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Smart Money - Arapov.trade');
+    this.titleService.setTitle(
+      'Complete Course on the Smart Money Concept - Arapov.trade'
+    );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Smart money - a complete trading course! Teaching of trading from zero',
+        'Understanding the Smart Money concept, institutional trading methodology, liquidity analysis, and market manipulation. A complete guide for traders.',
     });
+    this.gerRandom();
+  }
+  randomArticleRus: any = [];
+  gerRandom() {
+    this.randomArticleRus = this.articleServ.getRandomUkArticles();
   }
 }

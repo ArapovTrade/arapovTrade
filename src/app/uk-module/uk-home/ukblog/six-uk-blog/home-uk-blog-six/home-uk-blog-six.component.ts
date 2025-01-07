@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ArticlesService } from '../../../../../servises/articles.service';
 
 @Component({
   selector: 'app-home-uk-blog-six',
@@ -7,14 +8,26 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './home-uk-blog-six.component.scss',
 })
 export class HomeUkBlogSixComponent implements OnInit {
-  constructor(private meta: Meta, private titleService: Title) {}
+  constructor(
+    private meta: Meta,
+    private titleService: Title,
+    private articleServ: ArticlesService
+  ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Смарт Мані - Arapov.trade');
+    this.titleService.setTitle(
+      'Повний курс з концепції Смарт Мані - Arapov.trade'
+    );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Смарт Мані - Повний Курс з Трейдингу! Навчання трейдингу з нуля',
+        'Розбираємо концепцію Smart Money, методологію торгівлі інституційних гравців, аналіз ліквідності та маніпуляції на ринку. Повний посібник для трейдерів.',
     });
+
+    this.gerRandom();
+  }
+  randomArticleRus: any = [];
+  gerRandom() {
+    this.randomArticleRus = this.articleServ.getRandomUkArticles();
   }
 }
