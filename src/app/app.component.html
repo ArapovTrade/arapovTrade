@@ -228,17 +228,25 @@
                                     src="/assets/img/content/flagofbreatbritain.png" alt="flagGB">
                             </div>
                             <ul class="language-dropdown" [class.open]="dropdownOpen">
-                                <li class="li_block"><img style="width:18px ; height: 18px;     margin: 0 15px 0 0;"
-                                        src="/assets/img/content/flagofukraine.png" alt="flagUKR"><a routerLink="/uk"
-                                        routerLinkActive="active" [routerLinkActiveOptions]='{exact:true}'
+                                <li class="li_block"><a routerLink="/uk" routerLinkActive="active"
+                                        [routerLinkActiveOptions]='{exact:true}'
+                                        (click)="closeDropdown();changeLanguage('uk'); setUkraine()"><img
+                                            style="width:18px ; height: 18px;     margin: 0 15px 0 0;"
+                                            src="/assets/img/content/flagofukraine.png" alt="flagUKR"></a><a
+                                        routerLink="/uk" routerLinkActive="active"
+                                        [routerLinkActiveOptions]='{exact:true}'
                                         (click)="closeDropdown();changeLanguage('uk'); setUkraine()">Українська</a>
                                 </li>
-                                <li class="li_block"><img style="width:18px ; height: 18px;     margin: 0 15px 0 0;"
-                                        src="/assets/img/content/flagofrussia.png" alt="flagRus"><a routerLink="/ru"
-                                        routerLinkActive="active"
+                                <li class="li_block"><a routerLink="/ru" routerLinkActive="active"
+                                        (click)="closeDropdown() ; changeLanguage('ru');setRussian()"><img
+                                            style="width:18px ; height: 18px;     margin: 0 15px 0 0;"
+                                            src="/assets/img/content/flagofrussia.png" alt="flagRus"></a><a
+                                        routerLink="/ru" routerLinkActive="active"
                                         (click)="closeDropdown() ; changeLanguage('ru');setRussian()">Русский</a></li>
-                                <li class="li_block"><img style="width:18px ; height: 18px;     margin: 0 15px 0 0;"
-                                        src="/assets/img/content/flagofbreatbritain.png" alt="flagGB"><a
+                                <li class="li_block"><a routerLink="/en" routerLinkActive="active"
+                                        (click)="closeDropdown() ; changeLanguage('en');setEnglish()"><img
+                                            style="width:18px ; height: 18px;     margin: 0 15px 0 0;"
+                                            src="/assets/img/content/flagofbreatbritain.png" alt="flagGB"></a><a
                                         routerLink="/en" routerLinkActive="active"
                                         (click)="closeDropdown() ; changeLanguage('en');setEnglish()">English</a></li>
                             </ul>
