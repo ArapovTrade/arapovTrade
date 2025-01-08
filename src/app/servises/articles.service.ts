@@ -170,9 +170,9 @@ export class ArticlesService {
     },
 
     {
-      titleUkr: 'Імбаланс у трейдингу',
-      titleRus: 'Имбаланс в трейдинге',
-      titleEn: 'Imbalance in trading',
+      titleUkr: 'Імбаланс у трейдингу ',
+      titleRus: 'Имбаланс в трейдинге ',
+      titleEn: 'Imbalance in Trading ',
 
       linkUkr: 'imbalanceintrading',
       imgUkr: '/assets/img/content/imbalanceintrading44.png',
