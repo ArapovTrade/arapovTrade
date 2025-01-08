@@ -715,7 +715,7 @@ export class ArticlesService {
       titleRus: 'Ордер Блок в Трейдинге',
 
       linkUkr: 'orderblockintrading',
-      imgUkr: '/assets/img/content/orderblockintrading44.jpg',
+      imgUkr: '/assets/img/content/orderblockintrading44.png',
       groupsRus: ['Концепция Смарт Мани'],
       groupsEn: ['Smart Money Concept'],
       groupsUkr: ['Концепція Смарт Мані'],
