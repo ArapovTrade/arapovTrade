@@ -264,13 +264,13 @@ const routes: Routes = [
   //       (m) => m.ThirtyEightUkBlogModule
   //     ),
   // },
-  {
-    path: 'volumetricmarketanalysis', //39
-    loadChildren: () =>
-      import('./thirty-nine-uk-blog/thirty-nine-uk-blog.module').then(
-        (m) => m.ThirtyNineUkBlogModule
-      ),
-  },
+  // {
+  //   path: 'volumetricmarketanalysis', //39
+  //   loadChildren: () =>
+  //     import('./thirty-nine-uk-blog/thirty-nine-uk-blog.module').then(
+  //       (m) => m.ThirtyNineUkBlogModule
+  //     ),
+  // },
   {
     path: 'difficulttrading', //40
     loadChildren: () =>
@@ -615,13 +615,13 @@ const routes: Routes = [
         '../uk-trading/twenty-eight-uk-artickle/twenty-eight-uk-artickle.module'
       ).then((m) => m.TwentyEightUkArtickleModule),
   },
-  {
-    path: 'volumemarketanalysis', //29
-    loadChildren: () =>
-      import(
-        '../uk-trading/twenty-nine-uk-artickle/twenty-nine-uk-artickle.module'
-      ).then((m) => m.TwentyNineUkArtickleModule),
-  },
+  // {
+  //   path: 'volumemarketanalysis', //29
+  //   loadChildren: () =>
+  //     import(
+  //       '../uk-trading/twenty-nine-uk-artickle/twenty-nine-uk-artickle.module'
+  //     ).then((m) => m.TwentyNineUkArtickleModule),
+  // },
   {
     path: 'typesoforders', //30
     loadChildren: () =>
