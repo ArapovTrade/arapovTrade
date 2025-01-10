@@ -1,8 +1,8 @@
 .hero-section {
-    background: url(/assets/img/content/osnovirinka.jpg) no-repeat bottom right;
+    background: url(/assets/img/content/osnovirinka.webp) no-repeat bottom right;
     background-size: 100% 100%;
-    color: white;
-    height: 300px;
+color: white;
+    height: 250px;
 }
 
 .section-i {
@@ -10,13 +10,32 @@
 }
 
 .pictureImg {
-    width: 300px;
-    float: right;
-    margin-left: 20px;
+    width: 800px;
+
 }
-h2,h1{
+
+.pictureImg2 {
+    width: 600px;
+
+}
+
+.pictureImg2 {
+    width: 500px;
+
+}
+
+.flex2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+h2,
+h1 {
     align-self: center;
 }
+
 @media (min-width: 700px) {
     .hero-section {
         height: 400px;
@@ -28,6 +47,11 @@ h2,h1{
         text-align: center !important;
     }
 
+    .flex2 {
+
+        flex-wrap: nowrap;
+    }
+
     .hero-section {
         height: 500px;
     }
@@ -37,4 +61,19 @@ h2,h1{
     .hero-section {
         height: 600px;
     }
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pad6 {
+    padding: 60px 0;
+}
+
+.pad {
+    margin: 10px 30px 40px;
+    text-align: center;
 }

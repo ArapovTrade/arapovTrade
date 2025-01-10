@@ -835,7 +835,7 @@ export class ArticlesService {
       titleEn: 'Market Basics. Definitions',
       titleRus: 'Основы рынка. Термины',
 
-      imgUkr: '/assets/img/content/osnovirinka44.jpg',
+      imgUkr: '/assets/img/content/osnovirinka44.png',
       groupsRus: ['Трейдинг для начинающих'],
       groupsEn: ['Trading for Beginners'],
       groupsUkr: ['Трейдинг для початківців'],
