@@ -124,13 +124,13 @@ const routes: Routes = [
         (m) => m.EighteenUkBlogModule
       ),
   },
-  // {
-  //   path: 'smartmoneyeducation', //19
-  //   loadChildren: () =>
-  //     import('./nineteen-uk-blog/nineteen-uk-blog.module').then(
-  //       (m) => m.NineteenUkBlogModule
-  //     ),
-  // },
+  {
+    path: 'wyckoffmethod', //19
+    loadChildren: () =>
+      import('./nineteen-uk-blog/nineteen-uk-blog.module').then(
+        (m) => m.NineteenUkBlogModule
+      ),
+  },
   // {
   //   path: 'besttimefortrading', //20
   //   loadChildren: () =>
