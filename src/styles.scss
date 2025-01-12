@@ -2720,7 +2720,10 @@ div.horizontalfield {
     flex-wrap: wrap;
     padding: 20px 0;
 }
-
+.flexDisclaimer{
+    display: flex;
+    justify-content: center;
+}
 .footer__block {
     display: flex;
     flex-direction: column;

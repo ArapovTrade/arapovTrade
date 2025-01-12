@@ -5,6 +5,7 @@ import { Routes } from '@angular/router';
 import { RouterModule } from '@angular/router';
 import { HomePageComponent } from './en-home/home-page/home-page.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DisclaimerenComponent } from './en-home/doc/disclaimeren/disclaimeren.component';
 
 const routes: Routes = [
   // { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -13,6 +14,10 @@ const routes: Routes = [
     component: EnHomeComponent,
     children: [
       { path: 'home', component: HomePageComponent },
+      {
+        path: 'home/disclaimer',
+        component: DisclaimerenComponent,
+      },
       {
         path: 'studying',
         loadChildren: () =>
@@ -46,7 +51,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [EnHomeComponent, HomePageComponent],
+  declarations: [EnHomeComponent, HomePageComponent, DisclaimerenComponent],
   imports: [
     CommonModule,
     FormsModule,

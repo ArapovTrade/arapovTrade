@@ -5,6 +5,7 @@ import { Routes } from '@angular/router';
 import { RouterModule } from '@angular/router';
 import { UkHomePageComponent } from './uk-home/uk-home-page/uk-home-page.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DisclaimeruaComponent } from './uk-home/doc/disclaimerua/disclaimerua.component';
 
 const routes: Routes = [
   // { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -15,6 +16,10 @@ const routes: Routes = [
       { path: '', redirectTo: 'home', pathMatch: 'full' }, //new
 
       { path: 'home', component: UkHomePageComponent },
+      {
+        path: 'home/disclaimer',
+        component: DisclaimeruaComponent,
+      },
       {
         path: 'studying',
         loadChildren: () =>
@@ -46,7 +51,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [UkHomeComponent, UkHomePageComponent],
+  declarations: [UkHomeComponent, UkHomePageComponent, DisclaimeruaComponent],
   imports: [
     CommonModule,
     FormsModule,
