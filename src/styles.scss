@@ -722,7 +722,12 @@ section {
     padding: 0;
     text-align: left;
 }
-
+.styled-list-block {
+    margin-left: 5px!important;
+}
+.programm__in__pad{
+    padding-left: 10px!important;
+}
 .styled-list li {
     position: relative;
     padding-left: 14px;
