@@ -90,7 +90,7 @@ export class ArticlesService {
       titleEn: 'Market phases in trading',
       titleRus: 'Фазы рынка в трейдинге',
       linkUkr: 'blogmarketphases',
-      imgUkr: '/assets/img/content/blogmarketphases44.jpg',
+      imgUkr: '/assets/img/content/blogmarketphases44.png',
       groupsRus: ['Объемный анализ рынка'],
       groupsEn: ['Market Volume Analysis'],
       groupsUkr: ['Об`ємний аналіз ринку'],
