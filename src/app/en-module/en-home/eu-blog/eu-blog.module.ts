@@ -623,13 +623,13 @@ const routes: Routes = [
   //       '../en-trading/twenty-nine-en-artickle/twenty-nine-en-artickle.module'
   //     ).then((m) => m.TwentyNineEnArtickleModule),
   // },
-  {
-    path: 'typesoforders',
-    loadChildren: () =>
-      import('../en-trading/thirty-en-artickle/thirty-en-artickle.module').then(
-        (m) => m.ThirtyEnArtickleModule
-      ),
-  },
+  // {
+  //   path: 'typesoforders',
+  //   loadChildren: () =>
+  //     import('../en-trading/thirty-en-artickle/thirty-en-artickle.module').then(
+  //       (m) => m.ThirtyEnArtickleModule
+  //     ),
+  // },
   {
     path: 'marketorder',
     loadChildren: () =>
