@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ArticlesService } from '../../../../../servises/articles.service';
 
 @Component({
   selector: 'app-home-uk-thirty-four',
@@ -7,13 +8,32 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './home-uk-thirty-four.component.scss',
 })
 export class HomeUkThirtyFourComponent implements OnInit {
-  constructor(private meta: Meta, private titleService: Title) {}
+  constructor(
+    private meta: Meta,
+    private titleService: Title,
+    private articleServ: ArticlesService
+  ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Стоп-лімітний ордер - Arapov.trade');
+    this.titleService.setTitle(
+      'Стоп-лімітний ордер: Повний гід - Arapov.trade'
+    );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
-      content: 'Лімітний ордер, що це і як використовувати?',
+      content:
+        'Що таке стоп-лімітний ордер і як правильно його використовувати? Повний гід для трейдерів з налаштування та застосування Stop-Limit Order на криптовалютному та фондовому ринках.',
     });
+    this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-01-15' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/stoplimitorder1.png',
+    });
+
+    this.gerRandom();
+  }
+  randomArticleRus: any = [];
+  gerRandom() {
+    this.randomArticleRus = this.articleServ.getRandomUkArticles();
   }
 }
