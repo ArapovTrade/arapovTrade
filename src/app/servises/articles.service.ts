@@ -487,7 +487,7 @@ export class ArticlesService {
       titleEn: 'How to set a stop loss?',
 
       linkUkr: 'stoploss',
-      imgUkr: '/assets/img/content/stoploss44.png',
+      imgUkr: '/assets/img/content/stoplossmain44.png',
       groupsRus: ['Объемный анализ рынка'],
       groupsEn: ['Market Volume Analysis'],
       groupsUkr: ['Об`ємний аналіз ринку'],

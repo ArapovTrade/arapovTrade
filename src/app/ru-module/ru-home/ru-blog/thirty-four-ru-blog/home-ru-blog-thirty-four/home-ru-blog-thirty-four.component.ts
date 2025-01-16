@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ArticlesService } from '../../../../../servises/articles.service';
 
 @Component({
   selector: 'app-home-ru-blog-thirty-four',
@@ -7,13 +8,30 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './home-ru-blog-thirty-four.component.scss',
 })
 export class HomeRuBlogThirtyFourComponent implements OnInit {
-  constructor(private meta: Meta, private titleService: Title) {}
+  constructor(
+    private meta: Meta,
+    private titleService: Title,
+    private articleServ: ArticlesService
+  ) {}
   ngOnInit(): void {
     this.titleService.setTitle('Как выставлять стоп-лосс? - Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
-      content: 'Как выставлять стоп-лосс? Основы Трейдинга для новичков',
+      content:
+        'Как правильно выставлять стоп-лосс в трейдинге? Разбираем стратегии, методы расчета и ошибки при установке Stop-Loss, чтобы минимизировать риски и защитить капитал.',
     });
+    this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-01-16' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/stoplossmain.png',
+    });
+
+    this.gerRandom();
+  }
+  randomArticleRus: any = [];
+  gerRandom() {
+    this.randomArticleRus = this.articleServ.getRandomUkArticles();
   }
 }
