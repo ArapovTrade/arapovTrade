@@ -77,18 +77,20 @@
         padding-bottom: 40px;
     }
 
-    .hero-image-place {
-        padding-top: 50px;
-    }
+    // .hero-image-place {
+    //     padding-top: 50px;
+    // }
 
-    .hero-section {
-        height: 600px;
-    }
+    // .hero-section {
+    //     height: 600px;
+    // }
 
     .blog-text {
         width: 600px;
     }
-
+         .hero-content-main_block{
+            max-width: 45%;
+         }
     .hero-section .section-content {
         flex-direction: row;
         align-items: flex-start;

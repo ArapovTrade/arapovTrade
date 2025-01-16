@@ -91,4 +91,8 @@ export class UkBlogHomepageComponent implements OnInit {
     this.paginatedArticles = this.filteredArticles.slice(startIndex, endIndex);
     this.checkedGroup = this.artickleServ.selectedGroups;
   }
+
+  navigateToStudy() {
+    this.router.navigateByUrl('/uk/studying');
+  }
 }

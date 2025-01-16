@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { UkModuleModule } from './uk-module/uk-module.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 const routes: Routes = [
-  { path: '', redirectTo: 'uk/home', pathMatch: 'full' },
+  { path: '', redirectTo: 'uk/freestudying', pathMatch: 'full' },
   {
     path: 'uk',
     loadChildren: () =>

@@ -84,4 +84,7 @@ export class EnBlogHomepageComponent implements OnInit {
     this.paginatedArticles = this.filteredArticles.slice(startIndex, endIndex);
     this.checkedGroup = this.artickleServ.selectedGroups;
   }
+  navigateToStudy() {
+    this.router.navigateByUrl('/en/studying');
+  }
 }
