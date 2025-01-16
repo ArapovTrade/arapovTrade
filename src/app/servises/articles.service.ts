@@ -254,11 +254,11 @@ export class ArticlesService {
       id: 14,
     },
     {
-      titleUkr: "Вся правда про торгівлю ф'ючерсами",
+      titleUkr: "Правда про торгівлю ф'ючерсами",
       linkUkr: 'futurestrading',
-      titleRus: 'Вся правда о торговле фьючерсами',
+      titleRus: 'Правда о торговле фьючерсами',
 
-      titleEn: 'The whole truth about futures trading',
+      titleEn: ' The Truth about futures trading',
       imgUkr: '/assets/img/content/futurestrading44.png',
       groupsRus: ['Словарь трейдера'],
       groupsEn: ['Trader`s Dictionary'],

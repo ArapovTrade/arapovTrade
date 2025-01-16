@@ -14,12 +14,12 @@ export class HomeUkBlogFiveteenComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle("Вся правда про торгівлю ф'ючерсами");
+    this.titleService.setTitle("Правда про торгівлю ф'ючерсами");
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        "Дізнайтеся всю правду про торгівлю ф'ючерсами: їх переваги, ризики та секрети успішної торгівлі. Повний посібник для трейдерів.",
+        "Дізнайтеся  правду про торгівлю ф'ючерсами: їх переваги, ризики та секрети успішної торгівлі. Повний посібник для трейдерів.",
     });
     this.gerRandom();
   }
