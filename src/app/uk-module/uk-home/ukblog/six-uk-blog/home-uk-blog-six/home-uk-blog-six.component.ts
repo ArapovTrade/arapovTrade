@@ -14,9 +14,7 @@ export class HomeUkBlogSixComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle(
-      'Повний курс з концепції Смарт Мані - Arapov.trade'
-    );
+    this.titleService.setTitle('Концепція Смарт Мані - Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',

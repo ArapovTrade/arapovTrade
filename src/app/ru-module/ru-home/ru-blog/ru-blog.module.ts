@@ -153,13 +153,13 @@ const routes: Routes = [
   //       (m) => m.TwentyTwoRuBlogModule
   //     ),
   // },
-  {
-    path: 'liqudityintrading', //23
-    loadChildren: () =>
-      import('./twenty-three-ru-blog/twenty-three-ru-blog.module').then(
-        (m) => m.TwentyThreeRuBlogModule
-      ),
-  },
+  // {
+  //   path: 'liqudityintrading', //23
+  //   loadChildren: () =>
+  //     import('./twenty-three-ru-blog/twenty-three-ru-blog.module').then(
+  //       (m) => m.TwentyThreeRuBlogModule
+  //     ),
+  // },
   {
     path: 'flagfigure', //24
     loadChildren: () =>

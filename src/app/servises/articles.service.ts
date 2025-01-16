@@ -145,9 +145,9 @@ export class ArticlesService {
       id: 5,
     },
     {
-      titleUkr: 'Повний курс концепції Смарт Мані',
-      titleEn: 'Complete course on the concept of Smart Money',
-      titleRus: 'Полный курс по концепции Смарт Мани',
+      titleUkr: 'Концепція Смарт Мані',
+      titleEn: 'Concept of Smart Money',
+      titleRus: 'Концепция Смарт Мани',
 
       linkUkr: 'smartestmoney',
       imgUkr: '/assets/img/content/smartestmoney44.png',
@@ -349,18 +349,18 @@ export class ArticlesService {
     //   groupsUkr: ['Технічний аналіз'],
     //   id: 22,
     // },
-    {
-      titleUkr: 'Ліквідність у Трейдингу',
-      titleEn: 'Liquidity in Trading',
-      titleRus: 'Ликвидность в Трейдинге',
+    // {
+    //   titleUkr: 'Ліквідність у Трейдингу',
+    //   titleEn: 'Liquidity in Trading',
+    //   titleRus: 'Ликвидность в Трейдинге',
 
-      linkUkr: 'liqudityintrading',
-      imgUkr: '/assets/img/content/liqudityintrading44.png',
-      groupsRus: ['Объемный анализ рынка'],
-      groupsEn: ['Market Volume Analysis'],
-      groupsUkr: ['Об`ємний аналіз ринку'],
-      id: 23,
-    },
+    //   linkUkr: 'liqudityintrading',
+    //   imgUkr: '/assets/img/content/liqudityintrading44.png',
+    //   groupsRus: ['Объемный анализ рынка'],
+    //   groupsEn: ['Market Volume Analysis'],
+    //   groupsUkr: ['Об`ємний аналіз ринку'],
+    //   id: 23,
+    // },
     {
       titleUkr: 'Фігура "Прапор" у трейдингу',
       titleEn: 'Flag figure in trading',
