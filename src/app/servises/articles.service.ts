@@ -24,6 +24,7 @@ export class ArticlesService {
     'Словник трейдера',
     'Технічний аналіз',
     'Фундаментальний аналіз',
+    'Криптовалюта',
   ];
   groupsRus = [
     'Объемный анализ рынка',
@@ -33,6 +34,7 @@ export class ArticlesService {
     'Словарь трейдера',
     'Технический анализ',
     'Фундаментальный анализ',
+    'Криптовалюта',
   ];
   groupsEn = [
     'Market Volume Analysis',
@@ -42,6 +44,7 @@ export class ArticlesService {
     'Trader`s Dictionary',
     'Technical Analysis',
     'Fundamental Analysis',
+    'Cryptocurrency',
   ];
 
   selectedGroups: string[] = [];
