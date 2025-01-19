@@ -21,6 +21,12 @@ export class HomeUkTwentyOneComponent implements OnInit {
       content:
         'Аналіз ринку FOREX: ключові аспекти, що впливають на прийняття рішень трейдерами.',
     });
+    this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-01-19' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/marketanalysis.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

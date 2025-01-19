@@ -21,6 +21,13 @@ export class HomeRuTwentyOneComponent implements OnInit {
       content:
         'Анализ рынка FOREX: ключевые аспекты, влияющие на принятие решений трейдерами.',
     });
+
+    this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-01-19' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/marketanalysis.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];
