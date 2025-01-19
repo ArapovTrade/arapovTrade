@@ -21,6 +21,12 @@ export class HomeEnBlogFourtySevenComponent implements OnInit {
       content:
         'The basics of fundamental analysis, its advantages, disadvantages, and its role in trading.',
     });
+    this.meta.updateTag({ name: 'author', content: 'Ihor Arapov' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-01-17' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/fundamentalanalysis.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

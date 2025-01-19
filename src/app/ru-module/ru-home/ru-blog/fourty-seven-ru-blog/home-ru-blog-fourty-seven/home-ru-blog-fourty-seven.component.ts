@@ -21,6 +21,12 @@ export class HomeRuBlogFourtySevenComponent implements OnInit {
       content:
         'Фундаментальный анализ рынка: основы, преимущества и недостатки метода, влияние на трейдинг.',
     });
+    this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-01-19' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/fundamentalanalysis.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

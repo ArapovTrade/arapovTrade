@@ -20,7 +20,12 @@ export class HomeUkBlogFourtySevenComponent implements OnInit {
       name: 'description',
       content: 'Фундаментальний Аналіз | Об`ємний аналіз ринку',
     });
-
+    this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-01-19' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/fundamentalanalysis.webp',
+    });
     this.gerRandom();
   }
 
