@@ -23,6 +23,12 @@ export class HomeUkTwentyFiveComponent implements OnInit {
       content:
         'Аналіз ключових економічних показників, що впливають на фінансові ринки.',
     });
+    this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-01-20' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/keyeconomicgrowth.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

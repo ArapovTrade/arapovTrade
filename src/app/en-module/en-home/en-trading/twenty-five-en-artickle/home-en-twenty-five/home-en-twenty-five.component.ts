@@ -21,6 +21,12 @@ export class HomeEnTwentyFiveComponent implements OnInit {
       content:
         'An analysis of key economic indicators impacting financial markets.',
     });
+    this.meta.updateTag({ name: 'author', content: 'Ihor Arapov' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-01-20' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/keyeconomicgrowth.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

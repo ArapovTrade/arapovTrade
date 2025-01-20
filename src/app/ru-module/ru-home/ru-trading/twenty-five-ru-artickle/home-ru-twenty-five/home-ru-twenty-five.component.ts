@@ -23,6 +23,12 @@ export class HomeRuTwentyFiveComponent implements OnInit {
       content:
         'Разбор ключевых экономических показателей, влияющих на финансовые рынки.',
     });
+    this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-01-17' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/keyeconomicgrowth.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];
