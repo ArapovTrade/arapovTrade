@@ -21,6 +21,12 @@ export class HomeEnTwentyTwoComponent implements OnInit {
       content:
         'An analysis of key economic factors influencing currency exchange rates and their significance for evaluation.',
     });
+    this.meta.updateTag({ name: 'author', content: 'Ihor Arapov' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-01-20' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/economicfactors.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

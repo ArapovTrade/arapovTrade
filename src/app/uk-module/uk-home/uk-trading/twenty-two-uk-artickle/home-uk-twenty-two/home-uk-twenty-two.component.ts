@@ -21,6 +21,12 @@ export class HomeUkTwentyTwoComponent implements OnInit {
       content:
         'Аналіз ключових економічних факторів, що впливають на валютні курси, та їх значення для аналізу.',
     });
+    this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-01-20' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/economicfactors.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

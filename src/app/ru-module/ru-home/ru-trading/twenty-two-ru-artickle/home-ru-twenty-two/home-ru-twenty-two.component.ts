@@ -21,6 +21,14 @@ export class HomeRuTwentyTwoComponent implements OnInit {
       content:
         'Разбор ключевых экономических факторов, влияющих на валютные курсы, и их значимость для анализа.',
     });
+
+    this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-01-20' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/economicfactors.webp',
+    });
+
     this.gerRandom();
   }
   randomArticleRus: any = [];
