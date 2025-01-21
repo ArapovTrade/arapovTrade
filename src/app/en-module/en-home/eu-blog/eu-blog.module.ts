@@ -146,13 +146,13 @@ const routes: Routes = [
         (m) => m.TwentyOneEnBlogModule
       ),
   },
-  // {
-  //   path: 'pricepatterns', //22
-  //   loadChildren: () =>
-  //     import('./twenty-two-en-blog/twenty-two-en-blog.module').then(
-  //       (m) => m.TwentyTwoEnBlogModule
-  //     ),
-  // },
+  {
+    path: 'cryptoarbitrage', //22
+    loadChildren: () =>
+      import('./twenty-two-en-blog/twenty-two-en-blog.module').then(
+        (m) => m.TwentyTwoEnBlogModule
+      ),
+  },
   // {
   //   path: 'liqudityintrading', //23
   //   loadChildren: () =>

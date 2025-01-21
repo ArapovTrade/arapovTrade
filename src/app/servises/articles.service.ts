@@ -343,18 +343,19 @@ export class ArticlesService {
       groupsUkr: ['Концепція Смарт Мані'],
       id: 21,
     },
-    // {
-    //   titleUkr: 'Цінові фігури у трейдингу',
-    //   titleEn: 'Price patterns in trading',
-    //   titleRus: 'Ценовые фигуры в трейдинге',
+    {
+      titleUkr: 'Що таке арбітраж криптовалют: основи та секрети успіху',
+      titleEn:
+        'What is cryptocurrency arbitrage: the basics and secrets of success',
+      titleRus: 'Что такое арбитраж криптовалют: основы и секреты успеха',
 
-    //   linkUkr: 'pricepatterns',
-    //   imgUkr: '/assets/img/content/pricepatterns44.png',
-    //   groupsRus: ['Технический анализ'],
-    //   groupsEn: ['Technical Analysis'],
-    //   groupsUkr: ['Технічний аналіз'],
-    //   id: 22,
-    // },
+      linkUkr: 'cryptoarbitrage',
+      imgUkr: '/assets/img/content/cryptoarbitrage44.jpg',
+      groupsRus: ['Криптовалюта'],
+      groupsEn: ['Cryptocurrency'],
+      groupsUkr: ['Криптовалюта'],
+      id: 22,
+    },
     // {
     //   titleUkr: 'Ліквідність у Трейдингу',
     //   titleEn: 'Liquidity in Trading',
