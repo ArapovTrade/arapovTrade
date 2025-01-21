@@ -316,18 +316,21 @@ export class ArticlesService {
       groupsUkr: ['Концепція Смарт Мані'],
       id: 19,
     },
-    // {
-    //   titleUkr: '​Найкращий час для тредингу',
-    //   titleEn: 'Best time for trading',
-    //   titleRus: 'Лучшее время для трейдинга',
+    {
+      titleUkr:
+        'Що таке скам в криптовалюті - шахрайські схеми та способи захисту',
+      titleEn:
+        'What is a scam in cryptocurrency - fraudulent schemes and methods of protection',
+      titleRus:
+        'Что такое скам в криптовалюте: мошеннические схемы и способы защиты',
 
-    //   linkUkr: 'besttimefortrading',
-    //   imgUkr: '/assets/img/content/besttimefortrading44.png',
-    //   groupsRus: ['Трейдинг для начинающих'],
-    //   groupsEn: ['Trading for Beginners'],
-    //   groupsUkr: ['Трейдинг для початківців'],
-    //   id: 20,
-    // },
+      linkUkr: 'cryptoscam',
+      imgUkr: '/assets/img/content/cryptoscam44.png',
+      groupsRus: ['Криптовалюта'],
+      groupsEn: ['Cryptocurrency'],
+      groupsUkr: ['Криптовалюта'],
+      id: 20,
+    },
     {
       titleUkr: 'Як визначити маркетмейкера',
       titleEn: 'How to identify a market maker',

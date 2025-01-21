@@ -132,13 +132,13 @@ const routes: Routes = [
         (m) => m.NineteenEnBlogModule
       ),
   },
-  // {
-  //   path: 'besttimefortrading', //20
-  //   loadChildren: () =>
-  //     import('./twenty-en-blog/twenty-en-blog.module').then(
-  //       (m) => m.TwentyEnBlogModule
-  //     ),
-  // },
+  {
+    path: 'cryptoscam', //20
+    loadChildren: () =>
+      import('./twenty-en-blog/twenty-en-blog.module').then(
+        (m) => m.TwentyEnBlogModule
+      ),
+  },
   {
     path: 'marketmaker', //21
     loadChildren: () =>
