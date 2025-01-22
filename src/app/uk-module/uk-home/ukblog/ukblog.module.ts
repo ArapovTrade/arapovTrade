@@ -187,13 +187,13 @@ const routes: Routes = [
         (m) => m.TwentySevenUkBlogModule
       ),
   },
-  // {
-  //   path: 'smartmoneystrategy', //28
-  //   loadChildren: () =>
-  //     import('./twenty-eight-uk-blog/twenty-eight-uk-blog.module').then(
-  //       (m) => m.TwentyEightUkBlogModule
-  //     ),
-  // },
+  {
+    path: 'altblockchains', //28
+    loadChildren: () =>
+      import('./twenty-eight-uk-blog/twenty-eight-uk-blog.module').then(
+        (m) => m.TwentyEightUkBlogModule
+      ),
+  },
   {
     path: 'tradingquickstart', //29
     loadChildren: () =>
