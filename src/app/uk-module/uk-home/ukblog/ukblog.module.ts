@@ -257,13 +257,13 @@ const routes: Routes = [
         (m) => m.ThirtySevenUkBlogModule
       ),
   },
-  // {
-  //   path: 'smartmoneyconcept', //38
-  //   loadChildren: () =>
-  //     import('./thirty-eight-uk-blog/thirty-eight-uk-blog.module').then(
-  //       (m) => m.ThirtyEightUkBlogModule
-  //     ),
-  // },
+  {
+    path: 'cryptostoring', //38
+    loadChildren: () =>
+      import('./thirty-eight-uk-blog/thirty-eight-uk-blog.module').then(
+        (m) => m.ThirtyEightUkBlogModule
+      ),
+  },
   // {
   //   path: 'volumetricmarketanalysis', //39
   //   loadChildren: () =>

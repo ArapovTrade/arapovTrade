@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ArticlesService } from '../../../../../servises/articles.service';
 
 @Component({
   selector: 'app-home-uk-blog-thirty-eight',
@@ -7,15 +8,32 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './home-uk-blog-thirty-eight.component.scss',
 })
 export class HomeUkBlogThirtyEightComponent implements OnInit {
-  constructor(private meta: Meta, private titleService: Title) {}
+  constructor(
+    private meta: Meta,
+    private titleService: Title,
+    private articleServ: ArticlesService
+  ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Повний Курс Концепції Смарт Мані - Arapov.trade'
+      'Принципи зберігання криптовалют - Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
-      content: 'Повний Курс Концепції Смарт Мані | Смарт Мані у Трейдінгу',
+      content:
+        'Дізнайтеся про принципи зберігання криптовалют, вибір гаманців, безпеку та стратегії захисту активів. Повний посібник для інвесторів.',
     });
+    this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-01-23' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/cryptostoring.webp',
+    });
+
+    this.gerRandom();
+  }
+  randomArticleRus: any = [];
+  gerRandom() {
+    this.randomArticleRus = this.articleServ.getRandomUkArticles();
   }
 }
