@@ -417,10 +417,10 @@ export class ArticlesService {
       id: 27,
     },
     {
-      titleUkr: 'Що таке альтернативні блокчейні',
+      titleUkr: 'Що таке альтернативні блокчейни',
       linkUkr: 'altblockchains',
       titleEn: 'What are alternative blockchains',
-      titleRus: 'Что такое альтернативные блокчейни',
+      titleRus: 'Что такое альтернативные блокчейны',
 
       imgUkr: '/assets/img/content/altblockchains44.png',
       groupsRus: ['Криптовалюта'],
