@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ArticlesService } from '../../../../../servises/articles.service';
 
 @Component({
   selector: 'app-home-ru-blog-thirty-nine',
@@ -7,13 +8,32 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './home-ru-blog-thirty-nine.component.scss',
 })
 export class HomeRuBlogThirtyNineComponent implements OnInit {
-  constructor(private meta: Meta, private titleService: Title) {}
+  constructor(
+    private meta: Meta,
+    private titleService: Title,
+    private articleServ: ArticlesService
+  ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Объемный Анализ Рынка - Arapov.trade');
+    this.titleService.setTitle(
+      'Где безопасно хранить криптовалюту? - Arapov.trade'
+    );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
-      content: 'SmartMoney| СМАРТ МАНИ | Объемный Анализ Рынка',
+      content:
+        'Узнайте, где безопасно хранить криптовалюту: советы по выбору кошельков, принципы безопасности и лучшие практики. Полное руководство для защиты ваших активов.',
     });
+    this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-01-23' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/safetostorecrypto.webp',
+    });
+
+    this.gerRandom();
+  }
+  randomArticleRus: any = [];
+  gerRandom() {
+    this.randomArticleRus = this.articleServ.getRandomUkArticles();
   }
 }

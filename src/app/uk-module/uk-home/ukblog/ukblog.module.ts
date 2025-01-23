@@ -264,13 +264,13 @@ const routes: Routes = [
         (m) => m.ThirtyEightUkBlogModule
       ),
   },
-  // {
-  //   path: 'volumetricmarketanalysis', //39
-  //   loadChildren: () =>
-  //     import('./thirty-nine-uk-blog/thirty-nine-uk-blog.module').then(
-  //       (m) => m.ThirtyNineUkBlogModule
-  //     ),
-  // },
+  {
+    path: 'safetostorecrypto', //39
+    loadChildren: () =>
+      import('./thirty-nine-uk-blog/thirty-nine-uk-blog.module').then(
+        (m) => m.ThirtyNineUkBlogModule
+      ),
+  },
   {
     path: 'difficulttrading', //40
     loadChildren: () =>
