@@ -24,13 +24,13 @@ const routes: Routes = [
         (m) => m.ThreeRuBlogModule
       ),
   },
-  // {
-  //   path: 'reasonfordepositeloose',
-  //   loadChildren: () =>
-  //     import('./four-ru-blog/four-ru-blog.module').then(
-  //       (m) => m.FourRuBlogModule
-  //     ),
-  // },
+  {
+    path: 'avoidlosingmoney',
+    loadChildren: () =>
+      import('./four-ru-blog/four-ru-blog.module').then(
+        (m) => m.FourRuBlogModule
+      ),
+  },
   {
     path: 'pricingandliquidity',
     loadChildren: () =>

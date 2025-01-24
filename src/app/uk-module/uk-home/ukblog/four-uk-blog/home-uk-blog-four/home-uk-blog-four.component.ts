@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ArticlesService } from '../../../../../servises/articles.service';
 
 @Component({
   selector: 'app-home-uk-blog-four',
@@ -7,15 +8,32 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './home-uk-blog-four.component.scss',
 })
 export class HomeUkBlogFourComponent implements OnInit {
-  constructor(private meta: Meta, private titleService: Title) {}
+  constructor(
+    private meta: Meta,
+    private titleService: Title,
+    private articleServ: ArticlesService
+  ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Основні причини втрати депозиту - Arapov.trade'
+      'Як не втратити всі гроші на маржинальній торгівлі? - Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
-      content: 'Основні причини втрати депозиту в Трейдінгу',
+      content:
+        'Дізнайтеся, як уникнути втрат у маржинальній торгівлі, мінімізувати ризики та покращити свою стратегію управління капіталом. Корисні поради для початківців і досвідчених трейдерів.',
     });
+    this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-01-24' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/reasonfordepositeloose.png',
+    });
+
+    this.gerRandom();
+  }
+  randomArticleRus: any = [];
+  gerRandom() {
+    this.randomArticleRus = this.articleServ.getRandomUkArticles();
   }
 }
