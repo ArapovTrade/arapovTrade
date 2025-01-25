@@ -292,13 +292,13 @@ const routes: Routes = [
         (m) => m.FourtyTwoUkBlogModule
       ),
   },
-  // {
-  //   path: 'smartmoneystrategyforbanks', //43
-  //   loadChildren: () =>
-  //     import('./fourty-three-uk-blog/fourty-three-uk-blog.module').then(
-  //       (m) => m.FourtyThreeUkBlogModule
-  //     ),
-  // },
+  {
+    path: 'cryptomarketanalysis', //43
+    loadChildren: () =>
+      import('./fourty-three-uk-blog/fourty-three-uk-blog.module').then(
+        (m) => m.FourtyThreeUkBlogModule
+      ),
+  },
   // {
   //   path: 'basicsoftrading', //44
   //   loadChildren: () =>

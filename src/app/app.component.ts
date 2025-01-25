@@ -75,22 +75,18 @@ export class AppComponent implements OnInit, AfterViewChecked {
   checkLang!: number;
   setUkraine() {
     this.lan.setNumber(1);
-    // this.getLang();
   }
   setRussian() {
     this.lan.setNumber(2);
-    // this.getLang();
   }
   setEnglish() {
     this.lan.setNumber(3);
-    // this.getLang();
   }
   ngOnInit(): void {
     this.getLang();
   }
 
   getLang() {
-    // this.checkLang = this.lan.getNumber();
     this.lan.getNumber().subscribe((value) => {
       this.checkLang = value;
     });
@@ -98,8 +94,4 @@ export class AppComponent implements OnInit, AfterViewChecked {
   ngAfterViewChecked() {
     this.cdr.detectChanges();
   }
-  // ngDoCheck() {
-  //   this.getLang();
-  //   console.log(this.checkLang);
-  // }
 }

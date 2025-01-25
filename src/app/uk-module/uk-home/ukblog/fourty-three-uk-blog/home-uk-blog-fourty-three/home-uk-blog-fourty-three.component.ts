@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ArticlesService } from '../../../../../servises/articles.service';
 
 @Component({
   selector: 'app-home-uk-blog-fourty-three',
@@ -7,16 +8,32 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './home-uk-blog-fourty-three.component.scss',
 })
 export class HomeUkBlogFourtyThreeComponent implements OnInit {
-  constructor(private meta: Meta, private titleService: Title) {}
+  constructor(
+    private meta: Meta,
+    private titleService: Title,
+    private articleServ: ArticlesService
+  ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Смарт Мані - стратегія за якою торгують Банки - Arapov.trade'
+      'Аналіз попиту і пропозиції на ринку криптовалют - Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Смарт Мані - стратегія за якою торгують Банки! Навчання трейдингу',
+        'Дізнайтеся, як аналізувати попит і пропозицію на ринку криптовалют. Детальний гід з порадами, інструментами та стратегіями для успішного інвестування і торгівлі.',
     });
+    this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-01-25' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/cryptomarketanalysis.png',
+    });
+
+    this.gerRandom();
+  }
+  randomArticleRus: any = [];
+  gerRandom() {
+    this.randomArticleRus = this.articleServ.getRandomUkArticles();
   }
 }
