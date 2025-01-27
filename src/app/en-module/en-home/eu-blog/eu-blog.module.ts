@@ -300,13 +300,13 @@ const routes: Routes = [
         (m) => m.FourtyThreeEnBlogModule
       ),
   },
-  // {
-  //   path: 'basicsoftrading', //44
-  //   loadChildren: () =>
-  //     import('./fourty-four-en-blog/fourty-four-en-blog.module').then(
-  //       (m) => m.FourtyFourEnBlogModule
-  //     ),
-  // },
+  {
+    path: 'cryptostaking', //44
+    loadChildren: () =>
+      import('./fourty-four-en-blog/fourty-four-en-blog.module').then(
+        (m) => m.FourtyFourEnBlogModule
+      ),
+  },
   {
     path: 'movingaverages', //45
     loadChildren: () =>

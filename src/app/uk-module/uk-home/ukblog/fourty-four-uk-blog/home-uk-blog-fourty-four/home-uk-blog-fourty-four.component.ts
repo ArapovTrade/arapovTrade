@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ArticlesService } from '../../../../../servises/articles.service';
 
 @Component({
   selector: 'app-home-uk-blog-fourty-four',
@@ -7,15 +8,32 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './home-uk-blog-fourty-four.component.scss',
 })
 export class HomeUkBlogFourtyFourComponent implements OnInit {
-  constructor(private meta: Meta, private titleService: Title) {}
+  constructor(
+    private meta: Meta,
+    private titleService: Title,
+    private articleServ: ArticlesService
+  ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Основи трейдингу для початківців - Arapov.trade'
+      'Переваги та ризики криптостейкінгу - Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
-      content: 'Основи трейдингу для початківців: що таке трейдинг?',
+      content:
+        'Дізнайтеся про переваги та ризики криптостейкінгу, як заробляти на криптовалютах з мінімальними ризиками та на що звернути увагу, щоб уникнути помилок.',
     });
+    this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-01-27' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/cryptostaking.webp',
+    });
+
+    this.gerRandom();
+  }
+  randomArticleRus: any = [];
+  gerRandom() {
+    this.randomArticleRus = this.articleServ.getRandomUkArticles();
   }
 }
