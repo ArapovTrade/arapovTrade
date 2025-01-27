@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ArticlesService } from '../../../../../servises/articles.service';
 
 @Component({
   selector: 'app-home-uk-blog-fourty-six',
@@ -7,13 +8,32 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './home-uk-blog-fourty-six.component.scss',
 })
 export class HomeUkBlogFourtySixComponent implements OnInit {
-  constructor(private meta: Meta, private titleService: Title) {}
+  constructor(
+    private meta: Meta,
+    private titleService: Title,
+    private articleServ: ArticlesService
+  ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Навчання Трейдингу Безкоштовно - Arapov.trade');
+    this.titleService.setTitle(
+      'Bitcoin Pizza Day: історія, значення та традиції - Arapov.trade'
+    );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
-      content: 'Навчання Трейдингу Безкоштовно | Навчання Трейдінгу з Нуля',
+      content:
+        'Дізнайтеся про Bitcoin Pizza Day: як було здійснено першу покупку за біткоїни, чому цей день став історичним і як його відзначають у світі криптовалют.',
     });
+    this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-01-27' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/pizzaday.webp',
+    });
+
+    this.gerRandom();
+  }
+  randomArticleRus: any = [];
+  gerRandom() {
+    this.randomArticleRus = this.articleServ.getRandomUkArticles();
   }
 }
