@@ -735,13 +735,13 @@ const routes: Routes = [
   //       '../en-trading/fourty-five-en-artickle/fourty-five-en-artickle.module'
   //     ).then((m) => m.FourtyFiveEnArtickleModule),
   // },
-  // {
-  //   path: 'reasonforloosingmoney',
-  //   loadChildren: () =>
-  //     import(
-  //       '../en-trading/fourty-six-en-artickle/fourty-six-en-artickle.module'
-  //     ).then((m) => m.FourtySixEnArtickleModule),
-  // },
+  {
+    path: 'cryptotether',
+    loadChildren: () =>
+      import(
+        '../en-trading/fourty-six-en-artickle/fourty-six-en-artickle.module'
+      ).then((m) => m.FourtySixEnArtickleModule),
+  },
 ];
 
 @NgModule({
