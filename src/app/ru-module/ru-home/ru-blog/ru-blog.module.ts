@@ -370,13 +370,13 @@ const routes: Routes = [
         (m) => m.FiftyThreeRuBlogModule
       ),
   },
-  // {
-  //   path: 'featuresofcrypto', //54
-  //   loadChildren: () =>
-  //     import('./fifty-four-ru-blog/fifty-four-ru-blog.module').then(
-  //       (m) => m.FiftyFourRuBlogModule
-  //     ),
-  // },
+  {
+    path: 'cryptosafe', //54
+    loadChildren: () =>
+      import('./fifty-four-ru-blog/fifty-four-ru-blog.module').then(
+        (m) => m.FiftyFourRuBlogModule
+      ),
+  },
   {
     path: 'scalpingintrading', //55
     loadChildren: () =>
