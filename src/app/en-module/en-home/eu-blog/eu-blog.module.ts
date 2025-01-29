@@ -490,13 +490,13 @@ const routes: Routes = [
         (m) => m.TenEnArtickleModule
       ),
   },
-  // {
-  //   path: 'forexvaluedate',
-  //   loadChildren: () =>
-  //     import('../en-trading/eleven-en-artickle/eleven-en-artickle.module').then(
-  //       (m) => m.ElevenEnArtickleModule
-  //     ),
-  // },
+  {
+    path: 'cryptostart',
+    loadChildren: () =>
+      import('../en-trading/eleven-en-artickle/eleven-en-artickle.module').then(
+        (m) => m.ElevenEnArtickleModule
+      ),
+  },
   // {
   //   path: 'howtomakemoney',
   //   loadChildren: () =>

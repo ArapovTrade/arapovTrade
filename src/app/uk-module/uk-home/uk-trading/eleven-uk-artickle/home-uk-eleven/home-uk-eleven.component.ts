@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ArticlesService } from '../../../../../servises/articles.service';
 
 @Component({
   selector: 'app-home-uk-eleven',
@@ -7,13 +8,32 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './home-uk-eleven.component.scss',
 })
 export class HomeUkElevenComponent implements OnInit {
-  constructor(private meta: Meta, private titleService: Title) {}
+  constructor(
+    private meta: Meta,
+    private titleService: Title,
+    private articleServ: ArticlesService
+  ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Дата валютування - Arapov.trade');
+    this.titleService.setTitle(
+      'Як почати торгувати на криптобіржі - Arapov.trade'
+    );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
-      content: 'Що таке СВОП на ринку Форекс?',
+      content:
+        'Дізнайтеся, як почати торгувати на криптовалютній біржі: вибір платформи, реєстрація, налаштування акаунта, стратегії та поради щодо управління ризиками.',
     });
+    this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-01-29' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/cryptostart.webp',
+    });
+
+    this.gerRandom();
+  }
+  randomArticleRus: any = [];
+  gerRandom() {
+    this.randomArticleRus = this.articleServ.getRandomUkArticles();
   }
 }
