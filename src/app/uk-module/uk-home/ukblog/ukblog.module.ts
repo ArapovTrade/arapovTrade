@@ -727,13 +727,13 @@ const routes: Routes = [
   //       '../uk-trading/fourty-four-uk-artickle/fourty-four-uk-artickle.module'
   //     ).then((m) => m.FourtyFourUkArtickleModule),
   // },
-  // {
-  //   path: 'typeoftimeframes', //45
-  //   loadChildren: () =>
-  //     import(
-  //       '../uk-trading/fourty-five-uk-artickle/fourty-five-uk-artickle.module'
-  //     ).then((m) => m.FourtyFiveUkArtickleModule),
-  // },
+  {
+    path: 'freeeducation', //45
+    loadChildren: () =>
+      import(
+        '../uk-trading/fourty-five-uk-artickle/fourty-five-uk-artickle.module'
+      ).then((m) => m.FourtyFiveUkArtickleModule),
+  },
   {
     path: 'cryptotether', //46
     loadChildren: () =>

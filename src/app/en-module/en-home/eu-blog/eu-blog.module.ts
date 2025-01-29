@@ -728,13 +728,13 @@ const routes: Routes = [
   //       '../en-trading/fourty-four-en-artickle/fourty-four-en-artickle.module'
   //     ).then((m) => m.FourtyFourEnArtickleModule),
   // },
-  // {
-  //   path: 'typeoftimeframes',
-  //   loadChildren: () =>
-  //     import(
-  //       '../en-trading/fourty-five-en-artickle/fourty-five-en-artickle.module'
-  //     ).then((m) => m.FourtyFiveEnArtickleModule),
-  // },
+  {
+    path: 'freeeducation',
+    loadChildren: () =>
+      import(
+        '../en-trading/fourty-five-en-artickle/fourty-five-en-artickle.module'
+      ).then((m) => m.FourtyFiveEnArtickleModule),
+  },
   {
     path: 'cryptotether',
     loadChildren: () =>
