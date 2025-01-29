@@ -455,13 +455,13 @@ const routes: Routes = [
         (m) => m.FiveRuArticleModule
       ),
   },
-  // {
-  //   path: 'exchangeparticipants',
-  //   loadChildren: () =>
-  //     import('../ru-trading/six-ru-article/six-ru-article.module').then(
-  //       (m) => m.SixRuArticleModule
-  //     ),
-  // },
+  {
+    path: 'stablecoins',
+    loadChildren: () =>
+      import('../ru-trading/six-ru-article/six-ru-article.module').then(
+        (m) => m.SixRuArticleModule
+      ),
+  },
   {
     path: 'forexmarket',
     loadChildren: () =>
