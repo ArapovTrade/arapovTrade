@@ -525,13 +525,13 @@ const routes: Routes = [
         '../en-trading/fifteen-en-artickle/fifteen-en-artickle.module'
       ).then((m) => m.FifteenEnArtickleModule),
   },
-  // {
-  //   path: 'behavioralrisks',
-  //   loadChildren: () =>
-  //     import(
-  //       '../en-trading/sixteen-en-artickle/sixteen-en-artickle.module'
-  //     ).then((m) => m.SixteenEnArtickleModule),
-  // },
+  {
+    path: 'ethereum',
+    loadChildren: () =>
+      import(
+        '../en-trading/sixteen-en-artickle/sixteen-en-artickle.module'
+      ).then((m) => m.SixteenEnArtickleModule),
+  },
   // {
   //   path: 'nonmarketrisks',
   //   loadChildren: () =>

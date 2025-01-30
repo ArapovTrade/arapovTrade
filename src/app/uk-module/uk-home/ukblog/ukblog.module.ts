@@ -524,13 +524,13 @@ const routes: Routes = [
         '../uk-trading/fifteen-uk-artickle/fifteen-uk-artickle.module'
       ).then((m) => m.FifteenUkArtickleModule),
   },
-  // {
-  //   path: 'behavioralrisks', //16
-  //   loadChildren: () =>
-  //     import(
-  //       '../uk-trading/sixteen-uk-artickle/sixteen-uk-artickle.module'
-  //     ).then((m) => m.SixteenUkArtickleModule),
-  // },
+  {
+    path: 'ethereum', //16
+    loadChildren: () =>
+      import(
+        '../uk-trading/sixteen-uk-artickle/sixteen-uk-artickle.module'
+      ).then((m) => m.SixteenUkArtickleModule),
+  },
   // {
   //   path: 'nonmarketrisks', //17
   //   loadChildren: () =>
