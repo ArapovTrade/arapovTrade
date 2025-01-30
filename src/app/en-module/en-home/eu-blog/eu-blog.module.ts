@@ -497,13 +497,13 @@ const routes: Routes = [
         (m) => m.ElevenEnArtickleModule
       ),
   },
-  // {
-  //   path: 'howtomakemoney',
-  //   loadChildren: () =>
-  //     import('../en-trading/twelve-en-artickle/twelve-en-artickle.module').then(
-  //       (m) => m.TwelveEnArtickleModule
-  //     ),
-  // },
+  {
+    path: 'halving',
+    loadChildren: () =>
+      import('../en-trading/twelve-en-artickle/twelve-en-artickle.module').then(
+        (m) => m.TwelveEnArtickleModule
+      ),
+  },
   {
     path: 'riskcurrencyexchange',
     loadChildren: () =>

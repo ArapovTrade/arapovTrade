@@ -956,18 +956,19 @@ export class ArticlesService {
       groupsUkr: ['Криптовалюта'],
       id: 72,
     },
-    // {
-    //   titleUkr: 'Як заробити на FOREX',
-    //   linkUkr: 'howtomakemoney',
-    //   titleEn: 'How to make money trading FOREX',
-    //   titleRus: 'Как заработать на FOREX',
+    {
+      titleUkr: 'Що таке халвінг та як він впливає на ринок криптовалют?',
+      linkUkr: 'halving',
+      titleEn:
+        'What is halving and how does it affect the cryptocurrency market?',
+      titleRus: 'Что такое халвинг и как он влияет на рынок криптовалют?',
 
-    //   imgUkr: '/assets/img/content/howToMakeMoney44.png',
-    //   groupsRus: ['Трейдинг для начинающих'],
-    //   groupsEn: ['Trading for Beginners'],
-    //   groupsUkr: ['Трейдинг для початківців'],
-    //   id: 73,
-    // },
+      imgUkr: '/assets/img/content/halving44.png',
+      groupsRus: ['Криптовалюта'],
+      groupsEn: ['Cryptocurrency'],
+      groupsUkr: ['Криптовалюта'],
+      id: 73,
+    },
     {
       titleUkr: 'Ризик зміни курсу',
       linkUkr: 'riskcurrencyexchange',

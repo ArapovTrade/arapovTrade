@@ -496,13 +496,13 @@ const routes: Routes = [
         (m) => m.ElevenUkArtickleModule
       ),
   },
-  // {
-  //   path: 'howtomakemoney', //12
-  //   loadChildren: () =>
-  //     import('../uk-trading/twelve-uk-artickle/twelve-uk-artickle.module').then(
-  //       (m) => m.TwelveUkArtickleModule
-  //     ),
-  // },
+  {
+    path: 'halving', //12
+    loadChildren: () =>
+      import('../uk-trading/twelve-uk-artickle/twelve-uk-artickle.module').then(
+        (m) => m.TwelveUkArtickleModule
+      ),
+  },
   {
     path: 'riskcurrencyexchange', //13
     loadChildren: () =>
