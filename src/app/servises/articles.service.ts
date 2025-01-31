@@ -1018,11 +1018,10 @@ export class ArticlesService {
       id: 77,
     },
     {
-      titleUkr: 'Що таке Біткоін (Bitcoin)? Повний посібник з криптовалюти',
+      titleUkr: 'Що таке Біткоїн (Bitcoin) і як це працює?',
       linkUkr: 'bitcoin',
-      titleEn: 'What is Bitcoin? The Complete Guide to Cryptocurrency',
-      titleRus:
-        'Что такое Биткоин (Bitcoin)? Полное руководство по криптовалюте',
+      titleEn: 'What is Bitcoin and how does it work?',
+      titleRus: 'Что такое Биткоин (Bitcoin) и как это работает?',
 
       imgUkr: '/assets/img/content/bitcoin44.png',
       groupsRus: ['Криптовалюта'],

@@ -15,7 +15,7 @@ export class HomeUkSeventeenComponent implements OnInit {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Що Таке Біткоїн (Bitcoin)? Повний гід по криптовалюті - Arapov.trade'
+      'Що таке Біткоїн (Bitcoin) і як це працює? - Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({

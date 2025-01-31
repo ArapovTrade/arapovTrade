@@ -15,7 +15,7 @@ export class HomeEnSeventeenComponent implements OnInit {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'What is Bitcoin (BTC)? A Complete Guide to Cryptocurrency - Arapov.trade'
+      'What is Bitcoin and how does it work? - Arapov.trade'
     );
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
