@@ -533,13 +533,13 @@ const routes: Routes = [
         '../ru-trading/sixteen-ru-artickle/sixteen-ru-artickle.module'
       ).then((m) => m.SixteenRuArtickleModule),
   },
-  // {
-  //   path: 'nonmarketrisks',
-  //   loadChildren: () =>
-  //     import(
-  //       '../ru-trading/seventeen-ru-artickle/seventeen-ru-artickle.module'
-  //     ).then((m) => m.SeventeenRuArtickleModule),
-  // },
+  {
+    path: 'bitcoin',
+    loadChildren: () =>
+      import(
+        '../ru-trading/seventeen-ru-artickle/seventeen-ru-artickle.module'
+      ).then((m) => m.SeventeenRuArtickleModule),
+  },
   {
     path: 'psychorisks',
     loadChildren: () =>

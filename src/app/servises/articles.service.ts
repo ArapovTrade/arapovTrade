@@ -1017,18 +1017,19 @@ export class ArticlesService {
       groupsUkr: ['Криптовалюта'],
       id: 77,
     },
-    // {
-    //   titleUkr: 'Неринкові ризики FOREX',
-    //   linkUkr: 'nonmarketrisks',
-    //   titleEn: 'Non-market Risks of FOREX',
-    //   titleRus: 'Нерыночные риски FOREX',
+    {
+      titleUkr: 'Що таке Біткоін (Bitcoin)? Повний посібник з криптовалюти',
+      linkUkr: 'bitcoin',
+      titleEn: 'What is Bitcoin? The Complete Guide to Cryptocurrency',
+      titleRus:
+        'Что такое Биткоин (Bitcoin)? Полное руководство по криптовалюте',
 
-    //   imgUkr: '/assets/img/content/nonmarketrisks44.png',
-    //   groupsRus: ['Психология трейдинга'],
-    //   groupsEn: ['Trading Psychology'],
-    //   groupsUkr: ['Психологія трейдингу'],
-    //   id: 78,
-    // },
+      imgUkr: '/assets/img/content/bitcoin44.png',
+      groupsRus: ['Криптовалюта'],
+      groupsEn: ['Cryptocurrency'],
+      groupsUkr: ['Криптовалюта'],
+      id: 78,
+    },
     {
       titleUkr: 'Психологічні ризики FOREX',
       linkUkr: 'psychorisks',

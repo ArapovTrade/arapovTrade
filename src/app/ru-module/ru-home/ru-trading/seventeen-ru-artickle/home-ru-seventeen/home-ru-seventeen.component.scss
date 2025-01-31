@@ -1,8 +1,8 @@
 .hero-section {
-    background: url(/assets/img/content/nonmarketrisks.webp) no-repeat bottom right;
+    background: url(/assets/img/content/bitcoin.webp) no-repeat bottom right;
     background-size: 100% 100%;
-    color: white;
-    height: 300px;
+color: white;
+    height: 230px;
 }
 
 .section-i {
@@ -10,9 +10,8 @@
 }
 
 .pictureImg {
-    width: 300px;
-    float: right;
-    margin-left: 20px;
+    width: 800px;
+
 }
 
 h2,
@@ -50,4 +49,9 @@ h1 {
 
 .pad6 {
     padding: 60px 0;
+}
+
+.pad {
+    margin: 10px 30px 40px;
+    text-align: center;
 }
