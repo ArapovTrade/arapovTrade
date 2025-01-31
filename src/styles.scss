@@ -3180,3 +3180,12 @@ user-select: none;}
     color:#333333!important;
  }
   
+ .pt50{
+    padding-top: 20px;
+    padding-bottom: 30px!important;
+ }
+  @media (min-width: 700px) {
+    .pt50 {
+            padding-top: 50px;
+        }
+  }
