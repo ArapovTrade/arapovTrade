@@ -553,13 +553,13 @@ const routes: Routes = [
         '../en-trading/nineteen-en-artickle/nineteen-en-artickle.module'
       ).then((m) => m.NineteenEnArtickleModule),
   },
-  // {
-  //   path: 'marketanalysis',
-  //   loadChildren: () =>
-  //     import('../en-trading/twenty-en-artickle/twenty-en-artickle.module').then(
-  //       (m) => m.TwentyEnArtickleModule
-  //     ),
-  // },
+  {
+    path: 'steidlmayeranalysis',
+    loadChildren: () =>
+      import('../en-trading/twenty-en-artickle/twenty-en-artickle.module').then(
+        (m) => m.TwentyEnArtickleModule
+      ),
+  },
   {
     path: 'marketanalysisforex',
     loadChildren: () =>
