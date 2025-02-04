@@ -1161,18 +1161,20 @@ export class ArticlesService {
       groupsUkr: ['Технічний аналіз'],
       id: 89,
     },
-    // {
-    //   titleUkr: 'Об`ємний аналіз ринку',
-    //   linkUkr: 'volumemarketanalysis',
-    //   titleEn: 'Volume Market Analysis',
-    //   titleRus: 'Объемный анализ рынка',
+    {
+      titleUkr:
+        'Чому 90% трейдерів втрачають гроші? Пастки, створені Смарт Мані',
+      linkUkr: 'smartmonettraps',
+      titleEn: 'Why do 90% of traders lose money? Traps created by Smart Money',
+      titleRus:
+        'Почему 90% трейдеров теряют деньги? Ловушки, созданные Смарт Мани',
 
-    //   imgUkr: '/assets/img/content/volumemarketanalysis44.png',
-    //   groupsRus: ['Объемный анализ рынка'],
-    //   groupsEn: ['Market Volume Analysis'],
-    //   groupsUkr: ['Об`ємний аналіз ринку'],
-    //   id: 90,
-    // },
+      imgUkr: '/assets/img/content/smartmoneytraps44.webp',
+      groupsRus: ['Концепция Смарт Мани'],
+      groupsEn: ['Smart Money Concept'],
+      groupsUkr: ['Концепція Смарт Мані'],
+      id: 90,
+    },
     // {
     //   titleUkr: 'Види та типи ордерів',
     //   linkUkr: 'typesoforders',

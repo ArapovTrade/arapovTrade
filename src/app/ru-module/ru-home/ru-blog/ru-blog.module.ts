@@ -617,13 +617,13 @@ const routes: Routes = [
         '../ru-trading/twenty-eight-ru-artickle/twenty-eight-ru-artickle.module'
       ).then((m) => m.TwentyEightRuArtickleModule),
   },
-  // {
-  //   path: 'volumemarketanalysis',
-  //   loadChildren: () =>
-  //     import(
-  //       '../ru-trading/twenty-nine-ru-artickle/twenty-nine-ru-artickle.module'
-  //     ).then((m) => m.TwentyNineRuArtickleModule),
-  // },
+  {
+    path: 'smartmonettraps',
+    loadChildren: () =>
+      import(
+        '../ru-trading/twenty-nine-ru-artickle/twenty-nine-ru-artickle.module'
+      ).then((m) => m.TwentyNineRuArtickleModule),
+  },
   // {
   //   path: 'typesoforders',
   //   loadChildren: () =>

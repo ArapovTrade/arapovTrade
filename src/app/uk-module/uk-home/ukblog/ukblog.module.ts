@@ -615,13 +615,13 @@ const routes: Routes = [
         '../uk-trading/twenty-eight-uk-artickle/twenty-eight-uk-artickle.module'
       ).then((m) => m.TwentyEightUkArtickleModule),
   },
-  // {
-  //   path: 'volumemarketanalysis', //29
-  //   loadChildren: () =>
-  //     import(
-  //       '../uk-trading/twenty-nine-uk-artickle/twenty-nine-uk-artickle.module'
-  //     ).then((m) => m.TwentyNineUkArtickleModule),
-  // },
+  {
+    path: 'smartmonettraps', //29
+    loadChildren: () =>
+      import(
+        '../uk-trading/twenty-nine-uk-artickle/twenty-nine-uk-artickle.module'
+      ).then((m) => m.TwentyNineUkArtickleModule),
+  },
   // {
   //   path: 'typesoforders', //30
   //   loadChildren: () =>
