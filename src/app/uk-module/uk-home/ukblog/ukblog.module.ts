@@ -622,13 +622,13 @@ const routes: Routes = [
         '../uk-trading/twenty-nine-uk-artickle/twenty-nine-uk-artickle.module'
       ).then((m) => m.TwentyNineUkArtickleModule),
   },
-  // {
-  //   path: 'typesoforders', //30
-  //   loadChildren: () =>
-  //     import('../uk-trading/thirty-uk-artickle/thirty-uk-artickle.module').then(
-  //       (m) => m.ThirtyUkArtickleModule
-  //     ),
-  // },
+  {
+    path: 'imbalanceandfvg', //30
+    loadChildren: () =>
+      import('../uk-trading/thirty-uk-artickle/thirty-uk-artickle.module').then(
+        (m) => m.ThirtyUkArtickleModule
+      ),
+  },
   {
     path: 'marketorder', //31
     loadChildren: () =>

@@ -624,13 +624,13 @@ const routes: Routes = [
         '../ru-trading/twenty-nine-ru-artickle/twenty-nine-ru-artickle.module'
       ).then((m) => m.TwentyNineRuArtickleModule),
   },
-  // {
-  //   path: 'typesoforders',
-  //   loadChildren: () =>
-  //     import('../ru-trading/thirty-ru-artickle/thirty-ru-artickle.module').then(
-  //       (m) => m.ThirtyRuArtickleModule
-  //     ),
-  // },
+  {
+    path: 'imbalanceandfvg',
+    loadChildren: () =>
+      import('../ru-trading/thirty-ru-artickle/thirty-ru-artickle.module').then(
+        (m) => m.ThirtyRuArtickleModule
+      ),
+  },
   {
     path: 'marketorder',
     loadChildren: () =>

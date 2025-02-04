@@ -1175,18 +1175,21 @@ export class ArticlesService {
       groupsUkr: ['Концепція Смарт Мані'],
       id: 90,
     },
-    // {
-    //   titleUkr: 'Види та типи ордерів',
-    //   linkUkr: 'typesoforders',
-    //   titleEn: 'Types and Kinds of Orders',
-    //   titleRus: 'Виды и типы ордеров',
+    {
+      titleUkr:
+        'Imbalance та FVG (Fair Value Gaps): Як знаходити сильні зони ліквідності?',
+      linkUkr: 'imbalanceandfvg',
+      titleEn:
+        'Imbalance and FVG (Fair Value Gaps): How to find strong liquidity zones?',
+      titleRus:
+        'Imbalance и FVG (Fair Value Gaps): Как находить сильные зоны ликвидности?',
 
-    //   imgUkr: '/assets/img/content/typesoforders44.png',
-    //   groupsRus: ['Объемный анализ рынка'],
-    //   groupsEn: ['Market Volume Analysis'],
-    //   groupsUkr: ['Об`ємний аналіз ринку'],
-    //   id: 91,
-    // },
+      imgUkr: '/assets/img/content/imbalanceandfvg44.png',
+      groupsRus: ['Концепция Смарт Мани'],
+      groupsEn: ['Smart Money Concept'],
+      groupsUkr: ['Концепція Смарт Мані'],
+      id: 91,
+    },
     {
       titleUkr: 'Ринковий ордер',
       linkUkr: 'marketorder',
