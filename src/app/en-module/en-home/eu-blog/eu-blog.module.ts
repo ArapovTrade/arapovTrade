@@ -665,13 +665,13 @@ const routes: Routes = [
         '../en-trading/thirty-five-en-artickle/thirty-five-en-artickle.module'
       ).then((m) => m.ThirtyFiveEnArtickleModule),
   },
-  // {
-  //   path: 'tradingsystemsseparation',
-  //   loadChildren: () =>
-  //     import(
-  //       '../en-trading/thirty-six-en-artickle/thirty-six-en-artickle.module'
-  //     ).then((m) => m.ThirtySixEnArtickleModule),
-  // },
+  {
+    path: 'falsebreakouts',
+    loadChildren: () =>
+      import(
+        '../en-trading/thirty-six-en-artickle/thirty-six-en-artickle.module'
+      ).then((m) => m.ThirtySixEnArtickleModule),
+  },
   // {
   //   path: 'tradingsystemautomation',
   //   loadChildren: () =>

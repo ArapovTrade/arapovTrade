@@ -1250,18 +1250,20 @@ export class ArticlesService {
       groupsUkr: ['Трейдинг для початківців'],
       id: 96,
     },
-    // {
-    //   titleUkr: 'Розподіл торгових систем. Тривалість угоди',
-    //   linkUkr: 'tradingsystemsseparation',
-    //   titleEn: 'Separation of trading systems. Duration of the transaction',
-    //   titleRus: 'Разделение торговых систем. Длительность сделки',
+    {
+      titleUkr:
+        'Як Smart Money використовують помилкові пробої для збирання ліквідності?',
+      linkUkr: 'falsebreakouts',
+      titleEn: 'How does Smart Money use false breakouts to collect liquidity?',
+      titleRus:
+        'Как Smart Money используют ложные пробои для сбора ликвидности?',
 
-    //   imgUkr: '/assets/img/content/tradingsystemsseparation44.png',
-    //   groupsRus: ['Трейдинг для начинающих'],
-    //   groupsEn: ['Trading for Beginners'],
-    //   groupsUkr: ['Трейдинг для початківців'],
-    //   id: 97,
-    // },
+      imgUkr: '/assets/img/content/falsebreakouts44.webp',
+      groupsRus: ['Концепция Смарт Мани'],
+      groupsEn: ['Smart Money Concept'],
+      groupsUkr: ['Концепція Смарт Мані'],
+      id: 97,
+    },
     // {
     //   titleUkr: 'Розподіл торгових систем. Автоматизація',
     //   linkUkr: 'tradingsystemautomation',

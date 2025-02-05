@@ -666,13 +666,13 @@ const routes: Routes = [
         '../ru-trading/thirty-five-ru-artickle/thirty-five-ru-artickle.module'
       ).then((m) => m.ThirtyFiveRuArtickleModule),
   },
-  // {
-  //   path: 'tradingsystemsseparation',
-  //   loadChildren: () =>
-  //     import(
-  //       '../ru-trading/thirty-six-ru-artickle/thirty-six-ru-artickle.module'
-  //     ).then((m) => m.ThirtySixRuArtickleModule),
-  // },
+  {
+    path: 'falsebreakouts',
+    loadChildren: () =>
+      import(
+        '../ru-trading/thirty-six-ru-artickle/thirty-six-ru-artickle.module'
+      ).then((m) => m.ThirtySixRuArtickleModule),
+  },
   // {
   //   path: 'tradingsystemautomation',
   //   loadChildren: () =>
