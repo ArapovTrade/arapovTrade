@@ -5,7 +5,8 @@ import {
   ChangeDetectorRef,
   AfterViewChecked,
 } from '@angular/core';
-
+import { takeUntil } from 'rxjs/operators';
+import { Subject } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ArticlesService } from './servises/articles.service';
 import { LangService } from './servises/lang.service';
@@ -17,6 +18,8 @@ import { LangService } from './servises/lang.service';
 })
 export class AppComponent implements OnInit, AfterViewChecked {
   dropdownOpen = false;
+  checkLang!: number;
+  private destroy$ = new Subject<void>();
 
   toggleDropdown() {
     this.dropdownOpen = !this.dropdownOpen;
@@ -72,7 +75,7 @@ export class AppComponent implements OnInit, AfterViewChecked {
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
   }
-  checkLang!: number;
+
   setUkraine() {
     this.lan.setNumber(1);
   }
@@ -85,13 +88,22 @@ export class AppComponent implements OnInit, AfterViewChecked {
   ngOnInit(): void {
     this.getLang();
   }
-
   getLang() {
-    this.lan.getNumber().subscribe((value) => {
-      this.checkLang = value;
-    });
+    // this.lan.getNumber().subscribe((value) => {
+    //   this.checkLang = value;
+    // });
+    this.lan
+      .getNumber()
+      .pipe(takeUntil(this.destroy$))
+      .subscribe((value) => {
+        this.checkLang = value;
+      });
   }
   ngAfterViewChecked() {
     this.cdr.detectChanges();
+  }
+  ngOnDestroy() {
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 }
