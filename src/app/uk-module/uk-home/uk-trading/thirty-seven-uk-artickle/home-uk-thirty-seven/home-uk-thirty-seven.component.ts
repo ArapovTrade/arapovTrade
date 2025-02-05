@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ArticlesService } from '../../../../../servises/articles.service';
 
 @Component({
   selector: 'app-home-uk-thirty-seven',
@@ -7,15 +8,32 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './home-uk-thirty-seven.component.scss',
 })
 export class HomeUkThirtySevenComponent implements OnInit {
-  constructor(private meta: Meta, private titleService: Title) {}
+  constructor(
+    private meta: Meta,
+    private titleService: Title,
+    private articleServ: ArticlesService
+  ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Розподіл торгових систем. Автоматизація - Arapov.trade'
+      'Що таке  Stop Hunting  і як Smart Money вибивають стопи трейдерів? - Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
-      content: 'Типи торгових систем у трейдингу',
+      content:
+        'Розбираємо, як працює Stop Hunting, чому Smart Money вибивають стопи трейдерів і як захистити свій капітал від маніпуляцій великих гравців.',
     });
+    this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-02-05' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/stophunting.png',
+    });
+
+    this.gerRandom();
+  }
+  randomArticleRus: any = [];
+  gerRandom() {
+    this.randomArticleRus = this.articleServ.getRandomUkArticles();
   }
 }

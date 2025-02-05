@@ -672,13 +672,13 @@ const routes: Routes = [
         '../en-trading/thirty-six-en-artickle/thirty-six-en-artickle.module'
       ).then((m) => m.ThirtySixEnArtickleModule),
   },
-  // {
-  //   path: 'tradingsystemautomation',
-  //   loadChildren: () =>
-  //     import(
-  //       '../en-trading/thirty-seven-en-artickle/thirty-seven-en-artickle.module'
-  //     ).then((m) => m.ThirtySevenEnArtickleModule),
-  // },
+  {
+    path: 'stophunting',
+    loadChildren: () =>
+      import(
+        '../en-trading/thirty-seven-en-artickle/thirty-seven-en-artickle.module'
+      ).then((m) => m.ThirtySevenEnArtickleModule),
+  },
   {
     path: 'capitalmanagement',
     loadChildren: () =>

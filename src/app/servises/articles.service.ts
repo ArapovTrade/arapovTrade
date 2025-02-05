@@ -1264,18 +1264,21 @@ export class ArticlesService {
       groupsUkr: ['Концепція Смарт Мані'],
       id: 97,
     },
-    // {
-    //   titleUkr: 'Розподіл торгових систем. Автоматизація',
-    //   linkUkr: 'tradingsystemautomation',
-    //   titleEn: 'Separation of trading systems. Automation',
-    //   titleRus: 'Разделение торговых систем. Автоматизация',
+    {
+      titleUkr:
+        'Що таке "Stop Hunting" та як Smart Money вибивають стопи трейдерів?',
+      linkUkr: 'stophunting',
+      titleEn:
+        'What is "Stop Hunting" and how does Smart Money knock out traders` stops?',
+      titleRus:
+        'Что такое "Stop Hunting" и как Smart Money выбивают стопы трейдеров?',
 
-    //   imgUkr: '/assets/img/content/tradingsystemautomation44.png',
-    //   groupsRus: ['Трейдинг для начинающих'],
-    //   groupsEn: ['Trading for Beginners'],
-    //   groupsUkr: ['Трейдинг для початківців'],
-    //   id: 98,
-    // },
+      imgUkr: '/assets/img/content/stophunting44.webp',
+      groupsRus: ['Концепция Смарт Мани'],
+      groupsEn: ['Smart Money Concept'],
+      groupsUkr: ['Концепція Смарт Мані'],
+      id: 98,
+    },
     {
       titleUkr: 'Специфіка управління капіталом у трейдингу',
       linkUkr: 'capitalmanagement',
