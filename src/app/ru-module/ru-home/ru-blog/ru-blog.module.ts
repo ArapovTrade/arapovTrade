@@ -715,13 +715,13 @@ const routes: Routes = [
         '../ru-trading/fourty-two-ru-artickle/fourty-two-ru-artickle.module'
       ).then((m) => m.FourtyTwoRuArtickleModule),
   },
-  // {
-  //   path: 'selectingtimeframe',
-  //   loadChildren: () =>
-  //     import(
-  //       '../ru-trading/fourty-three-ru-artickle/fourty-three-ru-artickle.module'
-  //     ).then((m) => m.FourtyThreeRuArtickleModule),
-  // },
+  {
+    path: 'liquiditypools',
+    loadChildren: () =>
+      import(
+        '../ru-trading/fourty-three-ru-artickle/fourty-three-ru-artickle.module'
+      ).then((m) => m.FourtyThreeRuArtickleModule),
+  },
   // {
   //   path: 'timeframeforbeginner',
   //   loadChildren: () =>

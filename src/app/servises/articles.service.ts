@@ -1339,18 +1339,21 @@ export class ArticlesService {
       groupsUkr: ['Трейдинг для початківців'],
       id: 103,
     },
-    // {
-    //   titleUkr: 'Як обрати таймфрейм для торгівлі на біржі',
-    //   linkUkr: 'selectingtimeframe',
-    //   titleEn: 'How to Choose a Timeframe for Trading on the Stock Exchange',
-    //   titleRus: 'Как выбрать таймфрейм для торговли на бирже',
+    {
+      titleUkr:
+        'Пули ліквідності Як великі гравці шукають ліквідність на ринку?',
+      linkUkr: 'liquiditypools',
+      titleEn:
+        'Liquidity pools: How do major players seek liquidity in the market?',
+      titleRus:
+        'Пулы ликвидности: Как крупные игроки ищут ликвидность на рынке?',
 
-    //   imgUkr: '/assets/img/content/selectingtimeframe44.png',
-    //   groupsRus: ['Трейдинг для начинающих'],
-    //   groupsEn: ['Trading for Beginners'],
-    //   groupsUkr: ['Трейдинг для початківців'],
-    //   id: 104,
-    // },
+      imgUkr: '/assets/img/content/liquiditypools44.png',
+      groupsRus: ['Концепция Смарт Мани'],
+      groupsEn: ['Smart Money Concept'],
+      groupsUkr: ['Концепція Смарт Мані'],
+      id: 104,
+    },
     // {
     //   titleUkr: 'На якому таймфреймі краще торгувати новачкові',
     //   linkUkr: 'timeframeforbeginner',
