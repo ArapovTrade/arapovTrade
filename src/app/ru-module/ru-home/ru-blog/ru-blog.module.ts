@@ -722,13 +722,13 @@ const routes: Routes = [
         '../ru-trading/fourty-three-ru-artickle/fourty-three-ru-artickle.module'
       ).then((m) => m.FourtyThreeRuArtickleModule),
   },
-  // {
-  //   path: 'timeframeforbeginner',
-  //   loadChildren: () =>
-  //     import(
-  //       '../ru-trading/fourty-four-ru-artickle/fourty-four-ru-artickle.module'
-  //     ).then((m) => m.FourtyFourRuArtickleModule),
-  // },
+  {
+    path: 'icebergorders',
+    loadChildren: () =>
+      import(
+        '../ru-trading/fourty-four-ru-artickle/fourty-four-ru-artickle.module'
+      ).then((m) => m.FourtyFourRuArtickleModule),
+  },
   {
     path: 'freeeducation',
     loadChildren: () =>

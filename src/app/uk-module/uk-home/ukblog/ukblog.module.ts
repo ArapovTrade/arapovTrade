@@ -720,13 +720,13 @@ const routes: Routes = [
         '../uk-trading/fourty-three-uk-artickle/fourty-three-uk-artickle.module'
       ).then((m) => m.FourtyThreeUkArtickleModule),
   },
-  // {
-  //   path: 'timeframeforbeginner', //44
-  //   loadChildren: () =>
-  //     import(
-  //       '../uk-trading/fourty-four-uk-artickle/fourty-four-uk-artickle.module'
-  //     ).then((m) => m.FourtyFourUkArtickleModule),
-  // },
+  {
+    path: 'icebergorders', //44
+    loadChildren: () =>
+      import(
+        '../uk-trading/fourty-four-uk-artickle/fourty-four-uk-artickle.module'
+      ).then((m) => m.FourtyFourUkArtickleModule),
+  },
   {
     path: 'freeeducation', //45
     loadChildren: () =>

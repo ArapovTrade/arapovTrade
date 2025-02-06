@@ -721,13 +721,13 @@ const routes: Routes = [
         '../en-trading/fourty-three-en-artickle/fourty-three-en-artickle.module'
       ).then((m) => m.FourtyThreeEnArtickleModule),
   },
-  // {
-  //   path: 'timeframeforbeginner',
-  //   loadChildren: () =>
-  //     import(
-  //       '../en-trading/fourty-four-en-artickle/fourty-four-en-artickle.module'
-  //     ).then((m) => m.FourtyFourEnArtickleModule),
-  // },
+  {
+    path: 'icebergorders',
+    loadChildren: () =>
+      import(
+        '../en-trading/fourty-four-en-artickle/fourty-four-en-artickle.module'
+      ).then((m) => m.FourtyFourEnArtickleModule),
+  },
   {
     path: 'freeeducation',
     loadChildren: () =>

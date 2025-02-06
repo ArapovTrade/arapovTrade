@@ -1354,18 +1354,21 @@ export class ArticlesService {
       groupsUkr: ['Концепція Смарт Мані'],
       id: 104,
     },
-    // {
-    //   titleUkr: 'На якому таймфреймі краще торгувати новачкові',
-    //   linkUkr: 'timeframeforbeginner',
-    //   titleEn: 'What Timeframe is Best for a Beginner to Trade On',
-    //   titleRus: 'На каком таймфрейме лучше торговать новичку',
+    {
+      titleUkr:
+        'Приховані ордери (Iceberg Orders): Як банки маскують свої позиції?',
+      linkUkr: 'icebergorders',
+      titleEn:
+        'Hidden Orders (Iceberg Orders): How do banks disguise their positions?',
+      titleRus:
+        'Скрытые ордера (Iceberg Orders): Как банки маскируют свои позиции?',
 
-    //   imgUkr: '/assets/img/content/timeframeforbeginner44.png',
-    //   groupsRus: ['Трейдинг для начинающих'],
-    //   groupsEn: ['Trading for Beginners'],
-    //   groupsUkr: ['Трейдинг для початківців'],
-    //   id: 105,
-    // },
+      imgUkr: '/assets/img/content/icebergorders44.png',
+      groupsRus: ['Концепция Смарт Мани'],
+      groupsEn: ['Smart Money Concept'],
+      groupsUkr: ['Концепція Смарт Мані'],
+      id: 105,
+    },
     // {
     //   titleUkr: 'Види таймфреймів',
     //   linkUkr: 'typeoftimeframes',
