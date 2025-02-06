@@ -28,20 +28,20 @@ const routes: Routes = [
             (m) => m.RuStudyingModule
           ),
       },
-      {
-        path: 'trading',
-        loadChildren: () =>
-          import('./ru-home/ru-trading/ru-trading.module').then(
-            (m) => m.RuTradingModule
-          ),
-      },
-      {
-        path: 'crypto',
-        loadChildren: () =>
-          import('./ru-home/ru-crypto/ru-crypto.module').then(
-            (m) => m.RuCryptoModule
-          ),
-      },
+      // {
+      //   path: 'trading',
+      //   loadChildren: () =>
+      //     import('./ru-home/ru-trading/ru-trading.module').then(
+      //       (m) => m.RuTradingModule
+      //     ),
+      // },
+      // {
+      //   path: 'crypto',
+      //   loadChildren: () =>
+      //     import('./ru-home/ru-crypto/ru-crypto.module').then(
+      //       (m) => m.RuCryptoModule
+      //     ),
+      // },
       {
         path: 'freestudying',
         loadChildren: () =>
