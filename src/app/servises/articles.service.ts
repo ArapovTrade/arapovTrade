@@ -1369,17 +1369,19 @@ export class ArticlesService {
       groupsUkr: ['Концепція Смарт Мані'],
       id: 105,
     },
-    // {
-    //   titleUkr: 'Види таймфреймів',
-    //   linkUkr: 'typeoftimeframes',
-    //   titleEn: 'Types of Timeframes',
-    //   titleRus: 'Виды таймфреймов',
+    {
+      titleUkr:
+        'Як торгувати за Smart Money Concepts (SMC)? Покрокове керівництво',
+      linkUkr: 'smartmoneyconceptsguide',
+      titleEn: 'How to trade Smart Money Concepts (SMC)? Step by step guide',
+      titleRus:
+        'Как торговать по Smart Money Concepts (SMC)? Пошаговое руководство',
 
-    //   imgUkr: '/assets/img/content/typeoftimeframes44.png',
-    //   groupsRus: ['Трейдинг для начинающих'],
-    //   groupsEn: ['Trading for Beginners'],
-    //   groupsUkr: ['Трейдинг для початківців'],
-    //   id: 106,
-    // },
+      imgUkr: '/assets/img/content/smartmoneyconceptsguide44.png',
+      groupsRus: ['Концепция Смарт Мани'],
+      groupsEn: ['Smart Money Concept'],
+      groupsUkr: ['Концепція Смарт Мані'],
+      id: 106,
+    },
   ];
 }

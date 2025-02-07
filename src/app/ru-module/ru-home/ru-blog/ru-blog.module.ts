@@ -744,13 +744,13 @@ const routes: Routes = [
       ).then((m) => m.FourtySixRuArtickleModule),
   },
 
-  // {
-  //   path: '61', //61
-  //   loadChildren: () =>
-  //     import('../ru-blog/sixty-one-ru-blog/sixty-one-ru-blog.module').then(
-  //       (m) => m.SixtyOneRuBlogModule
-  //     ),
-  // },
+  {
+    path: 'smartmoneyconceptsguide', //61
+    loadChildren: () =>
+      import('../ru-blog/sixty-one-ru-blog/sixty-one-ru-blog.module').then(
+        (m) => m.SixtyOneRuBlogModule
+      ),
+  },
   // {
   //   path: '62', //62
   //   loadChildren: () =>

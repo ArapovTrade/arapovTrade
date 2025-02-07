@@ -741,13 +741,13 @@ const routes: Routes = [
         '../uk-trading/fourty-six-uk-artickle/fourty-six-uk-artickle.module'
       ).then((m) => m.FourtySixUkArtickleModule),
   },
-  // {
-  //   path: '61', //61
-  //   loadChildren: () =>
-  //     import('../ukblog/sixty-one-uk-blog/sixty-one-uk-blog.module').then(
-  //       (m) => m.SixtyOneUkBlogModule
-  //     ),
-  // },
+  {
+    path: 'smartmoneyconceptsguide', //61
+    loadChildren: () =>
+      import('../ukblog/sixty-one-uk-blog/sixty-one-uk-blog.module').then(
+        (m) => m.SixtyOneUkBlogModule
+      ),
+  },
   // {
   //   path: '62', //62
   //   loadChildren: () =>
