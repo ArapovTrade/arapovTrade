@@ -37,7 +37,10 @@ export class UkBlogHomepageComponent implements OnInit {
       'Безкоштовне навчання трейдингу від Ігоря Арапова'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-
+    this.meta.addTag({
+      name: 'description',
+      content: 'Безкоштовне навчання трейдингу від Ігоря Арапова',
+    });
     this.meta.addTag({
       name: 'keywords',
       content:

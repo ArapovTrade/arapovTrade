@@ -44,7 +44,7 @@ export class EnBlogHomepageComponent implements OnInit {
     });
     this.meta.addTag({
       name: 'description',
-      content: 'Free Trading Education',
+      content: 'Free trading training from Igor Arapov',
     });
     this.filteredArticles = this.artickleServ.englishArticles();
     this.enGroups = this.artickleServ.getEnglishGroups();
