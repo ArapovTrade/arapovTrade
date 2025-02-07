@@ -742,6 +742,77 @@ const routes: Routes = [
         '../en-trading/fourty-six-en-artickle/fourty-six-en-artickle.module'
       ).then((m) => m.FourtySixEnArtickleModule),
   },
+
+  // {
+  //   path: '61', //61
+  //   loadChildren: () =>
+  //     import('../eu-blog/sixty-one-en-blog/sixty-one-en-blog.module').then(
+  //       (m) => m.SixtyOneEnBlogModule
+  //     ),
+  // },
+  // {
+  //   path: '62', //62
+  //   loadChildren: () =>
+  //     import('../eu-blog/sixty-two-en-blog/sixty-two-en-blog.module').then(
+  //       (m) => m.SixtyTwoEnBlogModule
+  //     ),
+  // },
+  // {
+  //   path: '63', //63
+  //   loadChildren: () =>
+  //     import('../eu-blog/sixty-three-en-blog/sixty-three-en-blog.module').then(
+  //       (m) => m.SixtyThreeEnBlogModule
+  //     ),
+  // },
+  // {
+  //   path: '64', //64
+  //   loadChildren: () =>
+  //     import('../eu-blog/sixty-four-en-blog/sixty-four-en-blog.module').then(
+  //       (m) => m.SixtyFourEnBlogModule
+  //     ),
+  // },
+  // {
+  //   path: '65', //65
+  //   loadChildren: () =>
+  //     import('../eu-blog/sixty-five-en-blog/sixty-five-en-blog.module').then(
+  //       (m) => m.SixtyFiveEnBlogModule
+  //     ),
+  // },
+  // {
+  //   path: '66', //66
+  //   loadChildren: () =>
+  //     import('../eu-blog/sixty-six-en-blog/sixty-six-en-blog.module').then(
+  //       (m) => m.SixtySixEnBlogModule
+  //     ),
+  // },
+  // {
+  //   path: '67', //67
+  //   loadChildren: () =>
+  //     import('../eu-blog/sixty-seven-en-blog/sixty-seven-en-blog.module').then(
+  //       (m) => m.SixtySevenEnBlogModule
+  //     ),
+  // },
+  // {
+  //   path: '68', //68
+  //   loadChildren: () =>
+  //     import('../eu-blog/sixty-eight-en-blog/sixty-eight-en-blog.module').then(
+  //       (m) => m.SixtyEightEnBlogModule
+  //     ),
+  // },
+  // {
+  //   path: '69', //69
+  //   loadChildren: () =>
+  //     import('../eu-blog/sixty-nine-en-blog/sixty-nine-en-blog.module').then(
+  //       (m) => m.SixtyNineEnBlogModule
+  //     ),
+  // },
+  // {
+  //   path: '70', //70
+  //   loadChildren: () =>
+  //     import('../eu-blog/seventy-en-blog/seventy-en-blog.module').then(
+  //       (m) => m.SeventyEnBlogModule
+  //     ),
+  // },
 ];
 
 @NgModule({
