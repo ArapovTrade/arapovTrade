@@ -72,7 +72,7 @@ export class RuBlogHomepageComponent implements OnInit {
   }
   paginatedArticles = []; // Статьи для отображения на текущей странице
   currentPage = 0;
-  pageSize = 100;
+  pageSize = 150;
   onPageChange(event: PageEvent) {
     this.currentPage = event.pageIndex;
     this.pageSize = event.pageSize;
