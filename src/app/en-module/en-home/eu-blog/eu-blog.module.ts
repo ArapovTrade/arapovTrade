@@ -750,13 +750,13 @@ const routes: Routes = [
         (m) => m.SixtyOneEnBlogModule
       ),
   },
-  // {
-  //   path: '62', //62
-  //   loadChildren: () =>
-  //     import('../eu-blog/sixty-two-en-blog/sixty-two-en-blog.module').then(
-  //       (m) => m.SixtyTwoEnBlogModule
-  //     ),
-  // },
+  {
+    path: 'smartmoneystrategies', //62
+    loadChildren: () =>
+      import('../eu-blog/sixty-two-en-blog/sixty-two-en-blog.module').then(
+        (m) => m.SixtyTwoEnBlogModule
+      ),
+  },
   // {
   //   path: '63', //63
   //   loadChildren: () =>

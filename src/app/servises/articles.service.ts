@@ -1383,5 +1383,18 @@ export class ArticlesService {
       groupsUkr: ['Концепція Смарт Мані'],
       id: 106,
     },
+
+    {
+      titleUkr: 'Як знаходити точки входу Smart Money? Найкращі стратегії',
+      linkUkr: 'smartmoneystrategies',
+      titleEn: 'How to find entry points using Smart Money? Best Strategies',
+      titleRus: 'Как находить точки входа по Smart Money? Лучшие стратегии',
+
+      imgUkr: '/assets/img/content/smartmoneystrategies44.webp',
+      groupsRus: ['Концепция Смарт Мани'],
+      groupsEn: ['Smart Money Concept'],
+      groupsUkr: ['Концепція Смарт Мані'],
+      id: 107,
+    },
   ];
 }

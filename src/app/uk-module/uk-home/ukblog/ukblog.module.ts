@@ -748,13 +748,13 @@ const routes: Routes = [
         (m) => m.SixtyOneUkBlogModule
       ),
   },
-  // {
-  //   path: '62', //62
-  //   loadChildren: () =>
-  //     import('../ukblog/sixty-two-uk-blog/sixty-two-uk-blog.module').then(
-  //       (m) => m.SixtyTwoUkBlogModule
-  //     ),
-  // },
+  {
+    path: 'smartmoneystrategies', //62
+    loadChildren: () =>
+      import('../ukblog/sixty-two-uk-blog/sixty-two-uk-blog.module').then(
+        (m) => m.SixtyTwoUkBlogModule
+      ),
+  },
   // {
   //   path: '63', //63
   //   loadChildren: () =>

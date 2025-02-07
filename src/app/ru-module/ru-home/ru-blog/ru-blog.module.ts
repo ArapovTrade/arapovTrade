@@ -751,13 +751,13 @@ const routes: Routes = [
         (m) => m.SixtyOneRuBlogModule
       ),
   },
-  // {
-  //   path: '62', //62
-  //   loadChildren: () =>
-  //     import('../ru-blog/sixty-two-ru-blog/sixty-two-ru-blog.module').then(
-  //       (m) => m.SixtyTwoRuBlogModule
-  //     ),
-  // },
+  {
+    path: 'smartmoneystrategies', //62
+    loadChildren: () =>
+      import('../ru-blog/sixty-two-ru-blog/sixty-two-ru-blog.module').then(
+        (m) => m.SixtyTwoRuBlogModule
+      ),
+  },
   // {
   //   path: '63', //63
   //   loadChildren: () =>
