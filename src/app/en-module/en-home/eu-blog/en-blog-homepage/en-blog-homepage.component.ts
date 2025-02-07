@@ -42,7 +42,10 @@ export class EnBlogHomepageComponent implements OnInit {
       content:
         'cryptocurrency trading training, trading from scratch, Free trading training, free trading training from scratch, free trading courses, free trading training',
     });
-
+    this.meta.addTag({
+      name: 'description',
+      content: 'Free Trading Education',
+    });
     this.filteredArticles = this.artickleServ.englishArticles();
     this.enGroups = this.artickleServ.getEnglishGroups();
     this.grr = this.artickleServ.selectedGroups;
