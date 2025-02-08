@@ -1396,5 +1396,21 @@ export class ArticlesService {
       groupsUkr: ['Концепція Смарт Мані'],
       id: 107,
     },
+
+    {
+      titleUkr:
+        'Як Smart Money керують натовпом? Маніпуляції новинами та настроєм',
+      linkUkr: 'smartmoneycontrol',
+      titleEn:
+        'How does Smart Money control the crowd? News and mood manipulation',
+      titleRus:
+        'Как Smart Money управляют толпой? Манипуляции новостями и настроением',
+
+      imgUkr: '/assets/img/content/smartmoneycontrol44.webp',
+      groupsRus: ['Концепция Смарт Мани'],
+      groupsEn: ['Smart Money Concept'],
+      groupsUkr: ['Концепція Смарт Мані'],
+      id: 108,
+    },
   ];
 }

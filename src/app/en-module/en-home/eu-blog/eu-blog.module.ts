@@ -757,13 +757,13 @@ const routes: Routes = [
         (m) => m.SixtyTwoEnBlogModule
       ),
   },
-  // {
-  //   path: '63', //63
-  //   loadChildren: () =>
-  //     import('../eu-blog/sixty-three-en-blog/sixty-three-en-blog.module').then(
-  //       (m) => m.SixtyThreeEnBlogModule
-  //     ),
-  // },
+  {
+    path: 'smartmoneycontrol', //63
+    loadChildren: () =>
+      import('../eu-blog/sixty-three-en-blog/sixty-three-en-blog.module').then(
+        (m) => m.SixtyThreeEnBlogModule
+      ),
+  },
   // {
   //   path: '64', //64
   //   loadChildren: () =>

@@ -755,13 +755,13 @@ const routes: Routes = [
         (m) => m.SixtyTwoUkBlogModule
       ),
   },
-  // {
-  //   path: '63', //63
-  //   loadChildren: () =>
-  //     import('../ukblog/sixty-three-uk-blog/sixty-three-uk-blog.module').then(
-  //       (m) => m.SixtyThreeUkBlogModule
-  //     ),
-  // },
+  {
+    path: 'smartmoneycontrol', //63
+    loadChildren: () =>
+      import('../ukblog/sixty-three-uk-blog/sixty-three-uk-blog.module').then(
+        (m) => m.SixtyThreeUkBlogModule
+      ),
+  },
   // {
   //   path: '64', //64
   //   loadChildren: () =>
