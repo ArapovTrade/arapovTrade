@@ -764,13 +764,13 @@ const routes: Routes = [
         (m) => m.SixtyThreeEnBlogModule
       ),
   },
-  // {
-  //   path: '64', //64
-  //   loadChildren: () =>
-  //     import('../eu-blog/sixty-four-en-blog/sixty-four-en-blog.module').then(
-  //       (m) => m.SixtyFourEnBlogModule
-  //     ),
-  // },
+  {
+    path: 'practic', //64
+    loadChildren: () =>
+      import('../eu-blog/sixty-four-en-blog/sixty-four-en-blog.module').then(
+        (m) => m.SixtyFourEnBlogModule
+      ),
+  },
   // {
   //   path: '65', //65
   //   loadChildren: () =>

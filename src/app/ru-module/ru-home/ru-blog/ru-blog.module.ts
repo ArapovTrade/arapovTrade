@@ -765,13 +765,13 @@ const routes: Routes = [
         (m) => m.SixtyThreeRuBlogModule
       ),
   },
-  // {
-  //   path: '64', //64
-  //   loadChildren: () =>
-  //     import('../ru-blog/sixty-four-ru-blog/sixty-four-ru-blog.module').then(
-  //       (m) => m.SixtyFourRuBlogModule
-  //     ),
-  // },
+  {
+    path: 'practic', //64
+    loadChildren: () =>
+      import('../ru-blog/sixty-four-ru-blog/sixty-four-ru-blog.module').then(
+        (m) => m.SixtyFourRuBlogModule
+      ),
+  },
   // {
   //   path: '65', //65
   //   loadChildren: () =>

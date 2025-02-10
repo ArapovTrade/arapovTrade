@@ -25,6 +25,7 @@ export class ArticlesService {
     'Технічний аналіз',
     'Фундаментальний аналіз',
     'Криптовалюта',
+    'Приклади угод',
   ];
   groupsRus = [
     'Объемный анализ рынка',
@@ -35,6 +36,7 @@ export class ArticlesService {
     'Технический анализ',
     'Фундаментальный анализ',
     'Криптовалюта',
+    'Примеры сделок',
   ];
   groupsEn = [
     'Market Volume Analysis',
@@ -45,6 +47,7 @@ export class ArticlesService {
     'Technical Analysis',
     'Fundamental Analysis',
     'Cryptocurrency',
+    'Examples of transactions',
   ];
 
   selectedGroups: string[] = [];
@@ -1411,6 +1414,19 @@ export class ArticlesService {
       groupsEn: ['Smart Money Concept'],
       groupsUkr: ['Концепція Смарт Мані'],
       id: 108,
+    },
+
+    {
+      titleUkr: 'Практичні рекомендації',
+      linkUkr: 'practic',
+      titleEn: 'Practical recommendations',
+      titleRus: 'Практические рекомендации',
+
+      imgUkr: '/assets/img/content/prakticuk44.png',
+      groupsRus: ['Примеры сделок'],
+      groupsEn: ['Examples of transactions'],
+      groupsUkr: ['Приклади угод'],
+      id: 109,
     },
   ];
 }

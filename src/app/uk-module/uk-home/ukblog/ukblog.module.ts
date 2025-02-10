@@ -762,13 +762,13 @@ const routes: Routes = [
         (m) => m.SixtyThreeUkBlogModule
       ),
   },
-  // {
-  //   path: '64', //64
-  //   loadChildren: () =>
-  //     import('../ukblog/sixty-four-uk-blog/sixty-four-uk-blog.module').then(
-  //       (m) => m.SixtyFourUkBlogModule
-  //     ),
-  // },
+  {
+    path: 'practic', //64
+    loadChildren: () =>
+      import('../ukblog/sixty-four-uk-blog/sixty-four-uk-blog.module').then(
+        (m) => m.SixtyFourUkBlogModule
+      ),
+  },
   // {
   //   path: '65', //65
   //   loadChildren: () =>
