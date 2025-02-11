@@ -1440,5 +1440,18 @@ export class ArticlesService {
       groupsUkr: ['Об`ємний аналіз ринку'],
       id: 110,
     },
+
+    {
+      titleUkr: 'Як аналізувати рівні максимального накопичення обсягів',
+      linkUkr: 'peakvolumelevels',
+      titleEn: 'How to Analyze Peak Volume Levels',
+      titleRus: 'Как анализировать уровни максимального скопления объемов',
+
+      imgUkr: '/assets/img/content/peakvolumelevels44.png',
+      groupsRus: ['Объемный анализ рынка'],
+      groupsEn: ['Market Volume Analysis'],
+      groupsUkr: ['Об`ємний аналіз ринку'],
+      id: 111,
+    },
   ];
 }

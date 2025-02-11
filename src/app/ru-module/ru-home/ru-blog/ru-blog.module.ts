@@ -779,13 +779,13 @@ const routes: Routes = [
         (m) => m.SixtyFiveRuBlogModule
       ),
   },
-  // {
-  //   path: '66', //66
-  //   loadChildren: () =>
-  //     import('../ru-blog/sixty-six-ru-blog/sixty-six-ru-blog.module').then(
-  //       (m) => m.SixtySixRuBlogModule
-  //     ),
-  // },
+  {
+    path: 'peakvolumelevels', //66
+    loadChildren: () =>
+      import('../ru-blog/sixty-six-ru-blog/sixty-six-ru-blog.module').then(
+        (m) => m.SixtySixRuBlogModule
+      ),
+  },
   // {
   //   path: '67', //67
   //   loadChildren: () =>

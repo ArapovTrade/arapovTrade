@@ -776,13 +776,13 @@ const routes: Routes = [
         (m) => m.SixtyFiveUkBlogModule
       ),
   },
-  // {
-  //   path: '66', //66
-  //   loadChildren: () =>
-  //     import('../ukblog/sixty-six-uk-blog/sixty-six-uk-blog.module').then(
-  //       (m) => m.SixtySixUkBlogModule
-  //     ),
-  // },
+  {
+    path: 'peakvolumelevels', //66
+    loadChildren: () =>
+      import('../ukblog/sixty-six-uk-blog/sixty-six-uk-blog.module').then(
+        (m) => m.SixtySixUkBlogModule
+      ),
+  },
   // {
   //   path: '67', //67
   //   loadChildren: () =>
