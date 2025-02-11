@@ -769,13 +769,13 @@ const routes: Routes = [
         (m) => m.SixtyFourUkBlogModule
       ),
   },
-  // {
-  //   path: '65', //65
-  //   loadChildren: () =>
-  //     import('../ukblog/sixty-five-uk-blog/sixty-five-uk-blog.module').then(
-  //       (m) => m.SixtyFiveUkBlogModule
-  //     ),
-  // },
+  {
+    path: 'stockorderbook', //65
+    loadChildren: () =>
+      import('../ukblog/sixty-five-uk-blog/sixty-five-uk-blog.module').then(
+        (m) => m.SixtyFiveUkBlogModule
+      ),
+  },
   // {
   //   path: '66', //66
   //   loadChildren: () =>

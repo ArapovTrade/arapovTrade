@@ -772,13 +772,13 @@ const routes: Routes = [
         (m) => m.SixtyFourRuBlogModule
       ),
   },
-  // {
-  //   path: '65', //65
-  //   loadChildren: () =>
-  //     import('../ru-blog/sixty-five-ru-blog/sixty-five-ru-blog.module').then(
-  //       (m) => m.SixtyFiveRuBlogModule
-  //     ),
-  // },
+  {
+    path: 'stockorderbook', //65
+    loadChildren: () =>
+      import('../ru-blog/sixty-five-ru-blog/sixty-five-ru-blog.module').then(
+        (m) => m.SixtyFiveRuBlogModule
+      ),
+  },
   // {
   //   path: '66', //66
   //   loadChildren: () =>

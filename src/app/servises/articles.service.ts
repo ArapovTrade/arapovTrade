@@ -1428,5 +1428,17 @@ export class ArticlesService {
       groupsUkr: ['Приклади угод'],
       id: 109,
     },
+    {
+      titleUkr: 'Як читати Біржовий стакан і стрічку принтів',
+      linkUkr: 'stockorderbook',
+      titleEn: 'How to read the stock order book and print tape',
+      titleRus: 'Как читать Биржевой стакан и ленту принтов',
+
+      imgUkr: '/assets/img/content/stockorderbook44.png',
+      groupsRus: ['Объемный анализ рынка'],
+      groupsEn: ['Market Volume Analysis'],
+      groupsUkr: ['Об`ємний аналіз ринку'],
+      id: 110,
+    },
   ];
 }
