@@ -786,13 +786,13 @@ const routes: Routes = [
         (m) => m.SixtySixRuBlogModule
       ),
   },
-  // {
-  //   path: '67', //67
-  //   loadChildren: () =>
-  //     import('../ru-blog/sixty-seven-ru-blog/sixty-seven-ru-blog.module').then(
-  //       (m) => m.SixtySevenRuBlogModule
-  //     ),
-  // },
+  {
+    path: 'trendvolumeanalysis', //67
+    loadChildren: () =>
+      import('../ru-blog/sixty-seven-ru-blog/sixty-seven-ru-blog.module').then(
+        (m) => m.SixtySevenRuBlogModule
+      ),
+  },
   // {
   //   path: '68', //68
   //   loadChildren: () =>

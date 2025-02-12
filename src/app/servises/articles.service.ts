@@ -1453,5 +1453,21 @@ export class ArticlesService {
       groupsUkr: ['Об`ємний аналіз ринку'],
       id: 111,
     },
+
+    {
+      titleUkr:
+        'Чому важливо аналізувати обсяги у рамках поточних трендів на ринку',
+      linkUkr: 'trendvolumeanalysis',
+      titleEn:
+        'Why is it important to analyze volumes within the  current market trends?',
+      titleRus:
+        'Почему важно анализировать объемы в рамках текущих трендов на рынке',
+
+      imgUkr: '/assets/img/content/trendvolumeanalysis44.png',
+      groupsRus: ['Объемный анализ рынка'],
+      groupsEn: ['Market Volume Analysis'],
+      groupsUkr: ['Об`ємний аналіз ринку'],
+      id: 112,
+    },
   ];
 }
