@@ -790,13 +790,13 @@ const routes: Routes = [
         (m) => m.SixtySevenUkBlogModule
       ),
   },
-  // {
-  //   path: '68', //68
-  //   loadChildren: () =>
-  //     import('../ukblog/sixty-eight-uk-blog/sixty-eight-uk-blog.module').then(
-  //       (m) => m.SixtyEightUkBlogModule
-  //     ),
-  // },
+  {
+    path: 'marketauctiondevelops', //68
+    loadChildren: () =>
+      import('../ukblog/sixty-eight-uk-blog/sixty-eight-uk-blog.module').then(
+        (m) => m.SixtyEightUkBlogModule
+      ),
+  },
   // {
   //   path: '69', //69
   //   loadChildren: () =>

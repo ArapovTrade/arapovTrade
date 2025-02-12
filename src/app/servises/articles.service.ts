@@ -92,6 +92,148 @@ export class ArticlesService {
 
   ukrArtickles: artickle[] = [
     {
+      titleUkr: 'Як аналізувати рівні максимального накопичення обсягів',
+      linkUkr: 'peakvolumelevels',
+      titleEn: 'How to Analyze Peak Volume Levels',
+      titleRus: 'Как анализировать уровни максимального скопления объемов',
+
+      imgUkr: '/assets/img/content/peakvolumelevels44.png',
+      groupsRus: ['Объемный анализ рынка'],
+      groupsEn: ['Market Volume Analysis'],
+      groupsUkr: ['Об`ємний аналіз ринку'],
+      id: 111,
+    },
+
+    {
+      titleUkr:
+        'Чому важливо аналізувати обсяги у рамках поточних трендів на ринку',
+      linkUkr: 'trendvolumeanalysis',
+      titleEn:
+        'Why is it important to analyze volumes within the  current market trends?',
+      titleRus:
+        'Почему важно анализировать объемы в рамках текущих трендов на рынке',
+
+      imgUkr: '/assets/img/content/trendvolumeanalysis44.png',
+      groupsRus: ['Объемный анализ рынка'],
+      groupsEn: ['Market Volume Analysis'],
+      groupsUkr: ['Об`ємний аналіз ринку'],
+      id: 112,
+    },
+    {
+      titleUkr:
+        'Як розвивається ринковий аукціон, оцінка сантименту учасників ринку',
+      linkUkr: 'marketauctiondevelops',
+      titleEn:
+        'How a market auction develops, assessing the sentiment of market participants',
+      titleRus:
+        'Как развивается рыночный аукцион , оценка сантимента участников рынка',
+
+      imgUkr: '/assets/img/content/marketauctiondevelops44.png',
+      groupsRus: ['Объемный анализ рынка'],
+      groupsEn: ['Market Volume Analysis'],
+      groupsUkr: ['Об`ємний аналіз ринку'],
+      id: 113,
+    },
+    {
+      titleUkr:
+        'Пули ліквідності Як великі гравці шукають ліквідність на ринку?',
+      linkUkr: 'liquiditypools',
+      titleEn:
+        'Liquidity pools: How do major players seek liquidity in the market?',
+      titleRus:
+        'Пулы ликвидности: Как крупные игроки ищут ликвидность на рынке?',
+
+      imgUkr: '/assets/img/content/liquiditypools44.png',
+      groupsRus: ['Концепция Смарт Мани'],
+      groupsEn: ['Smart Money Concept'],
+      groupsUkr: ['Концепція Смарт Мані'],
+      id: 104,
+    },
+    {
+      titleUkr:
+        'Приховані ордери (Iceberg Orders): Як банки маскують свої позиції?',
+      linkUkr: 'icebergorders',
+      titleEn:
+        'Hidden Orders (Iceberg Orders): How do banks disguise their positions?',
+      titleRus:
+        'Скрытые ордера (Iceberg Orders): Как банки маскируют свои позиции?',
+
+      imgUkr: '/assets/img/content/icebergorders44.png',
+      groupsRus: ['Концепция Смарт Мани'],
+      groupsEn: ['Smart Money Concept'],
+      groupsUkr: ['Концепція Смарт Мані'],
+      id: 105,
+    },
+    {
+      titleUkr:
+        'Як торгувати за Smart Money Concepts (SMC)? Покрокове керівництво',
+      linkUkr: 'smartmoneyconceptsguide',
+      titleEn: 'How to trade Smart Money Concepts (SMC)? Step by step guide',
+      titleRus:
+        'Как торговать по Smart Money Concepts (SMC)? Пошаговое руководство',
+
+      imgUkr: '/assets/img/content/smartmoneyconceptsguide44.png',
+      groupsRus: ['Концепция Смарт Мани'],
+      groupsEn: ['Smart Money Concept'],
+      groupsUkr: ['Концепція Смарт Мані'],
+      id: 106,
+    },
+
+    {
+      titleUkr: 'Як знаходити точки входу Smart Money? Найкращі стратегії',
+      linkUkr: 'smartmoneystrategies',
+      titleEn: 'How to find entry points using Smart Money? Best Strategies',
+      titleRus: 'Как находить точки входа по Smart Money? Лучшие стратегии',
+
+      imgUkr: '/assets/img/content/smartmoneystrategies44.webp',
+      groupsRus: ['Концепция Смарт Мани'],
+      groupsEn: ['Smart Money Concept'],
+      groupsUkr: ['Концепція Смарт Мані'],
+      id: 107,
+    },
+
+    {
+      titleUkr:
+        'Як Smart Money керують натовпом? Маніпуляції новинами та настроєм',
+      linkUkr: 'smartmoneycontrol',
+      titleEn:
+        'How does Smart Money control the crowd? News and mood manipulation',
+      titleRus:
+        'Как Smart Money управляют толпой? Манипуляции новостями и настроением',
+
+      imgUkr: '/assets/img/content/smartmoneycontrol44.webp',
+      groupsRus: ['Концепция Смарт Мани'],
+      groupsEn: ['Smart Money Concept'],
+      groupsUkr: ['Концепція Смарт Мані'],
+      id: 108,
+    },
+
+    {
+      titleUkr: 'Практичні рекомендації',
+      linkUkr: 'practic',
+      titleEn: 'Practical recommendations',
+      titleRus: 'Практические рекомендации',
+
+      imgUkr: '/assets/img/content/prakticuk44.png',
+      groupsRus: ['Примеры сделок'],
+      groupsEn: ['Examples of transactions'],
+      groupsUkr: ['Приклади угод'],
+      id: 109,
+    },
+    {
+      titleUkr: 'Як читати Біржовий стакан і стрічку принтів',
+      linkUkr: 'stockorderbook',
+      titleEn: 'How to read the stock order book and print tape',
+      titleRus: 'Как читать Биржевой стакан и ленту принтов',
+
+      imgUkr: '/assets/img/content/stockorderbook44.png',
+      groupsRus: ['Объемный анализ рынка'],
+      groupsEn: ['Market Volume Analysis'],
+      groupsUkr: ['Об`ємний аналіз ринку'],
+      id: 110,
+    },
+
+    {
       titleUkr: 'Фази ринку у трейдингу',
       titleEn: 'Market phases in trading',
       titleRus: 'Фазы рынка в трейдинге',
@@ -1341,133 +1483,6 @@ export class ArticlesService {
       groupsEn: ['Trading for Beginners'],
       groupsUkr: ['Трейдинг для початківців'],
       id: 103,
-    },
-    {
-      titleUkr:
-        'Пули ліквідності Як великі гравці шукають ліквідність на ринку?',
-      linkUkr: 'liquiditypools',
-      titleEn:
-        'Liquidity pools: How do major players seek liquidity in the market?',
-      titleRus:
-        'Пулы ликвидности: Как крупные игроки ищут ликвидность на рынке?',
-
-      imgUkr: '/assets/img/content/liquiditypools44.png',
-      groupsRus: ['Концепция Смарт Мани'],
-      groupsEn: ['Smart Money Concept'],
-      groupsUkr: ['Концепція Смарт Мані'],
-      id: 104,
-    },
-    {
-      titleUkr:
-        'Приховані ордери (Iceberg Orders): Як банки маскують свої позиції?',
-      linkUkr: 'icebergorders',
-      titleEn:
-        'Hidden Orders (Iceberg Orders): How do banks disguise their positions?',
-      titleRus:
-        'Скрытые ордера (Iceberg Orders): Как банки маскируют свои позиции?',
-
-      imgUkr: '/assets/img/content/icebergorders44.png',
-      groupsRus: ['Концепция Смарт Мани'],
-      groupsEn: ['Smart Money Concept'],
-      groupsUkr: ['Концепція Смарт Мані'],
-      id: 105,
-    },
-    {
-      titleUkr:
-        'Як торгувати за Smart Money Concepts (SMC)? Покрокове керівництво',
-      linkUkr: 'smartmoneyconceptsguide',
-      titleEn: 'How to trade Smart Money Concepts (SMC)? Step by step guide',
-      titleRus:
-        'Как торговать по Smart Money Concepts (SMC)? Пошаговое руководство',
-
-      imgUkr: '/assets/img/content/smartmoneyconceptsguide44.png',
-      groupsRus: ['Концепция Смарт Мани'],
-      groupsEn: ['Smart Money Concept'],
-      groupsUkr: ['Концепція Смарт Мані'],
-      id: 106,
-    },
-
-    {
-      titleUkr: 'Як знаходити точки входу Smart Money? Найкращі стратегії',
-      linkUkr: 'smartmoneystrategies',
-      titleEn: 'How to find entry points using Smart Money? Best Strategies',
-      titleRus: 'Как находить точки входа по Smart Money? Лучшие стратегии',
-
-      imgUkr: '/assets/img/content/smartmoneystrategies44.webp',
-      groupsRus: ['Концепция Смарт Мани'],
-      groupsEn: ['Smart Money Concept'],
-      groupsUkr: ['Концепція Смарт Мані'],
-      id: 107,
-    },
-
-    {
-      titleUkr:
-        'Як Smart Money керують натовпом? Маніпуляції новинами та настроєм',
-      linkUkr: 'smartmoneycontrol',
-      titleEn:
-        'How does Smart Money control the crowd? News and mood manipulation',
-      titleRus:
-        'Как Smart Money управляют толпой? Манипуляции новостями и настроением',
-
-      imgUkr: '/assets/img/content/smartmoneycontrol44.webp',
-      groupsRus: ['Концепция Смарт Мани'],
-      groupsEn: ['Smart Money Concept'],
-      groupsUkr: ['Концепція Смарт Мані'],
-      id: 108,
-    },
-
-    {
-      titleUkr: 'Практичні рекомендації',
-      linkUkr: 'practic',
-      titleEn: 'Practical recommendations',
-      titleRus: 'Практические рекомендации',
-
-      imgUkr: '/assets/img/content/prakticuk44.png',
-      groupsRus: ['Примеры сделок'],
-      groupsEn: ['Examples of transactions'],
-      groupsUkr: ['Приклади угод'],
-      id: 109,
-    },
-    {
-      titleUkr: 'Як читати Біржовий стакан і стрічку принтів',
-      linkUkr: 'stockorderbook',
-      titleEn: 'How to read the stock order book and print tape',
-      titleRus: 'Как читать Биржевой стакан и ленту принтов',
-
-      imgUkr: '/assets/img/content/stockorderbook44.png',
-      groupsRus: ['Объемный анализ рынка'],
-      groupsEn: ['Market Volume Analysis'],
-      groupsUkr: ['Об`ємний аналіз ринку'],
-      id: 110,
-    },
-
-    {
-      titleUkr: 'Як аналізувати рівні максимального накопичення обсягів',
-      linkUkr: 'peakvolumelevels',
-      titleEn: 'How to Analyze Peak Volume Levels',
-      titleRus: 'Как анализировать уровни максимального скопления объемов',
-
-      imgUkr: '/assets/img/content/peakvolumelevels44.png',
-      groupsRus: ['Объемный анализ рынка'],
-      groupsEn: ['Market Volume Analysis'],
-      groupsUkr: ['Об`ємний аналіз ринку'],
-      id: 111,
-    },
-
-    {
-      titleUkr:
-        'Чому важливо аналізувати обсяги у рамках поточних трендів на ринку',
-      linkUkr: 'trendvolumeanalysis',
-      titleEn:
-        'Why is it important to analyze volumes within the  current market trends?',
-      titleRus:
-        'Почему важно анализировать объемы в рамках текущих трендов на рынке',
-
-      imgUkr: '/assets/img/content/trendvolumeanalysis44.png',
-      groupsRus: ['Объемный анализ рынка'],
-      groupsEn: ['Market Volume Analysis'],
-      groupsUkr: ['Об`ємний аналіз ринку'],
-      id: 112,
     },
   ];
 }
