@@ -799,13 +799,13 @@ const routes: Routes = [
         (m) => m.SixtyEightEnBlogModule
       ),
   },
-  // {
-  //   path: '69', //69
-  //   loadChildren: () =>
-  //     import('../eu-blog/sixty-nine-en-blog/sixty-nine-en-blog.module').then(
-  //       (m) => m.SixtyNineEnBlogModule
-  //     ),
-  // },
+  {
+    path: 'volumeandfuturesmarket', //69
+    loadChildren: () =>
+      import('../eu-blog/sixty-nine-en-blog/sixty-nine-en-blog.module').then(
+        (m) => m.SixtyNineEnBlogModule
+      ),
+  },
   // {
   //   path: '70', //70
   //   loadChildren: () =>

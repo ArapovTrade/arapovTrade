@@ -797,13 +797,13 @@ const routes: Routes = [
         (m) => m.SixtyEightUkBlogModule
       ),
   },
-  // {
-  //   path: '69', //69
-  //   loadChildren: () =>
-  //     import('../ukblog/sixty-nine-uk-blog/sixty-nine-uk-blog.module').then(
-  //       (m) => m.SixtyNineUkBlogModule
-  //     ),
-  // },
+  {
+    path: 'volumeandfuturesmarket', //69
+    loadChildren: () =>
+      import('../ukblog/sixty-nine-uk-blog/sixty-nine-uk-blog.module').then(
+        (m) => m.SixtyNineUkBlogModule
+      ),
+  },
   // {
   //   path: '70', //70
   //   loadChildren: () =>

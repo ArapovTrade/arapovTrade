@@ -800,13 +800,13 @@ const routes: Routes = [
         (m) => m.SixtyEightRuBlogModule
       ),
   },
-  // {
-  //   path: '69', //69
-  //   loadChildren: () =>
-  //     import('../ru-blog/sixty-nine-ru-blog/sixty-nine-ru-blog.module').then(
-  //       (m) => m.SixtyNineRuBlogModule
-  //     ),
-  // },
+  {
+    path: 'volumeandfuturesmarket', //69
+    loadChildren: () =>
+      import('../ru-blog/sixty-nine-ru-blog/sixty-nine-ru-blog.module').then(
+        (m) => m.SixtyNineRuBlogModule
+      ),
+  },
   // {
   //   path: '70', //70
   //   loadChildren: () =>

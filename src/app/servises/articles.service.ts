@@ -1484,5 +1484,21 @@ export class ArticlesService {
       groupsUkr: ['Трейдинг для початківців'],
       id: 103,
     },
+
+    {
+      titleUkr:
+        'Чим відрізняється аналіз обсягів на ринку акцій та на ринку ф`ючерсів',
+      linkUkr: 'volumeandfuturesmarket',
+      titleEn:
+        'What is the difference between volume analysis in the stock market and in the futures market?',
+      titleRus:
+        'Чем отличается анализ объемов на рынке акций и на рынке фьючерсов',
+
+      imgUkr: '/assets/img/content/volumeandfuturesmarket44.jpg',
+      groupsRus: ['Объемный анализ рынка'],
+      groupsEn: ['Market Volume Analysis'],
+      groupsUkr: ['Об`ємний аналіз ринку'],
+      id: 140,
+    },
   ];
 }
