@@ -806,13 +806,13 @@ const routes: Routes = [
         (m) => m.SixtyNineEnBlogModule
       ),
   },
-  // {
-  //   path: '70', //70
-  //   loadChildren: () =>
-  //     import('../eu-blog/seventy-en-blog/seventy-en-blog.module').then(
-  //       (m) => m.SeventyEnBlogModule
-  //     ),
-  // },
+  {
+    path: 'wyckoffsvolumeconcept', //70
+    loadChildren: () =>
+      import('../eu-blog/seventy-en-blog/seventy-en-blog.module').then(
+        (m) => m.SeventyEnBlogModule
+      ),
+  },
 ];
 
 @NgModule({

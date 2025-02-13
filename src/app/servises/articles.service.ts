@@ -1500,5 +1500,17 @@ export class ArticlesService {
       groupsUkr: ['Об`ємний аналіз ринку'],
       id: 140,
     },
+    {
+      titleUkr: 'Концепція Річарда Вайкоффа у розумінні обсягів',
+      linkUkr: 'wyckoffsvolumeconcept',
+      titleEn: 'Richard Wyckoff`s concept of understanding volumes',
+      titleRus: 'Концепция Ричарда Вайкоффа в понимании объемов ',
+
+      imgUkr: '/assets/img/content/wyckoffsvolumeconcept44.png',
+      groupsRus: ['Объемный анализ рынка'],
+      groupsEn: ['Market Volume Analysis'],
+      groupsUkr: ['Об`ємний аналіз ринку'],
+      id: 141,
+    },
   ];
 }

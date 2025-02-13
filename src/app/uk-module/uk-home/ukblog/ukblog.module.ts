@@ -804,13 +804,13 @@ const routes: Routes = [
         (m) => m.SixtyNineUkBlogModule
       ),
   },
-  // {
-  //   path: '70', //70
-  //   loadChildren: () =>
-  //     import('../ukblog/seventy-uk-blog/seventy-uk-blog.module').then(
-  //       (m) => m.SeventyUkBlogModule
-  //     ),
-  // },
+  {
+    path: 'wyckoffsvolumeconcept', //70
+    loadChildren: () =>
+      import('../ukblog/seventy-uk-blog/seventy-uk-blog.module').then(
+        (m) => m.SeventyUkBlogModule
+      ),
+  },
 ];
 
 @NgModule({
