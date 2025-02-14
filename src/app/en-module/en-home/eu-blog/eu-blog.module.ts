@@ -813,13 +813,13 @@ const routes: Routes = [
         (m) => m.SeventyEnBlogModule
       ),
   },
-  // {
-  //   path: '71', //71
-  //   loadChildren: () =>
-  //     import('../eu-blog/seventy-one-en-blog/seventy-one-en-blog.module').then(
-  //       (m) => m.SeventyOneEnBlogModule
-  //     ),
-  // },
+  {
+    path: 'newstrading', //71
+    loadChildren: () =>
+      import('../eu-blog/seventy-one-en-blog/seventy-one-en-blog.module').then(
+        (m) => m.SeventyOneEnBlogModule
+      ),
+  },
   // {
   //   path: '72', //72
   //   loadChildren: () =>

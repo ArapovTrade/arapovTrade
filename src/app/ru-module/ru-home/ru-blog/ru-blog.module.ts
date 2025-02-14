@@ -814,13 +814,13 @@ const routes: Routes = [
         (m) => m.SeventyRuBlogModule
       ),
   },
-  // {
-  //   path: '71', //71
-  //   loadChildren: () =>
-  //     import('../ru-blog/seventy-one-ru-blog/seventy-one-ru-blog.module').then(
-  //       (m) => m.SeventyOneRuBlogModule
-  //     ),
-  // },
+  {
+    path: 'newstrading', //71
+    loadChildren: () =>
+      import('../ru-blog/seventy-one-ru-blog/seventy-one-ru-blog.module').then(
+        (m) => m.SeventyOneRuBlogModule
+      ),
+  },
   // {
   //   path: '72', //72
   //   loadChildren: () =>

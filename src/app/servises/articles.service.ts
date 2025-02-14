@@ -1512,5 +1512,18 @@ export class ArticlesService {
       groupsUkr: ['Об`ємний аналіз ринку'],
       id: 141,
     },
+
+    {
+      titleUkr: 'Як трейдеру торгувати на новинах',
+      linkUkr: 'newstrading',
+      titleEn: 'How a trader should trade on the news',
+      titleRus: 'Как трейдеру торговать на новостях',
+
+      imgUkr: '/assets/img/content/newstrading44.png',
+      groupsRus: ['Фундаментальный анализ'],
+      groupsEn: ['Fundamental Analysis'],
+      groupsUkr: ['Фундаментальний аналіз'],
+      id: 142,
+    },
   ];
 }
