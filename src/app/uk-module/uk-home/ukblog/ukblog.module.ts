@@ -811,6 +811,76 @@ const routes: Routes = [
         (m) => m.SeventyUkBlogModule
       ),
   },
+  // {
+  //   path: '71', //71
+  //   loadChildren: () =>
+  //     import('../ukblog/seventy-one-uk-blog/seventy-one-uk-blog.module').then(
+  //       (m) => m.SeventyOneUkBlogModule
+  //     ),
+  // },
+  // {
+  //   path: '72', //72
+  //   loadChildren: () =>
+  //     import('../ukblog/seventy-two-uk-blog/seventy-two-uk-blog.module').then(
+  //       (m) => m.SeventyTwoUkBlogModule
+  //     ),
+  // },
+  // {
+  //   path: '73', //73
+  //   loadChildren: () =>
+  //     import(
+  //       '../ukblog/seventy-three-uk-blog/seventy-three-uk-blog.module'
+  //     ).then((m) => m.SeventyThreeUkBlogModule),
+  // },
+  // {
+  //   path: '74', //74
+  //   loadChildren: () =>
+  //     import('../ukblog/seventy-four-uk-blog/seventy-four-uk-blog.module').then(
+  //       (m) => m.SeventyFourUkBlogModule
+  //     ),
+  // },
+  // {
+  //   path: '75', //75
+  //   loadChildren: () =>
+  //     import('../ukblog/seventy-five-uk-blog/seventy-five-uk-blog.module').then(
+  //       (m) => m.SeventyFiveUkBlogModule
+  //     ),
+  // },
+  // {
+  //   path: '76', //76
+  //   loadChildren: () =>
+  //     import('../ukblog/seventy-six-uk-blog/seventy-six-uk-blog.module').then(
+  //       (m) => m.SeventySixUkBlogModule
+  //     ),
+  // },
+  // {
+  //   path: '77', //77
+  //   loadChildren: () =>
+  //     import(
+  //       '../ukblog/seventy-seven-uk-blog/seventy-seven-uk-blog.module'
+  //     ).then((m) => m.SeventySevenUkBlogModule),
+  // },
+  // {
+  //   path: '78', //78
+  //   loadChildren: () =>
+  //     import(
+  //       '../ukblog/seventy-eight-uk-blog/seventy-eight-uk-blog.module'
+  //     ).then((m) => m.SeventyEightUkBlogModule),
+  // },
+  // {
+  //   path: '79', //79
+  //   loadChildren: () =>
+  //     import('../ukblog/seventy-nine-uk-blog/seventy-nine-uk-blog.module').then(
+  //       (m) => m.SeventyNineUkBlogModule
+  //     ),
+  // },
+  // {
+  //   path: '80', //80
+  //   loadChildren: () =>
+  //     import('../ukblog/eighty-uk-blog/eighty-uk-blog.module').then(
+  //       (m) => m.EightyUkBlogModule
+  //     ),
+  // },
 ];
 
 @NgModule({
