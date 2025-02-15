@@ -821,13 +821,13 @@ const routes: Routes = [
         (m) => m.SeventyOneRuBlogModule
       ),
   },
-  // {
-  //   path: '72', //72
-  //   loadChildren: () =>
-  //     import('../ru-blog/seventy-two-ru-blog/seventy-two-ru-blog.module').then(
-  //       (m) => m.SeventyTwoRuBlogModule
-  //     ),
-  // },
+  {
+    path: 'economiccalendar', //72
+    loadChildren: () =>
+      import('../ru-blog/seventy-two-ru-blog/seventy-two-ru-blog.module').then(
+        (m) => m.SeventyTwoRuBlogModule
+      ),
+  },
   // {
   //   path: '73', //73
   //   loadChildren: () =>

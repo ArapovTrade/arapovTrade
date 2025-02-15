@@ -818,13 +818,13 @@ const routes: Routes = [
         (m) => m.SeventyOneUkBlogModule
       ),
   },
-  // {
-  //   path: '72', //72
-  //   loadChildren: () =>
-  //     import('../ukblog/seventy-two-uk-blog/seventy-two-uk-blog.module').then(
-  //       (m) => m.SeventyTwoUkBlogModule
-  //     ),
-  // },
+  {
+    path: 'economiccalendar', //72
+    loadChildren: () =>
+      import('../ukblog/seventy-two-uk-blog/seventy-two-uk-blog.module').then(
+        (m) => m.SeventyTwoUkBlogModule
+      ),
+  },
   // {
   //   path: '73', //73
   //   loadChildren: () =>

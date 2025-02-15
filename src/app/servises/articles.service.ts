@@ -1525,5 +1525,17 @@ export class ArticlesService {
       groupsUkr: ['Фундаментальний аналіз'],
       id: 142,
     },
+    {
+      titleUkr: 'Що таке економічний календар',
+      linkUkr: 'economiccalendar',
+      titleEn: 'What is an economic calendar?',
+      titleRus: 'Что такое экономический календарь',
+
+      imgUkr: '/assets/img/content/economiccalendar44.png',
+      groupsRus: ['Фундаментальный анализ'],
+      groupsEn: ['Fundamental Analysis'],
+      groupsUkr: ['Фундаментальний аналіз'],
+      id: 143,
+    },
   ];
 }
