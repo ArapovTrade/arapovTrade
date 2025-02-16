@@ -828,13 +828,13 @@ const routes: Routes = [
         (m) => m.SeventyTwoRuBlogModule
       ),
   },
-  // {
-  //   path: '73', //73
-  //   loadChildren: () =>
-  //     import(
-  //       '../ru-blog/seventy-three-ru-blog/seventy-three-ru-blog.module'
-  //     ).then((m) => m.SeventyThreeRuBlogModule),
-  // },
+  {
+    path: 'macroeconomicindicators', //73
+    loadChildren: () =>
+      import(
+        '../ru-blog/seventy-three-ru-blog/seventy-three-ru-blog.module'
+      ).then((m) => m.SeventyThreeRuBlogModule),
+  },
   // {
   //   path: '74', //74
   //   loadChildren: () =>

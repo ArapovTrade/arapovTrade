@@ -1537,5 +1537,17 @@ export class ArticlesService {
       groupsUkr: ['Фундаментальний аналіз'],
       id: 143,
     },
+    {
+      titleUkr: 'Макроекономічні показники фундаментального аналізу',
+      linkUkr: 'macroeconomicindicators',
+      titleEn: 'Macroeconomic indicators of fundamental analysis',
+      titleRus: 'Макроэкономические показатели фундаментального анализа',
+
+      imgUkr: '/assets/img/content/macroeconomicindicators44.webp',
+      groupsRus: ['Фундаментальный анализ'],
+      groupsEn: ['Fundamental Analysis'],
+      groupsUkr: ['Фундаментальний аналіз'],
+      id: 144,
+    },
   ];
 }

@@ -825,13 +825,13 @@ const routes: Routes = [
         (m) => m.SeventyTwoUkBlogModule
       ),
   },
-  // {
-  //   path: '73', //73
-  //   loadChildren: () =>
-  //     import(
-  //       '../ukblog/seventy-three-uk-blog/seventy-three-uk-blog.module'
-  //     ).then((m) => m.SeventyThreeUkBlogModule),
-  // },
+  {
+    path: 'macroeconomicindicators', //73
+    loadChildren: () =>
+      import(
+        '../ukblog/seventy-three-uk-blog/seventy-three-uk-blog.module'
+      ).then((m) => m.SeventyThreeUkBlogModule),
+  },
   // {
   //   path: '74', //74
   //   loadChildren: () =>
