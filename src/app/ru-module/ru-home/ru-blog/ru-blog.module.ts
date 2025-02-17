@@ -842,13 +842,13 @@ const routes: Routes = [
         '../ru-blog/seventy-four-ru-blog/seventy-four-ru-blog.module'
       ).then((m) => m.SeventyFourRuBlogModule),
   },
-  // {
-  //   path: '75', //75
-  //   loadChildren: () =>
-  //     import(
-  //       '../ru-blog/seventy-five-ru-blog/seventy-five-ru-blog.module'
-  //     ).then((m) => m.SeventyFiveRuBlogModule),
-  // },
+  {
+    path: 'gamblingorbusiness', //75
+    loadChildren: () =>
+      import(
+        '../ru-blog/seventy-five-ru-blog/seventy-five-ru-blog.module'
+      ).then((m) => m.SeventyFiveRuBlogModule),
+  },
   // {
   //   path: '76', //76
   //   loadChildren: () =>

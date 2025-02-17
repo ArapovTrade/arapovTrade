@@ -841,13 +841,13 @@ const routes: Routes = [
         '../eu-blog/seventy-four-en-blog/seventy-four-en-blog.module'
       ).then((m) => m.SeventyFourEnBlogModule),
   },
-  // {
-  //   path: '75', //75
-  //   loadChildren: () =>
-  //     import(
-  //       '../eu-blog/seventy-five-en-blog/seventy-five-en-blog.module'
-  //     ).then((m) => m.SeventyFiveEnBlogModule),
-  // },
+  {
+    path: 'gamblingorbusiness', //75
+    loadChildren: () =>
+      import(
+        '../eu-blog/seventy-five-en-blog/seventy-five-en-blog.module'
+      ).then((m) => m.SeventyFiveEnBlogModule),
+  },
   // {
   //   path: '76', //76
   //   loadChildren: () =>

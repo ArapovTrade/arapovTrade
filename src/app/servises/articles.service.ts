@@ -1561,5 +1561,18 @@ export class ArticlesService {
       groupsUkr: ['Фундаментальний аналіз'],
       id: 145,
     },
+    {
+      titleUkr: 'Трейдинг – азартна гра чи бізнес? Два психологічних підходи',
+      linkUkr: 'gamblingorbusiness',
+      titleEn: 'Trading – Gambling or Business? Two Psychological Approaches',
+      titleRus:
+        'Трейдинг – азартная игра или бизнес? Два психологических подхода',
+
+      imgUkr: '/assets/img/content/gamblingorbusiness44.webp',
+      groupsRus: ['Психология трейдинга'],
+      groupsEn: ['Trading Psychology'],
+      groupsUkr: ['Психологія трейдингу'],
+      id: 146,
+    },
   ];
 }

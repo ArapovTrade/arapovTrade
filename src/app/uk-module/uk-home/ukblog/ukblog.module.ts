@@ -839,13 +839,13 @@ const routes: Routes = [
         (m) => m.SeventyFourUkBlogModule
       ),
   },
-  // {
-  //   path: '75', //75
-  //   loadChildren: () =>
-  //     import('../ukblog/seventy-five-uk-blog/seventy-five-uk-blog.module').then(
-  //       (m) => m.SeventyFiveUkBlogModule
-  //     ),
-  // },
+  {
+    path: 'gamblingorbusiness', //75
+    loadChildren: () =>
+      import('../ukblog/seventy-five-uk-blog/seventy-five-uk-blog.module').then(
+        (m) => m.SeventyFiveUkBlogModule
+      ),
+  },
   // {
   //   path: '76', //76
   //   loadChildren: () =>
