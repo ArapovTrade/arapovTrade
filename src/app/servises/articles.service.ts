@@ -1549,5 +1549,17 @@ export class ArticlesService {
       groupsUkr: ['Фундаментальний аналіз'],
       id: 144,
     },
+    {
+      titleUkr: 'Фундаментальний аналіз світових валютних ринків',
+      linkUkr: 'globalfundamentalanalysis',
+      titleEn: 'Fundamental analysis of global currency markets',
+      titleRus: 'Фундаментальный анализ мировых валютных рынков',
+
+      imgUkr: '/assets/img/content/globalfundamentalanalysis44.webp',
+      groupsRus: ['Фундаментальный анализ'],
+      groupsEn: ['Fundamental Analysis'],
+      groupsUkr: ['Фундаментальний аналіз'],
+      id: 145,
+    },
   ];
 }

@@ -832,13 +832,13 @@ const routes: Routes = [
         '../ukblog/seventy-three-uk-blog/seventy-three-uk-blog.module'
       ).then((m) => m.SeventyThreeUkBlogModule),
   },
-  // {
-  //   path: '74', //74
-  //   loadChildren: () =>
-  //     import('../ukblog/seventy-four-uk-blog/seventy-four-uk-blog.module').then(
-  //       (m) => m.SeventyFourUkBlogModule
-  //     ),
-  // },
+  {
+    path: 'globalfundamentalanalysis', //74
+    loadChildren: () =>
+      import('../ukblog/seventy-four-uk-blog/seventy-four-uk-blog.module').then(
+        (m) => m.SeventyFourUkBlogModule
+      ),
+  },
   // {
   //   path: '75', //75
   //   loadChildren: () =>

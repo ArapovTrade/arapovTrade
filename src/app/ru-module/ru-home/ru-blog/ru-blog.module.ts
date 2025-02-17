@@ -835,13 +835,13 @@ const routes: Routes = [
         '../ru-blog/seventy-three-ru-blog/seventy-three-ru-blog.module'
       ).then((m) => m.SeventyThreeRuBlogModule),
   },
-  // {
-  //   path: '74', //74
-  //   loadChildren: () =>
-  //     import(
-  //       '../ru-blog/seventy-four-ru-blog/seventy-four-ru-blog.module'
-  //     ).then((m) => m.SeventyFourRuBlogModule),
-  // },
+  {
+    path: 'globalfundamentalanalysis', //74
+    loadChildren: () =>
+      import(
+        '../ru-blog/seventy-four-ru-blog/seventy-four-ru-blog.module'
+      ).then((m) => m.SeventyFourRuBlogModule),
+  },
   // {
   //   path: '75', //75
   //   loadChildren: () =>
