@@ -846,13 +846,13 @@ const routes: Routes = [
         (m) => m.SeventyFiveUkBlogModule
       ),
   },
-  // {
-  //   path: '76', //76
-  //   loadChildren: () =>
-  //     import('../ukblog/seventy-six-uk-blog/seventy-six-uk-blog.module').then(
-  //       (m) => m.SeventySixUkBlogModule
-  //     ),
-  // },
+  {
+    path: 'williamgannpsychology', //76
+    loadChildren: () =>
+      import('../ukblog/seventy-six-uk-blog/seventy-six-uk-blog.module').then(
+        (m) => m.SeventySixUkBlogModule
+      ),
+  },
   // {
   //   path: '77', //77
   //   loadChildren: () =>

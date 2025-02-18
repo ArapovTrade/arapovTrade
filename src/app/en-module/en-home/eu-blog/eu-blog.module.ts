@@ -848,13 +848,13 @@ const routes: Routes = [
         '../eu-blog/seventy-five-en-blog/seventy-five-en-blog.module'
       ).then((m) => m.SeventyFiveEnBlogModule),
   },
-  // {
-  //   path: '76', //76
-  //   loadChildren: () =>
-  //     import('../eu-blog/seventy-six-en-blog/seventy-six-en-blog.module').then(
-  //       (m) => m.SeventySixEnBlogModule
-  //     ),
-  // },
+  {
+    path: 'williamgannpsychology', //76
+    loadChildren: () =>
+      import('../eu-blog/seventy-six-en-blog/seventy-six-en-blog.module').then(
+        (m) => m.SeventySixEnBlogModule
+      ),
+  },
   // {
   //   path: '77', //77
   //   loadChildren: () =>

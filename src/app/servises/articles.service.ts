@@ -1574,5 +1574,17 @@ export class ArticlesService {
       groupsUkr: ['Психологія трейдингу'],
       id: 146,
     },
+    {
+      titleUkr: 'Психологія торгівлі Вільяма Ганна',
+      linkUkr: 'williamgannpsychology',
+      titleEn: 'Trading Psychology by William Gann',
+      titleRus: 'Психология торговли Уильяма Ганна',
+
+      imgUkr: '/assets/img/content/williamgannpsychology44.webp',
+      groupsRus: ['Психология трейдинга'],
+      groupsEn: ['Trading Psychology'],
+      groupsUkr: ['Психологія трейдингу'],
+      id: 147,
+    },
   ];
 }
