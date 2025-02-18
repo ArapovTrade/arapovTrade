@@ -856,13 +856,13 @@ const routes: Routes = [
         (m) => m.SeventySixRuBlogModule
       ),
   },
-  // {
-  //   path: '77', //77
-  //   loadChildren: () =>
-  //     import(
-  //       '../ru-blog/seventy-seven-ru-blog/seventy-seven-ru-blog.module'
-  //     ).then((m) => m.SeventySevenRuBlogModule),
-  // },
+  {
+    path: 'emotionsaffect', //77
+    loadChildren: () =>
+      import(
+        '../ru-blog/seventy-seven-ru-blog/seventy-seven-ru-blog.module'
+      ).then((m) => m.SeventySevenRuBlogModule),
+  },
   // {
   //   path: '78', //78
   //   loadChildren: () =>

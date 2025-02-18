@@ -855,13 +855,13 @@ const routes: Routes = [
         (m) => m.SeventySixEnBlogModule
       ),
   },
-  // {
-  //   path: '77', //77
-  //   loadChildren: () =>
-  //     import(
-  //       '../eu-blog/seventy-seven-en-blog/seventy-seven-en-blog.module'
-  //     ).then((m) => m.SeventySevenEnBlogModule),
-  // },
+  {
+    path: 'emotionsaffect', //77
+    loadChildren: () =>
+      import(
+        '../eu-blog/seventy-seven-en-blog/seventy-seven-en-blog.module'
+      ).then((m) => m.SeventySevenEnBlogModule),
+  },
   // {
   //   path: '78', //78
   //   loadChildren: () =>

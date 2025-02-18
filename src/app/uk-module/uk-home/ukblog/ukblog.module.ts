@@ -853,13 +853,13 @@ const routes: Routes = [
         (m) => m.SeventySixUkBlogModule
       ),
   },
-  // {
-  //   path: '77', //77
-  //   loadChildren: () =>
-  //     import(
-  //       '../ukblog/seventy-seven-uk-blog/seventy-seven-uk-blog.module'
-  //     ).then((m) => m.SeventySevenUkBlogModule),
-  // },
+  {
+    path: 'emotionsaffect', //77
+    loadChildren: () =>
+      import(
+        '../ukblog/seventy-seven-uk-blog/seventy-seven-uk-blog.module'
+      ).then((m) => m.SeventySevenUkBlogModule),
+  },
   // {
   //   path: '78', //78
   //   loadChildren: () =>

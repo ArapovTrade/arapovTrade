@@ -1586,5 +1586,17 @@ export class ArticlesService {
       groupsUkr: ['Психологія трейдингу'],
       id: 147,
     },
+    {
+      titleUkr: 'Як емоції впливають на угоди?',
+      linkUkr: 'emotionsaffect',
+      titleEn: 'Trading Psychology: How Do Emotions Affect Trades?',
+      titleRus: 'Психология трейдинга: Как эмоции влияют на сделки?',
+
+      imgUkr: '/assets/img/content/emotionsaffect44.webp',
+      groupsRus: ['Психология трейдинга'],
+      groupsEn: ['Trading Psychology'],
+      groupsUkr: ['Психологія трейдингу'],
+      id: 148,
+    },
   ];
 }
