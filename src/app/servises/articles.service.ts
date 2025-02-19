@@ -1610,5 +1610,17 @@ export class ArticlesService {
       groupsUkr: ['Психологія трейдингу'],
       id: 149,
     },
+    {
+      titleUkr: 'Чому новачки втрачають депозити?',
+      linkUkr: 'psychologyofaveraging',
+      titleEn: 'Psychology of "Averaging": Why Do Newbies Lose Deposits?',
+      titleRus: 'Психология "усреднения": Почему новички теряют депозиты?',
+
+      imgUkr: '/assets/img/content/psychologyofaveraging44.webp',
+      groupsRus: ['Психология трейдинга'],
+      groupsEn: ['Trading Psychology'],
+      groupsUkr: ['Психологія трейдингу'],
+      id: 150,
+    },
   ];
 }

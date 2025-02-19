@@ -869,13 +869,13 @@ const routes: Routes = [
         '../eu-blog/seventy-eight-en-blog/seventy-eight-en-blog.module'
       ).then((m) => m.SeventyEightEnBlogModule),
   },
-  // {
-  //   path: '79', //79
-  //   loadChildren: () =>
-  //     import(
-  //       '../eu-blog/seventy-nine-en-blog/seventy-nine-en-blog.module'
-  //     ).then((m) => m.SeventyNineEnBlogModule),
-  // },
+  {
+    path: 'psychologyofaveraging', //79
+    loadChildren: () =>
+      import(
+        '../eu-blog/seventy-nine-en-blog/seventy-nine-en-blog.module'
+      ).then((m) => m.SeventyNineEnBlogModule),
+  },
   // {
   //   path: '80', //80
   //   loadChildren: () =>
