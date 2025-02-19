@@ -862,13 +862,13 @@ const routes: Routes = [
         '../eu-blog/seventy-seven-en-blog/seventy-seven-en-blog.module'
       ).then((m) => m.SeventySevenEnBlogModule),
   },
-  // {
-  //   path: '78', //78
-  //   loadChildren: () =>
-  //     import(
-  //       '../eu-blog/seventy-eight-en-blog/seventy-eight-en-blog.module'
-  //     ).then((m) => m.SeventyEightEnBlogModule),
-  // },
+  {
+    path: 'fomo', //78
+    loadChildren: () =>
+      import(
+        '../eu-blog/seventy-eight-en-blog/seventy-eight-en-blog.module'
+      ).then((m) => m.SeventyEightEnBlogModule),
+  },
   // {
   //   path: '79', //79
   //   loadChildren: () =>

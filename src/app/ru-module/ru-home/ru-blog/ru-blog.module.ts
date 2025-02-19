@@ -863,13 +863,13 @@ const routes: Routes = [
         '../ru-blog/seventy-seven-ru-blog/seventy-seven-ru-blog.module'
       ).then((m) => m.SeventySevenRuBlogModule),
   },
-  // {
-  //   path: '78', //78
-  //   loadChildren: () =>
-  //     import(
-  //       '../ru-blog/seventy-eight-ru-blog/seventy-eight-ru-blog.module'
-  //     ).then((m) => m.SeventyEightRuBlogModule),
-  // },
+  {
+    path: 'fomo', //78
+    loadChildren: () =>
+      import(
+        '../ru-blog/seventy-eight-ru-blog/seventy-eight-ru-blog.module'
+      ).then((m) => m.SeventyEightRuBlogModule),
+  },
   // {
   //   path: '79', //79
   //   loadChildren: () =>

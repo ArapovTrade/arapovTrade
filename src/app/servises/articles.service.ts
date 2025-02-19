@@ -1598,5 +1598,17 @@ export class ArticlesService {
       groupsUkr: ['Психологія трейдингу'],
       id: 148,
     },
+    {
+      titleUkr: 'Як уникнути "FOMO" - страху втраченого прибутку?',
+      linkUkr: 'fomo',
+      titleEn: 'How to avoid "FOMO" - fear of missing out?',
+      titleRus: 'Как избежать "FOMO" – страха упущенной прибыли?',
+
+      imgUkr: '/assets/img/content/fomo44.png',
+      groupsRus: ['Психология трейдинга'],
+      groupsEn: ['Trading Psychology'],
+      groupsUkr: ['Психологія трейдингу'],
+      id: 149,
+    },
   ];
 }

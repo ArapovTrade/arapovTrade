@@ -860,13 +860,13 @@ const routes: Routes = [
         '../ukblog/seventy-seven-uk-blog/seventy-seven-uk-blog.module'
       ).then((m) => m.SeventySevenUkBlogModule),
   },
-  // {
-  //   path: '78', //78
-  //   loadChildren: () =>
-  //     import(
-  //       '../ukblog/seventy-eight-uk-blog/seventy-eight-uk-blog.module'
-  //     ).then((m) => m.SeventyEightUkBlogModule),
-  // },
+  {
+    path: 'fomo', //78
+    loadChildren: () =>
+      import(
+        '../ukblog/seventy-eight-uk-blog/seventy-eight-uk-blog.module'
+      ).then((m) => m.SeventyEightUkBlogModule),
+  },
   // {
   //   path: '79', //79
   //   loadChildren: () =>
