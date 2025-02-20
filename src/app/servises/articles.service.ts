@@ -1634,5 +1634,17 @@ export class ArticlesService {
       groupsUkr: ['Технічний аналіз'],
       id: 151,
     },
+    {
+      titleUkr: 'Фігура трикутник',
+      linkUkr: 'trianglefigure',
+      titleEn: 'The figure is a triangle',
+      titleRus: 'Фигура треугольник',
+
+      imgUkr: '/assets/img/content/trianglefigure44.png',
+      groupsRus: ['Технический анализ'],
+      groupsEn: ['Technical Analysis'],
+      groupsUkr: ['Технічний аналіз'],
+      id: 152,
+    },
   ];
 }

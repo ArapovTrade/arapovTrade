@@ -881,13 +881,13 @@ const routes: Routes = [
         (m) => m.EightyUkBlogModule
       ),
   },
-  // {
-  //   path: 'headandshoulders', //81
-  //   loadChildren: () =>
-  //     import('../ukblog/eighty-one-uk-blog/eighty-one-uk-blog.module').then(
-  //       (m) => m.EightyOneUkBlogModule
-  //     ),
-  // },
+  {
+    path: 'trianglefigure', //81
+    loadChildren: () =>
+      import('../ukblog/eighty-one-uk-blog/eighty-one-uk-blog.module').then(
+        (m) => m.EightyOneUkBlogModule
+      ),
+  },
   // {
   //   path: 'headandshoulders', //82
   //   loadChildren: () =>
