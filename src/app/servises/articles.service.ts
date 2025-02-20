@@ -1622,5 +1622,17 @@ export class ArticlesService {
       groupsUkr: ['Психологія трейдингу'],
       id: 150,
     },
+    {
+      titleUkr: 'Фігура "Голова і плечі"',
+      linkUkr: 'headandshoulders',
+      titleEn: 'Head and Shoulders Figure',
+      titleRus: 'Фигура "Голова и плечи"',
+
+      imgUkr: '/assets/img/content/headandshoulders44.png',
+      groupsRus: ['Технический анализ'],
+      groupsEn: ['Technical Analysis'],
+      groupsUkr: ['Технічний аналіз'],
+      id: 151,
+    },
   ];
 }

@@ -877,13 +877,13 @@ const routes: Routes = [
         '../ru-blog/seventy-nine-ru-blog/seventy-nine-ru-blog.module'
       ).then((m) => m.SeventyNineRuBlogModule),
   },
-  // {
-  //   path: '80', //80
-  //   loadChildren: () =>
-  //     import('../ru-blog/eighty-ru-blog/eighty-ru-blog.module').then(
-  //       (m) => m.EightyRuBlogModule
-  //     ),
-  // },
+  {
+    path: 'headandshoulders', //80
+    loadChildren: () =>
+      import('../ru-blog/eighty-ru-blog/eighty-ru-blog.module').then(
+        (m) => m.EightyRuBlogModule
+      ),
+  },
 ];
 
 @NgModule({

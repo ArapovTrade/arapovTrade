@@ -876,13 +876,13 @@ const routes: Routes = [
         '../eu-blog/seventy-nine-en-blog/seventy-nine-en-blog.module'
       ).then((m) => m.SeventyNineEnBlogModule),
   },
-  // {
-  //   path: '80', //80
-  //   loadChildren: () =>
-  //     import('../eu-blog/eighty-en-blog/eighty-en-blog.module').then(
-  //       (m) => m.EightyEnBlogModule
-  //     ),
-  // },
+  {
+    path: 'headandshoulders', //80
+    loadChildren: () =>
+      import('../eu-blog/eighty-en-blog/eighty-en-blog.module').then(
+        (m) => m.EightyEnBlogModule
+      ),
+  },
 ];
 
 @NgModule({

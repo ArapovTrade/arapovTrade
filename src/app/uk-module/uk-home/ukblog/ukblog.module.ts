@@ -874,13 +874,13 @@ const routes: Routes = [
         (m) => m.SeventyNineUkBlogModule
       ),
   },
-  // {
-  //   path: '80', //80
-  //   loadChildren: () =>
-  //     import('../ukblog/eighty-uk-blog/eighty-uk-blog.module').then(
-  //       (m) => m.EightyUkBlogModule
-  //     ),
-  // },
+  {
+    path: 'headandshoulders', //80
+    loadChildren: () =>
+      import('../ukblog/eighty-uk-blog/eighty-uk-blog.module').then(
+        (m) => m.EightyUkBlogModule
+      ),
+  },
 ];
 
 @NgModule({
