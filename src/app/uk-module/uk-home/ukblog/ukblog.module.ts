@@ -881,6 +881,55 @@ const routes: Routes = [
         (m) => m.EightyUkBlogModule
       ),
   },
+  // {
+  //   path: 'headandshoulders', //81
+  //   loadChildren: () =>
+  //     import('../ukblog/eighty-one-uk-blog/eighty-one-uk-blog.module').then(
+  //       (m) => m.EightyOneUkBlogModule
+  //     ),
+  // },
+  // {
+  //   path: 'headandshoulders', //82
+  //   loadChildren: () =>
+  //     import('../ukblog/eighty-two-uk-blog/eighty-two-uk-blog.module').then(
+  //       (m) => m.EightyTwoUkBlogModule
+  //     ),
+  // },
+  // {
+  //   path: 'headandshoulders', //83
+  //   loadChildren: () =>
+  //     import('../ukblog/eighty-three-uk-blog/eighty-three-uk-blog.module').then(
+  //       (m) => m.EightyThreeUkBlogModule
+  //     ),
+  // },
+  // {
+  //   path: 'headandshoulders', //84
+  //   loadChildren: () =>
+  //     import('../ukblog/eighty-four-uk-blog/eighty-four-uk-blog.module').then(
+  //       (m) => m.EightyFourUkBlogModule
+  //     ),
+  // },
+  // {
+  //   path: 'headandshoulders', //85
+  //   loadChildren: () =>
+  //     import('../ukblog/eighty-five-uk-blog/eighty-five-uk-blog.module').then(
+  //       (m) => m.EightyFiveUkBlogModule
+  //     ),
+  // },
+  // {
+  //   path: 'headandshoulders', //86
+  //   loadChildren: () =>
+  //     import('../ukblog/eighty-six-uk-blog/eighty-six-uk-blog.module').then(
+  //       (m) => m.EightySixUkBlogModule
+  //     ),
+  // },
+  // {
+  //   path: 'headandshoulders', //87
+  //   loadChildren: () =>
+  //     import('../ukblog/eighty-seven-uk-blog/eighty-seven-uk-blog.module').then(
+  //       (m) => m.EightySevenUkBlogModule
+  //     ),
+  // },
 ];
 
 @NgModule({

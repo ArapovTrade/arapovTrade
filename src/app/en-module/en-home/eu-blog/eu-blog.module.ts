@@ -883,6 +883,55 @@ const routes: Routes = [
         (m) => m.EightyEnBlogModule
       ),
   },
+  // {
+  //   path: 'headandshoulders', //81
+  //   loadChildren: () =>
+  //     import('../eu-blog/eighty-one-en-blog/eighty-one-en-blog.module').then(
+  //       (m) => m.EightyOneEnBlogModule
+  //     ),
+  // },
+  // {
+  //   path: 'headandshoulders', //82
+  //   loadChildren: () =>
+  //     import('../eu-blog/eighty-two-en-blog/eighty-two-en-blog.module').then(
+  //       (m) => m.EightyTwoEnBlogModule
+  //     ),
+  // },
+  // {
+  //   path: 'headandshoulders', //83
+  //   loadChildren: () =>
+  //     import(
+  //       '../eu-blog/eighty-three-en-blog/eighty-three-en-blog.module'
+  //     ).then((m) => m.EightyThreeEnBlogModule),
+  // },
+  // {
+  //   path: 'headandshoulders', //84
+  //   loadChildren: () =>
+  //     import('../eu-blog/eighty-four-en-blog/eighty-four-en-blog.module').then(
+  //       (m) => m.EightyFourEnBlogModule
+  //     ),
+  // },
+  // {
+  //   path: 'headandshoulders', //85
+  //   loadChildren: () =>
+  //     import('../eu-blog/eighty-five-en-blog/eighty-five-en-blog.module').then(
+  //       (m) => m.EightyFiveEnBlogModule
+  //     ),
+  // },
+  // {
+  //   path: 'headandshoulders', //86
+  //   loadChildren: () =>
+  //     import('../eu-blog/eighty-six-en-blog/eighty-six-en-blog.module').then(
+  //       (m) => m.EightySixEnBlogModule
+  //     ),
+  // },
+  // {
+  //   path: 'headandshoulders', //87
+  //   loadChildren: () =>
+  //     import(
+  //       '../eu-blog/eighty-seven-en-blog/eighty-seven-en-blog.module'
+  //     ).then((m) => m.EightySevenEnBlogModule),
+  // },
 ];
 
 @NgModule({
