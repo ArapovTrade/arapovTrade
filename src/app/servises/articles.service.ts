@@ -1658,5 +1658,17 @@ export class ArticlesService {
       groupsUkr: ['Технічний аналіз'],
       id: 153,
     },
+    {
+      titleUkr: 'Фігура "Чашка з ручкою": Як торгувати сильні пробої?',
+      linkUkr: 'cupandhandle',
+      titleEn: 'Cup and Handle Pattern: How to Trade Strong Breakouts?',
+      titleRus: 'Фигура "Чашка с ручкой": Как торговать сильные пробои?',
+
+      imgUkr: '/assets/img/content/cupandhandle44.png',
+      groupsRus: ['Технический анализ'],
+      groupsEn: ['Technical Analysis'],
+      groupsUkr: ['Технічний аналіз'],
+      id: 154,
+    },
   ];
 }

@@ -898,13 +898,13 @@ const routes: Routes = [
         (m) => m.EightyTwoRuBlogModule
       ),
   },
-  // {
-  //   path: 'headandshoulders', //83
-  //   loadChildren: () =>
-  //     import(
-  //       '../ru-blog/eighty-three-ru-blog/eighty-three-ru-blog.module'
-  //     ).then((m) => m.EightyThreeRuBlogModule),
-  // },
+  {
+    path: 'cupandhandle', //83
+    loadChildren: () =>
+      import(
+        '../ru-blog/eighty-three-ru-blog/eighty-three-ru-blog.module'
+      ).then((m) => m.EightyThreeRuBlogModule),
+  },
   // {
   //   path: 'headandshoulders', //84
   //   loadChildren: () =>
