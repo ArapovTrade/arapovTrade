@@ -890,13 +890,13 @@ const routes: Routes = [
         (m) => m.EightyOneEnBlogModule
       ),
   },
-  // {
-  //   path: 'headandshoulders', //82
-  //   loadChildren: () =>
-  //     import('../eu-blog/eighty-two-en-blog/eighty-two-en-blog.module').then(
-  //       (m) => m.EightyTwoEnBlogModule
-  //     ),
-  // },
+  {
+    path: 'flagandpennant', //82
+    loadChildren: () =>
+      import('../eu-blog/eighty-two-en-blog/eighty-two-en-blog.module').then(
+        (m) => m.EightyTwoEnBlogModule
+      ),
+  },
   // {
   //   path: 'headandshoulders', //83
   //   loadChildren: () =>

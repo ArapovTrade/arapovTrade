@@ -888,13 +888,13 @@ const routes: Routes = [
         (m) => m.EightyOneUkBlogModule
       ),
   },
-  // {
-  //   path: 'headandshoulders', //82
-  //   loadChildren: () =>
-  //     import('../ukblog/eighty-two-uk-blog/eighty-two-uk-blog.module').then(
-  //       (m) => m.EightyTwoUkBlogModule
-  //     ),
-  // },
+  {
+    path: 'flagandpennant', //82
+    loadChildren: () =>
+      import('../ukblog/eighty-two-uk-blog/eighty-two-uk-blog.module').then(
+        (m) => m.EightyTwoUkBlogModule
+      ),
+  },
   // {
   //   path: 'headandshoulders', //83
   //   loadChildren: () =>

@@ -1646,5 +1646,17 @@ export class ArticlesService {
       groupsUkr: ['Технічний аналіз'],
       id: 152,
     },
+    {
+      titleUkr: 'Прапор та вимпел: Як правильно торгувати після імпульсу?',
+      linkUkr: 'flagandpennant',
+      titleEn: 'Flag and Pennant: How to Trade Correctly After an Impulse?',
+      titleRus: 'Флаг и вымпел: Как правильно торговать после импульса?',
+
+      imgUkr: '/assets/img/content/flagandpennant44.png',
+      groupsRus: ['Технический анализ'],
+      groupsEn: ['Technical Analysis'],
+      groupsUkr: ['Технічний аналіз'],
+      id: 153,
+    },
   ];
 }

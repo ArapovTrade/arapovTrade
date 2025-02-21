@@ -891,13 +891,13 @@ const routes: Routes = [
         (m) => m.EightyOneRuBlogModule
       ),
   },
-  // {
-  //   path: 'headandshoulders', //82
-  //   loadChildren: () =>
-  //     import('../ru-blog/eighty-two-ru-blog/eighty-two-ru-blog.module').then(
-  //       (m) => m.EightyTwoRuBlogModule
-  //     ),
-  // },
+  {
+    path: 'flagandpennant', //82
+    loadChildren: () =>
+      import('../ru-blog/eighty-two-ru-blog/eighty-two-ru-blog.module').then(
+        (m) => m.EightyTwoRuBlogModule
+      ),
+  },
   // {
   //   path: 'headandshoulders', //83
   //   loadChildren: () =>
