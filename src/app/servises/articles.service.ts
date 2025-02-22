@@ -1670,5 +1670,20 @@ export class ArticlesService {
       groupsUkr: ['Технічний аналіз'],
       id: 154,
     },
+
+    {
+      titleUkr:
+        'Фігура "Поглинання" (Bullish & Bearish Engulfing): Як ловити розворот?',
+      linkUkr: 'engulfing',
+      titleEn: 'Bullish & Bearish Engulfing Pattern: How to Catch a Reversal?',
+      titleRus:
+        'Фигура "Поглощение" (Bullish & Bearish Engulfing): Как ловить разворот?',
+
+      imgUkr: '/assets/img/content/engulfing44.png',
+      groupsRus: ['Технический анализ'],
+      groupsEn: ['Technical Analysis'],
+      groupsUkr: ['Технічний аналіз'],
+      id: 155,
+    },
   ];
 }

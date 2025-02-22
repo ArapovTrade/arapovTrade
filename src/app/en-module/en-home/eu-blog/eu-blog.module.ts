@@ -904,13 +904,13 @@ const routes: Routes = [
         '../eu-blog/eighty-three-en-blog/eighty-three-en-blog.module'
       ).then((m) => m.EightyThreeEnBlogModule),
   },
-  // {
-  //   path: 'headandshoulders', //84
-  //   loadChildren: () =>
-  //     import('../eu-blog/eighty-four-en-blog/eighty-four-en-blog.module').then(
-  //       (m) => m.EightyFourEnBlogModule
-  //     ),
-  // },
+  {
+    path: 'engulfing', //84
+    loadChildren: () =>
+      import('../eu-blog/eighty-four-en-blog/eighty-four-en-blog.module').then(
+        (m) => m.EightyFourEnBlogModule
+      ),
+  },
   // {
   //   path: 'headandshoulders', //85
   //   loadChildren: () =>

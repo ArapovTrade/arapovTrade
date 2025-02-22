@@ -905,13 +905,13 @@ const routes: Routes = [
         '../ru-blog/eighty-three-ru-blog/eighty-three-ru-blog.module'
       ).then((m) => m.EightyThreeRuBlogModule),
   },
-  // {
-  //   path: 'headandshoulders', //84
-  //   loadChildren: () =>
-  //     import('../ru-blog/eighty-four-ru-blog/eighty-four-ru-blog.module').then(
-  //       (m) => m.EightyFourRuBlogModule
-  //     ),
-  // },
+  {
+    path: 'engulfing', //84
+    loadChildren: () =>
+      import('../ru-blog/eighty-four-ru-blog/eighty-four-ru-blog.module').then(
+        (m) => m.EightyFourRuBlogModule
+      ),
+  },
   // {
   //   path: 'headandshoulders', //85
   //   loadChildren: () =>

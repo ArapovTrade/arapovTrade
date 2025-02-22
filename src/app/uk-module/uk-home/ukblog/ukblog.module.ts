@@ -902,13 +902,13 @@ const routes: Routes = [
         (m) => m.EightyThreeUkBlogModule
       ),
   },
-  // {
-  //   path: 'headandshoulders', //84
-  //   loadChildren: () =>
-  //     import('../ukblog/eighty-four-uk-blog/eighty-four-uk-blog.module').then(
-  //       (m) => m.EightyFourUkBlogModule
-  //     ),
-  // },
+  {
+    path: 'engulfing', //84
+    loadChildren: () =>
+      import('../ukblog/eighty-four-uk-blog/eighty-four-uk-blog.module').then(
+        (m) => m.EightyFourUkBlogModule
+      ),
+  },
   // {
   //   path: 'headandshoulders', //85
   //   loadChildren: () =>
