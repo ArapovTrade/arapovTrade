@@ -909,13 +909,13 @@ const routes: Routes = [
         (m) => m.EightyFourUkBlogModule
       ),
   },
-  // {
-  //   path: 'headandshoulders', //85
-  //   loadChildren: () =>
-  //     import('../ukblog/eighty-five-uk-blog/eighty-five-uk-blog.module').then(
-  //       (m) => m.EightyFiveUkBlogModule
-  //     ),
-  // },
+  {
+    path: 'doubletopandbottom', //85
+    loadChildren: () =>
+      import('../ukblog/eighty-five-uk-blog/eighty-five-uk-blog.module').then(
+        (m) => m.EightyFiveUkBlogModule
+      ),
+  },
   // {
   //   path: 'headandshoulders', //86
   //   loadChildren: () =>

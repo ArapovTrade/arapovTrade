@@ -1685,5 +1685,18 @@ export class ArticlesService {
       groupsUkr: ['Технічний аналіз'],
       id: 155,
     },
+
+    {
+      titleUkr: 'Подвійна вершина та Подвійне дно',
+      linkUkr: 'doubletopandbottom',
+      titleEn: 'Double Top and Double Bottom',
+      titleRus: 'Двойная вершина и Двойное дно',
+
+      imgUkr: '/assets/img/content/doubletopandbottom44.png',
+      groupsRus: ['Технический анализ'],
+      groupsEn: ['Technical Analysis'],
+      groupsUkr: ['Технічний аналіз'],
+      id: 156,
+    },
   ];
 }

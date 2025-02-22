@@ -912,13 +912,13 @@ const routes: Routes = [
         (m) => m.EightyFourRuBlogModule
       ),
   },
-  // {
-  //   path: 'headandshoulders', //85
-  //   loadChildren: () =>
-  //     import('../ru-blog/eighty-five-ru-blog/eighty-five-ru-blog.module').then(
-  //       (m) => m.EightyFiveRuBlogModule
-  //     ),
-  // },
+  {
+    path: 'doubletopandbottom', //85
+    loadChildren: () =>
+      import('../ru-blog/eighty-five-ru-blog/eighty-five-ru-blog.module').then(
+        (m) => m.EightyFiveRuBlogModule
+      ),
+  },
   // {
   //   path: 'headandshoulders', //86
   //   loadChildren: () =>

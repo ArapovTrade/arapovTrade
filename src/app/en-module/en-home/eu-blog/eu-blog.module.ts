@@ -911,13 +911,13 @@ const routes: Routes = [
         (m) => m.EightyFourEnBlogModule
       ),
   },
-  // {
-  //   path: 'headandshoulders', //85
-  //   loadChildren: () =>
-  //     import('../eu-blog/eighty-five-en-blog/eighty-five-en-blog.module').then(
-  //       (m) => m.EightyFiveEnBlogModule
-  //     ),
-  // },
+  {
+    path: 'doubletopandbottom', //85
+    loadChildren: () =>
+      import('../eu-blog/eighty-five-en-blog/eighty-five-en-blog.module').then(
+        (m) => m.EightyFiveEnBlogModule
+      ),
+  },
   // {
   //   path: 'headandshoulders', //86
   //   loadChildren: () =>
