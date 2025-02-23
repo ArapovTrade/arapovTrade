@@ -919,13 +919,13 @@ const routes: Routes = [
         (m) => m.EightyFiveRuBlogModule
       ),
   },
-  // {
-  //   path: 'headandshoulders', //86
-  //   loadChildren: () =>
-  //     import('../ru-blog/eighty-six-ru-blog/eighty-six-ru-blog.module').then(
-  //       (m) => m.EightySixRuBlogModule
-  //     ),
-  // },
+  {
+    path: 'pattern-1-2-3', //86
+    loadChildren: () =>
+      import('../ru-blog/eighty-six-ru-blog/eighty-six-ru-blog.module').then(
+        (m) => m.EightySixRuBlogModule
+      ),
+  },
   // {
   //   path: 'headandshoulders', //87
   //   loadChildren: () =>

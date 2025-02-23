@@ -916,13 +916,13 @@ const routes: Routes = [
         (m) => m.EightyFiveUkBlogModule
       ),
   },
-  // {
-  //   path: 'headandshoulders', //86
-  //   loadChildren: () =>
-  //     import('../ukblog/eighty-six-uk-blog/eighty-six-uk-blog.module').then(
-  //       (m) => m.EightySixUkBlogModule
-  //     ),
-  // },
+  {
+    path: 'pattern-1-2-3', //86
+    loadChildren: () =>
+      import('../ukblog/eighty-six-uk-blog/eighty-six-uk-blog.module').then(
+        (m) => m.EightySixUkBlogModule
+      ),
+  },
   // {
   //   path: 'headandshoulders', //87
   //   loadChildren: () =>

@@ -1698,5 +1698,17 @@ export class ArticlesService {
       groupsUkr: ['Технічний аналіз'],
       id: 156,
     },
+    {
+      titleUkr: 'Паттерн 1-2-3',
+      linkUkr: 'pattern-1-2-3',
+      titleEn: 'Pattern 1-2-3',
+      titleRus: 'Паттерн 1-2-3',
+
+      imgUkr: '/assets/img/content/pattern-1-2-344.png',
+      groupsRus: ['Технический анализ'],
+      groupsEn: ['Technical Analysis'],
+      groupsUkr: ['Технічний аналіз'],
+      id: 157,
+    },
   ];
 }

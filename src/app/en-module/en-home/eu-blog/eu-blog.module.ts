@@ -918,13 +918,13 @@ const routes: Routes = [
         (m) => m.EightyFiveEnBlogModule
       ),
   },
-  // {
-  //   path: 'headandshoulders', //86
-  //   loadChildren: () =>
-  //     import('../eu-blog/eighty-six-en-blog/eighty-six-en-blog.module').then(
-  //       (m) => m.EightySixEnBlogModule
-  //     ),
-  // },
+  {
+    path: 'pattern-1-2-3', //86
+    loadChildren: () =>
+      import('../eu-blog/eighty-six-en-blog/eighty-six-en-blog.module').then(
+        (m) => m.EightySixEnBlogModule
+      ),
+  },
   // {
   //   path: 'headandshoulders', //87
   //   loadChildren: () =>
