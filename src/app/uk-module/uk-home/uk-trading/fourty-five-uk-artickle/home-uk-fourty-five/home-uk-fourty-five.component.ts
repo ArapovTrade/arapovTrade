@@ -23,7 +23,7 @@ export class HomeUkFourtyFiveComponent implements OnInit {
     });
 
     this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-29' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-02-24' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/freeeducationnew.webp',
