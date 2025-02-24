@@ -22,7 +22,7 @@ export class HomeRuFourtyFiveComponent implements OnInit {
         'Бесплатное обучение трейдингу. Введение в технический, фундаментальный и объемный анализ. Основные принципы торговли и психология трейдера.',
     });
     this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-29' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-02-24' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/freeeducationnew.webp',
