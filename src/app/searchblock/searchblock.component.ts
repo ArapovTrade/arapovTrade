@@ -63,10 +63,10 @@ export class SearchblockComponent implements OnInit {
   ngAfterViewChecked() {
     this.placeholderText =
       this.searchservic.checkLange == 1
-        ? 'Рівні Фібоначчі'
+        ? 'Наприклад :  "Рівні Фібоначчі"'
         : this.searchservic.checkLange == 2
-        ? 'Торговый план трейдера'
-        : 'Smart Money';
+        ? 'Например : "Метод Вайкоффа"'
+        : 'For example : "Smart Money"';
     this.cdr.detectChanges();
   }
 }
