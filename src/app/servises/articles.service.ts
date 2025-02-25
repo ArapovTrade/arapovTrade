@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-interface artickle {
+export interface artickle {
   titleUkr: string;
   titleEn: string;
   titleRus: string;

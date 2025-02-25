@@ -10,6 +10,7 @@ import { Subject } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ArticlesService } from './servises/articles.service';
 import { LangService } from './servises/lang.service';
+import { SearchServiceService } from './servises/search-service.service';
 
 @Component({
   selector: 'app-root',
@@ -34,7 +35,8 @@ export class AppComponent implements OnInit, AfterViewChecked {
     private route: ActivatedRoute,
     private artickle: ArticlesService,
     private lan: LangService,
-    private cdr: ChangeDetectorRef
+    private cdr: ChangeDetectorRef,
+    private searchSer: SearchServiceService
   ) {}
 
   changeLanguage(lang: string) {
@@ -89,14 +91,12 @@ export class AppComponent implements OnInit, AfterViewChecked {
     this.getLang();
   }
   getLang() {
-    // this.lan.getNumber().subscribe((value) => {
-    //   this.checkLang = value;
-    // });
     this.lan
       .getNumber()
       .pipe(takeUntil(this.destroy$))
       .subscribe((value) => {
         this.checkLang = value;
+        this.searchSer.setLange(this.checkLang);
       });
   }
   ngAfterViewChecked() {
@@ -105,5 +105,13 @@ export class AppComponent implements OnInit, AfterViewChecked {
   ngOnDestroy() {
     this.destroy$.next();
     this.destroy$.complete();
+  }
+
+  //popup
+  flag1: boolean = false;
+  flagTrue1: boolean = true;
+  searchtoggle(event: Event) {
+    this.flag1 = !this.flag1;
+    this.flagTrue1 = !this.flagTrue1;
   }
 }

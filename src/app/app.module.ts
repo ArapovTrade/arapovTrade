@@ -15,8 +15,9 @@ import { UkModuleModule } from './uk-module/uk-module.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { SearchblockComponent } from './searchblock/searchblock.component';
 @NgModule({
-  declarations: [AppComponent, PageNotFoundComponent],
+  declarations: [AppComponent, PageNotFoundComponent, SearchblockComponent],
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
