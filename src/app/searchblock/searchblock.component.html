@@ -2,8 +2,21 @@
     <div class="header-search">
         <span class="header-search_container">
             <form [formGroup]="myForm" action="" class="searchContainer">
+
+
                 <input formControlName="searchControl" type="text" autocomplete="off" spellcheck="false"
-                    class="searchinp" placeholder="Text">
+                    class="searchinp" placeholder="{{placeholderText}}">
+
+                <!-- <div *ngIf="language==2">
+                    <input formControlName="searchControl" type="text" autocomplete="off" spellcheck="false"
+                        class="searchinp" placeholder="Уровни Поддержки и Сопротивления">
+                </div>
+                <div *ngIf="language==3">
+                    <input formControlName="searchControl" type="text" autocomplete="off" spellcheck="false"
+                        class="searchinp" placeholder="Smart Money">
+                </div> -->
+
+
                 <button type="button" class="creatBtn" (click)="clearInp()">Clear</button>
                 <button type="button" class="closeBtn" (click)="closeBtn()"><span style="font-size: larger;">X</span>
                 </button>

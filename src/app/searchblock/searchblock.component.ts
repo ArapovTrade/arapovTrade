@@ -1,4 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  ChangeDetectorRef,
+  Component,
+  OnChanges,
+  OnInit,
+  SimpleChanges,
+  DoCheck,
+} from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { debounceTime, distinctUntilChanged, Observable } from 'rxjs';
 import { EventEmitter, Output } from '@angular/core';
@@ -11,7 +18,10 @@ import { artickle } from '../servises/articles.service';
   styleUrl: './searchblock.component.scss',
 })
 export class SearchblockComponent implements OnInit {
-  constructor(private searchservic: SearchServiceService) {
+  constructor(
+    private searchservic: SearchServiceService,
+    private cdr: ChangeDetectorRef
+  ) {
     this.searchControl.valueChanges
       .pipe(debounceTime(300), distinctUntilChanged())
       .subscribe((value) => {
@@ -20,6 +30,7 @@ export class SearchblockComponent implements OnInit {
         this.searchservic.updateSearch(value || '');
       });
   }
+
   @Output() closeBlockChild: EventEmitter<Event> = new EventEmitter();
 
   language!: number;
@@ -27,6 +38,7 @@ export class SearchblockComponent implements OnInit {
   myForm!: FormGroup;
   searchControl: FormControl = new FormControl('');
   filteredArr: Observable<artickle[]> = this.searchservic.filteredArticles$;
+  placeholderText: string = 'ррррррр';
   ngOnInit(): void {
     this.myForm = new FormGroup({
       searchControl: this.searchControl,
@@ -46,5 +58,15 @@ export class SearchblockComponent implements OnInit {
 
     const regex = new RegExp(this.searchText, 'gi'); // 'gi' - регистронезависимый поиск
     return title.replace(regex, (match) => `<strong>${match}</strong>`); // Оборачиваем совпадения в <strong>
+  }
+
+  ngAfterViewChecked() {
+    this.placeholderText =
+      this.searchservic.checkLange == 1
+        ? 'Рівні Фібоначчі'
+        : this.searchservic.checkLange == 2
+        ? 'Торговый план трейдера'
+        : 'Smart Money';
+    this.cdr.detectChanges();
   }
 }

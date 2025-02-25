@@ -440,7 +440,7 @@ export class ArticlesService {
     {
       titleUkr: 'Об`ємний аналіз ринку',
       titleEn: 'Volumetric market analysis',
-      titleRus: 'Объемный анализ рынка',
+      titleRus: 'Обьемный анализ рынка',
 
       linkUkr: 'volmarketanalisys',
       imgUkr: '/assets/img/content/volmarketanalisys44.png',
