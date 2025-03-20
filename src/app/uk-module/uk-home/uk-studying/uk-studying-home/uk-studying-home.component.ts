@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { Meta, Title } from '@angular/platform-browser';
+import { LangService } from '../../../../servises/lang.service';
 
 @Component({
   selector: 'app-uk-studying-home',
@@ -11,7 +12,8 @@ export class UkStudyingHomeComponent implements OnInit {
   constructor(
     private router: Router,
     private meta: Meta,
-    private titleService: Title
+    private titleService: Title,
+    private lang: LangService
   ) {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
@@ -22,14 +24,16 @@ export class UkStudyingHomeComponent implements OnInit {
     });
   }
   ngOnInit(): void {
+    this.lang.setNumber(1);
+
     this.titleService.setTitle(
-      ' Авторське навчання трейдингу онлайн | Курси трейдингу | Ігор Арапов'
+      'Курси трейдингу |  Авторське навчання трейдингу онлайн | Ігор Арапов'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Авторськe ⏩ навчання трейдингу від ArapovTrade . ⭐ Дистанційне навчання трейдингу онлайн з нуля від Ігоря Арапова.',
+        '⭐ Дистанційне навчання трейдингу онлайн з нуля від Ігоря Арапова. Авторськe ⏩ навчання трейдингу від ArapovTrade . ',
     });
     this.meta.addTag({
       name: 'keywords',
@@ -38,7 +42,7 @@ export class UkStudyingHomeComponent implements OnInit {
     });
   }
   navigateToHomeWithId() {
-    this.router.navigateByUrl('/uk/home').then(() => {
+    this.router.navigateByUrl('/uk').then(() => {
       setTimeout(() => {
         this.scrollToRegistration();
       }, 100);

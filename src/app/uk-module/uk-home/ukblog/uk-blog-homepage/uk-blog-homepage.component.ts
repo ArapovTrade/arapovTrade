@@ -4,6 +4,7 @@ import { NavigationEnd, Router } from '@angular/router';
 import { Meta, Title } from '@angular/platform-browser';
 import { ArticlesService } from '../../../../servises/articles.service';
 import { PageEvent } from '@angular/material/paginator';
+import { LangService } from '../../../../servises/lang.service';
 
 @Component({
   selector: 'app-uk-blog-homepage',
@@ -18,7 +19,8 @@ export class UkBlogHomepageComponent implements OnInit {
     private router: Router,
     private meta: Meta,
     private titleService: Title,
-    private paginator: MatPaginatorIntl
+    private paginator: MatPaginatorIntl,
+    private lang: LangService
   ) {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
@@ -32,7 +34,7 @@ export class UkBlogHomepageComponent implements OnInit {
   ukrGroups: any = [];
   ngOnInit(): void {
     this.paginator.itemsPerPageLabel = '';
-
+    this.lang.setNumber(1);
     this.titleService.setTitle(
       'Безкоштовне навчання трейдингу від Ігоря Арапова'
     );

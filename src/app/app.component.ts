@@ -11,7 +11,10 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ArticlesService } from './servises/articles.service';
 import { LangService } from './servises/lang.service';
 import { SearchServiceService } from './servises/search-service.service';
-
+import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
+import { FormGroup } from '@angular/forms';
+import { FormControl, Validators } from '@angular/forms';
+import { ServLangueageService } from './servises/serv-langueage.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -36,7 +39,8 @@ export class AppComponent implements OnInit, AfterViewChecked {
     private artickle: ArticlesService,
     private lan: LangService,
     private cdr: ChangeDetectorRef,
-    private searchSer: SearchServiceService
+    private searchSer: SearchServiceService,
+    private languageService:ServLangueageService
   ) {}
 
   changeLanguage(lang: string) {
@@ -87,14 +91,26 @@ export class AppComponent implements OnInit, AfterViewChecked {
   setEnglish() {
     this.lan.setNumber(3);
   }
+  registForm: any;
+
   ngOnInit(): void {
-    this.getLang();
+    this.languageService.languageCode$.subscribe(code => {
+      this.checkLang = code;
+       
+    });
+    // this.getLang();
+    this.registForm = new FormGroup({
+      userName: new FormControl('', Validators.required),
+      userEmail: new FormControl(null, [Validators.email, Validators.required]),
+      userMessage: new FormControl('', Validators.required),
+    });
   }
   getLang() {
+     
     this.lan
       .getNumber()
       .pipe(takeUntil(this.destroy$))
-      .subscribe((value) => {
+      .subscribe((value) => { 
         this.checkLang = value;
         this.searchSer.setLange(this.checkLang);
       });
@@ -113,5 +129,50 @@ export class AppComponent implements OnInit, AfterViewChecked {
   searchtoggle(event: Event) {
     this.flag1 = !this.flag1;
     this.flagTrue1 = !this.flagTrue1;
+  }
+
+  //popup
+  flag: boolean = false;
+  flagTrue: boolean = true;
+  popuptoggle() {
+    this.flag = !this.flag;
+    this.flagTrue = !this.flagTrue;
+    // this.registForm.reset();
+  }
+  onSubmit(registForm: FormGroup) {
+    if (
+      registForm.value.userName &&
+      registForm.value.userEmail &&
+      registForm.value.userMessage
+    ) {
+      const templateParams = {
+        userName: registForm.value.userName,
+        userEmail: registForm.value.userEmail,
+        userMessage: registForm.value.userMessage,
+      };
+
+      emailjs
+        .send(
+          'service_qomgf4f',
+          'template_jif62uq',
+          templateParams,
+          'zvCuOnVqiMJMycGQ0'
+        )
+        .then(
+          (result: EmailJSResponseStatus) => {
+            console.log(result.text);
+            this.registForm.reset(); // Сброс формы после успешной отправки
+          },
+          (error) => {
+            console.error(error.text);
+          }
+        );
+    }
+  }
+  close() {
+    this.registForm.reset();
+
+    this.flag = true;
+    this.flagTrue = false;
   }
 }

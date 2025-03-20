@@ -8,49 +8,33 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DisclaimerComponent } from './ru-home/doc/disclaimer/disclaimer.component';
 
 const routes: Routes = [
-  // { path: '', redirectTo: 'home', pathMatch: 'full' },
   {
     path: '',
-    // path: 'home',
 
     component: RuHomeComponent,
-    children: [
-      { path: 'home', component: RuHomePageComponent },
-      // { path: '', component: RuHomePageComponent },
-      {
-        path: 'home/disclaimer',
-        component: DisclaimerComponent,
-      },
-      {
-        path: 'studying',
-        loadChildren: () =>
-          import('./ru-home/ru-studying/ru-studying.module').then(
-            (m) => m.RuStudyingModule
-          ),
-      },
-      // {
-      //   path: 'trading',
-      //   loadChildren: () =>
-      //     import('./ru-home/ru-trading/ru-trading.module').then(
-      //       (m) => m.RuTradingModule
-      //     ),
-      // },
-      // {
-      //   path: 'crypto',
-      //   loadChildren: () =>
-      //     import('./ru-home/ru-crypto/ru-crypto.module').then(
-      //       (m) => m.RuCryptoModule
-      //     ),
-      // },
-      {
-        path: 'freestudying',
-        loadChildren: () =>
-          import('./ru-home/ru-blog/ru-blog.module').then(
-            (m) => m.RuBlogModule
-          ),
-      },
-    ],
   },
+  // children: [
+  //   { path: 'home', component: RuHomePageComponent },
+
+  {
+    path: 'disclaimer',
+    component: DisclaimerComponent,
+  },
+  {
+    path: 'studying',
+    loadChildren: () =>
+      import('./ru-home/ru-studying/ru-studying.module').then(
+        (m) => m.RuStudyingModule
+      ),
+  },
+
+  {
+    path: 'freestudying',
+    loadChildren: () =>
+      import('./ru-home/ru-blog/ru-blog.module').then((m) => m.RuBlogModule),
+  },
+  // ],
+  // },
 ];
 
 @NgModule({

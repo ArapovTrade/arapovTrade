@@ -37,10 +37,14 @@ export class EnHomeComponent implements OnInit {
       userMessage: new FormControl('', Validators.required),
     });
     this.titleService.setTitle(
-      "Trading courses Author's online trading education| Igor Arapov"
+      "Trading courses Author's online trading training | Igor Arapov"
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-
+    this.meta.addTag({
+      name: 'description',
+      content:
+        "Author's ⏩ trading courses from Igor Arapov. ⭐ Training in trading from scratch from ArapovTrade.",
+    });
     this.meta.addTag({
       name: 'keywords',
       content:
@@ -105,5 +109,8 @@ export class EnHomeComponent implements OnInit {
 
     this.flag = true;
     this.flagTrue = false;
+  }
+  navigateToStudy() {
+    this.router.navigateByUrl('/en/studying');
   }
 }

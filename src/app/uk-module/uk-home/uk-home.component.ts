@@ -1,9 +1,16 @@
-import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
-import { FormControl, Validators } from '@angular/forms';
-import { NavigationEnd, Router } from '@angular/router';
+import {
+  Component,
+  Inject,
+  OnInit,
+  Renderer2,
+  RendererFactory2,
+} from '@angular/core';
 
-import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
+import { NavigationEnd } from '@angular/router';
+import { Meta, Title } from '@angular/platform-browser';
+import { DOCUMENT } from '@angular/common';
+import { Router } from '@angular/router';
+
 import { LangService } from '../../servises/lang.service';
 
 @Component({
@@ -12,11 +19,20 @@ import { LangService } from '../../servises/lang.service';
   styleUrl: './uk-home.component.scss',
 })
 export class UkHomeComponent implements OnInit {
-  constructor(private router: Router, private lang: LangService) {
+  private renderer: Renderer2;
+  constructor(
+    private meta: Meta,
+    private router: Router,
+
+    private titleService: Title,
+    private rendererFactory: RendererFactory2,
+    @Inject(DOCUMENT) private document: Document,
+    private lang: LangService
+  ) {
+    this.renderer = rendererFactory.createRenderer(null, null);
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         if (typeof window !== 'undefined') {
-          // Ваш код, который использует window
           window.scrollTo(0, 0);
         }
       }
@@ -37,59 +53,31 @@ export class UkHomeComponent implements OnInit {
     this.isMenuOpen = !this.isMenuOpen;
   }
 
-  //popup
-  flag: boolean = false;
-  flagTrue: boolean = true;
-  popuptoggle() {
-    this.flag = !this.flag;
-    this.flagTrue = !this.flagTrue;
-    // this.registForm.reset();
-  }
-
-  registForm: any;
   ngOnInit() {
-    this.lang.setNumber(1);
-    this.registForm = new FormGroup({
-      userName: new FormControl('', Validators.required),
-      userEmail: new FormControl(null, [Validators.email, Validators.required]),
-      userMessage: new FormControl('', Validators.required),
+    this.titleService.setTitle('Авторське навчання трейдингу');
+    this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+    this.meta.addTag({
+      name: 'description',
+      content:
+        'Авторські ⏩ курси трейдингу від Ігоря Арапова. ⭐ Навчання трейдингу онлайн з нуля від ArapovTrade.',
     });
+    this.meta.addTag({
+      name: 'keywords',
+      content:
+        'курси трейдингу, трейдинг, валюти, навчання трейдингу, безкоштовне навчання трейдингу, навчання трейдингу безкоштовно, навчання трейдингу криптовалют, трейдинг курси безкоштовно, трейдинг з нуля, курси по трейдингу',
+    });
+
+    this.lang.setNumber(1);
   }
 
-  onSubmit(registForm: FormGroup) {
-    if (
-      registForm.value.userName &&
-      registForm.value.userEmail &&
-      registForm.value.userMessage
-    ) {
-      const templateParams = {
-        userName: registForm.value.userName,
-        userEmail: registForm.value.userEmail,
-        userMessage: registForm.value.userMessage,
-      };
-
-      emailjs
-        .send(
-          'service_qomgf4f',
-          'template_jif62uq',
-          templateParams,
-          'zvCuOnVqiMJMycGQ0'
-        )
-        .then(
-          (result: EmailJSResponseStatus) => {
-            console.log(result.text);
-            this.registForm.reset(); // Сброс формы после успешной отправки
-          },
-          (error) => {
-            console.error(error.text);
-          }
-        );
+  scrollToRegistration() {
+    const element = document.getElementById('registration');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }
-  close() {
-    this.registForm.reset();
 
-    this.flag = true;
-    this.flagTrue = false;
+  navigateToStudy() {
+    this.router.navigateByUrl('/uk/studying');
   }
 }

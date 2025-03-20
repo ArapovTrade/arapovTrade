@@ -33,7 +33,7 @@ export class UkHomePageComponent implements OnInit {
     //   rel: 'canonical',
     //   href: 'https://arapov-trading.vercel.app/uk/home',
     // });
-    this.setCanonicalURL('https://arapov.trade/uk/home');
+    // this.setCanonicalURL('https://arapov.trade/uk/home');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',

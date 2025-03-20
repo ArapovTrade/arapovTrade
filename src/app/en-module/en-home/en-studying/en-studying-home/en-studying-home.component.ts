@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { Meta, Title } from '@angular/platform-browser';
+import { LangService } from '../../../../servises/lang.service';
 
 @Component({
   selector: 'app-en-studying-home',
@@ -11,7 +12,8 @@ export class EnStudyingHomeComponent implements OnInit {
   constructor(
     private router: Router,
     private meta: Meta,
-    private titleService: Title
+    private titleService: Title,
+    private lang: LangService
   ) {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
@@ -22,6 +24,7 @@ export class EnStudyingHomeComponent implements OnInit {
     });
   }
   ngOnInit(): void {
+    this.lang.setNumber(3);
     this.titleService.setTitle(
       " Author's online trading training Trading courses Igor Arapov"
     );
@@ -38,7 +41,7 @@ export class EnStudyingHomeComponent implements OnInit {
     });
   }
   navigateToHomeWithId() {
-    this.router.navigateByUrl('/en/home').then(() => {
+    this.router.navigateByUrl('/en').then(() => {
       setTimeout(() => {
         this.scrollToRegistration();
       }, 100);

@@ -8,46 +8,44 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DisclaimerenComponent } from './en-home/doc/disclaimeren/disclaimeren.component';
 
 const routes: Routes = [
-  // { path: '', redirectTo: 'home', pathMatch: 'full' },
   {
     path: '',
     component: EnHomeComponent,
-    children: [
-      { path: 'home', component: HomePageComponent },
-      {
-        path: 'home/disclaimer',
-        component: DisclaimerenComponent,
-      },
-      {
-        path: 'studying',
-        loadChildren: () =>
-          import('./en-home/en-studying/en-studying.module').then(
-            (m) => m.EnStudyingModule
-          ),
-      },
-      // {
-      //   path: 'trading',
-      //   loadChildren: () =>
-      //     import('./en-home/en-trading/en-trading.module').then(
-      //       (m) => m.EnTradingModule
-      //     ),
-      // },
-      // {
-      //   path: 'crypto',
-      //   loadChildren: () =>
-      //     import('./en-home/en-crypto/en-crypto.module').then(
-      //       (m) => m.EnCryptoModule
-      //     ),
-      // },
-      {
-        path: 'freestudying',
-        loadChildren: () =>
-          import('./en-home/eu-blog/eu-blog.module').then(
-            (m) => m.EuBlogModule
-          ),
-      },
-    ],
   },
+  // children: [
+  //   { path: 'home', component: HomePageComponent },
+  {
+    path: 'disclaimer',
+    component: DisclaimerenComponent,
+  },
+  {
+    path: 'studying',
+    loadChildren: () =>
+      import('./en-home/en-studying/en-studying.module').then(
+        (m) => m.EnStudyingModule
+      ),
+  },
+  // {
+  //   path: 'trading',
+  //   loadChildren: () =>
+  //     import('./en-home/en-trading/en-trading.module').then(
+  //       (m) => m.EnTradingModule
+  //     ),
+  // },
+  // {
+  //   path: 'crypto',
+  //   loadChildren: () =>
+  //     import('./en-home/en-crypto/en-crypto.module').then(
+  //       (m) => m.EnCryptoModule
+  //     ),
+  // },
+  {
+    path: 'freestudying',
+    loadChildren: () =>
+      import('./en-home/eu-blog/eu-blog.module').then((m) => m.EuBlogModule),
+  },
+  //   ],
+  // },
 ];
 
 @NgModule({

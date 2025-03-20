@@ -4,6 +4,7 @@ import { PageEvent } from '@angular/material/paginator';
 import { ArticlesService } from '../../../../servises/articles.service';
 import { NavigationEnd, Router } from '@angular/router';
 import { Meta, Title } from '@angular/platform-browser';
+import { LangService } from '../../../../servises/lang.service';
 
 @Component({
   selector: 'app-ru-blog-homepage',
@@ -15,6 +16,7 @@ export class RuBlogHomepageComponent implements OnInit {
   @ViewChild(MatPaginator) paginatorr!: MatPaginator;
 
   constructor(
+    private lang: LangService,
     private artickleServ: ArticlesService,
     private paginator: MatPaginatorIntl,
 
@@ -33,6 +35,7 @@ export class RuBlogHomepageComponent implements OnInit {
   filteredArticles: any = [];
   rusGroups: any = [];
   ngOnInit(): void {
+    this.lang.setNumber(2);
     this.paginator.itemsPerPageLabel = '';
 
     this.titleService.setTitle(

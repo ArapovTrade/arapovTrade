@@ -39,10 +39,15 @@ export class RuHomeComponent implements OnInit {
       userMessage: new FormControl('', Validators.required),
     });
     this.titleService.setTitle(
-      'Курсы трейдинга Авторское обучение трейдингу  '
+      'Авторское обучение трейдингу онлайн | Курсы трейдинга  | Игорь Арапов'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
 
+    this.meta.addTag({
+      name: 'description',
+      content:
+        'Авторские ⏩ курсы трейдинга от Игоря Арапова. ⭐ Обучение трейдингу с нуля от ArapovTrade.',
+    });
     this.meta.addTag({
       name: 'keywords',
       content:
@@ -107,5 +112,16 @@ export class RuHomeComponent implements OnInit {
 
     this.flag = true;
     this.flagTrue = false;
+  }
+
+  //
+  scrollToRegistrationRu() {
+    const element = document.getElementById('registrationRu');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+  navigateToStudy() {
+    this.router.navigateByUrl('/ru/studying');
   }
 }

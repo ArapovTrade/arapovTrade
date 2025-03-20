@@ -5,6 +5,7 @@ import { PageEvent } from '@angular/material/paginator';
 import { NavigationEnd, Router } from '@angular/router';
 import { Meta, Title } from '@angular/platform-browser';
 import { ArticlesService } from '../../../../servises/articles.service';
+import { LangService } from '../../../../servises/lang.service';
 
 @Component({
   selector: 'app-en-blog-homepage',
@@ -20,7 +21,8 @@ export class EnBlogHomepageComponent implements OnInit {
     private router: Router,
     private meta: Meta,
     private titleService: Title,
-    private paginator: MatPaginatorIntl
+    private paginator: MatPaginatorIntl,
+    private lang: LangService
   ) {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
@@ -34,7 +36,7 @@ export class EnBlogHomepageComponent implements OnInit {
   enGroups: any = [];
   ngOnInit(): void {
     this.paginator.itemsPerPageLabel = '';
-
+    this.lang.setNumber(3);
     this.titleService.setTitle('Free trading training from Igor Arapov');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
