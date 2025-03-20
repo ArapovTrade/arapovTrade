@@ -96,7 +96,7 @@ export class AppComponent implements OnInit, AfterViewChecked {
   ngOnInit(): void {
     this.languageService.languageCode$.subscribe(code => {
       this.checkLang = code;
-       
+      this.searchSer.setLange(this.checkLang);
     });
     // this.getLang();
     this.registForm = new FormGroup({
