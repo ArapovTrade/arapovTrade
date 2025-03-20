@@ -4,7 +4,10 @@ import {
   DoCheck,
   ChangeDetectorRef,
   AfterViewChecked,
+  Renderer2,
+  RendererFactory2,
 } from '@angular/core';
+import { NavigationEnd } from '@angular/router';
 import { takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -24,7 +27,7 @@ export class AppComponent implements OnInit, AfterViewChecked {
   dropdownOpen = false;
   checkLang!: number;
   private destroy$ = new Subject<void>();
-
+  private renderer: Renderer2;
   toggleDropdown() {
     this.dropdownOpen = !this.dropdownOpen;
   }
@@ -40,8 +43,18 @@ export class AppComponent implements OnInit, AfterViewChecked {
     private lan: LangService,
     private cdr: ChangeDetectorRef,
     private searchSer: SearchServiceService,
-    private languageService:ServLangueageService
-  ) {}
+    private languageService:ServLangueageService,
+    private rendererFactory: RendererFactory2,
+  ) {
+    this.renderer = rendererFactory.createRenderer(null, null);
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        if (typeof window !== 'undefined') {
+          window.scrollTo(0, 0);
+        }
+      }
+    });
+  }
 
   changeLanguage(lang: string) {
     // Получение текущего пути и параметров маршрута
