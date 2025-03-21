@@ -4,8 +4,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { MainpageComponent } from './mainpage/mainpage.component';
 const routes: Routes = [
-  { path: '', redirectTo: 'uk/freestudying', pathMatch: 'full' },
-  // { path: '', component: MainpageComponent },
+  // { path: '', redirectTo: 'uk/freestudying', pathMatch: 'full' },
+  { path: '', component: MainpageComponent },
   {
     path: 'uk',
     loadChildren: () =>
