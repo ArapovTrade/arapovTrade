@@ -167,7 +167,11 @@ export class AppComponent implements OnInit, AfterViewChecked  {
       { property: 'og:type', content: 'article' },
       { property: 'og:image:width', content: '1200' },
       { property: 'og:image:height', content: '630' },
-      { property: 'og:site_name', content: 'ArapovTrade' }
+      { property: 'og:site_name', content: 'ArapovTrade' },
+
+      // Базові Twitter Card теги
+      { name: 'twitter:card', content: 'summary_large_image' }, // Дефолтний тип картки
+      { name: 'twitter:site', content: '@ArapovTrade' } // Ваш Twitter акаунт (замініть)
     ]);
 
 
