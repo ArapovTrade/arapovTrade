@@ -51,7 +51,9 @@ export class ArticlesService {
   ];
 
   selectedGroups: string[] = [];
-
+  getArticleByLink(link: string) {
+    return this.ukrArtickles.find(article => article.linkUkr === link) ||null // Дефолт - перша стаття
+  }
   ukrainiansArticles() {
     if (this.selectedGroups.length === 0) {
       return this.ukrArtickles;

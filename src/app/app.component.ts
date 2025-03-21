@@ -2,10 +2,13 @@ import {
   Component,
   OnInit,
   DoCheck,
+  
   ChangeDetectorRef,
   AfterViewChecked,
   Renderer2,
   RendererFactory2,
+  AfterContentChecked,
+  OnChanges,
 } from '@angular/core';
 import { NavigationEnd } from '@angular/router';
 import { takeUntil } from 'rxjs/operators';
@@ -18,12 +21,16 @@ import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
 import { FormGroup } from '@angular/forms';
 import { FormControl, Validators } from '@angular/forms';
 import { ServLangueageService } from './servises/serv-langueage.service';
+import { Meta, Title } from '@angular/platform-browser';
+import { filter } from 'rxjs/operators';
+
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent implements OnInit, AfterViewChecked {
+export class AppComponent implements OnInit, AfterViewChecked  {
   dropdownOpen = false;
   checkLang!: number;
   private destroy$ = new Subject<void>();
@@ -44,7 +51,7 @@ export class AppComponent implements OnInit, AfterViewChecked {
     private cdr: ChangeDetectorRef,
     private searchSer: SearchServiceService,
     private languageService:ServLangueageService,
-    private rendererFactory: RendererFactory2,
+    private rendererFactory: RendererFactory2,private meta: Meta, private titleService: Title
   ) {
     this.renderer = rendererFactory.createRenderer(null, null);
     this.router.events.subscribe((event) => {
@@ -55,6 +62,7 @@ export class AppComponent implements OnInit, AfterViewChecked {
       }
     });
   }
+   
 
   changeLanguage(lang: string) {
     // Получение текущего пути и параметров маршрута
@@ -116,8 +124,57 @@ export class AppComponent implements OnInit, AfterViewChecked {
       userName: new FormControl('', Validators.required),
       userEmail: new FormControl(null, [Validators.email, Validators.required]),
       userMessage: new FormControl('', Validators.required),
-    });
+    });     
+    
+
+    this.setDefaultMetaTags();
+
+    this.router.events
+      .pipe(filter(event => event instanceof NavigationEnd))
+      .subscribe(() => {
+        const urlPath = this.router.url.split('?')[0].replace(/^\/|\/$/g, ''); // Отримуємо чистий шлях
+        const segments = urlPath.split('/'); // Розбиваємо на сегменти
+        const link = segments[segments.length - 1] || '';
+        const article = this.artickle.getArticleByLink(link)||null;;
+
+        // Визначаємо мову та витягуємо відповідний заголовок
+        const lang = urlPath.startsWith('uk') ? 'Ukr' : urlPath.startsWith('en') ? 'En' : 'Rus';
+        const titleKey = `title${lang}` as 'titleUkr' | 'titleEn' | 'titleRus'; // Обмежуємо ключі
+        const title =(article)? article[titleKey] :'ArapovTrade - Освіта з трейдингу';
+        const description = `${title} -  from Arapov.trade.`;
+        const image = article?.imgUkr || '/assets/img/default-og-image.jpg';
+        const url = `https://arapov.trade${this.router.url}`;
+         
+        // Оновлюємо теги
+        // this.titleService.setTitle(title);
+        // this.meta.updateTag({ name: 'description', content: description });
+        this.meta.updateTag({ property: 'og:title', content: title });
+        this.meta.updateTag({ property: 'og:description', content: description });
+        this.meta.updateTag({ property: 'og:image', content: `https://arapov.trade${image}` });
+        this.meta.updateTag({ property: 'og:url', content: url });
+
+        // Оновлюємо Twitter Card теги
+        this.meta.updateTag({ name: 'twitter:card', content: 'summary_large_image' }); // Тип картки
+        this.meta.updateTag({ name: 'twitter:title', content: title });
+        this.meta.updateTag({ name: 'twitter:description', content: description });
+        this.meta.updateTag({ name: 'twitter:image', content: `https://arapov.trade${image}` });
+        this.meta.updateTag({ name: 'twitter:url', content: url });
+      });
   }
+
+  private setDefaultMetaTags() {
+    this.meta.addTags([
+      { property: 'og:type', content: 'article' },
+      { property: 'og:image:width', content: '1200' },
+      { property: 'og:image:height', content: '630' },
+      { property: 'og:site_name', content: 'ArapovTrade' }
+    ]);
+
+
+
+  }
+    
+
   getLang() {
      
     this.lan
@@ -129,7 +186,9 @@ export class AppComponent implements OnInit, AfterViewChecked {
       });
   }
   ngAfterViewChecked() {
-    this.cdr.detectChanges();
+    this.cdr.detectChanges();  
+    
+    
   }
   ngOnDestroy() {
     this.destroy$.next();
@@ -189,3 +248,5 @@ export class AppComponent implements OnInit, AfterViewChecked {
     this.flagTrue = false;
   }
 }
+
+
