@@ -3,12 +3,12 @@
 		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 	<loc>https://arapov.trade/</loc>
-	<lastmod>2025-01-17T14:51:07+01:00</lastmod>
+	<lastmod>2025-03-21T14:51:07+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://arapov.trade/uk/home</loc>
-	<lastmod>2025-01-17T14:51:07+01:00</lastmod>
+	<loc>https://arapov.trade/uk</loc>
+	<lastmod>2025-03-21T14:51:07+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
@@ -63,13 +63,13 @@
 	<priority>0.6</priority>
 </url>
 <url>
-	<loc>https://arapov.trade/uk/home/disclaimer</loc>
+	<loc>https://arapov.trade/uk/disclaimer</loc>
 	<lastmod>2025-01-17T14:51:07+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
-	<loc>https://arapov.trade/ru/home</loc>
-	<lastmod>2025-01-17T14:51:10+01:00</lastmod>
+	<loc>https://arapov.trade/ru</loc>
+	<lastmod>2025-03-21T14:51:10+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
@@ -83,8 +83,8 @@
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://arapov.trade/en/home</loc>
-	<lastmod>2025-01-17T14:51:11+01:00</lastmod>
+	<loc>https://arapov.trade/en</loc>
+	<lastmod>2025-03-21T14:51:11+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
@@ -288,8 +288,8 @@
 	<priority>0.6</priority>
 </url>
 <url>
-	<loc>https://arapov.trade/ru/home/disclaimer</loc>
-	<lastmod>2025-01-17T14:51:13+01:00</lastmod>
+	<loc>https://arapov.trade/ru/disclaimer</loc>
+	<lastmod>2025-03-21T14:51:13+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
@@ -358,8 +358,8 @@
 	<priority>0.6</priority>
 </url>
 <url>
-	<loc>https://arapov.trade/en/home/disclaimer</loc>
-	<lastmod>2025-01-17T14:51:15+01:00</lastmod>
+	<loc>https://arapov.trade/en/disclaimer</loc>
+	<lastmod>2025-03-21T14:51:15+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
