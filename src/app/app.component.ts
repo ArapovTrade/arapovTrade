@@ -152,7 +152,7 @@ export class AppComponent implements OnInit, AfterViewChecked  {
         this.meta.updateTag({ property: 'og:description', content: description });
         this.meta.updateTag({ property: 'og:image', content: `https://arapov.trade${image}` });
         this.meta.updateTag({ property: 'og:url', content: url });
-
+         
         // Оновлюємо Twitter Card теги
         this.meta.updateTag({ name: 'twitter:card', content: 'summary_large_image' }); // Тип картки
         this.meta.updateTag({ name: 'twitter:title', content: title });
