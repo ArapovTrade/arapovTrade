@@ -159,6 +159,8 @@ export class AppComponent implements OnInit, AfterViewChecked  {
         this.meta.updateTag({ name: 'twitter:description', content: description });
         this.meta.updateTag({ name: 'twitter:image', content: `https://arapov.trade${image}` });
         this.meta.updateTag({ name: 'twitter:url', content: url });
+
+        console.log(title)
       });
   }
 
