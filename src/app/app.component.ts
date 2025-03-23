@@ -142,7 +142,7 @@ export class AppComponent implements OnInit, AfterViewChecked  {
         const titleKey = `title${lang}` as 'titleUkr' | 'titleEn' | 'titleRus'; // Обмежуємо ключі
         const title =(article)? article[titleKey] :'Обучение трейдингу с нуля - ArapovTrade';
         const description = `Бесплатное обучение трейдингу для начинающих - ArapovTrade`;
-        const image = article?.imgUkr || '/assets/img/default-og-image.jpg';
+        const image = article?.imgUkr || 'assets/img/default-og-image.jpg';
         const url = `https://arapov.trade${this.router.url}`;
          
         // Оновлюємо теги
@@ -160,7 +160,7 @@ export class AppComponent implements OnInit, AfterViewChecked  {
         this.meta.updateTag({ name: 'twitter:image', content: `https://arapov.trade${image}` });
         this.meta.updateTag({ name: 'twitter:url', content: url });
 
-        console.log(title)
+         
       });
   }
 
