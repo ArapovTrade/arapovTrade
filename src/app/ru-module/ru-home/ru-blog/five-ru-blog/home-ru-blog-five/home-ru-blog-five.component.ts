@@ -23,8 +23,8 @@ export class HomeRuBlogFiveComponent implements OnInit {
       content:
         'Что такое ценообразование и ликвидность на финансовых рынках? Изучаем ключевые принципы, влияние ликвидности на ценообразование, роль маркет-мейкеров и управление рисками.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-17' });
+    
+    this.meta.updateTag({ name: 'datePublished', content: '2025-03-26' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/pricingandliquidity.webp',

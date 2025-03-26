@@ -21,8 +21,8 @@ export class HomeUkBlogFiveComponent implements OnInit {
       content:
         'Що таке ціноутворення та ліквідність на фінансових ринках? Досліджуємо ключові принципи, вплив ліквідності на ціноутворення, роль маркет-мейкерів та управління ризиками.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-17' });
+   
+    this.meta.updateTag({ name: 'datePublished', content: '2025-03-26' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/pricingandliquidity.webp',

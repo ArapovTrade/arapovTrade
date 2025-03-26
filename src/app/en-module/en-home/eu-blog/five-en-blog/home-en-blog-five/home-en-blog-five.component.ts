@@ -21,8 +21,8 @@ export class HomeEnBlogFiveComponent implements OnInit {
       content:
         'What is pricing and liquidity in financial markets? We explore key principles, the impact of liquidity on pricing, the role of market makers, and risk management.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-17' });
+    
+    this.meta.updateTag({ name: 'datePublished', content: '2025-03-26' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/pricingandliquidity.webp',
