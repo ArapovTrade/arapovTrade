@@ -21,8 +21,8 @@ export class HomeRuBlogFiftyComponent implements OnInit {
       content:
         'Что такое алгоритмические ордера? Изучите их типы, преимущества, риски и будущее использования в трейдинге. Полное руководство для трейдеров.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-17' });
+     
+    this.meta.updateTag({ name: 'datePublished', content: '2025-03-26' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/algorithmicorders.webp',

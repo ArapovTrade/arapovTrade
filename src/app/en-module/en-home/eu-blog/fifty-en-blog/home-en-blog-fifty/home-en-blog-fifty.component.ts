@@ -23,8 +23,8 @@ export class HomeEnBlogFiftyComponent implements OnInit {
       content:
         'What are algorithmic orders? Learn about their types, benefits, risks, and future use in trading. A comprehensive guide for traders.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Ihor Arapov' });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-17' });
+     
+    this.meta.updateTag({ name: 'datePublished', content: '2025-03-26' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/algorithmicorders.webp',

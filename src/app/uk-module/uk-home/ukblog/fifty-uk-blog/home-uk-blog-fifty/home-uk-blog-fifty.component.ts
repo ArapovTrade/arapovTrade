@@ -21,8 +21,8 @@ export class HomeUkBlogFiftyComponent implements OnInit {
       content:
         'Що таке алгоритмічні ордери? Вивчіть їх типи, переваги, ризики та майбутнє використання у трейдингу. Повний посібник для трейдерів.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-17' });
+    
+    this.meta.updateTag({ name: 'datePublished', content: '2025-03-26' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/algorithmicorders.webp',
