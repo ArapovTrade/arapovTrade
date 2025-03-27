@@ -23,8 +23,8 @@ export class HomeEnTwentyComponent implements OnInit {
       content:
         'Learn how to analyze the market using Peter Steidlmayer’s concept. What is Market Profile, how to account for supply and demand in trading, and which tools to use for successful trading.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Igor Arapov' });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-02-03' });
+     
+    this.meta.updateTag({ name: 'datePublished', content: '2025-03-27' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/steidlmayeranalysis.png',

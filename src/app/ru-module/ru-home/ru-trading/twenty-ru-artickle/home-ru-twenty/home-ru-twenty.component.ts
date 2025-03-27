@@ -24,8 +24,8 @@ export class HomeRuTwentyComponent implements OnInit {
         'Узнайте, как анализировать рынок с помощью концепции Питера Стеделмайера. Что такое Market Profile, как учитывать спрос и предложение в трейдинге и какие инструменты применять для успешной торговли.',
     });
 
-    this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-02-03' });
+     
+    this.meta.updateTag({ name: 'datePublished', content: '2025-03-27' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/steidlmayeranalysis.png',
