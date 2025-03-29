@@ -23,8 +23,8 @@ export class HomeUkThirtyFourComponent implements OnInit {
       content:
         'Що таке стоп-лімітний ордер і як правильно його використовувати? Повний гід для трейдерів з налаштування та застосування Stop-Limit Order на криптовалютному та фондовому ринках.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-15' });
+     
+    this.meta.updateTag({ name: 'datePublished', content: '2025-03-29' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/stoplimitorder1.png',

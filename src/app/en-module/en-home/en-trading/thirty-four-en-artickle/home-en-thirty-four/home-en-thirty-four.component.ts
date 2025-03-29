@@ -23,8 +23,8 @@ export class HomeEnThirtyFourComponent implements OnInit {
       content:
         'What is a stop-limit order and how to use it correctly? A complete guide for traders on setting up and applying Stop-Limit Orders in cryptocurrency and stock markets.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Ihor Arapov' });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-15' });
+    
+    this.meta.updateTag({ name: 'datePublished', content: '2025-03-29' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/stoplimitorder1.png',
