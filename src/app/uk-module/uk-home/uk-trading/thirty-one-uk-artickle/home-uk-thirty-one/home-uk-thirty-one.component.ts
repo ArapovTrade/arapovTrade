@@ -21,8 +21,8 @@ export class HomeUkThirtyOneComponent implements OnInit {
       content:
         'Що таке ринковий ордер і як він працює? Дізнайтеся, як використовувати Market Order для швидкого входу та виходу з угод, його переваги, недоліки та приклади застосування на біржах.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-14' });
+     
+    this.meta.updateTag({ name: 'datePublished', content: '2025-03-29' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/marketorder.webp',

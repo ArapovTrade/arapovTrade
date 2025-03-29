@@ -21,8 +21,8 @@ export class HomeEnThirtyOneComponent implements OnInit {
       content:
         'What is a market order and how does it work? Learn how to use Market Order for quick trade entry and exit, its advantages, disadvantages, and examples of application on exchanges.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Ihor Arapov' });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-14' });
+     
+    this.meta.updateTag({ name: 'datePublished', content: '2025-03-29' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/marketorder.webp',
