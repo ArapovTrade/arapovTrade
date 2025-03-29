@@ -23,8 +23,8 @@ export class HomeEnThirtyTwoComponent implements OnInit {
       content:
         'What is a stop order and how to use it correctly in trading? A detailed breakdown of the Stop Order, its types, advantages and disadvantages, as well as strategies for applying it on cryptocurrency and stock exchanges.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Ihor Arapov' });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-15' });
+    
+    this.meta.updateTag({ name: 'datePublished', content: '2025-03-29' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/stoporder.webp',

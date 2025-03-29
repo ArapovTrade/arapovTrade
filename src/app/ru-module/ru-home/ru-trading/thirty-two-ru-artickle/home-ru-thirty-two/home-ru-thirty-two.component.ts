@@ -23,8 +23,8 @@ export class HomeRuThirtyTwoComponent implements OnInit {
       content:
         'Что такое стоп-ордер и как его правильно использовать в трейдинге? Подробный разбор Stop Order, его видов, преимуществ и недостатков, а также стратегий применения на криптовалютных и фондовых биржах.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-15' });
+     
+    this.meta.updateTag({ name: 'datePublished', content: '2025-03-29' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/stoporder.webp',
