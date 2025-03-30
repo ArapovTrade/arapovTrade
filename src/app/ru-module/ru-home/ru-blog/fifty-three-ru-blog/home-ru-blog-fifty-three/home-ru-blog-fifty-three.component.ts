@@ -21,6 +21,11 @@ export class HomeRuBlogFiftyThreeComponent implements OnInit {
       content:
         'Что такое ордер блок в трейдинге? Разбираем концепцию, методы определения и торговые стратегии. Полное руководство по ордерным блокам и их использованию в анализе рынка.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-03-30' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/orderblockintrading.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

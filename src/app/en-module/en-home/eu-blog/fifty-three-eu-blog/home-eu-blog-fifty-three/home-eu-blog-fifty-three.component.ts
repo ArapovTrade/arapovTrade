@@ -21,7 +21,11 @@ export class HomeEuBlogFiftyThreeComponent implements OnInit {
       content:
         'What is an order block in trading? We analyze the concept, identification methods, and trading strategies. A complete guide to order blocks and their use in market analysis.',
     });
-
+    this.meta.updateTag({ name: 'datePublished', content: '2025-03-30' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/orderblockintrading.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

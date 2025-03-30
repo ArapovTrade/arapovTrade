@@ -21,6 +21,12 @@ export class HomeUkBlogFiftyThreeComponent implements OnInit {
       content:
         'Що таке ордерний блок у трейдингу? Розбираємо концепцію, методи визначення та торгові стратегії. Повний посібник з ордерних блоків і їх використання в аналізі ринку.',
     });
+
+    this.meta.updateTag({ name: 'datePublished', content: '2025-03-30' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/orderblockintrading.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];
