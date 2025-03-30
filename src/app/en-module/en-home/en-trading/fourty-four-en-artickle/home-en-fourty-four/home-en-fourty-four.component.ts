@@ -23,8 +23,8 @@ export class HomeEnFourtyFourComponent implements OnInit {
       content:
         'What are hidden orders (Iceberg Orders)? How do banks and large players use them to mask their positions? Learn how to detect iceberg orders and how to use them in trading.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Igor Arapov' });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-02-06' });
+     
+    this.meta.updateTag({ name: 'datePublished', content: '2025-03-30' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/icebergorders.png',

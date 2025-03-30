@@ -23,8 +23,8 @@ export class HomeUkFourtyFourComponent implements OnInit {
       content:
         'Що таке приховані ордери (Iceberg Orders)? Як банки та великі гравці використовують їх для маскування своїх позицій? Дізнайтесь, як виявити айсберг-ордера та як їх використовувати в торгівлі.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-02-06' });
+     
+    this.meta.updateTag({ name: 'datePublished', content: '2025-03-30' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/icebergorders.png',
