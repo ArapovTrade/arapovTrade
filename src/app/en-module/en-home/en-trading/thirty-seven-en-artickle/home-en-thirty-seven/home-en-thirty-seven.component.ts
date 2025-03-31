@@ -24,8 +24,8 @@ export class HomeEnThirtySevenComponent implements OnInit {
         'Exploring how Stop Hunting works, why Smart Money trigger traders` stop losses, and how to protect your capital from manipulations by large players.',
     });
 
-    this.meta.updateTag({ name: 'author', content: 'Igor Arapov' });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-02-05' });
+     
+    this.meta.updateTag({ name: 'datePublished', content: '2025-03-31' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/stophunting.png',

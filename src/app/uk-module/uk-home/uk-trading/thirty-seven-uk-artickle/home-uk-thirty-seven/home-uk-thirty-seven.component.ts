@@ -23,8 +23,8 @@ export class HomeUkThirtySevenComponent implements OnInit {
       content:
         'Розбираємо, як працює Stop Hunting, чому Smart Money вибивають стопи трейдерів і як захистити свій капітал від маніпуляцій великих гравців.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-02-05' });
+     
+    this.meta.updateTag({ name: 'datePublished', content: '2025-03-31' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/stophunting.png',
