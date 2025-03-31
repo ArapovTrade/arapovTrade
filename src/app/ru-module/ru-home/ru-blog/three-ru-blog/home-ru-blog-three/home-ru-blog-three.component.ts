@@ -21,7 +21,11 @@ export class HomeRuBlogThreeComponent implements OnInit {
       content:
         'Узнайте, что такое волатильность, как она влияет на торговлю и стратегии для работы на высоковолатильных рынках.',
     });
-
+    this.meta.updateTag({ name: 'datePublished', content: '2025-03-31' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/volatility44.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

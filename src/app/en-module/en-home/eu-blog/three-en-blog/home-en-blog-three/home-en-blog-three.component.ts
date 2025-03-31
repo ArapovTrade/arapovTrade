@@ -21,7 +21,11 @@ export class HomeEnBlogThreeComponent implements OnInit {
       content:
         'Learn what volatility is, how it impacts trading, and strategies for working in high-volatility markets.',
     });
-
+    this.meta.updateTag({ name: 'datePublished', content: '2025-03-31' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/volatility44.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

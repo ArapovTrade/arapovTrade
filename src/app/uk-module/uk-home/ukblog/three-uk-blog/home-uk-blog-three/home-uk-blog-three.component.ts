@@ -21,6 +21,11 @@ export class HomeUkBlogThreeComponent implements OnInit {
       content:
         'Дізнайтеся, що таке волатильність, як вона впливає на торгівлю, та стратегії для роботи на високо-волатильних ринках.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-03-31' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/volatility44.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];
