@@ -24,8 +24,8 @@ export class HomeUkThirtyComponent implements OnInit {
         'Розбираємо, що таке Imbalance і FVG (Fair Value Gaps), як їх знаходити на графіку та використовувати у торгівлі. Дізнайтеся, чому ці зони важливі для визначення ліквідності та як застосовувати їх у стратегіях.',
     });
 
-    this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-02-04' });
+    
+    this.meta.updateTag({ name: 'datePublished', content: '2025-03-30' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/imbalanceandfvg.png',

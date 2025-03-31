@@ -23,8 +23,8 @@ export class HomeEnThirtyComponent implements OnInit {
       content:
         'Let`s analyze what Imbalance and FVG (Fair Value Gaps) are, how to identify them on a chart, and use them in trading. Learn why these zones are important for liquidity determination and how to apply them in strategies.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Igor Arapov' });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-02-04' });
+     
+    this.meta.updateTag({ name: 'datePublished', content: '2025-03-30' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/imbalanceandfvg.png',
