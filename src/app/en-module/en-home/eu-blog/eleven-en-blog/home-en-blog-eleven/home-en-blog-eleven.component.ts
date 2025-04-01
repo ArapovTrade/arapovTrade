@@ -23,7 +23,11 @@ export class HomeEnBlogElevenComponent implements OnInit {
       content:
         'Find out how much starting deposit a trader needs, how to calculate it correctly, and manage capital. Useful tips for beginners and experienced traders.',
     });
-
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-01' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/starterdeposit.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

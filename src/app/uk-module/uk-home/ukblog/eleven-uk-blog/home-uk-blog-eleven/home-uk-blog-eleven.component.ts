@@ -23,7 +23,11 @@ export class HomeUkBlogElevenComponent implements OnInit {
       content:
         'Дізнайтеся, який стартовий депозит потрібен трейдеру, як його правильно розрахувати і управляти капіталом. Корисні поради для початківців і досвідчених трейдерів.',
     });
-
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-01' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/starterdeposit.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

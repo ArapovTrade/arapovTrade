@@ -23,6 +23,11 @@ export class HomeRuBlogElevenComponent implements OnInit {
       content:
         'Узнайте, какой стартовый депозит нужен трейдеру, как его правильно рассчитать и управлять капиталом. Полезные советы для начинающих и опытных трейдеров.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-01' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/starterdeposit.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];
