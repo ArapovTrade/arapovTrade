@@ -21,6 +21,11 @@ export class HomeRuBlogFourteenComponent implements OnInit {
       content:
         'Разберём различия между трейдингом и инвестициями, их преимущества и недостатки. Узнайте, что подходит именно вам!',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-01' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/tradingandinvestments.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

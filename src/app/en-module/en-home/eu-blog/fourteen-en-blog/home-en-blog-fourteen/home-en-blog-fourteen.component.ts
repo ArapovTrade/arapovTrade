@@ -21,6 +21,11 @@ export class HomeEnBlogFourteenComponent implements OnInit {
       content:
         'Learn the differences between trading and investing, their advantages and disadvantages. Find out what suits you best!',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-01' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/tradingandinvestments.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

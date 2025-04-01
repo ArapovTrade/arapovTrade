@@ -21,6 +21,11 @@ export class HomeUkBlogFourteenComponent implements OnInit {
       content:
         'Розберемо відмінності між трейдингом та інвестиціями, їх переваги та недоліки. Дізнайтеся, що підходить саме вам!',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-01' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/tradingandinvestments.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];
