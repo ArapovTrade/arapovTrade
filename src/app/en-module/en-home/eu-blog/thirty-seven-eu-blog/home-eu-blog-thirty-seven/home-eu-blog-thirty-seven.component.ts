@@ -23,6 +23,11 @@ export class HomeEuBlogThirtySevenComponent implements OnInit {
       content:
         'Learn what drawdowns in trading are, how to analyze and manage them to achieve consistent profitability',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-02' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/drawdowns.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

@@ -23,7 +23,11 @@ export class HomeUkBlogThirtySevenComponent implements OnInit {
       content:
         'Дізнайтеся, що таке просадки в трейдингу, як їх аналізувати та керувати ними для досягнення стабільного прибутку.',
     });
-
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-02' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/drawdowns.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];
