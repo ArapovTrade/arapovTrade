@@ -21,6 +21,11 @@ export class HomeUkBlogThirtyComponent implements OnInit {
       content:
         'Дізнайтеся про основи криптовалют, їхні особливості та ключові принципи торгівлі для початківців трейдерів.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-02' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/cryptocurrencybasics.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

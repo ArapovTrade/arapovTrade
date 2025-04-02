@@ -21,7 +21,11 @@ export class HomeEnBlogThirtyComponent implements OnInit {
       content:
         'Learn the basics of cryptocurrencies, their features, and key trading principles for beginner traders.',
     });
-
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-02' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/cryptocurrencybasics.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

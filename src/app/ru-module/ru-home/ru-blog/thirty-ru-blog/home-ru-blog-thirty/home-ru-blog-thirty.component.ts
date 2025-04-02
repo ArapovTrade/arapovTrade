@@ -21,6 +21,11 @@ export class HomeRuBlogThirtyComponent implements OnInit {
       content:
         'Познакомьтесь с основами криптовалют, их особенностями и ключевыми принципами торговли для начинающих трейдеров.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-02' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/cryptocurrencybasics.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];
