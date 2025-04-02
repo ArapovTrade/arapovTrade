@@ -21,6 +21,11 @@ export class HomeEuBlogThirtyTwoComponent implements OnInit {
       content:
         'Explore the benefits of paid trading education. Find out why investing in learning can be the first step toward a successful trading career.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-02' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/purchasingcourses.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

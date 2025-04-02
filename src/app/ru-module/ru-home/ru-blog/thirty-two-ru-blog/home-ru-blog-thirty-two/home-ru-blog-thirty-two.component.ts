@@ -21,6 +21,11 @@ export class HomeRuBlogThirtyTwoComponent implements OnInit {
       content:
         'Рассмотрим преимущества платного обучения трейдингу. Узнайте, почему инвестирование в обучение может стать первым шагом к успешной карьере трейдера.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-02' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/purchasingcourses.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];
