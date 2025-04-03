@@ -21,6 +21,11 @@ export class HomeUkBlogFourtyEightComponent implements OnInit {
       content:
         'Самостійне навчання трейдингу: покрокова інструкція, поради та рекомендації для початківців. Успішний старт на фінансових ринках.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-03' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/selfstudying.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

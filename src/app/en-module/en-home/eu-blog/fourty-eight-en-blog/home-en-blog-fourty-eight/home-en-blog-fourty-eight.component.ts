@@ -21,6 +21,11 @@ export class HomeEnBlogFourtyEightComponent implements OnInit {
       content:
         'Self-learning trading: step-by-step guide, tips, and recommendations for beginners. A successful start in financial markets.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-03' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/selfstudying.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];
