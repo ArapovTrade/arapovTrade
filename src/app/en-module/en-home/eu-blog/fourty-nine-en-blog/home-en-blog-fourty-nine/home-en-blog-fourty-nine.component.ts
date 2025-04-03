@@ -21,6 +21,11 @@ export class HomeEnBlogFourtyNineComponent implements OnInit {
       content:
         'Learn how to choose the perfect trading platform for trading. Useful tips, selection criteria, and a list of the best platforms for beginners and professionals.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-03' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/choosingtradingplatform.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

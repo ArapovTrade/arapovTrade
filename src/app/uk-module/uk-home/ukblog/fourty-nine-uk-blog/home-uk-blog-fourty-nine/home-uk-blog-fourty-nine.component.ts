@@ -21,6 +21,11 @@ export class HomeUkBlogFourtyNineComponent implements OnInit {
       content:
         'Дізнайтеся, як обрати ідеальну торгову платформу для трейдингу. Корисні поради, критерії вибору та список найкращих платформ для початківців і професіоналів.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-03' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/choosingtradingplatform.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];
