@@ -21,7 +21,11 @@ export class HomeUkBlogFourtyTwoComponent implements OnInit {
       content:
         'Дізнайтеся основні ризики криптовалютного ринку для початківців трейдерів та інвесторів. Дізнайтеся, як управляти ризиками та мінімізувати втрати.',
     });
-
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-03' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/cryptocurrencyrisks.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

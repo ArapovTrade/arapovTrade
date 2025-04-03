@@ -21,6 +21,11 @@ export class HomeEnBlogFourtyTwoComponent implements OnInit {
       content:
         'Learn the main risks of the cryptocurrency market for beginner traders and investors. Find out how to manage risks and minimize losses.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-03' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/cryptocurrencyrisks.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];
