@@ -21,6 +21,11 @@ export class HomeRuBlogFiftyEightComponent implements OnInit {
       content:
         'Как правильно использовать стратегию усреднения в трейдинге? Узнайте о методах усреднения, рисках, преимуществах и стратегиях для эффективной торговли.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-04' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/averagingintrading.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

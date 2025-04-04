@@ -21,7 +21,11 @@ export class HomeUkBlogFiftyEightComponent implements OnInit {
       content:
         ' Як правильно використовувати стратегію усереднення в трейдингу? Дізнайтеся про методи усереднення, ризики, переваги та стратегії для ефективної торгівлі.',
     });
-
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-04' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/averagingintrading.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

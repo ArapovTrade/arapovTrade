@@ -21,7 +21,11 @@ export class HomeEuBlogFiftyEightComponent implements OnInit {
       content:
         'How to properly use the averaging strategy in trading? Learn about averaging methods, risks, benefits, and strategies for effective trading.',
     });
-
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-04' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/averagingintrading.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];
