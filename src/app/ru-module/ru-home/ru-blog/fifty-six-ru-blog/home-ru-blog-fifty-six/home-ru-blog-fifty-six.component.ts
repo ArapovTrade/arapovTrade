@@ -23,6 +23,11 @@ export class HomeRuBlogFiftySixComponent implements OnInit {
       content:
         'Рассмотрим, как книги по трейдингу помогают начинающим трейдерам. Полезные рекомендации и лучшие книги для старта в мире финансовых рынков.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-04' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/benefitsoftradingbooks.jpg',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

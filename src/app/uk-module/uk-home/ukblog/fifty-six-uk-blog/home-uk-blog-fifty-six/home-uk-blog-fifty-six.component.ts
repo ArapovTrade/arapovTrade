@@ -23,6 +23,11 @@ export class HomeUkBlogFiftySixComponent implements OnInit {
       content:
         'Розглянемо, як книги з трейдингу допомагають початківцям трейдерам. Корисні рекомендації та найкращі книги для старту у світі фінансових ринків.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-04' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/benefitsoftradingbooks.jpg',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

@@ -21,7 +21,11 @@ export class HomeEuBlogFiftySixComponent implements OnInit {
       content:
         'Discover how trading books can help beginner traders. Useful recommendations and top books to start your journey in the financial markets.',
     });
-
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-04' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/benefitsoftradingbooks.jpg',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];
