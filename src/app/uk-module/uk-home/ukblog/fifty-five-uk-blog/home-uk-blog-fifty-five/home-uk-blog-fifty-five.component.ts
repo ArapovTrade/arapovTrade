@@ -23,7 +23,11 @@ export class HomeUkBlogFiftyFiveComponent implements OnInit {
       content:
         'Детальний посібник зі скальпінгу у трейдингу: стратегії, індикатори, ризики та автоматизація. Навчіться заробляти на короткострокових угодах!',
     });
-
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-04' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/scalpingintrading.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

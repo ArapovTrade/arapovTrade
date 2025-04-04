@@ -23,6 +23,11 @@ export class HomeRuBlogFiftyFiveComponent implements OnInit {
       content:
         'Подробное руководство по скальпингу в трейдинге: стратегии, индикаторы, риски и автоматизация. Научитесь зарабатывать на краткосрочных сделках!',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-04' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/scalpingintrading.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];
