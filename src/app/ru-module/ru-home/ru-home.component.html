@@ -13,8 +13,7 @@
 
 
                     <div class="button-place">
-                        <!-- <button (click)="scrollToRegistrationRu()" class="button js-scroll"><span
-                                style="margin-right:15px ;">Быстрый старт</span> </button> -->
+                         
                         <button (click)="navigateToStudy()" class="button js-scroll"><span
                                 style="margin-right:15px ;">Быстрый старт</span> </button>
                     </div>
@@ -249,107 +248,7 @@
         </footer>
     </div>
 </section>
-<!-- //////////////////////////////////////////////////////// -->
-
-
-<!-- <header class="header">
-    <div class="b-top">
-        <div class="container">
-            <a routerLink="" routerLinkActive="active">
-            </a>
-
-            <a routerLink="studying" routerLinkActive="active">
-            </a>
-
-
-            <a routerLink="freestudying" routerLinkActive="active"></a>
-        </div>
-    </div>
-</header> -->
+ 
 <div class="span"></div>
-
-<!-- ----------------------------------------------------------------- -->
-<!-- <div *ngIf="flag" class="popup-mainBlock">    
-
-    <form novalidate [formGroup]="registForm" (ngSubmit)="popuptoggle( ); onSubmit(registForm);  " class="popup-form">
-        <div class="popup-header">
-            <button (click)="close()" class="popup_close-btn">Х</button>
-            <div class="popup-message">
-                <p>Напишите ваш вопрос и мы сразу ответим!</p>
-            </div>
-            <div class="img_title_block">
-                <div class="img_title_wrapper"><a href="https://telegram.me/ArapovTrade"><img
-                            class="img_title img_youtube" src="assets/img/content/Telegram_logo.png" alt="Telegram"></a>
-                </div>
-                <div class="img_title_wrapper"><a href="viber://chat?number=+380502933075"><img
-                            class="img_title img_facebook" src="assets/img/content/Viber.png" alt="Viber"></a>
-                </div>
-                <div class="img_title_wrapper"><a href="https://wa.me/+380502933075"><img class="img_title img_linkedin"
-                            src="assets/img/content/WhatsApp.png" alt="WhatsApp"></a>
-
-                </div>
-
-            </div>
-        </div>
-        <div>
-            <label for="userName">Имя</label>
-            <input type="text" id="userName" formControlName="userName" placeholder="Введите ваше имя">
-        </div>
-        <div>
-            <label for="userEmail">Эмейл</label>
-            <input type="email" id="userEmail" formControlName="userEmail" placeholder="Введите ваш email">
-        </div>
-
-        <div>
-            <label for="userMessage">Сообщение</label>
-            <textarea id="userMessage" formControlName="userMessage" cols="30" rows="10"
-                placeholder="Введите сообщение"></textarea>
-        </div>
-        <input type="submit" value="Отправить" [disabled]="registForm.invalid"
-            [ngClass]="{popupSubmitFalse:registForm.invalid, popupSubmit:registForm.valid}">
-
-    </form>
-</div> -->
-
-
-
-
-<!-- ----------------------------------------------------------------- -->
-
-
-
-<!-- <div>
-    <div [ngClass]="{displNone:flag, displBlock:flagTrue}" class="contact-sign-popup popup-button" #popUpDiv>
-        <button class="button-sign-popup " (click)="popuptoggle( )">
-
-            <svg width="35" height="35" id="svg2" version="1.1" viewBox="0 0 32 32" xml:space="preserve"
-                xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#"
-                xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-                xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-                xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-                xmlns:svg="http://www.w3.org/2000/svg">
-                <defs id="defs6" />
-                <g id="g10" transform="matrix(2.2333333,0,0,-2.2333333,-10.5,43)">
-                    <path
-                        d="M 12.14991,18.805524 A 6.6653094,6.6653094 0 0 0 16.9344,16.791234 6.6653094,6.6653094 0 0 0 16.81105,7.3658521 6.6653094,6.6653094 0 0 0 8.6448506,6.4867351 l 0.063,-0.06118 -2.61527,-0.937108 1.00812,2.314824 a 6.6653094,6.6653094 0 0 0 0.4083,9.1113329 6.6653094,6.6653094 0 0 0 4.6408794,1.89092 z"
-                        id="path941"
-                        style="fill:none;stroke:#ffffff;stroke-width:0.77400002;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-                    <circle cx="9.6361694" cy="-12.036508" id="circle1300" r="0.69950414"
-                        style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.69573557;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-                        transform="scale(1,-1)" />
-                    <circle cx="12.274857" cy="-12.036508" id="circle1302" r="0.69950414"
-                        style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.69573557;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-                        transform="scale(1,-1)" />
-                    <circle cx="14.913583" cy="-12.036508" id="circle1304" r="0.69950414"
-                        style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.69573557;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-                        transform="scale(1,-1)" />
-                </g>
-            </svg>
-
-
-        </button>
-
-
-    </div>
-</div> -->
+ 
 <router-outlet></router-outlet>

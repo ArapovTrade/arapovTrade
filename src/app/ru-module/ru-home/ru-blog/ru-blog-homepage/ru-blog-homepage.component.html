@@ -6,12 +6,7 @@
                     <h1 class="orange  ">
                         Бесплатное обучение трейдингу
                     </h1>
-                    <!-- <p>Бесплатные обучающие материалы , подробные <a class="orange dec"
-                            href="https://youtube.com/playlist?list=PLdXB70rGX5_zqH_X84Q_z0wj5pQYhdqfk&si=Hquku7z09eOtp4fp">видеоуроки</a>
-                        и статьи - собранные в полноценные
-                        курсы по ключевым темам
-                        трейдинга для самостоятельного обучения от Игоря Арапова.
-                    </p> -->
+                     
                     <p>
                         <a routerLink="freeeducation" class="orange dec blacklink">Бесплатное обучение трейдингу</a> ,
                         включающее
@@ -20,18 +15,13 @@
                             видеоуроки</a>, статьи и бесплатные обучающие материалы, собраны в
                         полноценные курсы по ключевым темам трейдинга для самостоятельного обучения от Игоря Арапова.
                     </p>
-                    <!-- <div class="button-place">
-
-                        <button (click)="navigateToStudy()" class="button js-scroll"><span
-                                style="margin-right:15px ;">Быстрый старт</span>
-                        </button>
-                    </div> -->
+                     
 
                 </div>
                 <div class="hero-image-place  m-right">
                     <picture class="hero-image">
                         <source srcset="/assets/img/content/author22.png" media="(min-width: 600px)">
-                        <!-- <img src="/assets/img/content/sticker.webp" alt="author"> -->
+                         
                         <img src="/assets/img/content/author22.png" alt="author" loading="lazy">
                     </picture>
                 </div>
@@ -71,12 +61,12 @@
                                 <div class="programm__item">
                                     <span class="programm__close"></span>
                                     <div class="programm__in box">
-                                        <a routerLink="{{article.linkUkr}}">
+                                        <a routerLink="{{article.linkUkr}}" hreflang="ru">
                                             <img class="article-img" src="{{article.imgUkr}}" alt="requotes"
                                                 loading="lazy">
                                         </a>
                                         <div class="programm__title orange">
-                                            <a routerLink="{{article.linkUkr}}" class="orange">
+                                            <a routerLink="{{article.linkUkr}}" class="orange" hreflang="ru">
                                                 <h3>{{article.titleRus}}</h3>
                                             </a>
                                         </div>
