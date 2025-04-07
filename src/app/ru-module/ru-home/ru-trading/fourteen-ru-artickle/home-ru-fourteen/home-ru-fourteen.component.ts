@@ -22,6 +22,11 @@ export class HomeRuFourteenComponent implements OnInit {
       content:
         'Разберём, какие риски связаны с использованием кредитного плеча на Форекс, и как управлять ими для минимизации потерь.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-07' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/forexLeverageRisk.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

@@ -22,7 +22,11 @@ export class HomeEnFourteenComponent implements OnInit {
       content:
         'Discover the risks associated with using leverage on Forex and how to manage them to minimize losses.',
     });
-
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-07' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/forexLeverageRisk.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

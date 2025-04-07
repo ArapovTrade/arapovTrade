@@ -21,6 +21,11 @@ export class HomeUkFourteenComponent implements OnInit {
       content:
         'Розглянемо, які ризики пов’язані з використанням кредитного плеча на Форекс, і як ними керувати, щоб мінімізувати втрати.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-07' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/forexLeverageRisk.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];
