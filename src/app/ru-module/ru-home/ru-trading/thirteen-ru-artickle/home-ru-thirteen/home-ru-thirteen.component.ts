@@ -22,6 +22,11 @@ export class HomeRuThirteenComponent implements OnInit {
       content:
         'Узнайте, что такое риск изменения курса, как он влияет на финансовые операции, и какие стратегии помогут минимизировать его.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-07' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/riskCurrencyExchange.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

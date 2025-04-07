@@ -21,7 +21,11 @@ export class HomeUkThirteenComponent implements OnInit {
       content:
         'Дізнайтеся, що таке ризик зміни курсу, як він впливає на фінансові операції, та які стратегії допоможуть мінімізувати його.',
     });
-
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-07' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/riskCurrencyExchange.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

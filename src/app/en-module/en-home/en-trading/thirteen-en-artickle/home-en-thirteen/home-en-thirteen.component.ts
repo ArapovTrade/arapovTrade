@@ -21,7 +21,11 @@ export class HomeEnThirteenComponent implements OnInit {
       content:
         'Learn what currency risk is, how it impacts financial operations, and what strategies can help mitigate it.',
     });
-
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-07' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/riskCurrencyExchange.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];
