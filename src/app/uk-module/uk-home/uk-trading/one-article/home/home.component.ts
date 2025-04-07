@@ -22,6 +22,11 @@ export class HomeComponent implements OnInit {
       content:
         'Корисні поради для початківців трейдерів. Дізнайтеся, як керувати ризиками, розробляти стратегію та уникати помилок у трейдингу.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-07' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/traderStarterw.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

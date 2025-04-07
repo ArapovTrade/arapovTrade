@@ -23,6 +23,11 @@ export class HomeOneEnComponent implements OnInit {
       content:
         'Useful tips for beginner traders. Learn how to manage risks, develop strategies, and avoid mistakes in trading.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-07' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/traderStarterw.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];
