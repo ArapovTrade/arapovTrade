@@ -21,6 +21,11 @@ export class HomeEnThirtyThreeComponent implements OnInit {
       content:
         'Learn what requotes are in trading, why they occur, and how to avoid them. Tips for improving trading and working with brokers.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-07' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/requotes.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

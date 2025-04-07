@@ -21,7 +21,11 @@ export class HomeRuThirtyThreeComponent implements OnInit {
       content:
         'Узнайте, что такое реквоты в трейдинге, почему они возникают и как их избежать. Советы по улучшению торговли и работе с брокерами. ',
     });
-
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-07' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/requotes.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];
