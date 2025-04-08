@@ -23,7 +23,11 @@ export class HomeEnThirtyEightComponent implements OnInit {
       content:
         'A complete guide to capital management in trading. Risk management, money management, loss control, and effective deposit management strategies.',
     });
-
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-08' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/capitalmanagement.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

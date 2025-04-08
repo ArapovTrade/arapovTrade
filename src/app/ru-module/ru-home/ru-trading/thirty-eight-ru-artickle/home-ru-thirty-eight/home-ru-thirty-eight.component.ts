@@ -23,6 +23,11 @@ export class HomeRuThirtyEightComponent implements OnInit {
       content:
         'Полное руководство по управлению капиталом в трейдинге. Риск-менеджмент, мани-менеджмент, контроль убытков и эффективные стратегии управления депозитом.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-08' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/capitalmanagement.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];
