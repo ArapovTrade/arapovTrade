@@ -23,6 +23,11 @@ export class HomeEnThirtyFiveComponent implements OnInit {
       content:
         'Learn what a trading system is, its types, the features of automation, and how to choose a strategy that suits your trading goals.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-08' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/tradingsystem.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

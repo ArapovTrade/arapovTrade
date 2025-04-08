@@ -23,6 +23,11 @@ export class HomeUkThirtyFiveComponent implements OnInit {
       content:
         'Дізнайтеся, що таке торгова система, її види, особливості автоматизації та як обрати відповідну для ваших цілей стратегію торгівлі.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-08' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/tradingsystem.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

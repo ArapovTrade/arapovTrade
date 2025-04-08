@@ -23,6 +23,11 @@ export class HomeRuThirtyFiveComponent implements OnInit {
       content:
         'Узнайте, что такое торговая система, её виды, особенности автоматизации и как выбрать подходящую для ваших целей стратегию торговли.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-08' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/tradingsystem.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];
