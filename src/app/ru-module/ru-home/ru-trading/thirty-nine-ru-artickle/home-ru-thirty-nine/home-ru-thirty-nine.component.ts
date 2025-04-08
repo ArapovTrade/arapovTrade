@@ -23,7 +23,11 @@ export class HomeRuThirtyNineComponent implements OnInit {
       content:
         'Как правильно рассчитать соотношение прибыли и убытка в трейдинге? Узнайте о R/R Ratio, управлении рисками и стратегиях повышения эффективности торговли.',
     });
-
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-08' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/profitandlossratio.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

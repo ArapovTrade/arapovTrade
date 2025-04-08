@@ -23,7 +23,11 @@ export class HomeEnThirtyNineComponent implements OnInit {
       content:
         'How to correctly calculate the profit and loss ratio in trading? Learn about R/R Ratio, risk management, and strategies to improve trading efficiency.',
     });
-
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-08' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/profitandlossratio.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

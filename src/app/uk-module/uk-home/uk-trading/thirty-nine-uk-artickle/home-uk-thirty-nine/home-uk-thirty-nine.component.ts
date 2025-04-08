@@ -23,7 +23,11 @@ export class HomeUkThirtyNineComponent implements OnInit {
       content:
         'Як правильно розрахувати співвідношення прибутку та збитків у трейдингу? Дізнайтеся про R/R Ratio, управління ризиками та стратегії підвищення ефективності торгівлі.',
     });
-
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-08' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/profitandlossratio.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];
