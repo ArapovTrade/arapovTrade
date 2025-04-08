@@ -21,6 +21,11 @@ export class HomeEnFourtyOneComponent implements OnInit {
       content:
         'Learn how to create an effective trader`s trading plan. Key components, examples, and tips for successful planning.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-08' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/tradingplan.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

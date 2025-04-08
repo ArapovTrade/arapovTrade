@@ -21,6 +21,11 @@ export class HomeRuFourtyOneComponent implements OnInit {
       content:
         'Узнайте, как составить эффективный торговый план трейдера. Ключевые компоненты, примеры и советы по успешному планированию.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-08' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/tradingplan.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

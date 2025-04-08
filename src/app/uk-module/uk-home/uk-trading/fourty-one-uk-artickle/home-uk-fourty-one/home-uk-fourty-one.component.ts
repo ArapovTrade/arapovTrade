@@ -21,7 +21,11 @@ export class HomeUkFourtyOneComponent implements OnInit {
       content:
         'Дізнайтеся, як скласти ефективний торговий план трейдера. Ключові компоненти, приклади та поради щодо успішного планування.',
     });
-
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-08' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/tradingplan.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];
