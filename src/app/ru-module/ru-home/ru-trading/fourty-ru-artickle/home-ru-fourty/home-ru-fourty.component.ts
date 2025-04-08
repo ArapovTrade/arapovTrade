@@ -21,7 +21,11 @@ export class HomeRuFourtyComponent implements OnInit {
       content:
         'Узнайте распространённые ошибки начинающих трейдеров и как их избежать. Рекомендации для успешного старта на финансовых рынках.',
     });
-
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-08' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/beginnermistakes.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

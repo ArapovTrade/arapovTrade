@@ -21,6 +21,11 @@ export class HomeEnFourtyComponent implements OnInit {
       content:
         'Learn about common mistakes beginner traders make and how to avoid them. Recommendations for a successful start in financial markets.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-08' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/beginnermistakes.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];
