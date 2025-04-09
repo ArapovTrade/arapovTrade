@@ -21,6 +21,11 @@ export class HomeUkBlogTenComponent implements OnInit {
       content:
         'Дізнайтеся основні причини втрати депозиту трейдерами, включаючи помилки у стратегії, відсутність дисципліни та переоцінку можливостей. Поради щодо запобігання втратам.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-09' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/mainreasonforlosses.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

@@ -21,6 +21,11 @@ export class HomeRuBlogTenComponent implements OnInit {
       content:
         'Узнайте основные причины потери депозита трейдерами, включая ошибки стратегии, отсутствие дисциплины и переоценку возможностей. Советы по предотвращению потерь.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-09' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/mainreasonforlosses.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

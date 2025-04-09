@@ -21,6 +21,11 @@ export class HomeEnBlogTenComponent implements OnInit {
       content:
         'Discover the main reasons for deposit loss among traders, including strategy mistakes, lack of discipline, and overestimation of abilities. Tips for preventing losses.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-09' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/mainreasonforlosses.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];
