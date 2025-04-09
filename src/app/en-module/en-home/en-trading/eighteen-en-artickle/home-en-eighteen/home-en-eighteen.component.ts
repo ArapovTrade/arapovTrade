@@ -22,6 +22,11 @@ export class HomeEnEighteenComponent implements OnInit {
       content:
         'Learn about the psychological risks associated with FOREX trading and how to minimize them. A comprehensive guide for traders with examples and tips.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-09' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/psychorisks.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

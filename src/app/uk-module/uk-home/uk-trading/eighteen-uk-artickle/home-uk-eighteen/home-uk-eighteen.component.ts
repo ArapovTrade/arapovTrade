@@ -21,6 +21,11 @@ export class HomeUkEighteenComponent implements OnInit {
       content:
         'Дізнайтеся про психологічні ризики, пов’язані з торгівлею на FOREX, та як їх мінімізувати. Повний посібник для трейдерів із прикладами та порадами.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-09' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/psychorisks.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

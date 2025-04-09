@@ -22,6 +22,12 @@ export class HomeRuEighteenComponent implements OnInit {
       content:
         'Узнайте о психологических рисках, связанных с торговлей на FOREX, и как их минимизировать. Полное руководство для трейдеров с примерами и советами.',
     });
+
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-09' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/psychorisks.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];
