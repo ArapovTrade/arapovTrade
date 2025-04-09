@@ -21,6 +21,11 @@ export class HomeUkNineteenComponent implements OnInit {
       content:
         'Дізнайтеся, як почати торгувати на валютному ринку FOREX. Детальний посібник для новачків із порадами, стратегіями та прикладами.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-09' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/howtotradeonforex.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

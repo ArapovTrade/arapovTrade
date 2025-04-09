@@ -21,6 +21,11 @@ export class HomeRuNineteenComponent implements OnInit {
       content:
         'Узнайте, как начать торговать на валютном рынке FOREX . Подробное руководство для новичков с советами, стратегиями и примерами.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-09' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/howtotradeonforex.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

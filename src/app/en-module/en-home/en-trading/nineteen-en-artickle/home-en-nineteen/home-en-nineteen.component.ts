@@ -21,6 +21,11 @@ export class HomeEnNineteenComponent implements OnInit {
       content:
         'Learn how to start trading on the FOREX market. A detailed guide for beginners with tips, strategies, and examples.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-09' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/howtotradeonforex.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];
