@@ -22,6 +22,11 @@ export class HomeRuFourComponent implements OnInit {
       content:
         'Узнайте о различиях между биржевыми и внебиржевыми рынками, их особенностях, преимуществах и недостатках. Полное руководство для трейдеров и инвесторов.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-10' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/exchangemarkets.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

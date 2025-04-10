@@ -22,6 +22,11 @@ export class HomeFourEnComponent implements OnInit {
       content:
         'Learn about the differences between exchange and over-the-counter markets, their features, advantages, and disadvantages. A comprehensive guide for traders and investors.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-10' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/exchangemarkets.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

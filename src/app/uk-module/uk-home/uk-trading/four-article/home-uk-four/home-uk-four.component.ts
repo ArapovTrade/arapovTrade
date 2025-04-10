@@ -21,6 +21,11 @@ export class HomeUkFourComponent implements OnInit {
       content:
         'Дізнайтеся про відмінності між біржовими та позабіржовими ринками, їх особливості, переваги та недоліки. Повний посібник для трейдерів та інвесторів.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-10' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/exchangemarkets.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];
