@@ -22,6 +22,11 @@ export class HomeRuThreeComponent implements OnInit {
       content:
         'Узнайте, что такое биржа, её виды, функции и особенности торговли на бирже. Полное руководство для новичков и профессионалов.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-10' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/znakomstvosbirgey.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

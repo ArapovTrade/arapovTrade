@@ -24,6 +24,11 @@ export class HomeThreeEnComponent implements OnInit {
       content:
         'Learn what an exchange is, its types, functions, and trading features. A complete guide for beginners and professionals.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-10' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/znakomstvosbirgey.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

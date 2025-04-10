@@ -21,6 +21,11 @@ export class HomeUkThreeComponent implements OnInit {
       content:
         'Дізнайтеся, що таке біржа, її види, функції та особливості торгівлі. Повний гід для початківців і професіоналів.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-10' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/znakomstvosbirgey.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];
