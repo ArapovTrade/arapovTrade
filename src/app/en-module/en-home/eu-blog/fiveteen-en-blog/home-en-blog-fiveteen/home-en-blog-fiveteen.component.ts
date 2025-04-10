@@ -21,6 +21,11 @@ export class HomeEnBlogFiveteenComponent implements OnInit {
       content:
         'Discover the truth about futures trading: its advantages, risks, and secrets to successful trading. A comprehensive guide for traders.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-10' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/futurestrading.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

@@ -21,6 +21,11 @@ export class HomeRuBlogFiveteenComponent implements OnInit {
       content:
         'Узнайте   правду о торговле фьючерсами: их преимущества, риски и секреты успешной торговли. Полное руководство для трейдеров.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-10' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/futurestrading.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

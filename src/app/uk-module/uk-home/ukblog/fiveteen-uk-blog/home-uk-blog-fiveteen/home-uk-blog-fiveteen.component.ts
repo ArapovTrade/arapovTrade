@@ -21,6 +21,11 @@ export class HomeUkBlogFiveteenComponent implements OnInit {
       content:
         "Дізнайтеся  правду про торгівлю ф'ючерсами: їх переваги, ризики та секрети успішної торгівлі. Повний посібник для трейдерів.",
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-10' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/futurestrading.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];
