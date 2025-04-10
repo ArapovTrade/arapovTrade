@@ -22,6 +22,11 @@ export class HomeRuOneComponent implements OnInit {
       content:
         'Узнайте, что такое деривативы, их основные виды, применение и влияние на финансовые рынки. Полное руководство для трейдеров и инвесторов.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-10' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/dericativessBebPack.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

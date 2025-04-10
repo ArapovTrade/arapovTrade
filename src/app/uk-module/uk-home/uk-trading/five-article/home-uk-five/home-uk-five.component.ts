@@ -21,6 +21,11 @@ export class HomeUkFiveComponent implements OnInit {
       content:
         'Дізнайтеся, що таке деривативи, їх основні види, застосування та вплив на фінансові ринки. Повний посібник для трейдерів та інвесторів.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-10' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/dericativessBebPack.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

@@ -22,6 +22,11 @@ export class HomeFiveEnComponent implements OnInit {
       content:
         'Learn about derivatives, their main types, applications, and impact on financial markets. A complete guide for traders and investors.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-10' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/dericativessBebPack.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];
