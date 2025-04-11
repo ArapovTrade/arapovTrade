@@ -21,6 +21,11 @@ export class HomeUkNineComponent implements OnInit {
       content:
         'Дізнайтеся, як формується курс валют, які фактори на нього впливають і як це впливає на світову економіку. Повний посібник для інвесторів і трейдерів.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-11' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/formationExchange.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

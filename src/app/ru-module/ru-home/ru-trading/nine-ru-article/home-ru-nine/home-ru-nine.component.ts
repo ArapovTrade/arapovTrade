@@ -22,6 +22,11 @@ export class HomeRuNineComponent implements OnInit {
       content:
         'Узнайте, как формируется курс валют, какие факторы на него влияют и как это влияет на мировую экономику. Полное руководство для инвесторов и трейдеров.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-11' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/formationExchange.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];
