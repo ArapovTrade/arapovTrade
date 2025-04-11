@@ -22,6 +22,11 @@ export class HomeRuEightComponent implements OnInit {
       content:
         'Узнайте, что такое валюты, их виды, особенности котировок и как они используются в международной торговле и финансовых рынках. Полное руководство для трейдеров и инвесторов.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-11' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/currencies.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

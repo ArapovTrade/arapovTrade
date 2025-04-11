@@ -21,6 +21,11 @@ export class HomeUkEightComponent implements OnInit {
       content:
         'Дізнайтеся, що таке валюти, їх види, особливості котирувань та як вони використовуються в міжнародній торгівлі та фінансових ринках. Повний посібник для трейдерів та інвесторів.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-11' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/currencies.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

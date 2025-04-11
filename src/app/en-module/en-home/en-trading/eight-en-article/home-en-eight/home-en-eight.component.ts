@@ -22,6 +22,11 @@ export class HomeEnEightComponent implements OnInit {
       content:
         'Learn about currencies, their types, features of quotations, and how they are used in international trade and financial markets. A comprehensive guide for traders and investors.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-11' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/currencies.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];
