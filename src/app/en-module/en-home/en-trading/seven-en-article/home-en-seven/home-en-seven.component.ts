@@ -22,6 +22,11 @@ export class HomeEnSevenComponent implements OnInit {
       content:
         'A comprehensive guide to the FOREX market. Learn about its features, participants, trading sessions, and key strategies for beginners and professionals.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-11' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/ForexMarket.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

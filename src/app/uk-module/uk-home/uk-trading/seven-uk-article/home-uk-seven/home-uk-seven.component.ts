@@ -21,6 +21,11 @@ export class HomeUkSevenComponent implements OnInit {
       content:
         'Повний посібник про ринок FOREX. Дізнайтеся про його особливості, учасників, торгові сесії та ключові стратегії для новачків і професіоналів.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-11' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/ForexMarket.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];
