@@ -22,6 +22,11 @@ export class HomeRuFifteenComponent implements OnInit {
       content:
         'Узнайте о ключевых центральных банках мира, их функциях, заседаниях и влиянии на мировую экономику. Подробное руководство для трейдеров и инвесторов.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-13' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/majorBankFrs_JQ.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

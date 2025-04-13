@@ -21,6 +21,11 @@ export class HomeUkFifteenComponent implements OnInit {
       content:
         'Дізнайтеся про ключові центральні банки світу, їхні функції, засідання та вплив на світову економіку. Детальний посібник для трейдерів та інвесторів.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-13' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/majorBankFrs_JQ.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];
