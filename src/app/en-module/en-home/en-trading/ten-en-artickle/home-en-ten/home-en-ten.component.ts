@@ -24,6 +24,11 @@ export class HomeEnTenComponent implements OnInit {
       content:
         'Learn about trading positions, their types, rollover mechanisms, and value dates. A complete guide for traders and investors featuring unique information and examples.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-13' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/currencyPosition.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

@@ -24,6 +24,11 @@ export class HomeRuTenComponent implements OnInit {
       content:
         'Узнайте, что такое позиции в трейдинге, их типы, механизм переноса и дату валютирования. Полное руководство для трейдеров и инвесторов, содержащее уникальную информацию и примеры.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-13' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/currencyPosition.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

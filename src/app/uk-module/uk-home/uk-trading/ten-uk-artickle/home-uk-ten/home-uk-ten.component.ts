@@ -23,6 +23,11 @@ export class HomeUkTenComponent implements OnInit {
       content:
         'Дізнайтеся, що таке позиції в трейдингу, їх типи, механізм перенесення та дату валютування. Повний посібник для трейдерів та інвесторів, що містить унікальну інформацію та приклади.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-13' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/currencyPosition.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];
