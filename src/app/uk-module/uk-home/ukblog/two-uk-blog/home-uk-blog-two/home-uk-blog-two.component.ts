@@ -21,6 +21,11 @@ export class HomeUkBlogTwoComponent implements OnInit {
       content:
         'Дізнайтеся все про дивергенцію на індикаторах: що це, як її розпізнавати, популярні стратегії та індикатори для аналізу. Повний посібник для трейдерів.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-13' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/divergenceonindecators.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

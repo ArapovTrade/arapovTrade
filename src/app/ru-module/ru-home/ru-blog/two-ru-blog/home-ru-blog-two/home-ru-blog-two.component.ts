@@ -21,6 +21,11 @@ export class HomeRuBlogTwoComponent implements OnInit {
       content:
         'Узнайте всё о дивергенции на индикаторах: что это, как её распознавать, популярные стратегии и индикаторы для анализа. Полное руководство для трейдеров.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-13' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/divergenceonindecators.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

@@ -21,6 +21,11 @@ export class HomeEnBlogTwoComponent implements OnInit {
       content:
         'Learn everything about divergence on indicators: what it is, how to recognize it, popular strategies, and indicators for analysis. A complete guide for traders.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-13' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/divergenceonindecators.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];
