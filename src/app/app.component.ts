@@ -2,7 +2,6 @@ import {
   Component,
   OnInit,
   DoCheck,
-  
   ChangeDetectorRef,
   AfterViewChecked,
   Renderer2,
@@ -23,7 +22,7 @@ import { FormControl, Validators } from '@angular/forms';
 import { ServLangueageService } from './servises/serv-langueage.service';
 import { Meta, Title } from '@angular/platform-browser';
 import { filter } from 'rxjs/operators';
-
+import { MetaservService } from './servises/metaserv.service';
 
 @Component({
   selector: 'app-root',
@@ -51,7 +50,8 @@ export class AppComponent implements OnInit, AfterViewChecked  {
     private cdr: ChangeDetectorRef,
     private searchSer: SearchServiceService,
     private languageService:ServLangueageService,
-    private rendererFactory: RendererFactory2,private meta: Meta, private titleService: Title
+    private rendererFactory: RendererFactory2,private meta: Meta, private titleService: Title,
+    private metaTegServ:MetaservService
   ) {
     this.renderer = rendererFactory.createRenderer(null, null);
     this.router.events.subscribe((event) => {
@@ -115,6 +115,7 @@ export class AppComponent implements OnInit, AfterViewChecked  {
   registForm: any;
 
   ngOnInit(): void {
+    this.metaTegServ.addOrganizationSchema();
     this.languageService.languageCode$.subscribe(code => {
       this.checkLang = code;
       this.searchSer.setLange(this.checkLang);
@@ -124,7 +125,7 @@ export class AppComponent implements OnInit, AfterViewChecked  {
       userName: new FormControl('', Validators.required),
       userEmail: new FormControl(null, [Validators.email, Validators.required]),
       userMessage: new FormControl('', Validators.required),
-    });     
+    });    
     
 
     this.setDefaultMetaTags();
