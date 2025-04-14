@@ -21,6 +21,11 @@ export class HomeUkBlogTwelveComponent implements OnInit {
       content:
         'Детальний посібник із торгівлі рівнями для трейдерів-початківців. Як визначати, використовувати та торгувати ключові рівні.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-14' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/tradingoflevels.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

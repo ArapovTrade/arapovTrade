@@ -21,6 +21,11 @@ export class HomeEnBlogTwelveComponent implements OnInit {
       content:
         'A detailed guide to level trading for beginner traders. Learn how to identify, utilize, and trade key levels.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-14' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/tradingoflevels.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

@@ -21,6 +21,11 @@ export class HomeRuBlogTwelveComponent implements OnInit {
       content:
         'Детальное руководство по торговле уровнями для начинающих трейдеров. Как определять, использовать и торговать ключевые уровни.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-14' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/tradingoflevels.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];
