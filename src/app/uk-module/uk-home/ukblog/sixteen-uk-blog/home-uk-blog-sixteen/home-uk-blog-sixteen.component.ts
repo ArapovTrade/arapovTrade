@@ -21,6 +21,11 @@ export class HomeUkBlogSixteenComponent implements OnInit {
       content:
         'Усе, що потрібно знати про трендові канали у трейдингу: визначення, побудова, стратегії та поради.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-15' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/trandingchannels.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

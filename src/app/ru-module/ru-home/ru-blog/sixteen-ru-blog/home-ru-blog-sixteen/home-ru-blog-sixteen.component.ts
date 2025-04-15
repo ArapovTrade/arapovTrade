@@ -21,6 +21,11 @@ export class HomeRuBlogSixteenComponent implements OnInit {
       content:
         'Все, что нужно знать о трендовых каналах в трейдинге: определение, построение, стратегии и советы.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-15' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/trandingchannels.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

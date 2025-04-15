@@ -21,6 +21,11 @@ export class HomeEnBlogSixteenComponent implements OnInit {
       content:
         'Everything you need to know about trend channels in trading: definition, construction, strategies, and tips.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-15' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/trandingchannels.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];
