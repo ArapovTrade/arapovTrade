@@ -23,6 +23,11 @@ export class HomeEnBlogThirteenComponent implements OnInit {
       content:
         'A detailed description of Elliott Wave Theory: principles, structure, and application in technical analysis.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-15' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/wavesofelliott.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

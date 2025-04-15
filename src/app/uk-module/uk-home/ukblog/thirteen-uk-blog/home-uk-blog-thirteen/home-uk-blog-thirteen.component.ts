@@ -23,6 +23,11 @@ export class HomeUkBlogThirteenComponent implements OnInit {
       content:
         'Детальний опис теорії хвиль Елліотта: принципи, структура та застосування в технічному аналізі.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-15' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/wavesofelliott.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];
