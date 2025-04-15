@@ -21,6 +21,11 @@ export class HomeUkBlogTwentyFourComponent implements OnInit {
       content:
         "Все, що потрібно знати про фігуру 'Прапор' у трейдингу: як її розпізнати, торгувати та уникнути помилок.",
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-15' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/flagfigure.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

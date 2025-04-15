@@ -23,6 +23,11 @@ export class HomeEnBlogTwentyFourComponent implements OnInit {
       content:
         "Everything you need to know about the 'Flag' pattern in trading: how to identify, trade, and avoid mistakes.",
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-15' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/flagfigure.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

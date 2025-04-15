@@ -21,6 +21,11 @@ export class HomeRuBlogTwentyFourComponent implements OnInit {
       content:
         "Все, что нужно знать о фигуре 'Флаг' в трейдинге: как её распознать, торговать и избежать ошибок.",
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-15' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/flagfigure.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];
