@@ -21,6 +21,11 @@ export class HomeUkBlogTwentySevenComponent implements OnInit {
       content:
         "Детальний посібник з японських свічок: їх читання, формації та застосування у трейдингу. Дізнайтеся більше про 'молот', 'повішеного' та інші ключові патерни.",
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-16' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/japanesecandle.jpg',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

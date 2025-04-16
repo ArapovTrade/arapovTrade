@@ -21,6 +21,11 @@ export class HomeRuBlogTwentySevenComponent implements OnInit {
       content:
         "Детальное руководство по японским свечам: их чтению, формациям и применению в трейдинге. Узнайте больше о 'молоте', 'повешенном' и других ключевых паттернах.",
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-16' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/japanesecandle.jpg',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

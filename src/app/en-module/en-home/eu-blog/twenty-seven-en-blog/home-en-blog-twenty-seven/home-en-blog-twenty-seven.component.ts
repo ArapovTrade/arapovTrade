@@ -21,6 +21,11 @@ export class HomeEnBlogTwentySevenComponent implements OnInit {
       content:
         "A detailed guide to Japanese candlesticks: how to read, identify formations, and apply them in trading. Learn more about 'Hammer,' 'Hanging Man,' and other key patterns.",
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-16' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/japanesecandle.jpg',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];
