@@ -21,6 +21,11 @@ export class HomeEuBlogThirtyThreeComponent implements OnInit {
       content:
         'A detailed guide on Pin Bars in trading. Learn how to use this pattern effectively for market analysis and making trading decisions.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-16' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/pinbar.jpg',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

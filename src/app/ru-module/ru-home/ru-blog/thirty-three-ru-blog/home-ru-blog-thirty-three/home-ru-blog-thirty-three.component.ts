@@ -21,6 +21,11 @@ export class HomeRuBlogThirtyThreeComponent implements OnInit {
       content:
         'Детальное руководство по Пин-барам в трейдинге. Узнайте, как правильно использовать этот паттерн для анализа рынка и принятия торговых решений.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-16' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/pinbar.jpg',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

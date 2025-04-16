@@ -20,6 +20,11 @@ export class HomeUkBlogThirtyThreeComponent implements OnInit {
       content:
         'Детальний посібник про Пін-бари у трейдингу. Дізнайтеся, як правильно використовувати цей патерн для аналізу ринку та ухвалення торгових рішень.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-16' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/pinbar.jpg',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];
