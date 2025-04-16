@@ -21,6 +21,11 @@ export class HomeRuBlogThirtyOneComponent implements OnInit {
       content:
         'Детальное руководство по уровням поддержки и сопротивления. Узнайте, как их строить, определять и эффективно использовать в трейдинге.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-16' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/levelofsupport.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

@@ -21,6 +21,11 @@ export class HomeEuBlogThirtyOneComponent implements OnInit {
       content:
         'A detailed guide on support and resistance levels. Learn how to build, identify, and effectively use them in trading.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-16' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/levelofsupport.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

@@ -20,6 +20,11 @@ export class HomeUkBlogThirtyOneComponent implements OnInit {
       content:
         'Детальний посібник з рівнів підтримки та опору. Дізнайтеся, як їх будувати, визначати та ефективно використовувати у трейдингу.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-16' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/levelofsupport.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];
