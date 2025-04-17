@@ -21,6 +21,11 @@ export class HomeEuBlogFiftyOneComponent implements OnInit {
       content:
         'Learn everything about the Price Action method: its core principles, popular patterns, strategies, and practical examples. A complete guide for beginner and experienced traders.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-17' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/candlestickpatterns.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

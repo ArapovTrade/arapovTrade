@@ -21,6 +21,11 @@ export class HomeUkBlogFiftyOneComponent implements OnInit {
       content:
         'Дізнайтеся все про метод Price Action: основні принципи, популярні патерни, стратегії та приклади їх застосування. Повний посібник для початківців та досвідчених трейдерів.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-17' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/candlestickpatterns.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];
