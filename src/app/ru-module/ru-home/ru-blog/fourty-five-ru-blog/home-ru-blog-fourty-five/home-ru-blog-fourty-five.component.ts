@@ -17,9 +17,15 @@ export class HomeRuBlogFourtyFiveComponent implements OnInit {
     this.titleService.setTitle('Как применять скользящие средние в трейдинге?');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
-      name: 'description',
+      name: 'description',   
       content:
         'Узнайте, как использовать скользящие средние в трейдинге: их виды, стратегии и примеры применения для анализа трендов и принятия решений.',
+    });
+     
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-17' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/movingaverages.png',
     });
     this.gerRandom();
   }

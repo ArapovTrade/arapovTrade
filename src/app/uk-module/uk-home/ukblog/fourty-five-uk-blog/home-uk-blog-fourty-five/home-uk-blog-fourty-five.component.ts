@@ -23,6 +23,12 @@ export class HomeUkBlogFourtyFiveComponent implements OnInit {
       content:
         'Дізнайтеся, як використовувати ковзні середні в трейдингу: їх типи, стратегії та приклади застосування для аналізу трендів і прийняття рішень.',
     });
+     
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-17' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/movingaverages.png',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];
