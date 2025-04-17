@@ -21,6 +21,11 @@ export class HomeRuBlogFiftySevenComponent implements OnInit {
       content:
         'Узнайте всё о торговых индикаторах: их виды, применение и популярные стратегии для эффективного анализа рынка, включая RSI и MACD.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-17' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/tradingindicators.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

@@ -21,6 +21,11 @@ export class HomeUkBlogFiftySevenComponent implements OnInit {
       content:
         'Дізнайтеся все про торгові індикатори: їх види, застосування та популярні стратегії для ефективного аналізу ринку, включаючи RSI та MACD.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-17' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/tradingindicators.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];
