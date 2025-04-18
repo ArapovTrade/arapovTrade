@@ -23,6 +23,11 @@ export class HomeUkTwentyFourComponent implements OnInit {
       content:
         'Детальний аналіз рівнів Фібоначчі: що це таке, як вони працюють і їхня роль у технічному аналізі.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-18' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/economicstate.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

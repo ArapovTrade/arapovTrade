@@ -23,6 +23,11 @@ export class HomeEnTwentyFourComponent implements OnInit {
       content:
         'A detailed analysis of Fibonacci levels: what they are, how they work, and their role in technical analysis.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-18' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/economicstate.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

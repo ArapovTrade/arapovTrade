@@ -23,6 +23,11 @@ export class HomeRuTwentyFourComponent implements OnInit {
       content:
         'Подробный разбор уровней Фибоначчи: что это такое, как они работают, и их роль в техническом анализе.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-18' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/economicstate.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];
