@@ -21,6 +21,11 @@ export class HomeRuBlogFiftyNineComponent implements OnInit {
       content:
         ' Детальное руководство по торговле на пробой уровня в трейдинге. Узнайте, как определять уровни, работать с пин-баром и объемами.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-18' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/levelbreakoutstrategy.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

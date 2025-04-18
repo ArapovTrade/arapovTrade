@@ -21,6 +21,11 @@ export class HomeEuBlogFiftyNineComponent implements OnInit {
       content:
         ' A detailed guide on trading level breakouts in trading. Learn how to identify levels, work with pin bars, and use volume.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-18' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/levelbreakoutstrategy.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];
