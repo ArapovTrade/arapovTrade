@@ -21,6 +21,11 @@ export class HomeRuTwentySixComponent implements OnInit {
       content:
         'Разбор основ технического анализа рынка, его принципов и ключевых методов. ',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-18' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/technicalanalysis.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

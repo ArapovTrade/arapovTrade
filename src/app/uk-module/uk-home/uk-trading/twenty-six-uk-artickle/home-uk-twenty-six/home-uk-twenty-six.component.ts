@@ -21,6 +21,11 @@ export class HomeUkTwentySixComponent implements OnInit {
       content:
         'Огляд основ технічного аналізу ринку, його принципів і ключових методів.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-18' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/technicalanalysis.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];

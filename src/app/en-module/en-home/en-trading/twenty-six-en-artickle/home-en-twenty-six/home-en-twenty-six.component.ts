@@ -21,6 +21,11 @@ export class HomeEnTwentySixComponent implements OnInit {
       content:
         'An overview of the basics of technical market analysis, its principles, and key methods.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-18' });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: '/assets/img/content/technicalanalysis.webp',
+    });
     this.gerRandom();
   }
   randomArticleRus: any = [];
