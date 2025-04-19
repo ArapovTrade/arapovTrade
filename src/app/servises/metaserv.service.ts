@@ -32,6 +32,8 @@ export class MetaservService {
           'https://www.linkedin.com/in/arapovtrade',
           'https://wa.me/380502933075',
           'viber://chat?number=%2B380502933075',
+          'https://rutube.ru/channel/41668647',
+        'https://dzen.ru/id/66bf54343761337a416dac58?share_to=link',
         ],
       },
       sameAs: [
@@ -41,6 +43,8 @@ export class MetaservService {
         'https://www.linkedin.com/in/arapovtrade',
         'https://wa.me/380502933075',
         'viber://chat?number=%2B380502933075',
+        'https://rutube.ru/channel/41668647',
+        'https://dzen.ru/id/66bf54343761337a416dac58?share_to=link',
       ],
       contactPoint: {
         '@type': 'ContactPoint',
