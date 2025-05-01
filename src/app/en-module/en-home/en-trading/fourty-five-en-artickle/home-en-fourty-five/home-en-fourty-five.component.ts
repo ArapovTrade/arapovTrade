@@ -14,7 +14,7 @@ export class HomeEnFourtyFiveComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Free Trading Training - Arapov.trade');
+    this.titleService.setTitle('Free Trading Training - Ihor Arapov');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
