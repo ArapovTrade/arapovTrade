@@ -137,12 +137,12 @@ export class AppComponent implements OnInit, AfterViewChecked  {
         const segments = urlPath.split('/'); // Розбиваємо на сегменти
         const link = segments[segments.length - 1] || '';
         const article = this.artickle.getArticleByLink(link)||null;;
-
+         
         // Визначаємо мову та витягуємо відповідний заголовок
         const lang = urlPath.startsWith('uk') ? 'Ukr' : urlPath.startsWith('en') ? 'En' : 'Rus';
         const titleKey = `title${lang}` as 'titleUkr' | 'titleEn' | 'titleRus'; // Обмежуємо ключі
-        const title =(article)? article[titleKey] :'Обучение трейдингу с нуля - ArapovTrade';
-        const description = `Бесплатное обучение трейдингу для начинающих - ArapovTrade`;
+        const title =(article)? article[titleKey] : (segments[1]==='studying')?'Авторские Курсы по трейдингу': 'Обучение трейдингу с нуля - ArapovTrade';
+        const description =(segments[1]==='studying')? 'Курсы по трейдингу для начинающих': `Бесплатное обучение трейдингу для начинающих - ArapovTrade`;
         const image = article?.imgUkr || 'assets/img/default-og-image.jpg';
         const url = `https://arapov.trade${this.router.url}`;
          
