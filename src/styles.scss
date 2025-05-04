@@ -3189,3 +3189,22 @@ user-select: none;}
             padding-top: 50px;
         }
   }
+
+
+  .small{
+    font-size: 12px;
+  }
+  @media (min-width: 700px) {
+    .small{
+        font-size: 14px;
+      }
+  }
+  .pictureImgPractice{
+    width: 90%;
+    margin: 0 auto;
+  }
+  .pictureImgPractice_flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
