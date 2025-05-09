@@ -7,7 +7,7 @@ import {
   Renderer2,
   RendererFactory2,
   AfterContentChecked,
-  OnChanges,
+  OnChanges,Inject 
 } from '@angular/core';
 import { NavigationEnd } from '@angular/router';
 import { takeUntil } from 'rxjs/operators';
@@ -23,7 +23,7 @@ import { ServLangueageService } from './servises/serv-langueage.service';
 import { Meta, Title } from '@angular/platform-browser';
 import { filter } from 'rxjs/operators';
 import { MetaservService } from './servises/metaserv.service';
-
+import { DOCUMENT } from '@angular/common';  
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -41,7 +41,7 @@ export class AppComponent implements OnInit, AfterViewChecked  {
   closeDropdown() {
     this.dropdownOpen = true;
   }
-
+  
   constructor(
     private router: Router,
     private route: ActivatedRoute,
@@ -51,7 +51,8 @@ export class AppComponent implements OnInit, AfterViewChecked  {
     private searchSer: SearchServiceService,
     private languageService:ServLangueageService,
     private rendererFactory: RendererFactory2,private meta: Meta, private titleService: Title,
-    private metaTegServ:MetaservService
+    private metaTegServ:MetaservService,
+    @Inject(DOCUMENT) private document: Document 
   ) {
     this.renderer = rendererFactory.createRenderer(null, null);
     this.router.events.subscribe((event) => {
@@ -136,7 +137,8 @@ export class AppComponent implements OnInit, AfterViewChecked  {
         const urlPath = this.router.url.split('?')[0].replace(/^\/|\/$/g, ''); // Отримуємо чистий шлях
         const segments = urlPath.split('/'); // Розбиваємо на сегменти
         const link = segments[segments.length - 1] || '';
-        const article = this.artickle.getArticleByLink(link)||null;;
+        const article = this.artickle.getArticleByLink(link)||null;
+        const langCode = urlPath.startsWith('uk') ? 'uk' : urlPath.startsWith('en') ? 'en' : 'ru';
          
         // Визначаємо мову та витягуємо відповідний заголовок
         const lang = urlPath.startsWith('uk') ? 'Ukr' : urlPath.startsWith('en') ? 'En' : 'Rus';
@@ -160,8 +162,8 @@ export class AppComponent implements OnInit, AfterViewChecked  {
         this.meta.updateTag({ name: 'twitter:description', content: description });
         this.meta.updateTag({ name: 'twitter:image', content: `https://arapov.trade${image}` });
         this.meta.updateTag({ name: 'twitter:url', content: url });
-
-         
+        this.meta.updateTag({ name: 'language', content: langCode }); 
+        this.document.documentElement.lang = langCode;  
       });
   }
 
