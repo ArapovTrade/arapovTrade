@@ -27,7 +27,7 @@ export class HomeRuFourtyFiveComponent implements OnInit {
       property: 'og:image',
       content: '/assets/img/content/freeeducationnew.webp',
     });
-
+  
     this.gerRandom();
   }
   randomArticleRus: any = [];

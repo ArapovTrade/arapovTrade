@@ -15,16 +15,16 @@ export class HomeEnBlogSixtyFourComponent {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Practical Trading Recommendations - Arapov.trade'
+      'Practical trading recommendations. Trading system - Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Practical trading recommendations, analysis of charts with entry point examples, money management, and risk management.',
+        'Practical trading tips, trading system with examples of entry and exit points, money management and risk management. Step-by-step guide',
     });
     this.meta.updateTag({ name: 'author', content: 'Igor Arapov' });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-02-10' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-05-12' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/prakticen.jpg',

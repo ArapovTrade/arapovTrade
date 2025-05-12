@@ -14,12 +14,12 @@ export class HomeUkFourtyFiveComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Безкоштовне навчання трейдингу - Ігор Арапов');
+    this.titleService.setTitle('Безкоштовне навчання трейдингу від Ігоря Арапова');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        "Безкоштовне навчання трейдингу. Вступ до технічного, фундаментального та об'ємного аналізу. Основні принципи торгівлі та психологія трейдера.",
+        "Безкоштовне навчання трейдингу для початківців, що включає докладні відеоуроки та статті, зібрані у повноцінні курси з ключових тем трейдингу для самостійного навчання від Ігоря Арапова",
     });
 
     this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
