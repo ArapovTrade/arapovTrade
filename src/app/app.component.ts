@@ -139,12 +139,37 @@ export class AppComponent implements OnInit, AfterViewChecked  {
         const link = segments[segments.length - 1] || '';
         const article = this.artickle.getArticleByLink(link)||null;
         const langCode = urlPath.startsWith('uk') ? 'uk' : urlPath.startsWith('en') ? 'en' : 'ru';
-         
+      
         // Визначаємо мову та витягуємо відповідний заголовок
         const lang = urlPath.startsWith('uk') ? 'Ukr' : urlPath.startsWith('en') ? 'En' : 'Rus';
         const titleKey = `title${lang}` as 'titleUkr' | 'titleEn' | 'titleRus'; // Обмежуємо ключі
-        const title =(article)? article[titleKey] : (segments[1]==='studying')?'Авторские Курсы по трейдингу': 'Обучение трейдингу с нуля - ArapovTrade';
-        const description =(segments[1]==='studying')? 'Курсы по трейдингу для начинающих': `Бесплатное обучение трейдингу для начинающих - ArapovTrade`;
+        // let title =(article)? article[titleKey] : (segments[1]==='studying')?'Авторские Курсы по трейдингу': 'Обучение трейдингу с нуля - ArapovTrade';
+
+        let title='';
+        if(article){
+          title = article[titleKey];
+        }else if(segments[1]==='studying'&&segments[0]==='ru'){
+          title='Авторские Курсы по трейдингу';
+        }else if(segments[1]==='studying'&&segments[0]==='uk'){
+          title='Авторські Курси з трейдингу';
+        }else if(segments[0]==='uk'){
+          title='Навчання трейдингу з нуля - ArapovTrade';
+        }else{
+          title='Обучение трейдингу с нуля - ArapovTrade'
+        }
+
+        let description ='';
+         if(segments[1]==='studying'&&segments[0]==='ru'){
+          description='Курсы по трейдингу для начинающих';
+        }else if(segments[1]==='studying'&&segments[0]==='uk'){
+          description='Курси з трейдингу для початківців';
+        }else if(segments[0]==='uk'){
+          description='Безкоштовне навчання трейдингу для початківців - ArapovTrade';
+        }else{
+          description='Бесплатное обучение трейдингу для начинающих - ArapovTrade'
+        }
+
+        // const description =(segments[1]==='studying')? 'Курсы по трейдингу для начинающих': `Бесплатное обучение трейдингу для начинающих - ArapovTrade`;
         const image = article?.imgUkr || 'assets/img/default-og-image.jpg';
         const url = `https://arapov.trade${this.router.url}`;
          
