@@ -149,24 +149,24 @@ export class AppComponent implements OnInit, AfterViewChecked  {
         if(article){
           title = article[titleKey];
         }else if(segments[1]==='studying'&&segments[0]==='ru'){
-          title='Авторские Курсы по трейдингу';
+          title='Авторские Курсы по трейдингу - Игорь Арапов';
         }else if(segments[1]==='studying'&&segments[0]==='uk'){
-          title='Авторські Курси з трейдингу';
+          title='Авторські Курси з трейдингу - Ігор Арапов';
         }else if(segments[0]==='uk'){
-          title='Навчання трейдингу з нуля - ArapovTrade';
+          title='Безкоштовне навчання трейдингу - Ігор Арапов';
         }else{
-          title='Обучение трейдингу с нуля - ArapovTrade'
+          title='Бесплатное обучение трейдингу - Игорь Арапов'
         }
 
         let description ='';
          if(segments[1]==='studying'&&segments[0]==='ru'){
-          description='Курсы по трейдингу для начинающих';
+          description='Курсы по трейдингу для начинающих от Игоря Арапова';
         }else if(segments[1]==='studying'&&segments[0]==='uk'){
-          description='Курси з трейдингу для початківців';
+          description='Курси з трейдингу для початківців від Ігоря Арапова';
         }else if(segments[0]==='uk'){
-          description='Безкоштовне навчання трейдингу для початківців - ArapovTrade';
+          description='Безкоштовне навчання трейдингу для початківців - Ігор Арапов';
         }else{
-          description='Бесплатное обучение трейдингу для начинающих - ArapovTrade'
+          description='Бесплатное обучение трейдингу для начинающих - Игорь Арапов'
         }
 
         // const description =(segments[1]==='studying')? 'Курсы по трейдингу для начинающих': `Бесплатное обучение трейдингу для начинающих - ArapovTrade`;
