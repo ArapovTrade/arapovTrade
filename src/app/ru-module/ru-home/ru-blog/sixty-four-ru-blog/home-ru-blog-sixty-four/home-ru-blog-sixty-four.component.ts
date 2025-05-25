@@ -24,7 +24,7 @@ export class HomeRuBlogSixtyFourComponent {
         'Практические рекомендации по трейдингу, торговая система  с примерами точек входа и выхода, мани-менеджментом и управление рисками. Пошаговое руководство',
     });
     this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-05-12' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-05-25' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/prakticrus.jpg',

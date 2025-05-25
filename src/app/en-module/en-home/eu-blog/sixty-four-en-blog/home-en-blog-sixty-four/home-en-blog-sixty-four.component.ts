@@ -24,7 +24,7 @@ export class HomeEnBlogSixtyFourComponent {
         'Practical trading tips, trading system with examples of entry and exit points, money management and risk management. Step-by-step guide',
     });
     this.meta.updateTag({ name: 'author', content: 'Igor Arapov' });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-05-12' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-05-25' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/prakticen.jpg',
