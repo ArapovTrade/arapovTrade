@@ -339,17 +339,17 @@ body {
   color: #1e3a8a;
   margin: 40px 0 20px;
   font-weight: 700;
-  border-left: 4px solid #f97316; /* Оранжевая полоса слева */
+  border-left: 4px solid #f97316;  
   padding-left: 16px;
   line-height: 1.4;
-} /* Общие стили для списков */
+}  
 .hero-content ul {
   margin: 20px 0;
   padding: 0;
   list-style: none;
   display: grid;
-  gap: 12px; /* Меньший отступ между карточками */
-} /* Карточки для списка "Темы уроков" */
+  gap: 12px;  
+}  
 .hero-content ul:first-of-type li {
   background: #ffffff;
   border-radius: 8px;
@@ -379,8 +379,8 @@ body {
   flex-shrink: 0;
 }
 .hero-content ul:first-of-type {
-  counter-reset: list-counter; /* Сброс нумерации для списка */
-} /* Карточки для списка "В этом курсе вы узнаете" */
+  counter-reset: list-counter;  
+}  
 .hero-content ul:nth-of-type(2) li {
   background: #f8fafc;
   border-radius: 8px;
@@ -396,16 +396,16 @@ body {
 }
 .hero-content ul:nth-of-type(2) li::before {
   content: "";
-  background: url("/assets/img/icons/check-circle.svg") no-repeat center;
+  background: url("/assets/img/content/check-circle.svg") no-repeat center;
   width: 24px;
   height: 24px;
   background-size: contain;
   flex-shrink: 0;
-} /* Эффект наведения */
+}  
 .hero-content ul li:hover {
   transform: translateY(-4px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-} /* Анимация появления */
+}  
 .hero-content ul li {
   opacity: 0;
   animation: slideIn 0.5s ease-out forwards;
@@ -446,7 +446,7 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
-} /* Адаптивность */
+}  
 @media (max-width: 768px) {
   .hero-content h3 {
     font-size: 22px;
