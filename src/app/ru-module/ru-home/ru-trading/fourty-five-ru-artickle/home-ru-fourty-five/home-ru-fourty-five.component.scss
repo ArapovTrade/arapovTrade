@@ -27,9 +27,7 @@ h1 {
   margin: 10px 30px 40px;
   text-align: center;
 }
-
-//////////////////////////////////////////////
-///
+ 
 .img_title {
   width: 30px;
   height: 30px;
@@ -340,61 +338,7 @@ body {
   display: grid;
   gap: 12px;  
 }  
-.hero-content .ulor li {
-  background: #ffffff;
-  border-radius: 8px;
-  padding: 16px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  font-size: 16px;
-  color: #1f2937;
-  position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.hero-content .ulor li::before {
-  content: counter(list-counter);
-  counter-increment: list-counter;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 24px;
-  height: 24px;
-  background: #f97316;
-  color: #ffffff;
-  border-radius: 50%;
-  font-size: 14px;
-  font-weight: 600;
-  flex-shrink: 0;
-}
-.hero-content .ulor {
-  counter-reset: list-counter;  
-}  
-.hero-content .ulbl li {
-  background: #f8fafc;
-  border-radius: 8px;
-  padding: 16px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  font-size: 16px;
-  color: #1f2937;
-  position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.hero-content .ulbl li::before {
-  content: "";
-  background: url(/assets/img/content/check-circle.svg) no-repeat center;
-  width: 24px;
-  height: 24px;
-  background-size: contain;
-  flex-shrink: 0;
-}  
-.hero-content ul li:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}  
+
  
  
  
