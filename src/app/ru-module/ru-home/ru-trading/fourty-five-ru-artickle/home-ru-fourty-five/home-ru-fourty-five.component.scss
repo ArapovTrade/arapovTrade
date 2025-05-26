@@ -396,7 +396,7 @@ body {
 }
 .hero-content ul:nth-of-type(2) li::before {
   content: "";
-  background: url("/assets/img/content/check-circle.svg") no-repeat center;
+  background: url(/assets/img/content/check-circle.svg) no-repeat center;
   width: 24px;
   height: 24px;
   background-size: contain;
