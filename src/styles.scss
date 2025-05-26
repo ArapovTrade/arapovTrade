@@ -3268,3 +3268,20 @@ user-select: none;}
   background-size: contain;
   flex-shrink: 0;
 }  
+  
+.title-freestudy-block {
+  font-size: 26px;
+  color: #1e3a8a;
+  margin: 40px 0 20px;
+  font-weight: 700;
+  border-left: 4px solid #f97316;  
+  padding-left: 16px !important;
+  line-height: 1.4;
+}  
+.ulbl,.ulor {
+  margin: 20px 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 12px;  
+} 
