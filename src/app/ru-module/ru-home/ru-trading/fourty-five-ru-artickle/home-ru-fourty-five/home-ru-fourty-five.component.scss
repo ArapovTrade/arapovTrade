@@ -350,7 +350,7 @@ body {
   display: grid;
   gap: 12px;  
 }  
-.hero-content ul:first-of-type li {
+.hero-content .ulor li {
   background: #ffffff;
   border-radius: 8px;
   padding: 16px;
@@ -363,7 +363,7 @@ body {
   align-items: center;
   gap: 12px;
 }
-.hero-content ul:first-of-type li::before {
+.hero-content .ulor li::before {
   content: counter(list-counter);
   counter-increment: list-counter;
   display: inline-flex;
@@ -378,10 +378,10 @@ body {
   font-weight: 600;
   flex-shrink: 0;
 }
-.hero-content ul:first-of-type {
+.hero-content .ulor {
   counter-reset: list-counter;  
 }  
-.hero-content ul:nth-of-type(2) li {
+.hero-content .ulbl li {
   background: #f8fafc;
   border-radius: 8px;
   padding: 16px;
@@ -394,7 +394,7 @@ body {
   align-items: center;
   gap: 12px;
 }
-.hero-content ul:nth-of-type(2) li::before {
+.hero-content .ulbl li::before {
   content: "";
   background: url(/assets/img/content/check-circle.svg) no-repeat center;
   width: 24px;
@@ -434,7 +434,7 @@ body {
 .hero-content ul li:nth-child(8) {
   animation-delay: 0.8s;
 }
-.hero-content ul li:nth-child(9) {
+.hero-content ul li:nth-child(n+9) {
   animation-delay: 0.9s;
 }
 @keyframes slideIn {
@@ -457,8 +457,8 @@ body {
     font-size: 15px;
     padding: 12px;
   }
-  .hero-content ul:first-of-type li::before,
-  .hero-content ul:nth-of-type(2) li::before {
+  .hero-content .ulor li::before,
+  .hero-content .ulbl li::before {
     width: 20px;
     height: 20px;
     font-size: 12px;
@@ -476,8 +476,8 @@ body {
     font-size: 14px;
     padding: 10px;
   }
-  .hero-content ul:first-of-type li::before,
-  .hero-content ul:nth-of-type(2) li::before {
+  .hero-content .ulor li::before,
+  .hero-content .ulbl li::before {
     width: 18px;
     height: 18px;
   }
