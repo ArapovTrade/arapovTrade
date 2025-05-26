@@ -14,12 +14,12 @@ export class HomeEnFourtyFiveComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Free trading training from Igor Arapov');
+    this.titleService.setTitle('Free trading course from Igor Arapov');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Free trading training for beginners, including detailed video tutorials and articles, collected into full courses on key trading topics for self-study from Igor Arapov',
+        'Free trading training for beginners, including detailed video tutorials and articles, collected into full courses on key trading topics for self-study from Igor ArapovFree trading course for beginners, including detailed video tutorials and articles, collected into full lessons on key trading topics for self-study from Igor Arapov',
     });
     this.meta.updateTag({ name: 'author', content: 'Igor Arapov' });
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-24' });
