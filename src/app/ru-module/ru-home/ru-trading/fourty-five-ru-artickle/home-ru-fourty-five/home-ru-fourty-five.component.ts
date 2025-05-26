@@ -14,12 +14,12 @@ export class HomeRuFourtyFiveComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Бесплатное обучение трейдингу от Игоря Арапова');
+    this.titleService.setTitle('Бесплатный курс по  трейдингу от Игоря Арапова');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Бесплатное обучение трейдингу для начинающих, включающее подробные видеоуроки и  статьи , собранные в полноценные курсы по ключевым темам трейдинга для самостоятельного обучения от Игоря Арапова',
+        'Бесплатный курс по  трейдингу для начинающих, включающий подробные видеоуроки и  статьи , собранные в полноценные уроки по ключевым темам трейдинга для самостоятельного обучения от Игоря Арапова',
     });
     this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-24' });
