@@ -7,7 +7,8 @@ import {
   Renderer2,
   RendererFactory2,
   AfterContentChecked,
-  OnChanges,Inject 
+  OnChanges,
+  Inject,
 } from '@angular/core';
 import { NavigationEnd } from '@angular/router';
 import { takeUntil } from 'rxjs/operators';
@@ -23,17 +24,20 @@ import { ServLangueageService } from './servises/serv-langueage.service';
 import { Meta, Title } from '@angular/platform-browser';
 import { filter } from 'rxjs/operators';
 import { MetaservService } from './servises/metaserv.service';
-import { DOCUMENT } from '@angular/common';  
+import { DOCUMENT } from '@angular/common';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent implements OnInit, AfterViewChecked  {
+export class AppComponent implements OnInit, AfterViewChecked {
   dropdownOpen = false;
   checkLang!: number;
   private destroy$ = new Subject<void>();
   private renderer: Renderer2;
+  breadcrumbs: any[] = []; // Массив для хлебных крошек
+
+  jsonLd: any; // Объект для JSON-LD
   toggleDropdown() {
     this.dropdownOpen = !this.dropdownOpen;
   }
@@ -41,7 +45,7 @@ export class AppComponent implements OnInit, AfterViewChecked  {
   closeDropdown() {
     this.dropdownOpen = true;
   }
-  
+
   constructor(
     private router: Router,
     private route: ActivatedRoute,
@@ -49,10 +53,12 @@ export class AppComponent implements OnInit, AfterViewChecked  {
     private lan: LangService,
     private cdr: ChangeDetectorRef,
     private searchSer: SearchServiceService,
-    private languageService:ServLangueageService,
-    private rendererFactory: RendererFactory2,private meta: Meta, private titleService: Title,
-    private metaTegServ:MetaservService,
-    @Inject(DOCUMENT) private document: Document 
+    private languageService: ServLangueageService,
+    private rendererFactory: RendererFactory2,
+    private meta: Meta,
+    private titleService: Title,
+    private metaTegServ: MetaservService,
+    @Inject(DOCUMENT) private document: Document
   ) {
     this.renderer = rendererFactory.createRenderer(null, null);
     this.router.events.subscribe((event) => {
@@ -63,7 +69,6 @@ export class AppComponent implements OnInit, AfterViewChecked  {
       }
     });
   }
-   
 
   changeLanguage(lang: string) {
     // Получение текущего пути и параметров маршрута
@@ -117,7 +122,7 @@ export class AppComponent implements OnInit, AfterViewChecked  {
 
   ngOnInit(): void {
     this.metaTegServ.addOrganizationSchema();
-    this.languageService.languageCode$.subscribe(code => {
+    this.languageService.languageCode$.subscribe((code) => {
       this.checkLang = code;
       this.searchSer.setLange(this.checkLang);
     });
@@ -126,69 +131,94 @@ export class AppComponent implements OnInit, AfterViewChecked  {
       userName: new FormControl('', Validators.required),
       userEmail: new FormControl(null, [Validators.email, Validators.required]),
       userMessage: new FormControl('', Validators.required),
-    });    
-    
+    });
 
     this.setDefaultMetaTags();
 
     this.router.events
-      .pipe(filter(event => event instanceof NavigationEnd))
+      .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe(() => {
         const urlPath = this.router.url.split('?')[0].replace(/^\/|\/$/g, ''); // Отримуємо чистий шлях
         const segments = urlPath.split('/'); // Розбиваємо на сегменти
         const link = segments[segments.length - 1] || '';
-        const article = this.artickle.getArticleByLink(link)||null;
-        const langCode = urlPath.startsWith('uk') ? 'uk' : urlPath.startsWith('en') ? 'en' : 'ru';
-      
+        const article = this.artickle.getArticleByLink(link) || null;
+        const langCode = urlPath.startsWith('uk')
+          ? 'uk'
+          : urlPath.startsWith('en')
+          ? 'en'
+          : 'ru';
+
         // Визначаємо мову та витягуємо відповідний заголовок
-        const lang = urlPath.startsWith('uk') ? 'Ukr' : urlPath.startsWith('en') ? 'En' : 'Rus';
+        const lang = urlPath.startsWith('uk')
+          ? 'Ukr'
+          : urlPath.startsWith('en')
+          ? 'En'
+          : 'Rus';
         const titleKey = `title${lang}` as 'titleUkr' | 'titleEn' | 'titleRus'; // Обмежуємо ключі
         // let title =(article)? article[titleKey] : (segments[1]==='studying')?'Авторские Курсы по трейдингу': 'Обучение трейдингу с нуля - ArapovTrade';
 
-        let title='';
-        if(article){
+        let title = '';
+        if (article) {
           title = article[titleKey];
-        }else if(segments[1]==='studying'&&segments[0]==='ru'){
-          title='Авторские Курсы по трейдингу - Игорь Арапов';
-        }else if(segments[1]==='studying'&&segments[0]==='uk'){
-          title='Авторські Курси з трейдингу - Ігор Арапов';
-        }else if(segments[0]==='uk'){
-          title='Безкоштовне навчання трейдингу - Ігор Арапов';
-        }else{
-          title='Бесплатное обучение трейдингу - Игорь Арапов'
+        } else if (segments[1] === 'studying' && segments[0] === 'ru') {
+          title = 'Авторские Курсы по трейдингу - Игорь Арапов';
+        } else if (segments[1] === 'studying' && segments[0] === 'uk') {
+          title = 'Авторські Курси з трейдингу - Ігор Арапов';
+        } else if (segments[0] === 'uk') {
+          title = 'Безкоштовне навчання трейдингу - Ігор Арапов';
+        } else {
+          title = 'Бесплатное обучение трейдингу - Игорь Арапов';
         }
 
-        let description ='';
-         if(segments[1]==='studying'&&segments[0]==='ru'){
-          description='Курсы по трейдингу для начинающих от Игоря Арапова';
-        }else if(segments[1]==='studying'&&segments[0]==='uk'){
-          description='Курси з трейдингу для початківців від Ігоря Арапова';
-        }else if(segments[0]==='uk'){
-          description='Безкоштовне навчання трейдингу для початківців - Ігор Арапов';
-        }else{
-          description='Бесплатное обучение трейдингу для начинающих - Игорь Арапов'
+        let description = '';
+        if (segments[1] === 'studying' && segments[0] === 'ru') {
+          description = 'Курсы по трейдингу для начинающих от Игоря Арапова';
+        } else if (segments[1] === 'studying' && segments[0] === 'uk') {
+          description = 'Курси з трейдингу для початківців від Ігоря Арапова';
+        } else if (segments[0] === 'uk') {
+          description =
+            'Безкоштовне навчання трейдингу для початківців - Ігор Арапов';
+        } else {
+          description =
+            'Бесплатное обучение трейдингу для начинающих - Игорь Арапов';
         }
 
         // const description =(segments[1]==='studying')? 'Курсы по трейдингу для начинающих': `Бесплатное обучение трейдингу для начинающих - ArapovTrade`;
         const image = article?.imgUkr || 'assets/img/default-og-image.jpg';
         const url = `https://arapov.trade${this.router.url}`;
-         
+
         // Оновлюємо теги
         // this.titleService.setTitle(title);
         // this.meta.updateTag({ name: 'description', content: description });
         this.meta.updateTag({ property: 'og:title', content: title });
-        this.meta.updateTag({ property: 'og:description', content: description });
-        this.meta.updateTag({ property: 'og:image', content: `https://arapov.trade${image}` });
+        this.meta.updateTag({
+          property: 'og:description',
+          content: description,
+        });
+        this.meta.updateTag({
+          property: 'og:image',
+          content: `https://arapov.trade${image}`,
+        });
         this.meta.updateTag({ property: 'og:url', content: url });
-         
+
         // Оновлюємо Twitter Card теги
-        this.meta.updateTag({ name: 'twitter:card', content: 'summary_large_image' }); // Тип картки
+        this.meta.updateTag({
+          name: 'twitter:card',
+          content: 'summary_large_image',
+        }); // Тип картки
         this.meta.updateTag({ name: 'twitter:title', content: title });
-        this.meta.updateTag({ name: 'twitter:description', content: description });
-        this.meta.updateTag({ name: 'twitter:image', content: `https://arapov.trade${image}` });
+        this.meta.updateTag({
+          name: 'twitter:description',
+          content: description,
+        });
+        this.meta.updateTag({
+          name: 'twitter:image',
+          content: `https://arapov.trade${image}`,
+        });
         this.meta.updateTag({ name: 'twitter:url', content: url });
-        this.meta.updateTag({ name: 'language', content: langCode }); 
-        this.document.documentElement.lang = langCode;  
+        this.meta.updateTag({ name: 'language', content: langCode });
+        this.document.documentElement.lang = langCode;
+        this.generateBreadcrumbs();
       });
   }
 
@@ -201,28 +231,324 @@ export class AppComponent implements OnInit, AfterViewChecked  {
 
       // Базові Twitter Card теги
       { name: 'twitter:card', content: 'summary_large_image' }, // Дефолтний тип картки
-      { name: 'twitter:site', content: '@Igor_Arapov1990' } // Ваш Twitter акаунт (замініть)
+      { name: 'twitter:site', content: '@Igor_Arapov1990' }, // Ваш Twitter акаунт (замініть)
     ]);
-
-
-
   }
-    
+
+  private generateBreadcrumbs() {
+    const urlPath = this.router.url.split('?')[0].replace(/^\/|\/$/g, '');
+
+    this.breadcrumbs = []; // Определяем хлебные крошки в зависимости от маршрута
+    if (urlPath === '' || urlPath === '/') {
+      this.breadcrumbs.push({ name: 'Головна', url: 'https://arapov.trade' });
+    } else if (urlPath === 'ru' || urlPath === 'uk' || urlPath === 'en') {
+      if (urlPath === 'ru') {
+        this.breadcrumbs.push(
+          { name: 'Головна', url: 'https://arapov.trade' },
+          { name: 'Автор курса', url: 'https://arapov.trade/ru' }
+        );
+      } else if (urlPath === 'uk') {
+        this.breadcrumbs.push(
+          { name: 'Головна', url: 'https://arapov.trade' },
+          { name: 'Автор курсу', url: 'https://arapov.trade/uk' }
+        );
+      } else if (urlPath === 'en') {
+        this.breadcrumbs.push(
+          { name: 'Головна', url: 'https://arapov.trade' },
+          { name: 'Course author', url: 'https://arapov.trade/en' }
+        );
+      }
+    } else if (
+      urlPath === 'ru/studying' ||
+      urlPath === 'uk/studying' ||
+      urlPath === 'en/studying'
+    ) {
+      if (urlPath === 'ru/studying') {
+        this.breadcrumbs.push(
+          { name: 'Головна', url: 'https://arapov.trade' },
+          { name: 'Автор курса', url: 'https://arapov.trade/ru' },
+          {
+            name: 'Обучение трейдингу',
+            url: 'https://arapov.trade/ru/studying',
+          }
+        );
+      }else if (urlPath === 'uk/studying') {
+        this.breadcrumbs.push(
+          { name: 'Головна', url: 'https://arapov.trade' },
+          { name: 'Автор курсу', url: 'https://arapov.trade/uk' },
+          {
+            name: 'Навчання трейдингу',
+            url: 'https://arapov.trade/ru/studying',
+          }
+        );
+      } else if (urlPath === 'en/studying') {
+        this.breadcrumbs.push(
+          { name: 'Головна', url: 'https://arapov.trade' },
+          { name: 'Course author', url: 'https://arapov.trade/en' },
+          {
+            name: 'Trading training',
+            url: 'https://arapov.trade/ru/studying',
+          }
+        );
+      }
+
+
+
+
+    } else if (urlPath === 'ru/freestudying'||urlPath === 'uk/freestudying'||urlPath === 'en/freestudying') {
+      
+       if (urlPath === 'ru/freestudying') {
+        this.breadcrumbs.push(
+          { name: 'Головна', url: 'https://arapov.trade' },
+          { name: 'Автор курса', url: 'https://arapov.trade/ru' },
+          {
+            name: 'Бесплатное обучение трейдингу',
+            url: 'https://arapov.trade/ru/freestudying',
+          }
+        );
+      }else if (urlPath === 'uk/freestudying') {
+        this.breadcrumbs.push(
+          { name: 'Головна', url: 'https://arapov.trade' },
+          { name: 'Автор курсу', url: 'https://arapov.trade/uk' },
+          {
+            name: 'Безкоштовне навчання трейдингу',
+            url: 'https://arapov.trade/uk/freestudying',
+          }
+        );
+      } else if (urlPath === 'en/freestudying') {
+        this.breadcrumbs.push(
+          { name: 'Головна', url: 'https://arapov.trade' },
+          { name: 'Author of the Course', url: 'https://arapov.trade/en' },
+          {
+            name: 'Free trading education',
+            url: 'https://arapov.trade/en/freestudying',
+          }
+        );
+      }
+
+    } else if (urlPath === 'ru/freestudying/freeeducation'||urlPath === 'uk/freestudying/freeeducation'||urlPath === 'en/freestudying/freeeducation') {
+       
+       if (urlPath === 'ru/freestudying/freeeducation') {
+        this.breadcrumbs.push(
+          { name: 'Головна', url: 'https://arapov.trade' },
+          { name: 'Автор курса', url: 'https://arapov.trade/ru' },
+          {
+            name: 'Бесплатное обучение трейдингу',
+            url: 'https://arapov.trade/ru/freestudying',
+          },
+          {
+            name: 'Бесплатные курсы по трейдингу',
+            url: 'https://arapov.trade/ru/freestudying/freeeducation',
+          }
+        );
+      }else if (urlPath === 'uk/freestudying/freeeducation') {
+        this.breadcrumbs.push(
+          { name: 'Головна', url: 'https://arapov.trade' },
+          { name: 'Автор курсу', url: 'https://arapov.trade/uk' },
+          {
+            name: 'Безкоштовне навчання трейдингу',
+            url: 'https://arapov.trade/uk/freestudying',
+          },
+          {
+            name: 'Безкоштовні курси з трейдингу',
+            url: 'https://arapov.trade/uk/freestudying/freeeducation',
+          }
+        );
+      } else if (urlPath === 'en/freestudying/freeeducation') {
+        this.breadcrumbs.push(
+          { name: 'Головна', url: 'https://arapov.trade' },
+          { name: 'Author of the Course', url: 'https://arapov.trade/en' },
+          {
+            name: 'Free trading education',
+            url: 'https://arapov.trade/en/freestudying',
+          },
+          {
+            name: 'Free Trading Courses',
+            url: 'https://arapov.trade/en/freestudying/freeeducation',
+          }
+        );
+      }
+
+
+
+
+
+
+    } else if (urlPath === 'ru/freestudying/practic'||urlPath === 'uk/freestudying/practic'||urlPath === 'en/freestudying/practic') {
+       
+      if (urlPath === 'ru/freestudying/practic') {
+        this.breadcrumbs.push(
+          { name: 'Головна', url: 'https://arapov.trade' },
+          { name: 'Автор курса', url: 'https://arapov.trade/ru' },
+          {
+            name: 'Бесплатное обучение трейдингу',
+            url: 'https://arapov.trade/ru/freestudying',
+          },
+          {
+            name: 'Торговая система трейдера',
+            url: 'https://arapov.trade/ru/freestudying/practic',
+          }
+        );
+      }else if (urlPath === 'uk/freestudying/practic') {
+        this.breadcrumbs.push(
+          { name: 'Головна', url: 'https://arapov.trade' },
+          { name: 'Автор курсу', url: 'https://arapov.trade/uk' },
+          {
+            name: 'Безкоштовне навчання трейдингу',
+            url: 'https://arapov.trade/uk/freestudying',
+          },
+          {
+            name: 'Торгова система трейдера',
+            url: 'https://arapov.trade/uk/freestudying/practic',
+          }
+        );
+      } else if (urlPath === 'en/freestudying/practic') {
+        this.breadcrumbs.push(
+          { name: 'Головна', url: 'https://arapov.trade' },
+          { name: 'Author of the Course', url: 'https://arapov.trade/en' },
+          {
+            name: 'Free trading education',
+            url: 'https://arapov.trade/en/freestudying',
+          },
+          {
+            name: 'Trader`s trading system',
+            url: 'https://arapov.trade/en/freestudying/practic',
+          }
+        );
+      }
+
+
+
+
+    }else if (urlPath === 'ru/disclaimer'||urlPath === 'uk/disclaimer'||urlPath === 'en/disclaimer'){
+      if (urlPath === 'ru/disclaimer') {
+        this.breadcrumbs.push(
+          { name: 'Головна', url: 'https://arapov.trade' },
+          { name: 'Автор курса', url: 'https://arapov.trade/ru' },
+          {
+            name: 'Отказ от ответственности',
+            url: 'https://arapov.trade/ru/disclaimer',
+          }
+        );
+      }else if (urlPath === 'uk/disclaimer') {
+        this.breadcrumbs.push(
+          { name: 'Головна', url: 'https://arapov.trade' },
+          { name: 'Автор курсу', url: 'https://arapov.trade/uk' },
+          {
+            name: 'Відмова від відповідальності',
+            url: 'https://arapov.trade/ru/disclaimer',
+          }
+        );
+      } else if (urlPath === 'en/disclaimer') {
+        this.breadcrumbs.push(
+          { name: 'Головна', url: 'https://arapov.trade' },
+          { name: 'Course author', url: 'https://arapov.trade/en' },
+          {
+            name: 'Disclaimer',
+            url: 'https://arapov.trade/ru/disclaimer',
+          }
+        );
+      }
+
+
+        
+      }else{
+        const urlArr=urlPath.split('/')
+          
+        if (urlArr[0] === 'ru') {
+        this.breadcrumbs.push(
+          { name: 'Головна', url: 'https://arapov.trade' },
+          { name: 'Автор курса', url: 'https://arapov.trade/ru' },
+          {
+            name: 'Бесплатное обучение трейдингу',
+            url: 'https://arapov.trade/ru/freestudying',
+          },
+          {
+            name: 'Теория по трейдингу',
+            url: `https://arapov.trade/ru/freestudying/${urlArr[2]}`,
+          }
+        );
+      }else if (urlArr[0] === 'uk') {
+        this.breadcrumbs.push(
+          { name: 'Головна', url: 'https://arapov.trade' },
+          { name: 'Автор курсу', url: 'https://arapov.trade/uk' },
+          {
+            name: 'Безкоштовне навчання трейдингу',
+            url: 'https://arapov.trade/uk/freestudying',
+          },
+          {
+            name: 'Теорія з трейдингу',
+            url: `https://arapov.trade/ru/freestudying/${urlArr[2]}`,
+          }
+        );
+      } else if (urlArr[0] === 'en') {
+        this.breadcrumbs.push(
+          { name: 'Головна', url: 'https://arapov.trade' },
+          { name: 'Author of the Course', url: 'https://arapov.trade/en' },
+          {
+            name: 'Free trading education',
+            url: 'https://arapov.trade/en/freestudying',
+          },
+          {
+            name: 'Trading Theory',
+           url: `https://arapov.trade/ru/freestudying/${urlArr[2]}`,
+          }
+        );
+      }
+
+
+
+
+
+      }
+    // Генерируем JSON-LD
+    this.jsonLd = {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: this.breadcrumbs.map((breadcrumb, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name: breadcrumb.name,
+        item: breadcrumb.url,
+      })),
+    };
+    // Динамически обновляем <script> в DOM
+    this.updateJsonLdScript();
+  }
+  // Метод для динамического обновления JSON-LD в DOM
+  private updateJsonLdScript() {
+    // Удаляем старый скрипт, если он есть
+    const existingScript = this.document.querySelector(
+      'script[type="application/ld+json"]'
+    );
+    if (existingScript) {
+       
+      existingScript.remove();
+       
+    }
+    // Создаем новый скрипт
+    const script = this.renderer.createElement('script');
+    this.renderer.setAttribute(script, 'type', 'application/ld+json');
+    this.renderer.setProperty(
+      script,
+      'textContent',
+      JSON.stringify(this.jsonLd)
+    );
+    // this.renderer.appendChild(this.document.head, script);
+    this.renderer.insertBefore(this.document.head, script, this.document.head.firstChild); 
+  }
 
   getLang() {
-     
     this.lan
       .getNumber()
       .pipe(takeUntil(this.destroy$))
-      .subscribe((value) => { 
+      .subscribe((value) => {
         this.checkLang = value;
         this.searchSer.setLange(this.checkLang);
       });
   }
   ngAfterViewChecked() {
-    this.cdr.detectChanges();  
-    
-    
+    this.cdr.detectChanges();
   }
   ngOnDestroy() {
     this.destroy$.next();
@@ -282,5 +608,3 @@ export class AppComponent implements OnInit, AfterViewChecked  {
     this.flagTrue = false;
   }
 }
-
-
