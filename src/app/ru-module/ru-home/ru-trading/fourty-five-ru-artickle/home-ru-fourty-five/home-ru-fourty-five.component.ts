@@ -19,9 +19,9 @@ export class HomeRuFourtyFiveComponent implements OnInit {
     this.meta.addTag({
       name: 'description',
       content:
-        'Бесплатный курс по  трейдингу для начинающих, включающий подробные видеоуроки и  статьи , собранные в полноценные уроки по ключевым темам трейдинга для самостоятельного обучения от Игоря Арапова',
+        'Бесплатный курс по трейдингу: 130+ статей и 70 видеоуроков. Изучите основы, анализ, психологию торговли и проверенные стратегии.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
+   
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-24' });
     this.meta.updateTag({
       property: 'og:image',
