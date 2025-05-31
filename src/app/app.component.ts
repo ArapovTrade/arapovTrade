@@ -164,6 +164,16 @@ export class AppComponent implements OnInit, AfterViewChecked {
           title = 'Авторские Курсы по трейдингу - Игорь Арапов';
         } else if (segments[1] === 'studying' && segments[0] === 'uk') {
           title = 'Авторські Курси з трейдингу - Ігор Арапов';
+        } else if (
+          segments[1] === 'freestudying' &&
+          segments[2] === 'freeeducation'
+        ) {
+          title =
+            segments[0] === 'ru'
+              ? 'Бесплатный курс по  трейдингу от Игоря Арапова'
+              : segments[0] === 'uk'
+              ? 'Безкоштовний курс з трейдингу від Ігоря Арапова'
+              : 'Free trading course from Igor Arapov';
         } else if (segments[0] === 'uk') {
           title = 'Безкоштовне навчання трейдингу - Ігор Арапов';
         } else {
@@ -175,6 +185,19 @@ export class AppComponent implements OnInit, AfterViewChecked {
           description = 'Курсы по трейдингу для начинающих от Игоря Арапова';
         } else if (segments[1] === 'studying' && segments[0] === 'uk') {
           description = 'Курси з трейдингу для початківців від Ігоря Арапова';
+        } else if (
+          segments[1] === 'freestudying' &&
+          segments[2] === 'freeeducation'
+        ) {
+          description =
+            segments[0] === 'ru'
+              ? 'Бесплатный курс по трейдингу: 130+ статей и 70 видеоуроков. Изучите основы, анализ, психологию торговли и проверенные стратегии'
+              : segments[0] === 'uk'
+              ? 'Безкоштовний курс з трейдингу: 130+ статей та 70 відеоуроків. Вивчіть основи, аналіз, психологію торгівлі та перевірені стратегії'
+              : 'Free Trading Course: 130+ Articles and 70 Video Lessons. Learn the Basics, Analysis, Trading Psychology, and Proven Strategies';
+
+
+          
         } else if (segments[0] === 'uk') {
           description =
             'Безкоштовне навчання трейдингу для початківців - Ігор Арапов';
@@ -183,8 +206,8 @@ export class AppComponent implements OnInit, AfterViewChecked {
             'Бесплатное обучение трейдингу для начинающих - Игорь Арапов';
         }
 
-        // const description =(segments[1]==='studying')? 'Курсы по трейдингу для начинающих': `Бесплатное обучение трейдингу для начинающих - ArapovTrade`;
-        const image = article?.imgUkr || 'assets/img/default-og-image.jpg';
+ 
+        const image = article?.imgUkr || 'assets/img/default-og-image.png';
         const url = `https://arapov.trade${this.router.url}`;
 
         // Оновлюємо теги
@@ -272,7 +295,7 @@ export class AppComponent implements OnInit, AfterViewChecked {
             url: 'https://arapov.trade/ru/studying',
           }
         );
-      }else if (urlPath === 'uk/studying') {
+      } else if (urlPath === 'uk/studying') {
         this.breadcrumbs.push(
           { name: 'Головна', url: 'https://arapov.trade' },
           { name: 'Автор курсу', url: 'https://arapov.trade/uk' },
@@ -291,13 +314,12 @@ export class AppComponent implements OnInit, AfterViewChecked {
           }
         );
       }
-
-
-
-
-    } else if (urlPath === 'ru/freestudying'||urlPath === 'uk/freestudying'||urlPath === 'en/freestudying') {
-      
-       if (urlPath === 'ru/freestudying') {
+    } else if (
+      urlPath === 'ru/freestudying' ||
+      urlPath === 'uk/freestudying' ||
+      urlPath === 'en/freestudying'
+    ) {
+      if (urlPath === 'ru/freestudying') {
         this.breadcrumbs.push(
           { name: 'Головна', url: 'https://arapov.trade' },
           { name: 'Автор курса', url: 'https://arapov.trade/ru' },
@@ -306,7 +328,7 @@ export class AppComponent implements OnInit, AfterViewChecked {
             url: 'https://arapov.trade/ru/freestudying',
           }
         );
-      }else if (urlPath === 'uk/freestudying') {
+      } else if (urlPath === 'uk/freestudying') {
         this.breadcrumbs.push(
           { name: 'Головна', url: 'https://arapov.trade' },
           { name: 'Автор курсу', url: 'https://arapov.trade/uk' },
@@ -325,10 +347,12 @@ export class AppComponent implements OnInit, AfterViewChecked {
           }
         );
       }
-
-    } else if (urlPath === 'ru/freestudying/freeeducation'||urlPath === 'uk/freestudying/freeeducation'||urlPath === 'en/freestudying/freeeducation') {
-       
-       if (urlPath === 'ru/freestudying/freeeducation') {
+    } else if (
+      urlPath === 'ru/freestudying/freeeducation' ||
+      urlPath === 'uk/freestudying/freeeducation' ||
+      urlPath === 'en/freestudying/freeeducation'
+    ) {
+      if (urlPath === 'ru/freestudying/freeeducation') {
         this.breadcrumbs.push(
           { name: 'Головна', url: 'https://arapov.trade' },
           { name: 'Автор курса', url: 'https://arapov.trade/ru' },
@@ -341,7 +365,7 @@ export class AppComponent implements OnInit, AfterViewChecked {
             url: 'https://arapov.trade/ru/freestudying/freeeducation',
           }
         );
-      }else if (urlPath === 'uk/freestudying/freeeducation') {
+      } else if (urlPath === 'uk/freestudying/freeeducation') {
         this.breadcrumbs.push(
           { name: 'Головна', url: 'https://arapov.trade' },
           { name: 'Автор курсу', url: 'https://arapov.trade/uk' },
@@ -368,14 +392,11 @@ export class AppComponent implements OnInit, AfterViewChecked {
           }
         );
       }
-
-
-
-
-
-
-    } else if (urlPath === 'ru/freestudying/practic'||urlPath === 'uk/freestudying/practic'||urlPath === 'en/freestudying/practic') {
-       
+    } else if (
+      urlPath === 'ru/freestudying/practic' ||
+      urlPath === 'uk/freestudying/practic' ||
+      urlPath === 'en/freestudying/practic'
+    ) {
       if (urlPath === 'ru/freestudying/practic') {
         this.breadcrumbs.push(
           { name: 'Головна', url: 'https://arapov.trade' },
@@ -389,7 +410,7 @@ export class AppComponent implements OnInit, AfterViewChecked {
             url: 'https://arapov.trade/ru/freestudying/practic',
           }
         );
-      }else if (urlPath === 'uk/freestudying/practic') {
+      } else if (urlPath === 'uk/freestudying/practic') {
         this.breadcrumbs.push(
           { name: 'Головна', url: 'https://arapov.trade' },
           { name: 'Автор курсу', url: 'https://arapov.trade/uk' },
@@ -416,11 +437,11 @@ export class AppComponent implements OnInit, AfterViewChecked {
           }
         );
       }
-
-
-
-
-    }else if (urlPath === 'ru/disclaimer'||urlPath === 'uk/disclaimer'||urlPath === 'en/disclaimer'){
+    } else if (
+      urlPath === 'ru/disclaimer' ||
+      urlPath === 'uk/disclaimer' ||
+      urlPath === 'en/disclaimer'
+    ) {
       if (urlPath === 'ru/disclaimer') {
         this.breadcrumbs.push(
           { name: 'Головна', url: 'https://arapov.trade' },
@@ -430,7 +451,7 @@ export class AppComponent implements OnInit, AfterViewChecked {
             url: 'https://arapov.trade/ru/disclaimer',
           }
         );
-      }else if (urlPath === 'uk/disclaimer') {
+      } else if (urlPath === 'uk/disclaimer') {
         this.breadcrumbs.push(
           { name: 'Головна', url: 'https://arapov.trade' },
           { name: 'Автор курсу', url: 'https://arapov.trade/uk' },
@@ -449,13 +470,10 @@ export class AppComponent implements OnInit, AfterViewChecked {
           }
         );
       }
+    } else {
+      const urlArr = urlPath.split('/');
 
-
-        
-      }else{
-        const urlArr=urlPath.split('/')
-          
-        if (urlArr[0] === 'ru') {
+      if (urlArr[0] === 'ru') {
         this.breadcrumbs.push(
           { name: 'Головна', url: 'https://arapov.trade' },
           { name: 'Автор курса', url: 'https://arapov.trade/ru' },
@@ -468,7 +486,7 @@ export class AppComponent implements OnInit, AfterViewChecked {
             url: `https://arapov.trade/ru/freestudying/${urlArr[2]}`,
           }
         );
-      }else if (urlArr[0] === 'uk') {
+      } else if (urlArr[0] === 'uk') {
         this.breadcrumbs.push(
           { name: 'Головна', url: 'https://arapov.trade' },
           { name: 'Автор курсу', url: 'https://arapov.trade/uk' },
@@ -491,16 +509,11 @@ export class AppComponent implements OnInit, AfterViewChecked {
           },
           {
             name: 'Trading Theory',
-           url: `https://arapov.trade/ru/freestudying/${urlArr[2]}`,
+            url: `https://arapov.trade/ru/freestudying/${urlArr[2]}`,
           }
         );
       }
-
-
-
-
-
-      }
+    }
     // Генерируем JSON-LD
     this.jsonLd = {
       '@context': 'https://schema.org',
@@ -522,9 +535,7 @@ export class AppComponent implements OnInit, AfterViewChecked {
       'script[type="application/ld+json"]'
     );
     if (existingScript) {
-       
       existingScript.remove();
-       
     }
     // Создаем новый скрипт
     const script = this.renderer.createElement('script');
@@ -535,7 +546,11 @@ export class AppComponent implements OnInit, AfterViewChecked {
       JSON.stringify(this.jsonLd)
     );
     // this.renderer.appendChild(this.document.head, script);
-    this.renderer.insertBefore(this.document.head, script, this.document.head.firstChild); 
+    this.renderer.insertBefore(
+      this.document.head,
+      script,
+      this.document.head.firstChild
+    );
   }
 
   getLang() {
