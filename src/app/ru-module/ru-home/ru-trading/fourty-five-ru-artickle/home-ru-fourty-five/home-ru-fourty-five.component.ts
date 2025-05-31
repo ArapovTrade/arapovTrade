@@ -19,10 +19,10 @@ export class HomeRuFourtyFiveComponent implements OnInit {
     this.meta.addTag({
       name: 'description',
       content:
-        'Бесплатный курс по трейдингу: 130+ статей и 70 видеоуроков. Изучите основы, анализ, психологию торговли и проверенные стратегии.',
+        'Бесплатный курс по трейдингу: 130+ статей и 70 видеоуроков. Изучите основы, анализ, психологию торговли и проверенные стратегии',
     });
    
-    this.meta.updateTag({ name: 'datePublished', content: '2025-02-24' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-05-30' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/freeeducationnew.webp',

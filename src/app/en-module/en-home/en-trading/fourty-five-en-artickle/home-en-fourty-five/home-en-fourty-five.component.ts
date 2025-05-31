@@ -19,10 +19,10 @@ export class HomeEnFourtyFiveComponent implements OnInit {
     this.meta.addTag({
       name: 'description',
       content:
-        'Free trading training for beginners, including detailed video tutorials and articles, collected into full courses on key trading topics for self-study from Igor ArapovFree trading course for beginners, including detailed video tutorials and articles, collected into full lessons on key trading topics for self-study from Igor Arapov',
+        'Free Trading Course: 130+ Articles and 70 Video Lessons. Learn the Basics, Analysis, Trading Psychology, and Proven Strategies',
     });
-    this.meta.updateTag({ name: 'author', content: 'Igor Arapov' });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-02-24' });
+     
+    this.meta.updateTag({ name: 'datePublished', content: '2025-05-30' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/freeeducationnew.webp',

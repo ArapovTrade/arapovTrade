@@ -19,11 +19,11 @@ export class HomeUkFourtyFiveComponent implements OnInit {
     this.meta.addTag({
       name: 'description',
       content:
-        "Безкоштовний курс з трейдингу для початківців, що включає докладні відеоуроки та статті, зібрані у повноцінні уроки з ключових тем трейдингу для самостійного навчання від Ігоря Арапова",
+        "Безкоштовний курс з трейдингу: 130+ статей та 70 відеоуроків. Вивчіть основи, аналіз, психологію торгівлі та перевірені стратегії",
     });
 
-    this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-02-24' });
+ 
+    this.meta.updateTag({ name: 'datePublished', content: '2025-05-30' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/freeeducationnew.webp',
