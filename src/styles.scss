@@ -3269,7 +3269,7 @@ body {
   padding-top: 40px !important;
 }
 .title_course {
-  padding-top: 50px !important;
+  padding-top: 40px !important;
   text-align: center !important;
 }
 .first_stroke {
@@ -3277,4 +3277,11 @@ body {
   text-underline-offset: 4px;
   text-decoration-thickness: 2px;
   text-decoration-color: #005db8;
+}
+
+@media (min-width: 768px) {
+  .title_course {
+  padding-top: 80px !important;
+  
+}
 }
