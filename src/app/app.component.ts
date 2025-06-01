@@ -198,6 +198,10 @@ export class AppComponent implements OnInit, AfterViewChecked {
 
 
           
+        }else if (segments[1] === 'freestudying') {
+
+          description =
+            (segments[0] === 'ru')?'Бесплатное обучение трейдингу от Игоря Арапова - подробный курс по трейдингу':'Безкоштовне навчання трейдингу від Ігоря Арапова - докладний курс з трейдингу'
         } else if (segments[0] === 'uk') {
           description =
             'Безкоштовне навчання трейдингу для початківців - Ігор Арапов';
