@@ -50,7 +50,7 @@
 
                 </div>
                 <!--  -->
-                <div *ngIf="checkLang===3">
+                <!-- <div *ngIf="checkLang===3">
                     <nav class="nav900" aria-label="Breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
                         <ul>
                             <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
@@ -116,7 +116,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
 
                 <div *ngIf="checkLang===2">
@@ -256,9 +256,9 @@
                             </div>
                             <div *ngIf="checkLang===2"><img style="width:30px ; height: 30px;"
                                     src="/assets/img/content/flagofrussia.png" alt="flagRus"></div>
-                            <div *ngIf="checkLang===3"><img style="width:30px ; height: 30px;"
+                            <!-- <div *ngIf="checkLang===3"><img style="width:30px ; height: 30px;"
                                     src="/assets/img/content/flagofbreatbritain.png" alt="flagGB">
-                            </div>
+                            </div> -->
                             <ul class="language-dropdown" [class.open]="dropdownOpen">
                                 <li class="li_block"><a routerLink="/uk" routerLinkActive="active" hreflang="uk"
                                         [routerLinkActiveOptions]='{exact:true}'
@@ -275,12 +275,12 @@
                                             src="/assets/img/content/flagofrussia.png" alt="flagRus"></a><a
                                         routerLink="/ru" routerLinkActive="active" hreflang="ru"
                                         (click)="closeDropdown() ; changeLanguage('ru');setRussian()">Русский</a></li>
-                                <li class="li_block"><a routerLink="/en" routerLinkActive="active" hreflang="en"
+                                <!-- <li class="li_block"><a routerLink="/en" routerLinkActive="active" hreflang="en"
                                         (click)="closeDropdown() ; changeLanguage('en');setEnglish()"><img
                                             style="width:18px ; height: 18px;     margin: 0 15px 0 0;"
                                             src="/assets/img/content/flagofbreatbritain.png" alt="flagGB"></a><a
                                         routerLink="/en" routerLinkActive="active" hreflang="en"
-                                        (click)="closeDropdown() ; changeLanguage('en');setEnglish()">English</a></li>
+                                        (click)="closeDropdown() ; changeLanguage('en');setEnglish()">English</a></li> -->
                             </ul>
                         </div>
                     </nav>

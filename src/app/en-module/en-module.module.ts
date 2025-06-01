@@ -8,23 +8,23 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DisclaimerenComponent } from './en-home/doc/disclaimeren/disclaimeren.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: EnHomeComponent,
-  },
+  // {
+  //   path: '',
+  //   component: EnHomeComponent,
+  // },
   // children: [
   //   { path: 'home', component: HomePageComponent },
-  {
-    path: 'disclaimer',
-    component: DisclaimerenComponent,
-  },
-  {
-    path: 'studying',
-    loadChildren: () =>
-      import('./en-home/en-studying/en-studying.module').then(
-        (m) => m.EnStudyingModule
-      ),
-  },
+  // {
+  //   path: 'disclaimer',
+  //   component: DisclaimerenComponent,
+  // },
+  // {
+  //   path: 'studying',
+  //   loadChildren: () =>
+  //     import('./en-home/en-studying/en-studying.module').then(
+  //       (m) => m.EnStudyingModule
+  //     ),
+  // },
   // {
   //   path: 'trading',
   //   loadChildren: () =>
@@ -39,11 +39,11 @@ const routes: Routes = [
   //       (m) => m.EnCryptoModule
   //     ),
   // },
-  {
-    path: 'freestudying',
-    loadChildren: () =>
-      import('./en-home/eu-blog/eu-blog.module').then((m) => m.EuBlogModule),
-  },
+  // {
+  //   path: 'freestudying',
+  //   loadChildren: () =>
+  //     import('./en-home/eu-blog/eu-blog.module').then((m) => m.EuBlogModule),
+  // },
   //   ],
   // },
 ];

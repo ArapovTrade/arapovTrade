@@ -16,11 +16,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./ru-module/ru-module.module').then((m) => m.RuModuleModule),
   },
-  {
-    path: 'en',
-    loadChildren: () =>
-      import('./en-module/en-module.module').then((m) => m.EnModuleModule),
-  },
+  // {
+  //   path: 'en',
+  //   loadChildren: () =>
+  //     import('./en-module/en-module.module').then((m) => m.EnModuleModule),
+  // },
 
   { path: '**', component: PageNotFoundComponent },
 ];
