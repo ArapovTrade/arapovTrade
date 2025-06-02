@@ -4,7 +4,8 @@ import { RuBlogHomepageComponent } from './ru-blog-homepage/ru-blog-homepage.com
 import { RouterModule } from '@angular/router';
 import { Routes } from '@angular/router';
 import { MatPaginatorModule } from '@angular/material/paginator';
-
+ 
+import { MatExpansionModule } from '@angular/material/expansion';
 const routes: Routes = [
   { path: '', component: RuBlogHomepageComponent },
   {
@@ -937,6 +938,6 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [RuBlogHomepageComponent],
-  imports: [CommonModule, MatPaginatorModule, RouterModule.forChild(routes)],
+  imports: [CommonModule, MatExpansionModule, MatPaginatorModule, RouterModule.forChild(routes)],
 })
 export class RuBlogModule {}

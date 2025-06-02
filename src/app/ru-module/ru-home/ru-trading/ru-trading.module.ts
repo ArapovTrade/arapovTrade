@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RuTradingHomepageComponent } from './ru-trading-homepage/ru-trading-homepage.component';
 import { RouterModule } from '@angular/router';
 import { Routes } from '@angular/router';
-
+import { MatExpansionModule } from '@angular/material/expansion';
 const routes: Routes = [
   // { path: '', component: RuTradingHomepageComponent },
   // { path: 'adviceForBeginners', component: RuTradingArticleOneComponent },
@@ -333,6 +333,6 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [RuTradingHomepageComponent],
-  imports: [CommonModule, RouterModule.forChild(routes)],
+  imports: [CommonModule,MatExpansionModule, RouterModule.forChild(routes)],
 })
 export class RuTradingModule {}

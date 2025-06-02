@@ -17,6 +17,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { SearchblockComponent } from './searchblock/searchblock.component';
 import { MainpageComponent } from './mainpage/mainpage.component';
+ 
+import { MatExpansionModule } from '@angular/material/expansion';
 @NgModule({
   declarations: [AppComponent, PageNotFoundComponent, SearchblockComponent, MainpageComponent],
   imports: [
@@ -28,7 +30,7 @@ import { MainpageComponent } from './mainpage/mainpage.component';
     UkModuleModule,
     FormsModule,
     ReactiveFormsModule,
-    MatPaginatorModule,
+    MatPaginatorModule ,MatExpansionModule
   ],
   providers: [provideClientHydration(), provideAnimationsAsync(), Title, Meta],
   bootstrap: [AppComponent],
