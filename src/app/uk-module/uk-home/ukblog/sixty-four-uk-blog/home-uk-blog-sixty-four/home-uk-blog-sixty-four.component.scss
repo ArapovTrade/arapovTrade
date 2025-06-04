@@ -99,3 +99,171 @@ h1 {
     flex-wrap: wrap;
     justify-content: space-around;
 }
+//
+/* Общие стили */
+.trading-section {
+//   font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.7;
+//   max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  color: #1a1a1a;
+} /* Заголовки */
+.main-title {
+  font-size: 2.5em;
+  font-weight: 700;
+  color: #003087;
+  margin-bottom: 24px;
+  position: relative;
+  padding-bottom: 12px;
+}
+.main-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, #003087, #3b82f6);
+  border-radius: 2px;
+}
+.section-title {
+  font-size: 1.75em;
+  font-weight: 600;
+  color: #003087;
+  margin: 40px 0 20px;
+} /* Параграфы */
+p {
+  font-size: 1.1em;
+  margin: 16px 0;
+  color: #333;
+}
+.highlight-box {
+  background: #f8fafc;
+  border-left: 4px solid #3b82f6;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+  font-size: 1.1em;
+  color: #1a1a1a;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+} /* Стили для секции Итог */
+.summary-container {
+ 
+  padding: 24px;
+   
+  margin-top: 40px;
+ 
+  
+}
+.summary-title {
+  font-size: 1.75em;
+  font-weight: 600;
+  color: #003087;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.summary-title::before {
+  content: "✅";
+  font-size: 1.5em;
+} /* Списки */
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+.feature-item {
+  margin: 16px 0;
+  font-size: 1.1em;
+  position: relative;
+  padding-left: 24px;
+}
+.feature-item::before {
+  content: "▸";
+  color: #3b82f6;
+  position: absolute;
+  left: 0;
+  top: 2px;
+}
+.sub-list {
+  list-style: none;
+  padding-left: 24px;
+  margin: 12px 0;
+}
+.sub-item::before {
+  content: "▹";
+  color: #3b82f6;
+  margin-right: 8px;
+} /* Выделение текста */
+.bold-text {
+  
+  font-weight: 600;
+} /* Призыв к действию */
+.call-to-action {
+  text-align: center;
+  margin-top: 40px;
+  padding: 24px;
+  background: #f8fafc;
+  border-radius: 12px;
+}
+.cta-text {
+  font-size: 1.15em;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+}
+.cta-button {
+  display: inline-block;
+  background: linear-gradient(90deg, #3b82f6, #2563eb);
+  color: #fff;
+  padding: 14px 32px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.1em;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+} /* Адаптивность */
+@media (max-width: 768px) {
+  .trading-section {
+    padding: 24px 16px;
+  }
+  .main-title {
+    font-size: 2em;
+  }
+  .section-title,
+  .summary-title {
+    font-size: 1.5em;
+  }
+  .text,
+  .highlight-box,
+  .cta-text {
+    font-size: 1em;
+  }
+  .cta-button {
+    padding: 12px 24px;
+    font-size: 1em;
+  }
+  .summary-container {
+    padding: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .main-title {
+    font-size: 1.8em;
+  }
+  .section-title,
+  .summary-title {
+    font-size: 1.3em;
+  }
+  .highlight-box {
+    padding: 16px;
+  }
+  .summary-container {
+    padding: 16px;
+  }
+}
