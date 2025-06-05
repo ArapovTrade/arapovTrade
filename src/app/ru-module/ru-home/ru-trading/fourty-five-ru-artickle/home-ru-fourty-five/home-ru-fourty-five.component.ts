@@ -121,7 +121,7 @@ export class HomeRuFourtyFiveComponent implements OnInit {
 
     // -----------------------
 
-    const scripts = document.querySelectorAll(
+    const scripts = this.document.querySelectorAll(
       'script[type="application/ld+json"]'
     );
     let faqScript: HTMLScriptElement | any = null;
@@ -141,10 +141,10 @@ export class HomeRuFourtyFiveComponent implements OnInit {
     } else {
       // Если скрипт не найден, создаём новый
 
-      const script = document.createElement('script');
+      const script = this.document.createElement('script');
       script.type = 'application/ld+json';
       script.text = JSON.stringify(faqSchema);
-      document.head.appendChild(script);
+      this.document.head.appendChild(script);
     }
 
     // ---------
