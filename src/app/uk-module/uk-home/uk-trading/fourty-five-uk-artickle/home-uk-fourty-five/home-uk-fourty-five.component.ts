@@ -116,11 +116,40 @@ export class HomeUkFourtyFiveComponent implements OnInit {
         acceptedAnswer: { '@type': 'Answer', text: faq.answer },
       })),
     };
+// 
+    const scripts = document.querySelectorAll(
+      'script[type="application/ld+json"]'
+    );
+    let faqScript: HTMLScriptElement | any = null;
+    scripts.forEach((script) => {
+      try {
+        const jsonContent = JSON.parse(script.textContent || '{}');
+        if (jsonContent['@type'] === 'FAQPage') {
+          faqScript = script;
+        }
+      } catch (e) {
+        // Игнорируем некорректный JSON
+      }
+    });
+    // Если скрипт FAQPage найден, заменяем его
+    if (faqScript) {
+      faqScript.text = JSON.stringify(faqSchema);
+    } else {
+      // Если скрипт не найден, создаём новый
+
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.text = JSON.stringify(faqSchema);
+      document.head.appendChild(script);
+    }
+    // 
+
+
      // Добавление JSON-LD в <head>
-    const script = this.document.createElement('script');
-    script.type = 'application/ld+json';
-    script.text = JSON.stringify(faqSchema);
-    this.document.head.appendChild(script);
+    // const script = this.document.createElement('script');
+    // script.type = 'application/ld+json';
+    // script.text = JSON.stringify(faqSchema);
+    // this.document.head.appendChild(script);
 
   }
   randomArticleRus: any = [];
