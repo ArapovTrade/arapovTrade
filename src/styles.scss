@@ -3281,10 +3281,19 @@ body {
 
 @media (min-width: 768px) {
   .title_course {
-  padding-top: 80px !important;
-  
+    padding-top: 80px !important;
+  }
 }
-}
-.pad6 h1{
+.pad6 h1 {
   margin-bottom: 30px;
+}
+
+//
+@media screen and (max-width: 600px) {
+  .mat-expansion-panel-header {
+    height: auto !important; /* Динамічна висота заголовка */
+     
+    padding: 12px 12px !important; /* Зменшені відступи для компактності */
+     
+  }
 }

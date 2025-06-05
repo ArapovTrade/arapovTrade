@@ -1,22 +1,28 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, Inject , signal,ChangeDetectorRef, ChangeDetectionStrategy} from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { ArticlesService } from '../../../../../servises/articles.service';
 import { ActivatedRoute } from '@angular/router';
 import { DOCUMENT } from '@angular/common';
+
 @Component({
   selector: 'app-home-ru-fourty-five',
   templateUrl: './home-ru-fourty-five.component.html',
   styleUrl: './home-ru-fourty-five.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HomeRuFourtyFiveComponent implements OnInit {
+    readonly panelOpenState = signal(false);
   constructor(
     private meta: Meta,
     private titleService: Title,
     private articleServ: ArticlesService,
     private route: ActivatedRoute,
-    @Inject(DOCUMENT) private document: Document
+    @Inject(DOCUMENT) private document: Document,
+    private cdr :ChangeDetectorRef
   ) {}
   ngOnInit(): void {
+   
+
     this.titleService.setTitle(
       'Бесплатный курс по  трейдингу от Игоря Арапова'
     );
@@ -147,24 +153,14 @@ export class HomeRuFourtyFiveComponent implements OnInit {
       this.document.head.appendChild(script);
     }
 
-    // ---------
-
-    // Удаляем старый скрипт, если он есть
-    // const existingScript = this.document.querySelector(
-    //   'script[type="application/ld+json"]'
-    // );
-    // if (existingScript) {
-    //   existingScript.remove();
-    // }
-
-    // Добавление JSON-LD в <head>
-    // const script = this.document.createElement('script');
-    // script.type = 'application/ld+json';
-    // script.text = JSON.stringify(faqSchema);
-    // this.document.head.appendChild(script);
+     
   }
   randomArticleRus: any = [];
   gerRandom() {
     this.randomArticleRus = this.articleServ.getRandomUkArticles();
+  }
+  ngOnChanges(){
+    this.cdr.detectChanges()
+    
   }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, Inject, signal } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { ArticlesService } from '../../../../../servises/articles.service';
 import { ActivatedRoute } from '@angular/router';
@@ -9,6 +9,7 @@ import { DOCUMENT } from '@angular/common';
   styleUrl: './home-uk-fourty-five.component.scss',
 })
 export class HomeUkFourtyFiveComponent implements OnInit {
+  readonly panelOpenState = signal(false);
   constructor(
     private meta: Meta,
     private titleService: Title,
