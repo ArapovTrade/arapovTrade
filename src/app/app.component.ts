@@ -156,10 +156,12 @@ export class AppComponent implements OnInit, AfterViewChecked {
           : 'Rus';
         const titleKey = `title${lang}` as 'titleUkr' | 'titleEn' | 'titleRus'; // Обмежуємо ключі
         // let title =(article)? article[titleKey] : (segments[1]==='studying')?'Авторские Курсы по трейдингу': 'Обучение трейдингу с нуля - ArapovTrade';
-
+        // console.log(segments[0]=='')
         let title = '';
         if (article) {
           title = article[titleKey];
+        }else if (segments[0]=='') {
+          title = 'Безкоштовне навчання трейдингу — курс Ігоря Арапова';
         } else if (segments[1] === 'studying' && segments[0] === 'ru') {
           title = 'Авторские Курсы по трейдингу - Игорь Арапов';
         } else if (segments[1] === 'studying' && segments[0] === 'uk') {
@@ -181,7 +183,9 @@ export class AppComponent implements OnInit, AfterViewChecked {
         }
 
         let description = '';
-        if (segments[1] === 'studying' && segments[0] === 'ru') {
+         if (segments[0]=='') {
+          description = 'Безкоштовний курс з трейдингу Ігоря Арапова: 130 + статей і 70 відео. Вивчайте теханаліз, ризик-менеджмент і торгові стратегії онлайн';
+        }else if (segments[1] === 'studying' && segments[0] === 'ru') {
           description = 'Курсы по трейдингу для начинающих от Игоря Арапова';
         } else if (segments[1] === 'studying' && segments[0] === 'uk') {
           description = 'Курси з трейдингу для початківців від Ігоря Арапова';

@@ -11,20 +11,20 @@ constructor(private meta: Meta,
   private titleService: Title,){}
 
   ngOnInit(){
-    this.titleService.setTitle('Навчання трейдингу з нуля - Методичний посібник від Ігоря Арапова');
+    this.titleService.setTitle('Безкоштовне навчання трейдингу — курс Ігоря Арапова');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        "Методичний посібник для початківців у трейдингу: основи трейдингу, технічний аналіз, психологія ринку та торгова система від Ігоря Арапова.",
+        "Безкоштовний курс з трейдингу Ігоря Арапова: 130 + статей і 70 відео. Вивчайте теханаліз, ризик-менеджмент і торгові стратегії онлайн",
     });
 
     this.meta.addTag( {
        name:'keywords',
        content:'трейдинг, навчання трейдингу, технічний аналіз, фінансова біржа, торгова система, Ігор Арапов'
     })
-    this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-03-21' });
+   
+    this.meta.updateTag({ name: 'datePublished', content: '2025-06-07' });
     this.meta.updateTag({
       property: 'og:image',
       content: 'assets/img/photo_mainpage.jpg',
