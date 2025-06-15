@@ -15,15 +15,15 @@ export class HomeRuBlogSeventySevenComponent {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Психология трейдинга: Как эмоции влияют на сделки? - Arapov.trade'
+      'Психология трейдинга: влияние эмоций на сделки | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Разбираем, как эмоции влияют на трейдинг, почему страх и жадность мешают зарабатывать, а также какие психологические техники помогут контролировать эмоции и повысить эффективность торговли.',
+        'Как эмоции влияют на трейдинг? Узнайте, как страх и жадность мешают торговать и какие техники помогут контролировать эмоции для успешных сделок',
     });
-    this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
+   
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-18' });
     this.meta.updateTag({
       property: 'og:image',
@@ -31,7 +31,7 @@ export class HomeRuBlogSeventySevenComponent {
     });
     this.meta.updateTag({
       name: 'headline',
-      content: 'Психология трейдинга: Как эмоции влияют на сделки?',
+      content: 'Психология трейдинга: влияние эмоций на сделки | Arapov.trade',
     });
 
     this.gerRandom();
