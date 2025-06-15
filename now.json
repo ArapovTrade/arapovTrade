@@ -1,6 +1,0 @@
-{
-  "rewrites": [
-    { "source": "/uk", "destination": "/uk/home" },
-    { "source": "/", "destination": "/uk/home" }
-  ]
-}
