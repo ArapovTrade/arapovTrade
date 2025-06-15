@@ -15,13 +15,14 @@ export class HomeRuBlogFourtyComponent implements OnInit {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Почему трейдинг такой сложный ? - Arapov.trade'
+      'Почему трейдинг такой сложный? | Arapov.trade'
+
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Узнайте, почему трейдинг считается сложной профессией и какие факторы делают его таким. Советы по преодолению трудностей и достижению успеха',
+        'Узнайте, почему трейдинг считается сложной профессией и какие факторы влияют на это. Советы по преодолению трудностей и достижению успеха.',
     });
 
     this.gerRandom();

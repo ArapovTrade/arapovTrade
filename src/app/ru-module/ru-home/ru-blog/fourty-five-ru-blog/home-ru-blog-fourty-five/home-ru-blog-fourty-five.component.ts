@@ -14,12 +14,12 @@ export class HomeRuBlogFourtyFiveComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Как применять скользящие средние в трейдинге?');
+    this.titleService.setTitle('Скользящие средние в трейдинге | ArapovTrade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',   
       content:
-        'Узнайте, как использовать скользящие средние в трейдинге: их виды, стратегии и примеры применения для анализа трендов и принятия решений.',
+        'Скользящие средние: как применять в трейдинге? Руководство от ArapovTrade по стратегиям и анализу трендов.',
     });
      
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-17' });

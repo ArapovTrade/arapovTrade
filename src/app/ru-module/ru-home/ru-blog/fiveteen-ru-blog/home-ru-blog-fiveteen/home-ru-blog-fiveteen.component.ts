@@ -14,12 +14,12 @@ export class HomeRuBlogFiveteenComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Правда о торговле фьючерсами');
+    this.titleService.setTitle('Торговля фьючерсами: правда и риски | ArapovTrade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Узнайте   правду о торговле фьючерсами: их преимущества, риски и секреты успешной торговли. Полное руководство для трейдеров.',
+        'Правда о торговле фьючерсами: риски и стратегии. Руководство от ArapovTrade для трейдеров по анализу и торговле.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-10' });
     this.meta.updateTag({

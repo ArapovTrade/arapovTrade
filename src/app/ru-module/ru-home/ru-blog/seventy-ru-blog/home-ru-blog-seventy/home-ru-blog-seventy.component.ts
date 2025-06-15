@@ -15,15 +15,15 @@ export class HomeRuBlogSeventyComponent {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Концепция Ричарда Вайкоффа в понимании объемов - Arapov.trade'
+      'Концепция Вайкоффа: объёмный анализ | ArapovTrade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Полное руководство по концепции Ричарда Вайкоффа. Разбираем, как объемный анализ помогает определять намерения крупных игроков и находить ключевые уровни рынка.',
+        'Концепция Вайкоффа: как объёмный анализ выявляет намерения крупных игроков и ключевые уровни рынка. Советы от ArapovTrade',
     });
-    this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
+   
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-13' });
     this.meta.updateTag({
       property: 'og:image',

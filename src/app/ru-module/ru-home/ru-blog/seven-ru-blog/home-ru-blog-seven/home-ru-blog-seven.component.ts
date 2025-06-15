@@ -14,12 +14,12 @@ export class HomeRuBlogSevenComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Как Зарабатывают в Трейдинге?');
+    this.titleService.setTitle('Как зарабатывать в трейдинге? | ArapovTrade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Узнайте, как зарабатывать в трейдинге, какие инструменты и стратегии помогут вам достичь успеха. Разберем, что такое Форекс и как использовать торговое плечо.',
+        'Как зарабатывать в трейдинге? Советы от ArapovTrade по Форекс, стратегиям и торговому плечу для новичков.',
     });
     this.gerRandom();
   }

@@ -15,13 +15,15 @@ export class HomeRuBlogFiftyFiveComponent implements OnInit {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Скальпинг в трейдинге: Полное руководство - Arapov.trade'
+      'Скальпинг в трейдинге: Полное руководство | ArapovTrade'  
+
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Подробное руководство по скальпингу в трейдинге: стратегии, индикаторы, риски и автоматизация. Научитесь зарабатывать на краткосрочных сделках!',
+        'Скальпинг в трейдинге: стратегии, индикаторы, риски. Научитесь зарабатывать на краткосрочных сделках с помощью полного гида от ArapovTrade'
+,
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-04' });
     this.meta.updateTag({

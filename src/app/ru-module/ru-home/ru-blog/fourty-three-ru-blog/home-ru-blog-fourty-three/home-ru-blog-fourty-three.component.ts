@@ -15,15 +15,15 @@ export class HomeRuBlogFourtyThreeComponent implements OnInit {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Анализ спроса и предложения на рынке криптовалют - Arapov.trade'
+      'Спрос и предложение в криптовалютах | ArapovTrade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Узнайте, как анализировать спрос и предложение на рынке криптовалют. Подробный гид с советами, инструментами и стратегиями для успешного инвестирования и торговли.',
+        'Анализ спроса и предложения в криптовалютах: как торговать? Гид от ArapovTrade по стратегиям и инвестициям.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
+   
     this.meta.updateTag({ name: 'datePublished', content: '2025-01-25' });
     this.meta.updateTag({
       property: 'og:image',

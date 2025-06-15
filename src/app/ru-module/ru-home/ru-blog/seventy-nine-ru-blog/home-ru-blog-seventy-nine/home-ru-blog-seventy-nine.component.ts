@@ -15,15 +15,15 @@ export class HomeRuBlogSeventyNineComponent {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Психология усреднения: почему новички теряют депозиты? - Arapov.trade'
+      'Усреднение: психология потерь новичков | ArapovTrade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Разбираем психологические ловушки усреднения, почему трейдеры продолжают добавлять позиции в убыточные сделки и какие альтернативные стратегии помогут избежать слива депозита.',
+        'Психологические ловушки усреднения в трейдинге: почему трейдеры увеличивают убыточные позиции и как альтернативные стратегии помогут сохранить депозит.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
+     
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-10' });
     this.meta.updateTag({
       property: 'og:image',
@@ -31,7 +31,7 @@ export class HomeRuBlogSeventyNineComponent {
     });
     this.meta.updateTag({
       name: 'headline',
-      content: 'Психология усреднения: почему новички теряют депозиты?',
+      content: 'Усреднение: психология потерь новичков | ArapovTrade',
     });
 
     this.gerRandom();

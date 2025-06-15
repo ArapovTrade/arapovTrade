@@ -15,15 +15,15 @@ export class HomeRuBlogFourtySixComponent implements OnInit {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Bitcoin Pizza Day: история, значение и традиции - Arapov.trade'
+      'Bitcoin Pizza Day: что это? | ArapovTrade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Узнайте о Bitcoin Pizza Day: как была совершена первая покупка за биткоины, почему этот день стал историческим и как его отмечают в мире криптовалют.',
+        'Bitcoin Pizza Day: история и значение первой сделки за биткоины. Бесплатное руководство от ArapovTrade о криптовалютах.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
+    
     this.meta.updateTag({ name: 'datePublished', content: '2025-01-27' });
     this.meta.updateTag({
       property: 'og:image',

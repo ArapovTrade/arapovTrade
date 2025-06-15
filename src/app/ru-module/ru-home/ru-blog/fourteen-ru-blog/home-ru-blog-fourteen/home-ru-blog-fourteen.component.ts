@@ -14,12 +14,12 @@ export class HomeRuBlogFourteenComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Трейдинг и Инвестиции. Что лучше?');
+    this.titleService.setTitle('Трейдинг или инвестиции: что выбрать? | ArapovTrade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Разберём различия между трейдингом и инвестициями, их преимущества и недостатки. Узнайте, что подходит именно вам!',
+        'Трейдинг или инвестиции: что выбрать? Бесплатное руководство от ArapovTrade по плюсам, минусам и стратегиям.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-01' });
     this.meta.updateTag({

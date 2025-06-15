@@ -15,15 +15,15 @@ export class HomeRuBlogSeventyOneComponent {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Как трейдеру торговать на новостях - Arapov.trade'
+      'Торговля на новостях в трейдинге | ArapovTrade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Полное руководство по торговле на новостях. Разбираем, как экономические события влияют на рынок, какие стратегии новостной торговли самые эффективные и как минимизировать риски во время высокой волатильности.',
+        'Торговля на новостях: как минимизировать риски? Советы от ArapovTrade по стратегиям и волатильности.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
+   
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-14' });
     this.meta.updateTag({
       property: 'og:image',

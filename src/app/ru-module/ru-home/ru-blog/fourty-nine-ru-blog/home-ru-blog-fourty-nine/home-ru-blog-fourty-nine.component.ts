@@ -19,7 +19,7 @@ export class HomeRuBlogFourtyNineComponent implements OnInit {
     this.meta.addTag({
       name: 'description',
       content:
-        'Узнайте, как выбрать идеальную торговую платформу для трейдинга. Полезные советы, критерии выбора и список лучших платформ для начинающих и профессионалов.',
+        'Как выбрать торговую платформу для трейдинга? Советы, критерии выбора и лучшие платформы для начинающих и опытных трейдеров от ArapovTrade.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-03' });
     this.meta.updateTag({

@@ -14,12 +14,12 @@ export class HomeRuBlogEighteenComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Объемный анализ рынка - Arapov.trade');
+    this.titleService.setTitle('Объемный анализ рынка | ArapovTrade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Что такое объемный анализ рынка? Разбираем ключевые принципы, инструменты и стратегии. Полное руководство по объемному анализу и его применению в трейдинге.',
+        'Объемный анализ рынка: принципы, инструменты, стратегии трейдинга. Руководство от ArapovTrade для анализа и торговли',
     });
     this.gerRandom();
   }

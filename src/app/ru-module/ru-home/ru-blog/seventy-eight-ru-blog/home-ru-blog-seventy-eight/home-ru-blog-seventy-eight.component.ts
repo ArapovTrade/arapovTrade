@@ -15,15 +15,15 @@ export class HomeRuBlogSeventyEightComponent {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Как избежать FOMO – страха упущенной прибыли? - Arapov.trade'
+      'Как избежать FOMO в трейдинге? | ArapovTrade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Узнайте, что такое FOMO в трейдинге, как страх упущенной прибыли мешает принимать обоснованные решения и какие стратегии помогут избежать эмоциональных сделок и торговать осознанно.',
+        'FOMO в трейдинге: как избежать потерь? Советы от ArapovTrade по осознанной торговле и управлению эмоциями.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
+    
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-18' });
     this.meta.updateTag({
       property: 'og:image',

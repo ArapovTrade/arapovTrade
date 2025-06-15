@@ -15,15 +15,16 @@ export class HomeRuBlogFourtyFourComponent implements OnInit {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Преимущества и риски криптостейкинга - Arapov.trade'
+      'Преимущества и риски криптостейкинга | ArapovTrade'
+
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Узнайте о преимуществах и рисках криптостейкинга, как заработать на криптовалютах с минимальными рисками и на что обратить внимание, чтобы избежать ошибок.',
+        'Преимущества и риски криптостейкинга: как зарабатывать на криптовалютах с минимальными рисками и избегать ошибок. Практические советы от ArapovTrade.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
+    
     this.meta.updateTag({ name: 'datePublished', content: '2025-01-27' });
     this.meta.updateTag({
       property: 'og:image',

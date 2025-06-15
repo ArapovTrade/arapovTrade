@@ -15,15 +15,15 @@ export class HomeRuBlogEightyFiveComponent {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Фигура `Двойная вершина` и `Двойное дно`: Как торговать разворотные паттерны? - Arapov.trade'
+      'Двойная вершина и двойное дно | ArapovTrade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Разбираем фигуры `Двойная вершина` и `Двойное дно` – надежные разворотные паттерны технического анализа. Узнайте, как правильно их идентифицировать, какие сигналы подтверждают смену тренда и как эффективно применять их в торговых стратегиях.',
+        'Двойная вершина и двойное дно: как торговать разворотные паттерны? Руководство от ArapovTrade по анализу и стратегиям',
     });
-    this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
+    
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-22' });
     this.meta.updateTag({
       property: 'og:image',
@@ -32,7 +32,7 @@ export class HomeRuBlogEightyFiveComponent {
     this.meta.updateTag({
       name: 'headline',
       content:
-        'Фигура `Двойная вершина` и `Двойное дно`: Как торговать разворотные паттерны?',
+        'Двойная вершина и двойное дно | ArapovTrade',
     });
 
     this.gerRandom();

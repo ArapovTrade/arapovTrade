@@ -14,12 +14,12 @@ export class HomeRuBlogSeventeenComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Топ мифов о трейдинге');
+    this.titleService.setTitle('Мифы о трейдинге: топ заблуждений | ArapovTrade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Разоблачение популярных мифов о трейдинге, которые вводят в заблуждение начинающих и опытных трейдеров.',
+        'Топ мифов о трейдинге: разоблачение заблуждений. Советы от ArapovTrade для новичков и опытных трейдеров.',
     });
 
     this.gerRandom();

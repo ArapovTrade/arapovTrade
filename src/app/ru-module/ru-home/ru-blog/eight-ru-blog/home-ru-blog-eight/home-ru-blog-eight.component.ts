@@ -14,12 +14,12 @@ export class HomeRuBlogEightComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Имбаланс в трейдинге - Arapov.trade');
+    this.titleService.setTitle('Имбаланс в трейдинге | ArapovTrade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Разбираем концепцию имбаланса в трейдинге, его влияние на движение цены, методы анализа и торговые стратегии. Полное руководство по использованию рыночного дисбаланса.',
+        'Имбаланс в трейдинге: как анализировать и использовать в торговле. Руководство от ArapovTrade по стратегиям и движению цены',
     });
 
     this.gerRandom();

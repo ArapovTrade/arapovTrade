@@ -15,15 +15,16 @@ export class HomeRuBlogFourComponent implements OnInit {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Как не потерять все деньги на маржинальной торговле?  - Arapov.trade'
+      'Маржинальная торговля без потерь — советы ArapovTrade'
+
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Узнайте, как избежать потерь в маржинальной торговле, минимизировать риски и улучшить свою стратегию управления капиталом. Полезные советы для начинающих и опытных трейдеров.',
+        'Как избежать потерь в маржинальной торговле? Советы по управлению капиталом  от ArapovTrade — для новичков и опытных трейдеров',
     });
-    this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
+     
     this.meta.updateTag({ name: 'datePublished', content: '2025-01-24' });
     this.meta.updateTag({
       property: 'og:image',

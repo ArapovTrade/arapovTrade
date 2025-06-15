@@ -14,14 +14,14 @@ export class HomeRuBlogFourtySevenComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Фундаментальный Анализ рынка - Arapov.trade');
+    this.titleService.setTitle('Фундаментальный анализ рынка | ArapovTrade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Фундаментальный анализ рынка: основы, преимущества и недостатки метода, влияние на трейдинг.',
+        'Фундаментальный анализ рынка: как применять? Руководство от ArapovTrade по основам, стратегиям и трейдингу.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
+    
     this.meta.updateTag({ name: 'datePublished', content: '2025-01-19' });
     this.meta.updateTag({
       property: 'og:image',

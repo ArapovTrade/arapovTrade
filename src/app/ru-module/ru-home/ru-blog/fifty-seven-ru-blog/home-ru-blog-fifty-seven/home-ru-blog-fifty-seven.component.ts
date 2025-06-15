@@ -14,12 +14,12 @@ export class HomeRuBlogFiftySevenComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Индикаторы в трейдинге: Полное руководство');
+    this.titleService.setTitle('Индикаторы в трейдинге: руководство | ArapovTrade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Узнайте всё о торговых индикаторах: их виды, применение и популярные стратегии для эффективного анализа рынка, включая RSI и MACD.',
+        'Индикаторы в трейдинге: RSI, MACD и стратегии. Руководство от ArapovTrade по анализу рынка для новичков и профи.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-17' });
     this.meta.updateTag({

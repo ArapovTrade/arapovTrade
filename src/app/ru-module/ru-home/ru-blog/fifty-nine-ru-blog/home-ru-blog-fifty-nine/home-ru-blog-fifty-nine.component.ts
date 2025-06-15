@@ -14,12 +14,12 @@ export class HomeRuBlogFiftyNineComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Как торговать Пробой уровня в трейдинге');
+    this.titleService.setTitle('Как торговать пробой уровня в трейдинге | ArapovTrade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        ' Детальное руководство по торговле на пробой уровня в трейдинге. Узнайте, как определять уровни, работать с пин-баром и объемами.',
+        'Узнайте, как торговать пробой уровня: определение ключевых зон, пин-бары, объёмы. Практические советы от ArapovTrade',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-18' });
     this.meta.updateTag({

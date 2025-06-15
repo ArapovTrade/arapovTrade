@@ -14,12 +14,12 @@ export class HomeRuBlogFiftyThreeComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Ордер Блок в Трейдинге - Arapov.trade');
+    this.titleService.setTitle('Ордер блок в трейдинге: руководство | ArapovTrade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Что такое ордер блок в трейдинге? Разбираем концепцию, методы определения и торговые стратегии. Полное руководство по ордерным блокам и их использованию в анализе рынка.',
+        'Ордер блок в трейдинге: как определять и торговать? Руководство от ArapovTrade по анализу и стратегиям.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-03-30' });
     this.meta.updateTag({

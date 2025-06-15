@@ -14,14 +14,14 @@ export class HomeRuBlogOneComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Фазы рынка в трейдинге  - Arapov.trade');
+    this.titleService.setTitle('Фазы рынка в трейдинге | ArapovTrade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Какие существуют фазы рынка? Как определить текущий этап рыночного цикла? Полное руководство по фазам рынка в трейдинге: накопление, рост, распределение и снижение. Стратегии торговли в каждой фазе.',
+        'Фазы рынка в трейдинге: как распознавать накопление, рост, распределение и снижение. Стратегии и примеры от ArapovTrade',
     });
-    this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
+     
     this.meta.updateTag({ name: 'datePublished', content: '2025-01-13' });
     this.meta.updateTag({
       property: 'og:image',

@@ -14,14 +14,14 @@ export class HomeRuBlogEightyOneComponent {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Фигура `Треугольник` - Arapov.trade');
+    this.titleService.setTitle('Треугольник: паттерн трейдинга | ArapovTrade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Разбираем фигуру `Треугольник` – один из ключевых паттернов технического анализа. Узнайте, как правильно определить этот паттерн на графике, какие сигналы подтверждают пробой и как использовать его в торговых стратегиях.',
+        'Фигура Треугольник: как торговать паттерн? Руководство от ArapovTrade по анализу, пробою и стратегиям',
     });
-    this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
+     
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-20' });
     this.meta.updateTag({
       property: 'og:image',
@@ -29,7 +29,7 @@ export class HomeRuBlogEightyOneComponent {
     });
     this.meta.updateTag({
       name: 'headline',
-      content: 'Фигура `Треугольник`',
+      content: 'Треугольник: паттерн трейдинга | ArapovTrade`',
     });
 
     this.gerRandom();

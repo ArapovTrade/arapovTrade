@@ -15,13 +15,13 @@ export class HomeRuBlogNineComponent implements OnInit {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Как прогнозировать цену на рынке? - Arapov.trade'
+      'Как прогнозировать цену в трейдинге | ArapovTrade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Прогнозирование цены в трейдинге: фундаментальный и технический анализ, индикаторы, математические модели и рыночная психология. Полное руководство по предсказанию движения рынка.',
+        'Как прогнозировать цену в трейдинге: анализ, индикаторы, психология и стратегии. Узнайте, как предсказывать движение рынка с ArapovTrade',
     });
 
     this.gerRandom();

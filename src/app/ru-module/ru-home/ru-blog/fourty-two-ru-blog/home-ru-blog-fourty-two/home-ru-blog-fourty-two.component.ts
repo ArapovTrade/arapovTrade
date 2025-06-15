@@ -14,12 +14,13 @@ export class HomeRuBlogFourtyTwoComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Риски криптовалют для начинающих');
+    this.titleService.setTitle('Риски криптовалют для новичков | ArapovTrade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Изучите основные риски криптовалютного рынка для начинающих трейдеров и инвесторов. Узнайте, как управлять рисками и минимизировать потери.',
+        'Риски криптовалют для новичков: как управлять капиталом и избежать ошибок. Руководство от ArapovTrade по безопасному трейдингу.'
+,
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-03' });
     this.meta.updateTag({

@@ -15,15 +15,15 @@ export class HomeRuBlogEightyFourComponent {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Фигура `Поглощение` (Bullish & Bearish Engulfing): Как ловить разворот? - Arapov.trade'
+      'Поглощение: Bullish и Bearish | ArapovTrade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Разбираем фигуру `Поглощение` (Bullish & Bearish Engulfing) – мощный сигнал разворота тренда. Узнайте, как правильно идентифицировать этот паттерн, какие сигналы подтверждают его силу и как использовать его в торговых стратегиях.',
+        'Поглощение (Bullish & Bearish): как ловить разворот? Руководство от ArapovTrade по паттерну и стратегиям',
     });
-    this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
+    
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-22' });
     this.meta.updateTag({
       property: 'og:image',
@@ -32,7 +32,7 @@ export class HomeRuBlogEightyFourComponent {
     this.meta.updateTag({
       name: 'headline',
       content:
-        'Фигура `Поглощение` (Bullish & Bearish Engulfing): Как ловить разворот?',
+        'Поглощение: Bullish и Bearish | ArapovTrade',
     });
 
     this.gerRandom();

@@ -50,9 +50,9 @@ export class RuBlogHomepageComponent implements OnInit {
     });
     this.meta.addTag({
       name: 'description',
-      content: 'Бесплатное обучение трейдингу от Игоря Арапова - подробный курс по трейдингу',
+      content: 'Бесплатное обучение трейдингу от Игоря Арапова: пошаговый курс с нуля, разбор стратегий, управление рисками и практические занятия. Начните зарабатывать уже сегодня!',
     });
-    this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
+     
 
     this.filteredArticles = this.artickleServ.russianssArticles();
     this.rusGroups = this.artickleServ.getRussianGroups();

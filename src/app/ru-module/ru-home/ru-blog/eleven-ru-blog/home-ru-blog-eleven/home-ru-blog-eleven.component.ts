@@ -21,7 +21,7 @@ export class HomeRuBlogElevenComponent implements OnInit {
     this.meta.addTag({
       name: 'description',
       content:
-        'Узнайте, какой стартовый депозит нужен трейдеру, как его правильно рассчитать и управлять капиталом. Полезные советы для начинающих и опытных трейдеров.',
+        'Какой стартовый депозит нужен трейдеру? Советы по расчёту капитала и управлению рисками от ArapovTrade.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-01' });
     this.meta.updateTag({

@@ -15,15 +15,15 @@ export class HomeRuBlogEightyTwoComponent {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Флаг и вымпел: Как правильно торговать после импульса? - Arapov.trade'
+      'Флаг и вымпел: пробой тренда | ArapovTrade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Разбираем фигуры `Флаг` и `Вымпел` – мощные паттерны продолжения тренда. Узнайте, как правильно идентифицировать эти фигуры на графике, какие сигналы подтверждают пробой и как применять их в торговых стратегиях.',
+        'Флаг и вымпел: как торговать пробой тренда? Руководство от ArapovTrade по паттернам и стратегиям',
     });
-    this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
+     
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-21' });
     this.meta.updateTag({
       property: 'og:image',
@@ -31,7 +31,7 @@ export class HomeRuBlogEightyTwoComponent {
     });
     this.meta.updateTag({
       name: 'headline',
-      content: 'Флаг и вымпел: Как правильно торговать после импульса?',
+      content: 'Флаг и вымпел: пробой тренда | ArapovTrade',
     });
 
     this.gerRandom();

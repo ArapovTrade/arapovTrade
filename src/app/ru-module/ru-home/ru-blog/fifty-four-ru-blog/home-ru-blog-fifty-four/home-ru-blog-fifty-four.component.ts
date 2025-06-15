@@ -15,15 +15,16 @@ export class HomeRuBlogFiftyFourComponent implements OnInit {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Как обеспечить безопасность криптовалюты - Arapov.trade'
+     'Как обеспечить безопасность криптовалюты - Arapov.trade'
+
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Узнайте, как защитить свои цифровые активы, минимизировать риски кражи криптовалюты и сохранить конфиденциальность. Полезные советы и стратегии для начинающих и опытных пользователей.',
+        'Как защитить криптовалюту от кражи? Советы по безопасности, управлению активами и конфиденциальности от Arapov.trade',
     });
-    this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
+    
     this.meta.updateTag({ name: 'datePublished', content: '2025-01-28' });
     this.meta.updateTag({
       property: 'og:image',

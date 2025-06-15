@@ -21,7 +21,8 @@ export class HomeRuBlogFourtyEightComponent implements OnInit {
     this.meta.addTag({
       name: 'description',
       content:
-        'Самостоятельное обучение трейдингу: пошаговая инструкция, советы и рекомендации для новичков. Успешный старт на финансовых рынках.',
+       'Самостоятельное обучение трейдингу: пошаговая инструкция, советы и рекомендации для новичков. Успешный старт на финансовых рынках.'
+,
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-03' });
     this.meta.updateTag({

@@ -14,12 +14,12 @@ export class HomeRuBlogFiftyComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Алгоримические Ордера на Бирже - Arapov.trade');
+    this.titleService.setTitle('Алгоритмические ордера на бирже | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Что такое алгоритмические ордера? Изучите их типы, преимущества, риски и будущее использования в трейдинге. Полное руководство для трейдеров.',
+        'Что такое алгоритмические ордера? Типы, плюсы и риски. Узнайте, как автоматизировать трейдинг и повысить эффективность сделок с ArapovTrade',
     });
      
     this.meta.updateTag({ name: 'datePublished', content: '2025-03-26' });

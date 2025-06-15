@@ -14,12 +14,12 @@ export class HomeRuBlogFiftyEightComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Усреднение в трейдинге - Arapov.trade');
+    this.titleService.setTitle('Усреднение в трейдинге | ArapovTrade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Как правильно использовать стратегию усреднения в трейдинге? Узнайте о методах усреднения, рисках, преимуществах и стратегиях для эффективной торговли.',
+        'Усреднение в трейдинге: как применять и когда избегать? Советы от ArapovTrade по стратегиям, рискам и управлению позицией',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-04' });
     this.meta.updateTag({

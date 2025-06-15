@@ -15,13 +15,13 @@ export class HomeRuBlogFiveComponent implements OnInit {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Ценообразование и ликвидность на финансовых рынках - Arapov.trade'
+      'Ценообразование и ликвидность | ArapovTrade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Что такое ценообразование и ликвидность на финансовых рынках? Изучаем ключевые принципы, влияние ликвидности на ценообразование, роль маркет-мейкеров и управление рисками.',
+        'Ценообразование и ликвидность: как они работают? Руководство от ArapovTrade по анализу рынка и стратегиям.',
     });
     
     this.meta.updateTag({ name: 'datePublished', content: '2025-03-26' });

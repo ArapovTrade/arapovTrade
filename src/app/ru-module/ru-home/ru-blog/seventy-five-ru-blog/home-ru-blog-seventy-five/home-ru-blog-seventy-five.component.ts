@@ -15,15 +15,15 @@ export class HomeRuBlogSeventyFiveComponent {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Трейдинг – азартная игра или бизнес? Два психологических подхода - Arapov.trade'
+      'Трейдинг: игра или бизнес? | ArapovTrade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Рассмотрим два психологических подхода к трейдингу: азартный и профессиональный. Разберем ключевые отличия между игрой и бизнесом, а также узнаем, какие стратегии помогают добиться успеха на финансовых рынках.',
+        'Трейдинг: азарт или бизнес? Советы от ArapovTrade по психологии и стратегиям для успеха на рынках.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
+    
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-17' });
     this.meta.updateTag({
       property: 'og:image',

@@ -15,15 +15,15 @@ export class HomeRuBlogEightyThreeComponent {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Фигура `Чашка с ручкой`: Как торговать сильные пробои? - Arapov.trade'
+      'Чашка с ручкой: пробой тренда | ArapovTrade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Разбираем фигуру `Чашка с ручкой` – один из самых надежных паттернов продолжения тренда. Узнайте, как правильно идентифицировать этот паттерн, какие сигналы подтверждают пробой и как применять его в торговых стратегиях.',
+        'Чашка с ручкой: как торговать пробой тренда? Руководство от ArapovTrade по паттерну и стратегиям',
     });
-    this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
+     
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-21' });
     this.meta.updateTag({
       property: 'og:image',
@@ -31,7 +31,7 @@ export class HomeRuBlogEightyThreeComponent {
     });
     this.meta.updateTag({
       name: 'headline',
-      content: 'Фигура `Чашка с ручкой`: Как торговать сильные пробои?',
+      content: 'Чашка с ручкой: пробой тренда | ArapovTrade',
     });
 
     this.gerRandom();

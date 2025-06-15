@@ -15,13 +15,13 @@ export class HomeRuBlogFiftySixComponent implements OnInit {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Книги по трейдингу: в чем польза для начинающих?'
+      'Книги по трейдингу для новичков | ArapovTrade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Рассмотрим, как книги по трейдингу помогают начинающим трейдерам. Полезные рекомендации и лучшие книги для старта в мире финансовых рынков.',
+        'Книги по трейдингу для новичков: лучшие рекомендации и польза. Руководство от ArapovTrade для старта на финансовых рынках.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-04' });
     this.meta.updateTag({
