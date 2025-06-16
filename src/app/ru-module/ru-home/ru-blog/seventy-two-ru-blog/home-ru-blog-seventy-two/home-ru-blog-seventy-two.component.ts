@@ -15,15 +15,15 @@ export class HomeRuBlogSeventyTwoComponent {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Что такое экономический календарь - Arapov.trade'
+      'Экономический календарь в трейдинге: как использовать | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Полное руководство по экономическому календарю фондового рынка. Как использовать его для прогнозирования рыночных движений, какие события влияют на акции и индексы, а также стратегии торговли на новостях.',
+        'Узнайте, как экономический календарь помогает в трейдинге! Гид по событиям, влияющим на акции, индексы и стратегии торговли на новостях',
     });
-    this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
+     
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-15' });
     this.meta.updateTag({
       property: 'og:image',

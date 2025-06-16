@@ -15,15 +15,15 @@ export class HomeRuBlogSixtyTwoComponent {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Как находить точки входа по Smart Money? Лучшие стратегии - Arapov.trade'
+      'Smart Money: точки входа и стратегии | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Разбираем стратегии Smart Money, позволяющие находить точные точки входа. Как использовать Order Blocks, ликвидность, FVG и другие концепции для точного входа в рынок.',
+        'Разбираем как находить точки входа по Smart Money! Стратегии с Order Blocks, ликвидностью и FVG для точного трейдинга с Arapov.trade',
     });
-    this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
+    
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-07' });
     this.meta.updateTag({
       property: 'og:image',

@@ -15,15 +15,15 @@ export class HomeRuBlogSixtyFiveComponent {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Как читать Биржевой стакан и ленту принтов - Arapov.trade'
+      'Биржевой стакан и лента принтов: как читать | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Полное руководство по чтению биржевого стакана и ленты принтов. Разбираем, как анализировать заявки, ликвидность и крупные сделки, чтобы определять намерения Smart Money и находить выгодные точки входа в рынок.',
+        'Узнайте, как читать биржевой стакан и ленту принтов! Анализ заявок, ликвидности и сделок для выявления Smart Money и точек входа с Arapov.trade',
     });
-    this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
+    
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-11' });
     this.meta.updateTag({
       property: 'og:image',

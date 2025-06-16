@@ -15,15 +15,15 @@ export class HomeRuBlogSeventyThreeComponent {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Макроэкономические показатели фундаментального анализа - Arapov.trade'
+      'Макроэкономика в трейдинге: ключ к рынку | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Полное руководство по макроэкономическим показателям в фундаментальном анализе. Как ВВП, инфляция, ставки ФРС и другие индикаторы влияют на рынок?',
+        'Узнайте, как макроэкономические показатели влияют на рынок! Руководство по ВВП, инфляции, ставкам ФРС и индикаторам для успешного трейдинга.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
+    
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-16' });
     this.meta.updateTag({
       property: 'og:image',

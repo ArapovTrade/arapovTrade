@@ -14,12 +14,12 @@ export class HomeRuBlogSixtyComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Трейдинг Vs Опционы: сравнение инструментов');
+    this.titleService.setTitle('Трейдинг vs опционы: что выбрать трейдеру | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Сравнение трейдинга и опционов. Разбираем преимущества и недостатки инструментов, стратегии, риски и применение для разных типов трейдеров.',
+        'Трейдинг или опционы: что выбрать трейдеру? Сравнение стратегий, рисков и преимуществ для успешной торговли с Arapov.trade',
     });
     this.gerRandom();
   }

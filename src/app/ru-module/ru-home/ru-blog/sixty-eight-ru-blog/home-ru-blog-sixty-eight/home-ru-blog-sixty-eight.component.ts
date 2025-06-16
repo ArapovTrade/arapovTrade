@@ -15,15 +15,15 @@ export class HomeRuBlogSixtyEightComponent {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Как развивается рыночный аукцион и оценка сентимента участников рынка - Arapov.trade'
+      'Рыночный аукцион и сентимент в трейдинге | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Глубокий анализ рыночного аукциона и сентимента участников рынка. Как работает аукционная теория, какие индикаторы помогают выявить баланс спроса и предложения, и как трейдеры могут использовать эти знания для торговли.',
+        'Узнайте, как рыночный аукцион и сентимент участников влияют на трейдинг! Анализ аукционной теории и индикаторов для успешной торговли с Arapov.trade',
     });
-    this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
+    
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-12' });
     this.meta.updateTag({
       property: 'og:image',

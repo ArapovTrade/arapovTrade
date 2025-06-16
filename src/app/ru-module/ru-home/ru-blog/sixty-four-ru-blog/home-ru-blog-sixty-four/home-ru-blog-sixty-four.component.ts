@@ -16,15 +16,15 @@ export class HomeRuBlogSixtyFourComponent {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Практические рекомендации по трейдингу. Торговая система - Arapov.trade'
+      'Торговая система для успешного трейдинга | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Практические рекомендации по трейдингу, торговая система  с примерами точек входа и выхода, мани-менеджментом и управление рисками. Пошаговое руководство',
+        'Узнайте, как торговать с торговой системой! Практические советы по точкам входа, выхода, манименеджменту и управлению рисками для успеха с Arapov.trade',
     });
-    this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
+  
     this.meta.updateTag({ name: 'datePublished', content: '2025-05-25' });
     this.meta.updateTag({
       property: 'og:image',

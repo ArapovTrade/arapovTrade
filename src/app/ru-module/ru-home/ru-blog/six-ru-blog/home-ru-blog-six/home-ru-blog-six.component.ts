@@ -14,12 +14,12 @@ export class HomeRuBlogSixComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Концепция Смарт Мани - Arapov.trade');
+    this.titleService.setTitle('Smart Money в трейдинге: стратегия крупных игроков | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Разбираем концепцию Smart Money, методологию торговли институциональных игроков, анализ ликвидности и манипуляции на рынке. Полное руководство для трейдеров.',
+        'Узнайте, как Smart Money влияет на трейдинг! Методы крупных игроков, манипуляции ценой и ликвидность для прибыльной торговли с Arapov.trade.',
     });
     this.gerRandom();
   }

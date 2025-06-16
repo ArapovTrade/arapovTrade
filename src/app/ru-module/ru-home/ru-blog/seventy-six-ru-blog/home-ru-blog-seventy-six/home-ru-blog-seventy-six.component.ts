@@ -15,15 +15,15 @@ export class HomeRuBlogSeventySixComponent {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Психология торговли Уильяма Ганна - Arapov.trade'
+      'Психология трейдинга по Уильяму Ганну: секреты успеха | ArapovTrade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Разбираем психологические принципы торговли Уильяма Ганна, его подход к самоконтролю, управлению рисками и эмоциональной устойчивости трейдера. Узнайте, как применять его методику в современном трейдинге.',
+        'Психология трейдинга по Уильяму Ганну: развивайте самоконтроль, управление рисками и устойчивость. Применяйте принципы Ганна в современной торговле и достигайте успеха!',
     });
-    this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
+   
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-18' });
     this.meta.updateTag({
       property: 'og:image',
@@ -31,7 +31,7 @@ export class HomeRuBlogSeventySixComponent {
     });
     this.meta.updateTag({
       name: 'headline',
-      content: 'Психология торговли Уильяма Ганна',
+      content: 'Психология трейдинга по Уильяму Ганну: секреты успеха | ArapovTrade',
     });
 
     this.gerRandom();

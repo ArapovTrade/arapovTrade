@@ -19,7 +19,7 @@ export class HomeRuBlogFourtySevenComponent implements OnInit {
     this.meta.addTag({
       name: 'description',
       content:
-        'Фундаментальный анализ рынка: как применять? Руководство от ArapovTrade по основам, стратегиям и трейдингу.',
+        'Фундаментальный анализ рынка: как применять в трейдинге. Узнайте об основных принципах, стратегиях и макроэкономических факторах с ArapovTrade.',
     });
     
     this.meta.updateTag({ name: 'datePublished', content: '2025-01-19' });

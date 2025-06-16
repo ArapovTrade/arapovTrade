@@ -15,15 +15,15 @@ export class HomeRuBlogSixtyThreeComponent {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Как Smart Money управляют толпой? Манипуляции новостями и настроением - Arapov.trade'
+      'Smart Money: манипуляции рынком | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Разбираем, как Smart Money манипулируют рынком, используя новости и настроение толпы. Как крупные игроки создают тренды, заманивают розничных трейдеров в ловушки и собирают ликвидность.',
+        'Узнайте, как Smart Money манипулирует рынком через новости и толпу! Советы по распознанию трендов, ловушек и ликвидности для трейдинга с Arapov.trade',
     });
-    this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
+     
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-08' });
     this.meta.updateTag({
       property: 'og:image',

@@ -15,15 +15,15 @@ export class HomeRuBlogSixtySixComponent {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Как анализировать уровни максимального скопления объемов - Arapov.trade'
+      'Анализ объемов: как находить ключевые уровни | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Полное руководство по анализу уровней максимального объема. Разбираем, как находить зоны крупного интереса, определять ключевые уровни поддержки и сопротивления и торговать с учетом объемного анализа.',
+        'Узнайте, как анализировать уровни максимального объема! Советы по поиску зон интереса, уровней поддержки и сопротивления для трейдинга с Arapov.trade',
     });
-    this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
+    
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-11' });
     this.meta.updateTag({
       property: 'og:image',

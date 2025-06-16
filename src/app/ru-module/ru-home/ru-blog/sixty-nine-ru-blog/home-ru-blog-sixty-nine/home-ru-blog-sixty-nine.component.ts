@@ -15,15 +15,15 @@ export class HomeRuBlogSixtyNineComponent {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Чем отличается анализ объемов на рынке акций и на рынке фьючерсов - Arapov.trade'
+      'Анализ объемов: акции vs фьючерсы | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Полное руководство по отличиям в анализе объемов на фондовом и фьючерсном рынках. Разбираем ключевые особенности работы с объемами, методики анализа и практическое применение объемных индикаторов.',
+        'Узнайте отличия анализа объемов на рынках акций и фьючерсов! Практические методы и индикаторы для успешного трейдинга с Arapov.trade',
     });
-    this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
+    
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-13' });
     this.meta.updateTag({
       property: 'og:image',

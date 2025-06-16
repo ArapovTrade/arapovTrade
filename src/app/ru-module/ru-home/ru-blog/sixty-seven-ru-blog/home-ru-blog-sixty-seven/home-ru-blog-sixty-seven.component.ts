@@ -15,15 +15,15 @@ export class HomeRuBlogSixtySevenComponent {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Почему важно анализировать объемы в рамках текущих трендов на рынке - Arapov.trade'
+      'Объемы в трейдинге: как анализировать | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Разбираем, почему анализ объемов является ключевым инструментом в определении силы трендов, точек разворота и подтверждении рыночных движений. Узнайте, как объемный анализ помогает избежать ложных сигналов и торговать с высокой точностью.',
+        'Узнайте, как анализ объемов улучшает трейдинг! Практические советы по оценке трендов, точек разворота и избежанию ложных сигналов с Arapov.trade',
     });
-    this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
+     
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-12' });
     this.meta.updateTag({
       property: 'og:image',

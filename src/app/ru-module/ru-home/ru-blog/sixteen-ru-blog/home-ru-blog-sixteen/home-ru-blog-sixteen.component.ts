@@ -14,12 +14,12 @@ export class HomeRuBlogSixteenComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Трендовые каналы: Полное руководство');
+    this.titleService.setTitle('Трендовые каналы в трейдинге: как использовать | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Все, что нужно знать о трендовых каналах в трейдинге: определение, построение, стратегии и советы.',
+        'Узнайте, как использовать трендовые каналы в трейдинге! Полное руководство по их построению, стратегиям торговли и советам для успеха с Arapov.trade',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-15' });
     this.meta.updateTag({
