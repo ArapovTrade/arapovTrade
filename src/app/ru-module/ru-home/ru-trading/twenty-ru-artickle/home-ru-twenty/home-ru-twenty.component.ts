@@ -15,16 +15,16 @@ export class HomeRuTwentyComponent implements OnInit {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Анализ спроса и предложения в рамках концепции Питера Стеделмайера - Arapov.trade'
+      'Market Profile и анализ спроса и предложения | Arapov.trade'
     );
+
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Узнайте, как анализировать рынок с помощью концепции Питера Стеделмайера. Что такое Market Profile, как учитывать спрос и предложение в трейдинге и какие инструменты применять для успешной торговли.',
+        'Что такое Market Profile и как его использовать для анализа спроса и предложения. Метод Питера Стеделмайера для трейдинга на основе поведения рынка.',
     });
 
-     
     this.meta.updateTag({ name: 'datePublished', content: '2025-03-27' });
     this.meta.updateTag({
       property: 'og:image',

@@ -14,13 +14,12 @@ export class HomeRuEightComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Валюты и их котировки');
-
-    this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+    this.titleService.setTitle('Валюты и котировки в трейдинге | Arapov.trade');
+    this.meta.updateTag({ name: 'robots', content: 'index' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Узнайте, что такое валюты, их виды, особенности котировок и как они используются в международной торговле и финансовых рынках. Полное руководство для трейдеров и инвесторов.',
+        'Узнайте о валютах и их котировках! Виды, особенности и использование в трейдинге и финансах на Arapov.trade.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-11' });
     this.meta.updateTag({

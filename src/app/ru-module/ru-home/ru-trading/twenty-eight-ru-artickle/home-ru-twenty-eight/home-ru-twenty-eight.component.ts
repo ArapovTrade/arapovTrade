@@ -15,13 +15,13 @@ export class HomeRuTwentyEightComponent implements OnInit {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Ценовые фигуры в техническом анализе: полное руководство - Arapov.trade'
+      'Ценовые фигуры в трейдинге: как использовать | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Подробный обзор ключевых ценовых фигур в техническом анализе: разворотные и продолжительные модели, их применение и ограничения. ',
+        'Обзор ключевых ценовых фигур в трейдинге: разворотные и продолжительные модели, как их применять на практике.',
     });
     this.gerRandom();
   }

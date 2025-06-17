@@ -14,13 +14,12 @@ export class HomeRuFourComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Биржевой и внебиржевой рынки');
-
-    this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+    this.titleService.setTitle('Биржевые и внебиржевые рынки | Arapov.trade');
+    this.meta.updateTag({ name: 'robots', content: 'index' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Узнайте о различиях между биржевыми и внебиржевыми рынками, их особенностях, преимуществах и недостатках. Полное руководство для трейдеров и инвесторов.',
+        'Узнайте о биржевых и внебиржевых рынках! Различия, особенности и советы для трейдеров и инвесторов на Arapov.trade.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-10' });
     this.meta.updateTag({

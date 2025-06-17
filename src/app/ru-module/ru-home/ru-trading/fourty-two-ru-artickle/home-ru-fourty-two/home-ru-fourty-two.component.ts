@@ -15,13 +15,13 @@ export class HomeRuFourtyTwoComponent implements OnInit {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Таймфреймы в трейдинге: как выбрать лучший временной интервал? - Arapov.trade'
+      'Таймфреймы в трейдинге: выбор интервала | Arapov.trade'
     );
-    this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+    this.meta.updateTag({ name: 'robots', content: 'index' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Разбираем, какие бывают таймфреймы в трейдинге, как выбрать подходящий временной интервал и на каком таймфрейме лучше торговать новичку. Полное руководство для трейдеров.',
+        'Узнайте, как выбрать таймфрейм в трейдинге! Подходящие интервалы для новичков и стратегии торговли на Arapov.trade.',
     });
     this.gerRandom();
   }

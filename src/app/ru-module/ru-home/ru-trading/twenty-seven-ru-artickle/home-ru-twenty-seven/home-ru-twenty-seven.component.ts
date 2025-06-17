@@ -15,14 +15,16 @@ export class HomeRuTwentySevenComponent implements OnInit {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Технический анализ рынка. Основные виды графиков - Arapov.trade'
+      'Технический анализ: виды графиков и тренды | Arapov.trade'
     );
+
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Подробный разбор основ технического анализа рынка: виды графиков, тренды и уровни поддержки и сопротивления.',
+        'Основы технического анализа: виды графиков, тренды и уровни поддержки и сопротивления для эффективной торговли.',
     });
+
     this.gerRandom();
   }
   randomArticleRus: any = [];

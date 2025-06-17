@@ -15,13 +15,13 @@ export class HomeRuThirtyEightComponent implements OnInit {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Специфика управления капиталом в трейдинге - Arapov.trade'
+      'Управление капиталом в трейдинге | Arapov.trade'
     );
-    this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+    this.meta.updateTag({ name: 'robots', content: 'index' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Полное руководство по управлению капиталом в трейдинге. Риск-менеджмент, мани-менеджмент, контроль убытков и эффективные стратегии управления депозитом.',
+        'Узнайте, как управлять капиталом в трейдинге! Риск-менеджмент, мани-менеджмент и стратегии для защиты депозита на Arapov.trade.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-08' });
     this.meta.updateTag({

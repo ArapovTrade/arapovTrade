@@ -14,13 +14,16 @@ export class HomeRuTwentyThreeComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Мировые фондовые индексы - Arapov.trade');
+    this.titleService.setTitle(
+      'Мировые фондовые индексы: обзор и влияние | Arapov.trade'
+    );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Обзор ключевых мировых фондовых индексов и их значения для мировой экономики.',
+        'Подробный обзор мировых фондовых индексов, их роль в экономике и советы для инвесторов от Arapov.trade.',
     });
+
     this.gerRandom();
   }
   randomArticleRus: any = [];

@@ -14,13 +14,13 @@ export class HomeRuNineComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Формирование курса валют');
+    this.titleService.setTitle('Курс валют: ключевые факторы и влияние | Arapov.trade');
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Узнайте, как формируется курс валют, какие факторы на него влияют и как это влияет на мировую экономику. Полное руководство для инвесторов и трейдеров.',
+        'Узнайте, как формируется курс валют: основные экономические и рыночные факторы, их влияние на цены и практические советы трейдерам от Arapov.trade.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-11' });
     this.meta.updateTag({

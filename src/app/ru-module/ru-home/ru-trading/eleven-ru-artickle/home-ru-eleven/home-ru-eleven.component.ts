@@ -15,16 +15,15 @@ export class HomeRuElevenComponent implements OnInit {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Как начать торговать на криптобирже - Arapov.trade'
+      'Как начать торговать на криптобирже | Arapov.trade'
     );
-
-    this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+    this.meta.updateTag({ name: 'robots', content: 'index' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Узнайте, как начать торговать на криптовалютной бирже: выбор платформы, регистрация, настройка аккаунта, стратегии и советы по управлению рисками.',
+        'Узнайте, как начать торговать на криптобирже! Выбор платформы, регистрация, стратегии и советы по управлению рисками на Arapov.trade.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-01-29' });
     this.meta.updateTag({
       property: 'og:image',

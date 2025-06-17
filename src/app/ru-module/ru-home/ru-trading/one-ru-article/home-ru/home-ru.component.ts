@@ -15,14 +15,16 @@ export class HomeRuComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.titleService.setTitle('10 советов начинающим трейдерам');
-
+    this.titleService.setTitle(
+      '10 советов начинающим трейдерам | Arapov.trade'
+    );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Полезные советы для начинающих трейдеров. Узнайте, как управлять рисками, разрабатывать стратегию и избегать ошибок в трейдинге.',
+        'Узнайте 10 ключевых советов для начинающих трейдеров: управление рисками, разработка стратегии и избегание ошибок. Советы от Arapov.trade.',
     });
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-07' });
     this.meta.updateTag({
       property: 'og:image',

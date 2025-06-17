@@ -15,15 +15,15 @@ export class HomeRuTwentyNineComponent implements OnInit {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Почему 90% трейдеров теряют деньги? Ловушки, созданные Смарт Мани - Arapov.trade'
+      'Почему трейдеры теряют деньги | Ловушки Смарт Мани'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Узнайте, почему 90% трейдеров теряют деньги и какие ловушки расставляют Смарт Мани. Разбираем главные ошибки, манипуляции и способы избежать финансовых потерь на рынке.',
+        'Главные ошибки трейдеров, ловушки Смарт Мани и как избежать потерь. Полезное руководство для начинающих на Arapov.trade.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
+    
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-04' });
     this.meta.updateTag({
       property: 'og:image',

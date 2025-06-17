@@ -14,13 +14,16 @@ export class HomeRuTwentySixComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Технический анализ рынка - Arapov.trade');
+    this.titleService.setTitle(
+      'Технический анализ рынка – методы и принципы | Arapov.trade'
+    );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Разбор основ технического анализа рынка, его принципов и ключевых методов. ',
+        'Разбор основ технического анализа рынка: ключевые методы, виды графиков, тренды, уровни поддержки и сопротивления для успешной торговли.',
     });
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-18' });
     this.meta.updateTag({
       property: 'og:image',

@@ -15,15 +15,15 @@ export class HomeRuThirtySixComponent implements OnInit {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Как Smart Money используют ложные пробои для сбора ликвидности? - Arapov.trade'
+      'Smart Money и ложные пробои: как работают | Arapov.trade'
     );
-    this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+    this.meta.updateTag({ name: 'robots', content: 'index' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Разберем, как Smart Money манипулируют рынком с помощью ложных пробоев, собирая ликвидность перед движением в свою сторону. Как определить ловушки и не попасться в манипуляции?',
+        'Узнайте, как Smart Money создают ложные пробои для сбора ликвидности! Способы распознавания ловушек в трейдинге на Arapov.trade.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-05' });
     this.meta.updateTag({
       property: 'og:image',

@@ -14,13 +14,14 @@ export class HomeRuFifteenComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Основные центральные банки');
-
-    this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+    this.titleService.setTitle(
+      'Центральные банки: функции и влияние | Arapov.trade'
+    );
+    this.meta.updateTag({ name: 'robots', content: 'index' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Узнайте о ключевых центральных банках мира, их функциях, заседаниях и влиянии на мировую экономику. Подробное руководство для трейдеров и инвесторов.',
+        'Узнайте о главных центральных банках мира! Их функции, заседания и влияние на экономику для трейдеров на Arapov.trade.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-13' });
     this.meta.updateTag({

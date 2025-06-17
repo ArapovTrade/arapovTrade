@@ -14,13 +14,14 @@ export class HomeRuThreeComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Знакомство с биржей: Полное руководство');
-
-    this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+    this.titleService.setTitle(
+      'Знакомство с биржей: полное руководство | Arapov.trade'
+    );
+    this.meta.updateTag({ name: 'robots', content: 'index' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Узнайте, что такое биржа, её виды, функции и особенности торговли на бирже. Полное руководство для новичков и профессионалов.',
+        'Узнайте, что такое биржа! Виды, функции, особенности торговли и советы для новичков и профессионалов в трейдинге на Arapov.trade.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-10' });
     this.meta.updateTag({

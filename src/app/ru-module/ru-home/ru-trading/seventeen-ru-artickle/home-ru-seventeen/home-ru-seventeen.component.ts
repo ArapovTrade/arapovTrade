@@ -15,16 +15,16 @@ export class HomeRuSeventeenComponent implements OnInit {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Что такое Биткоин (Bitcoin) и как это работает? - Arapov.trade'
+      'Что такое Биткоин и как он работает | Arapov.trade'
     );
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Узнайте, что такое Биткоин, как он работает, какие у него преимущества и риски, а также как использовать криптовалюту для инвестиций и торговли.',
+        'Что такое Биткоин и как он работает? Узнайте его преимущества, риски и как использовать криптовалюту в инвестициях и трейдинге с Arapov.trade.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
+    
     this.meta.updateTag({ name: 'datePublished', content: '2025-01-31' });
     this.meta.updateTag({
       property: 'og:image',

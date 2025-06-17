@@ -14,13 +14,12 @@ export class HomeRuOneComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Деривативы и их виды');
-
-    this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+    this.titleService.setTitle('Деривативы: виды и применение | Arapov.trade');
+    this.meta.updateTag({ name: 'robots', content: 'index' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Узнайте, что такое деривативы, их основные виды, применение и влияние на финансовые рынки. Полное руководство для трейдеров и инвесторов.',
+        'Узнайте, что такое деривативы! Виды, применение и их влияние на финансовые рынки для трейдеров на Arapov.trade.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-10' });
     this.meta.updateTag({

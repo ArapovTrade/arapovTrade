@@ -14,15 +14,15 @@ export class HomeRuTwentyOneComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Анализ рынка FOREX - Arapov.trade');
+    this.titleService.setTitle('Как проводить анализ рынка FOREX | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Анализ рынка FOREX: ключевые аспекты, влияющие на принятие решений трейдерами.',
+        'Как анализировать рынок FOREX: типы анализа, влияющие факторы и советы для трейдеров. Узнайте больше на Arapov.trade.',
     });
 
-    this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
+    
     this.meta.updateTag({ name: 'datePublished', content: '2025-01-19' });
     this.meta.updateTag({
       property: 'og:image',

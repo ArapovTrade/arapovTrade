@@ -15,16 +15,16 @@ export class HomeRuSixteenComponent implements OnInit {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Криптовалюта Ethereum – что это такое и как она работает? - Arapov.trade'
+      'Ethereum: как работает и зачем он нужен | Arapov.trade'
     );
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Ethereum – вторая по капитализации криптовалюта, предлагающая умные контракты и децентрализованные приложения. Узнайте, как работает Ethereum и какие у него перспективы.',
+        'Ethereum — криптовалюта с умными контрактами и dApp. Узнайте, как она работает, зачем нужна и какие перспективы у Ethereum на Arapov.trade.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
+    
     this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
     this.meta.updateTag({
       property: 'og:image',

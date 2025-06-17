@@ -14,15 +14,15 @@ export class HomeRuSixComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Алгоритмические стейблкоины  - Arapov.trade');
+    this.titleService.setTitle('Алгоритмические стейблкоины: как работают | Arapov.trade');
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Разбираем, что такое алгоритмические стейблкоины, как они работают, их преимущества и риски. Узнайте, стоит ли использовать этот вид криптовалюты.',
+        'Узнайте, как работают алгоритмические стейблкоины, в чём их преимущества и риски. Полное руководство для трейдеров и инвесторов на Arapov.trade.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
+   
     this.meta.updateTag({ name: 'datePublished', content: '2025-01-29' });
     this.meta.updateTag({
       property: 'og:image',

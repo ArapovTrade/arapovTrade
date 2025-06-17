@@ -14,15 +14,16 @@ export class HomeRuTwentyTwoComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Экономические факторы - Arapov.trade');
-    this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+    this.titleService.setTitle(
+      'Экономические факторы в трейдинге | Arapov.trade'
+    );
+    this.meta.updateTag({ name: 'robots', content: 'index' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Разбор ключевых экономических факторов, влияющих на валютные курсы, и их значимость для анализа.',
+        'Узнайте, как экономические факторы влияют на валютные курсы! Ключевые аспекты и их роль в анализе трейдинга на Arapov.trade.',
     });
 
-    this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
     this.meta.updateTag({ name: 'datePublished', content: '2025-01-20' });
     this.meta.updateTag({
       property: 'og:image',

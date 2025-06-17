@@ -15,15 +15,15 @@ export class HomeRuTwentyFiveComponent implements OnInit {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Основные показатели экономического роста - Arapov.trade'
+      'Экономические показатели роста: что влияет на рынки | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Разбор ключевых экономических показателей, влияющих на финансовые рынки.',
+        'Узнайте, какие экономические показатели важны для роста: ВВП, инфляция, безработица и их влияние на финансовые рынки.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
+  
     this.meta.updateTag({ name: 'datePublished', content: '2025-01-17' });
     this.meta.updateTag({
       property: 'og:image',

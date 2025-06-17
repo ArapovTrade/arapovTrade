@@ -14,13 +14,14 @@ export class HomeRuFourteenComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Риск кредитного плеча на Форекс');
-
-    this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+    this.titleService.setTitle(
+      'Риск кредитного плеча на Форекс | Arapov.trade'
+    );
+    this.meta.updateTag({ name: 'robots', content: 'index' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Разберём, какие риски связаны с использованием кредитного плеча на Форекс, и как управлять ими для минимизации потерь.',
+        'Узнайте о рисках кредитного плеча на Форекс! Как управлять ими и минимизировать потери в торговле на Arapov.trade.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-07' });
     this.meta.updateTag({

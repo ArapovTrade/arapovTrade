@@ -15,15 +15,17 @@ export class HomeRuTenComponent implements OnInit {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Позиции в трейдинге: виды, перенос и дата валютирования'
+      'Позиции в трейдинге: виды и перенос | Arapov.trade'
     );
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+
     this.meta.addTag({
       name: 'description',
       content:
-        'Узнайте, что такое позиции в трейдинге, их типы, механизм переноса и дату валютирования. Полное руководство для трейдеров и инвесторов, содержащее уникальную информацию и примеры.',
+        'Что такое позиции в трейдинге? Узнайте виды позиций, как происходит перенос и что значит дата валютирования. Полезно трейдерам и инвесторам.',
     });
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-13' });
     this.meta.updateTag({
       property: 'og:image',

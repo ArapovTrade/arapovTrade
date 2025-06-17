@@ -14,14 +14,16 @@ export class HomeRuSevenComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Рынок FOREX');
+    this.titleService.setTitle('Что такое рынок FOREX: основы и стратегии | Arapov.trade');
 
-    this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
-      name: 'description',
-      content:
-        'Полное руководство по рынку FOREX. Узнайте о его особенностях, участниках, торговых сессиях и ключевых стратегиях для начинающих и профессионалов.',
-    });
+this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+
+this.meta.addTag({
+  name: 'description',
+  content:
+    'Узнайте, как работает рынок FOREX: особенности, участники, торговые сессии и стратегии. Полное руководство для трейдера от Arapov.trade.',
+});
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-11' });
     this.meta.updateTag({
       property: 'og:image',

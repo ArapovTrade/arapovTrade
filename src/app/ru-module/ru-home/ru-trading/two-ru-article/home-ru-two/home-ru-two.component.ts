@@ -14,13 +14,12 @@ export class HomeRuTwoComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Основы рынка. Словарь терминов - Arapov.trade');
-
-    this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+    this.titleService.setTitle('Словарь терминов рынка: основы | Arapov.trade');
+    this.meta.updateTag({ name: 'robots', content: 'index' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Полное руководство по основным терминам финансового рынка. Разбираем ключевые понятия фондового, валютного и криптовалютного рынков, а также стратегии трейдинга и анализа.',
+        'Узнайте ключевые термины финансового рынка! Основы фондового, валютного и криптовалютного трейдинга в словаре на Arapov.trade.',
     });
 
     this.gerRandom();

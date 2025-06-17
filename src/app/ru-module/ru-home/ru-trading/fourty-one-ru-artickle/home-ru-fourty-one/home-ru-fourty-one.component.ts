@@ -14,12 +14,14 @@ export class HomeRuFourtyOneComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Торговый план трейдера');
-    this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+    this.titleService.setTitle(
+      'Торговый план трейдера: как составить | Arapov.trade'
+    );
+    this.meta.updateTag({ name: 'robots', content: 'index' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Узнайте, как составить эффективный торговый план трейдера. Ключевые компоненты, примеры и советы по успешному планированию.',
+        'Узнайте, как составить торговый план трейдера! Ключевые компоненты и советы для успешного трейдинга на Arapov.trade.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-08' });
     this.meta.updateTag({

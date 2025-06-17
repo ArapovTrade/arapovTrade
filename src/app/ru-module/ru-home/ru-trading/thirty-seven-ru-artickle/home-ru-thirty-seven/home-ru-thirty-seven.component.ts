@@ -15,15 +15,14 @@ export class HomeRuThirtySevenComponent implements OnInit {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Что такое `Stop Hunting` и как Smart Money выбивают стопы трейдеров? - Arapov.trade'
+      'Stop Hunting: как Smart Money выбивают стопы | Arapov.trade'
     );
-    this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+    this.meta.updateTag({ name: 'robots', content: 'index' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Разбираем, как работает Stop Hunting, почему Smart Money выбивают стопы трейдеров и как защитить свой капитал от манипуляций крупных игроков.',
+        'Узнайте, что такое Stop Hunting! Как Smart Money выбивают стопы и как защитить капитал в трейдинге на Arapov.trade.',
     });
-     
     this.meta.updateTag({ name: 'datePublished', content: '2025-03-31' });
     this.meta.updateTag({
       property: 'og:image',

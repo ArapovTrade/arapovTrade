@@ -15,13 +15,13 @@ export class HomeRuThirtyFiveComponent implements OnInit {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Торговая система: виды и оптимизация - Arapov.trade'
+      'Торговая система: виды и оптимизация | Arapov.trade'
     );
-    this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+    this.meta.updateTag({ name: 'robots', content: 'index' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Узнайте, что такое торговая система, её виды, особенности автоматизации и как выбрать подходящую для ваших целей стратегию торговли.',
+        'Узнайте о торговых системах в трейдинге! Виды, оптимизация и выбор стратегии для успешной торговли на Arapov.trade.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-08' });
     this.meta.updateTag({

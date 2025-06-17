@@ -15,15 +15,15 @@ export class HomeRuThirtyComponent implements OnInit {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Imbalance и FVG (Fair Value Gaps): Как находить сильные зоны ликвидности? - Arapov.trade'
+      'Imbalance и FVG: зоны ликвидности | Arapov.trade'
     );
-    this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+    this.meta.updateTag({ name: 'robots', content: 'index' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Разбираем, что такое Imbalance и FVG (Fair Value Gaps), как их находить на графике и использовать в торговле. Узнайте, почему эти зоны важны для определения ликвидности и как применять их в стратегиях.',
+        'Узнайте, что такое Imbalance и FVG! Как находить зоны ликвидности и использовать их в торговых стратегиях на Arapov.trade.',
     });
-    
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-03-30' });
     this.meta.updateTag({
       property: 'og:image',

@@ -15,13 +15,13 @@ export class HomeRuThirtyNineComponent implements OnInit {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Соотношение прибыли и убытка  в трейдинге - Arapov.trade'
+      'Соотношение прибыли и убытка в трейдинге | Arapov.trade'
     );
-    this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+    this.meta.updateTag({ name: 'robots', content: 'index' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Как правильно рассчитать соотношение прибыли и убытка в трейдинге? Узнайте о R/R Ratio, управлении рисками и стратегиях повышения эффективности торговли.',
+        'Узнайте, как рассчитать соотношение прибыли и убытка! R/R Ratio, управление рисками и стратегии трейдинга на Arapov.trade.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-08' });
     this.meta.updateTag({
