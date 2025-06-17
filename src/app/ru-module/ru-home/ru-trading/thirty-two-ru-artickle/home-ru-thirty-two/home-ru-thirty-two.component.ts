@@ -21,7 +21,7 @@ export class HomeRuThirtyTwoComponent implements OnInit {
     this.meta.addTag({
       name: 'description',
       content:
-        'Узнайте, что такое стоп-ордер в трейдинге! Виды, преимущества, недостатки и стратегии применения Stop Order для успешной торговли на крипто- и фондовых рынках на Arapov.trade.',
+        'Узнайте, что такое стоп-ордер в трейдинге: виды, плюсы, минусы и стратегии для торговли на крипто- и фондовых рынках на Arapov.trade.',
     });
 
     this.meta.updateTag({ name: 'datePublished', content: '2025-03-29' });

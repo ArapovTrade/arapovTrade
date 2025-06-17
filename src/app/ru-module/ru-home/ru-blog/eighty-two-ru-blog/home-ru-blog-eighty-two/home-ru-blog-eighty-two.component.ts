@@ -21,7 +21,7 @@ export class HomeRuBlogEightyTwoComponent {
     this.meta.addTag({
       name: 'description',
       content:
-        'Флаг и вымпел: как торговать пробой тренда? Руководство от ArapovTrade по паттернам и стратегиям',
+        'Флаг и вымпел: как торговать пробой тренда? Руководство от ArapovTrade по паттернам, стратегиям и анализу для успешной торговли.',
     });
      
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-21' });

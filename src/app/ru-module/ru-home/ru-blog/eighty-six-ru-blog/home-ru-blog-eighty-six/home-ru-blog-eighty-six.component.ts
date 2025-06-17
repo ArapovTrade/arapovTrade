@@ -21,7 +21,7 @@ export class HomeRuBlogEightySixComponent {
     this.meta.addTag({
       name: 'description',
       content:
-        'Паттерн 1-2-3: как торговать разворот тренда? Руководство от ArapovTrade по анализу и стратегиям',
+        'Паттерн 1-2-3: как торговать разворот тренда? Руководство от ArapovTrade по анализу, стратегиям и успеху на крипто- и фондовых рынках.',
     });
     
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-23' });

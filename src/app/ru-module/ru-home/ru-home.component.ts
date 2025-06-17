@@ -46,7 +46,7 @@ export class RuHomeComponent implements OnInit {
     this.meta.addTag({
       name: 'description',
       content:
-        'Авторские ⏩ курсы трейдинга от Игоря Арапова. ⭐ Обучение трейдингу с нуля от ArapovTrade.',
+        'Авторские курсы трейдинга от Игоря Арапова: обучение с нуля, стратегии, психология и успех на крипто и фондовых рынках с ArapovTrade.',
     });
     this.meta.addTag({
       name: 'keywords',

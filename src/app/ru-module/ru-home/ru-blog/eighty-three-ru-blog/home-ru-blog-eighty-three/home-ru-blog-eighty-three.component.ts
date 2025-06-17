@@ -21,7 +21,7 @@ export class HomeRuBlogEightyThreeComponent {
     this.meta.addTag({
       name: 'description',
       content:
-        'Чашка с ручкой: как торговать пробой тренда? Руководство от ArapovTrade по паттерну и стратегиям',
+        'Чашка с ручкой: как торговать пробой тренда? Руководство от ArapovTrade по паттерну, стратегиям и успеху на крипто- и фондовых рынках.',
     });
      
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-21' });

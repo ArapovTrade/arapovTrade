@@ -21,7 +21,7 @@ export class HomeRuBlogSeventyFiveComponent {
     this.meta.addTag({
       name: 'description',
       content:
-        'Трейдинг: азарт или бизнес? Советы от ArapovTrade по психологии и стратегиям для успеха на рынках.',
+        'Трейдинг: азарт или бизнес? Советы от ArapovTrade по психологии, стратегиям и управлению рисками для успеха на крипто- и фондовых рынках.',
     });
     
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-17' });
