@@ -15,15 +15,14 @@ export class HomeRuBlogThirtyNineComponent implements OnInit {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Где безопасно хранить криптовалюту? - Arapov.trade'
+      'Где безопасно хранить криптовалюту | Arapov.trade'
     );
-    this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+    this.meta.updateTag({ name: 'robots', content: 'index' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Узнайте, где безопасно хранить криптовалюту: советы по выбору кошельков, принципы безопасности и лучшие практики. Полное руководство для защиты ваших активов.',
+        'Узнайте, как безопасно хранить криптовалюту! Советы по выбору кошельков, безопасности и защите активов на Arapov.trade.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
     this.meta.updateTag({ name: 'datePublished', content: '2025-01-23' });
     this.meta.updateTag({
       property: 'og:image',

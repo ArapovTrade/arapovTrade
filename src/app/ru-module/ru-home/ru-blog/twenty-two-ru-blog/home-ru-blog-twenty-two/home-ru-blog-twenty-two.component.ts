@@ -15,16 +15,15 @@ export class HomeRuBlogTwentyTwoComponent implements OnInit {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Что такое арбитраж криптовалют? - Arapov.trade'
+      'Арбитраж криптовалют: что это и как заработать | Arapov.trade'
     );
-    this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+    this.meta.updateTag({ name: 'robots', content: 'index' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Что такое арбитраж криптовалют? Узнайте об основах и секретах успеха этой стратегии заработка на разнице цен. Полное руководство для начинающих и профессиональных трейдеров.',
+        'Узнайте, что такое арбитраж криптовалют! Основы, стратегии и секреты заработка на разнице цен для трейдеров на Arapov.trade.',
     });
 
-    this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
     this.meta.updateTag({ name: 'datePublished', content: '2025-01-21' });
     this.meta.updateTag({
       property: 'og:image',

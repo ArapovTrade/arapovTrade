@@ -14,13 +14,16 @@ export class HomeRuBlogTwentySevenComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Как читать японские свечи');
+    this.titleService.setTitle(
+      'Японские свечи в трейдинге: как читать | Arapov.trade'
+    );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        "Детальное руководство по японским свечам: их чтению, формациям и применению в трейдинге. Узнайте больше о 'молоте', 'повешенном' и других ключевых паттернах.",
+        'Как читать японские свечи в трейдинге: разбор паттернов «молот», «повешенный» и других формаций для точного анализа рынка.',
     });
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-16' });
     this.meta.updateTag({
       property: 'og:image',

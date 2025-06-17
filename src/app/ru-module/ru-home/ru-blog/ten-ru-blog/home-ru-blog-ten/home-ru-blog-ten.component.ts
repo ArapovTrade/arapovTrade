@@ -14,12 +14,12 @@ export class HomeRuBlogTenComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Причины потери депозита');
+    this.titleService.setTitle('Потеря депозита в трейдинге: как избежать? | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Узнайте основные причины потери депозита трейдерами, включая ошибки стратегии, отсутствие дисциплины и переоценку возможностей. Советы по предотвращению потерь.',
+        'Узнайте, почему трейдеры теряют депозит! Ошибки стратегии, отсутствие дисциплины и переоценка рисков. Советы по предотвращению потерь на Arapov.trade',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-09' });
     this.meta.updateTag({

@@ -14,12 +14,12 @@ export class HomeRuBlogThirtySixComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Особенности рынка криптовалют');
-    this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+    this.titleService.setTitle('Особенности рынка криптовалют | Arapov.trade');
+    this.meta.updateTag({ name: 'robots', content: 'index' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Узнайте, чем рынок криптовалют отличается от других рынков, его ключевые особенности и стратегии торговли, которые помогут вам заработать.',
+        'Узнайте особенности рынка криптовалют! Ключевые отличия, стратегии торговли и советы для успешного заработка на Arapov.trade.',
     });
     this.gerRandom();
   }

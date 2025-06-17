@@ -14,12 +14,14 @@ export class HomeRuBlogTwoComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Дивергенция на индикаторах');
-    this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+    this.titleService.setTitle(
+      'Дивергенция на индикаторах в трейдинге | Arapov.trade'
+    );
+    this.meta.updateTag({ name: 'robots', content: 'index' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Узнайте всё о дивергенции на индикаторах: что это, как её распознавать, популярные стратегии и индикаторы для анализа. Полное руководство для трейдеров.',
+        'Узнайте, что такое дивергенция на индикаторах! Как её распознавать и использовать в стратегиях трейдинга на Arapov.trade.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-13' });
     this.meta.updateTag({

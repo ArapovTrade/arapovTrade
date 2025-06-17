@@ -14,14 +14,16 @@ export class HomeRuBlogTwentySixComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Виды ордеров на бирже - Arapov.trade');
+    this.titleService.setTitle(
+      'Виды ордеров на бирже: полный обзор | Arapov.trade'
+    );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Какие бывают виды ордеров на бирже? Как выбрать подходящий тип ордера для трейдинга? Полное руководство по рыночным, лимитным, стоп-ордерам и сложным ордерам. Особенности применения различных ордеров в торговле.',
+        'Виды ордеров на бирже: рыночные, лимитные, стоп-ордера и сложные ордера. Узнайте, как выбирать и применять каждый тип для эффективного трейдинга.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-01-14' });
     this.meta.updateTag({
       property: 'og:image',

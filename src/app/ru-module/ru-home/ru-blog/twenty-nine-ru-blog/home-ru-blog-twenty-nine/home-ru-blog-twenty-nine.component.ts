@@ -15,14 +15,16 @@ export class HomeRuBlogTwentyNineComponent implements OnInit {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Быстрый старт в трейдинге: руководство для новичков'
+      'Быстрый старт в трейдинге для новичков | Arapov.trade'
     );
+
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Узнайте, как быстро начать в трейдинге, овладеть основными навыками и избежать распространённых ошибок. Полное руководство для начинающих.',
+        'Узнайте, как быстро начать в трейдинге, освоить ключевые навыки и избежать распространённых ошибок. Полное руководство для новичков от ArapovTrade.',
     });
+
     this.gerRandom();
   }
   randomArticleRus: any = [];

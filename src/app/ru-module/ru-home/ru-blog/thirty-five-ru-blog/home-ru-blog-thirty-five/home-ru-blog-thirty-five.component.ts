@@ -14,12 +14,12 @@ export class HomeRuBlogThirtyFiveComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Основы Трейдинга для Начинающих');
+    this.titleService.setTitle('Основы трейдинга для начинающих | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Узнайте основы трейдинга для начинающих. Полное руководство по видам трейдинга, стратегиям, рискам и важным советам для успешного старта.',
+        'Узнайте основы трейдинга для начинающих! Руководство по стратегиям, рискам и советам для успешного старта на Arapov.trade.',
     });
     this.gerRandom();
   }

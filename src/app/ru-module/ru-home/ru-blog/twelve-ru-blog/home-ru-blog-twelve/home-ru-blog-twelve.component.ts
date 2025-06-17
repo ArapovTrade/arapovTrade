@@ -14,12 +14,12 @@ export class HomeRuBlogTwelveComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Торговля уровнями: Полное руководство');
-    this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+    this.titleService.setTitle('Торговля уровнями в трейдинге | Arapov.trade');
+    this.meta.updateTag({ name: 'robots', content: 'index' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Детальное руководство по торговле уровнями для начинающих трейдеров. Как определять, использовать и торговать ключевые уровни.',
+        'Узнайте, как торговать уровнями в трейдинге! Полное руководство по определению и использованию ключевых уровней на Arapov.trade.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-14' });
     this.meta.updateTag({

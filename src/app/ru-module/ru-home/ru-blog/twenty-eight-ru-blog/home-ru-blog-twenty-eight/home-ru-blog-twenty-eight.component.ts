@@ -14,17 +14,18 @@ export class HomeRuBlogTwentyEightComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle(
-      'Что такое альтернативные блокчейны? - Arapov.trade'
-    );
-    this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
-      name: 'description',
-      content:
-        'Узнайте, что такое альтернативные блокчейны, как они работают, в чем их преимущества и как они отличаются от Bitcoin и Ethereum. Полный гид по блокчейнам следующего поколения.',
-    });
+   this.titleService.setTitle(
+  'Альтернативные блокчейны: обзор и отличия | Arapov.trade'
+);
+this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+this.meta.addTag({
+  name: 'description',
+  content:
+    'Что такое альтернативные блокчейны: как они работают, их преимущества и отличия от Bitcoin и Ethereum. Обзор перспективных сетей нового поколения.',
+});
 
-    this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
+
+    
     this.meta.updateTag({ name: 'datePublished', content: '2025-01-22' });
     this.meta.updateTag({
       property: 'og:image',

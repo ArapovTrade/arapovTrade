@@ -14,14 +14,14 @@ export class HomeRuBlogTwentyComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Что такое скам в криптовалюте - Arapov.trade');
+    this.titleService.setTitle('Что такое скам в криптовалюте | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Что такое скам в криптовалюте? Узнайте о популярных мошеннических схемах, таких как фейковые ICO, пирамиды и фишинг. Как защитить свои средства и минимизировать риски? Полное руководство для трейдеров и инвесторов.',
+        'Что такое скам в криптовалюте: популярные мошеннические схемы — фейковые ICO, пирамиды, фишинг. Как защитить средства и снизить риски трейдерам и инвесторам.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-01-21' });
     this.meta.updateTag({
       property: 'og:image',

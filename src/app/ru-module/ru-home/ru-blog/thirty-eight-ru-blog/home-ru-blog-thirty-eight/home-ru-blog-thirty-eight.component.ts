@@ -14,14 +14,14 @@ export class HomeRuBlogThirtyEightComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Принципы хранения криптовалют - Arapov.trade');
+    this.titleService.setTitle('Хранение криптовалют: принципы и безопасность | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Узнайте о принципах хранения криптовалют, выборе кошельков, безопасности и стратегиях защиты активов. Полное руководство для инвесторов.',
+        'Как безопасно хранить криптовалюту? Выбор кошельков, защита активов и советы инвесторам по безопасности на Arapov.trade.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
+     
     this.meta.updateTag({ name: 'datePublished', content: '2025-01-23' });
     this.meta.updateTag({
       property: 'og:image',

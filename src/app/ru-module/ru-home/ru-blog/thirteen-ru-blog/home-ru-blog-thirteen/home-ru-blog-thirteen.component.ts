@@ -15,13 +15,13 @@ export class HomeRuBlogThirteenComponent implements OnInit {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Волны Эллиотта: Основы, структура и применение - Arapov.trade'
+      'Волны Эллиотта: основы и применение | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Детальное описание теории волн Эллиотта: принципы, структура и применение в техническом анализе.',
+        'Узнайте основы теории волн Эллиотта! Принципы, структура и применение в трейдинге для точного анализа на Arapov.trade',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-15' });
     this.meta.updateTag({

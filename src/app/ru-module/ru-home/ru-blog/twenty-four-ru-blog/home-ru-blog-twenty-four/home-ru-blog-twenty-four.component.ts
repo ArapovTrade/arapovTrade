@@ -14,13 +14,16 @@ export class HomeRuBlogTwentyFourComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Фигура `Флаг` в трейдинге: Полное руководство');
+    this.titleService.setTitle(
+      'Фигура «Флаг» в трейдинге: как торговать | Arapov.trade'
+    );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        "Все, что нужно знать о фигуре 'Флаг' в трейдинге: как её распознать, торговать и избежать ошибок.",
+        'Руководство по паттерну «Флаг» в трейдинге: распознавайте сигнал, входите в сделки и управляйте рисками. Примеры и советы от Arapov.trade.',
     });
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-15' });
     this.meta.updateTag({
       property: 'og:image',

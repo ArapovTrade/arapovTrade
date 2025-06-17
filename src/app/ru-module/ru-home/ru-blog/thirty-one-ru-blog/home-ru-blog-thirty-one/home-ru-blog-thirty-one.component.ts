@@ -14,12 +14,14 @@ export class HomeRuBlogThirtyOneComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Уровни Поддержки и Сопротивления');
-    this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+    this.titleService.setTitle(
+      'Уровни поддержки и сопротивления в трейдинге | Arapov.trade'
+    );
+    this.meta.updateTag({ name: 'robots', content: 'index' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Детальное руководство по уровням поддержки и сопротивления. Узнайте, как их строить, определять и эффективно использовать в трейдинге.',
+        'Узнайте, как строить и использовать уровни поддержки и сопротивления в трейдинге! Полное руководство для эффективных сделок на Arapov.trade.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-16' });
     this.meta.updateTag({
