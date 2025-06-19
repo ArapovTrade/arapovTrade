@@ -112,8 +112,9 @@ export class FaqservService {
    
 
   returnSchema(langcode: string) {
-    this.faqs = (langcode == 'uk'|| langcode=='')? this.faqsUKR : this.faqsRu;
     
+
+    this.faqs = (langcode == 'uk'|| langcode=='')? this.faqsUKR : this.faqsRu;
     let schema = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',

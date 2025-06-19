@@ -146,11 +146,12 @@ export class AppComponent implements OnInit, AfterViewChecked {
         const article = this.artickle.getArticleByLink(link) || null;
         const langCode = urlPath.startsWith('uk')
           ? 'uk'
-          : urlPath.startsWith('en')
-          ? 'en'
+          : urlPath.startsWith('')
+          ? 'uk'
           : 'ru';
 
           // FAQ
+           
           this.addingFaqScript(langCode)
         // Визначаємо мову та витягуємо відповідний заголовок
         const lang = urlPath.startsWith('uk')
