@@ -15,16 +15,15 @@ export class HomeUkThirtySixComponent implements OnInit {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Як Smart Money використовують хибні пробої для збору ліквідності? - Arapov.trade'
+      'Хибні пробої: як Smart Money збирають ліквідність'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Розглянемо, як Smart Money маніпулюють ринком за допомогою хибних пробоїв, збираючи ліквідність перед рухом у свій бік. Як визначити пастки і не потрапити на маніпуляції?',
+        'Дізнайтесь, як Smart Money використовують хибні пробої для збору ліквідності та як уникнути їх пасток у трейдингу. Посібник від ArapovTrade.',
     });
 
-    this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-05' });
     this.meta.updateTag({
       property: 'og:image',

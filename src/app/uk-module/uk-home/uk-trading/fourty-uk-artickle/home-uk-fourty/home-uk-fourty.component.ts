@@ -14,12 +14,12 @@ export class HomeUkFourtyComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Помилки початківців трейдерів');
+    this.titleService.setTitle('Помилки трейдерів-початківців: як уникнути');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Дізнайтеся про поширені помилки початківців трейдерів та як їх уникнути. Рекомендації для успішного старту на фінансових ринках.',
+        'Дізнайтесь про поширені помилки трейдерів-початківців та як їх уникнути. Поради для успішного старту на ринках від ArapovTrade.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-08' });
     this.meta.updateTag({

@@ -14,12 +14,12 @@ export class HomeUkNineteenComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Як торгувати на валютному ринку FOREX');
+    this.titleService.setTitle('Як торгувати на FOREX: посібник');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Дізнайтеся, як почати торгувати на валютному ринку FOREX. Детальний посібник для новачків із порадами, стратегіями та прикладами.',
+        'Дізнайтесь, як торгувати на валютному ринку FOREX: посібник для новачків із стратегіями, порадами та прикладами від ArapovTrade.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-09' });
     this.meta.updateTag({

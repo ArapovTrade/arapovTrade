@@ -14,12 +14,12 @@ export class HomeUkEightComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Валюти та їх котирування');
+    this.titleService.setTitle('Валюти та котирування: основи трейдингу');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Дізнайтеся, що таке валюти, їх види, особливості котирувань та як вони використовуються в міжнародній торгівлі та фінансових ринках. Повний посібник для трейдерів та інвесторів.',
+        'Дізнайтесь про валюти, їх види, котирування та використання в торгівлі й на фінансових ринках. Посібник для трейдерів від ArapovTrade.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-11' });
     this.meta.updateTag({

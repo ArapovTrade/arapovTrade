@@ -14,14 +14,12 @@ export class HomeUkThirtyNineComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle(
-      'Співвідношення прибутку та збитку у трейдингу - Arapov.trade'
-    );
+    this.titleService.setTitle('Прибуток та збитки: R/R у трейдингу');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Як правильно розрахувати співвідношення прибутку та збитків у трейдингу? Дізнайтеся про R/R Ratio, управління ризиками та стратегії підвищення ефективності торгівлі.',
+        'Дізнайтесь, як розрахувати співвідношення прибутку та збитків (R/R) у трейдингу, управляти ризиками та підвищувати ефективність. Посібник від ArapovTrade.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-08' });
     this.meta.updateTag({

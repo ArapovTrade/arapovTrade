@@ -14,14 +14,12 @@ export class HomeUkFourtyTwoComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle(
-      'Таймфрейми в трейдингу: як обрати найкращий часовий інтервал? - Arapov.trade'
-    );
+    this.titleService.setTitle('Таймфрейми в трейдингу: як обрати');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Розбираємо, які бувають таймфрейми в трейдингу, як обрати підходящий часовий інтервал і на якому таймфреймі краще торгувати новачкові. Повний гід для трейдерів.',
+        'Дізнайтесь про таймфрейми в трейдингу, як обрати часовий інтервал та який підходить новачкам. Посібник для трейдерів від ArapovTrade.',
     });
     this.gerRandom();
   }

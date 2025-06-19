@@ -14,16 +14,14 @@ export class HomeUkFourtySixComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle(
-      'Криптовалюта Tether (USDT): що це таке та як використовувати - Arapov.trade'
-    );
+    this.titleService.setTitle('Tether (USDT): що це та як використовувати');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Дізнайтеся все про криптовалюту Tether (USDT): що це, як працює та чому вона важлива для крипторинку. Особливості, переваги та ризики.',
+        'Дізнайтесь про Tether (USDT): що це, як працює, переваги, ризики та роль на крипторинку. Посібник для трейдерів від ArapovTrade.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-01-28' });
     this.meta.updateTag({
       property: 'og:image',

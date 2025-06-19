@@ -14,13 +14,18 @@ export class HomeUkTwentyThreeComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Світові фондові індекси - Arapov.trade');
+    this.titleService.setTitle(
+      'Основні світові фондові індекси | Arapov.trade'
+    );
+
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+
     this.meta.addTag({
       name: 'description',
       content:
-        'Огляд ключових світових фондових індексів та їх значення для світової економіки.',
+        'Дізнайтеся про головні світові фондові індекси, їхню роль у глобальній економіці та як вони впливають на фінансові ринки та інвесторів.',
     });
+
     this.gerRandom();
   }
   randomArticleRus: any = [];

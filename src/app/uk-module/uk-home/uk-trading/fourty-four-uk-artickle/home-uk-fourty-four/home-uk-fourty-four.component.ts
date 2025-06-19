@@ -14,16 +14,14 @@ export class HomeUkFourtyFourComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle(
-      'Приховані ордери (Iceberg Orders): Як банки маскують свої позиції? - Arapov.trade'
-    );
+    this.titleService.setTitle('Приховані ордери: як банки ховають позиції');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Що таке приховані ордери (Iceberg Orders)? Як банки та великі гравці використовують їх для маскування своїх позицій? Дізнайтесь, як виявити айсберг-ордера та як їх використовувати в торгівлі.',
+        'Дізнайтесь, що таке приховані ордери (Iceberg Orders), як банки маскують позиції та як використовувати їх у торгівлі. Посібник від ArapovTrade.',
     });
-     
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-03-30' });
     this.meta.updateTag({
       property: 'og:image',

@@ -14,12 +14,16 @@ export class HomeUkTwoComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Основи ринку. Словник термінів - Arapov.trade');
+    this.titleService.setTitle(
+      'Словник термінів фінансового ринку | Arapov.trade'
+    );
+
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+
     this.meta.addTag({
       name: 'description',
       content:
-        'Повний посібник з основних термінів фінансового ринку. Розбираємо ключові поняття фондового, валютного та криптовалютного ринків, а також стратегії трейдингу та аналізу.',
+        'Основні терміни ринку для трейдерів-початківців: фондовий, валютний і крипторинок, стратегії торгівлі та фінансовий аналіз.',
     });
 
     this.gerRandom();

@@ -14,16 +14,14 @@ export class HomeUkTwelveComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle(
-      'Що таке халвінг і як він впливає на ринок криптовалют? - Arapov.trade'
-    );
+    this.titleService.setTitle('Халвінг: вплив на ринок криптовалют');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Халвінг Bitcoin – один із найважливіших механізмів, що впливають на ціну та пропозицію криптовалюти. Дізнайтеся, що таке халвінг, як він працює та як впливає на ринок.',
+        'Дізнайтесь, що таке халвінг Bitcoin, як він працює та впливає на ціну і ринок криптовалют. Посібник для трейдерів від ArapovTrade.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
     this.meta.updateTag({
       property: 'og:image',

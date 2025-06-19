@@ -14,12 +14,12 @@ export class HomeUkSevenComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Ринок FOREX');
+    this.titleService.setTitle('Ринок FOREX: особливості, учасники та торгові сесії');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Повний посібник про ринок FOREX. Дізнайтеся про його особливості, учасників, торгові сесії та ключові стратегії для новачків і професіоналів.',
+        'Дізнайтеся, як працює ринок FOREX, хто на ньому торгує, які існують торгові сесії та які стратегії використовують трейдери різного рівня.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-11' });
     this.meta.updateTag({

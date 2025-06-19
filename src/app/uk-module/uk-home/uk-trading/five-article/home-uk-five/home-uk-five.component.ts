@@ -14,12 +14,12 @@ export class HomeUkFiveComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Деривативи та їх види');
+    this.titleService.setTitle('Деривативи: види та застосування');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Дізнайтеся, що таке деривативи, їх основні види, застосування та вплив на фінансові ринки. Повний посібник для трейдерів та інвесторів.',
+        'Дізнайтесь про деривативи, їх види, застосування та вплив на фінансові ринки. Посібник для трейдерів та інвесторів від ArapovTrade.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-10' });
     this.meta.updateTag({

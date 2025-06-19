@@ -14,16 +14,14 @@ export class HomeUkElevenComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle(
-      'Як почати торгувати на криптобіржі - Arapov.trade'
-    );
+    this.titleService.setTitle('Як торгувати на криптобіржі | ArapovTrade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Дізнайтеся, як почати торгувати на криптовалютній біржі: вибір платформи, реєстрація, налаштування акаунта, стратегії та поради щодо управління ризиками.',
+        'Дізнайтесь, як почати торгувати на криптобіржі: вибір платформи, реєстрація, стратегії та управління ризиками. Посібник від ArapovTrade.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-01-29' });
     this.meta.updateTag({
       property: 'og:image',

@@ -14,16 +14,14 @@ export class HomeUkTwentyNineComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle(
-      'Чому 90% трейдерів втрачають гроші? Пастки, створені Смарт Мани - Arapov.trade'
-    );
+    this.titleService.setTitle('Чому трейдери втрачають: пастки Smart Money');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Дізнайтеся, чому 90% трейдерів втрачають гроші і які пастки розставляють Смарт Мани. Розбираємо головні помилки, маніпуляції та способи уникнути фінансових втрат на ринку.',
+        'Дізнайтесь, чому 90% трейдерів втрачають гроші, які пастки створюють Smart Money та як уникнути втрат. Посібник від ArapovTrade.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-04' });
     this.meta.updateTag({
       property: 'og:image',

@@ -14,12 +14,12 @@ export class HomeUkFourtyOneComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Торговий план трейдера');
+    this.titleService.setTitle('Торговий план трейдера: як скласти');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Дізнайтеся, як скласти ефективний торговий план трейдера. Ключові компоненти, приклади та поради щодо успішного планування.',
+        'Дізнайтесь, як скласти ефективний торговий план трейдера: ключові компоненти, приклади та поради для успіху від ArapovTrade.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-08' });
     this.meta.updateTag({

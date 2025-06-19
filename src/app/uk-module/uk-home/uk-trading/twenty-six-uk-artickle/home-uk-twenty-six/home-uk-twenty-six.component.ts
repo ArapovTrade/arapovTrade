@@ -14,12 +14,12 @@ export class HomeUkTwentySixComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Технічний аналіз ринку - Arapov.trade');
+    this.titleService.setTitle('Технічний аналіз ринку: основи');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Огляд основ технічного аналізу ринку, його принципів і ключових методів.',
+        'Дізнайтесь про технічний аналіз ринку: основи, принципи та методи для трейдингу. Посібник для трейдерів від ArapovTrade.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-18' });
     this.meta.updateTag({

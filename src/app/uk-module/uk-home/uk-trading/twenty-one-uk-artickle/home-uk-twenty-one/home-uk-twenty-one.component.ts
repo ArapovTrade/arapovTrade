@@ -14,14 +14,14 @@ export class HomeUkTwentyOneComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Аналіз ринку FOREX: ключові аспекти');
+    this.titleService.setTitle('Аналіз ринку FOREX: основи трейдингу');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Аналіз ринку FOREX: ключові аспекти, що впливають на прийняття рішень трейдерами.',
+        'Дізнайтесь про аналіз ринку FOREX: ключові аспекти, фактори впливу та стратегії для трейдерів. Посібник від ArapovTrade.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-01-19' });
     this.meta.updateTag({
       property: 'og:image',

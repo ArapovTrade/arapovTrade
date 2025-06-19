@@ -14,14 +14,12 @@ export class HomeUkTwentyEightComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle(
-      'Цінові фігури у технічному аналізі: повний посібник'
-    );
+    this.titleService.setTitle('Цінові фігури в технічному аналізі');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Детальний огляд ключових цінових фігур у технічному аналізі: розворотні та продовжувальні моделі, їх застосування та обмеження.',
+        'Дізнайтесь про цінові фігури в технічному аналізі: розворотні та продовжувальні патерни, їх застосування в трейдингу від ArapovTrade.',
     });
     this.gerRandom();
   }

@@ -27,13 +27,13 @@ export class UkStudyingHomeComponent implements OnInit {
     this.lang.setNumber(1);
 
     this.titleService.setTitle(
-      'Курси трейдингу |  Авторське навчання трейдингу онлайн | Ігор Арапов'
+      'Курси трейдингу онлайн від Ігоря Арапова | ArapovTrade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        '⭐ Дистанційне навчання трейдингу онлайн з нуля від Ігоря Арапова. Авторськe ⏩ навчання трейдингу від ArapovTrade . ',
+        'Дистанційне навчання трейдингу з нуля від Ігоря Арапова: авторські курси, стратегії, психологія для успіху на ринках з ArapovTrade.',
     });
     this.meta.addTag({
       name: 'keywords',

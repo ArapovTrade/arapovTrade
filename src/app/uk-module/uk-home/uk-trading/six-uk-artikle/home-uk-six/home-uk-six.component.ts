@@ -14,14 +14,14 @@ export class HomeUkSixComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Алгоритмічні стейблкоїни - Arapov.trade');
+    this.titleService.setTitle('Алгоритмічні стейблкоїни: як працюють');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Розбираємо, що таке алгоритмічні стейблкоїни, як вони працюють, їх переваги та ризики. Дізнайтеся, чи варто використовувати цей вид криптовалюти.',
+        'Дізнайтесь про алгоритмічні стейблкоїни: принцип роботи, плюси, мінуси та їх роль у криптотрейдингу. Посібник від ArapovTrade.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-01-29' });
     this.meta.updateTag({
       property: 'og:image',

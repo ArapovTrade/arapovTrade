@@ -15,12 +15,12 @@ export class HomeComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.titleService.setTitle('10 порад початківцям трейдерам');
+    this.titleService.setTitle('10 порад для початківців у трейдингу – Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Корисні поради для початківців трейдерів. Дізнайтеся, як керувати ризиками, розробляти стратегію та уникати помилок у трейдингу.',
+        'Дізнайтеся 10 практичних порад для новачків у трейдингу: як уникати типових помилок, керувати ризиками та будувати власну стратегію.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-07' });
     this.meta.updateTag({

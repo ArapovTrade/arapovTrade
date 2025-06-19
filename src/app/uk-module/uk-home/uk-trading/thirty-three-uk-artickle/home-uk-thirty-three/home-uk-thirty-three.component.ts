@@ -14,12 +14,12 @@ export class HomeUkThirtyThreeComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Реквоти в трейдингу - Arapov.trade');
+    this.titleService.setTitle('Реквоти в трейдингу: що це та як уникнути');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Дізнайтеся, що таке реквоти в трейдингу, чому вони виникають та як їх уникнути. Поради щодо покращення торгівлі та роботи з брокерами.',
+        'Дізнайтесь, що таке реквоти в трейдингу, причини їх виникнення та як їх уникнути. Поради для трейдерів від ArapovTrade.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-07' });
     this.meta.updateTag({

@@ -14,14 +14,12 @@ export class HomeUkTwentyFourComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle(
-      'Рівні Фібоначчі: принципи та застосування - Arapov.trade'
-    );
+    this.titleService.setTitle('Рівні Фібоначчі в трейдингу');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Детальний аналіз рівнів Фібоначчі: що це таке, як вони працюють і їхня роль у технічному аналізі.',
+        'Дізнайтесь про рівні Фібоначчі: принципи, застосування в технічному аналізі та стратегії трейдингу. Посібник від ArapovTrade.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-18' });
     this.meta.updateTag({

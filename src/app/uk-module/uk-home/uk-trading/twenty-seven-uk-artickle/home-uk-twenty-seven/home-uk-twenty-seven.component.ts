@@ -14,14 +14,12 @@ export class HomeUkTwentySevenComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle(
-      'Технічний аналіз ринку. Основні види графіків - Arapov.trade'
-    );
+    this.titleService.setTitle('Технічний аналіз: види графіків');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Детальний огляд основ технічного аналізу ринку: види графіків, тренди та рівні підтримки і опору.',
+        'Дізнайтесь про технічний аналіз ринку: види графіків, тренди, рівні підтримки та опору для трейдингу. Посібник від ArapovTrade.',
     });
     this.gerRandom();
   }

@@ -14,14 +14,12 @@ export class HomeUkThirtyEightComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle(
-      'Специфіка управління капіталом у трейдингу - Arapov.trade'
-    );
+    this.titleService.setTitle('Управління капіталом у трейдингу');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Повний посібник з управління капіталом у трейдингу. Ризик-менеджмент, мані-менеджмент, контроль збитків та ефективні стратегії управління депозитом.',
+        'Дізнайтесь про управління капіталом у трейдингу: ризик-менеджмент, мані-менеджмент та стратегії контролю депозиту від ArapovTrade.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-08' });
     this.meta.updateTag({

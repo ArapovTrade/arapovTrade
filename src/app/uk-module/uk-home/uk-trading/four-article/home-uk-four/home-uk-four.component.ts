@@ -14,12 +14,12 @@ export class HomeUkFourComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Біржові та позабіржові ринки');
+    this.titleService.setTitle('Біржові та позабіржові ринки: огляд');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Дізнайтеся про відмінності між біржовими та позабіржовими ринками, їх особливості, переваги та недоліки. Повний посібник для трейдерів та інвесторів.',
+        'Дізнайтесь про біржові та позабіржові ринки: відмінності, особливості, переваги й недоліки. Посібник для трейдерів від ArapovTrade.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-10' });
     this.meta.updateTag({

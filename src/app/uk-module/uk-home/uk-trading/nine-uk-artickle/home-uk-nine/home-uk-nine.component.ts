@@ -14,12 +14,12 @@ export class HomeUkNineComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Формування курсу валют');
+    this.titleService.setTitle('Формування курсу валют: фактори впливу');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Дізнайтеся, як формується курс валют, які фактори на нього впливають і як це впливає на світову економіку. Повний посібник для інвесторів і трейдерів.',
+        'Дізнайтесь, як формується курс валют, які фактори впливають та їх роль в економіці. Посібник для трейдерів від ArapovTrade.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-11' });
     this.meta.updateTag({

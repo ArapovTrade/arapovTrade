@@ -14,14 +14,14 @@ export class HomeUkThirtyOneComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Ринковий ордер - Arapov.trade');
+    this.titleService.setTitle('Ринковий ордер: як працює та застосовується');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Що таке ринковий ордер і як він працює? Дізнайтеся, як використовувати Market Order для швидкого входу та виходу з угод, його переваги, недоліки та приклади застосування на біржах.',
+        'Дізнайтесь, що таке ринковий ордер, як він працює, його переваги, недоліки та приклади використання в трейдингу. Посібник від ArapovTrade.',
     });
-     
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-03-29' });
     this.meta.updateTag({
       property: 'og:image',

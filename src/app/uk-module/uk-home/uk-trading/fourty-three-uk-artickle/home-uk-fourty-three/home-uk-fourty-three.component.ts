@@ -14,16 +14,14 @@ export class HomeUkFourtyThreeComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle(
-      'Пули ліквідності: Як великі гравці шукають ліквідність на ринку? - Arapov.trade'
-    );
+    this.titleService.setTitle('Пули ліквідності: як шукають Smart Money');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Пули ліквідності відіграють ключову роль у трейдингу. Дізнайтесь, як Smart Money знаходять ліквідність, створюють ринкові маніпуляції та використовують приховані зони ліквідності.',
+        'Дізнайтесь, як Smart Money знаходять пули ліквідності, маніпулюють ринком та використовують приховані зони. Посібник від ArapovTrade.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-06' });
     this.meta.updateTag({
       property: 'og:image',

@@ -14,16 +14,14 @@ export class HomeUkThirtyTwoComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle(
-      'Стоп-ордер: Повний посібник для трейдерів - Arapov.trade'
-    );
+    this.titleService.setTitle('Стоп-ордер: як використовувати в трейдингу');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Що таке стоп-ордер і як його правильно використовувати в трейдингу? Детальний розбір Stop Order, його видів, переваг і недоліків, а також стратегій застосування на криптовалютних та фондових біржах.',
+        'Дізнайтесь, що таке стоп-ордер, його види, переваги, недоліки та стратегії використання на крипто- і фондових ринках від ArapovTrade.',
     });
-     
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-03-29' });
     this.meta.updateTag({
       property: 'og:image',

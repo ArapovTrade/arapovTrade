@@ -14,12 +14,12 @@ export class HomeUkFifteenComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Основні центральні банки');
+    this.titleService.setTitle('Центральні банки: функції та вплив');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Дізнайтеся про ключові центральні банки світу, їхні функції, засідання та вплив на світову економіку. Детальний посібник для трейдерів та інвесторів.',
+        'Дізнайтесь про ключові центральні банки світу, їх функції, засідання та вплив на економіку. Посібник для трейдерів від ArapovTrade.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-13' });
     this.meta.updateTag({

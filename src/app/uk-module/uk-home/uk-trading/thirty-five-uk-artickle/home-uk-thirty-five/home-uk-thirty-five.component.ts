@@ -14,14 +14,12 @@ export class HomeUkThirtyFiveComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle(
-      'Торгова система: види та оптимізація - Arapov.trade'
-    );
+    this.titleService.setTitle('Торгова система: види та оптимізація');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Дізнайтеся, що таке торгова система, її види, особливості автоматизації та як обрати відповідну для ваших цілей стратегію торгівлі.',
+        'Дізнайтесь про торгові системи: види, автоматизація, оптимізація та вибір стратегії для трейдингу. Посібник від ArapovTrade.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-08' });
     this.meta.updateTag({

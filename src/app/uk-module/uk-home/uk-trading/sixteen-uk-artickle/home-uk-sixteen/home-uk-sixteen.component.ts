@@ -14,16 +14,14 @@ export class HomeUkSixteenComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle(
-      'Криптовалюта Ethereum – що це таке і як вона працює? - Arapov.trade'
-    );
+    this.titleService.setTitle('Ethereum: що це та як працює');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Ethereum – друга за капіталізацією криптовалюта, що пропонує смарт-контракти та децентралізовані додатки. Дізнайтеся, як працює Ethereum та які в нього перспективи.',
+        'Дізнайтесь про Ethereum: смарт-контракти, децентралізовані додатки, принцип роботи та перспективи. Посібник для трейдерів від ArapovTrade.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
     this.meta.updateTag({
       property: 'og:image',

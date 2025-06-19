@@ -14,16 +14,14 @@ export class HomeUkThirtyFourComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle(
-      'Стоп-лімітний ордер: Повний гід - Arapov.trade'
-    );
+    this.titleService.setTitle('Стоп-лімітний ордер: як використовувати');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Що таке стоп-лімітний ордер і як правильно його використовувати? Повний гід для трейдерів з налаштування та застосування Stop-Limit Order на криптовалютному та фондовому ринках.',
+        'Дізнайтесь, що таке стоп-лімітний ордер, як його налаштувати та використовувати на крипто- і фондових ринках. Посібник від ArapovTrade.',
     });
-     
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-03-29' });
     this.meta.updateTag({
       property: 'og:image',

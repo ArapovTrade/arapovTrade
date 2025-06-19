@@ -14,12 +14,12 @@ export class HomeUkThreeComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Знайомство з біржею: Повний гід');
+    this.titleService.setTitle('Біржа: повний гід для трейдерів');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Дізнайтеся, що таке біржа, її види, функції та особливості торгівлі. Повний гід для початківців і професіоналів.',
+        'Дізнайтесь, що таке біржа, її види, функції та особливості торгівлі. Посібник для початківців і трейдерів від ArapovTrade.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-10' });
     this.meta.updateTag({

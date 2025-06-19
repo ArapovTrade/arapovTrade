@@ -14,16 +14,14 @@ export class HomeUkTwentyFiveComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle(
-      'Основні показники економічного зростання - Arapov.trade'
-    );
+    this.titleService.setTitle('Економічні показники зростання');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Аналіз ключових економічних показників, що впливають на фінансові ринки.',
+        'Дізнайтесь про ключові економічні показники зростання та їх вплив на фінансові ринки. Посібник для трейдерів від ArapovTrade.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-01-20' });
     this.meta.updateTag({
       property: 'og:image',

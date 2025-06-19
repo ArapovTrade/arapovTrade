@@ -14,14 +14,12 @@ export class HomeUkTenComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle(
-      'Позиції в трейдингу: види, перенесення та дата валютування'
-    );
+    this.titleService.setTitle('Позиції в трейдингу: види та валютування');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Дізнайтеся, що таке позиції в трейдингу, їх типи, механізм перенесення та дату валютування. Повний посібник для трейдерів та інвесторів, що містить унікальну інформацію та приклади.',
+        'Дізнайтесь про позиції в трейдингу: види, перенесення, дата валютування та приклади. Посібник для трейдерів від ArapovTrade.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-13' });
     this.meta.updateTag({

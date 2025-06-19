@@ -14,12 +14,12 @@ export class HomeUkEighteenComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Психологічні ризики FOREX');
+    this.titleService.setTitle('Психологічні ризики FOREX: як їх уникнути');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Дізнайтеся про психологічні ризики, пов’язані з торгівлею на FOREX, та як їх мінімізувати. Повний посібник для трейдерів із прикладами та порадами.',
+        'Дізнайтесь про психологічні ризики на FOREX та як їх мінімізувати. Посібник для трейдерів з порадами та прикладами від ArapovTrade.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-09' });
     this.meta.updateTag({

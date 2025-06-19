@@ -14,12 +14,12 @@ export class HomeUkThirteenComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Ризик зміни курсу');
+    this.titleService.setTitle('Ризик зміни курсу: як захиститись');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Дізнайтеся, що таке ризик зміни курсу, як він впливає на фінансові операції, та які стратегії допоможуть мінімізувати його.',
+        'Дізнайтесь, що таке ризик зміни курсу, його вплив на фінанси та стратегії мінімізації. Посібник для трейдерів від ArapovTrade.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-07' });
     this.meta.updateTag({
