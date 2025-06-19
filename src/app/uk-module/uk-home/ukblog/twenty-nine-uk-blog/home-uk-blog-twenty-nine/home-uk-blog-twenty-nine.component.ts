@@ -13,14 +13,12 @@ export class HomeUkBlogTwentyNineComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle(
-      'Швидкий старт у трейдингу: посібник для новачків'
-    );
+    this.titleService.setTitle('Швидкий старт у трейдингу для новачків');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Дізнайтеся, як швидко почати у трейдингу, опанувати основні навички та уникнути поширених помилок. Повний посібник для новачків.',
+        'Дізнайтесь, як швидко почати трейдинг: основи, ключові навички, стратегії та як уникнути типових помилок для новачків від ArapovTrade.',
     });
     this.gerRandom();
   }

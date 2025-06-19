@@ -14,12 +14,16 @@ export class HomeUkBlogEighteenComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Об`ємний аналіз ринку - Arapov.trade');
+    this.titleService.setTitle(
+      'Об’ємний аналіз ринку у трейдингу | Arapov.trade'
+    );
+
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+
     this.meta.addTag({
       name: 'description',
       content:
-        'Що таке об’ємний аналіз ринку? Розбираємо ключові принципи, інструменти та стратегії. Повний посібник з об’ємного аналізу та його застосування у трейдингу.',
+        'Дізнайтеся, як працює об’ємний аналіз ринку: принципи, інструменти та стратегії для ефективної торгівлі за обсягами.',
     });
 
     this.gerRandom();

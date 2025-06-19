@@ -14,16 +14,14 @@ export class HomeUkBlogSixtyFiveComponent {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle(
-      'Як читати Біржовий стакан і стрічку принтів - Arapov.trade'
-    );
+    this.titleService.setTitle('Біржовий стакан і стрічка принтів');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Повний посібник з читання біржового стакана та стрічки принтів. Розбираємо, як аналізувати заявки, ліквідність і великі угоди, щоб визначати наміри Smart Money та знаходити вигідні точки входу на ринок.',
+        'Дізнайтесь, як читати біржовий стакан і стрічку принтів, аналізувати ліквідність і угоди Smart Money від ArapovTrade.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-11' });
     this.meta.updateTag({
       property: 'og:image',

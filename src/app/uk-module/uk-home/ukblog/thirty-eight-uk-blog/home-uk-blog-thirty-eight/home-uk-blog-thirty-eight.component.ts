@@ -15,15 +15,15 @@ export class HomeUkBlogThirtyEightComponent implements OnInit {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Принципи зберігання криптовалют - Arapov.trade'
+      'Принципи зберігання криптовалют | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Дізнайтеся про принципи зберігання криптовалют, вибір гаманців, безпеку та стратегії захисту активів. Повний посібник для інвесторів.',
+        'Принципи зберігання криптовалют: вибір гаманців, безпека та стратегії захисту активів. Повний посібник для інвесторів Arapov.trade.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Игорь Арапов' });
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-01-23' });
     this.meta.updateTag({
       property: 'og:image',

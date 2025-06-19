@@ -14,16 +14,14 @@ export class HomeUkBlogSeventySixComponent {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle(
-      'Психологія торгівлі Вільяма Ганна - Arapov.trade'
-    );
+    this.titleService.setTitle('Психологія трейдингу Вільяма Ганна');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Розбираємо психологічні принципи торгівлі Вільяма Ганна, його підхід до самоконтролю, управління ризиками та емоційної стійкості трейдера. Дізнайтеся, як застосовувати його методику в сучасному трейдингу.',
+        'Дізнайтесь про психологію трейдингу Вільяма Ганна: самоконтроль, управління ризиками та методи для сучасного трейдингу від ArapovTrade.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-18' });
     this.meta.updateTag({
       property: 'og:image',

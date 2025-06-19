@@ -14,17 +14,14 @@ export class HomeUkBlogTwentyFiveComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle(
-      'Функції маркет-мейкерів на ринку криптовалют - Arapov.trade'
-    );
+    this.titleService.setTitle('Як працюють маркет-мейкери в крипто');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Дізнайтеся, які функції виконують маркет-мейкери на ринку криптовалют, їх роль у забезпеченні ліквідності, стабільності цін та розвитку торгівлі. Унікальний погляд на важливість маркет-мейкерів у криптоіндустрії.',
+        'Дізнайтесь, як маркет-мейкери забезпечують ліквідність і стабільність цін на ринку криптовалют у трейдингу від ArapovTrade.',
     });
 
-    this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
     this.meta.updateTag({ name: 'datePublished', content: '2025-01-22' });
     this.meta.updateTag({
       property: 'og:image',

@@ -14,14 +14,14 @@ export class HomeUkBlogSeventyTwoComponent {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Що таке економічний календар - Arapov.trade');
+    this.titleService.setTitle('Економічний календар: як використовувати');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Повний посібник з економічного календаря фондового ринку. Як використовувати його для прогнозування ринкових рухів, які події впливають на акції та індекси, а також стратегії торгівлі на новинах.',
+        'Дізнайтесь, як економічний календар допомагає прогнозувати ринкові рухи та торгувати на новинах акцій і індексів від ArapovTrade.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-15' });
     this.meta.updateTag({
       property: 'og:image',

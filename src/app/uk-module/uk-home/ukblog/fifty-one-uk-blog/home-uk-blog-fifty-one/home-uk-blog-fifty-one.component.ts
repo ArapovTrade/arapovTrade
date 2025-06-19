@@ -14,12 +14,12 @@ export class HomeUkBlogFiftyOneComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Price Action: Повний посібник');
+    this.titleService.setTitle('Price Action: стратегії трейдингу');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Дізнайтеся все про метод Price Action: основні принципи, популярні патерни, стратегії та приклади їх застосування. Повний посібник для початківців та досвідчених трейдерів.',
+        'Дізнайтесь про Price Action: принципи, патерни та стратегії трейдингу для початківців і професіоналів від ArapovTrade.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-17' });
     this.meta.updateTag({

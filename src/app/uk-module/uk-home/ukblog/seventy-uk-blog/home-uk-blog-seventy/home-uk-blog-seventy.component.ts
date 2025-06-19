@@ -14,16 +14,14 @@ export class HomeUkBlogSeventyComponent {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle(
-      'Концепція Річарда Вайкоффа в розумінні обсягів - Arapov.trade'
-    );
+    this.titleService.setTitle('Вайкофф: об’ємний аналіз ринку');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Повний посібник з концепції Річарда Вайкоффа. Розбираємо, як об`ємний аналіз допомагає визначати наміри великих гравців і знаходити ключові рівні ринку.',
+        'Дізнайтесь про концепцію Вайкоффа: як об’ємний аналіз виявляє дії великих гравців і ключові рівні ринку від ArapovTrade.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-13' });
     this.meta.updateTag({
       property: 'og:image',

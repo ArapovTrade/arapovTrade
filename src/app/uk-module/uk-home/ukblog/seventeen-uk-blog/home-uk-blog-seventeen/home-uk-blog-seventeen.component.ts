@@ -14,12 +14,12 @@ export class HomeUkBlogSeventeenComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Топ міфів про трейдинг');
+    this.titleService.setTitle('Міфи про трейдинг: правда і вигадки');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Розвінчання популярних міфів про трейдинг, які вводять в оману початківців та досвідчених трейдерів.',
+        'Розвінчуємо міфи про трейдинг, які обманюють початківців і трейдерів: правда, помилки та поради від ArapovTrade.',
     });
 
     this.gerRandom();

@@ -14,13 +14,16 @@ export class HomeUkBlogFourtyEightComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Інструкція з самостійного навчання трейдингу');
+    this.titleService.setTitle(
+      'Інструкція з самостійного навчання трейдингу | Arapov.trade'
+    );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Самостійне навчання трейдингу: покрокова інструкція, поради та рекомендації для початківців. Успішний старт на фінансових ринках.',
+        'Покрокова інструкція для самостійного навчання трейдингу. Поради та рекомендації для успішного старту на фінансових ринках.',
     });
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-03' });
     this.meta.updateTag({
       property: 'og:image',

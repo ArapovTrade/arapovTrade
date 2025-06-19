@@ -14,14 +14,16 @@ export class HomeUkBlogThirtyFourComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Як виставляти стоп-лос? - Arapov.trade');
+    this.titleService.setTitle('Як виставляти стоп-лос? | Arapov.trade');
+
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+
     this.meta.addTag({
       name: 'description',
       content:
-        'Як правильно виставляти стоп-лосс у трейдингу? Розбираємо стратегії, методи розрахунку та помилки під час встановлення Stop-Loss, щоб мінімізувати ризики та захистити капітал.',
+        'Дізнайтесь, як виставляти стоп-лосс у трейдингу: стратегії, помилки та методи розрахунку для зниження ризиків і захисту капіталу.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-01-16' });
     this.meta.updateTag({
       property: 'og:image',

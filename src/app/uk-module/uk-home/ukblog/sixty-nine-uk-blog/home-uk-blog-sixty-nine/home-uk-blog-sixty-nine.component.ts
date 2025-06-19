@@ -15,15 +15,17 @@ export class HomeUkBlogSixtyNineComponent {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Чим відрізняється аналіз обсягів на ринку акцій і на ринку ф`ючерсів - Arapov.trade'
+      'Аналіз обсягів: акції vs фʼючерси | Arapov.trade'
     );
+
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+
     this.meta.addTag({
       name: 'description',
       content:
-        'Повний посібник із відмінностей в аналізі обсягів на фондовому та ф`ючерсному ринках. Розглядаємо ключові особливості роботи з обсягами, методики аналізу та практичне застосування об`ємних індикаторів.',
+        'У чому різниця між аналізом обсягів на ринку акцій і фʼючерсів? Ключові особливості, підходи та індикатори для трейдингу.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-13' });
     this.meta.updateTag({
       property: 'og:image',

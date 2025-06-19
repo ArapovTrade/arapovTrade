@@ -14,13 +14,16 @@ export class HomeUkBlogTwoComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Дивергенція на індикаторах');
+    this.titleService.setTitle('Дивергенція на індикаторах | Arapov.trade');
+
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+
     this.meta.addTag({
       name: 'description',
       content:
-        'Дізнайтеся все про дивергенцію на індикаторах: що це, як її розпізнавати, популярні стратегії та індикатори для аналізу. Повний посібник для трейдерів.',
+        'Дізнайтеся про дивергенцію на індикаторах: що це, як розпізнавати, популярні стратегії та інструменти для аналізу від Arapov.trade.',
     });
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-13' });
     this.meta.updateTag({
       property: 'og:image',

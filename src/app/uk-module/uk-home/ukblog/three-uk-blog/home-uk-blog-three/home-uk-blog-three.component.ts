@@ -14,13 +14,16 @@ export class HomeUkBlogThreeComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Волатильність у трейдінгу  - Arapov.trade');
+    this.titleService.setTitle('Волатильність у трейдінгу | Arapov.trade');
+
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+
     this.meta.addTag({
       name: 'description',
       content:
-        'Дізнайтеся, що таке волатильність, як вона впливає на торгівлю, та стратегії для роботи на високо-волатильних ринках.',
+        'Дізнайтеся, що таке волатильність, як вона впливає на трейдинг і які стратегії ефективні на високо-волатильних ринках.',
     });
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-03-31' });
     this.meta.updateTag({
       property: 'og:image',

@@ -13,13 +13,16 @@ export class HomeUkBlogThirtyThreeComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Пін-бар: Грааль Трейдингу');
+    this.titleService.setTitle('Пін-бар: Грааль трейдингу | Arapov.trade');
+
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+
     this.meta.addTag({
       name: 'description',
       content:
-        'Детальний посібник про Пін-бари у трейдингу. Дізнайтеся, як правильно використовувати цей патерн для аналізу ринку та ухвалення торгових рішень.',
+        'Що таке Пін-бар у трейдингу? Як використовувати цей патерн для аналізу ринку та прийняття ефективних торгових рішень — гід від Arapov.trade.',
     });
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-16' });
     this.meta.updateTag({
       property: 'og:image',

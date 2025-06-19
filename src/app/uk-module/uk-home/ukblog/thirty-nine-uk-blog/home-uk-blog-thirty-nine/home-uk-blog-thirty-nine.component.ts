@@ -15,15 +15,17 @@ export class HomeUkBlogThirtyNineComponent implements OnInit {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Де безпечно зберігати криптовалюту? - Arapov.trade'
+      'Де безпечно зберігати криптовалюту? | Arapov.trade'
     );
+
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+
     this.meta.addTag({
       name: 'description',
       content:
-        'Дізнайтеся, де безпечно зберігати криптовалюту: поради щодо вибору гаманців, принципи безпеки та найкращі практики. Повний посібник для захисту ваших активів.',
+        'Де безпечно зберігати криптовалюту? Поради щодо вибору гаманців, принципи безпеки та найкращі практики захисту цифрових активів.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-01-23' });
     this.meta.updateTag({
       property: 'og:image',

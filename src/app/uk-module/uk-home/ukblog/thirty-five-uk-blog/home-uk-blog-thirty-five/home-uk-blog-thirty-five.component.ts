@@ -14,13 +14,18 @@ export class HomeUkBlogThirtyFiveComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Основи Трейдингу для Початківців');
+    this.titleService.setTitle(
+      'Основи трейдингу для початківців | Arapov.trade'
+    );
+
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+
     this.meta.addTag({
       name: 'description',
       content:
-        'Дізнайтеся основи трейдингу для початківців. Повний посібник з видів трейдингу, стратегій, ризиків та важливих порад для успішного старту.',
+        'Гід для новачків: види трейдингу, базові стратегії, ризики та поради для вдалого старту на ринку від Arapov.trade.',
     });
+
     this.gerRandom();
   }
   randomArticleRus: any = [];

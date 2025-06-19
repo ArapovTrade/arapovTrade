@@ -14,12 +14,12 @@ export class HomeUkBlogNineComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Як прогнозувати ціну на ринку?- Arapov.trade');
+    this.titleService.setTitle('Як прогнозувати ціну на ринку | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Прогнозування ціни в трейдингу: фундаментальний і технічний аналіз, індикатори, математичні моделі та ринкова психологія. Повний посібник із передбачення руху ринку.',
+        'Дізнайтеся, як прогнозувати ціну на ринку: технічний і фундаментальний аналіз, індикатори та ринкова психологія для трейдерів.',
     });
 
     this.gerRandom();

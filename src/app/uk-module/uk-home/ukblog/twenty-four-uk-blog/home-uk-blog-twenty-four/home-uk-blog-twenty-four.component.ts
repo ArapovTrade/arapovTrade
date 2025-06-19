@@ -14,12 +14,12 @@ export class HomeUkBlogTwentyFourComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle("Фігура 'Прапор' у трейдингу: Повний посібник");
+    this.titleService.setTitle('Фігура Прапор: як торгувати в трейдингу');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        "Все, що потрібно знати про фігуру 'Прапор' у трейдингу: як її розпізнати, торгувати та уникнути помилок.",
+        'Дізнайтесь, як розпізнати фігуру Прапор у трейдингу, торгувати пробої та уникати помилок у стратегіях від ArapovTrade.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-15' });
     this.meta.updateTag({

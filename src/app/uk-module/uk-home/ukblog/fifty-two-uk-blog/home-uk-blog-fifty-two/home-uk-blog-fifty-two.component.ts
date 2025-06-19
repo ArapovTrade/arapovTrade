@@ -14,12 +14,12 @@ export class HomeUkBlogFiftyTwoComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Анатомія трендів на ринку - Arapov.trade');
+    this.titleService.setTitle('Тренди на ринку: аналіз і стратегії');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Розбираємо, що таке тренд на фінансовому ринку, його фази, типи та методи аналізу. Повний гід з анатомії трендів: індикатори, стратегії та принципи торгівлі.',
+        'Дізнайтесь, що таке тренди на ринку, їх фази, типи, методи аналізу та стратегії трейдингу від ArapovTrade.',
     });
 
     this.gerRandom();

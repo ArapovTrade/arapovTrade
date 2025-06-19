@@ -15,15 +15,16 @@ export class HomeUkBlogSixtyThreeComponent {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Як Smart Money керують натовпом? Маніпуляції новинами та настроєм - Arapov.trade'
+      'Як Smart Money маніпулюють ринком | Arapov.trade'
     );
+
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Розбираємо, як Smart Money маніпулюють ринком, використовуючи новини та настрій натовпу. Як великі гравці створюють тренди, заманюють роздрібних трейдерів у пастки та збирають ліквідність.',
+        'Як Smart Money керують настроєм і новинами, щоб впливати на ринок і заманювати роздрібних трейдерів у пастки.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-08' });
     this.meta.updateTag({
       property: 'og:image',

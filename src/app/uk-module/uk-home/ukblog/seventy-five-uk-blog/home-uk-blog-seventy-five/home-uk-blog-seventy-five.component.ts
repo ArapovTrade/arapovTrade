@@ -14,16 +14,14 @@ export class HomeUkBlogSeventyFiveComponent {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle(
-      'Трейдинг – азартна гра чи бізнес? Два психологічні підходи - Arapov.trade'
-    );
+    this.titleService.setTitle('Трейдинг: азарт чи бізнес? Психологія');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Розглянемо два психологічні підходи до трейдингу: азартний та професійний. Проаналізуємо ключові відмінності між грою та бізнесом, а також дізнаємося, які стратегії допомагають досягти успіху на фінансових ринках.',
+        'Дізнайтесь, чи є трейдинг азартом чи бізнесом: психологічні підходи та стратегії успіху на ринках від ArapovTrade.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-17' });
     this.meta.updateTag({
       property: 'og:image',

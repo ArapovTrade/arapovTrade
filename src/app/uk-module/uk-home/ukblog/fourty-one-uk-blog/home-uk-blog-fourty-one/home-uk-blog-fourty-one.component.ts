@@ -14,15 +14,14 @@ export class HomeUkBlogFourtyOneComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle(
-      'Правила для Успішного Трейдингу - Arapov.trade'
-    );
+    this.titleService.setTitle('Правила успішного трейдингу | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Повний посібник з успішного трейдингу: стратегії, управління ризиками, вибір брокера, технічний і фундаментальний аналіз. Дізнайтеся, як стати успішним трейдером!',
+        'Дізнайтеся ключові правила успішного трейдингу: стратегії, управління ризиками, вибір брокера та аналіз ринку для початківців і профі.',
     });
+
     this.gerRandom();
   }
   randomArticleRus: any = [];

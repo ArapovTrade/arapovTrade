@@ -14,13 +14,18 @@ export class HomeUkBlogThirtyTwoComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Чи варто купувати навчання трейдингу?');
+    this.titleService.setTitle(
+      'Чи варто купувати навчання трейдингу? | Arapov.trade'
+    );
+
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+
     this.meta.addTag({
       name: 'description',
       content:
-        "Розглянемо переваги платного навчання трейдингу. Дізнайтеся, чому інвестування в навчання може стати першим кроком до успішної кар'єри трейдера.",
+        'Чи варто інвестувати в платне навчання трейдингу? Огляд переваг, підводних каменів та поради для початківців від Arapov.trade.',
     });
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-02' });
     this.meta.updateTag({
       property: 'og:image',

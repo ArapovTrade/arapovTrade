@@ -16,16 +16,14 @@ export class HomeUkBlogSixtyFourComponent {
     private route: ActivatedRoute
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle(
-      'Практичні рекомендації з трейдингу. Торгова система - Arapov.trade'
-    );
+    this.titleService.setTitle('Трейдинг: рекомендації та торгова система');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Практичні рекомендації з трейдингу, торгова система з прикладами точок входу та виходу, мані-менеджментом та управління ризиками. Покрокове керівництво',
+        'Дізнайтесь практичні рекомендації з трейдингу: торгова система, точки входу, мані-менеджмент і ризики від ArapovTrade.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-05-25' });
     this.meta.updateTag({
       property: 'og:image',
@@ -33,7 +31,7 @@ export class HomeUkBlogSixtyFourComponent {
     });
 
     this.gerRandom();
-     this.route.fragment.subscribe((fragment) => {
+    this.route.fragment.subscribe((fragment) => {
       if (fragment) {
         setTimeout(() => {
           const element = document.getElementById(fragment);

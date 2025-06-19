@@ -14,14 +14,12 @@ export class HomeUkBlogElevenComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle(
-      'Стартовий депозит трейдера: скільки потрібно для початку?'
-    );
+    this.titleService.setTitle('Стартовий депозит: скільки потрібно?');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Дізнайтеся, який стартовий депозит потрібен трейдеру, як його правильно розрахувати і управляти капіталом. Корисні поради для початківців і досвідчених трейдерів.',
+        'Дізнайтесь, який стартовий депозит потрібен для трейдингу, як його розрахувати та управляти капіталом. Поради від ArapovTrade.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-01' });
     this.meta.updateTag({

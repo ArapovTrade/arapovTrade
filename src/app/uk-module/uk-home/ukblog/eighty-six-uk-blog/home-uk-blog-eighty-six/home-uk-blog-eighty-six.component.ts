@@ -14,16 +14,14 @@ export class HomeUkBlogEightySixComponent {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle(
-      'Патерн 1-2-3: Як використовувати його для розвороту тренду? - Arapov.trade'
-    );
+    this.titleService.setTitle('Патерн 1-2-3: розворот тренду');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Розбираємо патерн 1-2-3 – універсальну модель розвороту тренду. Дізнайтеся, як правильно ідентифікувати цей патерн, на яких ринках він краще працює і як ефективно застосовувати його в торгових стратегіях.',
+        'Дізнайтесь про патерн 1-2-3: як визначити розворот тренду та використовувати в трейдингу на ринках. Посібник від ArapovTrade.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-23' });
     this.meta.updateTag({
       property: 'og:image',

@@ -14,13 +14,18 @@ export class HomeUkBlogThirtyComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Основи криптовалют для початківців трейдерів');
+    this.titleService.setTitle(
+      'Основи криптовалют для початківців | Arapov.trade'
+    );
+
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+
     this.meta.addTag({
       name: 'description',
       content:
-        'Дізнайтеся про основи криптовалют, їхні особливості та ключові принципи торгівлі для початківців трейдерів.',
+        'Дізнайтеся про основи криптовалют, їхні особливості та ключові принципи торгівлі для новачків. Практичний гід від Arapov.trade.',
     });
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-02' });
     this.meta.updateTag({
       property: 'og:image',

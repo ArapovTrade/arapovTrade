@@ -14,14 +14,12 @@ export class HomeUkBlogFiftySixComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle(
-      'Книги з трейдингу: у чому користь для початківців?'
-    );
+    this.titleService.setTitle('Книги з трейдингу для початківців');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Розглянемо, як книги з трейдингу допомагають початківцям трейдерам. Корисні рекомендації та найкращі книги для старту у світі фінансових ринків.',
+        'Дізнайтесь, як книги з трейдингу допомагають початківцям: рекомендації та кращі видання для старту на фінансових ринках від ArapovTrade.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-04' });
     this.meta.updateTag({

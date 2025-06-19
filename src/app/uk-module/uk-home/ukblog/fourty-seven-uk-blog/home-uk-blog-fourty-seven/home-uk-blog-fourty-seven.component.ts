@@ -14,13 +14,14 @@ export class HomeUkBlogFourtySevenComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Фундаментальний Аналіз ринку - Arapov.trade');
+    this.titleService.setTitle('Фундаментальний аналіз ринку | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
-      content: 'Фундаментальний Аналіз | Об`ємний аналіз ринку',
+      content:
+        'Дізнайтеся основи фундаментального аналізу ринку: як оцінювати економічні показники, новини та їх вплив на трейдинг і інвестиції.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-01-19' });
     this.meta.updateTag({
       property: 'og:image',

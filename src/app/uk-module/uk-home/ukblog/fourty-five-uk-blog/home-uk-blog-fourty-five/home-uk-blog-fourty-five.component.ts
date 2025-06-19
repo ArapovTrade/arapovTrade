@@ -15,13 +15,13 @@ export class HomeUkBlogFourtyFiveComponent implements OnInit {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Як використовувати ковзні середні у трейдингу?'
+      'Ковзні середні в трейдингу: типи і стратегії | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Дізнайтеся, як використовувати ковзні середні в трейдингу: їх типи, стратегії та приклади застосування для аналізу трендів і прийняття рішень.',
+        'Дізнайтеся про типи ковзних середніх і стратегії їх застосування для аналізу трендів і прийняття рішень у трейдингу.',
     });
      
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-17' });

@@ -14,15 +14,16 @@ export class HomeUkBlogTwentyTwoComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Що таке арбітраж криптовалют? - Arapov.trade');
+    this.titleService.setTitle('Що таке арбітраж криптовалют? | Arapov.trade');
+
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+
     this.meta.addTag({
       name: 'description',
       content:
-        'Що таке арбітраж криптовалют? Дізнайтеся про основи та секрети успіху цієї стратегії заробітку на різниці цін. Повний посібник для початківців та професійних трейдерів.',
+        'Що таке арбітраж криптовалют? Основи та секрети стратегії заробітку на різниці цін. Посібник для початківців і професіоналів від Arapov.trade.',
     });
 
-    this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
     this.meta.updateTag({ name: 'datePublished', content: '2025-01-21' });
     this.meta.updateTag({
       property: 'og:image',

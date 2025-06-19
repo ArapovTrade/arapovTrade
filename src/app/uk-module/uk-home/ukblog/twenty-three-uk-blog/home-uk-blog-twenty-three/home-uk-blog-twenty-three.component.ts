@@ -14,15 +14,14 @@ export class HomeUkBlogTwentyThreeComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Що таке Bitcoin-ETF - Arapov.trade');
+    this.titleService.setTitle('Bitcoin-ETF: що це та як працює');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Дізнайтеся, що таке Bitcoin-ETF, як він працює, його переваги та недоліки, а також вплив на ринок криптовалют. Повний посібник для інвесторів та трейдерів.',
+        'Дізнайтесь, що таке Bitcoin-ETF, як він впливає на ринок криптовалют, його переваги та недоліки для інвесторів від Arapov.trade.',
     });
 
-    this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
     this.meta.updateTag({ name: 'datePublished', content: '2025-01-21' });
     this.meta.updateTag({
       property: 'og:image',

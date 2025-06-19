@@ -15,14 +15,17 @@ export class HomeUkBlogThirtySevenComponent implements OnInit {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Просадки в трейдингу: Як керувати ризиками та зберігати прибуток'
+      'Просадки в трейдингу: як керувати ризиками  Arapov.trade'
     );
+
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+
     this.meta.addTag({
       name: 'description',
       content:
-        'Дізнайтеся, що таке просадки в трейдингу, як їх аналізувати та керувати ними для досягнення стабільного прибутку.',
+        'Що таке просадки в трейдингу та як ними керувати? Дізнайтесь, як знизити ризики та зберегти прибуток за допомогою грамотного аналізу.',
     });
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-02' });
     this.meta.updateTag({
       property: 'og:image',

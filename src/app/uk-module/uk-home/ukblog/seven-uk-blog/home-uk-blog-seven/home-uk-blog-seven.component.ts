@@ -14,12 +14,12 @@ export class HomeUkBlogSevenComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Як Заробляють у Трейдингу?');
+    this.titleService.setTitle('Як заробляти в трейдингу: стратегії');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Дізнайтеся, як заробляти у трейдингу, які інструменти та стратегії допоможуть вам досягти успіху. Розглянемо, що таке Форекс і як використовувати кредитне плече.',
+        'Дізнайтесь, як заробляти в трейдингу: інструменти, стратегії, Форекс і використання кредитного плеча від ArapovTrade.',
     });
     this.gerRandom();
   }

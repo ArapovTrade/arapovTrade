@@ -14,12 +14,12 @@ export class HomeUkBlogFiftyNineComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Як торгувати Пробій рівня у трейдингу');
+    this.titleService.setTitle('Пробій рівня: як торгувати в трейдингу');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Детальний посібник із торгівлі на пробій рівня у трейдингу. Дізнайтеся, як визначати рівні, працювати з пін-баром та обсягами.',
+        'Дізнайтесь, як торгувати пробій рівня в трейдингу: визначення рівнів, робота з пін-баром та обсягами від ArapovTrade.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-18' });
     this.meta.updateTag({

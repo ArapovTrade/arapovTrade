@@ -15,15 +15,15 @@ export class HomeUkBlogSixtySevenComponent {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Чому важливо аналізувати обсяги в рамках поточних трендів на ринку - Arapov.trade'
+      'Обсяги і тренди: як аналізувати | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Розбираємо, чому аналіз обсягів є ключовим інструментом у визначенні сили трендів, точок розвороту та підтвердженні ринкових рухів. Дізнайтеся, як об`ємний аналіз допомагає уникати хибних сигналів і торгувати з високою точністю.',
+        'Дізнайтеся, як аналіз обсягів допомагає визначити силу тренду, точки розвороту та уникнути хибних сигналів на ринку.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-12' });
     this.meta.updateTag({
       property: 'og:image',

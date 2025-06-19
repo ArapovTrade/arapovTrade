@@ -19,7 +19,7 @@ export class HomeUkBlogSixtyComponent implements OnInit {
     this.meta.addTag({
       name: 'description',
       content:
-        'Порівняння трейдингу та опціонів. Розбираємо переваги та недоліки інструментів, стратегії, ризики та застосування для різних типів трейдерів.',
+        'Порівняння трейдингу та опціонів. Переваги, недоліки, стратегії та ризики для різних типів трейдерів на Arapov.trade.',
     });
 
     this.gerRandom();

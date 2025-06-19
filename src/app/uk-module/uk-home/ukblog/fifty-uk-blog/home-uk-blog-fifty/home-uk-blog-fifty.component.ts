@@ -14,14 +14,14 @@ export class HomeUkBlogFiftyComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Алгоритмічні Ордери на Біржі - Arapov.trade');
+    this.titleService.setTitle('Алгоритмічні ордери: як працюють');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Що таке алгоритмічні ордери? Вивчіть їх типи, переваги, ризики та майбутнє використання у трейдингу. Повний посібник для трейдерів.',
+        'Дізнайтесь про алгоритмічні ордери на біржі: типи, переваги, ризики та їх використання в трейдингу від ArapovTrade.',
     });
-    
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-03-26' });
     this.meta.updateTag({
       property: 'og:image',

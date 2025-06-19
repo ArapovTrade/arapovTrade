@@ -14,13 +14,16 @@ export class HomeUkBlogFourtyNineComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Як обрати торгову платформу для трейдингу?');
+    this.titleService.setTitle(
+      'Як обрати торгову платформу для трейдингу | Arapov.trade'
+    );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Дізнайтеся, як обрати ідеальну торгову платформу для трейдингу. Корисні поради, критерії вибору та список найкращих платформ для початківців і професіоналів.',
+        'Дізнайтеся, як обрати торгову платформу для трейдингу: корисні поради, критерії вибору та огляд найкращих платформ для трейдерів.',
     });
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-03' });
     this.meta.updateTag({
       property: 'og:image',

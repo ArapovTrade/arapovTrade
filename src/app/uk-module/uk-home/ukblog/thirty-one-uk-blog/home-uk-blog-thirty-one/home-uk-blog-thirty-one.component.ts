@@ -13,13 +13,16 @@ export class HomeUkBlogThirtyOneComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Рівні підтримки та опору');
+    this.titleService.setTitle('Рівні підтримки та опору | Arapov.trade');
+
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+
     this.meta.addTag({
       name: 'description',
       content:
-        'Детальний посібник з рівнів підтримки та опору. Дізнайтеся, як їх будувати, визначати та ефективно використовувати у трейдингу.',
+        'Дізнайтесь, як будувати та використовувати рівні підтримки й опору у трейдингу. Практичний гід для трейдерів від Arapov.trade.',
     });
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-16' });
     this.meta.updateTag({
       property: 'og:image',

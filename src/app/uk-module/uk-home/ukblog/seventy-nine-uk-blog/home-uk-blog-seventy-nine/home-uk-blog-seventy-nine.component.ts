@@ -14,16 +14,14 @@ export class HomeUkBlogSeventyNineComponent {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle(
-      'Психологія усереднення: чому новачки втрачають депозити? - Arapov.trade'
-    );
+    this.titleService.setTitle('Психологія усереднення: втрата депозиту');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Розбираємо психологічні пастки усереднення, чому трейдери продовжують додавати позиції в збиткові угоди і які альтернативні стратегії допоможуть уникнути зливу депозиту.',
+        'Дізнайтесь про психологічні пастки усереднення, чому новачки втрачають депозити та як уникнути збитків у трейдингу від ArapovTrade.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-10' });
     this.meta.updateTag({
       property: 'og:image',

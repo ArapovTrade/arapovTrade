@@ -14,13 +14,16 @@ export class HomeUkBlogFourteenComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Трейдинг і Інвестиції. Що краще?');
+    this.titleService.setTitle(
+      'Трейдинг чи інвестиції: що обрати? | Arapov.trade'
+    );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Розберемо відмінності між трейдингом та інвестиціями, їх переваги та недоліки. Дізнайтеся, що підходить саме вам!',
+        'Порівняння трейдингу та інвестицій: ключові переваги, ризики і що підійде саме вам для фінансового успіху.',
     });
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-01' });
     this.meta.updateTag({
       property: 'og:image',

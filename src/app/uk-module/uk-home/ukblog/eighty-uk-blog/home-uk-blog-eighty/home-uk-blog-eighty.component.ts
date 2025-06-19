@@ -14,14 +14,14 @@ export class HomeUkBlogEightyComponent {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Фігура `Голова і плечі` - Arapov.trade');
+    this.titleService.setTitle('Голова і плечі: патерн розвороту');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Розбираємо фігуру `Голова і плечі` – один із найнадійніших патернів технічного аналізу. Дізнайтеся, як правильно ідентифікувати цю фігуру, які сигнали підтверджують розворот тренду і які стратегії допоможуть ефективно торгувати за цим патерном.',
+        'Дізнайтесь про патерн Голова і плечі: як визначити розворот тренду та торгувати ефективно. Посібник від ArapovTrade.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-20' });
     this.meta.updateTag({
       property: 'og:image',

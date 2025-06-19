@@ -14,13 +14,18 @@ export class HomeUkBlogTwelveComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Торгівля рівнями: Повний посібник');
+    this.titleService.setTitle(
+      'Торгівля рівнями: повний посібник | Arapov.trade'
+    );
+
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+
     this.meta.addTag({
       name: 'description',
       content:
-        'Детальний посібник із торгівлі рівнями для трейдерів-початківців. Як визначати, використовувати та торгувати ключові рівні.',
+        'Детальний посібник для початківців з торгівлі рівнями: як визначати, використовувати та ефективно торгувати ключові рівні від Arapov.trade.',
     });
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-14' });
     this.meta.updateTag({
       property: 'og:image',

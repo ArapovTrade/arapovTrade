@@ -15,15 +15,17 @@ export class HomeUkBlogEightyFiveComponent {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Фігура `Подвійна вершина` і `Подвійне дно`: Як торгувати розворотні патерни? - Arapov.trade'
+      'Подвійна вершина і дно: розворотні патерни'
     );
+
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+
     this.meta.addTag({
       name: 'description',
       content:
-        'Розбираємо фігури `Подвійна вершина` і `Подвійне дно` – надійні розворотні патерни технічного аналізу. Дізнайтеся, як правильно їх ідентифікувати, які сигнали підтверджують зміну тренду та як ефективно застосовувати їх у торгових стратегіях.',
+        'Дізнайтеся, як працюють фігури “Подвійна вершина” і “Подвійне дно” у теханалізі. Сигнали розвороту, входи та виходи з позицій.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-22' });
     this.meta.updateTag({
       property: 'og:image',

@@ -14,16 +14,14 @@ export class HomeUkBlogEightyTwoComponent {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle(
-      'Прапор і вимпел: Як правильно торгувати після імпульсу? - Arapov.trade'
-    );
+    this.titleService.setTitle('Прапор і Вимпел: торгуємо пробій');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Розбираємо фігури `Прапор` і `Вимпел` – потужні патерни продовження тренду. Дізнайтеся, як правильно ідентифікувати ці фігури на графіку, які сигнали підтверджують пробій і як застосовувати їх у торгових стратегіях.',
+        'Дізнайтесь про патерни Прапор і Вимпел: як визначити пробій тренду та використовувати в трейдингу. Посібник від ArapovTrade.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-21' });
     this.meta.updateTag({
       property: 'og:image',

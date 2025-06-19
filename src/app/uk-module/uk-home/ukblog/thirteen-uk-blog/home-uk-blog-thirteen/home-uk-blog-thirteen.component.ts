@@ -15,14 +15,15 @@ export class HomeUkBlogThirteenComponent implements OnInit {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Хвилі Елліотта: Основи, структура та застосування - Arapov.trade'
+      'Хвилі Елліотта: основи та застосування | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Детальний опис теорії хвиль Елліотта: принципи, структура та застосування в технічному аналізі.',
+        'Детальний опис теорії хвиль Елліотта: принципи, структура, основи та застосування в технічному аналізі для ефективної торгівлі.',
     });
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-15' });
     this.meta.updateTag({
       property: 'og:image',

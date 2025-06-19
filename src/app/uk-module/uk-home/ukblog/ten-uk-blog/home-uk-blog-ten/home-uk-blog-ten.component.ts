@@ -14,13 +14,15 @@ export class HomeUkBlogTenComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Причини втрати депозиту');
+    this.titleService.setTitle('Причини втрати депозиту | Arapov.trade');
+
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Дізнайтеся основні причини втрати депозиту трейдерами, включаючи помилки у стратегії, відсутність дисципліни та переоцінку можливостей. Поради щодо запобігання втратам.',
+        'Основні причини втрати депозиту: помилки в стратегії, відсутність дисципліни, переоцінка можливостей. Поради від Arapov.trade.',
     });
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-09' });
     this.meta.updateTag({
       property: 'og:image',

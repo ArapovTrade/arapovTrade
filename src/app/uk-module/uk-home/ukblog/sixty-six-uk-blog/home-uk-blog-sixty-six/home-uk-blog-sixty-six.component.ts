@@ -15,15 +15,15 @@ export class HomeUkBlogSixtySixComponent {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Як аналізувати рівні максимального скупчення обсягів - Arapov.trade'
+      'Рівні скупчення обсягів у трейдингу | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Повний посібник з аналізу рівнів максимального обсягу. Розбираємо, як знаходити зони великого інтересу, визначати ключові рівні підтримки та опору та торгувати з урахуванням об’ємного аналізу.',
+        'Дізнайтеся, як аналізувати рівні скупчення обсягів: зони інтересу, ключові підтримки й опори, ефективні стратегії з об’ємного аналізу.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-11' });
     this.meta.updateTag({
       property: 'og:image',

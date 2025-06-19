@@ -14,12 +14,12 @@ export class HomeUkBlogTwentySevenComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Як читати японські свічки');
+    this.titleService.setTitle('Японські свічки: як читати патерни');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        "Детальний посібник з японських свічок: їх читання, формації та застосування у трейдингу. Дізнайтеся більше про 'молот', 'повішеного' та інші ключові патерни.",
+        'Дізнайтесь, як читати японські свічки: ключові формації, патерни типу молот і повішений та їх застосування в трейдингу від ArapovTrade.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-16' });
     this.meta.updateTag({

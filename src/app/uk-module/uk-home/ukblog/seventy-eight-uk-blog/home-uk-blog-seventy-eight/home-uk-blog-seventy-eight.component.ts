@@ -14,16 +14,14 @@ export class HomeUkBlogSeventyEightComponent {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle(
-      'Як уникнути FOMO – страху втраченої вигоди? - Arapov.trade'
-    );
+    this.titleService.setTitle('FOMO в трейдингу: як уникнути страху');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Дізнайтеся, що таке FOMO у трейдингу, як страх втраченої вигоди заважає ухвалювати обґрунтовані рішення і які стратегії допоможуть уникнути емоційних угод і торгувати усвідомлено.',
+        'Дізнайтесь, що таке FOMO в трейдингу, як уникнути страху втраченої вигоди та торгувати усвідомлено. Поради від ArapovTrade.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-18' });
     this.meta.updateTag({
       property: 'og:image',

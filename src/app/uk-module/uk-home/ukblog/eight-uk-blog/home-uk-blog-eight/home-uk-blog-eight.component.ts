@@ -14,13 +14,16 @@ export class HomeUkBlogEightComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Імбаланс у трейдингу- Arapov.trade');
+    this.titleService.setTitle('Що таке імбаланс у трейдингу | Arapov.trade');
+
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+
     this.meta.addTag({
       name: 'description',
       content:
-        'Розбираємо концепцію імбалансу у трейдингу, його вплив на рух ціни, методи аналізу та торгові стратегії. Повний посібник з використання ринкового дисбалансу.',
+        'Що таке імбаланс у трейдингу, як він впливає на ринок. Приклади, методи виявлення і стратегії з урахуванням ринкового дисбалансу.',
     });
+
     this.gerRandom();
   }
   randomArticleRus: any = [];

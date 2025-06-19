@@ -15,15 +15,15 @@ export class HomeUkBlogSixtyOneComponent {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Як торгувати за Smart Money Concepts (SMC)? Покрокове керівництво - Arapov.trade'
+      'Як торгувати за Smart Money Concepts | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Дізнайтеся, як застосовувати Smart Money Concepts (SMC) у трейдингу. Повний посібник зі структури ринку, ліквідності, FVG та Order Blocks. Розбираємо стратегії входу та виходу на реальних прикладах.',
+        'Дізнайтеся, як торгувати за Smart Money Concepts: структура ринку, ліквідність, Order Blocks, FVG і стратегії входу та виходу з угод.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
+    
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-07' });
     this.meta.updateTag({
       property: 'og:image',

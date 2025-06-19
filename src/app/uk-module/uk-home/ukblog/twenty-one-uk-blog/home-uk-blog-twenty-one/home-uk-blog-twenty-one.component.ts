@@ -14,12 +14,12 @@ export class HomeUkBlogTwentyOneComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Як визначити маркетмейкера - Arapov.trade');
+    this.titleService.setTitle('Як розпізнати маркет-мейкера в трейдингу');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Розбираємо, хто такі маркет-мейкери, як їх визначити на ринку, які стратегії вони використовують і як їх дії впливають на ціну. Повний посібник з аналізу великих гравців.',
+        'Дізнайтесь, хто такі маркет-мейкери, як їх розпізнати на ринку, які стратегії вони застосовують і як це впливає на ціни від ArapovTrade.',
     });
 
     this.gerRandom();

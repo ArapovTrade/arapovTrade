@@ -14,16 +14,14 @@ export class HomeUkBlogSeventyThreeComponent {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle(
-      'Макроекономічні показники фундаментального аналізу - Arapov.trade'
-    );
+    this.titleService.setTitle('Як аналізувати макроекономіку ринку?');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Повний посібник із макроекономічних показників у фундаментальному аналізі. Як ВВП, інфляція, ставки ФРС та інші індикатори впливають на ринок?',
+        'Дізнайтесь, як ВВП, інфляція та ставки ФРС впливають на ринок через макроекономічні показники від ArapovTrade.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-16' });
     this.meta.updateTag({
       property: 'og:image',

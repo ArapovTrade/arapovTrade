@@ -14,16 +14,14 @@ export class HomeUkBlogSeventyFourComponent {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle(
-      'Фундаментальний аналіз світових валютних ринків - Arapov.trade'
-    );
+    this.titleService.setTitle('Фундаментальний аналіз валютних ринків');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Фундаментальний аналіз валютних ринків – це метод оцінки вартості валют на основі макроекономічних факторів. Розглянемо ключові показники, що впливають на валютні курси, та стратегії трейдингу на основі фундаментального аналізу.',
+        'Дізнайтесь про фундаментальний аналіз валютних ринків: ключові показники та стратегії трейдингу від ArapovTrade.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-17' });
     this.meta.updateTag({
       property: 'og:image',

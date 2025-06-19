@@ -15,15 +15,15 @@ export class HomeUkBlogTwentyEightComponent implements OnInit {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Що таке альтернативні блокчейни? - Arapov.trade'
+      'Що таке альтернативні блокчейни? | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Дізнайтеся, що таке альтернативні блокчейни, як вони працюють, у чому їх переваги та чим вони відрізняються від Bitcoin та Ethereum. Повний гід з блокчейнів наступного покоління.',
+        'Що таке альтернативні блокчейни, їхні переваги та відмінності від Bitcoin і Ethereum. Повний гід від Arapov.trade.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-01-22' });
     this.meta.updateTag({
       property: 'og:image',

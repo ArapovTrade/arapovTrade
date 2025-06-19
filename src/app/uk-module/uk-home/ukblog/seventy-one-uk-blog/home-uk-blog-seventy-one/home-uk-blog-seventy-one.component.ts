@@ -14,16 +14,14 @@ export class HomeUkBlogSeventyOneComponent {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle(
-      'Як трейдеру торгувати на новинах - Arapov.trade'
-    );
+    this.titleService.setTitle('Торгівля на новинах: стратегії трейдера');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Повний посібник з торгівлі на новинах. Розбираємо, як економічні події впливають на ринок, які стратегії новинної торгівлі найефективніші та як мінімізувати ризики під час високої волатильності.',
+        'Дізнайтесь, як торгувати на новинах: вплив економічних подій, стратегії трейдингу та мінімізація ризиків від ArapovTrade.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-14' });
     this.meta.updateTag({
       property: 'og:image',

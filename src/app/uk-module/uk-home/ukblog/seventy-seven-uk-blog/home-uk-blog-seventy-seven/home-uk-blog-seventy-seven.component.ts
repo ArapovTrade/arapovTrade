@@ -14,16 +14,14 @@ export class HomeUkBlogSeventySevenComponent {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle(
-      'Психологія трейдингу: Як емоції впливають на угоди? - Arapov.trade'
-    );
+    this.titleService.setTitle('Психологія трейдингу: контроль емоцій');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Розбираємо, як емоції впливають на трейдинг, чому страх і жадібність заважають заробляти, а також які психологічні техніки допоможуть контролювати емоції та підвищити ефективність торгівлі.',
+        'Дізнайтесь, як емоції впливають на трейдинг, чому страх і жадібність шкодять та як контролювати емоції від ArapovTrade.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-18' });
     this.meta.updateTag({
       property: 'og:image',

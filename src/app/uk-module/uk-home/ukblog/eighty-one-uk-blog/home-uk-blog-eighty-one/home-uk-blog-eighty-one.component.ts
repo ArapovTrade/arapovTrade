@@ -14,14 +14,14 @@ export class HomeUkBlogEightyOneComponent {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Фігура `Трикутник` - Arapov.trade');
+    this.titleService.setTitle('Фігура Трикутник у технічному аналізі');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Розбираємо фігуру `Трикутник` – один із ключових патернів технічного аналізу. Дізнайтеся, як правильно визначити цей патерн на графіку, які сигнали підтверджують пробій і як використовувати його в торгових стратегіях.',
+        'Дізнайтесь про фігуру Трикутник: як визначити патерн, сигнали пробою та використання в трейдингу. Посібник від ArapovTrade.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-20' });
     this.meta.updateTag({
       property: 'og:image',

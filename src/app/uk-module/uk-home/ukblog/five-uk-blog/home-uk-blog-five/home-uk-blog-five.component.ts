@@ -14,14 +14,14 @@ export class HomeUkBlogFiveComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Ціноутворення та Ліквідність - Arapov.trade');
+    this.titleService.setTitle('Ціноутворення та ліквідність ринку');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Що таке ціноутворення та ліквідність на фінансових ринках? Досліджуємо ключові принципи, вплив ліквідності на ціноутворення, роль маркет-мейкерів та управління ризиками.',
+        'Дізнайтесь про ціноутворення та ліквідність на фінансових ринках, роль маркет-мейкерів і управління ризиками від ArapovTrade.',
     });
-   
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-03-26' });
     this.meta.updateTag({
       property: 'og:image',

@@ -14,12 +14,12 @@ export class HomeUkBlogNineteenComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Метод Вайкоффа в трейдингу - Arapov.trade');
+    this.titleService.setTitle('Метод Вайкоффа в трейдингу | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Метод Вайкоффа – це потужний інструмент аналізу ринку, заснований на законах попиту і пропозиції. Дізнайтеся, як застосовувати Wyckoff Method для визначення трендів, точок входу та виходу з ринку.',
+        'Дізнайтеся, як методом Вайкоффа аналізувати попит і пропозицію, визначати тренди та оптимальні точки входу і виходу в трейдингу.',
     });
 
     this.gerRandom();

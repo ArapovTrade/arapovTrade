@@ -14,16 +14,14 @@ export class HomeUkBlogEightyThreeComponent {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle(
-      'Фігура `Чашка з ручкою`: Як торгувати сильні пробої? - Arapov.trade'
-    );
+    this.titleService.setTitle('Чашка з ручкою: торгуємо пробої');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Розбираємо фігуру `Чашка з ручкою` – один з найнадійніших патернів продовження тренду. Дізнайтеся, як правильно ідентифікувати цей патерн, які сигнали підтверджують пробій і як застосовувати його в торгових стратегіях.',
+        'Дізнайтесь про патерн Чашка з ручкою: як визначити пробій тренду та використовувати в трейдингу. Посібник від ArapovTrade.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Ігор Арапов' });
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-21' });
     this.meta.updateTag({
       property: 'og:image',
