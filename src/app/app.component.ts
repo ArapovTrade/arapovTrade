@@ -25,6 +25,7 @@ import { Meta, Title } from '@angular/platform-browser';
 import { filter } from 'rxjs/operators';
 import { MetaservService } from './servises/metaserv.service';
 import { DOCUMENT } from '@angular/common';
+import { FaqservService } from './servises/faqserv.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -58,7 +59,8 @@ export class AppComponent implements OnInit, AfterViewChecked {
     private meta: Meta,
     private titleService: Title,
     private metaTegServ: MetaservService,
-    @Inject(DOCUMENT) private document: Document
+    @Inject(DOCUMENT) private document: Document,
+    private faqservise:FaqservService
   ) {
     this.renderer = rendererFactory.createRenderer(null, null);
     this.router.events.subscribe((event) => {
@@ -69,7 +71,7 @@ export class AppComponent implements OnInit, AfterViewChecked {
       }
     });
   }
-
+  langFAQ=''
   changeLanguage(lang: string) {
     // Получение текущего пути и параметров маршрута
     const currentPath = this.router.url;
@@ -134,7 +136,7 @@ export class AppComponent implements OnInit, AfterViewChecked {
     });
 
     this.setDefaultMetaTags();
-
+    
     this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe(() => {
@@ -148,6 +150,8 @@ export class AppComponent implements OnInit, AfterViewChecked {
           ? 'en'
           : 'ru';
 
+          // FAQ
+          this.addingFaqScript(langCode)
         // Визначаємо мову та витягуємо відповідний заголовок
         const lang = urlPath.startsWith('uk')
           ? 'Ukr'
@@ -250,8 +254,53 @@ export class AppComponent implements OnInit, AfterViewChecked {
         this.meta.updateTag({ name: 'language', content: langCode });
         this.document.documentElement.lang = langCode;
         this.generateBreadcrumbs();
+      
       });
+
+
+         
+      
+      
   }
+   
+
+  //FAQ
+  private addingFaqScript(langcode:string){
+       
+    const faqSchema=this.faqservise.returnSchema(langcode)
+    
+    const scriptss = this.document.querySelectorAll(
+      'script[type="application/ld+json"]'
+    );
+    let faqScript: HTMLScriptElement | any = null;
+    scriptss.forEach((script) => {
+      try {
+        const jsonContent = JSON.parse(script.textContent || '{}');
+        if (jsonContent['@type'] === 'FAQPage') {
+          faqScript = script;
+          
+        }
+      } catch (e) {
+        // Игнорируем некорректный JSON
+      }
+    });
+   
+    // Если скрипт FAQPage найден, заменяем его
+    if (faqScript) {
+      faqScript.text = JSON.stringify(faqSchema);
+    } else {
+      // Если скрипт не найден, создаём новый
+
+      const scriptr = this.document.createElement('script');
+      scriptr.type = 'application/ld+json';
+      scriptr.text = JSON.stringify(faqSchema);
+      this.document.head.appendChild(scriptr);
+      
+    }
+
+    
+  }
+
 
   private setDefaultMetaTags() {
     this.meta.addTags([

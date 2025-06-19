@@ -39,7 +39,7 @@ export class RuHomeComponent implements OnInit {
       userMessage: new FormControl('', Validators.required),
     });
     this.titleService.setTitle(
-      'Авторское обучение трейдингу онлайн | Курсы трейдинга  | Игорь Арапов'
+      'Авторское обучение трейдингу онлайн | Игорь Арапов'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
 

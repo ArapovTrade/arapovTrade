@@ -54,12 +54,12 @@ export class UkHomeComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.titleService.setTitle('Авторське навчання трейдингу');
+    this.titleService.setTitle('Авторське навчання трейдингу від Ігоря Арапова');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Авторські ⏩ курси трейдингу від Ігоря Арапова. ⭐ Навчання трейдингу онлайн з нуля від ArapovTrade.',
+        'Онлайн-курс трейдингу від Ігоря Арапова — стартуйте з нуля і навчіться впевнено торгувати на фінансових ринках крок за кроком.',
     });
     this.meta.addTag({
       name: 'keywords',
@@ -69,7 +69,7 @@ export class UkHomeComponent implements OnInit {
 
     this.lang.setNumber(1);
   }
-
+  
   scrollToRegistration() {
     const element = document.getElementById('registration');
     if (element) {

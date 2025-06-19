@@ -26,7 +26,7 @@ export class RuStudyingHomeComponent implements OnInit {
   ngOnInit(): void {
     this.lang.setNumber(2);
     this.titleService.setTitle(
-      '  Курсы трейдинга | Авторское обучение трейдингу онлайн |Игорь Арапов'
+      'Курсы по трейдингу | Обучение  онлайн | Игорь Арапов'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
