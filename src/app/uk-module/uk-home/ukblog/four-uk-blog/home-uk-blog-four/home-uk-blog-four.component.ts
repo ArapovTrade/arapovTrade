@@ -14,9 +14,9 @@ export class HomeUkBlogFourComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle(
-      'Як не втратити гроші на маржинальній торгівлі | Arapov.trade'
-    );
+   this.titleService.setTitle('Як не втратити гроші на маржинальній торгівлі');
+
+
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({

@@ -15,7 +15,7 @@ export class HomeUkBlogFourtyEightComponent implements OnInit {
   ) {}
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Інструкція з самостійного навчання трейдингу | Arapov.trade'
+      'Самостійне навчання трейдингу | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({

@@ -14,7 +14,7 @@ export class HomeUkSixteenComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Ethereum: що це та як працює');
+    this.titleService.setTitle('Ethereum: що це та як працює | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',

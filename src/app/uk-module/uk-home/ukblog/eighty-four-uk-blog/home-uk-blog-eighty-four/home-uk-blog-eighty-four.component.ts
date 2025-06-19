@@ -14,14 +14,14 @@ export class HomeUkBlogEightyFourComponent {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Подвійна вершина і дно: розворотні патерни');
+    this.titleService.setTitle('Фігура Поглинання: Як спіймати розворот тренду');
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
 
     this.meta.addTag({
       name: 'description',
       content:
-        'Дізнайтеся, як працюють фігури “Подвійна вершина” і “Подвійне дно” у теханалізі. Сигнали розвороту, входи та виходи з позицій.',
+        'Дізнайтеся, як розпізнати фігуру Поглинання (Bullish & Bearish Engulfing) для точного входу при розвороті тренду. Поради від Arapov.trade.',
     });
 
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-22' });

@@ -14,7 +14,7 @@ export class HomeUkBlogEightySixComponent {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle('Патерн 1-2-3: розворот тренду');
+    this.titleService.setTitle('Патерн 1-2-3: розворот тренду | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
