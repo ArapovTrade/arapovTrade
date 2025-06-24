@@ -1,7 +1,110 @@
-
 {
   "routes": [
     { "handle": "filesystem" },
+    { "src": "/en/.*", "status": 410, "dest": "/index.html" },
+    { "src": "/en", "status": 410, "dest": "/index.html" },
+    { "src": "/ru/home", "status": 410, "dest": "/index.html" },
+    { "src": "/uk/home", "status": 410, "dest": "/index.html" },
+    { "src": "/en/home", "status": 410, "dest": "/index.html" },
+    { "src": "/ru/trading/.*", "status": 410, "dest": "/index.html" },
+    { "src": "/uk/trading/.*", "status": 410, "dest": "/index.html" },
+    { "src": "/en/trading/.*", "status": 410, "dest": "/index.html" },
+    { "src": "/ru/blog/.*", "status": 410, "dest": "/index.html" },
+    { "src": "/uk/blog/.*", "status": 410, "dest": "/index.html" },
+    { "src": "/en/blog/.*", "status": 410, "dest": "/index.html" },
+    {
+      "src": "/uk/freestudying/simpletradingsystem",
+      "status": 410,
+      "dest": "/index.html"
+    },
+    {
+      "src": "/ru/freestudying/simpletradingsystem",
+      "status": 410,
+      "dest": "/index.html"
+    },
+    {
+      "src": "/uk/freestudying/howtomakemoney",
+      "status": 410,
+      "dest": "/index.html"
+    },
+    {
+      "src": "/uk/freestudying/liqudityintrading",
+      "status": 410,
+      "dest": "/index.html"
+    },
+    {
+      "src": "/ru/freestudying/liqudityintrading",
+      "status": 410,
+      "dest": "/index.html"
+    },
+    {
+      "src": "/ru/freestudying/howtomakemoney",
+      "status": 410,
+      "dest": "/index.html"
+    },
+    {
+      "src": "/ru/freestudying/selectingtimeframe",
+      "status": 410,
+      "dest": "/index.html"
+    },
+    {
+      "src": "/uk/freestudying/selectingtimeframe",
+      "status": 410,
+      "dest": "/index.html"
+    },
+    {
+      "src": "/ru/freestudying/fibonacciLevels",
+      "status": 410,
+      "dest": "/index.html"
+    },
+    {
+      "src": "/uk/freestudying/fibonacciLevels",
+      "status": 410,
+      "dest": "/index.html"
+    },
+    {
+      "src": "/ru/freestudying/volumetricmarketanalysis",
+      "status": 410,
+      "dest": "/index.html"
+    },
+    {
+      "src": "/uk/freestudying/volumetricmarketanalysis",
+      "status": 410,
+      "dest": "/index.html"
+    },
+
+    {
+      "src": "/ru/freestudying/smartmoneyeducation",
+      "status": 410,
+      "dest": "/index.html"
+    },
+    {
+      "src": "/uk/freestudying/smartmoneyeducation",
+      "status": 410,
+      "dest": "/index.html"
+    },
+    {
+      "src": "/documents/Політика конфіденційності.pdf",
+      "status": 410,
+      "dest": "/index.html"
+    },
+    {
+      "src": "/assets/documents/Політикаконфіденційності.pdf",
+      "status": 410,
+      "dest": "/index.html"
+    },
+    {
+      "src": "/assets/documents/PrivacyPolicyUK.DOC",
+      "status": 410,
+      "dest": "/index.html"
+    },
+
+    { "src": "/ru/trading", "status": 410, "dest": "/index.html" },
+    { "src": "/uk/trading", "status": 410, "dest": "/index.html" },
+    { "src": "/en/trading", "status": 410, "dest": "/index.html" },
+    { "src": "/ru/blog", "status": 410, "dest": "/index.html" },
+    { "src": "/uk/blog", "status": 410, "dest": "/index.html" },
+    { "src": "/en/blog", "status": 410, "dest": "/index.html" },
     { "src": "/.*", "status": 404, "dest": "/index.html" }
   ]
 }
