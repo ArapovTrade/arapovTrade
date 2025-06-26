@@ -1,4 +1,4 @@
 User-agent: *
-Disallow: /ru/freestudying/freeeducation?gad_source=5
+Disallow: /*?gad_source=* 
 
 Sitemap: https://arapov.trade/sitemap.xml
