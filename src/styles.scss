@@ -3293,7 +3293,7 @@ body {
   .mat-expansion-panel-header {
     height: auto !important; /* Динамічна висота заголовка */
      
-    padding: 12px 12px !important; /* Зменшені відступи для компактності */
+    padding: 0px 12px !important; /* Зменшені відступи для компактності */
      
   }
 }
@@ -3311,4 +3311,21 @@ padding: 0 10px;
 }
 .mat-expansion-indicator svg {
   margin: 10px !important;
+}
+
+
+.orderList_pad{
+  padding: 0 0 0 60px !important;
+}
+.orderList_pad li{
+  padding:7px 10px;
+    font-style: italic;
+    color: rgb(76, 76, 76);
+    font-size: 14px;
+}
+ 
+@media screen and (max-width: 600px) {
+ .orderList_pad{
+  padding: 0 0 0 30px !important;
+}
 }
