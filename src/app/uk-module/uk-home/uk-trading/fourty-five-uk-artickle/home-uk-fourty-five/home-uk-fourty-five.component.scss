@@ -1,14 +1,7 @@
-// .hero-section {
-//   background: url(/assets/img/content/freeeducationnew.webp) no-repeat bottom
-//     right;
-//   background-size: 100% 100%;
-//   color: white;
-//   height: 230px;
-// }
+ 
 
 .section-i {
   padding: 0;
-  
 }
 
 .pictureImg {
@@ -19,8 +12,6 @@ h2,
 h1 {
   align-self: center;
 }
-
- 
 
 .flex {
   display: flex;
@@ -36,9 +27,7 @@ h1 {
   margin: 10px 30px 40px;
   text-align: center;
 }
-
-//////////////////////////////////////////////
-///
+ 
 .img_title {
   width: 30px;
   height: 30px;
@@ -108,7 +97,7 @@ body {
   text-align: center;
   background: url(/assets/img/content/freeeducationnew.webp) no-repeat bottom
     right;
-    background-size: 100% 100%;
+  background-size: 100% 100%;
   color: white;
   height: 230px;
 }
@@ -130,21 +119,7 @@ body {
   max-width: 600px;
   margin: 0 auto 24px;
 }
-.cta-button {
-  display: inline-block;
-  background-color: #3b82f6;
-  color: #ffffff;
-  padding: 12px 24px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 16px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-.cta-button:hover {
-  background-color: #1e3a8a;
-  transform: translateY(-2px);
-}
+
 .hero-content {
   background: #ffffff;
   padding: 40px;
@@ -166,6 +141,12 @@ body {
   color: #1e3a8a;
   margin: 24px 0 12px;
 }
+.hero-content h4 {
+  // font-size: 20px;
+  color: #1e3a8a;
+  margin: 24px 0 12px;
+}
+
 .hero-content p {
   font-size: 16px;
   color: #4b5563;
@@ -219,7 +200,7 @@ body {
 }
 .social-link i {
   font-size: 24px;
-} /* Related Articles */
+}  
 .related-articles {
   padding: 60px 0;
   background-color: #f5f5f5;
@@ -245,11 +226,7 @@ body {
   transform: translateY(-5px);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
-// .article-block img {
-//   width: 100%;
-//   height: 150px;
-//   object-fit: cover;
-// }
+ 
 .article-block h3 {
   font-size: 18px;
   color: #1e3a8a;
@@ -314,7 +291,6 @@ body {
   }
 }
 
-
 @media (min-width: 700px) {
   .hero-section {
     height: 400px;
@@ -338,3 +314,5 @@ body {
 }
 
  
+ 
+   
