@@ -119,21 +119,7 @@ body {
   max-width: 600px;
   margin: 0 auto 24px;
 }
-.cta-button {
-  display: inline-block;
-  background-color: #3b82f6;
-  color: #ffffff;
-  padding: 12px 24px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 16px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-.cta-button:hover {
-  background-color: #1e3a8a;
-  transform: translateY(-2px);
-}
+
 .hero-content {
   background: #ffffff;
   padding: 40px;
@@ -327,19 +313,6 @@ body {
   }
 }
 
- 
-
- .practice {
-  flex-direction: column;
-}
-.practice i {
-  font-size: 12px;
-}
-@media (min-width: 900px) {
-  .practice i {
-    font-size: 14px;
-  }
-}
  
  
    
