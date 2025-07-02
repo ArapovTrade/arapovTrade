@@ -1,113 +1,130 @@
 <section class="hero-section" id="hero">
-    <div class="container">
-        <div class="section-i">
-            <div class="section-content">
-                <div class="hero-content pt50">
+  <div class="container">
+    <div class="section-i">
+      <div class="section-content">
+        <div class="hero-content pt50">
+          <h1 class="orange">Навчання трейдингу безкоштовно</h1>
 
-                    <h1 class="orange ">
-                        Навчання трейдингу безкоштовно
-                    </h1>
+          <p>
+            <a routerLink="freeeducation" class="orange dec blacklink">
+              Безкоштовний курс з трейдингу </a
+            >, що включає в себе
+            <a
+              class="orange dec" target="_blank"
+              href="https://youtube.com/playlist?list=PLdXB70rGX5_zqH_X84Q_z0wj5pQYhdqfk&si=Hquku7z09eOtp4fp"
+            >
+              детальні відеоуроки
+            </a>
+            та статті з прикладами на ключові теми трейдингу для самостійного
+            навчання від Ігоря Арапова.
+          </p>
 
-                    <p>
-                        <a routerLink="freeeducation" class="orange dec blacklink">Навчання трейдингу безкоштовно</a> ,
-                        яке
-                        включає <a class="orange dec"
-                            href="https://youtube.com/playlist?list=PLdXB70rGX5_zqH_X84Q_z0wj5pQYhdqfk&si=Hquku7z09eOtp4fp">детальні
-                            відеоуроки</a>, статті та безкоштовні навчальні матеріали, зібрані в
-                        повноцінні курси за ключовими темами трейдингу для самостійного навчання від Ігоря Арапова.
-                    </p>
-                    <p>
-                  Ознайомитися з торговими результатами
-                  <strong> Безкоштовного навчального курсу</strong> і
-                  ефективністю торгової системи ви можете на
-                  <a
-                    target="_blank"
-                    class="linkrefinto"
-                    href="https://www.mql5.com/ru/signals/2246716?source=External "
-                    >публічному рахунку учня</a
-                  >
-                  . Учень займає 1 місце на сервісі <strong>MQL5</strong> за
-                  розміром капіталу його підписників.
-                </p>
-
-
-                </div>
-                <div class="hero-image-place  m-right">
-                    <picture class="hero-image">
-                        <source srcset="/assets/img/content/author22.png" media="(min-width: 600px)">
-
-                        <img src="/assets/img/content/author22.png" alt="author" loading="lazy">
-                    </picture>
-                </div>
-            </div>
+          <p>
+            Ознайомитися з торговими результатами
+            <strong> Безкоштовного навчального курсу</strong> і ефективністю
+            торгової системи ви можете на
+            <a
+              target="_blank"
+              class="linkrefinto"
+              href="https://www.mql5.com/ru/signals/2246716?source=External "
+              >публічному рахунку учня</a
+            >
+            . Учень займає 1 місце на сервісі <strong>MQL5</strong> за розміром
+            капіталу його підписників.
+          </p>
         </div>
+        <div class="hero-image-place m-right">
+          <picture class="hero-image">
+            <source
+              srcset="/assets/img/content/author22.png"
+              media="(min-width: 600px)"
+            />
+
+            <img
+              src="/assets/img/content/author22.png"
+              alt="author"
+              loading="lazy"
+            />
+          </picture>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
 
-
-
-
-
-
 <div class="separator" #scrollToTop>
-    <div class="line"></div>
+  <div class="line"></div>
 </div>
 
 <section class="" id="hero">
-    <div class="container black">
-        <div class="section-i padd3">
-            <div class="groups-block">
-
-                <div *ngFor="let group of ukrGroups" class="inpFlex">
-                    <label>
-                        <input type="checkbox" [checked]="this.grr.includes(group)" [value]="group"
-                            (change)="onGroupChange($event)" [class.checked-class]="checkedGroup.includes(group)" /> {{
-                        group
-                        }}
-                    </label>
-                </div>
-            </div>
-            <div class="section-content">
-                <div class="hero-content flex">
-
-
-
-                    <ng-template #articleTemplate let-article>
-                        <div class="article">
-                            <div class="programm__list">
-                                <div class="programm__item">
-                                    <span class="programm__close"></span>
-                                    <div class="programm__in box">
-                                        <a routerLink="{{article.linkUkr}}" hreflang="uk">
-                                            <img class="article-img" src="{{article.imgUkr}}" alt="{{article.titleUkr}}"
-                                                loading="lazy">
-                                        </a> 
-                                        <div class="programm__title orange">
-                                            <a routerLink="{{article.linkUkr}}" class="orange" hreflang="uk">
-                                                <h3>{{article.titleUkr}}</h3>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </ng-template>
-
-                    <div *ngFor="let article of paginatedArticles">
-
-                        <ng-container *ngTemplateOutlet="articleTemplate; context: { $implicit: article }">
-
-                        </ng-container>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <mat-paginator #paginator [length]="filteredArticles.length" [pageSize]="pageSize"
-                [pageSizeOptions]="[6, 12,   24 ,100 ]" aria-label="Select page" (page)="onPageChange($event)">>
-            </mat-paginator>
+  <div class="container black">
+    <div class="section-i padd3">
+      <div class="groups-block">
+        <div *ngFor="let group of ukrGroups" class="inpFlex">
+          <label>
+            <input
+              type="checkbox"
+              [checked]="this.grr.includes(group)"
+              [value]="group"
+              (change)="onGroupChange($event)"
+              [class.checked-class]="checkedGroup.includes(group)"
+            />
+            {{ group }}
+          </label>
         </div>
+      </div>
+      <div class="section-content">
+        <div class="hero-content flex">
+          <ng-template #articleTemplate let-article>
+            <div class="article">
+              <div class="programm__list">
+                <div class="programm__item">
+                  <span class="programm__close"></span>
+                  <div class="programm__in box">
+                    <a routerLink="{{ article.linkUkr }}" hreflang="uk">
+                      <img
+                        class="article-img"
+                        src="{{ article.imgUkr }}"
+                        alt="{{ article.titleUkr }}"
+                        loading="lazy"
+                      />
+                    </a>
+                    <div class="programm__title orange">
+                      <a
+                        routerLink="{{ article.linkUkr }}"
+                        class="orange"
+                        hreflang="uk"
+                      >
+                        <h3>{{ article.titleUkr }}</h3>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+
+          <div *ngFor="let article of paginatedArticles">
+            <ng-container
+              *ngTemplateOutlet="
+                articleTemplate;
+                context: { $implicit: article }
+              "
+            >
+            </ng-container>
+          </div>
+        </div>
+      </div>
+
+      <mat-paginator
+        #paginator
+        [length]="filteredArticles.length"
+        [pageSize]="pageSize"
+        [pageSizeOptions]="[6, 12, 24, 100]"
+        aria-label="Select page"
+        (page)="onPageChange($event)"
+        >>
+      </mat-paginator>
     </div>
+  </div>
 </section>
