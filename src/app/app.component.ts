@@ -152,7 +152,7 @@ export class AppComponent implements OnInit, AfterViewChecked {
 
           // FAQ
           
-          this.addingFaqScript(langCode)
+          this.addingFaqScript(langCode,urlPath )
         // Визначаємо мову та витягуємо відповідний заголовок
         const lang = urlPath.startsWith('uk')
           ? 'Ukr'
@@ -266,9 +266,9 @@ export class AppComponent implements OnInit, AfterViewChecked {
    
 
   //FAQ
-  private addingFaqScript(langcode:string){
+  private addingFaqScript(langcode:string, path:string){
        
-    const faqSchema=this.faqservise.returnSchema(langcode)
+    const faqSchema=this.faqservise.returnSchema(langcode, path)
     
     const scriptss = this.document.querySelectorAll(
       'script[type="application/ld+json"]'
