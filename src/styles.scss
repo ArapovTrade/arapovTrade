@@ -614,17 +614,7 @@ section {
   }
 }
 
-.button.button-white {
-  border: 1px solid white;
-  background: white;
-  color: #ff6633;
-}
-
-.button.button-white:hover,
-.button.button-white:active {
-  border: 1px solid #ffdcd0;
-  background: #ffdcd0;
-}
+ 
 
 .button-place {
   display: flex;
@@ -754,13 +744,7 @@ section {
   }
 }
 
-// .top-slogan {
-//     width: 0;
-//     height: 0;
-//     clip: rect(0, 0, 0, 0);
-//     overflow: hidden;
-//     color: #9c9c9c;
-// }
+ 
 
 .top-slogan mark {
   background: transparent;
@@ -809,16 +793,12 @@ section {
   cursor: pointer;
 }
 
-/* .top-menu #menu ~ .hide-menu {
-    display: none; } */
+ 
 .top-menu #menu ~ nav.menu {
   display: none;
 }
 
-/* .top-menu #menu:checked ~ .show-menu {
-    display: none; } */
-/* .top-menu #menu:checked ~ .hide-menu {
-    display: block; } */
+ 
 .top-menu #menu:checked ~ nav.menu {
   display: block;
   position: absolute;
