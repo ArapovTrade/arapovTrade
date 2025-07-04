@@ -242,33 +242,33 @@ faqsUkrCourse = [
 
     
 
-      if(path==''){
-        this.faqs=this.faqsUkrAuthor
-      }else if(langcode == 'uk'&&path=='uk'){
-         this.faqs=this.faqsUkrAuthor
-      }else if(langcode == 'ru'&&path=='ru'){
-         this.faqs=this.faqsRuAuthor
-      }else if(langcode == 'ru'&&path=='ru/studying'){
-         this.faqs=this.faqsRuCourse
-      }
-      else if(langcode == 'uk'&&path=='uk/studying'){
-         this.faqs=this.faqsUkrCourse
-      }
-      else if(langcode == 'uk'&&path=='uk/freestudying/freeeducation'){
-         this.faqs=this.faqsUkrOwl
-      }
-      else if(langcode == 'ru'&&path=='ru/freestudying/freeeducation'){
-         this.faqs=this.faqsUkrOwl
-      }
-      else if(langcode == 'ru'){
-         this.faqs=this.faqsRuPages
-      }else{
-        this.faqs=this.faqsUkrPages
-      }
+      // if(path==''){
+      //   this.faqs=this.faqsUkrAuthor
+      // }else if(langcode == 'uk'&&path=='uk'){
+      //    this.faqs=this.faqsUkrAuthor
+      // }else if(langcode == 'ru'&&path=='ru'){
+      //    this.faqs=this.faqsRuAuthor
+      // }else if(langcode == 'ru'&&path=='ru/studying'){
+      //    this.faqs=this.faqsRuCourse
+      // }
+      // else if(langcode == 'uk'&&path=='uk/studying'){
+      //    this.faqs=this.faqsUkrCourse
+      // }
+      // else if(langcode == 'uk'&&path=='uk/freestudying/freeeducation'){
+      //    this.faqs=this.faqsUkrOwl
+      // }
+      // else if(langcode == 'ru'&&path=='ru/freestudying/freeeducation'){
+      //    this.faqs=this.faqsUkrOwl
+      // }
+      // else if(langcode == 'ru'){
+      //    this.faqs=this.faqsRuPages
+      // }else{
+      //   this.faqs=this.faqsUkrPages
+      // }
 
 
 
-
+this.faqs=this.faqsUkrPages
  
 
     let schema = {
