@@ -11,6 +11,11 @@ export class FaqservService {
   faqs!: Array<arrayFAQ>;
   faqsUKR = [
     {
+      question: 'Де можна подивитися торгову статистику?',
+      answer:
+        'На нашому сайті представлений публічний торговий рахунок учня з сервера MQL5. Ви можете ознайомитися з детальною статистикою торгівлі, включаючи прибутковість, ризики та історію угод.',
+    },
+    {
       question: 'Як змінити мову сайту?',
       answer:
         'У правому верхньому куті натисніть на іконку прапора та виберіть потрібну вам мову.',
@@ -59,6 +64,11 @@ export class FaqservService {
   ];
 
   faqsRu = [
+    {
+      question: 'Где можно посмотреть торговую статистику?',
+      answer:
+        'На нашем сайте представлен публичный торговый счёт ученика с сервера MQL5. Вы можете ознакомиться с подробной статистикой торговли, включая прибыльность, риски и историю сделок.',
+    },
     {
       question: 'Как поменять язык сайта?',
       answer:
@@ -109,12 +119,9 @@ export class FaqservService {
   ];
   languageForFAQ = 'uk';
   constructor(@Inject(DOCUMENT) private document: Document) {}
-   
 
   returnSchema(langcode: string) {
-    
-
-    this.faqs = (langcode == 'uk'|| langcode=='')? this.faqsUKR : this.faqsRu;
+    this.faqs = langcode == 'uk' || langcode == '' ? this.faqsUKR : this.faqsRu;
     let schema = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
