@@ -1,14 +1,9 @@
-// Custom Theming for Angular Material
-// For more information: https://material.angular.io/guide/theming
+ 
 @use "@angular/material" as mat;
-// Plus imports for other components in your app.
-
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-// Be sure that you only ever include this mixin once!
+ 
 @include mat.core();
 
-// Define the theme object.
+ 
 $projectArapov-theme: mat.define-theme(
   (
     color: (
@@ -22,42 +17,12 @@ $projectArapov-theme: mat.define-theme(
   )
 );
 
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
+ 
 :root {
   @include mat.all-component-themes($projectArapov-theme);
 }
 
-// Comment out the line below if you want to use the pre-defined typography utility classes.
-// For more information: https://material.angular.io/guide/typography#using-typography-styles-in-your-application.
-// @include mat.typography-hierarchy($projectArapov-theme);
-
-// Comment out the line below if you want to use the deprecated `color` inputs.
-// @include mat.color-variants-backwards-compatibility($projectArapov-theme);
-
-// Custom Theming for Angular Material
-// For more information: https://material.angular.io/guide/theming
-
-// @use '@angular/material' as mat;
-
-// Plus imports for other components in your app.
-
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-// Be sure that you only ever include this mixin once!
-
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
-
-// Comment out the line below if you want to use the pre-defined typography utility classes.
-// For more information: https://material.angular.io/guide/typography#using-typography-styles-in-your-application.
-// @include mat.typography-hierarchy($projectArapov-theme);
-
-// Comment out the line below if you want to use the deprecated `color` inputs.
-// @include mat.color-variants-backwards-compatibility($projectArapov-theme);
-/* You can add global styles to this file, and also import other style files */
+ 
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
@@ -297,27 +262,7 @@ select {
   text-transform: none;
 }
 
-button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
-  -webkit-appearance: button;
-}
-
-button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-
-button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
-  outline: 1px dotted ButtonText;
-}
+ 
 
 fieldset {
   padding: 0.35em 0.75em 0.625em;
@@ -542,13 +487,11 @@ section {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -ms-flex-line-pack: center;
+  
   align-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
+  
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
+   
   justify-content: center;
   width: 100%;
   min-width: 280px;
@@ -580,13 +523,11 @@ section {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -ms-flex-line-pack: center;
+   
   align-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
+   
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
+   
   justify-content: center;
   width: 100%;
   max-width: 60px;
@@ -609,9 +550,7 @@ section {
   margin: 10px;
   color: white;
   font-family: Inter, "Inter", serif;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
+   
   user-select: none;
 }
 
