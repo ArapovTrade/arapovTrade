@@ -1,5 +1,15 @@
 import { Injectable, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
+import { FaqRuAuthorService } from './faqservices/faq-ru-author.service';
+import { FaqRuCourseService } from './faqservices/faq-ru-course.service';
+
+import { FaqRuOwlService } from './faqservices/faq-ru-owl.service';  
+import { FaqRuPagesService } from './faqservices/faq-ru-pages.service';  
+import { FaqUKCourseService } from './faqservices/faq-ukcourse.service';  
+import { FaqUkAuthorService } from './faqservices/faq-uk-author.service';   
+import { FaqUkOwlService } from './faqservices/faq-uk-owl.service';  
+import { FaqUkPagesService } from './faqservices/faq-uk-pages.service';  
+
 interface arrayFAQ {
   question: string;
   answer: string;
@@ -10,70 +20,52 @@ interface arrayFAQ {
 export class FaqservService {
   faqs!: Array<arrayFAQ>;
 
-  
+  languageForFAQ = 'uk';
 
-faqsUkrPages=[
-     {
-      question: 'Як змінити мову сайту?',
-      answer:
-        'У правому верхньому куті натисніть на іконку прапора і виберіть потрібну вам мову.',
-    },
-     {
-      question: 'Як зв’язатися з нами?',
-      answer:
-        'Юридична адреса з реєстрацією доступна для всіх бажаючих на головній сторінці сайту з детальним зазначенням контактної інформації.',
-    },
-    {
-      question: 'Які розділи трейдингу безкоштовні?',
-      answer:
-        'Безкоштовне навчання трейдингу включає наступні розділи: Вступ до трейдингу, Технічний аналіз, Об’ємний аналіз, Концепція Smart Money, Психологія трейдингу, Фундаментальний аналіз, Криптовалюти, Приклади угод.',
-    },
-    {
-      question: 'Чи потрібні спеціальні програми або платформи для проходження курсу?',
-      answer:
-        'Ні, всі матеріали доступні онлайн через ваш веб-браузер. Однак для практики трейдингу рекомендується встановити торгову платформу, яка підходить для ваших цілей.',
-    },
-    {
-      question: 'Як записатися на платний курс з наставником?',
-      answer:
-        'Контактна інформація для зв’язку вказана на сайті. Ви можете використовувати надані засоби зв’язку для отримання додаткової інформації або консультацій.',
-    },
-  ]
+  constructor(@Inject(DOCUMENT) private document: Document,
+  private faqRuAut:FaqRuAuthorService,
 
- 
-  constructor(@Inject(DOCUMENT) private document: Document) {}
+  private faqUkAut:FaqUkAuthorService,
+  private faqRuOwl:FaqRuOwlService,
+  private faqUkOwl:FaqUkOwlService,
+  private faqRuPages:FaqRuPagesService,
+  private faqUkPages:FaqUkPagesService,
+  private faqRuCrs:FaqRuCourseService,
+  private faqUkCrs:FaqUKCourseService,
+
+) {}
 
   returnSchema(langcode: string, path:string) {
 
     
 
-      // if(path==''){
-      //   this.faqs=this.faqsUkrAuthor
-      // }else if(langcode == 'uk'&&path=='uk'){
-      //    this.faqs=this.faqsUkrAuthor
-      // }else if(langcode == 'ru'&&path=='ru'){
-      //    this.faqs=this.faqsRuAuthor
-      // }else if(langcode == 'ru'&&path=='ru/studying'){
-      //    this.faqs=this.faqsRuCourse
-      // }
-      // else if(langcode == 'uk'&&path=='uk/studying'){
-      //    this.faqs=this.faqsUkrCourse
-      // }
-      // else if(langcode == 'uk'&&path=='uk/freestudying/freeeducation'){
-      //    this.faqs=this.faqsUkrOwl
-      // }
-      // else if(langcode == 'ru'&&path=='ru/freestudying/freeeducation'){
-      //    this.faqs=this.faqsUkrOwl
-      // }
-      // else if(langcode == 'ru'){
-      //    this.faqs=this.faqsRuPages
-      // }else{
-      //   this.faqs=this.faqsUkrPages
-      // }
+      if(path==''){
+        this.faqs=this.faqUkAut.getFaq()
+      }else if(langcode == 'uk'&&path=='uk'){
+         this.faqs=this.faqUkAut.getFaq()
+      }else if(langcode == 'ru'&&path=='ru'){
+         this.faqs=this.faqRuAut.getFaq()
+      }else if(langcode == 'ru'&&path=='ru/studying'){
+         this.faqs=this.faqRuCrs.getFaq()
+      }
+      else if(langcode == 'uk'&&path=='uk/studying'){
+         this.faqs=this.faqUkCrs.getFaq()
+      }
+      else if(langcode == 'uk'&&path=='uk/freestudying/freeeducation'){
+         this.faqs=this.faqUkOwl.getFaq()
+      }
+      else if(langcode == 'ru'&&path=='ru/freestudying/freeeducation'){
+         this.faqs=this.faqRuOwl.getFaq()
+      }
+      else if(langcode == 'ru'){
+         this.faqs=this.faqRuPages.getFaq()
+      }else{
+        this.faqs=this.faqUkPages.getFaq()
+      }
 
 
 
-this.faqs=this.faqsUkrPages
+ 
  
 
     let schema = {
