@@ -2321,8 +2321,7 @@ a {
 }
 
 .inputcontainer select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
+  
   appearance: none;
   // background: url(../img/svg/s-arrow.svg) 96% center no-repeat;
   border: 0 none;
@@ -2346,34 +2345,7 @@ div.horizontalfield {
   min-width: auto;
 }
 
-.fxc-captcha-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  margin-bottom: 12px;
-}
-
-.fxc-captcha-container .field {
-  margin-bottom: 12px;
-  width: 100%;
-}
-
-.fxc-captcha-container .field img {
-  border-radius: 100px;
-  min-height: 48px;
-  flex: 1;
-  -o-object-fit: cover;
-  object-fit: cover;
-  margin-right: 10px;
-}
-
-.fxc-captcha-container .field:last-child {
-  margin-bottom: 0;
-}
-
-.captcha {
-  margin-right: 10px;
-}
+ 
 
 .visually-hidden {
   position: absolute;
