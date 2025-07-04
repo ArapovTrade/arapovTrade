@@ -258,7 +258,7 @@ faqsUkrCourse = [
          this.faqs=this.faqsUkrOwl
       }
       else if(langcode == 'ru'&&path=='ru/freestudying/freeeducation'){
-         this.faqs=this.faqsUkrOwl
+         this.faqs=this.faqsRuOwl
       }
       else if(langcode == 'ru'){
          this.faqs=this.faqsRuPages
