@@ -60,7 +60,7 @@ export class AppComponent implements OnInit, AfterViewChecked {
     private titleService: Title,
     private metaTegServ: MetaservService,
     @Inject(DOCUMENT) private document: Document,
-    private faqservise:FaqservService
+    private faqservise: FaqservService
   ) {
     this.renderer = rendererFactory.createRenderer(null, null);
     this.router.events.subscribe((event) => {
@@ -71,7 +71,7 @@ export class AppComponent implements OnInit, AfterViewChecked {
       }
     });
   }
-  langFAQ=''
+  langFAQ = '';
   changeLanguage(lang: string) {
     // Получение текущего пути и параметров маршрута
     const currentPath = this.router.url;
@@ -136,7 +136,7 @@ export class AppComponent implements OnInit, AfterViewChecked {
     });
 
     this.setDefaultMetaTags();
-    
+
     this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe(() => {
@@ -146,13 +146,13 @@ export class AppComponent implements OnInit, AfterViewChecked {
         const article = this.artickle.getArticleByLink(link) || null;
         const langCode = urlPath.startsWith('uk')
           ? 'uk'
-          : urlPath==''
+          : urlPath == ''
           ? 'uk'
           : 'ru';
 
-          // FAQ
-          
-          this.addingFaqScript(langCode,urlPath )
+        // FAQ
+
+        this.addingFaqScript(langCode, urlPath);
         // Визначаємо мову та витягуємо відповідний заголовок
         const lang = urlPath.startsWith('uk')
           ? 'Ukr'
@@ -160,12 +160,11 @@ export class AppComponent implements OnInit, AfterViewChecked {
           ? 'En'
           : 'Rus';
         const titleKey = `title${lang}` as 'titleUkr' | 'titleEn' | 'titleRus'; // Обмежуємо ключі
-        // let title =(article)? article[titleKey] : (segments[1]==='studying')?'Авторские Курсы по трейдингу': 'Обучение трейдингу с нуля - ArapovTrade';
-        // console.log(segments[0]=='')
+        
         let title = '';
         if (article) {
           title = article[titleKey];
-        }else if (segments[0]=='') {
+        } else if (segments[0] == '') {
           title = 'Безкоштовне навчання трейдингу — курс Ігоря Арапова';
         } else if (segments[1] === 'studying' && segments[0] === 'ru') {
           title = 'Авторские Курсы по трейдингу - Игорь Арапов';
@@ -188,9 +187,10 @@ export class AppComponent implements OnInit, AfterViewChecked {
         }
 
         let description = '';
-         if (segments[0]=='') {
-          description = 'Безкоштовний курс з трейдингу Ігоря Арапова: 130 + статей і 70 відео. Вивчайте теханаліз, ризик-менеджмент і торгові стратегії онлайн';
-        }else if (segments[1] === 'studying' && segments[0] === 'ru') {
+        if (segments[0] == '') {
+          description =
+            'Безкоштовний курс з трейдингу Ігоря Арапова: 130 + статей і 70 відео. Вивчайте теханаліз, ризик-менеджмент і торгові стратегії онлайн';
+        } else if (segments[1] === 'studying' && segments[0] === 'ru') {
           description = 'Курсы по трейдингу для начинающих от Игоря Арапова';
         } else if (segments[1] === 'studying' && segments[0] === 'uk') {
           description = 'Курси з трейдингу для початківців від Ігоря Арапова';
@@ -204,13 +204,11 @@ export class AppComponent implements OnInit, AfterViewChecked {
               : segments[0] === 'uk'
               ? 'Безкоштовний курс з трейдингу: 130+ статей та 70 відеоуроків. Вивчіть основи, аналіз, психологію торгівлі та перевірені стратегії'
               : 'Free Trading Course: 130+ Articles and 70 Video Lessons. Learn the Basics, Analysis, Trading Psychology, and Proven Strategies';
-
-
-          
-        }else if (segments[1] === 'freestudying') {
-
+        } else if (segments[1] === 'freestudying') {
           description =
-            (segments[0] === 'ru')?'Бесплатное обучение трейдингу от Игоря Арапова - подробный курс по трейдингу':'Безкоштовне навчання трейдингу від Ігоря Арапова - докладний курс з трейдингу'
+            segments[0] === 'ru'
+              ? 'Бесплатное обучение трейдингу от Игоря Арапова - подробный курс по трейдингу'
+              : 'Безкоштовне навчання трейдингу від Ігоря Арапова - докладний курс з трейдингу';
         } else if (segments[0] === 'uk') {
           description =
             'Безкоштовне навчання трейдингу для початківців - Ігор Арапов';
@@ -219,7 +217,6 @@ export class AppComponent implements OnInit, AfterViewChecked {
             'Бесплатное обучение трейдингу для начинающих - Игорь Арапов';
         }
 
- 
         const image = article?.imgUkr || 'assets/img/default-og-image.png';
         const url = `https://arapov.trade${this.router.url}`;
 
@@ -255,21 +252,14 @@ export class AppComponent implements OnInit, AfterViewChecked {
         this.meta.updateTag({ name: 'language', content: langCode });
         this.document.documentElement.lang = langCode;
         this.generateBreadcrumbs();
-      
+        this.updateHreflangTags(); //hreflang
       });
-
-
-         
-      
-      
   }
-   
 
   //FAQ
-  private addingFaqScript(langcode:string, path:string){
-       
-    const faqSchema=this.faqservise.returnSchema(langcode, path)
-    
+  private addingFaqScript(langcode: string, path: string) {
+    const faqSchema = this.faqservise.returnSchema(langcode, path);
+
     const scriptss = this.document.querySelectorAll(
       'script[type="application/ld+json"]'
     );
@@ -279,13 +269,12 @@ export class AppComponent implements OnInit, AfterViewChecked {
         const jsonContent = JSON.parse(script.textContent || '{}');
         if (jsonContent['@type'] === 'FAQPage') {
           faqScript = script;
-          
         }
       } catch (e) {
         // Игнорируем некорректный JSON
       }
     });
-   
+
     // Если скрипт FAQPage найден, заменяем его
     if (faqScript) {
       faqScript.text = JSON.stringify(faqSchema);
@@ -296,12 +285,8 @@ export class AppComponent implements OnInit, AfterViewChecked {
       scriptr.type = 'application/ld+json';
       scriptr.text = JSON.stringify(faqSchema);
       this.document.head.appendChild(scriptr);
-      
     }
-
-    
   }
-
 
   private setDefaultMetaTags() {
     this.meta.addTags([
@@ -665,7 +650,7 @@ export class AppComponent implements OnInit, AfterViewChecked {
         )
         .then(
           (result: EmailJSResponseStatus) => {
-            console.log(result.text);
+             
             this.registForm.reset(); // Сброс формы после успешной отправки
           },
           (error) => {
@@ -679,5 +664,61 @@ export class AppComponent implements OnInit, AfterViewChecked {
 
     this.flag = true;
     this.flagTrue = false;
+  }
+  // hreflang
+  private updateHreflangTags() {
+    // Удаляем существующие hreflang теги, чтобы избежать дублирования
+    const existingHreflangTags = this.document.querySelectorAll(
+      'link[rel="alternate"][hreflang]'
+    );
+    existingHreflangTags.forEach((tag) => tag.remove());
+    // Определяем текущий путь без параметров запроса
+    const urlPath = this.router.url.split('?')[0].replace(/^\/|\/$/g, '');
+    const segments = urlPath.split('/');
+    const currentLang =
+      segments[0] === 'uk' || segments[0] === 'ru' ? segments[0] : 'uk';
+    // Определяем базовый путь без языка
+    const basePath =
+      (segments[0] === 'uk' || segments[0] === 'ru') && segments.length > 1
+        ? segments.slice(1).join('/')
+        : '';
+    // Для корневой страницы (arapov.trade/) добавляем только hreflang="uk"
+    if (urlPath === '') {
+      const link = this.renderer.createElement('link');
+      this.renderer.setAttribute(link, 'rel', 'alternate');
+      this.renderer.setAttribute(link, 'hreflang', 'uk');
+      this.renderer.setAttribute(link, 'href', 'https://arapov.trade/');
+      this.renderer.appendChild(this.document.head, link);
+      
+      return;
+    }
+    // Для остальных страниц (arapov.trade/uk, arapov.trade/ru и других)
+    const supportedLanguages = [
+      { code: 'uk', hreflang: 'uk' },
+      { code: 'ru', hreflang: 'ru' },
+    ];
+    // Добавляем тег hreflang для каждого языка
+    supportedLanguages.forEach((lang) => {
+      const href =
+        lang.code === 'uk'
+          ? `https://arapov.trade/${basePath ? 'uk/' + basePath : 'uk'}`
+          : `https://arapov.trade/${basePath ? 'ru/' + basePath : 'ru'}`;
+      const link = this.renderer.createElement('link');
+      this.renderer.setAttribute(link, 'rel', 'alternate');
+      this.renderer.setAttribute(link, 'hreflang', lang.hreflang);
+      this.renderer.setAttribute(link, 'href', href);
+      this.renderer.appendChild(this.document.head, link);
+    });
+    // Добавляем hreflang="x-default" (используем русскую версию как дефолтную)
+    const defaultHref =
+      basePath === ''
+        ? 'https://arapov.trade/ru'
+        : `https://arapov.trade/ru/${basePath}`;
+    const defaultLink = this.renderer.createElement('link');
+    this.renderer.setAttribute(defaultLink, 'rel', 'alternate');
+    this.renderer.setAttribute(defaultLink, 'hreflang', 'x-default');
+    this.renderer.setAttribute(defaultLink, 'href', defaultHref);
+    this.renderer.appendChild(this.document.head, defaultLink);
+   
   }
 }
