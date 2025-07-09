@@ -159,7 +159,7 @@ export class AppComponent implements OnInit, AfterViewChecked {
           : urlPath.startsWith('en')
           ? 'En'
           : 'Rus';
-        const titleKey = `title${lang}` as 'titleUkr' | 'titleEn' | 'titleRus'; // Обмежуємо ключі
+        const titleKey = `title${lang}` as 'titleUkr' |  'titleRus'; // Обмежуємо ключі
         
         let title = '';
         if (article) {
