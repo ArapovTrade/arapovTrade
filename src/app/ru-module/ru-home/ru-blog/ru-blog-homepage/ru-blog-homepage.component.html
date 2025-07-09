@@ -5,7 +5,6 @@
         <div class="hero-content pt50">
           <h1 class="orange">Обучение трейдингу бесплатно</h1>
 
-           
           <div itemscope itemtype="https://schema.org/Article">
             <p itemprop="description">
               <a
@@ -114,7 +113,7 @@
               <div class="programm__list">
                 <div class="programm__item">
                   <span class="programm__close"></span>
-                  <div class="programm__in box">
+                  <!-- <div class="programm__in box">
                     <a routerLink="{{ article.linkUkr }}" hreflang="ru">
                       <img
                         class="article-img"
@@ -132,6 +131,65 @@
                         <h3>{{ article.titleRus }}</h3>
                       </a>
                     </div>
+                  </div> -->
+
+                  <div
+                    class="programm__in box"
+                    itemprop="hasPart"
+                    itemscope
+                    itemtype="https://schema.org/Article"
+                  >
+                    <a
+                      [routerLink]="article.linkUkr"
+                      [attr.href]="article.linkUkr"
+                      hreflang="ru"
+                      itemprop="url"
+                    >
+                      <img
+                        class="article-img"
+                        [src]="article.imgUkr"
+                        [alt]="article.titleRus"
+                        itemprop="image"
+                        loading="lazy"
+                      />
+                    </a>
+
+                    <div class="programm__title orange">
+                      <a
+                        [routerLink]="article.linkUkr"
+                        class="orange"
+                        [attr.href]="article.linkUkr"
+                        hreflang="ru"
+                        itemprop="url"
+                      >
+                        <h3>
+                          <span itemprop="headline">{{
+                            article.titleRus
+                          }}</span>
+                        </h3>
+                      </a>
+                    </div>
+
+                    <meta
+                      itemprop="mainEntityOfPage"
+                      [attr.content]="article.linkUkr"
+                    />
+                    <meta
+                      itemprop="datePublished"
+                      content="2024-12-01T00:00:00+03:00"
+                    />
+                    <meta
+                      itemprop="dateModified"
+                      content="2025-06-01T00:00:00+03:00"
+                    />
+                    <span
+                      itemprop="author"
+                      itemscope
+                      itemtype="https://schema.org/Person"
+                    >
+                      <meta itemprop="name" content="Игорь Арапов" />
+                      <meta itemprop="url" content="https://arapov.trade/ru" />
+                    </span>
                   </div>
                 </div>
               </div>
