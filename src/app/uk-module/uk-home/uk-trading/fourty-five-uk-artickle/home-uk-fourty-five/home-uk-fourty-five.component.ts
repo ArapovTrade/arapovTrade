@@ -86,7 +86,7 @@ export class HomeUkFourtyFiveComponent implements OnInit {
       mainEntityOfPage: {
         '@type': 'WebPage',
         '@id': 'https://arapov.trade/uk/freestudying/freeeducation',
-        isAccessibleForFree: true,
+        "isAccessibleForFree": true,
       },
       step: [
         {

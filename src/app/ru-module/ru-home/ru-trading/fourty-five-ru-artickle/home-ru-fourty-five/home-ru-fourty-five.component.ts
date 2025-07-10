@@ -95,7 +95,7 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
       mainEntityOfPage: {
         '@type': 'WebPage',
         '@id': 'https://arapov.trade/ru/freestudying/freeeducation',
-        isAccessibleForFree: true,
+        "isAccessibleForFree": true,
       },
       step: [
         {
