@@ -18,6 +18,8 @@ export class HomeUkFourtyFiveComponent implements OnInit {
     @Inject(DOCUMENT) private document: Document
   ) {}
   ngOnInit(): void {
+    this.removeExistingWebPageSchema()
+
     this.titleService.setTitle(
       'Безкоштовний курс з трейдингу від Ігоря Арапова'
     );
@@ -33,7 +35,9 @@ export class HomeUkFourtyFiveComponent implements OnInit {
       property: 'og:image',
       content: '/assets/img/content/freeeducationnew.webp',
     });
-     this.addJsonLdScript();
+    this.addJsonLdScript();
+    this.addCourseSchema()
+    this.addCollectionPageSchema()
     this.gerRandom();
 
     this.route.fragment.subscribe((fragment) => {
@@ -57,13 +61,6 @@ export class HomeUkFourtyFiveComponent implements OnInit {
         }, 100);
       }
     });
-
-    
-    
-
-
-      
-
   }
 
   private addJsonLdScript(): void {
@@ -79,7 +76,10 @@ export class HomeUkFourtyFiveComponent implements OnInit {
       publisher: {
         '@type': 'Organization',
         name: 'Ігор Арапов',
-        logo: { '@type': 'ImageObject', url: 'https://arapov.trade/favicon.ico' },
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://arapov.trade/favicon.ico',
+        },
       },
       mainEntityOfPage: {
         '@type': 'WebPage',
@@ -145,7 +145,68 @@ export class HomeUkFourtyFiveComponent implements OnInit {
     this.document.head.appendChild(jsonLdScript);
   }
 
+  private addCourseSchema(): void {
+    const script = this.document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      '@id': 'https://arapov.trade/uk/freestudying/freeeducation#section1',
+      url: 'https://arapov.trade/uk/freestudying/freeeducation',
+      name: 'Безкоштовний курс із трейдингу від Ігоря Арапова',
+      description:
+        'Безкоштовний курс із трейдингу: 130+ статей та 70 відеоуроків. Вивчіть основи, аналіз, психологію торгівлі та перевірені стратегії',
+      inLanguage: 'uk',
+      mainEntity: { '@id': 'https://arapov.trade/uk/studying' },
+    });
+    this.document.head.appendChild(script);
+  }
+  private addCollectionPageSchema(): void {
+    const script = this.document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      name: 'Безкоштовні навчальні матеріали',
+      hasPart: [
+        {
+          '@type': 'Course',
+          name: 'Безкоштовне навчання трейдингу. Програма курсу',
+        },
+        { '@type': 'Course', name: 'Трейдинг для початківців' },
+        { '@type': 'Course', name: 'Технічний аналіз ринку' },
+        { '@type': 'Course', name: "Об'ємний аналіз. Методи" },
+        { '@type': 'Course', name: 'Смарт Мані: стратегія та навчання' },
+        { '@type': 'Course', name: 'Психологія трейдингу' },
+        { '@type': 'Course', name: 'Приклади угод' },
+        { '@type': 'Course', name: 'Відповіді на часті запитання' },
+      ],
+    });
+    this.document.head.appendChild(script);
+  }
 
+  private removeExistingWebPageSchema(): void {
+    const scripts = this.document.querySelectorAll(
+      'script[type="application/ld+json"]'
+    );
+
+    scripts.forEach((script) => {
+      try {
+        const content = JSON.parse(script.textContent || '{}');
+        if (content['@type'] === 'WebPage') {
+          script.remove();
+        }
+        if (content['@type'] === 'HowTo') {
+          script.remove();
+        }
+        if (content['@type'] === 'CollectionPage') {
+          script.remove();
+        }
+      } catch (e) {
+        // Игнорируем некорректные JSON (например, из других источников)
+      }
+    });
+  }
 
   randomArticleRus: any = [];
   gerRandom() {
