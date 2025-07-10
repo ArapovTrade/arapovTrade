@@ -5702,14 +5702,58 @@
     </div>
   </div>
 </section>
+ 
 <div class="article-section">
   <h2>Що ви могли пропустити:</h2>
   <div class="related-articles">
-    <div *ngFor="let article of randomArticleRus" class="article-block">
-      <a [routerLink]="['/uk/freestudying', article.linkUkr]">
-        <img [src]="article.imgUkr" [alt]="article.titleUkr" loading="lazy" />
-        <h3>{{ article.titleUkr }}</h3>
+    <div
+      *ngFor="let article of randomArticleRus"
+      class="article-block"
+      itemscope
+      itemtype="https://schema.org/Article"
+    >
+      <a
+        [routerLink]="['/uk/freestudying', article.linkUkr]"
+        itemprop="url"
+      >
+        <img
+          [src]="article.imgUkr"
+          [alt]="article.titleUkr"
+          loading="lazy"
+          itemprop="image"
+        />
+        <h3>
+          <span>{{ article.titleUkr }}</span>
+        </h3>
       </a>
+
+      <!-- SEO-заголовок, скрыт в мета -->
+      <meta itemprop="headline" [attr.content]="article.realTitleUkr" />
+
+      <meta
+        itemprop="mainEntityOfPage"
+        [attr.content]="'https://arapov.trade/uk/freestudying/' + article.linkUkr"
+      />
+      <meta
+        itemprop="description"
+        [attr.content]="article.descrUkr"
+      />
+      <meta
+        itemprop="datePublished"
+        content="2024-12-01T00:00:00+03:00"
+      />
+      <meta
+        itemprop="dateModified"
+        content="2025-06-01T00:00:00+03:00"
+      />
+      <span
+        itemprop="author"
+        itemscope
+        itemtype="https://schema.org/Person"
+      >
+        <meta itemprop="name" content="Ігор Арапов" />
+        <meta itemprop="url" content="https://arapov.trade/uk" />
+      </span>
     </div>
   </div>
 </div>
