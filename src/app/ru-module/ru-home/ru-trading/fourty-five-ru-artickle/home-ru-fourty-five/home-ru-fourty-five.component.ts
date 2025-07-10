@@ -94,8 +94,8 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
       license: 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
       mainEntityOfPage: {
         '@type': 'WebPage',
-        '@id': 'https://arapov.trade/ru/freestudying/freeeducation',
-        isAccessibleForFree: true
+        '@id': 'https://arapov.trade/ru/freestudying/freeeducation'
+        
       },
       step: [
         {
