@@ -29,7 +29,7 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
     private cdr: ChangeDetectorRef
   ) {}
   ngOnInit(): void {
-    this.removeExistingWebPageSchema()
+    this.removeExistingWebPageSchema();
     this.titleService.setTitle(
       'Бесплатный курс по  трейдингу от Игоря Арапова'
     );
@@ -46,8 +46,8 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
       content: '/assets/img/content/freeeducationnew.webp',
     });
     this.addJsonLdScript();
-    this.addCourseSchema()
-    
+    this.addCourseSchema();
+
     this.gerRandom();
 
     this.route.fragment.subscribe((fragment) => {
@@ -86,8 +86,13 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
       publisher: {
         '@type': 'Organization',
         name: 'Игорь Арапов',
-        logo: { '@type': 'ImageObject', url: 'https://arapov.trade/favicon.ico' },
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://arapov.trade/favicon.ico',
+        },
       },
+      license: 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
+      isAccessibleForFree: true,
       mainEntityOfPage: {
         '@type': 'WebPage',
         '@id': 'https://arapov.trade/ru/freestudying/freeeducation',
@@ -152,53 +157,44 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
     this.document.head.appendChild(jsonLdScript);
   }
 
-
   private addCourseSchema(): void {
     const script = this.document.createElement('script');
     script.type = 'application/ld+json';
 
-    
-  script.text = JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": "https://arapov.trade/ru/freestudying/freeeducation#section1",
-    "url": "https://arapov.trade/ru/freestudying/freeeducation",
-    "name": "Бесплатный курс по трейдингу от Игоря Арапова",
-    "description": "Бесплатный курс по трейдингу: 130+ статей и 70 видеоуроков. Изучите основы, анализ, психологию торговли и проверенные стратегии",
-    "inLanguage": "ru",
-    "mainEntity": { "@id": "https://arapov.trade/ru/studying" }
-  });
+    script.text = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      '@id': 'https://arapov.trade/ru/freestudying/freeeducation#section1',
+      url: 'https://arapov.trade/ru/freestudying/freeeducation',
+      name: 'Бесплатный курс по трейдингу от Игоря Арапова',
+      description:
+        'Бесплатный курс по трейдингу: 130+ статей и 70 видеоуроков. Изучите основы, анализ, психологию торговли и проверенные стратегии',
+      inLanguage: 'ru',
+      mainEntity: { '@id': 'https://arapov.trade/ru/studying' },
+    });
 
-     this.document.head.appendChild(script);
+    this.document.head.appendChild(script);
   }
 
-
-   
-
-
-
-
   private removeExistingWebPageSchema(): void {
-  const scripts = this.document.querySelectorAll('script[type="application/ld+json"]');
+    const scripts = this.document.querySelectorAll(
+      'script[type="application/ld+json"]'
+    );
 
-  scripts.forEach((script) => {
-    try {
-      const content = JSON.parse(script.textContent || '{}');
-      if (content['@type'] === 'WebPage') {
-        script.remove();
+    scripts.forEach((script) => {
+      try {
+        const content = JSON.parse(script.textContent || '{}');
+        if (content['@type'] === 'WebPage') {
+          script.remove();
+        }
+        if (content['@type'] === 'HowTo') {
+          script.remove();
+        }
+      } catch (e) {
+        // Игнорируем некорректные JSON (например, из других источников)
       }
-      if (content['@type'] === 'HowTo') {
-        script.remove();
-      }
-       
-    } catch (e) {
-      // Игнорируем некорректные JSON (например, из других источников)
-    }
-  });
-}
-
-
-
+    });
+  }
 
   randomArticleRus: any = [];
   gerRandom() {
