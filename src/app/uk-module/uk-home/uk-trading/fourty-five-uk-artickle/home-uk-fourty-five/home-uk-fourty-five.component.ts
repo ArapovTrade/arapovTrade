@@ -37,7 +37,7 @@ export class HomeUkFourtyFiveComponent implements OnInit {
     });
     this.addJsonLdScript();
     this.addCourseSchema()
-    this.addCollectionPageSchema()
+     
     this.gerRandom();
 
     this.route.fragment.subscribe((fragment) => {
@@ -161,29 +161,7 @@ export class HomeUkFourtyFiveComponent implements OnInit {
     });
     this.document.head.appendChild(script);
   }
-  private addCollectionPageSchema(): void {
-    const script = this.document.createElement('script');
-    script.type = 'application/ld+json';
-    script.text = JSON.stringify({
-      '@context': 'https://schema.org',
-      '@type': 'CollectionPage',
-      name: 'Безкоштовні навчальні матеріали',
-      hasPart: [
-        {
-          '@type': 'Course',
-          name: 'Безкоштовне навчання трейдингу. Програма курсу',
-        },
-        { '@type': 'Course', name: 'Трейдинг для початківців' },
-        { '@type': 'Course', name: 'Технічний аналіз ринку' },
-        { '@type': 'Course', name: "Об'ємний аналіз. Методи" },
-        { '@type': 'Course', name: 'Смарт Мані: стратегія та навчання' },
-        { '@type': 'Course', name: 'Психологія трейдингу' },
-        { '@type': 'Course', name: 'Приклади угод' },
-        { '@type': 'Course', name: 'Відповіді на часті запитання' },
-      ],
-    });
-    this.document.head.appendChild(script);
-  }
+   
 
   private removeExistingWebPageSchema(): void {
     const scripts = this.document.querySelectorAll(
@@ -199,9 +177,7 @@ export class HomeUkFourtyFiveComponent implements OnInit {
         if (content['@type'] === 'HowTo') {
           script.remove();
         }
-        if (content['@type'] === 'CollectionPage') {
-          script.remove();
-        }
+         
       } catch (e) {
         // Игнорируем некорректные JSON (например, из других источников)
       }

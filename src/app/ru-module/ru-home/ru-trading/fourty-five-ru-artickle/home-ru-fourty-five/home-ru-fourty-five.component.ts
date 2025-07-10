@@ -47,7 +47,7 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
     });
     this.addJsonLdScript();
     this.addCourseSchema()
-    this.addCollectionPageSchema()
+    
     this.gerRandom();
 
     this.route.fragment.subscribe((fragment) => {
@@ -173,28 +173,7 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
   }
 
 
-  private addCollectionPageSchema(): void {
-  const script = this.document.createElement('script');
-  script.type = 'application/ld+json';
-
-  script.text = JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": "Бесплатные обучающие материалы",
-    "hasPart": [
-      { "@type": "Course", "name": "Бесплатное обучение трейдингу. Программа курса" },
-      { "@type": "Course", "name": "Трейдинг для начинающих" },
-      { "@type": "Course", "name": "Технический анализ рынка" },
-      { "@type": "Course", "name": "Объемный анализ. Методы" },
-      { "@type": "Course", "name": "Смарт Мани: стратегия и обучение" },
-      { "@type": "Course", "name": "Психология трейдинга" },
-      { "@type": "Course", "name": "Примеры сделок" },
-      { "@type": "Course", "name": "Ответы на часто задаваемые вопросы" },
-    ]
-  });
-
-  this.document.head.appendChild(script);
-}
+   
 
 
 
@@ -211,9 +190,7 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
       if (content['@type'] === 'HowTo') {
         script.remove();
       }
-      if (content['@type'] === 'CollectionPage') {
-        script.remove();
-      }
+       
     } catch (e) {
       // Игнорируем некорректные JSON (например, из других источников)
     }
