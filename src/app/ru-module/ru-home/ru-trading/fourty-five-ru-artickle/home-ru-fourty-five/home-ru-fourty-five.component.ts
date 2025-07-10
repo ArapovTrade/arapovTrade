@@ -92,10 +92,10 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
         },
       },
       license: 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
-      isAccessibleForFree: true,
       mainEntityOfPage: {
         '@type': 'WebPage',
         '@id': 'https://arapov.trade/ru/freestudying/freeeducation',
+        isAccessibleForFree: true,
       },
       step: [
         {

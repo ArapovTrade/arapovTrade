@@ -82,10 +82,11 @@ export class HomeUkFourtyFiveComponent implements OnInit {
         },
       },
       license: 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
-      isAccessibleForFree: true,
+      
       mainEntityOfPage: {
         '@type': 'WebPage',
         '@id': 'https://arapov.trade/uk/freestudying/freeeducation',
+        isAccessibleForFree: true,
       },
       step: [
         {
