@@ -140,6 +140,8 @@ export class AppComponent implements OnInit, AfterViewChecked {
     this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe(() => {
+    this.removeMetaDescriptionIfExists()
+
         const urlPath = this.router.url.split('?')[0].replace(/^\/|\/$/g, ''); // Отримуємо чистий шлях
         const segments = urlPath.split('/'); // Розбиваємо на сегменти
         const link = segments[segments.length - 1] || '';
@@ -220,9 +222,7 @@ export class AppComponent implements OnInit, AfterViewChecked {
         const image = article?.imgUkr || 'assets/img/default-og-image.png';
         const url = `https://arapov.trade${this.router.url}`;
 
-        // Оновлюємо теги
-        // this.titleService.setTitle(title);
-        // this.meta.updateTag({ name: 'description', content: description });
+         
         this.meta.updateTag({ property: 'og:title', content: title });
         this.meta.updateTag({
           property: 'og:description',
@@ -255,6 +255,14 @@ export class AppComponent implements OnInit, AfterViewChecked {
         this.updateHreflangTags(); //hreflang
       });
   }
+  //delete description
+  private removeMetaDescriptionIfExists() {
+  const head = this.document.head;
+  const metaDescription = head.querySelector('meta[name="description"]');
+  if (metaDescription) {
+    head.removeChild(metaDescription);
+  }
+}
 
   //FAQ
   private addingFaqScript(langcode: string, path: string) {
