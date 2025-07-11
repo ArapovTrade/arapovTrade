@@ -141,7 +141,7 @@ export class AppComponent implements OnInit, AfterViewChecked {
       .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe(() => {
     this.removeMetaDescriptionIfExists()
-
+        
         const urlPath = this.router.url.split('?')[0].replace(/^\/|\/$/g, ''); // Отримуємо чистий шлях
         const segments = urlPath.split('/'); // Розбиваємо на сегменти
         const link = segments[segments.length - 1] || '';

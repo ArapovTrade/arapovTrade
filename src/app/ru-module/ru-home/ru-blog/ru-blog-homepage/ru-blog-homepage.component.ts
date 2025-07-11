@@ -1,10 +1,12 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+
+import {   Inject,Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { MatPaginator, MatPaginatorIntl } from '@angular/material/paginator';
 import { PageEvent } from '@angular/material/paginator';
 import { ArticlesService } from '../../../../servises/articles.service';
 import { NavigationEnd, Router } from '@angular/router';
 import { Meta, Title } from '@angular/platform-browser';
 import { LangService } from '../../../../servises/lang.service';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-ru-blog-homepage',
@@ -19,6 +21,7 @@ export class RuBlogHomepageComponent implements OnInit {
     private lang: LangService,
     private artickleServ: ArticlesService,
     private paginator: MatPaginatorIntl,
+    @Inject(DOCUMENT) private document: Document,
 
     private router: Router,
     private meta: Meta,
@@ -35,6 +38,7 @@ export class RuBlogHomepageComponent implements OnInit {
   filteredArticles: any = [];
   rusGroups: any = [];
   ngOnInit(): void {
+     
     this.lang.setNumber(2);
     this.paginator.itemsPerPageLabel = '';
 
@@ -98,4 +102,6 @@ export class RuBlogHomepageComponent implements OnInit {
   navigateToStudy() {
     this.router.navigateByUrl('/ru/studying');
   }
+
+ 
 }

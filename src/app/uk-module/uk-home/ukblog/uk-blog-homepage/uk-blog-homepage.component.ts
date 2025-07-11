@@ -1,10 +1,11 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import {  Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { MatPaginator, MatPaginatorIntl } from '@angular/material/paginator';
 import { NavigationEnd, Router } from '@angular/router';
 import { Meta, Title } from '@angular/platform-browser';
 import { ArticlesService } from '../../../../servises/articles.service';
 import { PageEvent } from '@angular/material/paginator';
 import { LangService } from '../../../../servises/lang.service';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-uk-blog-homepage',
@@ -18,6 +19,8 @@ export class UkBlogHomepageComponent implements OnInit {
     private artickleServ: ArticlesService,
     private router: Router,
     private meta: Meta,
+     
+
     private titleService: Title,
     private paginator: MatPaginatorIntl,
     private lang: LangService
@@ -33,6 +36,8 @@ export class UkBlogHomepageComponent implements OnInit {
   filteredArticles: any = [];
   ukrGroups: any = [];
   ngOnInit(): void {
+     
+
     this.paginator.itemsPerPageLabel = '';
     this.lang.setNumber(1);
     this.titleService.setTitle(
@@ -100,4 +105,5 @@ export class UkBlogHomepageComponent implements OnInit {
   navigateToStudy() {
     this.router.navigateByUrl('/uk/studying');
   }
+ 
 }
