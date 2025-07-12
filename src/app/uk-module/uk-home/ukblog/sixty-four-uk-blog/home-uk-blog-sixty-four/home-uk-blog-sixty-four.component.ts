@@ -24,7 +24,7 @@ export class HomeUkBlogSixtyFourComponent {
         'Дізнайтесь практичні рекомендації з трейдингу: торгова система, точки входу, мані-менеджмент і ризики від ArapovTrade.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-05-25' });
+     
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/prakticuk.jpg',

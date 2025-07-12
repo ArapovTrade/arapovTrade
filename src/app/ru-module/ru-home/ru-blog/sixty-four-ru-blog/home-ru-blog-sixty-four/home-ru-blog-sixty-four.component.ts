@@ -25,7 +25,7 @@ export class HomeRuBlogSixtyFourComponent {
         'Узнайте, как торговать с торговой системой! Практические советы по точкам входа, выхода, манименеджменту и управлению рисками для успеха с Arapov.trade',
     });
   
-    this.meta.updateTag({ name: 'datePublished', content: '2025-05-25' });
+    
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/prakticrus.jpg',
