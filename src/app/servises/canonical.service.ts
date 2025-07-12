@@ -7,8 +7,7 @@ export class CanonicalService {
   constructor(private meta: Meta) {}
 
   setCanonicalURL(url?: string) {
-    // const canURL = url === undefined ? window.location.href : url;
-    // this.meta.updateTag({ name: 'canonical', content: canURL });
+     
 
     const canURL = url === undefined ? window.location.href : url;
     let link: HTMLLinkElement | null = document.querySelector(

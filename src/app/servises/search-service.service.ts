@@ -40,11 +40,7 @@ export class SearchServiceService {
           article.titleRus.toLowerCase().includes(searchTerm.toLowerCase())
         );
       }
-      //  else if (this.checkLange == 3) {
-      //   this.filtered = this.artikles.filter((article) =>
-      //     article.titleEn.toLowerCase().includes(searchTerm.toLowerCase())
-      //   );
-      // }
+       
 
       return this.filtered.slice(0, 20);
     })

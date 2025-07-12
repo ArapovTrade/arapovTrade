@@ -49,76 +49,7 @@
 
 
                 </div>
-                <!--  -->
-                <!-- <div *ngIf="checkLang===3">
-                    <nav class="nav900" aria-label="Breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-                        <ul>
-                            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                                <a itemprop="item" routerLink="en" hreflang="en" routerLinkActive="active" (click)="closeMenu()">
-                                    <span itemprop="name">Course author</span> </a>
-                                <meta itemprop="position" content="1" />
-                            </li>
-                            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a
-                                    itemprop="item" routerLink="en/studying" hreflang="en" routerLinkActive="active"
-                                    (click)="closeMenu()">
-                                    <span itemprop="name">Trading
-                                        Courses</span> </a>
-                                <meta itemprop="position" content="2" />
-                            </li>
-
-                            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a
-                                    itemprop="item" routerLink="en/freestudying" hreflang="en" routerLinkActive="active"
-                                    (click)="closeMenu()">
-                                    <span itemprop="name">Free
-                                        Trading
-                                        Training</span></a>
-                                <meta itemprop="position" content="3" />
-                            </li>
-
-                        </ul>
-                    </nav>
-
-                    <div class="top-i nav800">
-                        <div class="top-slogan">
-                        </div>
-                        <div class="lang">
-                            <div class="top-menu">
-                                <input type="checkbox" name="menu" id="menu" hidden [checked]="isMenuOpen"
-                                    (change)="toggleMenu()">
-                                <label for="menu" class="show-menu">
-
-                                    <svg width="18" height="16" viewBox="0 0 18 16" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <rect width="18" height="2" rx="1" fill="#005DB8" />
-                                        <rect y="6" width="18" height="2" rx="1" fill="#005DB8" />
-                                        <rect y="12" width="18" height="2" rx="1" fill="#005DB8" />
-                                    </svg>
-                                </label>
-                                <nav class="menu" [ngClass]="{'open': isMenuOpen}">
-                                    <ul class="menu__list ">
-                                        <li><a routerLink="en" hreflang="en" routerLinkActive="active" (click)="closeMenu()">Course
-                                                author</a>
-                                        </li>
-                                        <li><a routerLink="en/studying" hreflang="en" routerLinkActive="active"
-                                                (click)="closeMenu()">Trading
-                                                Courses</a>
-                                        </li>
-
-                                        <li><a routerLink="en/freestudying" hreflang="en" routerLinkActive="active"
-                                                (click)="closeMenu()">Free
-                                                Trading
-                                                Training</a>
-                                        </li>
-
-
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-
-
+                
                 <div *ngIf="checkLang===2">
                     <nav class="nav900" aria-label="Breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
                         <ul>
@@ -275,12 +206,7 @@
                                             src="/assets/img/content/flagofrussia.png" alt="flagRus"></a><a
                                         routerLink="/ru" routerLinkActive="active" hreflang="ru"
                                         (click)="closeDropdown() ; changeLanguage('ru');setRussian()">Русский</a></li>
-                                <!-- <li class="li_block"><a routerLink="/en" routerLinkActive="active" hreflang="en"
-                                        (click)="closeDropdown() ; changeLanguage('en');setEnglish()"><img
-                                            style="width:18px ; height: 18px;     margin: 0 15px 0 0;"
-                                            src="/assets/img/content/flagofbreatbritain.png" alt="flagGB"></a><a
-                                        routerLink="/en" routerLinkActive="active" hreflang="en"
-                                        (click)="closeDropdown() ; changeLanguage('en');setEnglish()">English</a></li> -->
+                                 
                             </ul>
                         </div>
                     </nav>
@@ -298,11 +224,7 @@
 
 <div *ngIf="checkLang===1">
     <div *ngIf="flag" class="popup-mainBlock">
-        <!-- <button (click)="close()" class="popup_close-btn">Х</button>
-    <div style="position: relative ;">
-        <p>Напишіть Ваше запитання і ми відразу відповімо!</p>
-
-    </div> -->
+        
 
         <form novalidate [formGroup]="registForm" (ngSubmit)="popuptoggle( ); onSubmit(registForm);  "
             class="popup-form">

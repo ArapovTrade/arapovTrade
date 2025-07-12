@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { MainpageComponent } from './mainpage/mainpage.component';
 const routes: Routes = [
-  // { path: '', redirectTo: 'uk/freestudying', pathMatch: 'full' },
+ 
   { path: '', component: MainpageComponent },
   {
     path: 'uk',
@@ -16,11 +16,7 @@ const routes: Routes = [
     loadChildren: () =>
       import('./ru-module/ru-module.module').then((m) => m.RuModuleModule),
   },
-  // {
-  //   path: 'en',
-  //   loadChildren: () =>
-  //     import('./en-module/en-module.module').then((m) => m.EnModuleModule),
-  // },
+  
 
   { path: '**', component: PageNotFoundComponent },
 ];

@@ -13,8 +13,7 @@ const routes: Routes = [
 
     component: RuHomeComponent,
   },
-  // children: [
-  //   { path: 'home', component: RuHomePageComponent },
+   
 
   {
     path: 'disclaimer',
@@ -33,8 +32,7 @@ const routes: Routes = [
     loadChildren: () =>
       import('./ru-home/ru-blog/ru-blog.module').then((m) => m.RuBlogModule),
   },
-  // ],
-  // },
+   
 ];
 
 @NgModule({

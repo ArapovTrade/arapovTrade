@@ -6,7 +6,7 @@
     line-height: 37px;
     font-style: normal;
     line-height: normal;
-    // letter-spacing: 0.22px;
+   
 
 }
 
@@ -14,14 +14,14 @@
 
 
 
-/* Общие стили для всех блоков */
+ 
 .screen__list {
     display: none;
-    /* По умолчанию скрываем все блоки */
+  
 
 }
 
-/* Показываем блок 1 только на экранах менее 500px */
+ 
 @media (max-width: 499px) {
     .one {
         display: block;
@@ -50,7 +50,7 @@
     }
 }
 
-/* Показываем блок 3 на экранах 800px и более */
+ 
 @media (min-width: 800px) {
     .three {
         display: block;

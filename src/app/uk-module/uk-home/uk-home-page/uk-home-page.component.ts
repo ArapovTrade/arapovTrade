@@ -29,11 +29,7 @@ export class UkHomePageComponent implements OnInit {
   }
   ngOnInit(): void {
     this.titleService.setTitle('Авторське навчання трейдингу');
-    // this.meta.addTag({
-    //   rel: 'canonical',
-    //   href: 'https://arapov-trading.vercel.app/uk/home',
-    // });
-    // this.setCanonicalURL('https://arapov.trade/uk/home');
+     
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
@@ -49,7 +45,7 @@ export class UkHomePageComponent implements OnInit {
 
   setCanonicalURL(url: string) {
     const canURL = url === undefined ? window.location.href : url;
-    // this.meta.updateTag({ rel: 'canonical', href: canURL });
+    
     const link: HTMLLinkElement = this.renderer.createElement('link');
     this.renderer.setAttribute(link, 'rel', 'canonical');
     this.renderer.setAttribute(link, 'href', url); // Ошибка возникает здесь, если url может быть undefined

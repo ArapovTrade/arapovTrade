@@ -8,15 +8,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DisclaimeruaComponent } from './uk-home/doc/disclaimerua/disclaimerua.component';
 
 const routes: Routes = [
-  // { path: '', redirectTo: 'home', pathMatch: 'full' },
+   
   {
     path: '',
     component: UkHomeComponent,
   },
-  // children: [
-  // { path: '', redirectTo: 'home', pathMatch: 'full' }, //new
-
-  // { path: 'home', component: UkHomePageComponent },
+ 
   {
     path: 'disclaimer',
     component: DisclaimeruaComponent,
@@ -28,27 +25,13 @@ const routes: Routes = [
         (m) => m.UkStudyingModule
       ),
   },
-  // {
-  //   path: 'trading',
-  //   loadChildren: () =>
-  //     import('./uk-home/uk-trading/uk-trading.module').then(
-  //       (m) => m.UkTradingModule
-  //     ),
-  // },
-  // {
-  //   path: 'crypto',
-  //   loadChildren: () =>
-  //     import('./uk-home/uk-crypto/uk-crypto.module').then(
-  //       (m) => m.UkCryptoModule
-  //     ),
-  // },
+   
   {
     path: 'freestudying',
     loadChildren: () =>
       import('./uk-home/ukblog/ukblog.module').then((m) => m.UkblogModule),
   },
-  // ],
-  // },
+   
 ];
 
 @NgModule({
