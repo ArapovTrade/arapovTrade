@@ -52,18 +52,46 @@
               </span>
             </span>
           </div>
-          <p>
+    
+          <p itemscope itemtype="https://schema.org/Article">
+            <meta
+              itemprop="headline"
+              content="Результаты бесплатного курса трейдинга Игоря Арапова"
+            />
             Ознакомиться с торговыми результатами
-            <strong> Бесплатного обучающего курса</strong> и эффективностью
+            <strong>бесплатного обучающего курса</strong> и эффективностью
             торговой системы вы можете на
             <a
-              target="_blank"
+              itemprop="significantLink"
+              href="https://www.mql5.com/ru/signals/2246716?source=External&utm_source=website&utm_medium=article&utm_campaign=free_course"
               class="linkrefinto"
-              href="https://www.mql5.com/ru/signals/2246716?source=External "
-              >публичном счету ученика</a
+              target="_blank"
+              title="Публичный торговый счёт ученика на MQL5"
             >
-            . Ученик занимает 1 место на сервисе <strong>MQL5</strong> по
+              <span itemprop="name">публичном счёте ученика</span> </a
+            >. Ученик занимает 1 место на сервисе <strong>MQL5</strong> по
             размеру капитала его подписчиков.
+            <meta
+              itemprop="description"
+              content="Публичный торговый счёт ученика, прошедшего бесплатный курс Игоря Арапова. Лидер по капиталу подписчиков на MQL5."
+            />
+            <meta
+              itemprop="url"
+              content="https://arapov.trade/ru/freestudying"
+            />
+            <meta
+              itemprop="image"
+              content="https://arapov.trade/assets/img/photo_mainpage.jpg"
+            />
+            <span
+              itemprop="author"
+              itemscope
+              itemtype="https://schema.org/Person"
+            >
+              <meta itemprop="name" content="Игорь Арапов" />
+              <meta itemprop="url" content="https://arapov.trade/ru" />
+            </span>
+            <meta itemprop="publisher" content="Игорь Арапов" />
           </p>
         </div>
         <div class="hero-image-place m-right">
@@ -113,7 +141,6 @@
               <div class="programm__list">
                 <div class="programm__item">
                   <span class="programm__close"></span>
-                   
 
                   <div
                     class="programm__in box"
@@ -154,9 +181,15 @@
 
                     <meta
                       itemprop="mainEntityOfPage"
-                      [attr.content]="'https://arapov.trade/ru/freestudying/'+ article.linkUkr"
-                    /> 
-                    <meta itemprop="description" [attr.content]="article.descrRus" />
+                      [attr.content]="
+                        'https://arapov.trade/ru/freestudying/' +
+                        article.linkUkr
+                      "
+                    />
+                    <meta
+                      itemprop="description"
+                      [attr.content]="article.descrRus"
+                    />
 
                     <meta
                       itemprop="datePublished"
@@ -191,7 +224,7 @@
           </div>
         </div>
       </div>
-       
+
       <mat-paginator
         #paginator
         [length]="filteredArticles.length"
