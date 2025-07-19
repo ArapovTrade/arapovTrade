@@ -6,8 +6,7 @@
       "headers": {
         "Content-Type": "application/xml; charset=utf-8",
         "Content-Disposition": ""
-      },
-      "dest": "/sitemap.xml"
+      }
     },
     { "src": "/en/.*", "status": 410, "dest": "/index.html" },
     { "src": "/en", "status": 410, "dest": "/index.html" },
