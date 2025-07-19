@@ -3,9 +3,10 @@
     { "handle": "filesystem" },
     {
       "src": "/sitemap.xml",
+      "dest": "/sitemap.xml",
+      "status": 200,
       "headers": {
-        "Content-Type": "application/xml; charset=utf-8",
-        "Content-Disposition": ""
+        "Content-Type": "application/xml; charset=utf-8"
       }
     },
     { "src": "/en/.*", "status": 410, "dest": "/index.html" },
