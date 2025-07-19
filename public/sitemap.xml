@@ -11,56 +11,37 @@
     <loc>https://arapov.trade/ru</loc>
     <lastmod>2025-05-08</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://arapov.trade/ru"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://arapov.trade/uk"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://arapov.trade/ru"/>
+    <priority>0.8</priority> 
   </url>
   <url>
     <loc>https://arapov.trade/uk</loc>
     <lastmod>2025-05-08</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://arapov.trade/ru"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://arapov.trade/uk"/>
-
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://arapov.trade/ru"/>
+    <priority>0.8</priority> 
   </url>
   <url>
     <loc>https://arapov.trade/ru/studying</loc>
     <lastmod>2025-05-08</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://arapov.trade/ru/studying"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://arapov.trade/uk/studying"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://arapov.trade/ru/studying"/>
+    <priority>0.8</priority> 
   </url>
   <url>
     <loc>https://arapov.trade/uk/studying</loc>
     <lastmod>2025-05-08</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://arapov.trade/ru/studying"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://arapov.trade/uk/studying"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://arapov.trade/ru/studying"/>
+    <priority>0.8</priority> 
   </url>
   <url>
     <loc>https://arapov.trade/ru/freestudying</loc>
     <lastmod>2025-05-08</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://arapov.trade/ru/freestudying"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://arapov.trade/uk/freestudying"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://arapov.trade/ru/freestudying"/>
+    <priority>0.8</priority> 
   </url>
   <url>
     <loc>https://arapov.trade/uk/freestudying</loc>
     <lastmod>2025-05-08</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://arapov.trade/ru/freestudying"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://arapov.trade/uk/freestudying"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://arapov.trade/ru/freestudying"/>
+    <priority>0.8</priority> 
   </url>
 </urlset>
 
