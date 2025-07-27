@@ -1,4 +1,4 @@
 User-agent: *
-Disallow: /*?gad_source=* 
+Disallow:
 
 Sitemap: https://arapov.trade/sitemap.xml
