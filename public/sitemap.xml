@@ -6,11 +6,35 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
-
 <url>
   <loc>https://arapov.trade/</loc>
   <lastmod>2025-07-19T17:13:32+00:00</lastmod>
   <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru</loc>
+  <lastmod>2025-07-19T17:20:16+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/studying</loc>
+  <lastmod>2025-07-19T17:21:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying</loc>
+  <lastmod>2025-07-19T17:21:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/freeeducation</loc>
+  <lastmod>2025-07-19T17:21:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/practic</loc>
+  <lastmod>2025-07-19T17:21:14+00:00</lastmod>
+  <priority>0.51</priority>
 </url>
 <url>
   <loc>https://arapov.trade/uk</loc>
@@ -28,11 +52,6 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://arapov.trade/ru</loc>
-  <lastmod>2025-07-19T17:20:16+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
   <loc>https://arapov.trade/uk/freestudying/freeeducation</loc>
   <lastmod>2025-07-19T17:20:16+00:00</lastmod>
   <priority>0.80</priority>
@@ -43,9 +62,654 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://arapov.trade/uk/disclaimer</loc>
-  <lastmod>2025-07-19T17:20:45+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>https://arapov.trade/ru/freestudying/pricingandliquidity</loc>
+  <lastmod>2025-07-19T17:21:14+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/technicalanalysis</loc>
+  <lastmod>2025-07-19T17:21:14+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/wyckoffsvolumeconcept</loc>
+  <lastmod>2025-07-19T17:21:14+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/capitalmanagement</loc>
+  <lastmod>2025-07-19T17:21:14+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/peakvolumelevels</loc>
+  <lastmod>2025-07-19T17:21:15+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/trendvolumeanalysis</loc>
+  <lastmod>2025-07-19T17:21:15+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/marketauctiondevelops</loc>
+  <lastmod>2025-07-19T17:21:15+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/liquiditypools</loc>
+  <lastmod>2025-07-19T17:21:15+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/icebergorders</loc>
+  <lastmod>2025-07-19T17:21:15+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/smartmoneyconceptsguide</loc>
+  <lastmod>2025-07-19T17:21:16+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/smartmoneystrategies</loc>
+  <lastmod>2025-07-19T17:21:16+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/smartmoneycontrol</loc>
+  <lastmod>2025-07-19T17:21:16+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/stockorderbook</loc>
+  <lastmod>2025-07-19T17:21:16+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/blogmarketphases</loc>
+  <lastmod>2025-07-19T17:21:17+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/divergenceonindecators</loc>
+  <lastmod>2025-07-19T17:21:17+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/volatility</loc>
+  <lastmod>2025-07-19T17:21:17+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/avoidlosingmoney</loc>
+  <lastmod>2025-07-19T17:21:17+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/smartestmoney</loc>
+  <lastmod>2025-07-19T17:21:17+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/makingmoneyintrading</loc>
+  <lastmod>2025-07-19T17:21:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/imbalanceintrading</loc>
+  <lastmod>2025-07-19T17:21:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/predictmarketprice</loc>
+  <lastmod>2025-07-19T17:21:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/mainreasonforlosses</loc>
+  <lastmod>2025-07-19T17:21:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/starterdeposit</loc>
+  <lastmod>2025-07-19T17:21:18+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/tradingoflevels</loc>
+  <lastmod>2025-07-19T17:21:19+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/wavesofelliott</loc>
+  <lastmod>2025-07-19T17:21:19+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/tradingandinvestments</loc>
+  <lastmod>2025-07-19T17:21:19+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/futurestrading</loc>
+  <lastmod>2025-07-19T17:21:19+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/trandingchannels</loc>
+  <lastmod>2025-07-19T17:21:19+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/tradingmyths</loc>
+  <lastmod>2025-07-19T17:21:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/volmarketanalisys</loc>
+  <lastmod>2025-07-19T17:21:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/wyckoffmethod</loc>
+  <lastmod>2025-07-19T17:21:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/cryptoscam</loc>
+  <lastmod>2025-07-19T17:21:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/marketmaker</loc>
+  <lastmod>2025-07-19T17:21:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/cryptoarbitrage</loc>
+  <lastmod>2025-07-19T17:21:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/bitcoinetf</loc>
+  <lastmod>2025-07-19T17:21:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/flagfigure</loc>
+  <lastmod>2025-07-19T17:21:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/cryptommakers</loc>
+  <lastmod>2025-07-19T17:21:21+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/ordertypes</loc>
+  <lastmod>2025-07-19T17:21:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/japanesecandle</loc>
+  <lastmod>2025-07-19T17:21:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/altblockchains</loc>
+  <lastmod>2025-07-19T17:21:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/tradingquickstart</loc>
+  <lastmod>2025-07-19T17:21:22+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/cryptocurrencybasics</loc>
+  <lastmod>2025-07-19T17:21:23+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/levelofsupport</loc>
+  <lastmod>2025-07-19T17:21:23+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/purchasingcourses</loc>
+  <lastmod>2025-07-19T17:21:23+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/pinbar</loc>
+  <lastmod>2025-07-19T17:21:23+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/stoploss</loc>
+  <lastmod>2025-07-19T17:21:23+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/tradingbasics</loc>
+  <lastmod>2025-07-19T17:21:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/cryptocurrencytrading</loc>
+  <lastmod>2025-07-19T17:21:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/drawdowns</loc>
+  <lastmod>2025-07-19T17:21:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/cryptostoring</loc>
+  <lastmod>2025-07-19T17:21:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/safetostorecrypto</loc>
+  <lastmod>2025-07-19T17:21:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/difficulttrading</loc>
+  <lastmod>2025-07-19T17:21:24+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/successfultrading</loc>
+  <lastmod>2025-07-19T17:21:25+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/cryptocurrencyrisks</loc>
+  <lastmod>2025-07-19T17:21:25+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/cryptomarketanalysis</loc>
+  <lastmod>2025-07-19T17:21:25+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/cryptostaking</loc>
+  <lastmod>2025-07-19T17:21:25+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/movingaverages</loc>
+  <lastmod>2025-07-19T17:21:26+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/pizzaday</loc>
+  <lastmod>2025-07-19T17:21:26+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/fundamentalanalysis</loc>
+  <lastmod>2025-07-19T17:21:26+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/selfstudying</loc>
+  <lastmod>2025-07-19T17:21:26+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/choosingtradingplatform</loc>
+  <lastmod>2025-07-19T17:21:26+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/algorithmicorders</loc>
+  <lastmod>2025-07-19T17:21:27+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/candlestickpatterns</loc>
+  <lastmod>2025-07-19T17:21:27+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/anatomyofmarkettrends</loc>
+  <lastmod>2025-07-19T17:21:27+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/orderblockintrading</loc>
+  <lastmod>2025-07-19T17:21:27+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/cryptosafe</loc>
+  <lastmod>2025-07-19T17:21:27+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/scalpingintrading</loc>
+  <lastmod>2025-07-19T17:21:28+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/benefitsoftradingbooks</loc>
+  <lastmod>2025-07-19T17:21:28+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/tradingindicators</loc>
+  <lastmod>2025-07-19T17:21:28+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/averagingintrading</loc>
+  <lastmod>2025-07-19T17:21:28+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/levelbreakoutstrategy</loc>
+  <lastmod>2025-07-19T17:21:28+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/tradingvsoptions</loc>
+  <lastmod>2025-07-19T17:21:29+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/adviceforbeginners</loc>
+  <lastmod>2025-07-19T17:21:29+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/cryptotether</loc>
+  <lastmod>2025-07-19T17:21:29+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/marketbasics</loc>
+  <lastmod>2025-07-19T17:21:29+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/exchange</loc>
+  <lastmod>2025-07-19T17:21:29+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/exchangemarket</loc>
+  <lastmod>2025-07-19T17:21:30+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/derivatives</loc>
+  <lastmod>2025-07-19T17:21:30+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/stablecoins</loc>
+  <lastmod>2025-07-19T17:21:30+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/forexmarket</loc>
+  <lastmod>2025-07-19T17:21:30+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/currenciesandquotes</loc>
+  <lastmod>2025-07-19T17:21:30+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/formationexchange</loc>
+  <lastmod>2025-07-19T17:21:31+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/currencyposition</loc>
+  <lastmod>2025-07-19T17:21:31+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/cryptostart</loc>
+  <lastmod>2025-07-19T17:21:31+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/halving</loc>
+  <lastmod>2025-07-19T17:21:31+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/riskcurrencyexchange</loc>
+  <lastmod>2025-07-19T17:21:32+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/forexleveragerisk</loc>
+  <lastmod>2025-07-19T17:21:32+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/majorbankfrs</loc>
+  <lastmod>2025-07-19T17:21:32+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/ethereum</loc>
+  <lastmod>2025-07-19T17:21:32+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/bitcoin</loc>
+  <lastmod>2025-07-19T17:21:32+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/psychorisks</loc>
+  <lastmod>2025-07-19T17:21:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/howtotradeonforex</loc>
+  <lastmod>2025-07-19T17:21:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/steidlmayeranalysis</loc>
+  <lastmod>2025-07-19T17:21:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/marketanalysisforex</loc>
+  <lastmod>2025-07-19T17:21:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/econimicfactors</loc>
+  <lastmod>2025-07-19T17:21:33+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/worldstockindicates</loc>
+  <lastmod>2025-07-19T17:21:34+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/fibonaccilevels</loc>
+  <lastmod>2025-07-19T17:21:34+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/keyeconomicgrowth</loc>
+  <lastmod>2025-07-19T17:21:34+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/technicalmarketcharts</loc>
+  <lastmod>2025-07-19T17:21:34+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/keypricepattern</loc>
+  <lastmod>2025-07-19T17:21:34+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/smartmonettraps</loc>
+  <lastmod>2025-07-19T17:21:34+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/imbalanceandfvg</loc>
+  <lastmod>2025-07-19T17:21:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/marketorder</loc>
+  <lastmod>2025-07-19T17:21:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/stoporder</loc>
+  <lastmod>2025-07-19T17:21:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/requotes</loc>
+  <lastmod>2025-07-19T17:21:35+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/stoplimitorder</loc>
+  <lastmod>2025-07-19T17:21:36+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/tradingsystem</loc>
+  <lastmod>2025-07-19T17:21:36+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/falsebreakouts</loc>
+  <lastmod>2025-07-19T17:21:36+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/stophunting</loc>
+  <lastmod>2025-07-19T17:21:36+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/profitandlossratio</loc>
+  <lastmod>2025-07-19T17:21:36+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/beginnermistakes</loc>
+  <lastmod>2025-07-19T17:21:37+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/tradingplan</loc>
+  <lastmod>2025-07-19T17:21:37+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/timeframes</loc>
+  <lastmod>2025-07-19T17:21:37+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/volumeandfuturesmarket</loc>
+  <lastmod>2025-07-19T17:21:37+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/newstrading</loc>
+  <lastmod>2025-07-19T17:21:38+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/economiccalendar</loc>
+  <lastmod>2025-07-19T17:21:38+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/macroeconomicindicators</loc>
+  <lastmod>2025-07-19T17:21:38+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/globalfundamentalanalysis</loc>
+  <lastmod>2025-07-19T17:21:38+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/gamblingorbusiness</loc>
+  <lastmod>2025-07-19T17:21:38+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/williamgannpsychology</loc>
+  <lastmod>2025-07-19T17:21:38+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/emotionsaffect</loc>
+  <lastmod>2025-07-19T17:21:39+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/fomo</loc>
+  <lastmod>2025-07-19T17:21:39+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/psychologyofaveraging</loc>
+  <lastmod>2025-07-19T17:21:39+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/headandshoulders</loc>
+  <lastmod>2025-07-19T17:21:39+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/trianglefigure</loc>
+  <lastmod>2025-07-19T17:21:40+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/flagandpennant</loc>
+  <lastmod>2025-07-19T17:21:40+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/cupandhandle</loc>
+  <lastmod>2025-07-19T17:21:40+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/engulfing</loc>
+  <lastmod>2025-07-19T17:21:40+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/doubletopandbottom</loc>
+  <lastmod>2025-07-19T17:21:40+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://arapov.trade/ru/freestudying/pattern-1-2-3</loc>
+  <lastmod>2025-07-19T17:21:40+00:00</lastmod>
+  <priority>0.51</priority>
 </url>
 <url>
   <loc>https://arapov.trade/uk/freestudying/wyckoffsvolumeconcept</loc>
@@ -697,681 +1361,5 @@
   <lastmod>2025-07-19T17:21:12+00:00</lastmod>
   <priority>0.64</priority>
 </url>
-<url>
-  <loc>https://arapov.trade/ru/studying</loc>
-  <lastmod>2025-07-19T17:21:13+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying</loc>
-  <lastmod>2025-07-19T17:21:13+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/freeeducation</loc>
-  <lastmod>2025-07-19T17:21:13+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/disclaimer</loc>
-  <lastmod>2025-07-19T17:21:13+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/pricingandliquidity</loc>
-  <lastmod>2025-07-19T17:21:14+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/technicalanalysis</loc>
-  <lastmod>2025-07-19T17:21:14+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/wyckoffsvolumeconcept</loc>
-  <lastmod>2025-07-19T17:21:14+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/capitalmanagement</loc>
-  <lastmod>2025-07-19T17:21:14+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/practic</loc>
-  <lastmod>2025-07-19T17:21:14+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/peakvolumelevels</loc>
-  <lastmod>2025-07-19T17:21:15+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/trendvolumeanalysis</loc>
-  <lastmod>2025-07-19T17:21:15+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/marketauctiondevelops</loc>
-  <lastmod>2025-07-19T17:21:15+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/liquiditypools</loc>
-  <lastmod>2025-07-19T17:21:15+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/icebergorders</loc>
-  <lastmod>2025-07-19T17:21:15+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/smartmoneyconceptsguide</loc>
-  <lastmod>2025-07-19T17:21:16+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/smartmoneystrategies</loc>
-  <lastmod>2025-07-19T17:21:16+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/smartmoneycontrol</loc>
-  <lastmod>2025-07-19T17:21:16+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/stockorderbook</loc>
-  <lastmod>2025-07-19T17:21:16+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/blogmarketphases</loc>
-  <lastmod>2025-07-19T17:21:17+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/divergenceonindecators</loc>
-  <lastmod>2025-07-19T17:21:17+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/volatility</loc>
-  <lastmod>2025-07-19T17:21:17+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/avoidlosingmoney</loc>
-  <lastmod>2025-07-19T17:21:17+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/smartestmoney</loc>
-  <lastmod>2025-07-19T17:21:17+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/makingmoneyintrading</loc>
-  <lastmod>2025-07-19T17:21:18+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/imbalanceintrading</loc>
-  <lastmod>2025-07-19T17:21:18+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/predictmarketprice</loc>
-  <lastmod>2025-07-19T17:21:18+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/mainreasonforlosses</loc>
-  <lastmod>2025-07-19T17:21:18+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/starterdeposit</loc>
-  <lastmod>2025-07-19T17:21:18+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/tradingoflevels</loc>
-  <lastmod>2025-07-19T17:21:19+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/wavesofelliott</loc>
-  <lastmod>2025-07-19T17:21:19+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/tradingandinvestments</loc>
-  <lastmod>2025-07-19T17:21:19+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/futurestrading</loc>
-  <lastmod>2025-07-19T17:21:19+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/trandingchannels</loc>
-  <lastmod>2025-07-19T17:21:19+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/tradingmyths</loc>
-  <lastmod>2025-07-19T17:21:20+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/volmarketanalisys</loc>
-  <lastmod>2025-07-19T17:21:20+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/wyckoffmethod</loc>
-  <lastmod>2025-07-19T17:21:20+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/cryptoscam</loc>
-  <lastmod>2025-07-19T17:21:20+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/marketmaker</loc>
-  <lastmod>2025-07-19T17:21:20+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/cryptoarbitrage</loc>
-  <lastmod>2025-07-19T17:21:21+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/bitcoinetf</loc>
-  <lastmod>2025-07-19T17:21:21+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/flagfigure</loc>
-  <lastmod>2025-07-19T17:21:21+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/cryptommakers</loc>
-  <lastmod>2025-07-19T17:21:21+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/ordertypes</loc>
-  <lastmod>2025-07-19T17:21:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/japanesecandle</loc>
-  <lastmod>2025-07-19T17:21:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/altblockchains</loc>
-  <lastmod>2025-07-19T17:21:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/tradingquickstart</loc>
-  <lastmod>2025-07-19T17:21:22+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/cryptocurrencybasics</loc>
-  <lastmod>2025-07-19T17:21:23+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/levelofsupport</loc>
-  <lastmod>2025-07-19T17:21:23+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/purchasingcourses</loc>
-  <lastmod>2025-07-19T17:21:23+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/pinbar</loc>
-  <lastmod>2025-07-19T17:21:23+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/stoploss</loc>
-  <lastmod>2025-07-19T17:21:23+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/tradingbasics</loc>
-  <lastmod>2025-07-19T17:21:24+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/cryptocurrencytrading</loc>
-  <lastmod>2025-07-19T17:21:24+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/drawdowns</loc>
-  <lastmod>2025-07-19T17:21:24+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/cryptostoring</loc>
-  <lastmod>2025-07-19T17:21:24+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/safetostorecrypto</loc>
-  <lastmod>2025-07-19T17:21:24+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/difficulttrading</loc>
-  <lastmod>2025-07-19T17:21:24+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/successfultrading</loc>
-  <lastmod>2025-07-19T17:21:25+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/cryptocurrencyrisks</loc>
-  <lastmod>2025-07-19T17:21:25+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/cryptomarketanalysis</loc>
-  <lastmod>2025-07-19T17:21:25+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/cryptostaking</loc>
-  <lastmod>2025-07-19T17:21:25+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/movingaverages</loc>
-  <lastmod>2025-07-19T17:21:26+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/pizzaday</loc>
-  <lastmod>2025-07-19T17:21:26+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/fundamentalanalysis</loc>
-  <lastmod>2025-07-19T17:21:26+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/selfstudying</loc>
-  <lastmod>2025-07-19T17:21:26+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/choosingtradingplatform</loc>
-  <lastmod>2025-07-19T17:21:26+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/algorithmicorders</loc>
-  <lastmod>2025-07-19T17:21:27+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/candlestickpatterns</loc>
-  <lastmod>2025-07-19T17:21:27+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/anatomyofmarkettrends</loc>
-  <lastmod>2025-07-19T17:21:27+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/orderblockintrading</loc>
-  <lastmod>2025-07-19T17:21:27+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/cryptosafe</loc>
-  <lastmod>2025-07-19T17:21:27+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/scalpingintrading</loc>
-  <lastmod>2025-07-19T17:21:28+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/benefitsoftradingbooks</loc>
-  <lastmod>2025-07-19T17:21:28+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/tradingindicators</loc>
-  <lastmod>2025-07-19T17:21:28+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/averagingintrading</loc>
-  <lastmod>2025-07-19T17:21:28+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/levelbreakoutstrategy</loc>
-  <lastmod>2025-07-19T17:21:28+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/tradingvsoptions</loc>
-  <lastmod>2025-07-19T17:21:29+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/adviceforbeginners</loc>
-  <lastmod>2025-07-19T17:21:29+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/cryptotether</loc>
-  <lastmod>2025-07-19T17:21:29+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/marketbasics</loc>
-  <lastmod>2025-07-19T17:21:29+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/exchange</loc>
-  <lastmod>2025-07-19T17:21:29+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/exchangemarket</loc>
-  <lastmod>2025-07-19T17:21:30+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/derivatives</loc>
-  <lastmod>2025-07-19T17:21:30+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/stablecoins</loc>
-  <lastmod>2025-07-19T17:21:30+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/forexmarket</loc>
-  <lastmod>2025-07-19T17:21:30+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/currenciesandquotes</loc>
-  <lastmod>2025-07-19T17:21:30+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/formationexchange</loc>
-  <lastmod>2025-07-19T17:21:31+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/currencyposition</loc>
-  <lastmod>2025-07-19T17:21:31+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/cryptostart</loc>
-  <lastmod>2025-07-19T17:21:31+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/halving</loc>
-  <lastmod>2025-07-19T17:21:31+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/riskcurrencyexchange</loc>
-  <lastmod>2025-07-19T17:21:32+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/forexleveragerisk</loc>
-  <lastmod>2025-07-19T17:21:32+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/majorbankfrs</loc>
-  <lastmod>2025-07-19T17:21:32+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/ethereum</loc>
-  <lastmod>2025-07-19T17:21:32+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/bitcoin</loc>
-  <lastmod>2025-07-19T17:21:32+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/psychorisks</loc>
-  <lastmod>2025-07-19T17:21:33+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/howtotradeonforex</loc>
-  <lastmod>2025-07-19T17:21:33+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/steidlmayeranalysis</loc>
-  <lastmod>2025-07-19T17:21:33+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/marketanalysisforex</loc>
-  <lastmod>2025-07-19T17:21:33+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/econimicfactors</loc>
-  <lastmod>2025-07-19T17:21:33+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/worldstockindicates</loc>
-  <lastmod>2025-07-19T17:21:34+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/fibonaccilevels</loc>
-  <lastmod>2025-07-19T17:21:34+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/keyeconomicgrowth</loc>
-  <lastmod>2025-07-19T17:21:34+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/technicalmarketcharts</loc>
-  <lastmod>2025-07-19T17:21:34+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/keypricepattern</loc>
-  <lastmod>2025-07-19T17:21:34+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/smartmonettraps</loc>
-  <lastmod>2025-07-19T17:21:34+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/imbalanceandfvg</loc>
-  <lastmod>2025-07-19T17:21:35+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/marketorder</loc>
-  <lastmod>2025-07-19T17:21:35+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/stoporder</loc>
-  <lastmod>2025-07-19T17:21:35+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/requotes</loc>
-  <lastmod>2025-07-19T17:21:35+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/stoplimitorder</loc>
-  <lastmod>2025-07-19T17:21:36+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/tradingsystem</loc>
-  <lastmod>2025-07-19T17:21:36+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/falsebreakouts</loc>
-  <lastmod>2025-07-19T17:21:36+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/stophunting</loc>
-  <lastmod>2025-07-19T17:21:36+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/profitandlossratio</loc>
-  <lastmod>2025-07-19T17:21:36+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/beginnermistakes</loc>
-  <lastmod>2025-07-19T17:21:37+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/tradingplan</loc>
-  <lastmod>2025-07-19T17:21:37+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/timeframes</loc>
-  <lastmod>2025-07-19T17:21:37+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/volumeandfuturesmarket</loc>
-  <lastmod>2025-07-19T17:21:37+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/newstrading</loc>
-  <lastmod>2025-07-19T17:21:38+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/economiccalendar</loc>
-  <lastmod>2025-07-19T17:21:38+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/macroeconomicindicators</loc>
-  <lastmod>2025-07-19T17:21:38+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/globalfundamentalanalysis</loc>
-  <lastmod>2025-07-19T17:21:38+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/gamblingorbusiness</loc>
-  <lastmod>2025-07-19T17:21:38+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/williamgannpsychology</loc>
-  <lastmod>2025-07-19T17:21:38+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/emotionsaffect</loc>
-  <lastmod>2025-07-19T17:21:39+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/fomo</loc>
-  <lastmod>2025-07-19T17:21:39+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/psychologyofaveraging</loc>
-  <lastmod>2025-07-19T17:21:39+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/headandshoulders</loc>
-  <lastmod>2025-07-19T17:21:39+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/trianglefigure</loc>
-  <lastmod>2025-07-19T17:21:40+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/flagandpennant</loc>
-  <lastmod>2025-07-19T17:21:40+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/cupandhandle</loc>
-  <lastmod>2025-07-19T17:21:40+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/engulfing</loc>
-  <lastmod>2025-07-19T17:21:40+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/doubletopandbottom</loc>
-  <lastmod>2025-07-19T17:21:40+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://arapov.trade/ru/freestudying/pattern-1-2-3</loc>
-  <lastmod>2025-07-19T17:21:40+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-
 
 </urlset>
