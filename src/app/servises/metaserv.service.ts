@@ -39,7 +39,7 @@ export class MetaservService {
           'https://www.youtube.com/@ArapovTrade',
           'https://www.facebook.com/igor.arapov.75',
           'https://www.linkedin.com/in/arapovtrade',
-
+          'https://www.mql5.com/ru/signals/2246716?source=External',
           'https://wa.me/380502933075',
           'viber://chat?number=%2B380502933075',
           'https://rutube.ru/channel/41668647',
@@ -51,7 +51,7 @@ export class MetaservService {
         'https://www.youtube.com/@ArapovTrade',
         'https://www.facebook.com/igor.arapov.75',
         'https://www.linkedin.com/in/arapovtrade',
-
+        'https://www.mql5.com/ru/signals/2246716?source=External',
         'https://wa.me/380502933075',
         'viber://chat?number=%2B380502933075',
         'https://rutube.ru/channel/41668647',
