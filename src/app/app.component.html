@@ -49,7 +49,64 @@
 
 
                 </div>
-                
+                <div *ngIf="checkLang===3">
+                    <nav class="nav900" aria-label="Breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+                        <ul>
+                            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                <a itemprop="item" routerLink="en" hreflang="en" routerLinkActive="active" (click)="closeMenu()">
+                                    <span itemprop="name">About the course author</span> </a>
+                                <meta itemprop="position" content="1" />
+                            </li>
+                            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a
+                                    itemprop="item" routerLink="en/studying" hreflang="en" routerLinkActive="active"
+                                    (click)="closeMenu()">
+                                    <span itemprop="name">Trading courses</span> </a>
+                                <meta itemprop="position" content="2" />
+                            </li>
+
+                            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a
+                                    itemprop="item" routerLink="en/freestudying" hreflang="en" routerLinkActive="active"
+                                    (click)="closeMenu()">
+                                    <span itemprop="name">Free trading training</span></a>
+                                <meta itemprop="position" content="3" />
+                            </li>
+
+                        </ul>
+                    </nav>
+                    <div class="top-i nav800">
+                        <div class="top-slogan">
+                        </div>
+                        <div class="lang">
+                            <div class="top-menu">
+                                <input type="checkbox" name="menu" id="menu" hidden [checked]="isMenuOpen"
+                                    (change)="toggleMenu()">
+                                <label for="menu" class="show-menu">
+
+                                    <svg width="18" height="16" viewBox="0 0 18 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="18" height="2" rx="1" fill="#005DB8" />
+                                        <rect y="6" width="18" height="2" rx="1" fill="#005DB8" />
+                                        <rect y="12" width="18" height="2" rx="1" fill="#005DB8" />
+                                    </svg>
+                                </label>
+                                <nav class="menu" [ngClass]="{'open': isMenuOpen}">
+                                    <ul class="menu__list ">
+                                        <li><a routerLink="en" hreflang="en" routerLinkActive="active" (click)="closeMenu()">About
+                                                the course author</a>
+                                        </li>
+                                        <li><a routerLink="en/studying" hreflang="en" routerLinkActive="active"
+                                                (click)="closeMenu()">Trading courses</a>
+                                        </li>
+
+                                        <li><a routerLink="en/freestudying" hreflang="en" routerLinkActive="active"
+                                                (click)="closeMenu()">Free trading training</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div *ngIf="checkLang===2">
                     <nav class="nav900" aria-label="Breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
                         <ul>
@@ -187,9 +244,9 @@
                             </div>
                             <div *ngIf="checkLang===2"><img style="width:30px ; height: 30px;"
                                     src="/assets/img/content/flagofrussia.png" alt="flagRus"></div>
-                            <!-- <div *ngIf="checkLang===3"><img style="width:30px ; height: 30px;"
+                            <div *ngIf="checkLang===3"><img style="width:30px ; height: 30px;"
                                     src="/assets/img/content/flagofbreatbritain.png" alt="flagGB">
-                            </div> -->
+                            </div>
                             <ul class="language-dropdown" [class.open]="dropdownOpen">
                                 <li class="li_block"><a routerLink="/uk" routerLinkActive="active" hreflang="uk"
                                         [routerLinkActiveOptions]='{exact:true}'
@@ -206,6 +263,14 @@
                                             src="/assets/img/content/flagofrussia.png" alt="flagRus"></a><a
                                         routerLink="/ru" routerLinkActive="active" hreflang="ru"
                                         (click)="closeDropdown() ; changeLanguage('ru');setRussian()">Русский</a></li>
+                                        
+
+                                <li class="li_block"><a routerLink="/en" routerLinkActive="active" hreflang="en"
+                                        (click)="closeDropdown() ; changeLanguage('en');setRussian()"><img
+                                            style="width:18px ; height: 18px;     margin: 0 15px 0 0;"
+                                            src="/assets/img/content/flagofbreatbritain.png" alt="flagEn"></a><a
+                                        routerLink="/en" routerLinkActive="active" hreflang="en"
+                                        (click)="closeDropdown() ; changeLanguage('en');setRussian()">English</a></li>
                                  
                             </ul>
                         </div>

@@ -5,9 +5,12 @@ import { RouterModule } from '@angular/router';
 import { Routes } from '@angular/router';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { CoverComponent } from './cover/cover.component';
 const routes: Routes = [
-  { path: '', component: UkBlogHomepageComponent },
-  {
+  // { path: '', component: CoverComponent,
+  //   children: [
+          { path: '', component: UkBlogHomepageComponent },
+          {
     path: 'blogmarketphases', //1
     loadChildren: () =>
       import('./one-uk-blog/one-uk-blog.module').then((m) => m.OneUkBlogModule),
@@ -931,10 +934,13 @@ const routes: Routes = [
   //       (m) => m.EightySevenUkBlogModule
   //     ),
   // },
-];
+    ]
+//    },
+  
+// ];
 
 @NgModule({
-  declarations: [UkBlogHomepageComponent],
+  declarations: [UkBlogHomepageComponent, CoverComponent],
   imports: [CommonModule,MatExpansionModule, MatPaginatorModule, RouterModule.forChild(routes)],
 })
 export class UkblogModule {}

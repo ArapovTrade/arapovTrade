@@ -39,8 +39,8 @@ export class ServLangueageService {
         return 1;
       case 'ru':
         return 2;
-      // case 'en':
-      //   return 3;
+      case 'en':
+        return 3;
       default:
         return 1;
     }

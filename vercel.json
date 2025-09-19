@@ -10,8 +10,7 @@
     },
     { "handle": "filesystem" },
 
-    { "src": "/en/.*", "status": 410, "dest": "/index.html" },
-    { "src": "/en", "status": 410, "dest": "/index.html" },
+   
     { "src": "/ru/home", "status": 410, "dest": "/index.html" },
     { "src": "/uk/home", "status": 410, "dest": "/index.html" },
     { "src": "/en/home", "status": 410, "dest": "/index.html" },
