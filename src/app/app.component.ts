@@ -225,10 +225,10 @@ export class AppComponent implements OnInit, AfterViewChecked {
             'Бесплатное обучение трейдингу для начинающих - Игорь Арапов';
         }
         console.log(  description);
-        const image = article?.imgUkr || 'assets/img/default-og-image.png';
+        const image = article?.imgUkr || '/assets/img/default-og-image.png';
         const url = `https://arapov.trade${this.router.url}`;
 
-         
+         console.log(image)
         this.meta.updateTag({ property: 'og:title', content: title });
         this.meta.updateTag({
           property: 'og:description',
@@ -236,14 +236,14 @@ export class AppComponent implements OnInit, AfterViewChecked {
         });
         this.meta.updateTag({
           property: 'og:image',
-          content: `https://arapov.trade/${image}`,
+          content: `https://arapov.trade${image}`,
         });
         this.meta.updateTag({ property: 'og:url', content: url });
 
         // Оновлюємо Twitter Card теги
         this.meta.updateTag({
           name: 'twitter:card',
-          content: `https://arapov.trade/${image}`,
+          content: `https://arapov.trade${image}`,
         }); // Тип картки
         this.meta.updateTag({ name: 'twitter:title', content: title });
         this.meta.updateTag({
@@ -252,7 +252,7 @@ export class AppComponent implements OnInit, AfterViewChecked {
         });
         this.meta.updateTag({
           name: 'twitter:image',
-          content: `https://arapov.trade/${image}`,
+          content: `https://arapov.trade${image}`,
         });
         this.meta.updateTag({ name: 'twitter:url', content: url });
         this.meta.updateTag({ name: 'language', content: langCode });
