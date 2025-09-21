@@ -35,7 +35,7 @@ export class ServLangueageService {
 
     const langSegment = segments[0];
     switch (langSegment) {
-      case 'uk':
+      case 'uk':   // тут надо добавить 2 новые страницы ЕН майн и ру мейн а так же пустую '' которая будет задавать укр
         return 1;
       case 'ru':
         return 2;
