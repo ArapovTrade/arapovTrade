@@ -212,7 +212,7 @@ export class AppComponent implements OnInit, AfterViewChecked {
           description =
             segments[0] === 'ru'
               ? 'Бесплатное обучение трейдингу от Игоря Арапова - подробный курс по трейдингу'
-              :segments[0] === 'en'? 'Cost-free introduction to trading from Igor Arapov - report course on trading'
+              :segments[0] === 'en'? 'Free Introduction to Trading: a detailed course by Igor Arapov'
               : 'Безкоштовне навчання трейдингу від Ігоря Арапова - докладний курс з трейдингу';
         } else if (segments[0] === 'uk') {
           description =
