@@ -4857,7 +4857,7 @@ background: url(../../../public/assets/redesignArapovTrade/img/BG-author-phone.p
     letter-spacing: 150%;
     line-height: 120%;
     white-space: normal;
-    width: 100%;
+    width: 310px;
   }
 
   /* Восьмой блок (.eighth-block) */
@@ -4927,8 +4927,11 @@ background: url(../../../public/assets/redesignArapovTrade/img/BG-author-phone.p
   }
 
   .tabs-eight-block {
-    width: 100%;
-    margin-top: 20px;
+        width: 335px;
+    display: flex
+;
+    align-items: baseline;
+    margin: 20px auto 0;
   }
 
   .tab-block {
