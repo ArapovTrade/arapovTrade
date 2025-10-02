@@ -36,7 +36,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [RuHomeComponent, RuHomePageComponent, DisclaimerComponent],
+  declarations: [RuHomeComponent, RuHomePageComponent, DisclaimerComponent,],
   imports: [
     CommonModule,
     FormsModule,

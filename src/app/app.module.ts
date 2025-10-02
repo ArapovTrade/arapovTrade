@@ -15,12 +15,12 @@ import { UkModuleModule } from './uk-module/uk-module.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatPaginatorModule } from '@angular/material/paginator';
-import { SearchblockComponent } from './searchblock/searchblock.component';
+ 
 import { MainpageComponent } from './mainpage/mainpage.component';
  
-import { MatExpansionModule } from '@angular/material/expansion';
+import { MatExpansionModule } from '@angular/material/expansion'; 
 @NgModule({
-  declarations: [AppComponent, PageNotFoundComponent, SearchblockComponent, MainpageComponent],
+  declarations: [AppComponent, PageNotFoundComponent,   MainpageComponent, ],
   imports: [
     BrowserAnimationsModule,
     BrowserModule,

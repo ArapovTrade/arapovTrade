@@ -4,8 +4,12 @@ import { EnBlogHomepageComponent } from './en-blog-homepage/en-blog-homepage.com
 import { RouterModule } from '@angular/router';
 import { Routes } from '@angular/router';
 import { MatPaginatorModule } from '@angular/material/paginator';
-
+import { CoverEnComponent } from './cover-en/cover-en.component';
+ import { SearchblockEnComponent } from '../../../searchblock/searchblock-en/searchblock-en.component'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 const routes: Routes = [
+  { path: '', component: CoverEnComponent,
+        children: [
   { path: '', component: EnBlogHomepageComponent },
   {
     path: 'blogmarketphases',
@@ -932,10 +936,12 @@ const routes: Routes = [
   //       '../eu-blog/eighty-seven-en-blog/eighty-seven-en-blog.module'
   //     ).then((m) => m.EightySevenEnBlogModule),
   // },
+  ]
+   },
 ];
 
 @NgModule({
-  declarations: [EnBlogHomepageComponent],
-  imports: [CommonModule, MatPaginatorModule, RouterModule.forChild(routes)],
+  declarations: [EnBlogHomepageComponent, CoverEnComponent,SearchblockEnComponent],
+  imports: [CommonModule, MatPaginatorModule,FormsModule, ReactiveFormsModule, RouterModule.forChild(routes)],
 })
 export class EuBlogModule {}

@@ -18,34 +18,10 @@
     </div>
     <div class="body-search">
 
-        <div *ngFor="let art of filteredArr|async" class="article-card">
-            <div *ngIf="language==3">
-
-                <a routerLink="ru/freestudying/{{art.linkUkr}}" (click)="closeBtn()" class="card-link">
-                    <div class="article-content">
-                        <img src="{{art.imgUkr}}" alt="{{art.titleEn}}" loading="lazy" class="article-image">
-                        <h3 class="article-title orange" [innerHTML]="highlightText(art.titleEn)"> </h3>
-                    </div>
-                </a>
-
-
-            </div>
-
-
-
-            <div *ngIf="language==2">
-
-                <a routerLink="ru/freestudying/{{art.linkUkr}}" (click)="closeBtn()" class="card-link">
-                    <div class="article-content">
-                        <img src="{{art.imgUkr}}" alt="{{art.titleRus}}" loading="lazy" class="article-image">
-                        <h3 class="article-title orange" [innerHTML]="highlightText(art.titleRus)"> </h3>
-                    </div>
-                </a>
-
-
-            </div>
+        <div *ngFor="let art of filteredArr|async " class="article-card">
+            
             <div *ngIf="language==1">
-                <a routerLink="uk/freestudying/{{art.linkUkr}}" (click)="closeBtn()" class="card-link">
+                <a   (click)="closeBtn(); navigateToArticle('uk/freestudying/'+art.linkUkr)" class="card-link">
                     <div class="article-content">
                         <img src="{{art.imgUkr}}" alt="{{art.titleUkr}}" loading="lazy" class="article-image">
                         <h3 class="article-title orange" [innerHTML]="highlightText(art.titleUkr)"> </h3>

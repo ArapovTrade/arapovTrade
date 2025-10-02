@@ -22,7 +22,46 @@ $projectArapov-theme: mat.define-theme(
   @include mat.all-component-themes($projectArapov-theme);
 }
 
+
+@font-face {
+  font-family: 'Lato';
+  // src: url('assets/fonts/lato-regular.ttf') format('truetype');
+  src:url(/assets/fonts/Lato/Lato-Regular.ttf) format('truetype');
+  font-weight: 400; /* Regular */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  // src: url('assets/fonts/lato-bold.ttf') format('truetype');
+  src:url(/assets/fonts/Lato/Lato-SemiBold.ttf) format('truetype');
+  font-weight: 700; /* Bold */
+  font-style: normal;
+}
  
+@font-face {
+  font-family: 'Lato';
+   
+  src:url(/assets/fonts/Lato/Lato-LightItalic.ttf) format('truetype');
+  font-weight: 400;  
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Lato';
+   
+  src:url(/assets/fonts/Lato/Lato-Light.ttf) format('truetype');
+  font-weight: 300;  
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+   
+  src:url(../public/assets/fonts/Lato/Lato-SemiBoldItalic.ttf) format('truetype');
+  font-weight: 500;  
+  font-style: italic;
+}
+
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
@@ -45,7 +84,7 @@ body.loading {
 }
 
 body {
-  font-family: "Inter", serif;
+  font-family: 'Lato';
   background: rgb(88, 88, 88);
   color: black;
   font-size: 14px;
@@ -56,124 +95,7 @@ body.loading {
   pointer-events: none;
   z-index: 10000;
 }
-
-@font-face {
-  font-family: "Inter";
-  src: url("../public/assets/fonts/font/Inter_18pt-Black.ttf")
-    format("truetype");
-  font-weight: 900;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  src: url("../public/assets/fonts/font/Inter_18pt-ExtraLight.ttf")
-    format("truetype");
-  font-weight: 200;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  src: url("../public/assets/fonts/font/Inter_18pt-Bold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  src: url("../public/assets/fonts/font/Inter_18pt-ExtraBoldItalic.ttf")
-    format("truetype");
-  font-weight: 800;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Inter";
-  src: url("../public/assets/fonts/font/Inter_18pt-BlackItalic.ttf")
-    format("truetype");
-  font-weight: 900;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Inter";
-  src: url("../public/assets/fonts/font/Inter_18pt-ExtraLightItalic.ttf")
-    format("truetype");
-  font-weight: 200;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Inter";
-  src: url("../public/assets/fonts/font/Inter_18pt-ExtraBold.ttf")
-    format("truetype");
-  font-weight: 800;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  src: url("../public/assets/fonts/font/Inter_18pt-SemiBold.ttf")
-    format("truetype");
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  src: url("../public/assets/fonts/font/Inter_18pt-Italic.ttf")
-    format("truetype");
-  font-weight: normal;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Inter";
-  src: url("../public/assets/fonts/font/Inter_18pt-BoldItalic.ttf")
-    format("truetype");
-  font-weight: bold;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Inter";
-  src: url("../public/assets/fonts/font/Inter_18pt-SemiBoldItalic.ttf")
-    format("truetype");
-  font-weight: 600;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Inter";
-  src: url("../public/assets/fonts/font/Inter_18pt-LightItalic.ttf")
-    format("truetype");
-  font-weight: 300;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Inter";
-  src: url("../public/assets/fonts/font/Inter_18pt-Thin.ttf") format("truetype");
-  font-weight: 100;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  src: url("../public/assets/fonts/font/Inter_18pt-Regular.ttf")
-    format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  src: url("../public/assets/fonts/font/Inter_18pt-Light.ttf")
-    format("truetype");
-  font-weight: 300;
-  font-style: normal;
-}
+ 
 
 main {
   display: block;
@@ -191,10 +113,7 @@ hr {
   overflow: visible;
 }
 
-pre {
-  font-family: monospace, monospace;
-  font-size: 1em;
-}
+ 
 
 a {
   background-color: transparent;
@@ -211,13 +130,8 @@ strong {
   font-weight: bolder;
 }
 
-code,
-kbd,
-samp {
-  font-family: monospace, monospace;
-  font-size: 1em;
-}
-
+ 
+ 
 small {
   font-size: 80%;
 }
@@ -246,7 +160,7 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit;
+  font-family: 'Lato';
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
@@ -335,7 +249,7 @@ template {
 }
 
 body {
-  font-family: Inter, serif;
+  //font-family: 'Lato', serif;
   background: white;
   color: black;
   font-size: 14px;
@@ -501,7 +415,7 @@ section {
   border-radius: 100px;
   text-transform: uppercase;
   letter-spacing: 0.03em;
-  font-family: Inter, "Inter";
+font-family: 'Lato';
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
@@ -512,7 +426,7 @@ section {
   cursor: pointer;
   padding: 15px;
   color: white;
-  font-family: Inter, "Inter", serif;
+font-family: 'Lato', serif;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -537,7 +451,7 @@ section {
   border-radius: 100px;
   text-transform: uppercase;
   letter-spacing: 0.03em;
-  font-family: Inter, "Inter";
+font-family: 'Lato';
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
@@ -549,7 +463,7 @@ section {
   padding: 10px;
   margin: 10px;
   color: white;
-  font-family: Inter, "Inter", serif;
+font-family: 'Lato', serif;
    
   user-select: none;
 }
@@ -631,7 +545,7 @@ section {
 
 .button-place .button-description {
   margin-top: 8px;
-  font-family: Inter, "Inter";
+font-family: 'Lato';
   font-style: italic;
   font-weight: 700;
   font-size: 12px;
@@ -788,7 +702,7 @@ section {
   line-height: 14px;
   letter-spacing: 0.14px;
   text-transform: uppercase;
-  font-family: Inter, "Inter";
+font-family: 'Lato';
   font-size: 14px;
   cursor: pointer;
 }
@@ -918,7 +832,7 @@ section {
 .hero-section p {
   color: #333333;
   text-align: center;
-  font-family: Inter, "Inter";
+font-family: 'Lato';
   font-size: 14px;
   line-height: 23px;
   font-style: normal;
@@ -930,7 +844,7 @@ section {
 @media (min-width: 900px) {
   .hero-section p {
     color: #333333;
-    font-family: Inter, "Inter";
+  font-family: 'Lato';
     font-size: 18px;
     line-height: 30px;
     font-style: normal;
@@ -1136,7 +1050,7 @@ section {
   background: #ffffff;
   padding: 12px 18px;
   text-overflow: ellipsis;
-  font-family: Inter, "Inter";
+font-family: 'Lato';
   font-size: 14px;
   line-height: 16px;
   font-style: normal;
@@ -1905,7 +1819,7 @@ p.programm__content {
 .speaker__title {
   color: #005db8;
   text-align: center;
-  font-family: Inter, "Inter";
+font-family: 'Lato';
   font-size: 26px;
   line-height: 37px;
   font-style: normal;
@@ -2217,7 +2131,7 @@ a {
 }
 
 .horizontalfield {
-  font-family: "Inter";
+  font-family: "Lato";
   border: 1px solid #dbdbdb;
   border-radius: 100px;
   color: #000;
@@ -2554,8 +2468,8 @@ body {
 // POPUP
 .popup-button {
   position: fixed;
-  top: 88%;
-  left: 80%;
+  top: 84%;
+    left: 5%;
   z-index: 111000;
 }
 .contact-sign-popup {
@@ -2585,7 +2499,7 @@ body {
   border-radius: 100px;
   text-transform: uppercase;
   letter-spacing: 0.03em;
-  font-family: Inter, "Inter";
+font-family: 'Lato';
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
@@ -2597,7 +2511,7 @@ body {
   padding: 10px;
   margin: 1px;
   color: white;
-  font-family: Inter, serif;
+ font-family: 'Lato' ;
  
   user-select: none;
 }
@@ -2605,16 +2519,16 @@ body {
 @media (min-width: 600px) {
   .popup-button {
     position: fixed;
-    top: 80%;
-    left: 85%;
+        top: 84%;
+    left: 5%;
     z-index: 111000;
   }
 }
 @media (min-width: 800px) {
   .popup-button {
     position: fixed;
-    top: 80%;
-    left: 90%;
+        top: 87%;
+    left: 5%;
     z-index: 111000;
   }
 }
@@ -2633,7 +2547,7 @@ body {
   height: 100%;
   background-color: #333333;
   position: fixed;
-  z-index: 2;
+  z-index: 10000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2658,7 +2572,7 @@ body {
   border-radius: 100px;
   text-transform: uppercase;
   letter-spacing: 0.03em;
-  font-family: Inter;
+ font-family: 'Lato';
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
@@ -2669,7 +2583,7 @@ body {
   cursor: pointer;
   padding: 15px;
   color: white;
-  font-family: Inter, serif;
+ font-family: 'Lato' ;
  
   user-select: none;
 }
@@ -2691,7 +2605,7 @@ body {
   border-radius: 100px;
   text-transform: uppercase;
   letter-spacing: 0.03em;
-  font-family: Inter;
+ font-family: 'Lato';
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
@@ -2702,7 +2616,7 @@ body {
   cursor: pointer;
   padding: 15px;
   color: white;
-  font-family: Inter, serif;
+ font-family: 'Lato', serif;
   
   user-select: none;
 }
@@ -2828,7 +2742,7 @@ body {
 .mat-mdc-paginator-container {
   justify-content: center !important;
   background: #eeeeee;
-  font-family: "Inter";
+  font-family: "Lato";
   font-weight: 600;
   font-size: larger;
   color: #005db8;

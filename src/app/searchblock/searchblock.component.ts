@@ -11,6 +11,7 @@ import { debounceTime, distinctUntilChanged, Observable } from 'rxjs';
 import { EventEmitter, Output } from '@angular/core';
 import { SearchServiceService } from '../servises/search-service.service';
 import { artickle } from '../servises/articles.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-searchblock',
@@ -20,7 +21,8 @@ import { artickle } from '../servises/articles.service';
 export class SearchblockComponent implements OnInit {
   constructor(
     private searchservic: SearchServiceService,
-    private cdr: ChangeDetectorRef
+    private cdr: ChangeDetectorRef,
+    private router: Router,
   ) {
     this.searchControl.valueChanges
       .pipe(debounceTime(300), distinctUntilChanged())
@@ -68,5 +70,11 @@ export class SearchblockComponent implements OnInit {
         ? 'Например : "Метод Вайкоффа"'
         : 'For example : "Smart Money"';
     this.cdr.detectChanges();
+  }
+
+
+  navigateToArticle(path: any) {
+    
+    this.router.navigate([path]);
   }
 }

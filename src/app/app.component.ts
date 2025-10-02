@@ -7,7 +7,7 @@ import {
   Renderer2,
   RendererFactory2,
   AfterContentChecked,
-  OnChanges,
+  OnChanges, 
   Inject,
 } from '@angular/core';
 import { NavigationEnd } from '@angular/router';
@@ -224,11 +224,11 @@ export class AppComponent implements OnInit, AfterViewChecked {
           description =
             'Бесплатное обучение трейдингу для начинающих - Игорь Арапов';
         }
-        console.log(  description);
+         
         const image = article?.imgUkr || '/assets/img/default-og-image.png';
         const url = `https://arapov.trade${this.router.url}`;
 
-         console.log(image)
+        
         this.meta.updateTag({ property: 'og:title', content: title });
         this.meta.updateTag({
           property: 'og:description',

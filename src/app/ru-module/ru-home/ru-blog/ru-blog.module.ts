@@ -6,7 +6,12 @@ import { Routes } from '@angular/router';
 import { MatPaginatorModule } from '@angular/material/paginator';
  
 import { MatExpansionModule } from '@angular/material/expansion';
+import { CoverRuComponent } from './cover-ru/cover-ru.component';
+ import { SearchblockRuComponent } from '../../../searchblock/searchblock-ru/searchblock-ru.component'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 const routes: Routes = [
+  { path: '', component: CoverRuComponent,
+      children: [
   { path: '', component: RuBlogHomepageComponent },
   {
     path: 'blogmarketphases',
@@ -934,10 +939,12 @@ const routes: Routes = [
   //       '../ru-blog/eighty-seven-ru-blog/eighty-seven-ru-blog.module'
   //     ).then((m) => m.EightySevenRuBlogModule),
   // },
+  ]
+   },
 ];
 
 @NgModule({
-  declarations: [RuBlogHomepageComponent],
-  imports: [CommonModule, MatExpansionModule, MatPaginatorModule, RouterModule.forChild(routes)],
+  declarations: [RuBlogHomepageComponent, CoverRuComponent, SearchblockRuComponent],
+  imports: [CommonModule, MatExpansionModule,FormsModule, ReactiveFormsModule, MatPaginatorModule, RouterModule.forChild(routes)],
 })
 export class RuBlogModule {}

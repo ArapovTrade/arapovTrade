@@ -1,0 +1,287 @@
+<header class="header">
+    <div class="b-top">
+        <div class="container">
+            <div class="top-i">
+                <div class="top-slogan">
+                    <div class="flex">
+                        <a class=" " target="_blank" href="https://www.youtube.com/@ArapovTrade?si=fvsUJeH8tiR5x_QD">
+                            <mark>ArapovTrade</mark>
+                        </a>
+                        <a class=" " target="_blank" href="https://www.youtube.com/@ArapovTrade?si=fvsUJeH8tiR5x_QD">
+                            <img class="youtubeLink" src="/assets/img/svg/youtube.svg" alt="youtube">
+                        </a>
+                    </div>
+
+                </div>
+                 
+
+                <div>
+
+                    <div>
+                        <div (click)="searchtoggle($event)" style="display: flex;">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                viewBox="0 0 48 48" width="32px" height="32px">
+                                <g>
+                                    <rect x="34.6" y="28.1"
+                                        transform="matrix(0.7071 -0.7071 0.7071 0.7071 -15.1544 36.5859)" fill="#616161"
+                                        width="4" height="17" />
+                                    <circle fill="#005DB8" cx="20" cy="20" r="16" />
+                                </g>
+                                <rect x="36.2" y="32.1"
+                                    transform="matrix(0.7071 -0.7071 0.7071 0.7071 -15.8392 38.2393)" fill="#37474F"
+                                    width="4" height="12.3" />
+                                <circle fill="#ffffff" cx="20" cy="20" r="13" />
+
+                            </svg>
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="searchblock" [ngClass]="{displNone:!flag1, displBlock:!flagTrue1}"
+                    (click)="searchtoggle($event)">
+                    <div class="searchblockitem" (click)="$event.stopPropagation()">
+                        <app-searchblock-en (closeBlockChild)="searchtoggle($event)"> </app-searchblock-en>
+
+                    </div>
+
+
+                </div>
+                <div *ngIf="checkLang===3">
+                    <nav class="nav900" aria-label="Breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+                        <ul>
+                            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                <a itemprop="item"   hreflang="en" routerLinkActive="active" (click)="closeMenu(); navigateTo('en')">
+                                    <span itemprop="name">About the course author</span> </a>
+                                <meta itemprop="position" content="1" />
+                            </li>
+                            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a
+                                    itemprop="item"   hreflang="en" routerLinkActive="active"
+                                    (click)="closeMenu(); navigateTo('en/studying')">
+                                    <span itemprop="name">Trading courses</span> </a>
+                                <meta itemprop="position" content="2" />
+                            </li>
+
+                            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a
+                                    itemprop="item"   hreflang="en" routerLinkActive="active"
+                                    (click)="closeMenu(); navigateTo('en/freestudying')">
+                                    <span itemprop="name">Free trading training</span></a>
+                                <meta itemprop="position" content="3" />
+                            </li>
+
+                        </ul>
+                    </nav>
+                    <div class="top-i nav800">
+                        <div class="top-slogan">
+                        </div>
+                        <div class="lang">
+                            <div class="top-menu">
+                                <input type="checkbox" name="menu" id="menu" hidden [checked]="isMenuOpen"
+                                    (change)="toggleMenu()">
+                                <label for="menu" class="show-menu">
+
+                                    <svg width="18" height="16" viewBox="0 0 18 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="18" height="2" rx="1" fill="#005DB8" />
+                                        <rect y="6" width="18" height="2" rx="1" fill="#005DB8" />
+                                        <rect y="12" width="18" height="2" rx="1" fill="#005DB8" />
+                                    </svg>
+                                </label>
+                                <nav class="menu" [ngClass]="{'open': isMenuOpen}">
+                                    <ul class="menu__list ">
+                                        <li><a   hreflang="en" routerLinkActive="active" (click)="closeMenu(); navigateTo('en')">About
+                                                the course author</a>
+                                        </li>
+                                        <li><a   hreflang="en" routerLinkActive="active"
+                                                (click)="closeMenu(); navigateTo('en/studying')">Trading courses</a>
+                                        </li>
+
+                                        <li><a   hreflang="en" routerLinkActive="active"
+                                                (click)="closeMenu(); navigateTo('en/freestudying')">Free trading training</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div *ngIf="checkLang===2">
+                    <nav class="nav900" aria-label="Breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+                        <ul>
+                            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                <a itemprop="item" routerLink="ru" hreflang="ru" routerLinkActive="active" (click)="closeMenu()">
+                                    <span itemprop="name">Об авторе курса</span> </a>
+                                <meta itemprop="position" content="1" />
+                            </li>
+                            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a
+                                    itemprop="item" routerLink="ru/studying" hreflang="ru" routerLinkActive="active"
+                                    (click)="closeMenu()">
+                                    <span itemprop="name">Курсы по
+                                        трейдингу</span> </a>
+                                <meta itemprop="position" content="2" />
+                            </li>
+
+                            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a
+                                    itemprop="item" routerLink="ru/freestudying" hreflang="ru" routerLinkActive="active"
+                                    (click)="closeMenu()">
+                                    <span itemprop="name">Бесплатное
+                                        обучение трейдингу</span></a>
+                                <meta itemprop="position" content="3" />
+                            </li>
+
+                        </ul>
+                    </nav>
+                    <div class="top-i nav800">
+                        <div class="top-slogan">
+                        </div>
+                        <div class="lang">
+                            <div class="top-menu">
+                                <input type="checkbox" name="menu" id="menu" hidden [checked]="isMenuOpen"
+                                    (change)="toggleMenu()">
+                                <label for="menu" class="show-menu">
+
+                                    <svg width="18" height="16" viewBox="0 0 18 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="18" height="2" rx="1" fill="#005DB8" />
+                                        <rect y="6" width="18" height="2" rx="1" fill="#005DB8" />
+                                        <rect y="12" width="18" height="2" rx="1" fill="#005DB8" />
+                                    </svg>
+                                </label>
+                                <nav class="menu" [ngClass]="{'open': isMenuOpen}">
+                                    <ul class="menu__list ">
+                                        <li><a routerLink="ru" hreflang="ru" routerLinkActive="active" (click)="closeMenu()">Об
+                                                авторе курса</a>
+                                        </li>
+                                        <li><a routerLink="ru/studying" hreflang="ru" routerLinkActive="active"
+                                                (click)="closeMenu()">Курсы по
+                                                трейдингу</a>
+                                        </li>
+
+                                        <li><a routerLink="ru/freestudying" hreflang="ru" routerLinkActive="active"
+                                                (click)="closeMenu()">Бесплатное
+                                                обучение трейдингу</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div *ngIf="checkLang===1">
+                    <nav class="nav900" aria-label="Breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+                        <ul>
+                            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                <a itemprop="item"   hreflang="uk" routerLinkActive="active" (click)="closeMenu(); navigateTo('uk')">
+                                    <span itemprop="name">Про
+                                        автора курсу</span> </a>
+                                <meta itemprop="position" content="1" />
+                            </li>
+                            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a
+                                    itemprop="item"   hreflang="uk" routerLinkActive="active"
+                                    (click)="closeMenu(); navigateTo('uk/studying')">
+                                    <span itemprop="name">Курси з
+                                        трейдингу</span> </a>
+                                <meta itemprop="position" content="2" />
+                            </li>
+
+                            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a
+                                    itemprop="item" routerLink="uk/freestudying" hreflang="uk" routerLinkActive="active"
+                                    (click)="closeMenu(); navigateTo('uk/freestudying')">
+                                    <span itemprop="name">Безкоштовне
+                                        навчання трейдингу</span></a>
+                                <meta itemprop="position" content="3" />
+                            </li>
+
+                        </ul>
+                    </nav>
+
+
+
+                    <div class="lang nav800">
+
+                        <div class="top-menu">
+                            <input type="checkbox" name="menu" id="menu" hidden [checked]="isMenuOpen"
+                                (change)="toggleMenu()">
+                            <label for="menu" class="show-menu">
+
+                                <svg width="18" height="16" viewBox="0 0 18 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="18" height="2" rx="1" fill="#005DB8" />
+                                    <rect y="6" width="18" height="2" rx="1" fill="#005DB8" />
+                                    <rect y="12" width="18" height="2" rx="1" fill="#005DB8" />
+                                </svg>
+                            </label>
+                            <nav class="menu" [ngClass]="{'open': isMenuOpen}">
+                                <ul class="menu__list ">
+                                    <li><a routerLink="uk" routerLinkActive="active"  hreflang="uk" (click)="closeMenu()">Про
+                                            автора курсу</a>
+                                    </li>
+                                    <li><a routerLink="uk/studying" hreflang="uk" routerLinkActive="active"
+                                            (click)="closeMenu()">Курси з
+                                            трейдингу</a>
+                                    </li>
+
+                                    <li><a routerLink="uk/freestudying" hreflang="uk" routerLinkActive="active"
+                                            (click)="closeMenu()">Безкоштовне
+                                            навчання трейдингу</a>
+                                    </li>
+
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div> -->
+
+                <div class="lang">
+
+                    <nav class="nav-lang">
+                        <div class="language-selector" (click)="toggleDropdown()">
+
+                            <div *ngIf="checkLang===1"><img style="width:30px ; height: 30px;"
+                                    src="/assets/img/content/flagofukraine.png" alt="flagUKR">
+                            </div>
+                            <div *ngIf="checkLang===2"><img style="width:30px ; height: 30px;"
+                                    src="/assets/img/content/flagofrussia.png" alt="flagRus"></div>
+                            <div *ngIf="checkLang===3"><img style="width:30px ; height: 30px;"
+                                    src="/assets/img/content/flagofbreatbritain.png" alt="flagGB">
+                            </div>
+                            <ul class="language-dropdown" [class.open]="dropdownOpen">
+                                <li class="li_block"><a routerLink="/uk" routerLinkActive="active" hreflang="uk"
+                                        [routerLinkActiveOptions]='{exact:true}'
+                                        (click)="closeDropdown();changeLanguage('uk'); setUkraine()"><img
+                                            style="width:18px ; height: 18px;     margin: 0 15px 0 0;"
+                                            src="/assets/img/content/flagofukraine.png" alt="flagUKR"></a><a
+                                        routerLink="/uk" routerLinkActive="active" hreflang="uk"
+                                        [routerLinkActiveOptions]='{exact:true}'
+                                        (click)="closeDropdown();changeLanguage('uk'); setUkraine()">Українська</a>
+                                </li>
+                                <li class="li_block"><a routerLink="/ru" routerLinkActive="active" hreflang="ru"
+                                        (click)="closeDropdown() ; changeLanguage('ru');setRussian()"><img
+                                            style="width:18px ; height: 18px;     margin: 0 15px 0 0;"
+                                            src="/assets/img/content/flagofrussia.png" alt="flagRus"></a><a
+                                        routerLink="/ru" routerLinkActive="active" hreflang="ru"
+                                        (click)="closeDropdown() ; changeLanguage('ru');setRussian()">Русский</a></li>
+                                        
+
+                                <li class="li_block"><a routerLink="/en" routerLinkActive="active" hreflang="en"
+                                        (click)="closeDropdown() ; changeLanguage('en');setEnglish()"><img
+                                            style="width:18px ; height: 18px;     margin: 0 15px 0 0;"
+                                            src="/assets/img/content/flagofbreatbritain.png" alt="flagEn"></a><a
+                                        routerLink="/en" routerLinkActive="active" hreflang="en"
+                                        (click)="closeDropdown() ; changeLanguage('en');setEnglish()">English</a></li>
+                                 
+                            </ul>
+                        </div>
+                    </nav>
+
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</header>
+ <router-outlet>    </router-outlet>
