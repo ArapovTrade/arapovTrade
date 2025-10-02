@@ -1823,9 +1823,9 @@ background: url(../../../public/assets/redesignArapovTrade/img/BG-seventh-block-
   flex-basis: auto;
   position: relative;
   height: 23px;
-  font-family: Lato;
+  font-family: 'Lato';
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 22.815px;
   text-align: left;
   white-space: nowrap; 
@@ -1834,6 +1834,7 @@ background: url(../../../public/assets/redesignArapovTrade/img/BG-seventh-block-
   background-clip: text;
   -webkit-text-fill-color: transparent;
   margin: 6px 0 9px;
+  letter-spacing: normal;
 }
 .plus-3f {
   display: flex;
@@ -3672,6 +3673,7 @@ background: url(../../../public/assets/redesignArapovTrade/img/bg-seventh-table-
   .successful-trader {
     font-size: 24px;
     line-height: 20px;
+    letter-spacing: normal;
   }
 
    
@@ -4854,7 +4856,7 @@ background: url(../../../public/assets/redesignArapovTrade/img/BG-author-phone.p
   .successful-trader {
     font-size: 24px;
     height: 100%;
-    letter-spacing: 150%;
+    letter-spacing: normal;
     line-height: 120%;
     white-space: normal;
     width: 310px;
@@ -4926,7 +4928,7 @@ background: url(../../../public/assets/redesignArapovTrade/img/BG-author-phone.p
     margin: 18px 0;
   }
 
-  .tabs-eight-block {
+  .tabs-eight-block { //?????????????
         width: 335px;
     display: flex
 ;
