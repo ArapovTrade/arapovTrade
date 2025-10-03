@@ -137,21 +137,21 @@
       </div>
       <div class="hero-section-main">
         <div class="flex-row-e">
-          <div class="flex-row-f">
+          <div class="flex-row-f" data-aos="fade-up" data-aos-delay="300">
             <div class="coins"></div>
             <div class="text-block_one-block">
-              <div data-aos="fade-right" data-aos-delay="300" class="bezkoshtovniy-kurs" [ngStyle]="{ 'color': isDark? '#ffffff' : '#03314B' }">БЕЗКОШТОВНИЙ КУРС</div>   
+              <div   class="bezkoshtovniy-kurs" [ngStyle]="{ 'color': isDark? '#ffffff' : '#03314B' }">БЕЗКОШТОВНИЙ КУРС</div>   
 
               <div class="rectangle"></div>
 
-              <div class="zagolovok" data-aos="fade-left" data-aos-delay="350">
+              <div class="zagolovok"  >
                 <span  class="navchannya-treidzingu-z-nulya" [ngStyle]="{ 'color': isDark? '#ffffff' : '#03314B' }"   
                   >Навчання трейдингу з нуля: </span
                 ><span class="posibnik-dlya-pochatkivtsiv"    [ngClass]="{ 'gradient-orange': isDark, 'gradient-blue': !isDark }"
                   >Посібник для початківців</span
                 >
               </div>
-              <span data-aos="fade-right" data-aos-delay="300" class="tekst-opisanye" [ngStyle]="{ 'color': isDark? '#ffffff' : '#0C263A' }"
+              <span  class="tekst-opisanye" [ngStyle]="{ 'color': isDark? '#ffffff' : '#0C263A' }"
                 >Тут зібрана вся ключова інформація, щоб ви могли зробити перший
                 крок у світ інвестицій впевнено і безпечно.
                 <span>
@@ -160,7 +160,7 @@
                   дорогих помилок.</span
                 >
               </span>
-              <div class="authot_button_block" data-aos="fade-left" data-aos-delay="350">
+              <div class="authot_button_block"  >
                 <button  (click)="navigateTo('uk/freestudying')"    [ngClass]="{'btn-section-one':true, 'gradient-block-orange': isDark, 'gradient-block-blue': !isDark }"> 
                   <span
                     
@@ -204,7 +204,7 @@
               </div>
 
               <div class="cube"></div>
-              <div class="follow-us-block" [ngClass]="{'follow-pad':!isDark}" data-aos="fade-down" data-aos-delay="300">
+              <div class="follow-us-block" [ngClass]="{'follow-pad':!isDark}" >
                 <span class="follow-us" [ngStyle]="{ 'color': isDark? '#ffffff' : '#03314b' }"   >Пiдписуйтесь:</span>
                 <div>
                   <div class="icons">
@@ -341,7 +341,7 @@
           </div>
           <div *ngIf="isDark" class="mask-gradient"></div> 
 
-          <div class="image" data-aos="fade-left" data-aos-delay="350"  [ngClass]="{ 'shadow-dark': isDark, 'shadow-light': !isDark }"  
+          <div class="image"    [ngClass]="{ 'shadow-dark': isDark, 'shadow-light': !isDark }"  
 
           [ngStyle]="{ 
             'background': isDark? 
@@ -358,7 +358,7 @@
   </div>
 
   <div class="flex-row-ba" id="section1">
-    <div class="row">
+    <div class="row" data-aos="fade-up" data-aos-delay="300">
       <div class="left">
         <div class="bg-figure">  
            
@@ -370,21 +370,21 @@
             'bg-dark': isDark, 
             'bg-light': !isDark }"></div>
         </div>
-        <div class="img" data-aos="fade-right" data-aos-delay="300"></div>
+        <div class="img"  ></div>
         <div    class="igor-info" [ngStyle]="{ 'border': isDark? '2px solid #52493b' : '2px solid #4D5460' }" >  
-          <div class="avatar" data-aos="fade-right" data-aos-delay="300"></div>
-          <div class="name" data-aos="fade-up" data-aos-delay="300">
+          <div class="avatar"  ></div>
+          <div class="name"  >
             <span class="name-4">Iгор Арапов</span
             ><span class="designation">Професiйний трейдер</span>
           </div>
         </div>
       </div>
       <div class="right">
-        <div class="dorogiy-chitachu" data-aos="fade-left" data-aos-delay="300" >
+        <div class="dorogiy-chitachu"   >
           <span   [ngClass]="{'dorogiy':true ,'gradient-orange': isDark, 'gradient-blue': !isDark }">Дорогий </span
           ><span   [ngClass]="{ 'chitachu':true ,'gradient-orange': isDark, 'gradient-blue': !isDark }">читачу!</span>
         </div>
-        <div class="text_second-block lato-regular" data-aos="fade-up" data-aos-delay="300" >
+        <div class="text_second-block lato-regular"   >
           <span class="learning-materials lato-regular"  [ngStyle]="{ 'color': isDark? '#ffffff' : '#0C263A' }"
             >Метою цього методичного посібника є ознайомлення
             трейдерів-початківців із фінансовим ринком. Я намагався скласти
@@ -411,7 +411,7 @@
             окремих тем трейдингу у зручних відеороликах.</span
           >
         </div>
-        <div  data-aos="fade-left" data-aos-delay="300"    [ngClass]="{'youtube-channel':true, 'gradient-block-orange': isDark, 'gradient-block-blue': !isDark }">
+        <div     [ngClass]="{'youtube-channel':true, 'gradient-block-orange': isDark, 'gradient-block-blue': !isDark }">
           <a
             href="https://www.youtube.com/@ArapovTrade"
             target="_blank"
@@ -435,11 +435,11 @@
     <div class="about-bg" *ngIf="isDark"></div>
   </div>
   
-  <div class="about">
+  <div class="about" data-aos="fade-up" data-aos-delay="300">
     <div class="left-text">
-      <span data-aos="fade-up" data-aos-delay="300"   [ngClass]="{'author-header':true ,'gradient-orange': isDark, 'gradient-blue': !isDark }">Про автора стратегii</span>
+      <span    [ngClass]="{'author-header':true ,'gradient-orange': isDark, 'gradient-blue': !isDark }">Про автора стратегii</span>
       <div class="quote-block" [ngStyle]="{ 'background': isDark? 'rgba(255, 255, 255, 0.08)' : 'rgba(230, 237, 251, 0.7)' }"> 
-        <div class="quote" data-aos="fade-right" data-aos-delay="300">
+        <div class="quote" >
           <span class="quote-text" 
           [ngStyle]="{
             
@@ -452,15 +452,15 @@
             математику»</span
           >
 
-          <span  data-aos="fade-down" data-aos-delay="300" class="features-list" [ngStyle]="{ 'color': isDark? '#ffffff' : '#0C263A' }">I. Arapov</span>
+          <span   class="features-list" [ngStyle]="{ 'color': isDark? '#ffffff' : '#0C263A' }">I. Arapov</span>
         </div>
       </div>
       <div class="feature">
         <div class="iconss">
-          <div data-aos="fade-right" data-aos-delay="300" class="chart-experience" [ngStyle]="{ 'border': isDark? '2px solid rgba(255, 255, 255, 0.16)' : '2px solid #D6EBF7' }">
+          <div   class="chart-experience" [ngStyle]="{ 'border': isDark? '2px solid rgba(255, 255, 255, 0.16)' : '2px solid #D6EBF7' }">
             <div class="group-6"><div    [ngClass]="{'text-7':true ,'text-7-dark': isDark, 'text-7-light': !isDark }"></div></div>
           </div>
-          <div  data-aos="fade-left" data-aos-delay="300" class="feature-title">
+          <div   class="feature-title">
             <span class="feature-body" [ngStyle]="{ 'color': isDark? '#ffffff' : '#0C263A' }">12 рокiв досвiду</span
             ><span class="feature-8" [ngStyle]="{ 'color': isDark? '#ffffff' : '#6D7D89' }"
               >Трейдер з 2013 року, безліч успішних угод, 60% + приріст до
@@ -468,9 +468,9 @@
             >
           </div>
         </div>
-        <div class="icon-9" data-aos="fade-right" data-aos-delay="300">
+        <div class="icon-9" >
           <div class="system-trading" [ngStyle]="{ 'border': isDark? '2px solid rgba(255, 255, 255, 0.16)' : '2px solid #D6EBF7' }"><div   [ngClass]="{'text-a':true ,'text-a-dark': isDark, 'text-a-light': !isDark }"></div></div>
-          <div  data-aos="fade-left" data-aos-delay="300" class="feature-title-b">
+          <div    class="feature-title-b">
             <span class="feature-body-c" [ngStyle]="{ 'color': isDark? '#ffffff' : '#0C263A' }">Системний трейдинг</span
             ><span class="image-d" [ngStyle]="{ 'color': isDark? '#ffffff' : '#6D7D89' }"
               >Системний підхід на основі об'ємного аналізу, логіки Вайкоффа і
@@ -481,7 +481,7 @@
       </div>
     </div>
     <div class="shapes">
-      <div  data-aos="fade-down" data-aos-delay="300"    [ngClass]="{'articles':true ,'articles-dark': isDark, 'articles-light': !isDark }"></div>
+      <div     [ngClass]="{'articles':true ,'articles-dark': isDark, 'articles-light': !isDark }"></div>
       <div class="articles-text"   
       [ngStyle]="{
             
@@ -489,14 +489,14 @@
             'border': isDark? '2px solid rgba(230, 237, 251, 0.16)':'2px solid rgba(0, 136, 255, 0.16)',
             }"
             >  
-        <div class="articles-count"  data-aos="fade-left" data-aos-delay="300">
+        <div class="articles-count"   >
           <span class="articles-recommendations"
             >130+ навчальних статей<br /></span
           ><span class="graphics">з практичними рекомендаціями </span>
         </div>
       </div>
-      <div data-aos="fade-right" data-aos-delay="300"  class="mask-group"><div class="reviews-block"></div></div>
-      <div class="frame-e"  data-aos="fade-left" data-aos-delay="300"
+      <div    class="mask-group"><div class="reviews-block"></div></div>
+      <div class="frame-e"   
       [ngStyle]="{
             
             'background': isDark? 'rgba(255, 255, 255, 0.08)' : 'rgba(0, 136, 255, 0.08)' ,
@@ -512,26 +512,26 @@
     
   </div>
 
-  <div class="flex-row">
+  <div class="flex-row"  >
       <div class="background-shape"></div>
 
     <div class="base">
       <div   [ngClass]="{'background-10':true ,'background-10-dark': isDark, 'background-10-light': !isDark }"></div>
       <div class="up-block">
         <div    [ngClass]="{'arrow-11':true ,'arrow-11-dark': isDark, 'arrow-11-light': !isDark }"></div>
-        <div  data-aos="fade-left" data-aos-delay="300"  class="trading-definition"  [ngStyle]="{
+        <div data-aos="fade-up" data-aos-delay="300"   class="trading-definition"  [ngStyle]="{
             
             'background': isDark? 'rgba(255, 255, 255, 0.08)' : 'rgba(0, 131, 205, 0.08)' ,
             'border': isDark? '2px solid rgba(230, 237, 251, 0.16)':'2px solid #E6EDFB',
             }">
-          <div data-aos="fade-right" data-aos-delay="300" class="flex-row-12">  
+          <div   class="flex-row-12">  
             <div class="info-icon"><div    [ngClass]="{'group-13':true ,'group-13-dark': isDark, 'group-13-light': !isDark }"></div>
           </div>
-            <span  data-aos="fade-up" data-aos-delay="300"  [ngClass]="{ 'trading-definition-title':true, 'gradient-orange': isDark, 'gradient-blue': !isDark }"
+            <span     [ngClass]="{ 'trading-definition-title':true, 'gradient-orange': isDark, 'gradient-blue': !isDark }"
               >Що таке трейдинг: простими словами</span
             >
           </div>
-          <span  data-aos="fade-down" data-aos-delay="300" class="trading-definition-text" [ngStyle]="{ 'color': isDark? '#ffffff' : '#0C263A' }"
+          <span  class="trading-definition-text" [ngStyle]="{ 'color': isDark? '#ffffff' : '#0C263A' }"
             >У сучасному світі фінансів слово трейдинг дедалі частіше
             з’являється в заголовках новин, соціальних мережах і навіть у
             повсякденних розмовах. Воно стало майже синонімом до можливості
@@ -542,9 +542,9 @@
         </div>
       </div>
 
-      <div class="fifth-content_block">
+      <div class="fifth-content_block" data-aos="fade-up" data-aos-delay="300">
         <div class="left-content">
-          <div class="heading-support-text" data-aos="fade-left" data-aos-delay="300">
+          <div class="heading-support-text"  >
             <span   [ngClass]="{ 'osnovi-treidingu':true, 'gradient-orange': isDark, 'gradient-blue': !isDark }">Основи трейдингу</span
             ><span   class="osnovi-treidingu-14" [ngStyle]="{ 'color': isDark? '#ffffff' : '#0C263A' }"
               >Трейдинг (від англ. trading — торгівля) — це процес купівлі та
@@ -555,7 +555,7 @@
               прибутком.</span
             >
           </div>
-          <div class="tabs" data-aos="fade-down" data-aos-delay="300">
+          <div class="tabs"  >
             <div   [ngClass]="{ 'tab':true, 'tab-dark': isDark, 'tab-light': !isDark }">
               <span class="tab-text">Акції компаній</span>
             </div>
@@ -578,11 +578,11 @@
           </div>
         </div>
         <div  class="right-content_fifth">
-          <img data-aos="fade-left" data-aos-delay="300" *ngIf="isDark"
+          <img   *ngIf="isDark"
             src="assets/redesignArapovTrade/img/fifth-block-main-image.svg"
             alt="main"
           />
-          <img data-aos="fade-left" data-aos-delay="300" *ngIf="!isDark"
+          <img   *ngIf="!isDark"
             src="assets/redesignArapovTrade/img/fifth-block-main-image-light.svg"
             alt="main"
           />
@@ -593,16 +593,16 @@
       </div>
     </div>
   </div>
-  <div class="six_block">
+  <div class="six_block" data-aos="fade-up" data-aos-delay="300">
     <div class="six_block-left" >
       <div   [ngClass]="{'six-block-graph-img':true ,'six-block-graph-img-dark': isDark, 'six-block-graph-img-light': !isDark }"></div>
       <div  [ngClass]="{'bg-16':true ,'bg-16-dark': isDark, 'bg-16-light': !isDark }"></div>
-      <div data-aos="fade-right" data-aos-delay="300" class="six-block-main-img"></div>
+      <div   class="six-block-main-img"></div>
       <div   [ngClass]="{'flex-row-ca':true ,'flex-row-ca-dark': isDark, 'flex-row-ca-light': !isDark }"></div>
     </div>
     <div class="six_block-right">
-      <span data-aos="fade-left" data-aos-delay="300" class="material-symbols-show-chart-rounded" [ngClass]="{ 'material-symbols-show-chart-rounded':true, 'gradient-orange': isDark, 'gradient-blue': !isDark }">Хто такий трейдер?</span
-      ><span data-aos="fade-right" data-aos-delay="300" class="flex-row-fc" [ngStyle]="{ 'color': isDark? '#ffffff' : '#0C263A' }"
+      <span   class="material-symbols-show-chart-rounded" [ngClass]="{ 'material-symbols-show-chart-rounded':true, 'gradient-orange': isDark, 'gradient-blue': !isDark }">Хто такий трейдер?</span
+      ><span   class="flex-row-fc" [ngStyle]="{ 'color': isDark? '#ffffff' : '#0C263A' }"
         >Трейдер — це людина, яка здійснює купівлю та продаж фінансових
         інструментів з метою отримання прибутку. Він аналізує ринок, прогнозує
         зміни цін і приймає рішення: купувати, продавати або утримувати активи.
@@ -614,7 +614,7 @@
 
       <div class="satisfied-customer" [ngStyle]="{ 'background': isDark? 'rgba(255, 255, 255, 0.08)' : 'rgba(230, 237, 251, 0.7)' }">      
         <div class="naygolovnishe" [ngStyle]="{ 'border-left': isDark? '5px solid #ffcd29' : '5px solid #0082CC' }" > 
-          <p [ngStyle]="{ 'color': isDark? '#ffffff' : '#0C263A' }" data-aos="fade-up" data-aos-delay="300">
+          <p [ngStyle]="{ 'color': isDark? '#ffffff' : '#0C263A' }"  >
             Завдяки розвитку онлайн-бірж, брокерських сервісів і торгових
             платформ, сьогодні практично кожен може розпочати торгівлю на
             фінансовому ринку. Для цього достатньо мати комп’ютер або смартфон
@@ -624,19 +624,19 @@
       </div>
     </div>
   </div>
-  <div class="seventh-block">
+  <div class="seventh-block" data-aos="fade-up" data-aos-delay="300">
     <div class="bg-36">
       <div class="seventh-block_left">
         <div class="flex-column">
-          <span data-aos="fade-right" data-aos-delay="300"  [ngClass]="{ 'opportunities-risks':true, 'gradient-orange': isDark, 'gradient-blue': !isDark }">Можливості та ризики</span
-          ><span data-aos="fade-left" data-aos-delay="300" class="opportunities-risks-38" [ngStyle]="{ 'color': isDark? '#ffffff' : '#0C263A' }"
+          <span    [ngClass]="{ 'opportunities-risks':true, 'gradient-orange': isDark, 'gradient-blue': !isDark }">Можливості та ризики</span
+          ><span  class="opportunities-risks-38" [ngStyle]="{ 'color': isDark? '#ffffff' : '#0C263A' }"
             >Трейдинг приваблює можливістю високих доходів — досвідчені трейдери
             здатні заробляти понад 1000 доларів на місяць , а деякі — значно
             більше ($2,000–10,000$/міс). Однак трейдинг — це не легкі гроші . За
             статистикою, більшість новачків втрачає свої інвестиції вже у перші
             місяці.</span
           >
-          <div data-aos="fade-right" data-aos-delay="300" class="minuses"  >
+          <div   class="minuses"  >
             <span    [ngClass]="{ 'deposit-loss-reasons':true, 'gradient-orange': isDark, 'gradient-blue': !isDark }">Причини втрати депозиту:</span>
             <div class="minus">
               <span class="lending-money-investment" [ngStyle]="{ 'color': isDark? '#ffffff' : '#0C263A' }">Недосвідченість</span>
@@ -658,7 +658,7 @@
             </div>
           </div>
         </div>
-        <div class="plus" data-aos="fade-left" data-aos-delay="300">
+        <div class="plus"  >
           <span   [ngClass]="{ 'successful-trader':true, 'gradient-orange': isDark, 'gradient-blue': !isDark }"
             >Щоб стати успішним трейдером, необхідно:</span
           >
@@ -687,7 +687,7 @@
       <div class="seventh-block_rigth">
         <div class="right-37">
           <div class="money-tree" >
-            <img data-aos="fade-down" data-aos-delay="300" src="/assets/redesignArapovTrade/img/1.png" alt="tree" />
+            <img   src="/assets/redesignArapovTrade/img/1.png" alt="tree" />
           </div>
           <div  [ngClass]="{ 'chart':true, 'chart-dark': isDark, 'chart-light': !isDark }"></div>
           <div  [ngClass]="{ 'chart-arc':true, 'chart-arc-dark': isDark, 'chart-arc-light': !isDark }"></div>
@@ -698,15 +698,15 @@
   </div>
 
   <div class="eighth-block">
-    <div class="eighth-block_main">
+    <div class="eighth-block_main" data-aos="fade-up" data-aos-delay="300">
       <div class="eighth-block_main-left">
-        <div class="img-18" data-aos="fade-down" data-aos-delay="300"></div>
+        <div class="img-18" ></div>
         <div   [ngClass]="{ 'img-19':true, 'img-19-dark': isDark, 'img-19-light': !isDark }"></div>
       </div>
       <div class="reighth-block_main-right">
-        <span data-aos="fade-down" data-aos-delay="300"   [ngClass]="{ 'opportunities-risks':true, 'gradient-orange': isDark, 'gradient-blue': !isDark }">З чого почати? </span>
+        <span    [ngClass]="{ 'opportunities-risks':true, 'gradient-orange': isDark, 'gradient-blue': !isDark }">З чого почати? </span>
         <div   class="start-trading-recommendation" [ngStyle]="{ 'color': isDark? '#ffffff' : '#0C263A' }">
-          <span  data-aos="fade-up" data-aos-delay="300" 
+          <span   
             >Щоб правильно розпочати торгівлю на біржі та не втратити кошти , я
             рекомендую пройти безкоштовний навчальний курс . Курс охоплює всі
             ключові розділи теорії трейдингу, необхідні для впевненого
@@ -718,10 +718,10 @@
           розміром капіталу його підписників.
         </div>
 
-        <span data-aos="fade-left" data-aos-delay="300"   [ngClass]="{ 'successful-trader':true, 'gradient-orange': isDark, 'gradient-blue': !isDark }"
+        <span     [ngClass]="{ 'successful-trader':true, 'gradient-orange': isDark, 'gradient-blue': !isDark }"
           >На навчальній платформі ви знайдете:</span
         >
-        <div class="tabs-eight-block" data-aos="fade-right" data-aos-delay="300">
+        <div class="tabs-eight-block"  >
           <div  [ngClass]="{ 'tab':true, 'tab-dark': isDark, 'tab-light': !isDark }">
             <span class="tab-text">понад 130 статей і 70 відеоуроків</span>
           </div>
@@ -743,12 +743,12 @@
       </div>
     </div>
 
-    <div class="eighth-block_bottom-block">
+    <div class="eighth-block_bottom-block" data-aos="fade-up" data-aos-delay="300">
       <div class="notice-block">
         <div class="name-1a" [ngStyle]="{ 'background': isDark? 'rgba(255, 255, 255, 0.08)' : 'rgba(230, 237, 251, 0.7)' }">
           <div class=" " > 
             <!-- [ngStyle]="{ 'border-left': isDark? '5px solid #ffcd29' : '5px solid #0082CC' }" -->
-            <span data-aos="fade-left" data-aos-delay="300" class="quote-text-eight-block" 
+            <span   class="quote-text-eight-block" 
             [ngStyle]="{ 'color': isDark? '#ffffff' : '#0C263A',
               'border-left': isDark? '5px solid #ffcd29' : '5px solid #0082CC'
              }" 
@@ -764,9 +764,9 @@
         </div>
       </div>
 
-      <div class="author-speach-block">
-        <div  data-aos="fade-up" data-aos-delay="300" class="line"></div>
-        <div class="speach_text-block" data-aos="fade-right" data-aos-delay="300">
+      <div class="author-speach-block" data-aos="fade-up" data-aos-delay="300">
+        <div    class="line"></div>
+        <div class="speach_text-block"  >
           <span  class="speach-text"  [ngStyle]="{ 'color': isDark? '#ffffff' : '#0C263A' 
              }" 
             >Бажаю вам успіху у навчанні та перших кроках на шляху до
@@ -777,7 +777,7 @@
             Автор курсу "Навчання трейдингу з нуля" — Ігор Арапов</span
           >
         </div>
-        <span data-aos="fade-down" data-aos-delay="300" class="features-list ph" [ngStyle]="{ 'color': isDark? '#ffffff' : '#0C263A' 
+        <span   class="features-list ph" [ngStyle]="{ 'color': isDark? '#ffffff' : '#0C263A' 
              }" >I. Arapov</span>
       </div>
     </div>
@@ -788,7 +788,7 @@
       
 
       <div class="logo-body">
-        <div class="frame-29" data-aos="fade-right" data-aos-delay="300">
+        <div class="frame-29" >
           <div class="logo">
             <div class="header-logo-block">
               <div class="header-logo hhd" [ngStyle]="{ 'background': isDark? 'url(assets/redesignArapovTrade/img/logo-new.png) no-repeat center': 'url(assets/redesignArapovTrade/img/logo-new-light.png) no-repeat center' }"></div>
@@ -802,7 +802,7 @@
         </div>
       </div>
 
-      <div class="links"  data-aos="fade-left" data-aos-delay="300">
+      <div class="links"  >
         <div class="menu" >
           <span class="menu-title">Меню</span>
           <div class="menu-title-block">
