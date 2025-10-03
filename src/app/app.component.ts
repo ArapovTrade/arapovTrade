@@ -8,7 +8,7 @@ import {
   RendererFactory2,
   AfterContentChecked,
   OnChanges, 
-  Inject,
+  Inject,HostListener, OnDestroy
 } from '@angular/core';
 import { NavigationEnd } from '@angular/router';
 import { takeUntil } from 'rxjs/operators';
@@ -26,12 +26,19 @@ import { filter } from 'rxjs/operators';
 import { MetaservService } from './servises/metaserv.service';
 import { DOCUMENT } from '@angular/common';
 import { FaqservService } from './servises/faqserv.service';
+import { ThemeservService } from './servises/themeserv.service';
+ import { Subscription } from 'rxjs';
+ 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent implements OnInit, AfterViewChecked {
+export class AppComponent implements OnInit, AfterViewChecked , OnDestroy{
+ private routerSubscription!: Subscription;
+    private themeSubscription!: Subscription;
+   isDark !:boolean;
+
   dropdownOpen = false;
   checkLang!: number;
   private destroy$ = new Subject<void>();
@@ -60,16 +67,11 @@ export class AppComponent implements OnInit, AfterViewChecked {
     private titleService: Title,
     private metaTegServ: MetaservService,
     @Inject(DOCUMENT) private document: Document,
-    private faqservise: FaqservService
+    private faqservise: FaqservService,
+    private themeServ:ThemeservService
   ) {
     this.renderer = rendererFactory.createRenderer(null, null);
-    this.router.events.subscribe((event) => {
-      if (event instanceof NavigationEnd) {
-        if (typeof window !== 'undefined') {
-          window.scrollTo(0, 0);
-        }
-      }
-    });
+     
   }
   langFAQ = '';
   changeLanguage(lang: string) {
@@ -123,6 +125,17 @@ export class AppComponent implements OnInit, AfterViewChecked {
   registForm: any;
 
   ngOnInit(): void {
+     this.themeSubscription =this.themeServ.getTheme().subscribe(data=>{
+      this.isDark=data
+       
+    })
+    this.routerSubscription = this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        if (typeof window !== 'undefined') {
+          window.scrollTo(0, 0);
+        }
+      }
+    });
     this.metaTegServ.addOrganizationSchema();
     this.languageService.languageCode$.subscribe((code) => {
       this.checkLang = code;
@@ -625,8 +638,15 @@ export class AppComponent implements OnInit, AfterViewChecked {
   ngOnDestroy() {
     this.destroy$.next();
     this.destroy$.complete();
+    if (this.routerSubscription) {
+        this.routerSubscription.unsubscribe();
+      }
+      if (this.themeSubscription) {
+        this.themeSubscription.unsubscribe();
+      }
   }
-
+ 
+      
   //popup
   flag1: boolean = false;
   flagTrue1: boolean = true;
@@ -738,4 +758,50 @@ export class AppComponent implements OnInit, AfterViewChecked {
     this.renderer.appendChild(this.document.head, defaultLink);
    
   }
+
+
+  // 
+
+  scrollPosition: number = 0;
+  circleRadius: number = 25;
+  circumference: number = 2 * Math.PI * this.circleRadius;
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.scrollPosition =
+      window.pageYOffset ||
+      document.documentElement.scrollTop ||
+      document.body.scrollTop ||
+      0;
+    const maxScroll =
+      document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercentage = Math.min(
+      100,
+      (this.scrollPosition / maxScroll) * 100
+    );
+    this.updateProgressRing(scrollPercentage);
+    this.toggleButtonVisibility();
+  }
+
+  toggleButtonVisibility() {
+    const button = document.querySelector('.scroll-to-top') as HTMLElement;
+    if (this.scrollPosition > 100) {
+      // Показываем кнопку после 100px скролла
+      button.classList.add('visible');
+    } else {
+      button.classList.remove('visible');
+    }
+  }
+
+  updateProgressRing(percentage: number) {
+    const path = document.querySelector('.progress-ring__path') as SVGElement;
+    const dashOffset =
+      this.circumference - (percentage / 100) * this.circumference;
+    path.style.strokeDasharray = `${this.circumference} ${this.circumference}`;
+    path.style.strokeDashoffset = dashOffset.toString();
+  }
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  hovered: string | null = null;
+  
 }

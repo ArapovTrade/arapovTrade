@@ -29,42 +29,8 @@
   background: linear-gradient(90deg, #03324c, #0183cd);
   border: none;
 }
-.scroll-to-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 60px;
-  height: 60px;
-  cursor: pointer;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: 1001230;
-}
 
-.scroll-to-top.visible {
-  opacity: 1;
-}
-
-.progress-ring {
-  transform: rotate(0deg);
-  transform-origin: center;
-}
-
-.progress-ring__circle {
-  fill: none;
-  stroke: #ccc;
-}
-
-.progress-ring__path {
-  fill: none; 
-  stroke-linecap: round;
-  transition: stroke-dasharray 0.3s ease;
-}
-
-.arrow-up {
-  transform: translate(0, 2px);  
-}
-
+ 
  
 .lato-regular {
   font-family: "Lato";

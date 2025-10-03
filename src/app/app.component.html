@@ -469,6 +469,15 @@
 
     </div>
 </div>
-
+<div class="scroll-to-top" (click)="scrollToTop()">
+  <svg class="progress-ring" width="60" height="60">
+    <circle class="progress-ring__circle"  [attr.stroke]="isDark ? '#d5b900' : '#005DB8'" cx="30" cy="30" r="25" stroke-width="5" />
+    <circle class="progress-ring__path"  [attr.stroke]="isDark ? '#d5b900' : '#005DB8'" cx="30" cy="30" r="25" stroke-width="5" />
+    <svg width="40" height="40" x="10" y="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 20L12 4" [attr.stroke]="isDark ? '#d5b900' : '#005DB8'" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M4 12L12 4L20 12" [attr.stroke]="isDark ? '#d5b900' : '#005DB8'"  stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </svg>
+</div>
 
 <router-outlet></router-outlet>

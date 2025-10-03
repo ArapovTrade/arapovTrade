@@ -1,7 +1,8 @@
-import { Component, OnInit, HostListener,AfterViewInit, ChangeDetectorRef} from '@angular/core';
+import { Component, OnInit, HostListener,AfterViewInit, ChangeDetectorRef, OnDestroy} from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { Router ,NavigationEnd } from '@angular/router';
- 
+import { ThemeservService } from '../servises/themeserv.service';
+ import { Subscription } from 'rxjs';
 declare var AOS: any;
 
 @Component({
@@ -9,20 +10,15 @@ declare var AOS: any;
   templateUrl: './mainpage.component.html',
   styleUrl: './mainpage.component.scss',
 })
-export class MainpageComponent implements OnInit, AfterViewInit {
+export class MainpageComponent implements OnInit, AfterViewInit, OnDestroy {
   constructor(
     private meta: Meta,
     private titleService: Title,
     private router: Router,
-    private cdr:ChangeDetectorRef
+    private cdr:ChangeDetectorRef,
+    private themeService:ThemeservService
   ) {
-    this.router.events.subscribe((event) => {
-          if (event instanceof NavigationEnd) {
-            if (typeof window !== 'undefined') {
-              window.scrollTo(0, 0);
-            }
-          }
-        });
+    
   }
 
   ngAfterViewInit() {
@@ -34,7 +30,7 @@ export class MainpageComponent implements OnInit, AfterViewInit {
       });
     }  
   }
-  isDark = false;
+  isDark!:boolean  ;
   languages = ['ua', 'en', 'ru']; // какие языки нужны
   currentLang = 'ua';
   dropdownOpen = false;
@@ -62,14 +58,25 @@ export class MainpageComponent implements OnInit, AfterViewInit {
       content: 'assets/img/photo_mainpage.jpg',
     });
 
-    const savedTheme = this.getLocal('theme');
-    if (savedTheme) {
-      this.isDark = savedTheme === 'dark';
-    }
+     
+    this.themeSubscription =this.themeService.getTheme().subscribe(data=>{
+      this.isDark=data;
+        this.cdr.detectChanges();
+    })
+
+
+    this.routerSubscription = this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        if (typeof window !== 'undefined') {
+          window.scrollTo(0, 0);
+        }
+      }
+    });
   }
   toggleTheme() {
     this.isDark = !this.isDark;
-    this.setLocal('theme', this.isDark ? 'dark' : 'light');
+    this.themeService.setTheme(this.isDark)
+     
      this.refreshAOS();
 
 
@@ -84,15 +91,7 @@ refreshAOS() {
       console.warn('AOS is not defined, refresh skipped');
     }
   }
-  private getLocal(key: string): string | null {
-    return typeof window !== 'undefined' ? localStorage.getItem(key) : null;
-  }
-
-  private setLocal(key: string, value: string): void {
-    if (typeof window !== 'undefined') {
-      localStorage.setItem(key, value);
-    }
-  }
+   
   toggleDropdown() {
     this.dropdownOpen = !this.dropdownOpen;
   }
@@ -101,7 +100,7 @@ refreshAOS() {
 
     this.dropdownOpen = false;
 
-    // this.router.navigate([`/${lang}`]);
+     
   }
   navigateTo(path: string) {
     this.router.navigate([path]);
@@ -111,48 +110,17 @@ refreshAOS() {
     if (this.menuOpen) {
       this.dropdownOpen = false; // Закрываем меню языков, если открываем навигацию
     }
-  }
-
-  scrollPosition: number = 0;
-  circleRadius: number = 25;
-  circumference: number = 2 * Math.PI * this.circleRadius;
-  @HostListener('window:scroll', [])
-  onWindowScroll() {
-    this.scrollPosition =
-      window.pageYOffset ||
-      document.documentElement.scrollTop ||
-      document.body.scrollTop ||
-      0;
-    const maxScroll =
-      document.documentElement.scrollHeight - window.innerHeight;
-    const scrollPercentage = Math.min(
-      100,
-      (this.scrollPosition / maxScroll) * 100
-    );
-    this.updateProgressRing(scrollPercentage);
-    this.toggleButtonVisibility();
-  }
-
-  toggleButtonVisibility() {
-    const button = document.querySelector('.scroll-to-top') as HTMLElement;
-    if (this.scrollPosition > 100) {
-      // Показываем кнопку после 100px скролла
-      button.classList.add('visible');
-    } else {
-      button.classList.remove('visible');
+  } 
+   private routerSubscription!: Subscription;
+  private themeSubscription!: Subscription;
+   ngOnDestroy() {
+    // Отписка от подписок
+    if (this.routerSubscription) {
+      this.routerSubscription.unsubscribe();
     }
-  }
-
-  updateProgressRing(percentage: number) {
-    const path = document.querySelector('.progress-ring__path') as SVGElement;
-    const dashOffset =
-      this.circumference - (percentage / 100) * this.circumference;
-    path.style.strokeDasharray = `${this.circumference} ${this.circumference}`;
-    path.style.strokeDashoffset = dashOffset.toString();
-  }
-
-  scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
+    if (this.themeSubscription) {
+      this.themeSubscription.unsubscribe();
+    }
+  } 
   hovered: string | null = null;
 }
