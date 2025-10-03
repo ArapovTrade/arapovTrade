@@ -22,14 +22,16 @@ export class MainpageComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit() {
-     if (typeof AOS !== 'undefined') {
+  setTimeout(() => {
+    if (typeof AOS !== 'undefined') {
       AOS.init({
         duration: 1000,
         once: false,
         offset: 100
       });
-    }  
-  }
+    }
+  }, 500); // Задержка 0.5s
+}
   isDark!:boolean  ;
   languages = ['ua', 'en', 'ru']; // какие языки нужны
   currentLang = 'ua';
