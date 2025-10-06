@@ -172,6 +172,13 @@
   *ngIf="menuOpen"
   [ngStyle]="{ background: isDark ? '#2c2a06' : '#DBE2E7' }"
 >
+          <li
+    (click)="navigateTo('en/main')"
+    [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+    [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
+  >
+    Main page
+  </li>
   <li
     (click)="navigateTo('en/freestudying')"
     [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
@@ -179,13 +186,7 @@
   >
     Free Trading Training
   </li>
-  <li
-    (click)="navigateTo('en')"
-    [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-    [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-  >
-    About the Author
-  </li>
+  
   <li
     (click)="navigateTo('en/studying')"
     [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
@@ -609,8 +610,7 @@
             : 'url(/assets/redesignArapovTrade/img/section-two_image-block_shape-one.png) no-repeat center'
         }"
       ></div>
-    </div>
-    <div
+      <div
       class="section-two-bg"
       [ngStyle]="{
         background: isDark
@@ -618,6 +618,8 @@
           : 'url(/assets/redesignArapovTrade/img/author-page_second-block_bg-light.png) no-repeat'
       }"
     ></div>
+    </div>
+    
   </div>
 
   <div
@@ -630,7 +632,8 @@
       [ngStyle]="{
         background: isDark
           ? 'rgba(255, 255, 255, 0.08)'
-          : 'rgba(0, 131, 205, 0.08)'
+          : 'rgba(0, 131, 205, 0.08)',
+          border:isDark?' 1px solid #46483A':'1px solid #C5E2F2'
       }"
     >
       <div class="author-page_main-block_title-block three-block">
