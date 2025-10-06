@@ -32,7 +32,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./en-home/eu-blog/eu-blog.module').then((m) => m.EuBlogModule),
   },
-    
+    {
+    path: 'main',
+    loadChildren: () =>
+      import('./en-home/en-crypto/en-crypto.module').then((m) => m.EnCryptoModule),
+  },
   // },
 ];
 

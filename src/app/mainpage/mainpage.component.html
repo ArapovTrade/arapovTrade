@@ -1,65 +1,109 @@
-
-
-<div class="main-container"  [ngStyle]="{ 'background-color': isDark? '#141500': '#FFFFFF' }">
-  <div style="    padding: 0 20px;">
+<div
+  class="main-container"
+  [ngStyle]="{ 'background-color': isDark ? '#141500' : '#FFFFFF' }"
+>
+  <div style="padding: 0 20px">
     <div>
-      <div class="header-new_block" data-aos="fade-down" data-aos-delay="300">  
-        <div class="header-logo-block" >
-          <div class="header-logo" [ngStyle]="{ 'background': isDark? 'url(assets/redesignArapovTrade/img/logo-new.png) no-repeat center': 'url(assets/redesignArapovTrade/img/logo-new-light.png) no-repeat center' }"></div>
-          <span class="loog-text" [ngStyle]="{ 'color': isDark? '#ffffff' : '#0C263A' }">Arapov.Trade</span>
+      <div class="header-new_block" data-aos="fade-down" data-aos-delay="300">
+        <div class="header-logo-block">
+          <div
+            class="header-logo"
+            [ngStyle]="{
+              background: isDark
+                ? 'url(assets/redesignArapovTrade/img/logo-new.png) no-repeat center'
+                : 'url(assets/redesignArapovTrade/img/logo-new-light.png) no-repeat center'
+            }"
+          ></div>
+          <span
+            class="loog-text"
+            [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+            >Arapov.Trade</span
+          >
         </div>
- 
-        <div class="nav-bar">
-  <!-- Список для десктопа -->
-  <ul class="nav-list desktop-nav" [ngClass]="{ 'menu-item-dark': isDark, 'menu-item-light': !isDark }">
-    <li (click)="navigateTo('uk/freestudying')"    >
-      Безкоштовне навчання трейдингу
-    </li>
-    <li (click)="navigateTo('uk')"  >Про автора</li>
-    <li (click)="navigateTo('uk/studying')"  >Курси з трейдингу</li>
-  </ul>
 
-  
-</div>
+        <div class="nav-bar">
+          <!-- Список для десктопа -->
+          <ul
+            class="nav-list desktop-nav"
+            [ngClass]="{ 'menu-item-dark': isDark, 'menu-item-light': !isDark }"
+          >
+             <li (click)="navigateTo('')" [ngStyle]="{color:isDark?'#FFCD29':'#0082CC'}">
+              Головна
+            </li>
+            <li (click)="navigateTo('uk/freestudying')"    >
+             безкоштовнi курси
+            </li>
+            <li (click)="navigateTo('uk')">Про автора</li>
+            <li (click)="navigateTo('uk/studying')">Професiйнi курси</li>
+          </ul>
+        </div>
 
         <div class="langAndThere_block">
           <div class="lang-switcher" [class.open]="dropdownOpen">
-            <button class="lang-btn" (click)="toggleDropdown()" [ngStyle]="{ 'background': isDark? '#2c2a06' : '#DBE2E7' }">
+            <button
+              class="lang-btn"
+              (click)="toggleDropdown()"
+              [ngStyle]="{ background: isDark ? '#2c2a06' : '#DBE2E7' }"
+            >
               <span class="icon flex"
-                ><img *ngIf="isDark"
+                ><img
+                  *ngIf="isDark"
                   src="assets/redesignArapovTrade/img/lang_icon.png"
                   alt="lang_icon"
-              />
-                <img *ngIf="!isDark"
+                />
+                <img
+                  *ngIf="!isDark"
                   src="assets/redesignArapovTrade/img/lang_icon-light.png"
                   alt="lang_icon"
-              />
-            </span>
-              <span class="code" [ngStyle]="{ 'color': isDark? '#ffffff' : '#0C263A' }">{{ currentLang.toUpperCase() }}</span>
+                />
+              </span>
+              <span
+                class="code"
+                [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+                >{{ currentLang.toUpperCase() }}</span
+              >
               <span class="arrow flex"
-                ><img *ngIf="isDark"
+                ><img
+                  *ngIf="isDark"
                   src="assets/redesignArapovTrade/img/lang_arrow.png"
                   alt="arrow"
-              />
-                <img *ngIf="!isDark"
+                />
+                <img
+                  *ngIf="!isDark"
                   src="assets/redesignArapovTrade/img/lang_arrow-light.png"
                   alt="arrow"
-              />
-            
-            
-            </span>
+                />
+              </span>
             </button>
 
-            <ul class="dropdown" *ngIf="dropdownOpen" [ngStyle]="{ 'background': isDark? '#2c2a06' : '#DBE2E7' }">
-              <li *ngFor="let lang of languages" (click)="selectLang(lang)"    [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-              
-               >
-                {{ lang.toUpperCase() }}
+            <ul
+              class="dropdown"
+              *ngIf="dropdownOpen"
+              [ngStyle]="{ background: isDark ? '#2c2a06' : '#DBE2E7' }"
+            >
+              <li
+                [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
+                (click)="selectLang('ua'); navigateTo('/')"
+              >
+                UA
+              </li>
+              <li
+                [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
+                (click)="selectLang('ru'); navigateTo('ru/main')"
+              >
+                RU
+              </li>
+              <li
+                [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
+                (click)="selectLang('en'); navigateTo('en/main')"
+              >
+                EN
               </li>
             </ul>
           </div>
           <div
-            class="wrapper" [ngStyle]="{ 'background': isDark? '#2c2a06' : '#DBE2E7' }"
+            class="wrapper"
+            [ngStyle]="{ background: isDark ? '#2c2a06' : '#DBE2E7' }"
             [ngClass]="{ 'dark-theme': isDark, 'light-theme': !isDark }"
           >
             <button *ngIf="isDark" class="icon-btn" (click)="toggleTheme()">
@@ -102,56 +146,88 @@
                 />
               </div>
             </button>
-
-             
-            
           </div>
           <!-- Иконка меню и выпадающее меню для планшетов -->
-  <div class="menu-switcher" [class.open]="menuOpen">
-    <button class="menu-btn" (click)="toggleMenu()" [ngStyle]="{ 'background': isDark? '#2c2a06' : '#DBE2E7' }" >
-      <span class="icon flex">
-        <img *ngIf="isDark"
-          src="assets/redesignArapovTrade/img/menu-button.svg"
-          alt="menu_icon"
-        />
-        <img *ngIf="!isDark"
-          src="assets/redesignArapovTrade/img/menu-button-light.svg"
-          alt="menu_icon"
-        />
-      </span>
-    </button>
-    <ul class="menu-dropdown" *ngIf="menuOpen" [ngStyle]="{ 'background': isDark? '#2c2a06' : '#DBE2E7' }">
-      <li  (click)="navigateTo('uk/freestudying')" [ngStyle]="{ 'color': isDark? '#ffffff' : '#0C263A' }"    [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
-        Безкоштовне навчання трейдингу
-      </li>
-      <li (click)="navigateTo('uk')" [ngStyle]="{ 'color': isDark? '#ffffff' : '#0C263A' }"   [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">Про автора</li>
-      <li (click)="navigateTo('uk/studying')" [ngStyle]="{ 'color': isDark? '#ffffff' : '#0C263A' }"   [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">Курси з трейдингу</li>
-    </ul>
-  </div>
+          <div class="menu-switcher" [class.open]="menuOpen">
+            <button
+              class="menu-btn"
+              (click)="toggleMenu()"
+              [ngStyle]="{ background: isDark ? '#2c2a06' : '#DBE2E7' }"
+            >
+              <span class="icon flex">
+                <img
+                  *ngIf="isDark"
+                  src="assets/redesignArapovTrade/img/menu-button.svg"
+                  alt="menu_icon"
+                />
+                <img
+                  *ngIf="!isDark"
+                  src="assets/redesignArapovTrade/img/menu-button-light.svg"
+                  alt="menu_icon"
+                />
+              </span>
+            </button>
+            <ul
+              class="menu-dropdown"
+              *ngIf="menuOpen"
+              [ngStyle]="{ background: isDark ? '#2c2a06' : '#DBE2E7' }"
+            >
+              <li
+                (click)="navigateTo('uk/freestudying')"
+                [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+                [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
+              >
+                Безкоштовне навчання трейдингу
+              </li>
+              <li
+                (click)="navigateTo('uk')"
+                [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+                [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
+              >
+                Про автора
+              </li>
+              <li
+                (click)="navigateTo('uk/studying')"
+                [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+                [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
+              >
+                Курси з трейдингу
+              </li>
+            </ul>
+          </div>
         </div>
-        
-
-
-
-
       </div>
       <div class="hero-section-main">
         <div class="flex-row-e">
           <div class="flex-row-f" data-aos="fade-up" data-aos-delay="300">
             <div class="coins"></div>
             <div class="text-block_one-block">
-              <div   class="bezkoshtovniy-kurs" [ngStyle]="{ 'color': isDark? '#ffffff' : '#03314B' }">БЕЗКОШТОВНИЙ КУРС</div>   
+              <div
+                class="bezkoshtovniy-kurs"
+                [ngStyle]="{ color: isDark ? '#ffffff' : '#03314B' }"
+              >
+                БЕЗКОШТОВНИЙ КУРС
+              </div>
 
               <div class="rectangle"></div>
 
-              <div class="zagolovok"  >
-                <span  class="navchannya-treidzingu-z-nulya" [ngStyle]="{ 'color': isDark? '#ffffff' : '#03314B' }"   
+              <div class="zagolovok">
+                <span
+                  class="navchannya-treidzingu-z-nulya"
+                  [ngStyle]="{ color: isDark ? '#ffffff' : '#03314B' }"
                   >Навчання трейдингу з нуля: </span
-                ><span class="posibnik-dlya-pochatkivtsiv"    [ngClass]="{ 'gradient-orange': isDark, 'gradient-blue': !isDark }"
+                ><span
+                  class="posibnik-dlya-pochatkivtsiv"
+                  [ngClass]="{
+                    'gradient-orange': isDark,
+                    'gradient-blue': !isDark
+                  }"
                   >Посібник для початківців</span
                 >
               </div>
-              <span  class="tekst-opisanye" [ngStyle]="{ 'color': isDark? '#ffffff' : '#0C263A' }"
+              <span
+                class="tekst-opisanye"
+                [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
                 >Тут зібрана вся ключова інформація, щоб ви могли зробити перший
                 крок у світ інвестицій впевнено і безпечно.
                 <span>
@@ -160,176 +236,334 @@
                   дорогих помилок.</span
                 >
               </span>
-              <div class="authot_button_block"  >
-                <button  (click)="navigateTo('uk/freestudying')"    [ngClass]="{'btn-section-one':true, 'gradient-block-orange': isDark, 'gradient-block-blue': !isDark }"> 
+              <div class="authot_button_block">
+                <div
+                  (click)="navigateTo('uk/freestudying')"
+                  [ngClass]="{
+                    'btn-section-one': true,
+                    'gradient-block-orange': isDark,
+                    'gradient-block-blue': !isDark
+                  }"
+                >
                   <span
-                    
-                    class="pochaty-navchannya"  [ngStyle]="{ 'color': !isDark? '#ffffff' : '#03314b' }"
+                    class="pochaty-navchannya"
+                    [ngStyle]="{ color: !isDark ? '#ffffff' : '#03314b' }"
                     >Почати навчання</span
                   >
-                  <!-- Текст вынесен в отдельный span  [ngClass]="{ 'icon-button-dark': isDark, 'icon-button-light': !isDark }" class="icon-button "\[ngStyle]="{
-                      'background': isDark ? 'url(assets/redesignArapovTrade/img/IconButtonbig.png)' : 'url(assets/redesignArapovTrade/img/IconButtonbig-light.png)' 
-                    }
-                    "--> 
-                  <span 
+
+                  <!-- <span 
                     [ngClass]="{'icon-button': true, 'icon-button-dark': isDark, 'icon-button-light': !isDark}"
                     (click)="navigateTo('uk/freestudying')"  
                     
                     
-                  ></span>
-                  <!-- Иконка -->
-                </button>
+                  ></span> -->
+                  <!-- Иконка  [ngClass]="{
+                    'podrobnee-dark': isDark,
+                    'podrobnee-light': !isDark
+                  }"-->
+                </div>
 
-                <div class="podrobnee"  (click)="navigateTo('uk/studying')" 
-                [ngClass]="{ 
-                  'podrobnee-dark': isDark,
-                  'podrobnee-light': !isDark
-                  ,
-                     'icon-button-hover-dark': isDark,
-                     'icon-button-hover-light': !isDark
-                  }">
-                  <div class="icon-play">
-                    <div class="frame-1" [ngStyle]="{ 'background': isDark? 'url(assets/redesignArapovTrade/img/Frame111.png) no-repeat center': 'url(assets/redesignArapovTrade/img/Frame1111.png) no-repeat center' }">
+                <div
+                  class="podrobnee desc"
+                  (click)="navigateTo('uk/studying')"
+                  
+                >
+                  <div class="icon-play ">
+                    <!-- <div
+                      class="frame-1"
+                      [ngStyle]="{
+                        background: isDark
+                          ? 'url(assets/redesignArapovTrade/img/Frame111.png) no-repeat center'
+                          : 'url(assets/redesignArapovTrade/img/Frame1111.png) no-repeat center',
+                        'background-size': 'contain'
+                      }"
+                    ></div> -->
 
-                    </div></div>
-                  <span class="text">детальнiше</span>
-                  <span [ngClass]="{
-                    'icon-button': true, 
-                    'icon-button-dark': isDark, 
-                    'icon-button-light': !isDark
-                    }"
+                    <svg   
+                     [ngClass]="{ 
+                    'icon-play-dark': isDark,
+                    'icon-play-light': !isDark
+                  }"
+                      width="40"
+                      height="41"
+                      viewBox="0 0 40 41"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect  [ngClass]="{ 
+                    'icon-play-dark-rect': isDark,
+                    'icon-play-light-rect': !isDark
+                  }"
+                        x="-1"
+                        y="1"
+                        width="38"
+                        height="38"
+                        rx="19"
+                        transform="matrix(-1 0 0 1 38 0.5)"
+                        [attr.stroke]="isDark?'#ffffff':'#0C263A'"
+                        stroke-width="2"
+                      />
+                      <g clip-path="url(#clip0_296_9993)">
+                        <path
+                          d="M18.0729 13.882C17.1869 13.2912 16 13.9264 16 14.9914V26.0086C16 27.0736 17.1869 27.7088 18.0729 27.118L26.3359 21.6094C27.1275 21.0816 27.1275 19.9184 26.3359 19.3906L18.0729 13.882Z"
+                         
+                         [attr.stroke]="isDark?'#ffffff':'#0C263A'"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_296_9993">
+                          <rect
+                            width="32"
+                            height="32"
+                            fill="white"
+                            transform="translate(4 4.5)"
+                          />
+                        </clipPath>
+                      </defs>
+                    </svg>
                      
-                  ></span>
+
+
+                  </div>
+                </div>
+
+                <div
+                  class="podrobnee phone"
+                  (click)="navigateTo('uk/studying')"
+                  [ngClass]="{
+                    'podrobnee-dark': isDark,
+                    'podrobnee-light': !isDark
+                  }"
+                >
+                  <div class="icon-play">
+                    <svg   
+                     [ngClass]="{ 
+                    'icon-play-dark': isDark,
+                    'icon-play-light': !isDark
+                  }"
+                      width="40"
+                      height="41"
+                      viewBox="0 0 40 41"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect  [ngClass]="{ 
+                    'icon-play-dark-rect': isDark,
+                    'icon-play-light-rect': !isDark
+                  }"
+                        x="-1"
+                        y="1"
+                        width="38"
+                        height="38"
+                        rx="19"
+                        transform="matrix(-1 0 0 1 38 0.5)"
+                        [attr.stroke]="isDark?'#FCDB35':'#0082CC'"
+                        stroke-width="2"
+                      />
+                      <g clip-path="url(#clip0_296_9993)">
+                        <path
+                          d="M18.0729 13.882C17.1869 13.2912 16 13.9264 16 14.9914V26.0086C16 27.0736 17.1869 27.7088 18.0729 27.118L26.3359 21.6094C27.1275 21.0816 27.1275 19.9184 26.3359 19.3906L18.0729 13.882Z"
+                         
+                         [attr.stroke]="isDark?'#FCDB35':'#0082CC'"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_296_9993">
+                          <rect
+                            width="32"
+                            height="32"
+                            fill="white"
+                            transform="translate(4 4.5)"
+                          />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                     
+                  </div>
+                  <span class="text-p">Детальніше</span> 
                 </div>
               </div>
 
-              <div class="cube"></div>
-              <div class="follow-us-block" [ngClass]="{'follow-pad':!isDark}" >
-                <span class="follow-us" [ngStyle]="{ 'color': isDark? '#ffffff' : '#03314b' }"   >Пiдписуйтесь:</span>
+              <!-- <div class="cube"></div> -->
+              <div
+                class="follow-us-block"
+                [ngClass]="{ 'follow-pad': !isDark }"
+              >
+                <span
+                  class="follow-us"
+                  [ngStyle]="{ color: isDark ? '#ffffff' : '#03314b' }"
+                  >Пiдписуйтесь:</span
+                >
                 <div>
                   <div class="icons">
-                    <!-- facebook --> 
-                    <div class="fb"         [ngClass]="{ 'links-dark': isDark, 'links-light': !isDark }"
-                     >
-                      <a
-                        href="https://www.facebook.com/igor.arapov.75"
-                        style="padding-top: 5px"
-                      >
+                    <!-- facebook -->
+                    <div
+                      class="fb"
+                      [ngClass]="{
+                        'links-dark': isDark,
+                        'links-light': !isDark
+                      }"
+                    >
+                      <a href="https://www.facebook.com/igor.arapov.75">
                         <svg
-                          width="15"
-                          height="27"
+                          width="24"
+                          height="24"
                           viewBox="0 0 15 27"
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                         >
                           <path
                             d="M11.66 4.59339H14.1667V0.353394C12.953 0.22719 11.7335 0.164881 10.5133 0.166727C6.88666 0.166727 4.40666 2.38006 4.40666 6.43339V9.92673H0.313324V14.6734H4.40666V26.8334H9.31332V14.6734H13.3933L14.0067 9.92673H9.31332V6.90006C9.31332 5.50006 9.68666 4.59339 11.66 4.59339Z"
-                              [attr.fill]="isDark ? '#ffffff' : '#03314B'"
+                            [attr.fill]="
+                              isDark ? '#ffffff' : 'rgba(0,130,204,0.7)'
+                            "
                           />
                         </svg>
                       </a>
                     </div>
                     <!-- linkedin -->
-                    <div class="fb"  [ngClass]="{ 'links-dark': isDark, 'links-light': !isDark }">
+                    <div
+                      class="fb"
+                      [ngClass]="{
+                        'links-dark': isDark,
+                        'links-light': !isDark
+                      }"
+                    >
                       <a
                         href="https://www.linkedin.com/in/arapovtrade/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
-                        style="padding-top: 5px"
                       >
                         <svg
-                          width="25"
-                          height="27"
+                          width="24"
+                          height="24"
                           viewBox="0 0 25 24"
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                         >
                           <path
                             d="M0.499969 3.46655C0.499969 2.70335 0.770247 2.07372 1.31078 1.57766C1.85131 1.08158 2.55403 0.833557 3.41889 0.833557C4.26832 0.833557 4.95556 1.07776 5.48066 1.56622C6.0212 2.06992 6.29147 2.72624 6.29147 3.53524C6.29147 4.26789 6.02893 4.87843 5.50383 5.36688C4.9633 5.87059 4.25286 6.12244 3.37256 6.12244H3.34939C2.49996 6.12244 1.81272 5.87059 1.28761 5.36688C0.76251 4.86318 0.499969 4.22973 0.499969 3.46655ZM0.801128 23.5002V8.20594H5.94398V23.5002H0.801128ZM8.79341 23.5002H13.9363V14.9601C13.9363 14.4259 13.998 14.0138 14.1216 13.7238C14.3378 13.2048 14.666 12.766 15.1061 12.4073C15.5463 12.0486 16.0984 11.8692 16.7625 11.8692C18.4923 11.8692 19.3571 13.0216 19.3571 15.3265V23.5002H24.5V14.7312C24.5 12.4721 23.9594 10.7588 22.8783 9.59112C21.7973 8.42344 20.3687 7.83961 18.5926 7.83961C16.6004 7.83961 15.0482 8.68674 13.9363 10.381V10.4268H13.9131L13.9363 10.381V8.20594H8.79341C8.82429 8.69437 8.83974 10.2131 8.83974 12.7622C8.83974 15.3112 8.82429 18.8905 8.79341 23.5002Z"
-                            [attr.fill]="isDark ? '#ffffff' : '#03314B'"
+                            [attr.fill]="
+                              isDark ? '#ffffff' : 'rgba(0,130,204,0.7)'
+                            "
                           />
                         </svg>
                       </a>
                     </div>
                     <!-- twitter -->
-                    <div class="fb"  [ngClass]="{ 'links-dark': isDark, 'links-light': !isDark }">
-                      <a
-                        href="https://ru.tradingview.com/u/Igor_Arapov/"
-                        style="padding-top: 5px"
-                      >
+                    <div
+                      class="fb"
+                      [ngClass]="{
+                        'links-dark': isDark,
+                        'links-light': !isDark
+                      }"
+                    >
+                      <a href="https://ru.tradingview.com/u/Igor_Arapov/">
                         <svg
-                          width="31"
-                          height="28"
+                          width="24"
+                          height="24"
                           viewBox="0 0 25 13"
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                         >
                           <path
                             d="M16.365 2.77903C16.365 3.42934 16.1067 4.05301 15.6468 4.51285C15.187 4.97269 14.5633 5.23103 13.913 5.23103C13.2627 5.23103 12.639 4.97269 12.1792 4.51285C11.7193 4.05301 11.461 3.42934 11.461 2.77903C11.461 2.12872 11.7193 1.50504 12.1792 1.0452C12.639 0.585361 13.2627 0.327026 13.913 0.327026C14.5633 0.327026 15.187 0.585361 15.6468 1.0452C16.1067 1.50504 16.365 2.12872 16.365 2.77903ZM10.25 0.500026H0.5V5.40403H5.346V12.673H10.25V0.500026ZM18.846 0.500026H24.5L19.394 12.673H13.74L18.846 0.500026Z"
-                            [attr.fill]="isDark ? '#ffffff' : '#03314B'"
+                            [attr.fill]="
+                              isDark ? '#ffffff' : 'rgba(0,130,204,0.7)'
+                            "
                           />
                         </svg>
                       </a>
                     </div>
 
                     <!-- youtube -->
-                    <div class="fb"  [ngClass]="{ 'links-dark': isDark, 'links-light': !isDark }">
-                      <a
-                        href="https://www.youtube.com/@ArapovTrade"
-                        style="padding-top: 5px"
-                      >
+                    <div
+                      class="fb"
+                      [ngClass]="{
+                        'links-dark-special': isDark,
+                        'links-light-special': !isDark
+                      }"
+                    >
+                      <a href="https://www.youtube.com/@ArapovTrade">
                         <svg
-                          width="31"
-                          height="21"
-                          viewBox="0 0 31 21"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                         >
                           <path
-                            d="M30.1666 7.44665C30.2326 5.53818 29.8152 3.644 28.9533 1.93998C28.3685 1.24078 27.5569 0.768925 26.66 0.606645C22.95 0.270012 19.2247 0.132038 15.5 0.193312C11.7888 0.129257 8.07693 0.262779 4.37998 0.593312C3.64908 0.726268 2.97268 1.0691 2.43332 1.57998C1.23332 2.68665 1.09998 4.57998 0.966652 6.17998C0.773201 9.05673 0.773201 11.9432 0.966652 14.82C1.00523 15.7205 1.13931 16.6144 1.36665 17.4866C1.52742 18.1601 1.85268 18.7831 2.31332 19.3C2.85634 19.8379 3.5485 20.2003 4.29998 20.34C7.17454 20.6948 10.0709 20.8418 12.9667 20.78C17.6333 20.8466 21.7266 20.78 26.5666 20.4066C27.3366 20.2755 28.0482 19.9127 28.6066 19.3666C28.9799 18.9932 29.2588 18.5361 29.42 18.0333C29.8968 16.5701 30.131 15.0388 30.1133 13.5C30.1666 12.7533 30.1666 8.24665 30.1666 7.44665ZM12.4867 14.3V6.04665L20.38 10.1933C18.1667 11.42 15.2467 12.8066 12.4867 14.3Z"
-                            [attr.fill]="isDark ? '#ffffff' : '#03314B'"
+                            d="M10 8.5L16 12L10 15.5V8.5Z"
+                            [attr.fill]="isDark ? '#ffffff' : '#0082CC'"
+                          />
+                          <path
+                            d="M12 5C21 5 21 5 21 12C21 19 21 19 12 19C3 19 3 19 3 12C3 5 3 5 12 5Z"
+                            [attr.stroke]="
+                              isDark ? '#ffffff' : 'rgba(0,130,204,0.7)'
+                            "
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
                           />
                         </svg>
                       </a>
                     </div>
 
                     <!-- tg -->
-                    <div class="fb"  [ngClass]="{ 'links-dark': isDark, 'links-light': !isDark }">
-                      <a
-                        href="https://telegram.me/ArapovTrade"
-                        style="padding-top: 5px"
-                      >
+                    <div
+                      class="fb"
+                      [ngClass]="{
+                        'links-dark-special': isDark,
+
+                        'links-light-special': !isDark
+                      }"
+                    >
+                      <a href="https://telegram.me/ArapovTrade">
                         <svg
-                          width="28"
-                          height="27"
-                          viewBox="0 0 21 18"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                         >
                           <path
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="M18.277 0.930026C18.5241 0.826017 18.7946 0.790145 19.0603 0.826143C19.326 0.862142 19.5772 0.968695 19.7877 1.13471C19.9982 1.30073 20.1604 1.52014 20.2574 1.77011C20.3543 2.02008 20.3825 2.29147 20.339 2.55603L18.071 16.313C17.851 17.64 16.395 18.401 15.178 17.74C14.16 17.187 12.648 16.335 11.288 15.446C10.608 15.001 8.52502 13.576 8.78102 12.562C9.00102 11.695 12.501 8.43703 14.501 6.50003C15.286 5.73903 14.928 5.30003 14.001 6.00003C11.699 7.73803 8.00302 10.381 6.78102 11.125C5.70302 11.781 5.14102 11.893 4.46902 11.781C3.24302 11.577 2.10602 11.261 1.17802 10.876C-0.0759802 10.356 -0.0149803 8.63203 1.17702 8.13003L18.277 0.930026Z"
-                            [attr.fill]="isDark ? '#ffffff' : '#03314B'"
+                            d="M11.985 15.408L15.227 19.094C16.427 20.459 17.028 21.142 17.657 20.975C18.285 20.809 18.501 19.911 18.932 18.114L21.322 8.14604C21.987 5.37804 22.319 3.99504 21.581 3.31204C20.843 2.62904 19.564 3.13704 17.006 4.15204L5.13998 8.86504C3.09398 9.67804 2.07099 10.084 2.00599 10.782C1.99833 10.8532 1.99833 10.9249 2.00599 10.996C2.06899 11.695 3.08998 12.104 5.13398 12.923C6.05898 13.294 6.52199 13.48 6.85399 13.835C6.89132 13.875 6.92732 13.9164 6.96199 13.959C7.26799 14.339 7.39799 14.839 7.65899 15.835L8.14798 17.702C8.40098 18.672 8.52799 19.158 8.86099 19.224C9.19399 19.29 9.48299 18.888 10.062 18.083L11.985 15.408ZM11.985 15.408L11.668 15.078C11.306 14.7 11.125 14.512 11.125 14.278C11.125 14.044 11.305 13.855 11.668 13.478L15.241 9.75404"
+                            [attr.stroke]="
+                              isDark ? '#ffffff' : 'rgba(0,130,204,0.7)'
+                            "
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
                           />
                         </svg>
                       </a>
                     </div>
 
                     <!-- insta -->
-                    <div class="fb"  [ngClass]="{ 'links-dark': isDark, 'links-light': !isDark }">
-                      <a
-                        href="https://www.instagram.com/arapovtrade/"
-                        style="padding-top: 5px"
-                      >
+                    <div
+                      class="fb"
+                      [ngClass]="{
+                        'links-dark': isDark,
+                        'links-light': !isDark
+                      }"
+                    >
+                      <a href="https://www.instagram.com/arapovtrade/">
                         <svg
-                          width="27"
-                          height="27"
+                          width="24"
+                          height="24"
                           viewBox="0 0 21 21"
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                         >
                           <path
                             d="M6.3 0.5H14.7C17.9 0.5 20.5 3.1 20.5 6.3V14.7C20.5 16.2383 19.8889 17.7135 18.8012 18.8012C17.7135 19.8889 16.2383 20.5 14.7 20.5H6.3C3.1 20.5 0.5 17.9 0.5 14.7V6.3C0.5 4.76174 1.11107 3.28649 2.19878 2.19878C3.28649 1.11107 4.76174 0.5 6.3 0.5ZM6.1 2.5C5.14522 2.5 4.22955 2.87928 3.55442 3.55442C2.87928 4.22955 2.5 5.14522 2.5 6.1V14.9C2.5 16.89 4.11 18.5 6.1 18.5H14.9C15.8548 18.5 16.7705 18.1207 17.4456 17.4456C18.1207 16.7705 18.5 15.8548 18.5 14.9V6.1C18.5 4.11 16.89 2.5 14.9 2.5H6.1ZM15.75 4C16.0815 4 16.3995 4.1317 16.6339 4.36612C16.8683 4.60054 17 4.91848 17 5.25C17 5.58152 16.8683 5.89946 16.6339 6.13388C16.3995 6.3683 16.0815 6.5 15.75 6.5C15.4185 6.5 15.1005 6.3683 14.8661 6.13388C14.6317 5.89946 14.5 5.58152 14.5 5.25C14.5 4.91848 14.6317 4.60054 14.8661 4.36612C15.1005 4.1317 15.4185 4 15.75 4ZM10.5 5.5C11.8261 5.5 13.0979 6.02678 14.0355 6.96447C14.9732 7.90215 15.5 9.17392 15.5 10.5C15.5 11.8261 14.9732 13.0979 14.0355 14.0355C13.0979 14.9732 11.8261 15.5 10.5 15.5C9.17392 15.5 7.90215 14.9732 6.96447 14.0355C6.02678 13.0979 5.5 11.8261 5.5 10.5C5.5 9.17392 6.02678 7.90215 6.96447 6.96447C7.90215 6.02678 9.17392 5.5 10.5 5.5ZM10.5 7.5C9.70435 7.5 8.94129 7.81607 8.37868 8.37868C7.81607 8.94129 7.5 9.70435 7.5 10.5C7.5 11.2956 7.81607 12.0587 8.37868 12.6213C8.94129 13.1839 9.70435 13.5 10.5 13.5C11.2956 13.5 12.0587 13.1839 12.6213 12.6213C13.1839 12.0587 13.5 11.2956 13.5 10.5C13.5 9.70435 13.1839 8.94129 12.6213 8.37868C12.0587 7.81607 11.2956 7.5 10.5 7.5Z"
-                            [attr.fill]="isDark ? '#ffffff' : '#03314B'"
+                            [attr.fill]="
+                              isDark ? '#ffffff' : 'rgba(0,130,204,0.7)'
+                            "
                           />
                         </svg>
                       </a>
@@ -339,53 +573,80 @@
               </div>
             </div>
           </div>
-          <div *ngIf="isDark" class="mask-gradient"></div> 
+          <div *ngIf="isDark" class="mask-gradient"></div>
 
-          <div class="image"    [ngClass]="{ 'shadow-dark': isDark, 'shadow-light': !isDark }"  
-
-          [ngStyle]="{ 
-            'background': isDark? 
-            'url(assets/redesignArapovTrade/img/imageAuthor.png) no-repeat center':
-             'url(assets/redesignArapovTrade/img/imageAuthor-light.png) no-repeat center' 
-             
-             }"></div>
+          <div
+            class="image"
+            [ngClass]="{ 'shadow-dark': isDark, 'shadow-light': !isDark }"
+            [ngStyle]="{
+              background: isDark
+                ? 'url(assets/redesignArapovTrade/img/imageAuthor.png) no-repeat center'
+                : 'url(assets/redesignArapovTrade/img/imageAuthor-light.png) no-repeat center'
+            }"
+          ></div>
         </div>
       </div>
     </div>
 
     <div class="bg-shapes-34"></div>
-    <div *ngIf="!isDark" class="bg-shape-1" ></div>
+    <div *ngIf="!isDark" class="bg-shape-1"></div>
   </div>
 
   <div class="flex-row-ba" id="section1">
     <div class="row" data-aos="fade-up" data-aos-delay="300">
       <div class="left">
-        <div class="bg-figure">  
-           
-          <div 
-          [ngClass]="{ 'arrows':true, 'arrows-dark': isDark, 'arrows-light': !isDark }"
+        <div class="bg-figure">
+          <div
+            [ngClass]="{
+              arrows: true,
+              'arrows-dark': isDark,
+              'arrows-light': !isDark
+            }"
           ></div>
-          <div  [ngClass]="{ 
-            'bg':true ,
-            'bg-dark': isDark, 
-            'bg-light': !isDark }"></div>
+          <div
+            [ngClass]="{
+              bg: true,
+              'bg-dark': isDark,
+              'bg-light': !isDark
+            }"
+          ></div>
         </div>
-        <div class="img"  ></div>
-        <div    class="igor-info" [ngStyle]="{ 'border': isDark? '2px solid #52493b' : '2px solid #4D5460' }" >  
-          <div class="avatar"  ></div>
-          <div class="name"  >
+        <div class="img"></div>
+        <div
+          class="igor-info"
+          [ngStyle]="{
+            border: isDark ? '2px solid #52493b' : '2px solid #4D5460'
+          }"
+        >
+          <div class="avatar"></div>
+          <div class="name">
             <span class="name-4">Iгор Арапов</span
             ><span class="designation">Професiйний трейдер</span>
           </div>
         </div>
       </div>
       <div class="right">
-        <div class="dorogiy-chitachu"   >
-          <span   [ngClass]="{'dorogiy':true ,'gradient-orange': isDark, 'gradient-blue': !isDark }">Дорогий </span
-          ><span   [ngClass]="{ 'chitachu':true ,'gradient-orange': isDark, 'gradient-blue': !isDark }">читачу!</span>
+        <div class="dorogiy-chitachu">
+          <span
+            [ngClass]="{
+              dorogiy: true,
+              'gradient-orange': isDark,
+              'gradient-blue': !isDark
+            }"
+            >Дорогий </span
+          ><span
+            [ngClass]="{
+              chitachu: true,
+              'gradient-orange': isDark,
+              'gradient-blue': !isDark
+            }"
+            >читачу!</span
+          >
         </div>
-        <div class="text_second-block lato-regular"   >
-          <span class="learning-materials lato-regular"  [ngStyle]="{ 'color': isDark? '#ffffff' : '#0C263A' }"
+        <div class="text_second-block lato-regular">
+          <span
+            class="learning-materials lato-regular"
+            [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
             >Метою цього методичного посібника є ознайомлення
             трейдерів-початківців із фінансовим ринком. Я намагався скласти
             матеріали так, щоб охопити всі ключові теми, які є популярними на
@@ -394,15 +655,19 @@
             вибірково підійшов до теорії, виділяючи лише ключові теми трейдингу,
             адже вона дуже обширна. Під ключовими темами я маю на увазі
             інформацію, якою сам активно керуюся вже багато років і яку
-            застосовую на практиці.<br /><br>У своїх відео на
+            застосовую на практиці.<br /><br />У своїх відео на
           </span>
           <a
             href="https://www.youtube.com/@ArapovTrade"
             target="_blank"
-            class="youtube-kanali" [ngStyle]="{ 'color': isDark? '#ffffff' : '#0C263A' }"
+            class="youtube-kanali"
+            [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
           >
             YouTube-каналі </a
-          ><span  class="learning-materials-5 lato-regular" [ngStyle]="{ 'color': isDark? '#ffffff' : '#0C263A' }">
+          ><span
+            class="learning-materials-5 lato-regular"
+            [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+          >
             я згадував, що коли тільки починав вивчати трейдинг, матеріалів було
             небагато, і вони були розрізненими, що ускладнювало процес навчання.
             Тому я вважав своїм внеском у розвиток створити невелику бібліотеку,
@@ -411,37 +676,68 @@
             окремих тем трейдингу у зручних відеороликах.</span
           >
         </div>
-        <div     [ngClass]="{'youtube-channel':true, 'gradient-block-orange': isDark, 'gradient-block-blue': !isDark }">
+        <div
+          [ngClass]="{
+            'youtube-channel': true,
+            'gradient-block-orange': isDark,
+            'gradient-block-blue': !isDark
+          }"
+        >
           <a
             href="https://www.youtube.com/@ArapovTrade"
             target="_blank"
-            class="primary-button" [ngStyle]="{ 'color': !isDark? '#ffffff' : '#03314b' }"
-            >переглянути YouTube</a
+            class="primary-button"
+            [ngStyle]="{ color: !isDark ? '#ffffff' : '#03314b' }"
+            >переглянути YouTube-канал</a
           >
-          <span    [ngClass]="{'icon-button': true, 'icon-button-dark': isDark, 'icon-button-light': !isDark}"
+          <!-- <span
+            [ngClass]="{
+              'icon-button': true,
+              'icon-button-dark': isDark,
+              'icon-button-light': !isDark
+            }"
             ><a
               href="https://www.youtube.com/@ArapovTrade"
               target="_blank"
               class="primary-button"
             >
             </a
-          ></span>
+          ></span> -->
         </div>
       </div>
     </div>
-    <div   
-      [ngClass]="{ 'background':true, 'background-dark': isDark, 'background-light': !isDark }"
+    <div
+      [ngClass]="{
+        background: true,
+        'background-dark': isDark,
+        'background-light': !isDark
+      }"
     ></div>
     <div class="about-bg" *ngIf="isDark"></div>
   </div>
-  
+
   <div class="about" data-aos="fade-up" data-aos-delay="300">
     <div class="left-text">
-      <span    [ngClass]="{'author-header':true ,'gradient-orange': isDark, 'gradient-blue': !isDark }">Про автора стратегii</span>
-      <div class="quote-block" [ngStyle]="{ 'background': isDark? 'rgba(255, 255, 255, 0.08)' : 'rgba(230, 237, 251, 0.7)' }"> 
-        <div class="quote" >
-          <span class="quote-text" 
-          [ngStyle]="{
+      <span
+        [ngClass]="{
+          'author-header': true,
+          'gradient-orange': isDark,
+          'gradient-blue': !isDark
+        }"
+        >Про автора стратегii</span
+      >
+      <div
+        class="quote-block"
+        [ngStyle]="{
+          background: isDark
+            ? 'rgba(255, 255, 255, 0.08)'
+            : 'rgba(230, 237, 251, 0.7)'
+        }"
+      >
+        <div class="quote">
+          <span
+            class="quote-text"
+            [ngStyle]="{
             
             'color': isDark? '#ffffff' : '#0C263A' ,
             'border-left': isDark? '5px solid #ffcd29':'5px solid #0082CC',
@@ -452,27 +748,71 @@
             математику»</span
           >
 
-          <span   class="features-list" [ngStyle]="{ 'color': isDark? '#ffffff' : '#0C263A' }">I. Arapov</span>
+          <span
+            class="features-list"
+            [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+            >I. Arapov</span
+          >
         </div>
       </div>
       <div class="feature">
         <div class="iconss">
-          <div   class="chart-experience" [ngStyle]="{ 'border': isDark? '2px solid rgba(255, 255, 255, 0.16)' : '2px solid #D6EBF7' }">
-            <div class="group-6"><div    [ngClass]="{'text-7':true ,'text-7-dark': isDark, 'text-7-light': !isDark }"></div></div>
+          <div
+            class="chart-experience"
+            [ngStyle]="{
+              border: isDark
+                ? '2px solid rgba(255, 255, 255, 0.16)'
+                : '2px solid #D6EBF7'
+            }"
+          >
+            <div class="group-6">
+              <div
+                [ngClass]="{
+                  'text-7': true,
+                  'text-7-dark': isDark,
+                  'text-7-light': !isDark
+                }"
+              ></div>
+            </div>
           </div>
-          <div   class="feature-title">
-            <span class="feature-body" [ngStyle]="{ 'color': isDark? '#ffffff' : '#0C263A' }">12 рокiв досвiду</span
-            ><span class="feature-8" [ngStyle]="{ 'color': isDark? '#ffffff' : '#6D7D89' }"
+          <div class="feature-title">
+            <span
+              class="feature-body"
+              [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+              >12 рокiв досвiду</span
+            ><span
+              class="feature-8"
+              [ngStyle]="{ color: isDark ? '#ffffff' : '#6D7D89' }"
               >Трейдер з 2013 року, безліч успішних угод, 60% + приріст до
               загального депозиту за 2 роки</span
             >
           </div>
         </div>
-        <div class="icon-9" >
-          <div class="system-trading" [ngStyle]="{ 'border': isDark? '2px solid rgba(255, 255, 255, 0.16)' : '2px solid #D6EBF7' }"><div   [ngClass]="{'text-a':true ,'text-a-dark': isDark, 'text-a-light': !isDark }"></div></div>
-          <div    class="feature-title-b">
-            <span class="feature-body-c" [ngStyle]="{ 'color': isDark? '#ffffff' : '#0C263A' }">Системний трейдинг</span
-            ><span class="image-d" [ngStyle]="{ 'color': isDark? '#ffffff' : '#6D7D89' }"
+        <div class="icon-9">
+          <div
+            class="system-trading"
+            [ngStyle]="{
+              border: isDark
+                ? '2px solid rgba(255, 255, 255, 0.16)'
+                : '2px solid #D6EBF7'
+            }"
+          >
+            <div
+              [ngClass]="{
+                'text-a': true,
+                'text-a-dark': isDark,
+                'text-a-light': !isDark
+              }"
+            ></div>
+          </div>
+          <div class="feature-title-b">
+            <span
+              class="feature-body-c"
+              [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+              >Системний трейдинг</span
+            ><span
+              class="image-d"
+              [ngStyle]="{ color: isDark ? '#ffffff' : '#6D7D89' }"
               >Системний підхід на основі об'ємного аналізу, логіки Вайкоффа і
               контролю ризиків</span
             >
@@ -481,27 +821,36 @@
       </div>
     </div>
     <div class="shapes">
-      <div     [ngClass]="{'articles':true ,'articles-dark': isDark, 'articles-light': !isDark }"></div>
-      <div class="articles-text"   
-      [ngStyle]="{
+      <div
+        [ngClass]="{
+          articles: true,
+          'articles-dark': isDark,
+          'articles-light': !isDark
+        }"
+      ></div>
+      <div
+        class="articles-text"
+        [ngStyle]="{
             
             'background': isDark? 'rgba(255, 255, 255, 0.08)' : 'rgba(0, 136, 255, 0.08)' ,
             'border': isDark? '2px solid rgba(230, 237, 251, 0.16)':'2px solid rgba(0, 136, 255, 0.16)',
             }"
-            >  
-        <div class="articles-count"   >
+      >
+        <div class="articles-count">
           <span class="articles-recommendations"
             >130+ навчальних статей<br /></span
           ><span class="graphics">з практичними рекомендаціями </span>
         </div>
       </div>
-      <div    class="mask-group"><div class="reviews-block"></div></div>
-      <div class="frame-e"   
-      [ngStyle]="{
+      <div class="mask-group"><div class="reviews-block"></div></div>
+      <div
+        class="frame-e"
+        [ngStyle]="{
             
             'background': isDark? 'rgba(255, 255, 255, 0.08)' : 'rgba(0, 136, 255, 0.08)' ,
             'border': isDark? '2px solid rgba(230, 237, 251, 0.16)':'2px solid rgba(0, 136, 255, 0.16)',
-            }">
+            }"
+      >
         <div class="positive-reviews">
           <span class="positive-reviews-percent">95% </span
           ><span class="positive-reviews-text">Позитивних вiдгукiв</span>
@@ -509,29 +858,59 @@
         <div class="frame-f"></div>
       </div>
     </div>
-    
   </div>
 
-  <div class="flex-row"  >
-      <div class="background-shape"></div>
+  <div class="flex-row">
+    <div class="background-shape"></div>
 
     <div class="base">
-      <div   [ngClass]="{'background-10':true ,'background-10-dark': isDark, 'background-10-light': !isDark }"></div>
+      <div
+        [ngClass]="{
+          'background-10': true,
+          'background-10-dark': isDark,
+          'background-10-light': !isDark
+        }"
+      ></div>
       <div class="up-block">
-        <div    [ngClass]="{'arrow-11':true ,'arrow-11-dark': isDark, 'arrow-11-light': !isDark }"></div>
-        <div data-aos="fade-up" data-aos-delay="300"   class="trading-definition"  [ngStyle]="{
+        <div
+          [ngClass]="{
+            'arrow-11': true,
+            'arrow-11-dark': isDark,
+            'arrow-11-light': !isDark
+          }"
+        ></div>
+        <div
+          data-aos="fade-up"
+          data-aos-delay="300"
+          class="trading-definition"
+          [ngStyle]="{
             
             'background': isDark? 'rgba(255, 255, 255, 0.08)' : 'rgba(0, 131, 205, 0.08)' ,
             'border': isDark? '2px solid rgba(230, 237, 251, 0.16)':'2px solid #E6EDFB',
-            }">
-          <div   class="flex-row-12">  
-            <div class="info-icon"><div    [ngClass]="{'group-13':true ,'group-13-dark': isDark, 'group-13-light': !isDark }"></div>
-          </div>
-            <span     [ngClass]="{ 'trading-definition-title':true, 'gradient-orange': isDark, 'gradient-blue': !isDark }"
+            }"
+        >
+          <div class="flex-row-12">
+            <div class="info-icon">
+              <div
+                [ngClass]="{
+                  'group-13': true,
+                  'group-13-dark': isDark,
+                  'group-13-light': !isDark
+                }"
+              ></div>
+            </div>
+            <span
+              [ngClass]="{
+                'trading-definition-title': true,
+                'gradient-orange': isDark,
+                'gradient-blue': !isDark
+              }"
               >Що таке трейдинг: простими словами</span
             >
           </div>
-          <span  class="trading-definition-text" [ngStyle]="{ 'color': isDark? '#ffffff' : '#0C263A' }"
+          <span
+            class="trading-definition-text"
+            [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
             >У сучасному світі фінансів слово трейдинг дедалі частіше
             з’являється в заголовках новин, соціальних мережах і навіть у
             повсякденних розмовах. Воно стало майже синонімом до можливості
@@ -544,9 +923,17 @@
 
       <div class="fifth-content_block" data-aos="fade-up" data-aos-delay="300">
         <div class="left-content">
-          <div class="heading-support-text"  >
-            <span   [ngClass]="{ 'osnovi-treidingu':true, 'gradient-orange': isDark, 'gradient-blue': !isDark }">Основи трейдингу</span
-            ><span   class="osnovi-treidingu-14" [ngStyle]="{ 'color': isDark? '#ffffff' : '#0C263A' }"
+          <div class="heading-support-text">
+            <span
+              [ngClass]="{
+                'osnovi-treidingu': true,
+                'gradient-orange': isDark,
+                'gradient-blue': !isDark
+              }"
+              >Основи трейдингу</span
+            ><span
+              class="osnovi-treidingu-14"
+              [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
               >Трейдинг (від англ. trading — торгівля) — це процес купівлі та
               продажу фінансових активів із метою отримання прибутку на різниці
               в цінах. На практиці це може виглядати так: трейдер купує актив
@@ -555,54 +942,131 @@
               прибутком.</span
             >
           </div>
-          <div class="tabs"  >
-            <div   [ngClass]="{ 'tab':true, 'tab-dark': isDark, 'tab-light': !isDark }">
+          <div class="tabs">
+            <div
+              [ngClass]="{
+                tab: true,
+                'tab-dark': isDark,
+                'tab-light': !isDark
+              }"
+            >
               <span class="tab-text">Акції компаній</span>
             </div>
-            <div [ngClass]="{ 'tab':true, 'tab-dark': isDark, 'tab-light': !isDark }">
+            <div
+              [ngClass]="{
+                tab: true,
+                'tab-dark': isDark,
+                'tab-light': !isDark
+              }"
+            >
               <span class="tab-text">Валюту (ринок Форекс)</span>
             </div>
-            <div [ngClass]="{ 'tab':true, 'tab-dark': isDark, 'tab-light': !isDark }">
+            <div
+              [ngClass]="{
+                tab: true,
+                'tab-dark': isDark,
+                'tab-light': !isDark
+              }"
+            >
               <span class="tab-text">Криптовалюти (біткоїн, етеріум тощо)</span>
             </div>
-            <div [ngClass]="{ 'tab':true, 'tab-dark': isDark, 'tab-light': !isDark }">
+            <div
+              [ngClass]="{
+                tab: true,
+                'tab-dark': isDark,
+                'tab-light': !isDark
+              }"
+            >
               <span class="tab-text"
                 >Сировинні товари (золото, нафта, пшениця)</span
               >
             </div>
-            <div [ngClass]="{ 'tab':true, 'tab-dark': isDark, 'tab-light': !isDark }">
+            <div
+              [ngClass]="{
+                tab: true,
+                'tab-dark': isDark,
+                'tab-light': !isDark
+              }"
+            >
               <span class="tab-text"
                 >Ф’ючерси, опціони, індекси та інші інструменти</span
               >
             </div>
           </div>
         </div>
-        <div  class="right-content_fifth">
-          <img   *ngIf="isDark"
+        <div class="right-content_fifth">
+          <img
+            *ngIf="isDark"
             src="assets/redesignArapovTrade/img/fifth-block-main-image.svg"
             alt="main"
           />
-          <img   *ngIf="!isDark"
+          <img
+            *ngIf="!isDark"
             src="assets/redesignArapovTrade/img/fifth-block-main-image-light.svg"
             alt="main"
           />
-          <div   [ngClass]="{'arrow_fifth-block-rigth':true ,'arrow_fifth-block-rigth-dark': isDark, 'arrow_fifth-block-rigth-light': !isDark }"></div>
-          <div   [ngClass]="{'streamline-sharp_pie-chart-remix':true ,'streamline-sharp_pie-chart-remix-dark': isDark, 'streamline-sharp_pie-chart-remix-light': !isDark }"></div>
-          <div   [ngClass]="{'BG-shape-fifth_block':true ,'BG-shape-fifth_block-dark': isDark, 'BG-shape-fifth_block-light': !isDark }"></div>
+          <div
+            [ngClass]="{
+              'arrow_fifth-block-rigth': true,
+              'arrow_fifth-block-rigth-dark': isDark,
+              'arrow_fifth-block-rigth-light': !isDark
+            }"
+          ></div>
+          <div
+            [ngClass]="{
+              'streamline-sharp_pie-chart-remix': true,
+              'streamline-sharp_pie-chart-remix-dark': isDark,
+              'streamline-sharp_pie-chart-remix-light': !isDark
+            }"
+          ></div>
+          <div
+            [ngClass]="{
+              'BG-shape-fifth_block': true,
+              'BG-shape-fifth_block-dark': isDark,
+              'BG-shape-fifth_block-light': !isDark
+            }"
+          ></div>
         </div>
       </div>
     </div>
   </div>
   <div class="six_block" data-aos="fade-up" data-aos-delay="300">
-    <div class="six_block-left" >
-      <div   [ngClass]="{'six-block-graph-img':true ,'six-block-graph-img-dark': isDark, 'six-block-graph-img-light': !isDark }"></div>
-      <div  [ngClass]="{'bg-16':true ,'bg-16-dark': isDark, 'bg-16-light': !isDark }"></div>
-      <div   class="six-block-main-img"></div>
-      <div   [ngClass]="{'flex-row-ca':true ,'flex-row-ca-dark': isDark, 'flex-row-ca-light': !isDark }"></div>
+    <div class="six_block-left">
+      <div
+        [ngClass]="{
+          'six-block-graph-img': true,
+          'six-block-graph-img-dark': isDark,
+          'six-block-graph-img-light': !isDark
+        }"
+      ></div>
+      <div
+        [ngClass]="{
+          'bg-16': true,
+          'bg-16-dark': isDark,
+          'bg-16-light': !isDark
+        }"
+      ></div>
+      <div class="six-block-main-img"></div>
+      <div
+        [ngClass]="{
+          'flex-row-ca': true,
+          'flex-row-ca-dark': isDark,
+          'flex-row-ca-light': !isDark
+        }"
+      ></div>
     </div>
     <div class="six_block-right">
-      <span   class="material-symbols-show-chart-rounded" [ngClass]="{ 'material-symbols-show-chart-rounded':true, 'gradient-orange': isDark, 'gradient-blue': !isDark }">Хто такий трейдер?</span
-      ><span   class="flex-row-fc" [ngStyle]="{ 'color': isDark? '#ffffff' : '#0C263A' }"
+      <span
+        class="material-symbols-show-chart-rounded"
+        [ngClass]="{
+          'material-symbols-show-chart-rounded': true,
+          'gradient-orange': isDark,
+          'gradient-blue': !isDark
+        }"
+        >Хто такий трейдер?</span
+      ><span
+        class="flex-row-fc"
+        [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
         >Трейдер — це людина, яка здійснює купівлю та продаж фінансових
         інструментів з метою отримання прибутку. Він аналізує ринок, прогнозує
         зміни цін і приймає рішення: купувати, продавати або утримувати активи.
@@ -610,11 +1074,22 @@
         установ — банків, хедж-фондів, інвестиційних чи брокерських
         компаній.</span
       >
- 
 
-      <div class="satisfied-customer" [ngStyle]="{ 'background': isDark? 'rgba(255, 255, 255, 0.08)' : 'rgba(230, 237, 251, 0.7)' }">      
-        <div class="naygolovnishe" [ngStyle]="{ 'border-left': isDark? '5px solid #ffcd29' : '5px solid #0082CC' }" > 
-          <p [ngStyle]="{ 'color': isDark? '#ffffff' : '#0C263A' }"  >
+      <div
+        class="satisfied-customer"
+        [ngStyle]="{
+          background: isDark
+            ? 'rgba(255, 255, 255, 0.08)'
+            : 'rgba(230, 237, 251, 0.7)'
+        }"
+      >
+        <div
+          class="naygolovnishe"
+          [ngStyle]="{
+            'border-left': isDark ? '5px solid #ffcd29' : '5px solid #0082CC'
+          }"
+        >
+          <p [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }">
             Завдяки розвитку онлайн-бірж, брокерських сервісів і торгових
             платформ, сьогодні практично кожен може розпочати торгівлю на
             фінансовому ринку. Для цього достатньо мати комп’ютер або смартфон
@@ -628,57 +1103,151 @@
     <div class="bg-36">
       <div class="seventh-block_left">
         <div class="flex-column">
-          <span    [ngClass]="{ 'opportunities-risks':true, 'gradient-orange': isDark, 'gradient-blue': !isDark }">Можливості та ризики</span
-          ><span  class="opportunities-risks-38" [ngStyle]="{ 'color': isDark? '#ffffff' : '#0C263A' }"
+          <span
+            [ngClass]="{
+              'opportunities-risks': true,
+              'gradient-orange': isDark,
+              'gradient-blue': !isDark
+            }"
+            >Можливості та ризики</span
+          ><span
+            class="opportunities-risks-38"
+            [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
             >Трейдинг приваблює можливістю високих доходів — досвідчені трейдери
             здатні заробляти понад 1000 доларів на місяць , а деякі — значно
             більше ($2,000–10,000$/міс). Однак трейдинг — це не легкі гроші . За
             статистикою, більшість новачків втрачає свої інвестиції вже у перші
             місяці.</span
           >
-          <div   class="minuses"  >
-            <span    [ngClass]="{ 'deposit-loss-reasons':true, 'gradient-orange': isDark, 'gradient-blue': !isDark }">Причини втрати депозиту:</span>
+          <div class="minuses">
+            <span
+              [ngClass]="{
+                'deposit-loss-reasons': true,
+                'gradient-orange': isDark,
+                'gradient-blue': !isDark
+              }"
+              >Причини втрати депозиту:</span
+            >
             <div class="minus">
-              <span class="lending-money-investment" [ngStyle]="{ 'color': isDark? '#ffffff' : '#0C263A' }">Недосвідченість</span>
-              <div   [ngClass]="{ 'vector':true, 'vector-dark': isDark, 'vector-light': !isDark }"></div>
+              <span
+                class="lending-money-investment"
+                [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+                >Недосвідченість</span
+              >
+              <div
+                [ngClass]="{
+                  vector: true,
+                  'vector-dark': isDark,
+                  'vector-light': !isDark
+                }"
+              ></div>
             </div>
             <div class="minus">
-              <span class="lending-money-investment" [ngStyle]="{ 'color': isDark? '#ffffff' : '#0C263A' }">Емоційні рішення</span>
-              <div [ngClass]="{ 'vector':true, 'vector-dark': isDark, 'vector-light': !isDark }"></div>
+              <span
+                class="lending-money-investment"
+                [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+                >Емоційні рішення</span
+              >
+              <div
+                [ngClass]="{
+                  vector: true,
+                  'vector-dark': isDark,
+                  'vector-light': !isDark
+                }"
+              ></div>
             </div>
             <div class="minus">
-              <span class="lending-money-investment" [ngStyle]="{ 'color': isDark? '#ffffff' : '#0C263A' }">Нехтування ризиками</span>
-              <div [ngClass]="{ 'vector':true, 'vector-dark': isDark, 'vector-light': !isDark }"></div>
+              <span
+                class="lending-money-investment"
+                [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+                >Нехтування ризиками</span
+              >
+              <div
+                [ngClass]="{
+                  vector: true,
+                  'vector-dark': isDark,
+                  'vector-light': !isDark
+                }"
+              ></div>
             </div>
             <div class="minus">
-              <span class="lending-money-investment" [ngStyle]="{ 'color': isDark? '#ffffff' : '#0C263A' }"
+              <span
+                class="lending-money-investment"
+                [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
                 >Бажання швидкого збагачення</span
               >
-              <div [ngClass]="{ 'vector':true, 'vector-dark': isDark, 'vector-light': !isDark }"></div>
+              <div
+                [ngClass]="{
+                  vector: true,
+                  'vector-dark': isDark,
+                  'vector-light': !isDark
+                }"
+              ></div>
             </div>
           </div>
         </div>
-        <div class="plus"  >
-          <span   [ngClass]="{ 'successful-trader':true, 'gradient-orange': isDark, 'gradient-blue': !isDark }"
+        <div class="plus">
+          <span
+            [ngClass]="{
+              'successful-trader': true,
+              'gradient-orange': isDark,
+              'gradient-blue': !isDark
+            }"
             >Щоб стати успішним трейдером, необхідно:</span
           >
           <div class="plus-3f">
-            <div   [ngClass]="{ 'vector-40':true, 'vector-40-dark': isDark, 'vector-40-light': !isDark }"></div>
-            <span class="continuous-learning" [ngStyle]="{ 'color': isDark? '#ffffff' : '#0C263A' }">Постійно вчитися</span>
+            <div
+              [ngClass]="{
+                'vector-40': true,
+                'vector-40-dark': isDark,
+                'vector-40-light': !isDark
+              }"
+            ></div>
+            <span
+              class="continuous-learning"
+              [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+              >Постійно вчитися</span
+            >
           </div>
           <div class="plus-3f">
-            <div [ngClass]="{ 'vector-40':true, 'vector-40-dark': isDark, 'vector-40-light': !isDark }"></div>
-            <span class="continuous-learning" [ngStyle]="{ 'color': isDark? '#ffffff' : '#0C263A' }" >Розробити власну стратегію</span>
+            <div
+              [ngClass]="{
+                'vector-40': true,
+                'vector-40-dark': isDark,
+                'vector-40-light': !isDark
+              }"
+            ></div>
+            <span
+              class="continuous-learning"
+              [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+              >Розробити власну стратегію</span
+            >
           </div>
           <div class="plus-3f">
-            <div [ngClass]="{ 'vector-40':true, 'vector-40-dark': isDark, 'vector-40-light': !isDark }"></div>
-            <span class="continuous-learning" [ngStyle]="{ 'color': isDark? '#ffffff' : '#0C263A' }"
+            <div
+              [ngClass]="{
+                'vector-40': true,
+                'vector-40-dark': isDark,
+                'vector-40-light': !isDark
+              }"
+            ></div>
+            <span
+              class="continuous-learning"
+              [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
               >Мати чіткий план ризик-менеджменту</span
             >
           </div>
           <div class="plus-3f">
-            <div [ngClass]="{ 'vector-40':true, 'vector-40-dark': isDark, 'vector-40-light': !isDark }"></div>
-            <span class="continuous-learning" [ngStyle]="{ 'color': isDark? '#ffffff' : '#0C263A' }"
+            <div
+              [ngClass]="{
+                'vector-40': true,
+                'vector-40-dark': isDark,
+                'vector-40-light': !isDark
+              }"
+            ></div>
+            <span
+              class="continuous-learning"
+              [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
               >Контролювати емоції, особливо страх і жадібність</span
             >
           </div>
@@ -686,27 +1255,61 @@
       </div>
       <div class="seventh-block_rigth">
         <div class="right-37">
-          <div class="money-tree" >
-            <img   src="/assets/redesignArapovTrade/img/1.png" alt="tree" />
+          <div class="money-tree">
+            <img src="/assets/redesignArapovTrade/img/1.png" alt="tree" />
           </div>
-          <div  [ngClass]="{ 'chart':true, 'chart-dark': isDark, 'chart-light': !isDark }"></div>
-          <div  [ngClass]="{ 'chart-arc':true, 'chart-arc-dark': isDark, 'chart-arc-light': !isDark }"></div>
+          <div
+            [ngClass]="{
+              chart: true,
+              'chart-dark': isDark,
+              'chart-light': !isDark
+            }"
+          ></div>
+          <div
+            [ngClass]="{
+              'chart-arc': true,
+              'chart-arc-dark': isDark,
+              'chart-arc-light': !isDark
+            }"
+          ></div>
         </div>
       </div>
     </div>
-    <div  [ngClass]="{ 'bg_seventh':true, 'bg_seventh-dark': isDark, 'bg_seventh-light': !isDark }"></div>
+    <div
+      [ngClass]="{
+        bg_seventh: true,
+        'bg_seventh-dark': isDark,
+        'bg_seventh-light': !isDark
+      }"
+    ></div>
   </div>
 
   <div class="eighth-block">
     <div class="eighth-block_main" data-aos="fade-up" data-aos-delay="300">
       <div class="eighth-block_main-left">
-        <div class="img-18" ></div>
-        <div   [ngClass]="{ 'img-19':true, 'img-19-dark': isDark, 'img-19-light': !isDark }"></div>
+        <div class="img-18"></div>
+        <div
+          [ngClass]="{
+            'img-19': true,
+            'img-19-dark': isDark,
+            'img-19-light': !isDark
+          }"
+        ></div>
       </div>
       <div class="reighth-block_main-right">
-        <span    [ngClass]="{ 'opportunities-risks':true, 'gradient-orange': isDark, 'gradient-blue': !isDark }">З чого почати? </span>
-        <div   class="start-trading-recommendation" [ngStyle]="{ 'color': isDark? '#ffffff' : '#0C263A' }">
-          <span   
+        <span
+          [ngClass]="{
+            'opportunities-risks': true,
+            'gradient-orange': isDark,
+            'gradient-blue': !isDark
+          }"
+          >З чого почати?
+        </span>
+        <div
+          class="start-trading-recommendation"
+          [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+        >
+          <span
             >Щоб правильно розпочати торгівлю на біржі та не втратити кошти , я
             рекомендую пройти безкоштовний навчальний курс . Курс охоплює всі
             ключові розділи теорії трейдингу, необхідні для впевненого
@@ -718,40 +1321,70 @@
           розміром капіталу його підписників.
         </div>
 
-        <span     [ngClass]="{ 'successful-trader':true, 'gradient-orange': isDark, 'gradient-blue': !isDark }"
+        <span
+          [ngClass]="{
+            'successful-trader': true,
+            'gradient-orange': isDark,
+            'gradient-blue': !isDark
+          }"
           >На навчальній платформі ви знайдете:</span
         >
-        <div class="tabs-eight-block"  >
-          <div  [ngClass]="{ 'tab':true, 'tab-dark': isDark, 'tab-light': !isDark }">
+        <div class="tabs-eight-block">
+          <div
+            [ngClass]="{ tab: true, 'tab-dark': isDark, 'tab-light': !isDark }"
+          >
             <span class="tab-text">понад 130 статей і 70 відеоуроків</span>
           </div>
-          <div  [ngClass]="{ 'tab':true, 'tab-dark': isDark, 'tab-light': !isDark }">
+          <div
+            [ngClass]="{ tab: true, 'tab-dark': isDark, 'tab-light': !isDark }"
+          >
             <span class="tab-text"
               >пояснення базових і просунутих стратегій</span
             >
           </div>
-          <div  [ngClass]="{ 'tab':true, 'tab-dark': isDark, 'tab-light': !isDark }">
+          <div
+            [ngClass]="{ tab: true, 'tab-dark': isDark, 'tab-light': !isDark }"
+          >
             <span class="tab-text">приклади реальних угод</span>
           </div>
-          <div  [ngClass]="{ 'tab':true, 'tab-dark': isDark, 'tab-light': !isDark }">
+          <div
+            [ngClass]="{ tab: true, 'tab-dark': isDark, 'tab-light': !isDark }"
+          >
             <span class="tab-text">рекомендації щодо вибору брокера</span>
           </div>
-          <div  [ngClass]="{ 'tab':true, 'tab-dark': isDark, 'tab-light': !isDark }">
+          <div
+            [ngClass]="{ tab: true, 'tab-dark': isDark, 'tab-light': !isDark }"
+          >
             <span class="tab-text">пояснення термінів та інструментів</span>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="eighth-block_bottom-block" data-aos="fade-up" data-aos-delay="300">
+    <div
+      class="eighth-block_bottom-block"
+      data-aos="fade-up"
+      data-aos-delay="300"
+    >
       <div class="notice-block">
-        <div class="name-1a" [ngStyle]="{ 'background': isDark? 'rgba(255, 255, 255, 0.08)' : 'rgba(230, 237, 251, 0.7)' }">
-          <div class=" " > 
+        <div
+          class="name-1a"
+          [ngStyle]="{
+            background: isDark
+              ? 'rgba(255, 255, 255, 0.08)'
+              : 'rgba(230, 237, 251, 0.7)'
+          }"
+        >
+          <div class=" ">
             <!-- [ngStyle]="{ 'border-left': isDark? '5px solid #ffcd29' : '5px solid #0082CC' }" -->
-            <span   class="quote-text-eight-block" 
-            [ngStyle]="{ 'color': isDark? '#ffffff' : '#0C263A',
-              'border-left': isDark? '5px solid #ffcd29' : '5px solid #0082CC'
-             }" 
+            <span
+              class="quote-text-eight-block"
+              [ngStyle]="{
+                color: isDark ? '#ffffff' : '#0C263A',
+                'border-left': isDark
+                  ? '5px solid #ffcd29'
+                  : '5px solid #0082CC'
+              }"
               >Найголовніше — ви зможете опанувати торгову стратегію , яка
               допоможе вам впевнено почуватися на ринку, уникати типових помилок
               і поступово нарощувати прибуток.<br />Трейдинг — це не просто
@@ -765,33 +1398,43 @@
       </div>
 
       <div class="author-speach-block" data-aos="fade-up" data-aos-delay="300">
-        <div    class="line"></div>
-        <div class="speach_text-block"  >
-          <span  class="speach-text"  [ngStyle]="{ 'color': isDark? '#ffffff' : '#0C263A' 
-             }" 
+        <div class="line"></div>
+        <div class="speach_text-block">
+          <span
+            class="speach-text"
+            [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
             >Бажаю вам успіху у навчанні та перших кроках на шляху до
             професійного трейдингу!<br /><br /></span
-          ><span   class="speach-text-quote" [ngStyle]="{ 'color': isDark? '#ffffff' : '#0C263A' 
-             }" 
+          ><span
+            class="speach-text-quote"
+            [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
             >З повагою, <br />
             Автор курсу "Навчання трейдингу з нуля" — Ігор Арапов</span
           >
         </div>
-        <span   class="features-list ph" [ngStyle]="{ 'color': isDark? '#ffffff' : '#0C263A' 
-             }" >I. Arapov</span>
+        <span
+          class="features-list ph"
+          [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+          >I. Arapov</span
+        >
       </div>
     </div>
   </div>
 
   <div class="footer">
     <div class="footer-main-block">
-      
-
       <div class="logo-body">
-        <div class="frame-29" >
+        <div class="frame-29">
           <div class="logo">
             <div class="header-logo-block">
-              <div class="header-logo hhd" [ngStyle]="{ 'background': isDark? 'url(assets/redesignArapovTrade/img/logo-new.png) no-repeat center': 'url(assets/redesignArapovTrade/img/logo-new-light.png) no-repeat center' }"></div>
+              <div
+                class="header-logo hhd"
+                [ngStyle]="{
+                  background: isDark
+                    ? 'url(assets/redesignArapovTrade/img/logo-new.png) no-repeat center'
+                    : 'url(assets/redesignArapovTrade/img/logo-new-light.png) no-repeat center'
+                }"
+              ></div>
               <span class="loog-text hg">Arapov.Trade</span>
             </div>
           </div>
@@ -802,200 +1445,223 @@
         </div>
       </div>
 
-      <div class="links"  >
-        <div class="menu" >
+      <div class="links">
+        <div class="menu">
           <span class="menu-title">Меню</span>
           <div class="menu-title-block">
-            <a (click)="navigateTo('uk')" class="menu-title_text">Про автора курсу</a>
+            <a (click)="navigateTo('uk')" class="menu-title_text"
+              >Про автора курсу</a
+            >
           </div>
           <div class="menu-title-block">
-            <a (click)="navigateTo('uk/studying')" class="menu-title_text">Курси з трейдингу</a>
+            <a (click)="navigateTo('uk/studying')" class="menu-title_text"
+              >Курси з трейдингу</a
+            >
           </div>
           <div class="menu-title-block">
-            <a (click)="navigateTo('uk/freestudying')" class="menu-title_text">Безкоштовне навчання трейдингу</a>
+            <a (click)="navigateTo('uk/freestudying')" class="menu-title_text"
+              >Безкоштовне навчання трейдингу</a
+            >
           </div>
-           
         </div>
         <div class="menu">
           <span class="menu-title">Посилання</span
-          ><a href="/assets/documents/PublicOfferAgreementNew.docx"
-                    download class="menu-title-block menu-title_text">Договір публічної оферти</a
+          ><a
+            href="/assets/documents/PublicOfferAgreementNew.docx"
+            download
+            class="menu-title-block menu-title_text"
+            >Договір публічної оферти</a
           >
-          <a href="/assets/documents/PrivacyPolicyUK.DOCX" download class="menu-title-block menu-title_text">Політика конфіденційності</a
+          <a
+            href="/assets/documents/PrivacyPolicyUK.DOCX"
+            download
+            class="menu-title-block menu-title_text"
+            >Політика конфіденційності</a
           >
-          <a (click)="navigateTo('uk/disclaimer')" class="menu-title-block menu-title_text">Відмова від відповідальності</a>
+          <a
+            (click)="navigateTo('uk/disclaimer')"
+            class="menu-title-block menu-title_text"
+            >Відмова від відповідальності</a
+          >
         </div>
-        
-               
+
         <div class="menu">
           <span class="menu-title">Компанiя</span
-          ><span class="menu-title-block menu-title_text">ФОП Арапов І.В.<br />ІПН 3314507171</span>
+          ><span class="menu-title-block menu-title_text"
+            >ФОП Арапов І.В.<br />ІПН 3314507171</span
+          >
         </div>
-         
       </div>
-      
     </div>
     <div class="component-1f">
-        <div class="in-20"></div>
-        <div class="component-21">
-          <div class="box-b" >
-            <span class="text-2d">Arapov.Trade</span>
-            <div class="pic-14"></div>
-            <span class="text-2e">2025. Всі права захищені.</span>
+      <div class="in-20"></div>
+      <div class="component-21">
+        <div class="box-b">
+          <span class="text-2d">Arapov.Trade</span>
+          <div class="pic-14"></div>
+          <span class="text-2e">2025. Всі права захищені.</span>
+        </div>
+        <div class="section-18">
+          <!-- facebook -->
+          <div
+            class="fb"
+            [ngClass]="{
+              'links-dark': isDark,
+              'links-light': !isDark
+            }"
+          >
+            <a href="https://www.facebook.com/igor.arapov.75">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 15 27"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11.66 4.59339H14.1667V0.353394C12.953 0.22719 11.7335 0.164881 10.5133 0.166727C6.88666 0.166727 4.40666 2.38006 4.40666 6.43339V9.92673H0.313324V14.6734H4.40666V26.8334H9.31332V14.6734H13.3933L14.0067 9.92673H9.31332V6.90006C9.31332 5.50006 9.68666 4.59339 11.66 4.59339Z"
+                  fill="#ffffff"
+                />
+              </svg>
+            </a>
           </div>
-            <div class="section-18" >
- 
+          <!-- linkedin -->
+          <div
+            class="fb"
+            [ngClass]="{
+              'links-dark': isDark,
+              'links-light': !isDark
+            }"
+          >
+            <a
+              href="https://www.linkedin.com/in/arapovtrade/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 25 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0.499969 3.46655C0.499969 2.70335 0.770247 2.07372 1.31078 1.57766C1.85131 1.08158 2.55403 0.833557 3.41889 0.833557C4.26832 0.833557 4.95556 1.07776 5.48066 1.56622C6.0212 2.06992 6.29147 2.72624 6.29147 3.53524C6.29147 4.26789 6.02893 4.87843 5.50383 5.36688C4.9633 5.87059 4.25286 6.12244 3.37256 6.12244H3.34939C2.49996 6.12244 1.81272 5.87059 1.28761 5.36688C0.76251 4.86318 0.499969 4.22973 0.499969 3.46655ZM0.801128 23.5002V8.20594H5.94398V23.5002H0.801128ZM8.79341 23.5002H13.9363V14.9601C13.9363 14.4259 13.998 14.0138 14.1216 13.7238C14.3378 13.2048 14.666 12.766 15.1061 12.4073C15.5463 12.0486 16.0984 11.8692 16.7625 11.8692C18.4923 11.8692 19.3571 13.0216 19.3571 15.3265V23.5002H24.5V14.7312C24.5 12.4721 23.9594 10.7588 22.8783 9.59112C21.7973 8.42344 20.3687 7.83961 18.5926 7.83961C16.6004 7.83961 15.0482 8.68674 13.9363 10.381V10.4268H13.9131L13.9363 10.381V8.20594H8.79341C8.82429 8.69437 8.83974 10.2131 8.83974 12.7622C8.83974 15.3112 8.82429 18.8905 8.79341 23.5002Z"
+                  fill="#ffffff"
+                />
+              </svg>
+            </a>
+          </div>
+          <!-- twitter -->
+          <div
+            class="fb"
+            [ngClass]="{
+              'links-dark': isDark,
+              'links-light': !isDark
+            }"
+          >
+            <a href="https://ru.tradingview.com/u/Igor_Arapov/">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 25 13"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.365 2.77903C16.365 3.42934 16.1067 4.05301 15.6468 4.51285C15.187 4.97269 14.5633 5.23103 13.913 5.23103C13.2627 5.23103 12.639 4.97269 12.1792 4.51285C11.7193 4.05301 11.461 3.42934 11.461 2.77903C11.461 2.12872 11.7193 1.50504 12.1792 1.0452C12.639 0.585361 13.2627 0.327026 13.913 0.327026C14.5633 0.327026 15.187 0.585361 15.6468 1.0452C16.1067 1.50504 16.365 2.12872 16.365 2.77903ZM10.25 0.500026H0.5V5.40403H5.346V12.673H10.25V0.500026ZM18.846 0.500026H24.5L19.394 12.673H13.74L18.846 0.500026Z"
+                  fill="#ffffff"
+                />
+              </svg>
+            </a>
+          </div>
 
-             <!-- facebook -->
-                    <div    [ngClass]="{ 'fb in ':true, 'links-dark': isDark, 'links-light': !isDark }" 
-                        [ngStyle]="{ 'border': isDark? '3px solid rgba(255,255,255,0.08)' : '3px solid rgba(255,255,255,0.08)' }" 
-                    >
-                      <a
-                        href="https://www.facebook.com/igor.arapov.75"
-                        style="padding-top: 5px"
-                      >
-                        <svg
-                          width="15"
-                          height="27"
-                          viewBox="0 0 15 27"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M11.66 4.59339H14.1667V0.353394C12.953 0.22719 11.7335 0.164881 10.5133 0.166727C6.88666 0.166727 4.40666 2.38006 4.40666 6.43339V9.92673H0.313324V14.6734H4.40666V26.8334H9.31332V14.6734H13.3933L14.0067 9.92673H9.31332V6.90006C9.31332 5.50006 9.68666 4.59339 11.66 4.59339Z"
-                            fill="#ffffff"
-                          />
-                        </svg>
-                      </a>
-                    </div>
-                    <!-- linkedin -->
-                    <div [ngClass]="{ 'fb in ':true, 'links-dark': isDark, 'links-light': !isDark }" 
-                        [ngStyle]="{ 'border': isDark? '3px solid rgba(255,255,255,0.08)' : '3px solid rgba(255,255,255,0.08)' }" >
-                      <a
-                        href="https://www.linkedin.com/in/arapovtrade/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
-                        style="padding-top: 5px"
-                      >
-                        <svg
-                          width="25"
-                          height="27"
-                          viewBox="0 0 25 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0.499969 3.46655C0.499969 2.70335 0.770247 2.07372 1.31078 1.57766C1.85131 1.08158 2.55403 0.833557 3.41889 0.833557C4.26832 0.833557 4.95556 1.07776 5.48066 1.56622C6.0212 2.06992 6.29147 2.72624 6.29147 3.53524C6.29147 4.26789 6.02893 4.87843 5.50383 5.36688C4.9633 5.87059 4.25286 6.12244 3.37256 6.12244H3.34939C2.49996 6.12244 1.81272 5.87059 1.28761 5.36688C0.76251 4.86318 0.499969 4.22973 0.499969 3.46655ZM0.801128 23.5002V8.20594H5.94398V23.5002H0.801128ZM8.79341 23.5002H13.9363V14.9601C13.9363 14.4259 13.998 14.0138 14.1216 13.7238C14.3378 13.2048 14.666 12.766 15.1061 12.4073C15.5463 12.0486 16.0984 11.8692 16.7625 11.8692C18.4923 11.8692 19.3571 13.0216 19.3571 15.3265V23.5002H24.5V14.7312C24.5 12.4721 23.9594 10.7588 22.8783 9.59112C21.7973 8.42344 20.3687 7.83961 18.5926 7.83961C16.6004 7.83961 15.0482 8.68674 13.9363 10.381V10.4268H13.9131L13.9363 10.381V8.20594H8.79341C8.82429 8.69437 8.83974 10.2131 8.83974 12.7622C8.83974 15.3112 8.82429 18.8905 8.79341 23.5002Z"
-                            fill="white"
-                          />
-                        </svg>
-                      </a>
-                    </div>
-                    <!-- twitter -->
-                    <div [ngClass]="{ 'fb in ':true, 'links-dark': isDark, 'links-light': !isDark }" 
-                        [ngStyle]="{ 'border': isDark? '3px solid rgba(255,255,255,0.08)' : '3px solid rgba(255,255,255,0.08)' }" >
-                      <a
-                        href="https://ru.tradingview.com/u/Igor_Arapov/"
-                        style="padding-top: 5px"
-                      >
-                        <svg
-                          width="31"
-                          height="28"
-                          viewBox="0 0 25 13"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M16.365 2.77903C16.365 3.42934 16.1067 4.05301 15.6468 4.51285C15.187 4.97269 14.5633 5.23103 13.913 5.23103C13.2627 5.23103 12.639 4.97269 12.1792 4.51285C11.7193 4.05301 11.461 3.42934 11.461 2.77903C11.461 2.12872 11.7193 1.50504 12.1792 1.0452C12.639 0.585361 13.2627 0.327026 13.913 0.327026C14.5633 0.327026 15.187 0.585361 15.6468 1.0452C16.1067 1.50504 16.365 2.12872 16.365 2.77903ZM10.25 0.500026H0.5V5.40403H5.346V12.673H10.25V0.500026ZM18.846 0.500026H24.5L19.394 12.673H13.74L18.846 0.500026Z"
-                            fill="white"
-                          />
-                        </svg>
-                      </a>
-                    </div>
+          <!-- youtube -->
+          <div
+            class="fb"
+            [ngClass]="{
+              'links-dark-special': isDark,
+              'links-light-special': !isDark
+            }"
+          >
+            <a href="https://www.youtube.com/@ArapovTrade">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M10 8.5L16 12L10 15.5V8.5Z" fill="#ffffff" />
+                <path
+                  d="M12 5C21 5 21 5 21 12C21 19 21 19 12 19C3 19 3 19 3 12C3 5 3 5 12 5Z"
+                  stroke="#ffffff"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
 
-                    <!-- youtube -->
-                    <div [ngClass]="{ 'fb in ':true, 'links-dark': isDark, 'links-light': !isDark }" 
-                        [ngStyle]="{ 'border': isDark? '3px solid rgba(255,255,255,0.08)' : '3px solid rgba(255,255,255,0.08)' }" >
-                      <a
-                        href="https://www.youtube.com/@ArapovTrade"
-                        style="padding-top: 5px"
-                      >
-                        <svg
-                          width="31"
-                          height="21"
-                          viewBox="0 0 31 21"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M30.1666 7.44665C30.2326 5.53818 29.8152 3.644 28.9533 1.93998C28.3685 1.24078 27.5569 0.768925 26.66 0.606645C22.95 0.270012 19.2247 0.132038 15.5 0.193312C11.7888 0.129257 8.07693 0.262779 4.37998 0.593312C3.64908 0.726268 2.97268 1.0691 2.43332 1.57998C1.23332 2.68665 1.09998 4.57998 0.966652 6.17998C0.773201 9.05673 0.773201 11.9432 0.966652 14.82C1.00523 15.7205 1.13931 16.6144 1.36665 17.4866C1.52742 18.1601 1.85268 18.7831 2.31332 19.3C2.85634 19.8379 3.5485 20.2003 4.29998 20.34C7.17454 20.6948 10.0709 20.8418 12.9667 20.78C17.6333 20.8466 21.7266 20.78 26.5666 20.4066C27.3366 20.2755 28.0482 19.9127 28.6066 19.3666C28.9799 18.9932 29.2588 18.5361 29.42 18.0333C29.8968 16.5701 30.131 15.0388 30.1133 13.5C30.1666 12.7533 30.1666 8.24665 30.1666 7.44665ZM12.4867 14.3V6.04665L20.38 10.1933C18.1667 11.42 15.2467 12.8066 12.4867 14.3Z"
-                            fill="white"
-                          />
-                        </svg>
-                      </a>
-                    </div>
+          <!-- tg -->
+          <div
+            class="fb"
+            [ngClass]="{
+              'links-dark-special': isDark,
 
-                    <!-- tg -->
-                    <div [ngClass]="{ 'fb in ':true, 'links-dark': isDark, 'links-light': !isDark }" 
-                        [ngStyle]="{ 'border': isDark? '3px solid rgba(255,255,255,0.08)' : '3px solid rgba(255,255,255,0.08)' }" >
-                      <a
-                        href="https://telegram.me/ArapovTrade"
-                        style="padding-top: 5px"
-                      >
-                        <svg
-                          width="28"
-                          height="27"
-                          viewBox="0 0 21 18"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="M18.277 0.930026C18.5241 0.826017 18.7946 0.790145 19.0603 0.826143C19.326 0.862142 19.5772 0.968695 19.7877 1.13471C19.9982 1.30073 20.1604 1.52014 20.2574 1.77011C20.3543 2.02008 20.3825 2.29147 20.339 2.55603L18.071 16.313C17.851 17.64 16.395 18.401 15.178 17.74C14.16 17.187 12.648 16.335 11.288 15.446C10.608 15.001 8.52502 13.576 8.78102 12.562C9.00102 11.695 12.501 8.43703 14.501 6.50003C15.286 5.73903 14.928 5.30003 14.001 6.00003C11.699 7.73803 8.00302 10.381 6.78102 11.125C5.70302 11.781 5.14102 11.893 4.46902 11.781C3.24302 11.577 2.10602 11.261 1.17802 10.876C-0.0759802 10.356 -0.0149803 8.63203 1.17702 8.13003L18.277 0.930026Z"
-                            fill="white"
-                          />
-                        </svg>
-                      </a>
-                    </div>
+              'links-light-special': !isDark
+            }"
+          >
+            <a href="https://telegram.me/ArapovTrade">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11.985 15.408L15.227 19.094C16.427 20.459 17.028 21.142 17.657 20.975C18.285 20.809 18.501 19.911 18.932 18.114L21.322 8.14604C21.987 5.37804 22.319 3.99504 21.581 3.31204C20.843 2.62904 19.564 3.13704 17.006 4.15204L5.13998 8.86504C3.09398 9.67804 2.07099 10.084 2.00599 10.782C1.99833 10.8532 1.99833 10.9249 2.00599 10.996C2.06899 11.695 3.08998 12.104 5.13398 12.923C6.05898 13.294 6.52199 13.48 6.85399 13.835C6.89132 13.875 6.92732 13.9164 6.96199 13.959C7.26799 14.339 7.39799 14.839 7.65899 15.835L8.14798 17.702C8.40098 18.672 8.52799 19.158 8.86099 19.224C9.19399 19.29 9.48299 18.888 10.062 18.083L11.985 15.408ZM11.985 15.408L11.668 15.078C11.306 14.7 11.125 14.512 11.125 14.278C11.125 14.044 11.305 13.855 11.668 13.478L15.241 9.75404"
+                  stroke="#ffffff"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
 
-                    <!-- insta -->
-                    <div [ngClass]="{ 'fb in ':true, 'links-dark': isDark, 'links-light': !isDark }" 
-                        [ngStyle]="{ 'border': isDark? '3px solid rgba(255,255,255,0.08)' : '3px solid rgba(255,255,255,0.08)' }" >
-                      <a
-                        href="https://www.instagram.com/arapovtrade/"
-                        style="padding-top: 5px"
-                      >
-                        <svg
-                          width="27"
-                          height="27"
-                          viewBox="0 0 21 21"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M6.3 0.5H14.7C17.9 0.5 20.5 3.1 20.5 6.3V14.7C20.5 16.2383 19.8889 17.7135 18.8012 18.8012C17.7135 19.8889 16.2383 20.5 14.7 20.5H6.3C3.1 20.5 0.5 17.9 0.5 14.7V6.3C0.5 4.76174 1.11107 3.28649 2.19878 2.19878C3.28649 1.11107 4.76174 0.5 6.3 0.5ZM6.1 2.5C5.14522 2.5 4.22955 2.87928 3.55442 3.55442C2.87928 4.22955 2.5 5.14522 2.5 6.1V14.9C2.5 16.89 4.11 18.5 6.1 18.5H14.9C15.8548 18.5 16.7705 18.1207 17.4456 17.4456C18.1207 16.7705 18.5 15.8548 18.5 14.9V6.1C18.5 4.11 16.89 2.5 14.9 2.5H6.1ZM15.75 4C16.0815 4 16.3995 4.1317 16.6339 4.36612C16.8683 4.60054 17 4.91848 17 5.25C17 5.58152 16.8683 5.89946 16.6339 6.13388C16.3995 6.3683 16.0815 6.5 15.75 6.5C15.4185 6.5 15.1005 6.3683 14.8661 6.13388C14.6317 5.89946 14.5 5.58152 14.5 5.25C14.5 4.91848 14.6317 4.60054 14.8661 4.36612C15.1005 4.1317 15.4185 4 15.75 4ZM10.5 5.5C11.8261 5.5 13.0979 6.02678 14.0355 6.96447C14.9732 7.90215 15.5 9.17392 15.5 10.5C15.5 11.8261 14.9732 13.0979 14.0355 14.0355C13.0979 14.9732 11.8261 15.5 10.5 15.5C9.17392 15.5 7.90215 14.9732 6.96447 14.0355C6.02678 13.0979 5.5 11.8261 5.5 10.5C5.5 9.17392 6.02678 7.90215 6.96447 6.96447C7.90215 6.02678 9.17392 5.5 10.5 5.5ZM10.5 7.5C9.70435 7.5 8.94129 7.81607 8.37868 8.37868C7.81607 8.94129 7.5 9.70435 7.5 10.5C7.5 11.2956 7.81607 12.0587 8.37868 12.6213C8.94129 13.1839 9.70435 13.5 10.5 13.5C11.2956 13.5 12.0587 13.1839 12.6213 12.6213C13.1839 12.0587 13.5 11.2956 13.5 10.5C13.5 9.70435 13.1839 8.94129 12.6213 8.37868C12.0587 7.81607 11.2956 7.5 10.5 7.5Z"
-                            fill="white"
-                          />
-                        </svg>
-                      </a>
-                    </div>
-          </div>  
+          <!-- insta -->
+          <div
+            class="fb"
+            [ngClass]="{
+              'links-dark': isDark,
+              'links-light': !isDark
+            }"
+          >
+            <a href="https://www.instagram.com/arapovtrade/">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 21 21"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.3 0.5H14.7C17.9 0.5 20.5 3.1 20.5 6.3V14.7C20.5 16.2383 19.8889 17.7135 18.8012 18.8012C17.7135 19.8889 16.2383 20.5 14.7 20.5H6.3C3.1 20.5 0.5 17.9 0.5 14.7V6.3C0.5 4.76174 1.11107 3.28649 2.19878 2.19878C3.28649 1.11107 4.76174 0.5 6.3 0.5ZM6.1 2.5C5.14522 2.5 4.22955 2.87928 3.55442 3.55442C2.87928 4.22955 2.5 5.14522 2.5 6.1V14.9C2.5 16.89 4.11 18.5 6.1 18.5H14.9C15.8548 18.5 16.7705 18.1207 17.4456 17.4456C18.1207 16.7705 18.5 15.8548 18.5 14.9V6.1C18.5 4.11 16.89 2.5 14.9 2.5H6.1ZM15.75 4C16.0815 4 16.3995 4.1317 16.6339 4.36612C16.8683 4.60054 17 4.91848 17 5.25C17 5.58152 16.8683 5.89946 16.6339 6.13388C16.3995 6.3683 16.0815 6.5 15.75 6.5C15.4185 6.5 15.1005 6.3683 14.8661 6.13388C14.6317 5.89946 14.5 5.58152 14.5 5.25C14.5 4.91848 14.6317 4.60054 14.8661 4.36612C15.1005 4.1317 15.4185 4 15.75 4ZM10.5 5.5C11.8261 5.5 13.0979 6.02678 14.0355 6.96447C14.9732 7.90215 15.5 9.17392 15.5 10.5C15.5 11.8261 14.9732 13.0979 14.0355 14.0355C13.0979 14.9732 11.8261 15.5 10.5 15.5C9.17392 15.5 7.90215 14.9732 6.96447 14.0355C6.02678 13.0979 5.5 11.8261 5.5 10.5C5.5 9.17392 6.02678 7.90215 6.96447 6.96447C7.90215 6.02678 9.17392 5.5 10.5 5.5ZM10.5 7.5C9.70435 7.5 8.94129 7.81607 8.37868 8.37868C7.81607 8.94129 7.5 9.70435 7.5 10.5C7.5 11.2956 7.81607 12.0587 8.37868 12.6213C8.94129 13.1839 9.70435 13.5 10.5 13.5C11.2956 13.5 12.0587 13.1839 12.6213 12.6213C13.1839 12.0587 13.5 11.2956 13.5 10.5C13.5 9.70435 13.1839 8.94129 12.6213 8.37868C12.0587 7.81607 11.2956 7.5 10.5 7.5Z"
+                  fill="white"
+                />
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
-    <div   [ngClass]="{ 'bg-shapes-footer':true, 'bg-shapes-footer-dark': isDark, 'bg-shapes-footer-light': !isDark }"></div>
+    </div>
+    <div
+      [ngClass]="{
+        'bg-shapes-footer': true,
+        'bg-shapes-footer-dark': isDark,
+        'bg-shapes-footer-light': !isDark
+      }"
+    ></div>
   </div>
 </div>
-
-
-
-<!-- <div class="scroll-to-top" (click)="scrollToTop()">
-  <svg class="progress-ring" width="60" height="60">
-    <circle class="progress-ring__circle"  [attr.stroke]="isDark ? '#d5b900' : '#005DB8'" cx="30" cy="30" r="25" stroke-width="5" />
-    <circle class="progress-ring__path"  [attr.stroke]="isDark ? '#d5b900' : '#005DB8'" cx="30" cy="30" r="25" stroke-width="5" />
-    <svg width="40" height="40" x="10" y="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M12 20L12 4" [attr.stroke]="isDark ? '#d5b900' : '#005DB8'" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M4 12L12 4L20 12" [attr.stroke]="isDark ? '#d5b900' : '#005DB8'"  stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-  </svg>
-</div> -->
-
- 

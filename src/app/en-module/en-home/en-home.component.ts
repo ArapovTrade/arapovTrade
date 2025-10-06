@@ -1,4 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit,
+  ChangeDetectorRef,
+  Component,
+  Inject,
+  OnDestroy,
+  OnInit,
+  Renderer2,
+  RendererFactory2, } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+  import { Subscription } from 'rxjs';
+  declare var AOS: any;
+  import { ThemeservService } from '../../servises/themeserv.service';
 import { Meta, Title } from '@angular/platform-browser';
 import { NavigationEnd, Router } from '@angular/router';
 import { FormGroup } from '@angular/forms';
@@ -11,23 +22,67 @@ import { LangService } from '../../servises/lang.service';
   templateUrl: './en-home.component.html',
   styleUrl: './en-home.component.scss',
 })
-export class EnHomeComponent implements OnInit {
+export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
+    private renderer: Renderer2;
   constructor(
     private router: Router,
     private meta: Meta,
     private titleService: Title,
-    private lang: LangService
+    private lang: LangService,
+      private cdr:ChangeDetectorRef,
+     private themeService:ThemeservService,
+
+    private rendererFactory: RendererFactory2,
+    @Inject(DOCUMENT) private document: Document,
   ) {
-    this.router.events.subscribe((event) => {
-      if (event instanceof NavigationEnd) {
-        if (typeof window !== 'undefined') {
-          // Ваш код, который использует window
-          window.scrollTo(0, 0);
-        }
-      }
-    });
+    // this.router.events.subscribe((event) => {
+    //   if (event instanceof NavigationEnd) {
+    //     if (typeof window !== 'undefined') {
+    //       // Ваш код, который использует window
+    //       window.scrollTo(0, 0);
+    //     }
+    //   }
+    // });
+    this.renderer = rendererFactory.createRenderer(null, null);
+
   }
   registForm: any;
+
+  ngAfterViewInit() {
+  setTimeout(() => {
+    if (typeof AOS !== 'undefined') {
+      AOS.init({
+        duration: 1000,
+        once: false,
+        offset: 100
+      });
+    }
+  }, 500); // Задержка 0.5s
+}
+  isMenuOpen = false;
+
+  openMenu() {
+    this.isMenuOpen = true;
+  }
+
+  closeMenu() {
+    this.isMenuOpen = false;
+  }
+
+  // toggleMenu() {
+  //   this.isMenuOpen = !this.isMenuOpen;
+  // }
+  toggleMenu(): void {
+    this.menuOpen = !this.menuOpen;
+    if (this.menuOpen) {
+      this.dropdownOpen = false; // Закрываем меню языков, если открываем навигацию
+    }
+  } 
+  isDark!:boolean  ;
+  languages = ['ua', 'en', 'ru']; // какие языки нужны
+  currentLang = 'en';
+  dropdownOpen = false;
+  menuOpen: boolean = false;
 
   ngOnInit(): void {
     this.lang.setNumber(3);
@@ -50,21 +105,78 @@ export class EnHomeComponent implements OnInit {
       content:
         'trading courses, trading, currencies, trading training, free trading training, free trading training, cryptocurrency trading training, free trading courses, trading from scratch, trading courses',
     });
-  }
-  isMenuOpen = false;
 
-  openMenu() {
-    this.isMenuOpen = true;
+      this.themeSubscription =this.themeService.getTheme().subscribe(data=>{
+      this.isDark=data;
+        this.cdr.detectChanges();
+    })
+
+
+    this.routerSubscription = this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        if (typeof window !== 'undefined') {
+          window.scrollTo(0, 0);
+        }
+      }
+    });
   }
 
-  closeMenu() {
-    this.isMenuOpen = false;
+  scrollToRegistration() {
+    const element = document.getElementById('registration');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   }
 
-  toggleMenu() {
-    this.isMenuOpen = !this.isMenuOpen;
+  navigateToStudy() {
+    this.router.navigateByUrl('/uk/studying');
   }
 
+
+   private routerSubscription!: Subscription;
+    private themeSubscription!: Subscription;
+     ngOnDestroy() {
+      // Отписка от подписок
+      if (this.routerSubscription) {
+        this.routerSubscription.unsubscribe();
+      }
+      if (this.themeSubscription) {
+        this.themeSubscription.unsubscribe();
+      }
+    } 
+    hovered: string | null = null;
+    toggleTheme() {
+    this.isDark = !this.isDark;
+    this.themeService.setTheme(this.isDark)
+     
+     this.refreshAOS();
+
+
+  }
+refreshAOS() {
+    if (typeof AOS !== 'undefined') {
+      setTimeout(() => {
+        AOS.refresh(); // Обновление позиций AOS
+        this.cdr.detectChanges(); // Принудительное обнаружение изменений
+      }, 100); // Задержка для синхронизации
+    } else {
+      console.warn('AOS is not defined, refresh skipped');
+    }
+  }
+   
+  toggleDropdown() {
+    this.dropdownOpen = !this.dropdownOpen;
+  }
+  selectLang(lang: string) {
+    this.currentLang = lang;
+
+    this.dropdownOpen = false;
+
+     
+  }
+  navigateTo(path: string) {
+    this.router.navigate([path]);
+  }
   //popup
   flag: boolean = false;
   flagTrue: boolean = true;
@@ -110,7 +222,7 @@ export class EnHomeComponent implements OnInit {
     this.flag = true;
     this.flagTrue = false;
   }
-  navigateToStudy() {
-    this.router.navigateByUrl('/en/studying');
-  }
+//   navigateToStudy() {
+//     this.router.navigateByUrl('/en/studying');
+//   }
 }

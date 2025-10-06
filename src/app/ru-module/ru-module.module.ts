@@ -32,6 +32,7 @@ const routes: Routes = [
     loadChildren: () =>
       import('./ru-home/ru-blog/ru-blog.module').then((m) => m.RuBlogModule),
   },
+  {path:'main', loadChildren:()=>import('./ru-home/ru-crypto/ru-crypto.module').then((m)=>m.RuCryptoModule)}
    
 ];
 
