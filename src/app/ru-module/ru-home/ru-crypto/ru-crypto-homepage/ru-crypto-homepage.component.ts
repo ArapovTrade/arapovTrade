@@ -39,19 +39,19 @@ export class RuCryptoHomepageComponent  implements OnInit, AfterViewInit, OnDest
     menuOpen: boolean = false;
     ngOnInit() {
       this.titleService.setTitle(
-        'Безкоштовне навчання трейдингу — курс Ігоря Арапова'
+        'Бесплатное обучение трейдингу — курс Игоря Арапова'
       );
       this.meta.updateTag({ name: 'robots', content: 'index, follow' });
       this.meta.addTag({
         name: 'description',
         content:
-          'Безкоштовний курс з трейдингу Ігоря Арапова: 130 + статей і 70 відео. Вивчайте теханаліз, ризик-менеджмент і торгові стратегії онлайн',
+          'Бесплатный курс по трейдингу Игоря Арапова: 130+ статей и 70 видео. Изучайте теханализ, риск-менеджмент и торговые стратегии онлайн',
       });
   
       this.meta.addTag({
         name: 'keywords',
         content:
-          'трейдинг, навчання трейдингу, технічний аналіз, фінансова біржа, торгова система, Ігор Арапов',
+          'Трейдинг, Обучение трейдингу, Технический анализ, Финансовая биржа, Торговая система, Игорь Арапов',
       });
   
       this.meta.updateTag({ name: 'datePublished', content: '2025-06-07' });
