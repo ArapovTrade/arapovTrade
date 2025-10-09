@@ -16,13 +16,14 @@ theme$=new BehaviorSubject(false)
     const savedTheme = this.getLocal('theme');
      
     if (savedTheme) {
-      this.isDark = savedTheme === 'dark';
+      console.log(savedTheme)
+      this.isDark = savedTheme === 'light';
        this.theme$.next(this.isDark)
     }
     return this.theme$
   }
   setTheme(theme:boolean){
-    this.setLocal('theme', theme ? 'dark' : 'light');
+    this.setLocal('theme', theme ? 'light' : 'dark');
     this.theme$.next(theme)
   }
 
