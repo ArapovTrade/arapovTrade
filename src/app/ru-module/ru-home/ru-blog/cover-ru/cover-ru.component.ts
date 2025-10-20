@@ -1,6 +1,6 @@
 import { ChangeDetectorRef, Component, Renderer2, RendererFactory2,
    
-  Inject, } from '@angular/core';
+  Inject,   AfterViewInit, OnDestroy,OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ArticlesService } from '../../../../servises/articles.service';
 import { LangService } from '../../../../servises/lang.service';
@@ -13,6 +13,9 @@ import { Meta, Title } from '@angular/platform-browser';
 import { filter } from 'rxjs/operators';
 import { MetaservService } from '../../../../servises/metaserv.service';
  import { takeUntil } from 'rxjs/operators';
+ import { Subscription } from 'rxjs';
+declare var AOS: any;
+import { ThemeservService } from '../../../../servises/themeserv.service';
 @Component({
   selector: 'app-cover-ru',
   templateUrl: './cover-ru.component.html',
@@ -27,13 +30,13 @@ dropdownOpen = false;
   breadcrumbs: any[] = []; // Массив для хлебных крошек
 
   jsonLd: any; // Объект для JSON-LD
-  toggleDropdown() {
-    this.dropdownOpen = !this.dropdownOpen;
-  }
+  // toggleDropdown() {
+  //   this.dropdownOpen = !this.dropdownOpen;
+  // }
 
-  closeDropdown() {
-    this.dropdownOpen = true;
-  }
+  // closeDropdown() {
+  //   this.dropdownOpen = true;
+  // }
 
    
   constructor( private router: Router,
@@ -44,25 +47,39 @@ dropdownOpen = false;
       private searchSer: SearchServiceService,
       private languageService: ServLangueageService,
       private rendererFactory: RendererFactory2,
+      private themeService:ThemeservService,
      @Inject(DOCUMENT) private document: Document,
       private meta: Meta,
          private titleService: Title,
          private metaTegServ: MetaservService,
     ) {
-        this.renderer = rendererFactory.createRenderer(null, null);
-            this.router.events.subscribe((event) => {
-              if (event instanceof NavigationEnd) {
-                if (typeof window !== 'undefined') {
-                  window.scrollTo(0, 0);
-                }
-              }
-            });
+        // this.renderer = rendererFactory.createRenderer(null, null);
+        //     this.router.events.subscribe((event) => {
+        //       if (event instanceof NavigationEnd) {
+        //         if (typeof window !== 'undefined') {
+        //           window.scrollTo(0, 0);
+        //         }
+        //       }
+        //     });
      
+        this.renderer = rendererFactory.createRenderer(null, null);
     
      
    
      
   }
+
+ngAfterViewInit() {
+  setTimeout(() => {
+    if (typeof AOS !== 'undefined') {
+      AOS.init({
+        duration: 1000,
+        once: false,
+        offset: 100
+      });
+    }
+  }, 500); // Задержка 0.5s
+}
 
   changeLanguage(lang: string) {
     // Получение текущего пути и параметров маршрута
@@ -89,8 +106,13 @@ dropdownOpen = false;
       window.scrollTo(0, 0);
     });
   }
-
+menuOpen: boolean = false;
   isMenuOpen = false;
+isDark!:boolean  ;
+  languages = ['ua', 'en', 'ru']; // какие языки нужны
+  currentLang = 'ru';
+   private routerSubscription!: Subscription;
+    private themeSubscription!: Subscription;
 
   openMenu() {
     this.isMenuOpen = true;
@@ -100,7 +122,11 @@ dropdownOpen = false;
     this.isMenuOpen = false;
   }
   toggleMenu() {
-    this.isMenuOpen = !this.isMenuOpen;
+   this.isMenuOpen = !this.isMenuOpen;
+    this.menuOpen = !this.menuOpen;
+    if (this.menuOpen) {
+      this.dropdownOpen = false; // Закрываем меню языков, если открываем навигацию
+    }
   }
 
   setUkraine() {
@@ -124,6 +150,24 @@ dropdownOpen = false;
 
 
   ngOnInit(): void {
+this.themeSubscription =this.themeService.getTheme().subscribe(data=>{
+      this.isDark=data;
+        this.cdr.detectChanges();
+    })
+
+
+    this.routerSubscription = this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        if (typeof window !== 'undefined') {
+          window.scrollTo(0, 0);
+        }
+      }
+    });
+
+
+
+
+
        this.metaTegServ.addOrganizationSchema();
       this.languageService.languageCode$.subscribe((code) => {
         this.checkLang = code;
@@ -280,10 +324,43 @@ dropdownOpen = false;
       this.cdr.detectChanges();
     }
     ngOnDestroy() {
-      this.destroy$.next();
+       this.destroy$.next();
       this.destroy$.complete();
+      if (this.routerSubscription) {
+        this.routerSubscription.unsubscribe();
+      }
+      if (this.themeSubscription) {
+        this.themeSubscription.unsubscribe();
+      }
     }
   
+toggleTheme() {
+    this.isDark = !this.isDark;
+    this.themeService.setTheme(this.isDark)
+     
+     this.refreshAOS();
+
+
+  }
+  refreshAOS() {
+    if (typeof AOS !== 'undefined') {
+      setTimeout(() => {
+        AOS.refresh(); // Обновление позиций AOS
+        this.cdr.detectChanges(); // Принудительное обнаружение изменений
+      }, 100); // Задержка для синхронизации
+    } else {
+      console.warn('AOS is not defined, refresh skipped');
+    }
+  }
+   hovered: string | null = null;   
+
+
+
+
+
+
+
+
      //delete description
   private removeMetaDescriptionIfExists() {
   const head = this.document.head;
@@ -361,7 +438,7 @@ dropdownOpen = false;
     } else if (urlPath === 'ru' || urlPath === 'uk' || urlPath === 'en') {
       if (urlPath === 'ru') {
         this.breadcrumbs.push(
-          { name: 'Головна', url: 'https://arapov.trade' },
+          { name: 'Главная', url: 'https://arapov.trade/ru/main' },
           { name: 'Автор курса', url: 'https://arapov.trade/ru' }
         );
       } else if (urlPath === 'uk') {
@@ -371,7 +448,7 @@ dropdownOpen = false;
         );
       } else if (urlPath === 'en') {
         this.breadcrumbs.push(
-          { name: 'Головна', url: 'https://arapov.trade' },
+          { name: 'Main', url: 'https://arapov.trade/en/main' },
           { name: 'Course author', url: 'https://arapov.trade/en' }
         );
       }
@@ -382,7 +459,7 @@ dropdownOpen = false;
     ) {
       if (urlPath === 'ru/studying') {
         this.breadcrumbs.push(
-          { name: 'Головна', url: 'https://arapov.trade' },
+         { name: 'Главная', url: 'https://arapov.trade/ru/main' },
           { name: 'Автор курса', url: 'https://arapov.trade/ru' },
           {
             name: 'Обучение трейдингу',
@@ -400,7 +477,7 @@ dropdownOpen = false;
         );
       } else if (urlPath === 'en/studying') {
         this.breadcrumbs.push(
-          { name: 'Головна', url: 'https://arapov.trade' },
+         { name: 'Main', url: 'https://arapov.trade/en/main' },
           { name: 'Course author', url: 'https://arapov.trade/en' },
           {
             name: 'Trading training',
@@ -415,7 +492,7 @@ dropdownOpen = false;
     ) {
       if (urlPath === 'ru/freestudying') {
         this.breadcrumbs.push(
-          { name: 'Головна', url: 'https://arapov.trade' },
+          { name: 'Главная', url: 'https://arapov.trade/ru/main' },
           { name: 'Автор курса', url: 'https://arapov.trade/ru' },
           {
             name: 'Бесплатное обучение трейдингу',
@@ -433,7 +510,7 @@ dropdownOpen = false;
         );
       } else if (urlPath === 'en/freestudying') {
         this.breadcrumbs.push(
-          { name: 'Головна', url: 'https://arapov.trade' },
+       { name: 'Main', url: 'https://arapov.trade/en/main' },
           { name: 'Author of the Course', url: 'https://arapov.trade/en' },
           {
             name: 'Free trading education',
@@ -448,7 +525,7 @@ dropdownOpen = false;
     ) {
       if (urlPath === 'ru/freestudying/freeeducation') {
         this.breadcrumbs.push(
-          { name: 'Головна', url: 'https://arapov.trade' },
+         { name: 'Главная', url: 'https://arapov.trade/ru/main' },
           { name: 'Автор курса', url: 'https://arapov.trade/ru' },
           {
             name: 'Бесплатное обучение трейдингу',
@@ -474,7 +551,7 @@ dropdownOpen = false;
         );
       } else if (urlPath === 'en/freestudying/freeeducation') {
         this.breadcrumbs.push(
-          { name: 'Головна', url: 'https://arapov.trade' },
+          { name: 'Main', url: 'https://arapov.trade/en/main' },
           { name: 'Author of the Course', url: 'https://arapov.trade/en' },
           {
             name: 'Free trading education',
@@ -493,7 +570,7 @@ dropdownOpen = false;
     ) {
       if (urlPath === 'ru/freestudying/practic') {
         this.breadcrumbs.push(
-          { name: 'Головна', url: 'https://arapov.trade' },
+       { name: 'Главная', url: 'https://arapov.trade/ru/main' },
           { name: 'Автор курса', url: 'https://arapov.trade/ru' },
           {
             name: 'Бесплатное обучение трейдингу',
@@ -519,7 +596,7 @@ dropdownOpen = false;
         );
       } else if (urlPath === 'en/freestudying/practic') {
         this.breadcrumbs.push(
-          { name: 'Головна', url: 'https://arapov.trade' },
+         { name: 'Main', url: 'https://arapov.trade/en/main' },
           { name: 'Author of the Course', url: 'https://arapov.trade/en' },
           {
             name: 'Free trading education',
@@ -538,7 +615,7 @@ dropdownOpen = false;
     ) {
       if (urlPath === 'ru/disclaimer') {
         this.breadcrumbs.push(
-          { name: 'Головна', url: 'https://arapov.trade' },
+          { name: 'Главная', url: 'https://arapov.trade/ru/main' },
           { name: 'Автор курса', url: 'https://arapov.trade/ru' },
           {
             name: 'Отказ от ответственности',
@@ -556,7 +633,7 @@ dropdownOpen = false;
         );
       } else if (urlPath === 'en/disclaimer') {
         this.breadcrumbs.push(
-          { name: 'Головна', url: 'https://arapov.trade' },
+       { name: 'Main', url: 'https://arapov.trade/en/main' },
           { name: 'Course author', url: 'https://arapov.trade/en' },
           {
             name: 'Disclaimer',
@@ -569,7 +646,7 @@ dropdownOpen = false;
 
       if (urlArr[0] === 'ru') {
         this.breadcrumbs.push(
-          { name: 'Головна', url: 'https://arapov.trade' },
+         { name: 'Главная', url: 'https://arapov.trade/ru/main' },
           { name: 'Автор курса', url: 'https://arapov.trade/ru' },
           {
             name: 'Бесплатное обучение трейдингу',
@@ -595,7 +672,7 @@ dropdownOpen = false;
         );
       } else if (urlArr[0] === 'en') {
         this.breadcrumbs.push(
-          { name: 'Головна', url: 'https://arapov.trade' },
+         { name: 'Main', url: 'https://arapov.trade/en/main' },
           { name: 'Author of the Course', url: 'https://arapov.trade/en' },
           {
             name: 'Free trading education',
@@ -648,4 +725,14 @@ dropdownOpen = false;
   }
 
   navigateTo(link:string){ this.router.navigate([link]);}
+   toggleDropdown() {
+    this.dropdownOpen = !this.dropdownOpen;
+  }
+  selectLang(lang: string) {
+    this.currentLang = lang;
+
+    this.dropdownOpen = false;
+
+     
+  }
 }

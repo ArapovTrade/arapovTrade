@@ -8,6 +8,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { CoverComponent } from './cover/cover.component';
 import { SearchblockComponent } from '../../../searchblock/searchblock.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+ 
 
 const routes: Routes = [
   { path: '', component: CoverComponent,
@@ -943,7 +944,8 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [UkBlogHomepageComponent, CoverComponent,SearchblockComponent],
+  declarations: [UkBlogHomepageComponent, CoverComponent,SearchblockComponent ],
   imports: [CommonModule,MatExpansionModule,FormsModule, ReactiveFormsModule, MatPaginatorModule, RouterModule.forChild(routes)],
+  
 })
 export class UkblogModule {}
