@@ -1346,7 +1346,11 @@ display: flex
         display: none;
 }
 }
-
+@media (max-width: 766px) {
+    .icons{
+        width: 200px;
+    }
+}
 
 
 

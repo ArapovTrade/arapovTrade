@@ -1743,23 +1743,4 @@ display: flex
 
  
 
-@media (max-width: 766px) {
-    .icons {
-        width: 230px !important;
-    }
-}
-
-@media (max-width: 766px) {
-    .follow-us-block  {
-        width: 335px;
-        top: 545px;
-        gap: 30px !important;
-    }
-}
-
-@media (max-width: 440px) {
-    .follow-us-block {
-        flex-wrap: wrap !important;
-        gap: 0 !important;
-    }
-}
+ 
