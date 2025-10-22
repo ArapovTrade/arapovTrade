@@ -92,7 +92,7 @@ body {
   font-family: 'Lato';
   background: rgb(88, 88, 88);
   color: black;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 23px;
 }
 body.loading {
@@ -254,7 +254,7 @@ body {
   //font-family: 'Lato', serif;
   background: white;
   color: black;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 23px;
 }
 @media (min-width: 1220px) {
@@ -3540,7 +3540,7 @@ background-clip: text;
 -webkit-text-fill-color: transparent;
 font-family: advent pro;
 font-size: 45px;
-font-weight: bold;
+font-weight: bold;    
 }
 .dark-theme-main-cont .container h2,.dark-theme-main-cont .article-section h2{
   background: linear-gradient(90deg, #D6BA01, #FCFE8A);
@@ -3549,7 +3549,7 @@ background-clip: text;
 -webkit-text-fill-color: transparent;
 font-family: advent pro;
 font-size: 30px;
-font-weight: bold;
+font-weight: bold;       width: fit-content;
 }
 .dark-theme-main-cont .container h3,.dark-theme-main-cont .article-section h3{
   background: linear-gradient(90deg, #D6BA01, #FCFE8A);
@@ -3558,7 +3558,7 @@ background-clip: text;
 -webkit-text-fill-color: transparent;
 font-family: advent pro;
 font-size: 24px;
-font-weight: bold;
+font-weight: bold;     width: fit-content;
 }
 .dark-theme-main-cont .container h4{
   background: linear-gradient(90deg, #D6BA01, #FCFE8A);
@@ -3567,23 +3567,32 @@ background-clip: text;
 -webkit-text-fill-color: transparent;
 font-family: advent pro;
 font-size: 18px;
-font-weight: bold;
+font-weight: bold;     width: fit-content;
 }
 .dark-theme-main-cont .container strong{
-  background: linear-gradient(90deg, #FCFE8A, #D6BA01);
--webkit-background-clip: text;
-background-clip: text;
--webkit-text-fill-color: transparent;
-
+//   background: linear-gradient(90deg, #FCFE8A, #D6BA01);
+// -webkit-background-clip: text;
+// background-clip: text;
+// -webkit-text-fill-color: transparent;
+        font-weight: 900;
+    font-style: italic;
+    // color: rgba(0, 0, 0, 0.85);
+    color: #e8da43;
 }
   .dark-theme-main-cont .container a{
   text-decoration: underline;
-    text-underline-offset: 4px;
+    text-underline-offset: 3px;
     color: white !important;
-    font-weight: 400;
+    font-weight: 600;
 
 }
-   
+    .light-theme-main-cont .container a{
+  text-decoration: underline;
+    text-underline-offset: 3px;
+     color: #015A8C !important;
+    font-weight: 600;
+
+}
 
 
 
@@ -3596,7 +3605,7 @@ background-clip: text;
 -webkit-text-fill-color: transparent;
 font-family: advent pro;
 font-size: 45px;
-font-weight: bold;
+font-weight: bold;    
 
 }
 .light-theme-main-cont .container h2,.light-theme-main-cont .article-section h2{
@@ -3606,7 +3615,7 @@ background-clip: text;
 -webkit-text-fill-color: transparent;
 font-family: advent pro;
  font-size: 30px;
-font-weight: bold;
+font-weight: bold;     width: fit-content;
 
 }
 .light-theme-main-cont .container h3.light-theme-main-cont .article-section h3{
@@ -3616,7 +3625,7 @@ background-clip: text;
 -webkit-text-fill-color: transparent;
 font-family: advent pro;
   font-size: 24px;
-font-weight: bold;
+font-weight: bold;     width: fit-content;
 }
 .light-theme-main-cont .container h4{
   background: linear-gradient(90deg, #03324c, #0183cd)  ;
@@ -3625,14 +3634,17 @@ background-clip: text;
 -webkit-text-fill-color: transparent;
 font-family: advent pro;
 font-size: 18px;
-font-weight: bold;
+font-weight: bold;     width: fit-content;
 }
 .light-theme-main-cont .container strong{
-  background: linear-gradient(90deg, #0183cd, #03324c)  ;
-   -webkit-background-clip: text;
-background-clip: text;
--webkit-text-fill-color: transparent;
-
+//   background: linear-gradient(90deg, #0183cd, #03324c)  ;
+//    -webkit-background-clip: text;
+// background-clip: text;
+// -webkit-text-fill-color: transparent;
+        font-weight: 900;
+    font-style: italic;
+    color: rgba(0, 0, 0, 0.85);
+    //color: #e8da43;
 }
 .container .hero-section{
 position: relative;
@@ -4109,7 +4121,7 @@ font-size: 16px;
 
 @media (min-width: 1100px){
   .hero-section {
-        height: 500px !important;
+        height: 550px !important;
     }
 }
 
@@ -4162,3 +4174,7 @@ margin: 20px auto 50px !important;
         }
 
         
+
+
+
+    
