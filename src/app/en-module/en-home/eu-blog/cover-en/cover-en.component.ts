@@ -724,7 +724,7 @@ toggleTheme() {
     );
   }
 
-  navigateTo(link:string){ this.router.navigate([link]);}
+  navigateTo(link:string){ this.router.navigate([link]); this.menuOpen=false;}
   toggleDropdown() {
     this.dropdownOpen = !this.dropdownOpen;
   }

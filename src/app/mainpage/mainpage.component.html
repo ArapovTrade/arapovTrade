@@ -27,12 +27,13 @@
             class="nav-list desktop-nav"
             [ngClass]="{ 'menu-item-dark': isDark, 'menu-item-light': !isDark }"
           >
-             <li (click)="navigateTo('')" [ngStyle]="{color:isDark?'#FFCD29':'#0082CC'}">
+            <li
+              (click)="navigateTo('')"
+              [ngStyle]="{ color: isDark ? '#FFCD29' : '#0082CC' }"
+            >
               Головна
             </li>
-            <li (click)="navigateTo('uk/freestudying')"    >
-             безкоштовнi курси
-            </li>
+            <li (click)="navigateTo('uk/freestudying')">безкоштовнi курси</li>
             <li (click)="navigateTo('uk')">Про автора</li>
             <li (click)="navigateTo('uk/studying')">Професiйнi курси</li>
           </ul>
@@ -147,6 +148,7 @@
               </div>
             </button>
           </div>
+
           <!-- Иконка меню и выпадающее меню для планшетов -->
           <div class="menu-switcher" [class.open]="menuOpen">
             <button
@@ -154,7 +156,7 @@
               (click)="toggleMenu()"
               [ngStyle]="{ background: isDark ? '#2c2a06' : '#DBE2E7' }"
             >
-              <span class="icon flex">
+              <span class="icon flex" *ngIf="!menuOpen">
                 <img
                   *ngIf="isDark"
                   src="assets/redesignArapovTrade/img/menu-button.svg"
@@ -166,37 +168,64 @@
                   alt="menu_icon"
                 />
               </span>
+
+              <span class="icon flex cross" *ngIf="menuOpen">
+                <img
+                  *ngIf="isDark"
+                  src="assets/redesignArapovTrade/img/menu-button-cross.svg"
+                  alt="menu_icon"
+                />
+                <img
+                  *ngIf="!isDark"
+                  src="assets/redesignArapovTrade/img/menu-button-cross-light.svg"
+                  alt="menu_icon"
+                />
+              </span>
             </button>
-            <ul
-              class="menu-dropdown"
-              *ngIf="menuOpen"
-              [ngStyle]="{ background: isDark ? '#2c2a06' : '#DBE2E7' }"
-            >
-              <li
-                (click)="navigateTo('uk/freestudying')"
-                [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-                [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-              >
-                Безкоштовне навчання трейдингу
-              </li>
-              <li
-                (click)="navigateTo('uk')"
-                [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-                [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-              >
-                Про автора
-              </li>
-              <li
-                (click)="navigateTo('uk/studying')"
-                [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-                [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-              >
-                Курси з трейдингу
-              </li>
-            </ul>
           </div>
         </div>
       </div>
+
+      <div class="mask_drop-menu" *ngIf="menuOpen">
+        <div
+          class="menu-dropdown"
+          [ngStyle]="{
+            background: isDark ? 'rgba(1, 1, 1, 1)' : 'rgba(255, 255, 255, 1)'
+          }"
+        >
+          <ul>
+            <li
+              (click)="navigateTo('')"
+              [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+              [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
+            >
+              ГОЛОВНА
+            </li>
+            <li
+              (click)="navigateTo('uk/freestudying')"
+              [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+              [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
+            >
+              БЕЗКОШТОВНІ КУРСИ
+            </li>
+            <li
+              (click)="navigateTo('uk')"
+              [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+              [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
+            >
+              ПРО АВТОРА
+            </li>
+            <li
+              (click)="navigateTo('uk/studying')"
+              [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+              [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
+            >
+              ПРОФЕСІЙНІ КУРСИ
+            </li>
+          </ul>
+        </div>
+      </div>
+
       <div class="hero-section-main">
         <div class="flex-row-e">
           <div class="flex-row-f" data-aos="fade-up" data-aos-delay="300">
@@ -263,12 +292,8 @@
                   }"-->
                 </div>
 
-                <div
-                  class="podrobnee desc"
-                  (click)="navigateTo('uk/studying')"
-                  
-                >
-                  <div class="icon-play ">
+                <div class="podrobnee desc" (click)="navigateTo('uk/studying')">
+                  <div class="icon-play">
                     <!-- <div
                       class="frame-1"
                       [ngStyle]="{
@@ -279,35 +304,35 @@
                       }"
                     ></div> -->
 
-                    <svg   
-                     [ngClass]="{ 
-                    'icon-play-dark': isDark,
-                    'icon-play-light': !isDark
-                  }"
+                    <svg
+                      [ngClass]="{
+                        'icon-play-dark': isDark,
+                        'icon-play-light': !isDark
+                      }"
                       width="40"
                       height="41"
                       viewBox="0 0 40 41"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      <rect  [ngClass]="{ 
-                    'icon-play-dark-rect': isDark,
-                    'icon-play-light-rect': !isDark
-                  }"
+                      <rect
+                        [ngClass]="{
+                          'icon-play-dark-rect': isDark,
+                          'icon-play-light-rect': !isDark
+                        }"
                         x="-1"
                         y="1"
                         width="38"
                         height="38"
                         rx="19"
                         transform="matrix(-1 0 0 1 38 0.5)"
-                        [attr.stroke]="isDark?'#ffffff':'#0C263A'"
+                        [attr.stroke]="isDark ? '#ffffff' : '#0C263A'"
                         stroke-width="2"
                       />
                       <g clip-path="url(#clip0_296_9993)">
                         <path
                           d="M18.0729 13.882C17.1869 13.2912 16 13.9264 16 14.9914V26.0086C16 27.0736 17.1869 27.7088 18.0729 27.118L26.3359 21.6094C27.1275 21.0816 27.1275 19.9184 26.3359 19.3906L18.0729 13.882Z"
-                         
-                         [attr.stroke]="isDark?'#ffffff':'#0C263A'"
+                          [attr.stroke]="isDark ? '#ffffff' : '#0C263A'"
                           stroke-width="2"
                           stroke-linecap="round"
                           stroke-linejoin="round"
@@ -324,9 +349,6 @@
                         </clipPath>
                       </defs>
                     </svg>
-                     
-
-
                   </div>
                 </div>
 
@@ -339,35 +361,35 @@
                   }"
                 >
                   <div class="icon-play">
-                    <svg   
-                     [ngClass]="{ 
-                    'icon-play-dark': isDark,
-                    'icon-play-light': !isDark
-                  }"
+                    <svg
+                      [ngClass]="{
+                        'icon-play-dark': isDark,
+                        'icon-play-light': !isDark
+                      }"
                       width="40"
                       height="41"
                       viewBox="0 0 40 41"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      <rect  [ngClass]="{ 
-                    'icon-play-dark-rect': isDark,
-                    'icon-play-light-rect': !isDark
-                  }"
+                      <rect
+                        [ngClass]="{
+                          'icon-play-dark-rect': isDark,
+                          'icon-play-light-rect': !isDark
+                        }"
                         x="-1"
                         y="1"
                         width="38"
                         height="38"
                         rx="19"
                         transform="matrix(-1 0 0 1 38 0.5)"
-                        [attr.stroke]="isDark?'#FCDB35':'#0082CC'"
+                        [attr.stroke]="isDark ? '#FCDB35' : '#0082CC'"
                         stroke-width="2"
                       />
                       <g clip-path="url(#clip0_296_9993)">
                         <path
                           d="M18.0729 13.882C17.1869 13.2912 16 13.9264 16 14.9914V26.0086C16 27.0736 17.1869 27.7088 18.0729 27.118L26.3359 21.6094C27.1275 21.0816 27.1275 19.9184 26.3359 19.3906L18.0729 13.882Z"
-                         
-                         [attr.stroke]="isDark?'#FCDB35':'#0082CC'"
+                          [attr.stroke]="isDark ? '#FCDB35' : '#0082CC'"
                           stroke-width="2"
                           stroke-linecap="round"
                           stroke-linejoin="round"
@@ -384,9 +406,8 @@
                         </clipPath>
                       </defs>
                     </svg>
-                     
                   </div>
-                  <span class="text-p">Детальніше</span> 
+                  <span class="text-p">Детальніше</span>
                 </div>
               </div>
 
@@ -1449,9 +1470,7 @@
         <div class="menu">
           <span class="menu-title">Меню</span>
           <div class="menu-title-block">
-            <a (click)="navigateTo('')" class="menu-title_text"
-              >Головна</a
-            >
+            <a (click)="navigateTo('')" class="menu-title_text">Головна</a>
           </div>
           <div class="menu-title-block">
             <a (click)="navigateTo('uk')" class="menu-title_text"
@@ -1491,24 +1510,41 @@
         </div>
 
         <div class="menu">
-          <span class="menu-title">Нашi проекти</span
+          <span class="menu-title">Нашi проекти</span>
+          <a
+            href="https://arapov.education/ua/course-ua/"
+            target="_blank"
+            class="menu-title-block menu-title_text"
           >
-          <a href="https://arapov.education/ua/course-ua/" target="_blank" class="menu-title-block menu-title_text">
-              
-           <span class="menu-title-block menu-title_text"
-            >  Швидкий старт у трейдингу</span> </a> 
-             <a href="https://arapov.education/ua/reg-workshop-ua/" target="_blank" class="menu-title-block menu-title_text">
-              
-           <span class="menu-title-block menu-title_text"
-            >  Вступ до трейдингу</span> </a> 
-             <a href="https://arapov.trade/uk/studying" target="_blank" class="menu-title-block menu-title_text">
-              
-           <span class="menu-title-block menu-title_text"
-            >  Професійні курси</span> </a> 
-             <a href="https://arapovcopytrade.com/ua/invest-ua/" target="_blank" class="menu-title-block menu-title_text"> 
-              
-           <span class="menu-title-block menu-title_text"
-            >  Копiтрейдинг</span> </a> 
+            <span class="menu-title-block menu-title_text">
+              Швидкий старт у трейдингу</span
+            >
+          </a>
+          <a
+            href="https://arapov.education/ua/reg-workshop-ua/"
+            target="_blank"
+            class="menu-title-block menu-title_text"
+          >
+            <span class="menu-title-block menu-title_text">
+              Вступ до трейдингу</span
+            >
+          </a>
+          <a
+            href="https://arapov.trade/uk/studying"
+            target="_blank"
+            class="menu-title-block menu-title_text"
+          >
+            <span class="menu-title-block menu-title_text">
+              Професійні курси</span
+            >
+          </a>
+          <a
+            href="https://arapovcopytrade.com/ua/invest-ua/"
+            target="_blank"
+            class="menu-title-block menu-title_text"
+          >
+            <span class="menu-title-block menu-title_text"> Копiтрейдинг</span>
+          </a>
         </div>
       </div>
     </div>
@@ -1518,8 +1554,8 @@
         <div class="box-b">
           <span class="text-2d">Arapov.Trade</span>
           <div class="pic-14"></div>
-          <span class="text-2e">2025. Всі права захищені.</span><span class="text-2e">ФОП Арапов І.В.
-ІПН 3314507171</span>
+          <span class="text-2e">2025. Всі права захищені.</span
+          ><span class="text-2e">ФОП Арапов І.В. ІПН 3314507171</span>
         </div>
         <div class="section-18">
           <!-- facebook -->

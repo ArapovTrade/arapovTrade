@@ -3,6 +3,49 @@
   class="main-container"
   [ngStyle]="{ 'background-color': isDark ? '#141500' : '#FFFFFF' }"
 >
+ <div class="mask_drop-menu" *ngIf="menuOpen" style="margin-top: 40px;">
+        <div  
+          class="menu-dropdown"
+          [ngStyle]="{
+            background: isDark ? 'rgba(1, 1, 1, 1)' : 'rgba(255, 255, 255, 1)',
+             
+          }"
+        >
+          <ul>
+            <li
+              (click)="navigateTo('en/main')"
+              [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+              [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
+            >
+              MAIN
+            </li>
+            <li
+              (click)="navigateTo('en/freestudying')"
+              [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+              [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
+            >
+              FREE COURSES
+            </li>
+            <li
+              (click)="navigateTo('en')"
+              [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+              [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
+            >
+              ABOUT THE AUTHOR
+            </li>
+            <li
+              (click)="navigateTo('en/studying')"
+              [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+              [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
+            >
+              PROFESSIONAL COURSES
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+
   <div class="author-page_section-one">
     <div class="header-new_block" data-aos="fade-down" data-aos-delay="300">
       <div class="header-logo-block">
@@ -149,53 +192,38 @@
         </div>
 
         <div class="menu-switcher" [class.open]="menuOpen">
-          <button
-            class="menu-btn"
-            (click)="toggleMenu()"
-            [ngStyle]="{ background: isDark ? '#2c2a06' : '#DBE2E7' }"
-          >
-            <span class="icon flex">
-              <img
-                *ngIf="isDark"
-                src="assets/redesignArapovTrade/img/menu-button.svg"
-                alt="menu_icon"
-              />
-              <img
-                *ngIf="!isDark"
-                src="assets/redesignArapovTrade/img/menu-button-light.svg"
-                alt="menu_icon"
-              />
-            </span>
-          </button>
-          <ul
-  class="menu-dropdown"
-  *ngIf="menuOpen"
-  [ngStyle]="{ background: isDark ? '#2c2a06' : '#DBE2E7' }"
->
-          <li
-    (click)="navigateTo('en/main')"
-    [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-    [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-  >
-    Main page
-  </li>
-  <li
-    (click)="navigateTo('en/freestudying')"
-    [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-    [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-  >
-    Free Trading Training
-  </li>
-  
-  <li
-    (click)="navigateTo('en/studying')"
-    [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-    [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-  >
-    Trading Courses
-  </li>
-</ul>
-        </div>
+            <button
+              class="menu-btn"
+              (click)="toggleMenu()"
+              [ngStyle]="{ background: isDark ? '#2c2a06' : '#DBE2E7' }"
+            >
+              <span class="icon flex" *ngIf="!menuOpen">
+                <img
+                  *ngIf="isDark"
+                  src="assets/redesignArapovTrade/img/menu-button.svg"
+                  alt="menu_icon"
+                />
+                <img
+                  *ngIf="!isDark"
+                  src="assets/redesignArapovTrade/img/menu-button-light.svg"
+                  alt="menu_icon"
+                />
+              </span>
+
+              <span class="icon flex cross" *ngIf="menuOpen">
+                <img
+                  *ngIf="isDark"
+                  src="assets/redesignArapovTrade/img/menu-button-cross.svg"
+                  alt="menu_icon"
+                />
+                <img
+                  *ngIf="!isDark"
+                  src="assets/redesignArapovTrade/img/menu-button-cross-light.svg"
+                  alt="menu_icon"
+                />
+              </span>
+            </button>
+          </div>
       </div>
     </div>
     <div class="author-page_main-block" data-aos="fade-up" data-aos-delay="300">

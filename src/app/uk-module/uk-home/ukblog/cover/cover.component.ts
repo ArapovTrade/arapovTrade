@@ -722,7 +722,13 @@ isDark!:boolean  ;
     );
   }
 
-  navigateTo(link:string){ this.router.navigate([link]);}
+  navigateTo(link:string){
+    this.menuOpen=false;
+    
+    this.router.navigate([link]);
+
+
+  }
 
    toggleDropdown() {
     this.dropdownOpen = !this.dropdownOpen;

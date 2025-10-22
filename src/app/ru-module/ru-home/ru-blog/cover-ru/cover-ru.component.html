@@ -457,58 +457,83 @@
         </div>
 
         <div class="menu-switcher" [class.open]="menuOpen">
-          <button
-            class="menu-btn"
-            (click)="toggleMenu()"
-            [ngStyle]="{ background: isDark ? '#2c2a06' : '#DBE2E7' }"
-          >
-            <span class="icon flex">
-              <img
-                *ngIf="isDark"
-                src="assets/redesignArapovTrade/img/menu-button.svg"
-                alt="menu_icon"
-              />
-              <img
-                *ngIf="!isDark"
-                src="assets/redesignArapovTrade/img/menu-button-light.svg"
-                alt="menu_icon"
-              />
-            </span>
-          </button>
-          <ul
-            class="menu-dropdown"
-            *ngIf="menuOpen"
-            [ngStyle]="{ background: isDark ? '#2c2a06' : '#DBE2E7' }"
-          >
-          <li
+            <button
+              class="menu-btn"
+              (click)="toggleMenu()"
+              [ngStyle]="{ background: isDark ? '#2c2a06' : '#DBE2E7' }"
+            >
+              <span class="icon flex" *ngIf="!menuOpen">
+                <img
+                  *ngIf="isDark"
+                  src="assets/redesignArapovTrade/img/menu-button.svg"
+                  alt="menu_icon"
+                />
+                <img
+                  *ngIf="!isDark"
+                  src="assets/redesignArapovTrade/img/menu-button-light.svg"
+                  alt="menu_icon"
+                />
+              </span>
+
+              <span class="icon flex cross" *ngIf="menuOpen">
+                <img
+                  *ngIf="isDark"
+                  src="assets/redesignArapovTrade/img/menu-button-cross.svg"
+                  alt="menu_icon"
+                />
+                <img
+                  *ngIf="!isDark"
+                  src="assets/redesignArapovTrade/img/menu-button-cross-light.svg"
+                  alt="menu_icon"
+                />
+              </span>
+            </button>
+          </div>
+      </div>
+    </div>
+     
+  </div>
+   <div class="mask_drop-menu" *ngIf="menuOpen"  >
+        <div  
+          class="menu-dropdown"
+          [ngStyle]="{
+            background: isDark ? 'rgba(1, 1, 1, 1)' : 'rgba(255, 255, 255, 1)',
+             
+          }"
+        >
+          <ul>
+            <li
               (click)="navigateTo('ru/main')"
               [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
               [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
             >
-              Главная
+              ГЛАВНАЯ
             </li>
             <li
-              (click)="navigateTo('ru');toggleMenu()"
+              (click)="navigateTo('ru/freestudying')"
               [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
               [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
             >
-              Об Авторе
+              БЕСПЛАТНЫЕ КУРСЫ
             </li>
-            
+            <li
+              (click)="navigateTo('ru')"
+              [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+              [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
+            >
+              ОБ АВТОРЕ
+            </li>
             <li
               (click)="navigateTo('ru/studying')"
               [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
               [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
             >
-              Курсы по трейдингу
+              ПРОФЕССИОНАЛЬНЫЕ КУРСЫ
             </li>
           </ul>
         </div>
       </div>
-    </div>
-     
-  </div>
-  
+
  
 <router-outlet>    </router-outlet>
   <!-- Footer -->

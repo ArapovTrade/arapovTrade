@@ -557,7 +557,46 @@
 <div
   class="main-container"
   [ngStyle]="{ 'background-color': isDark ? '#141500' : '#FFFFFF' }"
->
+><div class="mask_drop-menu" *ngIf="menuOpen" style="margin-top: 40px;">
+        <div  
+          class="menu-dropdown"
+          [ngStyle]="{
+            background: isDark ? 'rgba(1, 1, 1, 1)' : 'rgba(255, 255, 255, 1)',
+             
+          }"
+        >
+          <ul>
+            <li
+              (click)="navigateTo('')"
+              [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+              [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
+            >
+              ГОЛОВНА
+            </li>
+            <li
+              (click)="navigateTo('uk/freestudying')"
+              [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+              [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
+            >
+              БЕЗКОШТОВНІ КУРСИ
+            </li>
+            <li
+              (click)="navigateTo('uk')"
+              [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+              [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
+            >
+              ПРО АВТОРА
+            </li>
+            <li
+              (click)="navigateTo('uk/studying')"
+              [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+              [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
+            >
+              ПРОФЕСІЙНІ КУРСИ
+            </li>
+          </ul>
+        </div>
+      </div>
   <div class="author-page_section-one">
     <div class="header-new_block" data-aos="fade-down" data-aos-delay="300">
       <div class="header-logo-block">
@@ -704,7 +743,7 @@
           </button>
         </div>
 
-        <div class="menu-switcher" [class.open]="menuOpen">
+        <!-- <div class="menu-switcher" [class.open]="menuOpen">
           <button
             class="menu-btn"
             (click)="toggleMenu()"
@@ -751,7 +790,41 @@
               Про автора
             </li>
           </ul>
-        </div>
+        </div> -->
+        <div class="menu-switcher" [class.open]="menuOpen">
+            <button
+              class="menu-btn"
+              (click)="toggleMenu()"
+              [ngStyle]="{ background: isDark ? '#2c2a06' : '#DBE2E7' }"
+            >
+              <span class="icon flex" *ngIf="!menuOpen">
+                <img
+                  *ngIf="isDark"
+                  src="assets/redesignArapovTrade/img/menu-button.svg"
+                  alt="menu_icon"
+                />
+                <img
+                  *ngIf="!isDark"
+                  src="assets/redesignArapovTrade/img/menu-button-light.svg"
+                  alt="menu_icon"
+                />
+              </span>
+
+              <span class="icon flex cross" *ngIf="menuOpen">
+                <img
+                  *ngIf="isDark"
+                  src="assets/redesignArapovTrade/img/menu-button-cross.svg"
+                  alt="menu_icon"
+                />
+                <img
+                  *ngIf="!isDark"
+                  src="assets/redesignArapovTrade/img/menu-button-cross-light.svg"
+                  alt="menu_icon"
+                />
+              </span>
+            </button>
+          </div>
+      
       </div>
     </div>
     <div class="author-page_main-block" data-aos="fade-up" data-aos-delay="300">
