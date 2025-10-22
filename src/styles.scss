@@ -3589,9 +3589,9 @@ font-weight: bold;     width: fit-content;
     .light-theme-main-cont .container a{
   text-decoration: underline;
     text-underline-offset: 3px;
-     color: #015A8C !important;
+     color: #015A8C  ;
     font-weight: 600;
-
+      
 }
 
 
@@ -4134,10 +4134,6 @@ font-size: 16px;
 .mat-expansion-indicator svg{
   fill: white !important;
 }
-.owl_link-box{
-  a{color: white;}
-  
-}
 
 
 
@@ -4179,4 +4175,7 @@ margin: 20px auto 50px !important;
 
 
 
-    
+    .owl_link-box{
+  a{color: white !important;}
+  
+}
