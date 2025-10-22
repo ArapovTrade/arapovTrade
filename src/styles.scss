@@ -4211,7 +4211,9 @@ font-size: 16px;
 
 @media (min-width: 1100px){
   .hero-section {
-        height: 550px !important;
+        // height: 550px !important;
+        // background-size: 100% auto !important;
+        background-position: top center !important;
     }
 }
 
