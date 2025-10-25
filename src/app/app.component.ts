@@ -272,6 +272,7 @@ export class AppComponent implements OnInit, AfterViewChecked , OnDestroy{
         this.document.documentElement.lang = langCode;
         this.generateBreadcrumbs();
         this.updateHreflangTags(); //hreflang
+        this.updateCanonicalTag();
       });
   }
   //delete description
@@ -282,6 +283,22 @@ export class AppComponent implements OnInit, AfterViewChecked , OnDestroy{
     head.removeChild(metaDescription);
   }
 }
+//каноникал
+private updateCanonicalTag() {
+  // Удаляем старые канонические теги
+  const existingCanonical = this.document.querySelector('link[rel="canonical"]');
+  if (existingCanonical) {
+    existingCanonical.remove();
+  }
+
+  // Создаём новый
+  const canonicalLink = this.renderer.createElement('link');
+  this.renderer.setAttribute(canonicalLink, 'rel', 'canonical');
+  const url = `https://arapov.trade${this.router.url.split('?')[0]}`;
+  this.renderer.setAttribute(canonicalLink, 'href', url);
+  this.renderer.appendChild(this.document.head, canonicalLink);
+}
+
 
   //FAQ
   private addingFaqScript(langcode: string, path: string) {
