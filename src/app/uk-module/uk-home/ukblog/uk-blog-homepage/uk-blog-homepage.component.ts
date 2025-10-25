@@ -1,7 +1,16 @@
-import {  AfterViewInit,
-  ChangeDetectorRef,Inject,
-  OnDestroy, Component, OnInit, ViewChild, Renderer2,
-  RendererFactory2, ElementRef, HostListener } from '@angular/core';
+import {
+  AfterViewInit,
+  ChangeDetectorRef,PLATFORM_ID,
+  Inject,
+  OnDestroy,
+  Component,
+  OnInit,
+  ViewChild,
+  Renderer2,
+  RendererFactory2,
+  ElementRef,
+  HostListener,
+} from '@angular/core';
 import { MatPaginator, MatPaginatorIntl } from '@angular/material/paginator';
 import { NavigationEnd, Router } from '@angular/router';
 import { Meta, Title } from '@angular/platform-browser';
@@ -13,6 +22,8 @@ import { Subscription } from 'rxjs';
 declare var AOS: any;
 import { ThemeservService } from '../../../../servises/themeserv.service';
 import { artickle } from '../../../../servises/articles.service';
+import { ActivatedRoute } from '@angular/router';
+import { isPlatformBrowser } from '@angular/common';
 @Component({
   selector: 'app-uk-blog-homepage',
   templateUrl: './uk-blog-homepage.component.html',
@@ -22,34 +33,37 @@ export class UkBlogHomepageComponent implements OnInit {
   @ViewChild('scrollToTop') scrollToTop!: ElementRef;
   @ViewChild(MatPaginator) paginatorr!: MatPaginator;
   private renderer: Renderer2;
-  
+
   constructor(
+    private activateRout: ActivatedRoute,
+       @Inject(PLATFORM_ID) private platformId: Object,
     private artickleServ: ArticlesService,
     private router: Router,
     private meta: Meta,
-       private cdr:ChangeDetectorRef,
-    private themeService:ThemeservService,
- private rendererFactory: RendererFactory2,
+    private cdr: ChangeDetectorRef,
+    private themeService: ThemeservService,
+    private rendererFactory: RendererFactory2,
     @Inject(DOCUMENT) private document: Document,
     private titleService: Title,
     private paginator: MatPaginatorIntl,
-    private lang: LangService,private eRef: ElementRef
+    private lang: LangService,
+    private eRef: ElementRef
   ) {
     this.renderer = rendererFactory.createRenderer(null, null);
-     
+    
   }
 
   ngAfterViewInit() {
-  setTimeout(() => {
-    if (typeof AOS !== 'undefined') {
-      AOS.init({
-        duration: 1000,
-        once: false,
-        offset: 100
-      });
-    }
-  }, 500); // Задержка 0.5s
-}
+    setTimeout(() => {
+      if (typeof AOS !== 'undefined') {
+        AOS.init({
+          duration: 1000,
+          once: false,
+          offset: 100,
+        });
+      }
+    }, 500); // Задержка 0.5s
+  }
   isMenuOpen = false;
 
   openMenu() {
@@ -68,22 +82,35 @@ export class UkBlogHomepageComponent implements OnInit {
     if (this.menuOpen) {
       this.dropdownOpen = false; // Закрываем меню языков, если открываем навигацию
     }
-  } 
-  isDark!:boolean  ;
+  }
+  isDark!: boolean;
   languages = ['ua', 'en', 'ru']; // какие языки нужны
   currentLang = 'ua';
   dropdownOpen = false;
   menuOpen: boolean = false;
 
-
   filteredArticles: any = [];
   ukrGroups: any = [];
   ngOnInit(): void {
-      this.themeSubscription =this.themeService.getTheme().subscribe(data=>{
-      this.isDark=data;
-        this.cdr.detectChanges();
-    })
+    this.activateRout.queryParams.subscribe((params) => {
+      const selectedGroup = params['group'];
+      if(selectedGroup){
+         this.artickleServ.selectedGroups = [selectedGroup];
+      this.grr = [...this.artickleServ.selectedGroups];
+      this.checkedGroup = [...this.artickleServ.selectedGroups];
+      
+      this.cdr.detectChanges();
+      this.onGroupChangeFromEvent(selectedGroup);
+      }
+    
+    
+    });
+     
 
+    this.themeSubscription = this.themeService.getTheme().subscribe((data) => {
+      this.isDark = data;
+      this.cdr.detectChanges();
+    });
 
     this.routerSubscription = this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
@@ -93,8 +120,6 @@ export class UkBlogHomepageComponent implements OnInit {
       }
     });
 
-
-
     this.paginator.itemsPerPageLabel = '';
     this.lang.setNumber(1);
     this.titleService.setTitle(
@@ -103,7 +128,8 @@ export class UkBlogHomepageComponent implements OnInit {
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
-      content: 'Безкоштовне навчання трейдингу від Ігоря Арапова —  онлайн-курс з нуля для тих, хто хоче впевнено розпочати шлях на фінансових ринках.',
+      content:
+        'Безкоштовне навчання трейдингу від Ігоря Арапова —  онлайн-курс з нуля для тих, хто хоче впевнено розпочати шлях на фінансових ринках.',
     });
     this.meta.addTag({
       name: 'keywords',
@@ -116,65 +142,78 @@ export class UkBlogHomepageComponent implements OnInit {
     this.grr = this.artickleServ.selectedGroups;
     this.updatePaginatedArticles();
     this.updateArticleCounts();
-     this.gerRandom();
+    this.gerRandom();
   }
   randomArticleRus: any = [];
   gerRandom() {
     this.randomArticleRus = this.artickleServ.getRandomUkArticlesFive();
   }
 
+  hoveredIndex: number | null = null;
 
-hoveredIndex: number | null = null;
-
-projects = [
-  { title: 'Швидкий старт', link: 'https://arapov.education/ua/course-ua/' },
-  { title: 'Вступ до трейдингу', link: 'https://arapov.education/ua/reg-workshop-ua/' },
-  { title: 'Професійні курси', link: 'https://arapov.trade/uk/studying' },
-  { title: 'Базовий курс', link: 'https://arapov.trade/uk/freestudying/freeeducation' },
-  { title: 'Копiтрейдинг', link: 'https://arapovcopytrade.com/ua/invest-ua/' },
-];
-
-
+  projects = [
+    { title: 'Швидкий старт', link: 'https://arapov.education/ua/course-ua/' },
+    {
+      title: 'Вступ до трейдингу',
+      link: 'https://arapov.education/ua/reg-workshop-ua/',
+    },
+    { title: 'Професійні курси', link: 'https://arapov.trade/uk/studying' },
+    {
+      title: 'Базовий курс',
+      link: 'https://arapov.trade/uk/freestudying/freeeducation',
+    },
+    {
+      title: 'Копiтрейдинг',
+      link: 'https://arapovcopytrade.com/ua/invest-ua/',
+    },
+  ];
 
   grr!: any;
   checkedGroup!: any;
-  onGroupChange(event: Event) {
-    // const checkbox = event.target as HTMLInputElement;
-    // const value = checkbox.value;
 
-    // if (checkbox.checked) {
-    //   this.artickleServ.selectedGroups.push(value);
-    //   this.filteredArticles = this.artickleServ.ukrainiansArticles();
-    //   this.updatePaginatedArticles();
+  onGroupChangeFromEvent(value: string) {
+    
+    // if (this.artickleServ.selectedGroups.includes(value)) {
+    //   this.artickleServ.selectedGroups = [];
     // } else {
-    //   this.artickleServ.selectedGroups =
-    //     this.artickleServ.selectedGroups.filter((group) => group !== value);
-    //   this.filteredArticles = this.artickleServ.ukrainiansArticles();
-    //   this.updatePaginatedArticles();
+       
+    //   this.artickleServ.selectedGroups = [value];
     // }
 
+    // Обновляем фильтрованные статьи
+    this.filteredArticles = this.artickleServ.ukrainiansArticles();
+    this.updatePaginatedArticles();
+
+    // Возвращаем пагинацию на первую страницу
     // this.paginatorr.firstPage();
 
-     const checkbox = event.target as HTMLInputElement;
-  const value = checkbox.value;
-
-  // Если нажали на уже выбранную группу — сбрасываем фильтр (показываем все)
-  if (this.artickleServ.selectedGroups.includes(value)) {
-    this.artickleServ.selectedGroups = [];
-  } else {
-    // Иначе выбираем только одну группу
-    this.artickleServ.selectedGroups = [value];
+   
+    if (isPlatformBrowser(this.platformId)) {
+      setTimeout(() => {
+        this.moveToTheTop();
+      }, 500); // Задержка для рендеринга DOM
+    }
   }
 
-  // Обновляем фильтрованные статьи
-  this.filteredArticles = this.artickleServ.ukrainiansArticles();
-  this.updatePaginatedArticles();
+  onGroupChange(event: Event) {
+    const checkbox = event.target as HTMLInputElement;
+    const value = checkbox.value;
+ 
+    // Если нажали на уже выбранную группу — сбрасываем фильтр (показываем все)
+    if (this.artickleServ.selectedGroups.includes(value)) {
+      this.artickleServ.selectedGroups = [];
+    } else {
+      // Иначе выбираем только одну группу
+      this.artickleServ.selectedGroups = [value];
+    }
 
-  // Возвращаем пагинацию на первую страницу
-  this.paginatorr.firstPage();
-
-
+    // Обновляем фильтрованные статьи
+    this.filteredArticles = this.artickleServ.ukrainiansArticles();
+    this.updatePaginatedArticles();
+ 
   
+    // Возвращаем пагинацию на первую страницу
+    this.paginatorr.firstPage();
   }
   paginatedArticles = []; // Статьи для отображения на текущей странице
   currentPage = 0;
@@ -192,7 +231,7 @@ projects = [
       top: topPosition,
       behavior: 'smooth',
     });
-    this.moveToTheTop()
+    this.moveToTheTop();
   }
   updatePaginatedArticles() {
     const startIndex = this.currentPage * this.pageSize;
@@ -204,68 +243,62 @@ projects = [
   navigateToStudy() {
     this.router.navigateByUrl('/uk/studying');
   }
-   private routerSubscription!: Subscription;
-      private themeSubscription!: Subscription;
-       ngOnDestroy() {
-        // Отписка от подписок
-        if (this.routerSubscription) {
-          this.routerSubscription.unsubscribe();
-        }
-        if (this.themeSubscription) {
-          this.themeSubscription.unsubscribe();
-        }
-      } 
-      hovered: string | null = null;
-      toggleTheme() {
-      this.isDark = !this.isDark;
-      this.themeService.setTheme(this.isDark)
-       
-       this.refreshAOS();
-  
-  
+  private routerSubscription!: Subscription;
+  private themeSubscription!: Subscription;
+  ngOnDestroy() {
+    // Отписка от подписок
+    if (this.routerSubscription) {
+      this.routerSubscription.unsubscribe();
     }
+    if (this.themeSubscription) {
+      this.themeSubscription.unsubscribe();
+    }
+  }
+  hovered: string | null = null;
+  toggleTheme() {
+    this.isDark = !this.isDark;
+    this.themeService.setTheme(this.isDark);
+
+    this.refreshAOS();
+  }
   refreshAOS() {
-      if (typeof AOS !== 'undefined') {
-        setTimeout(() => {
-          AOS.refresh(); // Обновление позиций AOS
-          this.cdr.detectChanges(); // Принудительное обнаружение изменений
-        }, 100); // Задержка для синхронизации
-      } else {
-        console.warn('AOS is not defined, refresh skipped');
-      }
+    if (typeof AOS !== 'undefined') {
+      setTimeout(() => {
+        AOS.refresh(); // Обновление позиций AOS
+        this.cdr.detectChanges(); // Принудительное обнаружение изменений
+      }, 100); // Задержка для синхронизации
+    } else {
+      console.warn('AOS is not defined, refresh skipped');
     }
-     
-    toggleDropdown() {
-      this.dropdownOpen = !this.dropdownOpen;
-    }
-    selectLang(lang: string) {
-      this.currentLang = lang;
-  
-      this.dropdownOpen = false;
-  
-       
-    }
-    navigateTo(path: string) {
-      this.router.navigate([path]);
-    }
+  }
 
+  toggleDropdown() {
+    this.dropdownOpen = !this.dropdownOpen;
+  }
+  selectLang(lang: string) {
+    this.currentLang = lang;
 
+    this.dropdownOpen = false;
+  }
+  navigateTo(path: string) {
+    this.router.navigate([path]);
+  }
 
-    articleCounts: { [key: string]: number } = {};
-    updateArticleCounts() {
-  this.articleCounts = {}; // очищаем
+  articleCounts: { [key: string]: number } = {};
+  updateArticleCounts() {
+    this.articleCounts = {}; // очищаем
 
-  this.artickleServ.ukrArtickles.forEach(article => {
-    // article.groupsUkr — это массив, например ['Програмування', 'Маркетинг']
-    article.groupsUkr.forEach(group => {
-      if (!this.articleCounts[group]) {
-        this.articleCounts[group] = 1;
-      } else {
-        this.articleCounts[group]++;
-      }
+    this.artickleServ.ukrArtickles.forEach((article) => {
+      // article.groupsUkr — это массив, например ['Програмування', 'Маркетинг']
+      article.groupsUkr.forEach((group) => {
+        if (!this.articleCounts[group]) {
+          this.articleCounts[group] = 1;
+        } else {
+          this.articleCounts[group]++;
+        }
+      });
     });
-  });
-}
+  }
   //popup
   flag1: boolean = false;
   flagTrue1: boolean = true;
@@ -274,51 +307,46 @@ projects = [
     this.flagTrue1 = !this.flagTrue1;
   }
 
+  isFocused = false;
+  displayedArticles: artickle[] = [];
+  maxResults = 5;
+  searchQuery: string = '';
 
-isFocused = false;
-displayedArticles: artickle[] = [];
-maxResults = 5;
-searchQuery: string = '';
+  onFocus() {
+    this.isFocused = true;
 
-onFocus() {
-  this.isFocused = true;
-
-  // Показываем 5 случайных статей при фокусе, если инпут пуст
-  if (!this.searchQuery) {
-    const shuffled = [...this.artickleServ.ukrArtickles].sort(() => Math.random() - 0.5);
-    this.displayedArticles = shuffled.slice(0, this.maxResults);
+    // Показываем 5 случайных статей при фокусе, если инпут пуст
+    if (!this.searchQuery) {
+      const shuffled = [...this.artickleServ.ukrArtickles].sort(
+        () => Math.random() - 0.5
+      );
+      this.displayedArticles = shuffled.slice(0, this.maxResults);
+    }
   }
-}
 
-onBlur() {
-  setTimeout(() => {
-    this.isFocused = false;
-  }, 150); // таймаут чтобы клик по статье сработал
-}
-
-onSearchChange() {
-  // Логика асинхронного поиска
-  const filtered = this.artickleServ.ukrArtickles.filter(a =>
-    a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase())
-  );
-  this.displayedArticles = filtered.slice(0, this.maxResults);
-}
-
-moveToTheTop(){
-  const element = document.getElementById('scrollToTop');
-  if (element) {
-    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  onBlur() {
+    setTimeout(() => {
+      this.isFocused = false;
+    }, 150); // таймаут чтобы клик по статье сработал
   }
-}
 
-groupsMenuOpen = false;
-   toggleGroupsMenu(event: Event) {
-    
+  onSearchChange() {
+    // Логика асинхронного поиска
+    const filtered = this.artickleServ.ukrArtickles.filter((a) =>
+      a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase())
+    );
+    this.displayedArticles = filtered.slice(0, this.maxResults);
+  }
+
+  moveToTheTop() {
+    const element = document.getElementById('scrollToTop');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  groupsMenuOpen = false;
+  toggleGroupsMenu(event: Event) {
     this.groupsMenuOpen = !this.groupsMenuOpen;
   }
-   
-
-
-
-
 }

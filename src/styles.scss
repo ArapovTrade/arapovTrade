@@ -3691,7 +3691,7 @@ font-family: advent pro;
 font-weight: bold;     width: fit-content;
 
 }
-.light-theme-main-cont .container h3.light-theme-main-cont .article-section h3{
+.light-theme-main-cont .container h3, .light-theme-main-cont .article-section h3{
   background: linear-gradient(90deg, #03324c, #0183cd)  ;
    -webkit-background-clip: text;
 background-clip: text;
@@ -4265,5 +4265,7 @@ margin: 20px auto 50px !important;
   a{color: white !important;}
   
 }
+
+
 
 

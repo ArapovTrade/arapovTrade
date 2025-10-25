@@ -16,7 +16,7 @@ theme$=new BehaviorSubject(false)
     const savedTheme = this.getLocal('theme');
      
     if (savedTheme) {
-      console.log(savedTheme)
+       
       this.isDark = savedTheme === 'light';
        this.theme$.next(this.isDark)
     }

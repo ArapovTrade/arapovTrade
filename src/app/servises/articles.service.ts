@@ -2105,7 +2105,7 @@ export class ArticlesService {
       id: 156,
     },
     {
-      titleUkr: 'Паттерн 1-2-3',
+      titleUkr: 'Патерн 1-2-3',
       linkUkr: 'pattern-1-2-3', 
       titleRus: 'Паттерн 1-2-3',
       titleEn: '1-2-3 Pattern',
