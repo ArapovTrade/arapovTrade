@@ -273,8 +273,46 @@ export class AppComponent implements OnInit, AfterViewChecked , OnDestroy{
         this.generateBreadcrumbs();
         this.updateHreflangTags(); //hreflang
         this.updateCanonicalTag();
+        this.updateMetaKeywords();
       });
   }
+
+  private updateMetaKeywords() {
+  
+  // const currentUrl = this.router.url.split('?')[0];
+ 
+  // const existingTag = this.document.querySelector('meta[name="keywords"]');
+  // if (existingTag) {
+  //   this.renderer.removeChild(this.document.head, existingTag);
+  // }
+
+   
+  // const meta = this.renderer.createElement('meta');
+  // this.renderer.setAttribute(meta, 'name', 'keywords');
+
+ 
+  // const keywordsMap: Record<string, string> = {
+  //   '/ru/freestudying/freeeducation': 'бесплатное обучение, трейдинг, курс трейдера, артапов трейд, торговля на бирже, уроки трейдинга',
+  //   '/uk/freestudying/freeeducation': 'безкоштовне навчання, трейдинг, курс трейдера, арапов трейд, торгівля, уроки трейдингу',
+  //   '/en/freestudying/freeeducation': 'free trading education, learn trading, forex, arapov trade, stock trading lessons',
+  //   '/ru/freestudying/imbalanceintrading': 'дисбаланс на рынке, объемный анализ, смарт мани, уровни ликвидности, трейдинг стратегия',
+  //   '/uk/freestudying/imbalanceintrading': 'дисбаланс на ринку, об’ємний аналіз, смарт мані, рівні ліквідності, стратегія трейдингу',
+  //   '/en/freestudying/imbalanceintrading': 'imbalance in trading, order blocks, smart money, liquidity zones, trading education',
+    
+  // };
+
+ 
+  // const keywords =
+  //   keywordsMap[currentUrl] ||
+  //   'arapov trade, trading education, forex, trading courses, learn trading online';
+
+  // this.renderer.setAttribute(meta, 'content', keywords);
+  // this.renderer.appendChild(this.document.head, meta);
+}
+
+
+
+
   //delete description
   private removeMetaDescriptionIfExists() {
   const head = this.document.head;
