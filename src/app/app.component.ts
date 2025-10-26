@@ -389,7 +389,8 @@ private updateCanonicalTag() {
       { property: 'og:site_name', content: 'https://arapov.trade/' },
 
       // Базові Twitter Card теги
-      { name: 'twitter:card', content: `https://arapov.trade/assets/img/default-og-image.png`}, // Дефолтний тип картки
+      { name: 'twitter:image', content: `https://arapov.trade/assets/img/default-og-image.png`},
+      { name: 'twitter:card', content: `summary_large_image`}, // Дефолтний тип картки
       { name: 'twitter:site', content: '@Igor_Arapov1990' }, // Ваш Twitter акаунт (замініть)
     ]);
   }
