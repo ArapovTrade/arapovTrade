@@ -55,10 +55,53 @@ export class MainpageComponent implements OnInit, AfterViewInit, OnDestroy {
     });
 
     this.meta.updateTag({ name: 'datePublished', content: '2025-06-07' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: 'assets/img/photo_mainpage.jpg',
-    });
+     
+    this.meta.updateTag({ property: 'og:title', content: 'Навчання трейдерів торгівлі на біржі | Курс трейдингу від Ігоря Арапова' });
+        this.meta.updateTag({
+          property: 'og:description',
+          content: 'Безкоштовний курс з трейдингу Ігоря Арапова: 130 + статей і 70 відео. Вивчайте теханаліз, ризик-менеджмент і торгові стратегії онлайн',
+        });
+        this.meta.updateTag(      { property: 'og:image:width', content: '1200' });
+        this.meta.updateTag({ property: 'og:image:height', content: '600' })
+        this.meta.updateTag({
+          property: 'og:image',
+          content: `https://arapov.trade${image}`,
+        });
+        this.meta.updateTag({ property: 'og:url', content: 'https://arapov.trade' });
+
+        // Оновлюємо Twitter Card теги
+        this.meta.updateTag({
+          name: 'twitter:card',
+          content: `summary_large_image`,
+        }); // Тип картки
+        this.meta.updateTag({ name: 'twitter:title', content: 'Навчання трейдерів торгівлі на біржі | Курс трейдингу від Ігоря Арапова' });
+        this.meta.updateTag({
+          name: 'twitter:description',
+          content: 'Безкоштовний курс з трейдингу Ігоря Арапова: 130 + статей і 70 відео. Вивчайте теханаліз, ризик-менеджмент і торгові стратегії онлайн',
+        });
+        this.meta.updateTag({
+          name: 'twitter:image',
+          content: `https://arapov.trade/assets/img/default-og-image.png`,
+        });
+        this.meta.updateTag({ name: 'twitter:url', content: 'https://arapov.trade' });
+        this.meta.updateTag({ name: 'language', content: 'uk' });
+        this.meta.updateTag({ property: 'og:type', content: 'website' }); // или 'article'
+        
+this.meta.updateTag({ property: 'og:locale', content:  'uk_UA'   }); // ru_RU, uk_UA, en_US
+this.meta.updateTag({ property: 'og:site_name', content: 'Arapov Trade' });
+
+
+
+
+
+
+
+
+
+
+
+
+
 
      
     this.themeSubscription =this.themeService.getTheme().subscribe(data=>{
