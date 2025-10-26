@@ -82,15 +82,15 @@ export class UkStudyingHomeComponent implements OnInit , AfterViewInit, OnDestro
       'Курси трейдингу онлайн | Навчання трейдингу з нуля'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
-        'Дистанційне навчання трейдингу з нуля від Ігоря Арапова: авторські курси, стратегії, психологія для успіху на ринках з ArapovTrade.',
+        'Онлайн-курси з трейдингу від Ігоря Арапова — навчання трейдингу та інвестиціям з нуля, дистанційно та безкоштовно. Вивчайте технічний та фундаментальний аналіз, торгові стратегії та управління ризиками крок за кроком.',
     });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'keywords',
       content:
-        'курси трейдингу, трейдинг, навчання трейдингу, навчання трейдингу онлайн, безкоштовне навчання трейдингу, дистанційне навчання трейдингу, ',
+        'курси трейдингу, навчання трейдингу онлайн, трейдинг з нуля, дистанційне навчання, інвестиції, торгові стратегії',
     });
 
     this.themeSubscription =this.themeService.getTheme().subscribe(data=>{

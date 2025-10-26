@@ -109,14 +109,14 @@ ngAfterViewInit() {
     this.lang.setNumber(3);
     this.titleService.setTitle('Online Trading Training | Free Trading Courses from Igor Arapov');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'keywords',
       content:
-        'cryptocurrency trading training, trading from scratch, Free trading training, free trading training from scratch, free trading courses, free trading training',
+        'free trading education, trading from scratch, online trading courses, remote trading education, trading strategies, cryptocurrency trading, trading online',
     });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
-      content: 'Free trading training from Igor Arapov',
+      content: 'Free online trading education by Igor Arapov — complete step-by-step course from scratch, analysis of trading strategies, risk management, and practical exercises. Learn trading and cryptocurrencies remotely and for free.',
     });
     this.filteredArticles = this.artickleServ.englishArticles();
     this.enGroups = this.artickleServ.getEnglishGroups();

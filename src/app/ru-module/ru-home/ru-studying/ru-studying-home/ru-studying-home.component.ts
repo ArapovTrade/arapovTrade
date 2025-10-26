@@ -76,15 +76,15 @@ export class RuStudyingHomeComponent implements OnInit , AfterViewInit, OnDestro
       'Курсы по трейдингу онлайн | Обучение трейдингу с нуля'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
-        'Авторское ⏩ обучение трейдингу от ArapovTrade. ⭐ Дистанционное обучение трейдингу онлайн с нуля от Игоря Арапова.',
+        'Онлайн-курсы по трейдингу от Игоря Арапова — обучение трейдингу и инвестициям с нуля, дистанционно и бесплатно. Изучайте технический и фундаментальный анализ, торговые стратегии и управление рисками шаг за шагом.',
     });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'keywords',
       content:
-        'курсы трейдинга, курсы по трейдингу, трейдинг, обучение трейдингу, обучение трейдингу онлайн, бесплатное обучение трейдингу, дистанционное обучение трейдингу ',
+        'курсы трейдингу, обучение трейдингу онлайн, трейдинг с нуля, дистанционное обучение, инвестиции, торговые стратегии',
     });
      this.themeSubscription =this.themeService.getTheme().subscribe(data=>{
       this.isDark=data;

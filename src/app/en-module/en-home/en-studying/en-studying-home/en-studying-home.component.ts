@@ -79,12 +79,12 @@ export class EnStudyingHomeComponent implements OnInit , AfterViewInit, OnDestro
     this.meta.addTag({
       name: 'description',
       content:
-        "Author's ⏩ trading training from ArapovTrade. ⭐ Distance learning online trading from scratch from Igor Arapov.",
+        "Online trading courses by Igor Arapov — trading and investment education from scratch, remotely and free. Learn technical and fundamental analysis, trading strategies, and risk management step by step.",
     });
     this.meta.addTag({
       name: 'keywords',
       content:
-        'trading courses, trading, trading training, online trading training, free trading training, distance trading training ',
+        'trading courses, online trading education, trading from scratch, remote learning, investments, trading strategies',
     });
      this.themeSubscription =this.themeService.getTheme().subscribe(data=>{
       this.isDark=data;

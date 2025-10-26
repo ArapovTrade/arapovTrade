@@ -98,12 +98,12 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
     this.meta.addTag({
       name: 'description',
       content:
-        "Author's ⏩ trading courses from Igor Arapov. ⭐ Training in trading from scratch from ArapovTrade.",
+        "Free trading education from scratch by Igor Arapov — online trading courses, technical and fundamental analysis, trading cryptocurrencies and currency pairs step by step.",
     });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'keywords',
       content:
-        'trading courses, trading, currencies, trading training, free trading training, free trading training, cryptocurrency trading training, free trading courses, trading from scratch, trading courses',
+        'trading education, trading courses, online trading, trading from scratch, cryptocurrencies, currency pairs',
     });
 
       this.themeSubscription =this.themeService.getTheme().subscribe(data=>{

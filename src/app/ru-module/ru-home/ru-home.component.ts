@@ -101,15 +101,15 @@ export class RuHomeComponent implements OnInit, AfterViewInit, OnDestroy {
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
 
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
-        'Авторские курсы трейдинга от Игоря Арапова: обучение с нуля, стратегии, психология и успех на крипто и фондовых рынках с ArapovTrade.',
+        'Обучение трейдингу с нуля бесплатно от Игоря Арапова — онлайн-курсы трейдинга, технический и фундаментальный анализ, торговля криптовалютами и валютными парами шаг за шагом.',
     });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'keywords',
       content:
-        'курсы трейдинга, трейдинг,  валюты, обучение трейдингу, бесплатное обучение трейдингу, обучение трейдингу бесплатно, обучение трейдингу криптовалют, трейдинг курсы бесплатно, трейдинг с нуля, курсы по трейдингу',
+        'обучение трейдингу, курсы трейдинга, трейдинг онлайн, трейдинг с нуля, криптовалюты, валютные пары',
     });
     this.themeSubscription =this.themeService.getTheme().subscribe(data=>{
       this.isDark=data;
