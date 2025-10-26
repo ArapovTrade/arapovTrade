@@ -65,7 +65,7 @@ export class MainpageComponent implements OnInit, AfterViewInit, OnDestroy {
         this.meta.updateTag({ property: 'og:image:height', content: '600' })
         this.meta.updateTag({
           property: 'og:image',
-          content: `https://arapov.trade${image}`,
+          content: `https://arapov.trade/assets/img/default-og-image.png`,
         });
         this.meta.updateTag({ property: 'og:url', content: 'https://arapov.trade' });
 
