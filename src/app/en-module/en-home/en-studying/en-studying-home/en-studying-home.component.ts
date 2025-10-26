@@ -73,7 +73,7 @@ export class EnStudyingHomeComponent implements OnInit , AfterViewInit, OnDestro
   ngOnInit(): void {
     this.lang.setNumber(3);
     this.titleService.setTitle(
-      " Author's online trading training Trading courses Igor Arapov"
+      "Online Trading Courses | Learn Trading from Scratch"
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({

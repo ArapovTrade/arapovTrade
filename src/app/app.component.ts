@@ -176,23 +176,27 @@ export class AppComponent implements OnInit, AfterViewChecked , OnDestroy{
         if (article) {
           title = article[titleKey];
         } else if (segments[0] == '') {
-          title = 'Безкоштовне навчання трейдингу — курс Ігоря Арапова';
+          title = 'Навчання трейдерів торгівлі на біржі | Курс трейдингу від Ігоря Арапова';
+          } else if (segments[1] === 'main' && segments[0] === 'ru') {
+          title = 'Обучение трейдеров торговле на бирже | Курс трейдинга от Игоря Арапова';
+          } else if (segments[1] === 'main' && segments[0] === 'en') {
+          title = 'Stock Market Trading Training for Traders | Trading Course by Igor Arapov';
         } else if (segments[1] === 'studying' && segments[0] === 'ru') {
-          title = 'Авторские Курсы по трейдингу - Игорь Арапов';
+          title = 'Курсы по трейдингу онлайн | Обучение трейдингу с нуля';
         } else if (segments[1] === 'studying' && segments[0] === 'uk') {
-          title = 'Авторські Курси з трейдингу - Ігор Арапов';
+          title = 'Курси трейдингу онлайн | Навчання трейдингу з нуля';
            } else if (segments[1] === 'studying' && segments[0] === 'en') {
-          title = 'Trading Courses by Igor Arapov';
+          title = 'Online Trading Courses | Learn Trading from Scratch';
         } else if (
           segments[1] === 'freestudying' &&
           segments[2] === 'freeeducation'
         ) {
           title =
             segments[0] === 'ru'
-              ? 'Бесплатный курс по  трейдингу от Игоря Арапова'
+              ? 'Бесплатное обучение трейдингу для начинающих с нуля | Игорь Арапов'
               : segments[0] === 'uk'
-              ? 'Безкоштовний курс з трейдингу від Ігоря Арапова'
-              : 'Free trading course from Igor Arapov';
+              ? 'Безкоштовне навчання трейдингу для початківців | Ігор Арапов'
+              : 'Free trading training for beginners from scratch | Igor Arapov';
         } else if (segments[0] === 'uk') {
           title = 'Безкоштовне навчання трейдингу - Ігор Арапов';
         } else if (segments[0] === 'en') {
@@ -247,6 +251,8 @@ export class AppComponent implements OnInit, AfterViewChecked , OnDestroy{
           property: 'og:description',
           content: description,
         });
+        this.meta.updateTag(      { property: 'og:image:width', content: '1200' });
+        this.meta.updateTag({ property: 'og:image:height', content: '600' })
         this.meta.updateTag({
           property: 'og:image',
           content: `https://arapov.trade${image}`,
@@ -256,7 +262,7 @@ export class AppComponent implements OnInit, AfterViewChecked , OnDestroy{
         // Оновлюємо Twitter Card теги
         this.meta.updateTag({
           name: 'twitter:card',
-          content: `https://arapov.trade${image}`,
+          content: `summary_large_image`,
         }); // Тип картки
         this.meta.updateTag({ name: 'twitter:title', content: title });
         this.meta.updateTag({
@@ -269,6 +275,11 @@ export class AppComponent implements OnInit, AfterViewChecked , OnDestroy{
         });
         this.meta.updateTag({ name: 'twitter:url', content: url });
         this.meta.updateTag({ name: 'language', content: langCode });
+        this.meta.updateTag({ property: 'og:type', content: 'website' }); // или 'article'
+        
+this.meta.updateTag({ property: 'og:locale', content: (langCode=='ru'?'ru_RU':(langCode=='uk')?'uk_UA':'en_US') }); // ru_RU, uk_UA, en_US
+this.meta.updateTag({ property: 'og:site_name', content: 'Arapov Trade' });
+
         this.document.documentElement.lang = langCode;
         this.generateBreadcrumbs();
         this.updateHreflangTags(); //hreflang

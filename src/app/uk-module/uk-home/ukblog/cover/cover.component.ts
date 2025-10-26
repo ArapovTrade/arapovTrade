@@ -427,277 +427,355 @@ isDark!:boolean  ;
    
   }
 
-   private generateBreadcrumbs() {
-    const urlPath = this.router.url.split('?')[0].replace(/^\/|\/$/g, '');
+  //  private generateBreadcrumbs() {
+  //   const urlPath = this.router.url.split('?')[0].replace(/^\/|\/$/g, '');
 
-    this.breadcrumbs = []; // Определяем хлебные крошки в зависимости от маршрута
-    if (urlPath === '' || urlPath === '/') {
-      this.breadcrumbs.push({ name: 'Головна', url: 'https://arapov.trade' });
-    } else if (urlPath === 'ru' || urlPath === 'uk' || urlPath === 'en') {
-      if (urlPath === 'ru') {
-        this.breadcrumbs.push(
-          { name: 'Главная', url: 'https://arapov.trade/ru/main' },
-          { name: 'Автор курса', url: 'https://arapov.trade/ru' }
-        );
-      } else if (urlPath === 'uk') {
-        this.breadcrumbs.push(
-          { name: 'Головна', url: 'https://arapov.trade' },
-          { name: 'Автор курсу', url: 'https://arapov.trade/uk' }
-        );
-      } else if (urlPath === 'en') {
-        this.breadcrumbs.push(
-          { name: 'Main', url: 'https://arapov.trade/en/main' },
-          { name: 'Course author', url: 'https://arapov.trade/en' }
-        );
-      }
-    } else if (
-      urlPath === 'ru/studying' ||
-      urlPath === 'uk/studying' ||
-      urlPath === 'en/studying'
-    ) {
-      if (urlPath === 'ru/studying') {
-        this.breadcrumbs.push(
-          { name: 'Главная', url: 'https://arapov.trade/ru/main' },
-          { name: 'Автор курса', url: 'https://arapov.trade/ru' },
-          {
-            name: 'Обучение трейдингу',
-            url: 'https://arapov.trade/ru/studying',
-          }
-        );
-      } else if (urlPath === 'uk/studying') {
-        this.breadcrumbs.push(
-          { name: 'Головна', url: 'https://arapov.trade' },
-          { name: 'Автор курсу', url: 'https://arapov.trade/uk' },
-          {
-            name: 'Навчання трейдингу',
-            url: 'https://arapov.trade/ru/studying',
-          }
-        );
-      } else if (urlPath === 'en/studying') {
-        this.breadcrumbs.push(
-          { name: 'Main', url: 'https://arapov.trade/en/main' },
-          { name: 'Course author', url: 'https://arapov.trade/en' },
-          {
-            name: 'Trading training',
-            url: 'https://arapov.trade/ru/studying',
-          }
-        );
-      }
-    } else if (
-      urlPath === 'ru/freestudying' ||
-      urlPath === 'uk/freestudying' ||
-      urlPath === 'en/freestudying'
-    ) {
-      if (urlPath === 'ru/freestudying') {
-        this.breadcrumbs.push(
-          { name: 'Главная', url: 'https://arapov.trade/ru/main' },
-          { name: 'Автор курса', url: 'https://arapov.trade/ru' },
-          {
-            name: 'Бесплатное обучение трейдингу',
-            url: 'https://arapov.trade/ru/freestudying',
-          }
-        );
-      } else if (urlPath === 'uk/freestudying') {
-        this.breadcrumbs.push(
-          { name: 'Головна', url: 'https://arapov.trade' },
-          { name: 'Автор курсу', url: 'https://arapov.trade/uk' },
-          {
-            name: 'Безкоштовне навчання трейдингу',
-            url: 'https://arapov.trade/uk/freestudying',
-          }
-        );
-      } else if (urlPath === 'en/freestudying') {
-        this.breadcrumbs.push(
-           { name: 'Main', url: 'https://arapov.trade/en/main' },
-          { name: 'Author of the Course', url: 'https://arapov.trade/en' },
-          {
-            name: 'Free trading education',
-            url: 'https://arapov.trade/en/freestudying',
-          }
-        );
-      }
-    } else if (
-      urlPath === 'ru/freestudying/freeeducation' ||
-      urlPath === 'uk/freestudying/freeeducation' ||
-      urlPath === 'en/freestudying/freeeducation'
-    ) {
-      if (urlPath === 'ru/freestudying/freeeducation') {
-        this.breadcrumbs.push(
-           { name: 'Главная', url: 'https://arapov.trade/ru/main' },
-          { name: 'Автор курса', url: 'https://arapov.trade/ru' },
-          {
-            name: 'Бесплатное обучение трейдингу',
-            url: 'https://arapov.trade/ru/freestudying',
-          },
-          {
-            name: 'Бесплатные курсы по трейдингу',
-            url: 'https://arapov.trade/ru/freestudying/freeeducation',
-          }
-        );
-      } else if (urlPath === 'uk/freestudying/freeeducation') {
-        this.breadcrumbs.push(
-          { name: 'Головна', url: 'https://arapov.trade' },
-          { name: 'Автор курсу', url: 'https://arapov.trade/uk' },
-          {
-            name: 'Безкоштовне навчання трейдингу',
-            url: 'https://arapov.trade/uk/freestudying',
-          },
-          {
-            name: 'Безкоштовні курси з трейдингу',
-            url: 'https://arapov.trade/uk/freestudying/freeeducation',
-          }
-        );
-      } else if (urlPath === 'en/freestudying/freeeducation') {
-        this.breadcrumbs.push(
-           { name: 'Main', url: 'https://arapov.trade/en/main' },
-          { name: 'Author of the Course', url: 'https://arapov.trade/en' },
-          {
-            name: 'Free trading education',
-            url: 'https://arapov.trade/en/freestudying',
-          },
-          {
-            name: 'Free Trading Courses',
-            url: 'https://arapov.trade/en/freestudying/freeeducation',
-          }
-        );
-      }
-    } else if (
-      urlPath === 'ru/freestudying/practic' ||
-      urlPath === 'uk/freestudying/practic' ||
-      urlPath === 'en/freestudying/practic'
-    ) {
-      if (urlPath === 'ru/freestudying/practic') {
-        this.breadcrumbs.push(
-           { name: 'Главная', url: 'https://arapov.trade/ru/main' },
-          { name: 'Автор курса', url: 'https://arapov.trade/ru' },
-          {
-            name: 'Бесплатное обучение трейдингу',
-            url: 'https://arapov.trade/ru/freestudying',
-          },
-          {
-            name: 'Торговая система трейдера',
-            url: 'https://arapov.trade/ru/freestudying/practic',
-          }
-        );
-      } else if (urlPath === 'uk/freestudying/practic') {
-        this.breadcrumbs.push(
-          { name: 'Головна', url: 'https://arapov.trade' },
-          { name: 'Автор курсу', url: 'https://arapov.trade/uk' },
-          {
-            name: 'Безкоштовне навчання трейдингу',
-            url: 'https://arapov.trade/uk/freestudying',
-          },
-          {
-            name: 'Торгова система трейдера',
-            url: 'https://arapov.trade/uk/freestudying/practic',
-          }
-        );
-      } else if (urlPath === 'en/freestudying/practic') {
-        this.breadcrumbs.push(
-         { name: 'Main', url: 'https://arapov.trade/en/main' },
-          { name: 'Author of the Course', url: 'https://arapov.trade/en' },
-          {
-            name: 'Free trading education',
-            url: 'https://arapov.trade/en/freestudying',
-          },
-          {
-            name: 'Trader`s trading system',
-            url: 'https://arapov.trade/en/freestudying/practic',
-          }
-        );
-      }
-    } else if (
-      urlPath === 'ru/disclaimer' ||
-      urlPath === 'uk/disclaimer' ||
-      urlPath === 'en/disclaimer'
-    ) {
-      if (urlPath === 'ru/disclaimer') {
-        this.breadcrumbs.push(
-          { name: 'Главная', url: 'https://arapov.trade/ru/main' },
-          { name: 'Автор курса', url: 'https://arapov.trade/ru' },
-          {
-            name: 'Отказ от ответственности',
-            url: 'https://arapov.trade/ru/disclaimer',
-          }
-        );
-      } else if (urlPath === 'uk/disclaimer') {
-        this.breadcrumbs.push(
-          { name: 'Головна', url: 'https://arapov.trade' },
-          { name: 'Автор курсу', url: 'https://arapov.trade/uk' },
-          {
-            name: 'Відмова від відповідальності',
-            url: 'https://arapov.trade/ru/disclaimer',
-          }
-        );
-      } else if (urlPath === 'en/disclaimer') {
-        this.breadcrumbs.push(
-           { name: 'Main', url: 'https://arapov.trade/en/main' },
-          { name: 'Course author', url: 'https://arapov.trade/en' },
-          {
-            name: 'Disclaimer',
-            url: 'https://arapov.trade/ru/disclaimer',
-          }
-        );
-      }
-    } else {
-      const urlArr = urlPath.split('/');
+  //   this.breadcrumbs = []; // Определяем хлебные крошки в зависимости от маршрута
+  //   if (urlPath === '' || urlPath === '/') {
+  //     this.breadcrumbs.push({ name: 'Головна', url: 'https://arapov.trade' });
+  //   } else if (urlPath === 'ru' || urlPath === 'uk' || urlPath === 'en') {
+  //     if (urlPath === 'ru') {
+  //       this.breadcrumbs.push(
+  //         { name: 'Главная', url: 'https://arapov.trade/ru/main' },
+  //         { name: 'Автор курса', url: 'https://arapov.trade/ru' }
+  //       );
+  //     } else if (urlPath === 'uk') {
+  //       this.breadcrumbs.push(
+  //         { name: 'Головна', url: 'https://arapov.trade' },
+  //         { name: 'Автор курсу', url: 'https://arapov.trade/uk' }
+  //       );
+  //     } else if (urlPath === 'en') {
+  //       this.breadcrumbs.push(
+  //         { name: 'Main', url: 'https://arapov.trade/en/main' },
+  //         { name: 'Course author', url: 'https://arapov.trade/en' }
+  //       );
+  //     }
+  //   } else if (
+  //     urlPath === 'ru/studying' ||
+  //     urlPath === 'uk/studying' ||
+  //     urlPath === 'en/studying'
+  //   ) {
+  //     if (urlPath === 'ru/studying') {
+  //       this.breadcrumbs.push(
+  //         { name: 'Главная', url: 'https://arapov.trade/ru/main' },
+  //         { name: 'Автор курса', url: 'https://arapov.trade/ru' },
+  //         {
+  //           name: 'Обучение трейдингу',
+  //           url: 'https://arapov.trade/ru/studying',
+  //         }
+  //       );
+  //     } else if (urlPath === 'uk/studying') {
+  //       this.breadcrumbs.push(
+  //         { name: 'Головна', url: 'https://arapov.trade' },
+  //         { name: 'Автор курсу', url: 'https://arapov.trade/uk' },
+  //         {
+  //           name: 'Навчання трейдингу',
+  //           url: 'https://arapov.trade/uk/studying',
+  //         }
+  //       );
+  //     } else if (urlPath === 'en/studying') {
+  //       this.breadcrumbs.push(
+  //         { name: 'Main', url: 'https://arapov.trade/en/main' },
+  //         { name: 'Course author', url: 'https://arapov.trade/en' },
+  //         {
+  //           name: 'Trading training',
+  //           url: 'https://arapov.trade/uk/studying',
+  //         }
+  //       );
+  //     }
+  //   } else if (
+  //     urlPath === 'ru/freestudying' ||
+  //     urlPath === 'uk/freestudying' ||
+  //     urlPath === 'en/freestudying'
+  //   ) {
+  //     if (urlPath === 'ru/freestudying') {
+  //       this.breadcrumbs.push(
+  //         { name: 'Главная', url: 'https://arapov.trade/ru/main' },
+  //         { name: 'Автор курса', url: 'https://arapov.trade/ru' },
+  //         {
+  //           name: 'Бесплатное обучение трейдингу',
+  //           url: 'https://arapov.trade/ru/freestudying',
+  //         }
+  //       );
+  //     } else if (urlPath === 'uk/freestudying') {
+  //       this.breadcrumbs.push(
+  //         { name: 'Головна', url: 'https://arapov.trade' },
+  //         { name: 'Автор курсу', url: 'https://arapov.trade/uk' },
+  //         {
+  //           name: 'Безкоштовне навчання трейдингу',
+  //           url: 'https://arapov.trade/uk/freestudying',
+  //         }
+  //       );
+  //     } else if (urlPath === 'en/freestudying') {
+  //       this.breadcrumbs.push(
+  //          { name: 'Main', url: 'https://arapov.trade/en/main' },
+  //         { name: 'Author of the Course', url: 'https://arapov.trade/en' },
+  //         {
+  //           name: 'Free trading education',
+  //           url: 'https://arapov.trade/en/freestudying',
+  //         }
+  //       );
+  //     }
+  //   } else if (
+  //     urlPath === 'ru/freestudying/freeeducation' ||
+  //     urlPath === 'uk/freestudying/freeeducation' ||
+  //     urlPath === 'en/freestudying/freeeducation'
+  //   ) {
+  //     if (urlPath === 'ru/freestudying/freeeducation') {
+  //       this.breadcrumbs.push(
+  //          { name: 'Главная', url: 'https://arapov.trade/ru/main' },
+  //         { name: 'Автор курса', url: 'https://arapov.trade/ru' },
+  //         {
+  //           name: 'Бесплатное обучение трейдингу',
+  //           url: 'https://arapov.trade/ru/freestudying',
+  //         },
+  //         {
+  //           name: 'Бесплатные курсы по трейдингу',
+  //           url: 'https://arapov.trade/ru/freestudying/freeeducation',
+  //         }
+  //       );
+  //     } else if (urlPath === 'uk/freestudying/freeeducation') {
+  //       this.breadcrumbs.push(
+  //         { name: 'Головна', url: 'https://arapov.trade' },
+  //         { name: 'Автор курсу', url: 'https://arapov.trade/uk' },
+  //         {
+  //           name: 'Безкоштовне навчання трейдингу',
+  //           url: 'https://arapov.trade/uk/freestudying',
+  //         },
+  //         {
+  //           name: 'Безкоштовні курси з трейдингу',
+  //           url: 'https://arapov.trade/uk/freestudying/freeeducation',
+  //         }
+  //       );
+  //     } else if (urlPath === 'en/freestudying/freeeducation') {
+  //       this.breadcrumbs.push(
+  //          { name: 'Main', url: 'https://arapov.trade/en/main' },
+  //         { name: 'Author of the Course', url: 'https://arapov.trade/en' },
+  //         {
+  //           name: 'Free trading education',
+  //           url: 'https://arapov.trade/en/freestudying',
+  //         },
+  //         {
+  //           name: 'Free Trading Courses',
+  //           url: 'https://arapov.trade/en/freestudying/freeeducation',
+  //         }
+  //       );
+  //     }
+  //   } else if (
+  //     urlPath === 'ru/freestudying/practic' ||
+  //     urlPath === 'uk/freestudying/practic' ||
+  //     urlPath === 'en/freestudying/practic'
+  //   ) {
+  //     if (urlPath === 'ru/freestudying/practic') {
+  //       this.breadcrumbs.push(
+  //          { name: 'Главная', url: 'https://arapov.trade/ru/main' },
+  //         { name: 'Автор курса', url: 'https://arapov.trade/ru' },
+  //         {
+  //           name: 'Бесплатное обучение трейдингу',
+  //           url: 'https://arapov.trade/ru/freestudying',
+  //         },
+  //         {
+  //           name: 'Торговая система трейдера',
+  //           url: 'https://arapov.trade/ru/freestudying/practic',
+  //         }
+  //       );
+  //     } else if (urlPath === 'uk/freestudying/practic') {
+  //       this.breadcrumbs.push(
+  //         { name: 'Головна', url: 'https://arapov.trade' },
+  //         { name: 'Автор курсу', url: 'https://arapov.trade/uk' },
+  //         {
+  //           name: 'Безкоштовне навчання трейдингу',
+  //           url: 'https://arapov.trade/uk/freestudying',
+  //         },
+  //         {
+  //           name: 'Торгова система трейдера',
+  //           url: 'https://arapov.trade/uk/freestudying/practic',
+  //         }
+  //       );
+  //     } else if (urlPath === 'en/freestudying/practic') {
+  //       this.breadcrumbs.push(
+  //        { name: 'Main', url: 'https://arapov.trade/en/main' },
+  //         { name: 'Author of the Course', url: 'https://arapov.trade/en' },
+  //         {
+  //           name: 'Free trading education',
+  //           url: 'https://arapov.trade/en/freestudying',
+  //         },
+  //         {
+  //           name: 'Trader`s trading system',
+  //           url: 'https://arapov.trade/en/freestudying/practic',
+  //         }
+  //       );
+  //     }
+  //   } else if (
+  //     urlPath === 'ru/disclaimer' ||
+  //     urlPath === 'uk/disclaimer' ||
+  //     urlPath === 'en/disclaimer'
+  //   ) {
+  //     if (urlPath === 'ru/disclaimer') {
+  //       this.breadcrumbs.push(
+  //         { name: 'Главная', url: 'https://arapov.trade/ru/main' },
+  //         { name: 'Автор курса', url: 'https://arapov.trade/ru' },
+  //         {
+  //           name: 'Отказ от ответственности',
+  //           url: 'https://arapov.trade/ru/disclaimer',
+  //         }
+  //       );
+  //     } else if (urlPath === 'uk/disclaimer') {
+  //       this.breadcrumbs.push(
+  //         { name: 'Головна', url: 'https://arapov.trade' },
+  //         { name: 'Автор курсу', url: 'https://arapov.trade/uk' },
+  //         {
+  //           name: 'Відмова від відповідальності',
+  //           url: 'https://arapov.trade/ru/disclaimer',
+  //         }
+  //       );
+  //     } else if (urlPath === 'en/disclaimer') {
+  //       this.breadcrumbs.push(
+  //          { name: 'Main', url: 'https://arapov.trade/en/main' },
+  //         { name: 'Course author', url: 'https://arapov.trade/en' },
+  //         {
+  //           name: 'Disclaimer',
+  //           url: 'https://arapov.trade/ru/disclaimer',
+  //         }
+  //       );
+  //     }
+  //   } else {
+  //     const urlArr = urlPath.split('/');
 
-      if (urlArr[0] === 'ru') {
-        this.breadcrumbs.push(
-          { name: 'Главная', url: 'https://arapov.trade/ru/main' },
-          { name: 'Автор курса', url: 'https://arapov.trade/ru' },
-          {
-            name: 'Бесплатное обучение трейдингу',
-            url: 'https://arapov.trade/ru/freestudying',
-          },
-          {
-            name: 'Теория по трейдингу',
-            url: `https://arapov.trade/ru/freestudying/${urlArr[2]}`,
-          }
-        );
-      } else if (urlArr[0] === 'uk') {
-        this.breadcrumbs.push(
-          { name: 'Головна', url: 'https://arapov.trade' },
-          { name: 'Автор курсу', url: 'https://arapov.trade/uk' },
-          {
-            name: 'Безкоштовне навчання трейдингу',
-            url: 'https://arapov.trade/uk/freestudying',
-          },
-          {
-            name: 'Теорія з трейдингу',
-            url: `https://arapov.trade/ru/freestudying/${urlArr[2]}`,
-          }
-        );
-      } else if (urlArr[0] === 'en') {
-        this.breadcrumbs.push(
-            { name: 'Main', url: 'https://arapov.trade/en/main' },
-          { name: 'Author of the Course', url: 'https://arapov.trade/en' },
-          {
-            name: 'Free trading education',
-            url: 'https://arapov.trade/en/freestudying',
-          },
-          {
-            name: 'Trading Theory',
-            url: `https://arapov.trade/ru/freestudying/${urlArr[2]}`,
-          }
-        );
+  //     if (urlArr[0] === 'ru') {
+  //       this.breadcrumbs.push(
+  //         { name: 'Главная', url: 'https://arapov.trade/ru/main' },
+  //         { name: 'Автор курса', url: 'https://arapov.trade/ru' },
+  //         {
+  //           name: 'Бесплатное обучение трейдингу',
+  //           url: 'https://arapov.trade/ru/freestudying',
+  //         },
+  //         {
+  //           name: 'Теория по трейдингу',
+  //           url: `https://arapov.trade/ru/freestudying/${urlArr[2]}`,
+  //         }
+  //       );
+  //     } else if (urlArr[0] === 'uk') {
+  //       this.breadcrumbs.push(
+  //         { name: 'Головна', url: 'https://arapov.trade' },
+  //         { name: 'Автор курсу', url: 'https://arapov.trade/uk' },
+  //         {
+  //           name: 'Безкоштовне навчання трейдингу',
+  //           url: 'https://arapov.trade/uk/freestudying',
+  //         },
+  //         {
+  //           name: 'Теорія з трейдингу',
+  //           url: `https://arapov.trade/ru/freestudying/${urlArr[2]}`,
+  //         }
+  //       );
+  //     } else if (urlArr[0] === 'en') {
+  //       this.breadcrumbs.push(
+  //           { name: 'Main', url: 'https://arapov.trade/en/main' },
+  //         { name: 'Author of the Course', url: 'https://arapov.trade/en' },
+  //         {
+  //           name: 'Free trading education',
+  //           url: 'https://arapov.trade/en/freestudying',
+  //         },
+  //         {
+  //           name: 'Trading Theory',
+  //           url: `https://arapov.trade/ru/freestudying/${urlArr[2]}`,
+  //         }
+  //       );
+  //     }
+  //   }
+  //   // Генерируем JSON-LD
+  //   this.jsonLd = {
+  //     '@context': 'https://schema.org',
+  //     '@type': 'BreadcrumbList',
+  //     itemListElement: this.breadcrumbs.map((breadcrumb, index) => ({
+  //       '@type': 'ListItem',
+  //       position: index + 1,
+  //       name: breadcrumb.name,
+  //       item: breadcrumb.url,
+  //     })),
+  //   };
+  //   // Динамически обновляем <script> в DOM
+  //   this.updateJsonLdScript();
+  // }
+  // Метод для динамического обновления JSON-LD в DOMъъъ
+
+private generateBreadcrumbs() {
+  const urlPath = this.router.url.split('?')[0].replace(/^\/|\/$/g, '');
+  const segments = urlPath.split('/');
+  const lang = ['ru', 'uk', 'en'].includes(segments[0]) ? segments[0] : 'ru';
+  this.breadcrumbs = [];
+
+  // Базовые URL для языков
+  const baseUrls: Record<string, string> = {
+    ru: 'https://arapov.trade/ru',
+    uk: 'https://arapov.trade/uk',
+    en: 'https://arapov.trade/en',
+  };
+
+  // Названия страниц по языкам
+  const names: Record<string, Record<string, string>> = {
+    main: { ru: 'Главная', uk: 'Головна', en: 'Main' },
+    author: { ru: 'Автор курса', uk: 'Автор курсу', en: 'Author of the Course' },
+    studying: { ru: 'Обучение трейдингу', uk: 'Навчання трейдингу', en: 'Trading training' },
+    freestudying: { ru: 'Бесплатное обучение трейдингу', uk: 'Безкоштовне навчання трейдингу', en: 'Free trading education' },
+    freeeducation: { ru: 'Бесплатные курсы по трейдингу', uk: 'Безкоштовні курси з трейдингу', en: 'Free Trading Courses' },
+    practic: { ru: 'Торговая система трейдера', uk: 'Торгова система трейдера', en: "Trader's trading system" },
+    disclaimer: { ru: 'Отказ от ответственности', uk: 'Відмова від відповідальності', en: 'Disclaimer' },
+    theory: { ru: 'Теория по трейдингу', uk: 'Теорія з трейдингу', en: 'Trading Theory' },
+  };
+
+  // Функция для добавления крошки
+  const addBreadcrumb = (key: string, suffix?: string) => {
+    const url = suffix ? `${baseUrls[lang]}/${suffix}` : baseUrls[lang];
+    this.breadcrumbs.push({ name: names[key][lang], url });
+  };
+
+  // Главная крошка
+  if (!urlPath) {
+    this.breadcrumbs.push({ name: names['main'][lang], url: 'https://arapov.trade' });
+  } else {
+    addBreadcrumb('main');   // Главная
+    addBreadcrumb('author'); // Автор курса
+
+    const page = segments[1];
+
+    if (page === 'studying') {
+      addBreadcrumb('studying', 'studying');
+    } else if (page === 'freestudying') {
+      addBreadcrumb('freestudying', 'freestudying');
+
+      if (segments[2] === 'freeeducation') {
+        addBreadcrumb('freeeducation', 'freestudying/freeeducation');
+      } else if (segments[2] === 'practic') {
+        addBreadcrumb('practic', 'freestudying/practic');
+      } else if (segments[2]) {
+        addBreadcrumb('theory', `freestudying/${segments[2]}`);
       }
+    } else if (page === 'disclaimer') {
+      addBreadcrumb('disclaimer', 'disclaimer');
     }
-    // Генерируем JSON-LD
-    this.jsonLd = {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: this.breadcrumbs.map((breadcrumb, index) => ({
-        '@type': 'ListItem',
-        position: index + 1,
-        name: breadcrumb.name,
-        item: breadcrumb.url,
-      })),
-    };
-    // Динамически обновляем <script> в DOM
-    this.updateJsonLdScript();
   }
-  // Метод для динамического обновления JSON-LD в DOM
+
+  // Генерация JSON-LD
+  this.jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: this.breadcrumbs.map((breadcrumb, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: breadcrumb.name,
+      item: breadcrumb.url,
+    })),
+  };
+
+  // Обновляем <script> JSON-LD в DOM
+  this.updateJsonLdScript();
+}
+
+
+
+
+  
   private updateJsonLdScript() {
     // Удаляем старый скрипт, если он есть
     const existingScript = this.document.querySelector(

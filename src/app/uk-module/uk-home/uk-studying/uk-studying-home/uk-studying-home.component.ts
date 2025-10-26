@@ -79,7 +79,7 @@ export class UkStudyingHomeComponent implements OnInit , AfterViewInit, OnDestro
     this.lang.setNumber(1);
 
     this.titleService.setTitle(
-      'Курси трейдингу онлайн від Ігоря Арапова | ArapovTrade'
+      'Курси трейдингу онлайн | Навчання трейдингу з нуля'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({

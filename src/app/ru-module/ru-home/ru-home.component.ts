@@ -97,7 +97,7 @@ export class RuHomeComponent implements OnInit, AfterViewInit, OnDestroy {
       userMessage: new FormControl('', Validators.required),
     });
     this.titleService.setTitle(
-      'Авторское обучение трейдингу онлайн | Игорь Арапов'
+      'Обучение трейдингу с нуля бесплатно | Игорь Арапов'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
 

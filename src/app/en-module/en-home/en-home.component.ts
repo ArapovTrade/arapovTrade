@@ -92,7 +92,7 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
       userMessage: new FormControl('', Validators.required),
     });
     this.titleService.setTitle(
-      "Trading courses Author's online trading training | Igor Arapov"
+      "Free Trading Training from Scratch | Igor Arapov"
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({

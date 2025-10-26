@@ -39,7 +39,7 @@ export class EnCryptoHomepageComponent  implements OnInit, AfterViewInit, OnDest
       menuOpen: boolean = false;
       ngOnInit() {
         this.titleService.setTitle(
-          'Free Trading Education — Igor Arapov`s Course '
+          'Stock Market Trading Training for Traders | Trading Course by Igor Arapov'
         );
         this.meta.updateTag({ name: 'robots', content: 'index, follow' });
         this.meta.addTag({

@@ -31,7 +31,7 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {
     this.removeExistingWebPageSchema();
     this.titleService.setTitle(
-      'Бесплатный курс по  трейдингу от Игоря Арапова'
+      'Бесплатное обучение трейдингу для начинающих с нуля | Игорь Арапов'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({

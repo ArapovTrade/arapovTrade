@@ -39,7 +39,7 @@ export class RuCryptoHomepageComponent  implements OnInit, AfterViewInit, OnDest
     menuOpen: boolean = false;
     ngOnInit() {
       this.titleService.setTitle(
-        'Бесплатное обучение трейдингу — курс Игоря Арапова'
+        'Обучение трейдеров торговле на бирже | Курс трейдинга от Игоря Арапова'
       );
       this.meta.updateTag({ name: 'robots', content: 'index, follow' });
       this.meta.addTag({

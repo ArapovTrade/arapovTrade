@@ -73,7 +73,7 @@ export class RuStudyingHomeComponent implements OnInit , AfterViewInit, OnDestro
   ngOnInit(): void {
     this.lang.setNumber(2);
     this.titleService.setTitle(
-      'Курсы по трейдингу | Обучение  онлайн | Игорь Арапов'
+      'Курсы по трейдингу онлайн | Обучение трейдингу с нуля'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({

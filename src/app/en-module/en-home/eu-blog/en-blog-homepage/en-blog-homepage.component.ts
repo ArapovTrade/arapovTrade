@@ -107,7 +107,7 @@ ngAfterViewInit() {
 
     this.paginator.itemsPerPageLabel = '';
     this.lang.setNumber(3);
-    this.titleService.setTitle('Free trading training from Igor Arapov');
+    this.titleService.setTitle('Online Trading Training | Free Trading Courses from Igor Arapov');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'keywords',

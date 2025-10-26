@@ -123,7 +123,7 @@ export class UkBlogHomepageComponent implements OnInit {
     this.paginator.itemsPerPageLabel = '';
     this.lang.setNumber(1);
     this.titleService.setTitle(
-      'Безкоштовне навчання трейдингу від Ігоря Арапова'
+      'Навчання трейдингу онлайн | Безкоштовні курси трейдерів від Ігоря Арапова'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({

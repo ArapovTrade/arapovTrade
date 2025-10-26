@@ -21,7 +21,7 @@ export class HomeUkFourtyFiveComponent implements OnInit {
     this.removeExistingWebPageSchema()
 
     this.titleService.setTitle(
-      'Безкоштовний курс з трейдингу від Ігоря Арапова'
+      'Безкоштовне навчання трейдингу для початківців | Ігор Арапов'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({

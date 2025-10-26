@@ -4269,3 +4269,81 @@ margin: 20px auto 50px !important;
 
 
 
+.zagolovok{
+  margin: 0;
+}
+.trading-definition-title,.osnovi-treidingu,.material-symbols-show-chart-rounded,.opportunities-risks {
+  margin: 0;
+  width: auto !important;
+       margin-bottom: 15px;
+}
+.osnovi-treidingu {
+  justify-content: flex-start !important;
+}
+.osnovi-treidingu-14{
+  margin-top: 15px;
+}
+.author-page_main-block_title-block{
+  margin: 0;
+}
+.author-page_main-block_title-block h1{
+display: inline;
+ 
+
+}
+@media (min-width: 767px) and (max-width: 1200px){
+.author-page_main-block_title-block h1{
+  font-family: Advent Pro;
+font-weight: 700;
+font-style: Bold;
+font-size: 40px;
+ 
+line-height: 100%;
+ 
+
+}
+.studying_h2,.studying_h1{
+font-family: Advent Pro;
+font-weight: 700;
+font-style: Bold;
+font-size: 30px !important;
+leading-trim: NONE;
+line-height: 32px;
+letter-spacing: 0%;
+
+}
+}
+
+@media (max-width: 766px){
+
+.author-page_main-block_title-block h1{
+  font-family: Advent Pro;
+font-weight: 600;
+font-style: normal;
+font-size: 30px;
+ 
+line-height: 100%;
+  
+}
+.author_descr_span{
+    font-size: 30px;
+  }
+}
+.author-page_main-block_title-block h2{
+  font-size: 30px;
+  display: inline;
+}
+.studying_h2,.studying_h1{
+font-family: Advent Pro;
+font-weight: 700;
+font-style: Bold;
+font-size: 30px;
+leading-trim: NONE;
+line-height: 32px;
+letter-spacing: 0%;
+
+}
+ 
+.second-section_programm-block h2{
+ margin-bottom: 15px;
+}

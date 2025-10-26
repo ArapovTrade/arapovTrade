@@ -148,58 +148,9 @@
               </div>
             </button>
           </div>
-          <!-- Иконка меню и выпадающее меню для планшетов -->
-          <!-- <div class="menu-switcher" [class.open]="menuOpen">
-            <button
-              class="menu-btn"
-              (click)="toggleMenu()"
-              [ngStyle]="{ background: isDark ? '#2c2a06' : '#DBE2E7' }"
-            >
-              <span class="icon flex">
-                <img
-                  *ngIf="isDark"
-                  src="assets/redesignArapovTrade/img/menu-button.svg"
-                  alt="menu_icon"
-                />
-                <img
-                  *ngIf="!isDark"
-                  src="assets/redesignArapovTrade/img/menu-button-light.svg"
-                  alt="menu_icon"
-                />
-              </span>
-            </button>
-            <ul
-              class="menu-dropdown"
-              *ngIf="menuOpen"
-              [ngStyle]="{ background: isDark ? '#2c2a06' : '#DBE2E7' }"
-            >
-              <li
-                (click)="navigateTo('ru/freestudying')"
-                [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-                [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-              >
-                Бесплатное обучение трейдингу
-              </li>
-              <li
-                (click)="navigateTo('ru')"
-                [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-                [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-              >
-                Об авторе
-              </li>
-              <li
-                (click)="navigateTo('ru/studying')"
-                [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-                [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-              >
-                Курсы по трейдингу
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div> -->
+          
       
-        <!-- Иконка меню и выпадающее меню для планшетов -->
+       
           <div class="menu-switcher" [class.open]="menuOpen">
             <button
               class="menu-btn"
@@ -290,7 +241,7 @@
 
               <div class="rectangle"></div>
 
-              <div class="zagolovok">
+              <h1 class="zagolovok">
                 <span
                   class="navchannya-treidzingu-z-nulya"
                   [ngStyle]="{ color: isDark ? '#ffffff' : '#03314B' }"
@@ -303,7 +254,7 @@
                   }"
                   >Руководство для начинающих</span
                 >
-              </div>
+                </h1>
               <span
                 class="tekst-opisanye"
                 [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
@@ -957,13 +908,13 @@
                 }"
               ></div>
             </div>
-            <span
+            <h2
               [ngClass]="{
                 'trading-definition-title': true,
                 'gradient-orange': isDark,
                 'gradient-blue': !isDark
               }"
-              >Что такое трейдинг: простыми словами</span
+              >Что такое трейдинг: простыми словами</h2
             >
           </div>
           <span
@@ -982,13 +933,13 @@
       <div class="fifth-content_block" data-aos="fade-up" data-aos-delay="300">
         <div class="left-content">
           <div class="heading-support-text">
-            <span
+            <h2
               [ngClass]="{
                 'osnovi-treidingu': true,
                 'gradient-orange': isDark,
                 'gradient-blue': !isDark
               }"
-              >Основы трейдинга</span
+              >Основы трейдинга</h2
             ><span
               class="osnovi-treidingu-14"
               [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
@@ -1116,14 +1067,14 @@
       ></div>
     </div>
     <div class="six_block-right">
-      <span
+      <h2
         class="material-symbols-show-chart-rounded"
         [ngClass]="{
           'material-symbols-show-chart-rounded': true,
           'gradient-orange': isDark,
           'gradient-blue': !isDark
         }"
-        >Кто такой трейдер?</span
+        >Кто такой трейдер?</h2
       ><span
         class="flex-row-fc"
         [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
@@ -1163,13 +1114,13 @@
     <div class="bg-36">
       <div class="seventh-block_left">
         <div class="flex-column">
-          <span
+          <h2
             [ngClass]="{
               'opportunities-risks': true,
               'gradient-orange': isDark,
               'gradient-blue': !isDark
             }"
-            >Возможности и риски</span
+            >Возможности и риски</h2
           ><span
             class="opportunities-risks-38"
             [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
@@ -1357,14 +1308,14 @@
         ></div>
       </div>
       <div class="reighth-block_main-right">
-        <span
+        <h2
           [ngClass]="{
             'opportunities-risks': true,
             'gradient-orange': isDark,
             'gradient-blue': !isDark
           }"
           >С чего начать?
-        </span>
+        </h2>
         <div
           class="start-trading-recommendation"
           [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"

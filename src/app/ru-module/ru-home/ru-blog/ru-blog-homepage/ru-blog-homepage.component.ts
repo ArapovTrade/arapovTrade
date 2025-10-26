@@ -106,7 +106,7 @@ ngAfterViewInit() {
     this.paginator.itemsPerPageLabel = '';
 
     this.titleService.setTitle(
-      'Бесплатное обучение трейдингу от Игоря Арапова'
+      'Обучение трейдингу онлайн | Бесплатные курсы трейдеров от Игоря Арапова'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
 

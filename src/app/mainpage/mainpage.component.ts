@@ -39,7 +39,7 @@ export class MainpageComponent implements OnInit, AfterViewInit, OnDestroy {
   menuOpen: boolean = false;
   ngOnInit() {
     this.titleService.setTitle(
-      'Безкоштовне навчання трейдингу — курс Ігоря Арапова'
+      'Навчання трейдерів торгівлі на біржі | Курс трейдингу від Ігоря Арапова'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({

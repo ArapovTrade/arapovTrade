@@ -74,7 +74,7 @@ export class UkHomeComponent implements OnInit, AfterViewInit, OnDestroy {
   dropdownOpen = false;
   menuOpen: boolean = false;
   ngOnInit() {
-    this.titleService.setTitle('Авторське навчання трейдингу від Ігоря Арапова');
+    this.titleService.setTitle('Навчання трейдингу з нуля безкоштовно | Ігор Арапов');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
