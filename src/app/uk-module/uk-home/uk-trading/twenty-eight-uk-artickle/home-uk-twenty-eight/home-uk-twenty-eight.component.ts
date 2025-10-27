@@ -16,7 +16,7 @@ export class HomeUkTwentyEightComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Цінові фігури в технічному аналізі');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь про цінові фігури в технічному аналізі: розворотні та продовжувальні патерни, їх застосування в трейдингу від ArapovTrade.',

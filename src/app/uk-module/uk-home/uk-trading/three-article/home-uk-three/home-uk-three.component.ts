@@ -16,7 +16,7 @@ export class HomeUkThreeComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Біржа: повний гід для трейдерів');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь, що таке біржа, її види, функції та особливості торгівлі. Посібник для початківців і трейдерів від ArapovTrade.',

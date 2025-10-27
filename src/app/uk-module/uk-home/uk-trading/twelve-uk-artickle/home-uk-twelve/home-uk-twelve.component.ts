@@ -16,7 +16,7 @@ export class HomeUkTwelveComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Халвінг: вплив на ринок криптовалют');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь, що таке халвінг Bitcoin, як він працює та впливає на ціну і ринок криптовалют. Посібник для трейдерів від ArapovTrade.',

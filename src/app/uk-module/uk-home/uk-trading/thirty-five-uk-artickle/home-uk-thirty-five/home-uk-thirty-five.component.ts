@@ -16,7 +16,7 @@ export class HomeUkThirtyFiveComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Торгова система: види та оптимізація');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь про торгові системи: види, автоматизація, оптимізація та вибір стратегії для трейдингу. Посібник від ArapovTrade.',

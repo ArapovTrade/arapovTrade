@@ -16,7 +16,7 @@ export class HomeUkFourtyComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Помилки трейдерів-початківців: як уникнути');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь про поширені помилки трейдерів-початківців та як їх уникнути. Поради для успішного старту на ринках від ArapovTrade.',

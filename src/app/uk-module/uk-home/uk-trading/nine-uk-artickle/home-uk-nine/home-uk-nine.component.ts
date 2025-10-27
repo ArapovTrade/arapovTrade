@@ -16,7 +16,7 @@ export class HomeUkNineComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Формування курсу валют: фактори впливу');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь, як формується курс валют, які фактори впливають та їх роль в економіці. Посібник для трейдерів від ArapovTrade.',

@@ -16,7 +16,7 @@ export class HomeUkFifteenComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Центральні банки: функції та вплив');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь про ключові центральні банки світу, їх функції, засідання та вплив на економіку. Посібник для трейдерів від ArapovTrade.',

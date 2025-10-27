@@ -16,7 +16,7 @@ export class HomeUkThirteenComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Ризик зміни курсу: як захиститись');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь, що таке ризик зміни курсу, його вплив на фінанси та стратегії мінімізації. Посібник для трейдерів від ArapovTrade.',

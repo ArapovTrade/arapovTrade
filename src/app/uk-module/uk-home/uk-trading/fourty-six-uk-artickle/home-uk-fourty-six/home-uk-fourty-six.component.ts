@@ -16,7 +16,7 @@ export class HomeUkFourtySixComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Tether (USDT): що це та як використовувати');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь про Tether (USDT): що це, як працює, переваги, ризики та роль на крипторинку. Посібник для трейдерів від ArapovTrade.',

@@ -16,7 +16,7 @@ export class HomeUkSixComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Алгоритмічні стейблкоїни: як працюють');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь про алгоритмічні стейблкоїни: принцип роботи, плюси, мінуси та їх роль у криптотрейдингу. Посібник від ArapovTrade.',

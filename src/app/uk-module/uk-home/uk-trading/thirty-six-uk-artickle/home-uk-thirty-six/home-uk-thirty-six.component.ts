@@ -18,7 +18,7 @@ export class HomeUkThirtySixComponent implements OnInit {
       'Хибні пробої: як Smart Money збирають ліквідність'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь, як Smart Money використовують хибні пробої для збору ліквідності та як уникнути їх пасток у трейдингу. Посібник від ArapovTrade.',

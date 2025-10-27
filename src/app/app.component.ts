@@ -212,8 +212,7 @@ export class AppComponent implements OnInit, AfterViewChecked , OnDestroy{
           title = 'Обучение трейдингу с нуля бесплатно | Игорь Арапов';
         }
 
-
-        console.log('title',title);
+ 
         
 
         let description = '';
@@ -262,6 +261,7 @@ export class AppComponent implements OnInit, AfterViewChecked , OnDestroy{
         const url = `https://arapov.trade${this.router.url}`;
 
         this.titleService.setTitle(title);
+        this.removeMetaDescriptionIfExists()
         this.meta.updateTag({ name: 'description', content: description });
 
      

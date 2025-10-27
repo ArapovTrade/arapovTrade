@@ -16,7 +16,7 @@ export class HomeUkFourtyTwoComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Таймфрейми в трейдингу: як обрати');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь про таймфрейми в трейдингу, як обрати часовий інтервал та який підходить новачкам. Посібник для трейдерів від ArapovTrade.',

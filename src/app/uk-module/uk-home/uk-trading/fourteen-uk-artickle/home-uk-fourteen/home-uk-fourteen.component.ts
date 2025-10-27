@@ -16,7 +16,7 @@ export class HomeUkFourteenComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Ризики кредитного плеча на Форекс');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь про ризики кредитного плеча на Форекс та як ними керувати, щоб мінімізувати втрати. Посібник для трейдерів від ArapovTrade.',

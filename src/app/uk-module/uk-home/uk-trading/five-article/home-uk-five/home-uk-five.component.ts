@@ -16,7 +16,7 @@ export class HomeUkFiveComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Деривативи: види та застосування');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь про деривативи, їх види, застосування та вплив на фінансові ринки. Посібник для трейдерів та інвесторів від ArapovTrade.',

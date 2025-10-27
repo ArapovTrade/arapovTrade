@@ -16,7 +16,7 @@ export class HomeUkThirtyTwoComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Стоп-ордер: як використовувати в трейдингу');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь, що таке стоп-ордер, його види, переваги, недоліки та стратегії використання на крипто- і фондових ринках від ArapovTrade.',

@@ -16,7 +16,7 @@ export class HomeUkEightComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Валюти та котирування: основи трейдингу');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь про валюти, їх види, котирування та використання в торгівлі й на фінансових ринках. Посібник для трейдерів від ArapovTrade.',

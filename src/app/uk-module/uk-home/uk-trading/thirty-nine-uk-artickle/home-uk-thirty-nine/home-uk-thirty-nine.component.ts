@@ -16,7 +16,7 @@ export class HomeUkThirtyNineComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Прибуток та збитки: R/R у трейдингу');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь, як розрахувати співвідношення прибутку та збитків (R/R) у трейдингу, управляти ризиками та підвищувати ефективність. Посібник від ArapovTrade.',

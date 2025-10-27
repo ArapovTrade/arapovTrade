@@ -16,7 +16,7 @@ export class HomeUkThirtyFourComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Стоп-лімітний ордер: як використовувати');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь, що таке стоп-лімітний ордер, як його налаштувати та використовувати на крипто- і фондових ринках. Посібник від ArapovTrade.',

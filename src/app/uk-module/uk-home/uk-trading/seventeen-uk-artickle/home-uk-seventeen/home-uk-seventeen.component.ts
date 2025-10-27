@@ -18,7 +18,7 @@ export class HomeUkSeventeenComponent implements OnInit {
       'Що таке Біткоїн і як він працює | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтеся, що таке Біткоїн, як він працює, його ключові переваги, ризики і практичне застосування в інвестиціях та торгівліна.',

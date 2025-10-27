@@ -20,7 +20,7 @@ export class HomeUkTwoComponent implements OnInit {
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
 
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Основні терміни ринку для трейдерів-початківців: фондовий, валютний і крипторинок, стратегії торгівлі та фінансовий аналіз.',

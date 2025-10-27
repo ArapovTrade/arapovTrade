@@ -16,7 +16,7 @@ export class HomeUkThirtyEightComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Управління капіталом у трейдингу');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь про управління капіталом у трейдингу: ризик-менеджмент, мані-менеджмент та стратегії контролю депозиту від ArapovTrade.',

@@ -16,7 +16,7 @@ export class HomeUkThirtyComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Imbalance і FVG: зони ліквідності в трейдингу');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь, що таке Imbalance і FVG, як знаходити зони ліквідності на графіку та використовувати їх у трейдингу. Посібник від ArapovTrade.',

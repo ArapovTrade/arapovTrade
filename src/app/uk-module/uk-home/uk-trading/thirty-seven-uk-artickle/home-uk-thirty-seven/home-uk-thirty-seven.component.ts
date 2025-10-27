@@ -16,7 +16,7 @@ export class HomeUkThirtySevenComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Stop Hunting: як Smart Money вибивають стопи');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь, що таке Stop Hunting, як Smart Money вибивають стопи трейдерів та як захистити капітал від маніпуляцій. Посібник від ArapovTrade.',

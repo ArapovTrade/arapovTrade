@@ -16,7 +16,7 @@ export class HomeUkTwentyFiveComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Економічні показники зростання');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь про ключові економічні показники зростання та їх вплив на фінансові ринки. Посібник для трейдерів від ArapovTrade.',

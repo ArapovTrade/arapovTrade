@@ -16,7 +16,7 @@ export class HomeUkSixteenComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Ethereum: що це та як працює | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь про Ethereum: смарт-контракти, децентралізовані додатки, принцип роботи та перспективи. Посібник для трейдерів від ArapovTrade.',

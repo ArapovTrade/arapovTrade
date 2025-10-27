@@ -16,7 +16,7 @@ export class HomeUkNineteenComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Як торгувати на FOREX: посібник');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь, як торгувати на валютному ринку FOREX: посібник для новачків із стратегіями, порадами та прикладами від ArapovTrade.',

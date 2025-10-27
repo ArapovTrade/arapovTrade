@@ -16,7 +16,7 @@ export class HomeUkTwentySixComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Технічний аналіз ринку: основи');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь про технічний аналіз ринку: основи, принципи та методи для трейдингу. Посібник для трейдерів від ArapovTrade.',

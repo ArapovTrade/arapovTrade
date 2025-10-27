@@ -20,7 +20,7 @@ export class HomeUkTwentyThreeComponent implements OnInit {
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
 
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтеся про головні світові фондові індекси, їхню роль у глобальній економіці та як вони впливають на фінансові ринки та інвесторів.',

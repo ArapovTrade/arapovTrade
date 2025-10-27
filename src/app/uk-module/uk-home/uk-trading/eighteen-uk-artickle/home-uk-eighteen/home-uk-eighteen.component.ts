@@ -16,7 +16,7 @@ export class HomeUkEighteenComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Психологічні ризики FOREX: як їх уникнути');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь про психологічні ризики на FOREX та як їх мінімізувати. Посібник для трейдерів з порадами та прикладами від ArapovTrade.',

@@ -17,7 +17,7 @@ export class HomeUkTwentyComponent implements OnInit {
     this.titleService.setTitle('Аналіз попиту і пропозиції у трейдингу | Arapov.trade');
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
   name: 'description',
   content:
     'Як використовувати концепцію Пітера Стеделмайєра для аналізу попиту і пропозиції. Основи Market Profile для ефективної торгівлі на ринку.',

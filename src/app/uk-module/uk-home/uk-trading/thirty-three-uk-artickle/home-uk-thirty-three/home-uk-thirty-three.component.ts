@@ -16,7 +16,7 @@ export class HomeUkThirtyThreeComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Реквоти в трейдингу: що це та як уникнути');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь, що таке реквоти в трейдингу, причини їх виникнення та як їх уникнути. Поради для трейдерів від ArapovTrade.',

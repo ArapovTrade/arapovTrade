@@ -16,7 +16,7 @@ export class HomeUkFourtyOneComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Торговий план трейдера: як скласти');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь, як скласти ефективний торговий план трейдера: ключові компоненти, приклади та поради для успіху від ArapovTrade.',

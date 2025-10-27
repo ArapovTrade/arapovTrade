@@ -17,7 +17,7 @@ export class HomeUkTwentyTwoComponent implements OnInit {
     this.titleService.setTitle('Економічні фактори у трейдингу | Arapov.trade');
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтеся, як економічні фактори впливають на валютні курси. Основні показники для аналізу ринку, трейдингу та ухвалення фінансових рішень.',

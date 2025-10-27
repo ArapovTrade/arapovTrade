@@ -16,7 +16,7 @@ export class HomeUkTwentyOneComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Аналіз ринку FOREX: основи трейдингу');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь про аналіз ринку FOREX: ключові аспекти, фактори впливу та стратегії для трейдерів. Посібник від ArapovTrade.',

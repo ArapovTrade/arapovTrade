@@ -16,7 +16,7 @@ export class HomeUkThirtyOneComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Ринковий ордер: як працює та застосовується');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь, що таке ринковий ордер, як він працює, його переваги, недоліки та приклади використання в трейдингу. Посібник від ArapovTrade.',

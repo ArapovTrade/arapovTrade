@@ -16,7 +16,7 @@ export class HomeUkTwentyNineComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Чому трейдери втрачають: пастки Smart Money');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь, чому 90% трейдерів втрачають гроші, які пастки створюють Smart Money та як уникнути втрат. Посібник від ArapovTrade.',

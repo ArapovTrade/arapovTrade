@@ -16,7 +16,7 @@ export class HomeUkSevenComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Ринок FOREX: особливості, учасники та торгові сесії');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтеся, як працює ринок FOREX, хто на ньому торгує, які існують торгові сесії та які стратегії використовують трейдери різного рівня.',

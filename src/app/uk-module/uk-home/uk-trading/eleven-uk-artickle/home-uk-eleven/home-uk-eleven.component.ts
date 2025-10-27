@@ -16,7 +16,7 @@ export class HomeUkElevenComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Як торгувати на криптобіржі | ArapovTrade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь, як почати торгувати на криптобіржі: вибір платформи, реєстрація, стратегії та управління ризиками. Посібник від ArapovTrade.',

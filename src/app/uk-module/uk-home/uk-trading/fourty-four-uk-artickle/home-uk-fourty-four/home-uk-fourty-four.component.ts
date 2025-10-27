@@ -16,7 +16,7 @@ export class HomeUkFourtyFourComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Приховані ордери: як банки ховають позиції');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь, що таке приховані ордери (Iceberg Orders), як банки маскують позиції та як використовувати їх у торгівлі. Посібник від ArapovTrade.',

@@ -16,7 +16,7 @@ export class HomeUkTwentyFourComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Рівні Фібоначчі в трейдингу | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь про рівні Фібоначчі: принципи, застосування в технічному аналізі та стратегії трейдингу. Посібник від ArapovTrade.',

@@ -16,7 +16,7 @@ export class HomeUkFourtyThreeComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Пули ліквідності: як шукають Smart Money');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь, як Smart Money знаходять пули ліквідності, маніпулюють ринком та використовують приховані зони. Посібник від ArapovTrade.',

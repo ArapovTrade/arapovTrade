@@ -16,7 +16,7 @@ export class HomeUkFourComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Біржові та позабіржові ринки: огляд');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь про біржові та позабіржові ринки: відмінності, особливості, переваги й недоліки. Посібник для трейдерів від ArapovTrade.',

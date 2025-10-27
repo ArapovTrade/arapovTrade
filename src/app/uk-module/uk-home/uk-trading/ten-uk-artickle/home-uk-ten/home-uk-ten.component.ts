@@ -16,7 +16,7 @@ export class HomeUkTenComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Позиції в трейдингу: види та валютування');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь про позиції в трейдингу: види, перенесення, дата валютування та приклади. Посібник для трейдерів від ArapovTrade.',
