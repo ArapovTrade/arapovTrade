@@ -42,13 +42,13 @@ export class EnCryptoHomepageComponent  implements OnInit, AfterViewInit, OnDest
           'Stock Market Trading Training for Traders | Trading Course by Igor Arapov'
         );
         this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-        this.meta.addTag({
+        this.meta.updateTag({
           name: 'description',
           content:
             'Igor Arapov`s Free Trading Course: 130+ Articles and 70 Videos. Study Technical Analysis, Risk Management, and Trading Strategies Online',
         });
     
-        this.meta.addTag({
+        this.meta.updateTag({
           name: 'keywords',
           content:
             'Trading, Trading education , Technical analysis, Financial exchange, Trading system, Igor Arapov',

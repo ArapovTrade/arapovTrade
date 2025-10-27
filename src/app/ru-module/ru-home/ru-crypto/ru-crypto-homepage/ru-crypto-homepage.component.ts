@@ -42,13 +42,13 @@ export class RuCryptoHomepageComponent  implements OnInit, AfterViewInit, OnDest
         'Обучение трейдеров торговле на бирже | Курс трейдинга от Игоря Арапова'
       );
       this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-      this.meta.addTag({
+      this.meta.updateTag({
         name: 'description',
         content:
           'Бесплатный курс по трейдингу Игоря Арапова: 130+ статей и 70 видео. Изучайте теханализ, риск-менеджмент и торговые стратегии онлайн',
       });
   
-      this.meta.addTag({
+      this.meta.updateTag({
         name: 'keywords',
         content:
           'Трейдинг, Обучение трейдингу, Технический анализ, Финансовая биржа, Торговая система, Игорь Арапов',

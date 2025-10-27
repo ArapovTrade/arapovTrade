@@ -42,13 +42,13 @@ export class MainpageComponent implements OnInit, AfterViewInit, OnDestroy {
       'Навчання трейдерів торгівлі на біржі | Курс трейдингу від Ігоря Арапова'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Безкоштовний курс з трейдингу Ігоря Арапова: 130 + статей і 70 відео. Вивчайте теханаліз, ризик-менеджмент і торгові стратегії онлайн',
     });
 
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'keywords',
       content:
         'трейдинг, навчання трейдингу, технічний аналіз, фінансова біржа, торгова система, Ігор Арапов',

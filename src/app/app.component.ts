@@ -148,7 +148,7 @@ export class AppComponent implements OnInit, AfterViewChecked , OnDestroy{
       userMessage: new FormControl('', Validators.required),
     });
 
-    this.setDefaultMetaTags();
+    // this.setDefaultMetaTags();
 
     this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
@@ -382,17 +382,17 @@ private updateCanonicalTag() {
   }
 
   private setDefaultMetaTags() {
-    this.meta.addTags([
-      { property: 'og:type', content: 'article' },
-      { property: 'og:image:width', content: '1200' },
-      { property: 'og:image:height', content: '630' },
-      { property: 'og:site_name', content: 'https://arapov.trade/' },
+    // this.meta.addTags([
+    //   { property: 'og:type', content: 'article' },
+    //   { property: 'og:image:width', content: '1200' },
+    //   { property: 'og:image:height', content: '630' },
+    //   { property: 'og:site_name', content: 'https://arapov.trade/' },
 
-      // Базові Twitter Card теги
-      { name: 'twitter:image', content: `https://arapov.trade/assets/img/default-og-image.png`},
-      { name: 'twitter:card', content: `summary_large_image`}, // Дефолтний тип картки
-      { name: 'twitter:site', content: '@Igor_Arapov1990' }, // Ваш Twitter акаунт (замініть)
-    ]);
+    //   // Базові Twitter Card теги
+    //   { name: 'twitter:image', content: `https://arapov.trade/assets/img/default-og-image.png`},
+    //   { name: 'twitter:card', content: `summary_large_image`}, // Дефолтний тип картки
+    //   { name: 'twitter:site', content: '@Igor_Arapov1990' }, // Ваш Twitter акаунт (замініть)
+    // ]);
   }
 
   private generateBreadcrumbs() {
@@ -767,64 +767,85 @@ private updateCanonicalTag() {
     this.flagTrue = false;
   }
   // hreflang
-  private updateHreflangTags() {
-    // Удаляем существующие hreflang теги, чтобы избежать дублирования
-    const existingHreflangTags = this.document.querySelectorAll(
-      'link[rel="alternate"][hreflang]'
-    );
-    existingHreflangTags.forEach((tag) => tag.remove());
-    // Определяем текущий путь без параметров запроса
-    const urlPath = this.router.url.split('?')[0].replace(/^\/|\/$/g, '');
-    const segments = urlPath.split('/');
-    const currentLang =
-      segments[0] === 'uk' || segments[0] === 'ru' || segments[0] === 'en' ? segments[0] : 'uk';
-    // Определяем базовый путь без языка
-    const basePath =
-      (segments[0] === 'uk' || segments[0] === 'ru'|| segments[0] === 'en' ) && segments.length > 1
-        ? segments.slice(1).join('/')
-        : '';
-    // Для корневой страницы (arapov.trade/) добавляем только hreflang="uk"
-    if (urlPath === '') {
-      const link = this.renderer.createElement('link');
-      this.renderer.setAttribute(link, 'rel', 'alternate');
-      this.renderer.setAttribute(link, 'hreflang', 'uk');
-      this.renderer.setAttribute(link, 'href', 'https://arapov.trade/');
-      this.renderer.appendChild(this.document.head, link);
-      
-      return;
+ private updateHreflangTags() {
+  // 1. Удаляем старые теги
+  this.document
+    .querySelectorAll('link[rel="alternate"][hreflang]')
+    .forEach(tag => tag.remove());
+
+  const fullPath = this.router.url.split('?')[0].replace(/^\/|\/$/g, '');
+  const segments = fullPath.split('/');
+
+  const LANGS = ['uk', 'ru', 'en'];
+
+  let currentLang: string;
+  let basePath: string;
+
+  // === Главная страница (особый случай) ===
+  if (fullPath === '' || fullPath === 'ru/main' || fullPath === 'en/main') {
+    if (fullPath === '') {
+      currentLang = 'uk';
+      basePath = 'main';
+    } else {
+      currentLang = segments[0]; // ru или en
+      basePath = 'main';
     }
-    // Для остальных страниц (arapov.trade/uk, arapov.trade/ru и других)
-    const supportedLanguages = [
-      { code: 'uk', hreflang: 'uk' },
-      { code: 'ru', hreflang: 'ru' },
-      { code: 'en', hreflang: 'en' },
-    ];
-    // Добавляем тег hreflang для каждого языка
-    supportedLanguages.forEach((lang) => {
-      const href =
-        lang.code === 'uk'
-          ? `https://arapov.trade/${basePath ? 'uk/' + basePath : 'uk'}`
-          : lang.code === 'en'
-    ? `https://arapov.trade/${basePath ? 'en/' + basePath : 'en'}`
-          : `https://arapov.trade/${basePath ? 'ru/' + basePath : 'ru'}`;
-      const link = this.renderer.createElement('link');
-      this.renderer.setAttribute(link, 'rel', 'alternate');
-      this.renderer.setAttribute(link, 'hreflang', lang.hreflang);
-      this.renderer.setAttribute(link, 'href', href);
-      this.renderer.appendChild(this.document.head, link);
-    });
-    // Добавляем hreflang="x-default" (используем русскую версию как дефолтную)
-    const defaultHref =
-      basePath === ''
-        ? 'https://arapov.trade/ru'
-        : `https://arapov.trade/ru/${basePath}`;
-    const defaultLink = this.renderer.createElement('link');
-    this.renderer.setAttribute(defaultLink, 'rel', 'alternate');
-    this.renderer.setAttribute(defaultLink, 'hreflang', 'x-default');
-    this.renderer.setAttribute(defaultLink, 'href', defaultHref);
-    this.renderer.appendChild(this.document.head, defaultLink);
-   
   }
+  // === Обычные страницы ===
+  else {
+    const firstSegment = segments[0];
+
+    // Проверяем: первый сегмент — это язык?
+    if (LANGS.includes(firstSegment)) {
+      currentLang = firstSegment;
+      // Убираем язык из пути
+      basePath = segments.slice(1).join('/') || '';
+    } else {
+      // Если первый сегмент НЕ язык — считаем, что это украинская версия БЕЗ префикса
+      // Но по правилам — такие URL не должны существовать! Однако на всякий случай:
+      currentLang = 'uk';
+      basePath = segments.join('/') || '';
+    }
+  }
+
+  // === Генерация hreflang ===
+  LANGS.forEach(lang => {
+    let href: string;
+
+    if (basePath === 'main') {
+      // Главная страница
+      if (lang === 'uk') {
+        href = 'https://arapov.trade/';
+      } else if (lang === 'ru') {
+        href = 'https://arapov.trade/ru/main';
+      } else {
+        href = 'https://arapov.trade/en/main';
+      }
+    } else {
+      // Обычная страница — ВСЕГДА с префиксом языка
+      href = `https://arapov.trade/${lang}/${basePath}`;
+      // Убираем двойной слеш, если basePath пустой
+      href = href.replace(/\/$/, '');
+    }
+
+    const link = this.renderer.createElement('link');
+    this.renderer.setAttribute(link, 'rel', 'alternate');
+    this.renderer.setAttribute(link, 'hreflang', lang);
+    this.renderer.setAttribute(link, 'href', href);
+    this.renderer.appendChild(this.document.head, link);
+  });
+
+  // === x-default — русская версия ===
+  const xDefaultHref = basePath === 'main'
+    ? 'https://arapov.trade/ru/main'
+    : `https://arapov.trade/ru/${basePath}`;
+
+  const defaultLink = this.renderer.createElement('link');
+  this.renderer.setAttribute(defaultLink, 'rel', 'alternate');
+  this.renderer.setAttribute(defaultLink, 'hreflang', 'x-default');
+  this.renderer.setAttribute(defaultLink, 'href', xDefaultHref);
+  this.renderer.appendChild(this.document.head, defaultLink);
+}
 
 
   // 
