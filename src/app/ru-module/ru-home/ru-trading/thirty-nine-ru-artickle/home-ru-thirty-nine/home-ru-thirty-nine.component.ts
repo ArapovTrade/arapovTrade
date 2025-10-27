@@ -18,7 +18,7 @@ export class HomeRuThirtyNineComponent implements OnInit {
       'Соотношение прибыли и убытка в трейдинге | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте, как рассчитать соотношение прибыли и убытка! R/R Ratio, управление рисками и стратегии трейдинга на Arapov.trade.',

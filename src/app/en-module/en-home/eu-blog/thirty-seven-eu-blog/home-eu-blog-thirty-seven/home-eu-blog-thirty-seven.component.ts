@@ -18,7 +18,7 @@ export class HomeEuBlogThirtySevenComponent implements OnInit {
       'Drawdowns in Trading: How to Manage Risks and Preserve Profits'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Learn what drawdowns in trading are, how to analyze and manage them to achieve consistent profitability',

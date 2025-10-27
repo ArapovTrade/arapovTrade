@@ -18,7 +18,7 @@ export class HomeRuBlogSixtyTwoComponent {
       'Smart Money: точки входа и стратегии | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Разбираем как находить точки входа по Smart Money! Стратегии с Order Blocks, ликвидностью и FVG для точного трейдинга с Arapov.trade',

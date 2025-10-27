@@ -50,7 +50,7 @@ export class HomeUkBlogEightComponent implements OnInit {
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
 
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Що таке імбаланс у трейдингу, як він впливає на ринок. Приклади, методи виявлення і стратегії з урахуванням ринкового дисбалансу.',

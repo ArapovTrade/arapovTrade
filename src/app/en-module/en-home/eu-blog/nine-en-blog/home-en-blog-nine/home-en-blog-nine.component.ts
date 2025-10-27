@@ -18,7 +18,7 @@ export class HomeEnBlogNineComponent implements OnInit {
       'How to predict the market price? - Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Price forecasting in trading: fundamental and technical analysis, indicators, mathematical models, and market psychology. A complete guide to predicting market movements.',

@@ -20,7 +20,7 @@ export class HomeUkBlogSixtyNineComponent {
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
 
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'У чому різниця між аналізом обсягів на ринку акцій і фʼючерсів? Ключові особливості, підходи та індикатори для трейдингу.',

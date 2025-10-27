@@ -20,7 +20,7 @@ export class HomeUkBlogThirtyFiveComponent implements OnInit {
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
 
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Гід для новачків: види трейдингу, базові стратегії, ризики та поради для вдалого старту на ринку від Arapov.trade.',

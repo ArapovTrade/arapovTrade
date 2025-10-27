@@ -18,7 +18,7 @@ export class HomeEnBlogSeventyFourComponent {
       'Fundamental Analysis of Global Currency Markets - Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Fundamental analysis of currency markets is a method of assessing currency value based on macroeconomic factors. We will explore key indicators that influence exchange rates and trading strategies based on fundamental analysis.',

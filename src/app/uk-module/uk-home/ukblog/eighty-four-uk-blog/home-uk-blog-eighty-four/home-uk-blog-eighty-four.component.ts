@@ -37,7 +37,7 @@ export class HomeUkBlogEightyFourComponent {
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
 
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтеся, як розпізнати фігуру Поглинання (Bullish & Bearish Engulfing) для точного входу при розвороті тренду. Поради від Arapov.trade.',

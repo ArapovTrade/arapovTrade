@@ -18,7 +18,7 @@ export class HomeEnBlogSeventyFiveComponent {
       'Trading – a gambling game or a business? Two psychological approaches - Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Let`s examine two psychological approaches to trading: gambling and professional. We`ll analyze the key differences between a game and a business, as well as explore strategies that help achieve success in financial markets.',

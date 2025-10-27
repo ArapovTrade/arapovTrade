@@ -18,7 +18,7 @@ export class HomeRuBlogTwentyFourComponent implements OnInit {
       'Фигура «Флаг» в трейдинге: как торговать | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Руководство по паттерну «Флаг» в трейдинге: распознавайте сигнал, входите в сделки и управляйте рисками. Примеры и советы от Arapov.trade.',

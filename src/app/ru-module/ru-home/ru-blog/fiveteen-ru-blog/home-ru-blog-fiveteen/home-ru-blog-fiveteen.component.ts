@@ -16,7 +16,7 @@ export class HomeRuBlogFiveteenComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Торговля фьючерсами: правда и риски | ArapovTrade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Правда о торговле фьючерсами: риски и стратегии. Руководство от ArapovTrade для трейдеров по анализу и торговле.',

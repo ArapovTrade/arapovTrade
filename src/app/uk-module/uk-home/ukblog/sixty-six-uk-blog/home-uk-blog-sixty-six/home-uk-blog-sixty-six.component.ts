@@ -18,7 +18,7 @@ export class HomeUkBlogSixtySixComponent {
       'Рівні скупчення обсягів у трейдингу | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтеся, як аналізувати рівні скупчення обсягів: зони інтересу, ключові підтримки й опори, ефективні стратегії з об’ємного аналізу.',

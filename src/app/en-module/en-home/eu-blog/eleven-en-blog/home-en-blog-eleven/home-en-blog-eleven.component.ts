@@ -18,7 +18,7 @@ export class HomeEnBlogElevenComponent implements OnInit {
       "Trader's Starting Deposit: How Much Do You Need to Begin?"
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Find out how much starting deposit a trader needs, how to calculate it correctly, and manage capital. Useful tips for beginners and experienced traders.',

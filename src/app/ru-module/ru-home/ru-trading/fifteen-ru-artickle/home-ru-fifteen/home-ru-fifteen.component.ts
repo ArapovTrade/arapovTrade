@@ -18,7 +18,7 @@ export class HomeRuFifteenComponent implements OnInit {
       'Центральные банки: функции и влияние | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте о главных центральных банках мира! Их функции, заседания и влияние на экономику для трейдеров на Arapov.trade.',

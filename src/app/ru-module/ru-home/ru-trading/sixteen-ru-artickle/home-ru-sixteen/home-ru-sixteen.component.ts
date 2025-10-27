@@ -19,7 +19,7 @@ export class HomeRuSixteenComponent implements OnInit {
     );
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Ethereum — криптовалюта с умными контрактами и dApp. Узнайте, как она работает, зачем нужна и какие перспективы у Ethereum на Arapov.trade.',

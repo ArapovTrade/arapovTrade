@@ -17,7 +17,7 @@ export class HomeEnEightComponent implements OnInit {
     this.titleService.setTitle('Currencies and Their Quotations');
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Learn about currencies, their types, features of quotations, and how they are used in international trade and financial markets. A comprehensive guide for traders and investors.',

@@ -17,7 +17,7 @@ export class HomeEnEighteenComponent implements OnInit {
     this.titleService.setTitle('Psychological Risks in FOREX');
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Learn about the psychological risks associated with FOREX trading and how to minimize them. A comprehensive guide for traders with examples and tips.',

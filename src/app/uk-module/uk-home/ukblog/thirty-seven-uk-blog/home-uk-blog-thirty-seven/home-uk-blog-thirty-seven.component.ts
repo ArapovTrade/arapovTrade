@@ -20,7 +20,7 @@ export class HomeUkBlogThirtySevenComponent implements OnInit {
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
 
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Що таке просадки в трейдингу та як ними керувати? Дізнайтесь, як знизити ризики та зберегти прибуток за допомогою грамотного аналізу.',

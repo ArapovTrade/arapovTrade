@@ -16,7 +16,7 @@ export class HomeUkBlogSixtyComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Трейдинг Vs Опціони: порівняння інструментів');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Порівняння трейдингу та опціонів. Переваги, недоліки, стратегії та ризики для різних типів трейдерів на Arapov.trade.',

@@ -16,7 +16,7 @@ export class HomeUkBlogSeventyFourComponent {
   ngOnInit(): void {
     this.titleService.setTitle('Фундаментальний аналіз валютних ринків');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь про фундаментальний аналіз валютних ринків: ключові показники та стратегії трейдингу від ArapovTrade.',

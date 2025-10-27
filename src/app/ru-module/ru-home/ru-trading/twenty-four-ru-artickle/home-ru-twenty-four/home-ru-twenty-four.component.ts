@@ -18,7 +18,7 @@ export class HomeRuTwentyFourComponent implements OnInit {
       'Уровни Фибоначчи в техническом анализе | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Что такое уровни Фибоначчи и как они применяются в трейдинге и теханализе. Узнайте принципы построения и примеры использования.',

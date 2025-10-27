@@ -16,7 +16,7 @@ export class HomeEnBlogTwelveComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Level Trading: A Complete Guide');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'A detailed guide to level trading for beginner traders. Learn how to identify, utilize, and trade key levels.',

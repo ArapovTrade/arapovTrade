@@ -18,7 +18,7 @@ export class HomeEnBlogSeventyNineComponent {
       'The Psychology of Averaging: Why Beginners Lose Their Deposits? - Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Analyzing the psychological traps of averaging, why traders continue adding positions to losing trades, and what alternative strategies can help avoid account liquidation.',

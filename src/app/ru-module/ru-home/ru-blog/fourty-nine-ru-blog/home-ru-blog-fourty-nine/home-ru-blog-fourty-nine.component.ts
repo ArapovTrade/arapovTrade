@@ -16,7 +16,7 @@ export class HomeRuBlogFourtyNineComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Как выбрать торговую платформу для трейдинга?');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Как выбрать торговую платформу для трейдинга? Советы, критерии выбора и лучшие платформы для начинающих и опытных трейдеров от ArapovTrade.',

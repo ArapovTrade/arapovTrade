@@ -16,7 +16,7 @@ export class HomeEnTwentyFiveComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Key Economic Growth Indicators - Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'An analysis of key economic indicators impacting financial markets.',

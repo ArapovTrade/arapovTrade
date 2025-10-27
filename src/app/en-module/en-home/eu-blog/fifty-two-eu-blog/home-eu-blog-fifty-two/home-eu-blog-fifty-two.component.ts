@@ -16,7 +16,7 @@ export class HomeEuBlogFiftyTwoComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Anatomy of market trends - Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Exploring what a trend is in the financial market, its phases, types, and methods of analysis. A complete guide to the anatomy of trends: indicators, strategies, and trading principles.',

@@ -16,7 +16,7 @@ export class HomeEnTwentySixComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Technical Market Analysis - Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'An overview of the basics of technical market analysis, its principles, and key methods.',

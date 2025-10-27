@@ -18,7 +18,7 @@ export class HomeEnBlogThirteenComponent implements OnInit {
       'Elliott Waves: Basics, Structure, and Application - Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'A detailed description of Elliott Wave Theory: principles, structure, and application in technical analysis.',

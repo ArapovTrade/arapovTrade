@@ -18,7 +18,7 @@ export class HomeOneEnComponent implements OnInit {
     this.titleService.setTitle('10 Tips for Beginner Traders');
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Useful tips for beginner traders. Learn how to manage risks, develop strategies, and avoid mistakes in trading.',

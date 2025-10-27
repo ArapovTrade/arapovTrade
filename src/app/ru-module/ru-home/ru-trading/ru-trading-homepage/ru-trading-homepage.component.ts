@@ -28,11 +28,11 @@ export class RuTradingHomepageComponent implements OnInit {
       'Бесплатное обучение трейдингу от Игоря Арапова'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    // this.meta.addTag({
+    // this.meta.updateTag({
     //   name: 'description',
     //   content: 'Бесплатное обучение трейдинга онлайн от Игоря Арапова. ⭐',
     // });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'keywords',
       content: 'бесплатное обучение трейдингу, трейдинг, обучение трейдингу',
     });

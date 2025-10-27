@@ -16,7 +16,7 @@ export class HomeEnBlogSeventyTwoComponent {
   ngOnInit(): void {
     this.titleService.setTitle('What is an Economic Calendar - Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'A complete guide to the stock market economic calendar. How to use it to predict market movements, which events affect stocks and indices, and trading strategies based on news.',

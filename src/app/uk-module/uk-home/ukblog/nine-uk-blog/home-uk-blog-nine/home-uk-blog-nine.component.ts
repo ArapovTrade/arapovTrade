@@ -16,7 +16,7 @@ export class HomeUkBlogNineComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Як прогнозувати ціну на ринку | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтеся, як прогнозувати ціну на ринку: технічний і фундаментальний аналіз, індикатори та ринкова психологія для трейдерів.',

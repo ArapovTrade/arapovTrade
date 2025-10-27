@@ -16,7 +16,7 @@ export class HomeEnBlogEighteenComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Volumetric market analysis - Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'What is volume market analysis? We break down key principles, tools, and strategies. A complete guide to volume analysis and its application in trading.',

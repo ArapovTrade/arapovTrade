@@ -16,7 +16,7 @@ export class HomeEnBlogThreeComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Volatility in trading  - Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Learn what volatility is, how it impacts trading, and strategies for working in high-volatility markets.',

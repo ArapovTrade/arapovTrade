@@ -16,7 +16,7 @@ export class HomeRuBlogFiftyEightComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Усреднение в трейдинге | ArapovTrade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Усреднение в трейдинге: как применять и когда избегать? Советы от ArapovTrade по стратегиям, рискам и управлению позицией',

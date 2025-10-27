@@ -18,7 +18,7 @@ export class HomeEnBlogSeventyThreeComponent {
       'Macroeconomic Indicators of Fundamental Analysis - Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'A complete guide to macroeconomic indicators in fundamental analysis. How GDP, inflation, Fed rates, and other indicators affect the market?',

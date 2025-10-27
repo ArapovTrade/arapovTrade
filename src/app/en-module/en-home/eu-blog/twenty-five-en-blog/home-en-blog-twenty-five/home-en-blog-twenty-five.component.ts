@@ -18,7 +18,7 @@ export class HomeEnBlogTwentyFiveComponent implements OnInit {
       'Functions of Market Makers in the Cryptocurrency Market - Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Discover the roles and functions of market makers in the cryptocurrency market, their contribution to liquidity, price stability, and trade facilitation. An in-depth look at their significance in the crypto industry.',

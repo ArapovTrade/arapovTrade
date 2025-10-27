@@ -34,7 +34,7 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
       'Бесплатное обучение трейдингу для начинающих с нуля | Игорь Арапов'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Бесплатный курс по трейдингу: 130+ статей и 70 видеоуроков. Изучите основы, анализ, психологию торговли и проверенные стратегии',

@@ -16,7 +16,7 @@ export class HomeEuBlogThirtySixComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Features of the Cryptocurrency Market');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Learn how the cryptocurrency market differs from other markets, its key features, and trading strategies to help you succeed.',

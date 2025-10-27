@@ -16,7 +16,7 @@ export class HomeEnNineteenComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('How to Trade on the FOREX Market');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Learn how to start trading on the FOREX market. A detailed guide for beginners with tips, strategies, and examples.',

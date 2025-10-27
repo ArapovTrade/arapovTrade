@@ -18,7 +18,7 @@ export class HomeEnThirtyEightComponent implements OnInit {
       'Specifics of Capital Management in Trading - Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'A complete guide to capital management in trading. Risk management, money management, loss control, and effective deposit management strategies.',

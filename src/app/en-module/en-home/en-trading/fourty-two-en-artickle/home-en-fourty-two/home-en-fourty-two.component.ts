@@ -18,7 +18,7 @@ export class HomeEnFourtyTwoComponent implements OnInit {
       'Timeframes in Trading: How to Choose the Best Time Interval? - Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'We explore the different types of timeframes in trading, how to select the right time interval, and which timeframe is best for beginners. A comprehensive guide for traders.',

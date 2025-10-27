@@ -16,7 +16,7 @@ export class HomeRuFourtyComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Ошибки начинающих трейдеров | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте, какие ошибки совершают начинающие трейдеры! Советы, как их избежать и успешно стартовать на рынках с Arapov.trade.',

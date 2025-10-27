@@ -18,7 +18,7 @@ export class HomeRuBlogThirtyTwoComponent implements OnInit {
       'Стоит ли покупать обучение трейдингу? | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте, стоит ли покупать обучение трейдингу! Преимущества курсов и как они помогут начать успешную карьеру трейдера на Arapov.trade.',

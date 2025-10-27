@@ -18,7 +18,7 @@ export class HomeUkBlogFourtyThreeComponent implements OnInit {
       'Аналіз попиту і пропозиції на крипторинку | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтеся, як аналізувати попит і пропозицію на крипторинку. Поради, інструменти та стратегії для успішної торгівлі.',

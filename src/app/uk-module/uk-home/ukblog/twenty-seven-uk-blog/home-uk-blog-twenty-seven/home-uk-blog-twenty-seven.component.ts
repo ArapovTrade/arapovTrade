@@ -16,7 +16,7 @@ export class HomeUkBlogTwentySevenComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Японські свічки: як читати патерни');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь, як читати японські свічки: ключові формації, патерни типу молот і повішений та їх застосування в трейдингу від ArapovTrade.',

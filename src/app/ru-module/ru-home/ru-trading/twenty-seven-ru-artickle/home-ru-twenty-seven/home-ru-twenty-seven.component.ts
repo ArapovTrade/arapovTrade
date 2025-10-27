@@ -19,7 +19,7 @@ export class HomeRuTwentySevenComponent implements OnInit {
     );
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Основы технического анализа: виды графиков, тренды и уровни поддержки и сопротивления для эффективной торговли.',

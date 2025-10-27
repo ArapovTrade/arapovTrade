@@ -16,7 +16,7 @@ export class HomeRuBlogFiftyNineComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Как торговать пробой уровня в трейдинге | ArapovTrade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте, как торговать пробой уровня: определение ключевых зон, пин-бары, объёмы. Практические советы от ArapovTrade',

@@ -18,7 +18,7 @@ export class HomeEnBlogEightyFourComponent {
       'Engulfing Pattern (Bullish & Bearish Engulfing): How to Catch a Reversal? - Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Analyzing the `Engulfing` pattern (Bullish & Bearish Engulfing) – a powerful trend reversal signal. Learn how to correctly identify this pattern, what signals confirm its strength, and how to use it in trading strategies.',

@@ -16,7 +16,7 @@ export class HomeUkBlogFourtySevenComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Фундаментальний аналіз ринку | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтеся основи фундаментального аналізу ринку: як оцінювати економічні показники, новини та їх вплив на трейдинг і інвестиції.',

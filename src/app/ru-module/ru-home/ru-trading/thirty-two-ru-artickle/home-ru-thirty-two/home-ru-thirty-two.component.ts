@@ -18,7 +18,7 @@ export class HomeRuThirtyTwoComponent implements OnInit {
       'Стоп-ордер в трейдинге: как использовать | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте, что такое стоп-ордер в трейдинге: виды, плюсы, минусы и стратегии для торговли на крипто- и фондовых рынках на Arapov.trade.',

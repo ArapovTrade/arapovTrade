@@ -18,7 +18,7 @@ export class HomeEnTwentyComponent implements OnInit {
       'Analysis of Supply and Demand Within the Concept of Peter Steidlmayer - Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Learn how to analyze the market using Peter Steidlmayer’s concept. What is Market Profile, how to account for supply and demand in trading, and which tools to use for successful trading.',

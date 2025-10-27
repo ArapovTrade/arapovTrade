@@ -18,7 +18,7 @@ export class HomeEnBlogFourComponent implements OnInit {
       'How Not to Lose All Your Money in Margin Trading?  - Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Learn how to avoid losses in margin trading, minimize risks, and improve your capital management strategy. Useful tips for beginners and experienced traders.',

@@ -16,7 +16,7 @@ export class HomeRuBlogSixComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Smart Money в трейдинге: стратегия крупных игроков | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте, как Smart Money влияет на трейдинг! Методы крупных игроков, манипуляции ценой и ликвидность для прибыльной торговли с Arapov.trade.',

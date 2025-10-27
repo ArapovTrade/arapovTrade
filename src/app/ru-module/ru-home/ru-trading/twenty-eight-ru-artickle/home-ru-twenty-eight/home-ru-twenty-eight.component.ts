@@ -18,7 +18,7 @@ export class HomeRuTwentyEightComponent implements OnInit {
       'Ценовые фигуры в трейдинге: как использовать | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Обзор ключевых ценовых фигур в трейдинге: разворотные и продолжительные модели, как их применять на практике.',

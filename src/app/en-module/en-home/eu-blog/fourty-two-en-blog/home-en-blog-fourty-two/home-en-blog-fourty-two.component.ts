@@ -16,7 +16,7 @@ export class HomeEnBlogFourtyTwoComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Cryptocurrency Risks for Beginners');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Learn the main risks of the cryptocurrency market for beginner traders and investors. Find out how to manage risks and minimize losses.',

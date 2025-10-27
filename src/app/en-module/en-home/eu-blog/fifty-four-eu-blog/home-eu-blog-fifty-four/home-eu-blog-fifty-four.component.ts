@@ -18,7 +18,7 @@ export class HomeEuBlogFiftyFourComponent implements OnInit {
       'How to Ensure Cryptocurrency Security - Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Learn how to protect your digital assets, minimize the risks of cryptocurrency theft, and maintain privacy. Useful tips and strategies for both beginners and experienced users.',

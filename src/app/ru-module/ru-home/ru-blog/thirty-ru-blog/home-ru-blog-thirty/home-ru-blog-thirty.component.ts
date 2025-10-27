@@ -18,7 +18,7 @@ export class HomeRuBlogThirtyComponent implements OnInit {
       'Основы криптовалют для начинающих | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте основы криптовалют для начинающих трейдеров! Принципы торговли, особенности рынка и советы для старта на Arapov.trade.',

@@ -18,7 +18,7 @@ export class HomeEnThirtyFiveComponent implements OnInit {
       'Trading System: Types and Optimization - Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Learn what a trading system is, its types, the features of automation, and how to choose a strategy that suits your trading goals.',

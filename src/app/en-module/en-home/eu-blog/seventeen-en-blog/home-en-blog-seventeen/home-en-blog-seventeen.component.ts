@@ -16,7 +16,7 @@ export class HomeEnBlogSeventeenComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Top Myths About Trading');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Debunking popular myths about trading that mislead both beginner and experienced traders.',

@@ -18,7 +18,7 @@ export class HomeEnBlogSixtyFiveComponent {
       'How to Read the Order Book and Tape Prints - Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'A complete guide to reading the order book and tape prints. Learn how to analyze orders, liquidity, and large trades to determine Smart Money`s intentions and find profitable entry points in the market.',

@@ -16,7 +16,7 @@ export class HomeUkBlogTwentyFourComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Фігура Прапор: як торгувати в трейдингу');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь, як розпізнати фігуру Прапор у трейдингу, торгувати пробої та уникати помилок у стратегіях від ArapovTrade.',

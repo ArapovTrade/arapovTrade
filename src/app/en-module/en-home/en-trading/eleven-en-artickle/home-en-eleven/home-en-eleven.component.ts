@@ -19,7 +19,7 @@ export class HomeEnElevenComponent implements OnInit {
     );
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Learn how to start trading on a cryptocurrency exchange: choosing a platform, registration, setting up an account, strategies, and risk management tips.',

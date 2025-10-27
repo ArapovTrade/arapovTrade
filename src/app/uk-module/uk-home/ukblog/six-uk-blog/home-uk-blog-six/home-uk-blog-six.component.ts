@@ -16,7 +16,7 @@ export class HomeUkBlogSixComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Smart Money: концепція трейдингу');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь про Smart Money: як інституційні гравці торгують, аналіз ліквідності та маніпуляції ринку від ArapovTrade.',

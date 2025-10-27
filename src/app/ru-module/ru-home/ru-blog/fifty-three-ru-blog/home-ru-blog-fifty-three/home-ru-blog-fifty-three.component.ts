@@ -16,7 +16,7 @@ export class HomeRuBlogFiftyThreeComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Ордер блок в трейдинге: руководство | ArapovTrade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Ордер блок в трейдинге: как определять и торговать? Руководство от ArapovTrade по анализу и стратегиям.',

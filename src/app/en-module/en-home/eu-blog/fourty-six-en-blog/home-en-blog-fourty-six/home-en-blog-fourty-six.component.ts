@@ -18,7 +18,7 @@ export class HomeEnBlogFourtySixComponent implements OnInit {
       'Bitcoin Pizza Day: History, Significance, and Traditions - Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Learn about Bitcoin Pizza Day: how the first purchase with bitcoins was made, why this day became historic, and how it is celebrated in the cryptocurrency world.',

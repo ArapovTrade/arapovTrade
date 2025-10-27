@@ -18,7 +18,7 @@ export class HomeRuBlogSeventyThreeComponent {
       'Макроэкономика в трейдинге: ключ к рынку | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте, как макроэкономические показатели влияют на рынок! Руководство по ВВП, инфляции, ставкам ФРС и индикаторам для успешного трейдинга.',

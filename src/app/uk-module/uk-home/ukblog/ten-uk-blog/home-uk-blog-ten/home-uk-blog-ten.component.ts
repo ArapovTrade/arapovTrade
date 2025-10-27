@@ -17,7 +17,7 @@ export class HomeUkBlogTenComponent implements OnInit {
     this.titleService.setTitle('Причини втрати депозиту | Arapov.trade');
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Основні причини втрати депозиту: помилки в стратегії, відсутність дисципліни, переоцінка можливостей. Поради від Arapov.trade.',

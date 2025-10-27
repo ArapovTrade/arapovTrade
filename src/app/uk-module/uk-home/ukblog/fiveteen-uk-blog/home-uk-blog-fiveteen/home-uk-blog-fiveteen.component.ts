@@ -45,7 +45,7 @@ export class HomeUkBlogFiveteenComponent implements OnInit {
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
 
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Правда про торгівлю ф’ючерсами: основні переваги, ризики та стратегії. Дізнайтеся, як працює ф’ючерсний ринок і що варто знати трейдерам.',

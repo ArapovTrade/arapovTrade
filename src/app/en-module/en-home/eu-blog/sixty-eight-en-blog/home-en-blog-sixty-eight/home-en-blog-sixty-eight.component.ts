@@ -18,7 +18,7 @@ export class HomeEnBlogSixtyEightComponent {
       'How the Market Auction Develops and Sentiment Analysis of Market Participants - Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'In-depth analysis of the market auction and sentiment of market participants. How auction theory works, which indicators help identify the balance of supply and demand, and how traders can use this knowledge for trading.',

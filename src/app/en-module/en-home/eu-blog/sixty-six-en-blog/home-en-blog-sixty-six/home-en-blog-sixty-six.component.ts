@@ -18,7 +18,7 @@ export class HomeEnBlogSixtySixComponent {
       'How to Analyze High Volume Accumulation Levels - Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'A complete guide to analyzing high volume levels. Learn how to identify areas of significant interest, determine key support and resistance levels, and trade using volume analysis.',

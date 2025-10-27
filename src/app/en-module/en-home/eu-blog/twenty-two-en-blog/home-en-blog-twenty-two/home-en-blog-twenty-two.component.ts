@@ -18,7 +18,7 @@ export class HomeEnBlogTwentyTwoComponent implements OnInit {
       'What is cryptocurrency arbitrage? - Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'What is cryptocurrency arbitrage? Learn the basics and secrets of success with this strategy of earning on price differences. A complete guide for beginners and professional traders.',

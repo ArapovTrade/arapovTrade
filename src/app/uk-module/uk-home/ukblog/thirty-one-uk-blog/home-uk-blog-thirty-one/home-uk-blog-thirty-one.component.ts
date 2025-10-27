@@ -17,7 +17,7 @@ export class HomeUkBlogThirtyOneComponent implements OnInit {
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
 
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь, як будувати та використовувати рівні підтримки й опору у трейдингу. Практичний гід для трейдерів від Arapov.trade.',

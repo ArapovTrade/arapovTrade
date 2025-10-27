@@ -42,7 +42,7 @@ export class HomeUkBlogFiftyFiveComponent implements OnInit {
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle('Скальпінг у трейдингу: стратегії');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь про скальпінг у трейдингу: стратегії, індикатори, ризики та автоматизація для короткострокових угод від ArapovTrade.',

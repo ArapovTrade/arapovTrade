@@ -18,7 +18,7 @@ export class HomeEnTwentyEightComponent implements OnInit {
       'Price Patterns in Technical Analysis: Comprehensive Guide'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'A detailed overview of key price patterns in technical analysis: reversal and continuation models, their application, and limitations.',

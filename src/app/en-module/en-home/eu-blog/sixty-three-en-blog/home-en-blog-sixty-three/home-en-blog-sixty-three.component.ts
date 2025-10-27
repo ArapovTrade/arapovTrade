@@ -18,7 +18,7 @@ export class HomeEnBlogSixtyThreeComponent {
       'How Do Smart Money Control the Crowd? News and Sentiment Manipulation - Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Analyzing how Smart Money manipulate the market using news and crowd sentiment. How major players create trends, trap retail traders, and collect liquidity.',

@@ -18,7 +18,7 @@ export class HomeUkBlogFourtyEightComponent implements OnInit {
       'Самостійне навчання трейдингу | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Покрокова інструкція для самостійного навчання трейдингу. Поради та рекомендації для успішного старту на фінансових ринках.',

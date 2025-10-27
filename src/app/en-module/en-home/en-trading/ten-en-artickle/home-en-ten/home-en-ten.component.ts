@@ -19,7 +19,7 @@ export class HomeEnTenComponent implements OnInit {
     );
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Learn about trading positions, their types, rollover mechanisms, and value dates. A complete guide for traders and investors featuring unique information and examples.',

@@ -16,7 +16,7 @@ export class HomeRuBlogNineteenComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Метод Вайкоффа в трейдинге | ArapovTrade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Метод Вайкоффа: как анализировать рынок? Гид от ArapovTrade по Wyckoff Method, трендам и точкам входа.',

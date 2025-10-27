@@ -16,7 +16,7 @@ export class HomeRuBlogTwentyOneComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Как определить маркет-мейкера | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Маркет-мейкеры: как определить их на рынке трейдинга, используемые стратегии и влияние на цену. Советы по анализу крупных игроков от Arapov.trade.',

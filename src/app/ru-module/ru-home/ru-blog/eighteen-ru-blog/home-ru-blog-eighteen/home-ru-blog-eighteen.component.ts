@@ -16,7 +16,7 @@ export class HomeRuBlogEighteenComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Объемный анализ рынка | ArapovTrade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Объемный анализ рынка: принципы, инструменты, стратегии трейдинга. Руководство от ArapovTrade для анализа и торговли',

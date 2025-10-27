@@ -16,7 +16,7 @@ export class HomeEnBlogFourtySevenComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Fundamental Market Analysis - Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'The basics of fundamental analysis, its advantages, disadvantages, and its role in trading.',

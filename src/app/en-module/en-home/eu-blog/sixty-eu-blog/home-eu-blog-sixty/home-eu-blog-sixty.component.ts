@@ -18,7 +18,7 @@ export class HomeEuBlogSixtyComponent implements OnInit {
       'Trading Vs Options: Comparing Financial Instruments'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'A comprehensive comparison of trading and options. Discover the advantages, disadvantages, strategies, and risks of these financial instruments.',

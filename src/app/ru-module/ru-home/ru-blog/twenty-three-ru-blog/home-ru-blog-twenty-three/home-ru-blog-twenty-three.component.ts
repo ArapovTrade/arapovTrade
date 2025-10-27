@@ -18,7 +18,7 @@ export class HomeRuBlogTwentyThreeComponent implements OnInit {
       'Bitcoin-ETF: что это и как работает | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте, что такое Bitcoin-ETF! Как он работает, плюсы и минусы, влияние на рынок криптовалют для трейдеров на Arapov.trade.',

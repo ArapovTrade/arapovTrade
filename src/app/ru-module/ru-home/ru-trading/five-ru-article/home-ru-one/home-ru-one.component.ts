@@ -16,7 +16,7 @@ export class HomeRuOneComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Деривативы: виды и применение | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте, что такое деривативы! Виды, применение и их влияние на финансовые рынки для трейдеров на Arapov.trade.',

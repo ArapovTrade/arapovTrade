@@ -16,7 +16,7 @@ export class HomeUkBlogSevenComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Як заробляти в трейдингу: стратегії');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь, як заробляти в трейдингу: інструменти, стратегії, Форекс і використання кредитного плеча від ArapovTrade.',

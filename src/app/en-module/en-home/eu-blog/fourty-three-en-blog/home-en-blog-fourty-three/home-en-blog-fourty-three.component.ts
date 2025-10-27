@@ -18,7 +18,7 @@ export class HomeEnBlogFourtyThreeComponent implements OnInit {
       'Analysis of Supply and Demand in the Cryptocurrency Market - Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Learn how to analyze supply and demand in the cryptocurrency market. A detailed guide with tips, tools, and strategies for successful investing and trading.',

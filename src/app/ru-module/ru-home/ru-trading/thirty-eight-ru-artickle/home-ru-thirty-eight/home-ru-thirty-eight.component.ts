@@ -18,7 +18,7 @@ export class HomeRuThirtyEightComponent implements OnInit {
       'Управление капиталом в трейдинге | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте, как управлять капиталом в трейдинге! Риск-менеджмент, мани-менеджмент и стратегии для защиты депозита на Arapov.trade.',

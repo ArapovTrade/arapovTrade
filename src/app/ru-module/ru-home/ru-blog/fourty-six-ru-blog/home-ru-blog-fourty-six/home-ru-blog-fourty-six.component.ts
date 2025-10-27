@@ -18,7 +18,7 @@ export class HomeRuBlogFourtySixComponent implements OnInit {
       'Bitcoin Pizza Day: что это? | ArapovTrade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Bitcoin Pizza Day: история и значение первой сделки за биткоины. Бесплатное руководство от ArapovTrade о криптовалютах.',

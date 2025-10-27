@@ -41,7 +41,7 @@ export class HomeUkBlogFiftyOneComponent implements OnInit {
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle('Price Action: стратегії трейдингу');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь про Price Action: принципи, патерни та стратегії трейдингу для початківців і професіоналів від ArapovTrade.',

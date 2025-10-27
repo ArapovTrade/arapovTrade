@@ -18,7 +18,7 @@ export class HomeEnBlogSixtySevenComponent {
       'Why It Is Important to Analyze Volumes Within Current Market Trends - Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'We explore why volume analysis is a key tool in determining trend strength, reversal points, and confirming market movements. Learn how volume analysis helps avoid false signals and trade with high accuracy.',

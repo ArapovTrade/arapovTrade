@@ -18,7 +18,7 @@ export class HomeEnThirtySevenComponent implements OnInit {
       'What is  Stop Hunting  and how do Smart Money trigger traders`  stop losses?'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Exploring how Stop Hunting works, why Smart Money trigger traders` stop losses, and how to protect your capital from manipulations by large players.',

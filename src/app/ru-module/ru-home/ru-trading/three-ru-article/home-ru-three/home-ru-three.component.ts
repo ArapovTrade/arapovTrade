@@ -18,7 +18,7 @@ export class HomeRuThreeComponent implements OnInit {
       'Знакомство с биржей: полное руководство | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте, что такое биржа! Виды, функции, особенности торговли и советы для новичков и профессионалов в трейдинге на Arapov.trade.',

@@ -16,7 +16,7 @@ export class HomeEnBlogThirtyComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Cryptocurrency Basics for Beginner Traders');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Learn the basics of cryptocurrencies, their features, and key trading principles for beginner traders.',

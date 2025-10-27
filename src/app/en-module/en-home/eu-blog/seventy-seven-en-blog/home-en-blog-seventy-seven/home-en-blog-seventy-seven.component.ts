@@ -18,7 +18,7 @@ export class HomeEnBlogSeventySevenComponent {
       'Trading Psychology: How Emotions Affect Your Trades? - Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Analyzing how emotions impact trading, why fear and greed prevent profits, and which psychological techniques help control emotions and improve trading efficiency.',

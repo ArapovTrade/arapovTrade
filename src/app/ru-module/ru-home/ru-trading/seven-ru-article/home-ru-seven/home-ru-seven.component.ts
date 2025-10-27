@@ -18,7 +18,7 @@ export class HomeRuSevenComponent implements OnInit {
 
 this.meta.updateTag({ name: 'robots', content: 'index, follow' });
 
-this.meta.addTag({
+this.meta.updateTag({
   name: 'description',
   content:
     'Узнайте, как работает рынок FOREX: особенности, участники, торговые сессии и стратегии. Полное руководство для трейдера от Arapov.trade.',

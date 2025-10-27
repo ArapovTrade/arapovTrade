@@ -18,7 +18,7 @@ export class HomeRuBlogSixtyOneComponent {
       'Smart Money Concepts (SMC) в трейдинге | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте, как применять Smart Money Concepts (SMC) в трейдинге! Стратегии по структуре рынка, ликвидности, FVG и Order Blocks с примерами',

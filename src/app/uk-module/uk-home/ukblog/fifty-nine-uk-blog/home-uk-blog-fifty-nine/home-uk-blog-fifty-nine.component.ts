@@ -41,7 +41,7 @@ private cdr:ChangeDetectorRef,
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle('Пробій рівня: як торгувати в трейдингу');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь, як торгувати пробій рівня в трейдингу: визначення рівнів, робота з пін-баром та обсягами від ArapovTrade.',

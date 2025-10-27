@@ -16,7 +16,7 @@ export class HomeEnBlogFourteenComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Trading vs. Investing: Which Is Better?');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Learn the differences between trading and investing, their advantages and disadvantages. Find out what suits you best!',

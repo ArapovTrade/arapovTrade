@@ -16,7 +16,7 @@ export class HomeRuBlogTwentyComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Что такое скам в криптовалюте | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Что такое скам в криптовалюте: популярные мошеннические схемы — фейковые ICO, пирамиды, фишинг. Как защитить средства и снизить риски трейдерам и инвесторам.',

@@ -18,7 +18,7 @@ export class HomeRuBlogThirtyNineComponent implements OnInit {
       'Где безопасно хранить криптовалюту | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте, как безопасно хранить криптовалюту! Советы по выбору кошельков, безопасности и защите активов на Arapov.trade.',

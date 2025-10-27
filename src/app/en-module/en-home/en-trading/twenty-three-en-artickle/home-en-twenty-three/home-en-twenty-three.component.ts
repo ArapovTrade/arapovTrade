@@ -16,7 +16,7 @@ export class HomeEnTwentyThreeComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('World Stock Indices - Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'An overview of key global stock indices and their significance for the world economy.',

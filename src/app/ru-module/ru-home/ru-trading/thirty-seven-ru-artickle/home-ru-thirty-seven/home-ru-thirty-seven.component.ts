@@ -18,7 +18,7 @@ export class HomeRuThirtySevenComponent implements OnInit {
       'Stop Hunting: как Smart Money выбивают стопы | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте, что такое Stop Hunting! Как Smart Money выбивают стопы и как защитить капитал в трейдинге на Arapov.trade.',

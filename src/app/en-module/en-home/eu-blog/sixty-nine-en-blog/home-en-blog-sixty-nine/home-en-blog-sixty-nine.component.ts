@@ -18,7 +18,7 @@ export class HomeEnBlogSixtyNineComponent {
       'How Volume Analysis Differs in the Stock Market and Futures Market'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'A complete guide to the differences in volume analysis between the stock and futures markets. Exploring key aspects of working with volumes, analysis methods, and practical application of volume indicators.',

@@ -16,7 +16,7 @@ export class HomeEuBlogThirtyOneComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Support and Resistance Levels');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'A detailed guide on support and resistance levels. Learn how to build, identify, and effectively use them in trading.',

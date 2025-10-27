@@ -16,7 +16,7 @@ export class HomeUkBlogSeventyNineComponent {
   ngOnInit(): void {
     this.titleService.setTitle('Психологія усереднення: втрата депозиту');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь про психологічні пастки усереднення, чому новачки втрачають депозити та як уникнути збитків у трейдингу від ArapovTrade.',

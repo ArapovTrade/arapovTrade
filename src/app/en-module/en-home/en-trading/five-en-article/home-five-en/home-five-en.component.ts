@@ -17,7 +17,7 @@ export class HomeFiveEnComponent implements OnInit {
     this.titleService.setTitle('Derivatives and Their Types');
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Learn about derivatives, their main types, applications, and impact on financial markets. A complete guide for traders and investors.',

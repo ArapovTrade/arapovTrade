@@ -18,7 +18,7 @@ export class HomeRuBlogTwentyFiveComponent implements OnInit {
   'Маркет-мейкеры в крипторынке: функции и роль | Arapov.trade'
 );
 this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-this.meta.addTag({
+this.meta.updateTag({
   name: 'description',
   content:
     'Функции маркет-мейкеров в крипторынке: обеспечение ликвидности, стабилизация цен и поддержка торговли. Роль маркет-мейкеров в развитии криптоиндустрии.',

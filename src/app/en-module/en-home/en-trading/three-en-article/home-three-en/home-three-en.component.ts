@@ -19,7 +19,7 @@ export class HomeThreeEnComponent implements OnInit {
     );
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Learn what an exchange is, its types, functions, and trading features. A complete guide for beginners and professionals.',

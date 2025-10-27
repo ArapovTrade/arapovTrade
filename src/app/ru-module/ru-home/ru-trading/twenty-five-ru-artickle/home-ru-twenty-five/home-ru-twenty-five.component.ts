@@ -18,7 +18,7 @@ export class HomeRuTwentyFiveComponent implements OnInit {
       'Экономические показатели роста: что влияет на рынки | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте, какие экономические показатели важны для роста: ВВП, инфляция, безработица и их влияние на финансовые рынки.',

@@ -18,7 +18,7 @@ export class HomeRuBlogTwentySixComponent implements OnInit {
       'Виды ордеров на бирже: полный обзор | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Виды ордеров на бирже: рыночные, лимитные, стоп-ордера и сложные ордера. Узнайте, как выбирать и применять каждый тип для эффективного трейдинга.',

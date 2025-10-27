@@ -18,7 +18,7 @@ export class HomeEnThirtyFourComponent implements OnInit {
       'Stop-Limit Order: A Complete Guide - Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'What is a stop-limit order and how to use it correctly? A complete guide for traders on setting up and applying Stop-Limit Orders in cryptocurrency and stock markets.',

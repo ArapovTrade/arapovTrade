@@ -18,7 +18,7 @@ export class HomeRuFourtyFourComponent implements OnInit {
       'Iceberg (скрытые) ордера в трейдинге | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте, что такое скрытые ордера (Iceberg Orders)! Как банки маскируют позиции и как использовать их в трейдинге на Arapov.trade.',

@@ -16,7 +16,7 @@ export class HomeRuBlogFiftyOneComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Price Action в трейдинге: руководство | ArapovTrade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Price Action: как торговать без индикаторов? Руководство от ArapovTrade по свечным паттернам, стратегиям и анализу для трейдеров.',

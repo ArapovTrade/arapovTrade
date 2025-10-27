@@ -18,7 +18,7 @@ export class HomeRuBlogSeventyEightComponent {
       'Как избежать FOMO в трейдинге? | ArapovTrade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'FOMO в трейдинге: как избежать потерь? Советы от ArapovTrade по осознанной торговле и управлению эмоциями.',

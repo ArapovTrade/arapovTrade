@@ -19,7 +19,7 @@ export class HomeRuSeventeenComponent implements OnInit {
     );
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Что такое Биткоин и как он работает? Узнайте его преимущества, риски и как использовать криптовалюту в инвестициях и трейдинге с Arapov.trade.',

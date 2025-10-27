@@ -18,7 +18,7 @@ export class HomeRuFourteenComponent implements OnInit {
       'Риск кредитного плеча на Форекс | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте о рисках кредитного плеча на Форекс! Как управлять ими и минимизировать потери в торговле на Arapov.trade.',

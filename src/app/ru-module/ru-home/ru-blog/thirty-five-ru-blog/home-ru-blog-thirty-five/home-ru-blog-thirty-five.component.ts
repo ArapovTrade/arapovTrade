@@ -16,7 +16,7 @@ export class HomeRuBlogThirtyFiveComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Основы трейдинга для начинающих | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте основы трейдинга для начинающих! Руководство по стратегиям, рискам и советам для успешного старта на Arapov.trade.',

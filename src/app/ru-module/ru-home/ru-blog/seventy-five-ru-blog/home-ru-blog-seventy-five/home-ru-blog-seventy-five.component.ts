@@ -18,7 +18,7 @@ export class HomeRuBlogSeventyFiveComponent {
       'Трейдинг: игра или бизнес? | ArapovTrade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Трейдинг: азарт или бизнес? Советы от ArapovTrade по психологии, стратегиям и управлению рисками для успеха на крипто- и фондовых рынках.',

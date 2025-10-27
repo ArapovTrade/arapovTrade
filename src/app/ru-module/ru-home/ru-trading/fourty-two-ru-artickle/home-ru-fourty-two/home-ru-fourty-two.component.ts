@@ -18,7 +18,7 @@ export class HomeRuFourtyTwoComponent implements OnInit {
       'Таймфреймы в трейдинге: выбор интервала | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте, как выбрать таймфрейм в трейдинге! Подходящие интервалы для новичков и стратегии торговли на Arapov.trade.',

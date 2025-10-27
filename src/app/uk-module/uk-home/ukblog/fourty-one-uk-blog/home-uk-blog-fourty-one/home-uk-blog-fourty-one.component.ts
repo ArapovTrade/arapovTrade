@@ -16,7 +16,7 @@ export class HomeUkBlogFourtyOneComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Правила успішного трейдингу | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтеся ключові правила успішного трейдингу: стратегії, управління ризиками, вибір брокера та аналіз ринку для початківців і профі.',

@@ -16,7 +16,7 @@ export class HomeRuTwoComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Словарь терминов рынка: основы | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте ключевые термины финансового рынка! Основы фондового, валютного и криптовалютного трейдинга в словаре на Arapov.trade.',

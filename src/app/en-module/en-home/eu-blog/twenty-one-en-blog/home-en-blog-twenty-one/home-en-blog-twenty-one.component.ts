@@ -16,7 +16,7 @@ export class HomeEnBlogTwentyOneComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('How to identify a market maker - Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'We explore who market makers are, how to identify them in the market, what strategies they use, and how their actions impact price. A complete guide to analyzing major players.',

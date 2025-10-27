@@ -16,7 +16,7 @@ export class HomeEuBlogThirtyThreeComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Pin Bar: The Holy Grail of Trading');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'A detailed guide on Pin Bars in trading. Learn how to use this pattern effectively for market analysis and making trading decisions.',

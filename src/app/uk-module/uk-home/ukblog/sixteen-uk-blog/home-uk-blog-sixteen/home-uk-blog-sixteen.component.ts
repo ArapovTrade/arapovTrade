@@ -16,7 +16,7 @@ export class HomeUkBlogSixteenComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Трендові канали: стратегії трейдингу');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь про трендові канали в трейдингу: як будувати, визначати та використовувати стратегії для торгівлі від ArapovTrade.',

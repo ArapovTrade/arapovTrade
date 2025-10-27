@@ -16,7 +16,7 @@ export class HomeRuBlogFourtySevenComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Фундаментальный анализ рынка | ArapovTrade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Фундаментальный анализ рынка: как применять в трейдинге. Узнайте об основных принципах, стратегиях и макроэкономических факторах с ArapovTrade.',

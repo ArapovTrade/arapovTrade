@@ -20,7 +20,7 @@ export class HomeUkBlogThirtyComponent implements OnInit {
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
 
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтеся про основи криптовалют, їхні особливості та ключові принципи торгівлі для новачків. Практичний гід від Arapov.trade.',

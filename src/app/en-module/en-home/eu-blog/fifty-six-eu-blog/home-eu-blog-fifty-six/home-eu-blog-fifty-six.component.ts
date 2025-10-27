@@ -16,7 +16,7 @@ export class HomeEuBlogFiftySixComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Trading Books: How They Benefit Beginners?');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Discover how trading books can help beginner traders. Useful recommendations and top books to start your journey in the financial markets.',

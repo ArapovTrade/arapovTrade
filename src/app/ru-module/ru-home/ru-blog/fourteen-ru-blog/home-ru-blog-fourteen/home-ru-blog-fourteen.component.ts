@@ -16,7 +16,7 @@ export class HomeRuBlogFourteenComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Трейдинг или инвестиции: что выбрать? | ArapovTrade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Трейдинг или инвестиции: что выбрать? Бесплатное руководство от ArapovTrade по плюсам, минусам и стратегиям.',

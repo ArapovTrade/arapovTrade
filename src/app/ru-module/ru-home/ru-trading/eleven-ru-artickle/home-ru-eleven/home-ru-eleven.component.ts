@@ -18,7 +18,7 @@ export class HomeRuElevenComponent implements OnInit {
       'Как начать торговать на криптобирже | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте, как начать торговать на криптобирже! Выбор платформы, регистрация, стратегии и советы по управлению рисками на Arapov.trade.',

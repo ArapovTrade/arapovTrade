@@ -18,7 +18,7 @@ export class HomeEnTwentySevenComponent implements OnInit {
       'Technical Market Analysis. Main Types of Chart - Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'A detailed overview of the basics of technical market analysis: chart types, trends, and support and resistance levels.',

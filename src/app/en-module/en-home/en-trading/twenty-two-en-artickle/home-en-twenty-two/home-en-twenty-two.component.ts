@@ -16,7 +16,7 @@ export class HomeEnTwentyTwoComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Economic Factors - Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'An analysis of key economic factors influencing currency exchange rates and their significance for evaluation.',

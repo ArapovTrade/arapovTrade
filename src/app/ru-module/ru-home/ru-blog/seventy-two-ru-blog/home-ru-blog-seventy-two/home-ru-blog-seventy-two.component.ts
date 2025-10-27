@@ -18,7 +18,7 @@ export class HomeRuBlogSeventyTwoComponent {
       'Экономический календарь в трейдинге: как использовать | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте, как экономический календарь помогает в трейдинге! Гид по событиям, влияющим на акции, индексы и стратегии торговли на новостях',

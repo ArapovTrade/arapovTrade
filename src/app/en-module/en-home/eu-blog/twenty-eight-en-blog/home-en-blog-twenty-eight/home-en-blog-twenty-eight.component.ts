@@ -18,7 +18,7 @@ export class HomeEnBlogTwentyEightComponent implements OnInit {
       'What are Alternative Blockchains? - Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Discover what alternative blockchains are, how they work, their benefits, and how they differ from Bitcoin and Ethereum. A comprehensive guide to next-generation blockchains.',

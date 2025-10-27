@@ -18,7 +18,7 @@ export class HomeEnBlogEightySixComponent {
       'Pattern 1-2-3: How to Use It for Trend Reversal? - Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Analyzing the 1-2-3 pattern – a universal trend reversal model. Learn how to correctly identify this pattern, which markets it works best on, and how to effectively apply it in trading strategies.',

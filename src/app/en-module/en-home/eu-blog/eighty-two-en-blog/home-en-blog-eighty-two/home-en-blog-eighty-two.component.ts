@@ -18,7 +18,7 @@ export class HomeEnBlogEightyTwoComponent {
       'Flag and Pennant: How to Trade After an Impulse? - Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Analyzing the `Flag` and `Pennant` patterns – powerful trend continuation formations. Learn how to correctly identify these patterns on a chart, what signals confirm breakouts, and how to apply them in trading strategies.',

@@ -16,7 +16,7 @@ export class HomeEnBlogFiveteenComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('The Truth About Futures Trading');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Discover the truth about futures trading: its advantages, risks, and secrets to successful trading. A comprehensive guide for traders.',

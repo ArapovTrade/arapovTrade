@@ -18,7 +18,7 @@ export class HomeEnBlogEightyFiveComponent {
       'Double Top and Double Bottom: How to Trade Reversal Patterns? - Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Analyzing `Double Top` and `Double Bottom` patterns – reliable reversal patterns in technical analysis. Learn how to correctly identify them, what signals confirm trend changes, and how to effectively apply them in trading strategies.',

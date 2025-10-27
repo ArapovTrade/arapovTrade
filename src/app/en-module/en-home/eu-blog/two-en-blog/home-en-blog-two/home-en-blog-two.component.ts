@@ -16,7 +16,7 @@ export class HomeEnBlogTwoComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Divergence on Indicators');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Learn everything about divergence on indicators: what it is, how to recognize it, popular strategies, and indicators for analysis. A complete guide for traders.',

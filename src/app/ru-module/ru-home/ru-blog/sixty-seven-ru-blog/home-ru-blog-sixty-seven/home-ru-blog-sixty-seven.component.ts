@@ -18,7 +18,7 @@ export class HomeRuBlogSixtySevenComponent {
       'Объемы в трейдинге: как анализировать | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте, как анализ объемов улучшает трейдинг! Практические советы по оценке трендов, точек разворота и избежанию ложных сигналов с Arapov.trade',

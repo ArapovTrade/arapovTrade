@@ -35,7 +35,7 @@ export class HomeUkBlogEightyTwoComponent {
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle('Прапор і Вимпел: торгуємо пробій');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь про патерни Прапор і Вимпел: як визначити пробій тренду та використовувати в трейдингу. Посібник від ArapovTrade.',

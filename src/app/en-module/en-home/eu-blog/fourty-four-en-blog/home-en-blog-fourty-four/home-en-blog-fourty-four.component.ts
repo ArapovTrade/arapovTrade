@@ -18,7 +18,7 @@ export class HomeEnBlogFourtyFourComponent implements OnInit {
       'Advantages and Risks of Crypto Staking - Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Learn about the advantages and risks of crypto staking, how to earn with cryptocurrencies with minimal risks, and what to pay attention to in order to avoid mistakes.',

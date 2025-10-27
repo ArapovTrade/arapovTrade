@@ -19,7 +19,7 @@ export class HomeRuBlogTwentyNineComponent implements OnInit {
     );
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте, как быстро начать в трейдинге, освоить ключевые навыки и избежать распространённых ошибок. Полное руководство для новичков от ArapovTrade.',

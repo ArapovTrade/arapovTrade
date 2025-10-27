@@ -16,7 +16,7 @@ export class HomeUkBlogSeventyEightComponent {
   ngOnInit(): void {
     this.titleService.setTitle('FOMO в трейдингу: як уникнути страху');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь, що таке FOMO в трейдингу, як уникнути страху втраченої вигоди та торгувати усвідомлено. Поради від ArapovTrade.',

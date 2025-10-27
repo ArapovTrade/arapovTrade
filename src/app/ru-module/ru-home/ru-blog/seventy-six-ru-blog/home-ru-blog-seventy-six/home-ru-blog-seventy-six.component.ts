@@ -18,7 +18,7 @@ export class HomeRuBlogSeventySixComponent {
       'Психология трейдинга по Уильяму Ганну: секреты успеха | ArapovTrade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Психология трейдинга по У. Ганну: самоконтроль, управление рисками, устойчивость. Применяйте принципы Ганна в торговле для успеха!',

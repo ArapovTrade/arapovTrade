@@ -18,7 +18,7 @@ export class HomeEnBlogTwentySixComponent implements OnInit {
       'Types of orders on the exchange - Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'What are the different types of orders on the exchange? How to choose the right type of order for trading? A complete guide to market, limit, stop orders, and advanced orders. Features of using different orders in trading.',

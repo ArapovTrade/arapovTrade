@@ -36,7 +36,7 @@ export class HomeUkBlogEightyThreeComponent {
 
     this.titleService.setTitle('Чашка з ручкою: торгуємо пробої');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь про патерн Чашка з ручкою: як визначити пробій тренду та використовувати в трейдингу. Посібник від ArapovTrade.',

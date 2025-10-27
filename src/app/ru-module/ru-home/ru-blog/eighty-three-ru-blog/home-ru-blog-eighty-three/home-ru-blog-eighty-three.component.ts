@@ -18,7 +18,7 @@ export class HomeRuBlogEightyThreeComponent {
       'Чашка с ручкой: пробой тренда | ArapovTrade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Чашка с ручкой: как торговать пробой тренда? Руководство от ArapovTrade по паттерну, стратегиям и успеху на крипто- и фондовых рынках.',

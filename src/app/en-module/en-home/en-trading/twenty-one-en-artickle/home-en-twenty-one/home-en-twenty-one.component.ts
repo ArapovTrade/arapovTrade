@@ -16,7 +16,7 @@ export class HomeEnTwentyOneComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Analysis of the FOREX Market - Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'FOREX Market Analysis: Key aspects influencing decision-making for traders.',

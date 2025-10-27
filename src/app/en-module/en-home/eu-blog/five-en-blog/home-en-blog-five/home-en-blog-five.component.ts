@@ -16,7 +16,7 @@ export class HomeEnBlogFiveComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Pricing and Liquidity - Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'What is pricing and liquidity in financial markets? We explore key principles, the impact of liquidity on pricing, the role of market makers, and risk management.',

@@ -15,7 +15,7 @@ export class HomeEuBlogFourtyComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Why is trading so difficult? - Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Discover why trading is considered a challenging profession and what factors make it so. Tips to overcome difficulties and achieve success.',

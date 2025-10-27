@@ -35,7 +35,7 @@ export class HomeUkBlogEightySixComponent {
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle('Патерн 1-2-3: розворот тренду | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь про патерн 1-2-3: як визначити розворот тренду та використовувати в трейдингу на ринках. Посібник від ArapovTrade.',

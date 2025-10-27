@@ -16,7 +16,7 @@ export class HomeEnBlogSeventyOneComponent {
   ngOnInit(): void {
     this.titleService.setTitle('How a Trader Can Trade on News - Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'A complete guide to trading on news. We analyze how economic events affect the market, which news trading strategies are the most effective, and how to minimize risks during high volatility.',

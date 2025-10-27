@@ -19,7 +19,7 @@ export class HomeRuBlogSixtyFourComponent {
       'Торговая система для успешного трейдинга | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте, как торговать с торговой системой! Практические советы по точкам входа, выхода, манименеджменту и управлению рисками для успеха с Arapov.trade',

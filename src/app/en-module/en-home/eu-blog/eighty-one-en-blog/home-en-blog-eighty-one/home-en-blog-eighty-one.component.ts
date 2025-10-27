@@ -16,7 +16,7 @@ export class HomeEnBlogEightyOneComponent {
   ngOnInit(): void {
     this.titleService.setTitle('Triangle Pattern - Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Analyzing the `Triangle` pattern – one of the key technical analysis patterns. Learn how to correctly identify this pattern on a chart, what signals confirm a breakout, and how to use it in trading strategies.',

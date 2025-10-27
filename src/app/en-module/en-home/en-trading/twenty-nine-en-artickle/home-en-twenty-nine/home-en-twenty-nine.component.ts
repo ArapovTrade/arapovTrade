@@ -18,7 +18,7 @@ export class HomeEnTwentyNineComponent implements OnInit {
       'Why Do 90% of Traders Lose Money? Traps Created by Smart Money - Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Find out why 90% of traders lose money and what traps are set by Smart Money. We analyze the main mistakes, manipulations, and ways to avoid financial losses in the market.',

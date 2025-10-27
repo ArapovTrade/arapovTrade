@@ -16,7 +16,7 @@ export class HomeEnBlogNineteenComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('The Wyckoff Method in Trading - Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'The Wyckoff Method is a powerful market analysis tool based on the laws of supply and demand. Learn how to apply the Wyckoff Method to identify trends, entry and exit points in the market.',

@@ -18,7 +18,7 @@ export class HomeRuBlogSixtyNineComponent {
       'Анализ объемов: акции vs фьючерсы | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте отличия анализа объемов на рынках акций и фьючерсов! Практические методы и индикаторы для успешного трейдинга с Arapov.trade',

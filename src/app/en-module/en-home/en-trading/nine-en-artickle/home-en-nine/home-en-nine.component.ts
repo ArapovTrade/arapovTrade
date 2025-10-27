@@ -17,7 +17,7 @@ export class HomeEnNineComponent implements OnInit {
     this.titleService.setTitle('Currency Exchange Rate Formation');
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Learn how currency exchange rates are formed, the factors influencing them, and their impact on the global economy. A complete guide for investors and traders.',

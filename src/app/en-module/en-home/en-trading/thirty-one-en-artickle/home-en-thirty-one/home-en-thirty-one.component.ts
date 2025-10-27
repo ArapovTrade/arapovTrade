@@ -16,7 +16,7 @@ export class HomeEnThirtyOneComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Market Order - Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'What is a market order and how does it work? Learn how to use Market Order for quick trade entry and exit, its advantages, disadvantages, and examples of application on exchanges.',

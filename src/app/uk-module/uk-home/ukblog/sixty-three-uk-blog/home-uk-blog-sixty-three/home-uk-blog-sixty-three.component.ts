@@ -19,7 +19,7 @@ export class HomeUkBlogSixtyThreeComponent {
     );
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Як Smart Money керують настроєм і новинами, щоб впливати на ринок і заманювати роздрібних трейдерів у пастки.',

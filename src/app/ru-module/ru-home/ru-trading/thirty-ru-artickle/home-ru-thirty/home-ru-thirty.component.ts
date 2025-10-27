@@ -18,7 +18,7 @@ export class HomeRuThirtyComponent implements OnInit {
       'Imbalance и FVG: зоны ликвидности | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте, что такое Imbalance и FVG! Как находить зоны ликвидности и использовать их в торговых стратегиях на Arapov.trade.',

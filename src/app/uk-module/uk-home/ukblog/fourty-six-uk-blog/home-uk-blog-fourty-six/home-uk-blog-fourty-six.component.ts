@@ -18,7 +18,7 @@ export class HomeUkBlogFourtySixComponent implements OnInit {
       'Bitcoin Pizza Day: історія та значення | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтеся про Bitcoin Pizza Day — першу покупку за біткоїни, історію цього дня та традиції святкування у світі криптовалют.',

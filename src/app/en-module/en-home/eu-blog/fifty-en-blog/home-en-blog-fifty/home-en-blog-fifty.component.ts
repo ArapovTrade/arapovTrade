@@ -18,7 +18,7 @@ export class HomeEnBlogFiftyComponent implements OnInit {
       'Algorithmic Orders on the Exchange - Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'What are algorithmic orders? Learn about their types, benefits, risks, and future use in trading. A comprehensive guide for traders.',

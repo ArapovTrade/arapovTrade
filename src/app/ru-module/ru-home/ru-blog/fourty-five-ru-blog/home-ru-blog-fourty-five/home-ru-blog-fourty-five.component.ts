@@ -16,7 +16,7 @@ export class HomeRuBlogFourtyFiveComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Скользящие средние в трейдинге | ArapovTrade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',   
       content:
         'Скользящие средние: как применять в трейдинге? Руководство от ArapovTrade по стратегиям и анализу трендов.',

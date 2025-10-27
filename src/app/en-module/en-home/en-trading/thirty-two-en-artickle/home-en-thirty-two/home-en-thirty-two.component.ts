@@ -18,7 +18,7 @@ export class HomeEnThirtyTwoComponent implements OnInit {
       'Stop Order: A Complete Guide for Traders - Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'What is a stop order and how to use it correctly in trading? A detailed breakdown of the Stop Order, its types, advantages and disadvantages, as well as strategies for applying it on cryptocurrency and stock exchanges.',

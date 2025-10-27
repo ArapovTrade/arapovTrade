@@ -18,7 +18,7 @@ export class HomeEnBlogSixtyTwoComponent {
       'How to Find Entry Points Using Smart Money? Best Strategies - Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Analyzing Smart Money strategies to find precise entry points. How to use Order Blocks, liquidity, FVG, and other concepts for accurate market entry.',

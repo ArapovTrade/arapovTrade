@@ -18,7 +18,7 @@ export class HomeEnBlogTwentyComponent implements OnInit {
       'What is a Scam in Cryptocurrency - Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'What is a scam in cryptocurrency? Learn about popular fraudulent schemes such as fake ICOs, pyramids, and phishing. How to protect your funds and minimize risks? A comprehensive guide for traders and investors.',

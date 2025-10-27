@@ -18,7 +18,7 @@ export class HomeRuThirtyFourComponent implements OnInit {
       'Стоп-лимитный ордер: как использовать | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте, что такое стоп-лимитный ордер! Руководство по настройке и применению Stop-Limit в трейдинге на Arapov.trade.',

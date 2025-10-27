@@ -19,7 +19,7 @@ export class HomeRuBlogFiftyFiveComponent implements OnInit {
 
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Скальпинг в трейдинге: стратегии, индикаторы, риски. Научитесь зарабатывать на краткосрочных сделках с помощью полного гида от ArapovTrade'

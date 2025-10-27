@@ -18,7 +18,7 @@ export class HomeUkBlogThirteenComponent implements OnInit {
       'Хвилі Елліотта: основи та застосування | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Детальний опис теорії хвиль Елліотта: принципи, структура, основи та застосування в технічному аналізі для ефективної торгівлі.',

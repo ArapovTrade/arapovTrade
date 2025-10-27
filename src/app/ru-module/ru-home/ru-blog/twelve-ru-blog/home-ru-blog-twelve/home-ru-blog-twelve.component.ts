@@ -16,7 +16,7 @@ export class HomeRuBlogTwelveComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Торговля уровнями в трейдинге | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте, как торговать уровнями в трейдинге! Полное руководство по определению и использованию ключевых уровней на Arapov.trade.',

@@ -16,7 +16,7 @@ export class HomeUkBlogSeventyComponent {
   ngOnInit(): void {
     this.titleService.setTitle('Вайкофф: об’ємний аналіз ринку');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь про концепцію Вайкоффа: як об’ємний аналіз виявляє дії великих гравців і ключові рівні ринку від ArapovTrade.',

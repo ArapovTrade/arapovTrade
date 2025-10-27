@@ -18,7 +18,7 @@ export class HomeRuBlogSixtyFiveComponent {
       'Биржевой стакан и лента принтов: как читать | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте, как читать биржевой стакан и ленту принтов! Анализ заявок, ликвидности и сделок для выявления Smart Money и точек входа с Arapov.trade',

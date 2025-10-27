@@ -18,7 +18,7 @@ export class HomeUkBlogSixtyFourComponent {
   ngOnInit(): void {
     this.titleService.setTitle('Трейдинг: рекомендації та торгова система');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь практичні рекомендації з трейдингу: торгова система, точки входу, мані-менеджмент і ризики від ArapovTrade.',

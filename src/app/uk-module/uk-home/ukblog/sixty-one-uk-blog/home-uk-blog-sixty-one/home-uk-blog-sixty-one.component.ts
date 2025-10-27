@@ -18,7 +18,7 @@ export class HomeUkBlogSixtyOneComponent {
       'Як торгувати за Smart Money Concepts | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтеся, як торгувати за Smart Money Concepts: структура ринку, ліквідність, Order Blocks, FVG і стратегії входу та виходу з угод.',

@@ -16,7 +16,7 @@ export class HomeEnBlogSixteenComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Trend Channels: A Complete Guide');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Everything you need to know about trend channels in trading: definition, construction, strategies, and tips.',

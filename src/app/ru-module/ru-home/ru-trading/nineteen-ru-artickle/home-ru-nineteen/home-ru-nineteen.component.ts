@@ -16,7 +16,7 @@ export class HomeRuNineteenComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Торговля на FOREX: как начать | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте, как торговать на FOREX! Руководство для новичков с советами, стратегиями и примерами на Arapov.trade.',

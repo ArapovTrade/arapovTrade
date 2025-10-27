@@ -16,7 +16,7 @@ export class HomeEnBlogFourtyFiveComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('How to Use Moving Averages in Trading?');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Learn how to use moving averages in trading: types, strategies, and practical examples for trend analysis and decision-making.',

@@ -18,7 +18,7 @@ export class HomeEnBlogSixtyOneComponent {
       'How to Trade Using Smart Money Concepts (SMC)? Step-by-Step Guide - Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Learn how to apply Smart Money Concepts (SMC) in trading. A complete guide on market structure, liquidity, FVG, and Order Blocks. We analyze entry and exit strategies with real examples.',

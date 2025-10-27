@@ -18,7 +18,7 @@ export class HomeRuBlogThirteenComponent implements OnInit {
       'Волны Эллиотта: основы и применение | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте основы теории волн Эллиотта! Принципы, структура и применение в трейдинге для точного анализа на Arapov.trade',

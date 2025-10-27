@@ -16,7 +16,7 @@ export class HomeRuBlogThirtySixComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Особенности рынка криптовалют | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте особенности рынка криптовалют! Ключевые отличия, стратегии торговли и советы для успешного заработка на Arapov.trade.',

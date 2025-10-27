@@ -16,7 +16,7 @@ export class HomeUkBlogFourtyComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Чому трейдинг такий складний? | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтеся, чому трейдинг складний і які фактори впливають на успіх. Поради для подолання труднощів і досягнення результатів у трейдингу.',

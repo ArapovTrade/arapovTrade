@@ -16,7 +16,7 @@ export class HomeRuBlogThirtyEightComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Хранение криптовалют: принципы и безопасность | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Как безопасно хранить криптовалюту? Выбор кошельков, защита активов и советы инвесторам по безопасности на Arapov.trade.',

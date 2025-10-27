@@ -20,7 +20,7 @@ export class HomeUkBlogThirtyTwoComponent implements OnInit {
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
 
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Чи варто інвестувати в платне навчання трейдингу? Огляд переваг, підводних каменів та поради для початківців від Arapov.trade.',

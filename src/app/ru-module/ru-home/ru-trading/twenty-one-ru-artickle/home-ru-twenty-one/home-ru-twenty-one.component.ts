@@ -16,7 +16,7 @@ export class HomeRuTwentyOneComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Как проводить анализ рынка FOREX | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Как анализировать рынок FOREX: типы анализа, влияющие факторы и советы для трейдеров. Узнайте больше на Arapov.trade.',

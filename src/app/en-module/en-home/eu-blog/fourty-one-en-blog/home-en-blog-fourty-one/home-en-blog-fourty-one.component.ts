@@ -16,7 +16,7 @@ export class HomeEnBlogFourtyOneComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Rules for Successful Trading - Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'A complete guide to successful trading: strategies, risk management, broker selection, technical and fundamental analysis. Learn how to become a successful trader!',

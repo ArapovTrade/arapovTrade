@@ -18,7 +18,7 @@ export class HomeRuBlogFourtyThreeComponent implements OnInit {
       'Спрос и предложение в криптовалютах | ArapovTrade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Анализ спроса и предложения в криптовалютах: как торговать? Гид от ArapovTrade по стратегиям и инвестициям.',

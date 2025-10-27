@@ -18,7 +18,7 @@ export class HomeEnBlogTwentyFourComponent implements OnInit {
       "The 'Flag' Pattern in Trading: A Comprehensive Guide"
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         "Everything you need to know about the 'Flag' pattern in trading: how to identify, trade, and avoid mistakes.",

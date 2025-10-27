@@ -16,7 +16,7 @@ export class HomeEnBlogTwentyNineComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle("Quick Start in Trading: A Beginner's Guide");
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Learn how to start trading quickly, master essential skills, and avoid common mistakes. A comprehensive guide for beginners.',

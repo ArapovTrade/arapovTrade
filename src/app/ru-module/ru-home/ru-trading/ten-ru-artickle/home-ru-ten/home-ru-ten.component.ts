@@ -20,7 +20,7 @@ export class HomeRuTenComponent implements OnInit {
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
 
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Что такое позиции в трейдинге? Узнайте виды позиций, как происходит перенос и что значит дата валютирования. Полезно трейдерам и инвесторам.',

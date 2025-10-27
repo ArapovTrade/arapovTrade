@@ -18,7 +18,7 @@ export class HomeEnBlogEightyThreeComponent {
       'Cup and Handle Pattern: How to Trade Strong Breakouts? - Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Analyzing the `Cup and Handle` pattern – one of the most reliable trend continuation patterns. Learn how to correctly identify this pattern, which signals confirm the breakout, and how to apply it in trading strategies.',

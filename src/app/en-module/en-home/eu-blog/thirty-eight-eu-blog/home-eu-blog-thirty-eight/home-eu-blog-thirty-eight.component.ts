@@ -18,7 +18,7 @@ export class HomeEuBlogThirtyEightComponent implements OnInit {
       'Principles of Cryptocurrency Storage - Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Learn about the principles of cryptocurrency storage, wallet selection, security, and asset protection strategies. A comprehensive guide for investors.',

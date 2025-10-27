@@ -16,7 +16,7 @@ export class HomeEnBlogTwentySevenComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('How to Read Japanese Candlesticks');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         "A detailed guide to Japanese candlesticks: how to read, identify formations, and apply them in trading. Learn more about 'Hammer,' 'Hanging Man,' and other key patterns.",

@@ -19,7 +19,7 @@ export class HomeRuBlogFourtyOneComponent implements OnInit {
 
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Полное руководство по успешному трейдингу: стратегии, управление рисками, выбор брокера, технический и фундаментальный анализ. Станьте успешным трейдером!',

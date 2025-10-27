@@ -18,7 +18,7 @@ export class HomeRuTwentyNineComponent implements OnInit {
       'Почему трейдеры теряют деньги | Ловушки Смарт Мани'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Главные ошибки трейдеров, ловушки Смарт Мани и как избежать потерь. Полезное руководство для начинающих на Arapov.trade.',

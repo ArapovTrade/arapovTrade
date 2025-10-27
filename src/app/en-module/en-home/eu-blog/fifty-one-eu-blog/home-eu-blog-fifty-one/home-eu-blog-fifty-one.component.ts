@@ -16,7 +16,7 @@ export class HomeEuBlogFiftyOneComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Price Action: A Complete Guide');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Learn everything about the Price Action method: its core principles, popular patterns, strategies, and practical examples. A complete guide for beginner and experienced traders.',

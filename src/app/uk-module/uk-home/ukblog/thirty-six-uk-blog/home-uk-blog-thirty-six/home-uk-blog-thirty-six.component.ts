@@ -18,7 +18,7 @@ export class HomeUkBlogThirtySixComponent implements OnInit {
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
 
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'У чому особливості крипторинку? Дізнайтесь ключові відмінності, фактори впливу та ефективні стратегії торгівлі від Arapov.trade.',

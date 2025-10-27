@@ -16,7 +16,7 @@ export class HomeEnThirtyThreeComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Requotes in Trading - Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Learn what requotes are in trading, why they occur, and how to avoid them. Tips for improving trading and working with brokers.',

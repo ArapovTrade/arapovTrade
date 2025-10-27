@@ -19,7 +19,7 @@ export class HomeUkBlogFourComponent implements OnInit {
 
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Поради, як мінімізувати ризики та уникнути втрат у маржинальній торгівлі. Ключові стратегії управління капіталом для трейдерів.',

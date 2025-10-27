@@ -16,7 +16,7 @@ export class HomeEnBlogEightComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Imbalance in trading - Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'We analyze the concept of imbalance in trading, its impact on price movement, analysis methods, and trading strategies. A complete guide to using market disbalance.',

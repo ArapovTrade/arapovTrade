@@ -16,7 +16,7 @@ export class HomeUkBlogSeventySevenComponent {
   ngOnInit(): void {
     this.titleService.setTitle('Психологія трейдингу: контроль емоцій');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь, як емоції впливають на трейдинг, чому страх і жадібність шкодять та як контролювати емоції від ArapovTrade.',

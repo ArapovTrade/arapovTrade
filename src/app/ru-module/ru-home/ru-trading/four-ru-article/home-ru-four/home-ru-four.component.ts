@@ -16,7 +16,7 @@ export class HomeRuFourComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Биржевые и внебиржевые рынки | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте о биржевых и внебиржевых рынках! Различия, особенности и советы для трейдеров и инвесторов на Arapov.trade.',

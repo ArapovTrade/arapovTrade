@@ -41,7 +41,7 @@ export class HomeUkBlogFiftyThreeComponent implements OnInit {
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle('Ордер блок у трейдингу: як використовувати');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь, що таке ордер блок у трейдингу, як його визначити та використовувати в торгових стратегіях від ArapovTrade.',

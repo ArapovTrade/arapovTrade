@@ -16,7 +16,7 @@ export class HomeRuBlogTenComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Потеря депозита в трейдинге: как избежать? | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте, почему трейдеры теряют депозит! Ошибки стратегии, отсутствие дисциплины и переоценка рисков. Советы по предотвращению потерь на Arapov.trade',

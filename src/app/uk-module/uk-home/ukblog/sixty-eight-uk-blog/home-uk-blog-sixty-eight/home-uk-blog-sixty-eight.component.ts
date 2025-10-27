@@ -16,7 +16,7 @@ export class HomeUkBlogSixtyEightComponent {
   ngOnInit(): void {
     this.titleService.setTitle('Ринковий аукціон і сентимент трейдерів');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь про ринковий аукціон і сентимент ринку: аукціонна теорія, індикатори попиту та пропозиції в трейдингу від ArapovTrade.',

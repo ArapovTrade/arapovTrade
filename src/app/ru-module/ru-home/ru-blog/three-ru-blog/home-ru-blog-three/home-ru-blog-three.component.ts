@@ -16,7 +16,7 @@ export class HomeRuBlogThreeComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Волатильность в трейдинге: как использовать | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте, что такое волатильность в трейдинге! Как она влияет на торговлю и стратегии для высоковолатильных рынков на Arapov.trade.',

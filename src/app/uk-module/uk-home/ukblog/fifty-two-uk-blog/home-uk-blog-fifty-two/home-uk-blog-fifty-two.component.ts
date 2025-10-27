@@ -41,7 +41,7 @@ export class HomeUkBlogFiftyTwoComponent implements OnInit {
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle('Тренди на ринку: аналіз і стратегії');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь, що таке тренди на ринку, їх фази, типи, методи аналізу та стратегії трейдингу від ArapovTrade.',

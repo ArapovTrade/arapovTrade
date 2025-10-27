@@ -18,7 +18,7 @@ export class HomeRuBlogSeventyComponent {
       'Концепция Вайкоффа: объёмный анализ | ArapovTrade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Концепция Вайкоффа: как объёмный анализ выявляет намерения крупных игроков и ключевые уровни рынка. Советы от ArapovTrade',

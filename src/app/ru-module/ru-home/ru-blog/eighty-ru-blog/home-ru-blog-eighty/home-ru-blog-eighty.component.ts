@@ -16,7 +16,7 @@ export class HomeRuBlogEightyComponent {
   ngOnInit(): void {
     this.titleService.setTitle('Голова и плечи — мощный паттерн разворота | ArapovTrade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Голова и плечи: как торговать разворотный паттерн? Руководство от ArapovTrade по анализу и стратегиям',

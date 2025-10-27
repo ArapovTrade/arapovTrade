@@ -18,7 +18,7 @@ export class HomeEnBlogSeventySixComponent {
       'William Gann`s Trading Psychology - Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Analyzing William Gann`s psychological trading principles, his approach to self-control, risk management, and trader’s emotional resilience. Learn how to apply his methodology in modern trading.',

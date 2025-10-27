@@ -16,7 +16,7 @@ export class HomeEnThirteenComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Currency Risk');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Learn what currency risk is, how it impacts financial operations, and what strategies can help mitigate it.',

@@ -16,7 +16,7 @@ export class HomeRuBlogEightComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Имбаланс в трейдинге | ArapovTrade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Имбаланс в трейдинге: как анализировать и использовать в торговле. Руководство от ArapovTrade по стратегиям и движению цены',

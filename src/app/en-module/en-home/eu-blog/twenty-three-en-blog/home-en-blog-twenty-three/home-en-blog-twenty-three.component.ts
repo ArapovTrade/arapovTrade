@@ -16,7 +16,7 @@ export class HomeEnBlogTwentyThreeComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('What is a Bitcoin-ETF - Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Learn what a Bitcoin-ETF is, how it works, its advantages and disadvantages, and its impact on the cryptocurrency market. A complete guide for investors and traders.',

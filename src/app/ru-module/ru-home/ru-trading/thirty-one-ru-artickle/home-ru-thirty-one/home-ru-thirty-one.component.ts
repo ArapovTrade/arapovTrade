@@ -18,7 +18,7 @@ export class HomeRuThirtyOneComponent implements OnInit {
       'Рыночный ордер: что это и как работает | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте, что такое рыночный ордер (Market Order)! Как он работает, когда применять, плюсы и минусы для трейдеров на Arapov.trade.',

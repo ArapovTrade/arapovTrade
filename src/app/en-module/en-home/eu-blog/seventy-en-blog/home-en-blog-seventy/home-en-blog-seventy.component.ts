@@ -18,7 +18,7 @@ export class HomeEnBlogSeventyComponent {
       'Richard Wyckoff`s Concept in Understanding Volume - Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'A complete guide to Richard Wyckoff`s concept. We analyze how volume analysis helps determine the intentions of large players and identify key market levels.',

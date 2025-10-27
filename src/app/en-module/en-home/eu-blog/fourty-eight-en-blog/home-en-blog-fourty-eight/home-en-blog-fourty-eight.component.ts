@@ -16,7 +16,7 @@ export class HomeEnBlogFourtyEightComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Guide to Self-Learning Trading');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Self-learning trading: step-by-step guide, tips, and recommendations for beginners. A successful start in financial markets.',

@@ -41,7 +41,7 @@ export class HomeUkBlogFiveComponent implements OnInit {
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle('Ціноутворення та ліквідність ринку');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь про ціноутворення та ліквідність на фінансових ринках, роль маркет-мейкерів і управління ризиками від ArapovTrade.',

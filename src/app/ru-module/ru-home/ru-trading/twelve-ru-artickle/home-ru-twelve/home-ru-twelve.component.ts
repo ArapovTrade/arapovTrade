@@ -20,7 +20,7 @@ export class HomeRuTwelveComponent implements OnInit {
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
 
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Что такое халвинг в криптовалюте? Как работает этот механизм и влияет ли он на цену Bitcoin? Простое объяснение и прогнозы на Arapov.trade.',

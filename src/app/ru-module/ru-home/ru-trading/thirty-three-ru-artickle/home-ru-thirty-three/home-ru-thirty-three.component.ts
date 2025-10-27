@@ -18,7 +18,7 @@ export class HomeRuThirtyThreeComponent implements OnInit {
       'Реквоты в трейдинге: что это и как избежать | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте, что такое реквоты в трейдинге! Почему возникают и как их избежать для эффективной торговли на Arapov.trade.',

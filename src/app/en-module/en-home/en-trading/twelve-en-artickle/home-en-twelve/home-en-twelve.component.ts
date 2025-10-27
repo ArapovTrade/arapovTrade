@@ -19,7 +19,7 @@ export class HomeEnTwelveComponent implements OnInit {
     );
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Bitcoin halving is one of the key mechanisms affecting the price and supply of cryptocurrency. Learn what halving is, how it works, and its impact on the market.',

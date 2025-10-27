@@ -18,7 +18,7 @@ export class HomeRuThirtyFiveComponent implements OnInit {
       'Торговая система: виды и оптимизация | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте о торговых системах в трейдинге! Виды, оптимизация и выбор стратегии для успешной торговли на Arapov.trade.',

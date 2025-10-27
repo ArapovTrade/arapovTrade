@@ -18,7 +18,7 @@ export class HomeRuBlogThirtySevenComponent implements OnInit {
       'Просадки в трейдинге: управление рисками | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте, как анализировать и управлять просадками в трейдинге! Советы по минимизации рисков и сохранению прибыли на Arapov.trade.',

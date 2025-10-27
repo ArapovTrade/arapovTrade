@@ -18,7 +18,7 @@ export class HomeUkBlogSixtySevenComponent {
       'Обсяги і тренди: як аналізувати | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтеся, як аналіз обсягів допомагає визначити силу тренду, точки розвороту та уникнути хибних сигналів на ринку.',

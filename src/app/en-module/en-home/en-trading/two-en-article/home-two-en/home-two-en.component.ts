@@ -19,7 +19,7 @@ export class HomeTwoEnComponent implements OnInit {
     );
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'A complete guide to the key terms of the financial market. We analyze fundamental concepts of the stock, forex, and cryptocurrency markets, as well as trading strategies and analysis.',

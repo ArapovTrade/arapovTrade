@@ -18,7 +18,7 @@ export class HomeEnBlogSixtyFourComponent {
       'Practical trading recommendations. Trading system - Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Practical trading tips, trading system with examples of entry and exit points, money management and risk management. Step-by-step guide',

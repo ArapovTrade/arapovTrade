@@ -16,7 +16,7 @@ export class HomeUkBlogSeventySixComponent {
   ngOnInit(): void {
     this.titleService.setTitle('Психологія трейдингу Вільяма Ганна');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь про психологію трейдингу Вільяма Ганна: самоконтроль, управління ризиками та методи для сучасного трейдингу від ArapovTrade.',

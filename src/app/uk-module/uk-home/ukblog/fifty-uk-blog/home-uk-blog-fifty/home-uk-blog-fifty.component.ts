@@ -41,7 +41,7 @@ export class HomeUkBlogFiftyComponent implements OnInit {
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle('Алгоритмічні ордери: як працюють');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь про алгоритмічні ордери на біржі: типи, переваги, ризики та їх використання в трейдингу від ArapovTrade.',

@@ -18,7 +18,7 @@ export class HomeRuBlogTwentyEightComponent implements OnInit {
   'Альтернативные блокчейны: обзор и отличия | Arapov.trade'
 );
 this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-this.meta.addTag({
+this.meta.updateTag({
   name: 'description',
   content:
     'Что такое альтернативные блокчейны: как они работают, их преимущества и отличия от Bitcoin и Ethereum. Обзор перспективных сетей нового поколения.',

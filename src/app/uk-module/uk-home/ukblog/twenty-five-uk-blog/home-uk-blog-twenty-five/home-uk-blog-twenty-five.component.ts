@@ -16,7 +16,7 @@ export class HomeUkBlogTwentyFiveComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Як працюють маркет-мейкери в крипто');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь, як маркет-мейкери забезпечують ліквідність і стабільність цін на ринку криптовалют у трейдингу від ArapovTrade.',

@@ -17,7 +17,7 @@ export class HomeEnSixComponent implements OnInit {
     this.titleService.setTitle('Algorithmic Stablecoins - Arapov.trade');
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Learn what algorithmic stablecoins are, how they work, their advantages and risks. Find out whether this type of cryptocurrency is worth using.',

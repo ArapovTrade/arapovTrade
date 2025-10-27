@@ -16,7 +16,7 @@ export class HomeUkBlogTwentyThreeComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Bitcoin-ETF: що це та як працює');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь, що таке Bitcoin-ETF, як він впливає на ринок криптовалют, його переваги та недоліки для інвесторів від Arapov.trade.',

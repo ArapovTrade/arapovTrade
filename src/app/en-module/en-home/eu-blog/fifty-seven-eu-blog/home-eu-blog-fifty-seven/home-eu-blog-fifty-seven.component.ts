@@ -16,7 +16,7 @@ export class HomeEuBlogFiftySevenComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Indicators in Trading: A Complete Guide');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Learn everything about trading indicators: their types, applications, and popular strategies for effective market analysis, including RSI and MACD.',

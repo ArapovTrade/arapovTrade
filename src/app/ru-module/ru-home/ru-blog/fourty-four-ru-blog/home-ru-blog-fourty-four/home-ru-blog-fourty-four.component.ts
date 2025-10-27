@@ -19,7 +19,7 @@ export class HomeRuBlogFourtyFourComponent implements OnInit {
 
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Преимущества и риски криптостейкинга: как зарабатывать на криптовалютах с минимальными рисками и избегать ошибок. Практические советы от ArapovTrade.',

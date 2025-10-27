@@ -19,7 +19,7 @@ export class HomeRuBlogFiftyFourComponent implements OnInit {
 
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Как защитить криптовалюту от кражи? Советы по безопасности, управлению активами и конфиденциальности от Arapov.trade',

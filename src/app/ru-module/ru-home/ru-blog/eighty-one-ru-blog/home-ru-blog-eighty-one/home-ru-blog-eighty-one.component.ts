@@ -16,7 +16,7 @@ export class HomeRuBlogEightyOneComponent {
   ngOnInit(): void {
     this.titleService.setTitle('Треугольник: паттерн трейдинга | ArapovTrade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Фигура Треугольник: как торговать паттерн? Руководство от ArapovTrade по анализу, пробою и стратегиям',

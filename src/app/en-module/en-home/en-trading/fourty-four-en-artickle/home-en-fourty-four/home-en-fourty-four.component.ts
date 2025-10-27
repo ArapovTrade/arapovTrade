@@ -18,7 +18,7 @@ export class HomeEnFourtyFourComponent implements OnInit {
       'Hidden Orders (Iceberg Orders): How Banks Mask Their Positions? - Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'What are hidden orders (Iceberg Orders)? How do banks and large players use them to mask their positions? Learn how to detect iceberg orders and how to use them in trading.',

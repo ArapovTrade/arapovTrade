@@ -16,7 +16,7 @@ export class HomeEuBlogThirtyFiveComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Trading Basics for Beginners');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Learn the basics of trading for beginners. A complete guide to types of trading, strategies, risks, and essential tips for a successful start.',

@@ -18,7 +18,7 @@ export class HomeUkBlogTwentyTwoComponent implements OnInit {
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
 
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Що таке арбітраж криптовалют? Основи та секрети стратегії заробітку на різниці цін. Посібник для початківців і професіоналів від Arapov.trade.',

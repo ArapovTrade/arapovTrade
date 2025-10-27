@@ -17,7 +17,7 @@ export class HomeFourEnComponent implements OnInit {
     this.titleService.setTitle('Exchange and Over-the-Counter Markets');
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Learn about the differences between exchange and over-the-counter markets, their features, advantages, and disadvantages. A comprehensive guide for traders and investors.',

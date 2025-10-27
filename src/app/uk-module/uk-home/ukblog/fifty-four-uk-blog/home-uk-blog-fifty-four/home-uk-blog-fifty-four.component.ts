@@ -41,7 +41,7 @@ export class HomeUkBlogFiftyFourComponent implements OnInit {
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle('Як захистити криптовалюту від ризиків');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь, як забезпечити безпеку криптовалюти: захист активів, мінімізація ризиків крадіжки та конфіденційність від ArapovTrade.',

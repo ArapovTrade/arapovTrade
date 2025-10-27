@@ -18,7 +18,7 @@ export class HomeUkBlogTwoComponent implements OnInit {
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
 
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтеся про дивергенцію на індикаторах: що це, як розпізнавати, популярні стратегії та інструменти для аналізу від Arapov.trade.',

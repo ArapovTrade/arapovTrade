@@ -18,7 +18,7 @@ export class HomeRuTwentyTwoComponent implements OnInit {
       'Экономические факторы в трейдинге | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте, как экономические факторы влияют на валютные курсы! Ключевые аспекты и их роль в анализе трейдинга на Arapov.trade.',

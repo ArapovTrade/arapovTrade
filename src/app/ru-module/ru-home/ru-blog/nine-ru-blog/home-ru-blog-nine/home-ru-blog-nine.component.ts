@@ -18,7 +18,7 @@ export class HomeRuBlogNineComponent implements OnInit {
       'Как прогнозировать цену в трейдинге | ArapovTrade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Как прогнозировать цену в трейдинге: анализ, индикаторы, психология и стратегии. Узнайте, как предсказывать движение рынка с ArapovTrade',

@@ -18,7 +18,7 @@ export class HomeEnTwentyFourComponent implements OnInit {
       'Fibonacci Levels: Principles and Application - Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'A detailed analysis of Fibonacci levels: what they are, how they work, and their role in technical analysis.',

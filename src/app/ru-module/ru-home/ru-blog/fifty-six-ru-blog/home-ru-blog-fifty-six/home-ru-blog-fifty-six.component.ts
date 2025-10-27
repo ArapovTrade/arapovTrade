@@ -18,7 +18,7 @@ export class HomeRuBlogFiftySixComponent implements OnInit {
       'Книги по трейдингу для новичков | ArapovTrade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Книги по трейдингу для новичков: лучшие рекомендации и польза. Руководство от ArapovTrade для старта на финансовых рынках.',

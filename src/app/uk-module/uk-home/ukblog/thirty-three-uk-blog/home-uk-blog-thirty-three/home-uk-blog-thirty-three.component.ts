@@ -17,7 +17,7 @@ export class HomeUkBlogThirtyThreeComponent implements OnInit {
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
 
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Що таке Пін-бар у трейдингу? Як використовувати цей патерн для аналізу ринку та прийняття ефективних торгових рішень — гід від Arapov.trade.',

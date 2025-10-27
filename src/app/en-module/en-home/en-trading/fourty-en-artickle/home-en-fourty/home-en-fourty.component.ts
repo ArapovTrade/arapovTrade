@@ -16,7 +16,7 @@ export class HomeEnFourtyComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Mistakes of Beginner Traders');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Learn about common mistakes beginner traders make and how to avoid them. Recommendations for a successful start in financial markets.',

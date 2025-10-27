@@ -16,7 +16,7 @@ export class HomeUkBlogTwentySixComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Види ордерів на біржі: як вибрати');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь про види ордерів на біржі: ринкові, лімітні, стоп-ордери та складні, їх особливості та застосування в трейдингу від ArapovTrade.',

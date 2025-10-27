@@ -18,7 +18,7 @@ export class HomeEnBlogSeventyEightComponent {
       'How to Avoid FOMO – Fear of Missing Out? - Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Learn what FOMO in trading is, how the fear of missing out affects decision-making, and which strategies can help you avoid emotional trades and trade consciously.',

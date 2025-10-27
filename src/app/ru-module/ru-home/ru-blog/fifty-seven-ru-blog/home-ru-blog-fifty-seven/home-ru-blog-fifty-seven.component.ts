@@ -16,7 +16,7 @@ export class HomeRuBlogFiftySevenComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Индикаторы в трейдинге: руководство | ArapovTrade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Индикаторы в трейдинге: RSI, MACD и стратегии. Руководство от ArapovTrade по анализу рынка для новичков и профи.',

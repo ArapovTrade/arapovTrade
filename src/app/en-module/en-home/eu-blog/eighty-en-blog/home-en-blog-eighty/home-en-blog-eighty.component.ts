@@ -16,7 +16,7 @@ export class HomeEnBlogEightyComponent {
   ngOnInit(): void {
     this.titleService.setTitle('Head and Shoulders Pattern - Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Analyzing the `Head and Shoulders` pattern – one of the most reliable technical analysis patterns. Learn how to correctly identify this pattern, what signals confirm a trend reversal, and which strategies can help trade it effectively.',

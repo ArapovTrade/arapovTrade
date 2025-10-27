@@ -18,7 +18,7 @@ export class HomeRuBlogSixtySixComponent {
       'Анализ объемов: как находить ключевые уровни | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте, как анализировать уровни максимального объема! Советы по поиску зон интереса, уровней поддержки и сопротивления для трейдинга с Arapov.trade',

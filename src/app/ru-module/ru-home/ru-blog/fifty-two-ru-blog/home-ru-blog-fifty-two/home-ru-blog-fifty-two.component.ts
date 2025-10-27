@@ -15,7 +15,7 @@ export class HomeRuBlogFiftyTwoComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Анатомия трендов в трейдинге | ArapovTrade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Анатомия трендов: как анализировать рынок? Руководство от ArapovTrade по фазам, индикаторам и стратегиям.',

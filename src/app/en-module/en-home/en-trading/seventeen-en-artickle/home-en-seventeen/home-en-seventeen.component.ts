@@ -19,7 +19,7 @@ export class HomeEnSeventeenComponent implements OnInit {
     );
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Learn what Bitcoin is, how it works, its advantages and risks, and how to use cryptocurrency for investment and trading.',

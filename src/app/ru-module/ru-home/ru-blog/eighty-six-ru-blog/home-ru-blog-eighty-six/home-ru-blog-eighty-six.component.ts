@@ -18,7 +18,7 @@ export class HomeRuBlogEightySixComponent {
       'Паттерн 1-2-3: разворот тренда | ArapovTrade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Паттерн 1-2-3: как торговать разворот тренда? Руководство от ArapovTrade по анализу, стратегиям и успеху на крипто- и фондовых рынках.',

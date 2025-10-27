@@ -17,7 +17,7 @@ export class HomeEnSevenComponent implements OnInit {
     this.titleService.setTitle('The FOREX Market');
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'A comprehensive guide to the FOREX market. Learn about its features, participants, trading sessions, and key strategies for beginners and professionals.',

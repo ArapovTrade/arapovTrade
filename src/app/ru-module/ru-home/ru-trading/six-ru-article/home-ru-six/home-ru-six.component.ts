@@ -17,7 +17,7 @@ export class HomeRuSixComponent implements OnInit {
     this.titleService.setTitle('Алгоритмические стейблкоины: как работают | Arapov.trade');
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте, как работают алгоритмические стейблкоины, в чём их преимущества и риски. Полное руководство для трейдеров и инвесторов на Arapov.trade.',

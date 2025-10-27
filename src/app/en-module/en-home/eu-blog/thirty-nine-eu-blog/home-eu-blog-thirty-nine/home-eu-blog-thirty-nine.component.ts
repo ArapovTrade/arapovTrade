@@ -18,7 +18,7 @@ export class HomeEuBlogThirtyNineComponent implements OnInit {
       'Where to Safely Store Cryptocurrency? - Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Learn where to safely store cryptocurrency: tips for choosing wallets, security principles, and best practices. A complete guide to protecting your assets.',

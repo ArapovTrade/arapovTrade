@@ -18,7 +18,7 @@ export class HomeEnThirtySixComponent implements OnInit {
       'How Smart Money Uses False Breakouts to Gather Liquidity? - Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Let`s analyze how Smart Money manipulates the market using false breakouts to gather liquidity before moving in their desired direction. How to identify traps and avoid market manipulation?',

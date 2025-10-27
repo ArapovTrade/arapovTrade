@@ -16,7 +16,7 @@ export class HomeRuBlogThirtyFourComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Как выставлять стоп-лосс в трейдинге | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте, как правильно выставлять стоп-лосс! Стратегии, расчет и ошибки при установке Stop-Loss для минимизации рисков на Arapov.trade.',

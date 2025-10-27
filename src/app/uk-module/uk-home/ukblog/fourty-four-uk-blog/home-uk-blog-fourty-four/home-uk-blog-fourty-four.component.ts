@@ -18,7 +18,7 @@ export class HomeUkBlogFourtyFourComponent implements OnInit {
       'Переваги й ризики криптостейкінгу | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтеся про переваги та ризики криптостейкінгу. Як заробляти на криптовалютах з мінімальними ризиками і уникати типових помилок.',

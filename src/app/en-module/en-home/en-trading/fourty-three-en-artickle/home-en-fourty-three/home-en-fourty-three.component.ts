@@ -18,7 +18,7 @@ export class HomeEnFourtyThreeComponent implements OnInit {
       'Liquidity Pools: How Big Players Find Liquidity in the Market? - Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Liquidity pools play a key role in trading. Learn how Smart Money finds liquidity, creates market manipulations, and uses hidden liquidity zones.',

@@ -18,7 +18,7 @@ export class HomeEnThirtyComponent implements OnInit {
       'Imbalance and FVG (Fair Value Gaps): How to Identify Strong Liquidity Zones? - Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Let`s analyze what Imbalance and FVG (Fair Value Gaps) are, how to identify them on a chart, and use them in trading. Learn why these zones are important for liquidity determination and how to apply them in strategies.',

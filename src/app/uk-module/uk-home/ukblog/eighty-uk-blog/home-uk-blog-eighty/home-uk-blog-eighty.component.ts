@@ -35,7 +35,7 @@ export class HomeUkBlogEightyComponent {
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle('Голова і плечі: патерн розвороту');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь про патерн Голова і плечі: як визначити розворот тренду та торгувати ефективно. Посібник від ArapovTrade.',

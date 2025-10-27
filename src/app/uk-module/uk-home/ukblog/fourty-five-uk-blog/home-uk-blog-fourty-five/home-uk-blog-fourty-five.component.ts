@@ -18,7 +18,7 @@ export class HomeUkBlogFourtyFiveComponent implements OnInit {
       'Ковзні середні в трейдингу: типи і стратегії | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтеся про типи ковзних середніх і стратегії їх застосування для аналізу трендів і прийняття рішень у трейдингу.',

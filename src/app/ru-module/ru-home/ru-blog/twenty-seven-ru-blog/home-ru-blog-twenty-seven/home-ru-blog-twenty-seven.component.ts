@@ -18,7 +18,7 @@ export class HomeRuBlogTwentySevenComponent implements OnInit {
       'Японские свечи в трейдинге: как читать | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Как читать японские свечи в трейдинге: разбор паттернов «молот», «повешенный» и других формаций для точного анализа рынка.',

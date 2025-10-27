@@ -36,7 +36,7 @@ export class HomeUkBlogEightyOneComponent {
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle('Фігура Трикутник у технічному аналізі');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь про фігуру Трикутник: як визначити патерн, сигнали пробою та використання в трейдингу. Посібник від ArapovTrade.',

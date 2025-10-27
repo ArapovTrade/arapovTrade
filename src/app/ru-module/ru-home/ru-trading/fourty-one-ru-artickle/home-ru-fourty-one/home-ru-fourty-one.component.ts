@@ -18,7 +18,7 @@ export class HomeRuFourtyOneComponent implements OnInit {
       'Торговый план трейдера: как составить | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте, как составить торговый план трейдера! Ключевые компоненты и советы для успешного трейдинга на Arapov.trade.',

@@ -18,7 +18,7 @@ export class HomeUkBlogFourtyTwoComponent implements OnInit {
       'Ризики криптовалют для початківців | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтеся основні ризики криптовалют для початківців та як управляти ними, щоб мінімізувати втрати і захистити інвестиції.',

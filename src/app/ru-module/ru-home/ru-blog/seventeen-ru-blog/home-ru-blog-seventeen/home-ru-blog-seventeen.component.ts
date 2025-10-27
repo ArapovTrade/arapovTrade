@@ -16,7 +16,7 @@ export class HomeRuBlogSeventeenComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Мифы о трейдинге: топ заблуждений | ArapovTrade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Топ мифов о трейдинге: разоблачение заблуждений. Советы от ArapovTrade для новичков и опытных трейдеров.',

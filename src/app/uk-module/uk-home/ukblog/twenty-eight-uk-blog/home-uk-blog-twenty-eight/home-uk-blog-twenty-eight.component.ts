@@ -18,7 +18,7 @@ export class HomeUkBlogTwentyEightComponent implements OnInit {
       'Що таке альтернативні блокчейни? | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Що таке альтернативні блокчейни, їхні переваги та відмінності від Bitcoin і Ethereum. Повний гід від Arapov.trade.',

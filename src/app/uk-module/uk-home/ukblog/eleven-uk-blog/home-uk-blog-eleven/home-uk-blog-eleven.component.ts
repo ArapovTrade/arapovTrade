@@ -36,7 +36,7 @@ export class HomeUkBlogElevenComponent implements OnInit {
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle('Стартовий депозит: скільки потрібно?');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь, який стартовий депозит потрібен для трейдингу, як його розрахувати та управляти капіталом. Поради від ArapovTrade.',

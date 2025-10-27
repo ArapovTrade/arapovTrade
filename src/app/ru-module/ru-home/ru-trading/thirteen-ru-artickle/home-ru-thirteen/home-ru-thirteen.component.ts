@@ -18,7 +18,7 @@ export class HomeRuThirteenComponent implements OnInit {
       'Риск изменения курса валют: защита инвестиций | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте, как защитить инвестиции от риска изменения курса валют! Стратегии минимизации рисков для трейдеров на Arapov.trade.',

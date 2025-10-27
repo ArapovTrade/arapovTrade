@@ -18,7 +18,7 @@ export class HomeRuBlogSixtyThreeComponent {
       'Smart Money: манипуляции рынком | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте, как Smart Money манипулирует рынком через новости и толпу! Советы по распознанию трендов, ловушек и ликвидности для трейдинга с Arapov.trade',

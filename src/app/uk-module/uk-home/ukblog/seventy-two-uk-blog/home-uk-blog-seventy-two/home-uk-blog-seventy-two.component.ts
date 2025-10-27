@@ -16,7 +16,7 @@ export class HomeUkBlogSeventyTwoComponent {
   ngOnInit(): void {
     this.titleService.setTitle('Економічний календар: як використовувати');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь, як економічний календар допомагає прогнозувати ринкові рухи та торгувати на новинах акцій і індексів від ArapovTrade.',

@@ -18,7 +18,7 @@ export class HomeRuBlogFiveComponent implements OnInit {
       'Ценообразование и ликвидность | ArapovTrade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Ценообразование и ликвидность: как они работают? Руководство от ArapovTrade по анализу рынка и стратегиям.',

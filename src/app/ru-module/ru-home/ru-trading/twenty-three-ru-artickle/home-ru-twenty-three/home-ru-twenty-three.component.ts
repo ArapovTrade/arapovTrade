@@ -18,7 +18,7 @@ export class HomeRuTwentyThreeComponent implements OnInit {
       'Мировые фондовые индексы: обзор и влияние | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Подробный обзор мировых фондовых индексов, их роль в экономике и советы для инвесторов от Arapov.trade.',

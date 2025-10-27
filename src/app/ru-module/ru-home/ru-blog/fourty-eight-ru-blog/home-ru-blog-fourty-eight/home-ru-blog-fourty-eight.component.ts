@@ -18,7 +18,7 @@ export class HomeRuBlogFourtyEightComponent implements OnInit {
     //   'Самостоятельное обучение трейдингу | Игорь Арапов'
     // );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-//     this.meta.addTag({
+//     this.meta.updateTag({
 //       name: 'description',
 //       content:
 //        'Самостоятельное обучение трейдингу от Игоря Арапова: пошаговый курс с нуля, реальные стратегии и советы для уверенного старта в трейдинге.'

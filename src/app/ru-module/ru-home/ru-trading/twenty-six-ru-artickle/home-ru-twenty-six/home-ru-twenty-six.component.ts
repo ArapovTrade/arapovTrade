@@ -18,7 +18,7 @@ export class HomeRuTwentySixComponent implements OnInit {
       'Технический анализ рынка – методы и принципы | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Разбор основ технического анализа рынка: ключевые методы, виды графиков, тренды, уровни поддержки и сопротивления для успешной торговли.',

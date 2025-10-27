@@ -18,7 +18,7 @@ export class HomeRuBlogTwentyTwoComponent implements OnInit {
       'Арбитраж криптовалют: что это и как заработать | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте, что такое арбитраж криптовалют! Основы, стратегии и секреты заработка на разнице цен для трейдеров на Arapov.trade.',

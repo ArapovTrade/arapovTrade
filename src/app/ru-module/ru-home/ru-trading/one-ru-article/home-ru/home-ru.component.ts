@@ -19,7 +19,7 @@ export class HomeRuComponent implements OnInit {
       '10 советов начинающим трейдерам | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте 10 ключевых советов для начинающих трейдеров: управление рисками, разработка стратегии и избегание ошибок. Советы от Arapov.trade.',

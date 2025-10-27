@@ -18,7 +18,7 @@ export class HomeRuBlogThirtyOneComponent implements OnInit {
       'Уровни поддержки и сопротивления в трейдинге | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте, как строить и использовать уровни поддержки и сопротивления в трейдинге! Полное руководство для эффективных сделок на Arapov.trade.',

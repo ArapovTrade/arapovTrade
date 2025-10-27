@@ -17,7 +17,7 @@ export class HomeEnFourteenComponent implements OnInit {
     this.titleService.setTitle('Forex Leverage Risk');
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Discover the risks associated with using leverage on Forex and how to manage them to minimize losses.',

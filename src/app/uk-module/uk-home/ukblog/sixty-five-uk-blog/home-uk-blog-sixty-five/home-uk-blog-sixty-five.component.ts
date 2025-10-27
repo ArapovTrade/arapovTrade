@@ -16,7 +16,7 @@ export class HomeUkBlogSixtyFiveComponent {
   ngOnInit(): void {
     this.titleService.setTitle('Біржовий стакан і стрічка принтів');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь, як читати біржовий стакан і стрічку принтів, аналізувати ліквідність і угоди Smart Money від ArapovTrade.',

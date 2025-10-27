@@ -16,7 +16,7 @@ export class HomeUkBlogOneComponent implements OnInit {
   ngOnInit(): void {
    this.titleService.setTitle('Фази ринку у трейдингу | Arapov.trade');
 this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-this.meta.addTag({
+this.meta.updateTag({
   name: 'description',
   content:
     'Дізнайтеся про фази ринку в трейдингу: накопичення, зростання, розподіл і зниження. Як визначити фазу та застосувати стратегії для успішної торгівлі.',

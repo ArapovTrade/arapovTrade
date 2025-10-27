@@ -17,7 +17,7 @@ export class HomeRuNineComponent implements OnInit {
     this.titleService.setTitle('Курс валют: ключевые факторы и влияние | Arapov.trade');
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте, как формируется курс валют: основные экономические и рыночные факторы, их влияние на цены и практические советы трейдерам от Arapov.trade.',

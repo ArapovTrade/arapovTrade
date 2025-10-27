@@ -16,7 +16,7 @@ export class HomeUkBlogSeventeenComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Міфи про трейдинг: правда і вигадки');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Розвінчуємо міфи про трейдинг, які обманюють початківців і трейдерів: правда, помилки та поради від ArapovTrade.',

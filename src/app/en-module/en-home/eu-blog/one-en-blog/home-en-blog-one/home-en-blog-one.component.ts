@@ -16,7 +16,7 @@ export class HomeEnBlogOneComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Market phases in trading  - Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'What are the market phases? How to identify the current stage of the market cycle? A complete guide to market phases in trading: accumulation, growth, distribution, and decline. Trading strategies for each phase.',

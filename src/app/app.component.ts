@@ -856,9 +856,12 @@ private updateCanonicalTag() {
   });
 
   // === x-default — русская версия ===
+  // const xDefaultHref = basePath === 'main'
+  //   ? 'https://arapov.trade/ru/main'
+  //   : `https://arapov.trade/ru/${basePath}`;
   const xDefaultHref = basePath === 'main'
-    ? 'https://arapov.trade/ru/main'
-    : `https://arapov.trade/ru/${basePath}`;
+    ? 'https://arapov.trade/'
+    : `https://arapov.trade/`;
 
   const defaultLink = this.renderer.createElement('link');
   this.renderer.setAttribute(defaultLink, 'rel', 'alternate');

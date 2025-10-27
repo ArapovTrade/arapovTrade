@@ -25,11 +25,11 @@ export class EnTradingHomepageComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Free introduction to trading from Igor Arapov');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    // this.meta.addTag({
+    // this.meta.updateTag({
     //   name: 'description',
     //   content: 'Free introduction to online trading from Igor Arapov. ⭐',
     // });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'keywords',
       content:
         'no cost for getting started with trading, trading, getting started with trading',

@@ -16,7 +16,7 @@ export class HomeEnFourtyOneComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Trader`s Trading Plan');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Learn how to create an effective trader`s trading plan. Key components, examples, and tips for successful planning.',

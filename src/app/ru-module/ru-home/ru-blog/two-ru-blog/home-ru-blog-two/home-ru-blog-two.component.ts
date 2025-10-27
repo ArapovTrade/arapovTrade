@@ -18,7 +18,7 @@ export class HomeRuBlogTwoComponent implements OnInit {
       'Дивергенция на индикаторах в трейдинге | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте, что такое дивергенция на индикаторах! Как её распознавать и использовать в стратегиях трейдинга на Arapov.trade.',

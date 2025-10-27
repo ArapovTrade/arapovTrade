@@ -17,7 +17,7 @@ export class HomeEnFifteenComponent implements OnInit {
     this.titleService.setTitle('Key Central Banks');
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Learn about the major central banks of the world, their functions, meetings, and impact on the global economy. A detailed guide for traders and investors.',

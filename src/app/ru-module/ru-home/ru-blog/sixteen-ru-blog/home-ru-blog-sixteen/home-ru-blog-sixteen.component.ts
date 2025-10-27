@@ -16,7 +16,7 @@ export class HomeRuBlogSixteenComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Трендовые каналы в трейдинге: как использовать | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте, как использовать трендовые каналы в трейдинге! Полное руководство по их построению, стратегиям торговли и советам для успеха с Arapov.trade',

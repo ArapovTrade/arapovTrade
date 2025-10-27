@@ -18,7 +18,7 @@ export class HomeUkBlogTwentyComponent implements OnInit {
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
 
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Що таке скам у криптовалюті? Популярні шахрайські схеми та поради, як захистити кошти. Посібник для трейдерів та інвесторів від Arapov.trade.',

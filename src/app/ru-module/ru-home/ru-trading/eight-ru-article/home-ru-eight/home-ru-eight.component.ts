@@ -16,7 +16,7 @@ export class HomeRuEightComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Валюты и котировки в трейдинге | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте о валютах и их котировках! Виды, особенности и использование в трейдинге и финансах на Arapov.trade.',

@@ -18,7 +18,7 @@ export class HomeRuBlogSeventyOneComponent {
       'Торговля на новостях в трейдинге | ArapovTrade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Торговля на новостях: как минимизировать риски? Советы от ArapovTrade по стратегиям и волатильности.',

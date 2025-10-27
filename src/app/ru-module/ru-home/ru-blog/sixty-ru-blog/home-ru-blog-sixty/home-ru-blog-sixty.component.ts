@@ -16,7 +16,7 @@ export class HomeRuBlogSixtyComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Трейдинг vs опционы: что выбрать трейдеру | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Трейдинг или опционы: что выбрать трейдеру? Сравнение стратегий, рисков и преимуществ для успешной торговли с Arapov.trade',

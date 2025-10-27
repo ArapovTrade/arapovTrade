@@ -18,7 +18,7 @@ export class HomeRuFourtySixComponent implements OnInit {
       'Tether (USDT): что это и как использовать | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте, что такое Tether (USDT)! Как работает, преимущества, риски и роль на крипторынке для трейдеров на Arapov.trade.',

@@ -18,7 +18,7 @@ export class HomeUkBlogThreeComponent implements OnInit {
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
 
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтеся, що таке волатильність, як вона впливає на трейдинг і які стратегії ефективні на високо-волатильних ринках.',

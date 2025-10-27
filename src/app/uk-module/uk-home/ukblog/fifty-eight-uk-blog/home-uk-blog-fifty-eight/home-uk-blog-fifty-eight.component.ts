@@ -36,7 +36,7 @@ export class HomeUkBlogFiftyEightComponent implements OnInit {
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle('Усереднення в трейдингу: як застосовувати');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь, як використовувати усереднення в трейдингу: методи, переваги, ризики та стратегії для ефективної торгівлі від ArapovTrade.',

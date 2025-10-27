@@ -18,7 +18,7 @@ export class HomeUkBlogThirtyEightComponent implements OnInit {
       'Принципи зберігання криптовалют | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Принципи зберігання криптовалют: вибір гаманців, безпека та стратегії захисту активів. Повний посібник для інвесторів Arapov.trade.',

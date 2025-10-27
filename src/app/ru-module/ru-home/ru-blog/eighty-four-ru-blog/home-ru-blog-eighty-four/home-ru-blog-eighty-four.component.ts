@@ -18,7 +18,7 @@ export class HomeRuBlogEightyFourComponent {
       'Поглощение: Bullish и Bearish | ArapovTrade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Поглощение (Bullish & Bearish): как ловить разворот? Руководство от ArapovTrade по паттерну и стратегиям',

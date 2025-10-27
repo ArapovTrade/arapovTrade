@@ -18,7 +18,7 @@ export class HomeRuThirtySixComponent implements OnInit {
       'Smart Money и ложные пробои: как работают | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте, как Smart Money создают ложные пробои для сбора ликвидности! Способы распознавания ловушек в трейдинге на Arapov.trade.',

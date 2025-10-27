@@ -20,7 +20,7 @@ export class HomeUkBlogThirtyNineComponent implements OnInit {
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
 
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Де безпечно зберігати криптовалюту? Поради щодо вибору гаманців, принципи безпеки та найкращі практики захисту цифрових активів.',

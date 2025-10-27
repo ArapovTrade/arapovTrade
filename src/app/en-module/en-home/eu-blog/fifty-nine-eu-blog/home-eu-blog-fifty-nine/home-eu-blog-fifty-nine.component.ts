@@ -16,7 +16,7 @@ export class HomeEuBlogFiftyNineComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle(' How to Trade Level Breakouts in Trading');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         ' A detailed guide on trading level breakouts in trading. Learn how to identify levels, work with pin bars, and use volume.',

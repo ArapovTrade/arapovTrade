@@ -18,7 +18,7 @@ export class HomeRuBlogThirtyThreeComponent implements OnInit {
       'Пин-бар в трейдинге: как использовать | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте, как использовать пин-бар в трейдинге! Руководство по анализу рынка и торговым решениям с паттерном пин-бар на Arapov.trade.',

@@ -18,7 +18,7 @@ export class HomeUkBlogSixtyTwoComponent {
       'Точки входу за Smart Money: стратегії | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Стратегії Smart Money для точного входу: Order Blocks, ліквідність, FVG та інші ключові концепції для ефективної торгівлі.',

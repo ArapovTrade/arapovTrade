@@ -19,7 +19,7 @@ export class HomeRuBlogFourtyComponent implements OnInit {
 
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте, почему трейдинг считается сложной профессией и какие факторы влияют на это. Советы по преодолению трудностей и достижению успеха.',

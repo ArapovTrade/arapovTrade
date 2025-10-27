@@ -19,7 +19,7 @@ export class HomeEnSixteenComponent implements OnInit {
     );
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Ethereum is the second-largest cryptocurrency by market capitalization, offering smart contracts and decentralized applications. Learn how Ethereum works and what its future holds.',

@@ -48,7 +48,7 @@ export class HomeUkBlogEighteenComponent implements OnInit {
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
 
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтеся, як працює об’ємний аналіз ринку: принципи, інструменти та стратегії для ефективної торгівлі за обсягами.',

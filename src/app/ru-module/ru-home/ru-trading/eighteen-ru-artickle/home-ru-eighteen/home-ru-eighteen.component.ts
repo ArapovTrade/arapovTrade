@@ -16,7 +16,7 @@ export class HomeRuEighteenComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Психологические риски FOREX | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте о психологических рисках на FOREX! Как их минимизировать и советы для успешной торговли на Arapov.trade.',

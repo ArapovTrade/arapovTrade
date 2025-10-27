@@ -18,7 +18,7 @@ export class HomeUkBlogFourtyNineComponent implements OnInit {
       'Як обрати торгову платформу для трейдингу | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтеся, як обрати торгову платформу для трейдингу: корисні поради, критерії вибору та огляд найкращих платформ для трейдерів.',

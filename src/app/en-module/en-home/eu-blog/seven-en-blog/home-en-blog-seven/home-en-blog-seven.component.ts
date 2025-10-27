@@ -16,7 +16,7 @@ export class HomeEnBlogSevenComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('How to Make Money in Trading?');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         "Learn how to make money in trading, which tools and strategies will help you achieve success. Let's discuss Forex and how to use leverage.",

@@ -41,7 +41,7 @@ export class HomeUkBlogFiftySixComponent implements OnInit {
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle('Книги з трейдингу для початківців');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь, як книги з трейдингу допомагають початківцям: рекомендації та кращі видання для старту на фінансових ринках від ArapovTrade.',

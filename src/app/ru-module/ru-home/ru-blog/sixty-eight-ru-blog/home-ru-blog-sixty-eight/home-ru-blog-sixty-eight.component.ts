@@ -18,7 +18,7 @@ export class HomeRuBlogSixtyEightComponent {
       'Рыночный аукцион и сентимент в трейдинге | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте, как рыночный аукцион и сентимент участников влияют на трейдинг! Анализ аукционной теории и индикаторов для успешной торговли с Arapov.trade',

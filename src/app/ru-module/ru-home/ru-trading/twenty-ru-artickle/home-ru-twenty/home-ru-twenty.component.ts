@@ -19,7 +19,7 @@ export class HomeRuTwentyComponent implements OnInit {
     );
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Что такое Market Profile и как его использовать для анализа спроса и предложения. Метод Питера Стеделмайера для трейдинга на основе поведения рынка.',

@@ -18,7 +18,7 @@ export class HomeUkBlogFourteenComponent implements OnInit {
       'Трейдинг чи інвестиції: що обрати? | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Порівняння трейдингу та інвестицій: ключові переваги, ризики і що підійде саме вам для фінансового успіху.',

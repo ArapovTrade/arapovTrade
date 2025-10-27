@@ -18,7 +18,7 @@ export class HomeUkBlogThirtyFourComponent implements OnInit {
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
 
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь, як виставляти стоп-лосс у трейдингу: стратегії, помилки та методи розрахунку для зниження ризиків і захисту капіталу.',

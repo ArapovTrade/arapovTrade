@@ -18,7 +18,7 @@ export class HomeEnFourtySixComponent implements OnInit {
       'Tether Cryptocurrency (USDT): What It Is and How to Use It - Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Learn everything about Tether (USDT): what it is, how it works, and why it is essential for the crypto market. Features, advantages, and risks.',

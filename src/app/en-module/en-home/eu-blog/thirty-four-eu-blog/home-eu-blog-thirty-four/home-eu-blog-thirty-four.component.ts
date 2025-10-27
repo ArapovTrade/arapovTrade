@@ -16,7 +16,7 @@ export class HomeEuBlogThirtyFourComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('How to set a stop loss? - Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'How to properly set a stop-loss in trading? We explain strategies, calculation methods, and mistakes to avoid when setting Stop-Loss to minimize risks and protect your capital.',

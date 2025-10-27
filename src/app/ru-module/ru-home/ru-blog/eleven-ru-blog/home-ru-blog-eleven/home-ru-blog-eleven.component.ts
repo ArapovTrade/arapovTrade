@@ -18,7 +18,7 @@ export class HomeRuBlogElevenComponent implements OnInit {
       'Стартовый депозит трейдера: сколько нужно для начала?'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Какой стартовый депозит нужен трейдеру? Советы по расчёту капитала и управлению рисками от ArapovTrade.',

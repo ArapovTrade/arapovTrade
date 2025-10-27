@@ -16,7 +16,7 @@ export class HomeRuBlogFourtyTwoComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Риски криптовалют для новичков | ArapovTrade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Риски криптовалют для новичков: как управлять капиталом и избежать ошибок. Руководство от ArapovTrade по безопасному трейдингу.'

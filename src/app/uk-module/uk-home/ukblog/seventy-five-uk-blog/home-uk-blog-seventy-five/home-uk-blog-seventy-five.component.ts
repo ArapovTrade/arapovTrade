@@ -16,7 +16,7 @@ export class HomeUkBlogSeventyFiveComponent {
   ngOnInit(): void {
     this.titleService.setTitle('Трейдинг: азарт чи бізнес? Психологія');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Дізнайтесь, чи є трейдинг азартом чи бізнесом: психологічні підходи та стратегії успіху на ринках від ArapovTrade.',

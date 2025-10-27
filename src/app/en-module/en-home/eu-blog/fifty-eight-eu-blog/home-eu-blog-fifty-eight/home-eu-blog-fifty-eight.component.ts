@@ -16,7 +16,7 @@ export class HomeEuBlogFiftyEightComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Averaging in trading - Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'How to properly use the averaging strategy in trading? Learn about averaging methods, risks, benefits, and strategies for effective trading.',

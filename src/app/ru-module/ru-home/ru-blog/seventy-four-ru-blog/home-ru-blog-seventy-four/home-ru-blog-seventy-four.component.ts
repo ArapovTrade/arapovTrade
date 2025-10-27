@@ -18,7 +18,7 @@ export class HomeRuBlogSeventyFourComponent {
       'Фундаментальный анализ валютных рынков | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Фундаментальный анализ валютных рынков: ключевые макроэкономические факторы, их влияние на курсы и торговые стратегии. Руководство от ArapovTrade',

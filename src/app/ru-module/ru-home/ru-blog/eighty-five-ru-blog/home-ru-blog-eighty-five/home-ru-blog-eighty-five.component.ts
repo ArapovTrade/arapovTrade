@@ -18,7 +18,7 @@ export class HomeRuBlogEightyFiveComponent {
       'Двойная вершина и двойное дно | ArapovTrade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Двойная вершина и двойное дно: как торговать разворотные паттерны? Руководство от ArapovTrade по анализу и стратегиям',

@@ -16,7 +16,7 @@ export class HomeRuBlogFiftyComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Алгоритмические ордера на бирже | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Что такое алгоритмические ордера? Типы, плюсы и риски. Узнайте, как автоматизировать трейдинг и повысить эффективность сделок с ArapovTrade',

@@ -18,7 +18,7 @@ export class HomeRuBlogEightyTwoComponent {
       'Флаг и вымпел: пробой тренда | ArapovTrade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Флаг и вымпел: как торговать пробой тренда? Руководство от ArapovTrade по паттернам, стратегиям и анализу для успешной торговли.',

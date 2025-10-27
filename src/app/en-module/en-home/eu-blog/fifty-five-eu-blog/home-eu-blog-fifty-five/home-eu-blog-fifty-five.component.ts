@@ -18,7 +18,7 @@ export class HomeEuBlogFiftyFiveComponent implements OnInit {
       'Scalping in Trading: A Complete Guide - Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'A detailed guide to scalping in trading: strategies, indicators, risks, and automation. Learn how to profit from short-term trades!',

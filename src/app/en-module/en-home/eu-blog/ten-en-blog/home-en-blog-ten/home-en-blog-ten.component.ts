@@ -16,7 +16,7 @@ export class HomeEnBlogTenComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Reasons for Deposit Loss');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Discover the main reasons for deposit loss among traders, including strategy mistakes, lack of discipline, and overestimation of abilities. Tips for preventing losses.',

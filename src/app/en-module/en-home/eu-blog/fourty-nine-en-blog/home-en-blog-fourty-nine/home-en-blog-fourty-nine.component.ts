@@ -16,7 +16,7 @@ export class HomeEnBlogFourtyNineComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('How to Choose a Trading Platform for Trading?');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Learn how to choose the perfect trading platform for trading. Useful tips, selection criteria, and a list of the best platforms for beginners and professionals.',

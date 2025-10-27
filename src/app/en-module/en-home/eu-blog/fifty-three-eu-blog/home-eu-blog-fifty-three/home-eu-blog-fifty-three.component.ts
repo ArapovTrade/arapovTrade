@@ -16,7 +16,7 @@ export class HomeEuBlogFiftyThreeComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Block Order in Trading - Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'What is an order block in trading? We analyze the concept, identification methods, and trading strategies. A complete guide to order blocks and their use in market analysis.',

@@ -16,7 +16,7 @@ export class HomeRuFourtyThreeComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('Пулы ликвидности в трейдинге | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Узнайте, как работают пулы ликвидности! Как Smart Money ищет ликвидность и использует скрытые зоны в трейдинге на Arapov.trade.',

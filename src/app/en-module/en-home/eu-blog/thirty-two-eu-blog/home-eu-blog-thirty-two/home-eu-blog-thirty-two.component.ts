@@ -16,7 +16,7 @@ export class HomeEuBlogThirtyTwoComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle(' Is it worth buying trading education?');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Explore the benefits of paid trading education. Find out why investing in learning can be the first step toward a successful trading career.',
