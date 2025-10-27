@@ -211,6 +211,10 @@ export class AppComponent implements OnInit, AfterViewChecked , OnDestroy{
           title = 'Обучение трейдингу с нуля бесплатно | Игорь Арапов';
         }
 
+
+
+        
+
         let description = '';
         if (segments[0] == '') {
           description =
@@ -248,7 +252,7 @@ export class AppComponent implements OnInit, AfterViewChecked , OnDestroy{
             'Обучение трейдингу с нуля бесплатно от Игоря Арапова — онлайн-курсы трейдинга, технический и фундаментальный анализ, торговля криптовалютами и валютными парами шаг за шагом.';
         }
          
-        const image = article?.imgUkr || '/assets/img/default-og-image.png';
+        const image = article?.imgUkr || '/assets/redesignArapovTrade/img/author-page_main-block_img-light.png';
         const url = `https://arapov.trade${this.router.url}`;
 
         
