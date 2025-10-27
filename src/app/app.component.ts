@@ -197,12 +197,18 @@ export class AppComponent implements OnInit, AfterViewChecked , OnDestroy{
               : segments[0] === 'uk'
               ? 'Безкоштовне навчання трейдингу для початківців | Ігор Арапов'
               : 'Free trading training for beginners from scratch | Igor Arapov';
+        } else if (segments[1] === 'freestudying') {
+          title =
+            segments[0] === 'ru'
+              ? 'Обучение трейдингу онлайн | Бесплатные курсы трейдеров от Игоря Арапова'
+              :segments[0] === 'en'? 'Online Trading Training | Free Trading Courses from Igor Arapov'
+              : 'Навчання трейдингу онлайн | Безкоштовні курси трейдерів від Ігоря Арапова';
         } else if (segments[0] === 'uk') {
-          title = 'Безкоштовне навчання трейдингу - Ігор Арапов';
+          title = 'Навчання трейдингу з нуля безкоштовно | Ігор Арапов';
         } else if (segments[0] === 'en') {
-          title = 'Cost-free introduction to trading - Igor Arapov';
+          title = 'Free Trading Training from Scratch | Igor Arapov';
         }else {
-          title = 'Бесплатное обучение трейдингу - Игорь Арапов';
+          title = 'Обучение трейдингу с нуля бесплатно | Игорь Арапов';
         }
 
         let description = '';
@@ -210,11 +216,11 @@ export class AppComponent implements OnInit, AfterViewChecked , OnDestroy{
           description =
             'Безкоштовний курс з трейдингу Ігоря Арапова: 130 + статей і 70 відео. Вивчайте теханаліз, ризик-менеджмент і торгові стратегії онлайн';
         } else if (segments[1] === 'studying' && segments[0] === 'ru') {
-          description = 'Курсы по трейдингу для начинающих от Игоря Арапова';
+          description = 'Онлайн-курсы по трейдингу от Игоря Арапова — обучение трейдингу и инвестициям с нуля, дистанционно и бесплатно. Изучайте технический и фундаментальный анализ, торговые стратегии и управление рисками шаг за шагом.';
         } else if (segments[1] === 'studying' && segments[0] === 'uk') {
-          description = 'Курси з трейдингу для початківців від Ігоря Арапова';
+          description = 'Онлайн-курси з трейдингу від Ігоря Арапова — навчання трейдингу та інвестиціям з нуля, дистанційно та безкоштовно. Вивчайте технічний та фундаментальний аналіз, торгові стратегії та управління ризиками крок за кроком.';
           } else if (segments[1] === 'studying' && segments[0] === 'en') {
-          description = 'Trading courses for beginners from Igor Arapov';
+          description = 'Online trading courses by Igor Arapov — trading and investment education from scratch, remotely and free. Learn technical and fundamental analysis, trading strategies, and risk management step by step.';
         } else if (
           segments[1] === 'freestudying' &&
           segments[2] === 'freeeducation'
@@ -228,18 +234,18 @@ export class AppComponent implements OnInit, AfterViewChecked , OnDestroy{
         } else if (segments[1] === 'freestudying') {
           description =
             segments[0] === 'ru'
-              ? 'Бесплатное обучение трейдингу от Игоря Арапова - подробный курс по трейдингу'
-              :segments[0] === 'en'? 'Free Introduction to Trading: a detailed course by Igor Arapov'
-              : 'Безкоштовне навчання трейдингу від Ігоря Арапова - докладний курс з трейдингу';
+              ? 'Бесплатное обучение трейдингу от Игоря Арапова — полный пошаговый курс с нуля, разбор торговых стратегий, управление рисками и практические занятия. Изучайте трейдинг и криптовалюты дистанционно и бесплатно.'
+              :segments[0] === 'en'? 'Free online trading education by Igor Arapov — complete step-by-step course from scratch, analysis of trading strategies, risk management, and practical exercises. Learn trading and cryptocurrencies remotely and for free.'
+              : 'Безкоштовне  навчання трейдингу від Ігоря Арапова — повний покроковий курс з нуля, розбір торгових стратегій, управління ризиками та практичні заняття. Вивчайте трейдинг і криптовалюти дистанційно та безкоштовно.';
         } else if (segments[0] === 'uk') {
           description =
-            'Безкоштовне навчання трейдингу для початківців - Ігор Арапов';
+            'Навчання трейдингу з нуля безкоштовно від Ігоря Арапова — курси трейдингу онлайн, технічний та фундаментальний аналіз, торгівля криптовалютами та валютними парами крок за кроком.';
         }else if (segments[0] === 'en') {
           description =
-            'Cost-free introduction to trading for the beginning - Igor Arapov';
+            'Free trading education from scratch by Igor Arapov — online trading courses, technical and fundamental analysis, trading cryptocurrencies and currency pairs step by step.';
         } else {
           description =
-            'Бесплатное обучение трейдингу для начинающих - Игорь Арапов';
+            'Обучение трейдингу с нуля бесплатно от Игоря Арапова — онлайн-курсы трейдинга, технический и фундаментальный анализ, торговля криптовалютами и валютными парами шаг за шагом.';
         }
          
         const image = article?.imgUkr || '/assets/img/default-og-image.png';
