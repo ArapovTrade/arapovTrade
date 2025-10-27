@@ -45,6 +45,10 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
       property: 'og:image',
       content: '/assets/img/content/freeeducationnew.webp',
     });
+    this.meta.updateTag({
+          name: 'twitter:image',
+          content: `/assets/img/content/freeeducationnew.webp`,
+        });
     this.addJsonLdScript();
     this.addCourseSchema();
 

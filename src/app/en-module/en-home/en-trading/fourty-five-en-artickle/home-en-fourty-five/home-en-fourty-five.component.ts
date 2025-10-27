@@ -27,7 +27,10 @@ export class HomeEnFourtyFiveComponent implements OnInit {
       property: 'og:image',
       content: '/assets/img/content/freeeducationnew.webp',
     });
-
+this.meta.updateTag({
+          name: 'twitter:image',
+          content: `/assets/img/content/freeeducationnew.webp`,
+        });
     this.gerRandom();
   }
   randomArticleRus: any = [];

@@ -24,7 +24,7 @@ export class HomeUkFourtyFiveComponent implements OnInit {
       'Безкоштовне навчання трейдингу для початківців | Ігор Арапов'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Безкоштовний курс з трейдингу: 130+ статей та 70 відеоуроків. Вивчіть основи, аналіз, психологію торгівлі та перевірені стратегії',
@@ -35,6 +35,10 @@ export class HomeUkFourtyFiveComponent implements OnInit {
       property: 'og:image',
       content: '/assets/img/content/freeeducationnew.webp',
     });
+     this.meta.updateTag({
+          name: 'twitter:image',
+          content: `/assets/img/content/freeeducationnew.webp`,
+        });
     this.addJsonLdScript();
     this.addCourseSchema()
      
