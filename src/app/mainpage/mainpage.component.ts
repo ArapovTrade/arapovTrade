@@ -65,7 +65,7 @@ export class MainpageComponent implements OnInit, AfterViewInit, OnDestroy {
         this.meta.updateTag({ property: 'og:image:height', content: '600' })
         this.meta.updateTag({
           property: 'og:image',
-          content: `assets/redesignArapovTrade/img/author-page_main-block_img-light.png`,
+          content: `https://arapov.trade/assets/redesignArapovTrade/img/author-page_main-block_img-light.png`,
         });
         this.meta.updateTag({ property: 'og:url', content: 'https://arapov.trade' });
 
@@ -81,7 +81,7 @@ export class MainpageComponent implements OnInit, AfterViewInit, OnDestroy {
         });
         this.meta.updateTag({
           name: 'twitter:image',
-          content: `assets/redesignArapovTrade/img/author-page_main-block_img-light.png`,
+          content: `https://arapov.trade/assets/redesignArapovTrade/img/author-page_main-block_img-light.png`,
         });
         this.meta.updateTag({ name: 'twitter:url', content: 'https://arapov.trade' });
         this.meta.updateTag({ name: 'language', content: 'uk' });

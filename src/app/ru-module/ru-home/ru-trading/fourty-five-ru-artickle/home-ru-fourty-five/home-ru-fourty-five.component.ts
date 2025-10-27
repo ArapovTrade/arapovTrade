@@ -43,11 +43,11 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
     this.meta.updateTag({ name: 'datePublished', content: '2025-05-30' });
     this.meta.updateTag({
       property: 'og:image',
-      content: '/assets/img/content/freeeducationnew.webp',
+      content: 'https://arapov.trade/assets/img/content/freeeducationnew.webp',
     });
     this.meta.updateTag({
           name: 'twitter:image',
-          content: `/assets/img/content/freeeducationnew.webp`,
+          content: `https://arapov.trade/assets/img/content/freeeducationnew.webp`,
         });
     this.addJsonLdScript();
     this.addCourseSchema();

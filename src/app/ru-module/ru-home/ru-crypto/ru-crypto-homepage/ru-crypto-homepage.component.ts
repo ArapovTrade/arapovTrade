@@ -57,7 +57,7 @@ export class RuCryptoHomepageComponent  implements OnInit, AfterViewInit, OnDest
       this.meta.updateTag({ name: 'datePublished', content: '2025-06-07' });
       this.meta.updateTag({
         property: 'og:image',
-        content: 'assets/img/photo_mainpage.jpg',
+        content: 'https://arapov.trade/assets/img/photo_mainpage.jpg',
       });
   
        
