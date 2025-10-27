@@ -195,7 +195,7 @@ this.themeSubscription =this.themeService.getTheme().subscribe(data=>{
             : urlPath.startsWith('en')
             ? 'En'
             : 'Rus';
-          const titleKey = `title${lang}` as 'titleUkr' |  'titleRus'|  'titleEn'; // Обмежуємо ключі
+          // const titleKey = `title${lang}` as 'titleUkr' |  'titleRus'|  'titleEn';  
           
           // let title = '';
           // if (article) {

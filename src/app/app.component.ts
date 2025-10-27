@@ -170,8 +170,9 @@ export class AppComponent implements OnInit, AfterViewChecked , OnDestroy{
           : urlPath.startsWith('en')
           ? 'En'
           : 'Rus';
-        const titleKey = `title${lang}` as 'titleUkr' |  'titleRus'|  'titleEn'; // Обмежуємо ключі
-        
+        const titleKey = `realTitle${lang}` as 'realTitleUkr' |  'realTitleRus'|  'realTitleEn'; // Обмежуємо ключі
+        const titleDescr= `descr${lang}` as 'descrUkr' |  'descrRus'|  'descrEn';
+
         let title = '';
         if (article) {
           title = article[titleKey];
@@ -212,11 +213,16 @@ export class AppComponent implements OnInit, AfterViewChecked , OnDestroy{
         }
 
 
-
+        console.log('title',title);
         
 
         let description = '';
-        if (segments[0] == '') {
+        if (article) {
+          description = article[titleDescr];
+
+
+
+        }else if (segments[0] == '') {
           description =
             'Безкоштовний курс з трейдингу Ігоря Арапова: 130 + статей і 70 відео. Вивчайте теханаліз, ризик-менеджмент і торгові стратегії онлайн';
         } else if (segments[1] === 'studying' && segments[0] === 'ru') {
@@ -255,7 +261,11 @@ export class AppComponent implements OnInit, AfterViewChecked , OnDestroy{
         const image = article?.imgUkr || '/assets/redesignArapovTrade/img/author-page_main-block_img-light.png';
         const url = `https://arapov.trade${this.router.url}`;
 
-        
+        this.titleService.setTitle(title);
+        this.meta.updateTag({ name: 'description', content: description });
+
+     
+
         this.meta.updateTag({ property: 'og:title', content: title });
         this.meta.updateTag({
           property: 'og:description',

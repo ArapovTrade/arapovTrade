@@ -14,16 +14,16 @@ export class HomeRuBlogFourtyEightComponent implements OnInit {
     private articleServ: ArticlesService
   ) {}
   ngOnInit(): void {
-    this.titleService.setTitle(
-      'Инструкция по самостоятельному обучению трейдингу'
-    );
+    // this.titleService.setTitle(
+    //   'Самостоятельное обучение трейдингу | Игорь Арапов'
+    // );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
-      name: 'description',
-      content:
-       'Самостоятельное обучение трейдингу: пошаговая инструкция, советы и рекомендации для новичков. Успешный старт на финансовых рынках.'
-,
-    });
+//     this.meta.addTag({
+//       name: 'description',
+//       content:
+//        'Самостоятельное обучение трейдингу от Игоря Арапова: пошаговый курс с нуля, реальные стратегии и советы для уверенного старта в трейдинге.'
+// ,
+//     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-03' });
     this.meta.updateTag({
       property: 'og:image',
