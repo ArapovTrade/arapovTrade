@@ -1,7 +1,16 @@
-import { AfterViewInit,
-  ChangeDetectorRef,Inject,
-  OnDestroy, Component, OnInit, ViewChild, Renderer2,
-  RendererFactory2, ElementRef, HostListener } from '@angular/core';
+import {
+  AfterViewInit,
+  ChangeDetectorRef,
+  Inject, PLATFORM_ID,
+  OnDestroy,
+  Component,
+  OnInit,
+  ViewChild,
+  Renderer2,
+  RendererFactory2,
+  ElementRef,
+  HostListener,
+} from '@angular/core';
 import { MatPaginator, MatPaginatorIntl } from '@angular/material/paginator';
 
 import { PageEvent } from '@angular/material/paginator';
@@ -14,26 +23,31 @@ import { Subscription } from 'rxjs';
 declare var AOS: any;
 import { ThemeservService } from '../../../../servises/themeserv.service';
 import { artickle } from '../../../../servises/articles.service';
+import { ActivatedRoute } from '@angular/router';
+import { isPlatformBrowser } from '@angular/common';
 @Component({
   selector: 'app-en-blog-homepage',
   templateUrl: './en-blog-homepage.component.html',
   styleUrl: './en-blog-homepage.component.scss',
 })
 export class EnBlogHomepageComponent implements OnInit {
+  
   @ViewChild('scrollToTop') scrollToTop!: ElementRef;
   @ViewChild(MatPaginator) paginatorr!: MatPaginator;
-private renderer: Renderer2;
+  private renderer: Renderer2;
   constructor(
+     private activateRout: ActivatedRoute,
+    @Inject(PLATFORM_ID) private platformId: Object,
     private lang: LangService,
     private artickleServ: ArticlesService,
     private paginator: MatPaginatorIntl,
     @Inject(DOCUMENT) private document: Document,
- private cdr:ChangeDetectorRef,
-  private themeService:ThemeservService,
- private rendererFactory: RendererFactory2,
+    private cdr: ChangeDetectorRef,
+    private themeService: ThemeservService,
+    private rendererFactory: RendererFactory2,
     private router: Router,
     private meta: Meta,
-    
+
     private titleService: Title
   ) {
     this.renderer = rendererFactory.createRenderer(null, null);
@@ -47,17 +61,17 @@ private renderer: Renderer2;
     // });
   }
 
-ngAfterViewInit() {
-  setTimeout(() => {
-    if (typeof AOS !== 'undefined') {
-      AOS.init({
-        duration: 1000,
-        once: false,
-        offset: 100
-      });
-    }
-  }, 500); // Задержка 0.5s
-}
+  ngAfterViewInit() {
+    setTimeout(() => {
+      if (typeof AOS !== 'undefined') {
+        AOS.init({
+          duration: 1000,
+          once: false,
+          offset: 100,
+        });
+      }
+    }, 500); // Задержка 0.5s
+  }
   isMenuOpen = false;
 
   openMenu() {
@@ -76,24 +90,31 @@ ngAfterViewInit() {
     if (this.menuOpen) {
       this.dropdownOpen = false; // Закрываем меню языков, если открываем навигацию
     }
-  } 
-  isDark!:boolean  ;
+  }
+  isDark!: boolean;
   languages = ['ua', 'en', 'ru']; // какие языки нужны
   currentLang = 'en';
   dropdownOpen = false;
   menuOpen: boolean = false;
 
-
-
-
   filteredArticles: any = [];
   enGroups: any = [];
   ngOnInit(): void {
- this.themeSubscription =this.themeService.getTheme().subscribe(data=>{
-      this.isDark=data;
-        this.cdr.detectChanges();
-    })
+    this.activateRout.queryParams.subscribe((params) => {
+      const selectedGroup = params['group'];
+      if (selectedGroup) {
+        this.artickleServ.selectedGroups = [selectedGroup];
+        this.grr = [...this.artickleServ.selectedGroups];
+        this.checkedGroup = [...this.artickleServ.selectedGroups];
 
+        this.cdr.detectChanges();
+        this.onGroupChangeFromEvent(selectedGroup);
+      }
+    });
+    this.themeSubscription = this.themeService.getTheme().subscribe((data) => {
+      this.isDark = data;
+      this.cdr.detectChanges();
+    });
 
     this.routerSubscription = this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
@@ -103,11 +124,11 @@ ngAfterViewInit() {
       }
     });
 
-
-
     this.paginator.itemsPerPageLabel = '';
     this.lang.setNumber(3);
-    this.titleService.setTitle('Online Trading Training | Free Trading Courses from Igor Arapov');
+    this.titleService.setTitle(
+      'Online Trading Training | Free Trading Courses from Igor Arapov'
+    );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'keywords',
@@ -116,33 +137,57 @@ ngAfterViewInit() {
     });
     this.meta.updateTag({
       name: 'description',
-      content: 'Free online trading education by Igor Arapov — complete step-by-step course from scratch, analysis of trading strategies, risk management, and practical exercises. Learn trading and cryptocurrencies remotely and for free.',
+      content:
+        'Free online trading education by Igor Arapov — complete step-by-step course from scratch, analysis of trading strategies, risk management, and practical exercises. Learn trading and cryptocurrencies remotely and for free.',
     });
     this.filteredArticles = this.artickleServ.englishArticles();
     this.enGroups = this.artickleServ.getEnglishGroups();
     this.grr = this.artickleServ.selectedGroups;
     this.updatePaginatedArticles();
-     this.updateArticleCounts();
-     this.gerRandom();
+    this.updateArticleCounts();
+    this.gerRandom();
   }
+onGroupChangeFromEvent(value: string) {
+    // if (this.artickleServ.selectedGroups.includes(value)) {
+    //   this.artickleServ.selectedGroups = [];
+    // } else {
 
-randomArticleEn: any = [];
+    //   this.artickleServ.selectedGroups = [value];
+    // }
+
+    // Обновляем фильтрованные статьи
+    this.filteredArticles = this.artickleServ.ukrainiansArticles();
+    this.updatePaginatedArticles();
+
+    // Возвращаем пагинацию на первую страницу
+    // this.paginatorr.firstPage();
+
+    if (isPlatformBrowser(this.platformId)) {
+      setTimeout(() => {
+        this.moveToTheTop();
+      }, 500); // Задержка для рендеринга DOM
+    }
+  }
+  randomArticleEn: any = [];
   gerRandom() {
     this.randomArticleEn = this.artickleServ.getRandomUkArticlesFive();
   }
 
+  hoveredIndex: number | null = null;
 
-hoveredIndex: number | null = null;
-
-projects = [
-  { title: 'Quick start', link: 'https://arapov.education/en/course-en/' },
-  { title: 'Introduction to Trading', link: 'https://arapov.education/en/reg-workshop-en/' },
-  { title: 'Professional courses', link: 'https://arapov.trade/en/studying' },
-  { title: 'Basic course', link: 'https://arapov.trade/en/freestudying/freeeducation' },
-  { title: 'Copy-trading', link: 'https://arapovcopytrade.com/en/home-en/' },
-];
-
-
+  projects = [
+    { title: 'Quick start', link: 'https://arapov.education/en/course-en/' },
+    {
+      title: 'Introduction to Trading',
+      link: 'https://arapov.education/en/reg-workshop-en/',
+    },
+    { title: 'Professional courses', link: 'https://arapov.trade/en/studying' },
+    {
+      title: 'Basic course',
+      link: 'https://arapov.trade/en/freestudying/freeeducation',
+    },
+    { title: 'Copy-trading', link: 'https://arapovcopytrade.com/en/home-en/' },
+  ];
 
   grr!: any;
   checkedGroup!: any;
@@ -161,31 +206,19 @@ projects = [
     //   this.updatePaginatedArticles();
     // }
 
-// Если нажали на уже выбранную группу — сбрасываем фильтр (показываем все)
-  if (this.artickleServ.selectedGroups.includes(value)) {
-    this.artickleServ.selectedGroups = [];
-  } else {
-    // Иначе выбираем только одну группу
-    this.artickleServ.selectedGroups = [value];
-  }
+    // Если нажали на уже выбранную группу — сбрасываем фильтр (показываем все)
+    if (this.artickleServ.selectedGroups.includes(value)) {
+      this.artickleServ.selectedGroups = [];
+    } else {
+      // Иначе выбираем только одну группу
+      this.artickleServ.selectedGroups = [value];
+    }
 
-  // Обновляем фильтрованные статьи
-  this.filteredArticles = this.artickleServ.englishArticles();
-  this.updatePaginatedArticles();
-
-
+    // Обновляем фильтрованные статьи
+    this.filteredArticles = this.artickleServ.englishArticles();
+    this.updatePaginatedArticles();
 
     this.paginatorr.firstPage();
-
-
-
-
-
-
-
-
-
-
   }
   paginatedArticles = []; // Статьи для отображения на текущей странице
   currentPage = 0;
@@ -203,10 +236,8 @@ projects = [
       top: topPosition,
       behavior: 'smooth',
     });
-    this.moveToTheTop()
+    this.moveToTheTop();
   }
-
-
 
   updatePaginatedArticles() {
     const startIndex = this.currentPage * this.pageSize;
@@ -218,67 +249,54 @@ projects = [
     this.router.navigateByUrl('/en/studying');
   }
 
+  private routerSubscription!: Subscription;
+  private themeSubscription!: Subscription;
+  ngOnDestroy() {
+    // Отписка от подписок
+    if (this.routerSubscription) {
+      this.routerSubscription.unsubscribe();
+    }
+    if (this.themeSubscription) {
+      this.themeSubscription.unsubscribe();
+    }
+  }
+  hovered: string | null = null;
+  toggleTheme() {
+    this.isDark = !this.isDark;
+    this.themeService.setTheme(this.isDark);
 
+    this.refreshAOS();
+  }
+  refreshAOS() {
+    if (typeof AOS !== 'undefined') {
+      setTimeout(() => {
+        AOS.refresh(); // Обновление позиций AOS
+        this.cdr.detectChanges(); // Принудительное обнаружение изменений
+      }, 100); // Задержка для синхронизации
+    } else {
+      console.warn('AOS is not defined, refresh skipped');
+    }
+  }
 
+  toggleDropdown() {
+    this.dropdownOpen = !this.dropdownOpen;
+  }
+  selectLang(lang: string) {
+    this.currentLang = lang;
 
+    this.dropdownOpen = false;
+  }
+  navigateTo(path: string) {
+    this.router.navigate([path]);
+  }
 
-
-
-
-   private routerSubscription!: Subscription;
-        private themeSubscription!: Subscription;
-         ngOnDestroy() {
-          // Отписка от подписок
-          if (this.routerSubscription) {
-            this.routerSubscription.unsubscribe();
-          }
-          if (this.themeSubscription) {
-            this.themeSubscription.unsubscribe();
-          }
-        } 
-        hovered: string | null = null;
-        toggleTheme() {
-        this.isDark = !this.isDark;
-        this.themeService.setTheme(this.isDark)
-         
-         this.refreshAOS();
-    
-    
-      }
-    refreshAOS() {
-        if (typeof AOS !== 'undefined') {
-          setTimeout(() => {
-            AOS.refresh(); // Обновление позиций AOS
-            this.cdr.detectChanges(); // Принудительное обнаружение изменений
-          }, 100); // Задержка для синхронизации
-        } else {
-          console.warn('AOS is not defined, refresh skipped');
-        }
-      }
-       
-      toggleDropdown() {
-        this.dropdownOpen = !this.dropdownOpen;
-      }
-      selectLang(lang: string) {
-        this.currentLang = lang;
-    
-        this.dropdownOpen = false;
-    
-         
-      }
-      navigateTo(path: string) {
-        this.router.navigate([path]);
-      }
-  
-  
-  
-      articleCounts: { [key: string]: number } = {};
-      updateArticleCounts() {
+  articleCounts: { [key: string]: number } = {};
+  updateArticleCounts() {
     this.articleCounts = {}; // очищаем
-  
-    this.artickleServ.ukrArtickles.forEach(article => {
+
+    this.artickleServ.ukrArtickles.forEach((article) => {
       // article.groupsUkr — это массив, например ['Програмування', 'Маркетинг']
-      article.groupsEng.forEach(group => {
+      article.groupsEng.forEach((group) => {
         if (!this.articleCounts[group]) {
           this.articleCounts[group] = 1;
         } else {
@@ -287,55 +305,54 @@ projects = [
       });
     });
   }
-    //popup
-    flag1: boolean = false;
-    flagTrue1: boolean = true;
-    searchtoggle(event: Event) {
-      this.flag1 = !this.flag1;
-      this.flagTrue1 = !this.flagTrue1;
-    }
-  
-  
+  //popup
+  flag1: boolean = false;
+  flagTrue1: boolean = true;
+  searchtoggle(event: Event) {
+    this.flag1 = !this.flag1;
+    this.flagTrue1 = !this.flagTrue1;
+  }
+
   isFocused = false;
   displayedArticles: artickle[] = [];
   maxResults = 5;
   searchQuery: string = '';
-  
+
   onFocus() {
     this.isFocused = true;
-  
+
     // Показываем 5 случайных статей при фокусе, если инпут пуст
     if (!this.searchQuery) {
-      const shuffled = [...this.artickleServ.ukrArtickles].sort(() => Math.random() - 0.5);
+      const shuffled = [...this.artickleServ.ukrArtickles].sort(
+        () => Math.random() - 0.5
+      );
       this.displayedArticles = shuffled.slice(0, this.maxResults);
     }
   }
-  
+
   onBlur() {
     setTimeout(() => {
       this.isFocused = false;
     }, 150); // таймаут чтобы клик по статье сработал
   }
-  
+
   onSearchChange() {
     // Логика асинхронного поиска
-    const filtered = this.artickleServ.ukrArtickles.filter(a =>
+    const filtered = this.artickleServ.ukrArtickles.filter((a) =>
       a.titleEn.toLowerCase().includes(this.searchQuery.toLowerCase())
     );
     this.displayedArticles = filtered.slice(0, this.maxResults);
   }
-  
-  moveToTheTop(){
+
+  moveToTheTop() {
     const element = document.getElementById('scrollToTop');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }
-  
-  groupsMenuOpen = false;
-     toggleGroupsMenu(event: Event) {
-      
-      this.groupsMenuOpen = !this.groupsMenuOpen;
-    }
 
+  groupsMenuOpen = false;
+  toggleGroupsMenu(event: Event) {
+    this.groupsMenuOpen = !this.groupsMenuOpen;
+  }
 }

@@ -932,13 +932,13 @@ const routes: Routes = [
         (m) => m.EightySixRuBlogModule
       ),
   },
-  // {
-  //   path: 'headandshoulders', //87
-  //   loadChildren: () =>
-  //     import(
-  //       '../ru-blog/eighty-seven-ru-blog/eighty-seven-ru-blog.module'
-  //     ).then((m) => m.EightySevenRuBlogModule),
-  // },
+  {
+    path: 'copytrading', //87
+    loadChildren: () =>
+      import(
+        '../ru-blog/eighty-seven-ru-blog/eighty-seven-ru-blog.module'
+      ).then((m) => m.EightySevenRuBlogModule),
+  },
   ]
    },
 ];

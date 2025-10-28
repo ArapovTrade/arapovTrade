@@ -929,13 +929,13 @@ const routes: Routes = [
         (m) => m.EightySixEnBlogModule
       ),
   },
-  // {
-  //   path: 'headandshoulders', //87
-  //   loadChildren: () =>
-  //     import(
-  //       '../eu-blog/eighty-seven-en-blog/eighty-seven-en-blog.module'
-  //     ).then((m) => m.EightySevenEnBlogModule),
-  // },
+  {
+    path: 'copytrading', //87
+    loadChildren: () =>
+      import(
+        '../eu-blog/eighty-seven-en-blog/eighty-seven-en-blog.module'
+      ).then((m) => m.EightySevenEnBlogModule),
+  },
   ]
    },
 ];

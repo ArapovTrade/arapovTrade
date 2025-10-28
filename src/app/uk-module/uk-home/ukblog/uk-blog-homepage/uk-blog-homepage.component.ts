@@ -1,6 +1,7 @@
 import {
   AfterViewInit,
-  ChangeDetectorRef,PLATFORM_ID,
+  ChangeDetectorRef,
+  PLATFORM_ID,
   Inject,
   OnDestroy,
   Component,
@@ -36,7 +37,7 @@ export class UkBlogHomepageComponent implements OnInit {
 
   constructor(
     private activateRout: ActivatedRoute,
-       @Inject(PLATFORM_ID) private platformId: Object,
+    @Inject(PLATFORM_ID) private platformId: Object,
     private artickleServ: ArticlesService,
     private router: Router,
     private meta: Meta,
@@ -50,7 +51,6 @@ export class UkBlogHomepageComponent implements OnInit {
     private eRef: ElementRef
   ) {
     this.renderer = rendererFactory.createRenderer(null, null);
-    
   }
 
   ngAfterViewInit() {
@@ -94,18 +94,15 @@ export class UkBlogHomepageComponent implements OnInit {
   ngOnInit(): void {
     this.activateRout.queryParams.subscribe((params) => {
       const selectedGroup = params['group'];
-      if(selectedGroup){
-         this.artickleServ.selectedGroups = [selectedGroup];
-      this.grr = [...this.artickleServ.selectedGroups];
-      this.checkedGroup = [...this.artickleServ.selectedGroups];
-      
-      this.cdr.detectChanges();
-      this.onGroupChangeFromEvent(selectedGroup);
+      if (selectedGroup) {
+        this.artickleServ.selectedGroups = [selectedGroup];
+        this.grr = [...this.artickleServ.selectedGroups];
+        this.checkedGroup = [...this.artickleServ.selectedGroups];
+
+        this.cdr.detectChanges();
+        this.onGroupChangeFromEvent(selectedGroup);
       }
-    
-    
     });
-     
 
     this.themeSubscription = this.themeService.getTheme().subscribe((data) => {
       this.isDark = data;
@@ -172,11 +169,10 @@ export class UkBlogHomepageComponent implements OnInit {
   checkedGroup!: any;
 
   onGroupChangeFromEvent(value: string) {
-    
     // if (this.artickleServ.selectedGroups.includes(value)) {
     //   this.artickleServ.selectedGroups = [];
     // } else {
-       
+
     //   this.artickleServ.selectedGroups = [value];
     // }
 
@@ -187,7 +183,6 @@ export class UkBlogHomepageComponent implements OnInit {
     // Возвращаем пагинацию на первую страницу
     // this.paginatorr.firstPage();
 
-   
     if (isPlatformBrowser(this.platformId)) {
       setTimeout(() => {
         this.moveToTheTop();
@@ -198,7 +193,7 @@ export class UkBlogHomepageComponent implements OnInit {
   onGroupChange(event: Event) {
     const checkbox = event.target as HTMLInputElement;
     const value = checkbox.value;
- 
+
     // Если нажали на уже выбранную группу — сбрасываем фильтр (показываем все)
     if (this.artickleServ.selectedGroups.includes(value)) {
       this.artickleServ.selectedGroups = [];
@@ -210,8 +205,7 @@ export class UkBlogHomepageComponent implements OnInit {
     // Обновляем фильтрованные статьи
     this.filteredArticles = this.artickleServ.ukrainiansArticles();
     this.updatePaginatedArticles();
- 
-  
+
     // Возвращаем пагинацию на первую страницу
     this.paginatorr.firstPage();
   }

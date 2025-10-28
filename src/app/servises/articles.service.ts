@@ -126,6 +126,25 @@ export class ArticlesService {
       id: 48,
     },
     {
+     
+      linkUkr: 'copytrading',
+      titleRus: 'Copy trading: что такое копитрейдинг и как работает?',
+      titleUkr: 'Copy trading: що таке копітрейдинг і як він працює?',
+     titleEn: 'Copy Trading: What is Copy-Trading and How Does It Work?',
+     descrRus:
+        'Что такое копитрейдинг криптовалют и как зарабатывать, копируя сделки успешных трейдеров на бирже | Игорь Арапов',
+        descrUkr: 'Що таке копітрейдинг криптовалют і як заробляти, копіюючи угоди успішних трейдерів на біржі | Ігор Арапов',
+        descrEn: 'What is cryptocurrency copy trading and how to earn by copying the trades of successful traders on the exchange | Igor Arapov',
+      realTitleRus: 'Copy trading: что такое копитрейдинг и как работает? | Игорь Арапов',
+      realTitleUkr: 'Copy trading: що таке копітрейдинг і як він працює? | Ігор Арапов',
+      realTitleEn: 'Copy Trading: What is Copy-Trading and How Does It Work? | Igor Arapov',
+      imgUkr: '/assets/img/content/copytrading_two.png',
+      groupsRus: ['Трейдинг для начинающих'],
+      groupsUkr: ['Трейдинг для початківців'],
+      groupsEng: ['Trading for Beginners'],
+      id: 133,
+    },
+    {
       titleUkr: 'Як аналізувати рівні максимального накопичення обсягів',
       titleEn: 'How to Analyze Peak Volume Levels',
       titleRus: 'Как анализировать уровни максимального скопления объемов',
