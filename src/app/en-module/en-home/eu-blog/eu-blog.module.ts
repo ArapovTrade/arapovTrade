@@ -936,6 +936,27 @@ const routes: Routes = [
         '../eu-blog/eighty-seven-en-blog/eighty-seven-en-blog.module'
       ).then((m) => m.EightySevenEnBlogModule),
   },
+  // {
+  //   path: 'tradingview-platform', //88
+  //   loadChildren: () =>
+  //     import('../eu-blog/eighty-eight-en-blog/eighty-eight-en-blog.module').then(
+  //       (m) => m.EightyEightEnBlogModule
+  //     ),
+  // },
+  // {
+  //   path: '89', //89
+  //   loadChildren: () =>
+  //     import('../eu-blog/eighty-nine-en-blog/eighty-nine-en-blog.module').then(
+  //       (m) => m.EightyNineEnBlogModule
+  //     ),
+  // },
+  // {
+  //   path: '90', //90
+  //   loadChildren: () =>
+  //     import('../eu-blog/ninty-en-blog/ninty-en-blog.module').then(
+  //       (m) => m.NintyEnBlogModule
+  //     ),
+  // },
   ]
    },
 ];

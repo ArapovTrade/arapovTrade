@@ -45,15 +45,15 @@ constructor(
 
 
 
-    // this.titleService.setTitle('Що таке імбаланс у трейдингу | Arapov.trade');
+    this.titleService.setTitle('Copy Trading: What is Copy-Trading and How Does It Work? | Igor Arapov');
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
 
-    // this.meta.updateTag({
-    //   name: 'description',
-    //   content:
-    //     'Що таке імбаланс у трейдингу, як він впливає на ринок. Приклади, методи виявлення і стратегії з урахуванням ринкового дисбалансу.',
-    // });
+    this.meta.updateTag({
+      name: 'description',
+      content:
+        'What is cryptocurrency copy trading and how to earn by copying the trades of successful traders on the exchange | Igor Arapov',
+    });
 
     this.gerRandom();
   }

@@ -144,6 +144,26 @@ export class ArticlesService {
       groupsEng: ['Trading for Beginners'],
       id: 133,
     },
+     {
+     
+      linkUkr: 'tradingview-platform',
+      titleRus: 'Платформа TradingView: что это такое, как пользоваться и зарабатывать',
+      titleUkr: 'Платформа TradingView: що це таке, як користуватися та заробляти',
+     titleEn: 'TradingView Platform: What It Is and How to Use It and Earn',
+      descrRus:
+        'TradingView: Полная инструкция, как пользоваться платформой и ЗАРАБАТЫВАТЬ. Пошаговая настройка графиков, анализ данных и эффективные стратегии для трейдеров. Узнайте секреты успешного трейдинга!',
+      descrUkr:
+        'TradingView: Повна інструкція, як користуватися платформою та ЗАРОБЛЯТИ. Покрокова настройка графіків, аналіз даних та ефективні стратегії для трейдерів. Дізнайтеся секрети успішного трейдингу!',
+        descrEn: 'TradingView: A complete guide on how to use the platform and EARN. Step-by-step chart setup, data analysis, and effective strategies for traders. Discover the secrets of successful trading!',
+      realTitleRus: 'Платформа TradingView: что это такое, как пользоваться и зарабатывать | Игорь Арапов',
+      realTitleUkr: 'Платформа TradingView: що це таке, як користуватися та заробляти | Ігор Арапов',
+      realTitleEn: 'TradingView Platform: What It Is and How to Use It and Earn | Igor Arapov',
+      imgUkr: '/assets/img/content/copytrading_two.png',
+      groupsRus: ['Трейдинг для начинающих'],
+      groupsUkr: ['Трейдинг для початківців'],
+      groupsEng: ['Trading for Beginners'],
+      id: 135,
+    },
     {
       titleUkr: 'Як аналізувати рівні максимального накопичення обсягів',
       titleEn: 'How to Analyze Peak Volume Levels',

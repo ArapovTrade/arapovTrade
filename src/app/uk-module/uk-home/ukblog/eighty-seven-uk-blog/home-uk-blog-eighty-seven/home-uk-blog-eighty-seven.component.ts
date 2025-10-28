@@ -46,7 +46,12 @@ export class HomeUkBlogEightySevenComponent implements OnInit  {
 
 
 
-  
+   this.titleService.setTitle('Copy trading: що таке копітрейдинг і як він працює? | Ігор Арапов');
+    this.meta.updateTag({
+      name: 'description',
+      content:
+        'Що таке копітрейдинг криптовалют і як заробляти, копіюючи угоди успішних трейдерів на біржі | Ігор Арапов',
+    });
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
 

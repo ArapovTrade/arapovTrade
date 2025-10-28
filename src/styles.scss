@@ -3932,7 +3932,7 @@ font-size: 30px;
 font-size: 18px;
  
 }
- 
+
 .box-b{
   flex-wrap: wrap;
 }
@@ -4347,3 +4347,8 @@ letter-spacing: 0%;
 .second-section_programm-block h2{
  margin-bottom: 15px;
 }
+
+ .container main em{
+  font-family: "Advent Pro" !important;
+  letter-spacing: 1px !important;
+ }

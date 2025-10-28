@@ -31,7 +31,12 @@ export class HomeRuBlogEightySevenComponent implements OnInit{
   checkedGroup!: any;
 
   ngOnInit(): void {
-    
+    this.titleService.setTitle('Copy trading: что такое копитрейдинг и как работает? | Игорь Арапов');
+    this.meta.updateTag({
+      name: 'description',
+      content:
+        'Что такое копитрейдинг криптовалют и как зарабатывать, копируя сделки успешных трейдеров на бирже | Игорь Арапов',
+    });
 
      this.themeSubscription =this.themeService.getTheme().subscribe(data=>{
       this.isDark=data;
