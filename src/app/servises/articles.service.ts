@@ -144,26 +144,7 @@ export class ArticlesService {
       groupsEng: ['Trading for Beginners'],
       id: 133,
     },
-    //  {
-     
-    //   linkUkr: 'tradingview-platform',
-    //   titleRus: 'Платформа TradingView: что это такое, как пользоваться и зарабатывать',
-    //   titleUkr: 'Платформа TradingView: що це таке, як користуватися та заробляти',
-    //  titleEn: 'TradingView Platform: What It Is and How to Use It and Earn',
-    //   descrRus:
-    //     'TradingView: Полная инструкция, как пользоваться платформой и ЗАРАБАТЫВАТЬ. Пошаговая настройка графиков, анализ данных и эффективные стратегии для трейдеров. Узнайте секреты успешного трейдинга!',
-    //   descrUkr:
-    //     'TradingView: Повна інструкція, як користуватися платформою та ЗАРОБЛЯТИ. Покрокова настройка графіків, аналіз даних та ефективні стратегії для трейдерів. Дізнайтеся секрети успішного трейдингу!',
-    //     descrEn: 'TradingView: A complete guide on how to use the platform and EARN. Step-by-step chart setup, data analysis, and effective strategies for traders. Discover the secrets of successful trading!',
-    //   realTitleRus: 'Платформа TradingView: что это такое, как пользоваться и зарабатывать | Игорь Арапов',
-    //   realTitleUkr: 'Платформа TradingView: що це таке, як користуватися та заробляти | Ігор Арапов',
-    //   realTitleEn: 'TradingView Platform: What It Is and How to Use It and Earn | Igor Arapov',
-    //   imgUkr: '/assets/img/content/copytrading_two.png',
-    //   groupsRus: ['Трейдинг для начинающих'],
-    //   groupsUkr: ['Трейдинг для початківців'],
-    //   groupsEng: ['Trading for Beginners'],
-    //   id: 135,
-    // },
+   
     {
       titleUkr: 'Як аналізувати рівні максимального накопичення обсягів',
       titleEn: 'How to Analyze Peak Volume Levels',
@@ -208,6 +189,45 @@ export class ArticlesService {
       groupsUkr: ['Об`ємний аналіз ринку'],
       groupsEng: ['Market Volume Analysis'],
       id: 112,
+    },
+      {
+     
+      linkUkr: 'tradingview-platform',
+      titleRus: 'Платформа TradingView: что это такое, как пользоваться и зарабатывать',
+      titleUkr: 'Платформа TradingView: що це таке, як користуватися та заробляти',
+     titleEn: 'TradingView Platform: What It Is and How to Use It and Earn',
+      descrRus:
+        'TradingView: Полная инструкция, как пользоваться платформой и ЗАРАБАТЫВАТЬ. Пошаговая настройка графиков, анализ данных и эффективные стратегии для трейдеров. Узнайте секреты успешного трейдинга!',
+      descrUkr:
+        'TradingView: Повна інструкція, як користуватися платформою та ЗАРОБЛЯТИ. Покрокова настройка графіків, аналіз даних та ефективні стратегії для трейдерів. Дізнайтеся секрети успішного трейдингу!',
+        descrEn: 'TradingView: A complete guide on how to use the platform and EARN. Step-by-step chart setup, data analysis, and effective strategies for traders. Discover the secrets of successful trading!',
+      realTitleRus: 'Платформа TradingView: что это такое, как пользоваться и зарабатывать | Игорь Арапов',
+      realTitleUkr: 'Платформа TradingView: що це таке, як користуватися та заробляти | Ігор Арапов',
+      realTitleEn: 'TradingView Platform: What It Is and How to Use It and Earn | Igor Arapov',
+      imgUkr: '/assets/img/content/tradingview_1.png',
+      groupsRus: ['Трейдинг для начинающих'],
+      groupsUkr: ['Трейдинг для початківців'],
+      groupsEng: ['Trading for Beginners'],
+      id: 135,
+    },
+      {
+     
+      linkUkr: 'bitcoin-domination',
+      titleRus: 'Что такое доминация биткоина (BTC.D) и ее влияние на рынок криптовалют',
+      titleUkr: 'Що таке домінація біткоїна (BTC.D) і як вона впливає на ринок криптовалют',
+      titleEn: 'What is Bitcoin Dominance (BTC.D) and How It Affects the Cryptocurrency Market',
+      descrRus:
+        'Что такое доминация биткоина (BTC.D), зачем следить за этим показателем и как доминирование BTC влияет на рынок криптовалют и альткоины. Простое объяснение для начинающих трейдеров.',
+       descrEn: 'What is Bitcoin Dominance (BTC.D), why track this metric, and how BTC dominance affects the cryptocurrency market and altcoins. A simple explanation for beginner traders.',
+       descrUkr: 'Що таке домінація біткоїна (BTC.D), навіщо стежити за цим показником і як домінування BTC впливає на ринок криптовалют і альткоїни. Просте пояснення для початківців трейдерів.',
+        realTitleRus: 'Что такое доминация биткоина (BTC.D) и как она влияет на рынок криптовалют | Игорь Арапов',
+      realTitleUkr: 'Що таке домінація біткоїна (BTC.D) і як вона впливає на ринок криптовалют | Ігор Арапов',
+      realTitleEn: 'What is Bitcoin Dominance (BTC.D) and How It Affects the Cryptocurrency Market | Igor Arapov',
+      imgUkr: '/assets/img/content/bitcoin_dominance_1.png',
+      groupsRus: ['Трейдинг для начинающих'],
+      groupsUkr: ['Трейдинг для початківців'],
+      groupsEng: ['Trading for Beginners'],
+      id: 136,
     },
     {
       titleUkr:

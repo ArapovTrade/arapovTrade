@@ -938,20 +938,20 @@ const routes: Routes = [
         (m) => m.EightySevenUkBlogModule
       ),
   },
-  // {
-  //   path: 'tradingview-platform', //88
-  //   loadChildren: () =>
-  //     import('../ukblog/eighty-eight-uk-blog/eighty-eight-uk-blog.module').then(
-  //       (m) => m.EightyEightUkBlogModule
-  //     ),
-  // },
-  // {
-  //   path: '89', //89
-  //   loadChildren: () =>
-  //     import('../ukblog/eighty-nine-uk-blog/eighty-nine-uk-blog.module').then(
-  //       (m) => m.EightyNineUkBlogModule
-  //     ),
-  // },
+  {
+    path: 'tradingview-platform', //88
+    loadChildren: () =>
+      import('../ukblog/eighty-eight-uk-blog/eighty-eight-uk-blog.module').then(
+        (m) => m.EightyEightUkBlogModule
+      ),
+  },
+  {
+    path: 'bitcoin-domination', //89
+    loadChildren: () =>
+      import('../ukblog/eighty-nine-uk-blog/eighty-nine-uk-blog.module').then(
+        (m) => m.EightyNineUkBlogModule
+      ),
+  },
   // {
   //   path: '90', //90
   //   loadChildren: () =>
