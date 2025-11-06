@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-TJ7D7QQ");
+    </script>
+    <!-- End Google Tag Manager -->
+
     <meta charset="utf-8" />
 
     <meta name="robots" content="index, follow" />
@@ -25,21 +40,6 @@
       name="google-site-verification"
       content="LSc_5GLJbfjm2X-eqPDAQStRgGsV5WJ04aiU3R-GjdE"
     />
-
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=AW-300104071"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "AW-300104071");
-    </script>
 
     <script type="application/ld+json">
       {
@@ -132,22 +132,55 @@
     </script>
     <script defer src="/_vercel/insights/script.js"></script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<!-- <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet"> -->
-       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@600;700&display=swap" />
- 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400&display=swap" />
-<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@600&display=swap" /> -->
-<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@600&display=swap" /> -->
-    <!-- In index.html <head> -->
-        <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@600;700&display=swap"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400&display=swap"
+    />
+
+    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
+
+    <!-- Google tag (gtag.js) -->
+    <!-- <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-300104071"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "AW-300104071");
+    </script> -->
   </head>
 
   <body class="mat-typography">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-TJ7D7QQ"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <!-- Google tag (gtag.js) -->
-    <script
+    <!-- <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-GZDEYNMZ9J"
     ></script>
@@ -159,7 +192,7 @@
       gtag("js", new Date());
 
       gtag("config", "G-GZDEYNMZ9J");
-    </script>
+    </script> -->
 
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
@@ -207,13 +240,13 @@
     <!-- /Yandex.Metrika counter -->
 
     <app-root></app-root>
-      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-      <script>
-    AOS.init({
-      duration: 1000, // Длительность анимации (мс)
-      once: true, // Анимация срабатывает один раз
-      offset: 100 // Смещение от верха экрана (px)
-    });
-  </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000, // Длительность анимации (мс)
+        once: true, // Анимация срабатывает один раз
+        offset: 100, // Смещение от верха экрана (px)
+      });
+    </script>
   </body>
 </html>
