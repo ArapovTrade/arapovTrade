@@ -230,6 +230,26 @@ export class ArticlesService {
       id: 136,
     },
     {
+      titleUkr: 'Чим відрізняється трейдер від інвестора?',
+      titleRus: 'Чем отличается трейдер от инвестора?',
+      titleEn: 'What is the Difference Between a Trader and an Investor?',
+       descrEn:
+        'What is the difference between a trader and an investor? Which is better: trading or investing? Learn the key distinctions, advantages, and strategies | ArapovTrade',
+      descrUkr:
+        'Чим відрізняється трейдер від інвестора? Що краще: трейдинг чи інвестиції? Дізнайтеся ключові відмінності, переваги та стратегії | ArapovTrade',
+      descrRus:
+        'В чем разница между трейдером и инвестором? Что лучше: трейдинг или инвестиции? Узнайте ключевые отличия, преимущества и стратегии | ArapovTrade',
+      realTitleRus: 'Чем отличается трейдер от инвестора? | ArapovTrade',
+      realTitleEn: 'What is the Difference Between a Trader and an Investor? | ArapovTrade',
+      realTitleUkr: 'Чим відрізняється трейдер від інвестора? | ArapovTrade',
+      linkUkr: 'tradingandinvestments',
+      imgUkr: '/assets/img/content/tradingandinvestments.webp',
+      groupsRus: ['Трейдинг для начинающих'],
+      groupsUkr: ['Трейдинг для початківців'],
+      groupsEng: ['Trading for Beginners'],
+      id: 14,
+    },
+    {
       titleUkr:
         'Як розвивається ринковий аукціон, оцінка сантименту учасників ринку',
       linkUkr: 'marketauctiondevelops',
@@ -670,26 +690,7 @@ export class ArticlesService {
       groupsEng: ['Technical Analysis'],
       id: 13,
     },
-    {
-      titleUkr: 'Трейдинг та Інвестиції що краще?',
-      titleRus: 'Трейдинг и Инвестиции что лучше?',
-      descrEn:
-        'Comparison of trading and investing: key advantages, risks, and what suits you for financial success.',
-      titleEn: 'Trading vs. Investing: Which is Better?',
-      descrUkr:
-        'Порівняння трейдингу та інвестицій: ключові переваги, ризики і що підійде саме вам для фінансового успіху.',
-      descrRus:
-        'Трейдинг или инвестиции: что выбрать? Бесплатное руководство от ArapovTrade по плюсам, минусам и стратегиям.',
-      realTitleRus: 'Трейдинг или инвестиции: что выбрать? | ArapovTrade',
-      realTitleEn: 'Trading or Investing: Which to Choose? | ArapovTrade',
-      realTitleUkr: 'Трейдинг чи інвестиції: що обрати? | Arapov.trade',
-      linkUkr: 'tradingandinvestments',
-      imgUkr: '/assets/img/content/tradingandinvestments.webp',
-      groupsRus: ['Трейдинг для начинающих'],
-      groupsUkr: ['Трейдинг для початківців'],
-      groupsEng: ['Trading for Beginners'],
-      id: 14,
-    },
+    
     {
       titleUkr: "Правда про торгівлю ф'ючерсами",
       linkUkr: 'futurestrading',

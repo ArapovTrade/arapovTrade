@@ -40,16 +40,16 @@ export class HomeUkBlogFourteenComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Трейдинг чи інвестиції: що обрати? | Arapov.trade'
+      'Чим відрізняється трейдер від інвестора? | ArapovTrade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Порівняння трейдингу та інвестицій: ключові переваги, ризики і що підійде саме вам для фінансового успіху.',
+        'Чим відрізняється трейдер від інвестора? Що краще: трейдинг чи інвестиції? Дізнайтеся ключові відмінності, переваги та стратегії | ArapovTrade',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-04-01' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-11-07' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/tradingandinvestments.webp',
