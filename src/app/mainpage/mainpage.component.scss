@@ -7,7 +7,7 @@
 // }
  
 .phone{
-  display: none !important;
+  // display: none !important;
 }
  .desc{
   display: block;
@@ -2185,13 +2185,9 @@ background: url(../../../public/assets/redesignArapovTrade/img/elips-light.svg)
   align-items: center;
   justify-content: center;
   flex-wrap: nowrap;
-  // gap: 10px;
+  padding: 10px 40px;
   transition: all 0.3s ease;  
-  // width: 269px;
-  // height: 85.333px;
-
-  // padding: 21.33px 42.667px 21.333px 42.667px;
-  // background: #22190d;
+   
 
   z-index: 231;
   border-radius: 11px;
@@ -2768,7 +2764,7 @@ background: url(../../../public/assets/redesignArapovTrade/img/articles-light.pn
     top: 944px;
   }
   .phone{
-  display: none;
+  // display: none;
 }
  .desc{
   display: block;
