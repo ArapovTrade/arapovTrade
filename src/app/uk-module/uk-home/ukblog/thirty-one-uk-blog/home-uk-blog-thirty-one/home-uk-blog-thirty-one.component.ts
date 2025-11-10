@@ -39,14 +39,14 @@ export class HomeUkBlogThirtyOneComponent implements OnInit {
     this.grr = this.artickleServ.selectedGroups;
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
-    this.titleService.setTitle('Рівні підтримки та опору | Arapov.trade');
+    this.titleService.setTitle('Як будувати рівні в трейдингу | Ігор Арапов');
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
 
     this.meta.updateTag({
       name: 'description',
       content:
-        'Дізнайтесь, як будувати та використовувати рівні підтримки й опору у трейдингу. Практичний гід для трейдерів від Arapov.trade.',
+        'Дізнайтесь, як будувати та використовувати рівні підтримки й опору у трейдингу. Практичний гід для трейдерів | Ігор Арапов.',
     });
 
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-16' });

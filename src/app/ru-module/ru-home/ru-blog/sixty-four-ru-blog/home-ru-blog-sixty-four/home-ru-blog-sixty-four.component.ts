@@ -41,13 +41,13 @@ export class HomeRuBlogSixtyFourComponent {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Торговая система для успешного трейдинга | Arapov.trade'
+      'Стратегия трейдинга для новичков | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Узнайте, как торговать с торговой системой! Практические советы по точкам входа, выхода, манименеджменту и управлению рисками для успеха с Arapov.trade',
+        'Узнайте, как построить торговую стратегию в трейдинге: правила входа и выхода, управление рисками, примеры систем для новичков и профи | Игорь Арапов',
     });
   
     

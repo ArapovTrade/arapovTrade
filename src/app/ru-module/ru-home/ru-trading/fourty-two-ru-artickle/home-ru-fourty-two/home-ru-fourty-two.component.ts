@@ -41,13 +41,13 @@ export class HomeRuFourtyTwoComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Таймфреймы в трейдинге: выбор интервала | Arapov.trade'
+      'Таймфреймы в трейдинге: на каком таймфрейме лучше торговать | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Узнайте, как выбрать таймфрейм в трейдинге! Подходящие интервалы для новичков и стратегии торговли на Arapov.trade.',
+        'Что такое таймфрейм и на каком таймрефме лучше торговать? Узнайте, какой таймфрейм выбрать для скальпинга, интрадей и долгосрочных стратегий | Arapov.trade.',
     });
     this.gerRandom();
   }

@@ -36,13 +36,13 @@ export class HomeEnFourtyTwoComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Timeframes in Trading: How to Choose the Best Time Interval? - Arapov.trade'
+      'Timeframes in Trading: Which Timeframe is Best for Trading | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'We explore the different types of timeframes in trading, how to select the right time interval, and which timeframe is best for beginners. A comprehensive guide for traders.',
+        'What is a timeframe and which timeframe is best for trading? Learn how to choose the right timeframe for scalping, intraday, and long-term strategies | Arapov.trade.',
     });
 
     this.gerRandom();

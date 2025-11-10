@@ -387,19 +387,19 @@ export class ArticlesService {
     },
 
     {
-      titleUkr: 'Практичні рекомендації',
+      titleUkr: 'Торгова стратегія для початківців',
       linkUkr: 'practic',
       descrEn:
         'Self-study guide for trading by Igor Arapov: step-by-step course from scratch, real strategies and tips for a confident start in trading.',
-      titleRus: 'Практические рекомендации',
-      titleEn: 'Practical Recommendations',
+      titleRus: 'Стратегия трейдинга для новичков ',
+      titleEn: 'Trading Strategy for Beginners',
       descrUkr:
         'Дізнайтесь практичні рекомендації з трейдингу: торгова система, точки входу, мані-менеджмент і ризики від ArapovTrade.',
       descrRus:
-        'Узнайте, как торговать с торговой системой! Практические советы по точкам входа, выхода, манименеджменту и управлению рисками для успеха с Arapov.trade',
-      realTitleRus: 'Торговая система для успешного трейдинга | Arapov.trade',
-      realTitleUkr: 'Трейдинг: рекомендації та торгова система',
-      realTitleEn: 'Trading: Recommendations and Trading System | Arapov.trade',
+        'Узнайте, как построить торговую стратегию в трейдинге: правила входа и выхода, управление рисками, примеры систем для новичков и профи | Игорь Арапов',
+      realTitleRus: 'Стратегия трейдинга для новичков | Arapov.trade',
+      realTitleUkr: 'Торгова стратегія для початківців | Arapov.trade',
+      realTitleEn: 'Trading Strategy for Beginners | Arapov.trade',
       imgUkr: '/assets/img/content/prakticuk.jpg',
       groupsRus: ['Примеры сделок'],
       groupsUkr: ['Приклади угод'],
@@ -1020,19 +1020,19 @@ export class ArticlesService {
       id: 30,
     },
     {
-      titleUkr: 'Рівні Підтримки та Опору',
+      titleUkr: 'Як будувати рівні в трейдингу',
       descrEn:
-        'Learn how to build and use support and resistance levels in trading. A practical guide for traders from Arapov.trade.',
-      titleRus: 'Уровни Поддержки и Сопротивления',
-      titleEn: 'Levels of Support and Resistance',
+        'Learn how to build and use support and resistance levels in trading. A practical guide for traders | Igor Arapov.',
+      titleRus: 'Как строить уровни в трейдинге',
+      titleEn: 'How to Build Levels in Trading',
       descrUkr:
-        'Дізнайтесь, як будувати та використовувати рівні підтримки й опору у трейдингу. Практичний гід для трейдерів від Arapov.trade.',
+        'Дізнайтесь, як будувати та використовувати рівні підтримки й опору у трейдингу. Практичний гід для трейдерів | Ігор Арапов.',
       descrRus:
-        'Узнайте, как строить и использовать уровни поддержки и сопротивления в трейдинге! Полное руководство для эффективных сделок на Arapov.trade.',
+        'Узнайте, как строить и использовать уровни поддержки и сопротивления в трейдинге! Полное руководство для эффективных сделок | Игорь Арапов.',
       realTitleRus:
-        'Уровни поддержки и сопротивления в трейдинге | Arapov.trade',
-      realTitleEn: 'Support and Resistance Levels in Trading | Arapov.trade',
-      realTitleUkr: 'Рівні підтримки та опору | Arapov.trade',
+        'Как строить уровни в трейдинге | Игорь Арапов',
+       realTitleUkr: 'Як будувати рівні в трейдингу | Ігор Арапов',
+      realTitleEn: 'How to Build Levels in Trading | Igor Arapov',
       linkUkr: 'levelofsupport',
       imgUkr: '/assets/img/content/levelofsupport.webp',
       groupsRus: ['Технический анализ'],
@@ -2472,16 +2472,17 @@ export class ArticlesService {
       linkUkr: 'timeframes',
       titleRus: 'Таймфреймы в трейдинге',
       titleEn: 'Timeframes in Trading',
-      descrEn:
-        'Learn about timeframes in trading, how to choose the right interval, and which ones are best for beginners. A guide for traders from ArapovTrade.',
-      descrUkr:
-        'Дізнайтесь про таймфрейми в трейдингу, як обрати часовий інтервал та який підходить новачкам. Посібник для трейдерів від ArapovTrade.',
+       
       descrRus:
-        'Узнайте, как выбрать таймфрейм в трейдинге! Подходящие интервалы для новичков и стратегии торговли на Arapov.trade.',
-      realTitleRus: 'Таймфреймы в трейдинге: выбор интервала | Arapov.trade',
-      realTitleEn:
-        'Timeframes in Trading: Choosing the Right Interval | Arapov.trade',
-      realTitleUkr: 'Таймфрейми в трейдингу: як обрати | Arapov.trade',
+        'Что такое таймфрейм и на каком таймрефме лучше торговать? Узнайте, какой таймфрейм выбрать для скальпинга, интрадей и долгосрочных стратегий | Arapov.trade.',
+        descrEn:
+        'What is a timeframe and which timeframe is best for trading? Learn how to choose the right timeframe for scalping, intraday, and long-term strategies | Arapov.trade.',
+      descrUkr:
+        'Що таке таймфрейм і який таймфрейм найкращий для торгівлі? Дізнайтесь, як обрати таймфрейм для скальпінгу, інтрадей та довгострокових стратегій | Arapov.trade.',
+      realTitleRus: 'Таймфреймы в трейдинге: на каком таймфрейме лучше торговать | Arapov.trade',
+      realTitleUkr: 'Таймфрейми у трейдингу: який таймфрейм найкращий для торгівлі | Arapov.trade',
+       realTitleEn: 'Timeframes in Trading: Which Timeframe is Best for Trading | Arapov.trade',
+       
       imgUkr: '/assets/img/content/timeframes44.webp',
       groupsRus: ['Трейдинг для начинающих'],
       groupsUkr: ['Трейдинг для початківців'],

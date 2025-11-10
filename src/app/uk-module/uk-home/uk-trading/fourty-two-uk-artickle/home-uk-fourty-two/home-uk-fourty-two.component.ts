@@ -39,12 +39,12 @@ export class HomeUkFourtyTwoComponent implements OnInit {
     this.grr = this.artickleServ.selectedGroups;
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
-    this.titleService.setTitle('Таймфрейми в трейдингу: як обрати');
+    this.titleService.setTitle('Таймфрейми у трейдингу: який таймфрейм найкращий для торгівлі | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Дізнайтесь про таймфрейми в трейдингу, як обрати часовий інтервал та який підходить новачкам. Посібник для трейдерів від ArapovTrade.',
+        'Що таке таймфрейм і який таймфрейм найкращий для торгівлі? Дізнайтесь, як обрати таймфрейм для скальпінгу, інтрадей та довгострокових стратегій | Arapov.trade.',
     });
     this.gerRandom();
   }

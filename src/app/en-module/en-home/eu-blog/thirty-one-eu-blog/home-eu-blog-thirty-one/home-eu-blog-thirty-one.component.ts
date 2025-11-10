@@ -35,12 +35,12 @@ export class HomeEuBlogThirtyOneComponent implements OnInit {
     this.grr = this.artickleServ.selectedGroups;
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
-    this.titleService.setTitle('Support and Resistance Levels');
+    this.titleService.setTitle('How to Build Levels in Trading | Igor Arapov');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'A detailed guide on support and resistance levels. Learn how to build, identify, and effectively use them in trading.',
+        'Learn how to build and use support and resistance levels in trading. A practical guide for traders | Igor Arapov.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-16' });
     this.meta.updateTag({
