@@ -169,29 +169,7 @@ export class ArticlesService {
       id: 111,
     },
 
-    {
-      titleUkr:
-        'Чому важливо аналізувати обсяги у рамках поточних трендів на ринку',
-      linkUkr: 'trendvolumeanalysis',
-      titleRus:
-        'Почему важно анализировать объемы в рамках текущих трендов на рынке',
-      titleEn:
-        'Why It’s Important to Analyze Volumes Within Current Market Trends',
-      descrEn:
-        'Learn how volume analysis helps identify trend strength, reversal points, and avoid false signals in the market.',
-      descrUkr:
-        'Дізнайтеся, як аналіз обсягів допомагає визначити силу тренду, точки розвороту та уникнути хибних сигналів на ринку.',
-      descrRus:
-        'Узнайте, как анализ объемов улучшает трейдинг! Практические советы по оценке трендов, точек разворота и избежанию ложных сигналов с Arapov.trade',
-      realTitleRus: 'Объемы в трейдинге: как анализировать | Arapov.trade',
-      realTitleEn: 'Volume Analysis in Trading: How to Analyze | Arapov.trade',
-      realTitleUkr: 'Обсяги і тренди: як аналізувати | Arapov.trade',
-      imgUkr: '/assets/img/content/trendvolumeanalysis.webp',
-      groupsRus: ['Объемный анализ рынка'],
-      groupsUkr: ['Об`ємний аналіз ринку'],
-      groupsEng: ['Market Volume Analysis'],
-      id: 112,
-    },
+    
       {
      
       linkUkr: 'tradingview-platform',
@@ -252,27 +230,25 @@ export class ArticlesService {
       id: 14,
     },
     {
-      titleUkr:
-        'Як розвивається ринковий аукціон, оцінка сантименту учасників ринку',
-      linkUkr: 'marketauctiondevelops',
-      titleRus:
-        'Как развивается рыночный аукцион , оценка сантимента участников рынка',
-      titleEn:
-        'How Market Auction Develops, Assessing Market Participant Sentiment',
-      descrEn:
-        'Explore the dynamics of market auctions and participant sentiment: auction theory, demand and supply indicators in trading from ArapovTrade.',
+       
+      linkUkr: 'trianglefigure',
+      titleRus: 'Паттерн треугольник в трейдинге',
+      titleUkr: 'Фігура Трикутник у технічному аналізі', 
+      titleEn: 'Triangle Pattern in Technical Analysis',
       descrUkr:
-        'Дізнайтесь про ринковий аукціон і сентимент ринку: аукціонна теорія, індикатори попиту та пропозиції в трейдингу від ArapovTrade.',
+        'Дізнайтесь про фігуру Трикутник: як визначити патерн, сигнали пробою та використання в трейдингу. Посібник від ArapovTrade.',
       descrRus:
-        'Узнайте, как рыночный аукцион и сентимент участников влияют на трейдинг! Анализ аукционной теории и индикаторов для успешной торговли с Arapov.trade',
-      realTitleRus: 'Рыночный аукцион и сентимент в трейдинге | Arapov.trade',
-      realTitleEn: 'Market Auction and Sentiment in Trading | Arapov.trade',
-      realTitleUkr: 'Ринковий аукціон і сентимент трейдерів',
-      imgUkr: '/assets/img/content/marketauctiondevelops.webp',
-      groupsRus: ['Объемный анализ рынка'],
-      groupsUkr: ['Об`ємний аналіз ринку'],
-      groupsEng: ['Market Volume Analysis'],
-      id: 113,
+        'Фигура Треугольник в трейдинге: как торговать паттерн? Руководство от ArapovTrade по анализу, пробою и стратегиям',
+      realTitleRus: 'Паттерн треугольник в трейдинге | ArapovTrade',
+      realTitleEn: 'Triangle: Trading Pattern | ArapovTrade',
+      realTitleUkr: 'Фігура Трикутник у технічному аналізі',
+      imgUkr: '/assets/img/content/trianglefigure.webp',
+      descrEn:
+        'Learn about the Triangle pattern: how to identify it, breakout signals, and trading applications with a guide from ArapovTrade.',
+      groupsRus: ['Технический анализ'],
+      groupsUkr: ['Технічний аналіз'],
+      groupsEng: ['Technical Analysis'],
+      id: 152,
     },
     {
       titleUkr:
@@ -1977,6 +1953,29 @@ export class ArticlesService {
       id: 78,
     },
     {
+      titleUkr:
+        'Чому важливо аналізувати обсяги у рамках поточних трендів на ринку',
+      linkUkr: 'trendvolumeanalysis',
+      titleRus:
+        'Почему важно анализировать объемы в рамках текущих трендов на рынке',
+      titleEn:
+        'Why It’s Important to Analyze Volumes Within Current Market Trends',
+      descrEn:
+        'Learn how volume analysis helps identify trend strength, reversal points, and avoid false signals in the market.',
+      descrUkr:
+        'Дізнайтеся, як аналіз обсягів допомагає визначити силу тренду, точки розвороту та уникнути хибних сигналів на ринку.',
+      descrRus:
+        'Узнайте, как анализ объемов улучшает трейдинг! Практические советы по оценке трендов, точек разворота и избежанию ложных сигналов с Arapov.trade',
+      realTitleRus: 'Объемы в трейдинге: как анализировать | Arapov.trade',
+      realTitleEn: 'Volume Analysis in Trading: How to Analyze | Arapov.trade',
+      realTitleUkr: 'Обсяги і тренди: як аналізувати | Arapov.trade',
+      imgUkr: '/assets/img/content/trendvolumeanalysis.webp',
+      groupsRus: ['Объемный анализ рынка'],
+      groupsUkr: ['Об`ємний аналіз ринку'],
+      groupsEng: ['Market Volume Analysis'],
+      id: 112,
+    },
+    {
       titleUkr: 'Психологічні ризики FOREX',
       linkUkr: 'psychorisks',
       titleRus: 'Психологические риски FOREX',
@@ -2743,25 +2742,29 @@ export class ArticlesService {
       id: 151,
     },
     {
-      titleUkr: 'Фігура трикутник',
-      linkUkr: 'trianglefigure',
-      titleRus: 'Фигура треугольник',
-      titleEn: 'Triangle Pattern',
-      descrUkr:
-        'Дізнайтесь про фігуру Трикутник: як визначити патерн, сигнали пробою та використання в трейдингу. Посібник від ArapovTrade.',
-      descrRus:
-        'Фигура Треугольник: как торговать паттерн? Руководство от ArapovTrade по анализу, пробою и стратегиям',
-      realTitleRus: 'Треугольник: паттерн трейдинга | ArapovTrade',
-      realTitleEn: 'Triangle: Trading Pattern | ArapovTrade',
-      realTitleUkr: 'Фігура Трикутник у технічному аналізі',
-      imgUkr: '/assets/img/content/trianglefigure.webp',
+      titleUkr:
+        'Як розвивається ринковий аукціон, оцінка сантименту учасників ринку',
+      linkUkr: 'marketauctiondevelops',
+      titleRus:
+        'Как развивается рыночный аукцион , оценка сантимента участников рынка',
+      titleEn:
+        'How Market Auction Develops, Assessing Market Participant Sentiment',
       descrEn:
-        'Learn about the Triangle pattern: how to identify it, breakout signals, and trading applications with a guide from ArapovTrade.',
-      groupsRus: ['Технический анализ'],
-      groupsUkr: ['Технічний аналіз'],
-      groupsEng: ['Technical Analysis'],
-      id: 152,
+        'Explore the dynamics of market auctions and participant sentiment: auction theory, demand and supply indicators in trading from ArapovTrade.',
+      descrUkr:
+        'Дізнайтесь про ринковий аукціон і сентимент ринку: аукціонна теорія, індикатори попиту та пропозиції в трейдингу від ArapovTrade.',
+      descrRus:
+        'Узнайте, как рыночный аукцион и сентимент участников влияют на трейдинг! Анализ аукционной теории и индикаторов для успешной торговли с Arapov.trade',
+      realTitleRus: 'Рыночный аукцион и сентимент в трейдинге | Arapov.trade',
+      realTitleEn: 'Market Auction and Sentiment in Trading | Arapov.trade',
+      realTitleUkr: 'Ринковий аукціон і сентимент трейдерів',
+      imgUkr: '/assets/img/content/marketauctiondevelops.webp',
+      groupsRus: ['Объемный анализ рынка'],
+      groupsUkr: ['Об`ємний аналіз ринку'],
+      groupsEng: ['Market Volume Analysis'],
+      id: 113,
     },
+    
     {
       titleUkr: 'Прапор та вимпел: Як правильно торгувати після імпульсу?',
       linkUkr: 'flagandpennant',

@@ -38,12 +38,12 @@ export class HomeRuBlogEightyOneComponent {
     this.grr = this.artickleServ.selectedGroups;
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
-    this.titleService.setTitle('Треугольник: паттерн трейдинга | ArapovTrade');
+    this.titleService.setTitle('Паттерн треугольник в трейдинге | ArapovTrade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Фигура Треугольник: как торговать паттерн? Руководство от ArapovTrade по анализу, пробою и стратегиям',
+        'Фигура Треугольник в трейдинге: как торговать паттерн? Руководство от ArapovTrade по анализу, пробою и стратегиям',
     });
      
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-20' });
