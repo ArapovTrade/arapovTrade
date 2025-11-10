@@ -41,7 +41,7 @@ export class HomeRuBlogThreeComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
 
-    this.titleService.setTitle('Волатильность в трейдинге: как использовать | Arapov.trade');
+    this.titleService.setTitle('Что такое волатильность в трейдинге | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',

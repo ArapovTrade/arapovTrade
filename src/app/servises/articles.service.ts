@@ -273,6 +273,26 @@ export class ArticlesService {
       groupsEng: ['Smart Money Concept'],
       id: 104,
     },
+     {
+      titleUkr: 'Торгова стратегія для початківців',
+      linkUkr: 'practic',
+      descrEn:
+        'Self-study guide for trading by Igor Arapov: step-by-step course from scratch, real strategies and tips for a confident start in trading.',
+      titleRus: 'Стратегия трейдинга для новичков ',
+      titleEn: 'Trading Strategy for Beginners',
+      descrUkr:
+        'Дізнайтесь практичні рекомендації з трейдингу: торгова система, точки входу, мані-менеджмент і ризики від ArapovTrade.',
+      descrRus:
+        'Узнайте, как построить торговую стратегию в трейдинге: правила входа и выхода, управление рисками, примеры систем для новичков и профи | Игорь Арапов',
+      realTitleRus: 'Стратегия трейдинга для новичков | Arapov.trade',
+      realTitleUkr: 'Торгова стратегія для початківців | Arapov.trade',
+      realTitleEn: 'Trading Strategy for Beginners | Arapov.trade',
+      imgUkr: '/assets/img/content/prakticuk.jpg',
+      groupsRus: ['Примеры сделок'],
+      groupsUkr: ['Приклади угод'],
+      groupsEng: ['Trade Examples'],
+      id: 109,
+    },
     {
        
       linkUkr: 'icebergorders',
@@ -363,26 +383,7 @@ export class ArticlesService {
       id: 108,
     },
 
-    {
-      titleUkr: 'Торгова стратегія для початківців',
-      linkUkr: 'practic',
-      descrEn:
-        'Self-study guide for trading by Igor Arapov: step-by-step course from scratch, real strategies and tips for a confident start in trading.',
-      titleRus: 'Стратегия трейдинга для новичков ',
-      titleEn: 'Trading Strategy for Beginners',
-      descrUkr:
-        'Дізнайтесь практичні рекомендації з трейдингу: торгова система, точки входу, мані-менеджмент і ризики від ArapovTrade.',
-      descrRus:
-        'Узнайте, как построить торговую стратегию в трейдинге: правила входа и выхода, управление рисками, примеры систем для новичков и профи | Игорь Арапов',
-      realTitleRus: 'Стратегия трейдинга для новичков | Arapov.trade',
-      realTitleUkr: 'Торгова стратегія для початківців | Arapov.trade',
-      realTitleEn: 'Trading Strategy for Beginners | Arapov.trade',
-      imgUkr: '/assets/img/content/prakticuk.jpg',
-      groupsRus: ['Примеры сделок'],
-      groupsUkr: ['Приклади угод'],
-      groupsEng: ['Trade Examples'],
-      id: 109,
-    },
+   
     {
       titleUkr: 'Як читати Біржовий стакан і стрічку принтів',
       linkUkr: 'stockorderbook',
@@ -445,9 +446,10 @@ export class ArticlesService {
       realTitleEn: 'Divergence on Indicators in Trading | Arapov.trade',
     },
     {
-      titleUkr: 'Волатильність у трейдингу',
-      titleRus: 'Волатильность в трейдинге',
-      titleEn: 'Volatility in Trading',
+       
+      titleRus: 'Что такое волатильность',
+      titleUkr: 'Що таке волатильність',
+      titleEn: 'What is Volatility',
       descrEn:
         'Learn about volatility in trading: what it is, how it affects trading, and effective strategies for high-volatility markets.',
 
@@ -461,9 +463,9 @@ export class ArticlesService {
         'Дізнайтеся, що таке волатильність, як вона впливає на трейдинг і які стратегії ефективні на високо-волатильних ринках.',
       descrRus:
         'Узнайте, что такое волатильность в трейдинге! Как она влияет на торговлю и стратегии для высоковолатильных рынков на Arapov.trade.',
-      realTitleRus: 'Волатильность в трейдинге: как использовать | Arapov.trade',
-      realTitleEn: 'Volatility in Trading: How to Use It | Arapov.trade',
-      realTitleUkr: 'Волатильність у трейдінгу | Arapov.trade',
+      realTitleRus: 'Что такое волатильность | Arapov.trade',
+      realTitleEn: 'What is Volatility in Trading | Arapov.trade',
+      realTitleUkr: 'Що таке волатильність у трейдінгу | Arapov.trade',
     },
     {
       titleUkr: 'Як не втратити всі гроші на маржинальній торгівлі?',
