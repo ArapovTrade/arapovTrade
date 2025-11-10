@@ -296,21 +296,21 @@ export class ArticlesService {
       id: 105,
     },
     {
-      titleUkr: 'Як торгувати за Smart Money Concepts (SMC)?',
+       
       linkUkr: 'smartmoneyconceptsguide',
       descrEn:
         'Self-study guide for trading by Igor Arapov: step-by-step course from scratch, real strategies and tips for a confident start in trading.',
       titleRus:
-        'Как торговать по Smart Money Concepts (SMC)? Пошаговое руководство',
-      titleEn:
-        'How to Trade Using Smart Money Concepts (SMC)? A Step-by-Step Guide',
+        'Концепция смарт мани',
+      titleUkr: 'Концепція смарт мані',
+      titleEn: 'Smart Money Concept',
       descrUkr:
         'Дізнайтеся, як торгувати за Smart Money Concepts: структура ринку, ліквідність, Order Blocks, FVG і стратегії входу та виходу з угод.',
       descrRus:
-        'Узнайте, как применять Smart Money Concepts (SMC) в трейдинге! Стратегии по структуре рынка, ликвидности, FVG и Order Blocks с примерами',
-      realTitleRus: 'Smart Money Concepts (SMC) в трейдинге | Arapov.trade',
-      realTitleUkr: 'Як торгувати за Smart Money Concepts | Arapov.trade',
-      realTitleEn: 'Smart Money Concepts (SMC) in Trading | Arapov.trade',
+        'Узнайте, как применять Smart Money Concept (SMC) в трейдинге! Стратегии по структуре рынка, ликвидности, FVG и Order Blocks с примерами',
+      realTitleRus: 'Стратегия смарт мани | Arapov.trade',
+      realTitleUkr: 'Стратегія смарт мані | Arapov.trade',
+      realTitleEn: 'Smart Money Strategy | Arapov.trade',
       imgUkr: '/assets/img/content/smartmoneyconceptsguide.webp',
       groupsRus: ['Концепция Смарт Мани'],
       groupsUkr: ['Концепція Смарт Мані'],

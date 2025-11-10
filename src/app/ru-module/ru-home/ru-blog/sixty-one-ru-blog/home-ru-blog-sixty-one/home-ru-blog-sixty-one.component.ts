@@ -41,13 +41,13 @@ export class HomeRuBlogSixtyOneComponent {
     this.checkedGroup = this.artickleServ.selectedGroups;
 
     this.titleService.setTitle(
-      'Smart Money Concepts (SMC) в трейдинге | Arapov.trade'
+      'Стратегия смарт мани | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Узнайте, как применять Smart Money Concepts (SMC) в трейдинге! Стратегии по структуре рынка, ликвидности, FVG и Order Blocks с примерами',
+        'Узнайте, как применять Smart Money Concept (SMC) в трейдинге! Стратегии по структуре рынка, ликвидности, FVG и Order Blocks с примерами',
     });
    
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-07' });
