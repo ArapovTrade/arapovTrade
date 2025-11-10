@@ -40,7 +40,7 @@ export class HomeRuFourtyThreeComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
 
-    this.titleService.setTitle('Пулы ликвидности в трейдинге | Arapov.trade');
+    this.titleService.setTitle('Что такое пулы ликвидности и как они работают? | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index' });
     this.meta.updateTag({
       name: 'description',

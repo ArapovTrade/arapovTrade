@@ -251,22 +251,22 @@ export class ArticlesService {
       id: 152,
     },
     {
-      titleUkr:
-        'Пули ліквідності Як великі гравці шукають ліквідність на ринку?',
+       
       linkUkr: 'liquiditypools',
       titleRus:
-        'Пулы ликвидности: Как крупные игроки ищут ликвидность на рынке?',
+        'Что такое пулы ликвидности и как они работают?',
+      titleUkr: 'Що таке пули ліквідності і як вони працюють?',
+      titleEn: 'What are Liquidity Pools and How Do They Work?',
       descrEn:
         'Learn how Smart Money finds liquidity pools, manipulates the market, and uses hidden zones. A guide from ArapovTrade.',
-      titleEn:
-        'Liquidity Pools: How Do Big Players Find Liquidity in the Market?',
+       
       descrUkr:
         'Дізнайтесь, як Smart Money знаходять пули ліквідності, маніпулюють ринком та використовують приховані зони. Посібник від ArapovTrade.',
       descrRus:
         'Узнайте, как работают пулы ликвидности! Как Smart Money ищет ликвидность и использует скрытые зоны в трейдинге на Arapov.trade.',
-      realTitleRus: 'Пулы ликвидности в трейдинге | Arapov.trade',
-      realTitleUkr: 'Пули ліквідності: як шукають Smart Money',
-      realTitleEn: 'Liquidity Pools in Trading | Arapov.trade',
+      realTitleRus: 'Что такое пулы ликвидности и как они работают? | Arapov.trade',
+      realTitleUkr: 'Що таке пули ліквідності і як вони працюють? | Arapov.trade',
+      realTitleEn: 'What are Liquidity Pools and How Do They Work? | Arapov.trade',
       imgUkr: '/assets/img/content/liquiditypools.png',
       groupsRus: ['Концепция Смарт Мани'],
       groupsUkr: ['Концепція Смарт Мані'],
