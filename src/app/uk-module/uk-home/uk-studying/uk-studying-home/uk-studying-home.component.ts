@@ -110,11 +110,12 @@ export class UkStudyingHomeComponent implements OnInit , AfterViewInit, OnDestro
 
   }
   navigateToHomeWithId() {
-    this.router.navigateByUrl('/uk').then(() => {
-      setTimeout(() => {
-        this.scrollToRegistration();
-      }, 100);
-    });
+    window.location.href = 'https://arapov.education/ua/course-ua/';
+    // this.router.navigateByUrl('/uk').then(() => {
+    //   setTimeout(() => {
+    //     this.scrollToRegistration();
+    //   }, 100);
+    // });
   }
   scrollToRegistration() {
     const element = document.getElementById('registration');

@@ -41,13 +41,13 @@ export class HomeRuBlogSixtySixComponent {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Анализ объемов: как находить ключевые уровни | Arapov.trade'
+      'Что такое объем торгов на бирже | Игорь Арапов'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Узнайте, как анализировать уровни максимального объема! Советы по поиску зон интереса, уровней поддержки и сопротивления для трейдинга с Arapov.trade',
+        'Узнайте, как анализировать объем торгов в трейдинге! Советы по поиску зон интереса, уровней поддержки и сопротивления для трейдинга с Arapov.trade',
     });
     
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-11' });

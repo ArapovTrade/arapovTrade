@@ -145,21 +145,23 @@ export class ArticlesService {
       id: 133,
     },
    
+
     {
-      titleUkr: 'Як аналізувати рівні максимального накопичення обсягів',
-      titleEn: 'How to Analyze Peak Volume Levels',
-      titleRus: 'Как анализировать уровни максимального скопления объемов',
-      descrEn:
-        'Learn how to analyze peak volume levels: areas of interest, key support and resistance levels, effective strategies for volume analysis.',
-      linkUkr: 'peakvolumelevels',
+    
+      titleRus: 'Что такое объем торгов на бирже? ',
+      titleUkr: 'Що таке обсяг торгів на біржі?',
+      titleEn: 'What is Trading Volume on the Exchange?',
+       linkUkr: 'peakvolumelevels',
+       descrRus:
+        'Узнайте, как анализировать объем торгов в трейдинге! Советы по поиску зон интереса, уровней поддержки и сопротивления для трейдинга с Arapov.trade',
       descrUkr:
-        'Дізнайтеся, як аналізувати рівні скупчення обсягів: зони інтересу, ключові підтримки й опори, ефективні стратегії з об’ємного аналізу.',
-      descrRus:
-        'Узнайте, как анализировать уровни максимального объема! Советы по поиску зон интереса, уровней поддержки и сопротивления для трейдинга с Arapov.trade',
-      realTitleRus:
-        'Анализ объемов: как находить ключевые уровни | Arapov.trade',
-      realTitleUkr: 'Рівні скупчення обсягів у трейдингу | Arapov.trade',
-      realTitleEn: 'Volume Analysis: How to Find Key Levels | Arapov.trade',
+        'Дізнайтеся, як аналізувати обсяг торгів у трейдингу! Поради щодо пошуку зон інтересу, рівнів підтримки та опору для трейдингу з Arapov.trade',
+      descrEn:
+        'Learn how to analyze trading volume in trading! Tips for finding areas of interest, support and resistance levels for trading with Arapov.trade',
+        realTitleRus:
+        'Что такое объем торгов на бирже | Игорь Арапов',
+      realTitleEn: 'What is Trading Volume on the Exchange | Arapov.trade',
+      realTitleUkr: 'Що таке обсяг торгів на біржі | Arapov.trade',
       imgUkr: '/assets/img/content/peakvolumelevels.webp',
       groupsRus: ['Объемный анализ рынка'],
       groupsUkr: ['Об`ємний аналіз ринку'],

@@ -101,16 +101,17 @@ export class RuStudyingHomeComponent implements OnInit , AfterViewInit, OnDestro
     });
   }
   navigateToHomeWithId() {
-    this.router
-      .navigateByUrl('/ru')
-      .then(() => {
-        setTimeout(() => {
-          this.scrollToRegistration();
-        }, 100);
-      })
-      .catch((err) => {
-        console.error('Navigation error:', err);
-      });
+     window.location.href = 'https://arapov.education/course/';
+    // this.router
+    //   .navigateByUrl('/ru')
+    //   .then(() => {
+    //     setTimeout(() => {
+    //       this.scrollToRegistration();
+    //     }, 100);
+    //   })
+    //   .catch((err) => {
+    //     console.error('Navigation error:', err);
+    //   });
   }
   scrollToRegistration() {
     const element = document.getElementById('registrationRu');
