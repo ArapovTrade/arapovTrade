@@ -40,13 +40,13 @@ export class HomeRuFourtyFourComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Iceberg (скрытые) ордера в трейдинге | Arapov.trade'
+      'Что такое айсберг ордер (Iceberg Order)? | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Узнайте, что такое скрытые ордера (Iceberg Orders)! Как банки маскируют позиции и как использовать их в трейдинге на Arapov.trade.',
+        'Узнайте, что такое айсберг ордер (скрытые ордера)! Как банки маскируют позиции и как использовать их в трейдинге на Arapov.trade.',
     });
 
     this.meta.updateTag({ name: 'datePublished', content: '2025-03-30' });

@@ -274,22 +274,21 @@ export class ArticlesService {
       id: 104,
     },
     {
-      titleUkr:
-        'Приховані ордери (Iceberg Orders): Як банки маскують свої позиції?',
+       
       linkUkr: 'icebergorders',
       descrEn:
         'Learn about Iceberg Orders: how banks hide their positions and how to use them in trading. A guide from ArapovTrade.',
       titleRus:
-        'Скрытые ордера (Iceberg Orders): Как банки маскируют свои позиции?',
-      titleEn: 'Iceberg Orders: How Do Banks Hide Their Positions?',
+        'Что такое айсберг ордер (Iceberg Order)?',
+      titleUkr: 'Що таке приховані ордери (Iceberg Orders)?',
+      titleEn: 'What are Iceberg Orders?',
       descrUkr:
-        'Дізнайтесь, що таке приховані ордери (Iceberg Orders), як банки маскують позиції та як використовувати їх у торгівлі. Посібник від ArapovTrade.',
+        'Дізнайтесь, що таке приховані ордери (Iceberg Order), як банки маскують позиції та як використовувати їх у торгівлі. Посібник від ArapovTrade.',
       descrRus:
-        'Узнайте, что такое скрытые ордера (Iceberg Orders)! Как банки маскируют позиции и как использовать их в трейдинге на Arapov.trade.',
-      realTitleRus: 'Iceberg (скрытые) ордера в трейдинге | Arapov.trade',
-      realTitleUkr: 'Приховані ордери: як банки ховають позиції',
-      realTitleEn:
-        'Iceberg Orders in Trading: How Banks Hide Positions | Arapov.trade',
+        'Узнайте, что такое айсберг ордер (скрытые ордера)! Как банки маскируют позиции и как использовать их в трейдинге на Arapov.trade.',
+      realTitleRus: 'Что такое айсберг ордер (Iceberg Order)? | Arapov.trade',
+      realTitleEn: 'What are Iceberg Orders ? | Arapov.trade',
+      realTitleUkr: 'Що таке айсберг ордер (Iceberg Order)? | Arapov.trade',
       imgUkr: '/assets/img/content/icebergorders.webp',
       groupsRus: ['Концепция Смарт Мани'],
       groupsUkr: ['Концепція Смарт Мані'],
