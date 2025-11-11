@@ -1427,18 +1427,19 @@ export class ArticlesService {
       id: 52,
     },
     {
-      titleUkr: 'Ордер Блок у Трейдінгу',
-      titleRus: 'Ордер Блок в Трейдинге',
-      titleEn: 'Order Block in Trading',
+       
+      titleRus: 'Что такое ордер блок?',
+      titleUkr: 'Що таке ордер блок?',
+      titleEn: 'What is an Order Block?', 
       descrEn:
         'Learn about order blocks in trading: how to identify and use them in trading strategies from ArapovTrade.',
       descrUkr:
         'Дізнайтесь, що таке ордер блок у трейдингу, як його визначити та використовувати в торгових стратегіях від ArapovTrade.',
       descrRus:
-        'Ордер блок в трейдинге: как определять и торговать? Руководство от ArapovTrade по анализу и стратегиям.',
-      realTitleRus: 'Ордер блок в трейдинге: руководство | ArapovTrade',
-      realTitleUkr: 'Ордер блок у трейдингу: як використовувати',
-      realTitleEn: 'Order Block in Trading: How to Use It',
+        'Узнайте, что такое ордерный блок (Order Block), изучите его типы и научитесь эффективно торговать. Полное руководство для трейдеров',
+      realTitleRus: 'Что такое ордер блок (Order Block) в трейдинге | ArapovTrade',
+      realTitleEn: 'What is an Order Block in Trading | ArapovTrade',
+      realTitleUkr: 'Що таке ордер блок у трейдингу (Order Block) | ArapovTrade',
       linkUkr: 'orderblockintrading',
       imgUkr: '/assets/img/content/orderblockintrading.webp',
       groupsRus: ['Концепция Смарт Мани'],
