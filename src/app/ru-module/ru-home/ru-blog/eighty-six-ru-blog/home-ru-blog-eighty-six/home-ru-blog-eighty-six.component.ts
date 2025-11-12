@@ -40,13 +40,13 @@ export class HomeRuBlogEightySixComponent {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Паттерн 1-2-3: разворот тренда | ArapovTrade'
+      'Паттерн 123 в трейдинге | ArapovTrade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Паттерн 1-2-3: как торговать разворот тренда? Руководство от ArapovTrade по анализу, стратегиям и успеху на крипто- и фондовых рынках.',
+        'Паттерн 123 стратегия как использовать разворот тренда? Руководство от ArapovTrade по анализу, стратегиям и успеху на крипто- и фондовых рынках.',
     });
     
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-23' });

@@ -2857,19 +2857,21 @@ export class ArticlesService {
       id: 156,
     },
     {
-      titleUkr: 'Патерн 1-2-3',
+       
       linkUkr: 'pattern-1-2-3',
-      titleRus: 'Паттерн 1-2-3',
-      titleEn: '1-2-3 Pattern',
+      titleRus: 'Паттерн 123 в трейдинге', 	
+       titleEn: '123 Pattern in Trading',
+      titleUkr: 'Патерн 123 у трейдингу',
+       
       descrUkr:
-        'Дізнайтесь про патерн 1-2-3: як визначити розворот тренду та використовувати в трейдингу на ринках. Посібник від ArapovTrade.',
+        'Дізнайтесь про патерн 123: як визначити розворот тренду та використовувати в трейдингу на ринках. Посібник від ArapovTrade.',
       descrRus:
-        'Паттерн 1-2-3: как торговать разворот тренда? Руководство от ArapovTrade по анализу, стратегиям и успеху на крипто- и фондовых рынках.',
-      realTitleRus: 'Паттерн 1-2-3: разворот тренда | ArapovTrade',
-      realTitleEn: '1-2-3 Pattern: Trend Reversal | ArapovTrade',
-      realTitleUkr: 'Патерн 1-2-3: розворот тренду | Arapov.trade',
+        'Паттерн 123 стратегия как использовать разворот тренда? Руководство от ArapovTrade по анализу, стратегиям и успеху на крипто- и фондовых рынках.',
+      realTitleRus: 'Паттерн 123 в трейдинге | ArapovTrade',
+      realTitleEn: '123 Pattern: Trend Reversal | ArapovTrade',
+      realTitleUkr: 'Патерн 123: розворот тренду | Arapov.trade',
       descrEn:
-        'Learn about the 1-2-3 pattern: how to identify trend reversals and trade effectively in the markets with a guide from ArapovTrade.',
+        'Learn about the 123 pattern: how to identify trend reversals and trade effectively in the markets with a guide from ArapovTrade.',
       imgUkr: '/assets/img/content/pattern-1-2-3.png',
       groupsRus: ['Технический анализ'],
       groupsUkr: ['Технічний аналіз'],
