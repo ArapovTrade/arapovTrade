@@ -2665,9 +2665,10 @@ export class ArticlesService {
       id: 147,
     },
     {
-      titleUkr: 'Як емоції впливають на угоди?',
+      
       linkUkr: 'emotionsaffect',
       titleRus: 'Психология трейдинга: Как эмоции влияют на сделки?',
+      titleUkr: 'Психологія трейдингу: Як емоції впливають на угоди?',
       titleEn: 'Trading Psychology: How Emotions Affect Trades',
       descrEn:
         'Learn how emotions impact trading, why fear and greed hinder success, and techniques to control emotions from ArapovTrade.',
@@ -2676,7 +2677,7 @@ export class ArticlesService {
       descrRus:
         'Как эмоции влияют на трейдинг? Узнайте, как страх и жадность мешают торговать и какие техники помогут контролировать эмоции для успешных сделок',
       realTitleRus:
-        'Психология трейдинга: влияние эмоций на сделки | Arapov.trade',
+        'Психология трейдинга: контроль эмоций | Arapov.trade',
       realTitleUkr: 'Психологія трейдингу: контроль емоцій | Arapov.trade',
       realTitleEn: 'Trading Psychology: Emotion Control | Arapov.trade',
       imgUkr: '/assets/img/content/emotionsaffect44.webp',

@@ -40,7 +40,7 @@ export class HomeRuBlogSeventySevenComponent {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Психология трейдинга: влияние эмоций на сделки | Arapov.trade'
+      'Психология трейдинга: контроль эмоций | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
