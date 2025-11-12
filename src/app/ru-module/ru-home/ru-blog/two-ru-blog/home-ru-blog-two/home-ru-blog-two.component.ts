@@ -41,13 +41,13 @@ export class HomeRuBlogTwoComponent implements OnInit {
     this.checkedGroup = this.artickleServ.selectedGroups;
 
     this.titleService.setTitle(
-      'Дивергенция на индикаторах в трейдинге | Arapov.trade'
+      'Что такое дивергенция в трейдинге? | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Узнайте, что такое дивергенция на индикаторах! Как её распознавать и использовать в стратегиях трейдинга на Arapov.trade.',
+        'Узнайте, что такое дивергенция и как она помогает предсказывать движение рынка на Arapov.trade.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-13' });
     this.meta.updateTag({

@@ -426,24 +426,26 @@ export class ArticlesService {
       id: 1,
     },
     {
-      titleUkr: 'Дивергенція на індикаторах',
-      titleRus: 'Дивергенция на индикаторах',
-      titleEn: 'Divergence on Indicators',
-      descrEn:
-        'Learn about divergence on indicators: what it is, how to recognize it, popular strategies, and tools for analysis from Arapov.trade.',
-      linkUkr: 'divergenceonindecators',
+      
+      titleRus: 'Что такое дивергенция в трейдинге?', 
+      titleUkr: 'Що таке дивергенція у трейдингу?',
+      titleEn: 'What is Divergence in Trading?',
+       linkUkr: 'divergenceonindecators',
       imgUkr: '/assets/img/content/divergenceonindecators.webp',
       groupsRus: ['Технический анализ'],
       groupsUkr: ['Технічний аналіз'],
       groupsEng: ['Technical Analysis'],
       id: 2,
-      descrUkr:
-        'Дізнайтеся про дивергенцію на індикаторах: що це, як розпізнавати, популярні стратегії та інструменти для аналізу від Arapov.trade.',
+      
       descrRus:
-        'Узнайте, что такое дивергенция на индикаторах! Как её распознавать и использовать в стратегиях трейдинга на Arapov.trade.',
-      realTitleRus: 'Дивергенция на индикаторах в трейдинге | Arapov.trade',
-      realTitleUkr: 'Дивергенція на індикаторах | Arapov.trade',
-      realTitleEn: 'Divergence on Indicators in Trading | Arapov.trade',
+        'Узнайте, что такое дивергенция и как она помогает предсказывать движение рынка на Arapov.trade.',
+      descrUkr:
+        'Дізнайтеся, що таке дивергенція та як вона допомагає передбачати рух ринку на Arapov.trade.',
+        descrEn:
+        'Learn about divergence and how it helps predict market movement on Arapov.trade.',
+      realTitleRus: 'Что такое дивергенция в трейдинге? | Arapov.trade',
+      realTitleEn: 'What is Divergence in Trading? | Arapov.trade',
+      realTitleUkr: 'Що таке дивергенція у трейдингу? | Arapov.trade',
     },
     {
        
