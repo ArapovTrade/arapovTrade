@@ -2815,17 +2815,18 @@ export class ArticlesService {
     },
 
     {
-      titleUkr: 'Фігура "Поглинання" : Як ловити розворот?',
+       
       linkUkr: 'engulfing',
-      titleRus: 'Фигура "Поглощение" : Как ловить разворот?',
-      titleEn: 'Engulfing Pattern : How to Trade Reversals?',
-      descrEn:
-        'Learn about the Engulfing pattern (Bullish & Bearish): how to identify trend reversals and trade effectively with a guide from ArapovTrade.',
-      descrUkr:
-        'Дізнайтеся, як розпізнати фігуру Поглинання (Bullish & Bearish Engulfing) для точного входу при розвороті тренду. Поради від Arapov.trade.',
+      titleRus: 'Паттерн поглощение. Как определить разворот тренда?',
+      titleUkr: 'Фігура Поглинання: Як спіймати розворот тренду',
+      titleEn: 'Engulfing Pattern: How to Catch Trend Reversals',
       descrRus:
-        'Поглощение (Bullish & Bearish): как ловить разворот? Руководство от ArapovTrade по паттерну и стратегиям',
-      realTitleRus: 'Поглощение: Bullish и Bearish | ArapovTrade',
+        'Как определить разворот тренда с помощью паттерна поглощение. Bullish и Bearish Engulfing — как ловить тренд на графике.',
+      descrUkr:
+        'Як визначити розворот тренду за допомогою фігури Поглинання. Bullish та Bearish Engulfing — як ловити тренд на графіку.',
+      descrEn:
+        'Learn how to identify trend reversals using the Engulfing pattern. Bullish and Bearish Engulfing – how to catch trends on the chart.',
+        realTitleRus: 'Паттерн поглощение. Как определить разворот тренда? | ArapovTrade',
       realTitleEn: 'Engulfing: Bullish and Bearish | ArapovTrade',
       realTitleUkr: 'Фігура Поглинання: Як спіймати розворот тренду',
       imgUkr: '/assets/img/content/engulfing.webp',

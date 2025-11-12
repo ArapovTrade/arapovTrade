@@ -40,13 +40,13 @@ export class HomeRuBlogEightyFourComponent {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Поглощение: Bullish и Bearish | ArapovTrade'
+      'Паттерн поглощение. Как определить разворот тренда? | ArapovTrade',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Поглощение (Bullish & Bearish): как ловить разворот? Руководство от ArapovTrade по паттерну и стратегиям',
+        'Как определить разворот тренда с помощью паттерна поглощение. Bullish и Bearish Engulfing — как ловить тренд на графике.',
     });
     
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-22' });
