@@ -39,12 +39,12 @@ export class HomeRuBlogFiveteenComponent implements OnInit {
     this.grr = this.artickleServ.selectedGroups;
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
-    this.titleService.setTitle('Торговля фьючерсами: правда и риски | ArapovTrade');
+    this.titleService.setTitle('Что такое фьючерсы? | ArapovTrade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Правда о торговле фьючерсами: риски и стратегии. Руководство от ArapovTrade для трейдеров по анализу и торговле.',
+        'Торговля фьючерсами. Узнайте, как выбрать брокера для торговли фьючерсами. Изучите что такое фьючерсная торговля с Игорем Араповым.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-10' });
     this.meta.updateTag({

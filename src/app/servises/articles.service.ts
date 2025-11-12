@@ -671,20 +671,21 @@ export class ArticlesService {
     },
     
     {
-      titleUkr: "Правда про торгівлю ф'ючерсами",
+       
       linkUkr: 'futurestrading',
-      titleRus: 'Правда о торговле фьючерсами',
-      titleEn: 'The Truth About Futures Trading',
-      descrEn:
-        'Learn the truth about futures trading: key advantages, risks, and strategies. Find out how the futures market works and what traders need to know.',
-      descrUkr:
-        'Правда про торгівлю ф’ючерсами: основні переваги, ризики та стратегії. Дізнайтеся, як працює ф’ючерсний ринок і що варто знати трейдерам.',
+      titleRus: 'Что такое фьючерсы?',
+      titleUkr: 'Що таке ф’ючерси?',
+      titleEn: 'What are Futures?',
       descrRus:
-        'Правда о торговле фьючерсами: риски и стратегии. Руководство от ArapovTrade для трейдеров по анализу и торговле.',
-      realTitleRus: 'Торговля фьючерсами: правда и риски | ArapovTrade',
-      realTitleUkr: 'Торгівля ф’ючерсами: правда, ризики і можливості',
+        'Торговля фьючерсами. Узнайте, как выбрать брокера для торговли фьючерсами. Изучите что такое фьючерсная торговля с Игорем Араповым.',
+      descrUkr:
+        'Торгівля ф’ючерсами. Дізнайтеся, як обрати брокера для торгівлі ф’ючерсами. Вивчіть що таке ф’ючерсна торгівля з Ігорем Араповим.',
+      descrEn:
+        'Futures Trading. Learn how to choose a broker for futures trading. Explore what futures trading is with Igor Arapov.',
+        realTitleRus: 'Что такое фьючерсы?| ArapovTrade',
+      realTitleUkr: 'Що таке ф’ючерси? | ArapovTrade',
       imgUkr: '/assets/img/content/futurestrading.webp',
-      realTitleEn: 'Futures Trading: Truth and Risks | ArapovTrade',
+      realTitleEn: 'What are Futures? | ArapovTrade',
       groupsRus: ['Словарь трейдера'],
       groupsUkr: ['Словник трейдера'],
       groupsEng: ['Trader`s Dictionary'],
