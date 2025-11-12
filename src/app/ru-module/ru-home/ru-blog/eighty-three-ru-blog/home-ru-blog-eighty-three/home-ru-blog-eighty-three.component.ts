@@ -42,7 +42,7 @@ export class HomeRuBlogEightyThreeComponent {
     this.checkedGroup = this.artickleServ.selectedGroups;
 
     this.titleService.setTitle(
-      'Чашка с ручкой: пробой тренда | ArapovTrade'
+      'Паттерн чашка с ручкой в трейдинге | ArapovTrade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({

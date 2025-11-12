@@ -2794,17 +2794,19 @@ export class ArticlesService {
       id: 153,
     },
     {
-      titleUkr: 'Фігура "Чашка з ручкою": Як торгувати сильні пробої?',
+       
+
       linkUkr: 'cupandhandle',
-      titleRus: 'Фигура "Чашка с ручкой": Как торговать сильные пробои?',
-      titleEn: 'Cup and Handle Pattern: How to Trade Strong Breakouts?',
+      titleRus: 'Паттерн чашка с ручкой в трейдинге',
+        titleEn: 'Cup and Handle Pattern in Trading',
+      titleUkr: 'Патерн Чашка з ручкою у трейдингу',
       descrUkr:
         'Дізнайтесь про патерн Чашка з ручкою: як визначити пробій тренду та використовувати в трейдингу. Посібник від ArapovTrade.',
       descrRus:
         'Чашка с ручкой: как торговать пробой тренда? Руководство от ArapovTrade по паттерну, стратегиям и успеху на крипто- и фондовых рынках.',
-      realTitleRus: 'Чашка с ручкой: пробой тренда | ArapovTrade',
-      realTitleEn: 'Cup and Handle: Trend Breakout | ArapovTrade',
-      realTitleUkr: 'Чашка з ручкою: торгуємо пробої',
+      realTitleRus: 'Паттерн чашка с ручкой в трейдинге | ArapovTrade',
+      realTitleEn: 'Cup and Handle Pattern in Trading | ArapovTrade',
+      realTitleUkr: 'Патерн Чашка з ручкою у трейдингу | Arapov.trade',
       imgUkr: '/assets/img/content/cupandhandle.png',
       groupsRus: ['Технический анализ'],
       descrEn:
