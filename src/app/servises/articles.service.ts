@@ -531,18 +531,20 @@ export class ArticlesService {
       id: 6,
     },
     {
-      titleUkr: 'Як заробляють у трейдингу?',
-      titleRus: 'Как зарабатывают в трейдинге?',
+       
+      titleRus: 'Как заработать на трейдинге?',
+      titleUkr: 'Як заробляти в трейдингу?',
       titleEn: 'How to Make Money in Trading?',
-      descrEn:
-        'Learn how to make money in trading: tools, strategies, Forex, and the use of leverage from ArapovTrade.',
-      descrUkr:
-        'Дізнайтесь, як заробляти в трейдингу: інструменти, стратегії, Форекс і використання кредитного плеча від ArapovTrade.',
+       
       descrRus:
-        'Как зарабатывать в трейдинге? Советы от ArapovTrade по Форекс, стратегиям и торговому плечу для новичков.',
-      realTitleRus: 'Как зарабатывать в трейдинге? | ArapovTrade',
-      realTitleEn: 'How to Make Money in Trading? | ArapovTrade',
-      realTitleUkr: 'Як заробляти в трейдингу: стратегії',
+        'Как заработать на трейдинге? Узнайте стратегии как заработать в интернете на трейдинге с нуля на ArapovTrade.',
+      descrUkr:
+        'Як заробляти в трейдингу? Дізнайтеся стратегії заробітку в інтернеті на трейдингу з нуля на Arapov.trade.',
+        descrEn:
+        'How to make money in trading? Learn strategies to earn online from scratch on Arapov.trade.',
+      realTitleRus: 'Как заработать на трейдинге? | ArapovTrade',
+      realTitleUkr: 'Як заробляти в трейдингу? | Arapov.trade',
+      realTitleEn: 'How to Make Money in Trading? | Arapov.trade',
       linkUkr: 'makingmoneyintrading',
       imgUkr: '/assets/img/content/makingmoneyintrading.webp',
       groupsRus: ['Трейдинг для начинающих'],

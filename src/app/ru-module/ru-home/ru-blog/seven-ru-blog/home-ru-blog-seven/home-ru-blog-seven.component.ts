@@ -39,12 +39,12 @@ export class HomeRuBlogSevenComponent implements OnInit {
     this.grr = this.artickleServ.selectedGroups;
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
-    this.titleService.setTitle('Как зарабатывать в трейдинге? | ArapovTrade');
+    this.titleService.setTitle('Как заработать на трейдинге? | ArapovTrade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Как зарабатывать в трейдинге? Советы от ArapovTrade по Форекс, стратегиям и торговому плечу для новичков.',
+        'Как заработать на трейдинге? Узнайте стратегии как заработать в интернете на трейдинге с нуля на ArapovTrade.',
     });
     this.gerRandom();
   }
