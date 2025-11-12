@@ -1831,22 +1831,22 @@ export class ArticlesService {
       id: 72,
     },
     {
-      titleUkr: 'Що таке халвінг та як він впливає на ринок криптовалют?',
+       
       linkUkr: 'halving',
-      titleRus: 'Что такое халвинг и как он влияет на рынок криптовалют?',
-      titleEn:
-        'What is Halving and How Does It Affect the Cryptocurrency Market?',
-      descrEn:
-        'Learn what Bitcoin halving is, how it works, and its impact on price and the crypto market. A guide for traders from ArapovTrade.',
+      titleRus: 'Что такое халвинг биткоина?',
+      titleUkr: 'Що таке халвінг біткоїна?',
+      titleEn: 'What is Bitcoin Halving?',
+       descrRus:
+        'Узнайте, что такое халвинг биткоина,	когда был халвинг биткоина и почему это событие важно для майнеров и инвесторов на Arapov.trade.',
       descrUkr:
-        'Дізнайтесь, що таке халвінг Bitcoin, як він працює та впливає на ціну і ринок криптовалют. Посібник для трейдерів від ArapovTrade.',
-      descrRus:
-        'Что такое халвинг в криптовалюте? Как работает этот механизм и влияет ли он на цену Bitcoin? Простое объяснение и прогнозы на Arapov.trade.',
-      realTitleRus:
-        'Что такое халвинг и его влияние на крипторынок | Arapov.trade',
-      realTitleEn:
-        'What is Halving and Its Impact on Crypto Market | Arapov.trade',
-      realTitleUkr: 'Халвінг: вплив на ринок криптовалют | Arapov.trade',
+        'Дізнайтесь, що таке халвінг біткоїна, коли відбувався халвінг та чому це важливо для майнерів і інвесторів від ArapovTrade.',
+      descrEn:
+        'Learn about Bitcoin halving: what it is, when it occurs, and its significance for miners and investors. A guide from ArapovTrade.',
+        realTitleRus:
+        'Что такое халвинг биткоина? | Arapov.trade',
+        realTitleUkr:'Що таке халвінг біткоїна? | Arapov.trade',
+      realTitleEn: 'What is Bitcoin Halving? | Arapov.trade',
+       
       imgUkr: '/assets/img/content/halving.webp',
       groupsRus: ['Криптовалюта'],
       groupsUkr: ['Криптовалюта'],

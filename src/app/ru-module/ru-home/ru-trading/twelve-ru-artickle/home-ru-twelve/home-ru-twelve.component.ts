@@ -41,7 +41,7 @@ export class HomeRuTwelveComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Что такое халвинг и его влияние на крипторынок | Arapov.trade'
+      'Что такое халвинг биткоина? | Arapov.trade'
     );
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
@@ -49,10 +49,10 @@ export class HomeRuTwelveComponent implements OnInit {
     this.meta.updateTag({
       name: 'description',
       content:
-        'Что такое халвинг в криптовалюте? Как работает этот механизм и влияет ли он на цену Bitcoin? Простое объяснение и прогнозы на Arapov.trade.',
+        'Узнайте, что такое халвинг биткоина,	когда был халвинг биткоина и почему это событие важно для майнеров и инвесторов на Arapov.trade.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-10-30' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/halving.webp',
