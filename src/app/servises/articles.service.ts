@@ -2729,21 +2729,22 @@ export class ArticlesService {
       id: 150,
     },
     {
-      titleUkr: 'Фігура "Голова і плечі"',
+       
       linkUkr: 'headandshoulders',
-      titleRus: 'Фигура "Голова и плечи"',
-      titleEn: 'Head and Shoulders Pattern',
-      descrUkr:
-        'Дізнайтесь про патерн Голова і плечі: як визначити розворот тренду та торгувати ефективно. Посібник від ArapovTrade.',
+      titleRus: 'Голова и плечи паттерн', 	
+        titleEn: 'Head and Shoulders Pattern',
+      titleUkr: 'Голова і плечі патерн',
+       
       descrRus:
-        'Голова и плечи: как торговать разворотный паттерн? Руководство от ArapovTrade по анализу и стратегиям',
-      realTitleRus: 'Голова и плечи — мощный паттерн разворота | ArapovTrade',
-      realTitleEn:
-        'Head and Shoulders — Powerful Reversal Pattern | ArapovTrade',
-      realTitleUkr: 'Голова і плечі: патерн розвороту | ArapovTrade',
-      imgUkr: '/assets/img/content/headandshoulders.webp',
+        'Фигура голова и плечи: как торговать разворотный паттерн? Руководство от ArapovTrade по анализу и стратегиям',
+      descrUkr:
+        'Фігура голова і плечі: як торгувати розворотний патерн? Посібник від ArapovTrade з аналізу та стратегій.',
       descrEn:
-        'Learn about the Head and Shoulders pattern: how to identify trend reversals and trade effectively with a guide from ArapovTrade.',
+        'Head and Shoulders pattern: how to trade the reversal pattern? A guide from ArapovTrade on analysis and strategies.',
+      realTitleRus: 'Голова и плечи паттерн : как торговать | ArapovTrade',
+      realTitleEn: 'Head and Shoulders Pattern: How to Trade | ArapovTrade',
+      realTitleUkr: 'Голова і плечі патерн: як торгувати | Arapov.trade',
+      imgUkr: '/assets/img/content/headandshoulders.webp',
       groupsRus: ['Технический анализ'],
       groupsUkr: ['Технічний аналіз'],
       groupsEng: ['Technical Analysis'],

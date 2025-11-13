@@ -40,12 +40,12 @@ export class HomeRuBlogEightyComponent {
     this.grr = this.artickleServ.selectedGroups;
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
-    this.titleService.setTitle('Голова и плечи — мощный паттерн разворота | ArapovTrade');
+    this.titleService.setTitle('Голова и плечи паттерн : как торговать | ArapovTrade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Голова и плечи: как торговать разворотный паттерн? Руководство от ArapovTrade по анализу и стратегиям',
+        'Фигура голова и плечи: как торговать разворотный паттерн? Руководство от ArapovTrade по анализу и стратегиям',
     });
     
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-20' });
