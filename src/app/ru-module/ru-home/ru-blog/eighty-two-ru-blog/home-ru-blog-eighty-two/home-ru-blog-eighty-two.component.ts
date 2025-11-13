@@ -41,14 +41,15 @@ export class HomeRuBlogEightyTwoComponent {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
 
-    this.titleService.setTitle(
-      'Флаг и вымпел: пробой тренда | ArapovTrade'
+    this.titleService.setTitle( 	
+
+      'Паттерн вымпел и  флаг в трейдинге | ArapovTrade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Флаг и вымпел: как торговать пробой тренда? Руководство от ArapovTrade по паттернам, стратегиям и анализу для успешной торговли.',
+        'Паттерн вымпел и  флаг в трейдинге. Изучите фигуры технического анализа, паттерны и стратегии  для успешной торговли.',
     });
      
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-21' });

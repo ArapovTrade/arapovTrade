@@ -2774,17 +2774,18 @@ export class ArticlesService {
     },
     
     {
-      titleUkr: 'Прапор та вимпел: Як правильно торгувати після імпульсу?',
+       
       linkUkr: 'flagandpennant',
-      titleRus: 'Флаг и вымпел: Как правильно торговать после импульса?',
-      titleEn: 'Flag and Pennant: How to Trade After an Impulse Move?',
+      titleRus: 'Паттерн вымпел и  флаг в трейдинге',
+       titleEn: 'Flag and Pennant Pattern in Trading',
+      titleUkr: 'Прапор і Вимпел у трейдингу',
       descrUkr:
         'Дізнайтесь про патерни Прапор і Вимпел: як визначити пробій тренду та використовувати в трейдингу. Посібник від ArapovTrade.',
       descrRus:
-        'Флаг и вымпел: как торговать пробой тренда? Руководство от ArapovTrade по паттернам, стратегиям и анализу для успешной торговли.',
-      realTitleRus: 'Флаг и вымпел: пробой тренда | ArapovTrade',
+        'Паттерн вымпел и  флаг в трейдинге. Изучите фигуры технического анализа, паттерны и стратегии  для успешной торговли.',
+      realTitleRus: 'Паттерн вымпел и  флаг в трейдинге | ArapovTrade',
       realTitleEn: 'Flag and Pennant: Trend Breakout | ArapovTrade',
-      realTitleUkr: 'Прапор і Вимпел: торгуємо пробій',
+      realTitleUkr: 'Прапор і Вимпел у трейдингу | Arapov.trade',
       imgUkr: '/assets/img/content/flagandpennant.webp',
       groupsRus: ['Технический анализ'],
       descrEn:
