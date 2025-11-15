@@ -2689,19 +2689,22 @@ export class ArticlesService {
       id: 148,
     },
     {
-      titleUkr: 'Як уникнути "FOMO" - страху втраченого прибутку?',
+       
       linkUkr: 'fomo',
-      titleRus: 'Как избежать "FOMO" – страха упущенной прибыли?',
+      titleRus: 'Что такое фомо в трейдинге?',
+      titleUkr: 'Що таке фомо в трейдингу?',
+      titleEn: 'What is FOMO in Trading?',
       descrEn:
         'Learn what FOMO is in trading, how to avoid fear of missing out, and trade mindfully with tips from ArapovTrade.',
-      titleEn: 'How to Avoid FOMO – Fear of Missing Out?',
-      descrUkr:
-        'Дізнайтесь, що таке FOMO в трейдингу, як уникнути страху втраченої вигоди та торгувати усвідомлено. Поради від ArapovTrade.',
+      
       descrRus:
-        'FOMO в трейдинге: как избежать потерь? Советы от ArapovTrade по осознанной торговле и управлению эмоциями.',
-      realTitleRus: 'Как избежать FOMO в трейдинге? | ArapovTrade',
-      realTitleEn: 'How to Avoid FOMO in Trading? | ArapovTrade',
-      realTitleUkr: 'FOMO в трейдингу: як уникнути страху',
+        'Что такое FOMO в трейдинге и как избежать потерь? Советы от ArapovTrade по осознанной торговле и управлению эмоциями.',
+      descrUkr:
+        'Що таке FOMO в трейдингу і як уникнути втрат? Поради від ArapovTrade щодо усвідомленої торгівлі та управління емоціями.',
+      realTitleRus: 'Что такое фомо в трейдинге? | ArapovTrade',
+      realTitleUkr: 'Що таке фомо в трейдингу? | ArapovTrade',
+      realTitleEn: 'What is FOMO in Trading? | ArapovTrade',
+     
       imgUkr: '/assets/img/content/fomo.webp',
       groupsRus: ['Психология трейдинга'],
       groupsUkr: ['Психологія трейдингу'],

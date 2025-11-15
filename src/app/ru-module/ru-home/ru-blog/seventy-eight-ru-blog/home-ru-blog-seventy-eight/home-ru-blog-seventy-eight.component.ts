@@ -41,13 +41,13 @@ export class HomeRuBlogSeventyEightComponent {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Как избежать FOMO в трейдинге? | ArapovTrade'
+      'Что такое фомо в трейдинге? | ArapovTrade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'FOMO в трейдинге: как избежать потерь? Советы от ArapovTrade по осознанной торговле и управлению эмоциями.',
+        'Что такое FOMO в трейдинге и как избежать потерь? Советы от ArapovTrade по осознанной торговле и управлению эмоциями.',
     });
     
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-18' });
