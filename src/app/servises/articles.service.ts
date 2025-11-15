@@ -2396,9 +2396,9 @@ export class ArticlesService {
       id: 98,
     },
     {
-      titleUkr: 'Специфіка управління капіталом у трейдингу',
+      titleUkr: 'Управління капіталом у трейдингу',
       linkUkr: 'capitalmanagement',
-      titleRus: 'Специфика управления капиталом в трейдинге',
+      titleRus: 'Управление капиталом в трейдинге',
       descrEn:
         'Learn about capital management in trading: risk management, money management, and strategies to protect your deposit from ArapovTrade.',
       titleEn: 'Capital Management in Trading',
