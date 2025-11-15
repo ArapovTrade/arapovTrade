@@ -42,13 +42,13 @@ export class HomeRuBlogSeventyNineComponent {
     this.checkedGroup = this.artickleServ.selectedGroups;
 
     this.titleService.setTitle(
-      'Усреднение: психология потерь новичков | ArapovTrade'
+      'Усреднение в трейдинге | ArapovTrade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Психологические ловушки усреднения в трейдинге: почему трейдеры увеличивают убыточные позиции и как альтернативные стратегии помогут сохранить депозит.',
+        'Узнайте что такое усреднение в трейдинге и что такое усреднение в инвестициях! Почему новички теряют депозиты от ArapovTrade.',
     });
      
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-10' });

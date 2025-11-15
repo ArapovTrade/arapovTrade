@@ -2709,19 +2709,21 @@ export class ArticlesService {
       id: 149,
     },
     {
-      titleUkr: 'Психологія усереднення: втрата депозиту',
+      
       descrEn:
         'Learn about the psychology of averaging, why beginners lose deposits, and how to avoid losses in trading from ArapovTrade.',
       linkUkr: 'psychologyofaveraging',
-      titleRus: 'Психология "усреднения": Почему новички теряют депозиты?',
-      titleEn: 'Psychology of Averaging: Why Do Beginners Lose Deposits?',
-      descrUkr:
-        'Дізнайтесь про психологічні пастки усереднення, чому новачки втрачають депозити та як уникнути збитків у трейдингу від ArapovTrade.',
+      titleRus: 'Усреднение в трейдинге',	
+      titleEn: 'Averaging in Trading',
+      titleUkr: 'Усереднення в трейдингу',
+      
       descrRus:
-        'Бесплатное обучение трейдингу от Игоря Арапова: пошаговый курс с нуля, разбор стратегий, управление рисками и практические занятия.',
-      realTitleRus: 'Усреднение: психология потерь новичков | ArapovTrade',
-      realTitleEn: 'Averaging: Psychology of Beginner Losses | ArapovTrade',
-      realTitleUkr: 'Психологія усереднення: втрата депозиту | ArapovTrade',
+        'Узнайте что такое усреднение в трейдинге и что такое усреднение в инвестициях! Почему новички теряют депозиты от ArapovTrade.',
+      descrUkr:
+        'Дізнайтесь, що таке усереднення в трейдингу та інвестиціях! Чому новачки втрачають депозити від ArapovTrade.',
+        realTitleRus: 'Усреднение в трейдинге | ArapovTrade',
+      realTitleEn: 'Averaging in Trading | ArapovTrade',
+      realTitleUkr: 'Усереднення в трейдингу | ArapovTrade',
       imgUkr: '/assets/img/content/psychologyofaveraging44.webp',
       groupsRus: ['Психология трейдинга'],
       groupsUkr: ['Психологія трейдингу'],
