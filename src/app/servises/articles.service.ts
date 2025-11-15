@@ -2565,7 +2565,7 @@ export class ArticlesService {
     {
       titleUkr: 'Що таке економічний календар',
       linkUkr: 'economiccalendar',
-      titleRus: 'Что такое экономический календарь',
+      titleRus: 'Что такое экономический календарь?',
       descrEn:
         'Learn what an economic calendar is, how it helps predict market movements, and trade news on stocks and indices from ArapovTrade.',
       titleEn: 'What is an Economic Calendar',
@@ -2574,7 +2574,7 @@ export class ArticlesService {
       descrRus:
         'Узнайте, как экономический календарь помогает в трейдинге! Гид по событиям, влияющим на акции, индексы и стратегии торговли на новостях',
       realTitleRus:
-        'Экономический календарь в трейдинге: как использовать | Arapov.trade',
+        'Что такое экономический календарь? | Arapov.trade',
       realTitleEn: 'Economic Calendar in Trading: How to Use | Arapov.trade',
       realTitleUkr: 'Економічний календар: як використовувати',
       imgUkr: '/assets/img/content/economiccalendar.png',

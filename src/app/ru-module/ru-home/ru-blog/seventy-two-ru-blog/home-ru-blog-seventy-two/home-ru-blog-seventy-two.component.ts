@@ -40,7 +40,7 @@ export class HomeRuBlogSeventyTwoComponent {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Экономический календарь в трейдинге: как использовать | Arapov.trade'
+      'Что такое экономический календарь? | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
