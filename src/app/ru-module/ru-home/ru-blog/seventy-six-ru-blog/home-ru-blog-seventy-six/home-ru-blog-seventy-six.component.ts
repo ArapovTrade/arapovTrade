@@ -40,13 +40,13 @@ export class HomeRuBlogSeventySixComponent {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Психология трейдинга по Уильяму Ганну: секреты успеха | ArapovTrade'
+      'Метод Ганна | ArapovTrade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Психология трейдинга по У. Ганну: самоконтроль, управление рисками, устойчивость. Применяйте принципы Ганна в торговле для успеха!',
+        'Теория Ганна: самоконтроль, управление рисками, устойчивость. Применяйте принципы Ганна в торговле для успеха!',
     });
    
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-18' });
@@ -54,10 +54,7 @@ export class HomeRuBlogSeventySixComponent {
       property: 'og:image',
       content: '/assets/img/content/williamgannpsychology.webp',
     });
-    this.meta.updateTag({
-      name: 'headline',
-      content: 'Психология трейдинга по Уильяму Ганну: секреты успеха | ArapovTrade',
-    });
+    
 
     this.gerRandom();
   }

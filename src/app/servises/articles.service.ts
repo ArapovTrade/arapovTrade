@@ -2648,16 +2648,16 @@ export class ArticlesService {
     {
       titleUkr: 'Психологія торгівлі Вільяма Ганна',
       linkUkr: 'williamgannpsychology',
-      titleRus: 'Психология торговли Уильяма Ганна',
+      titleRus: 'Метод Ганна',
       descrEn:
         "Discover William Gann's trading psychology: self-control, risk management, and methods for modern trading from ArapovTrade.",
       titleEn: "William Gann's Trading Psychology",
       descrUkr:
         'Дізнайтесь про психологію трейдингу Вільяма Ганна: самоконтроль, управління ризиками та методи для сучасного трейдингу від ArapovTrade.',
       descrRus:
-        'Психология трейдинга по У. Ганну: самоконтроль, управление рисками, устойчивость. Применяйте принципы Ганна в торговле для успеха!',
+        'Теория Ганна: самоконтроль, управление рисками, устойчивость. Применяйте принципы Ганна в торговле для успеха!',
       realTitleRus:
-        'Психология трейдинга по Уильяму Ганну: секреты успеха | ArapovTrade',
+        'Метод Ганна | ArapovTrade',
       realTitleUkr: 'Психологія трейдингу Вільяма Ганна | ArapovTrade',
       realTitleEn: "William Gann's Trading Psychology | ArapovTrade",
       imgUkr: '/assets/img/content/williamgannpsychology44.webp',
