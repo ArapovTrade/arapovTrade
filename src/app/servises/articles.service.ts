@@ -2351,9 +2351,9 @@ export class ArticlesService {
       id: 96,
     },
     {
-      titleUkr: 'Як Smart Money використовують хибні пробої?',
+      titleUkr: 'Як розпізнати хибний пробій?',
       linkUkr: 'falsebreakouts',
-      titleRus: 'Как Smart Money используют ложные пробои?',
+      titleRus: 'Как распознать ложный пробой?',
       descrEn:
         'Learn how Smart Money use false breakouts to gather liquidity and how to avoid their traps in trading. A guide from ArapovTrade.',
       titleEn: 'How Do Smart Money Use False Breakouts?',
@@ -2361,10 +2361,10 @@ export class ArticlesService {
         'Дізнайтесь, як Smart Money використовують хибні пробої для збору ліквідності та як уникнути їх пасток у трейдингу. Посібник від ArapovTrade.',
       descrRus:
         'Узнайте, как Smart Money создают ложные пробои для сбора ликвидности! Способы распознавания ловушек в трейдинге на Arapov.trade.',
-      realTitleRus: 'Smart Money и ложные пробои: как работают | Arapov.trade',
+      realTitleRus: 'Как распознать ложный пробой? | Arapov.trade',
       realTitleEn:
         'Smart Money and False Breakouts: How They Work | Arapov.trade',
-      realTitleUkr: 'Хибні пробої: як Smart Money збирають ліквідність',
+      realTitleUkr: 'Хибні пробої: як їх розпізнати | Arapov.trade',
       imgUkr: '/assets/img/content/falsebreakouts44.webp',
       groupsRus: ['Концепция Смарт Мани'],
       groupsUkr: ['Концепція Смарт Мані'],

@@ -40,7 +40,7 @@ export class HomeRuThirtySixComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Smart Money и ложные пробои: как работают | Arapov.trade'
+      'Как распознать ложный пробой? | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index' });
     this.meta.updateTag({
