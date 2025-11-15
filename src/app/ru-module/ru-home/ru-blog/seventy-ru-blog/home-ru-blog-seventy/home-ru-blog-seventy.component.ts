@@ -41,13 +41,13 @@ export class HomeRuBlogSeventyComponent {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Концепция Вайкоффа: объёмный анализ | ArapovTrade'
+      'Метод Ричарда Вайкоффа | ArapovTrade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Концепция Вайкоффа: как объёмный анализ выявляет намерения крупных игроков и ключевые уровни рынка. Советы от ArapovTrade',
+        'Метод Вайкоффа: как объёмный анализ выявляет намерения крупных игроков и ключевые уровни рынка. Советы от ArapovTrade',
     });
    
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-13' });

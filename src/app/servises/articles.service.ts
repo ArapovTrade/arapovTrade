@@ -2522,19 +2522,19 @@ export class ArticlesService {
       id: 140,
     },
     {
-      titleUkr: 'Концепція Річарда Вайкоффа у розумінні обсягів',
+      titleUkr: 'Метод Річарда Вайкоффа',
       linkUkr: 'wyckoffsvolumeconcept',
-      titleRus: 'Концепция Ричарда Вайкоффа в понимании объемов',
+      titleRus: 'Метод Ричарда Вайкоффа',
       descrEn:
         "Learn about Wyckoff's Volume Concept: how volume analysis reveals Smart Money actions and key market levels from ArapovTrade.",
-      titleEn: "Wyckoff's Volume Concept Explained",
+      titleEn: "Wyckoff's Volume Concept",
       descrUkr:
         'Дізнайтесь про концепцію Вайкоффа: як об’ємний аналіз виявляє дії великих гравців і ключові рівні ринку від ArapovTrade.',
       descrRus:
-        'Концепция Вайкоффа: как объёмный анализ выявляет намерения крупных игроков и ключевые уровни рынка. Советы от ArapovTrade',
-      realTitleRus: 'Концепция Вайкоффа: объёмный анализ | ArapovTrade',
-      realTitleUkr: 'Вайкофф: об’ємний аналіз ринку | ArapovTrade',
-      realTitleEn: 'Wyckoff: Volume Market Analysis | ArapovTrade',
+        'Метод Вайкоффа: как объёмный анализ выявляет намерения крупных игроков и ключевые уровни рынка. Советы от ArapovTrade',
+      realTitleRus: 'Метод Ричарда Вайкоффа | ArapovTrade',
+      realTitleEn: "Wyckoff's Volume Concept | ArapovTrade",
+      realTitleUkr: 'Метод Річарда Вайкоффа | ArapovTrade',
       imgUkr: '/assets/img/content/wyckoffsvolumeconcept.webp',
       groupsRus: ['Объемный анализ рынка'],
       groupsUkr: ['Об`ємний аналіз ринку'],
