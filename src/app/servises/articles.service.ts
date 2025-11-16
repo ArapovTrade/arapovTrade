@@ -106,7 +106,7 @@ export class ArticlesService {
 
   ukrArtickles: artickle[] = [
     {
-      titleUkr: 'Самостійне навчання трейдингу',
+      titleUkr: 'Як стати трейдером самостійно?',
       linkUkr: 'selfstudying',
       titleRus: 'Самостоятельное обучение трейдингу',
       titleEn: 'Self-Study Guide for Trading',
@@ -117,7 +117,7 @@ export class ArticlesService {
       descrRus:
         'Самостоятельное обучение трейдингу от Игоря Арапова: пошаговый курс с нуля, реальные стратегии и советы для уверенного старта в трейдинге.',
       realTitleRus: 'Самостоятельное обучение трейдингу | Игорь Арапов',
-      realTitleUkr: 'Самостійне навчання трейдингу | Ігор Арапов',
+      realTitleUkr: 'Як стати трейдером самостійно? | Ігор Арапов',
       realTitleEn: 'Self-Study Guide for Trading | Igor Arapov',
       imgUkr: '/assets/img/content/selfstudying44.webp',
       groupsRus: ['Трейдинг для начинающих'],
@@ -148,8 +148,8 @@ export class ArticlesService {
 
     {
     
-      titleRus: 'Что такое объем торгов на бирже? ',
-      titleUkr: 'Що таке обсяг торгів на біржі?',
+      titleRus: 'Что такое объем торгов на бирже?',
+      titleUkr: 'Обсяг торгів на біржі: що це і як його аналізувати?',
       titleEn: 'What is Trading Volume on the Exchange?',
        linkUkr: 'peakvolumelevels',
        descrRus:
@@ -161,10 +161,10 @@ export class ArticlesService {
         realTitleRus:
         'Что такое объем торгов на бирже | Игорь Арапов',
       realTitleEn: 'What is Trading Volume on the Exchange | Arapov.trade',
-      realTitleUkr: 'Що таке обсяг торгів на біржі | Arapov.trade',
+      realTitleUkr: 'Обсяг торгів на біржі: що це і як його аналізувати?',
       imgUkr: '/assets/img/content/peakvolumelevels.webp',
       groupsRus: ['Объемный анализ рынка'],
-      groupsUkr: ['Об`ємний аналіз ринку'],
+      groupsUkr: ['Об`ємний аналіз ринку'], 
       groupsEng: ['Market Volume Analysis'],
       id: 111,
     },
@@ -210,7 +210,7 @@ export class ArticlesService {
       id: 136,
     },
     {
-      titleUkr: 'Чим відрізняється трейдер від інвестора?',
+      titleUkr: 'Хто такий трейдер і хто такий інвестор — пояснення для початківців',
       titleRus: 'Чем отличается трейдер от инвестора?',
       titleEn: 'What is the Difference Between a Trader and an Investor?',
        descrEn:
@@ -221,7 +221,7 @@ export class ArticlesService {
         'В чем разница между трейдером и инвестором? Что лучше: трейдинг или инвестиции? Узнайте ключевые отличия, преимущества и стратегии | ArapovTrade',
       realTitleRus: 'Чем отличается трейдер от инвестора? | ArapovTrade',
       realTitleEn: 'What is the Difference Between a Trader and an Investor? | ArapovTrade',
-      realTitleUkr: 'Чим відрізняється трейдер від інвестора? | ArapovTrade',
+      realTitleUkr: 'Хто такий трейдер і хто такий інвестор — пояснення для початківців',
       linkUkr: 'tradingandinvestments',
       imgUkr: '/assets/img/content/tradingandinvestments.webp',
       groupsRus: ['Трейдинг для начинающих'],
@@ -233,7 +233,7 @@ export class ArticlesService {
        
       linkUkr: 'trianglefigure',
       titleRus: 'Паттерн треугольник в трейдинге',
-      titleUkr: 'Фігура Трикутник у технічному аналізі', 
+      titleUkr: 'Фігура перевернутий трикутник', 
       titleEn: 'Triangle Pattern in Technical Analysis',
       descrUkr:
         'Дізнайтесь про фігуру Трикутник: як визначити патерн, сигнали пробою та використання в трейдингу. Посібник від ArapovTrade.',
@@ -241,7 +241,7 @@ export class ArticlesService {
         'Фигура Треугольник в трейдинге: как торговать паттерн? Руководство от ArapovTrade по анализу, пробою и стратегиям',
       realTitleRus: 'Паттерн треугольник в трейдинге | ArapovTrade',
       realTitleEn: 'Triangle: Trading Pattern | ArapovTrade',
-      realTitleUkr: 'Фігура Трикутник у технічному аналізі',
+      realTitleUkr: 'Фігура перевернутий трикутник | ArapovTrade',
       imgUkr: '/assets/img/content/trianglefigure.webp',
       descrEn:
         'Learn about the Triangle pattern: how to identify it, breakout signals, and trading applications with a guide from ArapovTrade.',
@@ -255,7 +255,7 @@ export class ArticlesService {
       linkUkr: 'liquiditypools',
       titleRus:
         'Что такое пулы ликвидности и как они работают?',
-      titleUkr: 'Що таке пули ліквідності і як вони працюють?',
+      titleUkr: 'Пули ліквідності: що це таке і як працюють?',
       titleEn: 'What are Liquidity Pools and How Do They Work?',
       descrEn:
         'Learn how Smart Money finds liquidity pools, manipulates the market, and uses hidden zones. A guide from ArapovTrade.',
@@ -265,7 +265,7 @@ export class ArticlesService {
       descrRus:
         'Узнайте, как работают пулы ликвидности! Как Smart Money ищет ликвидность и использует скрытые зоны в трейдинге на Arapov.trade.',
       realTitleRus: 'Что такое пулы ликвидности и как они работают? | Arapov.trade',
-      realTitleUkr: 'Що таке пули ліквідності і як вони працюють? | Arapov.trade',
+      realTitleUkr: 'Пули ліквідності: що це таке і як працюють? | Arapov.trade',
       realTitleEn: 'What are Liquidity Pools and How Do They Work? | Arapov.trade',
       imgUkr: '/assets/img/content/liquiditypools.png',
       groupsRus: ['Концепция Смарт Мани'],
@@ -274,18 +274,18 @@ export class ArticlesService {
       id: 104,
     },
      {
-      titleUkr: 'Торгова стратегія для початківців',
+      titleUkr: 'Стратегії трейдингу з нуля',
       linkUkr: 'practic',
       descrEn:
         'Self-study guide for trading by Igor Arapov: step-by-step course from scratch, real strategies and tips for a confident start in trading.',
-      titleRus: 'Стратегия трейдинга для новичков ',
+      titleRus: 'Стратегия трейдинга для новичков',
       titleEn: 'Trading Strategy for Beginners',
       descrUkr:
         'Дізнайтесь практичні рекомендації з трейдингу: торгова система, точки входу, мані-менеджмент і ризики від ArapovTrade.',
       descrRus:
         'Узнайте, как построить торговую стратегию в трейдинге: правила входа и выхода, управление рисками, примеры систем для новичков и профи | Игорь Арапов',
       realTitleRus: 'Стратегия трейдинга для новичков | Arapov.trade',
-      realTitleUkr: 'Торгова стратегія для початківців | Arapov.trade',
+      realTitleUkr: 'Стратегії трейдингу з нуля | Arapov.trade',
       realTitleEn: 'Trading Strategy for Beginners | Arapov.trade',
       imgUkr: '/assets/img/content/prakticuk.jpg',
       groupsRus: ['Примеры сделок'],
@@ -300,7 +300,7 @@ export class ArticlesService {
         'Learn about Iceberg Orders: how banks hide their positions and how to use them in trading. A guide from ArapovTrade.',
       titleRus:
         'Что такое айсберг ордер (Iceberg Order)?',
-      titleUkr: 'Що таке приховані ордери (Iceberg Orders)?',
+      titleUkr: 'Iceberg-ордери: що це таке і як працюють на біржі',
       titleEn: 'What are Iceberg Orders?',
       descrUkr:
         'Дізнайтесь, що таке приховані ордери (Iceberg Order), як банки маскують позиції та як використовувати їх у торгівлі. Посібник від ArapovTrade.',
@@ -308,7 +308,7 @@ export class ArticlesService {
         'Узнайте, что такое айсберг ордер (скрытые ордера)! Как банки маскируют позиции и как использовать их в трейдинге на Arapov.trade.',
       realTitleRus: 'Что такое айсберг ордер (Iceberg Order)? | Arapov.trade',
       realTitleEn: 'What are Iceberg Orders ? | Arapov.trade',
-      realTitleUkr: 'Що таке айсберг ордер (Iceberg Order)? | Arapov.trade',
+      realTitleUkr: 'Iceberg-ордери: що це таке і як працюють на біржі',
       imgUkr: '/assets/img/content/icebergorders.webp',
       groupsRus: ['Концепция Смарт Мани'],
       groupsUkr: ['Концепція Смарт Мані'],
@@ -339,7 +339,7 @@ export class ArticlesService {
     },
 
     {
-      titleUkr: 'Як знаходити точки входу Smart Money? Найкращі стратегії',
+      titleUkr: 'Точки входу за концепцією Smart Money',
       linkUkr: 'smartmoneystrategies',
       descrEn:
         'Strategies for Smart Money entry points: Order Blocks, liquidity, FVG, and other key concepts for effective trading.',
@@ -349,8 +349,8 @@ export class ArticlesService {
         'Стратегії Smart Money для точного входу: Order Blocks, ліквідність, FVG та інші ключові концепції для ефективної торгівлі.',
       descrRus:
         'Разбираем как находить точки входа по Smart Money! Стратегии с Order Blocks, ликвидностью и FVG для точного трейдинга с Arapov.trade',
-      realTitleRus: 'Smart Money: точки входа и стратегии | Arapov.trade',
-      realTitleUkr: 'Точки входу за Smart Money: стратегії | Arapov.trade',
+      realTitleRus: 'Стратегия смарт мани: как находить точки входа | Arapov.trade',
+      realTitleUkr: 'Точки входу за концепцією Smart Money | Arapov.trade',
       realTitleEn: 'Smart Money: Entry Points and Strategies | Arapov.trade',
       imgUkr: '/assets/img/content/smartmoneystrategies44.webp',
       groupsRus: ['Концепция Смарт Мани'],
@@ -385,7 +385,7 @@ export class ArticlesService {
 
    
     {
-      titleUkr: 'Як читати Біржовий стакан і стрічку принтів',
+      titleUkr: 'Біржовий стакан і стрічка принтів: як читати та використовувати',
       linkUkr: 'stockorderbook',
       descrEn:
         'Learn how to read the order book and tape prints, analyze liquidity, and identify Smart Money trades with ArapovTrade.',
@@ -396,7 +396,7 @@ export class ArticlesService {
       descrRus:
         'Узнайте, как читать биржевой стакан и ленту принтов! Анализ заявок, ликвидности и сделок для выявления Smart Money и точек входа с Arapov.trade',
       realTitleRus: 'Биржевой стакан и лента принтов: как читать | Arapov.trade',
-      realTitleUkr: 'Біржовий стакан і стрічка принтів | Arapov.trade',
+      realTitleUkr: 'Біржовий стакан і стрічка принтів: як читати та використовувати',
       realTitleEn: 'Order Book and Tape Prints: How to Read | Arapov.trade',
       imgUkr: '/assets/img/content/stockorderbook.png',
       groupsRus: ['Объемный анализ рынка'],
@@ -421,7 +421,7 @@ export class ArticlesService {
       descrRus:
         'Фазы рынка в трейдинге: как распознавать накопление, рост, распределение и снижение. Стратегии и примеры от ArapovTrade',
       realTitleRus: 'Фазы рынка в трейдинге | ArapovTrade',
-      realTitleUkr: 'Фази ринку у трейдингу | Arapov.trade',
+      realTitleUkr: 'Структура ринку: як змінюються фази і що з цим робити',
       realTitleEn: 'Market Phases in Trading | Arapov.trade',
       id: 1,
     },
