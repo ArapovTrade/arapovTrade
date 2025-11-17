@@ -41,7 +41,7 @@ export class HomeRuBlogElevenComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Стартовый депозит трейдера: сколько нужно для начала?'
+      'Первый депозит трейдера: сколько нужно для старта?'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({

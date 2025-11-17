@@ -190,6 +190,26 @@ export class ArticlesService {
       groupsEng: ['Trading for Beginners'],
       id: 135,
     },
+    {
+      titleUkr: 'Стратегії трейдингу з нуля',
+      linkUkr: 'practic',
+      descrEn:
+        'Self-study guide for trading by Igor Arapov: step-by-step course from scratch, real strategies and tips for a confident start in trading.',
+      titleRus: 'Стратегия трейдинга для новичков',
+      titleEn: 'Trading Strategy for Beginners',
+      descrUkr:
+        'Дізнайтесь практичні рекомендації з трейдингу: торгова система, точки входу, мані-менеджмент і ризики від ArapovTrade.',
+      descrRus:
+        'Узнайте, как построить торговую стратегию в трейдинге: правила входа и выхода, управление рисками, примеры систем для новичков и профи | Игорь Арапов',
+      realTitleRus: 'Стратегия трейдинга для новичков | Arapov.trade',
+      realTitleUkr: 'Стратегії трейдингу з нуля | Arapov.trade',
+      realTitleEn: 'Trading Strategy for Beginners | Arapov.trade',
+      imgUkr: '/assets/img/content/prakticuk.jpg',
+      groupsRus: ['Примеры сделок'],
+      groupsUkr: ['Приклади угод'],
+      groupsEng: ['Trade Examples'],
+      id: 109,
+    },
       {
      
       linkUkr: 'bitcoin-domination',
@@ -273,26 +293,7 @@ export class ArticlesService {
       groupsEng: ['Smart Money Concept'],
       id: 104,
     },
-     {
-      titleUkr: 'Стратегії трейдингу з нуля',
-      linkUkr: 'practic',
-      descrEn:
-        'Self-study guide for trading by Igor Arapov: step-by-step course from scratch, real strategies and tips for a confident start in trading.',
-      titleRus: 'Стратегия трейдинга для новичков',
-      titleEn: 'Trading Strategy for Beginners',
-      descrUkr:
-        'Дізнайтесь практичні рекомендації з трейдингу: торгова система, точки входу, мані-менеджмент і ризики від ArapovTrade.',
-      descrRus:
-        'Узнайте, как построить торговую стратегию в трейдинге: правила входа и выхода, управление рисками, примеры систем для новичков и профи | Игорь Арапов',
-      realTitleRus: 'Стратегия трейдинга для новичков | Arapov.trade',
-      realTitleUkr: 'Стратегії трейдингу з нуля | Arapov.trade',
-      realTitleEn: 'Trading Strategy for Beginners | Arapov.trade',
-      imgUkr: '/assets/img/content/prakticuk.jpg',
-      groupsRus: ['Примеры сделок'],
-      groupsUkr: ['Приклади угод'],
-      groupsEng: ['Trade Examples'],
-      id: 109,
-    },
+     
     {
        
       linkUkr: 'icebergorders',
@@ -386,7 +387,7 @@ export class ArticlesService {
    
     {
       titleUkr: 'Біржовий стакан і стрічка принтів: як читати та використовувати',
-      linkUkr: 'stockorderbook',
+      linkUkr: 'stockorderbook', 
       descrEn:
         'Learn how to read the order book and tape prints, analyze liquidity, and identify Smart Money trades with ArapovTrade.',
       titleRus: 'Как читать Биржевой стакан и ленту принтов',
@@ -479,7 +480,7 @@ export class ArticlesService {
         'Поради, як мінімізувати ризики та уникнути втрат у маржинальній торгівлі. Ключові стратегії управління капіталом для трейдерів.',
       descrRus:
         'Как избежать потерь в маржинальной торговле? Советы по управлению капиталом  от ArapovTrade — для новичков и опытных трейдеров',
-      realTitleRus: 'Маржинальная торговля без потерь — советы ArapovTrade',
+      realTitleRus: 'Маржинальная торговля без потерь | ArapovTrade',
       realTitleEn: 'Margin Trading Without Losses — Tips from ArapovTrade',
       realTitleUkr: 'Як не втратити гроші на маржинальній торгівлі',
       linkUkr: 'avoidlosingmoney',
@@ -603,7 +604,7 @@ export class ArticlesService {
         'Основні причини втрати депозиту: помилки в стратегії, відсутність дисципліни, переоцінка можливостей. Поради від Arapov.trade.',
       descrRus:
         'Узнайте, почему трейдеры теряют депозит! Ошибки стратегии, отсутствие дисциплины и переоценка рисков. Советы по предотвращению потерь на Arapov.trade',
-      realTitleRus: 'Потеря депозита в трейдинге: как избежать? | Arapov.trade',
+      realTitleRus: 'В трейдинге как не слить депозит | Arapov.trade',
       realTitleEn: 'Losing Deposit in Trading: How to Avoid It? | Arapov.trade',
       realTitleUkr: 'Причини втрати депозиту | Arapov.trade',
       linkUkr: 'mainreasonforlosses',
@@ -623,7 +624,7 @@ export class ArticlesService {
         'Дізнайтесь, який стартовий депозит потрібен для трейдингу, як його розрахувати та управляти капіталом. Поради від ArapovTrade.',
       descrRus:
         'Какой стартовый депозит нужен трейдеру? Советы по расчёту капитала и управлению рисками от ArapovTrade.',
-      realTitleRus: 'Стартовый депозит трейдера: сколько нужно для начала?',
+      realTitleRus: 'Первый депозит трейдера: сколько нужно для старта?',
       realTitleEn: 'Trader’s Starting Deposit: How Much is Needed to Start?',
       realTitleUkr: 'Стартовий депозит: скільки потрібно?',
       linkUkr: 'starterdeposit',
@@ -635,7 +636,7 @@ export class ArticlesService {
     },
     {
       titleUkr: 'Торгівля рівнів',
-      titleRus: 'Торговля уровней',
+      titleRus: 'Торговля от уровней',
       titleEn: 'Trading of Levels',
       descrEn:
         'Learn how to trade key levels in the market: identification, usage, and effective strategies from Arapov.trade.',
@@ -643,7 +644,7 @@ export class ArticlesService {
         'Детальний посібник для початківців з торгівлі рівнями: як визначати, використовувати та ефективно торгувати ключові рівні від Arapov.trade.',
       descrRus:
         'Узнайте, как торговать уровнями в трейдинге! Полное руководство по определению и использованию ключевых уровней на Arapov.trade.',
-      realTitleRus: 'Торговля уровнями в трейдинге | Arapov.trade',
+      realTitleRus: 'Торговля от уровней в трейдинге | Arapov.trade',
       realTitleUkr: 'Торгівля рівнями: повний посібник | Arapov.trade',
       realTitleEn: 'Trading Levels: A Complete Guide | Arapov.trade',
       linkUkr: 'tradingoflevels',
@@ -808,7 +809,7 @@ export class ArticlesService {
         'Дізнайтесь, хто такі маркет-мейкери, як їх розпізнати на ринку, які стратегії вони застосовують і як це впливає на ціни від ArapovTrade.',
       descrRus:
         'Маркет-мейкеры: как определить их на рынке трейдинга, используемые стратегии и влияние на цену. Советы по анализу крупных игроков от Arapov.trade.',
-      realTitleRus: 'Как определить маркет-мейкера | Arapov.trade',
+      realTitleRus: 'Кто такой маркет мейкер? | Arapov.trade',
       realTitleUkr: 'Як розпізнати маркет-мейкера в трейдингу',
       linkUkr: 'marketmaker',
       realTitleEn: 'How to Identify a Market Maker in Trading',
@@ -869,7 +870,7 @@ export class ArticlesService {
         'Дізнайтесь, як розпізнати фігуру Прапор у трейдингу, торгувати пробої та уникати помилок у стратегіях від ArapovTrade.',
       descrRus:
         'Руководство по паттерну «Флаг» в трейдинге: распознавайте сигнал, входите в сделки и управляйте рисками. Примеры и советы от Arapov.trade.',
-      realTitleRus: 'Фигура Флаг в трейдинге: как торговать | Arapov.trade',
+      realTitleRus: 'Паттерн флаг в трейдинге: как торговать | Arapov.trade',
       realTitleEn: 'Flag Pattern in Trading: How to Trade | Arapov.trade',
       realTitleUkr: 'Фігура Прапор: як торгувати в трейдингу',
       linkUkr: 'flagfigure',
@@ -890,7 +891,7 @@ export class ArticlesService {
       descrRus:
         'Функции маркет-мейкеров в крипторынке: обеспечение ликвидности, стабилизация цен и поддержка торговли. Роль маркет-мейкеров в развитии криптоиндустрии.',
       realTitleRus:
-        'Маркет-мейкеры в крипторынке: функции и роль | Arapov.trade',
+        'Маркет мейкер в крипторынке: функции и роль | Arapov.trade',
       realTitleEn:
         'Market Makers in Crypto Market: Functions and Role | Arapov.trade',
       realTitleUkr: 'Як працюють маркет-мейкери у крипто | Arapov.trade',

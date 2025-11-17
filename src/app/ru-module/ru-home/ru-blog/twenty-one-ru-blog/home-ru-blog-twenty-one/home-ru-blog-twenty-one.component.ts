@@ -40,7 +40,7 @@ export class HomeRuBlogTwentyOneComponent implements OnInit {
     this.grr = this.artickleServ.selectedGroups;
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
-    this.titleService.setTitle('Как определить маркет-мейкера | Arapov.trade');
+    this.titleService.setTitle('Кто такой маркет мейкер? | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',

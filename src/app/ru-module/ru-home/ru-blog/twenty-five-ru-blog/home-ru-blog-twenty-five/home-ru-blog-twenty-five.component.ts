@@ -42,7 +42,7 @@ export class HomeRuBlogTwentyFiveComponent implements OnInit {
     this.checkedGroup = this.artickleServ.selectedGroups;
 
    this.titleService.setTitle(
-  'Маркет-мейкеры в крипторынке: функции и роль | Arapov.trade'
+  'Маркет мейкер  в крипторынке: функции и роль | Arapov.trade'
 );
 this.meta.updateTag({ name: 'robots', content: 'index, follow' });
 this.meta.updateTag({

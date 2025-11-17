@@ -41,7 +41,7 @@ export class HomeRuBlogTwentyFourComponent implements OnInit {
     this.checkedGroup = this.artickleServ.selectedGroups;
 
     this.titleService.setTitle(
-      'Фигура «Флаг» в трейдинге: как торговать | Arapov.trade'
+      'Паттерн флаг в трейдинге: как торговать | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({

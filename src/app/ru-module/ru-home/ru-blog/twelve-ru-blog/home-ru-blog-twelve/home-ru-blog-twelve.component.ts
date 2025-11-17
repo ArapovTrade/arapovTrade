@@ -41,7 +41,7 @@ export class HomeRuBlogTwelveComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
 
-    this.titleService.setTitle('Торговля уровнями в трейдинге | Arapov.trade');
+    this.titleService.setTitle('Уровни в трейдинге | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index' });
     this.meta.updateTag({
       name: 'description',

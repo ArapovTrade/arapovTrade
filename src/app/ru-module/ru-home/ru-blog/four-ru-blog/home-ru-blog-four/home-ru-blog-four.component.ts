@@ -41,7 +41,7 @@ export class HomeRuBlogFourComponent implements OnInit {
     this.checkedGroup = this.artickleServ.selectedGroups;
 
     this.titleService.setTitle(
-      'Маржинальная торговля без потерь — советы ArapovTrade'
+      'Маржинальная торговля без потерь | ArapovTrade'
 
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });

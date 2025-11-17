@@ -41,7 +41,7 @@ export class HomeRuBlogTenComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
 
-    this.titleService.setTitle('Потеря депозита в трейдинге: как избежать? | Arapov.trade');
+    this.titleService.setTitle('В трейдинге как не слить депозит? | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
