@@ -861,7 +861,7 @@ export class ArticlesService {
     },
     {
       titleUkr: 'Фігура "Прапор" у трейдингу',
-      titleRus: 'Фигура "Флаг" в трейдинге',
+      titleRus: 'Фигура Флаг в трейдинге',
       descrEn:
         'Learn how to recognize the Flag pattern in trading, trade breakouts, and avoid mistakes in strategies from ArapovTrade.',
       titleEn: 'Flag Pattern in Trading',
@@ -869,7 +869,7 @@ export class ArticlesService {
         'Дізнайтесь, як розпізнати фігуру Прапор у трейдингу, торгувати пробої та уникати помилок у стратегіях від ArapovTrade.',
       descrRus:
         'Руководство по паттерну «Флаг» в трейдинге: распознавайте сигнал, входите в сделки и управляйте рисками. Примеры и советы от Arapov.trade.',
-      realTitleRus: 'Фигура «Флаг» в трейдинге: как торговать | Arapov.trade',
+      realTitleRus: 'Фигура Флаг в трейдинге: как торговать | Arapov.trade',
       realTitleEn: 'Flag Pattern in Trading: How to Trade | Arapov.trade',
       realTitleUkr: 'Фігура Прапор: як торгувати в трейдингу',
       linkUkr: 'flagfigure',
