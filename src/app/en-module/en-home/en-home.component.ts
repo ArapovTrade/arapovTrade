@@ -35,14 +35,7 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
     private rendererFactory: RendererFactory2,
     @Inject(DOCUMENT) private document: Document,
   ) {
-    // this.router.events.subscribe((event) => {
-    //   if (event instanceof NavigationEnd) {
-    //     if (typeof window !== 'undefined') {
-    //       // Ваш код, который использует window
-    //       window.scrollTo(0, 0);
-    //     }
-    //   }
-    // });
+     
     this.renderer = rendererFactory.createRenderer(null, null);
 
   }
@@ -69,9 +62,7 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
     this.isMenuOpen = false;
   }
 
-  // toggleMenu() {
-  //   this.isMenuOpen = !this.isMenuOpen;
-  // }
+   
   toggleMenu(): void {
     this.menuOpen = !this.menuOpen;
     if (this.menuOpen) {

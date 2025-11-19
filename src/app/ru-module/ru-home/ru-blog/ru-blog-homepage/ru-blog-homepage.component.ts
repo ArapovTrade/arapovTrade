@@ -51,13 +51,7 @@ private eRef: ElementRef,
   ) {
     this.renderer = rendererFactory.createRenderer(null, null);
 
-    // this.router.events.subscribe((event) => {
-    //   if (event instanceof NavigationEnd) {
-    //     if (typeof window !== 'undefined') {
-    //       window.scrollTo(0, 0);
-    //     }
-    //   }
-    // });
+     
   }
 
   ngAfterViewInit() {
@@ -81,9 +75,7 @@ private eRef: ElementRef,
     this.isMenuOpen = false;
   }
 
-  // toggleMenu() {
-  //   this.isMenuOpen = !this.isMenuOpen;
-  // }
+   
   toggleMenu(): void {
     this.menuOpen = !this.menuOpen;
     if (this.menuOpen) {
@@ -177,19 +169,14 @@ private eRef: ElementRef,
   grr!: any;
   checkedGroup!: any;
    onGroupChangeFromEvent(value: string) {
-    // if (this.artickleServ.selectedGroups.includes(value)) {
-    //   this.artickleServ.selectedGroups = [];
-    // } else {
-
-    //   this.artickleServ.selectedGroups = [value];
-    // }
+    
 
     // Обновляем фильтрованные статьи
     this.filteredArticles = this.artickleServ.ukrainiansArticles();
     this.updatePaginatedArticles();
 
     // Возвращаем пагинацию на первую страницу
-    // this.paginatorr.firstPage();
+     
 
     if (isPlatformBrowser(this.platformId)) {
       setTimeout(() => {
@@ -202,16 +189,7 @@ private eRef: ElementRef,
     const checkbox = event.target as HTMLInputElement;
     const value = checkbox.value;
 
-    // if (checkbox.checked) {
-    //   this.artickleServ.selectedGroups.push(value);
-    //   this.filteredArticles = this.artickleServ.russianssArticles();
-    //   this.updatePaginatedArticles();
-    // } else {
-    //   this.artickleServ.selectedGroups =
-    //     this.artickleServ.selectedGroups.filter((group) => group !== value);
-    //   this.filteredArticles = this.artickleServ.russianssArticles();
-    //   this.updatePaginatedArticles();
-    // }
+    
 
     // Если нажали на уже выбранную группу — сбрасываем фильтр (показываем все)
     if (this.artickleServ.selectedGroups.includes(value)) {
@@ -234,10 +212,7 @@ private eRef: ElementRef,
     this.currentPage = event.pageIndex;
     this.pageSize = event.pageSize;
     this.updatePaginatedArticles();
-    // this.scrollToTop.nativeElement.scrollIntoView({
-    //   behavior: 'smooth',
-    //   block: 'start',
-    // });
+     
     const topPosition = this.scrollToTop.nativeElement.offsetTop;
     window.scrollTo({
       top: topPosition,

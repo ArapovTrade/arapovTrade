@@ -310,35 +310,7 @@ this.meta.updateTag({ property: 'og:site_name', content: 'Arapov Trade' });
 
   private updateMetaKeywords() {
   
-  // const currentUrl = this.router.url.split('?')[0];
- 
-  // const existingTag = this.document.querySelector('meta[name="keywords"]');
-  // if (existingTag) {
-  //   this.renderer.removeChild(this.document.head, existingTag);
-  // }
-
    
-  // const meta = this.renderer.createElement('meta');
-  // this.renderer.setAttribute(meta, 'name', 'keywords');
-
- 
-  // const keywordsMap: Record<string, string> = {
-  //   '/ru/freestudying/freeeducation': 'бесплатное обучение, трейдинг, курс трейдера, артапов трейд, торговля на бирже, уроки трейдинга',
-  //   '/uk/freestudying/freeeducation': 'безкоштовне навчання, трейдинг, курс трейдера, арапов трейд, торгівля, уроки трейдингу',
-  //   '/en/freestudying/freeeducation': 'free trading education, learn trading, forex, arapov trade, stock trading lessons',
-  //   '/ru/freestudying/imbalanceintrading': 'дисбаланс на рынке, объемный анализ, смарт мани, уровни ликвидности, трейдинг стратегия',
-  //   '/uk/freestudying/imbalanceintrading': 'дисбаланс на ринку, об’ємний аналіз, смарт мані, рівні ліквідності, стратегія трейдингу',
-  //   '/en/freestudying/imbalanceintrading': 'imbalance in trading, order blocks, smart money, liquidity zones, trading education',
-    
-  // };
-
- 
-  // const keywords =
-  //   keywordsMap[currentUrl] ||
-  //   'arapov trade, trading education, forex, trading courses, learn trading online';
-
-  // this.renderer.setAttribute(meta, 'content', keywords);
-  // this.renderer.appendChild(this.document.head, meta);
 }
 
 
@@ -353,20 +325,7 @@ this.meta.updateTag({ property: 'og:site_name', content: 'Arapov Trade' });
   }
 }
 //каноникал
-// private updateCanonicalTag() {
-//   // Удаляем старые канонические теги
-//   const existingCanonical = this.document.querySelector('link[rel="canonical"]');
-//   if (existingCanonical) {
-//     existingCanonical.remove();
-//   }
-
-//   // Создаём новый
-//   const canonicalLink = this.renderer.createElement('link');
-//   this.renderer.setAttribute(canonicalLink, 'rel', 'canonical');
-//   const url = `https://arapov.trade${this.router.url.split('?')[0]}`;
-//   this.renderer.setAttribute(canonicalLink, 'href', url);
-//   this.renderer.appendChild(this.document.head, canonicalLink);
-// }
+ 
 private updateCanonicalTag() {
   // Удаляем старые канонические теги
   const existingCanonical = this.document.querySelector('link[rel="canonical"]');
@@ -429,17 +388,7 @@ private updateCanonicalTag() {
   }
 
   private setDefaultMetaTags() {
-    // this.meta.addTags([
-    //   { property: 'og:type', content: 'article' },
-    //   { property: 'og:image:width', content: '1200' },
-    //   { property: 'og:image:height', content: '630' },
-    //   { property: 'og:site_name', content: 'https://arapov.trade/' },
-
-    //   // Базові Twitter Card теги
-    //   { name: 'twitter:image', content: `https://arapov.trade/assets/img/default-og-image.png`},
-    //   { name: 'twitter:card', content: `summary_large_image`}, // Дефолтний тип картки
-    //   { name: 'twitter:site', content: '@Igor_Arapov1990' }, // Ваш Twitter акаунт (замініть)
-    // ]);
+     
   }
 
   private generateBreadcrumbs() {
@@ -813,201 +762,9 @@ private updateCanonicalTag() {
     this.flag = true;
     this.flagTrue = false;
   }
-  // hreflang
-//  private updateHreflangTags() {
-//   // 1. Удаляем старые теги
-//   this.document
-//     .querySelectorAll('link[rel="alternate"][hreflang]')
-//     .forEach(tag => tag.remove());
-
-//   const fullPath = this.router.url.split('?')[0].replace(/^\/|\/$/g, '');
-//   const segments = fullPath.split('/');
-
-//   const LANGS = ['uk', 'ru', 'en'];
-
-//   let currentLang: string;
-//   let basePath: string;
-
-//   // === Главная страница (особый случай) ===
-//   if (fullPath === '' || fullPath === 'ru/main' || fullPath === 'en/main') {
-//     if (fullPath === '') {
-//       currentLang = 'uk';
-//       basePath = 'main';
-//     } else {
-//       currentLang = segments[0]; // ru или en
-//       basePath = 'main';
-//     }
-//   }
-//   // === Обычные страницы ===
-//   else {
-//     const firstSegment = segments[0];
-
-//     // Проверяем: первый сегмент — это язык?
-//     if (LANGS.includes(firstSegment)) {
-//       currentLang = firstSegment;
-//       // Убираем язык из пути
-//       basePath = segments.slice(1).join('/') || '';
-//     } else {
-//       // Если первый сегмент НЕ язык — считаем, что это украинская версия БЕЗ префикса
-//       // Но по правилам — такие URL не должны существовать! Однако на всякий случай:
-//       currentLang = 'uk';
-//       basePath = segments.join('/') || '';
-//     }
-//   }
-
-//   // === Генерация hreflang ===
-//   // LANGS.forEach(lang => {
-//   //   let href: string;
-
-//   //   if (basePath === 'main') {
-//   //     // Главная страница
-//   //     if (lang === 'uk') {
-//   //       href = 'https://arapov.trade/';
-//   //     } else if (lang === 'ru') {
-//   //       href = 'https://arapov.trade/ru/main';
-//   //     } else {
-//   //       href = 'https://arapov.trade/en/main';
-//   //     }
-//   //   } else {
-//   //     // Обычная страница — ВСЕГДА с префиксом языка
-//   //     href = `https://arapov.trade/${lang}/${basePath}`;
-//   //     // Убираем двойной слеш, если basePath пустой
-//   //     href = href.replace(/\/$/, '');
-//   //   }
-
-//   //   const link = this.renderer.createElement('link');
-//   //   this.renderer.setAttribute(link, 'rel', 'alternate');
-//   //   this.renderer.setAttribute(link, 'hreflang', lang);
-//   //   this.renderer.setAttribute(link, 'href', href);
-//   //   this.renderer.appendChild(this.document.head, link);
-//   // });
-
-//   // // === x-default — русская версия ===
-//   // const xDefaultHref = basePath === 'main'
-//   //   ? 'https://arapov.trade/ru/main'
-//   //   : `https://arapov.trade/ru/${basePath}`;
-//   // // const xDefaultHref = basePath === 'main'
-//   // //   ? 'https://arapov.trade/'
-//   // //   : `https://arapov.trade/`;
-
-//   // const defaultLink = this.renderer.createElement('link');
-//   // this.renderer.setAttribute(defaultLink, 'rel', 'alternate');
-//   // this.renderer.setAttribute(defaultLink, 'hreflang', 'x-default');
-//   // this.renderer.setAttribute(defaultLink, 'href', xDefaultHref);
-//   // this.renderer.appendChild(this.document.head, defaultLink);
-//     // === Генерация hreflang ===
-//   LANGS.forEach(lang => {
-//     let href: string;
-
-//     if (basePath === 'main' || basePath === '') {
-//       // Главная страница
-//       if (lang === 'uk') {
-//         href = 'https://arapov.trade/';
-//       } else if (lang === 'ru') {
-//         href = 'https://arapov.trade/ru';
-//       } else {
-//         href = 'https://arapov.trade/en';
-//       }
-//     } else {
-//       // Обычная страница — ВСЕГДА с префиксом языка
-//       href = `https://arapov.trade/${lang}/${basePath}`;
-//     }
-
-//     // Убираем возможные двойные слеши
-//     href = href.replace(/([^:]\/)\/+/g, '$1');
-
-//     const link = this.renderer.createElement('link');
-//     this.renderer.setAttribute(link, 'rel', 'alternate');
-//     this.renderer.setAttribute(link, 'hreflang', lang);
-//     this.renderer.setAttribute(link, 'href', href);
-//     this.renderer.appendChild(this.document.head, link);
-//   });
-
-//   // === x-default — русская версия ===
-//   const xDefaultHref =
-//     basePath === 'main' || basePath === ''
-//       ? 'https://arapov.trade/ru'
-//       : `https://arapov.trade/ru/${basePath}`;
-
-//   const defaultLink = this.renderer.createElement('link');
-//   this.renderer.setAttribute(defaultLink, 'rel', 'alternate');
-//   this.renderer.setAttribute(defaultLink, 'hreflang', 'x-default');
-//   this.renderer.setAttribute(defaultLink, 'href', xDefaultHref);
-//   this.renderer.appendChild(this.document.head, defaultLink);
-
-// }
 
 
-// private updateHreflangTags() {
-//   // Удаляем старые теги hreflang
-//   this.document
-//     .querySelectorAll('link[rel="alternate"][hreflang]')
-//     .forEach(tag => tag.remove());
-
-//   const fullPath = this.router.url.split('?')[0].replace(/^\/|\/$/g, '');
-//   const segments = fullPath ? fullPath.split('/') : [];
-//   const LANGS = ['uk', 'ru', 'en'];
-
-//   // Определяем текущий язык и basePath
-//   let currentLang: string;
-//   let basePath: string;
-
-//   if (!fullPath || fullPath === 'main' || fullPath === 'ru/main' || fullPath === 'en/main') {
-//     // Главная (включая варианты /, /main, /ru/main, /en/main)
-//     basePath = 'main';
-//     if (!fullPath) currentLang = 'uk';
-//     else currentLang = segments[0] || 'uk';
-//   } else {
-//     const first = segments[0];
-//     if (LANGS.includes(first)) {
-//       currentLang = first;
-//       basePath = segments.slice(1).join('/');
-//     } else {
-//       // Считаем, что это укр-версия без префикса (редкий случай)
-//       currentLang = 'uk';
-//       basePath = segments.join('/');
-//     }
-//   }
-
-//   // Хелпер: нормализовать href (убрать двойные слеши, убрать слеш в конце)
-//   const normalize = (u: string) => u.replace(/([^:]\/)\/+/g, '$1').replace(/\/$/, '');
-
-//   // Генерим теги для каждой локали
-//   LANGS.forEach(lang => {
-//     let href = '';
-
-//     if (basePath === 'main') {
-//       // Для главной — специальные адреса, как ты просил:
-//       if (lang === 'uk') href = 'https://arapov.trade';
-//       else if (lang === 'ru') href = 'https://arapov.trade/ru/main';
-//       else href = 'https://arapov.trade/en/main';
-//     } else {
-//       // Для обычных страниц — всегда с префиксом языка
-//       // Пример: https://arapov.trade/ru/freestudying/technicalanalysis
-//       href = `https://arapov.trade/${lang}/${basePath}`;
-//     }
-
-//     href = normalize(href);
-
-//     const link = this.renderer.createElement('link');
-//     this.renderer.setAttribute(link, 'rel', 'alternate');
-//     this.renderer.setAttribute(link, 'hreflang', lang);
-//     this.renderer.setAttribute(link, 'href', href);
-//     this.renderer.appendChild(this.document.head, link);
-//   });
-
-//   // x-default — ведём на корень сайта (можешь заменить на другую цель при желании)
-//   // const xDefaultHref = normalize('https://arapov.trade');
-//     const xDefaultHref = basePath === 'main'
-//     ? 'https://arapov.trade/ru/main'
-//     : `https://arapov.trade/ru/${basePath}`;
-
-//   const defaultLink = this.renderer.createElement('link');
-//   this.renderer.setAttribute(defaultLink, 'rel', 'alternate');
-//   this.renderer.setAttribute(defaultLink, 'hreflang', 'x-default');
-//   this.renderer.setAttribute(defaultLink, 'href', xDefaultHref);
-//   this.renderer.appendChild(this.document.head, defaultLink);
-// }
+   
  
 private updateHreflangTags() {
   // Удаляем старые теги hreflang

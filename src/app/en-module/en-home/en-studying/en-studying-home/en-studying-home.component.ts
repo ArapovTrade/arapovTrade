@@ -102,11 +102,7 @@ export class EnStudyingHomeComponent implements OnInit , AfterViewInit, OnDestro
   }
   navigateToHomeWithId() {
     window.location.href = 'https://arapov.education/en/course-en/';
-    // this.router.navigateByUrl('/en').then(() => {
-    //   setTimeout(() => {
-    //     this.scrollToRegistration();
-    //   }, 100);
-    // });
+     
   }
   scrollToRegistration() {
     const element = document.getElementById('registrationEn');

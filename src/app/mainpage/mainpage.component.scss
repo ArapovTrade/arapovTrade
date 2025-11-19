@@ -1,14 +1,6 @@
-// .btn-section-one:hover {
-//   width: 377.333px;  
-// }
-
-// .btn-section-one:hover .icon-button {
-//   width: 70px;  
-// }
  
-.phone{
-  // display: none !important;
-}
+ 
+ 
  .desc{
   display: block;
  }
@@ -2128,29 +2120,7 @@ background: url(../../../public/assets/redesignArapovTrade/img/elips-light.svg)
   background-position: center;
 }
 
-.youtube-channel:hover {
-  // width: 377px;  
-  // padding-right: 5px;  
-}
-.youtube-channel:hover .icon-button {
-  // width: 55px;  
-  // height: 55px;
-
-   
-}
-.youtube-channel .icon-button  {
-  // width: 0;
-  // transition: width 0.3s;
-}
-.podrobnee:hover {
-  // overflow: hidden;
-  // width: 320px;  
-  // padding-right: 5px;  
-  // .text {
-  //   color: #03314b;
-  // }
-  
-}
+ 
 .icon-button-hover-dark {
   &:hover {
     background: linear-gradient(90deg, #f7b709, #fffda0);
@@ -2176,9 +2146,7 @@ background: url(../../../public/assets/redesignArapovTrade/img/elips-light.svg)
   }
   }
 }
-.podrobnee:hover .icon-button  {
-  // width: 70px;  
-}
+ 
 
 .podrobnee {
   display: flex;
@@ -2213,23 +2181,15 @@ background: url(../../../public/assets/redesignArapovTrade/img/elips-light.svg)
   justify-content: center;
   flex-wrap: nowrap;
   flex-shrink: 0;
-  // gap: 10.667px;
-  position: relative;
-  // width: 40px;
-  // height:40px;
+   
+  position: relative; 
   width: 50px;
-    height: 44px;
-  // border: 2px solid #f7f8f9;
-  // transform: rotate(180deg); 
+    height: 44px; 
   z-index: 232;
   border-radius: 133.333px;
   background-size: contain;
 }
-.icon-play:hover svg path{
-  // transform:scale(1.15) rotate(180deg);
-  // stroke:#fcca35 ;
-    
-}
+ 
 
  .icon-play-light:hover path{
   stroke: #0082CC;
@@ -2291,16 +2251,7 @@ background: url(../../../public/assets/redesignArapovTrade/img/elips-light.svg)
 /* Медиа-запрос для планшетов (до 767px) */
 
 @media (min-width: 767px) and (max-width: 1200px) {
-//   .btn-section-one:hover {
-   
-//   width: 207px;
-   
-// }
-
-// .btn-section-one:hover .icon-button {
-   
-//   display: none !important;
-// }
+ 
    
   
 
@@ -2325,19 +2276,12 @@ background: url(../../../public/assets/redesignArapovTrade/img/elips-light.svg)
   
 
   .youtube-channel {
-    // width: 265px;
-    // height: 40px;
-    // padding-left: 15px;
+     
     padding: 10px 30px;
     font-size: 16px;
     font-family: "Lato";
   }
-  .youtube-channel:hover {
-    // width: 265px;
-    // .icon-button   {
-    //   display: none;
-    // }
-  }
+  
   .primary-button {
     font-size: 13px;
   }
@@ -2411,50 +2355,17 @@ background: url(../../../public/assets/redesignArapovTrade/img/elips-light.svg)
     justify-content: space-evenly;
     text-align: left;
   }
-  .btn-section-one {
-    // width: 207px;
-    // height: 45px;
-    // padding-left: 25px;
-  }
+  
   .pochaty-navchannya {
-     
-    // height: 45px;
+   
     font-family: "Lato";
     font-weight: 600;
-    font-size: 16px;
-    // flex-shrink: 1;
+    font-size: 16px; 
     display: flex;
     align-items: center;
-    justify-content: center;
-
-    // text-transform: none;
+    justify-content: center; 
   }
-  .podrobnee {
-    // width: 205px;
-    // height: 45px;
-  }
-  .podrobnee .text {
-    // font-family: "Lato";
-    // font-weight: 600;
-    // font-size: 16px;
-  }
-  .podrobnee:hover { 
-    // overflow: hidden;
-    // width: 205px;
-    // padding-right: 35px;  
-    // .text {
-    //   color: #03314b;
-    // }
-    // .frame-1 {
-    //   display: none;
-    // }
-    // .icon-play {
-    //   display: none;
-    // }
-    // .icon-button{
-    //   display: none;
-    // }
-  }
+   
   .icon-button-hover-dark {
   &:hover {
     background: linear-gradient(90deg, #f7b709, #fffda0);
@@ -2499,10 +2410,7 @@ background: url(../../../public/assets/redesignArapovTrade/img/elips-light.svg)
     background-position: center !important;
   }
   .authot_button_block {
-    flex-direction: row;
-    // gap: 15px;
-    // width: 426px;
-    // height: 65px;
+    flex-direction: row; 
     height: 44px;
     margin: 0;
   }
@@ -2763,9 +2671,7 @@ background: url(../../../public/assets/redesignArapovTrade/img/articles-light.pn
     position: absolute;
     top: 944px;
   }
-  .phone{
-  // display: none;
-}
+   
  .desc{
   display: block;
  }
@@ -3244,15 +3150,10 @@ background: url(../../../public/assets/redesignArapovTrade/img/bg-seventh-table-
     justify-content: center;
   }
 
-  .youtube-channel:hover { 
-    // .icon-button  {
-    //   display: none;
-    // }
+  .youtube-channel:hover {  
     margin: 0 auto;
     font-size: 16px;
-    font-family: "Lato";
-    // width: 315px;
-    // height: 40px;
+    font-family: "Lato"; 
     padding: 0;
     justify-content: center;
   }
@@ -3344,8 +3245,7 @@ background: url(../../../public/assets/redesignArapovTrade/img/bg-seventh-table-
   }
 
   .btn-section-one {
-    width: 100%;
-    // height: 45px;
+    width: 100%; 
     padding: 0;
     justify-content: center;
   }
@@ -3353,40 +3253,15 @@ background: url(../../../public/assets/redesignArapovTrade/img/bg-seventh-table-
   .pochaty-navchannya { 
     font-size: 16px;
     font-family: "Lato";
-    font-weight: 600;
-    // flex-shrink: 1;
+    font-weight: 600; 
     display: flex;
     align-items: center;
     justify-content: center;
         width:  100%;
-    padding: 10px 0;
-    // text-transform: none;
+    padding: 10px 0; 
   }
 
-  .podrobnee {
-    // width: 315px;
-    // height: 45px;
-    // padding: 0;
-    // justify-content: center;
-  }
-
-  .podrobnee .text {
-    // font-family: "Lato";
-    // font-weight: 600;
-    // font-size: 16px;
-  }
-
-  .podrobnee:hover { 
-    // overflow: hidden; 
-    // .text {
-    //   color: #03314b;
-    // }
-    // .frame-1,
-    // .icon-play,
-    // .icon-button,.icon-button-dark, .icon-button-light {
-    //   display: none;
-    // }
-  }
+   
   .icon-button-hover-dark {
   &:hover {
     background: linear-gradient(90deg, #f7b709, #fffda0);
