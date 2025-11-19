@@ -41,7 +41,7 @@ export class HomeRuBlogThirtyFourComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
 
-    this.titleService.setTitle('Как выставлять стоп-лосс в трейдинге | Arapov.trade');
+    this.titleService.setTitle('Что такое стоп-лосс и как его выставлять | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',

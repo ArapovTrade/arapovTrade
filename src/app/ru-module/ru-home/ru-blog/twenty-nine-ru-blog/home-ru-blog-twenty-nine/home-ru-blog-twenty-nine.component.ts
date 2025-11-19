@@ -40,7 +40,7 @@ export class HomeRuBlogTwentyNineComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Быстрый старт в трейдинге для новичков | Arapov.trade'
+      'Трейдинг для начинающих : как начать | Arapov.trade'
     );
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });

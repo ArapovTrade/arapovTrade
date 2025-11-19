@@ -40,7 +40,7 @@ export class HomeRuBlogThirtyEightComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
 
-    this.titleService.setTitle('Хранение криптовалют: принципы и безопасность | Arapov.trade');
+    this.titleService.setTitle('Безопасное хранение криптовалюты | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',

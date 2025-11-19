@@ -39,7 +39,7 @@ export class HomeRuBlogThirtySixComponent implements OnInit {
     this.grr = this.artickleServ.selectedGroups;
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
-    this.titleService.setTitle('Особенности рынка криптовалют | Arapov.trade');
+    this.titleService.setTitle('Рынок криптовалют: как анализировать | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index' });
     this.meta.updateTag({
       name: 'description',

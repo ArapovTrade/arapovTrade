@@ -41,7 +41,7 @@ export class HomeRuBlogThirtySevenComponent implements OnInit {
     this.checkedGroup = this.artickleServ.selectedGroups;
 
     this.titleService.setTitle(
-      'Просадки в трейдинге: управление рисками | Arapov.trade'
+      'Просадка в трейдинге: управление рисками | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index' });
     this.meta.updateTag({

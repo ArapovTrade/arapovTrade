@@ -40,7 +40,7 @@ export class HomeRuBlogThirtyComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Основы криптовалют для начинающих | Arapov.trade'
+      'Трейдинг криптовалют: обучение для новичков| Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index' });
     this.meta.updateTag({

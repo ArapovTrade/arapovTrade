@@ -40,7 +40,7 @@ export class HomeRuElevenComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Как начать торговать на криптобирже | Arapov.trade'
+      'Как начать торговать на бирже | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index' });
     this.meta.updateTag({

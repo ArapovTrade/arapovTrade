@@ -41,7 +41,7 @@ export class HomeRuThreeComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Знакомство с биржей: полное руководство | Arapov.trade'
+      'Что такое биржа: полное руководство | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index' });
     this.meta.updateTag({

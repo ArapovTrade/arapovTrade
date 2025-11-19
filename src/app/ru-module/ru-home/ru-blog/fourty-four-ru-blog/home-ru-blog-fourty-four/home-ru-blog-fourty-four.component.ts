@@ -41,7 +41,7 @@ export class HomeRuBlogFourtyFourComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Преимущества и риски криптостейкинга | ArapovTrade'
+      'Что такое стейкинг криптовалюты? | ArapovTrade'
 
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });

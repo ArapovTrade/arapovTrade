@@ -41,7 +41,7 @@ export class HomeRuFourtySixComponent implements OnInit {
     this.checkedGroup = this.artickleServ.selectedGroups;
 
     this.titleService.setTitle(
-      'Tether (USDT): что это и как использовать | Arapov.trade'
+      'Что такое Tether (USDT) | Arapov.trade'
     );
     this.meta.updateTag({ name: 'robots', content: 'index' });
     this.meta.updateTag({
