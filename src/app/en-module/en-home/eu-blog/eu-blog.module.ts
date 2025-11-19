@@ -950,13 +950,41 @@ const routes: Routes = [
         (m) => m.EightyNineEnBlogModule
       ),
   },
-  // {
-  //   path: '90', //90
-  //   loadChildren: () =>
-  //     import('../eu-blog/ninty-en-blog/ninty-en-blog.module').then(
-  //       (m) => m.NintyEnBlogModule
-  //     ),
-  // },
+  {
+    path: 'metodmartingejla', //90
+    loadChildren: () =>
+      import('../eu-blog/ninty-en-blog/ninty-en-blog.module').then(
+        (m) => m.NintyEnBlogModule
+      ),
+  },
+  {
+    path: 'tiltintrading', //91
+    loadChildren: () =>
+      import('../eu-blog/ninty-one-en-blog/ninty-one-en-blog.module').then(
+        (m) => m.NintyOneEnBlogModule
+      ),
+  },
+  {
+    path: 'binarnyeopciony', //92
+    loadChildren: () =>
+      import('../eu-blog/ninty-two-en-blog/ninty-two-en-blog.module').then(
+        (m) => m.NintyTwoEnBlogModule
+      ),
+  },
+  {
+    path: 'atrindikator', //93
+    loadChildren: () =>
+      import('../eu-blog/ninty-three-en-blog/ninty-three-en-blog.module').then(
+        (m) => m.NintyThreeEnBlogModule
+      ),
+  },
+  {
+    path: 'spread', //94
+    loadChildren: () =>
+      import('../eu-blog/ninty-four-en-blog/ninty-four-en-blog.module').then(
+        (m) => m.NintyFourEnBlogModule
+      ),
+  },
   ]
    },
 ];

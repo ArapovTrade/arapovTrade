@@ -210,6 +210,110 @@ export class ArticlesService {
       groupsEng: ['Trade Examples'],
       id: 109,
     },
+    {
+      titleUkr: 'Метод Мартінгейла',
+      linkUkr: 'metodmartingejla',
+      titleRus: 'Метод Мартингейла',
+      titleEn: 'Martingale method',
+      descrRus:
+        'Узнайте, как работает метод Мартингейла в трейдинге. Способы увеличения прибыли и управления рисками  | Игорь Арапов',
+      descrUkr:
+        'Дізнайтеся, як працює метод Мартінгейла у трейдингу. Способи збільшення прибутку та управління ризиками | Ігор Арапов',
+      descrEn:
+        'Learn how the Martingale method works in trading. Ways to increase profits and manage risks | Igor Arapov',
+      realTitleRus: 'Стратегия Мартингейла в трейдинге: Как повысить доход',
+      realTitleUkr: 'Стратегія Мартінгейла у трейдингу: Як підвищити дохід',
+      realTitleEn: 'Martingale Strategy in Trading: How to Increase Income',
+      imgUkr: '/assets/img/content/martingale.png',
+      groupsRus: ['Трейдинг для начинающих'],
+      groupsUkr: ['Трейдинг для початківців'],
+      groupsEng: ['Trading for Beginners'],
+      id: 158,
+    },
+    {
+       
+      linkUkr: 'tiltintrading',
+      titleRus: 'Что такое тильт в трейдинге : причины, признаки',
+      titleUkr: 'Що таке тільт у трейдингу: причини, ознаки',
+      titleEn: 'What is Tilt in Trading: Causes, Signs',
+      descrRus:
+        'Узнайте, что такое тильт, его причины, признаки, виды (явный и скрытый), а также эффективные способы борьбы и профилактики | Игорь Арапов',
+      descrUkr:
+        'Дізнайтеся, що таке тільт, його причини, ознаки, види (явний і прихований), а також ефективні способи боротьби та профілактики | Ігор Арапов',
+      descrEn:
+        'Learn what tilt is, its causes, signs, types (overt and covert), and effective ways to combat and prevent it | Igor Arapov',
+      realTitleRus: 'Что такое тильт в трейдинге : причины, признаки',
+      realTitleUkr: 'Що таке тільт у трейдингу: причини, ознаки',
+      realTitleEn: 'What is Tilt in Trading: Causes, Signs',
+      imgUkr: '/assets/img/content/tilt2.jpg',
+      groupsRus: ['Трейдинг для начинающих'],
+      groupsUkr: ['Трейдинг для початківців'],
+      groupsEng: ['Trading for Beginners'],
+      id: 159,
+    },
+    {
+       
+      linkUkr: 'binarnyeopciony',
+      titleRus: 'Бинарные опционы : стратегия для новичков',
+       titleUkr: 'Бінарні опціони: стратегія для початківців',
+      titleEn: 'Binary Options: Strategy for Beginners',
+      descrRus:
+        'Узнайте, что такое бинарные опционы, как они работают, их виды, особенности, плюсы и минусы. Подробное руководство для новичков | Игорь Арапов',
+      descrUkr:
+        'Дізнайтеся, що таке бінарні опціони, як вони працюють, їх види, особливості, плюси та мінуси. Детальний посібник для початківців | Ігор Арапов',
+      descrEn:
+        'Learn what binary options are, how they work, their types, features, pros and cons. A detailed guide for beginners | Igor Arapov',
+      realTitleRus: 'Бинарные опционы : стратегия для новичков | Игорь Арапов',
+      realTitleUkr: 'Бінарні опціони: стратегія для початківців | Ігорь Арапов',
+      realTitleEn: 'Binary Options: Strategy for Beginners | Igor Arapov',
+      imgUkr: '/assets/img/content/binareoptions2.jpg',
+      groupsRus: ['Трейдинг для начинающих'],
+      groupsUkr: ['Трейдинг для початківців'],
+      groupsEng: ['Trading for Beginners'],
+      id: 160,
+    },
+    {
+       
+      linkUkr: 'atrindikator',
+      titleRus: 'ATR индикатор',
+       titleUkr: 'Індикатор ATR',
+      titleEn: 'ATR Indicator',
+      descrRus:
+        'Узнайте, что такое ATR индикатор в трейдинге, как он рассчитывается и как использовать Average True Range для определения волатильности рынка| Игорь Арапов',
+      descrUkr:
+        'Дізнайтеся, що таке індикатор ATR у трейдингу, як він розраховується та як використовувати Average True Range для визначення волатильності ринку | Ігор Арапов',
+      descrEn:
+        'Learn what the ATR indicator is in trading, how it is calculated, and how to use the Average True Range to determine market volatility | Igor Arapov',
+        realTitleRus: 'Что такое ATR индикатор | Игорь Арапов',
+      realTitleUkr: 'Що таке індикатор ATR | Ігор Арапов',
+      realTitleEn: 'What is the ATR Indicator | Igor Arapov',
+      imgUkr: '/assets/img/content/atrindicator.jpg',
+      groupsRus: ['Трейдинг для начинающих'],
+      groupsUkr: ['Трейдинг для початківців'],
+      groupsEng: ['Trading for Beginners'],
+      id: 161,
+    },
+     {
+       
+      linkUkr: 'spread',
+      titleRus: 'Что такое спред?',
+        titleUkr: 'Що таке спред?',
+      titleEn: 'What is Spread?',
+      descrRus:
+        'Узнайте, что такое спред в трейдинге, почему он важен и как эта разница между Bid и Ask ценами влияет на вашу первую сделку | Игорь Арапов',
+      descrUkr:
+        'Дізнайтеся, що таке спред у трейдингу, чому він важливий і як ця різниця між цінами Bid та Ask впливає на вашу першу угоду | Ігор Арапов',
+      descrEn:
+        'Learn what spread is in trading, why it is important, and how the difference between Bid and Ask prices affects your first trade | Igor Arapov',
+      realTitleRus: 'Что такое спред в трейдинге простыми словами | Игорь Арапов',
+      realTitleUkr: 'Що таке спред у трейдингу простими словами | Ігор Арапов',
+      realTitleEn: 'What is Spread in Trading Simple Words | Igor Arapov',
+      imgUkr: '/assets/img/content/spread3.png',
+      groupsRus: ['Трейдинг для начинающих'],
+      groupsUkr: ['Трейдинг для початківців'],
+      groupsEng: ['Trading for Beginners'],
+      id: 162,
+    },
       {
      
       linkUkr: 'bitcoin-domination',
