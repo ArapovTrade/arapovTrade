@@ -20,4 +20,4 @@ describe('EnHomeComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-});
+}); 
