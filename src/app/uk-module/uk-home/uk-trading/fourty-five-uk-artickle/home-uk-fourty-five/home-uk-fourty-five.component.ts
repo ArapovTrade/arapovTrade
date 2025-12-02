@@ -67,7 +67,9 @@ export class HomeUkFourtyFiveComponent implements OnInit {
         });
     this.addJsonLdScript();
     this.addCourseSchema()
-     
+      this.addVideoObjectSchema();
+this.addArtickleSchema()
+
     this.gerRandom();
 
     this.route.fragment.subscribe((fragment) => {
@@ -176,6 +178,111 @@ export class HomeUkFourtyFiveComponent implements OnInit {
     });
     this.document.head.appendChild(jsonLdScript);
   }
+  private addVideoObjectSchema() {
+  // Проверяем, существует ли уже такой VideoObject
+  const exists = Array.from(
+    this.document.querySelectorAll('script[type="application/ld+json"]')
+  ).some(script => {
+    try {
+      const json = JSON.parse(script.textContent || '{}');
+      return json["@type"] === "VideoObject" &&
+             json["name"] === "Безкоштовний курс з трейдингу — огляд програми";
+    } catch {
+      return false;
+    }
+  });
+
+  if (exists) return;
+
+  const script = this.document.createElement('script');
+  script.type = 'application/ld+json';
+  script.text = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Безкоштовний курс з трейдингу — огляд програми",
+    "description": "Детальний розбір безкоштовного курсу з трейдингу: на що звертати увагу, навіщо потрібні різні розділи та які ключові теми в них розкриваються.",
+    "thumbnailUrl": "https://img.youtube.com/vi/ZHhJqYzyaO4/maxresdefault.jpg",
+    "uploadDate": "2024-01-15",
+    "duration": "PT15M",
+    "contentUrl": "https://www.youtube.com/watch?v=ZHhJqYzyaO4",
+    "embedUrl": "https://www.youtube.com/embed/ZHhJqYzyaO4",
+    "author": {
+      "@type": "Person",
+      "name": "Ігор Арапов"
+    }
+  });
+
+  this.document.head.appendChild(script);
+}
+
+
+  private addArtickleSchema() {
+  // Проверяем, существует ли уже такой ItemList
+  const exists = Array.from(
+    this.document.querySelectorAll('script[type="application/ld+json"]')
+  ).some(script => {
+    try {
+      const json = JSON.parse(script.textContent || '{}');
+      return json["@type"] === "ItemList" &&
+             json["name"] === "Розділи курсу з трейдингу";
+    } catch {
+      return false;
+    }
+  });
+
+  if (exists) return;
+
+  const script = this.document.createElement('script');
+  script.type = 'application/ld+json';
+  script.text = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Розділи курсу з трейдингу",
+    "description": "Структура безкоштовного курсу з трейдингу для початківців",
+    "numberOfItems": 6,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Трейдинг для початківців",
+        "description": "Основи професії, міфи про трейдинг, типові помилки новачків"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Технічний аналіз ринку",
+        "description": "Фази ринку, тренди, рівні підтримки та опору, розворотні моделі"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Об’ємний аналіз",
+        "description": "Вертикальний і горизонтальний об’єм, метод Вайкоффа, принцип зусилля-результат"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Smart Money",
+        "description": "Концепція розумних грошей, маніпуляції великих гравців, ліквідність"
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "name": "Психологія трейдингу",
+        "description": "Страх і жадібність, дисципліна, мислення професійного трейдера"
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "name": "Практика та приклади угод",
+        "description": "Торгова система, розрахунок позиції, ризик-менеджмент, приклади входів"
+      }
+    ]
+  });
+
+  this.document.head.appendChild(script);
+}
+
 
   private addCourseSchema(): void {
     const script = this.document.createElement('script');

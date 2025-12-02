@@ -29,27 +29,25 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
     private articleServ: ArticlesService,
     private route: ActivatedRoute,
     @Inject(DOCUMENT) private document: Document,
-   private cdr:ChangeDetectorRef,
-  private router: Router,
-    private themeService:ThemeservService,
-    private artickleServ: ArticlesService,
+    private cdr: ChangeDetectorRef,
+    private router: Router,
+    private themeService: ThemeservService,
+    private artickleServ: ArticlesService
   ) {}
-   private routerSubscription!: Subscription;
- private themeSubscription!: Subscription;
-  isDark!:boolean  ;
+  private routerSubscription!: Subscription;
+  private themeSubscription!: Subscription;
+  isDark!: boolean;
   ukrGroups: any = [];
- grr!: any;
+  grr!: any;
   checkedGroup!: any;
 
   ngOnInit(): void {
+    this.themeSubscription = this.themeService.getTheme().subscribe((data) => {
+      this.isDark = data;
+      this.cdr.detectChanges();
+    });
 
-
-     this.themeSubscription =this.themeService.getTheme().subscribe(data=>{
-      this.isDark=data;
-        this.cdr.detectChanges();
-    })
-    
- this.ukrGroups = this.artickleServ.getRussianGroups();
+    this.ukrGroups = this.artickleServ.getRussianGroups();
     this.grr = this.artickleServ.selectedGroups;
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
@@ -71,11 +69,13 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
       content: 'https://arapov.trade/assets/img/content/freeeducationnew.webp',
     });
     this.meta.updateTag({
-          name: 'twitter:image',
-          content: `https://arapov.trade/assets/img/content/freeeducationnew.webp`,
-        });
+      name: 'twitter:image',
+      content: `https://arapov.trade/assets/img/content/freeeducationnew.webp`,
+    });
     this.addJsonLdScript();
     this.addCourseSchema();
+    this.addVideoObjectSchema();
+    this.addArtickleSchema();
 
     this.gerRandom();
 
@@ -123,8 +123,7 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
       license: 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
       mainEntityOfPage: {
         '@type': 'WebPage',
-        '@id': 'https://arapov.trade/ru/freestudying/freeeducation'
-        
+        '@id': 'https://arapov.trade/ru/freestudying/freeeducation',
       },
       step: [
         {
@@ -204,7 +203,123 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
 
     this.document.head.appendChild(script);
   }
+  private addVideoObjectSchema() {
+    // Проверяем, есть ли уже такой VideoObject в head
+    const exists = Array.from(
+      this.document.querySelectorAll('script[type="application/ld+json"]')
+    ).some((script) => {
+      try {
+        const json = JSON.parse(script.textContent || '{}');
+        return (
+          json['@type'] === 'VideoObject' &&
+          json['name'] === 'Бесплатный курс по трейдингу — обзор программы'
+        );
+      } catch {
+        return false;
+      }
+    });
 
+    // Если уже существует — выходим
+    if (exists) return;
+
+    // Создаем новый JSON-LD
+    const script = this.document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'VideoObject',
+      name: 'Бесплатный курс по трейдингу — обзор программы',
+      description:
+        'Подробный разбор бесплатного курса по трейдингу: на что обращать внимание, зачем нужны разные разделы и какие ключевые темы в них раскрываются.',
+      thumbnailUrl: 'https://img.youtube.com/vi/ZHhJqYzyaO4/maxresdefault.jpg',
+      uploadDate: '2024-01-15',
+      duration: 'PT15M',
+      contentUrl: 'https://www.youtube.com/watch?v=ZHhJqYzyaO4',
+      embedUrl: 'https://www.youtube.com/embed/ZHhJqYzyaO4',
+      author: {
+        '@type': 'Person',
+        name: 'Игорь Арапов',
+      },
+    });
+
+    this.document.head.appendChild(script);
+  }
+  private addArtickleSchema() {
+    // Проверяем, есть ли уже ItemList в head
+    const exists = Array.from(
+      this.document.querySelectorAll('script[type="application/ld+json"]')
+    ).some((script) => {
+      try {
+        const json = JSON.parse(script.textContent || '{}');
+        return (
+          json['@type'] === 'ItemList' &&
+          json['name'] === 'Разделы курса по трейдингу'
+        );
+      } catch {
+        return false;
+      }
+    });
+
+    // Если уже существует — выходим
+    if (exists) return;
+
+    // Создаем новый JSON-LD
+    const script = this.document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'Разделы курса по трейдингу',
+      description: 'Структура бесплатного курса по трейдингу для начинающих',
+      numberOfItems: 6,
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Трейдинг для начинающих',
+          description:
+            'Основы профессии, мифы о трейдинге, типичные ошибки новичков',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Технический анализ рынка',
+          description:
+            'Фазы рынка, тренды, уровни поддержки и сопротивления, разворотные модели',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'Объёмный анализ',
+          description:
+            'Вертикальный и горизонтальный объём, метод Вайкоффа, принцип усилие-результат',
+        },
+        {
+          '@type': 'ListItem',
+          position: 4,
+          name: 'Smart Money',
+          description:
+            'Концепция умных денег, манипуляции крупных игроков, ликвидность',
+        },
+        {
+          '@type': 'ListItem',
+          position: 5,
+          name: 'Психология трейдинга',
+          description:
+            'Страх и жадность, дисциплина, мышление профессионального трейдера',
+        },
+        {
+          '@type': 'ListItem',
+          position: 6,
+          name: 'Практика и примеры сделок',
+          description:
+            'Торговая система, расчёт позиции, риск-менеджмент, примеры входов',
+        },
+      ],
+    });
+
+    this.document.head.appendChild(script);
+  }
   private removeExistingWebPageSchema(): void {
     const scripts = this.document.querySelectorAll(
       'script[type="application/ld+json"]'
@@ -229,76 +344,66 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
   gerRandom() {
     this.randomArticleRus = this.artickleServ.getRandomUkArticles();
   }
-  
-  
+
   hoveredIndex: number | null = null;
-  
+
   projects = [
-  { title: 'Быстрый старт', link: 'https://arapov.education/course/' },
-  { title: 'Введение в трейдинг', link: 'https://arapov.education/reg-workshop/' },
-  { title: 'Профессиональные курсы', link: 'https://arapov.trade/ru/studying' },
-  { title: 'Базовый курс', link: 'https://arapov.trade/ru/freestudying/freeeducation' },
-  { title: 'Копитрейдинг', link: 'https://arapovcopytrade.com' },
-];
-  
-  
-  
-   
-    onGroupChange(event: Event) {
-       
-     
-       const checkbox = event.target as HTMLInputElement;
+    { title: 'Быстрый старт', link: 'https://arapov.education/course/' },
+    {
+      title: 'Введение в трейдинг',
+      link: 'https://arapov.education/reg-workshop/',
+    },
+    {
+      title: 'Профессиональные курсы',
+      link: 'https://arapov.trade/ru/studying',
+    },
+    {
+      title: 'Базовый курс',
+      link: 'https://arapov.trade/ru/freestudying/freeeducation',
+    },
+    { title: 'Копитрейдинг', link: 'https://arapovcopytrade.com' },
+  ];
+
+  onGroupChange(event: Event) {
+    const checkbox = event.target as HTMLInputElement;
     const value = checkbox.value;
-    
-      this.router.navigate(['/ru/freestudying'], {
-      queryParams: { group: value }
+
+    this.router.navigate(['/ru/freestudying'], {
+      queryParams: { group: value },
     });
-     
-   
-    
+
     this.checkedGroup = this.artickleServ.selectedGroups;
-    
+  }
+  paginatedArticles = []; // Статьи для отображения на текущей странице
+  currentPage = 0;
+  pageSize = 10;
+
+  ngOnDestroy() {
+    // Отписка от подписок
+    if (this.routerSubscription) {
+      this.routerSubscription.unsubscribe();
     }
-    paginatedArticles = []; // Статьи для отображения на текущей странице
-    currentPage = 0;
-    pageSize = 10;
-     
-  
-     
-         ngOnDestroy() {
-          // Отписка от подписок
-          if (this.routerSubscription) {
-            this.routerSubscription.unsubscribe();
-          }
-          if (this.themeSubscription) {
-            this.themeSubscription.unsubscribe();
-          }
-        } 
-        hovered: string | null = null;
-        toggleTheme() {
-        this.isDark = !this.isDark;
-        this.themeService.setTheme(this.isDark)
-         
-         
-    
-    
-      }
-    
-       
-       
-      navigateTo(path: string) {
-        this.router.navigate([path]);
-      }
-  
-  
-  
-      articleCounts: { [key: string]: number } = {};
-      updateArticleCounts() {
+    if (this.themeSubscription) {
+      this.themeSubscription.unsubscribe();
+    }
+  }
+  hovered: string | null = null;
+  toggleTheme() {
+    this.isDark = !this.isDark;
+    this.themeService.setTheme(this.isDark);
+  }
+
+  navigateTo(path: string) {
+    this.router.navigate([path]);
+  }
+
+  articleCounts: { [key: string]: number } = {};
+  updateArticleCounts() {
     this.articleCounts = {}; // очищаем
-  
-    this.artickleServ.ukrArtickles.forEach(article => {
+
+    this.artickleServ.ukrArtickles.forEach((article) => {
       // article.groupsUkr — это массив, например ['Програмування', 'Маркетинг']
-      article.groupsRus.forEach(group => {
+      article.groupsRus.forEach((group) => {
         if (!this.articleCounts[group]) {
           this.articleCounts[group] = 1;
         } else {
@@ -307,89 +412,93 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
       });
     });
   }
-    //popup
-    flag1: boolean = false;
-    flagTrue1: boolean = true;
-    searchtoggle(event: Event) {
-      this.flag1 = !this.flag1;
-      this.flagTrue1 = !this.flagTrue1;
-    }
-  
-  
+  //popup
+  flag1: boolean = false;
+  flagTrue1: boolean = true;
+  searchtoggle(event: Event) {
+    this.flag1 = !this.flag1;
+    this.flagTrue1 = !this.flagTrue1;
+  }
+
   isFocused = false;
   displayedArticles: artickle[] = [];
   maxResults = 5;
   searchQuery: string = '';
-  
+
   onFocus() {
     this.isFocused = true;
-  
+
     // Показываем 5 случайных статей при фокусе, если инпут пуст
     if (!this.searchQuery) {
-      const shuffled = [...this.artickleServ.ukrArtickles].sort(() => Math.random() - 0.5);
+      const shuffled = [...this.artickleServ.ukrArtickles].sort(
+        () => Math.random() - 0.5
+      );
       this.displayedArticles = shuffled.slice(0, this.maxResults);
     }
   }
-  
+
   onBlur() {
     setTimeout(() => {
       this.isFocused = false;
     }, 150); // таймаут чтобы клик по статье сработал
   }
-  
+
   onSearchChange() {
     // Логика асинхронного поиска
-    const filtered = this.artickleServ.ukrArtickles.filter(a =>
+    const filtered = this.artickleServ.ukrArtickles.filter((a) =>
       a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase())
     );
     this.displayedArticles = filtered.slice(0, this.maxResults);
   }
-  
-  moveToTheTop(){
+
+  moveToTheTop() {
     const element = document.getElementById('scrollToTop');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }
-  
+
   groupsMenuOpen = false;
-     toggleGroupsMenu(event: Event) {
-      
-      this.groupsMenuOpen = !this.groupsMenuOpen;
+  toggleGroupsMenu(event: Event) {
+    this.groupsMenuOpen = !this.groupsMenuOpen;
+  }
+
+  goToNextPage() {
+    let nextpage: any;
+    const path: string =
+      this.router.url.split('/')[this.router.url.split('/').length - 1];
+    let index = this.artickleServ.ukrArtickles.findIndex(
+      (a) => a.linkUkr == path
+    );
+
+    if (this.artickleServ.ukrArtickles.length - 1 == index) {
+      nextpage = this.artickleServ.ukrArtickles[0].linkUkr;
+    } else {
+      nextpage = this.artickleServ.ukrArtickles[index + 1].linkUkr;
     }
 
-    goToNextPage(){
-      let nextpage:any;
-      const path:string=this.router.url.split('/')[this.router.url.split('/').length-1];
-      let index=this.artickleServ.ukrArtickles.findIndex(a=>a.linkUkr==path);
-     
-      if(this.artickleServ.ukrArtickles.length-1==index){
-      nextpage=this.artickleServ.ukrArtickles[0].linkUkr;
-      }else{
-        nextpage=this.artickleServ.ukrArtickles[index+1].linkUkr;
-      }
-      
-       
-       this.router.navigate(['/ru/freestudying', nextpage] )
-      
+    this.router.navigate(['/ru/freestudying', nextpage]);
+  }
+
+  goToPreviousPage() {
+    let nextpage: any;
+    const path: string =
+      this.router.url.split('/')[this.router.url.split('/').length - 1];
+    let index = this.artickleServ.ukrArtickles.findIndex(
+      (a) => a.linkUkr == path
+    );
+
+    if (index == 1) {
+      nextpage =
+        this.artickleServ.ukrArtickles[
+          this.artickleServ.ukrArtickles.length - 1
+        ].linkUkr;
+    } else {
+      nextpage = this.artickleServ.ukrArtickles[index - 1].linkUkr;
     }
 
-
-
-    goToPreviousPage(){
-      let nextpage:any;
-      const path:string=this.router.url.split('/')[this.router.url.split('/').length-1];
-      let index=this.artickleServ.ukrArtickles.findIndex(a=>a.linkUkr==path);
-     
-      if(index==1){
-      nextpage=this.artickleServ.ukrArtickles[this.artickleServ.ukrArtickles.length-1].linkUkr;
-      }else{
-        nextpage=this.artickleServ.ukrArtickles[index-1].linkUkr;
-      }
-      
-         
-       this.router.navigate(['/ru/freestudying', nextpage] )
-    }
+    this.router.navigate(['/ru/freestudying', nextpage]);
+  }
   ngAfterViewInit() {
     // Затримка для забезпечення ініціалізації Angular Material
     setTimeout(() => {
