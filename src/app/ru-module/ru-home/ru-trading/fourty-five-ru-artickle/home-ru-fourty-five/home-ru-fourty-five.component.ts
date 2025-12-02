@@ -334,6 +334,12 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
         if (content['@type'] === 'HowTo') {
           script.remove();
         }
+         if (content['@type'] === 'ItemList') {
+          script.remove();
+        }
+        if (content['@type'] === 'VideoObject') {
+          script.remove();
+        }
       } catch (e) {
         // Игнорируем некорректные JSON (например, из других источников)
       }
