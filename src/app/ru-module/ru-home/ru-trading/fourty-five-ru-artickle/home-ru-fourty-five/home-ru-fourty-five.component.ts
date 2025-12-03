@@ -111,6 +111,12 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
       name: 'Как пройти бесплатный курс по трейдингу от Игоря Арапова',
       description:
         'Пошаговая инструкция для самостоятельного прохождения бесплатного онлайн-курса трейдинга.',
+      totalTime: "PT2M",
+        estimatedCost: {
+            "@type": "MonetaryAmount",
+            "currency": "USD",
+            "value": "0"
+        },   
       author: { '@type': 'Person', name: 'Игорь Арапов' },
       publisher: {
         '@type': 'Organization',
