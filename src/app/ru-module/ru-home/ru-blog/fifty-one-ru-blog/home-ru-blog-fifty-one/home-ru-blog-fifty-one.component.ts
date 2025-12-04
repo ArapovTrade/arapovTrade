@@ -1,4 +1,5 @@
-import { Component, OnInit,ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit,ChangeDetectorRef,Inject,Renderer2, signal } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 import { ThemeservService } from '../../../../../servises/themeserv.service';
 import { artickle } from '../../../../../servises/articles.service';
 import { Subscription } from 'rxjs';
@@ -18,7 +19,8 @@ export class HomeRuBlogFiftyOneComponent implements OnInit {
     private cdr:ChangeDetectorRef,
   private router: Router,
     private themeService:ThemeservService,
-    private artickleServ: ArticlesService,
+    private artickleServ: ArticlesService,private renderer: Renderer2,
+    @Inject(DOCUMENT) private document: Document
   ) {}
   private routerSubscription!: Subscription;
  private themeSubscription!: Subscription;
@@ -27,7 +29,15 @@ export class HomeRuBlogFiftyOneComponent implements OnInit {
  grr!: any;
   checkedGroup!: any;
 
-  ngOnInit(): void {
+  readonly panelOpenState = signal(false);
+
+ ngOnInit(): void {
+     this.removeSelectedSchemas();
+    this.setArticleSchema();
+    this.setPersonSchema();
+    this.setFaqSchema();
+    this.setHowToSchema();
+    this.setGlossarySchema();
 
 
      this.themeSubscription =this.themeService.getTheme().subscribe(data=>{
@@ -39,12 +49,12 @@ export class HomeRuBlogFiftyOneComponent implements OnInit {
     this.grr = this.artickleServ.selectedGroups;
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
-    this.titleService.setTitle('Price Action в трейдинге: руководство | ArapovTrade');
+    this.titleService.setTitle('Price Action в трейдинге: полное руководство | ArapovTrade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Price Action: как торговать без индикаторов? Руководство от ArapovTrade по свечным паттернам, стратегиям и анализу для трейдеров.',
+        'Узнайте, как использовать метод Price Action в трейдинге. Свечные паттерны, уровни поддержки и сопротивления, стратегии торговли без индикаторов.',
     });
 
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-17' });
@@ -219,4 +229,291 @@ export class HomeRuBlogFiftyOneComponent implements OnInit {
          
        this.router.navigate(['/ru/freestudying', nextpage] )
     }
+
+
+
+    private removeSelectedSchemas(): void {
+  const typesToRemove = [
+    'Article',
+    'FAQPage',
+    'HowTo',
+    'DefinedTermSet',
+    'Person',
+  ];
+
+  const scripts = this.document.querySelectorAll(
+    'script[type="application/ld+json"]'
+  );
+
+  scripts.forEach((script) => {
+    try {
+      const json = JSON.parse(script.textContent || '{}');
+
+      // Массив, объект-граф или одиночный объект
+      const candidates = json['@graph'] ?? (Array.isArray(json) ? json : [json]);
+
+      const shouldRemove = candidates.some((entry: any) =>
+        entry['@type'] && typesToRemove.includes(entry['@type'])
+      );
+
+      if (shouldRemove) {
+        script.remove();
+      }
+
+    } catch {
+      /* ignore invalid */
+    }
+  });
+}
+
+
+
+
+
+private addJsonLdSchema(data: any): void {
+    const script = this.renderer.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(data);
+    this.renderer.appendChild(this.document.head, script);
+  }
+
+  // ============================================================
+  //  ARTICLE
+  // ============================================================
+  private setArticleSchema(): void {
+    const data = {
+       "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Price Action в трейдинге: полное руководство по торговле без индикаторов",
+            "description": "Подробное руководство по методу Price Action. Свечные паттерны (пин-бар, поглощение, внутренний бар), уровни поддержки и сопротивления, стратегии торговли на чистых графиках.",
+            "author": {
+                "@type": "Person",
+                "name": "Игорь Арапов",
+                "url": "https://arapov.trade/ru",
+                "description": "Профессиональный трейдер с 2013 года. Специалист по Smart Money, методу Вайкоффа и объёмному анализу.",
+                "sameAs": [
+                    "https://www.youtube.com/@ArapovTrade"
+                ]
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "ArapovTrade",
+                "url": "https://arapov.trade",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://arapov.trade/assets/img/favicon.ico"
+                }
+            },
+            "datePublished": "2025-01-15",
+            "dateModified": "2025-06-04",
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://arapov.trade/ru/freestudying/candlestickpatterns"
+            },
+            "image": {
+                "@type": "ImageObject",
+                "url": "https://arapov.trade/assets/img/content/priceaction1.png",
+                "width": 1200,
+                "height": 630
+            },
+            "articleSection": "Технический анализ",
+            "keywords": "Price Action, свечные паттерны, пин-бар, поглощение, трейдинг",
+            "inLanguage": "ru"
+    };
+
+    this.addJsonLdSchema(data);
+  }
+
+  // ============================================================
+  //  PERSON
+  // ============================================================
+  private setPersonSchema(): void {
+    const data = {
+      '@context': 'https://schema.org',
+      '@type': 'Person',
+      '@id': 'https://arapov.trade/#person',
+      name: 'Игорь Арапов',
+      url: 'https://arapov.trade/ru/',
+      image: 'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
+      sameAs: [
+        'https://www.youtube.com/@ArapovTrade',
+        'https://t.me/ArapovTrade',
+      ],
+      jobTitle: 'Профессиональный трейдер',
+      description:
+        'Активно торгую на финансовых рынках с 2013 года. Автор бесплатного курса по трейдингу.',
+    };
+
+    this.addJsonLdSchema(data);
+  }
+
+   
+
+  // ============================================================
+  //  FAQ
+  // ============================================================
+  private setFaqSchema(): void {
+    const data = {
+       "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "Что такое Price Action в трейдинге?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Price Action — это метод технического анализа, основанный на изучении движения цены без использования индикаторов. Трейдеры анализируют чистые ценовые графики, свечные паттерны, уровни поддержки и сопротивления для принятия торговых решений. Метод помогает понять психологию рынка и действия крупных игроков."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Какие основные паттерны Price Action существуют?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Основные паттерны Price Action включают: пин-бар (свеча с длинной тенью, сигнализирующая о развороте), поглощение (свеча полностью перекрывает предыдущую), внутренний бар (свеча внутри диапазона предыдущей), доджи (нерешительность рынка). Эти паттерны наиболее эффективны на ключевых уровнях поддержки и сопротивления."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Как определить уровни поддержки и сопротивления?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Уровни поддержки и сопротивления определяются по историческим точкам, где цена многократно разворачивалась или консолидировалась. Поддержка — зона, где покупатели останавливают падение цены. Сопротивление — зона, где продавцы препятствуют росту. Значимые уровни подтверждаются множественными касаниями и высокими объёмами торгов."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "В чём преимущества торговли по Price Action?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Преимущества Price Action: простота анализа без сложных индикаторов, универсальность для любых рынков и таймфреймов, понимание психологии участников рынка, отсутствие запаздывания сигналов (в отличие от индикаторов), возможность видеть действия крупных игроков через свечные формации."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Как избежать ложных сигналов Price Action?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Для фильтрации ложных сигналов: торгуйте паттерны только на значимых уровнях поддержки/сопротивления, дожидайтесь закрытия сигнальной свечи, анализируйте контекст (тренд, волатильность), используйте подтверждение объёмами, избегайте торговли во время важных новостей, комбинируйте несколько таймфреймов для анализа."
+                    }
+                }
+            ]
+    };
+
+    this.addJsonLdSchema(data);
+  }
+
+  // ============================================================
+  //  HOWTO
+  // ============================================================
+  private setHowToSchema(): void {
+    const data = {
+       "@context": "https://schema.org",
+            "@type": "HowTo",
+            "name": "Как торговать по методу Price Action",
+            "description": "Пошаговое руководство по применению Price Action для прибыльной торговли на финансовых рынках.",
+            "step": [
+                {
+                    "@type": "HowToStep",
+                    "position": 1,
+                    "name": "Определите ключевые уровни на графике",
+                    "text": "Найдите значимые зоны поддержки и сопротивления, где цена многократно разворачивалась в прошлом. Отмечайте уровни на старшем таймфрейме (дневной или недельный) для определения глобальной структуры рынка."
+                },
+                {
+                    "@type": "HowToStep",
+                    "position": 2,
+                    "name": "Определите направление тренда",
+                    "text": "Проанализируйте структуру максимумов и минимумов. Восходящий тренд характеризуется более высокими максимумами и минимумами. Нисходящий — более низкими. Торгуйте в направлении основного тренда для повышения вероятности успеха."
+                },
+                {
+                    "@type": "HowToStep",
+                    "position": 3,
+                    "name": "Дождитесь формирования паттерна",
+                    "text": "Ищите свечные паттерны (пин-бар, поглощение, внутренний бар) на ключевых уровнях. Паттерн должен полностью сформироваться — дождитесь закрытия сигнальной свечи перед принятием решения о входе."
+                },
+                {
+                    "@type": "HowToStep",
+                    "position": 4,
+                    "name": "Проанализируйте контекст сигнала",
+                    "text": "Оцените рыночные условия: сила тренда, волатильность, новостной фон. Сигнал пин-бара в направлении тренда надёжнее контртрендового. Проверьте экономический календарь на наличие важных событий."
+                },
+                {
+                    "@type": "HowToStep",
+                    "position": 5,
+                    "name": "Установите стоп-лосс и цель прибыли",
+                    "text": "Разместите стоп-лосс за экстремум паттерна или за ключевой уровень. Определите цель прибыли на ближайшем уровне сопротивления или поддержки. Соотношение риска к прибыли должно быть минимум 1:2."
+                }
+            ]
+    };
+
+    this.addJsonLdSchema(data);
+  }
+
+  // ============================================================
+  //  GLOSSARY
+  // ============================================================
+  private setGlossarySchema(): void {
+    const data = {
+       "@context": "https://schema.org",
+            "@type": "DefinedTermSet",
+            "name": "Глоссарий терминов Price Action",
+            "description": "Основные термины и определения метода Price Action в техническом анализе",
+            "definedTerm": [
+                {
+                    "@type": "DefinedTerm",
+                    "name": "Price Action",
+                    "description": "Метод технического анализа, основанный на изучении движения цены без использования индикаторов, анализируя чистые ценовые графики."
+                },
+                {
+                    "@type": "DefinedTerm",
+                    "name": "Пин-бар (Pin Bar)",
+                    "description": "Свечной паттерн с длинной тенью и маленьким телом, сигнализирующий о развороте цены и отвержении определённого ценового уровня рынком."
+                },
+                {
+                    "@type": "DefinedTerm",
+                    "name": "Поглощение (Engulfing)",
+                    "description": "Паттерн из двух свечей, где вторая свеча полностью перекрывает тело первой, указывая на смену рыночных настроений."
+                },
+                {
+                    "@type": "DefinedTerm",
+                    "name": "Внутренний бар (Inside Bar)",
+                    "description": "Свеча, диапазон которой полностью находится внутри диапазона предыдущей материнской свечи, сигнализирующая о консолидации перед пробоем."
+                },
+                {
+                    "@type": "DefinedTerm",
+                    "name": "Уровень поддержки",
+                    "description": "Ценовая зона, где спрос превышает предложение и покупатели останавливают падение цены, вызывая отскок вверх."
+                },
+                {
+                    "@type": "DefinedTerm",
+                    "name": "Уровень сопротивления",
+                    "description": "Ценовая зона, где предложение превышает спрос и продавцы останавливают рост цены, вызывая отскок вниз."
+                },
+                {
+                    "@type": "DefinedTerm",
+                    "name": "Доджи (Doji)",
+                    "description": "Свеча с очень маленьким телом, где цены открытия и закрытия почти совпадают, указывающая на нерешительность рынка."
+                },
+                {
+                    "@type": "DefinedTerm",
+                    "name": "Фейковый пробой (False Breakout)",
+                    "description": "Ситуация, когда цена пробивает уровень, но быстро возвращается обратно, заманивая трейдеров в ловушку."
+                },
+                {
+                    "@type": "DefinedTerm",
+                    "name": "Свинг-хай и Свинг-лоу",
+                    "description": "Локальные максимумы и минимумы на графике, используемые для определения структуры тренда и ключевых разворотных точек."
+                },
+                {
+                    "@type": "DefinedTerm",
+                    "name": "Чистый график",
+                    "description": "Ценовой график без технических индикаторов, отображающий только свечи или бары и используемый в методе Price Action."
+                }
+            ]
+    };
+
+    this.addJsonLdSchema(data);
+  }
+
+
 }
