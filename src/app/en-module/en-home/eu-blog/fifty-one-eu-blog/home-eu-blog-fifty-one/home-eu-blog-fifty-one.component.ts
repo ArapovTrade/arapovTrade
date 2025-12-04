@@ -411,58 +411,58 @@ private addJsonLdSchema(data: any): void {
     const data = {
        "@context": "https://schema.org",
         "@type": "DefinedTermSet",
-        "name": "Price Action Glossary",
-        "description": "Key terms and definitions of Price Action method in technical analysis",
-        "definedTerm": [
+        name: "Price Action Glossary",
+        description: "Key terms and definitions of Price Action method in technical analysis",
+       hasDefinedTerm: [
             {
                 "@type": "DefinedTerm",
-                "name": "Price Action",
-                "description": "Technical analysis method based on studying price movement without indicators, analyzing clean price charts."
+                name: "Price Action",
+                description: "Technical analysis method based on studying price movement without indicators, analyzing clean price charts."
             },
             {
                 "@type": "DefinedTerm",
-                "name": "Pin Bar",
-                "description": "Candlestick pattern with a long wick and small body, signaling price reversal and market rejection of a certain price level."
+                name: "Pin Bar",
+                description: "Candlestick pattern with a long wick and small body, signaling price reversal and market rejection of a certain price level."
             },
             {
                 "@type": "DefinedTerm",
-                "name": "Engulfing Pattern",
-                "description": "Two-candle pattern where the second candle completely covers the first candle's body, indicating a shift in market sentiment."
+                name: "Engulfing Pattern",
+                description: "Two-candle pattern where the second candle completely covers the first candle's body, indicating a shift in market sentiment."
             },
             {
                 "@type": "DefinedTerm",
-                "name": "Inside Bar",
-                "description": "A candle whose range is completely within the previous mother candle's range, signaling consolidation before a breakout."
+                name: "Inside Bar",
+                description: "A candle whose range is completely within the previous mother candle's range, signaling consolidation before a breakout."
             },
             {
                 "@type": "DefinedTerm",
-                "name": "Support Level",
-                "description": "Price zone where demand exceeds supply and buyers stop price decline, causing an upward bounce."
+                name: "Support Level",
+                description: "Price zone where demand exceeds supply and buyers stop price decline, causing an upward bounce."
             },
             {
                 "@type": "DefinedTerm",
-                "name": "Resistance Level",
-                "description": "Price zone where supply exceeds demand and sellers stop price growth, causing a downward bounce."
+                name: "Resistance Level",
+                description: "Price zone where supply exceeds demand and sellers stop price growth, causing a downward bounce."
             },
             {
                 "@type": "DefinedTerm",
-                "name": "Doji",
-                "description": "A candle with very small body where opening and closing prices nearly coincide, indicating market indecision."
+                name: "Doji",
+                description: "A candle with very small body where opening and closing prices nearly coincide, indicating market indecision."
             },
             {
                 "@type": "DefinedTerm",
-                "name": "False Breakout",
-                "description": "Situation when price breaks through a level but quickly returns, trapping traders."
+                name: "False Breakout",
+                description: "Situation when price breaks through a level but quickly returns, trapping traders."
             },
             {
                 "@type": "DefinedTerm",
-                "name": "Swing High and Swing Low",
-                "description": "Local highs and lows on the chart used to determine trend structure and key reversal points."
+                name: "Swing High and Swing Low",
+                description: "Local highs and lows on the chart used to determine trend structure and key reversal points."
             },
             {
                 "@type": "DefinedTerm",
-                "name": "Clean Chart",
-                "description": "Price chart without technical indicators, displaying only candles or bars, used in Price Action method."
+                name: "Clean Chart",
+                description: "Price chart without technical indicators, displaying only candles or bars, used in Price Action method."
             }
         ]
     };
