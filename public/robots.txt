@@ -1,4 +1,68 @@
-User-agent: *
-Disallow:
+# robots.txt for arapov.trade
+# Trading Education Platform by Igor Arapov
+# Last updated: 2025-06-04
 
+# Allow all search engines full access
+User-agent: *
+Allow: /
+
+# Sitemaps
 Sitemap: https://arapov.trade/sitemap.xml
+Sitemap: https://arapov.trade/sitemap-images.xml
+
+# Google specific
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Googlebot-Image
+Allow: /assets/img/
+
+# Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Yandex (important for RU/UK audience)
+User-agent: Yandex
+Allow: /
+Crawl-delay: 1
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
+
+# AI Crawlers (for AI search visibility)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Block common spam/useless bots
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# Host directive
+Host: https://arapov.trade
