@@ -397,10 +397,16 @@ private updateCanonicalTag() {
     this.breadcrumbs = []; // Определяем хлебные крошки в зависимости от маршрута
     if (urlPath === '' || urlPath === '/') {
       this.breadcrumbs.push({ name: 'Головна', url: 'https://arapov.trade' });
+  } else if (urlPath === 'ru/main') {
+ this.breadcrumbs.push({ name: 'Главная', url: 'https://arapov.trade/ru/main' },);
+ } else if (urlPath === 'en/main') {
+ this.breadcrumbs.push({ name: 'Main Page', url: 'https://arapov.trade/en/main' },);
+
+
     } else if (urlPath === 'ru' || urlPath === 'uk' || urlPath === 'en') {
       if (urlPath === 'ru') {
         this.breadcrumbs.push(
-          { name: 'Головна', url: 'https://arapov.trade' },
+          { name: 'Главная', url: 'https://arapov.trade/ru/main' },
           { name: 'Автор курса', url: 'https://arapov.trade/ru' }
         );
       } else if (urlPath === 'uk') {
@@ -410,7 +416,7 @@ private updateCanonicalTag() {
         );
       } else if (urlPath === 'en') {
         this.breadcrumbs.push(
-          { name: 'Головна', url: 'https://arapov.trade' },
+          { name: 'Main Page', url: 'https://arapov.trade/en/main' },
           { name: 'Course author', url: 'https://arapov.trade/en' }
         );
       }
@@ -421,7 +427,7 @@ private updateCanonicalTag() {
     ) {
       if (urlPath === 'ru/studying') {
         this.breadcrumbs.push(
-          { name: 'Головна', url: 'https://arapov.trade' },
+          { name: 'Главная', url: 'https://arapov.trade/ru/main' },
           { name: 'Автор курса', url: 'https://arapov.trade/ru' },
           {
             name: 'Обучение трейдингу',
@@ -439,7 +445,7 @@ private updateCanonicalTag() {
         );
       } else if (urlPath === 'en/studying') {
         this.breadcrumbs.push(
-          { name: 'Головна', url: 'https://arapov.trade' },
+          { name: 'Main Page', url: 'https://arapov.trade/en/main' },
           { name: 'Course author', url: 'https://arapov.trade/en' },
           {
             name: 'Trading training',
@@ -454,7 +460,7 @@ private updateCanonicalTag() {
     ) {
       if (urlPath === 'ru/freestudying') {
         this.breadcrumbs.push(
-          { name: 'Головна', url: 'https://arapov.trade' },
+           { name: 'Главная', url: 'https://arapov.trade/ru/main' },
           { name: 'Автор курса', url: 'https://arapov.trade/ru' },
           {
             name: 'Бесплатное обучение трейдингу',
@@ -472,7 +478,7 @@ private updateCanonicalTag() {
         );
       } else if (urlPath === 'en/freestudying') {
         this.breadcrumbs.push(
-          { name: 'Головна', url: 'https://arapov.trade' },
+         { name: 'Main Page', url: 'https://arapov.trade/en/main' },
           { name: 'Author of the Course', url: 'https://arapov.trade/en' },
           {
             name: 'Free trading education',
@@ -487,7 +493,7 @@ private updateCanonicalTag() {
     ) {
       if (urlPath === 'ru/freestudying/freeeducation') {
         this.breadcrumbs.push(
-          { name: 'Головна', url: 'https://arapov.trade' },
+           { name: 'Главная', url: 'https://arapov.trade/ru/main' },
           { name: 'Автор курса', url: 'https://arapov.trade/ru' },
           {
             name: 'Бесплатное обучение трейдингу',
@@ -513,7 +519,7 @@ private updateCanonicalTag() {
         );
       } else if (urlPath === 'en/freestudying/freeeducation') {
         this.breadcrumbs.push(
-          { name: 'Головна', url: 'https://arapov.trade' },
+          { name: 'Main Page', url: 'https://arapov.trade/en/main' },
           { name: 'Author of the Course', url: 'https://arapov.trade/en' },
           {
             name: 'Free trading education',
@@ -532,7 +538,7 @@ private updateCanonicalTag() {
     ) {
       if (urlPath === 'ru/freestudying/practic') {
         this.breadcrumbs.push(
-          { name: 'Головна', url: 'https://arapov.trade' },
+           { name: 'Главная', url: 'https://arapov.trade/ru/main' },
           { name: 'Автор курса', url: 'https://arapov.trade/ru' },
           {
             name: 'Бесплатное обучение трейдингу',
@@ -558,7 +564,7 @@ private updateCanonicalTag() {
         );
       } else if (urlPath === 'en/freestudying/practic') {
         this.breadcrumbs.push(
-          { name: 'Головна', url: 'https://arapov.trade' },
+          { name: 'Main Page', url: 'https://arapov.trade/en/main' },
           { name: 'Author of the Course', url: 'https://arapov.trade/en' },
           {
             name: 'Free trading education',
@@ -577,7 +583,7 @@ private updateCanonicalTag() {
     ) {
       if (urlPath === 'ru/disclaimer') {
         this.breadcrumbs.push(
-          { name: 'Головна', url: 'https://arapov.trade' },
+           { name: 'Главная', url: 'https://arapov.trade/ru/main' },
           { name: 'Автор курса', url: 'https://arapov.trade/ru' },
           {
             name: 'Отказ от ответственности',
@@ -590,16 +596,16 @@ private updateCanonicalTag() {
           { name: 'Автор курсу', url: 'https://arapov.trade/uk' },
           {
             name: 'Відмова від відповідальності',
-            url: 'https://arapov.trade/ru/disclaimer',
+            url: 'https://arapov.trade/uk/disclaimer',
           }
         );
       } else if (urlPath === 'en/disclaimer') {
         this.breadcrumbs.push(
-          { name: 'Головна', url: 'https://arapov.trade' },
+          { name: 'Main Page', url: 'https://arapov.trade/en/main' },
           { name: 'Course author', url: 'https://arapov.trade/en' },
           {
             name: 'Disclaimer',
-            url: 'https://arapov.trade/ru/disclaimer',
+            url: 'https://arapov.trade/en/disclaimer',
           }
         );
       }
@@ -608,7 +614,7 @@ private updateCanonicalTag() {
 
       if (urlArr[0] === 'ru') {
         this.breadcrumbs.push(
-          { name: 'Головна', url: 'https://arapov.trade' },
+           { name: 'Главная', url: 'https://arapov.trade/ru/main' },
           { name: 'Автор курса', url: 'https://arapov.trade/ru' },
           {
             name: 'Бесплатное обучение трейдингу',
@@ -629,12 +635,12 @@ private updateCanonicalTag() {
           },
           {
             name: 'Теорія з трейдингу',
-            url: `https://arapov.trade/ru/freestudying/${urlArr[2]}`,
+            url: `https://arapov.trade/uk/freestudying/${urlArr[2]}`,
           }
         );
       } else if (urlArr[0] === 'en') {
         this.breadcrumbs.push(
-          { name: 'Головна', url: 'https://arapov.trade' },
+          { name: 'Main Page', url: 'https://arapov.trade/en/main' },
           { name: 'Author of the Course', url: 'https://arapov.trade/en' },
           {
             name: 'Free trading education',
@@ -642,10 +648,10 @@ private updateCanonicalTag() {
           },
           {
             name: 'Trading Theory',
-            url: `https://arapov.trade/ru/freestudying/${urlArr[2]}`,
+            url: `https://arapov.trade/en/freestudying/${urlArr[2]}`,
           }
         );
-      }
+      } 
     }
     // Генерируем JSON-LD
     this.jsonLd = {

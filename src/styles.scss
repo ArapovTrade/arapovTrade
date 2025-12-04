@@ -363,7 +363,7 @@ textarea::placeholder {
 
 ::-moz-selection {
   background: #005db8;
-  color: white;
+  color: white !important;
 }
 
 ::selection {
@@ -3663,7 +3663,7 @@ font-family: advent pro;
 font-size: 18px;
 font-weight: bold;     width: fit-content;
 }
-.dark-theme-main-cont .container strong{
+.dark-theme-main-cont .container strong, .dark-theme-main-cont .container dfn{
 //   background: linear-gradient(90deg, #FCFE8A, #D6BA01);
 // -webkit-background-clip: text;
 // background-clip: text;
@@ -3730,7 +3730,7 @@ font-family: advent pro;
 font-size: 18px;
 font-weight: bold;     width: fit-content;
 }
-.light-theme-main-cont .container strong{
+.light-theme-main-cont .container strong,.light-theme-main-cont .container dfn{
 //   background: linear-gradient(90deg, #0183cd, #03324c)  ;
 //    -webkit-background-clip: text;
 // background-clip: text;

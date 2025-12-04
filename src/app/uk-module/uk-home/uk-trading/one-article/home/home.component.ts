@@ -1,4 +1,5 @@
-import { Component, OnInit,ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit,ChangeDetectorRef,Inject,Renderer2, signal } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 import { ThemeservService } from '../../../../../servises/themeserv.service';
 import { artickle } from '../../../../../servises/articles.service';
 import { Subscription } from 'rxjs';
@@ -18,7 +19,8 @@ export class HomeComponent implements OnInit {
     private cdr:ChangeDetectorRef,
   private router: Router,
     private themeService:ThemeservService,
-    private artickleServ: ArticlesService,
+    private artickleServ: ArticlesService,private renderer: Renderer2,
+    @Inject(DOCUMENT) private document: Document
   ) {}
 
   private routerSubscription!: Subscription;
@@ -28,7 +30,15 @@ export class HomeComponent implements OnInit {
  grr!: any;
   checkedGroup!: any;
 
-  ngOnInit(): void {
+  readonly panelOpenState = signal(false);
+
+ ngOnInit(): void {
+     this.removeSelectedSchemas();
+    this.setArticleSchema();
+    this.setPersonSchema();
+    this.setFaqSchema();
+    this.setHowToSchema();
+    this.setGlossarySchema();
 
 
      this.themeSubscription =this.themeService.getTheme().subscribe(data=>{
@@ -40,12 +50,12 @@ export class HomeComponent implements OnInit {
     this.grr = this.artickleServ.selectedGroups;
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
-    this.titleService.setTitle('10 порад для початківців у трейдингу – Arapov.trade');
+    this.titleService.setTitle('10 порад початківцям трейдерам: як уникнути типових помилок | ArapovTrade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Дізнайтеся 10 практичних порад для новачків у трейдингу: як уникати типових помилок, керувати ризиками та будувати власну стратегію.',
+        'Практичні поради для початківців трейдерів від професіонала з 11-річним досвідом. Вибір брокера, управління ризиками, психологія торгівлі та побудова торгового плану.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-07' });
     this.meta.updateTag({
@@ -218,4 +228,286 @@ export class HomeComponent implements OnInit {
          
        this.router.navigate(['/uk/freestudying', nextpage] )
     }
+
+
+
+
+
+    private removeSelectedSchemas(): void {
+  const typesToRemove = [
+    'Article',
+    'FAQPage',
+    'HowTo',
+    'DefinedTermSet',
+    'Person',
+  ];
+
+  const scripts = this.document.querySelectorAll(
+    'script[type="application/ld+json"]'
+  );
+
+  scripts.forEach((script) => {
+    try {
+      const json = JSON.parse(script.textContent || '{}');
+
+      // Массив, объект-граф или одиночный объект
+      const candidates = json['@graph'] ?? (Array.isArray(json) ? json : [json]);
+
+      const shouldRemove = candidates.some((entry: any) =>
+        entry['@type'] && typesToRemove.includes(entry['@type'])
+      );
+
+      if (shouldRemove) {
+        script.remove();
+      }
+
+    } catch {
+      /* ignore invalid */
+    }
+  });
+}
+
+
+
+
+
+private addJsonLdSchema(data: any): void {
+    const script = this.renderer.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(data);
+    this.renderer.appendChild(this.document.head, script);
+  }
+
+  // ============================================================
+  //  ARTICLE
+  // ============================================================
+  private setArticleSchema(): void {
+    const data = {
+        "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "Article",
+                    "@id": "https://arapov.trade/uk/freestudying/adviceforbeginners#article",
+                    "headline": "10 порад початківцям трейдерам: як уникнути типових помилок",
+                    "description": "Практичні поради для початківців трейдерів від професіонала з 11-річним досвідом.",
+                    "image": [
+                        "https://arapov.trade/assets/img/content/traderStarterw.webp"
+                    ],
+                    "datePublished": "2024-08-15",
+                    "dateModified": "2025-06-04",
+                    "author": {
+                        "@type": "Person",
+                        "@id": "https://arapov.trade/#person"
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "@id": "https://arapov.trade/#organization"
+                    },
+                    "mainEntityOfPage": {
+                        "@type": "WebPage",
+                        "@id": "https://arapov.trade/uk/freestudying/adviceforbeginners"
+                    },
+                    "articleSection": "Трейдинг для початківців",
+                    "inLanguage": "uk"
+        },
+      ],
+    };
+
+    this.addJsonLdSchema(data);
+  }
+
+  // ============================================================
+  //  PERSON
+  // ============================================================
+  private setPersonSchema(): void {
+    const data = {
+      '@context': 'https://schema.org',
+      "@type": "Person",
+                    "@id": "https://arapov.trade/#person",
+                    "name": "Ігор Арапов",
+                    "url": "https://arapov.trade/uk/",
+                    "image": "https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png",
+                    "sameAs": [
+                        "https://www.youtube.com/@ArapovTrade",
+                        "https://t.me/ArapovTrade"
+                    ],
+                    "jobTitle": "Професійний трейдер",
+                    "description": "Активно торгую на фінансових ринках з 2013 року. Автор безкоштовного курсу з трейдингу."
+    };
+
+    this.addJsonLdSchema(data);
+  }
+
+   
+
+  // ============================================================
+  //  FAQ
+  // ============================================================
+  private setFaqSchema(): void {
+    const data = {
+      '@context': 'https://schema.org',
+      "@type": "FAQPage",
+                    "@id": "https://arapov.trade/uk/freestudying/adviceforbeginners#faq",
+                    "mainEntity": [
+                        {
+                            "@type": "Question",
+                            "name": "Скільки грошей потрібно для початку торгівлі?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Почати можна з 50-200 доларів у брокерів з мікро-лотами. Проте комфортний старт — від 500 доларів. Головне правило: торгуйте лише тими грошима, втрату яких можете собі дозволити."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Скільки часу потрібно на навчання трейдингу?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Базову теорію можна опанувати за 1-2 місяці. Формування стійких навичок займає 6-12 місяців практики. Стабільні результати зазвичай з'являються через 1-2 роки системної роботи."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Яке кредитне плече обрати новачку?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Початківцям рекомендується плече не вище 1:10-1:20. Високе плече посилює не лише прибуток, але й збитки. З досвідом можна поступово збільшувати до 1:30-1:50."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Чому більшість трейдерів втрачають гроші?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Основні причини: відсутність торгового плану, порушення ризик-менеджменту, емоційні рішення, недостатня підготовка та нереалістичні очікування швидкого прибутку."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Який стиль торгівлі кращий для початківців?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Новачкам краще починати зі свінг-трейдингу (позиції на кілька днів). Він дає час на аналіз, знижує вплив шуму і не вимагає постійної присутності біля монітора."
+                            }
+                        }
+                    ]
+    };
+
+    this.addJsonLdSchema(data);
+  }
+
+  // ============================================================
+  //  HOWTO
+  // ============================================================
+  private setHowToSchema(): void {
+    const data = {
+      '@context': 'https://schema.org',
+      "@type": "HowTo",
+                    "@id": "https://arapov.trade/uk/freestudying/adviceforbeginners#howto",
+                    "name": "Як почати торгувати на фінансових ринках",
+                    "description": "Покроковий план для початківців трейдерів",
+                    "step": [
+                        {
+                            "@type": "HowToStep",
+                            "position": 1,
+                            "name": "Вивчіть базову теорію",
+                            "text": "Витратьте 3-4 тижні на вивчення основ: типи ринків, класи активів, базова термінологія. Використовуйте книги та безкоштовні курси."
+                        },
+                        {
+                            "@type": "HowToStep",
+                            "position": 2,
+                            "name": "Оберіть надійного брокера",
+                            "text": "Перевірте ліцензію регулятора, порівняйте спреди та комісії, протестуйте платформу на демо-рахунку."
+                        },
+                        {
+                            "@type": "HowToStep",
+                            "position": 3,
+                            "name": "Складіть торговий план",
+                            "text": "Визначте цілі, оберіть стратегію, запишіть правила входу та виходу, встановіть ліміти ризику."
+                        },
+                        {
+                            "@type": "HowToStep",
+                            "position": 4,
+                            "name": "Практикуйтеся на демо-рахунку",
+                            "text": "Торгуйте 1-2 місяці віртуальними грошима, ведіть щоденник угод, аналізуйте результати."
+                        },
+                        {
+                            "@type": "HowToStep",
+                            "position": 5,
+                            "name": "Почніть з мінімальним капіталом",
+                            "text": "Переходьте на реальний рахунок з мінімальною сумою, дотримуйтеся ризик-менеджменту, поступово нарощуйте обсяги."
+                        }
+                    ]
+    };
+
+    this.addJsonLdSchema(data);
+  }
+
+  // ============================================================
+  //  GLOSSARY
+  // ============================================================
+  private setGlossarySchema(): void {
+    const data = {
+      '@context': 'https://schema.org',
+      "@type": "DefinedTermSet",
+                    "@id": "https://arapov.trade/uk/freestudying/adviceforbeginners#terms",
+                    "name": "Глосарій трейдера",
+                    "hasDefinedTerm": [
+                        {
+                            "@type": "DefinedTerm",
+                            "name": "Спред",
+                            "description": "Різниця між ціною купівлі (ask) та продажу (bid) активу"
+                        },
+                        {
+                            "@type": "DefinedTerm",
+                            "name": "Кредитне плече",
+                            "description": "Позикові кошти від брокера, що збільшують торговий капітал"
+                        },
+                        {
+                            "@type": "DefinedTerm",
+                            "name": "Стоп-лос",
+                            "description": "Ордер автоматичного закриття позиції при досягненні заданого рівня збитку"
+                        },
+                        {
+                            "@type": "DefinedTerm",
+                            "name": "Тейк-профіт",
+                            "description": "Ордер автоматичного закриття позиції при досягненні цільового прибутку"
+                        },
+                        {
+                            "@type": "DefinedTerm",
+                            "name": "Лот",
+                            "description": "Стандартна одиниця обсягу торгової позиції"
+                        },
+                        {
+                            "@type": "DefinedTerm",
+                            "name": "Маржа",
+                            "description": "Заставні кошти, що блокуються для відкриття позиції з плечем"
+                        },
+                        {
+                            "@type": "DefinedTerm",
+                            "name": "Волатильність",
+                            "description": "Ступінь мінливості ціни активу за певний період"
+                        },
+                        {
+                            "@type": "DefinedTerm",
+                            "name": "Скальпінг",
+                            "description": "Стиль торгівлі з безліччю коротких угод усередині дня"
+                        },
+                        {
+                            "@type": "DefinedTerm",
+                            "name": "Свінг-трейдинг",
+                            "description": "Торгівля позиціями від кількох днів до кількох тижнів"
+                        },
+                        {
+                            "@type": "DefinedTerm",
+                            "name": "Ризик-менеджмент",
+                            "description": "Система управління ризиками для захисту торгового капіталу"
+                        }
+                    ]
+    };
+
+    this.addJsonLdSchema(data);
+  }
+
+
+
 }

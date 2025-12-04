@@ -65,17 +65,48 @@ export class MetaservService {
         availableLanguage: ['Russian', 'Ukrainian'],
       },
     };
-    if (isPlatformBrowser(this.platformId)) {
-      this.meta.removeTag('name="schema"');
-    }
-    if (isPlatformBrowser(this.platformId)) {
-      this.meta.addTag({ name: 'schema', content: JSON.stringify(schema) });
-      const script = document.createElement('script');
-      script.type = 'application/ld+json';
-      script.text = JSON.stringify(schema);
-      document.head.appendChild(script);
-    } else {
-      this.meta.addTag({ name: 'schema', content: JSON.stringify(schema) });
-    }
+    // if (isPlatformBrowser(this.platformId)) {
+    //   this.meta.removeTag('name="schema"');
+    // }
+    // if (isPlatformBrowser(this.platformId)) {
+    //   this.meta.addTag({ name: 'schema', content: JSON.stringify(schema) });
+    //   const script = document.createElement('script');
+    //   script.type = 'application/ld+json';
+    //   script.text = JSON.stringify(schema);
+    //   document.head.appendChild(script);
+    // } else {
+    //   this.meta.addTag({ name: 'schema', content: JSON.stringify(schema) });
+    // }
+     if (isPlatformBrowser(this.platformId)) {
+    // Удаляем старые <meta name="schema">
+    const existingMeta = document.querySelectorAll('meta[name="schema"]');
+    existingMeta.forEach(meta => meta.remove());
+
+    // Удаляем старые <script type="application/ld+json">
+    const existingScripts = document.querySelectorAll('script[type="application/ld+json"]');
+    existingScripts.forEach(script => {
+      try {
+        const data = JSON.parse(script.textContent || '{}');
+        if (data['@type'] === 'Organization') {
+          script.remove();
+        }
+      } catch (e) {
+        // невалидный JSON игнорируем
+      }
+    });
+
+    // Добавляем новый <meta>
+    this.meta.addTag({ name: 'schema', content: JSON.stringify(schema) });
+
+    // Добавляем новый <script>
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(schema);
+    document.head.appendChild(script);
+  } else {
+    // На сервере просто добавляем meta
+    this.meta.removeTag('name="schema"'); // удаляем старый, если есть
+    this.meta.addTag({ name: 'schema', content: JSON.stringify(schema) });
+  }
   }
 }

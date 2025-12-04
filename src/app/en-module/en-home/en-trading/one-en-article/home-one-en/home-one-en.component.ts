@@ -1,4 +1,5 @@
-import { Component, OnInit,ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit,ChangeDetectorRef,Inject,Renderer2, signal } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 import { ThemeservService } from '../../../../../servises/themeserv.service';
 import { artickle } from '../../../../../servises/articles.service';
 import { Subscription } from 'rxjs';
@@ -19,7 +20,8 @@ export class HomeOneEnComponent implements OnInit {
   private router: Router,
     private themeService:ThemeservService,
     private artickleServ: ArticlesService,
-
+ private renderer: Renderer2,
+    @Inject(DOCUMENT) private document: Document
   ) {}
 
    private routerSubscription!: Subscription;
@@ -28,7 +30,15 @@ export class HomeOneEnComponent implements OnInit {
   ukrGroups: any = [];
  grr!: any;
   checkedGroup!: any;
-  ngOnInit(): void {
+  readonly panelOpenState = signal(false);
+
+ ngOnInit(): void {
+     this.removeSelectedSchemas();
+    this.setArticleSchema();
+    this.setPersonSchema();
+    this.setFaqSchema();
+    this.setHowToSchema();
+    this.setGlossarySchema();
      this.themeSubscription =this.themeService.getTheme().subscribe(data=>{
       this.isDark=data;
         this.cdr.detectChanges();
@@ -177,4 +187,167 @@ nextpage=this.artickleServ.ukrArtickles[this.artickleServ.ukrArtickles.length-1]
       }
        this.router.navigate(['/en/freestudying', nextpage] )
     }
+
+
+    private removeSelectedSchemas(): void {
+  const typesToRemove = [
+    'Article',
+    'FAQPage',
+    'HowTo',
+    'DefinedTermSet',
+    'Person',
+  ];
+
+  const scripts = this.document.querySelectorAll(
+    'script[type="application/ld+json"]'
+  );
+
+  scripts.forEach((script) => {
+    try {
+      const json = JSON.parse(script.textContent || '{}');
+
+      // Массив, объект-граф или одиночный объект
+      const candidates = json['@graph'] ?? (Array.isArray(json) ? json : [json]);
+
+      const shouldRemove = candidates.some((entry: any) =>
+        entry['@type'] && typesToRemove.includes(entry['@type'])
+      );
+
+      if (shouldRemove) {
+        script.remove();
+      }
+
+    } catch {
+      /* ignore invalid */
+    }
+  });
+}
+
+
+
+
+
+private addJsonLdSchema(data: any): void {
+    const script = this.renderer.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(data);
+    this.renderer.appendChild(this.document.head, script);
+  }
+
+  // ============================================================
+  //  ARTICLE
+  // ============================================================
+  private setArticleSchema(): void {
+    const data = {
+      '@context': 'https://schema.org',
+      '@graph': [
+        {
+           "@type": "Article",
+                "@id": "https://arapov.trade/en/freestudying/adviceforbeginners#article",
+                "headline": "10 Essential Tips for Beginner Traders: Avoiding Common Mistakes",
+                "description": "Practical advice for beginner traders from a professional with 11 years of experience.",
+                "image": [
+                    "https://arapov.trade/assets/img/content/traderStarterw.webp"
+                ],
+                "datePublished": "2024-08-15",
+                "dateModified": "2025-06-04",
+                "author": {"@type": "Person", "@id": "https://arapov.trade/#person"},
+                "publisher": {"@type": "Organization", "@id": "https://arapov.trade/#organization"},
+                "mainEntityOfPage": {"@type": "WebPage", "@id": "https://arapov.trade/en/freestudying/adviceforbeginners"},
+                "articleSection": "Trading for Beginners",
+                "inLanguage": "en"
+        },
+      ],
+    };
+
+    this.addJsonLdSchema(data);
+  }
+
+  // ============================================================
+  //  PERSON
+  // ============================================================
+  private setPersonSchema(): void {
+    const data = {
+      '@context': 'https://schema.org',
+      "@type": "Person",
+                "@id": "https://arapov.trade/#person",
+                "name": "Igor Arapov",
+                "url": "https://arapov.trade/en/",
+                "image": "https://arapov.trade/assets/img/author.jpg",
+                "sameAs": ["https://www.youtube.com/@ArapovTrade", "https://t.me/ArapovTrade"],
+                "jobTitle": "Professional Trader"
+    };
+
+    this.addJsonLdSchema(data);
+  }
+
+   
+
+  // ============================================================
+  //  FAQ
+  // ============================================================
+  private setFaqSchema(): void {
+    const data = {
+      '@context': 'https://schema.org',
+      "@type": "FAQPage",
+                "@id": "https://arapov.trade/en/freestudying/adviceforbeginners#faq",
+                "mainEntity": [
+                    {"@type": "Question", "name": "How much money do I need to start trading?", "acceptedAnswer": {"@type": "Answer", "text": "You can start with $50-200 at brokers offering micro-lots. However, a comfortable starting point is around $500. The key rule: only trade with money you can afford to lose."}},
+                    {"@type": "Question", "name": "How long does it take to learn trading?", "acceptedAnswer": {"@type": "Answer", "text": "Basic theory can be mastered in 1-2 months. Developing consistent skills takes 6-12 months of practice. Stable results typically appear after 1-2 years of systematic work."}},
+                    {"@type": "Question", "name": "What leverage should beginners use?", "acceptedAnswer": {"@type": "Answer", "text": "Beginners should use leverage no higher than 1:10-1:20. High leverage amplifies both profits and losses."}},
+                    {"@type": "Question", "name": "Why do most traders lose money?", "acceptedAnswer": {"@type": "Answer", "text": "Main reasons: lack of trading plan, poor risk management, emotional decisions, insufficient preparation, and unrealistic expectations of quick profits."}},
+                    {"@type": "Question", "name": "Which trading style is best for beginners?", "acceptedAnswer": {"@type": "Answer", "text": "Beginners should start with swing trading (positions held for several days). It allows time for analysis and reduces noise impact."}}
+                ]
+    };
+
+    this.addJsonLdSchema(data);
+  }
+
+  // ============================================================
+  //  HOWTO
+  // ============================================================
+  private setHowToSchema(): void {
+    const data = {
+      '@context': 'https://schema.org',
+      "@type": "HowTo",
+                "@id": "https://arapov.trade/en/freestudying/adviceforbeginners#howto",
+                "name": "How to Start Trading Financial Markets",
+                "description": "Step-by-step plan for beginner traders",
+                "step": [
+                    {"@type": "HowToStep", "position": 1, "name": "Learn basic theory", "text": "Spend 3-4 weeks studying fundamentals: market types, asset classes, basic terminology."},
+                    {"@type": "HowToStep", "position": 2, "name": "Choose a reliable broker", "text": "Verify regulator license, compare spreads and commissions, test the platform on demo."},
+                    {"@type": "HowToStep", "position": 3, "name": "Create a trading plan", "text": "Define goals, choose strategy, document entry and exit rules, set risk limits."},
+                    {"@type": "HowToStep", "position": 4, "name": "Practice on demo account", "text": "Trade for 1-2 months with virtual money, keep a trading journal, analyze results."},
+                    {"@type": "HowToStep", "position": 5, "name": "Start with minimum capital", "text": "Transition to live trading with minimal funds, maintain risk management."}
+                ]
+    };
+
+    this.addJsonLdSchema(data);
+  }
+
+  // ============================================================
+  //  GLOSSARY
+  // ============================================================
+  private setGlossarySchema(): void {
+    const data = {
+      '@context': 'https://schema.org',
+      "@type": "DefinedTermSet",
+                "@id": "https://arapov.trade/en/freestudying/adviceforbeginners#terms",
+                "name": "Trader's Glossary",
+                "hasDefinedTerm": [
+                    {"@type": "DefinedTerm", "name": "Spread", "description": "Difference between ask and bid price"},
+                    {"@type": "DefinedTerm", "name": "Leverage", "description": "Borrowed funds from broker increasing trading capital"},
+                    {"@type": "DefinedTerm", "name": "Stop-Loss", "description": "Order for automatic position closure at specified loss level"},
+                    {"@type": "DefinedTerm", "name": "Take-Profit", "description": "Order for automatic position closure at target profit"},
+                    {"@type": "DefinedTerm", "name": "Lot", "description": "Standard unit of trading position volume"},
+                    {"@type": "DefinedTerm", "name": "Margin", "description": "Collateral funds blocked for leveraged positions"},
+                    {"@type": "DefinedTerm", "name": "Volatility", "description": "Degree of asset price variation over a period"},
+                    {"@type": "DefinedTerm", "name": "Scalping", "description": "Trading style with numerous short intraday trades"},
+                    {"@type": "DefinedTerm", "name": "Swing Trading", "description": "Trading positions held from days to weeks"},
+                    {"@type": "DefinedTerm", "name": "Risk Management", "description": "System of managing risks to protect capital"}
+                ]
+    };
+
+    this.addJsonLdSchema(data);
+  }
 }
