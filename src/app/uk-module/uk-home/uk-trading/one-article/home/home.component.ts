@@ -293,8 +293,8 @@ private addJsonLdSchema(data: any): void {
                     "image": [
                         "https://arapov.trade/assets/img/content/traderStarterw.webp"
                     ],
-                    "datePublished": "2024-08-15",
-                    "dateModified": "2025-06-04",
+                    datePublished: '2025-01-10T12:00:00+02:00',
+dateModified: '2025-01-10T12:00:00+02:00',
                     "author": {
                         "@type": "Person",
                         "@id": "https://arapov.trade/#person"

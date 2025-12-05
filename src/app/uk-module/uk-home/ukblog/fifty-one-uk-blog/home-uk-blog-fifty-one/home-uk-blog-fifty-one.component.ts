@@ -302,8 +302,8 @@ private addJsonLdSchema(data: any): void {
                     "url": "https://arapov.trade/assets/img/favicon.ico"
                 }
             },
-            "datePublished": "2025-01-15",
-            "dateModified": "2025-06-04",
+            datePublished: '2025-01-10T12:00:00+02:00',
+dateModified: '2025-01-10T12:00:00+02:00',
             "mainEntityOfPage": {
                 "@type": "WebPage",
                 "@id": "https://arapov.trade/uk/freestudying/candlestickpatterns"
