@@ -202,7 +202,7 @@ this.addArtickleSchema()
     "name": "Безкоштовний курс з трейдингу — огляд програми",
     "description": "Детальний розбір безкоштовного курсу з трейдингу: на що звертати увагу, навіщо потрібні різні розділи та які ключові теми в них розкриваються.",
     "thumbnailUrl": "https://img.youtube.com/vi/ZHhJqYzyaO4/maxresdefault.jpg",
-    "uploadDate": "2024-01-15",
+     "uploadDate": "2024-01-15T12:00:00+02:00",
     "duration": "PT15M",
     "contentUrl": "https://www.youtube.com/watch?v=ZHhJqYzyaO4",
     "embedUrl": "https://www.youtube.com/embed/ZHhJqYzyaO4",

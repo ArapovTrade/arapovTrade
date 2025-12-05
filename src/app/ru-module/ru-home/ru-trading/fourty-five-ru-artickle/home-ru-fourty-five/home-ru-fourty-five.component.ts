@@ -238,7 +238,7 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
       description:
         'Подробный разбор бесплатного курса по трейдингу: на что обращать внимание, зачем нужны разные разделы и какие ключевые темы в них раскрываются.',
       thumbnailUrl: 'https://img.youtube.com/vi/ZHhJqYzyaO4/maxresdefault.jpg',
-      uploadDate: '2024-01-15',
+       "uploadDate": "2024-01-15T12:00:00+02:00",
       duration: 'PT15M',
       contentUrl: 'https://www.youtube.com/watch?v=ZHhJqYzyaO4',
       embedUrl: 'https://www.youtube.com/embed/ZHhJqYzyaO4',
