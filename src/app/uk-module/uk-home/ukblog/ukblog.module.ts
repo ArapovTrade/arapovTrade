@@ -987,6 +987,79 @@ const routes: Routes = [
         (m) => m.NintyFourUkBlogModule
       ),
   },
+
+
+
+
+
+  {
+    path: 'goldtrading', //95
+    loadChildren: () =>
+      import('../ukblog/ninty-five-uk-blog/ninty-five-uk-blog.module').then(
+        (m) => m.NintyFiveUkBlogModule
+      ),
+  },
+  //{
+  //   path: '96', //96
+  //   loadChildren: () =>
+  //     import('../ukblog/ninty-six-uk-blog/ninty-six-uk-blog.module').then(
+  //       (m) => m.NintySixUkBlogModule
+  //     ),
+  // },{
+  //   path: '97', //97
+  //   loadChildren: () =>
+  //     import('../ukblog/ninty-seven-uk-blog/ninty-seven-uk-blog.module').then(
+  //       (m) => m.NintySevenUkBlogModule
+  //     ),
+  // },{
+  //   path: '98', //98
+  //   loadChildren: () =>
+  //     import('../ukblog/ninty-eight-uk-blog/ninty-eight-uk-blog.module').then(
+  //       (m) => m.NintyEightUkBlogModule
+  //     ),
+  // },{
+  //   path: '99', //99
+  //   loadChildren: () =>
+  //     import('../ukblog/ninty-nine-uk-blog/ninty-nine-uk-blog.module').then(
+  //       (m) => m.NintyNineUkBlogModule
+  //     ),
+  // },{
+  //   path: '100', //100
+  //   loadChildren: () =>
+  //     import('../ukblog/onehundred-uk-blog/onehundred-uk-blog.module').then(
+  //       (m) => m.OnehundredUkBlogModule
+  //     ),
+  // },{
+  //   path: '101', //101
+  //   loadChildren: () =>
+  //     import('../ukblog/onehundred-one-uk-blog/onehundred-one-uk-blog.module').then(
+  //       (m) => m.OnehundredOneUkBlogModule
+  //     ),
+  // },{
+  //   path: '102', //102
+  //   loadChildren: () =>
+  //     import('../ukblog/onehundred-two-uk-blog/onehundred-two-uk-blog.module').then(
+  //       (m) => m.OnehundredTwoUkBlogModule
+  //     ),
+  // },{
+  //   path: '103', //103
+  //   loadChildren: () =>
+  //     import('../ukblog/onehundred-three-uk-blog/onehundred-three-uk-blog.module').then(
+  //       (m) => m.OnehundredThreeUkBlogModule
+  //     ),
+  // },{
+  //   path: '104', //104
+  //   loadChildren: () =>
+  //     import('../ukblog/onehundred-four-uk-blog/onehundred-four-uk-blog.module').then(
+  //       (m) => m.OnehundredFourUkBlogModule
+  //     ),
+  // },{
+  //   path: '105', //105
+  //   loadChildren: () =>
+  //     import('../ukblog/onehundred-five-uk-blog/onehundred-five-uk-blog.module').then(
+  //       (m) => m.OnehundredFiveUkBlogModule
+  //     ),
+  // },
     ]
    },
   

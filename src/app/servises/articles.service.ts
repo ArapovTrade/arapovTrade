@@ -168,7 +168,26 @@ export class ArticlesService {
       groupsEng: ['Market Volume Analysis'],
       id: 111,
     },
-
+    {
+     
+      linkUkr: 'goldtrading',
+      titleRus: 'Торговля золотом XAUUSD',
+      titleUkr: 'Торгівля золотом XAUUSD',
+     titleEn: 'Gold Trading XAUUSD',
+      descrRus:
+        'Торговля золотом XAUUSD: полное руководство. Фундаментальные факторы, технический анализ, стратегии и особенности трейдинга драгоценным металлом.',
+      descrUkr:
+        'Торгівля золотом XAUUSD: фундаментальні фактори, технічний аналіз, стратегії та управління ризиками для трейдерів дорогоцінних металів.',
+        descrEn: 'Gold XAUUSD trading guide: fundamental drivers, technical analysis strategies, risk management and market psychology for precious metals traders.',
+      realTitleRus: 'Торговля золотом XAUUSD | Полное руководство трейдера',
+      realTitleUkr: 'Торгівля золотом XAUUSD | Повний посібник трейдера',
+      realTitleEn: 'Gold Trading XAUUSD | Complete Trader`s Guide',
+      imgUkr: '/assets/img/content/goldtrading1.jpg',
+     groupsRus: ['Фундаментальный анализ'],
+      groupsUkr: ['Фундаментальний аналіз'],
+      groupsEng: ['Fundamental Analysis'],
+      id: 163,
+    },
     
       {
      

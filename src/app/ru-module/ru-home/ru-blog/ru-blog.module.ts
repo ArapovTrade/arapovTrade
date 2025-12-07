@@ -988,6 +988,78 @@ const routes: Routes = [
         (m) => m.NintyFourRuBlogModule
       ),
   },
+
+
+
+   {
+    path: 'goldtrading', //95
+    loadChildren: () =>
+      import('../ru-blog/ninty-five-ru-blog/ninty-five-ru-blog.module').then(
+        (m) => m.NintyFiveRuBlogModule
+      ),
+  },
+  //{
+  //   path: '96', //96
+  //   loadChildren: () =>
+  //     import('../ru-blog/ninty-six-ru-blog/ninty-six-ru-blog.module').then(
+  //       (m) => m.NintySixRuBlogModule
+  //     ),
+  // },{
+  //   path: '97', //97
+  //   loadChildren: () =>
+  //     import('../ru-blog/ninty-seven-ru-blog/ninty-seven-ru-blog.module').then(
+  //       (m) => m.NintySevenRuBlogModule
+  //     ),
+  // },{
+  //   path: '98', //98
+  //   loadChildren: () =>
+  //     import('../ru-blog/ninty-eight-ru-blog/ninty-eight-ru-blog.module').then(
+  //       (m) => m.NintyEightRuBlogModule
+  //     ),
+  // },{
+  //   path: '99', //99
+  //   loadChildren: () =>
+  //     import('../ru-blog/ninty-nine-ru-blog/ninty-nine-ru-blog.module').then(
+  //       (m) => m.NintyNineRuBlogModule
+  //     ),
+  // },{
+  //   path: '100', //100
+  //   loadChildren: () =>
+  //     import('../ru-blog/onehundred-ru-blog/onehundred-ru-blog.module').then(
+  //       (m) => m.OnehundredRuBlogModule
+  //     ),
+  // },{
+  //   path: '101', //101
+  //   loadChildren: () =>
+  //     import('../ru-blog/onehundred-one-ru-blog/onehundred-one-ru-blog.module').then(
+  //       (m) => m.OnehundredOneRuBlogModule
+  //     ),
+  // },{
+  //   path: '102', //102
+  //   loadChildren: () =>
+  //     import('../ru-blog/onehundred-two-ru-blog/onehundred-two-ru-blog.module').then(
+  //       (m) => m.OnehundredTwoRuBlogModule
+  //     ),
+  // },{
+  //   path: '103', //103
+  //   loadChildren: () =>
+  //     import('../ru-blog/onehundred-three-ru-blog/onehundred-three-ru-blog.module').then(
+  //       (m) => m.OnehundredThreeRuBlogModule
+  //     ),
+  // },{
+  //   path: '104', //104
+  //   loadChildren: () =>
+  //     import('../ru-blog/onehundred-four-ru-blog/onehundred-four-ru-blog.module').then(
+  //       (m) => m.OnehundredFourRuBlogModule
+  //     ),
+  // },{
+  //   path: '105', //105
+  //   loadChildren: () =>
+  //     import('../ru-blog/onehundred-five-ru-blog/onehundred-five-ru-blog.module').then(
+  //       (m) => m.OnehundredFiveRuBlogModule
+  //     ),
+  // },
+
   ]
    },
 ];

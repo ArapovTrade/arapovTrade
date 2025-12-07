@@ -1,0 +1,14 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { HomeRuBlogOnehundredComponent } from './home-ru-blog-onehundred/home-ru-blog-onehundred.component';
+
+
+
+import { RouterModule, Routes } from '@angular/router';
+const routes: Routes = [{ path: '', component: HomeRuBlogOnehundredComponent }];
+
+@NgModule({
+  declarations: [HomeRuBlogOnehundredComponent],
+  imports: [CommonModule, RouterModule.forChild(routes)],
+})
+export class OnehundredRuBlogModule { }

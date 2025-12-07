@@ -8,7 +8,7 @@ Allow: /
 
 # Sitemaps
 Sitemap: https://arapov.trade/sitemap.xml
-Sitemap: https://arapov.trade/sitemap-images.xml
+
 
 # Google specific
 User-agent: Googlebot
