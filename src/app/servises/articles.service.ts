@@ -210,6 +210,26 @@ export class ArticlesService {
     },
       {
      
+      linkUkr: 'rsiindicator',
+      titleRus: 'Индикатор RSI',
+      titleUkr: 'Індикатор RSI',
+     titleEn: 'RSI Indicator',
+      descrRus:
+        'Индикатор RSI (Relative Strength Index): полное руководство по использованию в трейдинге. Настройки, стратегии, сигналы перекупленности и перепроданности.',
+      descrUkr:
+        'Індикатор RSI (Relative Strength Index): повний посібник з використання у трейдингу. Налаштування, стратегії, сигнали перекупленості та перепроданості.',
+        descrEn: 'RSI Indicator (Relative Strength Index): complete trading guide. Settings, strategies, overbought and oversold signals, divergence patterns explained.',
+      realTitleRus: 'Индикатор RSI | Полное руководство по индексу относительной силы',
+      realTitleUkr: 'Індикатор RSI | Повний посібник з індексу відносної сили',
+      realTitleEn: 'RSI Indicator | Complete Guide to Relative Strength Index',
+      imgUkr: '/assets/img/content/rsiindex1.png',
+     groupsRus: ['Технический анализ'],
+      groupsUkr: ['Технічний аналіз'],
+      groupsEng: ['Technical Analysis'],
+      id: 165,
+    },
+      {
+     
       linkUkr: 'tradingview-platform',
       titleRus: 'Платформа TradingView: что это такое, как пользоваться и зарабатывать',
       titleUkr: 'Платформа TradingView: що це таке, як користуватися та заробляти',

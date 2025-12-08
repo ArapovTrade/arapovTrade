@@ -1005,13 +1005,14 @@ const routes: Routes = [
         (m) => m.NintySixRuBlogModule
       ),
   },
+  {
+    path: 'rsiindicator', //97
+    loadChildren: () =>
+      import('../ru-blog/ninty-seven-ru-blog/ninty-seven-ru-blog.module').then(
+        (m) => m.NintySevenRuBlogModule
+      ),
+  },
   //{
-  //   path: '97', //97
-  //   loadChildren: () =>
-  //     import('../ru-blog/ninty-seven-ru-blog/ninty-seven-ru-blog.module').then(
-  //       (m) => m.NintySevenRuBlogModule
-  //     ),
-  // },{
   //   path: '98', //98
   //   loadChildren: () =>
   //     import('../ru-blog/ninty-eight-ru-blog/ninty-eight-ru-blog.module').then(
