@@ -188,7 +188,26 @@ export class ArticlesService {
       groupsEng: ['Fundamental Analysis'],
       id: 163,
     },
-    
+    {
+     
+      linkUkr: 'oiltrading',
+      titleRus: 'Торговля нефтью',
+      titleUkr: 'Торгівля нафтою',
+     titleEn: 'Oil Trading Guide',
+      descrRus:
+        'Торговля нефтью: полное руководство. WTI, Brent, фьючерсы, фундаментальный и технический анализ, стратегии трейдинга нефтяными инструментами.',
+      descrUkr:
+        'Торгівля нафтою: аналіз WTI та Brent, фундаментальні драйвери, технічні стратегії та управління ризиками для енергетичних трейдерів.',
+        descrEn: 'Crude oil trading guide: WTI and Brent analysis, fundamental drivers, technical strategies, and risk management for energy traders.',
+      realTitleRus: 'Торговля нефтью | Полное руководство трейдера',
+      realTitleUkr: 'Торгівля нафтою | Аналіз WTI та Brent',
+      realTitleEn: 'Oil Trading Guide | WTI and Brent Analysis',
+      imgUkr: '/assets/img/content/oiltrading1.jpg',
+     groupsRus: ['Фундаментальный анализ'],
+      groupsUkr: ['Фундаментальний аналіз'],
+      groupsEng: ['Fundamental Analysis'],
+      id: 164,
+    },
       {
      
       linkUkr: 'tradingview-platform',

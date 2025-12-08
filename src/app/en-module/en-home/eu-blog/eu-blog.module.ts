@@ -997,13 +997,14 @@ const routes: Routes = [
         (m) => m.NintyFiveEnBlogModule
       ),
   },
+  {
+    path: 'oiltrading', //96
+    loadChildren: () =>
+      import('../eu-blog/ninty-six-en-blog/ninty-six-en-blog.module').then(
+        (m) => m.NintySixEnBlogModule
+      ),
+  },
   //{
-  //   path: '96', //96
-  //   loadChildren: () =>
-  //     import('../eu-blog/ninty-six-en-blog/ninty-six-en-blog.module').then(
-  //       (m) => m.NintySixEnBlogModule
-  //     ),
-  // },{
   //   path: '97', //97
   //   loadChildren: () =>
   //     import('../eu-blog/ninty-seven-en-blog/ninty-seven-en-blog.module').then(
