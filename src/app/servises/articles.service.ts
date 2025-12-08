@@ -228,6 +228,26 @@ export class ArticlesService {
       groupsEng: ['Technical Analysis'],
       id: 165,
     },
+    {
+     
+      linkUkr: 'stochastic',
+      titleRus: 'Стохастический осциллятор',
+      titleUkr: 'Стохастичний осцилятор',
+     titleEn: 'Stochastic Oscillator Guide',
+      descrRus:
+        'Стохастический осциллятор: полное руководство. Настройки, сигналы, стратегии торговли, дивергенции и комбинации с другими индикаторами.',
+      descrUkr:
+        'Стохастичний осцилятор: налаштування індикатора, сигнали перекупленості/перепроданості, дивергенція та практичні стратегії.',
+        descrEn: 'Stochastic Oscillator trading guide: indicator settings, overbought/oversold signals, divergence trading and practical strategies.',
+      realTitleRus: 'Стохастический осциллятор | Полное руководство',
+      realTitleUkr: 'Стохастичний осцилятор | Посібник з торгівлі',
+      realTitleEn: 'Stochastic Oscillator Guide | Trading Strategies',
+      imgUkr: '/assets/img/content/stochastic1.jpg',
+     groupsRus: ['Технический анализ'],
+      groupsUkr: ['Технічний аналіз'],
+      groupsEng: ['Technical Analysis'],
+      id: 166,
+    },
       {
      
       linkUkr: 'tradingview-platform',

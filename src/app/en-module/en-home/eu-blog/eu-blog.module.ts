@@ -1011,13 +1011,14 @@ const routes: Routes = [
         (m) => m.NintySevenEnBlogModule
       ),
   },
+  {
+    path: 'stochastic', //98
+    loadChildren: () =>
+      import('../eu-blog/ninty-eight-en-blog/ninty-eight-en-blog.module').then(
+        (m) => m.NintyEightEnBlogModule
+      ),
+  },
   //{
-  //   path: '98', //98
-  //   loadChildren: () =>
-  //     import('../eu-blog/ninty-eight-en-blog/ninty-eight-en-blog.module').then(
-  //       (m) => m.NintyEightEnBlogModule
-  //     ),
-  // },{
   //   path: '99', //99
   //   loadChildren: () =>
   //     import('../eu-blog/ninty-nine-en-blog/ninty-nine-en-blog.module').then(
