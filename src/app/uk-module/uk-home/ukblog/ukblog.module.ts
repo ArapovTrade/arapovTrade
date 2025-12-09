@@ -1020,13 +1020,14 @@ const routes: Routes = [
         (m) => m.NintyEightUkBlogModule
       ),
   },
+  {
+    path: 'macdindicator', //99
+    loadChildren: () =>
+      import('../ukblog/ninty-nine-uk-blog/ninty-nine-uk-blog.module').then(
+        (m) => m.NintyNineUkBlogModule
+      ),
+  },
   //{
-  //   path: '99', //99
-  //   loadChildren: () =>
-  //     import('../ukblog/ninty-nine-uk-blog/ninty-nine-uk-blog.module').then(
-  //       (m) => m.NintyNineUkBlogModule
-  //     ),
-  // },{
   //   path: '100', //100
   //   loadChildren: () =>
   //     import('../ukblog/onehundred-uk-blog/onehundred-uk-blog.module').then(

@@ -248,6 +248,26 @@ export class ArticlesService {
       groupsEng: ['Technical Analysis'],
       id: 166,
     },
+    {
+     
+      linkUkr: 'macdindicator',
+      titleRus: 'Индикатор MACD',
+      titleUkr: 'Індикатор MACD',
+     titleEn: 'MACD Indicator',
+      descrRus:
+        'Индикатор MACD: полное руководство по торговле. Настройки, сигналы, дивергенции, стратегии использования гистограммы и сигнальной линии.',
+      descrUkr:
+        'Індикатор MACD: повний посібник з торгівлі. Налаштування, сигнали, дивергенції, стратегії використання гістограми та сигнальної лінії.',
+        descrEn: 'MACD Indicator: complete trading guide. Settings, signals, divergences, histogram analysis and trading strategies explained.',
+      realTitleRus: 'Индикатор MACD | Полное руководство по торговле',
+      realTitleUkr: 'Індикатор MACD Повний посібник з торгівлі',
+      realTitleEn: 'MACD Indicator | Complete Trading Guide',
+      imgUkr: '/assets/img/content/macdindicator.png',
+     groupsRus: ['Технический анализ'],
+      groupsUkr: ['Технічний аналіз'],
+      groupsEng: ['Technical Analysis'],
+      id: 167,
+    },
       {
      
       linkUkr: 'tradingview-platform',

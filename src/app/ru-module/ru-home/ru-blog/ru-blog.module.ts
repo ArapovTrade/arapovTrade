@@ -1019,13 +1019,14 @@ const routes: Routes = [
         (m) => m.NintyEightRuBlogModule
       ),
   },
+  {
+    path: 'macdindicator', //99
+    loadChildren: () =>
+      import('../ru-blog/ninty-nine-ru-blog/ninty-nine-ru-blog.module').then(
+        (m) => m.NintyNineRuBlogModule
+      ),
+  },
   //{
-  //   path: '99', //99
-  //   loadChildren: () =>
-  //     import('../ru-blog/ninty-nine-ru-blog/ninty-nine-ru-blog.module').then(
-  //       (m) => m.NintyNineRuBlogModule
-  //     ),
-  // },{
   //   path: '100', //100
   //   loadChildren: () =>
   //     import('../ru-blog/onehundred-ru-blog/onehundred-ru-blog.module').then(
