@@ -1027,13 +1027,14 @@ const routes: Routes = [
         (m) => m.NintyNineUkBlogModule
       ),
   },
+  {
+    path: 'sp500trading', //100
+    loadChildren: () =>
+      import('../ukblog/onehundred-uk-blog/onehundred-uk-blog.module').then(
+        (m) => m.OnehundredUkBlogModule
+      ),
+  },
   //{
-  //   path: '100', //100
-  //   loadChildren: () =>
-  //     import('../ukblog/onehundred-uk-blog/onehundred-uk-blog.module').then(
-  //       (m) => m.OnehundredUkBlogModule
-  //     ),
-  // },{
   //   path: '101', //101
   //   loadChildren: () =>
   //     import('../ukblog/onehundred-one-uk-blog/onehundred-one-uk-blog.module').then(

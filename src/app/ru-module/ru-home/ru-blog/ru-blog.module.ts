@@ -1026,13 +1026,14 @@ const routes: Routes = [
         (m) => m.NintyNineRuBlogModule
       ),
   },
-  //{
-  //   path: '100', //100
-  //   loadChildren: () =>
-  //     import('../ru-blog/onehundred-ru-blog/onehundred-ru-blog.module').then(
-  //       (m) => m.OnehundredRuBlogModule
-  //     ),
-  // },{
+  {
+    path: 'sp500trading', //100
+    loadChildren: () =>
+      import('../ru-blog/onehundred-ru-blog/onehundred-ru-blog.module').then(
+        (m) => m.OnehundredRuBlogModule
+      ),
+  }
+  //,{
   //   path: '101', //101
   //   loadChildren: () =>
   //     import('../ru-blog/onehundred-one-ru-blog/onehundred-one-ru-blog.module').then(

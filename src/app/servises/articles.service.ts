@@ -268,6 +268,26 @@ export class ArticlesService {
       groupsEng: ['Technical Analysis'],
       id: 167,
     },
+    {
+     
+      linkUkr: 'sp500trading',
+      titleRus: 'Торговля S&P 500',
+      titleUkr: 'Торгівля S&P 500',
+     titleEn: 'S&P 500 Trading Guide',
+      descrRus:
+        'Торговля индексом S&P 500: полное руководство. Фундаментальный анализ, технические стратегии, ETF и фьючерсы.',
+      descrUkr:
+        'Торгівля S&P 500: фундаментальний аналіз індексу, технічні стратегії та управління ризиками для трейдерів фондових індексів.',
+        descrEn: 'S&P 500 trading guide: index fundamentals, technical analysis, trading strategies and risk management for equity index traders.',
+      realTitleRus: 'Торговля S&P 500 | Полное руководство',
+      realTitleUkr: 'Торгівля S&P 500 | Аналіз індексу та стратегії',
+      realTitleEn: 'S&P 500 Trading Guide | Index Analysis & Strategies',
+      imgUkr: '/assets/img/content/sp500trading1.jpg',
+     groupsRus: ['Фундаментальный анализ'],
+      groupsUkr: ['Фундаментальний аналіз'],
+      groupsEng: ['Fundamental Analysis'],
+      id: 168,
+    },
       {
      
       linkUkr: 'tradingview-platform',
