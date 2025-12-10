@@ -1033,13 +1033,14 @@ const routes: Routes = [
         (m) => m.OnehundredRuBlogModule
       ),
   }
-  //,{
-  //   path: '101', //101
-  //   loadChildren: () =>
-  //     import('../ru-blog/onehundred-one-ru-blog/onehundred-one-ru-blog.module').then(
-  //       (m) => m.OnehundredOneRuBlogModule
-  //     ),
-  // },{
+  ,{
+    path: 'vwap', //101
+    loadChildren: () =>
+      import('../ru-blog/onehundred-one-ru-blog/onehundred-one-ru-blog.module').then(
+        (m) => m.OnehundredOneRuBlogModule
+      ),
+  },
+  //{
   //   path: '102', //102
   //   loadChildren: () =>
   //     import('../ru-blog/onehundred-two-ru-blog/onehundred-two-ru-blog.module').then(

@@ -1032,13 +1032,14 @@ const routes: Routes = [
         (m) => m.OnehundredEnBlogModule
       ),
   },
+  {
+    path: 'vwap', //101
+    loadChildren: () =>
+      import('../eu-blog/onehundred-one-en-blog/onehundred-one-en-blog.module').then(
+        (m) => m.OnehundredOneEnBlogModule
+      ),
+  },
   //{
-  //   path: '101', //101
-  //   loadChildren: () =>
-  //     import('../eu-blog/onehundred-one-en-blog/onehundred-one-en-blog.module').then(
-  //       (m) => m.OnehundredOneEnBlogModule
-  //     ),
-  // },{
   //   path: '102', //102
   //   loadChildren: () =>
   //     import('../eu-blog/onehundred-two-en-blog/onehundred-two-en-blog.module').then(

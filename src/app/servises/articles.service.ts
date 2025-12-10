@@ -126,182 +126,209 @@ export class ArticlesService {
       id: 48,
     },
     {
-     
       linkUkr: 'copytrading',
       titleRus: 'Copy trading: что такое копитрейдинг и как работает?',
       titleUkr: 'Copy trading: що таке копітрейдинг і як він працює?',
-     titleEn: 'Copy Trading: What is Copy-Trading and How Does It Work?',
-     descrRus:
+      titleEn: 'Copy Trading: What is Copy-Trading and How Does It Work?',
+      descrRus:
         'Что такое копитрейдинг криптовалют и как зарабатывать, копируя сделки успешных трейдеров на бирже | Игорь Арапов',
-        descrUkr: 'Що таке копітрейдинг криптовалют і як заробляти, копіюючи угоди успішних трейдерів на біржі | Ігор Арапов',
-        descrEn: 'What is cryptocurrency copy trading and how to earn by copying the trades of successful traders on the exchange | Igor Arapov',
-      realTitleRus: 'Copy trading: что такое копитрейдинг и как работает? | Игорь Арапов',
-      realTitleUkr: 'Copy trading: що таке копітрейдинг і як він працює? | Ігор Арапов',
-      realTitleEn: 'Copy Trading: What is Copy-Trading and How Does It Work? | Igor Arapov',
+      descrUkr:
+        'Що таке копітрейдинг криптовалют і як заробляти, копіюючи угоди успішних трейдерів на біржі | Ігор Арапов',
+      descrEn:
+        'What is cryptocurrency copy trading and how to earn by copying the trades of successful traders on the exchange | Igor Arapov',
+      realTitleRus:
+        'Copy trading: что такое копитрейдинг и как работает? | Игорь Арапов',
+      realTitleUkr:
+        'Copy trading: що таке копітрейдинг і як він працює? | Ігор Арапов',
+      realTitleEn:
+        'Copy Trading: What is Copy-Trading and How Does It Work? | Igor Arapov',
       imgUkr: '/assets/img/content/copytrading_two.png',
       groupsRus: ['Трейдинг для начинающих'],
       groupsUkr: ['Трейдинг для початківців'],
       groupsEng: ['Trading for Beginners'],
       id: 133,
     },
-   
 
     {
-    
       titleRus: 'Что такое объем торгов на бирже?',
       titleUkr: 'Обсяг торгів на біржі: що це і як його аналізувати?',
       titleEn: 'What is Trading Volume on the Exchange?',
-       linkUkr: 'peakvolumelevels',
-       descrRus:
+      linkUkr: 'peakvolumelevels',
+      descrRus:
         'Узнайте, как анализировать объем торгов в трейдинге! Советы по поиску зон интереса, уровней поддержки и сопротивления для трейдинга с Arapov.trade',
       descrUkr:
         'Дізнайтеся, як аналізувати обсяг торгів у трейдингу! Поради щодо пошуку зон інтересу, рівнів підтримки та опору для трейдингу з Arapov.trade',
       descrEn:
         'Learn how to analyze trading volume in trading! Tips for finding areas of interest, support and resistance levels for trading with Arapov.trade',
-        realTitleRus:
-        'Что такое объем торгов на бирже | Игорь Арапов',
+      realTitleRus: 'Что такое объем торгов на бирже | Игорь Арапов',
       realTitleEn: 'What is Trading Volume on the Exchange | Arapov.trade',
       realTitleUkr: 'Обсяг торгів на біржі: що це і як його аналізувати?',
       imgUkr: '/assets/img/content/peakvolumelevels.webp',
       groupsRus: ['Объемный анализ рынка'],
-      groupsUkr: ['Об`ємний аналіз ринку'], 
+      groupsUkr: ['Об`ємний аналіз ринку'],
       groupsEng: ['Market Volume Analysis'],
       id: 111,
     },
     {
-     
       linkUkr: 'goldtrading',
       titleRus: 'Торговля золотом XAUUSD',
       titleUkr: 'Торгівля золотом XAUUSD',
-     titleEn: 'Gold Trading XAUUSD',
+      titleEn: 'Gold Trading XAUUSD',
       descrRus:
         'Торговля золотом XAUUSD: полное руководство. Фундаментальные факторы, технический анализ, стратегии и особенности трейдинга драгоценным металлом.',
       descrUkr:
         'Торгівля золотом XAUUSD: фундаментальні фактори, технічний аналіз, стратегії та управління ризиками для трейдерів дорогоцінних металів.',
-        descrEn: 'Gold XAUUSD trading guide: fundamental drivers, technical analysis strategies, risk management and market psychology for precious metals traders.',
+      descrEn:
+        'Gold XAUUSD trading guide: fundamental drivers, technical analysis strategies, risk management and market psychology for precious metals traders.',
       realTitleRus: 'Торговля золотом XAUUSD | Полное руководство трейдера',
       realTitleUkr: 'Торгівля золотом XAUUSD | Повний посібник трейдера',
       realTitleEn: 'Gold Trading XAUUSD | Complete Trader`s Guide',
       imgUkr: '/assets/img/content/goldtrading1.jpg',
-     groupsRus: ['Фундаментальный анализ'],
+      groupsRus: ['Фундаментальный анализ'],
       groupsUkr: ['Фундаментальний аналіз'],
       groupsEng: ['Fundamental Analysis'],
       id: 163,
     },
     {
-     
       linkUkr: 'oiltrading',
       titleRus: 'Торговля нефтью',
       titleUkr: 'Торгівля нафтою',
-     titleEn: 'Oil Trading Guide',
+      titleEn: 'Oil Trading Guide',
       descrRus:
         'Торговля нефтью: полное руководство. WTI, Brent, фьючерсы, фундаментальный и технический анализ, стратегии трейдинга нефтяными инструментами.',
       descrUkr:
         'Торгівля нафтою: аналіз WTI та Brent, фундаментальні драйвери, технічні стратегії та управління ризиками для енергетичних трейдерів.',
-        descrEn: 'Crude oil trading guide: WTI and Brent analysis, fundamental drivers, technical strategies, and risk management for energy traders.',
+      descrEn:
+        'Crude oil trading guide: WTI and Brent analysis, fundamental drivers, technical strategies, and risk management for energy traders.',
       realTitleRus: 'Торговля нефтью | Полное руководство трейдера',
       realTitleUkr: 'Торгівля нафтою | Аналіз WTI та Brent',
       realTitleEn: 'Oil Trading Guide | WTI and Brent Analysis',
       imgUkr: '/assets/img/content/oiltrading1.jpg',
-     groupsRus: ['Фундаментальный анализ'],
+      groupsRus: ['Фундаментальный анализ'],
       groupsUkr: ['Фундаментальний аналіз'],
       groupsEng: ['Fundamental Analysis'],
       id: 164,
     },
-      {
-     
+    {
       linkUkr: 'rsiindicator',
       titleRus: 'Индикатор RSI',
       titleUkr: 'Індикатор RSI',
-     titleEn: 'RSI Indicator',
+      titleEn: 'RSI Indicator',
       descrRus:
         'Индикатор RSI (Relative Strength Index): полное руководство по использованию в трейдинге. Настройки, стратегии, сигналы перекупленности и перепроданности.',
       descrUkr:
         'Індикатор RSI (Relative Strength Index): повний посібник з використання у трейдингу. Налаштування, стратегії, сигнали перекупленості та перепроданості.',
-        descrEn: 'RSI Indicator (Relative Strength Index): complete trading guide. Settings, strategies, overbought and oversold signals, divergence patterns explained.',
-      realTitleRus: 'Индикатор RSI | Полное руководство по индексу относительной силы',
+      descrEn:
+        'RSI Indicator (Relative Strength Index): complete trading guide. Settings, strategies, overbought and oversold signals, divergence patterns explained.',
+      realTitleRus:
+        'Индикатор RSI | Полное руководство по индексу относительной силы',
       realTitleUkr: 'Індикатор RSI | Повний посібник з індексу відносної сили',
       realTitleEn: 'RSI Indicator | Complete Guide to Relative Strength Index',
       imgUkr: '/assets/img/content/rsiindex1.png',
-     groupsRus: ['Технический анализ'],
+      groupsRus: ['Технический анализ'],
       groupsUkr: ['Технічний аналіз'],
       groupsEng: ['Technical Analysis'],
       id: 165,
     },
     {
-     
       linkUkr: 'stochastic',
       titleRus: 'Стохастический осциллятор',
       titleUkr: 'Стохастичний осцилятор',
-     titleEn: 'Stochastic Oscillator Guide',
+      titleEn: 'Stochastic Oscillator Guide',
       descrRus:
         'Стохастический осциллятор: полное руководство. Настройки, сигналы, стратегии торговли, дивергенции и комбинации с другими индикаторами.',
       descrUkr:
         'Стохастичний осцилятор: налаштування індикатора, сигнали перекупленості/перепроданості, дивергенція та практичні стратегії.',
-        descrEn: 'Stochastic Oscillator trading guide: indicator settings, overbought/oversold signals, divergence trading and practical strategies.',
+      descrEn:
+        'Stochastic Oscillator trading guide: indicator settings, overbought/oversold signals, divergence trading and practical strategies.',
       realTitleRus: 'Стохастический осциллятор | Полное руководство',
       realTitleUkr: 'Стохастичний осцилятор | Посібник з торгівлі',
       realTitleEn: 'Stochastic Oscillator Guide | Trading Strategies',
       imgUkr: '/assets/img/content/stochastic1.jpg',
-     groupsRus: ['Технический анализ'],
+      groupsRus: ['Технический анализ'],
       groupsUkr: ['Технічний аналіз'],
       groupsEng: ['Technical Analysis'],
       id: 166,
     },
     {
-     
       linkUkr: 'macdindicator',
       titleRus: 'Индикатор MACD',
       titleUkr: 'Індикатор MACD',
-     titleEn: 'MACD Indicator',
+      titleEn: 'MACD Indicator',
       descrRus:
         'Индикатор MACD: полное руководство по торговле. Настройки, сигналы, дивергенции, стратегии использования гистограммы и сигнальной линии.',
       descrUkr:
         'Індикатор MACD: повний посібник з торгівлі. Налаштування, сигнали, дивергенції, стратегії використання гістограми та сигнальної лінії.',
-        descrEn: 'MACD Indicator: complete trading guide. Settings, signals, divergences, histogram analysis and trading strategies explained.',
+      descrEn:
+        'MACD Indicator: complete trading guide. Settings, signals, divergences, histogram analysis and trading strategies explained.',
       realTitleRus: 'Индикатор MACD | Полное руководство по торговле',
       realTitleUkr: 'Індикатор MACD Повний посібник з торгівлі',
       realTitleEn: 'MACD Indicator | Complete Trading Guide',
       imgUkr: '/assets/img/content/macdindicator.png',
-     groupsRus: ['Технический анализ'],
+      groupsRus: ['Технический анализ'],
       groupsUkr: ['Технічний аналіз'],
       groupsEng: ['Technical Analysis'],
       id: 167,
     },
     {
-     
       linkUkr: 'sp500trading',
       titleRus: 'Торговля S&P 500',
       titleUkr: 'Торгівля S&P 500',
-     titleEn: 'S&P 500 Trading Guide',
+      titleEn: 'S&P 500 Trading Guide',
       descrRus:
         'Торговля индексом S&P 500: полное руководство. Фундаментальный анализ, технические стратегии, ETF и фьючерсы.',
       descrUkr:
         'Торгівля S&P 500: фундаментальний аналіз індексу, технічні стратегії та управління ризиками для трейдерів фондових індексів.',
-        descrEn: 'S&P 500 trading guide: index fundamentals, technical analysis, trading strategies and risk management for equity index traders.',
+      descrEn:
+        'S&P 500 trading guide: index fundamentals, technical analysis, trading strategies and risk management for equity index traders.',
       realTitleRus: 'Торговля S&P 500 | Полное руководство',
       realTitleUkr: 'Торгівля S&P 500 | Аналіз індексу та стратегії',
       realTitleEn: 'S&P 500 Trading Guide | Index Analysis & Strategies',
       imgUkr: '/assets/img/content/sp500trading1.jpg',
-     groupsRus: ['Фундаментальный анализ'],
+      groupsRus: ['Фундаментальный анализ'],
       groupsUkr: ['Фундаментальний аналіз'],
       groupsEng: ['Fundamental Analysis'],
       id: 168,
     },
-      {
-     
+    {
+      linkUkr: 'vwap',
+      titleRus: 'VWAP индикатор',
+      titleUkr: 'Індикатор VWAP',
+      titleEn: 'VWAP Indicator',
+      descrRus:
+        'VWAP индикатор: полное руководство. Средневзвешенная цена по объёму, стратегии внутридневной торговли.',
+      descrUkr:
+        'Індикатор VWAP: середньозважена ціна за обсягом, торгові стратегії, інституційне застосування.',
+      descrEn:
+        'VWAP indicator trading guide: volume weighted average price calculation, trading strategies, institutional applications.',
+      realTitleRus: 'VWAP индикатор | Полное руководство',
+      realTitleUkr: 'Індикатор VWAP | Посібник з торгівлі',
+      realTitleEn: 'VWAP Indicator | Complete Trading Guide',
+      imgUkr: '/assets/img/content/vwap1.jpg',
+      groupsRus: ['Объемный анализ рынка'],
+      groupsUkr: ['Об`ємний аналіз ринку'],
+      groupsEng: ['Market Volume Analysis'],
+      id: 169,
+    },
+    {
       linkUkr: 'tradingview-platform',
-      titleRus: 'Платформа TradingView: что это такое, как пользоваться и зарабатывать',
-      titleUkr: 'Платформа TradingView: що це таке, як користуватися та заробляти',
-     titleEn: 'TradingView Platform: What It Is and How to Use It and Earn',
+      titleRus:
+        'Платформа TradingView: что это такое, как пользоваться и зарабатывать',
+      titleUkr:
+        'Платформа TradingView: що це таке, як користуватися та заробляти',
+      titleEn: 'TradingView Platform: What It Is and How to Use It and Earn',
       descrRus:
         'TradingView: Полная инструкция, как пользоваться платформой и ЗАРАБАТЫВАТЬ. Пошаговая настройка графиков, анализ данных и эффективные стратегии для трейдеров. Узнайте секреты успешного трейдинга!',
       descrUkr:
         'TradingView: Повна інструкція, як користуватися платформою та ЗАРОБЛЯТИ. Покрокова настройка графіків, аналіз даних та ефективні стратегії для трейдерів. Дізнайтеся секрети успішного трейдингу!',
-        descrEn: 'TradingView: A complete guide on how to use the platform and EARN. Step-by-step chart setup, data analysis, and effective strategies for traders. Discover the secrets of successful trading!',
-      realTitleRus: 'Платформа TradingView: что это такое, как пользоваться и зарабатывать | Игорь Арапов',
-      realTitleUkr: 'Платформа TradingView: що це таке, як користуватися та заробляти | Ігор Арапов',
-      realTitleEn: 'TradingView Platform: What It Is and How to Use It and Earn | Igor Arapov',
+      descrEn:
+        'TradingView: A complete guide on how to use the platform and EARN. Step-by-step chart setup, data analysis, and effective strategies for traders. Discover the secrets of successful trading!',
+      realTitleRus:
+        'Платформа TradingView: что это такое, как пользоваться и зарабатывать | Игорь Арапов',
+      realTitleUkr:
+        'Платформа TradingView: що це таке, як користуватися та заробляти | Ігор Арапов',
+      realTitleEn:
+        'TradingView Platform: What It Is and How to Use It and Earn | Igor Arapov',
       imgUkr: '/assets/img/content/tradingview_1.png',
       groupsRus: ['Трейдинг для начинающих'],
       groupsUkr: ['Трейдинг для початківців'],
@@ -349,7 +376,6 @@ export class ArticlesService {
       id: 158,
     },
     {
-       
       linkUkr: 'tiltintrading',
       titleRus: 'Что такое тильт в трейдинге : причины, признаки',
       titleUkr: 'Що таке тільт у трейдингу: причини, ознаки',
@@ -370,10 +396,9 @@ export class ArticlesService {
       id: 159,
     },
     {
-       
       linkUkr: 'binarnyeopciony',
       titleRus: 'Бинарные опционы : стратегия для новичков',
-       titleUkr: 'Бінарні опціони: стратегія для початківців',
+      titleUkr: 'Бінарні опціони: стратегія для початківців',
       titleEn: 'Binary Options: Strategy for Beginners',
       descrRus:
         'Узнайте, что такое бинарные опционы, как они работают, их виды, особенности, плюсы и минусы. Подробное руководство для новичков | Игорь Арапов',
@@ -391,10 +416,9 @@ export class ArticlesService {
       id: 160,
     },
     {
-       
       linkUkr: 'atrindikator',
       titleRus: 'ATR индикатор',
-       titleUkr: 'Індикатор ATR',
+      titleUkr: 'Індикатор ATR',
       titleEn: 'ATR Indicator',
       descrRus:
         'Узнайте, что такое ATR индикатор в трейдинге, как он рассчитывается и как использовать Average True Range для определения волатильности рынка| Игорь Арапов',
@@ -402,7 +426,7 @@ export class ArticlesService {
         'Дізнайтеся, що таке індикатор ATR у трейдингу, як він розраховується та як використовувати Average True Range для визначення волатильності ринку | Ігор Арапов',
       descrEn:
         'Learn what the ATR indicator is in trading, how it is calculated, and how to use the Average True Range to determine market volatility | Igor Arapov',
-        realTitleRus: 'Что такое ATR индикатор | Игорь Арапов',
+      realTitleRus: 'Что такое ATR индикатор | Игорь Арапов',
       realTitleUkr: 'Що таке індикатор ATR | Ігор Арапов',
       realTitleEn: 'What is the ATR Indicator | Igor Arapov',
       imgUkr: '/assets/img/content/atrindicator.jpg',
@@ -411,11 +435,10 @@ export class ArticlesService {
       groupsEng: ['Trading for Beginners'],
       id: 161,
     },
-     {
-       
+    {
       linkUkr: 'spread',
       titleRus: 'Что такое спред?',
-        titleUkr: 'Що таке спред?',
+      titleUkr: 'Що таке спред?',
       titleEn: 'What is Spread?',
       descrRus:
         'Узнайте, что такое спред в трейдинге, почему он важен и как эта разница между Bid и Ask ценами влияет на вашу первую сделку | Игорь Арапов',
@@ -423,7 +446,8 @@ export class ArticlesService {
         'Дізнайтеся, що таке спред у трейдингу, чому він важливий і як ця різниця між цінами Bid та Ask впливає на вашу першу угоду | Ігор Арапов',
       descrEn:
         'Learn what spread is in trading, why it is important, and how the difference between Bid and Ask prices affects your first trade | Igor Arapov',
-      realTitleRus: 'Что такое спред в трейдинге простыми словами | Игорь Арапов',
+      realTitleRus:
+        'Что такое спред в трейдинге простыми словами | Игорь Арапов',
       realTitleUkr: 'Що таке спред у трейдингу простими словами | Ігор Арапов',
       realTitleEn: 'What is Spread in Trading Simple Words | Igor Arapov',
       imgUkr: '/assets/img/content/spread3.png',
@@ -432,19 +456,26 @@ export class ArticlesService {
       groupsEng: ['Trading for Beginners'],
       id: 162,
     },
-      {
-     
+    {
       linkUkr: 'bitcoin-domination',
-      titleRus: 'Что такое доминация биткоина (BTC.D) и ее влияние на рынок криптовалют',
-      titleUkr: 'Що таке домінація біткоїна (BTC.D) і як вона впливає на ринок криптовалют',
-      titleEn: 'What is Bitcoin Dominance (BTC.D) and How It Affects the Cryptocurrency Market',
+      titleRus:
+        'Что такое доминация биткоина (BTC.D) и ее влияние на рынок криптовалют',
+      titleUkr:
+        'Що таке домінація біткоїна (BTC.D) і як вона впливає на ринок криптовалют',
+      titleEn:
+        'What is Bitcoin Dominance (BTC.D) and How It Affects the Cryptocurrency Market',
       descrRus:
         'Что такое доминация биткоина (BTC.D), зачем следить за этим показателем и как доминирование BTC влияет на рынок криптовалют и альткоины. Простое объяснение для начинающих трейдеров.',
-       descrEn: 'What is Bitcoin Dominance (BTC.D), why track this metric, and how BTC dominance affects the cryptocurrency market and altcoins. A simple explanation for beginner traders.',
-       descrUkr: 'Що таке домінація біткоїна (BTC.D), навіщо стежити за цим показником і як домінування BTC впливає на ринок криптовалют і альткоїни. Просте пояснення для початківців трейдерів.',
-        realTitleRus: 'Что такое доминация биткоина (BTC.D) и как она влияет на рынок криптовалют | Игорь Арапов',
-      realTitleUkr: 'Що таке домінація біткоїна (BTC.D) і як вона впливає на ринок криптовалют | Ігор Арапов',
-      realTitleEn: 'What is Bitcoin Dominance (BTC.D) and How It Affects the Cryptocurrency Market | Igor Arapov',
+      descrEn:
+        'What is Bitcoin Dominance (BTC.D), why track this metric, and how BTC dominance affects the cryptocurrency market and altcoins. A simple explanation for beginner traders.',
+      descrUkr:
+        'Що таке домінація біткоїна (BTC.D), навіщо стежити за цим показником і як домінування BTC впливає на ринок криптовалют і альткоїни. Просте пояснення для початківців трейдерів.',
+      realTitleRus:
+        'Что такое доминация биткоина (BTC.D) и как она влияет на рынок криптовалют | Игорь Арапов',
+      realTitleUkr:
+        'Що таке домінація біткоїна (BTC.D) і як вона впливає на ринок криптовалют | Ігор Арапов',
+      realTitleEn:
+        'What is Bitcoin Dominance (BTC.D) and How It Affects the Cryptocurrency Market | Igor Arapov',
       imgUkr: '/assets/img/content/bitcoin_dominance_1.png',
       groupsRus: ['Трейдинг для начинающих'],
       groupsUkr: ['Трейдинг для початківців'],
@@ -452,18 +483,21 @@ export class ArticlesService {
       id: 136,
     },
     {
-      titleUkr: 'Хто такий трейдер і хто такий інвестор — пояснення для початківців',
+      titleUkr:
+        'Хто такий трейдер і хто такий інвестор — пояснення для початківців',
       titleRus: 'Чем отличается трейдер от инвестора?',
       titleEn: 'What is the Difference Between a Trader and an Investor?',
-       descrEn:
+      descrEn:
         'What is the difference between a trader and an investor? Which is better: trading or investing? Learn the key distinctions, advantages, and strategies | ArapovTrade',
       descrUkr:
         'Чим відрізняється трейдер від інвестора? Що краще: трейдинг чи інвестиції? Дізнайтеся ключові відмінності, переваги та стратегії | ArapovTrade',
       descrRus:
         'В чем разница между трейдером и инвестором? Что лучше: трейдинг или инвестиции? Узнайте ключевые отличия, преимущества и стратегии | ArapovTrade',
       realTitleRus: 'Чем отличается трейдер от инвестора? | ArapovTrade',
-      realTitleEn: 'What is the Difference Between a Trader and an Investor? | ArapovTrade',
-      realTitleUkr: 'Хто такий трейдер і хто такий інвестор — пояснення для початківців',
+      realTitleEn:
+        'What is the Difference Between a Trader and an Investor? | ArapovTrade',
+      realTitleUkr:
+        'Хто такий трейдер і хто такий інвестор — пояснення для початківців',
       linkUkr: 'tradingandinvestments',
       imgUkr: '/assets/img/content/tradingandinvestments.webp',
       groupsRus: ['Трейдинг для начинающих'],
@@ -472,10 +506,9 @@ export class ArticlesService {
       id: 14,
     },
     {
-       
       linkUkr: 'trianglefigure',
       titleRus: 'Паттерн треугольник в трейдинге',
-      titleUkr: 'Фігура перевернутий трикутник', 
+      titleUkr: 'Фігура перевернутий трикутник',
       titleEn: 'Triangle Pattern in Technical Analysis',
       descrUkr:
         'Дізнайтесь про фігуру Трикутник: як визначити патерн, сигнали пробою та використання в трейдингу. Посібник від ArapovTrade.',
@@ -493,36 +526,35 @@ export class ArticlesService {
       id: 152,
     },
     {
-       
       linkUkr: 'liquiditypools',
-      titleRus:
-        'Что такое пулы ликвидности и как они работают?',
+      titleRus: 'Что такое пулы ликвидности и как они работают?',
       titleUkr: 'Пули ліквідності: що це таке і як працюють?',
       titleEn: 'What are Liquidity Pools and How Do They Work?',
       descrEn:
         'Learn how Smart Money finds liquidity pools, manipulates the market, and uses hidden zones. A guide from ArapovTrade.',
-       
+
       descrUkr:
         'Дізнайтесь, як Smart Money знаходять пули ліквідності, маніпулюють ринком та використовують приховані зони. Посібник від ArapovTrade.',
       descrRus:
         'Узнайте, как работают пулы ликвидности! Как Smart Money ищет ликвидность и использует скрытые зоны в трейдинге на Arapov.trade.',
-      realTitleRus: 'Что такое пулы ликвидности и как они работают? | Arapov.trade',
-      realTitleUkr: 'Пули ліквідності: що це таке і як працюють? | Arapov.trade',
-      realTitleEn: 'What are Liquidity Pools and How Do They Work? | Arapov.trade',
+      realTitleRus:
+        'Что такое пулы ликвидности и как они работают? | Arapov.trade',
+      realTitleUkr:
+        'Пули ліквідності: що це таке і як працюють? | Arapov.trade',
+      realTitleEn:
+        'What are Liquidity Pools and How Do They Work? | Arapov.trade',
       imgUkr: '/assets/img/content/liquiditypools.png',
       groupsRus: ['Концепция Смарт Мани'],
       groupsUkr: ['Концепція Смарт Мані'],
       groupsEng: ['Smart Money Concept'],
       id: 104,
     },
-     
+
     {
-       
       linkUkr: 'icebergorders',
       descrEn:
         'Learn about Iceberg Orders: how banks hide their positions and how to use them in trading. A guide from ArapovTrade.',
-      titleRus:
-        'Что такое айсберг ордер (Iceberg Order)?',
+      titleRus: 'Что такое айсберг ордер (Iceberg Order)?',
       titleUkr: 'Iceberg-ордери: що це таке і як працюють на біржі',
       titleEn: 'What are Iceberg Orders?',
       descrUkr:
@@ -539,12 +571,10 @@ export class ArticlesService {
       id: 105,
     },
     {
-       
       linkUkr: 'smartmoneyconceptsguide',
       descrEn:
         'Self-study guide for trading by Igor Arapov: step-by-step course from scratch, real strategies and tips for a confident start in trading.',
-      titleRus:
-        'Концепция смарт мани',
+      titleRus: 'Концепция смарт мани',
       titleUkr: 'Концепція смарт мані',
       titleEn: 'Smart Money Concept',
       descrUkr:
@@ -572,7 +602,8 @@ export class ArticlesService {
         'Стратегії Smart Money для точного входу: Order Blocks, ліквідність, FVG та інші ключові концепції для ефективної торгівлі.',
       descrRus:
         'Разбираем как находить точки входа по Smart Money! Стратегии с Order Blocks, ликвидностью и FVG для точного трейдинга с Arapov.trade',
-      realTitleRus: 'Стратегия смарт мани: как находить точки входа | Arapov.trade',
+      realTitleRus:
+        'Стратегия смарт мани: как находить точки входа | Arapov.trade',
       realTitleUkr: 'Точки входу за концепцією Smart Money | Arapov.trade',
       realTitleEn: 'Smart Money: Entry Points and Strategies | Arapov.trade',
       imgUkr: '/assets/img/content/smartmoneystrategies44.webp',
@@ -606,10 +637,10 @@ export class ArticlesService {
       id: 108,
     },
 
-   
     {
-      titleUkr: 'Біржовий стакан і стрічка принтів: як читати та використовувати',
-      linkUkr: 'stockorderbook', 
+      titleUkr:
+        'Біржовий стакан і стрічка принтів: як читати та використовувати',
+      linkUkr: 'stockorderbook',
       descrEn:
         'Learn how to read the order book and tape prints, analyze liquidity, and identify Smart Money trades with ArapovTrade.',
       titleRus: 'Как читать Биржевой стакан и ленту принтов',
@@ -618,8 +649,10 @@ export class ArticlesService {
         'Дізнайтесь, як читати біржовий стакан і стрічку принтів, аналізувати ліквідність і угоди Smart Money від ArapovTrade.',
       descrRus:
         'Узнайте, как читать биржевой стакан и ленту принтов! Анализ заявок, ликвидности и сделок для выявления Smart Money и точек входа с Arapov.trade',
-      realTitleRus: 'Биржевой стакан и лента принтов: как читать | Arapov.trade',
-      realTitleUkr: 'Біржовий стакан і стрічка принтів: як читати та використовувати',
+      realTitleRus:
+        'Биржевой стакан и лента принтов: как читать | Arapov.trade',
+      realTitleUkr:
+        'Біржовий стакан і стрічка принтів: як читати та використовувати',
       realTitleEn: 'Order Book and Tape Prints: How to Read | Arapov.trade',
       imgUkr: '/assets/img/content/stockorderbook.png',
       groupsRus: ['Объемный анализ рынка'],
@@ -649,29 +682,27 @@ export class ArticlesService {
       id: 1,
     },
     {
-      
-      titleRus: 'Что такое дивергенция в трейдинге?', 
+      titleRus: 'Что такое дивергенция в трейдинге?',
       titleUkr: 'Що таке дивергенція у трейдингу?',
       titleEn: 'What is Divergence in Trading?',
-       linkUkr: 'divergenceonindecators',
+      linkUkr: 'divergenceonindecators',
       imgUkr: '/assets/img/content/divergenceonindecators.webp',
       groupsRus: ['Технический анализ'],
       groupsUkr: ['Технічний аналіз'],
       groupsEng: ['Technical Analysis'],
       id: 2,
-      
+
       descrRus:
         'Узнайте, что такое дивергенция и как она помогает предсказывать движение рынка на Arapov.trade.',
       descrUkr:
         'Дізнайтеся, що таке дивергенція та як вона допомагає передбачати рух ринку на Arapov.trade.',
-        descrEn:
+      descrEn:
         'Learn about divergence and how it helps predict market movement on Arapov.trade.',
       realTitleRus: 'Что такое дивергенция в трейдинге? | Arapov.trade',
       realTitleEn: 'What is Divergence in Trading? | Arapov.trade',
       realTitleUkr: 'Що таке дивергенція у трейдингу? | Arapov.trade',
     },
     {
-       
       titleRus: 'Что такое волатильность',
       titleUkr: 'Що таке волатильність',
       titleEn: 'What is Volatility',
@@ -754,16 +785,15 @@ export class ArticlesService {
       id: 6,
     },
     {
-       
       titleRus: 'Как заработать на трейдинге?',
       titleUkr: 'Як заробляти в трейдингу?',
       titleEn: 'How to Make Money in Trading?',
-       
+
       descrRus:
         'Как заработать на трейдинге? Узнайте стратегии как заработать в интернете на трейдинге с нуля на ArapovTrade.',
       descrUkr:
         'Як заробляти в трейдингу? Дізнайтеся стратегії заробітку в інтернеті на трейдингу з нуля на Arapov.trade.',
-        descrEn:
+      descrEn:
         'How to make money in trading? Learn strategies to earn online from scratch on Arapov.trade.',
       realTitleRus: 'Как заработать на трейдинге? | ArapovTrade',
       realTitleUkr: 'Як заробляти в трейдингу? | Arapov.trade',
@@ -896,9 +926,8 @@ export class ArticlesService {
       groupsEng: ['Technical Analysis'],
       id: 13,
     },
-    
+
     {
-       
       linkUkr: 'futurestrading',
       titleRus: 'Что такое фьючерсы?',
       titleUkr: 'Що таке ф’ючерси?',
@@ -909,7 +938,7 @@ export class ArticlesService {
         'Торгівля ф’ючерсами. Дізнайтеся, як обрати брокера для торгівлі ф’ючерсами. Вивчіть що таке ф’ючерсна торгівля з Ігорем Араповим.',
       descrEn:
         'Futures Trading. Learn how to choose a broker for futures trading. Explore what futures trading is with Igor Arapov.',
-        realTitleRus: 'Что такое фьючерсы?| ArapovTrade',
+      realTitleRus: 'Что такое фьючерсы?| ArapovTrade',
       realTitleUkr: 'Що таке ф’ючерси? | ArapovTrade',
       imgUkr: '/assets/img/content/futurestrading.webp',
       realTitleEn: 'What are Futures? | ArapovTrade',
@@ -1236,9 +1265,8 @@ export class ArticlesService {
         'Дізнайтесь, як будувати та використовувати рівні підтримки й опору у трейдингу. Практичний гід для трейдерів | Ігор Арапов.',
       descrRus:
         'Узнайте, как строить и использовать уровни поддержки и сопротивления в трейдинге! Полное руководство для эффективных сделок | Игорь Арапов.',
-      realTitleRus:
-        'Как строить уровни в трейдинге | Игорь Арапов',
-       realTitleUkr: 'Як будувати рівні в трейдингу | Ігор Арапов',
+      realTitleRus: 'Как строить уровни в трейдинге | Игорь Арапов',
+      realTitleUkr: 'Як будувати рівні в трейдингу | Ігор Арапов',
       realTitleEn: 'How to Build Levels in Trading | Igor Arapov',
       linkUkr: 'levelofsupport',
       imgUkr: '/assets/img/content/levelofsupport.webp',
@@ -1377,8 +1405,7 @@ export class ArticlesService {
         'Принципи зберігання криптовалют: вибір гаманців, безпека та стратегії захисту активів. Повний посібник для інвесторів Arapov.trade.',
       descrRus:
         'Как безопасно хранить криптовалюту? Выбор кошельков, защита активов и советы инвесторам по безопасности на Arapov.trade.',
-      realTitleRus:
-        'Безопасное хранение криптовалюты | Arapov.trade',
+      realTitleRus: 'Безопасное хранение криптовалюты | Arapov.trade',
       realTitleUkr: 'Безпечне зберігання криптовалюти | Arapov.trade',
       realTitleEn: 'Safe Cryptocurrency Storage | Arapov.trade',
       linkUkr: 'cryptostoring',
@@ -1654,19 +1681,20 @@ export class ArticlesService {
       id: 52,
     },
     {
-       
       titleRus: 'Что такое ордер блок?',
       titleUkr: 'Що таке ордер блок?',
-      titleEn: 'What is an Order Block?', 
+      titleEn: 'What is an Order Block?',
       descrEn:
         'Learn about order blocks in trading: how to identify and use them in trading strategies from ArapovTrade.',
       descrUkr:
         'Дізнайтесь, що таке ордер блок у трейдингу, як його визначити та використовувати в торгових стратегіях від ArapovTrade.',
       descrRus:
         'Узнайте, что такое ордерный блок (Order Block), изучите его типы и научитесь эффективно торговать. Полное руководство для трейдеров',
-      realTitleRus: 'Что такое ордер блок (Order Block) в трейдинге | ArapovTrade',
+      realTitleRus:
+        'Что такое ордер блок (Order Block) в трейдинге | ArapovTrade',
       realTitleEn: 'What is an Order Block in Trading | ArapovTrade',
-      realTitleUkr: 'Що таке ордер блок у трейдингу (Order Block) | ArapovTrade',
+      realTitleUkr:
+        'Що таке ордер блок у трейдингу (Order Block) | ArapovTrade',
       linkUkr: 'orderblockintrading',
       imgUkr: '/assets/img/content/orderblockintrading.webp',
       groupsRus: ['Концепция Смарт Мани'],
@@ -2056,22 +2084,20 @@ export class ArticlesService {
       id: 72,
     },
     {
-       
       linkUkr: 'halving',
       titleRus: 'Что такое халвинг биткоина?',
       titleUkr: 'Що таке халвінг біткоїна?',
       titleEn: 'What is Bitcoin Halving?',
-       descrRus:
+      descrRus:
         'Узнайте, что такое халвинг биткоина,	когда был халвинг биткоина и почему это событие важно для майнеров и инвесторов на Arapov.trade.',
       descrUkr:
         'Дізнайтесь, що таке халвінг біткоїна, коли відбувався халвінг та чому це важливо для майнерів і інвесторів від ArapovTrade.',
       descrEn:
         'Learn about Bitcoin halving: what it is, when it occurs, and its significance for miners and investors. A guide from ArapovTrade.',
-        realTitleRus:
-        'Что такое халвинг биткоина? | Arapov.trade',
-        realTitleUkr:'Що таке халвінг біткоїна? | Arapov.trade',
+      realTitleRus: 'Что такое халвинг биткоина? | Arapov.trade',
+      realTitleUkr: 'Що таке халвінг біткоїна? | Arapov.trade',
       realTitleEn: 'What is Bitcoin Halving? | Arapov.trade',
-       
+
       imgUkr: '/assets/img/content/halving.webp',
       groupsRus: ['Криптовалюта'],
       groupsUkr: ['Криптовалюта'],
@@ -2521,7 +2547,8 @@ export class ArticlesService {
         'Дізнайтесь, що таке реквоти в трейдингу, причини їх виникнення та як їх уникнути. Поради для трейдерів від ArapovTrade.',
       descrRus:
         'Узнайте, что такое реквоты в трейдинге! Почему возникают и как их избежать для эффективной торговли на Arapov.trade.',
-      realTitleRus: 'Реквоты в трейдинге: что это и как избежать | Arapov.trade',
+      realTitleRus:
+        'Реквоты в трейдинге: что это и как избежать | Arapov.trade',
       realTitleEn:
         'Requotes in Trading: What They Are and How to Avoid Them | Arapov.trade',
       realTitleUkr: 'Реквоти в трейдингу: що це та як уникнути',
@@ -2701,17 +2728,20 @@ export class ArticlesService {
       linkUkr: 'timeframes',
       titleRus: 'Таймфреймы в трейдинге',
       titleEn: 'Timeframes in Trading',
-       
+
       descrRus:
         'Что такое таймфрейм и на каком таймрефме лучше торговать? Узнайте, какой таймфрейм выбрать для скальпинга, интрадей и долгосрочных стратегий | Arapov.trade.',
-        descrEn:
+      descrEn:
         'What is a timeframe and which timeframe is best for trading? Learn how to choose the right timeframe for scalping, intraday, and long-term strategies | Arapov.trade.',
       descrUkr:
         'Що таке таймфрейм і який таймфрейм найкращий для торгівлі? Дізнайтесь, як обрати таймфрейм для скальпінгу, інтрадей та довгострокових стратегій | Arapov.trade.',
-      realTitleRus: 'Таймфреймы в трейдинге: на каком таймфрейме лучше торговать | Arapov.trade',
-      realTitleUkr: 'Таймфрейми у трейдингу: який таймфрейм найкращий для торгівлі | Arapov.trade',
-       realTitleEn: 'Timeframes in Trading: Which Timeframe is Best for Trading | Arapov.trade',
-       
+      realTitleRus:
+        'Таймфреймы в трейдинге: на каком таймфрейме лучше торговать | Arapov.trade',
+      realTitleUkr:
+        'Таймфрейми у трейдингу: який таймфрейм найкращий для торгівлі | Arapov.trade',
+      realTitleEn:
+        'Timeframes in Trading: Which Timeframe is Best for Trading | Arapov.trade',
+
       imgUkr: '/assets/img/content/timeframes44.webp',
       groupsRus: ['Трейдинг для начинающих'],
       groupsUkr: ['Трейдинг для початківців'],
@@ -2794,8 +2824,7 @@ export class ArticlesService {
         'Дізнайтесь, як економічний календар допомагає прогнозувати ринкові рухи та торгувати на новинах акцій і індексів від ArapovTrade.',
       descrRus:
         'Узнайте, как экономический календарь помогает в трейдинге! Гид по событиям, влияющим на акции, индексы и стратегии торговли на новостях',
-      realTitleRus:
-        'Что такое экономический календарь? | Arapov.trade',
+      realTitleRus: 'Что такое экономический календарь? | Arapov.trade',
       realTitleEn: 'Economic Calendar in Trading: How to Use | Arapov.trade',
       realTitleUkr: 'Економічний календар: як використовувати',
       imgUkr: '/assets/img/content/economiccalendar.png',
@@ -2877,8 +2906,7 @@ export class ArticlesService {
         'Дізнайтесь про психологію трейдингу Вільяма Ганна: самоконтроль, управління ризиками та методи для сучасного трейдингу від ArapovTrade.',
       descrRus:
         'Теория Ганна: самоконтроль, управление рисками, устойчивость. Применяйте принципы Ганна в торговле для успеха!',
-      realTitleRus:
-        'Метод Ганна | ArapovTrade',
+      realTitleRus: 'Метод Ганна | ArapovTrade',
       realTitleUkr: 'Психологія трейдингу Вільяма Ганна | ArapovTrade',
       realTitleEn: "William Gann's Trading Psychology | ArapovTrade",
       imgUkr: '/assets/img/content/williamgannpsychology44.webp',
@@ -2888,7 +2916,6 @@ export class ArticlesService {
       id: 147,
     },
     {
-      
       linkUkr: 'emotionsaffect',
       titleRus: 'Психология трейдинга: Как эмоции влияют на сделки?',
       titleUkr: 'Психологія трейдингу: Як емоції впливають на угоди?',
@@ -2899,8 +2926,7 @@ export class ArticlesService {
         'Дізнайтесь, як емоції впливають на трейдинг, чому страх і жадібність шкодять та як контролювати емоції від ArapovTrade.',
       descrRus:
         'Как эмоции влияют на трейдинг? Узнайте, как страх и жадность мешают торговать и какие техники помогут контролировать эмоции для успешных сделок',
-      realTitleRus:
-        'Психология трейдинга: контроль эмоций | Arapov.trade',
+      realTitleRus: 'Психология трейдинга: контроль эмоций | Arapov.trade',
       realTitleUkr: 'Психологія трейдингу: контроль емоцій | Arapov.trade',
       realTitleEn: 'Trading Psychology: Emotion Control | Arapov.trade',
       imgUkr: '/assets/img/content/emotionsaffect44.webp',
@@ -2910,14 +2936,13 @@ export class ArticlesService {
       id: 148,
     },
     {
-       
       linkUkr: 'fomo',
       titleRus: 'Что такое фомо в трейдинге?',
       titleUkr: 'Що таке фомо в трейдингу?',
       titleEn: 'What is FOMO in Trading?',
       descrEn:
         'Learn what FOMO is in trading, how to avoid fear of missing out, and trade mindfully with tips from ArapovTrade.',
-      
+
       descrRus:
         'Что такое FOMO в трейдинге и как избежать потерь? Советы от ArapovTrade по осознанной торговле и управлению эмоциями.',
       descrUkr:
@@ -2925,7 +2950,7 @@ export class ArticlesService {
       realTitleRus: 'Что такое фомо в трейдинге? | ArapovTrade',
       realTitleUkr: 'Що таке фомо в трейдингу? | ArapovTrade',
       realTitleEn: 'What is FOMO in Trading? | ArapovTrade',
-     
+
       imgUkr: '/assets/img/content/fomo.webp',
       groupsRus: ['Психология трейдинга'],
       groupsUkr: ['Психологія трейдингу'],
@@ -2933,19 +2958,18 @@ export class ArticlesService {
       id: 149,
     },
     {
-      
       descrEn:
         'Learn about the psychology of averaging, why beginners lose deposits, and how to avoid losses in trading from ArapovTrade.',
       linkUkr: 'psychologyofaveraging',
-      titleRus: 'Усреднение в трейдинге',	
+      titleRus: 'Усреднение в трейдинге',
       titleEn: 'Averaging in Trading',
       titleUkr: 'Усереднення в трейдингу',
-      
+
       descrRus:
         'Узнайте что такое усреднение в трейдинге и что такое усреднение в инвестициях! Почему новички теряют депозиты от ArapovTrade.',
       descrUkr:
         'Дізнайтесь, що таке усереднення в трейдингу та інвестиціях! Чому новачки втрачають депозити від ArapovTrade.',
-        realTitleRus: 'Усреднение в трейдинге | ArapovTrade',
+      realTitleRus: 'Усреднение в трейдинге | ArapovTrade',
       realTitleEn: 'Averaging in Trading | ArapovTrade',
       realTitleUkr: 'Усереднення в трейдингу | ArapovTrade',
       imgUkr: '/assets/img/content/psychologyofaveraging44.webp',
@@ -2955,12 +2979,11 @@ export class ArticlesService {
       id: 150,
     },
     {
-       
       linkUkr: 'headandshoulders',
-      titleRus: 'Голова и плечи паттерн', 	
-        titleEn: 'Head and Shoulders Pattern',
+      titleRus: 'Голова и плечи паттерн',
+      titleEn: 'Head and Shoulders Pattern',
       titleUkr: 'Голова і плечі патерн',
-       
+
       descrRus:
         'Фигура голова и плечи: как торговать разворотный паттерн? Руководство от ArapovTrade по анализу и стратегиям',
       descrUkr:
@@ -2999,12 +3022,11 @@ export class ArticlesService {
       groupsEng: ['Market Volume Analysis'],
       id: 113,
     },
-    
+
     {
-       
       linkUkr: 'flagandpennant',
       titleRus: 'Паттерн вымпел и  флаг в трейдинге',
-       titleEn: 'Flag and Pennant Pattern in Trading',
+      titleEn: 'Flag and Pennant Pattern in Trading',
       titleUkr: 'Прапор і Вимпел у трейдингу',
       descrUkr:
         'Дізнайтесь про патерни Прапор і Вимпел: як визначити пробій тренду та використовувати в трейдингу. Посібник від ArapovTrade.',
@@ -3022,11 +3044,9 @@ export class ArticlesService {
       id: 153,
     },
     {
-       
-
       linkUkr: 'cupandhandle',
       titleRus: 'Паттерн чашка с ручкой в трейдинге',
-        titleEn: 'Cup and Handle Pattern in Trading',
+      titleEn: 'Cup and Handle Pattern in Trading',
       titleUkr: 'Патерн Чашка з ручкою у трейдингу',
       descrUkr:
         'Дізнайтесь про патерн Чашка з ручкою: як визначити пробій тренду та використовувати в трейдингу. Посібник від ArapovTrade.',
@@ -3045,7 +3065,6 @@ export class ArticlesService {
     },
 
     {
-       
       linkUkr: 'engulfing',
       titleRus: 'Паттерн поглощение. Как определить разворот тренда?',
       titleUkr: 'Фігура Поглинання: Як спіймати розворот тренду',
@@ -3056,7 +3075,8 @@ export class ArticlesService {
         'Як визначити розворот тренду за допомогою фігури Поглинання. Bullish та Bearish Engulfing — як ловити тренд на графіку.',
       descrEn:
         'Learn how to identify trend reversals using the Engulfing pattern. Bullish and Bearish Engulfing – how to catch trends on the chart.',
-        realTitleRus: 'Паттерн поглощение. Как определить разворот тренда? | ArapovTrade',
+      realTitleRus:
+        'Паттерн поглощение. Как определить разворот тренда? | ArapovTrade',
       realTitleEn: 'Engulfing: Bullish and Bearish | ArapovTrade',
       realTitleUkr: 'Фігура Поглинання: Як спіймати розворот тренду',
       imgUkr: '/assets/img/content/engulfing.webp',
@@ -3087,12 +3107,11 @@ export class ArticlesService {
       id: 156,
     },
     {
-       
       linkUkr: 'pattern-1-2-3',
-      titleRus: 'Паттерн 123 в трейдинге', 	
-       titleEn: '123 Pattern in Trading',
+      titleRus: 'Паттерн 123 в трейдинге',
+      titleEn: '123 Pattern in Trading',
       titleUkr: 'Патерн 123 у трейдингу',
-       
+
       descrUkr:
         'Дізнайтесь про патерн 123: як визначити розворот тренду та використовувати в трейдингу на ринках. Посібник від ArapovTrade.',
       descrRus:
