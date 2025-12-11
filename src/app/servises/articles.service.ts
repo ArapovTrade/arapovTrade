@@ -291,6 +291,26 @@ export class ArticlesService {
       id: 168,
     },
     {
+      linkUkr: 'bollingerbands',
+      titleRus: 'Полосы Боллинджера',
+      titleUkr: 'Смуги Боллінджера',
+      titleEn: 'Bollinger Bands',
+      descrRus:
+        'Полосы Боллинджера: полное руководство по индикатору. Настройки, стратегии торговли, сжатие и расширение полос, пробои и отскоки.',
+      descrUkr:
+        'Смуги Боллінджера: повний посібник з індикатора. Налаштування, стратегії торгівлі, стиснення та розширення смуг, пробої та відскоки.',
+      descrEn:
+        'Bollinger Bands: complete trading guide. Settings, strategies, squeeze and expansion, breakouts and bounces explained.',
+      realTitleRus: 'Полосы Боллинджера | Полное руководство по индикатору',
+      realTitleUkr: 'Смуги Боллінджера | Повний посібник з індикатора',
+      realTitleEn: 'Bollinger Bands | Complete Trading Guide',
+      imgUkr: '/assets/img/content/bollingerbands1.jpg',
+      groupsRus: ['Технический анализ'],
+      groupsUkr: ['Технічний аналіз'],
+      groupsEng: ['Technical Analysis'],
+      id: 170,
+    },
+    {
       linkUkr: 'vwap',
       titleRus: 'VWAP индикатор',
       titleUkr: 'Індикатор VWAP',

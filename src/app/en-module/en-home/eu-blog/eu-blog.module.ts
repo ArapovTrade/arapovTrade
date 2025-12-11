@@ -1039,13 +1039,14 @@ const routes: Routes = [
         (m) => m.OnehundredOneEnBlogModule
       ),
   },
+  {
+    path: 'bollingerbands', //102
+    loadChildren: () =>
+      import('../eu-blog/onehundred-two-en-blog/onehundred-two-en-blog.module').then(
+        (m) => m.OnehundredTwoEnBlogModule
+      ),
+  },
   //{
-  //   path: '102', //102
-  //   loadChildren: () =>
-  //     import('../eu-blog/onehundred-two-en-blog/onehundred-two-en-blog.module').then(
-  //       (m) => m.OnehundredTwoEnBlogModule
-  //     ),
-  // },{
   //   path: '103', //103
   //   loadChildren: () =>
   //     import('../eu-blog/onehundred-three-en-blog/onehundred-three-en-blog.module').then(
