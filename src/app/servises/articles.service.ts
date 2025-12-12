@@ -311,6 +311,26 @@ export class ArticlesService {
       id: 170,
     },
     {
+      linkUkr: 'ichimoku',
+      titleRus: 'Индикатор Ишимоку',
+      titleUkr: 'Індикатор Ішимоку',
+      titleEn: 'Ichimoku Cloud Indicator',
+      descrRus:
+        'Индикатор Ишимоку (Ichimoku Kinko Hyo): полное руководство. Облако Кумо, линии Tenkan, Kijun, Chikou. Стратегии и сигналы.',
+      descrUkr:
+        'Індикатор Ішимоку: аналіз хмари Кумо, визначення тренду, торгові сигнали та практичні стратегії технічного аналізу.',
+      descrEn:
+        'Ichimoku Kinko Hyo indicator guide: Kumo cloud analysis, trend identification, trading signals, and practical strategies for technical traders.',
+      realTitleRus: 'Индикатор Ишимоку | Полное руководство по облаку',
+      realTitleUkr: 'Індикатор Ішимоку | Повний посібник з хмари',
+      realTitleEn: 'Ichimoku Cloud Indicator | Complete Trading Guide',
+      imgUkr: '/assets/img/content/ichimoku1.png',
+      groupsRus: ['Технический анализ'],
+      groupsUkr: ['Технічний аналіз'],
+      groupsEng: ['Technical Analysis'],
+      id: 171,
+    },
+    {
       linkUkr: 'vwap',
       titleRus: 'VWAP индикатор',
       titleUkr: 'Індикатор VWAP',

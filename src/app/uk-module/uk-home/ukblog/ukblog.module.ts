@@ -1048,13 +1048,14 @@ const routes: Routes = [
         (m) => m.OnehundredTwoUkBlogModule
       ),
   },
+  {
+    path: 'ichimoku', //103
+    loadChildren: () =>
+      import('../ukblog/onehundred-three-uk-blog/onehundred-three-uk-blog.module').then(
+        (m) => m.OnehundredThreeUkBlogModule
+      ),
+  },
   //{
-  //   path: '103', //103
-  //   loadChildren: () =>
-  //     import('../ukblog/onehundred-three-uk-blog/onehundred-three-uk-blog.module').then(
-  //       (m) => m.OnehundredThreeUkBlogModule
-  //     ),
-  // },{
   //   path: '104', //104
   //   loadChildren: () =>
   //     import('../ukblog/onehundred-four-uk-blog/onehundred-four-uk-blog.module').then(
