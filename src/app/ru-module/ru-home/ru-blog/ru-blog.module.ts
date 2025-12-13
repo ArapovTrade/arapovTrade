@@ -1061,13 +1061,13 @@ const routes: Routes = [
         (m) => m.OnehundredFourRuBlogModule
       ),
   },
-  //{
-  //   path: '105', //105
-  //   loadChildren: () =>
-  //     import('../ru-blog/onehundred-five-ru-blog/onehundred-five-ru-blog.module').then(
-  //       (m) => m.OnehundredFiveRuBlogModule
-  //     ),
-  // },
+  {
+    path: 'xrp', //105
+    loadChildren: () =>
+      import('../ru-blog/onehundred-five-ru-blog/onehundred-five-ru-blog.module').then(
+        (m) => m.OnehundredFiveRuBlogModule
+      ),
+  },
 
   ]
    },

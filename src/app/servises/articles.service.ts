@@ -345,10 +345,30 @@ export class ArticlesService {
       realTitleUkr: 'Торгівля Solana | Аналіз SOL та стратегії',
       realTitleEn: 'Solana Trading Guide | SOL Analysis & Strategies',
       imgUkr: '/assets/img/content/sol1.jpg',
-       groupsRus: ['Криптовалюта'],
+      groupsRus: ['Криптовалюта'],
       groupsUkr: ['Криптовалюта'],
       groupsEng: ['Cryptocurrency'],
       id: 172,
+    },
+    {
+      linkUkr: 'xrp',
+      titleRus: 'Торговля XRP (Ripple)',
+      titleUkr: 'Торгівля XRP (Ripple)',
+      titleEn: 'XRP Trading Guide',
+      descrRus:
+        'Торговля XRP (Ripple): полное руководство. Технология, судебное дело SEC, фундаментальный анализ, стратегии трейдинга.',
+      descrUkr:
+        'Торгівля XRP: аналіз ринку Ripple, технічні стратегії, фундаментальні фактори та управління ризиками для трейдерів криптовалют.',
+      descrEn:
+        'Complete XRP trading guide: RippleNet technology, SEC lawsuit impact, trading strategies and risk management for cryptocurrency traders.',
+      realTitleRus: 'Торговля XRP (Ripple) | Полное руководство',
+      realTitleUkr: 'Торгівля XRP | Аналіз ринку Ripple та стратегії',
+      realTitleEn: 'XRP Trading Guide | RippleNet Technology & Market Analysis',
+      imgUkr: '/assets/img/content/XRP2.jpg',
+      groupsRus: ['Криптовалюта'],
+      groupsUkr: ['Криптовалюта'],
+      groupsEng: ['Cryptocurrency'],
+      id: 173,
     },
     {
       linkUkr: 'vwap',

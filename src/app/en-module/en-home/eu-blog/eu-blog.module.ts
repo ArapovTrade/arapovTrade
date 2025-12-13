@@ -1060,13 +1060,13 @@ const routes: Routes = [
         (m) => m.OnehundredFourEnBlogModule
       ),
   },
-  //{
-  //   path: '105', //105
-  //   loadChildren: () =>
-  //     import('../eu-blog/onehundred-five-en-blog/onehundred-five-en-blog.module').then(
-  //       (m) => m.OnehundredFiveEnBlogModule
-  //     ),
-  // },
+  {
+    path: 'xrp', //105
+    loadChildren: () =>
+      import('../eu-blog/onehundred-five-en-blog/onehundred-five-en-blog.module').then(
+        (m) => m.OnehundredFiveEnBlogModule
+      ),
+  },
 
   ]
    },
