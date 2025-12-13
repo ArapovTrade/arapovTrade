@@ -1055,13 +1055,14 @@ const routes: Routes = [
         (m) => m.OnehundredThreeUkBlogModule
       ),
   },
+  {
+    path: 'solana', //104
+    loadChildren: () =>
+      import('../ukblog/onehundred-four-uk-blog/onehundred-four-uk-blog.module').then(
+        (m) => m.OnehundredFourUkBlogModule
+      ),
+  },
   //{
-  //   path: '104', //104
-  //   loadChildren: () =>
-  //     import('../ukblog/onehundred-four-uk-blog/onehundred-four-uk-blog.module').then(
-  //       (m) => m.OnehundredFourUkBlogModule
-  //     ),
-  // },{
   //   path: '105', //105
   //   loadChildren: () =>
   //     import('../ukblog/onehundred-five-uk-blog/onehundred-five-uk-blog.module').then(

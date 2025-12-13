@@ -331,6 +331,26 @@ export class ArticlesService {
       id: 171,
     },
     {
+      linkUkr: 'solana',
+      titleRus: 'Торговля Solana (SOL)',
+      titleUkr: 'Торгівля Solana (SOL)',
+      titleEn: 'Solana Trading Guide',
+      descrRus:
+        'Торговля Solana (SOL): полное руководство. Технология, фундаментальный анализ, технические стратегии, DeFi экосистема.',
+      descrUkr:
+        'Торгівля Solana SOL: технологія блокчейну, екосистема DeFi, торгові стратегії та управління ризиками для криптотрейдерів.',
+      descrEn:
+        'Solana SOL trading guide: blockchain technology, DeFi ecosystem, trading strategies and risk management for cryptocurrency traders.',
+      realTitleRus: 'Торговля Solana (SOL) | Полное руководство',
+      realTitleUkr: 'Торгівля Solana | Аналіз SOL та стратегії',
+      realTitleEn: 'Solana Trading Guide | SOL Analysis & Strategies',
+      imgUkr: '/assets/img/content/sol1.jpg',
+       groupsRus: ['Криптовалюта'],
+      groupsUkr: ['Криптовалюта'],
+      groupsEng: ['Cryptocurrency'],
+      id: 172,
+    },
+    {
       linkUkr: 'vwap',
       titleRus: 'VWAP индикатор',
       titleUkr: 'Індикатор VWAP',
