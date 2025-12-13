@@ -226,7 +226,7 @@ onGroupChangeFromEvent(value: string) {
   private routerSubscription!: Subscription;
   private themeSubscription!: Subscription;
   ngOnDestroy() {
-    // Отписка от подписок
+    // Отписка от подписок 
     if (this.routerSubscription) {
       this.routerSubscription.unsubscribe();
     }
