@@ -235,6 +235,9 @@ export class EnStudyingHomeComponent
         '@type': 'Organization',
         '@id': 'https://arapov.trade/#organization',
         name: 'Arapov Trade',
+         description:
+        'Individual trading education from scratch under the guidance of an experienced trader. Wyckoff Method, Volume Analysis, practice on live accounts.',
+      
         url: 'https://arapov.trade',
       },
       educationalLevel: 'Beginner to Advanced',
@@ -308,6 +311,9 @@ export class EnStudyingHomeComponent
         provider: {
           '@type': 'Organization',
           name: 'Arapov.trade',
+           description:
+        'Individual trading education from scratch under the guidance of an experienced trader. Wyckoff Method, Volume Analysis, practice on live accounts.',
+      
           url: 'https://arapov.trade',
         },
       },

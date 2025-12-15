@@ -236,6 +236,8 @@ export class RuStudyingHomeComponent
         '@type': 'Organization',
         '@id': 'https://arapov.trade/#organization',
         name: 'Arapov Trade',
+        description:
+          'Индивидуальное обучение трейдингу с нуля под руководством опытного трейдера. Метод Вайкоффа, объёмный анализ, практика на реальных счетах.',
         url: 'https://arapov.trade',
       },
       educationalLevel: 'Beginner to Advanced',
@@ -309,6 +311,9 @@ export class RuStudyingHomeComponent
         provider: {
           '@type': 'Organization',
           name: 'Arapov.trade',
+           description:
+          'Индивидуальное обучение трейдингу с нуля под руководством опытного трейдера. Метод Вайкоффа, объёмный анализ, практика на реальных счетах.',
+        
           url: 'https://arapov.trade',
         },
       },
@@ -319,7 +324,6 @@ export class RuStudyingHomeComponent
       datePublished: '2024-09-01T00:00:00+02:00',
       reviewBody:
         'За 11 месяцев торговли чистая прибыль составила 6237.14 USD, что соответствует 40% от депозита. WinRate — 67%, средняя доходность в месяц — 3.57%. Использую концепцию Ричарда Вайкоффа и торговлю на ложных пробоях.',
-       
     });
 
     this.document.head.appendChild(script);

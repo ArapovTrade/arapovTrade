@@ -239,6 +239,9 @@ export class UkStudyingHomeComponent
         '@type': 'Organization',
         '@id': 'https://arapov.trade/#organization',
         name: 'Arapov Trade',
+        description:
+          "Індивідуальне навчання трейдингу з нуля під керівництвом досвідченого трейдера. Метод Вайкоффа, об'ємний аналіз, практика на реальних рахунках.",
+
         url: 'https://arapov.trade',
       },
       educationalLevel: 'Beginner to Advanced',
@@ -312,6 +315,9 @@ export class UkStudyingHomeComponent
         provider: {
           '@type': 'Organization',
           name: 'Arapov.trade',
+          description:
+            "Індивідуальне навчання трейдингу з нуля під керівництвом досвідченого трейдера. Метод Вайкоффа, об'ємний аналіз, практика на реальних рахунках.",
+
           url: 'https://arapov.trade',
         },
       },
@@ -322,7 +328,6 @@ export class UkStudyingHomeComponent
       datePublished: '2024-09-01T00:00:00+02:00',
       reviewBody:
         'За 11 місяців торгівлі чистий прибуток склав 6237.14 USD, що дорівнює 40% від депозиту. WinRate — 67%, середня прибутковість на місяць — 3.57%. Використовую концепцію Річарда Вайкоффа та торгівлю на хибних пробоях.',
-       
     });
 
     this.document.head.appendChild(script);
