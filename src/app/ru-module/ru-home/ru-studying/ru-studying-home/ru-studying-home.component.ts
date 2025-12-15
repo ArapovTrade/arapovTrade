@@ -231,12 +231,12 @@ export class RuStudyingHomeComponent
       name: 'Профессиональный курс трейдинга',
       description:
         'Индивидуальное обучение трейдингу с нуля под руководством опытного трейдера. Метод Вайкоффа, объёмный анализ, практика на реальных счетах.',
-      url: 'https://arapov.trade/ru/studying', 
+      url: 'https://arapov.trade/ru/studying',
       provider: {
         '@type': 'Organization',
         '@id': 'https://arapov.trade/#organization',
         name: 'Arapov Trade',
-      url: 'https://arapov.trade'
+        url: 'https://arapov.trade',
       },
       educationalLevel: 'Beginner to Advanced',
       teaches: [
@@ -265,7 +265,6 @@ export class RuStudyingHomeComponent
         '@type': 'CourseInstance',
         courseMode: 'online',
         courseWorkload: 'P4W',
-         
       },
       aggregateRating: {
         '@type': 'AggregateRating',
@@ -304,21 +303,22 @@ export class RuStudyingHomeComponent
     script.text = JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'Review',
-      name: 'Review of Arapov.Trade',
-
+      itemReviewed: {
+        '@type': 'Course',
+        name: 'Профессиональный курс трейдинга',
+        provider: {
+          '@type': 'Organization',
+          name: 'Arapov.trade',
+          url: 'https://arapov.trade',
+        },
+      },
       author: {
         '@type': 'Person',
         name: 'Сергей Черемисин',
       },
-      datePublished: '2024-09-01',
+      datePublished: '2024-09-01T00:00:00+02:00',
       reviewBody:
-        'За 11 месяцев торговли чистая прибыль составила 6237.14 USD, что составляет 40% от суммы депозита. WinRate 67%, средняя доходность в месяц — 3.57%. Использую концепцию Ричарда Вайкоффа и торговую систему ложных пробоев.',
-      reviewRating: {
-        '@type': 'Rating',
-        ratingValue: '5',
-        bestRating: '5',
-        worstRating: '1',
-      },
+        'За 11 месяцев торговли чистая прибыль составила 6237.14 USD, что соответствует 40% от депозита. WinRate — 67%, средняя доходность в месяц — 3.57%. Использую концепцию Ричарда Вайкоффа и торговлю на ложных пробоях.',
        
     });
 

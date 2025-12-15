@@ -234,12 +234,12 @@ export class UkStudyingHomeComponent
       name: 'Професійний курс трейдингу',
       description:
         "Індивідуальне навчання трейдингу з нуля під керівництвом досвідченого трейдера. Метод Вайкоффа, об'ємний аналіз, практика на реальних рахунках.",
-      url: 'https://arapov.trade/uk/studying', 
+      url: 'https://arapov.trade/uk/studying',
       provider: {
         '@type': 'Organization',
         '@id': 'https://arapov.trade/#organization',
         name: 'Arapov Trade',
-      url: 'https://arapov.trade'
+        url: 'https://arapov.trade',
       },
       educationalLevel: 'Beginner to Advanced',
       teaches: [
@@ -268,7 +268,6 @@ export class UkStudyingHomeComponent
         '@type': 'CourseInstance',
         courseMode: 'online',
         courseWorkload: 'P4W',
-        
       },
       aggregateRating: {
         '@type': 'AggregateRating',
@@ -307,21 +306,22 @@ export class UkStudyingHomeComponent
     script.text = JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'Review',
-      name: 'Review of Arapov.Trade',
-
+      itemReviewed: {
+        '@type': 'Course',
+        name: 'Професійний курс трейдингу',
+        provider: {
+          '@type': 'Organization',
+          name: 'Arapov.trade',
+          url: 'https://arapov.trade',
+        },
+      },
       author: {
         '@type': 'Person',
-        name: 'Сергій Черемісін',
+        name: 'Сергій Черемисін',
       },
-      datePublished: '2024-09-01',
+      datePublished: '2024-09-01T00:00:00+02:00',
       reviewBody:
-        'За 11 місяців торгівлі чистий прибуток склав 6237.14 USD, що становить 40% від суми депозиту. WinRate 67%, середня дохідність на місяць — 3.57%. Використовую концепцію Річарда Вайкоффа і торговельну систему хибних пробоїв.',
-      reviewRating: {
-        '@type': 'Rating',
-        ratingValue: '5',
-        bestRating: '5',
-        worstRating: '1',
-      },
+        'За 11 місяців торгівлі чистий прибуток склав 6237.14 USD, що дорівнює 40% від депозиту. WinRate — 67%, середня прибутковість на місяць — 3.57%. Використовую концепцію Річарда Вайкоффа та торгівлю на хибних пробоях.',
        
     });
 

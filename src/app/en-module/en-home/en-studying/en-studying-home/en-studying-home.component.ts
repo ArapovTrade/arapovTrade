@@ -235,7 +235,7 @@ export class EnStudyingHomeComponent
         '@type': 'Organization',
         '@id': 'https://arapov.trade/#organization',
         name: 'Arapov Trade',
-      url: 'https://arapov.trade'
+        url: 'https://arapov.trade',
       },
       educationalLevel: 'Beginner to Advanced',
       teaches: [
@@ -264,7 +264,6 @@ export class EnStudyingHomeComponent
         '@type': 'CourseInstance',
         courseMode: 'online',
         courseWorkload: 'P4W',
-         
       },
       aggregateRating: {
         '@type': 'AggregateRating',
@@ -303,21 +302,22 @@ export class EnStudyingHomeComponent
     script.text = JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'Review',
-      name: 'Review of Arapov.Trade',
-
+      itemReviewed: {
+        '@type': 'Course',
+        name: 'Professional Trading Course',
+        provider: {
+          '@type': 'Organization',
+          name: 'Arapov.trade',
+          url: 'https://arapov.trade',
+        },
+      },
       author: {
         '@type': 'Person',
-        name: 'Sergey Cheremisin',
+        name: 'Serhii Cheremysin',
       },
-      datePublished: '2024-09-01',
+      datePublished: '2024-09-01T00:00:00+02:00',
       reviewBody:
-        'After 11 months of trading, net profit was $6,237.14, which is 40% of the deposit amount. WinRate 67%, average monthly return — 3.57%. I use the Richard Wyckoff concept and false breakout trading system.',
-      reviewRating: {
-        '@type': 'Rating',
-        ratingValue: '5',
-        bestRating: '5',
-        worstRating: '1',
-      },
+        'Over 11 months of trading, the net profit reached 6,237.14 USD, representing 40% of the initial deposit. Win rate is 67%, with an average monthly return of 3.57%. The strategy is based on Richard Wyckoff’s methodology and false breakout trading.',
        
     });
 
