@@ -215,7 +215,7 @@ export class UkStudyingHomeComponent
         const json = JSON.parse(script.textContent || '{}');
         return (
           json['@type'] === 'Course' &&
-          json['name'] === 'Профессиональный курс трейдинга'
+          json['name'] === 'Професійний курс трейдингу'
         );
       } catch {
         return false;
@@ -235,8 +235,17 @@ export class UkStudyingHomeComponent
       description:
         "Індивідуальне навчання трейдингу з нуля під керівництвом досвідченого трейдера. Метод Вайкоффа, об'ємний аналіз, практика на реальних рахунках.",
       url: 'https://arapov.trade/uk/studying',
+      instructor: {
+        '@type': 'Person',
+        name: 'Ігор Арапов',
+        jobTitle: 'Професійний трейдер',
+        url: 'https://arapov.trade/uk/',
+      },
       provider: {
-        '@id': 'https://arapov.trade/uk#person',
+        '@type': 'Organization',
+        '@id': 'https://arapov.trade/#organization',
+        name: 'Arapov Trade',
+      url: 'https://arapov.trade'
       },
       educationalLevel: 'Beginner to Advanced',
       teaches: [
@@ -265,9 +274,7 @@ export class UkStudyingHomeComponent
         '@type': 'CourseInstance',
         courseMode: 'online',
         courseWorkload: 'P4W',
-        instructor: {
-          '@id': 'https://arapov.trade/uk#person',
-        },
+        
       },
       aggregateRating: {
         '@type': 'AggregateRating',

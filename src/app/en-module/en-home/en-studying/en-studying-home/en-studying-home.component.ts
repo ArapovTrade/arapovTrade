@@ -210,7 +210,7 @@ export class EnStudyingHomeComponent
         const json = JSON.parse(script.textContent || '{}');
         return (
           json['@type'] === 'Course' &&
-          json['name'] === 'Профессиональный курс трейдинга'
+          json['name'] === 'Professional Trading Course'
         );
       } catch {
         return false;
@@ -230,8 +230,17 @@ export class EnStudyingHomeComponent
       description:
         'Individual trading education from scratch under the guidance of an experienced trader. Wyckoff Method, Volume Analysis, practice on live accounts.',
       url: 'https://arapov.trade/en/studying',
+      instructor: {
+        '@type': 'Person',
+        name: 'Igor Arapov',
+        jobTitle: 'Professional Trader',
+        url: 'https://arapov.trade/en/',
+      },
       provider: {
-        '@id': 'https://arapov.trade/en#person',
+        '@type': 'Organization',
+        '@id': 'https://arapov.trade/#organization',
+        name: 'Arapov Trade',
+      url: 'https://arapov.trade'
       },
       educationalLevel: 'Beginner to Advanced',
       teaches: [
@@ -260,9 +269,7 @@ export class EnStudyingHomeComponent
         '@type': 'CourseInstance',
         courseMode: 'online',
         courseWorkload: 'P4W',
-        instructor: {
-          '@id': 'https://arapov.trade/en#person',
-        },
+         
       },
       aggregateRating: {
         '@type': 'AggregateRating',

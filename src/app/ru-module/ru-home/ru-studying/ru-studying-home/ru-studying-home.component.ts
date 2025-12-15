@@ -210,7 +210,10 @@ export class RuStudyingHomeComponent
     ).some((script) => {
       try {
         const json = JSON.parse(script.textContent || '{}');
-        return json['@type'] === 'Course' && json['name'] === 'Профессиональный курс трейдинга';
+        return (
+          json['@type'] === 'Course' &&
+          json['name'] === 'Профессиональный курс трейдинга'
+        );
       } catch {
         return false;
       }
@@ -229,8 +232,17 @@ export class RuStudyingHomeComponent
       description:
         'Индивидуальное обучение трейдингу с нуля под руководством опытного трейдера. Метод Вайкоффа, объёмный анализ, практика на реальных счетах.',
       url: 'https://arapov.trade/ru/studying',
+      instructor: {
+        '@type': 'Person',
+        name: 'Игорь Арапов',
+        jobTitle: 'Профессиональный трейдер',
+        url: 'https://arapov.trade/ru/',
+      },
       provider: {
-        '@id': 'https://arapov.trade/ru#person',
+        '@type': 'Organization',
+        '@id': 'https://arapov.trade/#organization',
+        name: 'Arapov Trade',
+      url: 'https://arapov.trade'
       },
       educationalLevel: 'Beginner to Advanced',
       teaches: [
@@ -259,9 +271,7 @@ export class RuStudyingHomeComponent
         '@type': 'CourseInstance',
         courseMode: 'online',
         courseWorkload: 'P4W',
-        instructor: {
-          '@id': 'https://arapov.trade/ru#person',
-        },
+         
       },
       aggregateRating: {
         '@type': 'AggregateRating',
@@ -282,7 +292,10 @@ export class RuStudyingHomeComponent
     ).some((script) => {
       try {
         const json = JSON.parse(script.textContent || '{}');
-        return json['@type'] === 'Review' && json['name'] === 'Review of Arapov.Trade';
+        return (
+          json['@type'] === 'Review' &&
+          json['name'] === 'Review of Arapov.Trade'
+        );
       } catch {
         return false;
       }

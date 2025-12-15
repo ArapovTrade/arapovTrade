@@ -265,8 +265,8 @@ export class UkHomeComponent implements OnInit, AfterViewInit, OnDestroy {
       isPartOf: {
         '@id': 'https://arapov.trade/#website',
       },
-      dateCreated: '2020-01-01',
-      dateModified: '2025-12-15',
+      'dateCreated': '2020-01-01T00:00:00+02:00',  // ← Добавьте время
+    'dateModified': '2025-12-15T00:00:00+02:00'  // ← Добавьте время
     });
 
     this.document.head.appendChild(script);
