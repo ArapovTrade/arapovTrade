@@ -1,10 +1,10 @@
-import { Component, OnInit, HostListener,AfterViewInit, ChangeDetectorRef, OnDestroy} from '@angular/core';
+import { Component, OnInit, HostListener,AfterViewInit, ChangeDetectorRef, Inject, OnDestroy} from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { Router ,NavigationEnd } from '@angular/router';
 import { ThemeservService } from '../../../../servises/themeserv.service';
  import { Subscription } from 'rxjs';
 declare var AOS: any;
-
+import { DOCUMENT } from '@angular/common';
 @Component({
   selector: 'app-ru-crypto-homepage',
   templateUrl: './ru-crypto-homepage.component.html',
@@ -15,7 +15,7 @@ export class RuCryptoHomepageComponent  implements OnInit, AfterViewInit, OnDest
       private meta: Meta,
       private titleService: Title,
       private router: Router,
-      private cdr:ChangeDetectorRef,
+      private cdr:ChangeDetectorRef, @Inject(DOCUMENT) private document: Document,
       private themeService:ThemeservService
     ) {
       
@@ -38,6 +38,8 @@ export class RuCryptoHomepageComponent  implements OnInit, AfterViewInit, OnDest
     dropdownOpen = false;
     menuOpen: boolean = false;
     ngOnInit() {
+    this.removeExistingWebPageSchema();
+
       this.titleService.setTitle(
         'Обучение трейдеров торговле на бирже | Курс трейдинга от Игоря Арапова'
       );
@@ -59,6 +61,7 @@ export class RuCryptoHomepageComponent  implements OnInit, AfterViewInit, OnDest
         property: 'og:image',
         content: 'https://arapov.trade/assets/img/photo_mainpage.jpg',
       });
+    this.addWebSiteSchema();
   
        
       this.themeSubscription =this.themeService.getTheme().subscribe(data=>{
@@ -125,4 +128,71 @@ export class RuCryptoHomepageComponent  implements OnInit, AfterViewInit, OnDest
       }
     } 
     hovered: string | null = null;
+
+    private removeExistingWebPageSchema(): void {
+    const scripts = this.document.querySelectorAll(
+      'script[type="application/ld+json"]'
+    );
+
+    scripts.forEach((script) => {
+      try {
+        const content = JSON.parse(script.textContent || '{}');
+        if (content['@type'] === 'WebSite') {
+          script.remove();
+        }
+        
+      } catch (e) {
+        // Игнорируем некорректные JSON (например, из других источников)
+      }
+    });
+  }
+
+  private addWebSiteSchema() {
+    const exists = Array.from(
+      this.document.querySelectorAll('script[type="application/ld+json"]')
+    ).some((script) => {
+      try {
+        const json = JSON.parse(script.textContent || '{}');
+        return json['@type'] === 'WebSite' && json['name'] === 'Arapov.Trade';
+      } catch {
+        return false;
+      }
+    });
+
+    // Если уже существует — выходим
+    if (exists) return;
+
+    // Создаем новый JSON-LD
+    const script = this.document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      '@id': 'https://arapov.trade/ru/main#website',
+      url: 'https://arapov.trade/ru/main',
+      name: 'Arapov.Trade',
+      alternateName: 'Обучение трейдингу',
+      description:
+        'Бесплатное обучение трейдингу от Игоря Арапова. 130+ статей, 70 видеоуроков.',
+      inLanguage: 'ru-RU',
+      publisher: {
+        '@type': 'Organization',
+        '@id': 'https://arapov.trade/#organization',
+        name: 'Arapov.Trade',
+        url: 'https://arapov.trade',
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://arapov.trade/favicon.ico',
+        },
+        founder: {
+          '@type': 'Person',
+          '@id': 'https://arapov.trade/#person',
+          name: 'Арапов Ігор Віталійович',
+        },
+      },
+       
+    });
+
+    this.document.head.appendChild(script);
+  }
 }

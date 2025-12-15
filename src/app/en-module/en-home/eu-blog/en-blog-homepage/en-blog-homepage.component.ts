@@ -1,7 +1,8 @@
 import {
   AfterViewInit,
   ChangeDetectorRef,
-  Inject, PLATFORM_ID,
+  Inject,
+  PLATFORM_ID,
   OnDestroy,
   Component,
   OnInit,
@@ -31,12 +32,11 @@ import { isPlatformBrowser } from '@angular/common';
   styleUrl: './en-blog-homepage.component.scss',
 })
 export class EnBlogHomepageComponent implements OnInit {
-  
   @ViewChild('scrollToTop') scrollToTop!: ElementRef;
   @ViewChild(MatPaginator) paginatorr!: MatPaginator;
   private renderer: Renderer2;
   constructor(
-     private activateRout: ActivatedRoute,
+    private activateRout: ActivatedRoute,
     @Inject(PLATFORM_ID) private platformId: Object,
     private lang: LangService,
     private artickleServ: ArticlesService,
@@ -51,8 +51,6 @@ export class EnBlogHomepageComponent implements OnInit {
     private titleService: Title
   ) {
     this.renderer = rendererFactory.createRenderer(null, null);
-
-    
   }
 
   ngAfterViewInit() {
@@ -76,7 +74,6 @@ export class EnBlogHomepageComponent implements OnInit {
     this.isMenuOpen = false;
   }
 
-   
   toggleMenu(): void {
     this.menuOpen = !this.menuOpen;
     if (this.menuOpen) {
@@ -115,7 +112,8 @@ export class EnBlogHomepageComponent implements OnInit {
         }
       }
     });
-
+    this.removeExistingWebPageSchema();
+    this.addWebSiteSchema();
     this.paginator.itemsPerPageLabel = '';
     this.lang.setNumber(3);
     this.titleService.setTitle(
@@ -139,14 +137,10 @@ export class EnBlogHomepageComponent implements OnInit {
     this.updateArticleCounts();
     this.gerRandom();
   }
-onGroupChangeFromEvent(value: string) {
-    
-
+  onGroupChangeFromEvent(value: string) {
     // Обновляем фильтрованные статьи
     this.filteredArticles = this.artickleServ.ukrainiansArticles();
     this.updatePaginatedArticles();
-
-     
 
     if (isPlatformBrowser(this.platformId)) {
       setTimeout(() => {
@@ -181,8 +175,6 @@ onGroupChangeFromEvent(value: string) {
     const checkbox = event.target as HTMLInputElement;
     const value = checkbox.value;
 
-    
-
     // Если нажали на уже выбранную группу — сбрасываем фильтр (показываем все)
     if (this.artickleServ.selectedGroups.includes(value)) {
       this.artickleServ.selectedGroups = [];
@@ -204,7 +196,7 @@ onGroupChangeFromEvent(value: string) {
     this.currentPage = event.pageIndex;
     this.pageSize = event.pageSize;
     this.updatePaginatedArticles();
-     
+
     const topPosition = this.scrollToTop.nativeElement.offsetTop;
     window.scrollTo({
       top: topPosition,
@@ -226,7 +218,7 @@ onGroupChangeFromEvent(value: string) {
   private routerSubscription!: Subscription;
   private themeSubscription!: Subscription;
   ngOnDestroy() {
-    // Отписка от подписок 
+    // Отписка от подписок
     if (this.routerSubscription) {
       this.routerSubscription.unsubscribe();
     }
@@ -328,5 +320,110 @@ onGroupChangeFromEvent(value: string) {
   groupsMenuOpen = false;
   toggleGroupsMenu(event: Event) {
     this.groupsMenuOpen = !this.groupsMenuOpen;
+  }
+
+  private removeExistingWebPageSchema(): void {
+    const scripts = this.document.querySelectorAll(
+      'script[type="application/ld+json"]'
+    );
+
+    scripts.forEach((script) => {
+      try {
+        const content = JSON.parse(script.textContent || '{}');
+        if (content['@type'] === 'CollectionPage') {
+          script.remove();
+        }
+      } catch (e) {
+        // Игнорируем некорректные JSON (например, из других источников)
+      }
+    });
+  }
+
+  private addWebSiteSchema() {
+    const exists = Array.from(
+      this.document.querySelectorAll('script[type="application/ld+json"]')
+    ).some((script) => {
+      try {
+        const json = JSON.parse(script.textContent || '{}');
+        return json['@type'] === 'CollectionPage' && json['name'] === 'Free Trading Education';
+      } catch {
+        return false;
+      }
+    });
+
+    // Если уже существует — выходим
+    if (exists) return;
+
+    // Создаем новый JSON-LD
+    const script = this.document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      name: 'Free Trading Education',
+      description:
+        'Over 150 free trading articles: Smart Money Concepts, Wyckoff Method, Technical Analysis, Crypto Trading. Complete course for beginners.',
+      url: 'https://arapov.trade/en/freestudying',
+      isPartOf: {
+        '@id': 'https://arapov.trade/en/main#website',
+      },
+      author: {
+        '@id': 'https://arapov.trade/en#person',
+      },
+      about: [
+        {
+          '@type': 'Thing',
+          name: 'Trading Education',
+        },
+        {
+          '@type': 'Thing',
+          name: 'Smart Money Concepts',
+        },
+        {
+          '@type': 'Thing',
+          name: 'Technical Analysis',
+        },
+      ],
+      mainEntity: {
+        '@type': 'ItemList',
+        name: 'Main Trading Course Topics',
+        numberOfItems: 150,
+        itemListOrder: 'ItemListOrderDescending',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Smart Money Concepts',
+            url: 'https://arapov.trade/en/freestudying/smartmoneyconceptsguide',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Wyckoff Method',
+            url: 'https://arapov.trade/en/freestudying/wyckoffmethod',
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: 'Technical Analysis',
+            url: 'https://arapov.trade/en/freestudying/technicalanalysis',
+          },
+          {
+            '@type': 'ListItem',
+            position: 4,
+            name: 'Trading Indicators',
+            url: 'https://arapov.trade/en/freestudying/tradingindicators',
+          },
+          {
+            '@type': 'ListItem',
+            position: 5,
+            name: 'Cryptocurrency Trading',
+            url: 'https://arapov.trade/en/freestudying/cryptocurrencytrading',
+          },
+        ],
+      },
+    });
+
+    this.document.head.appendChild(script);
   }
 }

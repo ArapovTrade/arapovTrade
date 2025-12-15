@@ -1,11 +1,16 @@
-import { AfterViewInit,
+import {
+  AfterViewInit,
   ChangeDetectorRef,
   Component,
   Inject,
   OnDestroy,
   OnInit,
   Renderer2,
-  RendererFactory2,  ElementRef, HostListener, ViewChild } from '@angular/core';
+  RendererFactory2,
+  ElementRef,
+  HostListener,
+  ViewChild,
+} from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { Meta, Title } from '@angular/platform-browser';
 import { LangService } from '../../../../servises/lang.service';
@@ -19,35 +24,35 @@ import { ThemeservService } from '../../../../servises/themeserv.service';
   templateUrl: './ru-studying-home.component.html',
   styleUrl: './ru-studying-home.component.scss',
 })
-export class RuStudyingHomeComponent implements OnInit , AfterViewInit, OnDestroy{
+export class RuStudyingHomeComponent
+  implements OnInit, AfterViewInit, OnDestroy
+{
   private renderer: Renderer2;
   constructor(
     private router: Router,
     private meta: Meta,
-       private cdr:ChangeDetectorRef,
-       private themeService:ThemeservService,
-        private rendererFactory: RendererFactory2,
+    private cdr: ChangeDetectorRef,
+    private themeService: ThemeservService,
+    private rendererFactory: RendererFactory2,
     @Inject(DOCUMENT) private document: Document,
-    
+
     private titleService: Title,
     private lang: LangService
   ) {
     this.renderer = rendererFactory.createRenderer(null, null);
-     
   }
 
   ngAfterViewInit() {
-  setTimeout(() => {
-    if (typeof AOS !== 'undefined') {
-      AOS.init({
-        duration: 1000,
-        once: false,
-        offset: 100
-      });
-    }
-     
-  }, 500); // Задержка 0.5s
-}
+    setTimeout(() => {
+      if (typeof AOS !== 'undefined') {
+        AOS.init({
+          duration: 1000,
+          once: false,
+          offset: 100,
+        });
+      }
+    }, 500); // Задержка 0.5s
+  }
   isMenuOpen = false;
 
   openMenu() {
@@ -58,19 +63,21 @@ export class RuStudyingHomeComponent implements OnInit , AfterViewInit, OnDestro
     this.isMenuOpen = false;
   }
 
-   
   toggleMenu(): void {
     this.menuOpen = !this.menuOpen;
     if (this.menuOpen) {
       this.dropdownOpen = false; // Закрываем меню языков, если открываем навигацию
     }
-  } 
-  isDark!:boolean  ;
+  }
+  isDark!: boolean;
   languages = ['ua', 'en', 'ru']; // какие языки нужны
   currentLang = 'ru';
   dropdownOpen = false;
   menuOpen: boolean = false;
   ngOnInit(): void {
+    this.removeExistingWebPageSchema();
+    this.addWebSiteSchema();
+    this.addReviewSchema();
     this.lang.setNumber(2);
     this.titleService.setTitle(
       'Курсы по трейдингу онлайн | Обучение трейдингу с нуля'
@@ -86,11 +93,10 @@ export class RuStudyingHomeComponent implements OnInit , AfterViewInit, OnDestro
       content:
         'курсы трейдингу, обучение трейдингу онлайн, трейдинг с нуля, дистанционное обучение, инвестиции, торговые стратегии',
     });
-     this.themeSubscription =this.themeService.getTheme().subscribe(data=>{
-      this.isDark=data;
-        this.cdr.detectChanges();
-    })
-
+    this.themeSubscription = this.themeService.getTheme().subscribe((data) => {
+      this.isDark = data;
+      this.cdr.detectChanges();
+    });
 
     this.routerSubscription = this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
@@ -101,8 +107,7 @@ export class RuStudyingHomeComponent implements OnInit , AfterViewInit, OnDestro
     });
   }
   navigateToHomeWithId() {
-     window.location.href = 'https://arapov.education/course/';
-    
+    window.location.href = 'https://arapov.education/course/';
   }
   scrollToRegistration() {
     const element = document.getElementById('registrationRu');
@@ -114,72 +119,206 @@ export class RuStudyingHomeComponent implements OnInit , AfterViewInit, OnDestro
   }
 
   private routerSubscription!: Subscription;
-        private themeSubscription!: Subscription;
-         ngOnDestroy() {
-          // Отписка от подписок
-          if (this.routerSubscription) {
-            this.routerSubscription.unsubscribe();
-          }
-          if (this.themeSubscription) {
-            this.themeSubscription.unsubscribe();
-          }
-        } 
-        hovered: string | null = null;
-        toggleTheme() {
-        this.isDark = !this.isDark;
-        this.themeService.setTheme(this.isDark)
-         
-         this.refreshAOS();
-    
-    
-      }
-    refreshAOS() {
-        if (typeof AOS !== 'undefined') {
-          setTimeout(() => {
-            AOS.refresh(); // Обновление позиций AOS
-            this.cdr.detectChanges(); // Принудительное обнаружение изменений
-          }, 100); // Задержка для синхронизации
-        } else {
-          console.warn('AOS is not defined, refresh skipped');
-        }
-      }
-       
-      toggleDropdown() {
-        this.dropdownOpen = !this.dropdownOpen;
-      }
-      selectLang(lang: string) {
-        this.currentLang = lang;
-    
-        this.dropdownOpen = false;
-    
-         
-      }
-      navigateTo(path: string) {
-        this.router.navigate([path]);
-      }
-  
-   @ViewChild('programSection', { static: true }) section!: ElementRef;
-    @ViewChild('timelineProgress', { static: true }) progress!: ElementRef;
-  
-    @HostListener('window:scroll', [])
+  private themeSubscription!: Subscription;
+  ngOnDestroy() {
+    // Отписка от подписок
+    if (this.routerSubscription) {
+      this.routerSubscription.unsubscribe();
+    }
+    if (this.themeSubscription) {
+      this.themeSubscription.unsubscribe();
+    }
+  }
+  hovered: string | null = null;
+  toggleTheme() {
+    this.isDark = !this.isDark;
+    this.themeService.setTheme(this.isDark);
+
+    this.refreshAOS();
+  }
+  refreshAOS() {
+    if (typeof AOS !== 'undefined') {
+      setTimeout(() => {
+        AOS.refresh(); // Обновление позиций AOS
+        this.cdr.detectChanges(); // Принудительное обнаружение изменений
+      }, 100); // Задержка для синхронизации
+    } else {
+      console.warn('AOS is not defined, refresh skipped');
+    }
+  }
+
+  toggleDropdown() {
+    this.dropdownOpen = !this.dropdownOpen;
+  }
+  selectLang(lang: string) {
+    this.currentLang = lang;
+
+    this.dropdownOpen = false;
+  }
+  navigateTo(path: string) {
+    this.router.navigate([path]);
+  }
+
+  @ViewChild('programSection', { static: true }) section!: ElementRef;
+  @ViewChild('timelineProgress', { static: true }) progress!: ElementRef;
+
+  @HostListener('window:scroll', [])
   onScroll() {
     const section = this.section.nativeElement;
     const progress = this.progress.nativeElement;
-  
+
     const rect = section.getBoundingClientRect();
     const windowHeight = window.innerHeight;
-  
+
     // расстояние от верха страницы до секции
     const start = rect.top + window.scrollY - windowHeight;
     const end = rect.bottom + window.scrollY;
     const scrollPos = window.scrollY;
-  
+
     // процент прокрутки блока
-    const percent = Math.min(Math.max((scrollPos - start) / (end - start), 0), 1);
-  
+    const percent = Math.min(
+      Math.max((scrollPos - start) / (end - start), 0),
+      1
+    );
+
     progress.style.height = `${percent * 100}%`;
   }
 
+  private removeExistingWebPageSchema(): void {
+    const scripts = this.document.querySelectorAll(
+      'script[type="application/ld+json"]'
+    );
 
+    scripts.forEach((script) => {
+      try {
+        const content = JSON.parse(script.textContent || '{}');
+        if (content['@type'] === 'Course') {
+          script.remove();
+        }
+        if (content['@type'] === 'WebSite') {
+          script.remove();
+        }
+      } catch (e) {
+        // Игнорируем некорректные JSON (например, из других источников)
+      }
+    });
+  }
 
+  private addWebSiteSchema() {
+    const exists = Array.from(
+      this.document.querySelectorAll('script[type="application/ld+json"]')
+    ).some((script) => {
+      try {
+        const json = JSON.parse(script.textContent || '{}');
+        return json['@type'] === 'Course' && json['name'] === 'Профессиональный курс трейдинга';
+      } catch {
+        return false;
+      }
+    });
+
+    // Если уже существует — выходим
+    if (exists) return;
+
+    // Создаем новый JSON-LD
+    const script = this.document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Course',
+      name: 'Профессиональный курс трейдинга',
+      description:
+        'Индивидуальное обучение трейдингу с нуля под руководством опытного трейдера. Метод Вайкоффа, объёмный анализ, практика на реальных счетах.',
+      url: 'https://arapov.trade/ru/studying',
+      provider: {
+        '@id': 'https://arapov.trade/ru#person',
+      },
+      educationalLevel: 'Beginner to Advanced',
+      teaches: [
+        'Wyckoff Method',
+        'Volume Analysis',
+        'Technical Analysis',
+        'Risk Management',
+        'Market Psychology',
+        'Smart Money Concepts',
+      ],
+      about: [
+        {
+          '@type': 'Thing',
+          name: 'Stock Trading',
+        },
+        {
+          '@type': 'Thing',
+          name: 'Forex Trading',
+        },
+        {
+          '@type': 'Thing',
+          name: 'Cryptocurrency Trading',
+        },
+      ],
+      hasCourseInstance: {
+        '@type': 'CourseInstance',
+        courseMode: 'online',
+        courseWorkload: 'P4W',
+        instructor: {
+          '@id': 'https://arapov.trade/ru#person',
+        },
+      },
+      aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: '4.9',
+        bestRating: '5',
+        worstRating: '1',
+        ratingCount: '50',
+        reviewCount: '25',
+      },
+    });
+
+    this.document.head.appendChild(script);
+  }
+
+  private addReviewSchema() {
+    const exists = Array.from(
+      this.document.querySelectorAll('script[type="application/ld+json"]')
+    ).some((script) => {
+      try {
+        const json = JSON.parse(script.textContent || '{}');
+        return json['@type'] === 'Review' && json['name'] === 'Review of Arapov.Trade';
+      } catch {
+        return false;
+      }
+    });
+
+    // Если уже существует — выходим
+    if (exists) return;
+
+    // Создаем новый JSON-LD
+    const script = this.document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Review',
+      name: 'Review of Arapov.Trade',
+
+      author: {
+        '@type': 'Person',
+        name: 'Сергей Черемисин',
+      },
+      datePublished: '2024-09-01',
+      reviewBody:
+        'За 11 месяцев торговли чистая прибыль составила 6237.14 USD, что составляет 40% от суммы депозита. WinRate 67%, средняя доходность в месяц — 3.57%. Использую концепцию Ричарда Вайкоффа и торговую систему ложных пробоев.',
+      reviewRating: {
+        '@type': 'Rating',
+        ratingValue: '5',
+        bestRating: '5',
+        worstRating: '1',
+      },
+      itemReviewed: {
+        '@type': 'Course',
+        name: 'Профессиональный курс трейдинга',
+        url: 'https://arapov.trade/ru/studying',
+      },
+    });
+
+    this.document.head.appendChild(script);
+  }
 }

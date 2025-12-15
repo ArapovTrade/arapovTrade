@@ -1,6 +1,7 @@
 import {
   AfterViewInit,
-  ChangeDetectorRef, PLATFORM_ID,
+  ChangeDetectorRef,
+  PLATFORM_ID,
   Inject,
   OnDestroy,
   Component,
@@ -46,12 +47,10 @@ export class RuBlogHomepageComponent implements OnInit {
     private rendererFactory: RendererFactory2,
     private router: Router,
     private meta: Meta,
-private eRef: ElementRef,
+    private eRef: ElementRef,
     private titleService: Title
   ) {
     this.renderer = rendererFactory.createRenderer(null, null);
-
-     
   }
 
   ngAfterViewInit() {
@@ -75,7 +74,6 @@ private eRef: ElementRef,
     this.isMenuOpen = false;
   }
 
-   
   toggleMenu(): void {
     this.menuOpen = !this.menuOpen;
     if (this.menuOpen) {
@@ -91,7 +89,7 @@ private eRef: ElementRef,
   filteredArticles: any = [];
   rusGroups: any = [];
   ngOnInit(): void {
-     this.activateRout.queryParams.subscribe((params) => {
+    this.activateRout.queryParams.subscribe((params) => {
       const selectedGroup = params['group'];
       if (selectedGroup) {
         this.artickleServ.selectedGroups = [selectedGroup];
@@ -114,7 +112,8 @@ private eRef: ElementRef,
         }
       }
     });
-
+    this.removeExistingWebPageSchema();
+    this.addWebSiteSchema();
     this.lang.setNumber(2);
     this.paginator.itemsPerPageLabel = '';
 
@@ -168,15 +167,12 @@ private eRef: ElementRef,
 
   grr!: any;
   checkedGroup!: any;
-   onGroupChangeFromEvent(value: string) {
-    
-
+  onGroupChangeFromEvent(value: string) {
     // Обновляем фильтрованные статьи
     this.filteredArticles = this.artickleServ.ukrainiansArticles();
     this.updatePaginatedArticles();
 
     // Возвращаем пагинацию на первую страницу
-     
 
     if (isPlatformBrowser(this.platformId)) {
       setTimeout(() => {
@@ -188,8 +184,6 @@ private eRef: ElementRef,
   onGroupChange(event: Event) {
     const checkbox = event.target as HTMLInputElement;
     const value = checkbox.value;
-
-    
 
     // Если нажали на уже выбранную группу — сбрасываем фильтр (показываем все)
     if (this.artickleServ.selectedGroups.includes(value)) {
@@ -212,7 +206,7 @@ private eRef: ElementRef,
     this.currentPage = event.pageIndex;
     this.pageSize = event.pageSize;
     this.updatePaginatedArticles();
-     
+
     const topPosition = this.scrollToTop.nativeElement.offsetTop;
     window.scrollTo({
       top: topPosition,
@@ -335,5 +329,110 @@ private eRef: ElementRef,
   groupsMenuOpen = false;
   toggleGroupsMenu(event: Event) {
     this.groupsMenuOpen = !this.groupsMenuOpen;
+  }
+
+  private removeExistingWebPageSchema(): void {
+    const scripts = this.document.querySelectorAll(
+      'script[type="application/ld+json"]'
+    );
+
+    scripts.forEach((script) => {
+      try {
+        const content = JSON.parse(script.textContent || '{}');
+        if (content['@type'] === 'CollectionPage') {
+          script.remove();
+        }
+      } catch (e) {
+        // Игнорируем некорректные JSON (например, из других источников)
+      }
+    });
+  }
+
+  private addWebSiteSchema() {
+    const exists = Array.from(
+      this.document.querySelectorAll('script[type="application/ld+json"]')
+    ).some((script) => {
+      try {
+        const json = JSON.parse(script.textContent || '{}');
+        return json['@type'] === 'CollectionPage' && json['name'] === 'Бесплатное обучение трейдингу';
+      } catch {
+        return false;
+      }
+    });
+
+    // Если уже существует — выходим
+    if (exists) return;
+
+    // Создаем новый JSON-LD
+    const script = this.document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      name: 'Бесплатное обучение трейдингу',
+      description:
+        'Более 150 бесплатных статей по трейдингу: Smart Money Concepts, метод Вайкоффа, технический анализ, криптотрейдинг. Полный курс для начинающих.',
+      url: 'https://arapov.trade/ru/freestudying',
+      isPartOf: {
+        '@id': 'https://arapov.trade/ru/main#website',
+      },
+      author: {
+        '@id': 'https://arapov.trade/ru#person',
+      },
+      about: [
+        {
+          '@type': 'Thing',
+          name: 'Trading Education',
+        },
+        {
+          '@type': 'Thing',
+          name: 'Smart Money Concepts',
+        },
+        {
+          '@type': 'Thing',
+          name: 'Technical Analysis',
+        },
+      ],
+      mainEntity: {
+        '@type': 'ItemList',
+        name: 'Основные темы курса трейдинга',
+        numberOfItems: 150,
+        itemListOrder: 'ItemListOrderDescending',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Smart Money Concepts',
+            url: 'https://arapov.trade/ru/freestudying/smartmoneyconceptsguide',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Метод Вайкоффа',
+            url: 'https://arapov.trade/ru/freestudying/wyckoffmethod',
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: 'Технический анализ',
+            url: 'https://arapov.trade/ru/freestudying/technicalanalysis',
+          },
+          {
+            '@type': 'ListItem',
+            position: 4,
+            name: 'Торговые индикаторы',
+            url: 'https://arapov.trade/ru/freestudying/tradingindicators',
+          },
+          {
+            '@type': 'ListItem',
+            position: 5,
+            name: 'Криптотрейдинг',
+            url: 'https://arapov.trade/ru/freestudying/cryptocurrencytrading',
+          },
+        ],
+      },
+    });
+
+    this.document.head.appendChild(script);
   }
 }
