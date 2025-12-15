@@ -319,11 +319,7 @@ export class RuStudyingHomeComponent
         bestRating: '5',
         worstRating: '1',
       },
-      itemReviewed: {
-        '@type': 'Course',
-        name: 'Профессиональный курс трейдинга',
-        url: 'https://arapov.trade/ru/studying',
-      },
+       
     });
 
     this.document.head.appendChild(script);

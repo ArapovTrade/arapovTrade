@@ -322,11 +322,7 @@ export class UkStudyingHomeComponent
         bestRating: '5',
         worstRating: '1',
       },
-      itemReviewed: {
-        '@type': 'Course',
-        name: 'Професійний курс трейдингу',
-        url: 'https://arapov.trade/uk/studying',
-      },
+       
     });
 
     this.document.head.appendChild(script);

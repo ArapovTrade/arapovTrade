@@ -318,11 +318,7 @@ export class EnStudyingHomeComponent
         bestRating: '5',
         worstRating: '1',
       },
-      itemReviewed: {
-        '@type': 'Course',
-        name: 'Professional Trading Course',
-        url: 'https://arapov.trade/en/studying',
-      },
+       
     });
 
     this.document.head.appendChild(script);
