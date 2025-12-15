@@ -231,13 +231,7 @@ export class RuStudyingHomeComponent
       name: 'Профессиональный курс трейдинга',
       description:
         'Индивидуальное обучение трейдингу с нуля под руководством опытного трейдера. Метод Вайкоффа, объёмный анализ, практика на реальных счетах.',
-      url: 'https://arapov.trade/ru/studying',
-      instructor: {
-        '@type': 'Person',
-        name: 'Игорь Арапов',
-        jobTitle: 'Профессиональный трейдер',
-        url: 'https://arapov.trade/ru/',
-      },
+      url: 'https://arapov.trade/ru/studying', 
       provider: {
         '@type': 'Organization',
         '@id': 'https://arapov.trade/#organization',

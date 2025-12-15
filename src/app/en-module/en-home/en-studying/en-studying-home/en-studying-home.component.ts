@@ -230,12 +230,7 @@ export class EnStudyingHomeComponent
       description:
         'Individual trading education from scratch under the guidance of an experienced trader. Wyckoff Method, Volume Analysis, practice on live accounts.',
       url: 'https://arapov.trade/en/studying',
-      instructor: {
-        '@type': 'Person',
-        name: 'Igor Arapov',
-        jobTitle: 'Professional Trader',
-        url: 'https://arapov.trade/en/',
-      },
+
       provider: {
         '@type': 'Organization',
         '@id': 'https://arapov.trade/#organization',
