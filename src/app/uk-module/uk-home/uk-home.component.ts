@@ -216,8 +216,13 @@ export class UkHomeComponent implements OnInit, AfterViewInit, OnDestroy {
         },
       ],
       sameAs: [
-        'https://www.youtube.com/@ArapovTrade',
-        'https://www.mql5.com/ru/signals/2246716',
+        "https://t.me/ArapovTrade",
+          "https://www.youtube.com/@ArapovTrade",
+          "https://www.facebook.com/igor.arapov.75",
+          "https://www.linkedin.com/in/arapovtrade",
+          "https://rutube.ru/channel/41668647",
+          "https://dzen.ru/id/66bf54343761337a416dac58?share_to=link",
+          "https://www.mql5.com/ru/signals/2246716?source=External"
       ],
       url: 'https://arapov.trade/uk',
       mainEntityOfPage: 'https://arapov.trade/uk',
