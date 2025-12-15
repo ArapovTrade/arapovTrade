@@ -312,6 +312,9 @@ export class UkStudyingHomeComponent
       itemReviewed: {
         '@type': 'Course',
         name: 'Професійний курс трейдингу',
+        description:
+        "Індивідуальне навчання трейдингу з нуля під керівництвом досвідченого трейдера. Метод Вайкоффа, об'ємний аналіз, практика на реальних рахунках.",
+      
         provider: {
           '@type': 'Organization',
           name: 'Arapov.trade',

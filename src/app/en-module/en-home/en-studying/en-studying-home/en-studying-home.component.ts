@@ -308,6 +308,9 @@ export class EnStudyingHomeComponent
       itemReviewed: {
         '@type': 'Course',
         name: 'Professional Trading Course',
+        description:
+        'Individual trading education from scratch under the guidance of an experienced trader. Wyckoff Method, Volume Analysis, practice on live accounts.',
+      
         provider: {
           '@type': 'Organization',
           name: 'Arapov.trade',
