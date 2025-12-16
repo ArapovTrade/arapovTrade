@@ -313,7 +313,7 @@ export class HomeRuBlogSixtyOneComponent {
             'Smart Money Concepts',
             'SMC',
             'Order Blocks',
-            'Fair Value Gaps',
+            'Fair Value Gaps', 
             'ликвидность',
             'институциональный анализ',
           ],
