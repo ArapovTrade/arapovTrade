@@ -299,7 +299,7 @@ export class HomeRuBlogSixtyOneComponent {
             '@id': 'https://arapov.trade/ru#person',
           },
           publisher: {
-            '@id': 'https://arapov.trade/#organization',
+            '@id': 'https://arapov.trade/ru#organization',
           },
           datePublished: '2024-01-15T00:00:00+02:00',
           dateModified: '2025-06-04T00:00:00+02:00',

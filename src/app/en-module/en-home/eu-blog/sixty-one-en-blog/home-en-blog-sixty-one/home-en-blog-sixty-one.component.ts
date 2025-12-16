@@ -268,10 +268,10 @@ export class HomeEnBlogSixtyOneComponent {
           image: [
             'https://arapov.trade/assets/img/content/smartmoneyconceptsguide.webp',
           ],
-          author: { '@id': 'https://arapov.trade/#person' },
-          publisher: { '@id': 'https://arapov.trade/#organization' },
-          datePublished: '2024-01-15T00:00:00Z',
-          dateModified: '2025-06-04T00:00:00Z',
+          author: { '@id': 'https://arapov.trade/en#person' },
+          publisher: { '@id': 'https://arapov.trade/en#organization' },
+          datePublished: '2024-01-15T00:00:00+02:00',
+          dateModified: '2025-06-04T00:00:00+02:00',
           mainEntityOfPage: {
             '@type': 'WebPage',
             '@id':

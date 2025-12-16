@@ -295,10 +295,10 @@ export class HomeUkBlogSixtyOneComponent {
             'https://arapov.trade/assets/img/content/smartmoneyconceptsguide.webp',
           ],
           author: {
-            '@id': 'https://arapov.trade/#person',
+            '@id': 'https://arapov.trade/uk#person',
           },
           publisher: {
-            '@id': 'https://arapov.trade/#organization',
+            '@id': 'https://arapov.trade/uk#organization',
           },
           datePublished: '2024-01-15T00:00:00+02:00',
           dateModified: '2025-06-04T00:00:00+02:00',
@@ -327,23 +327,22 @@ export class HomeUkBlogSixtyOneComponent {
   // ============================================================
   //  PERSON
   // ============================================================
-  private setPersonSchema(): void {
+   private setPersonSchema(): void {
     const data = {
-      '@context': 'https://schema.org',
-      '@type': 'Person',
-      '@id': 'https://arapov.trade/#person',
-      name: 'Igor Arapov',
-      url: 'https://arapov.trade/en',
-      image:
-        'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
-      sameAs: [
-        'https://www.youtube.com/@ArapovTrade',
-        'https://t.me/ArapovTrade',
-      ],
-      jobTitle: 'Professional trader',
-      description:
-        'I have been actively trading on financial markets since 2013. Author of a free trading course.',
-    };
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  '@id': 'https://arapov.trade/#person',
+  name: 'Ігор Арапов',
+  url: 'https://arapov.trade/uk',
+  image: 'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
+  sameAs: [
+    'https://www.youtube.com/@ArapovTrade',
+    'https://t.me/ArapovTrade',
+  ],
+  jobTitle: 'Професійний трейдер',
+  description:
+    'Активно торгую на фінансових ринках з 2013 року. Автор безкоштовного курсу з трейдингу.',
+};
 
     this.addJsonLdSchema(data);
   }
