@@ -292,7 +292,7 @@ export class HomeEnBlogSixtyOneComponent {
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
-          video: {
+          video: { 
             '@type': 'VideoObject',
             name: 'Smart Money и Захват Ликвидности | Обучение Трейдингу от А до Я',
             description:
