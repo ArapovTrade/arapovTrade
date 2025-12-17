@@ -294,9 +294,10 @@ export class HomeEnBlogSixtyOneComponent {
           },
           video: {
             '@type': 'VideoObject',
-            name: 'Smart Money and Liquidity Grab | Trading Education from A to Z',
+            name: 'Smart Money и Захват Ликвидности | Обучение Трейдингу от А до Я',
             description:
-              'Smart Money and liquidity grab: complete guide to institutional trading strategies. Igor Arapov demonstrates on a live gold futures example how volume analysis works, Smart Money strategy, and why professional traders manipulate price before market reversal.',
+              'Smart Money и захват ликвидности: полное руководство по стратегиям крупных игроков. Игорь Арапов показывает на живом примере фьючерса золота, как работает объемный анализ, стратегия Smart Money и почему профессиональные трейдеры манипулируют ценой перед разворотом рынка.',
+
             thumbnailUrl: [
               'https://img.youtube.com/vi/nmDR1GUPoQg/maxresdefault.jpg',
               'https://img.youtube.com/vi/nmDR1GUPoQg/hqdefault.jpg',
@@ -307,60 +308,61 @@ export class HomeEnBlogSixtyOneComponent {
             embedUrl: 'https://www.youtube.com/embed/nmDR1GUPoQg',
             inLanguage: 'en',
             keywords:
-              'Smart Money, liquidity grab, volume analysis, smart money concepts, trading',
+              'Smart Money, захват ликвидности, объемный анализ, смарт мани, трейдинг',
+
             hasPart: [
               {
                 '@type': 'Clip',
-                name: 'Smart Money Concept: Who Are Smart Money in Stock Market',
+                name: 'Концепция Smart Money: кто такие умные деньги на бирже',
                 startOffset: 170,
                 endOffset: 492,
                 url: 'https://www.youtube.com/watch?v=nmDR1GUPoQg&t=170',
               },
               {
                 '@type': 'Clip',
-                name: 'Composite Operator: Who Are Smart Money',
+                name: 'Композитный оператор: кто такие Smart Money',
                 startOffset: 492,
                 endOffset: 547,
                 url: 'https://www.youtube.com/watch?v=nmDR1GUPoQg&t=492',
               },
               {
                 '@type': 'Clip',
-                name: 'Support and Resistance Levels: How to Identify Them Correctly',
+                name: 'Уровни поддержки и сопротивления: как их правильно определять',
                 startOffset: 547,
                 endOffset: 656,
                 url: 'https://www.youtube.com/watch?v=nmDR1GUPoQg&t=547',
               },
               {
                 '@type': 'Clip',
-                name: 'How to See Smart Money on Chart Through Volume Analysis',
+                name: 'Как увидеть Smart Money на графике через объемный анализ',
                 startOffset: 656,
                 endOffset: 1803,
                 url: 'https://www.youtube.com/watch?v=nmDR1GUPoQg&t=656',
               },
               {
                 '@type': 'Clip',
-                name: 'Liquidity Grab: Logic of False Breakout and Manipulation',
+                name: 'Захват ликвидности: логика ложного накола и манипуляций',
                 startOffset: 1803,
                 endOffset: 1888,
                 url: 'https://www.youtube.com/watch?v=nmDR1GUPoQg&t=1803',
               },
               {
                 '@type': 'Clip',
-                name: 'Foundation of Any Financial Market: Supply and Demand',
+                name: 'Основа работы любого финансового рынка: спрос и предложение',
                 startOffset: 1888,
                 endOffset: 2035,
                 url: 'https://www.youtube.com/watch?v=nmDR1GUPoQg&t=1888',
               },
               {
                 '@type': 'Clip',
-                name: 'Mechanics of False Breakout: How Professionals Hunt Stop Losses',
+                name: 'Механика ложного накола: как профессионалы собирают стопы',
                 startOffset: 2035,
                 endOffset: 2140,
                 url: 'https://www.youtube.com/watch?v=nmDR1GUPoQg&t=2035',
               },
               {
                 '@type': 'Clip',
-                name: 'Liquidity Deficit in Market: Why It Matters',
+                name: 'Дефицит ликвидности на рынке: почему это важно',
                 startOffset: 2140,
                 endOffset: 2223,
                 url: 'https://www.youtube.com/watch?v=nmDR1GUPoQg&t=2140',

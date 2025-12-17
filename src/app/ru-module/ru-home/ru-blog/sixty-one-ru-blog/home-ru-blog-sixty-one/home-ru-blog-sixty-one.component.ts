@@ -328,7 +328,7 @@ export class HomeRuBlogSixtyOneComponent {
               'https://img.youtube.com/vi/nmDR1GUPoQg/maxresdefault.jpg',
               'https://img.youtube.com/vi/nmDR1GUPoQg/hqdefault.jpg',
             ],
-            uploadDate: '2024-06-15',
+            uploadDate: '2025-06-14T00:00:00+02:00',
             duration: 'PT37M3S',
             contentUrl: 'https://www.youtube.com/watch?v=nmDR1GUPoQg',
             embedUrl: 'https://www.youtube.com/embed/nmDR1GUPoQg',

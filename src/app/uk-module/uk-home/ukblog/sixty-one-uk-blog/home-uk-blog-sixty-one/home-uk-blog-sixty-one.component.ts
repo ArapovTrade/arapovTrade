@@ -320,9 +320,9 @@ export class HomeUkBlogSixtyOneComponent {
           },
           video: {
             '@type': 'VideoObject',
-            name: 'Smart Money і Захоплення Ліквідності | Навчання Трейдингу від А до Я',
+            name: 'Smart Money и Захват Ликвидности | Обучение Трейдингу от А до Я',
             description:
-              "Smart Money і захоплення ліквідності: повне керівництво по стратегіях великих гравців. Ігор Арапов показує на живому прикладі ф'ючерса золота, як працює об'ємний аналіз, стратегія Smart Money і чому професійні трейдери маніпулюють ціною перед розворотом ринку.",
+              'Smart Money и захват ликвидности: полное руководство по стратегиям крупных игроков. Игорь Арапов показывает на живом примере фьючерса золота, как работает объемный анализ, стратегия Smart Money и почему профессиональные трейдеры манипулируют ценой перед разворотом рынка.',
             thumbnailUrl: [
               'https://img.youtube.com/vi/nmDR1GUPoQg/maxresdefault.jpg',
               'https://img.youtube.com/vi/nmDR1GUPoQg/hqdefault.jpg',
@@ -333,60 +333,61 @@ export class HomeUkBlogSixtyOneComponent {
             embedUrl: 'https://www.youtube.com/embed/nmDR1GUPoQg',
             inLanguage: 'uk',
             keywords:
-              "Smart Money, захоплення ліквідності, об'ємний аналіз, смарт мані, трейдинг",
+              'Smart Money, захват ликвидности, объемный анализ, смарт мани, трейдинг',
+
             hasPart: [
               {
                 '@type': 'Clip',
-                name: 'Концепція Smart Money: хто такі розумні гроші на біржі',
+                name: 'Концепция Smart Money: кто такие умные деньги на бирже',
                 startOffset: 170,
                 endOffset: 492,
                 url: 'https://www.youtube.com/watch?v=nmDR1GUPoQg&t=170',
               },
               {
                 '@type': 'Clip',
-                name: 'Композитний оператор: хто такі Smart Money',
+                name: 'Композитный оператор: кто такие Smart Money',
                 startOffset: 492,
                 endOffset: 547,
                 url: 'https://www.youtube.com/watch?v=nmDR1GUPoQg&t=492',
               },
               {
                 '@type': 'Clip',
-                name: 'Рівні підтримки та опору: як їх правильно визначати',
+                name: 'Уровни поддержки и сопротивления: как их правильно определять',
                 startOffset: 547,
                 endOffset: 656,
                 url: 'https://www.youtube.com/watch?v=nmDR1GUPoQg&t=547',
               },
               {
                 '@type': 'Clip',
-                name: "Як побачити Smart Money на графіку через об'ємний аналіз",
+                name: 'Как увидеть Smart Money на графике через объемный анализ',
                 startOffset: 656,
                 endOffset: 1803,
                 url: 'https://www.youtube.com/watch?v=nmDR1GUPoQg&t=656',
               },
               {
                 '@type': 'Clip',
-                name: 'Захоплення ліквідності: логіка хибного проколу та маніпуляцій',
+                name: 'Захват ликвидности: логика ложного накола и манипуляций',
                 startOffset: 1803,
                 endOffset: 1888,
                 url: 'https://www.youtube.com/watch?v=nmDR1GUPoQg&t=1803',
               },
               {
                 '@type': 'Clip',
-                name: 'Основа роботи будь-якого фінансового ринку: попит та пропозиція',
+                name: 'Основа работы любого финансового рынка: спрос и предложение',
                 startOffset: 1888,
                 endOffset: 2035,
                 url: 'https://www.youtube.com/watch?v=nmDR1GUPoQg&t=1888',
               },
               {
                 '@type': 'Clip',
-                name: 'Механіка хибного проколу: як професіонали збирають стопи',
+                name: 'Механика ложного накола: как профессионалы собирают стопы',
                 startOffset: 2035,
                 endOffset: 2140,
                 url: 'https://www.youtube.com/watch?v=nmDR1GUPoQg&t=2035',
               },
               {
                 '@type': 'Clip',
-                name: 'Дефіцит ліквідності на ринку: чому це важливо',
+                name: 'Дефицит ликвидности на рынке: почему это важно',
                 startOffset: 2140,
                 endOffset: 2223,
                 url: 'https://www.youtube.com/watch?v=nmDR1GUPoQg&t=2140',
