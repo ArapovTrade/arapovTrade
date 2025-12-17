@@ -259,34 +259,114 @@ export class HomeEnBlogSixtyOneComponent {
       '@graph': [
         {
           '@type': 'Article',
-          '@id':
-            'https://arapov.trade/en/freestudying/smartmoneyconceptsguide#article',
-          headline:
-            'Smart Money Concepts: Complete Guide to Trading Alongside Institutions',
-          description:
-            'Comprehensive Smart Money Concepts (SMC) guide: Order Blocks, Fair Value Gaps, liquidity zones, entry strategies, and risk management.',
-          image: [
-            'https://arapov.trade/assets/img/content/smartmoneyconceptsguide.webp',
-          ],
-          author: { '@id': 'https://arapov.trade/en#person' },
-          publisher: { '@id': 'https://arapov.trade/en#organization' },
-          datePublished: '2024-01-15T00:00:00+02:00',
-          dateModified: '2025-06-04T00:00:00+02:00',
           mainEntityOfPage: {
             '@type': 'WebPage',
             '@id':
               'https://arapov.trade/en/freestudying/smartmoneyconceptsguide',
           },
-          articleSection: 'Trading',
-          keywords: [
-            'Smart Money Concepts',
-            'SMC',
-            'Order Blocks',
-            'Fair Value Gaps',
-            'liquidity',
-            'institutional analysis',
-          ],
+          headline:
+            'Smart Money Concepts: Complete Guide to Smart Money Strategy',
+          description:
+            'Detailed analysis of the Smart Money concept. How large players manipulate price, liquidity grab, volume analysis.',
+          image:
+            'https://arapov.trade/assets/img/content/smartmoneyconceptsguide.webp',
+          datePublished: '2024-06-15T00:00:00+03:00',
+          dateModified: '2025-12-15T00:00:00+02:00',
           inLanguage: 'en',
+          author: {
+            '@type': 'Person',
+            '@id': 'https://arapov.trade/en#person',
+            name: 'Igor Arapov',
+            url: 'https://arapov.trade/en',
+            sameAs: [
+              'https://www.youtube.com/@ArapovTrade',
+              'https://www.mql5.com/ru/signals/2246716',
+            ],
+          },
+          publisher: {
+            '@type': 'Organization',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
+            logo: {
+              '@type': 'ImageObject',
+              url: 'https://arapov.trade/assets/img/favicon.ico',
+            },
+          },
+          video: {
+            '@type': 'VideoObject',
+            name: 'Smart Money and Liquidity Grab | Trading Education from A to Z',
+            description:
+              'Smart Money and liquidity grab: complete guide to institutional trading strategies. Igor Arapov demonstrates on a live gold futures example how volume analysis works, Smart Money strategy, and why professional traders manipulate price before market reversal.',
+            thumbnailUrl: [
+              'https://img.youtube.com/vi/nmDR1GUPoQg/maxresdefault.jpg',
+              'https://img.youtube.com/vi/nmDR1GUPoQg/hqdefault.jpg',
+            ],
+            uploadDate: '2024-06-15T00:00:00+03:00',
+            duration: 'PT37M3S',
+            contentUrl: 'https://www.youtube.com/watch?v=nmDR1GUPoQg',
+            embedUrl: 'https://www.youtube.com/embed/nmDR1GUPoQg',
+            inLanguage: 'en',
+            keywords:
+              'Smart Money, liquidity grab, volume analysis, smart money concepts, trading',
+            hasPart: [
+              {
+                '@type': 'Clip',
+                name: 'Smart Money Concept: Who Are Smart Money in Stock Market',
+                startOffset: 170,
+                endOffset: 492,
+                url: 'https://www.youtube.com/watch?v=nmDR1GUPoQg&t=170',
+              },
+              {
+                '@type': 'Clip',
+                name: 'Composite Operator: Who Are Smart Money',
+                startOffset: 492,
+                endOffset: 547,
+                url: 'https://www.youtube.com/watch?v=nmDR1GUPoQg&t=492',
+              },
+              {
+                '@type': 'Clip',
+                name: 'Support and Resistance Levels: How to Identify Them Correctly',
+                startOffset: 547,
+                endOffset: 656,
+                url: 'https://www.youtube.com/watch?v=nmDR1GUPoQg&t=547',
+              },
+              {
+                '@type': 'Clip',
+                name: 'How to See Smart Money on Chart Through Volume Analysis',
+                startOffset: 656,
+                endOffset: 1803,
+                url: 'https://www.youtube.com/watch?v=nmDR1GUPoQg&t=656',
+              },
+              {
+                '@type': 'Clip',
+                name: 'Liquidity Grab: Logic of False Breakout and Manipulation',
+                startOffset: 1803,
+                endOffset: 1888,
+                url: 'https://www.youtube.com/watch?v=nmDR1GUPoQg&t=1803',
+              },
+              {
+                '@type': 'Clip',
+                name: 'Foundation of Any Financial Market: Supply and Demand',
+                startOffset: 1888,
+                endOffset: 2035,
+                url: 'https://www.youtube.com/watch?v=nmDR1GUPoQg&t=1888',
+              },
+              {
+                '@type': 'Clip',
+                name: 'Mechanics of False Breakout: How Professionals Hunt Stop Losses',
+                startOffset: 2035,
+                endOffset: 2140,
+                url: 'https://www.youtube.com/watch?v=nmDR1GUPoQg&t=2035',
+              },
+              {
+                '@type': 'Clip',
+                name: 'Liquidity Deficit in Market: Why It Matters',
+                startOffset: 2140,
+                endOffset: 2223,
+                url: 'https://www.youtube.com/watch?v=nmDR1GUPoQg&t=2140',
+              },
+            ],
+          },
         },
       ],
     };

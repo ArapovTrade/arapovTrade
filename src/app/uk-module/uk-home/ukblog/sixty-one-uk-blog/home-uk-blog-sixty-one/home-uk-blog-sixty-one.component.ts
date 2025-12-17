@@ -285,38 +285,114 @@ export class HomeUkBlogSixtyOneComponent {
       '@graph': [
         {
           '@type': 'Article',
-          '@id':
-            'https://arapov.trade/uk/freestudying/smartmoneyconceptsguide#article',
-          headline:
-            'Smart Money Concepts: Повний Посібник з Торгівлі на Боці Інституціоналів',
-          description:
-            'Комплексний посібник з Smart Money Concepts (SMC): Order Blocks, Fair Value Gaps, зони ліквідності, стратегії входу та управління ризиками.',
-          image: [
-            'https://arapov.trade/assets/img/content/smartmoneyconceptsguide.webp',
-          ],
-          author: {
-            '@id': 'https://arapov.trade/uk#person',
-          },
-          publisher: {
-            '@id': 'https://arapov.trade/uk#organization',
-          },
-          datePublished: '2024-01-15T00:00:00+02:00',
-          dateModified: '2025-06-04T00:00:00+02:00',
           mainEntityOfPage: {
             '@type': 'WebPage',
             '@id':
               'https://arapov.trade/uk/freestudying/smartmoneyconceptsguide',
           },
-          articleSection: 'Трейдинг',
-          keywords: [
-            'Smart Money Concepts',
-            'SMC',
-            'Order Blocks',
-            'Fair Value Gaps',
-            'ліквідність',
-            'інституційний аналіз',
-          ],
+          headline:
+            'Smart Money Concepts: повний гайд по стратегії розумних грошей',
+          description:
+            "Детальний розбір концепції Smart Money. Як великі гравці маніпулюють ціною, захоплення ліквідності, об'ємний аналіз.",
+          image:
+            'https://arapov.trade/assets/img/content/smartmoneyconceptsguide.webp',
+          datePublished: '2024-06-15T00:00:00+03:00',
+          dateModified: '2024-12-15T00:00:00+02:00',
           inLanguage: 'uk',
+          author: {
+            '@type': 'Person',
+            '@id': 'https://arapov.trade/uk#person',
+            name: 'Ігор Арапов',
+            url: 'https://arapov.trade/uk',
+            sameAs: [
+              'https://www.youtube.com/@ArapovTrade',
+              'https://www.mql5.com/ru/signals/2246716',
+            ],
+          },
+          publisher: {
+            '@type': 'Organization',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
+            logo: {
+              '@type': 'ImageObject',
+              url: 'https://arapov.trade/assets/img/favicon.ico',
+            },
+          },
+          video: {
+            '@type': 'VideoObject',
+            name: 'Smart Money і Захоплення Ліквідності | Навчання Трейдингу від А до Я',
+            description:
+              "Smart Money і захоплення ліквідності: повне керівництво по стратегіях великих гравців. Ігор Арапов показує на живому прикладі ф'ючерса золота, як працює об'ємний аналіз, стратегія Smart Money і чому професійні трейдери маніпулюють ціною перед розворотом ринку.",
+            thumbnailUrl: [
+              'https://img.youtube.com/vi/nmDR1GUPoQg/maxresdefault.jpg',
+              'https://img.youtube.com/vi/nmDR1GUPoQg/hqdefault.jpg',
+            ],
+            uploadDate: '2024-06-15T00:00:00+03:00',
+            duration: 'PT37M3S',
+            contentUrl: 'https://www.youtube.com/watch?v=nmDR1GUPoQg',
+            embedUrl: 'https://www.youtube.com/embed/nmDR1GUPoQg',
+            inLanguage: 'uk',
+            keywords:
+              "Smart Money, захоплення ліквідності, об'ємний аналіз, смарт мані, трейдинг",
+            hasPart: [
+              {
+                '@type': 'Clip',
+                name: 'Концепція Smart Money: хто такі розумні гроші на біржі',
+                startOffset: 170,
+                endOffset: 492,
+                url: 'https://www.youtube.com/watch?v=nmDR1GUPoQg&t=170',
+              },
+              {
+                '@type': 'Clip',
+                name: 'Композитний оператор: хто такі Smart Money',
+                startOffset: 492,
+                endOffset: 547,
+                url: 'https://www.youtube.com/watch?v=nmDR1GUPoQg&t=492',
+              },
+              {
+                '@type': 'Clip',
+                name: 'Рівні підтримки та опору: як їх правильно визначати',
+                startOffset: 547,
+                endOffset: 656,
+                url: 'https://www.youtube.com/watch?v=nmDR1GUPoQg&t=547',
+              },
+              {
+                '@type': 'Clip',
+                name: "Як побачити Smart Money на графіку через об'ємний аналіз",
+                startOffset: 656,
+                endOffset: 1803,
+                url: 'https://www.youtube.com/watch?v=nmDR1GUPoQg&t=656',
+              },
+              {
+                '@type': 'Clip',
+                name: 'Захоплення ліквідності: логіка хибного проколу та маніпуляцій',
+                startOffset: 1803,
+                endOffset: 1888,
+                url: 'https://www.youtube.com/watch?v=nmDR1GUPoQg&t=1803',
+              },
+              {
+                '@type': 'Clip',
+                name: 'Основа роботи будь-якого фінансового ринку: попит та пропозиція',
+                startOffset: 1888,
+                endOffset: 2035,
+                url: 'https://www.youtube.com/watch?v=nmDR1GUPoQg&t=1888',
+              },
+              {
+                '@type': 'Clip',
+                name: 'Механіка хибного проколу: як професіонали збирають стопи',
+                startOffset: 2035,
+                endOffset: 2140,
+                url: 'https://www.youtube.com/watch?v=nmDR1GUPoQg&t=2035',
+              },
+              {
+                '@type': 'Clip',
+                name: 'Дефіцит ліквідності на ринку: чому це важливо',
+                startOffset: 2140,
+                endOffset: 2223,
+                url: 'https://www.youtube.com/watch?v=nmDR1GUPoQg&t=2140',
+              },
+            ],
+          },
         },
       ],
     };
@@ -327,22 +403,23 @@ export class HomeUkBlogSixtyOneComponent {
   // ============================================================
   //  PERSON
   // ============================================================
-   private setPersonSchema(): void {
+  private setPersonSchema(): void {
     const data = {
-  '@context': 'https://schema.org',
-  '@type': 'Person',
-  '@id': 'https://arapov.trade/#person',
-  name: 'Ігор Арапов',
-  url: 'https://arapov.trade/uk',
-  image: 'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
-  sameAs: [
-    'https://www.youtube.com/@ArapovTrade',
-    'https://t.me/ArapovTrade',
-  ],
-  jobTitle: 'Професійний трейдер',
-  description:
-    'Активно торгую на фінансових ринках з 2013 року. Автор безкоштовного курсу з трейдингу.',
-};
+      '@context': 'https://schema.org',
+      '@type': 'Person',
+      '@id': 'https://arapov.trade/#person',
+      name: 'Ігор Арапов',
+      url: 'https://arapov.trade/uk',
+      image:
+        'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
+      sameAs: [
+        'https://www.youtube.com/@ArapovTrade',
+        'https://t.me/ArapovTrade',
+      ],
+      jobTitle: 'Професійний трейдер',
+      description:
+        'Активно торгую на фінансових ринках з 2013 року. Автор безкоштовного курсу з трейдингу.',
+    };
 
     this.addJsonLdSchema(data);
   }

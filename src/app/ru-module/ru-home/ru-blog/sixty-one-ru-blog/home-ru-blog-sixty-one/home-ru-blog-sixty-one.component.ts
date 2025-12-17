@@ -67,7 +67,7 @@ export class HomeRuBlogSixtyOneComponent {
         'Smart Money Concepts (SMC) — полное руководство по торговле на стороне институциональных участников. Order Blocks, Fair Value Gaps, ликвидность и стратегии входа.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-02-07' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-12-14' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/smartmoneyconceptsguide.webp',
@@ -286,38 +286,114 @@ export class HomeRuBlogSixtyOneComponent {
       '@graph': [
         {
           '@type': 'Article',
-          '@id':
-            'https://arapov.trade/ru/freestudying/smartmoneyconceptsguide#article',
-          headline:
-            'Smart Money Concepts: Полное Руководство по Торговле на Стороне Институционалов',
-          description:
-            'Комплексное руководство по Smart Money Concepts (SMC): Order Blocks, Fair Value Gaps, зоны ликвидности, стратегии входа и управление рисками.',
-          image: [
-            'https://arapov.trade/assets/img/content/smartmoneyconceptsguide.webp',
-          ],
-          author: {
-            '@id': 'https://arapov.trade/ru#person',
-          },
-          publisher: {
-            '@id': 'https://arapov.trade/ru#organization',
-          },
-          datePublished: '2024-01-15T00:00:00+02:00',
-          dateModified: '2025-06-04T00:00:00+02:00',
           mainEntityOfPage: {
             '@type': 'WebPage',
             '@id':
               'https://arapov.trade/ru/freestudying/smartmoneyconceptsguide',
           },
-          articleSection: 'Трейдинг',
-          keywords: [
-            'Smart Money Concepts',
-            'SMC',
-            'Order Blocks',
-            'Fair Value Gaps', 
-            'ликвидность',
-            'институциональный анализ',
-          ],
+          headline:
+            'Smart Money Concepts: полный гайд по стратегии умных денег',
+          description:
+            'Детальный разбор концепции Smart Money. Как крупные игроки манипулируют ценой, захват ликвидности, объемный анализ.',
+          image:
+            'https://arapov.trade/assets/img/content/smartmoneyconceptsguide.webp',
+          datePublished: '2025-01-15T00:00:00+02:00',
+          dateModified: '2025-12-14T00:00:00+02:00',
           inLanguage: 'ru',
+          author: {
+            '@type': 'Person',
+            '@id': 'https://arapov.trade/ru#person',
+            name: 'Игорь Арапов',
+            url: 'https://arapov.trade/ru',
+            sameAs: [
+              'https://www.youtube.com/@ArapovTrade',
+              'https://www.mql5.com/ru/signals/2246716',
+            ],
+          },
+          publisher: {
+            '@type': 'Organization',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
+            logo: {
+              '@type': 'ImageObject',
+              url: 'https://arapov.trade/assets/img/logo.png',
+            },
+          },
+          video: {
+            '@type': 'VideoObject',
+            name: 'Smart Money и Захват Ликвидности | Обучение Трейдингу от А до Я',
+            description:
+              'Smart Money и захват ликвидности: полное руководство по стратегиям крупных игроков. Игорь Арапов показывает на живом примере фьючерса золота, как работает объемный анализ, стратегия Smart Money и почему профессиональные трейдеры манипулируют ценой перед разворотом рынка.',
+            thumbnailUrl: [
+              'https://img.youtube.com/vi/nmDR1GUPoQg/maxresdefault.jpg',
+              'https://img.youtube.com/vi/nmDR1GUPoQg/hqdefault.jpg',
+            ],
+            uploadDate: '2024-06-15',
+            duration: 'PT37M3S',
+            contentUrl: 'https://www.youtube.com/watch?v=nmDR1GUPoQg',
+            embedUrl: 'https://www.youtube.com/embed/nmDR1GUPoQg',
+            inLanguage: 'ru',
+            keywords:
+              'Smart Money, захват ликвидности, объемный анализ, смарт мани, трейдинг',
+            hasPart: [
+              {
+                '@type': 'Clip',
+                name: 'Концепция Smart Money: кто такие умные деньги на бирже',
+                startOffset: 170,
+                endOffset: 492,
+                url: 'https://www.youtube.com/watch?v=nmDR1GUPoQg&t=170',
+              },
+              {
+                '@type': 'Clip',
+                name: 'Композитный оператор: кто такие Smart Money',
+                startOffset: 492,
+                endOffset: 547,
+                url: 'https://www.youtube.com/watch?v=nmDR1GUPoQg&t=492',
+              },
+              {
+                '@type': 'Clip',
+                name: 'Уровни поддержки и сопротивления: как их правильно определять',
+                startOffset: 547,
+                endOffset: 656,
+                url: 'https://www.youtube.com/watch?v=nmDR1GUPoQg&t=547',
+              },
+              {
+                '@type': 'Clip',
+                name: 'Как увидеть Smart Money на графике через объемный анализ',
+                startOffset: 656,
+                endOffset: 1803,
+                url: 'https://www.youtube.com/watch?v=nmDR1GUPoQg&t=656',
+              },
+              {
+                '@type': 'Clip',
+                name: 'Захват ликвидности: логика ложного накола и манипуляций',
+                startOffset: 1803,
+                endOffset: 1888,
+                url: 'https://www.youtube.com/watch?v=nmDR1GUPoQg&t=1803',
+              },
+              {
+                '@type': 'Clip',
+                name: 'Основа работы любого финансового рынка: спрос и предложение',
+                startOffset: 1888,
+                endOffset: 2035,
+                url: 'https://www.youtube.com/watch?v=nmDR1GUPoQg&t=1888',
+              },
+              {
+                '@type': 'Clip',
+                name: 'Механика ложного накола: как профессионалы собирают стопы',
+                startOffset: 2035,
+                endOffset: 2140,
+                url: 'https://www.youtube.com/watch?v=nmDR1GUPoQg&t=2035',
+              },
+              {
+                '@type': 'Clip',
+                name: 'Дефицит ликвидности на рынке: почему это важно',
+                startOffset: 2140,
+                endOffset: 2223,
+                url: 'https://www.youtube.com/watch?v=nmDR1GUPoQg&t=2140',
+              },
+            ],
+          },
         },
       ],
     };
