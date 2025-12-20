@@ -264,6 +264,39 @@ export class RuHomeComponent implements OnInit, AfterViewInit, OnDestroy {
       givenName: 'Игорь',
       familyName: 'Арапов',
       jobTitle: 'Профессиональный трейдер',
+      hasOccupation: {
+        '@type': 'Occupation',
+        name: 'Trader',
+        description:
+          'Профессиональный трейдер на финансовых рынках с 2013 года',
+        occupationLocation: {
+          '@type': 'Country',
+          name: 'Ukraine',
+        },
+        skills: [
+          'Technical Analysis',
+          'Volume Analysis',
+          'Smart Money Concepts',
+          'Wyckoff Method',
+          'Risk Management',
+        ],
+      },
+      nationality: {
+        '@type': 'Country',
+        name: 'Ukraine',
+        alternateName: 'Украина',
+      },
+      knowsLanguage: [
+        { '@type': 'Language', name: 'Russian', alternateName: 'ru' },
+        { '@type': 'Language', name: 'Ukrainian', alternateName: 'uk' },
+        { '@type': 'Language', name: 'English', alternateName: 'en' },
+      ],
+      award: [
+        'Кандидат в мастера спорта по шахматам',
+        'Выбор редакции TradingView',
+        'Автор книги с ISBN 979-8-90243-075-9',
+      ],
+      publishingPrinciples: 'https://arapov.trade/ru/freestudying',
       description:
         'Трейдер с 2013 года, автор бесплатного курса обучения трейдингу. Специализация: Smart Money Concepts, метод Вайкоффа, объёмный анализ.',
       image:
@@ -295,14 +328,29 @@ export class RuHomeComponent implements OnInit, AfterViewInit, OnDestroy {
           dateCreated: '2013',
         },
       ],
+      identifier: [
+        {
+          '@type': 'PropertyValue',
+          propertyID: 'ORCID',
+          value: '0009-0003-0430-778X',
+        },
+        {
+          '@type': 'PropertyValue',
+          propertyID: 'Wikidata',
+          value: 'Q137454477',
+        },
+      ],
       sameAs: [
-        'https://t.me/ArapovTrade',
+        'https://www.wikidata.org/wiki/Q137454477',
+        'https://orcid.org/0009-0003-0430-778X',
+        'https://books.apple.com/us/author/игорь-арапов/id1862470877',
         'https://www.youtube.com/@ArapovTrade',
-        'https://www.facebook.com/igor.arapov.75',
         'https://www.linkedin.com/in/arapovtrade',
+        'https://www.mql5.com/ru/signals/2246716?source=External',
+        'https://t.me/ArapovTrade',
+        'https://www.facebook.com/igor.arapov.75',
         'https://rutube.ru/channel/41668647',
         'https://dzen.ru/id/66bf54343761337a416dac58?share_to=link',
-        'https://www.mql5.com/ru/signals/2246716?source=External',
       ],
       url: 'https://arapov.trade/ru',
       mainEntityOfPage: 'https://arapov.trade/ru',
@@ -345,8 +393,8 @@ export class RuHomeComponent implements OnInit, AfterViewInit, OnDestroy {
       isPartOf: {
         '@id': 'https://arapov.trade/ru/main/#website',
       },
-       'dateCreated': '2020-01-01T00:00:00+02:00',  // ← Добавьте время
-    'dateModified': '2025-12-15T00:00:00+02:00'  // ← Добавьте время
+      dateCreated: '2020-01-01T00:00:00+02:00', // ← Добавьте время
+      dateModified: '2025-12-15T00:00:00+02:00', // ← Добавьте время
     });
 
     this.document.head.appendChild(script);

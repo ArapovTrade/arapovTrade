@@ -1,50 +1,47 @@
- 
-
 <div
   class="main-container"
   [ngStyle]="{ 'background-color': isDark ? '#141500' : '#FFFFFF' }"
 >
-  <div class="mask_drop-menu" *ngIf="menuOpen" style="margin-top: 40px;">
-        <div  
-          class="menu-dropdown"
-          [ngStyle]="{
+  <div class="mask_drop-menu" *ngIf="menuOpen" style="margin-top: 40px">
+    <div
+      class="menu-dropdown"
+      [ngStyle]="{
             background: isDark ? 'rgba(1, 1, 1, 1)' : 'rgba(255, 255, 255, 1)',
              
           }"
+    >
+      <ul>
+        <li
+          (click)="navigateTo('ru/main')"
+          [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+          [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
         >
-          <ul>
-            <li
-              (click)="navigateTo('ru/main')"
-              [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-              [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-            >
-              ГЛАВНАЯ
-            </li>
-            <li
-              (click)="navigateTo('ru/freestudying')"
-              [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-              [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-            >
-              БЕСПЛАТНЫЕ КУРСЫ
-            </li>
-            <li
-              (click)="navigateTo('ru')"
-              [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-              [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-            >
-              ОБ АВТОРЕ
-            </li>
-            <li
-              (click)="navigateTo('ru/studying')"
-              [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-              [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-            >
-              ПРОФЕССИОНАЛЬНЫЕ КУРСЫ
-            </li>
-          </ul>
-        </div>
-      </div>
-
+          ГЛАВНАЯ
+        </li>
+        <li
+          (click)="navigateTo('ru/freestudying')"
+          [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+          [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
+        >
+          БЕСПЛАТНЫЕ КУРСЫ
+        </li>
+        <li
+          (click)="navigateTo('ru')"
+          [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+          [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
+        >
+          ОБ АВТОРЕ
+        </li>
+        <li
+          (click)="navigateTo('ru/studying')"
+          [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+          [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
+        >
+          ПРОФЕССИОНАЛЬНЫЕ КУРСЫ
+        </li>
+      </ul>
+    </div>
+  </div>
 
   <div class="author-page_section-one">
     <div class="header-new_block" data-aos="fade-down" data-aos-delay="300">
@@ -193,57 +190,58 @@
         </div>
 
         <div class="menu-switcher" [class.open]="menuOpen">
-            <button
-              class="menu-btn"
-              (click)="toggleMenu()"
-              [ngStyle]="{ background: isDark ? '#2c2a06' : '#DBE2E7' }"
-            >
-              <span class="icon flex" *ngIf="!menuOpen">
-                <img
-                  *ngIf="isDark"
-                  src="assets/redesignArapovTrade/img/menu-button.svg"
-                  alt="menu_icon"
-                />
-                <img
-                  *ngIf="!isDark"
-                  src="assets/redesignArapovTrade/img/menu-button-light.svg"
-                  alt="menu_icon"
-                />
-              </span>
+          <button
+            class="menu-btn"
+            (click)="toggleMenu()"
+            [ngStyle]="{ background: isDark ? '#2c2a06' : '#DBE2E7' }"
+          >
+            <span class="icon flex" *ngIf="!menuOpen">
+              <img
+                *ngIf="isDark"
+                src="assets/redesignArapovTrade/img/menu-button.svg"
+                alt="menu_icon"
+              />
+              <img
+                *ngIf="!isDark"
+                src="assets/redesignArapovTrade/img/menu-button-light.svg"
+                alt="menu_icon"
+              />
+            </span>
 
-              <span class="icon flex cross" *ngIf="menuOpen">
-                <img
-                  *ngIf="isDark"
-                  src="assets/redesignArapovTrade/img/menu-button-cross.svg"
-                  alt="menu_icon"
-                />
-                <img
-                  *ngIf="!isDark"
-                  src="assets/redesignArapovTrade/img/menu-button-cross-light.svg"
-                  alt="menu_icon"
-                />
-              </span>
-            </button>
-          </div>
+            <span class="icon flex cross" *ngIf="menuOpen">
+              <img
+                *ngIf="isDark"
+                src="assets/redesignArapovTrade/img/menu-button-cross.svg"
+                alt="menu_icon"
+              />
+              <img
+                *ngIf="!isDark"
+                src="assets/redesignArapovTrade/img/menu-button-cross-light.svg"
+                alt="menu_icon"
+              />
+            </span>
+          </button>
+        </div>
       </div>
     </div>
     <div class="author-page_main-block" data-aos="fade-up" data-aos-delay="300">
-      <div class="author-page_main-block_image-block img-courses-main-page-desc">
-        <img  
+      <div
+        class="author-page_main-block_image-block img-courses-main-page-desc"
+      >
+        <img
           src="/assets/redesignArapovTrade/img/courses-main-page.png"
           alt="img"
         />
-         
       </div>
 
-      <div class="author-page_main-block_image-block img-courses-main-page-phone" >
-        
-        <img  
+      <div
+        class="author-page_main-block_image-block img-courses-main-page-phone"
+      >
+        <img
           src="/assets/redesignArapovTrade/img/courses-main-page-phone.png"
           alt="img"
         />
       </div>
-
 
       <div class="author-page_main-block_image-block-table">
         <img
@@ -253,16 +251,20 @@
       </div>
       <div class="author-page_main-block_text-block">
         <div class="author-page_main-block_title-block">
-          <h1 class="studying_h1" [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-            >Обучение трейдингу и инвестициям для разумных инвесторов:
-        </h1>
-          <h2 class="studying_h2" 
+          <h1
+            class="studying_h1"
+            [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+          >
+            Обучение трейдингу и инвестициям для разумных инвесторов:
+          </h1>
+          <h2
+            class="studying_h2"
             [ngClass]="{
               'gradient-orange': isDark,
               'gradient-blue_author-page': !isDark
             }"
           >
-            Профессиональная платформа с готовыми решениями  
+            Профессиональная платформа с готовыми решениями
           </h2>
           <span [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }">
             для пассивного дохода
@@ -272,10 +274,17 @@
           <span
             class="author-page_main-block_description-text"
             [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-            >Платные курсы по трейдингу с наставником — это не обязательный шаг, а осознанный выбор для тех, кто хочет научиться трейдингу быстрее, с поддержкой и чёткой структурой. <br /><br />
-             
-Вся необходимая информация для обучения действительно есть в моём бесплатном курсе — вы можете изучать его самостоятельно и в удобном для себя темпе, а главное — бесплатно. <br /><br />
-            Но если для вас важны скорость, системность и обратная связь от опытного наставника, то персональное обучение поможет вам сэкономить время и избежать типовых ошибок, которые допускает большинство начинающих трейдеров в начале своего пути.
+            >Платные курсы по трейдингу с наставником — это не обязательный шаг,
+            а осознанный выбор для тех, кто хочет научиться трейдингу быстрее, с
+            поддержкой и чёткой структурой. <br /><br />
+
+            Вся необходимая информация для обучения действительно есть в моём
+            бесплатном курсе — вы можете изучать его самостоятельно и в удобном
+            для себя темпе, а главное — бесплатно. <br /><br />
+            Но если для вас важны скорость, системность и обратная связь от
+            опытного наставника, то персональное обучение поможет вам сэкономить
+            время и избежать типовых ошибок, которые допускает большинство
+            начинающих трейдеров в начале своего пути.
           </span>
         </div>
         <!-- (click)="navigateTo('uk/freestudying')" -->
@@ -317,7 +326,9 @@
   </div>
   <!-- Second Block -->
 
-  <div data-aos="fade-up" data-aos-delay="300"
+  <div
+    data-aos="fade-up"
+    data-aos-delay="300"
     [ngClass]="{
           'second-section': true,
           'second-pad': isDark,
@@ -339,8 +350,9 @@
         class="author-page_main-block_description-text"
         [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
       >
-        
-Программа охватывает ключевые аспекты биржевой торговли — от знакомства с финансовым рынком и его участниками до глубокого изучения технического, фундаментального и объёмного анализа.
+        Программа охватывает ключевые аспекты биржевой торговли — от знакомства
+        с финансовым рынком и его участниками до глубокого изучения
+        технического, фундаментального и объёмного анализа.
       </div>
     </div>
 
@@ -393,7 +405,8 @@
                 [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
               >
                 1. Типы анализа рынка <br />
-                2. Технический анализ. Торговая система «Работа от уровней» <br />
+                2. Технический анализ. Торговая система «Работа от уровней»
+                <br />
                 3. Фундаментальный анализ
               </span>
             </div>
@@ -415,7 +428,8 @@
                   'gradient-orange': isDark,
                   'gradient-blue_author-page': !isDark
                 }"
-                >«Торговая система и психология рынка» (основана на методологии Вайкоффа)</span
+                >«Торговая система и психология рынка» (основана на методологии
+                Вайкоффа)</span
               >
               <span
                 class="item-title_head"
@@ -432,10 +446,11 @@
                 class="author-page_main-block_description-text second-block-phone-descr"
                 [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
               >
-                1. Мани-менеджмент  <br />
+                1. Мани-менеджмент <br />
                 2. Сложный процент<br />
                 3. Риск-менеджмент<br />
-                4. Поведенческие факторы на рынке (манипуляции ценой как триггер к действию)<br />
+                4. Поведенческие факторы на рынке (манипуляции ценой как триггер
+                к действию)<br />
                 5. Зона спроса «толпы» (дистрибуция актива крупным капиталом)<br />
                 6. Зона распродажи «толпы» (накопление актива крупным капиталом)
               </span>
@@ -537,64 +552,64 @@
     <div class="timeline-section-bg-shapes"></div>
   </div>
 
-
-
-
-
-
-
-
-  <div class="third-section_container-main" data-aos="fade-up" data-aos-delay="300">
-    <div
-    class="third-section"
-    [ngStyle]="{
-      background: isDark
-        ? 'linear-gradient(90deg, rgba(56, 56, 32, 0.50) 0%, rgba(28, 29, 2, 0 ) 100%)'
-        : 'linear-gradient(90deg, rgba(0, 130, 204,  0.12) )'
-    }"
+  <div
+    class="third-section_container-main"
+    data-aos="fade-up"
+    data-aos-delay="300"
   >
-    <div class="third-section_text-block">
-      <div
-        [ngClass]="{
-          'second-section_programm-block-title': true,
-          'third-section-title-phone': true,
-          'gradient-orange': isDark,
-          'gradient-blue_author-page': !isDark
-        }"
-      >
-        Результат
-      </div>
-      <div
-        class="author-page_main-block_description-text"
-        [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-      >
-        Вы получите торговую систему, основанную на чтении объёмов, а также вы узнаете, как функционируют рынки, и получите практический навык открытия сделок под руководством практикующего трейдера, наставника курса.
-      </div>
-      <div
-        (click)="navigateToHomeWithId()"
-        [ngClass]="{
-          'author-page_main-block_btn': true,
-          'third-block-btn': true,
-          'gradient-block-orange': isDark,
-          'gradient-block-blue': !isDark
-        }"
-      >
-        <span
-          class="author-page_main-block_btn-text"
-          [ngStyle]="{ color: !isDark ? '#ffffff' : '#03314b' }"
-          >Оставить заявку</span
+    <div
+      class="third-section"
+      [ngStyle]="{
+        background: isDark
+          ? 'linear-gradient(90deg, rgba(56, 56, 32, 0.50) 0%, rgba(28, 29, 2, 0 ) 100%)'
+          : 'linear-gradient(90deg, rgba(0, 130, 204,  0.12) )'
+      }"
+    >
+      <div class="third-section_text-block">
+        <div
+          [ngClass]="{
+            'second-section_programm-block-title': true,
+            'third-section-title-phone': true,
+            'gradient-orange': isDark,
+            'gradient-blue_author-page': !isDark
+          }"
         >
+          Результат
+        </div>
+        <div
+          class="author-page_main-block_description-text"
+          [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+        >
+          Вы получите торговую систему, основанную на чтении объёмов, а также вы
+          узнаете, как функционируют рынки, и получите практический навык
+          открытия сделок под руководством практикующего трейдера, наставника
+          курса.
+        </div>
+        <div
+          (click)="navigateToHomeWithId()"
+          [ngClass]="{
+            'author-page_main-block_btn': true,
+            'third-block-btn': true,
+            'gradient-block-orange': isDark,
+            'gradient-block-blue': !isDark
+          }"
+        >
+          <span
+            class="author-page_main-block_btn-text"
+            [ngStyle]="{ color: !isDark ? '#ffffff' : '#03314b' }"
+            >Оставить заявку</span
+          >
+        </div>
+      </div>
+      <div class="third-image-block">
+        <div class="third-block_image-container">
+          <img
+            src="assets/redesignArapovTrade/img/third-image-block_img.png"
+            alt="image"
+          />
+        </div>
       </div>
     </div>
-    <div class="third-image-block">
-      <div class="third-block_image-container">
-        <img
-          src="assets/redesignArapovTrade/img/third-image-block_img.png"
-          alt="image"
-        />
-      </div>
-    </div>
-  </div>
     <div
       class="timeline-section-bg third-section-bg"
       [ngStyle]="{
@@ -605,35 +620,27 @@
     ></div>
   </div>
 
- 
-  <div  
+  <div
     [ngClass]="{
-           
-          'forth-section': true,
-           'forth-section-container-bg-light':!isDark
-          
-        }"
-  
-  
+      'forth-section': true,
+      'forth-section-container-bg-light': !isDark
+    }"
   >
     <div
-      
-
       [ngClass]="{
            
           'forth-section-container-bg': true,
            
           
         }"
-
       [ngStyle]="{
         background: isDark
           ? 'url(/assets/redesignArapovTrade/img/forth-section-container-bg-dark.png) no-repeat'
           : 'none'
       }"
     ></div>
-    
-    <div class="forth-section-container" >
+
+    <div class="forth-section-container">
       <div
         [ngClass]="{
           'second-section_programm-block-title': true,
@@ -644,7 +651,11 @@
       >
         Преимущества моего подхода к обучению трейдингу
       </div>
-      <div class="forth-section-container_tabs-block" data-aos="fade-up" data-aos-delay="300">
+      <div
+        class="forth-section-container_tabs-block"
+        data-aos="fade-up"
+        data-aos-delay="300"
+      >
         <div
           class="forth-section-container_tab"
           [ngStyle]="{
@@ -680,7 +691,9 @@
             class="author-page_main-block_description-text"
             [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
           >
-            Вы не просто изучаете теорию — вы торгуете на реальных счетах под моим наставничеством. Я сопровождаю вас на каждом этапе, помогая применять знания на практике и минимизировать ошибки.
+            Вы не просто изучаете теорию — вы торгуете на реальных счетах под
+            моим наставничеством. Я сопровождаю вас на каждом этапе, помогая
+            применять знания на практике и минимизировать ошибки.
           </div>
         </div>
         <div
@@ -718,7 +731,10 @@
             class="author-page_main-block_description-text"
             [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
           >
-            Моя методика базируется на концепции Вайкоффа и анализе торговых объёмов. Это не «волшебная таблетка», а система с положительным математическим ожиданием, которая доказала свою эффективность на реальных счетах моих учеников.
+            Моя методика базируется на концепции Вайкоффа и анализе торговых
+            объёмов. Это не «волшебная таблетка», а система с положительным
+            математическим ожиданием, которая доказала свою эффективность на
+            реальных счетах моих учеников.
           </div>
         </div>
         <div
@@ -756,20 +772,25 @@
             class="author-page_main-block_description-text"
             [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
           >
-           Никаких обещаний быстрых миллионов. Я обучаю реальному трейдингу, где успех зависит от дисциплины, знаний и управления рисками. Моя цель — сделать вас самостоятельным трейдером, а не зависимым от сигналов.
+            Никаких обещаний быстрых миллионов. Я обучаю реальному трейдингу,
+            где успех зависит от дисциплины, знаний и управления рисками. Моя
+            цель — сделать вас самостоятельным трейдером, а не зависимым от
+            сигналов.
           </div>
         </div>
       </div>
     </div>
     <div
-      class="third-section" data-aos="fade-up" data-aos-delay="300"
+      class="third-section"
+      data-aos="fade-up"
+      data-aos-delay="300"
       [ngStyle]="{
         background: isDark
           ? 'linear-gradient(90deg, rgba(56, 56, 32, 0.50) 0%, rgba(28, 29, 2, 0 ) 100%)'
           : 'linear-gradient(90deg, rgba(0, 130, 204,  0.12) )'
       }"
     >
-      <div class="third-section_text-block  forth-block-pad">
+      <div class="third-section_text-block forth-block-pad">
         <div
           [ngClass]="{
             'second-section_programm-block-title third-title-phone-small': true,
@@ -777,18 +798,42 @@
             'gradient-blue_author-page': !isDark
           }"
         >
-        Хотите больше?
+          Хотите больше?
         </div>
         <div
           class="author-page_main-block_description-text"
           [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
         >
-          Обучение у меня — это не про мгновенное богатство, а про построение устойчивого навыка, который приносит стабильный доход на дистанции. Вы получите знания, инструменты и поддержку, чтобы уверенно торговать на финансовых рынках. <br />
+          Обучение у меня — это не про мгновенное богатство, а про построение
+          устойчивого навыка, который приносит стабильный доход на дистанции. Вы
+          получите знания, инструменты и поддержку, чтобы уверенно торговать на
+          финансовых рынках. <br />
           <br />
-          Никогда не поздно начать <a style="text-decoration: underline;     letter-spacing: 1px; font-family: 'Advent Pro'; text-underline-offset: 4px; font-style: italic;" [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }" href="https://youtu.be/fcRKxFr-EW4?si=xh2GoCd_UaxfB29V" target="_blank" rel="nofollow">обучение трейдингу</a> ! Познакомьтесь с Азером — 73-летним учеником, который доказывает, что возраст не помеха для освоения трейдинга. Кандидат наук, физик-биотехнолог делится своим опытом перехода от убыточной торговли по индикаторам к прибыльному объемному анализу. Вдохновляющая история о том, как правильное обучение меняет результат.
-          <br>
-          <br>
-          Хотите узнать больше о том, как я могу помочь вам достичь ваших финансовых целей? Оставьте заявку, и я лично расскажу, как начать путь к успешному трейдингу!
+          Никогда не поздно начать
+          <a
+            style="
+              text-decoration: underline;
+              letter-spacing: 1px;
+              font-family: 'Advent Pro';
+              text-underline-offset: 4px;
+              font-style: italic;
+            "
+            [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+            href="https://youtu.be/fcRKxFr-EW4?si=xh2GoCd_UaxfB29V"
+            target="_blank"
+            rel="nofollow"
+            >обучение трейдингу</a
+          >
+          ! Познакомьтесь с Азером — 73-летним учеником, который доказывает, что
+          возраст не помеха для освоения трейдинга. Кандидат наук,
+          физик-биотехнолог делится своим опытом перехода от убыточной торговли
+          по индикаторам к прибыльному объемному анализу. Вдохновляющая история
+          о том, как правильное обучение меняет результат.
+          <br />
+          <br />
+          Хотите узнать больше о том, как я могу помочь вам достичь ваших
+          финансовых целей? Оставьте заявку, и я лично расскажу, как начать путь
+          к успешному трейдингу!
         </div>
         <div
           (click)="navigateToHomeWithId()"
@@ -839,7 +884,7 @@
     </div>
 
     <div
-      class="fifth-img-section_shape-one" 
+      class="fifth-img-section_shape-one"
       [ngStyle]="{
         background: isDark
           ? 'url(/assets/redesignArapovTrade/img/shape-one-bg-dark.png) no-repeat'
@@ -891,7 +936,8 @@
           class="sixth-block-tabs_text"
           [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
         >
-          После окончания обучения пополнение счёта составило 16 000 USD и ведётся активная публичная торговля на сервисе MQL5.
+          После окончания обучения пополнение счёта составило 16 000 USD и
+          ведётся активная публичная торговля на сервисе MQL5.
         </div>
       </div>
 
@@ -917,7 +963,12 @@
           class="sixth-block-tabs_text"
           [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
         >
-        За 11 месяцев торговли чистая прибыль составила 6237.14 USD, что составляет 40% от суммы депозита. Общее количество завершённых торговых сделок — 789, с WinRate 67%, средняя доходность в месяц — 3.57%. Сергей активно ведёт свой счёт публично на сервисе MQL5, где на момент написания статьи у него 8 подписчиков платных сигналов и 242 000 USD общего капитала его подписчиков.
+          За 11 месяцев торговли чистая прибыль составила 6237.14 USD, что
+          составляет 40% от суммы депозита. Общее количество завершённых
+          торговых сделок — 789, с WinRate 67%, средняя доходность в месяц —
+          3.57%. Сергей активно ведёт свой счёт публично на сервисе MQL5, где на
+          момент написания статьи у него 8 подписчиков платных сигналов и 242
+          000 USD общего капитала его подписчиков.
         </div>
       </div>
 
@@ -943,7 +994,8 @@
           class="sixth-block-tabs_text"
           [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
         >
-        В торговле использует концепцию «Ричарда Вайкоффа» и торговую систему «ложных пробоев».
+          В торговле использует концепцию «Ричарда Вайкоффа» и торговую систему
+          «ложных пробоев».
         </div>
       </div>
 
@@ -969,7 +1021,9 @@
           class="sixth-block-tabs_text"
           [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
         >
-          Сергей использует формулы из активного управления капиталом для повышения прибыльности торговой стратегии, что, в свою очередь, увеличивает общую ожидаемую доходность на дистанции.
+          Сергей использует формулы из активного управления капиталом для
+          повышения прибыльности торговой стратегии, что, в свою очередь,
+          увеличивает общую ожидаемую доходность на дистанции.
         </div>
       </div>
 
@@ -995,7 +1049,9 @@
           class="sixth-block-tabs_text"
           [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
         >
-          Ссылка на публичный торговый счёт Сергея на сайте MQL5, этот счёт является демонстрацией торговой системы Игоря Арапова, которая доступна бесплатно на сайте для всех желающих.
+          Ссылка на публичный торговый счёт Сергея на сайте MQL5, этот счёт
+          является демонстрацией торговой системы Игоря Арапова, которая
+          доступна бесплатно на сайте для всех желающих.
         </div>
       </div>
 
@@ -1022,7 +1078,9 @@
           class="sixth-block-tabs_text"
           [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
         >
-          Примечание: В видео «Как не потерять деньги в трейдинге?» я поднимаю ключевой вопрос, который отделяет прибыльного трейдера от неприбыльного.
+          Примечание: В видео «Как не потерять деньги в трейдинге?» я поднимаю
+          ключевой вопрос, который отделяет прибыльного трейдера от
+          неприбыльного.
         </div>
       </div>
     </div>
@@ -1062,24 +1120,32 @@
           class="author-page_main-block_description-text seventh-section-descr"
           [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
         >
-         В основе успешного трейдинга всегда лежит торговая система с положительным математическим ожиданием и ничего другого. Всех прибыльных трейдеров объединяет наличие таких систем. <br />
+          В основе успешного трейдинга всегда лежит торговая система с
+          положительным математическим ожиданием и ничего другого. Всех
+          прибыльных трейдеров объединяет наличие таких систем. <br />
           <br />
-          Прибыльность трейдеров различается в зависимости от формул управления капиталом, поскольку их существует большое количество, то и распределение по прибыльности идёт от консервативных до высокорискованных. <br />
+          Прибыльность трейдеров различается в зависимости от формул управления
+          капиталом, поскольку их существует большое количество, то и
+          распределение по прибыльности идёт от консервативных до
+          высокорискованных. <br />
           <br />
-          Опытные трейдеры никогда не завышают риски в трейдинге, а балансируют между положительным математическим ожиданием и контролем рисков в отдельно взятой сделке для достижения положительного результата на дистанции сделок.
+          Опытные трейдеры никогда не завышают риски в трейдинге, а балансируют
+          между положительным математическим ожиданием и контролем рисков в
+          отдельно взятой сделке для достижения положительного результата на
+          дистанции сделок.
         </div>
         <div
           (click)="navigateToHomeWithId()"
           [ngClass]="{
             'author-page_main-block_btn': true,
             'third-block-btn': true,
-            'seventh-btn':true,
+            'seventh-btn': true,
             'gradient-block-orange': isDark,
             'gradient-block-blue': !isDark
           }"
         >
           <span
-            class="author-page_main-block_btn-text "
+            class="author-page_main-block_btn-text"
             [ngStyle]="{ color: !isDark ? '#ffffff' : '#03314b' }"
             >Оставить заявку</span
           >
@@ -1121,7 +1187,8 @@
             </div>
           </div>
           <span class="footer-text"
-            >Бесплатное обучение трейдингу и практические рекомендации для новичков и профи, чтобы не потерять депозит.</span
+            >Бесплатное обучение трейдингу и практические рекомендации для
+            новичков и профи, чтобы не потерять депозит.</span
           >
         </div>
       </div>
@@ -1130,7 +1197,9 @@
         <div class="menu">
           <span class="menu-title">Меню</span>
           <div class="menu-title-block">
-            <a (click)="navigateTo('ru/main')" class="menu-title_text">Главная</a>
+            <a (click)="navigateTo('ru/main')" class="menu-title_text"
+              >Главная</a
+            >
           </div>
           <div class="menu-title-block">
             <a (click)="navigateTo('ru')" class="menu-title_text"
@@ -1170,24 +1239,41 @@
         </div>
 
         <div class="menu">
-          <span class="menu-title">Наши проекты</span
+          <span class="menu-title">Наши проекты</span>
+          <a
+            href="https://arapov.education/course/"
+            target="_blank"
+            class="menu-title-block menu-title_text"
           >
-          <a href="https://arapov.education/course/" target="_blank" class="menu-title-block menu-title_text">
-              
-           <span class="menu-title-block menu-title_text"
-            >  Быстрый старт в трейдинге</span> </a> 
-             <a href="https://arapov.education/reg-workshop/" target="_blank" class="menu-title-block menu-title_text">
-              
-           <span class="menu-title-block menu-title_text"
-            > Введение в трейдинг</span> </a> 
-             <a href="https://arapov.trade/ru/studying" target="_blank" class="menu-title-block menu-title_text">
-              
-           <span class="menu-title-block menu-title_text"
-            >  Профессиональные курсы</span> </a> 
-             <a href="https://arapovcopytrade.com" target="_blank" class="menu-title-block menu-title_text"> 
-              
-           <span class="menu-title-block menu-title_text"
-            >  Копитрейдинг</span> </a> 
+            <span class="menu-title-block menu-title_text">
+              Быстрый старт в трейдинге</span
+            >
+          </a>
+          <a
+            href="https://arapov.education/reg-workshop/"
+            target="_blank"
+            class="menu-title-block menu-title_text"
+          >
+            <span class="menu-title-block menu-title_text">
+              Введение в трейдинг</span
+            >
+          </a>
+          <a
+            href="https://arapov.trade/ru/studying"
+            target="_blank"
+            class="menu-title-block menu-title_text"
+          >
+            <span class="menu-title-block menu-title_text">
+              Профессиональные курсы</span
+            >
+          </a>
+          <a
+            href="https://arapovcopytrade.com"
+            target="_blank"
+            class="menu-title-block menu-title_text"
+          >
+            <span class="menu-title-block menu-title_text"> Копитрейдинг</span>
+          </a>
         </div>
       </div>
       <div class="popular-artickles">
@@ -1205,7 +1291,7 @@
               >Смарт Мани</a
             >
           </div>
-           <div class="popular-artickles_artickle">
+          <div class="popular-artickles_artickle">
             <a
               href="https://arapov.trade/ru/freestudying/makingmoneyintrading"
               target="_blank"
@@ -1277,7 +1363,7 @@
               >Трендовые каналы</a
             >
           </div>
-           <div class="popular-artickles_artickle">
+          <div class="popular-artickles_artickle">
             <a
               href="https://arapov.trade/ru/freestudying/tradingmyths"
               target="_blank"
@@ -1326,8 +1412,6 @@
             >
           </div>
         </div>
-         
-         
       </div>
     </div>
     <div class="component-1f">
@@ -1337,8 +1421,7 @@
           <span class="text-2d">Arapov.Trade</span>
           <div class="pic-14"></div>
           <span class="text-2e">2025. Все права защищены.</span>
-           <span class="text-2e">ФЛП Арапов И.В.
-ИНН 3314507171</span>
+          <span class="text-2e">ФЛП Арапов И.В. ИНН 3314507171</span>
         </div>
         <div class="section-18">
           <!-- facebook -->

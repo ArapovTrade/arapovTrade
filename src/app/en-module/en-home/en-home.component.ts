@@ -235,6 +235,39 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
       givenName: 'Igor',
       familyName: 'Arapov',
       jobTitle: 'Professional Trader',
+      hasOccupation: {
+        '@type': 'Occupation',
+        name: 'Trader',
+        description:
+         'Professional trader in financial markets since 2013',
+        occupationLocation: {
+          '@type': 'Country',
+          name: 'Ukraine',
+        },
+        skills: [
+          'Technical Analysis',
+          'Volume Analysis',
+          'Smart Money Concepts',
+          'Wyckoff Method',
+          'Risk Management',
+        ],
+      },
+      nationality: {
+        '@type': 'Country',
+        name: 'Ukraine',
+        alternateName: 'Украина',
+      },
+      knowsLanguage: [
+        { '@type': 'Language', name: 'Russian', alternateName: 'ru' },
+        { '@type': 'Language', name: 'Ukrainian', alternateName: 'uk' },
+        { '@type': 'Language', name: 'English', alternateName: 'en' },
+      ],
+      award: [
+        'Candidate for Master of Sports in Chess',
+'TradingView Editor`s Choice',
+'Author of a book with ISBN 979-8-90243-075-9',
+      ],
+      publishingPrinciples: 'https://arapov.trade/en/freestudying',
       description:
         'Trader since 2013, author of free trading education course. Specialization: Smart Money Concepts, Wyckoff Method, Volume Analysis.',
       image: 'https://arapov.trade/assets/img/igor-arapov.jpg',
@@ -265,14 +298,29 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
           dateCreated: '2013',
         },
       ],
+     identifier: [
+        {
+          '@type': 'PropertyValue',
+          propertyID: 'ORCID',
+          value: '0009-0003-0430-778X',
+        },
+        {
+          '@type': 'PropertyValue',
+          propertyID: 'Wikidata',
+          value: 'Q137454477',
+        },
+      ],
       sameAs: [
-        'https://t.me/ArapovTrade',
+        'https://www.wikidata.org/wiki/Q137454477',
+        'https://orcid.org/0009-0003-0430-778X',
+        'https://books.apple.com/us/author/игорь-арапов/id1862470877',
         'https://www.youtube.com/@ArapovTrade',
-        'https://www.facebook.com/igor.arapov.75',
         'https://www.linkedin.com/in/arapovtrade',
+        'https://www.mql5.com/ru/signals/2246716?source=External',
+        'https://t.me/ArapovTrade',
+        'https://www.facebook.com/igor.arapov.75',
         'https://rutube.ru/channel/41668647',
         'https://dzen.ru/id/66bf54343761337a416dac58?share_to=link',
-        'https://www.mql5.com/ru/signals/2246716?source=External',
       ],
       url: 'https://arapov.trade/en',
       mainEntityOfPage: 'https://arapov.trade/en',

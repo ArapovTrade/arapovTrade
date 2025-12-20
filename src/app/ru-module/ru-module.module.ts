@@ -13,7 +13,6 @@ const routes: Routes = [
 
     component: RuHomeComponent,
   },
-   
 
   {
     path: 'disclaimer',
@@ -32,12 +31,22 @@ const routes: Routes = [
     loadChildren: () =>
       import('./ru-home/ru-blog/ru-blog.module').then((m) => m.RuBlogModule),
   },
-  {path:'main', loadChildren:()=>import('./ru-home/ru-crypto/ru-crypto.module').then((m)=>m.RuCryptoModule)}
-   
+  {
+    path: 'main',
+    loadChildren: () =>
+      import('./ru-home/ru-crypto/ru-crypto.module').then(
+        (m) => m.RuCryptoModule
+      ),
+  },
+  {
+    path: 'books',
+    loadChildren: () =>
+      import('./ru-home/ru-book/ru-book.module').then((m) => m.RuBookModule),
+  },
 ];
 
 @NgModule({
-  declarations: [RuHomeComponent, RuHomePageComponent, DisclaimerComponent,],
+  declarations: [RuHomeComponent, RuHomePageComponent, DisclaimerComponent],
   imports: [
     CommonModule,
     FormsModule,

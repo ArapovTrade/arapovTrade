@@ -1,8 +1,7 @@
- 
- .desc{
+.desc {
   display: block;
- }
- 
+}
+
 .lato-regular {
   font-family: "Lato";
   font-weight: 400;
@@ -14,7 +13,6 @@
   font-weight: 700;
   font-style: normal;
 }
-
 
 .flex-row-f {
   position: relative;
@@ -36,9 +34,8 @@
   top: -60px;
   left: -60px;
 
-  background: url(/assets/redesignArapovTrade/img/Coins.png)
-    no-repeat center;
-   
+  background: url(/assets/redesignArapovTrade/img/Coins.png) no-repeat center;
+
   background-size: 100% 100%;
   z-index: 209;
 }
@@ -48,8 +45,8 @@
   height: 2063.346px;
   top: -647.437px;
   left: -300px;
-  background: url(/assets/redesignArapovTrade/img/BGshapes1.png)
-    no-repeat center;
+  background: url(/assets/redesignArapovTrade/img/BGshapes1.png) no-repeat
+    center;
   background-size: cover;
   z-index: 206;
 }
@@ -70,14 +67,13 @@
 .image {
   border-radius: 20px;
   width: 377px;
-  height: 576px; 
-   transition: background-image 1s ease, width 0.3s ease;
+  height: 576px;
+  transition: background-image 1s ease, width 0.3s ease;
   background-size: cover;
   z-index: 210;
-   background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 .shadow-dark {
   box-shadow: 0 0 10px #f7b709;
@@ -89,7 +85,7 @@
   position: absolute;
   width: 293px;
   height: 16px;
-  top: 30px; 
+  top: 30px;
   background: #fcda35;
   z-index: 240;
 }
@@ -114,11 +110,11 @@
   text-align: left;
   letter-spacing: -0.67px;
 }
-.posibnik-dlya-pochatkivtsiv { 
+.posibnik-dlya-pochatkivtsiv {
   color: #fcda35;
   font-family: Advent Pro;
   font-size: 60px;
-  font-weight: 700; 
+  font-weight: 700;
   line-height: normal;
   text-align: left;
   letter-spacing: -0.67px;
@@ -143,9 +139,9 @@
   align-items: center;
   justify-content: center;
   flex-wrap: nowrap;
-  gap: 10.667px; 
+  gap: 10.667px;
   width: 297.333px;
-  height: 85.333px; 
+  height: 85.333px;
   padding: 10.667px 42.667px 10.667px 42.667px;
   background: linear-gradient(90deg, #f7b709, #fffda0);
   z-index: 235;
@@ -154,19 +150,11 @@
 }
 
 .pochaty-navchannya {
-  // flex-shrink: 0;
-  // flex-basis: auto; 
-  // height: 32px;
   padding: 15px 45px;
   color: #03314b;
-  font-family:'Lato';
+  font-family: "Lato";
   font-size: 18px;
   font-weight: 400;
-  // line-height: 32px;
-  // text-align: left;
-  // text-transform: capitalize;
-  // white-space: nowrap;
-  // letter-spacing: 1.33px;
   z-index: 236;
 }
 
@@ -176,8 +164,7 @@
   height: 3.71%;
   top: 89.82%;
   left: 43.45%;
-  background: url(/assets/redesignArapovTrade/img/Cube.png)
-    no-repeat center;
+  background: url(/assets/redesignArapovTrade/img/Cube.png) no-repeat center;
   background-size: 100% 100%;
   z-index: 208;
 }
@@ -187,26 +174,20 @@
   gap: 30px;
   margin-top: 50px;
   margin-bottom: 20px;
-      height: 56px;
+  height: 56px;
 }
 
- 
-
-
-
 .bg-shape-1 {
-  position: absolute; 
+  position: absolute;
   width: 1626px;
   height: 1526.4px;
   top: -67.437px;
   left: 237px;
-  background: url(/assets/redesignArapovTrade/img/Top_Right-shape.png)
-    no-repeat center;
+  background: url(/assets/redesignArapovTrade/img/Top_Right-shape.png) no-repeat
+    center;
   background-size: cover;
   z-index: 206;
 }
-
-
 
 .mask-gradient {
   position: absolute;
@@ -214,15 +195,15 @@
   height: 838px;
   top: 0;
   left: 0;
-  background: url(/assets/redesignArapovTrade/img/mask-gradient.png)
-    no-repeat center;
+  background: url(/assets/redesignArapovTrade/img/mask-gradient.png) no-repeat
+    center;
   background-size: cover;
   z-index: 211;
 }
 // second block
 
 .flex-row-ba {
-  position: relative; 
+  position: relative;
   width: 100%;
   height: 660px;
   margin: 220px auto 0;
@@ -236,7 +217,7 @@
   position: relative;
   width: 1166px;
   margin: 0 auto;
-  height: 575.82px; 
+  height: 575.82px;
   z-index: 188;
 }
 .left {
@@ -261,38 +242,36 @@
   width: 115.903px;
   height: 98.305px;
   margin: 0px 0 0 267px;
- 
+
   z-index: -Infinity;
 }
-.arrows-dark{
- background: url(/assets/redesignArapovTrade/img/Arrow3x.png)
-    no-repeat center;
+.arrows-dark {
+  background: url(/assets/redesignArapovTrade/img/Arrow3x.png) no-repeat center;
   background-size: cover;
 }
-.arrows-light{
-background: url(/assets/redesignArapovTrade/img/Arrow3x-light.png)
-    no-repeat center;
+.arrows-light {
+  background: url(/assets/redesignArapovTrade/img/Arrow3x-light.png) no-repeat
+    center;
   background-size: cover;
 }
 .bg {
   position: relative;
   width: 365px;
   height: 473px;
-  margin: 4.512px 0 0 0; 
+  margin: 4.512px 0 0 0;
   z-index: 191;
   right: 20px;
   transition: background-image 0.3s ease;
 }
-.bg-dark{
-background: url(/assets/redesignArapovTrade/img/BG-leftpart-second.png)
+.bg-dark {
+  background: url(/assets/redesignArapovTrade/img/BG-leftpart-second.png)
     no-repeat center;
   background-size: cover;
 }
-.bg-light{
+.bg-light {
   background: url(/assets/redesignArapovTrade/img/BG-leftpart-second-light.png)
     no-repeat center;
   background-size: contain;
-
 }
 .img {
   position: absolute;
@@ -313,9 +292,9 @@ background: url(/assets/redesignArapovTrade/img/BG-leftpart-second.png)
   top: 434.263px;
   left: 0;
 
-  background: rgba(255, 205, 41, 0.08); 
+  background: rgba(255, 205, 41, 0.08);
   z-index: 194;
-  border-radius: 35px 60px 5px 35px; 
+  border-radius: 35px 60px 5px 35px;
   gap: 20px;
   padding: 16px 48px;
   overflow: hidden;
@@ -396,7 +375,7 @@ background: url(/assets/redesignArapovTrade/img/BG-leftpart-second.png)
   font-weight: 600;
   line-height: 56px;
   text-align: center;
-  text-transform: capitalize; 
+  text-transform: capitalize;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -408,7 +387,7 @@ background: url(/assets/redesignArapovTrade/img/BG-leftpart-second.png)
   font-weight: 600;
   line-height: 56px;
   text-align: center;
-  text-transform: capitalize; 
+  text-transform: capitalize;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -417,7 +396,7 @@ background: url(/assets/redesignArapovTrade/img/BG-leftpart-second.png)
   position: relative;
   width: 633px;
   height: 388px;
-  margin: 16px 0 35px 0; 
+  margin: 16px 0 35px 0;
   font-family: "Lato" !important;
   font-size: 18px;
   font-weight: 400;
@@ -461,21 +440,20 @@ background: url(/assets/redesignArapovTrade/img/BG-leftpart-second.png)
   height: 660px;
   top: 17px;
   left: 0;
- 
+
   z-index: 187;
 }
-.background-dark{
- background: url(/assets/redesignArapovTrade/img/second-block_bg.svg)
-    no-repeat center;
+.background-dark {
+  background: url(/assets/redesignArapovTrade/img/second-block_bg.svg) no-repeat
+    center;
   background-size: cover;
 }
-.background-light{
-   background: url(/assets/redesignArapovTrade/img/second-block_bg-light.png)
+.background-light {
+  background: url(/assets/redesignArapovTrade/img/second-block_bg-light.png)
     no-repeat center;
   background-size: cover;
-      width: 350px;
-    height: 485px;
-
+  width: 350px;
+  height: 485px;
 }
 
 // third block
@@ -512,7 +490,7 @@ background: url(/assets/redesignArapovTrade/img/BG-leftpart-second.png)
   line-height: 56px;
   text-align: center;
   text-transform: capitalize;
-  white-space: nowrap; 
+  white-space: nowrap;
   z-index: 174;
   -webkit-background-clip: text;
   background-clip: text;
@@ -528,7 +506,7 @@ background: url(/assets/redesignArapovTrade/img/BG-leftpart-second.png)
   width: 626px;
   height: 166px;
   margin: 29px 0 0 0;
-  padding: 9px 13px 9px 13px; 
+  padding: 9px 13px 9px 13px;
   border: 2px solid rgba(230, 237, 251, 0.16);
   z-index: 169;
   border-radius: 32px 60px 8px 40px;
@@ -605,7 +583,7 @@ background: url(/assets/redesignArapovTrade/img/BG-leftpart-second.png)
   flex-shrink: 0;
   position: relative;
   width: 56px;
-  height: 56px; 
+  height: 56px;
   z-index: 157;
   overflow: hidden;
   border-radius: 100px;
@@ -623,16 +601,15 @@ background: url(/assets/redesignArapovTrade/img/BG-leftpart-second.png)
   width: 24px;
   height: 24px;
 
- 
   z-index: 159;
 }
-.text-7-dark{
- background: url(/assets/redesignArapovTrade/img/third-block_charts_one.svg)
+.text-7-dark {
+  background: url(/assets/redesignArapovTrade/img/third-block_charts_one.svg)
     no-repeat center;
   background-size: 100% 100%;
 }
-.text-7-light{
- background: url(/assets/redesignArapovTrade/img/third-block_charts_one-light.png)
+.text-7-light {
+  background: url(/assets/redesignArapovTrade/img/third-block_charts_one-light.png)
     no-repeat center;
   background-size: 100% 100%;
 }
@@ -710,16 +687,15 @@ background: url(/assets/redesignArapovTrade/img/BG-leftpart-second.png)
   width: 24px;
   height: 24px;
 
-  
   z-index: 165;
 }
-.text-a-dark{
-background: url(/assets/redesignArapovTrade/img/third-block_charts_two.svg)
+.text-a-dark {
+  background: url(/assets/redesignArapovTrade/img/third-block_charts_two.svg)
     no-repeat center;
   background-size: cover;
 }
-.text-a-light{
-background: url(/assets/redesignArapovTrade/img/third-block_charts_two-light.png)
+.text-a-light {
+  background: url(/assets/redesignArapovTrade/img/third-block_charts_two-light.png)
     no-repeat center;
   background-size: cover;
 }
@@ -782,21 +758,20 @@ background: url(/assets/redesignArapovTrade/img/third-block_charts_two-light.png
   height: 902.675px;
   top: -191.716px;
   left: -169.803px;
-  
+
   z-index: 176;
 }
-.articles-dark{
-background: url(/assets/redesignArapovTrade/img/third-block_back.png)
+.articles-dark {
+  background: url(/assets/redesignArapovTrade/img/third-block_back.png)
     no-repeat center;
   background-size: cover;
 }
-.articles-light{
-background: url(/assets/redesignArapovTrade/img/articles-light.png)
-    no-repeat center;
+.articles-light {
+  background: url(/assets/redesignArapovTrade/img/articles-light.png) no-repeat
+    center;
   background-size: cover;
   top: -184.716px;
-    left: -243.803px; 
- 
+  left: -243.803px;
 }
 .articles-text {
   display: flex;
@@ -809,7 +784,7 @@ background: url(/assets/redesignArapovTrade/img/articles-light.png)
   height: 14.95%;
   top: -3.27%;
   left: -8.41%;
-  padding: 14px 48px 16px 48px; 
+  padding: 14px 48px 16px 48px;
   z-index: 184;
   border-radius: 32px 60px 8px 40px;
   backdrop-filter: blur(40px);
@@ -886,7 +861,7 @@ background: url(/assets/redesignArapovTrade/img/articles-light.png)
   gap: 8px;
   position: relative;
   width: 196px;
-  margin:18px 0 0 30px;
+  margin: 18px 0 0 30px;
   z-index: 180;
 }
 .positive-reviews-percent {
@@ -924,8 +899,8 @@ background: url(/assets/redesignArapovTrade/img/articles-light.png)
 .frame-f {
   position: relative;
   width: 212px;
-    height: 12px;
-    margin: 11px 0 0 30px;
+  height: 12px;
+  margin: 11px 0 0 30px;
   background: url(/assets/redesignArapovTrade/img/third-block-rectangle.svg)
     no-repeat center;
   background-size: cover;
@@ -938,7 +913,7 @@ background: url(/assets/redesignArapovTrade/img/articles-light.png)
 
 .flex-row {
   position: relative;
-  width: 100%; 
+  width: 100%;
   height: 1293px;
   margin: 46px 0 0 1px;
   z-index: 127;
@@ -958,16 +933,16 @@ background: url(/assets/redesignArapovTrade/img/articles-light.png)
   height: 1682px;
   top: -390px;
   left: 0;
-  
+
   z-index: 128;
 }
-.background-10-dark{
-background: url(/assets/redesignArapovTrade/img/forth-block-bg.svg)
-    no-repeat center;
+.background-10-dark {
+  background: url(/assets/redesignArapovTrade/img/forth-block-bg.svg) no-repeat
+    center;
   background-size: cover;
 }
-.background-10-light{
-background: url(/assets/redesignArapovTrade/img/forth-block-bg-lightt.svg)
+.background-10-light {
+  background: url(/assets/redesignArapovTrade/img/forth-block-bg-lightt.svg)
     no-repeat center;
   background-size: cover;
 }
@@ -999,25 +974,24 @@ background: url(/assets/redesignArapovTrade/img/forth-block-bg-lightt.svg)
   height: 102.212px;
   top: 0px;
   right: 1056.971px;
-   
-  
+
   z-index: 147;
 }
-.arrow-11-dark{
-background: url(/assets/redesignArapovTrade/img/Arrow-forth-block.png)
+.arrow-11-dark {
+  background: url(/assets/redesignArapovTrade/img/Arrow-forth-block.png)
     no-repeat center;
   background-size: cover;
 }
-.arrow-11-light{
-background: url(/assets/redesignArapovTrade/img/arrow-11-light.png)
-    no-repeat center;
+.arrow-11-light {
+  background: url(/assets/redesignArapovTrade/img/arrow-11-light.png) no-repeat
+    center;
   background-size: cover;
 }
 .trading-definition {
   position: relative;
   width: 1171px;
   height: 263px;
- 
+
   z-index: 148;
   border-radius: 32px 60px 8px 40px;
   backdrop-filter: blur(24px);
@@ -1045,16 +1019,14 @@ background: url(/assets/redesignArapovTrade/img/arrow-11-light.png)
   width: 14.6px;
   height: 58.4px;
   margin: 7.3px 0 0 29.2px;
- 
+
   z-index: 150;
 }
-.group-13-dark{
-   background: url(/assets/redesignArapovTrade/img/i-dark.png)
-    no-repeat center; 
+.group-13-dark {
+  background: url(/assets/redesignArapovTrade/img/i-dark.png) no-repeat center;
 }
-.group-13-light{
-background: url(/assets/redesignArapovTrade/img/i-light.png)
-    no-repeat center; 
+.group-13-light {
+  background: url(/assets/redesignArapovTrade/img/i-light.png) no-repeat center;
 }
 .trading-definition-title {
   display: flex;
@@ -1071,7 +1043,7 @@ background: url(/assets/redesignArapovTrade/img/i-light.png)
   line-height: 56px;
   text-align: center;
   text-transform: capitalize;
-  white-space: nowrap; 
+  white-space: nowrap;
   z-index: 152;
   -webkit-background-clip: text;
   background-clip: text;
@@ -1116,16 +1088,15 @@ background: url(/assets/redesignArapovTrade/img/i-light.png)
   top: -55px;
   right: -15px;
 
- 
   z-index: 143;
 }
-.arrow_fifth-block-rigth-dark{
- background: url(/assets/redesignArapovTrade/img/Arrow-fifth-block.png)
+.arrow_fifth-block-rigth-dark {
+  background: url(/assets/redesignArapovTrade/img/Arrow-fifth-block.png)
     no-repeat center;
   background-size: cover;
 }
-.arrow_fifth-block-rigth-light{
- background: url(/assets/redesignArapovTrade/img/Arrow-fifth-block-light.png)
+.arrow_fifth-block-rigth-light {
+  background: url(/assets/redesignArapovTrade/img/Arrow-fifth-block-light.png)
     no-repeat center;
   background-size: cover;
 }
@@ -1135,16 +1106,16 @@ background: url(/assets/redesignArapovTrade/img/i-light.png)
   height: 100px;
   top: 478px;
   right: 530px;
-  
+
   z-index: 143;
 }
-.streamline-sharp_pie-chart-remix-dark{
-background: url(/assets/redesignArapovTrade/img/streamline-sharp_pie-chart-remix.png)
+.streamline-sharp_pie-chart-remix-dark {
+  background: url(/assets/redesignArapovTrade/img/streamline-sharp_pie-chart-remix.png)
     no-repeat center;
   background-size: cover;
 }
-.streamline-sharp_pie-chart-remix-light{
-background: url(/assets/redesignArapovTrade/img/streamline-sharp_pie-chart-remix-light.png)
+.streamline-sharp_pie-chart-remix-light {
+  background: url(/assets/redesignArapovTrade/img/streamline-sharp_pie-chart-remix-light.png)
     no-repeat center;
   background-size: cover;
 }
@@ -1154,23 +1125,23 @@ background: url(/assets/redesignArapovTrade/img/streamline-sharp_pie-chart-remix
   height: 1133.92px;
   top: -410.437px;
   left: -476px;
-  
+
   z-index: 118;
 }
-.BG-shape-fifth_block-dark{
-background: url(/assets/redesignArapovTrade/img/BG-shape-fifth_block.png)
+.BG-shape-fifth_block-dark {
+  background: url(/assets/redesignArapovTrade/img/BG-shape-fifth_block.png)
     no-repeat center;
   background-size: cover;
 }
-.BG-shape-fifth_block-light{
-background: url(/assets/redesignArapovTrade/img/BG-shape-fifth_block-light.png)
+.BG-shape-fifth_block-light {
+  background: url(/assets/redesignArapovTrade/img/BG-shape-fifth_block-light.png)
     no-repeat center;
   background-size: cover;
 }
 .left-content {
   position: relative;
   width: 528px;
-  height: 621px; 
+  height: 621px;
   z-index: 131;
 }
 .heading-support-text {
@@ -1196,7 +1167,7 @@ background: url(/assets/redesignArapovTrade/img/BG-shape-fifth_block-light.png)
   line-height: 56px;
   text-align: center;
   text-transform: capitalize;
-  white-space: nowrap; 
+  white-space: nowrap;
   z-index: 133;
   -webkit-background-clip: text;
   background-clip: text;
@@ -1243,21 +1214,17 @@ background: url(/assets/redesignArapovTrade/img/BG-shape-fifth_block-light.png)
 
   z-index: 136;
   border-radius: 8px;
- 
 }
-.tab-dark{
-  
+.tab-dark {
   background: #2c2b1b;
-   box-shadow: 0 12px 30px 0 #010f0b;
+  box-shadow: 0 12px 30px 0 #010f0b;
 }
-.tab-light{
-  
-  
-   background: rgba(0, 136, 255, 0.16);
-   box-shadow: 0 2px 10px 0 rgba(0, 136, 255, 0.16);
-   .tab-text{
-color:#0C263A !important;
-   }
+.tab-light {
+  background: rgba(0, 136, 255, 0.16);
+  box-shadow: 0 2px 10px 0 rgba(0, 136, 255, 0.16);
+  .tab-text {
+    color: #0c263a !important;
+  }
 }
 .tab-text {
   flex-grow: 1;
@@ -1296,8 +1263,8 @@ color:#0C263A !important;
   height: 473px;
   top: 655px;
   left: 659px;
-  background: url(/assets/redesignArapovTrade/img/right-content.svg)
-    no-repeat center;
+  background: url(/assets/redesignArapovTrade/img/right-content.svg) no-repeat
+    center;
   background-size: cover;
   z-index: 130;
   border-radius: 16px;
@@ -1308,16 +1275,16 @@ color:#0C263A !important;
   height: 138.843px;
   top: -90px;
   left: 365px;
-  
+
   z-index: 124;
 }
-.six-block-graph-img-dark{
-background: url(/assets/redesignArapovTrade/img/gravity-ui_chart-bar.png)
+.six-block-graph-img-dark {
+  background: url(/assets/redesignArapovTrade/img/gravity-ui_chart-bar.png)
     no-repeat center;
   background-size: cover;
 }
-.six-block-graph-img-light{
-background: url(/assets/redesignArapovTrade/img/gravity-ui_chart-bar-light.png)
+.six-block-graph-img-light {
+  background: url(/assets/redesignArapovTrade/img/gravity-ui_chart-bar-light.png)
     no-repeat center;
   background-size: cover;
 }
@@ -1327,18 +1294,18 @@ background: url(/assets/redesignArapovTrade/img/gravity-ui_chart-bar-light.png)
   height: 694px;
   top: -180px;
   left: -120px;
-  
+
   z-index: 123;
   border-radius: 50%;
 }
-.bg-16-dark{
-background: url(/assets/redesignArapovTrade/img/Ellipse-sixth-block.png)
+.bg-16-dark {
+  background: url(/assets/redesignArapovTrade/img/Ellipse-sixth-block.png)
     no-repeat center;
   background-size: cover;
   filter: blur(50px);
 }
-.bg-16-light{
-background: url(/assets/redesignArapovTrade/img/Ellipse-sixth-block-light.png)
+.bg-16-light {
+  background: url(/assets/redesignArapovTrade/img/Ellipse-sixth-block-light.png)
     no-repeat center;
   background-size: cover;
   filter: blur(50px);
@@ -1346,7 +1313,7 @@ background: url(/assets/redesignArapovTrade/img/Ellipse-sixth-block-light.png)
 .six-block-main-img {
   position: relative;
   width: 509px;
-  height: 380px; 
+  height: 380px;
   background: url(/assets/redesignArapovTrade/img/six-block-main-img.svg)
     no-repeat center;
   background-size: cover;
@@ -1356,14 +1323,14 @@ background: url(/assets/redesignArapovTrade/img/Ellipse-sixth-block-light.png)
 .material-symbols-show-chart-rounded {
   display: flex;
   align-items: flex-start;
-  justify-content: flex-start; 
+  justify-content: flex-start;
   font-family: Advent Pro;
   font-size: 50px;
   font-weight: 700;
   line-height: 56px;
   text-align: center;
   text-transform: capitalize;
-  white-space: nowrap; 
+  white-space: nowrap;
   z-index: 122;
   -webkit-background-clip: text;
   background-clip: text;
@@ -1389,9 +1356,9 @@ background: url(/assets/redesignArapovTrade/img/Ellipse-sixth-block-light.png)
   align-items: flex-start;
   justify-content: center;
   flex-wrap: nowrap;
-  gap: 24px; 
+  gap: 24px;
   width: 574px;
-  height: 136px; 
+  height: 136px;
   padding: 24px 5px 20px 20px;
   background: rgba(255, 255, 255, 0.08);
   border: 2px solid rgba(230, 237, 251, 0.16);
@@ -1401,7 +1368,7 @@ background: url(/assets/redesignArapovTrade/img/Ellipse-sixth-block-light.png)
 }
 .naygolovnishe {
   color: #ffffff;
- 
+
   height: 92px;
   margin: 0;
   border-left: 5px solid #ffcd29;
@@ -1425,16 +1392,16 @@ background: url(/assets/redesignArapovTrade/img/Ellipse-sixth-block-light.png)
   height: 100px;
   top: 341px;
   left: 5px;
- 
+
   z-index: 125;
 }
-.flex-row-ca-dark{
- background: url(/assets/redesignArapovTrade/img/material-symbols_show-chart-rounded.png)
+.flex-row-ca-dark {
+  background: url(/assets/redesignArapovTrade/img/material-symbols_show-chart-rounded.png)
     no-repeat center;
   background-size: cover;
 }
-.flex-row-ca-light{
-background: url(/assets/redesignArapovTrade/img/material-symbols_show-chart-rounded-light.png)
+.flex-row-ca-light {
+  background: url(/assets/redesignArapovTrade/img/material-symbols_show-chart-rounded-light.png)
     no-repeat center;
   background-size: cover;
 }
@@ -1473,27 +1440,24 @@ background: url(/assets/redesignArapovTrade/img/material-symbols_show-chart-roun
   display: flex;
 }
 .bg_seventh {
-  
   width: 108%;
   height: 820px;
 
-  
   z-index: 36;
   position: absolute;
   left: -108px;
   top: 0px;
 }
- .bg_seventh-dark{
-background: url(/assets/redesignArapovTrade/img/BG-seventh-block.png)
+.bg_seventh-dark {
+  background: url(/assets/redesignArapovTrade/img/BG-seventh-block.png)
     no-repeat center;
-   background-size: cover;
-     
-  }
-  .bg_seventh-light{
-background: url(/assets/redesignArapovTrade/img/BG-seventh-block-light.png)
+  background-size: cover;
+}
+.bg_seventh-light {
+  background: url(/assets/redesignArapovTrade/img/BG-seventh-block-light.png)
     no-repeat center;
-   background-size: cover;
-  }
+  background-size: cover;
+}
 .seventh-block_left {
   width: 636px;
   height: 584px;
@@ -1535,14 +1499,14 @@ background: url(/assets/redesignArapovTrade/img/BG-seventh-block-light.png)
   z-index: 81;
   overflow: hidden;
 }
-.chart-dark{
-  background: url(/assets/redesignArapovTrade/img/chart-light.png)
-    no-repeat center;
+.chart-dark {
+  background: url(/assets/redesignArapovTrade/img/chart-light.png) no-repeat
+    center;
   background-size: cover;
 }
-.chart-light{
-  background: url(/assets/redesignArapovTrade/img/chart-dark.png)
-    no-repeat center;
+.chart-light {
+  background: url(/assets/redesignArapovTrade/img/chart-dark.png) no-repeat
+    center;
   background-size: cover;
 }
 .chart-arc {
@@ -1551,17 +1515,17 @@ background: url(/assets/redesignArapovTrade/img/BG-seventh-block-light.png)
   height: 100px;
   top: 463px;
   left: 347px;
- 
+
   z-index: 80;
   overflow: hidden;
 }
-.chart-arc-dark{
- background: url(/assets/redesignArapovTrade/img/mdi_chart-arc.png)
-    no-repeat center;
+.chart-arc-dark {
+  background: url(/assets/redesignArapovTrade/img/mdi_chart-arc.png) no-repeat
+    center;
   background-size: cover;
 }
-.chart-arc-light{
- background: url(/assets/redesignArapovTrade/img/mdi_chart-arc-light.png)
+.chart-arc-light {
+  background: url(/assets/redesignArapovTrade/img/mdi_chart-arc-light.png)
     no-repeat center;
   background-size: cover;
 }
@@ -1577,7 +1541,7 @@ background: url(/assets/redesignArapovTrade/img/BG-seventh-block-light.png)
   line-height: 56px;
   text-align: left;
   text-transform: capitalize;
-  white-space: nowrap; 
+  white-space: nowrap;
   z-index: 114;
   -webkit-background-clip: text;
   background-clip: text;
@@ -1589,7 +1553,7 @@ background: url(/assets/redesignArapovTrade/img/BG-seventh-block-light.png)
   justify-content: flex-start;
   margin-bottom: 22px;
   width: 625px;
-  // height: 92px; 
+  // height: 92px;
   color: #ffffff;
   font-family: Lato;
   font-size: 18px;
@@ -1618,7 +1582,7 @@ background: url(/assets/redesignArapovTrade/img/BG-seventh-block-light.png)
   font-weight: 600;
   line-height: 22.815px;
   text-align: left;
-  white-space: nowrap; 
+  white-space: nowrap;
   z-index: 100;
   -webkit-background-clip: text;
   background-clip: text;
@@ -1654,17 +1618,17 @@ background: url(/assets/redesignArapovTrade/img/BG-seventh-block-light.png)
   height: 17.39%;
   top: 43.48%;
   left: 0;
- 
+
   z-index: 103;
 }
-.vector-dark{
- background: url(/assets/redesignArapovTrade/img/vector-dark.png)
-    no-repeat center;
+.vector-dark {
+  background: url(/assets/redesignArapovTrade/img/vector-dark.png) no-repeat
+    center;
   background-size: 100% 100%;
 }
-.vector-light{
- background: url(/assets/redesignArapovTrade/img/vector-light.png)
-    no-repeat center;
+.vector-light {
+  background: url(/assets/redesignArapovTrade/img/vector-light.png) no-repeat
+    center;
   background-size: 100% 100%;
 }
 .plus {
@@ -1674,7 +1638,7 @@ background: url(/assets/redesignArapovTrade/img/BG-seventh-block-light.png)
   flex-wrap: nowrap;
   gap: 9px;
   position: relative;
-  width: 498px; 
+  width: 498px;
   z-index: 85;
 }
 .successful-trader {
@@ -1682,12 +1646,12 @@ background: url(/assets/redesignArapovTrade/img/BG-seventh-block-light.png)
   flex-basis: auto;
   position: relative;
   height: 23px;
-  font-family: 'Lato';
+  font-family: "Lato";
   font-size: 24px;
   font-weight: 700;
   line-height: 22.815px;
   text-align: left;
-  white-space: nowrap; 
+  white-space: nowrap;
   z-index: 86;
   -webkit-background-clip: text;
   background-clip: text;
@@ -1711,17 +1675,17 @@ background: url(/assets/redesignArapovTrade/img/BG-seventh-block-light.png)
   position: relative;
   width: 14.5px;
   height: 14.5px;
-   
+
   z-index: 88;
 }
-.vector-40-dark{
- background: url(/assets/redesignArapovTrade/img/plus-dark.png)
-    no-repeat center;
+.vector-40-dark {
+  background: url(/assets/redesignArapovTrade/img/plus-dark.png) no-repeat
+    center;
   background-size: cover;
 }
-.vector-40-light{
- background: url(/assets/redesignArapovTrade/img/plus-light.png)
-    no-repeat center;
+.vector-40-light {
+  background: url(/assets/redesignArapovTrade/img/plus-light.png) no-repeat
+    center;
   background-size: cover;
 }
 .continuous-learning {
@@ -1760,8 +1724,8 @@ background: url(/assets/redesignArapovTrade/img/BG-seventh-block-light.png)
 }
 
 .notice-block {
-  position: relative; 
-  // height: 162px; 
+  position: relative;
+  // height: 162px;
   height: fit-content;
   z-index: 55;
 }
@@ -1777,7 +1741,7 @@ background: url(/assets/redesignArapovTrade/img/BG-seventh-block-light.png)
   height: fit-content;
   top: 0;
   left: 0;
-  padding: 20px 48px 20px 48px; 
+  padding: 20px 48px 20px 48px;
   border: 2px solid rgba(230, 237, 251, 0.16);
   z-index: 52;
   border-radius: 32px 60px 8px 40px;
@@ -1836,17 +1800,15 @@ background: url(/assets/redesignArapovTrade/img/BG-seventh-block-light.png)
   // height: 129px;
   // justify-content: space-between;
   z-index: 59;
-      height: fit-content;
-    display: flex
-;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 .line {
-   
   width: 129px;
-  height: 129px; 
+  height: 129px;
   background: url(/assets/redesignArapovTrade/img/avatar-eight-block.svg)
     no-repeat center;
   background-size: cover;
@@ -1886,8 +1848,6 @@ background: url(/assets/redesignArapovTrade/img/BG-seventh-block-light.png)
   top: 73px;
   right: 186px;
 }
-
-
 
 .eighth-block_main-right {
   display: flex;
@@ -1980,15 +1940,15 @@ background: url(/assets/redesignArapovTrade/img/BG-seventh-block-light.png)
 .eighth-block_main-left {
   position: relative;
   width: 560px;
-  height: 710px; 
+  height: 710px;
   z-index: 77;
 }
 .img-18 {
   position: relative;
   width: 100%;
-  height: 100%; 
-  background: url(/assets/redesignArapovTrade/img/coffeeBook.png)
-    no-repeat center;
+  height: 100%;
+  background: url(/assets/redesignArapovTrade/img/coffeeBook.png) no-repeat
+    center;
   background-size: cover;
   z-index: 77;
 }
@@ -1998,19 +1958,18 @@ background: url(/assets/redesignArapovTrade/img/BG-seventh-block-light.png)
   height: 736px;
   top: 90px;
   left: -90px;
-  
+
   filter: blur(50px);
   z-index: 60;
 }
-.img-19-dark{
-background: url(/assets/redesignArapovTrade/img/JNsafcinNk.svg)
-    no-repeat center;
+.img-19-dark {
+  background: url(/assets/redesignArapovTrade/img/JNsafcinNk.svg) no-repeat
+    center;
   background-size: cover;
-
 }
-.img-19-light{
-background: url(/assets/redesignArapovTrade/img/elips-light.svg)
-    no-repeat center;
+.img-19-light {
+  background: url(/assets/redesignArapovTrade/img/elips-light.svg) no-repeat
+    center;
   background-size: cover;
 }
 .eighth-block_bottom-block {
@@ -2023,40 +1982,26 @@ background: url(/assets/redesignArapovTrade/img/elips-light.svg)
   height: 380px;
 }
 
-//  
-
-
-
-
-
-
+//
 
 //
 
-
-
-
-
-
-
-
 // language switcher styles
-
 
 .youtube-channel {
   position: relative;
   // width: 335px;
   // height: 64px;
   width: fit-content;
-  margin: 60px 0 0 0; 
+  margin: 60px 0 0 0;
   z-index: 200;
   border-radius: 8px;
   cursor: pointer;
-  justify-content:center;
+  justify-content: center;
   // padding-left: 30px;
   padding: 15px 45px;
   align-items: center;
-  transition: all 0.3s ease;  
+  transition: all 0.3s ease;
   gap: 10.667px;
 
   display: flex;
@@ -2064,19 +2009,19 @@ background: url(/assets/redesignArapovTrade/img/elips-light.svg)
 .primary-button {
   display: flex;
   align-items: center;
-  justify-content: space-between; 
+  justify-content: space-between;
   width: 255px;
   height: 24px;
 
-  width: auto;  
+  width: auto;
   padding: 0 10px;
   color: #1f233d;
   font-family: Open Sans;
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;
-  transition: all 0.3s ease; 
-  overflow: hidden;  
+  transition: all 0.3s ease;
+  overflow: hidden;
   text-transform: capitalize;
 
   letter-spacing: 1px;
@@ -2084,75 +2029,70 @@ background: url(/assets/redesignArapovTrade/img/elips-light.svg)
 }
 .btn-section-one {
   cursor: pointer;
-  transition: all 0.3s ease;  
+  transition: all 0.3s ease;
   display: flex;
   align-items: center;
-  justify-content: space-between;  
-  flex-wrap: nowrap; 
-  position: relative; 
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  position: relative;
   z-index: 235;
   border-radius: 10.667px;
-  overflow: hidden;  
+  overflow: hidden;
 }
 
 .icon-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 0;  
-  height: 80px;  
+  width: 0;
+  height: 80px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   transition: all 0.3s ease;
-  flex-shrink: 0;  
+  flex-shrink: 0;
 }
 .icon-button-dark {
-  background-image: url(/assets/redesignArapovTrade/img/IconButtonbig.png);  
+  background-image: url(/assets/redesignArapovTrade/img/IconButtonbig.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
 .icon-button-light {
-  background-image: url(/assets/redesignArapovTrade/img/IconButtonbig-light.png);   
+  background-image: url(/assets/redesignArapovTrade/img/IconButtonbig-light.png);
   background-repeat: no-repeat;
   background-position: center;
 }
 
- 
 .icon-button-hover-dark {
   &:hover {
     background: linear-gradient(90deg, #f7b709, #fffda0);
     .frame-1 {
-    background: url(/assets/redesignArapovTrade/img/Play.png)
-      no-repeat center !important;
-          background-size: contain !important;
-  }
+      background: url(/assets/redesignArapovTrade/img/Play.png) no-repeat center !important;
+      background-size: contain !important;
+    }
   }
 }
 .icon-button-hover-light {
-  
   &:hover {
     background: #005db8;
     .text {
-    color: white  ;
-  }
-      .frame-1 {
-           
-    background: url(/assets/redesignArapovTrade/img/Frame111.png)
-      no-repeat center  !important;
+      color: white;
+    }
+    .frame-1 {
+      background: url(/assets/redesignArapovTrade/img/Frame111.png) no-repeat
+        center !important;
       background-size: contain !important;
-  }
+    }
   }
 }
- 
 
 .podrobnee {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: nowrap; 
-  transition: all 0.3s ease;   
+  flex-wrap: nowrap;
+  transition: all 0.3s ease;
 
   z-index: 231;
   border-radius: 11px;
@@ -2163,66 +2103,63 @@ background: url(/assets/redesignArapovTrade/img/elips-light.svg)
   background: #22190d;
 }
 .podrobnee-light {
-  border: 2px solid #0082CC;
+  border: 2px solid #0082cc;
   background: #f5f5f5;
 }
 .podrobnee-light .text-p {
-  color: #0082CC;
+  color: #0082cc;
 }
 .podrobnee-dark .text-p {
-  color: #FCDB35;
+  color: #fcdb35;
 }
 .icon-play {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: nowrap;
-  flex-shrink: 0; 
-  position: relative; 
+  flex-shrink: 0;
+  position: relative;
   width: 50px;
-    height: 44px; 
+  height: 44px;
   z-index: 232;
   border-radius: 133.333px;
   background-size: contain;
 }
- 
 
- .icon-play-light:hover path{
-  stroke: #0082CC;
-  
- }
+.icon-play-light:hover path {
+  stroke: #0082cc;
+}
 
- .icon-play-light:hover {
-  .icon-play-light-rect{
-    stroke: #0082CC !important;
+.icon-play-light:hover {
+  .icon-play-light-rect {
+    stroke: #0082cc !important;
   }
- }
- .icon-play-dark:hover path{
-  stroke: #FFCD29;
-  
- }
+}
+.icon-play-dark:hover path {
+  stroke: #ffcd29;
+}
 
- .icon-play-dark:hover {
-  .icon-play-dark-rect{
-    stroke: #FFCD29 !important;
+.icon-play-dark:hover {
+  .icon-play-dark-rect {
+    stroke: #ffcd29 !important;
   }
- }
+}
 
 .frame-1 {
   flex-shrink: 0;
   position: relative;
-      width: 50px;
-    height: 50px; 
+  width: 50px;
+  height: 50px;
   background-size: cover;
   z-index: 233;
   overflow: hidden;
   transform: rotate(180deg);
-      background-size: contain !important;
+  background-size: contain !important;
 }
 .text {
   flex-shrink: 0;
   flex-basis: auto;
-   
+
   height: 32px;
   color: #ffffff;
 
@@ -2238,44 +2175,24 @@ background: url(/assets/redesignArapovTrade/img/elips-light.svg)
   line-height: 32px;
 }
 
-
-
-
 .about-bg {
   display: none;
 }
 /* Медиа-запрос для планшетов (до 767px) */
 
 @media (min-width: 767px) and (max-width: 1200px) {
-  .follow-us-block{
-  margin-top: 20px;
-}
- 
-   
-  
+  .follow-us-block {
+    margin-top: 20px;
+  }
 
   /* Header */
-  
-  
 
-  
-
-  
-
-  
-
-  
-  
- 
-
-  
-
-  .youtube-channel { 
+  .youtube-channel {
     padding: 10px 30px;
     font-size: 16px;
     font-family: "Lato";
   }
-   
+
   .primary-button {
     font-size: 13px;
   }
@@ -2287,8 +2204,8 @@ background: url(/assets/redesignArapovTrade/img/elips-light.svg)
     width: 429px;
     height: 468px;
   }
-  .flex-row-e { 
-    flex-direction: row;  
+  .flex-row-e {
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
     padding: 65px 0 0 0;
@@ -2332,7 +2249,7 @@ background: url(/assets/redesignArapovTrade/img/elips-light.svg)
   .zagolovok {
     line-height: 50px;
     width: 424px;
-    height:130px;
+    height: 130px;
     margin-bottom: 15px;
   }
   .navchannya-treidzingu-z-nulya,
@@ -2349,48 +2266,42 @@ background: url(/assets/redesignArapovTrade/img/elips-light.svg)
     justify-content: space-evenly;
     text-align: left;
   }
-   
+
   .pochaty-navchannya {
-     
-     
     font-family: "Lato";
     font-weight: 600;
     font-size: 16px;
-    
+
     display: flex;
     align-items: center;
     justify-content: center;
+  }
 
-    
-  }
-   
   .icon-button-hover-dark {
-  &:hover {
-    background: linear-gradient(90deg, #f7b709, #fffda0);
-    .frame-1 {
-    background: url(/assets/redesignArapovTrade/img/Play.png)
-      no-repeat center !important;
-          background-size: contain !important;
-  }
-  }
-}
-.icon-button-hover-light {
-  
-  &:hover {
-    background: #005db8;
-    .text {
-    color: white  ;
-  }
+    &:hover {
+      background: linear-gradient(90deg, #f7b709, #fffda0);
       .frame-1 {
-           
-    background: url(/assets/redesignArapovTrade/img/Frame111.png)
-      no-repeat center  !important;
-      background-size: contain !important;
+        background: url(/assets/redesignArapovTrade/img/Play.png) no-repeat
+          center !important;
+        background-size: contain !important;
+      }
+    }
   }
+  .icon-button-hover-light {
+    &:hover {
+      background: #005db8;
+      .text {
+        color: white;
+      }
+      .frame-1 {
+        background: url(/assets/redesignArapovTrade/img/Frame111.png) no-repeat
+          center !important;
+        background-size: contain !important;
+      }
+    }
   }
-}
-  .frame-1{
-     width: 40px;
+  .frame-1 {
+    width: 40px;
     height: 40px;
   }
   .icon-play {
@@ -2403,20 +2314,17 @@ background: url(/assets/redesignArapovTrade/img/elips-light.svg)
     position: absolute;
     right: 21px;
     top: 148px;
-    background-repeat: no-repeat !important; 
-        background-size: 107% 105% !important;
+    background-repeat: no-repeat !important;
+    background-size: 107% 105% !important;
     background-position: center !important;
   }
   .authot_button_block {
     flex-direction: row;
-     
+
     height: 44px;
     margin: 0;
   }
-  
-  
- 
-   
+
   .cube {
     width: 34px;
     height: 23px;
@@ -2439,12 +2347,12 @@ background: url(/assets/redesignArapovTrade/img/elips-light.svg)
     height: auto;
     margin: 0 auto;
   }
-  .background { 
+  .background {
     height: 918px;
     position: absolute;
-    background-size: cover; 
+    background-size: cover;
     top: -119px;
-    left: 0px; 
+    left: 0px;
   }
   .left {
     width: 725px;
@@ -2474,26 +2382,25 @@ background: url(/assets/redesignArapovTrade/img/elips-light.svg)
     background-size: contain;
 
     top: 100px;
-    left: 10px; 
+    left: 10px;
     background-repeat: no-repeat;
   }
-  .bg-dark{
-background: url(/assets/redesignArapovTrade/img/BG-back.png)
-    no-repeat center;
-  background-size: cover;
-}
-.bg-light{
-  background: url(/assets/redesignArapovTrade/img/BG-back-light.png)
-    no-repeat center;
-  background-size: contain;
-  width: 764px;
-        height: 477px;
-        position: absolute;
-        background-size: contain;
-        top: 100px;
-        left: -70px;
-
-}
+  .bg-dark {
+    background: url(/assets/redesignArapovTrade/img/BG-back.png) no-repeat
+      center;
+    background-size: cover;
+  }
+  .bg-light {
+    background: url(/assets/redesignArapovTrade/img/BG-back-light.png) no-repeat
+      center;
+    background-size: contain;
+    width: 764px;
+    height: 477px;
+    position: absolute;
+    background-size: contain;
+    top: 100px;
+    left: -70px;
+  }
   .arrows {
     left: 0px;
     top: 0px;
@@ -2509,9 +2416,9 @@ background: url(/assets/redesignArapovTrade/img/BG-back.png)
     top: 47px;
     left: 352px;
   }
-   
+
   .name-4,
-  .designation { 
+  .designation {
     line-height: 20px;
   }
   .right {
@@ -2554,27 +2461,22 @@ background: url(/assets/redesignArapovTrade/img/BG-back.png)
     height: 1022.675px;
     top: -274.716px;
     left: -239.803px;
-    
   }
-  .articles-dark{
-position: absolute;
+  .articles-dark {
+    position: absolute;
     background-size: contain;
     background: url(/assets/redesignArapovTrade/img/Shapes-second-table.png);
-}
-.articles-light{
-background: url(/assets/redesignArapovTrade/img/articles-light.png)
-    no-repeat center;
-  background-size: cover;
-   
+  }
+  .articles-light {
+    background: url(/assets/redesignArapovTrade/img/articles-light.png)
+      no-repeat center;
+    background-size: cover;
 
-            width: 1046.678px;
-        height: 1253.675px;
-        top: -302.716px;
-        left: -309.803px;
-
-
-        
-}
+    width: 1046.678px;
+    height: 1253.675px;
+    top: -302.716px;
+    left: -309.803px;
+  }
   .articles-text {
     width: 500px;
     height: 80px;
@@ -2664,16 +2566,16 @@ background: url(/assets/redesignArapovTrade/img/articles-light.png)
   .about-bg {
     display: block;
     background: url(/assets/redesignArapovTrade/img/BG-lines-back.png);
-    background-size: cover; 
+    background-size: cover;
     width: 100%;
     height: 300px;
     position: absolute;
     top: 944px;
   }
-  
- .desc{
-  display: block;
- }
+
+  .desc {
+    display: block;
+  }
   /* Четвёртый блок (.flex-row) */
   .flex-row {
     width: 100%;
@@ -2805,21 +2707,21 @@ background: url(/assets/redesignArapovTrade/img/articles-light.png)
   .left-content {
     width: 728px;
     height: 621px;
-    position: relative; 
+    position: relative;
   }
   .osnovi-treidingu {
     width: 278px;
     height: 56px;
     font-size: 40px;
     line-height: 36px;
-    text-align: center; 
+    text-align: center;
     align-items: center;
   }
   .osnovi-treidingu-14 {
     width: 728px;
     font-size: 16px;
     height: 90px;
-    margin-top: 10px; 
+    margin-top: 10px;
   }
   .tabs {
     width: 100%;
@@ -2836,7 +2738,7 @@ background: url(/assets/redesignArapovTrade/img/articles-light.png)
 
   /* Пятый блок (.six_block) */
   .six_block {
-    width: 728px; 
+    width: 728px;
     flex-direction: column;
     align-items: center;
     margin: 120px auto;
@@ -2881,7 +2783,7 @@ background: url(/assets/redesignArapovTrade/img/articles-light.png)
     height: 56px;
     font-size: 40px;
     line-height: 36px;
-    text-align: center; 
+    text-align: center;
   }
   .flex-row-fc {
     width: 728px;
@@ -2921,23 +2823,22 @@ background: url(/assets/redesignArapovTrade/img/articles-light.png)
     width: 121%;
     height: 93%;
     position: absolute;
-    
+
     flex-direction: column-reverse;
     top: 80px;
     left: 0;
   }
-  .bg_seventh-dark{
-background: url(/assets/redesignArapovTrade/img/bg-seventh-table.png);
-    background-size: cover;  
-    background-position: center;  
-    background-repeat: no-repeat;  
+  .bg_seventh-dark {
+    background: url(/assets/redesignArapovTrade/img/bg-seventh-table.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
-  .bg_seventh-light{
-
-background: url(/assets/redesignArapovTrade/img/bg-seventh-table-light.png);
-    background-size: cover;  
-    background-position: center;  
-    background-repeat: no-repeat;  
+  .bg_seventh-light {
+    background: url(/assets/redesignArapovTrade/img/bg-seventh-table-light.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
   .seventh-block_left {
     width: 724px;
@@ -3000,7 +2901,6 @@ background: url(/assets/redesignArapovTrade/img/bg-seventh-table-light.png);
     letter-spacing: normal;
   }
 
-   
   .eighth-block {
     width: 100%;
     height: 2030px;
@@ -3011,7 +2911,7 @@ background: url(/assets/redesignArapovTrade/img/bg-seventh-table-light.png);
     align-items: center;
     height: auto;
     margin-bottom: 30px;
-    width: 727px; 
+    width: 727px;
     margin: 0 auto;
   }
   .eighth-block_main-left {
@@ -3038,14 +2938,14 @@ background: url(/assets/redesignArapovTrade/img/bg-seventh-table-light.png);
     left: -55px;
   }
   .eighth-block_main-right {
-    width: 100%; 
+    width: 100%;
     position: relative;
     margin-top: 15px;
   }
   .start-trading-recommendation {
     width: 100%;
     height: 168px;
-    font-size: 16px; 
+    font-size: 16px;
     margin: 48px 0 40px;
   }
   .educational-platform-features {
@@ -3063,7 +2963,7 @@ background: url(/assets/redesignArapovTrade/img/bg-seventh-table-light.png);
   }
   .eighth-block_bottom-block {
     width: 728px;
-    height: auto; 
+    height: auto;
     margin-top: 70px;
   }
   .notice-block {
@@ -3103,35 +3003,17 @@ background: url(/assets/redesignArapovTrade/img/bg-seventh-table-light.png);
     font-family: "Lato";
   }
   .features-list {
-    left: 590px; 
+    left: 590px;
     top: 160px;
   }
-
-   
-
 }
 
 @media (max-width: 766px) {
-  
-  .follow-pad{
+  .follow-pad {
     top: 910px !important;
   }
- 
-  
 
   /* Header */
-  
-  
-  
-
-
- 
-  
- 
-
- 
-
-  
 
   .youtube-channel {
     margin: 0 auto;
@@ -3143,12 +3025,11 @@ background: url(/assets/redesignArapovTrade/img/bg-seventh-table-light.png);
     justify-content: center;
   }
 
-  .youtube-channel:hover { 
-    
+  .youtube-channel:hover {
     margin: 0 auto;
     font-size: 16px;
     font-family: "Lato";
-    
+
     padding: 0;
     justify-content: center;
   }
@@ -3157,7 +3038,7 @@ background: url(/assets/redesignArapovTrade/img/bg-seventh-table-light.png);
     font-size: clamp(12px, 1.7vw + 5px, 13px);
   }
 
-  .hero-section-main { 
+  .hero-section-main {
     margin-top: 0;
   }
 
@@ -3169,8 +3050,8 @@ background: url(/assets/redesignArapovTrade/img/bg-seventh-table-light.png);
   .flex-row-e {
     flex-direction: column;
     align-items: center;
-    justify-content: space-between; 
-    height: auto; 
+    justify-content: space-between;
+    height: auto;
     margin: 0;
     padding: 20px 0 0 0;
     width: 100%;
@@ -3222,7 +3103,7 @@ background: url(/assets/redesignArapovTrade/img/bg-seventh-table-light.png);
   }
 
   .navchannya-treidzingu-z-nulya,
-  .posibnik-dlya-pochatkivtsiv { 
+  .posibnik-dlya-pochatkivtsiv {
     font-size: 30px;
     margin: 0;
     padding: 0;
@@ -3240,48 +3121,45 @@ background: url(/assets/redesignArapovTrade/img/bg-seventh-table-light.png);
   }
 
   .btn-section-one {
-    width: 100%; 
+    width: 100%;
     padding: 0;
     justify-content: center;
   }
 
-  .pochaty-navchannya { 
+  .pochaty-navchannya {
     font-size: 16px;
     font-family: "Lato";
-    font-weight: 600; 
+    font-weight: 600;
     display: flex;
     align-items: center;
     justify-content: center;
-        width:  100%;
-    padding: 10px 0; 
+    width: 100%;
+    padding: 10px 0;
   }
 
-   
   .icon-button-hover-dark {
-  &:hover {
-    background: linear-gradient(90deg, #f7b709, #fffda0);
-    .frame-1 {
-    background: url(/assets/redesignArapovTrade/img/Play.png)
-      no-repeat center !important;
-          background-size: contain !important;
-  }
-  }
-}
-.icon-button-hover-light {
-  
-  &:hover {
-    background: #005db8;
-    .text {
-    color: white  ;
-  }
+    &:hover {
+      background: linear-gradient(90deg, #f7b709, #fffda0);
       .frame-1 {
-           
-    background: url(/assets/redesignArapovTrade/img/Frame111.png)
-      no-repeat center  !important;
-      background-size: contain !important;
+        background: url(/assets/redesignArapovTrade/img/Play.png) no-repeat
+          center !important;
+        background-size: contain !important;
+      }
+    }
   }
+  .icon-button-hover-light {
+    &:hover {
+      background: #005db8;
+      .text {
+        color: white;
+      }
+      .frame-1 {
+        background: url(/assets/redesignArapovTrade/img/Frame111.png) no-repeat
+          center !important;
+        background-size: contain !important;
+      }
+    }
   }
-}
   .flex-column {
     width: 100%;
   }
@@ -3291,31 +3169,25 @@ background: url(/assets/redesignArapovTrade/img/bg-seventh-table-light.png);
     height: clamp(18px, 2.7vh + 10px, 20px);
   }
 
-  .image { 
-    background: url(/assets/redesignArapovTrade/img/image-phone-main.svg)  ; 
-width:265px;
+  .image {
+    background: url(/assets/redesignArapovTrade/img/image-phone-main.svg);
+    width: 265px;
     height: 391px;
 
-    background-repeat: no-repeat !important; 
-        background-size: 107% 105% !important;
+    background-repeat: no-repeat !important;
+    background-size: 107% 105% !important;
     background-position: center !important;
   }
 
   .authot_button_block {
     flex-direction: column;
-    gap: 15px; 
+    gap: 15px;
     height: auto;
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-
-  
-  
-  
-
- 
 
   .cube {
     width: clamp(25px, 4.5vw + 10px, 34px);
@@ -3329,44 +3201,42 @@ width:265px;
   .flex-row-ba {
     width: 100%;
     height: auto;
-    margin-top: 113px; 
+    margin-top: 113px;
   }
 
   .row {
     width: 100%;
     height: 100%;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
   }
 
-  .background { 
+  .background {
     position: absolute;
 
- 
-    width: 100%; 
-    top: -28px; 
+    width: 100%;
+    top: -28px;
     background-repeat: no-repeat;
     background-position: top;
     background-size: auto;
   }
-.background-dark{
-   position: absolute;
-   background: url(/assets/redesignArapovTrade/img/BG-third-phone.png);
-  background-size: cover;
-  background-repeat: no-repeat;
+  .background-dark {
+    position: absolute;
+    background: url(/assets/redesignArapovTrade/img/BG-third-phone.png);
+    background-size: cover;
+    background-repeat: no-repeat;
     background-position: top;
     background-size: auto;
-}
-.background-light{
-   position: absolute;
+  }
+  .background-light {
+    position: absolute;
     background: url(/assets/redesignArapovTrade/img/BG-third-phone-light.png);
-  background-size: cover;
-  background-repeat: no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
     background-position: top;
-      width: 333px;
+    width: 333px;
     height: 600px;
-
-}
+  }
   .left {
     width: 100%;
 
@@ -3397,7 +3267,6 @@ width:265px;
   }
 
   .bg {
-    
     width: 62%;
     left: 8px;
     height: 485px;
@@ -3405,18 +3274,18 @@ width:265px;
     background-size: inherit;
     background-repeat: no-repeat;
   }
-  .bg-dark{
-background: url(/assets/redesignArapovTrade/img/BG-author-phone.png); 
-    background-repeat: no-repeat; 
+  .bg-dark {
+    background: url(/assets/redesignArapovTrade/img/BG-author-phone.png);
+    background-repeat: no-repeat;
     background-position: center;
-}
-.bg-light{
-  background: url(/assets/redesignArapovTrade/img/BG-author-phone-light.png); 
-    background-repeat: no-repeat; 
+  }
+  .bg-light {
+    background: url(/assets/redesignArapovTrade/img/BG-author-phone-light.png);
+    background-repeat: no-repeat;
     background-position: center;
-        
-        top: -9px !important;
-}
+
+    top: -9px !important;
+  }
 
   .arrows {
     position: absolute;
@@ -3434,7 +3303,7 @@ background: url(/assets/redesignArapovTrade/img/BG-author-phone.png);
     top: 0px;
     padding: 14px 20px;
     left: 50%;
-    transform: translateX(-50%); 
+    transform: translateX(-50%);
   }
 
   .name-4 {
@@ -3447,7 +3316,7 @@ background: url(/assets/redesignArapovTrade/img/BG-author-phone.png);
   .right {
     width: 100%;
     height: auto;
-    position: relative; 
+    position: relative;
     padding: 0 20px;
   }
 
@@ -3472,7 +3341,7 @@ background: url(/assets/redesignArapovTrade/img/BG-author-phone.png);
   }
 
   /* Третий блок (.about) */
-  .about { 
+  .about {
     width: 100%;
     flex-direction: column-reverse;
     align-items: center;
@@ -3485,25 +3354,23 @@ background: url(/assets/redesignArapovTrade/img/BG-author-phone.png);
     position: relative;
   }
 
-  .articles { 
+  .articles {
     left: -319px;
     top: -234px;
-   
   }
 
-   .articles-dark{
- position: absolute;
+  .articles-dark {
+    position: absolute;
     background-size: contain;
     background: url(/assets/redesignArapovTrade/img/shapes-forth-phone.png);
-}
-.articles-light{
- 
-  background-size: cover;
-            height: 1086px;
-        width: 734px;
-        top: -278px;
-        left: -334px;
-}
+  }
+  .articles-light {
+    background-size: cover;
+    height: 1086px;
+    width: 734px;
+    top: -278px;
+    left: -334px;
+  }
 
   .articles-text {
     width: 335px;
@@ -3518,20 +3385,19 @@ background: url(/assets/redesignArapovTrade/img/BG-author-phone.png);
   .graphics {
     font-size: 18px;
   }
-  .mask-group { 
-    width: 100%; 
+  .mask-group {
+    width: 100%;
     height: auto;
     position: relative;
     background-size: contain;
     top: 0;
     left: 0;
- 
   }
 
   .reviews-block {
-    background: url(/assets/redesignArapovTrade/img/forth-main-phone.svg); 
+    background: url(/assets/redesignArapovTrade/img/forth-main-phone.svg);
     height: 540px;
-    width: 100%; 
+    width: 100%;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -3548,20 +3414,20 @@ background: url(/assets/redesignArapovTrade/img/BG-author-phone.png);
   .left-text {
     width: 100%;
     height: auto;
-    position: relative; 
+    position: relative;
     padding: 0 20px;
     margin-top: 90px;
   }
 
   .author-header {
-    font-size: 30px; 
-    text-align: start; 
+    font-size: 30px;
+    text-align: start;
     margin: 0;
     padding-left: clamp(2px, 0.3vw, 2px);
     justify-content: flex-start;
   }
 
-  .quote-block { 
+  .quote-block {
     width: 100%;
     height: 245px;
     padding: clamp(6px, 1.2vw + 2px, 9px) clamp(16px, 3.2vw, 24px)
@@ -3582,7 +3448,7 @@ background: url(/assets/redesignArapovTrade/img/BG-author-phone.png);
     top: 20px;
   }
 
-  .quote .features-list { 
+  .quote .features-list {
     top: 177px;
   }
   .plus-3f {
@@ -3633,7 +3499,7 @@ background: url(/assets/redesignArapovTrade/img/BG-author-phone.png);
 
   /* Четвёртый блок (.flex-row) */
   .flex-row {
-    width: 100%; 
+    width: 100%;
     height: auto;
     margin: clamp(20px, 4vh + 10px, 30px) 0;
     margin-top: 22px;
@@ -3647,7 +3513,7 @@ background: url(/assets/redesignArapovTrade/img/BG-author-phone.png);
   }
 
   .background-shape {
-    left: clamp(-200px, -35vw - 50px, -266px); 
+    left: clamp(-200px, -35vw - 50px, -266px);
     z-index: 1;
     top: -600px;
     height: 834px;
@@ -3665,7 +3531,7 @@ background: url(/assets/redesignArapovTrade/img/BG-author-phone.png);
 
   .background-shape {
     display: block;
-    width: clamp(1500px, 280vw + 100px, 2149.56px); 
+    width: clamp(1500px, 280vw + 100px, 2149.56px);
     height: 1400px;
     position: absolute;
   }
@@ -3734,7 +3600,7 @@ background: url(/assets/redesignArapovTrade/img/BG-author-phone.png);
   .trading-definition-text {
     width: 100%;
     height: 100%;
-    font-size: 16px; 
+    font-size: 16px;
     margin: 0;
     line-height: 150%;
     text-align: center;
@@ -3756,9 +3622,9 @@ background: url(/assets/redesignArapovTrade/img/BG-author-phone.png);
     background-position: center;
   }
 
-  .right-content_fifth img { 
+  .right-content_fifth img {
     margin: 0 auto;
-    width: 337px; 
+    width: 337px;
     display: block;
     object-position: center;
   }
@@ -3852,11 +3718,11 @@ background: url(/assets/redesignArapovTrade/img/BG-author-phone.png);
   }
 
   .six-block-graph-img {
-    position: absolute; 
+    position: absolute;
     top: -74px;
     left: 0px;
   }
-  .six_block { 
+  .six_block {
     height: 100%;
   }
 
@@ -3912,7 +3778,7 @@ background: url(/assets/redesignArapovTrade/img/BG-author-phone.png);
   /* Седьмой блок (.seventh-block) */
   .seventh-block {
     width: 100%;
-    height: auto; 
+    height: auto;
     margin-top: 0;
     padding: 0 20px;
   }
@@ -3928,23 +3794,21 @@ background: url(/assets/redesignArapovTrade/img/BG-author-phone.png);
   .bg_seventh {
     width: 126%;
     height: 117%;
-    
+
     top: -105px;
     left: 0;
   }
-  .bg_seventh-dark{
- position: absolute;
+  .bg_seventh-dark {
+    position: absolute;
     background-size: contain;
     flex-direction: column-reverse;
     background: url(/assets/redesignArapovTrade/img/bg-seventh-table.png);
-     
   }
-  .bg_seventh-light{
- position: absolute;
+  .bg_seventh-light {
+    position: absolute;
     background-size: contain;
     flex-direction: column-reverse;
     background: url(/assets/redesignArapovTrade/img/bg-seven-light-phone.png);
-    
   }
 
   .seventh-block_left {
@@ -3956,7 +3820,7 @@ background: url(/assets/redesignArapovTrade/img/BG-author-phone.png);
   }
 
   .right-37 {
-    width: 100%; 
+    width: 100%;
     height: 429px;
     position: relative;
     margin: 0 auto;
@@ -3993,7 +3857,7 @@ background: url(/assets/redesignArapovTrade/img/BG-author-phone.png);
 
   .seventh-block_rigth {
     width: 100%;
-    height: auto; 
+    height: auto;
     margin-top: 0px;
     position: relative;
   }
@@ -4056,7 +3920,7 @@ background: url(/assets/redesignArapovTrade/img/BG-author-phone.png);
   .eighth-block_main-left {
     width: 336px;
     height: auto;
-    position: relative; 
+    position: relative;
     margin-bottom: clamp(20px, 3.5vh, 25px);
   }
 
@@ -4099,10 +3963,10 @@ background: url(/assets/redesignArapovTrade/img/BG-author-phone.png);
     margin: 18px 0;
   }
 
-  .tabs-eight-block { //?????????????
-        width: 335px;
-    display: flex
-;
+  .tabs-eight-block {
+    //?????????????
+    width: 335px;
+    display: flex;
     align-items: baseline;
     margin: 20px auto 0;
   }
@@ -4177,25 +4041,23 @@ background: url(/assets/redesignArapovTrade/img/BG-author-phone.png);
     left: 61%;
   }
 
-   .desc{
-  display: none;
- }
- .phone{
-  display: block !important;
-          display: block !important;
-        display: flex !important
+  .desc {
+    display: none;
+  }
+  .phone {
+    display: block !important;
+    display: block !important;
+    display: flex !important
 ;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        font-family: 'Lato';
-        font-size: 16px;
-        gap: 10px;
-        padding: 10px 0;
-            margin-bottom: 20px;
-         
- }
-  
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-family: "Lato";
+    font-size: 16px;
+    gap: 10px;
+    padding: 10px 0;
+    margin-bottom: 20px;
+  }
 }
 
 @media (min-width: 1000px) and (max-width: 1200px) {
