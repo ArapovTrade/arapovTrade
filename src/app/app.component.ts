@@ -91,7 +91,7 @@ export class AppComponent implements OnInit, AfterViewChecked, OnDestroy {
     } else {
       pathSegments.unshift(lang);
     }
-
+     
     // Построение нового пути
     const newPath = pathSegments.join('/');
     this.artickle.selectedGroups = [];

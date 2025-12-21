@@ -31,7 +31,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./uk-home/ukblog/ukblog.module').then((m) => m.UkblogModule),
   },
-   
+    {
+    path: 'books',
+    loadChildren: () =>
+      import('./uk-home/uk-book/uk-book.module').then((m) => m.UkBookModule),
+  },
 ];
 
 @NgModule({

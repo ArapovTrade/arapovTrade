@@ -12,32 +12,35 @@
     >
       <ul>
         <li
-          (click)="navigateTo('ru/main')"
+          (click)="navigateTo('')"
           [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
           [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
         >
-          ГЛАВНАЯ
+          
+Головна
+
         </li>
         <li
-          (click)="navigateTo('ru/freestudying')"
+          (click)="navigateTo('uk/freestudying')"
           [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
           [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
         >
-          БЕСПЛАТНЫЕ КУРСЫ
+          безкоштовнi курси
+
         </li>
         <li
-          (click)="navigateTo('ru')"
+          (click)="navigateTo('uk')"
           [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
           [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
         >
-          ОБ АВТОРЕ
+          Про автора
         </li>
         <li
-          (click)="navigateTo('ru/studying')"
+          (click)="navigateTo('uk/studying')"
           [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
           [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
         >
-          ПРОФЕССИОНАЛЬНЫЕ КУРСЫ
+          Професiйнi курси
         </li>
       </ul>
     </div>
@@ -66,10 +69,12 @@
           class="nav-list desktop-nav"
           [ngClass]="{ 'menu-item-dark': isDark, 'menu-item-light': !isDark }"
         >
-          <li (click)="navigateTo('ru/main')">Главная</li>
-          <li (click)="navigateTo('ru/freestudying')">Бесплатные курсы</li>
-          <li (click)="navigateTo('ru')">Об авторе</li>
-          <li (click)="navigateTo('ru/studying')">Профессиональные курсы</li>
+          <li (click)="navigateTo('')">Головна
+</li>
+          <li (click)="navigateTo('uk/freestudying')">безкоштовнi курси
+</li>
+          <li (click)="navigateTo('uk')">Про автора</li>
+          <li (click)="navigateTo('uk/studying')">Професiйнi курси</li>
         </ul>
       </div>
 
@@ -222,7 +227,7 @@
       <div class="author-page_main-block_text-block">
         <div class="author-page_main-block_title-block">
           <h1 class=" " [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }">
-            Список книг по трейдингу
+            Список книг з трейдингу
           </h1>
 
           <div class="free-courses_main-container_artickle-block">
@@ -244,7 +249,7 @@
                     <a
                       [routerLink]="'osnovy-treydinga'"
                        
-                      hreflang="ru"
+                      hreflang="uk"
                       itemprop="url"
                     >
                       <img [src]="'/assets/redesignArapovTrade/img/IMG000.jpg'" [alt]="'one-book'" itemprop="image" loading="lazy" />
@@ -256,7 +261,7 @@
                       class="free-courses_item-title"
                       [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
                     >
-                      <span itemprop="headline">Основы трейдинга  </span>
+                      <span itemprop="headline">Основи трейдингу </span>
                        
                     </span>
                   </div>
@@ -265,7 +270,7 @@
                     class="free-courses_item_descr"
                     [ngStyle]="{ color: isDark ? '#A6A6A6' : '#0C263A' }"
                   >
-                    <a [routerLink]="'osnovy-treydinga'" hreflang="ru" itemprop="url">
+                    <a [routerLink]="'osnovy-treydinga'" hreflang="uk" itemprop="url">
                       <span
                         [ngClass]="{
                           'read_more-text': true,
@@ -274,7 +279,7 @@
                         }"
                         [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
                       >
-                        Читать дальше
+                        Читати далі
                         <img
                           *ngIf="isDark"
                           src="/assets/redesignArapovTrade/img/read-more_icon.png"
@@ -334,8 +339,8 @@
             </div>
           </div>
           <span class="footer-text"
-            >Бесплатное обучение трейдингу и практические рекомендации для
-            новичков и профессионалов, чтобы не потерять депозит.</span
+            >Безкоштовне навчання трейдингу та практичнi рекомендацii для
+            новачкiв i профi, щоб не втратити депозит.</span
           >
         </div>
       </div>
@@ -344,85 +349,69 @@
         <div class="menu">
           <span class="menu-title">Меню</span>
           <div class="menu-title-block">
-            <a (click)="navigateTo('ru/main')" class="menu-title_text"
-              >Главная</a
+            <a (click)="navigateTo('')" class="menu-title_text"
+              >Головна</a
             >
           </div>
           <div class="menu-title-block">
-            <a (click)="navigateTo('ru')" class="menu-title_text"
-              >Об авторе курса</a
+            <a (click)="navigateTo('uk')" class="menu-title_text"
+              >Про автора курсу</a
             >
           </div>
           <div class="menu-title-block">
-            <a (click)="navigateTo('ru/studying')" class="menu-title_text"
-              >Курсы по трейдингу</a
+            <a (click)="navigateTo('uk/studying')" class="menu-title_text"
+              >Курси з трейдингу</a
             >
           </div>
           <div class="menu-title-block">
-            <a (click)="navigateTo('ru/freestudying')" class="menu-title_text"
-              >Бесплатное обучение трейдингу</a
+            <a (click)="navigateTo('uk/freestudying')" class="menu-title_text"
+              >Безкоштовне навчання трейдингу</a
             >
           </div>
         </div>
         <div class="menu">
-          <span class="menu-title">Ссылки</span
+          <span class="menu-title">Посилання</span
           ><a
-            href="/assets/documents/PublicOfferAgreementNewRU.docx"
+            href="/assets/documents/PublicOfferAgreementNew.docx"
             download
             class="menu-title-block menu-title_text"
-            >Договор публичной оферты</a
+            >Договір публічної оферти</a
           >
           <a
-            href="/assets/documents/PrivacyPolicyRU.DOCX"
+            href="/assets/documents/PrivacyPolicyUK.DOCX"
             download
             class="menu-title-block menu-title_text"
-            >Политика конфиденциальности</a
+            >Політика конфіденційності</a
           >
           <a
-            (click)="navigateTo('ru/disclaimer')"
+            (click)="navigateTo('uk/disclaimer')"
             class="menu-title-block menu-title_text"
-            >Отказ от ответственности</a
+            >Відмова від відповідальності</a
           >
         </div>
 
         <div class="menu">
-          <span class="menu-title">Наши проекты</span>
-          <a
-            href="https://arapov.education/course/"
-            target="_blank"
-            class="menu-title-block menu-title_text"
+          <span class="menu-title">Нашi проекти</span
           >
-            <span class="menu-title-block menu-title_text">
-              Быстрый старт в трейдинге</span
-            >
-          </a>
-          <a
-            href="https://arapov.education/reg-workshop/"
-            target="_blank"
-            class="menu-title-block menu-title_text"
-          >
-            <span class="menu-title-block menu-title_text">
-              Введение в трейдинг</span
-            >
-          </a>
-          <a
-            href="https://arapov.trade/ru/studying"
-            target="_blank"
-            class="menu-title-block menu-title_text"
-          >
-            <span class="menu-title-block menu-title_text">
-              Профессиональные курсы</span
-            >
-          </a>
-          <a
-            href="https://arapovcopytrade.com"
-            target="_blank"
-            class="menu-title-block menu-title_text"
-          >
-            <span class="menu-title-block menu-title_text"> Копитрейдинг</span>
-          </a>
+          <a href="https://arapov.education/ua/course-ua/" target="_blank" class="menu-title-block menu-title_text">
+              
+           <span class="menu-title-block menu-title_text"
+            >  Швидкий старт у трейдингу</span> </a> 
+             <a href="https://arapov.education/ua/reg-workshop-ua/" target="_blank" class="menu-title-block menu-title_text">
+              
+           <span class="menu-title-block menu-title_text"
+            >  Вступ до трейдингу</span> </a> 
+             <a href="https://arapov.trade/uk/studying" target="_blank" class="menu-title-block menu-title_text">
+              
+           <span class="menu-title-block menu-title_text"
+            >  Професійні курси</span> </a> 
+             <a href="https://arapovcopytrade.com/ua/invest-ua/" target="_blank" class="menu-title-block menu-title_text"> 
+              
+           <span class="menu-title-block menu-title_text"
+            >  Копiтрейдинг</span> </a> 
         </div>
       </div>
+      
     </div>
     <div class="component-1f">
       <div class="in-20"></div>
@@ -430,8 +419,8 @@
         <div class="box-b">
           <span class="text-2d">Arapov.Trade</span>
           <div class="pic-14"></div>
-          <span class="text-2e">2025. Все права защищены.</span>
-          <span class="text-2e">ФЛП Арапов И.В. ИНН 3314507171</span>
+          <span class="text-2e">2025. Всі права захищені.</span><span class="text-2e">ФОП Арапов І.В.
+ІПН 3314507171</span>
         </div>
         <div class="section-18">
           <!-- facebook -->

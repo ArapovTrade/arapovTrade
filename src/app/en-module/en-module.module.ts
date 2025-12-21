@@ -25,7 +25,11 @@ const routes: Routes = [
         (m) => m.EnStudyingModule
       ),
   },
-   
+   {
+    path: 'books',
+    loadChildren: () =>
+      import('./en-home/en-book/en-book.module').then((m) => m.EnBookModule),
+  },
    
   {
     path: 'freestudying',

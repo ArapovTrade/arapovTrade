@@ -15,11 +15,11 @@ declare var AOS: any;
 import { DOCUMENT } from '@angular/common';
 
 @Component({
-  selector: 'app-osnovy-treydinga',
-  templateUrl: './osnovy-treydinga.component.html',
-  styleUrl: './osnovy-treydinga.component.scss',
+  selector: 'app-osnovy-treydinga-uk',
+  templateUrl: './osnovy-treydinga-uk.component.html',
+  styleUrl: './osnovy-treydinga-uk.component.scss'
 })
-export class OsnovyTreydingaComponent
+export class OsnovyTreydingaUkComponent 
   implements OnInit, AfterViewInit, OnDestroy
 {
   constructor(
@@ -44,26 +44,26 @@ export class OsnovyTreydingaComponent
   }
   isDark!: boolean;
   languages = ['ua', 'en', 'ru']; // какие языки нужны
-  currentLang = 'ru';
+  currentLang = 'ua';
   dropdownOpen = false;
   menuOpen: boolean = false;
   ngOnInit() {
     this.removeExistingWebPageSchema();
 
     this.titleService.setTitle(
-      'Основы трейдинга — Бесплатная книга Игоря Арапова | ISBN 979-8-90243-075-9'
+      'Основи трейдингу — Безкоштовна книга Ігоря Арапова | ISBN 979-8-90243-075-9'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Скачать бесплатно книгу «Основы трейдинга» — методическое пособие для начинающих трейдеров от Игоря Арапова. FOREX, технический анализ, объёмный анализ, Smart Money. ISBN 979-8-90243-075-9',
+        'Завантажити безкоштовно книгу «Основи трейдингу» — методичне посібник для початкових трейдерів від Ігоря Арапова. FOREX, технічний аналіз, об’ємний аналіз, Smart Money. ISBN 979-8-90243-075-9',
     });
 
     this.meta.updateTag({
       name: 'keywords',
       content:
-        'книга трейдинг, обучение трейдингу, форекс для начинающих, технический анализ, объёмный анализ, Игорь Арапов, Smart Money',
+        'книга трейдинг, навчання трейдингу, форекс для початківців, технічний аналіз, об`ємний аналіз, Ігор Арапов, Smart Money',
     });
 
     this.meta.updateTag({ name: 'datePublished', content: '2025-06-07' });
@@ -182,25 +182,25 @@ export class OsnovyTreydingaComponent
     script.text = JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'Book',
-      '@id': 'https://arapov.trade/ru/books/osnovy-treydinga#book',
+      '@id': 'https://arapov.trade/uk/books/osnovy-treydinga#book',
       mainEntityOfPage: {
         '@type': 'WebPage',
-        '@id': 'https://arapov.trade/ru/books/osnovy-treydinga',
+        '@id': 'https://arapov.trade/uk/books/osnovy-treydinga',
       },
-      name: 'Основы трейдинга',
+      name: 'Основи трейдингу',
       alternateName: [
         'Osnovy Treydinga',
-        'Методическое пособие по Финансовому Трейдингу',
+        'Методичний посібник з Фінансового Трейдингу',
         'Trading Basics',
       ],
       headline:
-        'Основы трейдинга — Методическое пособие для начинающих трейдеров',
+        'Основи трейдингу — Методичний посібник для початкових трейдерів',
       description:
-        'Практическое руководство по финансовому трейдингу для начинающих. Книга охватывает основы биржевой торговли, рынок FOREX, фундаментальный, технический и объёмный анализ, виды ордеров, управление капиталом и типичные ошибки трейдеров. Автор делится 12-летним опытом торговли на финансовых рынках.',
+        'Практичне керівництво по фінансовому трейдингу для початківців. Книга охоплює основи біржової торгівлі, ринок FOREX, фундаментальний, технічний та об’ємний аналіз, види ордерів, управління капіталом та типові помилки трейдерів. Автор ділиться 12-річним досвідом торгівлі на фінансових ринках.',
       isbn: '979-8-90243-075-9',
       numberOfPages: 60,
       bookFormat: 'https://schema.org/EBook',
-      bookEdition: '1-е издание',
+      bookEdition: '1-е видання',
       inLanguage: {
         '@type': 'Language',
         name: 'Russian',
@@ -217,7 +217,7 @@ export class OsnovyTreydingaComponent
       about: [
         {
           '@type': 'Thing',
-          name: 'Биржевая торговля',
+          name: 'Біржова торгівля',
           sameAs: 'https://ru.wikipedia.org/wiki/Биржевая_торговля',
         },
         {
@@ -227,20 +227,20 @@ export class OsnovyTreydingaComponent
         },
         {
           '@type': 'Thing',
-          name: 'Технический анализ',
+          name: 'Технічний аналіз',
           sameAs: 'https://ru.wikipedia.org/wiki/Технический_анализ',
         },
         {
           '@type': 'Thing',
-          name: 'Фундаментальный анализ',
+          name: 'Фундаментальний аналіз',
         },
         {
           '@type': 'Thing',
-          name: 'Объёмный анализ',
+          name: 'Об’ємний аналіз',
         },
         {
           '@type': 'Thing',
-          name: 'Управление капиталом',
+          name: 'Управління капіталом',
         },
         {
           '@type': 'Thing',
@@ -248,10 +248,10 @@ export class OsnovyTreydingaComponent
         },
       ],
       keywords:
-        'трейдинг, форекс, технический анализ, объёмный анализ, биржа, инвестиции, smart money, обучение трейдингу',
+        'трейдинг, форекс, технічний аналіз, об’ємний аналіз, біржа, інвестиції, smart money, навчання трейдингу',
       author: {
         '@type': 'Person',
-        '@id': 'https://arapov.trade/ru#author',
+        '@id': 'https://arapov.trade/uk#author',
       },
       publisher: {
         '@type': 'Organization',
@@ -262,15 +262,15 @@ export class OsnovyTreydingaComponent
         url: 'https://arapov.trade/assets/redesignArapovTrade/img/IMG000.jpg',
         width: 600,
         height: 900,
-        caption: 'Обложка книги «Основы трейдинга» — Игорь Арапов',
+        caption: 'Обкладинка книги «Основи трейдингу» - Ігор Арапов',
       },
-      url: 'https://arapov.trade/ru/books/osnovy-treydinga',
+      url: 'https://arapov.trade/uk/books/osnovy-treydinga',
       offers: {
         '@type': 'Offer',
         price: '0',
         priceCurrency: 'USD',
         availability: 'https://schema.org/InStock',
-        url: 'https://arapov.trade/ru/books/osnovy-treydinga',
+        url: 'https://arapov.trade/uk/books/osnovy-treydinga',
         priceValidUntil: '2026-12-31',
         seller: {
           '@type': 'Organization',
@@ -286,7 +286,7 @@ export class OsnovyTreydingaComponent
           '@type': 'ReadAction',
           target: {
             '@type': 'EntryPoint',
-            url: 'https://arapov.trade/ru/books/osnovy-treydinga',
+            url: 'https://arapov.trade/uk/books/osnovy-treydinga',
             actionPlatform: [
               'http://schema.org/DesktopWebPlatform',
               'http://schema.org/MobileWebPlatform',
@@ -332,7 +332,7 @@ export class OsnovyTreydingaComponent
     ).some((script) => {
       try {
         const json = JSON.parse(script.textContent || '{}');
-        return json['@type'] === 'Person' && json['name'] === 'Игорь Арапов';
+        return json['@type'] === 'Person' && json['name'] === 'Ігор Арапов';
       } catch {
         return false;
       }
@@ -347,20 +347,20 @@ export class OsnovyTreydingaComponent
     script.text = JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/ru#author',
-      name: 'Игорь Арапов',
-      alternateName: ['Igor Arapov', 'Ігор Арапов'],
-      givenName: 'Игорь',
+      '@id': 'https://arapov.trade/uk#author',
+      name: 'Ігор Арапов',
+      alternateName: ['Igor Arapov', 'Игорь Арапов'],
+      givenName: 'Ігор',
       familyName: 'Арапов',
       description:
-        'Украинский трейдер с 2013 года. Создатель образовательной платформы arapov.trade, автор 130+ статей и 70+ видеоуроков по трейдингу. Специализируется на Smart Money концепциях, методе Вайкоффа и объёмном анализе.',
+        'Український трейдер із 2013 року. Творець освітньої платформи arapov.trade, автор 130+ статей та 70+ відеоуроків з трейдингу. Спеціалізується на Smart Money концепціях, методі Вайкоффа та об`ємному аналізі.',
       url: 'https://arapov.trade',
       image: {
         '@type': 'ImageObject',
         url: 'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
         width: 400,
         height: 400,
-        caption: 'Игорь Арапов — трейдер и автор',
+        caption: 'Ігор Арапов — трейдер і автор',
       },
       sameAs: [
         'https://www.youtube.com/@ArapovTrade',
@@ -371,7 +371,7 @@ export class OsnovyTreydingaComponent
       hasOccupation: {
         '@type': 'Occupation',
         name: 'Trader',
-        description: 'Профессиональный трейдер на финансовых рынках',
+        description: 'Професійний трейдер на фінансових ринках',
         occupationLocation: {
           '@type': 'Country',
           name: 'Ukraine',
@@ -380,7 +380,7 @@ export class OsnovyTreydingaComponent
       nationality: {
         '@type': 'Country',
         name: 'Ukraine',
-        alternateName: 'Украина',
+        alternateName: 'Україна',
       },
       knowsAbout: [
         'Trading',
@@ -412,7 +412,7 @@ export class OsnovyTreydingaComponent
     ).some((script) => {
       try {
         const json = JSON.parse(script.textContent || '{}');
-        return json['@type'] === 'WebPage' && json['name'] === 'Основы трейдинга — Бесплатная книга Игоря Арапова';
+        return json['@type'] === 'WebPage' && json['name'] === 'Основи трейдингу — Безкоштовна книга Ігоря Арапова';
       } catch {
         return false;
       }
@@ -427,12 +427,12 @@ export class OsnovyTreydingaComponent
     script.text = JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'WebPage',
-      '@id': 'https://arapov.trade/ru/books/osnovy-treydinga',
-      url: 'https://arapov.trade/ru/books/osnovy-treydinga',
-      name: 'Основы трейдинга — Бесплатная книга Игоря Арапова',
+      '@id': 'https://arapov.trade/uk/books/osnovy-treydinga',
+      url: 'https://arapov.trade/uk/books/osnovy-treydinga',
+      name: 'Основи трейдингу — Безкоштовна книга Ігоря Арапова',
       description:
-        'Скачать бесплатно книгу по трейдингу. ISBN 979-8-90243-075-9',
-      inLanguage: 'ru',
+        'Скачати безкоштовно книгу з трейдингу. ISBN 979-8-90243-075-9',
+      inLanguage: 'uk',
       isPartOf: {
         '@type': 'WebSite',
         '@id': 'https://arapov.trade/#website',
@@ -441,17 +441,17 @@ export class OsnovyTreydingaComponent
       },
       about: {
         '@type': 'Book',
-        '@id': 'https://arapov.trade/ru/books/osnovy-treydinga#book',
+        '@id': 'https://arapov.trade/uk/books/osnovy-treydinga#book',
       },
       author: {
         '@type': 'Person',
-        '@id': 'https://arapov.trade/ru#author',
+        '@id': 'https://arapov.trade/uk#author',
       },
       datePublished: '2025-12-18',
       dateModified: '2025-12-18',
       mainEntity: {
         '@type': 'Book',
-        '@id': 'https://arapov.trade/ru/books/osnovy-treydinga#book',
+        '@id': 'https://arapov.trade/uk/books/osnovy-treydinga#book',
       },
       breadcrumb: {
         '@type': 'BreadcrumbList',
@@ -459,26 +459,26 @@ export class OsnovyTreydingaComponent
           {
             '@type': 'ListItem',
             position: 1,
-            name: 'Главная',
+            name: 'Головна',
             item: 'https://arapov.trade',
           },
           {
             '@type': 'ListItem',
             position: 2,
             name: 'Про автора',
-            item: 'https://arapov.trade/ru',
+            item: 'https://arapov.trade/uk',
           },
           {
             '@type': 'ListItem',
             position: 3,
-            name: 'Мои книги',
-            item: 'https://arapov.trade/ru/books',
+            name: 'Мої книги',
+            item: 'https://arapov.trade/uk/books',
           },
           {
             '@type': 'ListItem',
             position: 4,
             name: 'Книга',
-            item: 'https://arapov.trade/ru/books/osnovy-treydinga',
+            item: 'https://arapov.trade/uk/books/osnovy-treydinga',
           },
         ],
       },
@@ -493,7 +493,7 @@ export class OsnovyTreydingaComponent
     ).some((script) => {
       try {
         const json = JSON.parse(script.textContent || '{}');
-        return json['@type'] === 'FAQPage' && json['name'] === 'Вопросы и ответы по книге "Основы трейдинга"';
+        return json['@type'] === 'FAQPage' && json['name'] === "Питання та відповіді щодо книги 'Основи трейдингу'";
       } catch {
         return false;
       }
@@ -508,46 +508,46 @@ export class OsnovyTreydingaComponent
     script.text = JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
-      name: 'Вопросы и ответы по книге "Основы трейдинга"',
+      name: "Питання та відповіді щодо книги 'Основи трейдингу'",
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'Книга действительно бесплатная?',
+          name: 'Книжка справді безкоштовна?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Да, книга «Основы трейдинга» доступна для скачивания абсолютно бесплатно в формате EPUB. Автор предоставляет её как часть бесплатной образовательной программы на платформе arapov.trade.',
+            text: 'Так, книга «Основи трейдингу» доступна для завантаження абсолютно безкоштовно у форматі EPUB. Автор надає її як частину безкоштовної освітньої програми на платформі arapov.trade.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Для кого эта книга?',
+          name: 'Для кого ця книга?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Книга предназначена для начинающих трейдеров, которые хотят понять основы финансовых рынков, а также для инвесторов, желающих разобраться в биржевой торговле. Опыт в трейдинге не требуется.',
+            text: 'Книга призначена для початкових трейдерів, які хочуть зрозуміти основи фінансових ринків, а також для інвесторів, які бажають розібратися в біржовій торгівлі. Досвід у трейдингу не потрібен.',
           },
         },
         {
           '@type': 'Question',
-          name: 'В каком формате доступна книга?',
+          name: 'В якому форматі доступна книга?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Книга доступна в формате EPUB, который поддерживается большинством электронных книг и приложений для чтения.',
+            text: 'Книга доступна в форматі EPUB, який підтримується більшістю електронних книг та програм для читання.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Кто автор книги?',
+          name: 'Хто автор книги?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Автор книги — Игорь Арапов, практикующий трейдер с 2013 года. Создатель образовательной платформы arapov.trade с 130+ статьями и YouTube канала @ArapovTrade с 70+ видеоуроками по трейдингу.',
+            text: 'Автор книги – Ігор Арапов, практикуючий трейдер з 2013 року. Творець освітньої платформи arapov.trade із 130+ статтями та YouTube каналу @ArapovTrade із 70+ відеоуроками з трейдингу.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Какой ISBN у книги?',
+          name: 'Який ISBN у книги?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'ISBN книги: 979-8-90243-075-9. Это международный стандартный книжный номер, зарегистрированный в Bowker Books in Print.',
+            text: 'ISBN книги: 979-8-90243-075-9. Це міжнародний стандартний книжковий номер, зареєстрований у Bowker Books in Print.',
           },
         },
       ],
@@ -557,3 +557,4 @@ export class OsnovyTreydingaComponent
   }
   
 }
+
