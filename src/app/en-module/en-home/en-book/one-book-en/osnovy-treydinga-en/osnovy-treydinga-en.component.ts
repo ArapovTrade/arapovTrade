@@ -427,8 +427,8 @@ export class OsnovyTreydingaEnComponent
     script.text = JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'WebPage',
-      '@id': 'https://arapov.trade/en/books/trading-basics',
-      url: 'https://arapov.trade/en/books/trading-basics',
+      '@id': 'https://arapov.trade/en/books/osnovy-treydinga',
+      url: 'https://arapov.trade/en/books/osnovy-treydinga',
       name: 'Trading Basics – Free Book by Igor Arapov',
       description:
         'Download the free book on trading. ISBN 979-8-90243-075-9',
@@ -441,7 +441,7 @@ export class OsnovyTreydingaEnComponent
       },
       about: {
         '@type': 'Book',
-        '@id': 'https://arapov.trade/en/books/trading-basics#book',
+        '@id': 'https://arapov.trade/en/books/osnovy-treydinga#book',
       },
       author: {
         '@type': 'Person',
@@ -451,7 +451,7 @@ export class OsnovyTreydingaEnComponent
       dateModified: '2025-12-18',
       mainEntity: {
         '@type': 'Book',
-        '@id': 'https://arapov.trade/en/books/trading-basics#book',
+        '@id': 'https://arapov.trade/en/books/osnovy-treydinga#book',
       },
       breadcrumb: {
         '@type': 'BreadcrumbList',
@@ -478,7 +478,7 @@ export class OsnovyTreydingaEnComponent
             '@type': 'ListItem',
             position: 4,
             name: 'Book',
-            item: 'https://arapov.trade/en/books/trading-basics',
+            item: 'https://arapov.trade/en/books/osnovy-treydinga',
           },
         ],
       },

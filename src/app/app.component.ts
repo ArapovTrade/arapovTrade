@@ -91,7 +91,7 @@ export class AppComponent implements OnInit, AfterViewChecked, OnDestroy {
     } else {
       pathSegments.unshift(lang);
     }
-     
+
     // Построение нового пути
     const newPath = pathSegments.join('/');
     this.artickle.selectedGroups = [];
@@ -204,20 +204,60 @@ export class AppComponent implements OnInit, AfterViewChecked, OnDestroy {
           title = 'Курси трейдингу онлайн | Навчання трейдингу з нуля';
         } else if (segments[1] === 'studying' && segments[0] === 'en') {
           title = 'Online Trading Courses | Learn Trading from Scratch';
-          
-          } else if (segments[1] === 'books' && segments[0] === 'ru') {
+        } else if (segments[1] === 'books' && segments[0] === 'ru') {
           title = 'Мои книги | Обучение трейдингу с нуля';
         } else if (segments[1] === 'books' && segments[0] === 'uk') {
           title = 'Мої книги | Навчання трейдингу з нуля';
         } else if (segments[1] === 'books' && segments[0] === 'en') {
           title = 'My Books | Trading Training from Scratch';
-          } else if (segments[1] === 'books' && segments[2] === 'osnovy-treydinga') {
+        } else if (
+          segments[1] === 'books' &&
+          segments[2] === 'osnovy-treydinga'
+        ) {
           title = 'Книга - Основы трейдинга | Обучение трейдингу с нуля';
-        } else if (segments[1] === 'books' && segments[2] === 'osnovy-treydinga') {
+        } else if (
+          segments[1] === 'books' &&
+          segments[2] === 'osnovy-treydinga'
+        ) {
           title = 'Книга - Основи трейдингу | Навчання трейдингу з нуля';
-        } else if (segments[1] === 'books' && segments[2] === 'osnovy-treydinga') {
+        } else if (
+          segments[1] === 'books' &&
+          segments[2] === 'osnovy-treydinga'
+        ) {
           title = 'Book - Trading Basics | Trading Training from Scratch';
-
+        } else if (
+          segments[1] === 'books' &&
+          segments[2] === 'osnovy-treydinga-tom-two'
+        ) {
+          title =
+            'Книга - Основы трейдинга. Практика | Обучение трейдингу с нуля';
+        } else if (
+          segments[1] === 'books' &&
+          segments[2] === 'osnovy-treydinga-tom-two'
+        ) {
+          title =
+            'Книга - Основи трейдингу. Практика | Навчання трейдингу з нуля';
+        } else if (
+          segments[1] === 'books' &&
+          segments[2] === 'osnovy-treydinga-tom-two'
+        ) {
+          title =
+            'Book - Trading Basics. Practice | Trading Training from Scratch';
+        } else if (
+          segments[1] === 'books' &&
+          segments[2] === 'psihologiya-treydinga'
+        ) {
+          title = 'Книга - Психология трейдинга | Обучение трейдингу с нуля';
+        } else if (
+          segments[1] === 'books' &&
+          segments[2] === 'psihologiya-treydinga'
+        ) {
+          title = 'Книга - Психологія трейдингу | Навчання трейдингу з нуля';
+        } else if (
+          segments[1] === 'books' &&
+          segments[2] === 'psihologiya-treydinga'
+        ) {
+          title = 'Book - Trading Psychology | Trading Training from Scratch';
         } else if (
           segments[1] === 'freestudying' &&
           segments[2] === 'freeeducation'
@@ -258,23 +298,80 @@ export class AppComponent implements OnInit, AfterViewChecked, OnDestroy {
         } else if (segments[1] === 'studying' && segments[0] === 'en') {
           description =
             'Online trading courses by Igor Arapov — trading and investment education from scratch, remotely and free. Learn technical and fundamental analysis, trading strategies, and risk management step by step.';
-        
-        
         } else if (segments[1] === 'books' && segments[0] === 'ru') {
-          description = 'Мои книги по трейдингу | Практические руководства для начинающих и профессионалов от трейдера с 12-летним опытом';
+          description =
+            'Мои книги по трейдингу | Практические руководства для начинающих и профессионалов от трейдера с 12-летним опытом';
         } else if (segments[1] === 'books' && segments[0] === 'uk') {
-          description = 'Мої книги з трейдингу | Практичні посібники для початківців та професіоналів від трейдера з 12-річним досвідом';
+          description =
+            'Мої книги з трейдингу | Практичні посібники для початківців та професіоналів від трейдера з 12-річним досвідом';
         } else if (segments[1] === 'books' && segments[0] === 'en') {
-          description = 'My trading books | Practical guides for beginners and professionals from a trader with 12 years of experience';
-          } else if (segments[1] === 'books' && segments[2] === 'osnovy-treydinga') {
-          description = 'Основы трейдинга - методическое пособие для начинающих | Биржевая торговля, FOREX, анализ рынка, управление капиталом';
-        } else if (segments[1] === 'books' && segments[2] === 'osnovy-treydinga') {
-          description = 'Основи трейдингу - методичний посібник для початківців | Біржова торгівля, FOREX, аналіз ринку, управління капіталом';
-        } else if (segments[1] === 'books' && segments[2] === 'osnovy-treydinga') {
-          description = 'Trading Basics - A Methodological Guide for Beginners | Stock Trading, FOREX, Market Analysis, Capital Management';
-        
-        
-          } else if (
+          description =
+            'My trading books | Practical guides for beginners and professionals from a trader with 12 years of experience';
+        } else if (
+          segments[1] === 'books' &&
+          segments[2] === 'osnovy-treydinga'
+        ) {
+          description =
+            'Основы трейдинга - методическое пособие для начинающих | Биржевая торговля, FOREX, анализ рынка, управление капиталом';
+        } else if (
+          segments[1] === 'books' &&
+          segments[2] === 'osnovy-treydinga'
+        ) {
+          description =
+            'Основи трейдингу - методичний посібник для початківців | Біржова торгівля, FOREX, аналіз ринку, управління капіталом';
+        } else if (
+          segments[1] === 'books' &&
+          segments[2] === 'osnovy-treydinga'
+        ) {
+          description =
+            'Trading Basics - A Methodological Guide for Beginners | Stock Trading, FOREX, Market Analysis, Capital Management';
+
+          // Основы трейдинга. Практика (том 2)
+        } else if (
+          segments[1] === 'books' &&
+          segments[2] === 'osnovy-treydinga-tom-two' &&
+          segments[0] === 'ru'
+        ) {
+          description =
+            'Основы трейдинга. Практика - продвинутый курс | Метод Вайкоффа, фазы рынка, управление рисками, торговые системы';
+        } else if (
+          segments[1] === 'books' &&
+          segments[2] === 'osnovy-treydinga-tom-two' &&
+          segments[0] === 'uk'
+        ) {
+          description =
+            'Основи трейдингу. Практика - просунутий курс | Метод Вайкоффа, фази ринку, управління ризиками, торгові системи';
+        } else if (
+          segments[1] === 'books' &&
+          segments[2] === 'osnovy-treydinga-tom-two' &&
+          segments[0] === 'en'
+        ) {
+          description =
+            'Trading Basics. Practice - Advanced Course | Wyckoff Method, Market Phases, Risk Management, Trading Systems';
+
+          // Психология трейдинга
+        } else if (
+          segments[1] === 'books' &&
+          segments[2] === 'psihologiya-treydinga' &&
+          segments[0] === 'ru'
+        ) {
+          description =
+            'Психология трейдинга - управление эмоциями | Страх, жадность, дисциплина, психология успешного трейдера';
+        } else if (
+          segments[1] === 'books' &&
+          segments[2] === 'psihologiya-treydinga' &&
+          segments[0] === 'uk'
+        ) {
+          description =
+            'Психологія трейдингу - управління емоціями | Страх, жадібність, дисципліна, психологія успішного трейдера';
+        } else if (
+          segments[1] === 'books' &&
+          segments[2] === 'psihologiya-treydinga' &&
+          segments[0] === 'en'
+        ) {
+          description =
+            'Trading Psychology - Emotion Management | Fear, Greed, Discipline, Successful Trader Psychology';
+        } else if (
           segments[1] === 'freestudying' &&
           segments[2] === 'freeeducation'
         ) {
@@ -535,8 +632,7 @@ export class AppComponent implements OnInit, AfterViewChecked, OnDestroy {
           }
         );
       }
-
-      } else if (
+    } else if (
       urlPath === 'ru/books/osnovy-treydinga' ||
       urlPath === 'uk/books/osnovy-treydinga' ||
       urlPath === 'en/books/osnovy-treydinga'
@@ -581,6 +677,108 @@ export class AppComponent implements OnInit, AfterViewChecked, OnDestroy {
           }
         );
       }
+
+      } else if (
+      urlPath === 'ru/books/psihologiya-treydinga' ||
+      urlPath === 'uk/books/psihologiya-treydinga' ||
+      urlPath === 'en/books/psihologiya-treydinga'
+    ) {
+      if (urlPath === 'ru/books/psihologiya-treydinga') {
+        this.breadcrumbs.push(
+          { name: 'Главная', url: 'https://arapov.trade/ru/main' },
+          { name: 'Автор курса', url: 'https://arapov.trade/ru' },
+          {
+            name: 'Все книги',
+            url: 'https://arapov.trade/ru/books',
+          },
+          {
+            name: 'Психология трейдинга',
+            url: 'https://arapov.trade/ru/books/psihologiya-treydinga',
+          }
+        );
+      } else if (urlPath === 'uk/books/psihologiya-treydinga') {
+        this.breadcrumbs.push(
+          { name: 'Головна', url: 'https://arapov.trade' },
+          { name: 'Автор курсу', url: 'https://arapov.trade/uk' },
+          {
+            name: 'Всі книги',
+            url: 'https://arapov.trade/uk/books',
+          },
+          {
+            name: 'Психологія трейдингу',
+            url: 'https://arapov.trade/uk/books/psihologiya-treydinga',
+          }
+        );
+      } else if (urlPath === 'en/books/psihologiya-treydinga') {
+        this.breadcrumbs.push(
+          { name: 'Main Page', url: 'https://arapov.trade/en/main' },
+          { name: 'Course author', url: 'https://arapov.trade/en' },
+          {
+            name: 'All books',
+            url: 'https://arapov.trade/en/books',
+          },
+          {
+            name: 'Trading Psychology',
+            url: 'https://arapov.trade/en/books/psihologiya-treydinga',
+          }
+        );
+      }
+
+
+
+      } else if (
+      urlPath === 'ru/books/osnovy-treydinga-tom-two' ||
+      urlPath === 'uk/books/osnovy-treydinga-tom-two' ||
+      urlPath === 'en/books/osnovy-treydinga-tom-two'
+    ) {
+      if (urlPath === 'ru/books/osnovy-treydinga-tom-two') {
+        this.breadcrumbs.push(
+          { name: 'Главная', url: 'https://arapov.trade/ru/main' },
+          { name: 'Автор курса', url: 'https://arapov.trade/ru' },
+          {
+            name: 'Все книги',
+            url: 'https://arapov.trade/ru/books',
+          },
+          {
+            name: 'Основы трейдинга. Практика',
+            url: 'https://arapov.trade/ru/books/osnovy-treydinga-tom-two',
+          }
+        );
+      } else if (urlPath === 'uk/books/osnovy-treydinga-tom-two') {
+        this.breadcrumbs.push(
+          { name: 'Головна', url: 'https://arapov.trade' },
+          { name: 'Автор курсу', url: 'https://arapov.trade/uk' },
+          {
+            name: 'Всі книги',
+            url: 'https://arapov.trade/uk/books',
+          },
+          {
+            name: 'Основи трейдингу. Практика',
+            url: 'https://arapov.trade/uk/books/osnovy-treydinga-tom-two',
+          }
+        );
+      } else if (urlPath === 'en/books/osnovy-treydinga-tom-two') {
+        this.breadcrumbs.push(
+          { name: 'Main Page', url: 'https://arapov.trade/en/main' },
+          { name: 'Course author', url: 'https://arapov.trade/en' },
+          {
+            name: 'All books',
+            url: 'https://arapov.trade/en/books',
+          },
+          {
+            name: 'Trading Basics. Practice',
+            url: 'https://arapov.trade/en/books/osnovy-treydinga-tom-two',
+          }
+        );
+      }
+
+
+
+
+
+
+
+
     } else if (
       urlPath === 'ru/freestudying' ||
       urlPath === 'uk/freestudying' ||
