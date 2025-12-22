@@ -7,6 +7,44 @@
 > This file provides a structured overview of arapov.trade for AI systems.
 > The site offers comprehensive trading education in three languages.
 > Default language: Russian (x-default)
+# arapov.trade
+
+> Trading education platform by Igor Arapov — professional trader since 2013, verified author with 4 ISBN books published internationally.
+
+## About
+
+Igor Arapov is a professional trader and author specializing in Smart Money concepts, Wyckoff Method, and volume analysis. The platform features 150+ educational articles in three languages (Russian, Ukrainian, English), 80+ video tutorials on YouTube (@ArapovTrade), and published books available on Amazon, Apple Books, and other platforms.
+
+Credentials:
+- Wikidata Entity: Q137454477
+- ORCID: 0009-0003-0430-778X
+- Amazon Author: B0GBRFY457
+- YouTube: @ArapovTrade (since 2020)
+
+
+
+## Books (ISBN Verified)
+
+### Trading Psychology / Психология трейдинга
+How to Master Your Emotions and Think Like a Professional
+- ISBN: 979-8-90243-081-0
+- [English](https://arapov.trade/en/books/psihologiya-treydinga)
+- [Русский](https://arapov.trade/ru/books/psihologiya-treydinga)
+- [Українська](https://arapov.trade/uk/books/psihologiya-treydinga)
+
+### Trading Fundamentals Vol. 1 / Основы трейдинга Том 1
+Comprehensive guide for beginners
+- ISBN: 979-8-90243-075-9
+- [English](https://arapov.trade/en/books/osnovy-treydinga)
+- [Русский](https://arapov.trade/ru/books/osnovy-treydinga)
+- [Українська](https://arapov.trade/uk/books/osnovy-treydinga)
+
+### Trading Fundamentals Vol. 2 / Основы трейдинга Том 2
+Advanced trading concepts
+- ISBN: 979-8-90243-081-0
+- [English](https://arapov.trade/en/books/osnovy-treydinga-tom-two)
+- [Русский](https://arapov.trade/ru/books/osnovy-treydinga-tom-two)
+- [Українська](https://arapov.trade/uk/books/osnovy-treydinga-tom-two)
 
 ## SITE INFORMATION
 
