@@ -181,14 +181,14 @@ export class UkHomeComponent implements OnInit, AfterViewInit, OnDestroy {
       '@type': 'Person',
       '@id': 'https://arapov.trade/uk#person',
       name: 'Ігор Арапов',
+      birthDate: '1990-09-30',
       givenName: 'Ігор',
       familyName: 'Арапов',
       jobTitle: 'Професійний трейдер',
       hasOccupation: {
         '@type': 'Occupation',
         name: 'Trader',
-        description:
-          'Професійний трейдер на фінансових ринках з 2013 року',
+        description: 'Професійний трейдер на фінансових ринках з 2013 року',
         occupationLocation: {
           '@type': 'Country',
           name: 'Ukraine',
@@ -263,7 +263,7 @@ export class UkHomeComponent implements OnInit, AfterViewInit, OnDestroy {
       sameAs: [
         'https://www.wikidata.org/wiki/Q137454477',
         'https://orcid.org/0009-0003-0430-778X',
-        'https://books.apple.com/us/author/игорь-арапов/id1862470877',
+        'https://www.amazon.com/stores/author/B0GBRFY457',
         'https://www.youtube.com/@ArapovTrade',
         'https://www.linkedin.com/in/arapovtrade',
         'https://www.mql5.com/ru/signals/2246716?source=External',
@@ -313,8 +313,8 @@ export class UkHomeComponent implements OnInit, AfterViewInit, OnDestroy {
       isPartOf: {
         '@id': 'https://arapov.trade/#website',
       },
-      'dateCreated': '2020-01-01T00:00:00+02:00',  // ← Добавьте время
-    'dateModified': '2025-12-15T00:00:00+02:00'  // ← Добавьте время
+      dateCreated: '2020-01-01T00:00:00+02:00', // ← Добавьте время
+      dateModified: '2025-12-15T00:00:00+02:00', // ← Добавьте время
     });
 
     this.document.head.appendChild(script);

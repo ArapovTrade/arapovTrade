@@ -232,14 +232,14 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
       '@type': 'Person',
       '@id': 'https://arapov.trade/en#person',
       name: 'Igor Arapov',
+      birthDate: '1990-09-30',
       givenName: 'Igor',
       familyName: 'Arapov',
       jobTitle: 'Professional Trader',
       hasOccupation: {
         '@type': 'Occupation',
         name: 'Trader',
-        description:
-         'Professional trader in financial markets since 2013',
+        description: 'Professional trader in financial markets since 2013',
         occupationLocation: {
           '@type': 'Country',
           name: 'Ukraine',
@@ -264,8 +264,8 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
       ],
       award: [
         'Candidate for Master of Sports in Chess',
-'TradingView Editor`s Choice',
-'Author of a book with ISBN 979-8-90243-075-9',
+        'TradingView Editor`s Choice',
+        'Author of a book with ISBN 979-8-90243-075-9',
       ],
       publishingPrinciples: 'https://arapov.trade/en/freestudying',
       description:
@@ -298,7 +298,7 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
           dateCreated: '2013',
         },
       ],
-     identifier: [
+      identifier: [
         {
           '@type': 'PropertyValue',
           propertyID: 'ORCID',
@@ -313,7 +313,7 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
       sameAs: [
         'https://www.wikidata.org/wiki/Q137454477',
         'https://orcid.org/0009-0003-0430-778X',
-        'https://books.apple.com/us/author/игорь-арапов/id1862470877',
+        'https://www.amazon.com/stores/author/B0GBRFY457',
         'https://www.youtube.com/@ArapovTrade',
         'https://www.linkedin.com/in/arapovtrade',
         'https://www.mql5.com/ru/signals/2246716?source=External',

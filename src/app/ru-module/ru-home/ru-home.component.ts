@@ -261,6 +261,7 @@ export class RuHomeComponent implements OnInit, AfterViewInit, OnDestroy {
       '@type': 'Person',
       '@id': 'https://arapov.trade/ru#person',
       name: 'Игорь Арапов',
+      birthDate: '1990-09-30',
       givenName: 'Игорь',
       familyName: 'Арапов',
       jobTitle: 'Профессиональный трейдер',
@@ -343,7 +344,7 @@ export class RuHomeComponent implements OnInit, AfterViewInit, OnDestroy {
       sameAs: [
         'https://www.wikidata.org/wiki/Q137454477',
         'https://orcid.org/0009-0003-0430-778X',
-        'https://books.apple.com/us/author/игорь-арапов/id1862470877',
+        'https://www.amazon.com/stores/author/B0GBRFY457',
         'https://www.youtube.com/@ArapovTrade',
         'https://www.linkedin.com/in/arapovtrade',
         'https://www.mql5.com/ru/signals/2246716?source=External',
