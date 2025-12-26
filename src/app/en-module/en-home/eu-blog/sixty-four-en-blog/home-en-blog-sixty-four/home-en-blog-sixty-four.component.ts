@@ -1,4 +1,12 @@
-import { Component, OnInit,ChangeDetectorRef } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ChangeDetectorRef,
+  Inject,
+  Renderer2,
+  signal,
+} from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 import { ThemeservService } from '../../../../../servises/themeserv.service';
 import { artickle } from '../../../../../servises/articles.service';
 import { Subscription } from 'rxjs';
@@ -15,35 +23,44 @@ export class HomeEnBlogSixtyFourComponent {
   constructor(
     private meta: Meta,
     private titleService: Title,
-    private cdr:ChangeDetectorRef,
-  private router: Router,
-    private themeService:ThemeservService,
+    private cdr: ChangeDetectorRef,
+    private router: Router,
+    private themeService: ThemeservService,
     private artickleServ: ArticlesService,
-
+    private renderer: Renderer2,
+    @Inject(DOCUMENT) private document: Document
   ) {}
- private routerSubscription!: Subscription;
- private themeSubscription!: Subscription;
-  isDark!:boolean  ;
+  private routerSubscription!: Subscription;
+  private themeSubscription!: Subscription;
+  isDark!: boolean;
   ukrGroups: any = [];
- grr!: any;
+  grr!: any;
   checkedGroup!: any;
+  readonly panelOpenState = signal(false);
+
   ngOnInit(): void {
-     this.themeSubscription =this.themeService.getTheme().subscribe(data=>{
-      this.isDark=data;
-        this.cdr.detectChanges();
-    })
- this.ukrGroups = this.artickleServ.getEnglishGroups();
+    this.removeSelectedSchemas();
+    this.setArticleSchema();
+    this.setPersonSchema();
+    this.setFaqSchema();
+    this.setHowToSchema();
+    this.setGlossarySchema();
+    this.themeSubscription = this.themeService.getTheme().subscribe((data) => {
+      this.isDark = data;
+      this.cdr.detectChanges();
+    });
+    this.ukrGroups = this.artickleServ.getEnglishGroups();
     this.grr = this.artickleServ.selectedGroups;
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Practical trading recommendations. Trading system - Arapov.trade'
+      'Trading System That Works — Real Examples with Entry & Exit Rules'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Practical trading tips, trading system with examples of entry and exit points, money management and risk management. Step-by-step guide',
+        'Complete trading system with real trade examples. Step-by-step guide to finding entry points, setting stop-losses, and taking profits using false breakout strategy.',
     });
     this.meta.updateTag({ name: 'author', content: 'Igor Arapov' });
     this.meta.updateTag({ name: 'datePublished', content: '2025-05-25' });
@@ -59,7 +76,7 @@ export class HomeEnBlogSixtyFourComponent {
     this.randomArticleRus = this.artickleServ.getRandomUkArticles();
   }
   hoveredIndex: number | null = null;
-   projects = [
+  projects = [
     { title: 'Quick start', link: 'https://arapov.education/en/course-en/' },
     {
       title: 'Introduction to Trading',
@@ -72,40 +89,40 @@ export class HomeEnBlogSixtyFourComponent {
     },
     { title: 'Copy-trading', link: 'https://arapovcopytrade.com/en/home-en/' },
   ];
-    onGroupChange(event: Event) {
-       const checkbox = event.target as HTMLInputElement;
+  onGroupChange(event: Event) {
+    const checkbox = event.target as HTMLInputElement;
     const value = checkbox.value;
-      this.router.navigate(['/en/freestudying'], {
-      queryParams: { group: value }
+    this.router.navigate(['/en/freestudying'], {
+      queryParams: { group: value },
     });
     this.checkedGroup = this.artickleServ.selectedGroups;
+  }
+  paginatedArticles = []; // Статьи для отображения на текущей странице
+  currentPage = 0;
+  pageSize = 10;
+  ngOnDestroy() {
+    // Отписка от подписок
+    if (this.routerSubscription) {
+      this.routerSubscription.unsubscribe();
     }
-    paginatedArticles = []; // Статьи для отображения на текущей странице
-    currentPage = 0;
-    pageSize = 10;
-         ngOnDestroy() {
-          // Отписка от подписок
-          if (this.routerSubscription) {
-            this.routerSubscription.unsubscribe();
-          }
-          if (this.themeSubscription) {
-            this.themeSubscription.unsubscribe();
-          }
-        } 
-        hovered: string | null = null;
-        toggleTheme() {
-        this.isDark = !this.isDark;
-        this.themeService.setTheme(this.isDark)
-      }
-      navigateTo(path: string) {
-        this.router.navigate([path]);
-      }
-      articleCounts: { [key: string]: number } = {};
-      updateArticleCounts() {
+    if (this.themeSubscription) {
+      this.themeSubscription.unsubscribe();
+    }
+  }
+  hovered: string | null = null;
+  toggleTheme() {
+    this.isDark = !this.isDark;
+    this.themeService.setTheme(this.isDark);
+  }
+  navigateTo(path: string) {
+    this.router.navigate([path]);
+  }
+  articleCounts: { [key: string]: number } = {};
+  updateArticleCounts() {
     this.articleCounts = {}; // очищаем
-    this.artickleServ.ukrArtickles.forEach(article => {
+    this.artickleServ.ukrArtickles.forEach((article) => {
       // article.groupsUkr — это массив, например ['Програмування', 'Маркетинг']
-      article.groupsEng.forEach(group => {
+      article.groupsEng.forEach((group) => {
         if (!this.articleCounts[group]) {
           this.articleCounts[group] = 1;
         } else {
@@ -114,13 +131,13 @@ export class HomeEnBlogSixtyFourComponent {
       });
     });
   }
-    //popup
-    flag1: boolean = false;
-    flagTrue1: boolean = true;
-    searchtoggle(event: Event) {
-      this.flag1 = !this.flag1;
-      this.flagTrue1 = !this.flagTrue1;
-    }
+  //popup
+  flag1: boolean = false;
+  flagTrue1: boolean = true;
+  searchtoggle(event: Event) {
+    this.flag1 = !this.flag1;
+    this.flagTrue1 = !this.flagTrue1;
+  }
   isFocused = false;
   displayedArticles: artickle[] = [];
   maxResults = 5;
@@ -129,7 +146,9 @@ export class HomeEnBlogSixtyFourComponent {
     this.isFocused = true;
     // Показываем 5 случайных статей при фокусе, если инпут пуст
     if (!this.searchQuery) {
-      const shuffled = [...this.artickleServ.ukrArtickles].sort(() => Math.random() - 0.5);
+      const shuffled = [...this.artickleServ.ukrArtickles].sort(
+        () => Math.random() - 0.5
+      );
       this.displayedArticles = shuffled.slice(0, this.maxResults);
     }
   }
@@ -140,43 +159,348 @@ export class HomeEnBlogSixtyFourComponent {
   }
   onSearchChange() {
     // Логика асинхронного поиска
-    const filtered = this.artickleServ.ukrArtickles.filter(a =>
+    const filtered = this.artickleServ.ukrArtickles.filter((a) =>
       a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase())
     );
     this.displayedArticles = filtered.slice(0, this.maxResults);
   }
-  moveToTheTop(){
+  moveToTheTop() {
     const element = document.getElementById('scrollToTop');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }
   groupsMenuOpen = false;
-     toggleGroupsMenu(event: Event) {
-      this.groupsMenuOpen = !this.groupsMenuOpen;
+  toggleGroupsMenu(event: Event) {
+    this.groupsMenuOpen = !this.groupsMenuOpen;
+  }
+
+  goToNextPage() {
+    let nextpage: any;
+    const path: string =
+      this.router.url.split('/')[this.router.url.split('/').length - 1];
+    let index = this.artickleServ.ukrArtickles.findIndex(
+      (a) => a.linkUkr == path
+    );
+
+    if (this.artickleServ.ukrArtickles.length - 1 == index) {
+      nextpage = this.artickleServ.ukrArtickles[0].linkUkr;
+    } else {
+      nextpage = this.artickleServ.ukrArtickles[index + 1].linkUkr;
     }
- 
-    goToNextPage(){
-      let nextpage:any;
-      const path:string=this.router.url.split('/')[this.router.url.split('/').length-1];
-      let index=this.artickleServ.ukrArtickles.findIndex(a=>a.linkUkr==path);
-     
-      if(this.artickleServ.ukrArtickles.length-1==index){
-      nextpage=this.artickleServ.ukrArtickles[0].linkUkr;
-      }else{
-        nextpage=this.artickleServ.ukrArtickles[index+1].linkUkr;
+    this.router.navigate(['/en/freestudying', nextpage]);
+  }
+  goToPreviousPage() {
+    let nextpage: any;
+    const path: string =
+      this.router.url.split('/')[this.router.url.split('/').length - 1];
+    let index = this.artickleServ.ukrArtickles.findIndex(
+      (a) => a.linkUkr == path
+    );
+    if (index == 1) {
+      nextpage =
+        this.artickleServ.ukrArtickles[
+          this.artickleServ.ukrArtickles.length - 1
+        ].linkUkr;
+    } else {
+      nextpage = this.artickleServ.ukrArtickles[index - 1].linkUkr;
+    }
+    this.router.navigate(['/en/freestudying', nextpage]);
+  }
+
+  private removeSelectedSchemas(): void {
+    const typesToRemove = [
+      'Article',
+      'FAQPage',
+      'HowTo',
+      'DefinedTermSet',
+      'Person',
+    ];
+
+    const scripts = this.document.querySelectorAll(
+      'script[type="application/ld+json"]'
+    );
+
+    scripts.forEach((script) => {
+      try {
+        const json = JSON.parse(script.textContent || '{}');
+
+        // Массив, объект-граф или одиночный объект
+        const candidates =
+          json['@graph'] ?? (Array.isArray(json) ? json : [json]);
+
+        const shouldRemove = candidates.some(
+          (entry: any) =>
+            entry['@type'] && typesToRemove.includes(entry['@type'])
+        );
+
+        if (shouldRemove) {
+          script.remove();
+        }
+      } catch {
+        /* ignore invalid */
       }
-       this.router.navigate(['/en/freestudying', nextpage] )
-    }
-    goToPreviousPage(){
-      let nextpage:any;
-      const path:string=this.router.url.split('/')[this.router.url.split('/').length-1];
-      let index=this.artickleServ.ukrArtickles.findIndex(a=>a.linkUkr==path);
-      if(index==1){
-nextpage=this.artickleServ.ukrArtickles[this.artickleServ.ukrArtickles.length-1].linkUkr;
-      }else{
-        nextpage=this.artickleServ.ukrArtickles[index-1].linkUkr;
-      }
-       this.router.navigate(['/en/freestudying', nextpage] )
-    }
+    });
+  }
+
+  private addJsonLdSchema(data: any): void {
+    const script = this.renderer.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(data);
+    this.renderer.appendChild(this.document.head, script);
+  }
+
+  // ============================================================
+  //  ARTICLE
+  // ============================================================
+  private setArticleSchema(): void {
+    const data = {
+      '@context': 'https://schema.org',
+      '@graph': [
+        {
+          '@type': 'Article',
+          '@id': 'https://arapov.trade/en/freestudying/practic#article',
+          headline:
+            'Trading System That Works — Real Examples with Entry & Exit Rules',
+          description:
+            'Complete trading system with real trade examples. Step-by-step guide to finding entry points, setting stop-losses, and taking profits using false breakout strategy.',
+          datePublished: '2024-06-15T00:00:00+02:00',
+          dateModified: '2025-01-04T00:00:00+02:00',
+          author: {
+            '@type': 'Person',
+            '@id': 'https://arapov.trade/en#person',
+            name: 'Igor Arapov',
+          },
+          publisher: {
+            '@type': 'Organization',
+            name: 'Arapov Trade',
+            logo: {
+              '@type': 'ImageObject',
+              url: 'https://arapov.trade/assets/img/favicon.ico',
+            },
+          },
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': 'https://arapov.trade/en/freestudying/practic',
+          },
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/prakticen.jpg',
+          },
+          articleSection: 'Trading',
+          keywords: [
+            'trading system',
+            'entry point',
+            'stop-loss',
+            'false breakout',
+            'Price Action',
+            'Smart Money',
+          ],
+        },
+      ],
+    };
+
+    this.addJsonLdSchema(data);
+  }
+
+  // ============================================================
+  //  PERSON
+  // ============================================================
+  private setPersonSchema(): void {
+    const data = {
+      '@context': 'https://schema.org',
+      '@type': 'Person',
+      '@id': 'https://arapov.trade/en#person',
+      name: 'Igor Arapov',
+      url: 'https://arapov.trade/en',
+      image:
+        'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
+      sameAs: [
+        'https://www.youtube.com/@ArapovTrade',
+        'https://t.me/ArapovTrade',
+      ],
+      jobTitle: 'Professional trader',
+      description:
+        'I have been actively trading on financial markets since 2013. Author of a free trading course.',
+    };
+
+    this.addJsonLdSchema(data);
+  }
+
+  // ============================================================
+  //  FAQ
+  // ============================================================
+  private setFaqSchema(): void {
+    const data = {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      '@id': 'https://arapov.trade/en/freestudying/practic#faq',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'What makes a trading system profitable?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Positive expectancy — when your average win multiplied by win rate exceeds your average loss multiplied by loss rate. A system with 40% winners can be highly profitable if winners are 3x larger than losers.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Why is the 3:1 reward-to-risk ratio so important?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: "Math: with 3:1 ratio, you only need 25% winners to break even. At 40% winners, you're solidly profitable. This ratio provides a buffer against random variance and ensures long-term edge despite losing streaks.",
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How do you identify a false breakout?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Key signs: price pierces a level on high volume but fails to close beyond it, forms a rejection candle (pin bar), then produces an engulfing pattern in opposite direction. This sequence indicates Smart Money trapped retail traders.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'When should you skip a trade even with a valid signal?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: "When the distance to target doesn't provide minimum 3:1 ratio. A perfect setup with poor risk-reward is a losing proposition over time. Discipline means knowing when NOT to trade as much as when to trade.",
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How many trades are needed to validate a system?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: "Minimum 50 trades for basic statistics, ideally 100+. Smaller samples are dominated by random variance. This is why demo trading before going live isn't optional — it's essential for system validation.",
+          },
+        },
+      ],
+    };
+
+    this.addJsonLdSchema(data);
+  }
+
+  // ============================================================
+  //  HOWTO
+  // ============================================================
+  private setHowToSchema(): void {
+    const data = {
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      '@id': 'https://arapov.trade/en/freestudying/practic#howto',
+      name: 'False Breakout Entry Method',
+      description:
+        'Step-by-step process for identifying and trading false breakouts at key levels.',
+      step: [
+        {
+          '@type': 'HowToStep',
+          position: 1,
+          name: 'Mark key level on higher timeframe',
+          text: 'On 4H chart, identify where price previously reversed — this becomes your zone of interest for potential trades.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 2,
+          name: 'Watch price approach the zone',
+          text: 'As price returns to the level, look for early weakness signs: pin bars, declining momentum, volume divergence.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 3,
+          name: 'Identify the false breakout',
+          text: 'Price pushes through level on high volume but fails to hold. This spike triggers stops and breakout orders — creating liquidity for Smart Money.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 4,
+          name: 'Wait for confirmation',
+          text: 'An engulfing candle confirms the false breakout. Entry triggers when price breaks the extreme of this confirmation candle.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 5,
+          name: 'Set your orders',
+          text: 'Stop-loss beyond the false breakout high/low. Target at opposite level. Verify minimum 3:1 ratio before entering.',
+        },
+      ],
+    };
+
+    this.addJsonLdSchema(data);
+  }
+
+  // ============================================================
+  //  GLOSSARY
+  // ============================================================
+  private setGlossarySchema(): void {
+    const data = {
+      '@context': 'https://schema.org',
+      '@type': 'DefinedTermSet',
+      '@id': 'https://arapov.trade/en/freestudying/practic#terms',
+      name: 'Trading System Terminology',
+      hasDefinedTerm: [
+        {
+          '@type': 'DefinedTerm',
+          name: 'Trading System',
+          description:
+            'Complete set of rules governing entries, exits, and position sizing.',
+        },
+        {
+          '@type': 'DefinedTerm',
+          name: 'Entry Point',
+          description:
+            'Specific price and conditions where a trade is initiated.',
+        },
+        {
+          '@type': 'DefinedTerm',
+          name: 'Stop-Loss',
+          description:
+            'Protective order that exits a losing trade at predetermined price.',
+        },
+        {
+          '@type': 'DefinedTerm',
+          name: 'Take-Profit',
+          description:
+            'Order that automatically locks in gains when target is reached.',
+        },
+        {
+          '@type': 'DefinedTerm',
+          name: 'False Breakout',
+          description:
+            'Price move beyond a level that fails to sustain and reverses.',
+        },
+        {
+          '@type': 'DefinedTerm',
+          name: 'Pin Bar',
+          description:
+            'Candle with long wick and small body showing price rejection.',
+        },
+        {
+          '@type': 'DefinedTerm',
+          name: 'Engulfing Pattern',
+          description:
+            "Two-candle pattern where second candle completely covers first candle's body.",
+        },
+        {
+          '@type': 'DefinedTerm',
+          name: 'Win Rate',
+          description: 'Percentage of profitable trades in a trading system.',
+        },
+        {
+          '@type': 'DefinedTerm',
+          name: 'Profit Factor',
+          description:
+            'Ratio of gross profit to gross loss — measures system efficiency.',
+        },
+        {
+          '@type': 'DefinedTerm',
+          name: 'Drawdown',
+          description: 'Maximum peak-to-trough decline in account equity.',
+        },
+      ],
+    };
+
+    this.addJsonLdSchema(data);
+  }
 }
