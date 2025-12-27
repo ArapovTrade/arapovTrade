@@ -425,7 +425,7 @@ export class HomeEnTwentySevenComponent implements OnInit {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
       name: 'Technical Analysis Glossary',
-      definedTerm: [
+      hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
           name: 'Japanese Candlesticks',
