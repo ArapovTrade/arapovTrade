@@ -302,7 +302,7 @@ export class HomeEnFourtyFiveComponent implements OnInit {
           },
           image: {
             '@type': 'ImageObject',
-            url: 'https://arapov.trade/assets/img/content/phaze-trading_1.png',
+            url: 'https://arapov.trade/assets/img/content/freeeducationnew.webp',
           },
           articleSection: 'Trading training',
           keywords: [

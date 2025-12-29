@@ -399,7 +399,7 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
           },
           image: {
             '@type': 'ImageObject',
-            url: 'https://arapov.trade/assets/img/content/phaze-trading_1.png',
+            url: 'https://arapov.trade/assets/img/content/freeeducationnew.webp',
           },
           articleSection: 'Обучение трейдингу',
           keywords: [
