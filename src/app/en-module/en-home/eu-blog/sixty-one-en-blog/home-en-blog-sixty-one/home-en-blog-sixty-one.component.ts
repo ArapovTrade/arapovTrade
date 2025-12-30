@@ -274,14 +274,7 @@ export class HomeEnBlogSixtyOneComponent {
           dateModified: '2025-12-15T00:00:00+02:00',
           inLanguage: 'en',
           author: {
-            '@type': 'Person',
             '@id': 'https://arapov.trade/en#person',
-            name: 'Igor Arapov',
-            url: 'https://arapov.trade/en',
-            sameAs: [
-              'https://www.youtube.com/@ArapovTrade',
-              'https://www.mql5.com/ru/signals/2246716',
-            ],
           },
           publisher: {
             '@type': 'Organization',
@@ -292,7 +285,7 @@ export class HomeEnBlogSixtyOneComponent {
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
-          video: { 
+          video: {
             '@type': 'VideoObject',
             name: 'Smart Money и Захват Ликвидности | Обучение Трейдингу от А до Я',
             description:
@@ -383,7 +376,7 @@ export class HomeEnBlogSixtyOneComponent {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/#person',
+      '@id': 'https://arapov.trade/en#person',
       name: 'Igor Arapov',
       url: 'https://arapov.trade/en',
       image:

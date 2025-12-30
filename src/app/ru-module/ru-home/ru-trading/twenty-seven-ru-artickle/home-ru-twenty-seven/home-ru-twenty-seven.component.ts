@@ -284,18 +284,7 @@ export class HomeRuTwentySevenComponent implements OnInit {
           description:
             'Полное руководство по техническому анализу: виды графиков, типы трендов и уровни поддержки/сопротивления для профессионального трейдинга',
           author: {
-            '@type': 'Person',
-            name: 'Игорь Арапов',
-            url: 'https://arapov.trade/ru',
-            sameAs: [
-              'https://www.youtube.com/@ArapovTrade',
-              'https://t.me/ArapovTrade',
-            ],
-            jobTitle: 'Профессиональный трейдер',
-            worksFor: {
-              '@type': 'Organization',
-              name: 'Arapov.trade',
-            },
+            '@id': 'https://arapov.trade/ru#person',
           },
           publisher: {
             '@type': 'Organization',

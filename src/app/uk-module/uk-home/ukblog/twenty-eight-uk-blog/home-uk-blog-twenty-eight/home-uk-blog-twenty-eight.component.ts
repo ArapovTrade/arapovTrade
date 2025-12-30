@@ -288,12 +288,7 @@ export class HomeUkBlogTwentyEightComponent implements OnInit {
           description:
             'Повний огляд альтернативних блокчейнів: Solana, Polkadot, Avalanche, Cardano та їх місце в Web3',
           author: {
-            '@type': 'Person',
-            name: 'Ігор Арапов',
-            url: 'https://arapov.trade/uk',
-            sameAs: ['https://www.youtube.com/@ArapovTrade'],
-            jobTitle: 'Професійний трейдер',
-            worksFor: { '@type': 'Organization', name: 'Arapov.trade' },
+            '@id': 'https://arapov.trade/uk#person',
           },
           publisher: {
             '@type': 'Organization',
@@ -303,8 +298,8 @@ export class HomeUkBlogTwentyEightComponent implements OnInit {
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
-         datePublished: '2025-01-10T12:00:00+02:00',
-dateModified: '2025-01-10T12:00:00+02:00',
+          datePublished: '2025-01-10T12:00:00+02:00',
+          dateModified: '2025-01-10T12:00:00+02:00',
           mainEntityOfPage: {
             '@type': 'WebPage',
             '@id': 'https://arapov.trade/uk/freestudying/altblockchains',
@@ -328,7 +323,7 @@ dateModified: '2025-01-10T12:00:00+02:00',
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/#person',
+      '@id': 'https://arapov.trade/uk#person',
       name: 'Ігор Арапов',
       url: 'https://arapov.trade/uk',
       image:

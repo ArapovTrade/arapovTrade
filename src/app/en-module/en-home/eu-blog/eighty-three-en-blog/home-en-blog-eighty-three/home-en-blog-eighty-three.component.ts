@@ -262,15 +262,7 @@ export class HomeEnBlogEightyThreeComponent {
           description:
             'Complete guide to trading the Cup and Handle pattern: identification, entry points, risk management',
           author: {
-            '@type': 'Person',
-            name: 'Igor Arapov',
-            url: 'https://arapov.trade/en',
-            sameAs: [
-              'https://www.youtube.com/@ArapovTrade',
-              'https://t.me/ArapovTrade',
-            ],
-            jobTitle: 'Professional Trader',
-            worksFor: { '@type': 'Organization', name: 'Arapov.trade' },
+            '@id': 'https://arapov.trade/en#person',
           },
           publisher: {
             '@type': 'Organization',

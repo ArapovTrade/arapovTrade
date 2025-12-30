@@ -285,13 +285,7 @@ export class HomeEnBlogNintyNineComponent implements OnInit {
             'MACD Indicator: complete trading guide. Settings, signals, divergences, histogram analysis and trading strategies explained.',
           image: 'https://arapov.trade/assets/img/content/macdindicator.png',
           author: {
-            '@type': 'Person',
-            name: 'Igor Arapov',
-            url: 'https://arapov.trade/en',
-            sameAs: [
-              'https://www.youtube.com/@ArapovTrade',
-              'https://t.me/ArapovTrade',
-            ],
+            '@id': 'https://arapov.trade/en#person',
           },
           publisher: {
             '@type': 'Organization',
@@ -322,7 +316,7 @@ export class HomeEnBlogNintyNineComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/#person',
+      '@id': 'https://arapov.trade/en#person',
       name: 'Igor Arapov',
       url: 'https://arapov.trade/en',
       image:

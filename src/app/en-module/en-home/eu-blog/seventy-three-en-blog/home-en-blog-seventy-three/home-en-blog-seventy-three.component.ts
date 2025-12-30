@@ -264,18 +264,7 @@ export class HomeEnBlogSeventyThreeComponent {
           description:
             'Complete guide to macroeconomic indicators for traders. Learn how GDP, inflation, interest rates, and employment affect financial markets.',
           author: {
-            '@type': 'Person',
-            name: 'Igor Arapov',
-            url: 'https://arapov.trade/en',
-            sameAs: [
-              'https://www.youtube.com/@ArapovTrade',
-              'https://t.me/ArapovTrade',
-            ],
-            jobTitle: 'Professional Trader',
-            worksFor: {
-              '@type': 'Organization',
-              name: 'Arapov Trade',
-            },
+            '@id': 'https://arapov.trade/en#person',
           },
           image: [
             'https://arapov.trade/assets/redesignArapovTrade/img/macroeconomicindicators.webp',

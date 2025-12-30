@@ -1,4 +1,11 @@
-import { Component, OnInit,ChangeDetectorRef,Inject,Renderer2, signal } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ChangeDetectorRef,
+  Inject,
+  Renderer2,
+  signal,
+} from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { ThemeservService } from '../../../../../servises/themeserv.service';
 import { artickle } from '../../../../../servises/articles.service';
@@ -16,34 +23,34 @@ export class HomeOneEnComponent implements OnInit {
   constructor(
     private meta: Meta,
     private titleService: Title,
-    private cdr:ChangeDetectorRef,
-  private router: Router,
-    private themeService:ThemeservService,
+    private cdr: ChangeDetectorRef,
+    private router: Router,
+    private themeService: ThemeservService,
     private artickleServ: ArticlesService,
- private renderer: Renderer2,
+    private renderer: Renderer2,
     @Inject(DOCUMENT) private document: Document
   ) {}
 
-   private routerSubscription!: Subscription;
- private themeSubscription!: Subscription;
-  isDark!:boolean  ;
+  private routerSubscription!: Subscription;
+  private themeSubscription!: Subscription;
+  isDark!: boolean;
   ukrGroups: any = [];
- grr!: any;
+  grr!: any;
   checkedGroup!: any;
   readonly panelOpenState = signal(false);
 
- ngOnInit(): void {
-     this.removeSelectedSchemas();
+  ngOnInit(): void {
+    this.removeSelectedSchemas();
     this.setArticleSchema();
     this.setPersonSchema();
     this.setFaqSchema();
     this.setHowToSchema();
     this.setGlossarySchema();
-     this.themeSubscription =this.themeService.getTheme().subscribe(data=>{
-      this.isDark=data;
-        this.cdr.detectChanges();
-    })
- this.ukrGroups = this.artickleServ.getEnglishGroups();
+    this.themeSubscription = this.themeService.getTheme().subscribe((data) => {
+      this.isDark = data;
+      this.cdr.detectChanges();
+    });
+    this.ukrGroups = this.artickleServ.getEnglishGroups();
     this.grr = this.artickleServ.selectedGroups;
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
@@ -67,7 +74,7 @@ export class HomeOneEnComponent implements OnInit {
     this.randomArticleRus = this.artickleServ.getRandomUkArticles();
   }
   hoveredIndex: number | null = null;
-   projects = [
+  projects = [
     { title: 'Quick start', link: 'https://arapov.education/en/course-en/' },
     {
       title: 'Introduction to Trading',
@@ -80,40 +87,40 @@ export class HomeOneEnComponent implements OnInit {
     },
     { title: 'Copy-trading', link: 'https://arapovcopytrade.com/en/home-en/' },
   ];
-    onGroupChange(event: Event) {
-       const checkbox = event.target as HTMLInputElement;
+  onGroupChange(event: Event) {
+    const checkbox = event.target as HTMLInputElement;
     const value = checkbox.value;
-      this.router.navigate(['/en/freestudying'], {
-      queryParams: { group: value }
+    this.router.navigate(['/en/freestudying'], {
+      queryParams: { group: value },
     });
     this.checkedGroup = this.artickleServ.selectedGroups;
+  }
+  paginatedArticles = []; // Статьи для отображения на текущей странице
+  currentPage = 0;
+  pageSize = 10;
+  ngOnDestroy() {
+    // Отписка от подписок
+    if (this.routerSubscription) {
+      this.routerSubscription.unsubscribe();
     }
-    paginatedArticles = []; // Статьи для отображения на текущей странице
-    currentPage = 0;
-    pageSize = 10;
-         ngOnDestroy() {
-          // Отписка от подписок
-          if (this.routerSubscription) {
-            this.routerSubscription.unsubscribe();
-          }
-          if (this.themeSubscription) {
-            this.themeSubscription.unsubscribe();
-          }
-        } 
-        hovered: string | null = null;
-        toggleTheme() {
-        this.isDark = !this.isDark;
-        this.themeService.setTheme(this.isDark)
-      }
-      navigateTo(path: string) {
-        this.router.navigate([path]);
-      }
-      articleCounts: { [key: string]: number } = {};
-      updateArticleCounts() {
+    if (this.themeSubscription) {
+      this.themeSubscription.unsubscribe();
+    }
+  }
+  hovered: string | null = null;
+  toggleTheme() {
+    this.isDark = !this.isDark;
+    this.themeService.setTheme(this.isDark);
+  }
+  navigateTo(path: string) {
+    this.router.navigate([path]);
+  }
+  articleCounts: { [key: string]: number } = {};
+  updateArticleCounts() {
     this.articleCounts = {}; // очищаем
-    this.artickleServ.ukrArtickles.forEach(article => {
+    this.artickleServ.ukrArtickles.forEach((article) => {
       // article.groupsUkr — это массив, например ['Програмування', 'Маркетинг']
-      article.groupsEng.forEach(group => {
+      article.groupsEng.forEach((group) => {
         if (!this.articleCounts[group]) {
           this.articleCounts[group] = 1;
         } else {
@@ -122,13 +129,13 @@ export class HomeOneEnComponent implements OnInit {
       });
     });
   }
-    //popup
-    flag1: boolean = false;
-    flagTrue1: boolean = true;
-    searchtoggle(event: Event) {
-      this.flag1 = !this.flag1;
-      this.flagTrue1 = !this.flagTrue1;
-    }
+  //popup
+  flag1: boolean = false;
+  flagTrue1: boolean = true;
+  searchtoggle(event: Event) {
+    this.flag1 = !this.flag1;
+    this.flagTrue1 = !this.flagTrue1;
+  }
   isFocused = false;
   displayedArticles: artickle[] = [];
   maxResults = 5;
@@ -137,7 +144,9 @@ export class HomeOneEnComponent implements OnInit {
     this.isFocused = true;
     // Показываем 5 случайных статей при фокусе, если инпут пуст
     if (!this.searchQuery) {
-      const shuffled = [...this.artickleServ.ukrArtickles].sort(() => Math.random() - 0.5);
+      const shuffled = [...this.artickleServ.ukrArtickles].sort(
+        () => Math.random() - 0.5
+      );
       this.displayedArticles = shuffled.slice(0, this.maxResults);
     }
   }
@@ -148,86 +157,91 @@ export class HomeOneEnComponent implements OnInit {
   }
   onSearchChange() {
     // Логика асинхронного поиска
-    const filtered = this.artickleServ.ukrArtickles.filter(a =>
+    const filtered = this.artickleServ.ukrArtickles.filter((a) =>
       a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase())
     );
     this.displayedArticles = filtered.slice(0, this.maxResults);
   }
-  moveToTheTop(){
+  moveToTheTop() {
     const element = document.getElementById('scrollToTop');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }
   groupsMenuOpen = false;
-     toggleGroupsMenu(event: Event) {
-      this.groupsMenuOpen = !this.groupsMenuOpen;
-    }
+  toggleGroupsMenu(event: Event) {
+    this.groupsMenuOpen = !this.groupsMenuOpen;
+  }
 
-    goToNextPage(){
-      let nextpage:any;
-      const path:string=this.router.url.split('/')[this.router.url.split('/').length-1];
-      let index=this.artickleServ.ukrArtickles.findIndex(a=>a.linkUkr==path);
-     
-      if(this.artickleServ.ukrArtickles.length-1==index){
-      nextpage=this.artickleServ.ukrArtickles[0].linkUkr;
-      }else{
-        nextpage=this.artickleServ.ukrArtickles[index+1].linkUkr;
+  goToNextPage() {
+    let nextpage: any;
+    const path: string =
+      this.router.url.split('/')[this.router.url.split('/').length - 1];
+    let index = this.artickleServ.ukrArtickles.findIndex(
+      (a) => a.linkUkr == path
+    );
+
+    if (this.artickleServ.ukrArtickles.length - 1 == index) {
+      nextpage = this.artickleServ.ukrArtickles[0].linkUkr;
+    } else {
+      nextpage = this.artickleServ.ukrArtickles[index + 1].linkUkr;
+    }
+    this.router.navigate(['/en/freestudying', nextpage]);
+  }
+  goToPreviousPage() {
+    let nextpage: any;
+    const path: string =
+      this.router.url.split('/')[this.router.url.split('/').length - 1];
+    let index = this.artickleServ.ukrArtickles.findIndex(
+      (a) => a.linkUkr == path
+    );
+    if (index == 1) {
+      nextpage =
+        this.artickleServ.ukrArtickles[
+          this.artickleServ.ukrArtickles.length - 1
+        ].linkUkr;
+    } else {
+      nextpage = this.artickleServ.ukrArtickles[index - 1].linkUkr;
+    }
+    this.router.navigate(['/en/freestudying', nextpage]);
+  }
+
+  private removeSelectedSchemas(): void {
+    const typesToRemove = [
+      'Article',
+      'FAQPage',
+      'HowTo',
+      'DefinedTermSet',
+      'Person',
+    ];
+
+    const scripts = this.document.querySelectorAll(
+      'script[type="application/ld+json"]'
+    );
+
+    scripts.forEach((script) => {
+      try {
+        const json = JSON.parse(script.textContent || '{}');
+
+        // Массив, объект-граф или одиночный объект
+        const candidates =
+          json['@graph'] ?? (Array.isArray(json) ? json : [json]);
+
+        const shouldRemove = candidates.some(
+          (entry: any) =>
+            entry['@type'] && typesToRemove.includes(entry['@type'])
+        );
+
+        if (shouldRemove) {
+          script.remove();
+        }
+      } catch {
+        /* ignore invalid */
       }
-       this.router.navigate(['/en/freestudying', nextpage] )
-    }
-    goToPreviousPage(){
-      let nextpage:any;
-      const path:string=this.router.url.split('/')[this.router.url.split('/').length-1];
-      let index=this.artickleServ.ukrArtickles.findIndex(a=>a.linkUkr==path);
-      if(index==1){
-nextpage=this.artickleServ.ukrArtickles[this.artickleServ.ukrArtickles.length-1].linkUkr;
-      }else{
-        nextpage=this.artickleServ.ukrArtickles[index-1].linkUkr;
-      }
-       this.router.navigate(['/en/freestudying', nextpage] )
-    }
+    });
+  }
 
-
-    private removeSelectedSchemas(): void {
-  const typesToRemove = [
-    'Article',
-    'FAQPage',
-    'HowTo',
-    'DefinedTermSet',
-    'Person',
-  ];
-
-  const scripts = this.document.querySelectorAll(
-    'script[type="application/ld+json"]'
-  );
-
-  scripts.forEach((script) => {
-    try {
-      const json = JSON.parse(script.textContent || '{}');
-
-      // Массив, объект-граф или одиночный объект
-      const candidates = json['@graph'] ?? (Array.isArray(json) ? json : [json]);
-
-      const shouldRemove = candidates.some((entry: any) =>
-        entry['@type'] && typesToRemove.includes(entry['@type'])
-      );
-
-      if (shouldRemove) {
-        script.remove();
-      }
-
-    } catch {
-      /* ignore invalid */
-    }
-  });
-}
-
-
-
-
-
-private addJsonLdSchema(data: any): void {
+  private addJsonLdSchema(data: any): void {
     const script = this.renderer.createElement('script');
     script.type = 'application/ld+json';
     script.text = JSON.stringify(data);
@@ -242,20 +256,29 @@ private addJsonLdSchema(data: any): void {
       '@context': 'https://schema.org',
       '@graph': [
         {
-           "@type": "Article",
-                "@id": "https://arapov.trade/en/freestudying/adviceforbeginners#article",
-                "headline": "10 Essential Tips for Beginner Traders: Avoiding Common Mistakes",
-                "description": "Practical advice for beginner traders from a professional with 11 years of experience.",
-                "image": [
-                    "https://arapov.trade/assets/img/content/traderStarterw.webp"
-                ],
-                datePublished: '2025-01-10T12:00:00+02:00',
-dateModified: '2025-01-10T12:00:00+02:00',
-                "author": {"@type": "Person", "@id": "https://arapov.trade/#person"},
-                "publisher": {"@type": "Organization", "@id": "https://arapov.trade/#organization"},
-                "mainEntityOfPage": {"@type": "WebPage", "@id": "https://arapov.trade/en/freestudying/adviceforbeginners"},
-                "articleSection": "Trading for Beginners",
-                "inLanguage": "en"
+          '@type': 'Article',
+          '@id':
+            'https://arapov.trade/en/freestudying/adviceforbeginners#article',
+          headline:
+            '10 Essential Tips for Beginner Traders: Avoiding Common Mistakes',
+          description:
+            'Practical advice for beginner traders from a professional with 11 years of experience.',
+          image: [
+            'https://arapov.trade/assets/img/content/traderStarterw.webp',
+          ],
+          datePublished: '2025-01-10T12:00:00+02:00',
+          dateModified: '2025-01-10T12:00:00+02:00',
+          author: { '@id': 'https://arapov.trade/en#person' },
+          publisher: {
+            '@type': 'Organization',
+            '@id': 'https://arapov.trade/#organization',
+          },
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': 'https://arapov.trade/en/freestudying/adviceforbeginners',
+          },
+          articleSection: 'Trading for Beginners',
+          inLanguage: 'en',
         },
       ],
     };
@@ -269,19 +292,23 @@ dateModified: '2025-01-10T12:00:00+02:00',
   private setPersonSchema(): void {
     const data = {
       '@context': 'https://schema.org',
-      "@type": "Person",
-                "@id": "https://arapov.trade/#person",
-                "name": "Igor Arapov",
-                "url": "https://arapov.trade/en/",
-                "image": "https://arapov.trade/assets/img/author.jpg",
-                "sameAs": ["https://www.youtube.com/@ArapovTrade", "https://t.me/ArapovTrade"],
-                "jobTitle": "Professional Trader"
+      '@type': 'Person',
+      '@id': 'https://arapov.trade/en#person',
+      name: 'Igor Arapov',
+      url: 'https://arapov.trade/en',
+      image:
+        'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
+      sameAs: [
+        'https://www.youtube.com/@ArapovTrade',
+        'https://t.me/ArapovTrade',
+      ],
+      jobTitle: 'Professional trader',
+      description:
+        'I have been actively trading on financial markets since 2013. Author of a free trading course.',
     };
 
     this.addJsonLdSchema(data);
   }
-
-   
 
   // ============================================================
   //  FAQ
@@ -289,15 +316,50 @@ dateModified: '2025-01-10T12:00:00+02:00',
   private setFaqSchema(): void {
     const data = {
       '@context': 'https://schema.org',
-      "@type": "FAQPage",
-                "@id": "https://arapov.trade/en/freestudying/adviceforbeginners#faq",
-                "mainEntity": [
-                    {"@type": "Question", "name": "How much money do I need to start trading?", "acceptedAnswer": {"@type": "Answer", "text": "You can start with $50-200 at brokers offering micro-lots. However, a comfortable starting point is around $500. The key rule: only trade with money you can afford to lose."}},
-                    {"@type": "Question", "name": "How long does it take to learn trading?", "acceptedAnswer": {"@type": "Answer", "text": "Basic theory can be mastered in 1-2 months. Developing consistent skills takes 6-12 months of practice. Stable results typically appear after 1-2 years of systematic work."}},
-                    {"@type": "Question", "name": "What leverage should beginners use?", "acceptedAnswer": {"@type": "Answer", "text": "Beginners should use leverage no higher than 1:10-1:20. High leverage amplifies both profits and losses."}},
-                    {"@type": "Question", "name": "Why do most traders lose money?", "acceptedAnswer": {"@type": "Answer", "text": "Main reasons: lack of trading plan, poor risk management, emotional decisions, insufficient preparation, and unrealistic expectations of quick profits."}},
-                    {"@type": "Question", "name": "Which trading style is best for beginners?", "acceptedAnswer": {"@type": "Answer", "text": "Beginners should start with swing trading (positions held for several days). It allows time for analysis and reduces noise impact."}}
-                ]
+      '@type': 'FAQPage',
+      '@id': 'https://arapov.trade/en/freestudying/adviceforbeginners#faq',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'How much money do I need to start trading?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'You can start with $50-200 at brokers offering micro-lots. However, a comfortable starting point is around $500. The key rule: only trade with money you can afford to lose.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How long does it take to learn trading?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Basic theory can be mastered in 1-2 months. Developing consistent skills takes 6-12 months of practice. Stable results typically appear after 1-2 years of systematic work.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What leverage should beginners use?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Beginners should use leverage no higher than 1:10-1:20. High leverage amplifies both profits and losses.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Why do most traders lose money?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Main reasons: lack of trading plan, poor risk management, emotional decisions, insufficient preparation, and unrealistic expectations of quick profits.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Which trading style is best for beginners?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Beginners should start with swing trading (positions held for several days). It allows time for analysis and reduces noise impact.',
+          },
+        },
+      ],
     };
 
     this.addJsonLdSchema(data);
@@ -309,17 +371,42 @@ dateModified: '2025-01-10T12:00:00+02:00',
   private setHowToSchema(): void {
     const data = {
       '@context': 'https://schema.org',
-      "@type": "HowTo",
-                "@id": "https://arapov.trade/en/freestudying/adviceforbeginners#howto",
-                "name": "How to Start Trading Financial Markets",
-                "description": "Step-by-step plan for beginner traders",
-                "step": [
-                    {"@type": "HowToStep", "position": 1, "name": "Learn basic theory", "text": "Spend 3-4 weeks studying fundamentals: market types, asset classes, basic terminology."},
-                    {"@type": "HowToStep", "position": 2, "name": "Choose a reliable broker", "text": "Verify regulator license, compare spreads and commissions, test the platform on demo."},
-                    {"@type": "HowToStep", "position": 3, "name": "Create a trading plan", "text": "Define goals, choose strategy, document entry and exit rules, set risk limits."},
-                    {"@type": "HowToStep", "position": 4, "name": "Practice on demo account", "text": "Trade for 1-2 months with virtual money, keep a trading journal, analyze results."},
-                    {"@type": "HowToStep", "position": 5, "name": "Start with minimum capital", "text": "Transition to live trading with minimal funds, maintain risk management."}
-                ]
+      '@type': 'HowTo',
+      '@id': 'https://arapov.trade/en/freestudying/adviceforbeginners#howto',
+      name: 'How to Start Trading Financial Markets',
+      description: 'Step-by-step plan for beginner traders',
+      step: [
+        {
+          '@type': 'HowToStep',
+          position: 1,
+          name: 'Learn basic theory',
+          text: 'Spend 3-4 weeks studying fundamentals: market types, asset classes, basic terminology.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 2,
+          name: 'Choose a reliable broker',
+          text: 'Verify regulator license, compare spreads and commissions, test the platform on demo.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 3,
+          name: 'Create a trading plan',
+          text: 'Define goals, choose strategy, document entry and exit rules, set risk limits.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 4,
+          name: 'Practice on demo account',
+          text: 'Trade for 1-2 months with virtual money, keep a trading journal, analyze results.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 5,
+          name: 'Start with minimum capital',
+          text: 'Transition to live trading with minimal funds, maintain risk management.',
+        },
+      ],
     };
 
     this.addJsonLdSchema(data);
@@ -331,21 +418,62 @@ dateModified: '2025-01-10T12:00:00+02:00',
   private setGlossarySchema(): void {
     const data = {
       '@context': 'https://schema.org',
-      "@type": "DefinedTermSet",
-                "@id": "https://arapov.trade/en/freestudying/adviceforbeginners#terms",
-                "name": "Trader's Glossary",
-                "hasDefinedTerm": [
-                    {"@type": "DefinedTerm", "name": "Spread", "description": "Difference between ask and bid price"},
-                    {"@type": "DefinedTerm", "name": "Leverage", "description": "Borrowed funds from broker increasing trading capital"},
-                    {"@type": "DefinedTerm", "name": "Stop-Loss", "description": "Order for automatic position closure at specified loss level"},
-                    {"@type": "DefinedTerm", "name": "Take-Profit", "description": "Order for automatic position closure at target profit"},
-                    {"@type": "DefinedTerm", "name": "Lot", "description": "Standard unit of trading position volume"},
-                    {"@type": "DefinedTerm", "name": "Margin", "description": "Collateral funds blocked for leveraged positions"},
-                    {"@type": "DefinedTerm", "name": "Volatility", "description": "Degree of asset price variation over a period"},
-                    {"@type": "DefinedTerm", "name": "Scalping", "description": "Trading style with numerous short intraday trades"},
-                    {"@type": "DefinedTerm", "name": "Swing Trading", "description": "Trading positions held from days to weeks"},
-                    {"@type": "DefinedTerm", "name": "Risk Management", "description": "System of managing risks to protect capital"}
-                ]
+      '@type': 'DefinedTermSet',
+      '@id': 'https://arapov.trade/en/freestudying/adviceforbeginners#terms',
+      name: "Trader's Glossary",
+      hasDefinedTerm: [
+        {
+          '@type': 'DefinedTerm',
+          name: 'Spread',
+          description: 'Difference between ask and bid price',
+        },
+        {
+          '@type': 'DefinedTerm',
+          name: 'Leverage',
+          description: 'Borrowed funds from broker increasing trading capital',
+        },
+        {
+          '@type': 'DefinedTerm',
+          name: 'Stop-Loss',
+          description:
+            'Order for automatic position closure at specified loss level',
+        },
+        {
+          '@type': 'DefinedTerm',
+          name: 'Take-Profit',
+          description: 'Order for automatic position closure at target profit',
+        },
+        {
+          '@type': 'DefinedTerm',
+          name: 'Lot',
+          description: 'Standard unit of trading position volume',
+        },
+        {
+          '@type': 'DefinedTerm',
+          name: 'Margin',
+          description: 'Collateral funds blocked for leveraged positions',
+        },
+        {
+          '@type': 'DefinedTerm',
+          name: 'Volatility',
+          description: 'Degree of asset price variation over a period',
+        },
+        {
+          '@type': 'DefinedTerm',
+          name: 'Scalping',
+          description: 'Trading style with numerous short intraday trades',
+        },
+        {
+          '@type': 'DefinedTerm',
+          name: 'Swing Trading',
+          description: 'Trading positions held from days to weeks',
+        },
+        {
+          '@type': 'DefinedTerm',
+          name: 'Risk Management',
+          description: 'System of managing risks to protect capital',
+        },
+      ],
     };
 
     this.addJsonLdSchema(data);

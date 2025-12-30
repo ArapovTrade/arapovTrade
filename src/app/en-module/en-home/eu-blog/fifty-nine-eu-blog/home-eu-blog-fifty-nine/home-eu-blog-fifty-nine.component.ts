@@ -261,19 +261,11 @@ export class HomeEuBlogFiftyNineComponent implements OnInit {
           description:
             'Complete guide to trading breakouts of support and resistance levels. Learn how to identify genuine breakouts, use retests and pin bars for optimal trade entries.',
           author: {
-            '@type': 'Person',
-            name: 'Igor Arapov',
-            url: 'https://arapov.trade/en',
-            sameAs: [
-              'https://www.youtube.com/@ArapovTrade',
-              'https://t.me/ArapovTrade',
-            ],
-            jobTitle: 'Professional Trader',
-            worksFor: {
-              '@type': 'Organization',
-              name: 'Arapov Trade',
-            },
+            '@id': 'https://arapov.trade/en#person',
           },
+          image: [
+            'https://arapov.trade/assets/img/content/levelbreakoutstrategy.webp',
+          ],
           publisher: {
             '@type': 'Organization',
             name: 'Arapov Trade',

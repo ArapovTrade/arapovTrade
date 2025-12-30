@@ -262,12 +262,7 @@ export class HomeEnTwentyOneComponent implements OnInit {
           description:
             'Comprehensive guide to currency market analysis: economic factors, news, rumors and trading psychology',
           author: {
-            '@type': 'Person',
-            name: 'Igor Arapov',
-            url: 'https://arapov.trade/en',
-            sameAs: ['https://www.youtube.com/@IgorArapov'],
-            jobTitle: 'Professional Trader',
-            worksFor: { '@type': 'Organization', name: 'Arapov.trade' },
+            '@id': 'https://arapov.trade/en#person',
           },
           publisher: {
             '@type': 'Organization',

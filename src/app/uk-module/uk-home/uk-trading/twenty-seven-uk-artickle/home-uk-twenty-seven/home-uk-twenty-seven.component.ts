@@ -282,15 +282,7 @@ export class HomeUkTwentySevenComponent implements OnInit {
           description:
             'Повний посібник з технічного аналізу: види графіків, типи трендів та рівні підтримки/опору для професійного трейдингу',
           author: {
-            '@type': 'Person',
-            name: 'Ігор Арапов',
-            url: 'https://arapov.trade/uk',
-            sameAs: [
-              'https://www.youtube.com/@ArapovTrade',
-              'https://t.me/ArapovTrade',
-            ],
-            jobTitle: 'Професійний трейдер',
-            worksFor: { '@type': 'Organization', name: 'Arapov.trade' },
+            '@id': 'https://arapov.trade/uk#person',
           },
           publisher: {
             '@type': 'Organization',

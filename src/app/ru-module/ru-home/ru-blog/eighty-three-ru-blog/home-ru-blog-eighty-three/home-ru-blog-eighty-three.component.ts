@@ -294,15 +294,7 @@ export class HomeRuBlogEightyThreeComponent {
           description:
             'Полное руководство по торговле паттерна Чашка с ручкой: распознавание, точки входа, управление рисками',
           author: {
-            '@type': 'Person',
-            name: 'Игорь Арапов',
-            url: 'https://arapov.trade/ru',
-            sameAs: [
-              'https://www.youtube.com/@ArapovTrade',
-              'https://t.me/ArapovTrade',
-            ],
-            jobTitle: 'Профессиональный трейдер',
-            worksFor: { '@type': 'Organization', name: 'Arapov.trade' },
+            '@id': 'https://arapov.trade/ru#person',
           },
           publisher: {
             '@type': 'Organization',

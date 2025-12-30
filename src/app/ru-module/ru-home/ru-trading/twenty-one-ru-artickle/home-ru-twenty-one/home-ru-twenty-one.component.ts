@@ -288,12 +288,7 @@ export class HomeRuTwentyOneComponent implements OnInit {
           description:
             'Комплексное руководство по анализу валютного рынка: экономические факторы, новости, слухи и психология трейдинга',
           author: {
-            '@type': 'Person',
-            name: 'Игорь Арапов',
-            url: 'https://arapov.trade/ru',
-            sameAs: ['https://www.youtube.com/@IgorArapov'],
-            jobTitle: 'Профессиональный трейдер',
-            worksFor: { '@type': 'Organization', name: 'Arapov.trade' },
+            '@id': 'https://arapov.trade/ru#person',
           },
           publisher: {
             '@type': 'Organization',

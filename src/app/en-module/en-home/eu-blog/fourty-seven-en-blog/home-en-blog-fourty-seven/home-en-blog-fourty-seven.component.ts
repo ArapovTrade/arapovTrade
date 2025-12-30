@@ -273,14 +273,7 @@ export class HomeEnBlogFourtySevenComponent implements OnInit {
           dateModified: '2025-07-15T00:00:00+02:00',
           inLanguage: 'en',
           author: {
-            '@type': 'Person',
             '@id': 'https://arapov.trade/en#person',
-            name: 'Игорь Арапов',
-            url: 'https://arapov.trade/en',
-            sameAs: [
-              'https://www.youtube.com/@ArapovTrade',
-              'https://www.mql5.com/ru/signals/2246716',
-            ],
           },
           publisher: {
             '@type': 'Organization',

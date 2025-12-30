@@ -286,13 +286,7 @@ export class HomeEnBlogNintySevenComponent implements OnInit {
             'RSI Indicator (Relative Strength Index): complete trading guide. Settings, strategies, overbought and oversold signals, divergence patterns explained.',
           image: 'https://arapov.trade/assets/img/content/rsiindex1.png',
           author: {
-            '@type': 'Person',
-            name: 'Igor Arapov',
-            url: 'https://arapov.trade/en',
-            sameAs: [
-              'https://www.youtube.com/@ArapovTrade',
-              'https://t.me/ArapovTrade',
-            ],
+            '@id': 'https://arapov.trade/en#person',
           },
           publisher: {
             '@type': 'Organization',
@@ -323,7 +317,7 @@ export class HomeEnBlogNintySevenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/#person',
+      '@id': 'https://arapov.trade/en#person',
       name: 'Igor Arapov',
       url: 'https://arapov.trade/en',
       image:

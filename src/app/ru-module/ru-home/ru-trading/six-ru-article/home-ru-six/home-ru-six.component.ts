@@ -296,13 +296,7 @@ export class HomeRuSixComponent implements OnInit {
             'Алгоритмические стейблкоины: принципы работы, механизмы стабилизации, популярные проекты. Преимущества и риски децентрализованных стабильных монет.',
           image: 'https://arapov.trade/assets/img/content/stablecoins.webp',
           author: {
-            '@type': 'Person',
-            name: 'Игорь Арапов',
-            url: 'https://arapov.trade/ru',
-            sameAs: [
-              'https://www.youtube.com/@ArapovTrade',
-              'https://t.me/ArapovTrade',
-            ],
+            '@id': 'https://arapov.trade/ru#person',
           },
           publisher: {
             '@type': 'Organization',
@@ -330,7 +324,7 @@ export class HomeRuSixComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/#person',
+      '@id': 'https://arapov.trade/ru#person',
       name: 'Игорь Арапов',
       url: 'https://arapov.trade/ru',
       image:

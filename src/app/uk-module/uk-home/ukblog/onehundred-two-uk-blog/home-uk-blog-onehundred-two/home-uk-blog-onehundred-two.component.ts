@@ -288,13 +288,7 @@ export class HomeUkBlogOnehundredTwoComponent implements OnInit {
             'Смуги Боллінджера: повний посібник з індикатора. Налаштування, стратегії торгівлі, стиснення та розширення смуг, пробої та відскоки.',
           image: 'https://arapov.trade/assets/img/content/bollingerbands1.jpg',
           author: {
-            '@type': 'Person',
-            name: 'Ігор Арапов',
-            url: 'https://arapov.trade/uk',
-            sameAs: [
-              'https://www.youtube.com/@ArapovTrade',
-              'https://t.me/ArapovTrade',
-            ],
+            '@id': 'https://arapov.trade/uk#person',
           },
           publisher: {
             '@type': 'Organization',
@@ -325,7 +319,7 @@ export class HomeUkBlogOnehundredTwoComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/#person',
+      '@id': 'https://arapov.trade/uk#person',
       name: 'Ігор Арапов',
       url: 'https://arapov.trade/uk',
       image:

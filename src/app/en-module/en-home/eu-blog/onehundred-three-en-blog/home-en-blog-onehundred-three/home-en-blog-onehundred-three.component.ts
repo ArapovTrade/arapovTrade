@@ -286,13 +286,7 @@ export class HomeEnBlogOnehundredThreeComponent implements OnInit {
             'Ichimoku Kinko Hyo indicator guide: Kumo cloud analysis, trend identification, trading signals, and practical strategies for technical traders.',
           image: 'https://arapov.trade/assets/img/content/ichimoku1.png',
           author: {
-            '@type': 'Person',
-            name: 'Igor Arapov',
-            url: 'https://arapov.trade/en',
-            sameAs: [
-              'https://www.youtube.com/@ArapovTrade',
-              'https://t.me/ArapovTrade',
-            ],
+            '@id': 'https://arapov.trade/en#person',
           },
           publisher: {
             '@type': 'Organization',
@@ -323,7 +317,7 @@ export class HomeEnBlogOnehundredThreeComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/#person',
+      '@id': 'https://arapov.trade/en#person',
       name: 'Igor Arapov',
       url: 'https://arapov.trade/en',
       image:

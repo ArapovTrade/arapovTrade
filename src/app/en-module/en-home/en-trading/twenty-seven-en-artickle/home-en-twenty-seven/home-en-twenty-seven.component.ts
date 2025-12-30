@@ -256,15 +256,7 @@ export class HomeEnTwentySevenComponent implements OnInit {
           description:
             'Complete guide to technical analysis: chart types, trend types, and support/resistance levels for professional trading',
           author: {
-            '@type': 'Person',
-            name: 'Igor Arapov',
-            url: 'https://arapov.trade/en',
-            sameAs: [
-              'https://www.youtube.com/@ArapovTrade',
-              'https://t.me/ArapovTrade',
-            ],
-            jobTitle: 'Professional Trader',
-            worksFor: { '@type': 'Organization', name: 'Arapov.trade' },
+            '@id': 'https://arapov.trade/en#person',
           },
           publisher: {
             '@type': 'Organization',

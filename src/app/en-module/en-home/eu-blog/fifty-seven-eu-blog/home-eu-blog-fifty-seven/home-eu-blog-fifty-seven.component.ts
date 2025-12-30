@@ -271,14 +271,7 @@ export class HomeEuBlogFiftySevenComponent implements OnInit {
           dateModified: '2025-01-15T00:00:00+02:00',
           inLanguage: 'eu',
           author: {
-            '@type': 'Person',
             '@id': 'https://arapov.trade/en#person',
-            name: 'Ihor Arapov',
-            url: 'https://arapov.trade/en',
-            sameAs: [
-              'https://www.youtube.com/@ArapovTrade',
-              'https://www.mql5.com/ru/signals/2246716',
-            ],
           },
           publisher: {
             '@type': 'Organization',
@@ -371,7 +364,7 @@ export class HomeEuBlogFiftySevenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/#person',
+      '@id': 'https://arapov.trade/en#person',
       name: 'Igor Arapov',
       url: 'https://arapov.trade/en',
       image:

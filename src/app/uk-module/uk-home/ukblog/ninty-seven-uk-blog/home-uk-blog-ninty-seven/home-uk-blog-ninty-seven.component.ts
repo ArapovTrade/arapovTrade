@@ -288,13 +288,7 @@ export class HomeUkBlogNintySevenComponent implements OnInit {
             'Індикатор RSI (Relative Strength Index): повний посібник з використання у трейдингу. Налаштування, стратегії, сигнали перекупленості та перепроданості.',
           image: 'https://arapov.trade/assets/img/content/rsiindex1.png',
           author: {
-            '@type': 'Person',
-            name: 'Ігор Арапов',
-            url: 'https://arapov.trade/uk',
-            sameAs: [
-              'https://www.youtube.com/@ArapovTrade',
-              'https://t.me/ArapovTrade',
-            ],
+            '@id': 'https://arapov.trade/uk#person',
           },
           publisher: {
             '@type': 'Organization',
@@ -325,7 +319,7 @@ export class HomeUkBlogNintySevenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/#person',
+      '@id': 'https://arapov.trade/uk#person',
       name: 'Ігор Арапов',
       url: 'https://arapov.trade/uk',
       image:

@@ -292,18 +292,11 @@ export class HomeUkBlogFiftySevenComponent implements OnInit {
             'Детальний посібник з індикаторів технічного аналізу RSI та MACD. Дізнайтеся, як застосовувати осцилятори для визначення точок входу та виходу з ринку.',
           image:
             'https://arapov.trade/assets/img/content/tradingindicators.webp',
-          datePublished: '2024-06-15',
-          dateModified: '2024-12-15',
+          datePublished: '2025-04-15T00:00:00Z',
+          dateModified: '2025-12-29T00:00:00Z',
           inLanguage: 'uk',
           author: {
-            '@type': 'Person',
             '@id': 'https://arapov.trade/uk#person',
-            name: 'Ігор Арапов',
-            url: 'https://arapov.trade/uk',
-            sameAs: [
-              'https://www.youtube.com/@ArapovTrade',
-              'https://www.mql5.com/ru/signals/2246716',
-            ],
           },
           publisher: {
             '@type': 'Organization',
@@ -323,7 +316,7 @@ export class HomeUkBlogFiftySevenComponent implements OnInit {
               'https://img.youtube.com/vi/t4eLSS2vh-w/maxresdefault.jpg',
               'https://img.youtube.com/vi/t4eLSS2vh-w/hqdefault.jpg',
             ],
-            uploadDate: '2024-06-15',
+            uploadDate: '2025-12-29T00:00:00Z',
             duration: 'PT12M35S',
             contentUrl: 'https://www.youtube.com/watch?v=t4eLSS2vh-w',
             embedUrl: 'https://www.youtube.com/embed/t4eLSS2vh-w',
@@ -396,7 +389,7 @@ export class HomeUkBlogFiftySevenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/#person',
+      '@id': 'https://arapov.trade/uk#person',
       name: 'Ігор Арапов',
       url: 'https://arapov.trade/uk',
       image:

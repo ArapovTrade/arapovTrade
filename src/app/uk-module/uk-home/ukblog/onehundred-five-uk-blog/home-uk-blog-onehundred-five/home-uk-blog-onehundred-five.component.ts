@@ -288,13 +288,7 @@ export class HomeUkBlogOnehundredFiveComponent implements OnInit {
             'Посібник з торгівлі XRP: технологія RippleNet, вплив судового процесу SEC, технічний аналіз',
           image: 'https://arapov.trade/assets/img/content/XRP2.jpg',
           author: {
-            '@type': 'Person',
-            name: 'Ігор Арапов',
-            url: 'https://arapov.trade/uk',
-            sameAs: [
-              'https://www.youtube.com/@ArapovTrade',
-              'https://t.me/ArapovTrade',
-            ],
+            '@id': 'https://arapov.trade/uk#person',
           },
           publisher: {
             '@type': 'Organization',
@@ -325,7 +319,7 @@ export class HomeUkBlogOnehundredFiveComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/#person',
+      '@id': 'https://arapov.trade/uk#person',
       name: 'Ігор Арапов',
       url: 'https://arapov.trade/uk',
       image:

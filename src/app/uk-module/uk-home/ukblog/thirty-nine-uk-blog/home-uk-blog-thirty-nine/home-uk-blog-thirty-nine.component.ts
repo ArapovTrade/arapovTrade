@@ -298,13 +298,7 @@ export class HomeUkBlogThirtyNineComponent implements OnInit {
           image:
             'https://arapov.trade/assets/img/content/safetostorecrypto.webp',
           author: {
-            '@type': 'Person',
-            name: 'Ігор Арапов',
-            url: 'https://arapov.trade/uk',
-            sameAs: [
-              'https://www.youtube.com/@ArapovTrade',
-              'https://t.me/ArapovTrade',
-            ],
+            '@id': 'https://arapov.trade/uk#person',
           },
           publisher: {
             '@type': 'Organization',

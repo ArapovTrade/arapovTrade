@@ -371,19 +371,7 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
           datePublished: '2025-01-15T00:00:00+02:00',
           dateModified: '2025-11-15T00:00:00+02:00',
           author: {
-            '@type': 'Person',
             '@id': 'https://arapov.trade/ru#person',
-            name: 'Игорь Арапов',
-            url: 'https://arapov.trade/ru',
-            sameAs: [
-              'https://www.youtube.com/@ArapovTrade',
-              'https://t.me/ArapovTrade',
-            ],
-            jobTitle: 'Профессиональный трейдер',
-            worksFor: {
-              '@type': 'Organization',
-              name: 'Arapov Trade',
-            },
           },
           publisher: {
             '@type': 'Organization',

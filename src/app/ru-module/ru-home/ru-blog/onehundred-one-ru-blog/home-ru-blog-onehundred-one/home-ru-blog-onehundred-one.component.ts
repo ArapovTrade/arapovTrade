@@ -289,9 +289,7 @@ export class HomeRuBlogOnehundredOneComponent implements OnInit {
             'VWAP индикатор: полное руководство. Средневзвешенная цена по объёму, стратегии внутридневной торговли.',
           image: 'https://arapov.trade/assets/img/content/vwap1.jpg',
           author: {
-            '@type': 'Person',
-            name: 'Игорь Арапов',
-            url: 'https://arapov.trade/ru',
+            '@id': 'https://arapov.trade/ru#person',
           },
           publisher: {
             '@type': 'Organization',
@@ -318,7 +316,7 @@ export class HomeRuBlogOnehundredOneComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/#person',
+      '@id': 'https://arapov.trade/ru#person',
       name: 'Игорь Арапов',
       url: 'https://arapov.trade/ru',
       image:

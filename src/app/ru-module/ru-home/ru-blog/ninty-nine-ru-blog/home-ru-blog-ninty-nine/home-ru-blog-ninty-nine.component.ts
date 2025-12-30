@@ -292,9 +292,7 @@ export class HomeRuBlogNintyNineComponent implements OnInit {
             'Индикатор MACD: полное руководство по торговле. Настройки, сигналы, дивергенции, стратегии использования гистограммы и сигнальной линии.',
           image: 'https://arapov.trade/assets/img/content/macdindicator1.jpg',
           author: {
-            '@type': 'Person',
-            name: 'Игорь Арапов',
-            url: 'https://arapov.trade/ru',
+            '@id': 'https://arapov.trade/ru#person',
           },
           publisher: {
             '@type': 'Organization',
@@ -321,7 +319,7 @@ export class HomeRuBlogNintyNineComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/#person',
+      '@id': 'https://arapov.trade/ru#person',
       name: 'Игорь Арапов',
       url: 'https://arapov.trade/ru',
       image:

@@ -289,19 +289,11 @@ export class HomeUkBlogEightyTwoComponent {
           description:
             'Повний посібник з торгівлі патернами Прапор і Вимпел. Дізнайтеся, як розпізнавати фігури продовження тренду, визначати точки входу та виставляти стоп-лосс і тейк-профіт.',
           author: {
-            '@type': 'Person',
-            name: 'Ігор Арапов',
-            url: 'https://arapov.trade/uk',
-            sameAs: [
-              'https://www.youtube.com/@ArapovTrade',
-              'https://t.me/ArapovTrade',
-            ],
-            jobTitle: 'Професійний трейдер',
-            worksFor: {
-              '@type': 'Organization',
-              name: 'Arapov Trade',
-            },
+            '@id': 'https://arapov.trade/uk#person',
           },
+          image: [
+            'https://arapov.trade/assets/img/content/flagandpennant.webp',
+          ],
           publisher: {
             '@type': 'Organization',
             name: 'Arapov Trade',

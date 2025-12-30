@@ -284,13 +284,7 @@ export class HomeEnBlogNintySixComponent implements OnInit {
             'Comprehensive guide to trading crude oil covering fundamentals, technicals, and strategies',
           image: 'https://arapov.trade/assets/img/content/oiltrading1.jpg',
           author: {
-            '@type': 'Person',
-            name: 'Igor Arapov',
-            url: 'https://arapov.trade/en',
-            sameAs: [
-              'https://www.youtube.com/@ArapovTrade',
-              'https://t.me/ArapovTrade',
-            ],
+            '@id': 'https://arapov.trade/en#person',
           },
           publisher: {
             '@type': 'Organization',
@@ -321,7 +315,7 @@ export class HomeEnBlogNintySixComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/#person',
+      '@id': 'https://arapov.trade/en#person',
       name: 'Igor Arapov',
       url: 'https://arapov.trade/en',
       image:

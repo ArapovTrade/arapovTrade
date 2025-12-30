@@ -289,18 +289,7 @@ export class HomeUkBlogSeventyThreeComponent {
           description:
             'Повний посібник з макроекономічних показників для трейдерів. Дізнайтеся, як ВВП, інфляція, процентні ставки та зайнятість впливають на фінансові ринки.',
           author: {
-            '@type': 'Person',
-            name: 'Ігор Арапов',
-            url: 'https://arapov.trade/uk',
-            sameAs: [
-              'https://www.youtube.com/@ArapovTrade',
-              'https://t.me/ArapovTrade',
-            ],
-            jobTitle: 'Професійний трейдер',
-            worksFor: {
-              '@type': 'Organization',
-              name: 'Arapov Trade',
-            },
+            '@id': 'https://arapov.trade/uk#person',
           },
           publisher: {
             '@type': 'Organization',

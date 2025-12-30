@@ -289,9 +289,7 @@ export class HomeRuBlogOnehundredFiveComponent implements OnInit {
             'Торговля XRP (Ripple): полное руководство. Технология, судебное дело SEC, фундаментальный анализ, стратегии трейдинга.',
           image: 'https://arapov.trade/assets/img/content/XRP2.jpg',
           author: {
-            '@type': 'Person',
-            name: 'Игорь Арапов',
-            url: 'https://arapov.trade/ru',
+            '@id': 'https://arapov.trade/ru#person',
           },
           publisher: {
             '@type': 'Organization',
@@ -318,7 +316,7 @@ export class HomeRuBlogOnehundredFiveComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/#person',
+      '@id': 'https://arapov.trade/ru#person',
       name: 'Игорь Арапов',
       url: 'https://arapov.trade/ru',
       image:

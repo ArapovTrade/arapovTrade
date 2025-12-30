@@ -288,15 +288,7 @@ export class HomeUkBlogEightyThreeComponent {
           description:
             'Повне керівництво з торгівлі патерну Чашка з ручкою: розпізнавання, точки входу, управління ризиками',
           author: {
-            '@type': 'Person',
-            name: 'Ігор Арапов',
-            url: 'https://arapov.trade/uk',
-            sameAs: [
-              'https://www.youtube.com/@ArapovTrade',
-              'https://t.me/ArapovTrade',
-            ],
-            jobTitle: 'Професійний трейдер',
-            worksFor: { '@type': 'Organization', name: 'Arapov.trade' },
+            '@id': 'https://arapov.trade/uk#person',
           },
           publisher: {
             '@type': 'Organization',

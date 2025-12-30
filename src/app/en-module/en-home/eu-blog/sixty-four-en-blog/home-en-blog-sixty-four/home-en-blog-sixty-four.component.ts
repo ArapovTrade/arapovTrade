@@ -267,9 +267,7 @@ export class HomeEnBlogSixtyFourComponent {
           datePublished: '2024-06-15T00:00:00+02:00',
           dateModified: '2025-01-04T00:00:00+02:00',
           author: {
-            '@type': 'Person',
             '@id': 'https://arapov.trade/en#person',
-            name: 'Igor Arapov',
           },
           publisher: {
             '@type': 'Organization',

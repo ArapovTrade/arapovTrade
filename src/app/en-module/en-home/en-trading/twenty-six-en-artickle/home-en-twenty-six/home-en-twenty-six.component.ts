@@ -272,14 +272,7 @@ export class HomeEnTwentySixComponent implements OnInit {
           dateModified: '2025-12-14T00:00:00+02:00',
           inLanguage: 'en',
           author: {
-            '@type': 'Person',
             '@id': 'https://arapov.trade/en#person',
-            name: 'Igor Arapov',
-            url: 'https://arapov.trade/en',
-            sameAs: [
-              'https://www.youtube.com/@ArapovTrade',
-              'https://www.mql5.com/ru/signals/2246716',
-            ],
           },
           publisher: {
             '@type': 'Organization',

@@ -286,13 +286,7 @@ export class HomeUkBlogNintySixComponent implements OnInit {
             'Торгівля нафтою: аналіз WTI та Brent, фундаментальні драйвери, технічні стратегії та управління ризиками для енергетичних трейдерів.',
           image: 'https://arapov.trade/assets/img/content/oiltrading1.jpg',
           author: {
-            '@type': 'Person',
-            name: 'Ігор Арапов',
-            url: 'https://arapov.trade/uk',
-            sameAs: [
-              'https://www.youtube.com/@ArapovTrade',
-              'https://t.me/ArapovTrade',
-            ],
+            '@id': 'https://arapov.trade/uk#person',
           },
           publisher: {
             '@type': 'Organization',
@@ -323,7 +317,7 @@ export class HomeUkBlogNintySixComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/#person',
+      '@id': 'https://arapov.trade/uk#person',
       name: 'Ігор Арапов',
       url: 'https://arapov.trade/uk',
       image:

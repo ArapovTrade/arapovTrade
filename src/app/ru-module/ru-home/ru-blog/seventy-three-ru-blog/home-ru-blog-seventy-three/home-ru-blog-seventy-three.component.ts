@@ -291,18 +291,7 @@ export class HomeRuBlogSeventyThreeComponent {
           description:
             'Полное руководство по макроэкономическим показателям для трейдеров. Узнайте, как ВВП, инфляция, процентные ставки и занятость влияют на финансовые рынки.',
           author: {
-            '@type': 'Person',
-            name: 'Игорь Арапов',
-            url: 'https://arapov.trade/ru',
-            sameAs: [
-              'https://www.youtube.com/@ArapovTrade',
-              'https://t.me/ArapovTrade',
-            ],
-            jobTitle: 'Профессиональный трейдер',
-            worksFor: {
-              '@type': 'Organization',
-              name: 'Arapov Trade',
-            },
+            '@id': 'https://arapov.trade/ru#person',
           },
           image: [
             'https://arapov.trade/assets/redesignArapovTrade/img/macroeconomicindicators.webp',

@@ -289,9 +289,7 @@ export class HomeRuBlogOnehundredComponent implements OnInit {
             'Торговля индексом S&P 500: фундаментальный анализ, технические стратегии, ETF и фьючерсы.',
           image: 'https://arapov.trade/assets/img/content/sp500trading1.jpg',
           author: {
-            '@type': 'Person',
-            name: 'Игорь Арапов',
-            url: 'https://arapov.trade/ru',
+            '@id': 'https://arapov.trade/ru#person',
           },
           publisher: {
             '@type': 'Organization',
@@ -318,7 +316,7 @@ export class HomeRuBlogOnehundredComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/#person',
+      '@id': 'https://arapov.trade/ru#person',
       name: 'Игорь Арапов',
       url: 'https://arapov.trade/ru',
       image:

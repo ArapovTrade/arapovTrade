@@ -291,9 +291,7 @@ export class HomeRuBlogOnehundredThreeComponent implements OnInit {
             'Индикатор Ишимоку (Ichimoku Kinko Hyo): полное руководство. Облако Кумо, линии Tenkan, Kijun, Chikou. Стратегии и сигналы.',
           image: 'https://arapov.trade/assets/img/content/ichimoku1.png',
           author: {
-            '@type': 'Person',
-            name: 'Игорь Арапов',
-            url: 'https://arapov.trade/ru',
+            '@id': 'https://arapov.trade/ru#person',
           },
           publisher: {
             '@type': 'Organization',
@@ -320,7 +318,7 @@ export class HomeRuBlogOnehundredThreeComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/#person',
+      '@id': 'https://arapov.trade/ru#person',
       name: 'Игорь Арапов',
       url: 'https://arapov.trade/ru',
       image:

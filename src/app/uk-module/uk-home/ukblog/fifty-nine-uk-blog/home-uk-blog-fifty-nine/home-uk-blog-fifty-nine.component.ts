@@ -286,19 +286,11 @@ export class HomeUkBlogFiftyNineComponent implements OnInit {
           description:
             'Детальний посібник з торгівлі на пробій рівнів підтримки та опору. Дізнайтеся, як визначати справжні пробої, використовувати ретести та пін-бари для входу в угоди.',
           author: {
-            '@type': 'Person',
-            name: 'Ігор Арапов',
-            url: 'https://arapov.trade/uk',
-            sameAs: [
-              'https://www.youtube.com/@ArapovTrade',
-              'https://t.me/ArapovTrade',
-            ],
-            jobTitle: 'Професійний трейдер',
-            worksFor: {
-              '@type': 'Organization',
-              name: 'Arapov Trade',
-            },
+            '@id': 'https://arapov.trade/uk#person',
           },
+          image: [
+            'https://arapov.trade/assets/img/content/levelbreakoutstrategy.webp',
+          ],
           publisher: {
             '@type': 'Organization',
             name: 'Arapov Trade',

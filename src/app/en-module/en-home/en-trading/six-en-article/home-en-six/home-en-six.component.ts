@@ -272,9 +272,7 @@ export class HomeEnSixComponent implements OnInit {
             'Algorithmic stablecoins: how they work, stabilization mechanisms, popular projects.',
           image: 'https://arapov.trade/assets/img/content/stablecoins.webp',
           author: {
-            '@type': 'Person',
-            name: 'Igor Arapov',
-            url: 'https://arapov.trade/en',
+            '@id': 'https://arapov.trade/en#person',
           },
           publisher: {
             '@type': 'Organization',

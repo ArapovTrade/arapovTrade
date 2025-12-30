@@ -263,12 +263,7 @@ export class HomeEnBlogTwentyEightComponent implements OnInit {
           description:
             'Complete overview of alternative blockchains: Solana, Polkadot, Avalanche, Cardano and their place in Web3',
           author: {
-            '@type': 'Person',
-            name: 'Igor Arapov',
-            url: 'https://arapov.trade/en',
-            sameAs: ['https://www.youtube.com/@ArapovTrade'],
-            jobTitle: 'Professional Trader',
-            worksFor: { '@type': 'Organization', name: 'Arapov.trade' },
+            '@id': 'https://arapov.trade/en#person',
           },
           publisher: {
             '@type': 'Organization',
@@ -279,7 +274,7 @@ export class HomeEnBlogTwentyEightComponent implements OnInit {
             },
           },
           datePublished: '2025-01-10T12:00:00+02:00',
-dateModified: '2025-01-10T12:00:00+02:00',
+          dateModified: '2025-01-10T12:00:00+02:00',
           mainEntityOfPage: {
             '@type': 'WebPage',
             '@id': 'https://arapov.trade/en/freestudying/altblockchains',
@@ -303,7 +298,7 @@ dateModified: '2025-01-10T12:00:00+02:00',
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/#person',
+      '@id': 'https://arapov.trade/en#person',
       name: 'Igor Arapov',
       url: 'https://arapov.trade/en',
       image:

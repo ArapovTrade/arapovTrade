@@ -746,7 +746,7 @@ const routes: Routes = [
         '../en-trading/fourty-six-en-artickle/fourty-six-en-artickle.module'
       ).then((m) => m.FourtySixEnArtickleModule),
   },
-
+ 
   {
     path: 'smartmoneyconceptsguide', //61
     loadChildren: () =>

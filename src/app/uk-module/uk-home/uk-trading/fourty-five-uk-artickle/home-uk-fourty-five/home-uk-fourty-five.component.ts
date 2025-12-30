@@ -323,19 +323,7 @@ export class HomeUkFourtyFiveComponent implements OnInit {
           datePublished: '2025-01-15T00:00:00+02:00',
           dateModified: '2025-11-15T00:00:00+02:00',
           author: {
-            '@type': 'Person',
             '@id': 'https://arapov.trade/uk#person',
-            name: 'Ігор Арапов',
-            url: 'https://arapov.trade/uk',
-            sameAs: [
-              'https://www.youtube.com/@ArapovTrade',
-              'https://t.me/ArapovTrade',
-            ],
-            jobTitle: 'Професійний трейдер',
-            worksFor: {
-              '@type': 'Organization',
-              name: 'Arapov Trade',
-            },
           },
           publisher: {
             '@type': 'Organization',

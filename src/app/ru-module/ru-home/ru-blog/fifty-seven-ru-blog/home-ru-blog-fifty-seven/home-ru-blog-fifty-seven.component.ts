@@ -297,14 +297,7 @@ export class HomeRuBlogFiftySevenComponent implements OnInit {
           dateModified: '2025-01-15T00:00:00+02:00',
           inLanguage: 'ru',
           author: {
-            '@type': 'Person',
             '@id': 'https://arapov.trade/ru#person',
-            name: 'Игорь Арапов',
-            url: 'https://arapov.trade/ru',
-            sameAs: [
-              'https://www.youtube.com/@ArapovTrade',
-              'https://www.mql5.com/ru/signals/2246716',
-            ],
           },
           publisher: {
             '@type': 'Organization',
@@ -397,7 +390,7 @@ export class HomeRuBlogFiftySevenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/#person',
+      '@id': 'https://arapov.trade/ru#person',
       name: 'Игорь Арапов',
       url: 'https://arapov.trade/ru',
       image:

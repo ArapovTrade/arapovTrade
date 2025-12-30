@@ -294,19 +294,11 @@ export class HomeRuBlogEightyTwoComponent {
           description:
             'Полное руководство по торговле паттернами Флаг и Вымпел. Узнайте, как распознавать фигуры продолжения тренда, определять точки входа и выставлять стоп-лосс и тейк-профит.',
           author: {
-            '@type': 'Person',
-            name: 'Игорь Арапов',
-            url: 'https://arapov.trade/ru',
-            sameAs: [
-              'https://www.youtube.com/@ArapovTrade',
-              'https://t.me/ArapovTrade',
-            ],
-            jobTitle: 'Профессиональный трейдер',
-            worksFor: {
-              '@type': 'Organization',
-              name: 'Arapov Trade',
-            },
+            '@id': 'https://arapov.trade/ru#person',
           },
+          image: [
+            'https://arapov.trade/assets/img/content/flagandpennant.webp',
+          ],
           publisher: {
             '@type': 'Organization',
             name: 'Arapov Trade',

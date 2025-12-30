@@ -267,19 +267,11 @@ export class HomeEnBlogEightyTwoComponent {
           description:
             'Complete guide to trading Flag and Pennant patterns. Learn how to identify trend continuation patterns, determine entry points and set stop-loss and take-profit levels.',
           author: {
-            '@type': 'Person',
-            name: 'Igor Arapov',
-            url: 'https://arapov.trade/en',
-            sameAs: [
-              'https://www.youtube.com/@ArapovTrade',
-              'https://t.me/ArapovTrade',
-            ],
-            jobTitle: 'Professional Trader',
-            worksFor: {
-              '@type': 'Organization',
-              name: 'Arapov Trade',
-            },
+            '@id': 'https://arapov.trade/en#person',
           },
+          image: [
+            'https://arapov.trade/assets/img/content/flagandpennant.webp',
+          ],
           publisher: {
             '@type': 'Organization',
             name: 'Arapov Trade',

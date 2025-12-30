@@ -301,14 +301,7 @@ export class HomeRuBlogSixtyOneComponent {
           dateModified: '2025-12-14T00:00:00+02:00',
           inLanguage: 'ru',
           author: {
-            '@type': 'Person',
             '@id': 'https://arapov.trade/ru#person',
-            name: 'Игорь Арапов',
-            url: 'https://arapov.trade/ru',
-            sameAs: [
-              'https://www.youtube.com/@ArapovTrade',
-              'https://www.mql5.com/ru/signals/2246716',
-            ],
           },
           publisher: {
             '@type': 'Organization',
@@ -408,9 +401,9 @@ export class HomeRuBlogSixtyOneComponent {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/#person',
+      '@id': 'https://arapov.trade/ru#person',
       name: 'Игорь Арапов',
-      url: 'https://arapov.trade/ru/',
+      url: 'https://arapov.trade/ru',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [

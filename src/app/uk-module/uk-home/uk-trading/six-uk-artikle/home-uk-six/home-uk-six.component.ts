@@ -295,9 +295,7 @@ export class HomeUkSixComponent implements OnInit {
             'Алгоритмічні стейблкоїни: принципи роботи, механізми стабілізації, популярні проекти. Переваги та ризики децентралізованих стабільних монет.',
           image: 'https://arapov.trade/assets/img/content/stablecoins.webp',
           author: {
-            '@type': 'Person',
-            name: 'Ігор Арапов',
-            url: 'https://arapov.trade/uk',
+            '@id': 'https://arapov.trade/uk#person',
           },
           publisher: {
             '@type': 'Organization',
