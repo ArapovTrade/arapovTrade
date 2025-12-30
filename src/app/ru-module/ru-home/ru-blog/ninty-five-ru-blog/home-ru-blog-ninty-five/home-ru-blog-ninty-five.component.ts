@@ -291,9 +291,7 @@ export class HomeRuBlogNintyFiveComponent implements OnInit {
             'Торговля золотом XAUUSD: полное руководство. Фундаментальные факторы, технический анализ, стратегии.',
           image: 'https://arapov.trade/assets/img/content/goldtrading1.jpg',
           author: {
-            '@type': 'Person',
-            name: 'Игорь Арапов',
-            url: 'https://arapov.trade/ru',
+            '@id': 'https://arapov.trade/ru#person',
           },
           publisher: {
             '@type': 'Organization',
@@ -303,8 +301,8 @@ export class HomeRuBlogNintyFiveComponent implements OnInit {
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
-        datePublished: '2025-06-04T00:00:00+02:00',
-dateModified:  '2025-06-04T00:00:00+02:00',
+          datePublished: '2025-06-04T00:00:00+02:00',
+          dateModified: '2025-06-04T00:00:00+02:00',
           inLanguage: 'ru',
         },
       ],
@@ -320,7 +318,7 @@ dateModified:  '2025-06-04T00:00:00+02:00',
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/#person',
+      '@id': 'https://arapov.trade/ru#person',
       name: 'Игорь Арапов',
       url: 'https://arapov.trade/ru',
       image:
@@ -343,14 +341,49 @@ dateModified:  '2025-06-04T00:00:00+02:00',
   private setFaqSchema(): void {
     const data = {
       '@context': 'https://schema.org',
-      "@type": "FAQPage",
-    "mainEntity": [
-      {"@type": "Question", "name": "Что такое XAUUSD?", "acceptedAnswer": {"@type": "Answer", "text": "XAUUSD — торговый символ курса золота к доллару США. XAU — международный код золота, USD — доллар. Котировка показывает стоимость тройской унции золота в долларах."}},
-      {"@type": "Question", "name": "Какие факторы влияют на цену золота?", "acceptedAnswer": {"@type": "Answer", "text": "Основные факторы: процентные ставки ФРС, курс доллара США, инфляция, геополитика, спрос центральных банков, реальные процентные ставки."}},
-      {"@type": "Question", "name": "Когда лучше торговать золотом?", "acceptedAnswer": {"@type": "Answer", "text": "Максимальная ликвидность — пересечение лондонской и нью-йоркской сессий (15:00-19:00 МСК). Активность также растёт при выходе данных США."}},
-      {"@type": "Question", "name": "Почему золото — защитный актив?", "acceptedAnswer": {"@type": "Answer", "text": "Золото сохраняет ценность тысячелетиями, не зависит от эмитента, защищает от инфляции. В кризисы капитал переводится в золото."}},
-      {"@type": "Question", "name": "Какой риск на сделку для золота?", "acceptedAnswer": {"@type": "Answer", "text": "Из-за волатильности рекомендуется 0.5-1% депозита на сделку. Стоп-лоссы шире, чем на форексе, учитывая дневные диапазоны 20-50 долларов."}}
-    ]
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'Что такое XAUUSD?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'XAUUSD — торговый символ курса золота к доллару США. XAU — международный код золота, USD — доллар. Котировка показывает стоимость тройской унции золота в долларах.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Какие факторы влияют на цену золота?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Основные факторы: процентные ставки ФРС, курс доллара США, инфляция, геополитика, спрос центральных банков, реальные процентные ставки.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Когда лучше торговать золотом?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Максимальная ликвидность — пересечение лондонской и нью-йоркской сессий (15:00-19:00 МСК). Активность также растёт при выходе данных США.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Почему золото — защитный актив?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Золото сохраняет ценность тысячелетиями, не зависит от эмитента, защищает от инфляции. В кризисы капитал переводится в золото.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Какой риск на сделку для золота?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Из-за волатильности рекомендуется 0.5-1% депозита на сделку. Стоп-лоссы шире, чем на форексе, учитывая дневные диапазоны 20-50 долларов.',
+          },
+        },
+      ],
     };
 
     this.addJsonLdSchema(data);
@@ -362,15 +395,40 @@ dateModified:  '2025-06-04T00:00:00+02:00',
   private setHowToSchema(): void {
     const data = {
       '@context': 'https://schema.org',
-      "@type": "HowTo",
-    "name": "Как начать торговать золотом XAUUSD",
-    "step": [
-      {"@type": "HowToStep", "position": 1, "name": "Изучите фундамент", "text": "Разберитесь в драйверах: политика ФРС, инфляция, доллар, геополитика."},
-      {"@type": "HowToStep", "position": 2, "name": "Выберите стратегию", "text": "Позиционная торговля, свинг или внутридневная. Адаптируйте под волатильность."},
-      {"@type": "HowToStep", "position": 3, "name": "Настройте риски", "text": "Уменьшенный размер позиции, расширенные стоп-лоссы, риск до 1%."},
-      {"@type": "HowToStep", "position": 4, "name": "Определите уровни", "text": "Исторические уровни, круглые числа (1800, 1900, 2000)."},
-      {"@type": "HowToStep", "position": 5, "name": "Учитывайте корреляции", "text": "DXY, доходность облигаций, серебро для подтверждения сигналов."}
-    ]
+      '@type': 'HowTo',
+      name: 'Как начать торговать золотом XAUUSD',
+      step: [
+        {
+          '@type': 'HowToStep',
+          position: 1,
+          name: 'Изучите фундамент',
+          text: 'Разберитесь в драйверах: политика ФРС, инфляция, доллар, геополитика.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 2,
+          name: 'Выберите стратегию',
+          text: 'Позиционная торговля, свинг или внутридневная. Адаптируйте под волатильность.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 3,
+          name: 'Настройте риски',
+          text: 'Уменьшенный размер позиции, расширенные стоп-лоссы, риск до 1%.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 4,
+          name: 'Определите уровни',
+          text: 'Исторические уровни, круглые числа (1800, 1900, 2000).',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 5,
+          name: 'Учитывайте корреляции',
+          text: 'DXY, доходность облигаций, серебро для подтверждения сигналов.',
+        },
+      ],
     };
 
     this.addJsonLdSchema(data);
@@ -382,18 +440,50 @@ dateModified:  '2025-06-04T00:00:00+02:00',
   private setGlossarySchema(): void {
     const data = {
       '@context': 'https://schema.org',
-       "@type": "DefinedTermSet",
-    name: "Терминология торговли золотом",
-    hasDefinedTerm: [
-      {"@type": "DefinedTerm", name: "XAUUSD", description: "Курс золота к доллару США"},
-      {"@type": "DefinedTerm", name: "Тройская унция", description: "Единица измерения — 31.1035 грамма"},
-      {"@type": "DefinedTerm", name: "Safe Haven", description: "Защитный актив в периоды нестабильности"},
-      {"@type": "DefinedTerm", name: "Реальные ставки", description: "Номинальные ставки минус инфляция"},
-      {"@type": "DefinedTerm", name: "Gold Fix", description: "Эталонная цена золота в Лондоне"},
-      {"@type": "DefinedTerm", name: "COMEX", description: "Крупнейшая биржа фьючерсов на золото"},
-      {"@type": "DefinedTerm", name: "Спот-золото", description: "Цена для немедленной поставки"},
-      {"@type": "DefinedTerm", name: "Gold/Silver Ratio", description: "Соотношение цены золота к серебру"}
-    ]
+      '@type': 'DefinedTermSet',
+      name: 'Терминология торговли золотом',
+      hasDefinedTerm: [
+        {
+          '@type': 'DefinedTerm',
+          name: 'XAUUSD',
+          description: 'Курс золота к доллару США',
+        },
+        {
+          '@type': 'DefinedTerm',
+          name: 'Тройская унция',
+          description: 'Единица измерения — 31.1035 грамма',
+        },
+        {
+          '@type': 'DefinedTerm',
+          name: 'Safe Haven',
+          description: 'Защитный актив в периоды нестабильности',
+        },
+        {
+          '@type': 'DefinedTerm',
+          name: 'Реальные ставки',
+          description: 'Номинальные ставки минус инфляция',
+        },
+        {
+          '@type': 'DefinedTerm',
+          name: 'Gold Fix',
+          description: 'Эталонная цена золота в Лондоне',
+        },
+        {
+          '@type': 'DefinedTerm',
+          name: 'COMEX',
+          description: 'Крупнейшая биржа фьючерсов на золото',
+        },
+        {
+          '@type': 'DefinedTerm',
+          name: 'Спот-золото',
+          description: 'Цена для немедленной поставки',
+        },
+        {
+          '@type': 'DefinedTerm',
+          name: 'Gold/Silver Ratio',
+          description: 'Соотношение цены золота к серебру',
+        },
+      ],
     };
 
     this.addJsonLdSchema(data);
