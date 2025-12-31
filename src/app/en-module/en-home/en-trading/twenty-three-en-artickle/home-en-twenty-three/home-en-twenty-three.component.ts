@@ -427,7 +427,7 @@ export class HomeEnTwentyThreeComponent implements OnInit {
       name: 'Stock Indices Glossary',
       description:
         'Key terms and definitions related to world stock market indices',
-      definedTerm: [
+      hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
           name: 'Stock Index',
