@@ -16,9 +16,7 @@
           [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
           [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
         >
-          
-Головна
-
+          Головна
         </li>
         <li
           (click)="navigateTo('uk/freestudying')"
@@ -26,7 +24,6 @@
           [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
         >
           безкоштовнi курси
-
         </li>
         <li
           (click)="navigateTo('uk')"
@@ -69,10 +66,8 @@
           class="nav-list desktop-nav"
           [ngClass]="{ 'menu-item-dark': isDark, 'menu-item-light': !isDark }"
         >
-          <li (click)="navigateTo('')">Головна
-</li>
-          <li (click)="navigateTo('uk/freestudying')">безкоштовнi курси
-</li>
+          <li (click)="navigateTo('')">Головна</li>
+          <li (click)="navigateTo('uk/freestudying')">безкоштовнi курси</li>
           <li (click)="navigateTo('uk')">Про автора</li>
           <li (click)="navigateTo('uk/studying')">Професiйнi курси</li>
         </ul>
@@ -226,14 +221,36 @@
     <div class="author-page_main-block" data-aos="fade-up" data-aos-delay="300">
       <div class="author-page_main-block_text-block">
         <div class="author-page_main-block_title-block">
-          <h1 class=" " [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }">
+          <h1 class=" " [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }" [ngClass]="{
+              'gradient-orange': isDark,
+              'gradient-blue_author-page': !isDark
+            }">
             Список книг з трейдингу
           </h1>
-
+          <p
+            class="book_page-text"
+            [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }" 
+          >
+            «Основи трейдингу» — серія книг
+            <a
+              style="text-decoration: underline !important"
+              [ngStyle]="{
+                color: isDark ? '#fdff8b' : '#0074e6'
+              }"
+              href="https://ru.wikibooks.org/wiki/Участник:IgorArapov"
+            >
+              Ігоря Арапова</a
+            >
+            , що являє собою систему підготовки трейдерів, яка охоплює діапазон
+            тем від математичних основ і механіки ринку до психології прийняття
+            рішень. Автор адаптує принципи шахової стратегії та методи
+            фізико-технічного аналізу для застосування на фінансових ринках. У
+            рамках методології основний пріоритет надається методу Вайкоффа та
+            концепції Smart Money.
+          </p>
           <div class="free-courses_main-container_artickle-block">
             <div class="item-flex">
               <div
-                 
                 class="artickle-block_item shadow-box-dark"
                 [ngClass]="{
                   'artickle-block_item': true,
@@ -248,11 +265,15 @@
                   <div class="free-courses_item_img">
                     <a
                       [routerLink]="'osnovy-treydinga'"
-                       
                       hreflang="uk"
                       itemprop="url"
                     >
-                      <img [src]="'/assets/redesignArapovTrade/img/IMG000.jpg'" [alt]="'one-book'" itemprop="image" loading="lazy" />
+                      <img
+                        [src]="'/assets/redesignArapovTrade/img/IMG000.jpg'"
+                        [alt]="'one-book'"
+                        itemprop="image"
+                        loading="lazy"
+                      />
                     </a>
                   </div>
 
@@ -262,7 +283,6 @@
                       [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
                     >
                       <span itemprop="headline">Основи трейдингу </span>
-                       
                     </span>
                   </div>
 
@@ -270,7 +290,11 @@
                     class="free-courses_item_descr"
                     [ngStyle]="{ color: isDark ? '#A6A6A6' : '#0C263A' }"
                   >
-                    <a [routerLink]="'osnovy-treydinga'" hreflang="uk" itemprop="url">
+                    <a
+                      [routerLink]="'osnovy-treydinga'"
+                      hreflang="uk"
+                      itemprop="url"
+                    >
                       <span
                         [ngClass]="{
                           'read_more-text': true,
@@ -295,7 +319,6 @@
                   </div>
                 </div>
               </div>
-
 
               <div
                 class="artickle-block_item shadow-box-dark"
@@ -329,7 +352,9 @@
                       class="free-courses_item-title"
                       [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
                     >
-                      <span itemprop="headline">Основи трейдингу. Практика</span>
+                      <span itemprop="headline"
+                        >Основи трейдингу. Практика</span
+                      >
                     </span>
                   </div>
 
@@ -367,15 +392,6 @@
                 </div>
               </div>
 
-
-
-
-
-
-
-
-
-
               <!-- third book -->
 
               <div
@@ -397,7 +413,9 @@
                       itemprop="url"
                     >
                       <img
-                        [src]="'/assets/redesignArapovTrade/img/cover_psychology.jpg'"
+                        [src]="
+                          '/assets/redesignArapovTrade/img/cover_psychology.jpg'
+                        "
                         [alt]="'one-book'"
                         itemprop="image"
                         loading="lazy"
@@ -448,10 +466,6 @@
                 </div>
               </div>
             </div>
-
-
-
-            
           </div>
         </div>
       </div>
@@ -505,9 +519,7 @@
         <div class="menu">
           <span class="menu-title">Меню</span>
           <div class="menu-title-block">
-            <a (click)="navigateTo('')" class="menu-title_text"
-              >Головна</a
-            >
+            <a (click)="navigateTo('')" class="menu-title_text">Головна</a>
           </div>
           <div class="menu-title-block">
             <a (click)="navigateTo('uk')" class="menu-title_text"
@@ -547,27 +559,43 @@
         </div>
 
         <div class="menu">
-          <span class="menu-title">Нашi проекти</span
+          <span class="menu-title">Нашi проекти</span>
+          <a
+            href="https://arapov.education/ua/course-ua/"
+            target="_blank"
+            class="menu-title-block menu-title_text"
           >
-          <a href="https://arapov.education/ua/course-ua/" target="_blank" class="menu-title-block menu-title_text">
-              
-           <span class="menu-title-block menu-title_text"
-            >  Швидкий старт у трейдингу</span> </a> 
-             <a href="https://arapov.education/ua/reg-workshop-ua/" target="_blank" class="menu-title-block menu-title_text">
-              
-           <span class="menu-title-block menu-title_text"
-            >  Вступ до трейдингу</span> </a> 
-             <a href="https://arapov.trade/uk/studying" target="_blank" class="menu-title-block menu-title_text">
-              
-           <span class="menu-title-block menu-title_text"
-            >  Професійні курси</span> </a> 
-             <a href="https://arapovcopytrade.com/ua/invest-ua/" target="_blank" class="menu-title-block menu-title_text"> 
-              
-           <span class="menu-title-block menu-title_text"
-            >  Копiтрейдинг</span> </a> 
+            <span class="menu-title-block menu-title_text">
+              Швидкий старт у трейдингу</span
+            >
+          </a>
+          <a
+            href="https://arapov.education/ua/reg-workshop-ua/"
+            target="_blank"
+            class="menu-title-block menu-title_text"
+          >
+            <span class="menu-title-block menu-title_text">
+              Вступ до трейдингу</span
+            >
+          </a>
+          <a
+            href="https://arapov.trade/uk/studying"
+            target="_blank"
+            class="menu-title-block menu-title_text"
+          >
+            <span class="menu-title-block menu-title_text">
+              Професійні курси</span
+            >
+          </a>
+          <a
+            href="https://arapovcopytrade.com/ua/invest-ua/"
+            target="_blank"
+            class="menu-title-block menu-title_text"
+          >
+            <span class="menu-title-block menu-title_text"> Копiтрейдинг</span>
+          </a>
         </div>
       </div>
-      
     </div>
     <div class="component-1f">
       <div class="in-20"></div>
@@ -575,8 +603,8 @@
         <div class="box-b">
           <span class="text-2d">Arapov.Trade</span>
           <div class="pic-14"></div>
-          <span class="text-2e">2025. Всі права захищені.</span><span class="text-2e">ФОП Арапов І.В.
-ІПН 3314507171</span>
+          <span class="text-2e">2025. Всі права захищені.</span
+          ><span class="text-2e">ФОП Арапов І.В. ІПН 3314507171</span>
         </div>
         <div class="section-18">
           <!-- facebook -->

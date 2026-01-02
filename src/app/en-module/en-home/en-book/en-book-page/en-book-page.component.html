@@ -31,7 +31,6 @@
           [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
         >
           About the author
-
         </li>
         <li
           (click)="navigateTo('en/studying')"
@@ -67,12 +66,9 @@
           class="nav-list desktop-nav"
           [ngClass]="{ 'menu-item-dark': isDark, 'menu-item-light': !isDark }"
         >
-          <li (click)="navigateTo('en/main')">Main
-</li>
-          <li (click)="navigateTo('en/freestudying')">free courses
-</li>
-          <li (click)="navigateTo('en')">About the author
-</li>
+          <li (click)="navigateTo('en/main')">Main</li>
+          <li (click)="navigateTo('en/freestudying')">free courses</li>
+          <li (click)="navigateTo('en')">About the author</li>
           <li (click)="navigateTo('en/studying')">Professional courses</li>
         </ul>
       </div>
@@ -225,14 +221,36 @@
     <div class="author-page_main-block" data-aos="fade-up" data-aos-delay="300">
       <div class="author-page_main-block_text-block">
         <div class="author-page_main-block_title-block">
-          <h1 class=" " [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }">
-           Trading book list
+          <h1 class=" " [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }" [ngClass]="{
+              'gradient-orange': isDark,
+              'gradient-blue_author-page': !isDark
+            }"> 
+            Trading book list
           </h1>
-
+          <p
+            class="book_page-text"
+            [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+          >
+            "Trading Fundamentals" is a book series by
+            <a
+              style="text-decoration: underline !important"
+              [ngStyle]="{
+                color: isDark ? '#fdff8b' : '#0074e6'
+              }"
+              href="https://ru.wikibooks.org/wiki/Участник:IgorArapov"
+            >
+              Igor Arapov</a
+            >
+            , presenting a comprehensive trader preparation system that spans
+            topics from mathematical foundations and market mechanics to
+            decision-making psychology. The author adapts chess strategy
+            principles and physics-based analytical methods for application in
+            financial markets. The methodology prioritizes the Wyckoff Method
+            and Smart Money concepts.
+          </p>
           <div class="free-courses_main-container_artickle-block">
             <div class="item-flex">
               <div
-                 
                 class="artickle-block_item shadow-box-dark"
                 [ngClass]="{
                   'artickle-block_item': true,
@@ -247,11 +265,15 @@
                   <div class="free-courses_item_img">
                     <a
                       [routerLink]="'osnovy-treydinga'"
-                       
                       hreflang="en"
                       itemprop="url"
                     >
-                      <img [src]="'/assets/redesignArapovTrade/img/IMG000.jpg'" [alt]="'one-book'" itemprop="image" loading="lazy" />
+                      <img
+                        [src]="'/assets/redesignArapovTrade/img/IMG000.jpg'"
+                        [alt]="'one-book'"
+                        itemprop="image"
+                        loading="lazy"
+                      />
                     </a>
                   </div>
 
@@ -261,7 +283,6 @@
                       [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
                     >
                       <span itemprop="headline">Trading Basics </span>
-                       
                     </span>
                   </div>
 
@@ -269,7 +290,11 @@
                     class="free-courses_item_descr"
                     [ngStyle]="{ color: isDark ? '#A6A6A6' : '#0C263A' }"
                   >
-                    <a [routerLink]="'osnovy-treydinga'" hreflang="en" itemprop="url">
+                    <a
+                      [routerLink]="'osnovy-treydinga'"
+                      hreflang="en"
+                      itemprop="url"
+                    >
                       <span
                         [ngClass]="{
                           'read_more-text': true,
@@ -294,7 +319,6 @@
                   </div>
                 </div>
               </div>
-
 
               <div
                 class="artickle-block_item shadow-box-dark"
@@ -366,15 +390,6 @@
                 </div>
               </div>
 
-
-
-
-
-
-
-
-
-
               <!-- third book -->
 
               <div
@@ -396,7 +411,9 @@
                       itemprop="url"
                     >
                       <img
-                        [src]="'/assets/redesignArapovTrade/img/cover_psychology.jpg'"
+                        [src]="
+                          '/assets/redesignArapovTrade/img/cover_psychology.jpg'
+                        "
                         [alt]="'one-book'"
                         itemprop="image"
                         loading="lazy"
@@ -490,7 +507,8 @@
             </div>
           </div>
           <span class="footer-text"
-            >Free trading education and practical recommendations for beginners and pros to avoid losing the deposit.</span
+            >Free trading education and practical recommendations for beginners
+            and pros to avoid losing the deposit.</span
           >
         </div>
       </div>
@@ -515,8 +533,8 @@
           </div>
           <div class="menu-title-block">
             <a (click)="navigateTo('en/freestudying')" class="menu-title_text"
-              >Free Trading Education </a
-            >
+              >Free Trading Education
+            </a>
           </div>
         </div>
         <div class="menu">
@@ -541,27 +559,43 @@
         </div>
 
         <div class="menu">
-          <span class="menu-title">Our Projects</span
+          <span class="menu-title">Our Projects</span>
+          <a
+            href="https://arapov.education/en/course-en/"
+            target="_blank"
+            class="menu-title-block menu-title_text"
           >
-          <a href="https://arapov.education/en/course-en/" target="_blank" class="menu-title-block menu-title_text">
-              
-           <span class="menu-title-block menu-title_text"
-            >  Quick Start In Trading</span> </a> 
-             <a href="https://arapov.education/en/reg-workshop-en/" target="_blank" class="menu-title-block menu-title_text">
-              
-           <span class="menu-title-block menu-title_text"
-            >  Introduction To Trading</span> </a> 
-             <a href="https://arapov.trade/en/studying" target="_blank" class="menu-title-block menu-title_text">
-              
-           <span class="menu-title-block menu-title_text"
-            >  Professional Courses</span> </a> 
-             <a href="https://arapovcopytrade.com/en/home-en/" target="_blank" class="menu-title-block menu-title_text"> 
-              
-           <span class="menu-title-block menu-title_text"
-            >  Copy-Trading</span> </a> 
+            <span class="menu-title-block menu-title_text">
+              Quick Start In Trading</span
+            >
+          </a>
+          <a
+            href="https://arapov.education/en/reg-workshop-en/"
+            target="_blank"
+            class="menu-title-block menu-title_text"
+          >
+            <span class="menu-title-block menu-title_text">
+              Introduction To Trading</span
+            >
+          </a>
+          <a
+            href="https://arapov.trade/en/studying"
+            target="_blank"
+            class="menu-title-block menu-title_text"
+          >
+            <span class="menu-title-block menu-title_text">
+              Professional Courses</span
+            >
+          </a>
+          <a
+            href="https://arapovcopytrade.com/en/home-en/"
+            target="_blank"
+            class="menu-title-block menu-title_text"
+          >
+            <span class="menu-title-block menu-title_text"> Copy-Trading</span>
+          </a>
         </div>
       </div>
-       
     </div>
     <div class="component-1f">
       <div class="in-20"></div>
@@ -570,7 +604,9 @@
           <span class="text-2d">Arapov.Trade</span>
           <div class="pic-14"></div>
           <span class="text-2e">2025. All rights reserved.</span>
-          <span class="text-2e">Sole Proprietor Arapov I. V. TIN 3314507171</span>
+          <span class="text-2e"
+            >Sole Proprietor Arapov I. V. TIN 3314507171</span
+          >
         </div>
         <div class="section-18">
           <!-- facebook -->

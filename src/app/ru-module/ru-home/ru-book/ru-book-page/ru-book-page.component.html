@@ -221,10 +221,37 @@
     <div class="author-page_main-block" data-aos="fade-up" data-aos-delay="300">
       <div class="author-page_main-block_text-block">
         <div class="author-page_main-block_title-block">
-          <h1 class=" " [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }">
+          <h1
+            class=" "
+            [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+            [ngClass]="{
+              'gradient-orange': isDark,
+              'gradient-blue_author-page': !isDark
+            }"
+          >
             Список книг по трейдингу
           </h1>
-
+          <p
+            class="book_page-text"
+            [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+          >
+            «Основы трейдинга» — серия книг
+            <a
+              style="text-decoration: underline !important"
+              [ngStyle]="{
+                color: isDark ? '#fdff8b' : '#0074e6'
+              }"
+              href="https://ru.wikibooks.org/wiki/Участник:IgorArapov"
+            >
+              Игоря Арапова</a
+            >
+            , представляющая собой систему подготовки трейдеров, охватывающую
+            диапазон тем от математических основ и механики рынка до психологии
+            принятия решений. Автор адаптирует принципы шахматной стратегии и
+            методы физико-технического анализа для применения на финансовых
+            рынках. В рамках методологии основной приоритет отдаётся методу
+            Вайкоффа и концепции Smart Money.
+          </p>
           <div class="free-courses_main-container_artickle-block">
             <div class="item-flex">
               <!-- Frist book -->
@@ -298,14 +325,6 @@
                 </div>
               </div>
 
-
-
-
-
-
-
-
-
               <!-- Second Book -->
 
               <div
@@ -340,7 +359,9 @@
                       class="free-courses_item-title"
                       [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
                     >
-                      <span itemprop="headline">Основы трейдинга. Практика</span>
+                      <span itemprop="headline"
+                        >Основы трейдинга. Практика</span
+                      >
                     </span>
                   </div>
 
@@ -378,15 +399,6 @@
                 </div>
               </div>
 
-
-
-
-
-
-
-
-
-
               <!-- third book -->
 
               <div
@@ -408,7 +420,9 @@
                       itemprop="url"
                     >
                       <img
-                        [src]="'/assets/redesignArapovTrade/img/cover_psychology.jpg'"
+                        [src]="
+                          '/assets/redesignArapovTrade/img/cover_psychology.jpg'
+                        "
                         [alt]="'one-book'"
                         itemprop="image"
                         loading="lazy"
