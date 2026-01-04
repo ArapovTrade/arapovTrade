@@ -29,19 +29,37 @@
           підписників.
         </span>
       </div>
-      <div
-        (click)="navigateTo('uk/freestudying/freeeducation')"
-        [ngClass]="{
-          'author-page_main-block_btn': true,
-          'gradient-block-orange': isDark,
-          'gradient-block-blue': !isDark
-        }"
-      >
-        <span
-          class="author-page_main-block_btn-text"
-          [ngStyle]="{ color: !isDark ? '#ffffff' : '#03314b' }"
-          >Почати навчання</span
+      <div class="authot_button_block">
+        <div
+          (click)="navigateTo('uk/freestudying/freeeducation')"
+          [ngClass]="{
+            'btn-section-one': true,
+            'gradient-block-orange': isDark,
+            'gradient-block-blue': !isDark
+          }"
         >
+         
+          <span
+            class="author-page_main-block_btn-text"
+            [ngStyle]="{ color: !isDark ? '#ffffff' : '#03314b' }"
+            >Почати навчання</span
+          >
+        </div>
+
+        <div
+          class="podrobnee phone"
+          [ngClass]="{
+            'podrobnee-dark': isDark,
+            'podrobnee-light': !isDark
+          }"
+        >
+          <span class="text-p"
+            ><a
+              (click)="navigateTo('uk/books')"
+              >Книги з трейдингу</a
+            >
+          </span>
+        </div>
       </div>
 
       <div class="follow-us-block" [ngClass]="{ 'follow-pad': !isDark }">

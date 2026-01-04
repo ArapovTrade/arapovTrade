@@ -25,19 +25,37 @@
           You can view the trading results of the free training course and the effectiveness of the trading system on a student's public account. The student ranks 1st on the MQL5 service by the capital size of their subscribers.
         </span>
       </div>
-      <div
-        (click)="navigateTo('en/freestudying/freeeducation')"
-        [ngClass]="{
-          'author-page_main-block_btn': true,
-          'gradient-block-orange': isDark,
-          'gradient-block-blue': !isDark
-        }"
-      >
-        <span
-          class="author-page_main-block_btn-text"
-          [ngStyle]="{ color: !isDark ? '#ffffff' : '#03314b' }"
-          >Start Learning</span
+     <div class="authot_button_block">
+        <div
+          (click)="navigateTo('en/freestudying/freeeducation')"
+          [ngClass]="{
+            'btn-section-one': true,
+            'gradient-block-orange': isDark,
+            'gradient-block-blue': !isDark
+          }"
         >
+         
+          <span
+            class="author-page_main-block_btn-text"
+            [ngStyle]="{ color: !isDark ? '#ffffff' : '#03314b' }"
+            >Start studying</span
+          >
+        </div>
+
+        <div
+          class="podrobnee phone"
+          [ngClass]="{
+            'podrobnee-dark': isDark,
+            'podrobnee-light': !isDark
+          }"
+        >
+          <span class="text-p"
+            ><a
+              (click)="navigateTo('en/books')"
+              >Trading books</a
+            >
+          </span>
+        </div>
       </div>
 
       <div class="follow-us-block" [ngClass]="{ 'follow-pad': !isDark }">

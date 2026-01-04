@@ -4475,4 +4475,22 @@ letter-spacing: 0%;
     margin: 0 0 50px;
     font-weight: 400;
     letter-spacing: 0;
+            line-height: 25px;
+
+  }
+
+  @media (min-width: 767px) and (max-width: 1200px) {
+
+  }
+
+  @media (max-width: 766px){
+
+    .book_page-text{
+    font-family: 'lato';
+    font-size: 18px;
+    margin: 0 0 50px;
+    font-weight: 400;
+    letter-spacing: 0;
+            line-height: 25px;
+  }
   }
