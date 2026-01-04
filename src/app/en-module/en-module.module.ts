@@ -13,7 +13,7 @@ const routes: Routes = [
     component: EnHomeComponent,
   },
    
-    { path: 'home', component: HomePageComponent },
+    // { path: 'home', component: HomePageComponent },
   {
     path: 'disclaimer',
     component: DisclaimerenComponent,
