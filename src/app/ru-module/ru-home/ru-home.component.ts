@@ -332,6 +332,11 @@ export class RuHomeComponent implements OnInit, AfterViewInit, OnDestroy {
       identifier: [
         {
           '@type': 'PropertyValue',
+          propertyID: 'Google Knowledge Graph',
+          value: 'kg:/g/11ysn_rm8l',
+        },
+        {
+          '@type': 'PropertyValue',
           propertyID: 'ORCID',
           value: '0009-0003-0430-778X',
         },
@@ -356,6 +361,7 @@ export class RuHomeComponent implements OnInit, AfterViewInit, OnDestroy {
         'https://rutube.ru/channel/41668647',
         'https://dzen.ru/id/66bf54343761337a416dac58?share_to=link',
       ],
+      
       url: 'https://arapov.trade/ru',
       mainEntityOfPage: 'https://arapov.trade/ru',
     });

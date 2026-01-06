@@ -301,6 +301,11 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
       identifier: [
         {
           '@type': 'PropertyValue',
+          propertyID: 'Google Knowledge Graph',
+          value: 'kg:/g/11ysn_rm8l',
+        },
+        {
+          '@type': 'PropertyValue',
           propertyID: 'ORCID',
           value: '0009-0003-0430-778X',
         },
