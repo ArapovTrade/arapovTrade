@@ -326,6 +326,8 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
         'https://www.linkedin.com/in/arapovtrade',
         'https://www.mql5.com/ru/signals/2246716?source=External',
         'https://t.me/ArapovTrade',
+        'https://www.google.com/search?kgmid=/g/11ysn_rm8l',
+
         'https://www.facebook.com/igor.arapov.75',
         'https://rutube.ru/channel/41668647',
         'https://dzen.ru/id/66bf54343761337a416dac58?share_to=link',

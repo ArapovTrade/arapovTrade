@@ -354,6 +354,8 @@ export class RuHomeComponent implements OnInit, AfterViewInit, OnDestroy {
         'https://www.linkedin.com/in/arapovtrade',
         'https://www.mql5.com/ru/signals/2246716?source=External',
         'https://t.me/ArapovTrade',
+        'https://www.google.com/search?kgmid=/g/11ysn_rm8l',
+
         'https://ru.wikibooks.org/wiki/Основы_трейдинга', 
         'https://www.crunchbase.com/person/igor-arapov', 
         'https://ru.wikibooks.org/wiki/Участник:IgorArapov',  
