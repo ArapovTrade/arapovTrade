@@ -204,8 +204,8 @@ export class PsychologiyaTreydingaEnComponent
       bookEdition: '1st edition',
       inLanguage: {
         '@type': 'Language',
-        name: 'Russian',
-        alternateName: 'ru',
+        name: 'English',
+        alternateName: 'en',
       },
       datePublished: '2025-12-18',
       dateCreated: '2025-12-18',
@@ -282,7 +282,7 @@ export class PsychologiyaTreydingaEnComponent
         '@type': 'Book',
         isbn: '979-8-90243-138-1',
         bookFormat: 'https://schema.org/EBook',
-        inLanguage: 'ru',
+        inLanguage: 'en',
         potentialAction: {
           '@type': 'ReadAction',
           target: {

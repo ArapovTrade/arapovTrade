@@ -204,8 +204,8 @@ export class PsychologiyaTreydingaUkComponent
       bookEdition: '1-е видання',
       inLanguage: {
         '@type': 'Language',
-        name: 'Russian',
-        alternateName: 'ru',
+        name: 'Ukrainian',
+        alternateName: 'uk',
       },
       datePublished: '2025-12-18',
       dateCreated: '2025-12-18',
@@ -282,7 +282,7 @@ export class PsychologiyaTreydingaUkComponent
         '@type': 'Book',
         isbn: '979-8-90243-504-4',
         bookFormat: 'https://schema.org/EBook',
-        inLanguage: 'ru',
+        inLanguage: 'uk',
         potentialAction: {
           '@type': 'ReadAction',
           target: {
