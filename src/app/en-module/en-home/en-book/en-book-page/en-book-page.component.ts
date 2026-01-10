@@ -235,9 +235,9 @@ export class EnBookPageComponent implements OnInit, AfterViewInit, OnDestroy {
     script.text = JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'ItemList',
-      name: 'Книги Ігоря Арапова про трейдинг',
+      name: "Igor Arapov's Trading Books",
       description:
-        'Безкоштовні книги з трейдингу від Ігоря Арапова. Основи трейдингу, психологія трейдингу та практичні методи торгівлі.',
+        'Free trading books by Igor Arapov. Trading basics, trading psychology, and practical trading methods.',
       numberOfItems: 3,
       itemListElement: [
         {
@@ -245,15 +245,15 @@ export class EnBookPageComponent implements OnInit, AfterViewInit, OnDestroy {
           position: 1,
           item: {
             '@type': 'Book',
-            '@id': 'https://arapov.trade/uk/books/osnovy-treydinga#book',
-            name: 'Основи трейдингу',
+            '@id': 'https://arapov.trade/en/books/osnovy-treydinga#book',
+            name: 'Trading Basics',
             isbn: '979-8-90243-075-9',
             inLanguage: 'ru',
             author: {
               '@type': 'Person',
-              '@id': 'https://arapov.trade/uk#author',
+              '@id': 'https://arapov.trade/en#author',
             },
-            url: 'https://arapov.trade/uk/books/osnovy-treydinga',
+            url: 'https://arapov.trade/en/books/osnovy-treydinga',
           },
         },
         {
@@ -261,15 +261,15 @@ export class EnBookPageComponent implements OnInit, AfterViewInit, OnDestroy {
           position: 2,
           item: {
             '@type': 'Book',
-            '@id': 'https://arapov.trade/uk/books/psykholohiya-treydinga#book',
-            name: 'Психологія трейдингу',
-            isbn: '979-8-90243-081-0',
-            inLanguage: 'ru',
+            '@id': 'https://arapov.trade/en/books/psihologiya-treydinga#book',
+            name: 'Trading Psychology',
+            isbn: '979-8-90243-138-1',
+            inLanguage: 'en',
             author: {
               '@type': 'Person',
-              '@id': 'https://arapov.trade/uk#author',
+              '@id': 'https://arapov.trade/en#author',
             },
-            url: 'https://arapov.trade/uk/books/psykholohiya-treydinga',
+            url: 'https://arapov.trade/en/books/psihologiya-treydinga',
           },
         },
         {
@@ -277,15 +277,15 @@ export class EnBookPageComponent implements OnInit, AfterViewInit, OnDestroy {
           position: 3,
           item: {
             '@type': 'Book',
-            '@id': 'https://arapov.trade/uk/books/osnovy-treydinga-tom-2#book',
-            name: 'Основи трейдингу Том 2',
+            '@id': 'https://arapov.trade/en/books/osnovy-treydinga-tom-two#book',
+            name: 'Trading Basics Volume 2',
             isbn: '979-8-90243-078-0',
             inLanguage: 'ru',
             author: {
               '@type': 'Person',
-              '@id': 'https://arapov.trade/uk#author',
+              '@id': 'https://arapov.trade/en#author',
             },
-            url: 'https://arapov.trade/uk/books/osnovy-treydinga-tom-2',
+            url: 'https://arapov.trade/en/books/osnovy-treydinga-tom-two',
           },
         },
       ],

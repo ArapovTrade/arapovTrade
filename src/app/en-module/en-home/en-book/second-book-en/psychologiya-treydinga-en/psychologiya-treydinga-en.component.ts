@@ -318,8 +318,8 @@ export class PsychologiyaTreydingaEnComponent
 
   downloadFile() {
     const link = document.createElement('a');
-    link.href = '/assets/documents/Psihologiya_Treydinga_Final.epub'; // путь к вашему файлу
-    link.download = 'Psihologiya_Treydinga_Final.epub'; // имя файла для скачивания
+    link.href = '/assets/documents/Trading_Psychology_Final.epub'; // путь к вашему файлу
+    link.download = 'Trading_Psychology_Final.epub'; // имя файла для скачивания
     link.click();
   }
 

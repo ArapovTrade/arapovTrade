@@ -294,8 +294,12 @@ export class RuHomeComponent implements OnInit, AfterViewInit, OnDestroy {
       ],
       award: [
         'Кандидат в мастера спорта по шахматам',
-        'Выбор редакции TradingView',
-        'Автор книги с ISBN 979-8-90243-075-9',
+        'Выбор редакции TradingView', 
+        'Автор книги «Основы трейдинга» (ISBN 979-8-90243-075-9)',
+        'Автор книги «Психология трейдинга» (ISBN 979-8-90243-081-0)',
+        'Автор книги «Основы трейдинга Том 2» (ISBN 979-8-90243-078-0)',
+        'Автор книги «Психологія трейдингу» (ISBN 979-8-90243-504-4)',
+        'Автор книги «Trading Psychology» (ISBN 979-8-90243-138-1)',
       ],
       publishingPrinciples: 'https://arapov.trade/ru/freestudying',
       description:
@@ -355,15 +359,18 @@ export class RuHomeComponent implements OnInit, AfterViewInit, OnDestroy {
         'https://www.mql5.com/ru/signals/2246716?source=External',
         'https://t.me/ArapovTrade',
         'https://www.google.com/search?kgmid=/g/11ysn_rm8l',
-
-        'https://ru.wikibooks.org/wiki/Основы_трейдинга', 
-        'https://www.crunchbase.com/person/igor-arapov', 
-        'https://ru.wikibooks.org/wiki/Участник:IgorArapov',  
+        'https://isni.org/isni/0000000529518564',
+        'https://bookwire.bowker.com/author/Igor-Arapov-40225801',
+        'https://www.goodreads.com/author/show/66848566',
+        'https://openlibrary.org/authors/OL16073686A',
+        'https://ru.wikibooks.org/wiki/Основы_трейдинга',
+        'https://www.crunchbase.com/person/igor-arapov',
+        'https://ru.wikibooks.org/wiki/Участник:IgorArapov',
         'https://www.facebook.com/igor.arapov.75',
         'https://rutube.ru/channel/41668647',
         'https://dzen.ru/id/66bf54343761337a416dac58?share_to=link',
       ],
-      
+
       url: 'https://arapov.trade/ru',
       mainEntityOfPage: 'https://arapov.trade/ru',
     });

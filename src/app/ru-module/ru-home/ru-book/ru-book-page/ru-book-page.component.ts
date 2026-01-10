@@ -260,7 +260,7 @@ export class RuBookPageComponent implements OnInit, AfterViewInit, OnDestroy {
           position: 2,
           item: {
             '@type': 'Book',
-            '@id': 'https://arapov.trade/ru/books/psykholohiya-treydinga#book',
+            '@id': 'https://arapov.trade/ru/books/psihologiya-treydinga#book',
             name: 'Психология трейдинга',
             isbn: '979-8-90243-081-0',
             inLanguage: 'ru',
@@ -268,7 +268,7 @@ export class RuBookPageComponent implements OnInit, AfterViewInit, OnDestroy {
               '@type': 'Person',
               '@id': 'https://arapov.trade/ru#author',
             },
-            url: 'https://arapov.trade/ru/books/psykholohiya-treydinga',
+            url: 'https://arapov.trade/ru/books/psihologiya-treydinga',
           },
         },
         {
@@ -276,7 +276,7 @@ export class RuBookPageComponent implements OnInit, AfterViewInit, OnDestroy {
           position: 3,
           item: {
             '@type': 'Book',
-            '@id': 'https://arapov.trade/ru/books/osnovy-treydinga-tom-2#book',
+            '@id': 'https://arapov.trade/ru/books/osnovy-treydinga-tom-two#book',
             name: 'Основы трейдинга Том 2',
             isbn: '979-8-90243-078-0',
             inLanguage: 'ru',
@@ -284,7 +284,7 @@ export class RuBookPageComponent implements OnInit, AfterViewInit, OnDestroy {
               '@type': 'Person',
               '@id': 'https://arapov.trade/ru#author',
             },
-            url: 'https://arapov.trade/ru/books/osnovy-treydinga-tom-2',
+            url: 'https://arapov.trade/ru/books/osnovy-treydinga-tom-two',
           },
         },
       ],
