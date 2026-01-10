@@ -17,7 +17,7 @@ import { DOCUMENT } from '@angular/common';
 @Component({
   selector: 'app-en-book-page',
   templateUrl: './en-book-page.component.html',
-  styleUrl: './en-book-page.component.scss'
+  styleUrl: './en-book-page.component.scss',
 })
 export class EnBookPageComponent implements OnInit, AfterViewInit, OnDestroy {
   constructor(
@@ -70,6 +70,7 @@ export class EnBookPageComponent implements OnInit, AfterViewInit, OnDestroy {
       content: 'https://arapov.trade/assets/img/photo_mainpage.jpg',
     });
     this.addWebSiteSchema();
+    this.addBookSchema();
 
     this.themeSubscription = this.themeService.getTheme().subscribe((data) => {
       this.isDark = data;
@@ -142,6 +143,9 @@ export class EnBookPageComponent implements OnInit, AfterViewInit, OnDestroy {
         if (content['@type'] === 'WebSite') {
           script.remove();
         }
+        if (content['@type'] === 'ItemList') {
+          script.remove();
+        }
       } catch (e) {
         // Игнорируем некорректные JSON (например, из других источников)
       }
@@ -203,10 +207,90 @@ export class EnBookPageComponent implements OnInit, AfterViewInit, OnDestroy {
     link.click();
   }
 
-
-
   openLink(url: string) {
     window.open(url, '_blank');
   }
-}
 
+  private addBookSchema() {
+    const exists = Array.from(
+      this.document.querySelectorAll('script[type="application/ld+json"]')
+    ).some((script) => {
+      try {
+        const json = JSON.parse(script.textContent || '{}');
+        return (
+          json['@type'] === 'ItemList' &&
+          json['name'] === 'Книги Игоря Арапова о трейдинге'
+        );
+      } catch {
+        return false;
+      }
+    });
+
+    // Если уже существует — выходим
+    if (exists) return;
+
+    // Создаем новый JSON-LD
+    const script = this.document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'Книги Ігоря Арапова про трейдинг',
+      description:
+        'Безкоштовні книги з трейдингу від Ігоря Арапова. Основи трейдингу, психологія трейдингу та практичні методи торгівлі.',
+      numberOfItems: 3,
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          item: {
+            '@type': 'Book',
+            '@id': 'https://arapov.trade/uk/books/osnovy-treydinga#book',
+            name: 'Основи трейдингу',
+            isbn: '979-8-90243-075-9',
+            inLanguage: 'ru',
+            author: {
+              '@type': 'Person',
+              '@id': 'https://arapov.trade/uk#author',
+            },
+            url: 'https://arapov.trade/uk/books/osnovy-treydinga',
+          },
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          item: {
+            '@type': 'Book',
+            '@id': 'https://arapov.trade/uk/books/psykholohiya-treydinga#book',
+            name: 'Психологія трейдингу',
+            isbn: '979-8-90243-081-0',
+            inLanguage: 'ru',
+            author: {
+              '@type': 'Person',
+              '@id': 'https://arapov.trade/uk#author',
+            },
+            url: 'https://arapov.trade/uk/books/psykholohiya-treydinga',
+          },
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          item: {
+            '@type': 'Book',
+            '@id': 'https://arapov.trade/uk/books/osnovy-treydinga-tom-2#book',
+            name: 'Основи трейдингу Том 2',
+            isbn: '979-8-90243-078-0',
+            inLanguage: 'ru',
+            author: {
+              '@type': 'Person',
+              '@id': 'https://arapov.trade/uk#author',
+            },
+            url: 'https://arapov.trade/uk/books/osnovy-treydinga-tom-2',
+          },
+        },
+      ],
+    });
+
+    this.document.head.appendChild(script);
+  }
+}

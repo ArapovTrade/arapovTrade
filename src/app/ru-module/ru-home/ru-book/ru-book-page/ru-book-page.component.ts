@@ -70,7 +70,7 @@ export class RuBookPageComponent implements OnInit, AfterViewInit, OnDestroy {
       content: 'https://arapov.trade/assets/img/photo_mainpage.jpg',
     });
     this.addWebSiteSchema();
-
+    this.addBookSchema();
     this.themeSubscription = this.themeService.getTheme().subscribe((data) => {
       this.isDark = data;
       this.cdr.detectChanges();
@@ -142,6 +142,9 @@ export class RuBookPageComponent implements OnInit, AfterViewInit, OnDestroy {
         if (content['@type'] === 'WebSite') {
           script.remove();
         }
+        if (content['@type'] === 'ItemList') {
+          script.remove();
+        }
       } catch (e) {
         // Игнорируем некорректные JSON (например, из других источников)
       }
@@ -203,9 +206,90 @@ export class RuBookPageComponent implements OnInit, AfterViewInit, OnDestroy {
     link.click();
   }
 
-
-
   openLink(url: string) {
     window.open(url, '_blank');
+  }
+
+  private addBookSchema() {
+    const exists = Array.from(
+      this.document.querySelectorAll('script[type="application/ld+json"]')
+    ).some((script) => {
+      try {
+        const json = JSON.parse(script.textContent || '{}');
+        return (
+          json['@type'] === 'ItemList' &&
+          json['name'] === 'Книги Игоря Арапова о трейдинге'
+        );
+      } catch {
+        return false;
+      }
+    });
+
+    // Если уже существует — выходим
+    if (exists) return;
+
+    // Создаем новый JSON-LD
+    const script = this.document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'Книги Игоря Арапова о трейдинге',
+      description:
+        'Бесплатные книги по трейдингу от Игоря Арапова. Основы трейдинга, психология трейдинга и практические методы торговли.',
+      numberOfItems: 3,
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          item: {
+            '@type': 'Book',
+            '@id': 'https://arapov.trade/ru/books/osnovy-treydinga#book',
+            name: 'Основы трейдинга',
+            isbn: '979-8-90243-075-9',
+            inLanguage: 'ru',
+            author: {
+              '@type': 'Person',
+              '@id': 'https://arapov.trade/ru#author',
+            },
+            url: 'https://arapov.trade/ru/books/osnovy-treydinga',
+          },
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          item: {
+            '@type': 'Book',
+            '@id': 'https://arapov.trade/ru/books/psykholohiya-treydinga#book',
+            name: 'Психология трейдинга',
+            isbn: '979-8-90243-081-0',
+            inLanguage: 'ru',
+            author: {
+              '@type': 'Person',
+              '@id': 'https://arapov.trade/ru#author',
+            },
+            url: 'https://arapov.trade/ru/books/psykholohiya-treydinga',
+          },
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          item: {
+            '@type': 'Book',
+            '@id': 'https://arapov.trade/ru/books/osnovy-treydinga-tom-2#book',
+            name: 'Основы трейдинга Том 2',
+            isbn: '979-8-90243-078-0',
+            inLanguage: 'ru',
+            author: {
+              '@type': 'Person',
+              '@id': 'https://arapov.trade/ru#author',
+            },
+            url: 'https://arapov.trade/ru/books/osnovy-treydinga-tom-2',
+          },
+        },
+      ],
+    });
+
+    this.document.head.appendChild(script);
   }
 }
