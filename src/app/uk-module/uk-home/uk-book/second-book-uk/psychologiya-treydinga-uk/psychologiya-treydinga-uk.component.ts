@@ -52,13 +52,13 @@ export class PsychologiyaTreydingaUkComponent
     this.removeExistingWebPageSchema();
 
     this.titleService.setTitle(
-      'Психологія трейдингу — Безкоштовна книга Ігоря Арапова | ISBN 979-8-90243-081-0'
+      'Психологія трейдингу — Безкоштовна книга Ігоря Арапова | ISBN 979-8-90243-504-4'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Завантажити безкоштовно книгу «Психологія трейдингу» — практичний посібник з управління емоціями від Ігоря Арапова. Страх, жадібність, дисципліна, психологія успішного трейдера. ISBN 979-8-90243-081-0',
+        'Завантажити безкоштовно книгу «Психологія трейдингу» — практичний посібник з управління емоціями від Ігоря Арапова. Страх, жадібність, дисципліна, психологія успішного трейдера. ISBN 979-8-90243-504-4',
     });
 
     this.meta.updateTag({
@@ -197,8 +197,8 @@ export class PsychologiyaTreydingaUkComponent
       headline:
         'Психологія трейдингу — Методичний посібник для початкових трейдерів',
       description:
-        'Завантажити безкоштовно книгу «Психологія трейдингу» — практичний посібник з управління емоціями від Ігоря Арапова. Страх, жадібність, дисципліна, психологія успішного трейдера. ISBN 979-8-90243-081-0',
-      isbn: '979-8-90243-081-0',
+        'Завантажити безкоштовно книгу «Психологія трейдингу» — практичний посібник з управління емоціями від Ігоря Арапова. Страх, жадібність, дисципліна, психологія успішного трейдера. ISBN 979-8-90243-504-4',
+      isbn: '979-8-90243-504-4',
       numberOfPages: 60,
       bookFormat: 'https://schema.org/EBook',
       bookEdition: '1-е видання',
@@ -280,7 +280,7 @@ export class PsychologiyaTreydingaUkComponent
       },
       workExample: {
         '@type': 'Book',
-        isbn: '979-8-90243-081-0',
+        isbn: '979-8-90243-504-4',
         bookFormat: 'https://schema.org/EBook',
         inLanguage: 'ru',
         potentialAction: {
@@ -432,7 +432,7 @@ export class PsychologiyaTreydingaUkComponent
       url: 'https://arapov.trade/uk/books/psihologiya-treydinga',
       name: 'Психологія трейдингу — Безкоштовна книга Ігоря Арапова',
       description:
-        'Скачати безкоштовно книгу з трейдингу. ISBN 979-8-90243-081-0',
+        'Скачати безкоштовно книгу з трейдингу. ISBN 979-8-90243-504-4',
       inLanguage: 'uk',
       isPartOf: {
         '@type': 'WebSite',
@@ -548,7 +548,7 @@ export class PsychologiyaTreydingaUkComponent
           name: 'Який ISBN у книги?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'ISBN книги: 979-8-90243-081-0. Це міжнародний стандартний книжковий номер, зареєстрований у Bowker Books in Print.',
+            text: 'ISBN книги: 979-8-90243-504-4. Це міжнародний стандартний книжковий номер, зареєстрований у Bowker Books in Print.',
           },
         },
       ],

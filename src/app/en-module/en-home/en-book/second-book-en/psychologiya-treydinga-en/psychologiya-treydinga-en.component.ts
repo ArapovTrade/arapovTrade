@@ -51,13 +51,13 @@ export class PsychologiyaTreydingaEnComponent
     this.removeExistingWebPageSchema();
 
     this.titleService.setTitle(
-      'Trading Psychology – Free Book by Igor Arapov | ISBN 979-8-90243-081-0'
+      'Trading Psychology – Free Book by Igor Arapov | ISBN 979-8-90243-138-1'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Download the free book "Trading Psychology" — a practical guide to emotion management by Igor Arapov. Fear, greed, discipline, psychology of a successful trader. ISBN 979-8-90243-081-0',
+        'Download the free book "Trading Psychology" — a practical guide to emotion management by Igor Arapov. Fear, greed, discipline, psychology of a successful trader. ISBN 979-8-90243-138-1',
     });
 
     this.meta.updateTag({
@@ -197,8 +197,8 @@ export class PsychologiyaTreydingaEnComponent
       ],
       headline: 'Trading Psychology — Methodological manual for beginners',
       description:
-        'Download the free book "Trading Psychology" — a practical guide to emotion management by Igor Arapov. Fear, greed, discipline, psychology of a successful trader. ISBN 979-8-90243-081-0',
-      isbn: '979-8-90243-081-0',
+        'Download the free book "Trading Psychology" — a practical guide to emotion management by Igor Arapov. Fear, greed, discipline, psychology of a successful trader. ISBN 979-8-90243-138-1',
+      isbn: '979-8-90243-138-1',
       numberOfPages: 60,
       bookFormat: 'https://schema.org/EBook',
       bookEdition: '1st edition',
@@ -280,7 +280,7 @@ export class PsychologiyaTreydingaEnComponent
       },
       workExample: {
         '@type': 'Book',
-        isbn: '979-8-90243-081-0',
+        isbn: '979-8-90243-138-1',
         bookFormat: 'https://schema.org/EBook',
         inLanguage: 'ru',
         potentialAction: {
@@ -434,7 +434,7 @@ export class PsychologiyaTreydingaEnComponent
       '@id': 'https://arapov.trade/en/books/psihologiya-treydinga',
       url: 'https://arapov.trade/en/books/psihologiya-treydinga',
       name: 'Trading Psychology – Free Book by Igor Arapov',
-      description: 'Download the free book on trading. ISBN 979-8-90243-081-0',
+      description: 'Download the free book on trading. ISBN 979-8-90243-138-1',
       inLanguage: 'en',
       isPartOf: {
         '@type': 'WebSite',
@@ -553,7 +553,7 @@ export class PsychologiyaTreydingaEnComponent
           name: 'What is the ISBN of the book?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: "The book's ISBN is 979-8-90243-081-0. This is an International Standard Book Number registered with Bowker Books in Print.",
+            text: "The book's ISBN is 979-8-90243-138-1. This is an International Standard Book Number registered with Bowker Books in Print.",
           },
         },
       ],
