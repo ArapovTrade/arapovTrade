@@ -452,7 +452,7 @@ export class HomeEnBlogFourComponent implements OnInit {
       name: 'Margin Trading Glossary',
       description:
         'Key terms and definitions related to margin trading and risk management',
-      definedTerm: [
+      hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
           name: 'Margin Trading',
