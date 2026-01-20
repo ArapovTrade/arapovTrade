@@ -290,6 +290,13 @@ export class PsychologiyaTreydingaUkComponent
           '@type': 'Library',
           name: 'Національна бібліотека України імені В. І. Вернадського',
           url: 'https://nbuv.gov.ua',
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: 'Голосіївський проспект, 3',
+            addressLocality: 'Київ',
+            postalCode: '03039',
+            addressCountry: 'UA',
+          },
         },
         sameAs: ['https://www.wikidata.org/wiki/Q137827249'],
         potentialAction: {
