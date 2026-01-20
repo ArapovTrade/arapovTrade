@@ -32,7 +32,7 @@ export class UkHomeComponent implements OnInit, AfterViewInit, OnDestroy {
     private titleService: Title,
     private rendererFactory: RendererFactory2,
     @Inject(DOCUMENT) private document: Document,
-    private lang: LangService
+    private lang: LangService,
   ) {
     this.renderer = rendererFactory.createRenderer(null, null);
   }
@@ -77,7 +77,7 @@ export class UkHomeComponent implements OnInit, AfterViewInit, OnDestroy {
     this.addPersoneSchema();
     this.addProfilePageSchema();
     this.titleService.setTitle(
-      'Навчання трейдингу з нуля безкоштовно | Ігор Арапов'
+      'Навчання трейдингу з нуля безкоштовно | Ігор Арапов',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
@@ -160,7 +160,7 @@ export class UkHomeComponent implements OnInit, AfterViewInit, OnDestroy {
   }
   private addPersoneSchema() {
     const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]')
+      this.document.querySelectorAll('script[type="application/ld+json"]'),
     ).some((script) => {
       try {
         const json = JSON.parse(script.textContent || '{}');
@@ -213,7 +213,7 @@ export class UkHomeComponent implements OnInit, AfterViewInit, OnDestroy {
       ],
       award: [
         'Кандидат у майстри спорту з шахів',
-        'Вибір редакції TradingView', 
+        'Вибір редакції TradingView',
         'Автор книги «Основы трейдинга» (ISBN 979-8-90243-075-9)',
         'Автор книги «Психология трейдинга» (ISBN 979-8-90243-081-0)',
         'Автор книги «Основы трейдинга Том 2» (ISBN 979-8-90243-078-0)',
@@ -288,6 +288,7 @@ export class UkHomeComponent implements OnInit, AfterViewInit, OnDestroy {
         'https://bookwire.bowker.com/author/Igor-Arapov-40225801',
         'https://www.goodreads.com/author/show/66848566',
         'https://openlibrary.org/authors/OL16073686A',
+        'http://www.irbis-nbuv.gov.ua/cgi-bin/irbis64r_81/cgiirbis_64.exe?Z21ID=&I21DBN=VFEIR&P21DBN=VFEIR&S21STN=1&S21REF=10&S21FMT=fullw&C21COM=S&S21CNR=20&S21P01=3&S21P02=0&S21P03=A=&S21COLORTERMS=0&S21STR=Арапов%2C%20Ігор',
       ],
       url: 'https://arapov.trade/uk',
       mainEntityOfPage: 'https://arapov.trade/uk',
@@ -298,7 +299,7 @@ export class UkHomeComponent implements OnInit, AfterViewInit, OnDestroy {
 
   private addProfilePageSchema() {
     const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]')
+      this.document.querySelectorAll('script[type="application/ld+json"]'),
     ).some((script) => {
       try {
         const json = JSON.parse(script.textContent || '{}');
@@ -338,7 +339,7 @@ export class UkHomeComponent implements OnInit, AfterViewInit, OnDestroy {
   }
   private removeExistingWebPageSchema(): void {
     const scripts = this.document.querySelectorAll(
-      'script[type="application/ld+json"]'
+      'script[type="application/ld+json"]',
     );
 
     scripts.forEach((script) => {

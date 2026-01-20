@@ -14,13 +14,12 @@ import { Subscription } from 'rxjs';
 declare var AOS: any;
 import { DOCUMENT } from '@angular/common';
 
-
 @Component({
   selector: 'app-psychologiya-treydinga-uk',
   templateUrl: './psychologiya-treydinga-uk.component.html',
-  styleUrl: './psychologiya-treydinga-uk.component.scss'
+  styleUrl: './psychologiya-treydinga-uk.component.scss',
 })
-export class PsychologiyaTreydingaUkComponent 
+export class PsychologiyaTreydingaUkComponent
   implements OnInit, AfterViewInit, OnDestroy
 {
   constructor(
@@ -29,7 +28,7 @@ export class PsychologiyaTreydingaUkComponent
     private router: Router,
     private cdr: ChangeDetectorRef,
     @Inject(DOCUMENT) private document: Document,
-    private themeService: ThemeservService
+    private themeService: ThemeservService,
   ) {}
 
   ngAfterViewInit() {
@@ -52,7 +51,7 @@ export class PsychologiyaTreydingaUkComponent
     this.removeExistingWebPageSchema();
 
     this.titleService.setTitle(
-      'Психологія трейдингу — Безкоштовна книга Ігоря Арапова | ISBN 979-8-90243-504-4'
+      'Психологія трейдингу — Безкоштовна книга Ігоря Арапова | ISBN 979-8-90243-504-4',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
@@ -138,7 +137,7 @@ export class PsychologiyaTreydingaUkComponent
 
   private removeExistingWebPageSchema(): void {
     const scripts = this.document.querySelectorAll(
-      'script[type="application/ld+json"]'
+      'script[type="application/ld+json"]',
     );
 
     scripts.forEach((script) => {
@@ -164,11 +163,13 @@ export class PsychologiyaTreydingaUkComponent
 
   private addWebSiteSchema() {
     const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]')
+      this.document.querySelectorAll('script[type="application/ld+json"]'),
     ).some((script) => {
       try {
         const json = JSON.parse(script.textContent || '{}');
-        return json['@type'] === 'Book' && json['name'] === 'Психологія трейдингу';
+        return (
+          json['@type'] === 'Book' && json['name'] === 'Психологія трейдингу'
+        );
       } catch {
         return false;
       }
@@ -283,6 +284,14 @@ export class PsychologiyaTreydingaUkComponent
         isbn: '979-8-90243-504-4',
         bookFormat: 'https://schema.org/EBook',
         inLanguage: 'uk',
+        url: 'http://www.irbis-nbuv.gov.ua/cgi-bin/irbis64r_81/cgiirbis_64.exe?Z21ID=&I21DBN=VFEIR&P21DBN=VFEIR&S21STN=1&S21REF=10&S21FMT=fullw&C21COM=S&S21CNR=20&S21P01=3&S21P02=0&S21P03=A=&S21COLORTERMS=0&S21STR=Арапов%2C%20Ігор',
+
+        provider: {
+          '@type': 'Library',
+          name: 'Національна бібліотека України імені В. І. Вернадського',
+          url: 'https://nbuv.gov.ua',
+        },
+        sameAs: ['https://www.wikidata.org/wiki/Q137827249'],
         potentialAction: {
           '@type': 'ReadAction',
           target: {
@@ -329,7 +338,7 @@ export class PsychologiyaTreydingaUkComponent
 
   private addPersoneSchema() {
     const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]')
+      this.document.querySelectorAll('script[type="application/ld+json"]'),
     ).some((script) => {
       try {
         const json = JSON.parse(script.textContent || '{}');
@@ -409,11 +418,15 @@ export class PsychologiyaTreydingaUkComponent
   }
   private addWebPageSchema() {
     const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]')
+      this.document.querySelectorAll('script[type="application/ld+json"]'),
     ).some((script) => {
       try {
         const json = JSON.parse(script.textContent || '{}');
-        return json['@type'] === 'WebPage' && json['name'] === 'Психологія трейдингу — Безкоштовна книга Ігоря Арапова';
+        return (
+          json['@type'] === 'WebPage' &&
+          json['name'] ===
+            'Психологія трейдингу — Безкоштовна книга Ігоря Арапова'
+        );
       } catch {
         return false;
       }
@@ -490,11 +503,15 @@ export class PsychologiyaTreydingaUkComponent
 
   private addFAQPageSchema() {
     const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]')
+      this.document.querySelectorAll('script[type="application/ld+json"]'),
     ).some((script) => {
       try {
         const json = JSON.parse(script.textContent || '{}');
-        return json['@type'] === 'FAQPage' && json['name'] === "Питання та відповіді щодо книги 'Психологія трейдингу'";
+        return (
+          json['@type'] === 'FAQPage' &&
+          json['name'] ===
+            "Питання та відповіді щодо книги 'Психологія трейдингу'"
+        );
       } catch {
         return false;
       }
@@ -556,6 +573,4 @@ export class PsychologiyaTreydingaUkComponent
 
     this.document.head.appendChild(script);
   }
-  
 }
-
