@@ -290,6 +290,10 @@ export class PsychologiyaTreydingaUkComponent
           '@type': 'Library',
           name: 'Національна бібліотека України імені В. І. Вернадського',
           url: 'https://nbuv.gov.ua',
+          telephone: '+380 44 525 81 04',
+          priceRange: 'Безкоштовно',
+          image:
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Vernadsky_National_Library_of_Ukraine.jpg/1280px-Vernadsky_National_Library_of_Ukraine.jpg',
           address: {
             '@type': 'PostalAddress',
             streetAddress: 'Голосіївський проспект, 3',
