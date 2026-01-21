@@ -260,6 +260,8 @@ export class HomeFourEnComponent implements OnInit {
           description:
             'Exchange and OTC markets: structure, regulation, liquidity and choosing a trading platform.',
           author: { '@id': 'https://arapov.trade/en#person' },
+          image: 'https://arapov.trade/assets/img/content/otcvsexchange.webp',
+
           publisher: {
             '@type': 'Organization',
             '@id': 'https://arapov.trade/#organization',

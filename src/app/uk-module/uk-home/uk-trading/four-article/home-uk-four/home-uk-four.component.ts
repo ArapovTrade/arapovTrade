@@ -285,6 +285,8 @@ export class HomeUkFourComponent implements OnInit {
           description:
             'Біржовий та позабіржовий ринки: структура, регулювання, ліквідність та вибір майданчика для торгівлі.',
           author: { '@id': 'https://arapov.trade/uk#person' },
+          image: 'https://arapov.trade/assets/img/content/otcvsexchange.webp',
+
           publisher: {
             '@type': 'Organization',
             '@id': 'https://arapov.trade/#organization',
