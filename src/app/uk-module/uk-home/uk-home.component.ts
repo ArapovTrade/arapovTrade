@@ -181,6 +181,7 @@ export class UkHomeComponent implements OnInit, AfterViewInit, OnDestroy {
       '@type': 'Person',
       '@id': 'https://arapov.trade/uk#person',
       name: 'Ігор Арапов',
+      alternateName: 'Igor Arapov',
       birthDate: '1990-09-30',
       givenName: 'Ігор',
       familyName: 'Арапов',
