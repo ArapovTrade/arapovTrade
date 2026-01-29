@@ -9,6 +9,8 @@ Allow: /
 # Sitemaps
 Sitemap: https://arapov.trade/sitemap.xml
 
+# LLMs.txt
+LLMs.txt: https://arapov.trade/llms.txt
 
 # Google specific
 User-agent: Googlebot
