@@ -438,6 +438,9 @@ export class HomeUkBlogFiftySixComponent implements OnInit {
   private setGlossarySchema(): void {
     const data = {
       '@context': 'https://schema.org',
+      '@type': 'DefinedTermSet',
+      '@id':
+        'https://arapov.trade/uk/freestudying/benefitsoftradingbooks#glossary',
       name: 'Глосарій термінів трейдингу',
       hasDefinedTerm: [
         {
