@@ -259,7 +259,7 @@ export class OsnovyTreydingaEnComponent
       },
       image: {
         '@type': 'ImageObject',
-        url: 'https://arapov.trade/assets/redesignArapovTrade/img/IMG000.jpg',
+        url: 'https://arapov.trade/assets/redesignArapovTrade/img/cover_en.jpg',
         width: 600,
         height: 900,
         caption: 'Cover of the book "Trading Basics" — Igor Arapov',
@@ -317,8 +317,8 @@ export class OsnovyTreydingaEnComponent
 
   downloadFile() {
     const link = document.createElement('a');
-    link.href = '/assets/documents/Trading_Book_ISBN.epub'; // путь к вашему файлу
-    link.download = 'Trading_Book_ISBN.epub'; // имя файла для скачивания
+    link.href = '/assets/documents/Trading_Fundamentals_Vol1_EN_FINAL.epub'; // путь к вашему файлу
+    link.download = 'Trading_Fundamentals_Vol1_EN_FINAL.epub'; // имя файла для скачивания
     link.click();
   }
 

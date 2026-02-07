@@ -260,7 +260,7 @@ export class OsnovyTreydingaTomTwoUkComponent
       },
       image: {
         '@type': 'ImageObject',
-        url: 'https://arapov.trade/assets/redesignArapovTrade/img/cover_tom2.jpg',
+        url: 'https://arapov.trade/assets/redesignArapovTrade/img/cover_ukr.png',
         width: 600,
         height: 900,
         caption: 'Обкладинка книги «Основи трейдингу. Практика» - Ігор Арапов',
@@ -318,8 +318,8 @@ export class OsnovyTreydingaTomTwoUkComponent
 
   downloadFile() {
     const link = document.createElement('a');
-    link.href = '/assets/documents/Osnovy_Tradinga_Tom2.epub'; // путь к вашему файлу
-    link.download = 'Osnovy_Tradinga_Tom2.epub'; // имя файла для скачивания
+    link.href = '/assets/documents/Osnovy_Treydyngu_Tom2_UA.epub'; // путь к вашему файлу
+    link.download = 'Osnovy_Treydyngu_Tom2_UA.epub'; // имя файла для скачивания
     link.click();
   }
 

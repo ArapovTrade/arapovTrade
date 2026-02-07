@@ -259,7 +259,7 @@ export class OsnovyTreydingaTomTwoEnComponent
       },
       image: {
         '@type': 'ImageObject',
-        url: 'https://arapov.trade/assets/redesignArapovTrade/img/IMG000.jpg',
+        url: 'https://arapov.trade/assets/redesignArapovTrade/img/cover_en_amazon.png',
         width: 600,
         height: 900,
         caption: 'Cover of the book "Trading Basics. Practice" — Igor Arapov',
@@ -317,8 +317,8 @@ export class OsnovyTreydingaTomTwoEnComponent
 
   downloadFile() {
     const link = document.createElement('a');
-    link.href = '/assets/documents/Osnovy_Tradinga_Tom2.epub'; // путь к вашему файлу
-    link.download = 'Osnovy_Tradinga_Tom2.epub'; // имя файла для скачивания
+    link.href = '/assets/documents/Trading_Fundamentals_Vol2_EN_FINAL-2.epub'; // путь к вашему файлу
+    link.download = 'Trading_Fundamentals_Vol2_EN_FINAL-2.epub'; // имя файла для скачивания
     link.click();
   }
 

@@ -259,7 +259,7 @@ export class OsnovyTreydingaUkComponent
       },
       image: {
         '@type': 'ImageObject',
-        url: 'https://arapov.trade/assets/redesignArapovTrade/img/IMG000.jpg',
+        url: 'https://arapov.trade/assets/redesignArapovTrade/img/cover_osnovy_treidynhu_ua.jpg',
         width: 600,
         height: 900,
         caption: 'Обкладинка книги «Основи трейдингу» - Ігор Арапов',
@@ -317,8 +317,8 @@ export class OsnovyTreydingaUkComponent
 
   downloadFile() {
     const link = document.createElement('a');
-    link.href = '/assets/documents/Trading_Book_ISBN.epub'; // путь к вашему файлу
-    link.download = 'Trading_Book_ISBN.epub'; // имя файла для скачивания
+    link.href = '/assets/documents/osnovy_treidyngu_ua_tom1.epub'; // путь к вашему файлу
+    link.download = 'osnovy_treidyngu_ua_tom1.epub'; // имя файла для скачивания
     link.click();
   }
 
