@@ -1069,6 +1069,15 @@ const routes: Routes = [
         (m) => m.OnehundredFiveUkBlogModule
       ),
   },
+  {
+    path: 'about', //106
+    loadChildren: () =>
+      import('../ukblog/onehundred-six-uk-blog/onehundred-six-uk-blog.module').then(
+        (m) => m.OnehundredSixUkBlogModule
+      ),
+  },
+
+
     ]
    },
   

@@ -291,6 +291,7 @@ faqsUkrCourse = [
       else if(langcode == 'ru'&&path=='ru/freestudying/freeeducation'){
          this.faqs=this.faqsRuOwl
       }
+      
       else if(langcode == 'ru'){
          this.faqs=this.faqsRuPages
       }else{

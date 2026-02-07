@@ -1067,7 +1067,13 @@ const routes: Routes = [
         (m) => m.OnehundredFiveEnBlogModule
       ),
   },
-
+  {
+    path: 'about', //106
+    loadChildren: () =>
+      import('../eu-blog/onehundred-six-en-blog/onehundred-six-en-blog.module').then(
+        (m) => m.OnehundredSixEnBlogModule
+      ),
+  },
   ]
    },
 ];

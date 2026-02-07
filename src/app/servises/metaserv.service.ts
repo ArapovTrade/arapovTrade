@@ -101,7 +101,7 @@ export class MetaservService {
       });
 
       // Добавляем новый <meta>
-      this.meta.addTag({ name: 'schema', content: JSON.stringify(schema) });
+      // this.meta.addTag({ name: 'schema', content: JSON.stringify(schema) });
 
       // Добавляем новый <script>
       const script = document.createElement('script');
