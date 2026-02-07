@@ -52,13 +52,13 @@ export class OsnovyTreydingaTomTwoUkComponent
     this.removeExistingWebPageSchema();
 
     this.titleService.setTitle(
-      'Основи трейдингу. Практика — Безкоштовна книга Ігоря Арапова | 979-8-90243-078-0'
+      'Основи трейдингу. Практика — Безкоштовна книга Ігоря Арапова | 979-8-90243-732-1'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Завантажити безкоштовно книгу «Основи трейдингу. Практика» — методичне посібник для початкових трейдерів від Ігоря Арапова. FOREX, технічний аналіз, об’ємний аналіз, Smart Money. 979-8-90243-078-0',
+        'Завантажити безкоштовно книгу «Основи трейдингу. Практика» — методичне посібник для початкових трейдерів від Ігоря Арапова. FOREX, технічний аналіз, об’ємний аналіз, Smart Money. 979-8-90243-732-1',
     });
 
     this.meta.updateTag({
@@ -198,7 +198,7 @@ export class OsnovyTreydingaTomTwoUkComponent
         'Основи трейдингу. Практика — Методичний посібник для початкових трейдерів',
       description:
         'Практичне керівництво по фінансовому трейдингу для початківців. Книга охоплює основи біржової торгівлі, ринок FOREX, фундаментальний, технічний та об’ємний аналіз, види ордерів, управління капіталом та типові помилки трейдерів. Автор ділиться 12-річним досвідом торгівлі на фінансових ринках.',
-      isbn: '979-8-90243-078-0',
+      isbn: '979-8-90243-732-1',
       numberOfPages: 60,
       bookFormat: 'https://schema.org/EBook',
       bookEdition: '1-е видання',
@@ -280,7 +280,7 @@ export class OsnovyTreydingaTomTwoUkComponent
       },
       workExample: {
         '@type': 'Book',
-        isbn: '979-8-90243-078-0',
+        isbn: '979-8-90243-732-1',
         bookFormat: 'https://schema.org/EBook',
         inLanguage: 'ru',
         potentialAction: {
@@ -432,7 +432,7 @@ export class OsnovyTreydingaTomTwoUkComponent
       url: 'https://arapov.trade/uk/books/osnovy-treydinga-tom-two',
       name: 'Основи трейдингу. Практика — Безкоштовна книга Ігоря Арапова',
       description:
-        'Скачати безкоштовно книгу з трейдингу. 979-8-90243-078-0',
+        'Скачати безкоштовно книгу з трейдингу. 979-8-90243-732-1',
       inLanguage: 'uk',
       isPartOf: {
         '@type': 'WebSite',
@@ -548,7 +548,7 @@ export class OsnovyTreydingaTomTwoUkComponent
           name: 'Який ISBN у книги?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'ISBN книги: 979-8-90243-078-0. Це міжнародний стандартний книжковий номер, зареєстрований у Bowker Books in Print.',
+            text: 'ISBN книги: 979-8-90243-732-1. Це міжнародний стандартний книжковий номер, зареєстрований у Bowker Books in Print.',
           },
         },
       ],

@@ -51,13 +51,13 @@ export class OsnovyTreydingaUkComponent
     this.removeExistingWebPageSchema();
 
     this.titleService.setTitle(
-      'Основи трейдингу — Безкоштовна книга Ігоря Арапова | ISBN 979-8-90243-075-9'
+      'Основи трейдингу — Безкоштовна книга Ігоря Арапова | ISBN 979-8-90243-730-7'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Завантажити безкоштовно книгу «Основи трейдингу» — методичне посібник для початкових трейдерів від Ігоря Арапова. FOREX, технічний аналіз, об’ємний аналіз, Smart Money. ISBN 979-8-90243-075-9',
+        'Завантажити безкоштовно книгу «Основи трейдингу» — методичне посібник для початкових трейдерів від Ігоря Арапова. FOREX, технічний аналіз, об’ємний аналіз, Smart Money. ISBN 979-8-90243-730-7',
     });
 
     this.meta.updateTag({
@@ -197,7 +197,7 @@ export class OsnovyTreydingaUkComponent
         'Основи трейдингу — Методичний посібник для початкових трейдерів',
       description:
         'Практичне керівництво по фінансовому трейдингу для початківців. Книга охоплює основи біржової торгівлі, ринок FOREX, фундаментальний, технічний та об’ємний аналіз, види ордерів, управління капіталом та типові помилки трейдерів. Автор ділиться 12-річним досвідом торгівлі на фінансових ринках.',
-      isbn: '979-8-90243-075-9',
+      isbn: '979-8-90243-730-7',
       numberOfPages: 60,
       bookFormat: 'https://schema.org/EBook',
       bookEdition: '1-е видання',
@@ -279,7 +279,7 @@ export class OsnovyTreydingaUkComponent
       },
       workExample: {
         '@type': 'Book',
-        isbn: '979-8-90243-075-9',
+        isbn: '979-8-90243-730-7',
         bookFormat: 'https://schema.org/EBook',
         inLanguage: 'ru',
         potentialAction: {
@@ -431,7 +431,7 @@ export class OsnovyTreydingaUkComponent
       url: 'https://arapov.trade/uk/books/osnovy-treydinga',
       name: 'Основи трейдингу — Безкоштовна книга Ігоря Арапова',
       description:
-        'Скачати безкоштовно книгу з трейдингу. ISBN 979-8-90243-075-9',
+        'Скачати безкоштовно книгу з трейдингу. ISBN 979-8-90243-730-7',
       inLanguage: 'uk',
       isPartOf: {
         '@type': 'WebSite',
@@ -547,7 +547,7 @@ export class OsnovyTreydingaUkComponent
           name: 'Який ISBN у книги?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'ISBN книги: 979-8-90243-075-9. Це міжнародний стандартний книжковий номер, зареєстрований у Bowker Books in Print.',
+            text: 'ISBN книги: 979-8-90243-730-7. Це міжнародний стандартний книжковий номер, зареєстрований у Bowker Books in Print.',
           },
         },
       ],

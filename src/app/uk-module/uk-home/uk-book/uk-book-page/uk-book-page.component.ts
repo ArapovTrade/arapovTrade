@@ -246,7 +246,7 @@ export class UkBookPageComponent implements OnInit, AfterViewInit, OnDestroy {
             '@type': 'Book',
             '@id': 'https://arapov.trade/uk/books/osnovy-treydinga#book',
             name: 'Основи трейдингу',
-            isbn: '979-8-90243-075-9',
+            isbn: '979-8-90243-730-7',
             inLanguage: 'ru',
             author: {
               '@type': 'Person',
@@ -278,7 +278,7 @@ export class UkBookPageComponent implements OnInit, AfterViewInit, OnDestroy {
             '@type': 'Book',
             '@id': 'https://arapov.trade/uk/books/osnovy-treydinga-tom-two#book',
             name: 'Основи трейдингу Том 2',
-            isbn: '979-8-90243-078-0',
+            isbn: '979-8-90243-732-1',
             inLanguage: 'ru',
             author: {
               '@type': 'Person',

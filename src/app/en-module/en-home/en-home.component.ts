@@ -271,6 +271,10 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
         'Author of a book «Основы трейдинга Том 2» (ISBN 979-8-90243-078-0)',
         'Author of a book «Психологія трейдингу» (ISBN 979-8-90243-504-4)',
         'Author of a book «Trading Psychology» (ISBN 979-8-90243-138-1)',
+        'Author of a book «Trading Basics» (ISBN 979-8-90243-734-5)',
+        'Author of a book «Основи трейдингу» (ISBN 979-8-90243-730-7)',
+        'Author of a book «Основи трейдингу Том 2» (ISBN 979-8-90243-732-1)',
+        'Author of a book «Trading Basics Volume 2» (ISBN 979-8-90243-755-0)',
       ],
       publishingPrinciples: 'https://arapov.trade/en/freestudying',
       description:

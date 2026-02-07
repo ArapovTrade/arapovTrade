@@ -51,13 +51,13 @@ export class OsnovyTreydingaEnComponent
     this.removeExistingWebPageSchema();
 
     this.titleService.setTitle(
-      'Trading Basics – Free Book by Igor Arapov | ISBN 979-8-90243-075-9'
+      'Trading Basics – Free Book by Igor Arapov | ISBN 979-8-90243-734-5'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Download the free book "Trading Basics" — a methodological guide for beginners by Igor Arapov. FOREX, technical analysis, volume analysis, Smart Money. ISBN 979-8-90243-075-9',
+        'Download the free book "Trading Basics" — a methodological guide for beginners by Igor Arapov. FOREX, technical analysis, volume analysis, Smart Money. ISBN 979-8-90243-734-5',
     });
 
     this.meta.updateTag({
@@ -197,7 +197,7 @@ export class OsnovyTreydingaEnComponent
         'Trading Basics — Methodological manual for beginners',
       description:
         'Practical guide to financial trading for beginners. The book covers the basics of stock trading, the FOREX market, fundamental, technical and volume analysis, order types, capital management and typical trader mistakes. The author shares 12 years of experience trading on financial markets.',
-      isbn: '979-8-90243-075-9',
+      isbn: '979-8-90243-734-5',
       numberOfPages: 60,
       bookFormat: 'https://schema.org/EBook',
       bookEdition: '1st edition',
@@ -279,7 +279,7 @@ export class OsnovyTreydingaEnComponent
       },
       workExample: {
         '@type': 'Book',
-        isbn: '979-8-90243-075-9',
+        isbn: '979-8-90243-734-5',
         bookFormat: 'https://schema.org/EBook',
         inLanguage: 'ru',
         potentialAction: {
@@ -431,7 +431,7 @@ export class OsnovyTreydingaEnComponent
       url: 'https://arapov.trade/en/books/osnovy-treydinga',
       name: 'Trading Basics – Free Book by Igor Arapov',
       description:
-        'Download the free book on trading. ISBN 979-8-90243-075-9',
+        'Download the free book on trading. ISBN 979-8-90243-734-5',
       inLanguage: 'en',
       isPartOf: {
         '@type': 'WebSite',
@@ -547,7 +547,7 @@ export class OsnovyTreydingaEnComponent
           name: 'What is the ISBN of the book?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'The book\'s ISBN is 979-8-90243-075-9. This is an International Standard Book Number registered with Bowker Books in Print.',
+            text: 'The book\'s ISBN is 979-8-90243-734-5. This is an International Standard Book Number registered with Bowker Books in Print.',
           },
         },
       ],

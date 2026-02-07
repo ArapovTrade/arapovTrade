@@ -301,6 +301,11 @@ export class RuHomeComponent implements OnInit, AfterViewInit, OnDestroy {
         'Автор книги «Основы трейдинга Том 2» (ISBN 979-8-90243-078-0)',
         'Автор книги «Психологія трейдингу» (ISBN 979-8-90243-504-4)',
         'Автор книги «Trading Psychology» (ISBN 979-8-90243-138-1)',
+
+        'Автор книги «Trading Basics» (ISBN 979-8-90243-734-5)',
+        'Автор книги «Основи трейдингу» (ISBN 979-8-90243-730-7)',
+        'Автор книги «Основи трейдингу Том 2» (ISBN 979-8-90243-732-1)',
+        'Автор книги «Trading Basics Volume 2» (ISBN 979-8-90243-755-0)',
       ],
       publishingPrinciples: 'https://arapov.trade/ru/freestudying',
       description:
