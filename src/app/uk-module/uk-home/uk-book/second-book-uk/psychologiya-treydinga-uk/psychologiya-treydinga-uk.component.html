@@ -6,9 +6,8 @@
     <div
       class="menu-dropdown"
       [ngStyle]="{
-            background: isDark ? 'rgba(1, 1, 1, 1)' : 'rgba(255, 255, 255, 1)',
-             
-          }"
+        background: isDark ? 'rgba(1, 1, 1, 1)' : 'rgba(255, 255, 255, 1)',
+      }"
     >
       <ul>
         <li
@@ -51,7 +50,7 @@
           [ngStyle]="{
             background: isDark
               ? 'url(assets/redesignArapovTrade/img/logo-new.png) no-repeat center'
-              : 'url(assets/redesignArapovTrade/img/logo-new-light.png) no-repeat center'
+              : 'url(assets/redesignArapovTrade/img/logo-new-light.png) no-repeat center',
           }"
         ></div>
         <span
@@ -238,7 +237,7 @@
           [ngClass]="{
             'isbn-block': true,
             'gradient-block-orange': isDark,
-            'podrobnee-light': !isDark
+            'podrobnee-light': !isDark,
           }"
         >
           <p
@@ -260,7 +259,7 @@
             class="author_descr_span"
             [ngClass]="{
               'gradient-orange': isDark,
-              'gradient-blue_author-page': !isDark
+              'gradient-blue_author-page': !isDark,
             }"
           >
             Як керувати емоціями та мислити як професійний трейдер.
@@ -329,7 +328,16 @@
             >Як керувати емоціями та мислити як професійний трейдер. Страх,
             жадібність, дисципліна, прийняття збитків, психологія великих грошей
             все що заважає заробляти і як це подолати. Від практика з 12-річним
-            досвідом
+            досвідом. <br />
+            Ця
+            <a class="linkrefinto" target="_blank"
+              href="http://www.irbis-nbuv.gov.ua/cgi-bin/irbis64r_81/cgiirbis_64.exe?Z21ID=&I21DBN=VFEIR&P21DBN=VFEIR&S21STN=1&S21REF=10&S21FMT=fullw&C21COM=S&S21CNR=20&S21P01=3&S21P02=0&S21P03=A=&S21COLORTERMS=0&S21STR=Арапов%2C%20Ігор"
+              >книга</a
+            >
+            офіційно внесена до фондів Національної бібліотеки України імені В.
+            І. Вернадського — найбільшої бібліотеки країни з фондом понад 15
+            мільйонів примірників. Бібліотека є головним науково-інформаційним
+            центром України при Національній академії наук.
           </span>
         </div>
         <div class="authot_button_block">
@@ -338,7 +346,7 @@
             [ngClass]="{
               'btn-section-one': true,
               'gradient-block-orange': isDark,
-              'gradient-block-blue': !isDark
+              'gradient-block-blue': !isDark,
             }"
           >
             <span
@@ -356,7 +364,7 @@
       [ngStyle]="{
         background: isDark
           ? 'url(/assets/redesignArapovTrade/img/author-page_main-block_bg.png)  no-repeat center'
-          : 'url(/assets/redesignArapovTrade/img/author-page_main-block_bg-light.png) no-repeat center'
+          : 'url(/assets/redesignArapovTrade/img/author-page_main-block_bg-light.png) no-repeat center',
       }"
     ></div>
     <div
@@ -364,185 +372,10 @@
       [ngStyle]="{
         background: isDark
           ? 'url(/assets/redesignArapovTrade/img/author-page_main-block_bg-image.png) no-repeat'
-          : 'url(/assets/redesignArapovTrade/img/author-page_main-block_bg-image-light.png) no-repeat'
+          : 'url(/assets/redesignArapovTrade/img/author-page_main-block_bg-image-light.png) no-repeat',
       }"
     ></div>
   </div>
-
-  <!-- <div
-    [ngClass]="{
-      'forth-section': true,
-      'forth-section-container-bg-light': !isDark
-    }"
-  >
-    <div
-      [ngClass]="{
-           
-          'forth-section-container-bg': true,
-           
-          
-        }"
-      [ngStyle]="{
-        background: isDark
-          ? 'url(/assets/redesignArapovTrade/img/forth-section-container-bg-dark.png) no-repeat'
-          : 'none'
-      }"
-    ></div>
-
-    <div class="forth-section-container">
-      <div
-        [ngClass]="{
-          'second-section_programm-block-title': true,
-          'forth-section-title': true,
-          'gradient-orange': isDark,
-          'gradient-blue_author-page': !isDark
-        }"
-      >
-        Де доступна книга?
-      </div>
-      <div
-        class="forth-section-container_tabs-block"
-        data-aos="fade-up"
-        data-aos-delay="300"
-      >
-        <div
-           
-          class="forth-section-container_tab"
-          [ngStyle]="{
-            background: isDark
-              ? 'linear-gradient(-23deg, rgba(255, 207, 104, 0.1) 22%, rgba(255, 187, 0, 0 ) 100%)'
-              : '#ffffff'
-          }"
-        >
-          <div class="tick-icon">
-            <img
-              [src]="
-                isDark
-                  ? 'assets/redesignArapovTrade/img/author-tick-dark.png'
-                  : 'assets/redesignArapovTrade/img/author-tick-light.png'
-              "
-              alt="tick"
-            />
-          </div>
-
-          <div>
-            <span
-              class="item-title_head"
-              [ngClass]="{
-                'second-section_programm-block-title': true,
-                'second-section_programm-block-title-text': true,
-                'gradient-orange': isDark,
-                'gradient-blue_author-page': !isDark
-              }"
-            >
-              Everand</span
-            >
-          </div>
-        </div>
-        <div
-          
-          class="forth-section-container_tab"
-          [ngStyle]="{
-            background: isDark
-              ? 'linear-gradient(-23deg, rgba(255, 207, 104, 0.1) 22%, rgba(255, 187, 0, 0 ) 100%)'
-              : '#ffffff'
-          }"
-        >
-          <div class="tick-icon">
-            <img
-              [src]="
-                isDark
-                  ? 'assets/redesignArapovTrade/img/author-tick-dark.png'
-                  : 'assets/redesignArapovTrade/img/author-tick-light.png'
-              "
-              alt="tick"
-            />
-          </div>
-
-          <div>
-            <span
-              class="item-title_head"
-              [ngClass]="{
-                'second-section_programm-block-title': true,
-                'second-section_programm-block-title-text': true,
-                'gradient-orange': isDark,
-                'gradient-blue_author-page': !isDark
-              }"
-            >
-              Apple Books</span
-            >
-          </div>
-        </div>
-
-        <div
-          class="forth-section-container_tab"
-          [ngStyle]="{
-            background: isDark
-              ? 'linear-gradient(-23deg, rgba(255, 207, 104, 0.1) 22%, rgba(255, 187, 0, 0 ) 100%)'
-              : '#ffffff'
-          }"
-        >
-          <div class="tick-icon">
-            <img
-              [src]="
-                isDark
-                  ? 'assets/redesignArapovTrade/img/author-tick-dark.png'
-                  : 'assets/redesignArapovTrade/img/author-tick-light.png'
-              "
-              alt="tick"
-            />
-          </div>
-
-          <div>
-            <span
-              class="item-title_head"
-              [ngClass]="{
-                'second-section_programm-block-title': true,
-                'second-section_programm-block-title-text': true,
-                'gradient-orange': isDark,
-                'gradient-blue_author-page': !isDark
-              }"
-              >Amazon Kindle</span
-            >
-          </div>
-        </div>
-
-        <div
-          class="forth-section-container_tab"
-          [ngStyle]="{
-            background: isDark
-              ? 'linear-gradient(-23deg, rgba(255, 207, 104, 0.1) 22%, rgba(255, 187, 0, 0 ) 100%)'
-              : '#ffffff'
-          }"
-        >
-          <div class="tick-icon">
-            <img
-              [src]="
-                isDark
-                  ? 'assets/redesignArapovTrade/img/author-tick-dark.png'
-                  : 'assets/redesignArapovTrade/img/author-tick-light.png'
-              "
-              alt="tick"
-            />
-          </div>
-
-          <div>
-            <span
-              class="item-title_head"
-              (click)="downloadFile()"
-              [ngClass]="{
-                'second-section_programm-block-title': true,
-                'second-section_programm-block-title-text': true,
-                'gradient-orange': isDark,
-                'gradient-blue_author-page': !isDark
-              }"
-              >Завантажити EPUB</span
-            >
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
 
   <div class="author-page_section-three">
     <div
@@ -551,7 +384,7 @@
         background: isDark
           ? 'rgba(255, 255, 255, 0.08)'
           : 'rgba(0, 131, 205, 0.08)',
-        border: isDark ? ' 1px solid #46483A' : '1px solid #C5E2F2'
+        border: isDark ? ' 1px solid #46483A' : '1px solid #C5E2F2',
       }"
     >
       <div class="author-page_main-block_title-block three-block">
@@ -559,7 +392,7 @@
           class=" "
           [ngClass]="{
             'gradient-orange': isDark,
-            'gradient-blue_author-page': !isDark
+            'gradient-blue_author-page': !isDark,
           }"
           >Хочете професійне навчання?</span
         >
@@ -583,7 +416,7 @@
           class=" "
           [ngClass]="{
             'gradient-orange': isDark,
-            'gradient-blue_author-page': !isDark
+            'gradient-blue_author-page': !isDark,
           }"
           >Виберіть зручний спосіб для зв'язку</span
         >
@@ -598,7 +431,7 @@
             [ngClass]="{
               'three-block_social-links_item': true,
               'three-block_social-links_item-dark': isDark,
-              'three-block_social-links_item-light': !isDark
+              'three-block_social-links_item-light': !isDark,
             }"
             [ngStyle]="{
               background: isDark
@@ -606,7 +439,7 @@
                 : 'rgba(0, 130, 204, 0.10)',
               border: isDark
                 ? '1px solid rgba(255, 205, 41, 0.30)'
-                : '1px solid rgba(0, 130, 204, 0.30)'
+                : '1px solid rgba(0, 130, 204, 0.30)',
             }"
           >
             <svg
@@ -619,7 +452,7 @@
               <path
                 [ngClass]="{
                   'svg-link-dark': isDark,
-                  'svg-link-light': !isDark
+                  'svg-link-light': !isDark,
                 }"
                 fill-rule="evenodd"
                 clip-rule="evenodd"
@@ -636,7 +469,7 @@
             [ngClass]="{
               'three-block_social-links_item': true,
               'three-block_social-links_item-dark': isDark,
-              'three-block_social-links_item-light': !isDark
+              'three-block_social-links_item-light': !isDark,
             }"
             [ngStyle]="{
               background: isDark
@@ -644,7 +477,7 @@
                 : 'rgba(0, 130, 204, 0.10)',
               border: isDark
                 ? '1px solid rgba(255, 205, 41, 0.30)'
-                : '1px solid rgba(0, 130, 204, 0.30)'
+                : '1px solid rgba(0, 130, 204, 0.30)',
             }"
           >
             <svg
@@ -657,7 +490,7 @@
               <path
                 [ngClass]="{
                   'svg-link-dark': isDark,
-                  'svg-link-light': !isDark
+                  'svg-link-light': !isDark,
                 }"
                 fill-rule="evenodd"
                 clip-rule="evenodd"
@@ -675,7 +508,7 @@
             [ngClass]="{
               'three-block_social-links_item': true,
               'three-block_social-links_item-dark': isDark,
-              'three-block_social-links_item-light': !isDark
+              'three-block_social-links_item-light': !isDark,
             }"
             [ngStyle]="{
               background: isDark
@@ -683,7 +516,7 @@
                 : 'rgba(0, 130, 204, 0.10)',
               border: isDark
                 ? '1px solid rgba(255, 205, 41, 0.30)'
-                : '1px solid rgba(0, 130, 204, 0.30)'
+                : '1px solid rgba(0, 130, 204, 0.30)',
             }"
           >
             <svg
@@ -696,7 +529,7 @@
               <path
                 [ngClass]="{
                   'svg-link-dark': isDark,
-                  'svg-link-light': !isDark
+                  'svg-link-light': !isDark,
                 }"
                 fill-rule="evenodd"
                 clip-rule="evenodd"
@@ -721,7 +554,7 @@
                 [ngStyle]="{
                   background: isDark
                     ? 'url(assets/redesignArapovTrade/img/logo-new.png) no-repeat center'
-                    : 'url(assets/redesignArapovTrade/img/logo-new-light.png) no-repeat center'
+                    : 'url(assets/redesignArapovTrade/img/logo-new-light.png) no-repeat center',
                 }"
               ></div>
               <span class="loog-text hg">Arapov.Trade</span>
@@ -831,7 +664,7 @@
             class="fb"
             [ngClass]="{
               'links-dark': isDark,
-              'links-light': !isDark
+              'links-light': !isDark,
             }"
           >
             <a href="https://www.facebook.com/igor.arapov.75">
@@ -854,7 +687,7 @@
             class="fb"
             [ngClass]="{
               'links-dark': isDark,
-              'links-light': !isDark
+              'links-light': !isDark,
             }"
           >
             <a
@@ -879,7 +712,7 @@
             class="fb"
             [ngClass]="{
               'links-dark': isDark,
-              'links-light': !isDark
+              'links-light': !isDark,
             }"
           >
             <a href="https://ru.tradingview.com/u/Igor_Arapov/">
@@ -903,7 +736,7 @@
             class="fb"
             [ngClass]="{
               'links-dark-special': isDark,
-              'links-light-special': !isDark
+              'links-light-special': !isDark,
             }"
           >
             <a href="https://www.youtube.com/@ArapovTrade">
@@ -932,7 +765,7 @@
             [ngClass]="{
               'links-dark-special': isDark,
 
-              'links-light-special': !isDark
+              'links-light-special': !isDark,
             }"
           >
             <a href="https://telegram.me/+380506308200">
@@ -959,7 +792,7 @@
             class="fb"
             [ngClass]="{
               'links-dark': isDark,
-              'links-light': !isDark
+              'links-light': !isDark,
             }"
           >
             <a href="https://www.instagram.com/arapovtrade/">
@@ -984,7 +817,7 @@
       [ngClass]="{
         'bg-shapes-footer': true,
         'bg-shapes-footer-dark': isDark,
-        'bg-shapes-footer-light': !isDark
+        'bg-shapes-footer-light': !isDark,
       }"
     ></div>
   </div>
