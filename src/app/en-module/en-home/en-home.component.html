@@ -38,6 +38,13 @@
         >
           PROFESSIONAL COURSES
         </li>
+        <li
+          (click)="navigateTo('en/books')"
+          [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+          [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
+        >
+          MY BOOKS
+        </li>
       </ul>
     </div>
   </div>
@@ -511,9 +518,10 @@
               [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
             >
               Actively engaged in trading on financial markets since
-              <a [ngStyle]="{
-                color: isDark ? '#fdff8b' : '#0074e6'
-              }"
+              <a
+                [ngStyle]="{
+                  color: isDark ? '#fdff8b' : '#0074e6',
+                }"
                 target="_blank"
                 class="linkrefinto"
                 style="text-decoration: underline"
@@ -554,9 +562,10 @@
               [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
             >
               Author of the free course "
-              <a [ngStyle]="{
-                color: isDark ? '#fdff8b' : '#0074e6'
-              }"
+              <a
+                [ngStyle]="{
+                  color: isDark ? '#fdff8b' : '#0074e6',
+                }"
                 target="_blank"
                 class="linkrefinto"
                 style="text-decoration: underline"
@@ -597,18 +606,22 @@
               class="proc-block_descr-text"
               [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
             >
-              Publications on <a [ngStyle]="{
-                color: isDark ? '#fdff8b' : '#0074e6'
-              }"
+              Publications on
+              <a
+                [ngStyle]="{
+                  color: isDark ? '#fdff8b' : '#0074e6',
+                }"
                 target="_blank"
                 class="linkrefinto"
                 style="text-decoration: underline"
                 href="https://ru.tradingview.com/u/Igor_Arapov/"
                 >TradingView</a
-              > since 2021, multiple wins in the "
-              <a [ngStyle]="{
-                color: isDark ? '#fdff8b' : '#0074e6'
-              }"
+              >
+              since 2021, multiple wins in the "
+              <a
+                [ngStyle]="{
+                  color: isDark ? '#fdff8b' : '#0074e6',
+                }"
                 target="_blank"
                 class="linkrefinto"
                 style="text-decoration: underline"
@@ -650,18 +663,20 @@
               [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
             >
               Author of the "Trading Fundamentals"
-              <a [ngStyle]="{
-                color: isDark ? '#fdff8b' : '#0074e6'
-              }"
+              <a
+                [ngStyle]="{
+                  color: isDark ? '#fdff8b' : '#0074e6',
+                }"
                 style="text-decoration: underline"
                 class="linkrefinto"
                 href="https://arapov.trade/en/books"
                 >book series</a
               >
               with international ISBNs (
-              <a [ngStyle]="{
-                color: isDark ? '#fdff8b' : '#0074e6'
-              }"
+              <a
+                [ngStyle]="{
+                  color: isDark ? '#fdff8b' : '#0074e6',
+                }"
                 target="_blank"
                 class="linkrefinto"
                 style="text-decoration: underline"
@@ -704,9 +719,10 @@
               [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
             >
               Author of a
-              <a [ngStyle]="{
-                color: isDark ? '#fdff8b' : '#0074e6'
-              }"
+              <a
+                [ngStyle]="{
+                  color: isDark ? '#fdff8b' : '#0074e6',
+                }"
                 class="linkrefinto"
                 target="_blank"
                 style="text-decoration: underline"
@@ -715,9 +731,10 @@
               >
               held in the collection of the Vernadsky National Library of
               Ukraine. <br />Also the author of an open trading
-              <a [ngStyle]="{
-                color: isDark ? '#fdff8b' : '#0074e6'
-              }"
+              <a
+                [ngStyle]="{
+                  color: isDark ? '#fdff8b' : '#0074e6',
+                }"
                 class="linkrefinto"
                 target="_blank"
                 style="text-decoration: underline"
@@ -974,6 +991,11 @@
               >Free trading training</a
             >
           </div>
+          <div class="menu-title-block">
+            <a (click)="navigateTo('en/books')" class="menu-title_text"
+              >MY BOOKS</a
+            >
+          </div>
         </div>
 
         <div class="menu">
@@ -994,6 +1016,11 @@
             (click)="navigateTo('uk/disclaimer')"
             class="menu-title-block menu-title_text"
             >Disclaimer</a
+          >
+          <a
+            (click)="navigateTo('en/freestudying/about')"
+            class="menu-title-block menu-title_text"
+            >About ARAPOV.TRADE</a
           >
         </div>
 

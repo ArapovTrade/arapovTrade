@@ -11,7 +11,7 @@
             [ngStyle]="{
               background: isDark
                 ? 'url(assets/redesignArapovTrade/img/logo-new.png) no-repeat center'
-                : 'url(assets/redesignArapovTrade/img/logo-new-light.png) no-repeat center'
+                : 'url(assets/redesignArapovTrade/img/logo-new-light.png) no-repeat center',
             }"
           ></div>
           <span
@@ -190,7 +190,7 @@
         <div
           class="menu-dropdown"
           [ngStyle]="{
-            background: isDark ? 'rgba(1, 1, 1, 1)' : 'rgba(255, 255, 255, 1)'
+            background: isDark ? 'rgba(1, 1, 1, 1)' : 'rgba(255, 255, 255, 1)',
           }"
         >
           <ul>
@@ -222,6 +222,13 @@
             >
               ПРОФЕСІЙНІ КУРСИ
             </li>
+            <li
+              (click)="navigateTo('uk/books')"
+              [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+              [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
+            >
+              МОЇ КНИГИ
+            </li>
           </ul>
         </div>
       </div>
@@ -249,11 +256,11 @@
                   class="posibnik-dlya-pochatkivtsiv"
                   [ngClass]="{
                     'gradient-orange': isDark,
-                    'gradient-blue': !isDark
+                    'gradient-blue': !isDark,
                   }"
                   >Посібник для початківців</span
                 >
-                </h1>
+              </h1>
               <span
                 class="tekst-opisanye"
                 [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
@@ -271,7 +278,7 @@
                   [ngClass]="{
                     'btn-section-one': true,
                     'gradient-block-orange': isDark,
-                    'gradient-block-blue': !isDark
+                    'gradient-block-blue': !isDark,
                   }"
                 >
                   <span
@@ -353,11 +360,10 @@
                 </div> phone-->
 
                 <div
-                  class="podrobnee  phone"
-                  
+                  class="podrobnee phone"
                   [ngClass]="{
                     'podrobnee-dark': isDark,
-                    'podrobnee-light': !isDark
+                    'podrobnee-light': !isDark,
                   }"
                 >
                   <!-- <div class="icon-play">
@@ -407,7 +413,14 @@
                       </defs>
                     </svg>
                   </div> -->
-                  <span class="text-p"><a  target="_blank" rel="nofollow" href="https://arapov.education/ua/course-ua/">Швидкий старт</a>  </span>
+                  <span class="text-p"
+                    ><a
+                      target="_blank"
+                      rel="nofollow"
+                      href="https://arapov.education/ua/course-ua/"
+                      >Швидкий старт</a
+                    >
+                  </span>
                 </div>
               </div>
 
@@ -428,7 +441,7 @@
                       class="fb"
                       [ngClass]="{
                         'links-dark': isDark,
-                        'links-light': !isDark
+                        'links-light': !isDark,
                       }"
                     >
                       <a href="https://www.facebook.com/igor.arapov.75">
@@ -453,7 +466,7 @@
                       class="fb"
                       [ngClass]="{
                         'links-dark': isDark,
-                        'links-light': !isDark
+                        'links-light': !isDark,
                       }"
                     >
                       <a
@@ -480,7 +493,7 @@
                       class="fb"
                       [ngClass]="{
                         'links-dark': isDark,
-                        'links-light': !isDark
+                        'links-light': !isDark,
                       }"
                     >
                       <a href="https://ru.tradingview.com/u/Igor_Arapov/">
@@ -506,7 +519,7 @@
                       class="fb"
                       [ngClass]="{
                         'links-dark-special': isDark,
-                        'links-light-special': !isDark
+                        'links-light-special': !isDark,
                       }"
                     >
                       <a href="https://www.youtube.com/@ArapovTrade">
@@ -540,7 +553,7 @@
                       [ngClass]="{
                         'links-dark-special': isDark,
 
-                        'links-light-special': !isDark
+                        'links-light-special': !isDark,
                       }"
                     >
                       <a href="https://telegram.me/+380506308200">
@@ -569,7 +582,7 @@
                       class="fb"
                       [ngClass]="{
                         'links-dark': isDark,
-                        'links-light': !isDark
+                        'links-light': !isDark,
                       }"
                     >
                       <a href="https://www.instagram.com/arapovtrade/">
@@ -602,7 +615,7 @@
             [ngStyle]="{
               background: isDark
                 ? 'url(assets/redesignArapovTrade/img/imageAuthor.png) no-repeat center'
-                : 'url(assets/redesignArapovTrade/img/imageAuthor-light.png) no-repeat center'
+                : 'url(assets/redesignArapovTrade/img/imageAuthor-light.png) no-repeat center',
             }"
           ></div>
         </div>
@@ -621,14 +634,14 @@
             [ngClass]="{
               arrows: true,
               'arrows-dark': isDark,
-              'arrows-light': !isDark
+              'arrows-light': !isDark,
             }"
           ></div>
           <div
             [ngClass]="{
               bg: true,
               'bg-dark': isDark,
-              'bg-light': !isDark
+              'bg-light': !isDark,
             }"
           ></div>
         </div>
@@ -636,7 +649,7 @@
         <div
           class="igor-info"
           [ngStyle]="{
-            border: isDark ? '2px solid #52493b' : '2px solid #4D5460'
+            border: isDark ? '2px solid #52493b' : '2px solid #4D5460',
           }"
         >
           <div class="avatar"></div>
@@ -652,18 +665,18 @@
             [ngClass]="{
               dorogiy: true,
               'gradient-orange': isDark,
-              'gradient-blue': !isDark
+              'gradient-blue': !isDark,
             }"
             >Дорогий </span
           ><span
             [ngClass]="{
               chitachu: true,
               'gradient-orange': isDark,
-              'gradient-blue': !isDark
+              'gradient-blue': !isDark,
             }"
             >читачу!</span
           >
-          </h2>
+        </h2>
         <div class="text_second-block lato-regular">
           <span
             class="learning-materials lato-regular"
@@ -701,7 +714,7 @@
           [ngClass]="{
             'youtube-channel': true,
             'gradient-block-orange': isDark,
-            'gradient-block-blue': !isDark
+            'gradient-block-blue': !isDark,
           }"
         >
           <a
@@ -731,7 +744,7 @@
       [ngClass]="{
         background: true,
         'background-dark': isDark,
-        'background-light': !isDark
+        'background-light': !isDark,
       }"
     ></div>
     <div class="about-bg" *ngIf="isDark"></div>
@@ -743,7 +756,7 @@
         [ngClass]="{
           'author-header': true,
           'gradient-orange': isDark,
-          'gradient-blue': !isDark
+          'gradient-blue': !isDark,
         }"
         >Про автора стратегii</span
       >
@@ -752,16 +765,15 @@
         [ngStyle]="{
           background: isDark
             ? 'rgba(255, 255, 255, 0.08)'
-            : 'rgba(230, 237, 251, 0.7)'
+            : 'rgba(230, 237, 251, 0.7)',
         }"
       >
         <div class="quote">
           <span
             class="quote-text"
             [ngStyle]="{
-            
-            'color': isDark? '#ffffff' : '#0C263A' ,
-            'border-left': isDark? '5px solid #ffcd29':'5px solid #0082CC',
+              color: isDark ? '#ffffff' : '#0C263A',
+              'border-left': isDark ? '5px solid #ffcd29' : '5px solid #0082CC',
             }"
             >«Успіх на ринку — це не результат надлюдських зусиль, а наслідок
             правильної системи. Кожен професіонал колись був на вашому місці,
@@ -783,7 +795,7 @@
             [ngStyle]="{
               border: isDark
                 ? '2px solid rgba(255, 255, 255, 0.16)'
-                : '2px solid #D6EBF7'
+                : '2px solid #D6EBF7',
             }"
           >
             <div class="group-6">
@@ -791,7 +803,7 @@
                 [ngClass]="{
                   'text-7': true,
                   'text-7-dark': isDark,
-                  'text-7-light': !isDark
+                  'text-7-light': !isDark,
                 }"
               ></div>
             </div>
@@ -815,14 +827,14 @@
             [ngStyle]="{
               border: isDark
                 ? '2px solid rgba(255, 255, 255, 0.16)'
-                : '2px solid #D6EBF7'
+                : '2px solid #D6EBF7',
             }"
           >
             <div
               [ngClass]="{
                 'text-a': true,
                 'text-a-dark': isDark,
-                'text-a-light': !isDark
+                'text-a-light': !isDark,
               }"
             ></div>
           </div>
@@ -846,16 +858,19 @@
         [ngClass]="{
           articles: true,
           'articles-dark': isDark,
-          'articles-light': !isDark
+          'articles-light': !isDark,
         }"
       ></div>
       <div
         class="articles-text"
         [ngStyle]="{
-            
-            'background': isDark? 'rgba(255, 255, 255, 0.08)' : 'rgba(0, 136, 255, 0.08)' ,
-            'border': isDark? '2px solid rgba(230, 237, 251, 0.16)':'2px solid rgba(0, 136, 255, 0.16)',
-            }"
+          background: isDark
+            ? 'rgba(255, 255, 255, 0.08)'
+            : 'rgba(0, 136, 255, 0.08)',
+          border: isDark
+            ? '2px solid rgba(230, 237, 251, 0.16)'
+            : '2px solid rgba(0, 136, 255, 0.16)',
+        }"
       >
         <div class="articles-count">
           <span class="articles-recommendations"
@@ -867,10 +882,13 @@
       <div
         class="frame-e"
         [ngStyle]="{
-            
-            'background': isDark? 'rgba(255, 255, 255, 0.08)' : 'rgba(0, 136, 255, 0.08)' ,
-            'border': isDark? '2px solid rgba(230, 237, 251, 0.16)':'2px solid rgba(0, 136, 255, 0.16)',
-            }"
+          background: isDark
+            ? 'rgba(255, 255, 255, 0.08)'
+            : 'rgba(0, 136, 255, 0.08)',
+          border: isDark
+            ? '2px solid rgba(230, 237, 251, 0.16)'
+            : '2px solid rgba(0, 136, 255, 0.16)',
+        }"
       >
         <div class="positive-reviews">
           <span class="positive-reviews-percent">95% </span
@@ -889,7 +907,7 @@
         [ngClass]="{
           'background-10': true,
           'background-10-dark': isDark,
-          'background-10-light': !isDark
+          'background-10-light': !isDark,
         }"
       ></div>
       <div class="up-block">
@@ -897,7 +915,7 @@
           [ngClass]="{
             'arrow-11': true,
             'arrow-11-dark': isDark,
-            'arrow-11-light': !isDark
+            'arrow-11-light': !isDark,
           }"
         ></div>
         <div
@@ -905,10 +923,13 @@
           data-aos-delay="300"
           class="trading-definition"
           [ngStyle]="{
-            
-            'background': isDark? 'rgba(255, 255, 255, 0.08)' : 'rgba(0, 131, 205, 0.08)' ,
-            'border': isDark? '2px solid rgba(230, 237, 251, 0.16)':'2px solid #E6EDFB',
-            }"
+            background: isDark
+              ? 'rgba(255, 255, 255, 0.08)'
+              : 'rgba(0, 131, 205, 0.08)',
+            border: isDark
+              ? '2px solid rgba(230, 237, 251, 0.16)'
+              : '2px solid #E6EDFB',
+          }"
         >
           <div class="flex-row-12">
             <div class="info-icon">
@@ -916,7 +937,7 @@
                 [ngClass]="{
                   'group-13': true,
                   'group-13-dark': isDark,
-                  'group-13-light': !isDark
+                  'group-13-light': !isDark,
                 }"
               ></div>
             </div>
@@ -924,10 +945,11 @@
               [ngClass]="{
                 'trading-definition-title': true,
                 'gradient-orange': isDark,
-                'gradient-blue': !isDark
+                'gradient-blue': !isDark,
               }"
-              >Що таке трейдинг: простими словами</h2
             >
+              Що таке трейдинг: простими словами
+            </h2>
           </div>
           <span
             class="trading-definition-text"
@@ -949,10 +971,12 @@
               [ngClass]="{
                 'osnovi-treidingu': true,
                 'gradient-orange': isDark,
-                'gradient-blue': !isDark
+                'gradient-blue': !isDark,
               }"
-              >Основи трейдингу</h2
-            ><span
+            >
+              Основи трейдингу
+            </h2>
+            <span
               class="osnovi-treidingu-14"
               [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
               >Трейдинг (від англ. trading — торгівля) — це процес купівлі та
@@ -968,7 +992,7 @@
               [ngClass]="{
                 tab: true,
                 'tab-dark': isDark,
-                'tab-light': !isDark
+                'tab-light': !isDark,
               }"
             >
               <span class="tab-text">Акції компаній</span>
@@ -977,7 +1001,7 @@
               [ngClass]="{
                 tab: true,
                 'tab-dark': isDark,
-                'tab-light': !isDark
+                'tab-light': !isDark,
               }"
             >
               <span class="tab-text">Валюту (ринок Форекс)</span>
@@ -986,7 +1010,7 @@
               [ngClass]="{
                 tab: true,
                 'tab-dark': isDark,
-                'tab-light': !isDark
+                'tab-light': !isDark,
               }"
             >
               <span class="tab-text">Криптовалюти (біткоїн, етеріум тощо)</span>
@@ -995,7 +1019,7 @@
               [ngClass]="{
                 tab: true,
                 'tab-dark': isDark,
-                'tab-light': !isDark
+                'tab-light': !isDark,
               }"
             >
               <span class="tab-text"
@@ -1006,7 +1030,7 @@
               [ngClass]="{
                 tab: true,
                 'tab-dark': isDark,
-                'tab-light': !isDark
+                'tab-light': !isDark,
               }"
             >
               <span class="tab-text"
@@ -1030,21 +1054,21 @@
             [ngClass]="{
               'arrow_fifth-block-rigth': true,
               'arrow_fifth-block-rigth-dark': isDark,
-              'arrow_fifth-block-rigth-light': !isDark
+              'arrow_fifth-block-rigth-light': !isDark,
             }"
           ></div>
           <div
             [ngClass]="{
               'streamline-sharp_pie-chart-remix': true,
               'streamline-sharp_pie-chart-remix-dark': isDark,
-              'streamline-sharp_pie-chart-remix-light': !isDark
+              'streamline-sharp_pie-chart-remix-light': !isDark,
             }"
           ></div>
           <div
             [ngClass]="{
               'BG-shape-fifth_block': true,
               'BG-shape-fifth_block-dark': isDark,
-              'BG-shape-fifth_block-light': !isDark
+              'BG-shape-fifth_block-light': !isDark,
             }"
           ></div>
         </div>
@@ -1057,14 +1081,14 @@
         [ngClass]="{
           'six-block-graph-img': true,
           'six-block-graph-img-dark': isDark,
-          'six-block-graph-img-light': !isDark
+          'six-block-graph-img-light': !isDark,
         }"
       ></div>
       <div
         [ngClass]="{
           'bg-16': true,
           'bg-16-dark': isDark,
-          'bg-16-light': !isDark
+          'bg-16-light': !isDark,
         }"
       ></div>
       <div class="six-block-main-img"></div>
@@ -1072,7 +1096,7 @@
         [ngClass]="{
           'flex-row-ca': true,
           'flex-row-ca-dark': isDark,
-          'flex-row-ca-light': !isDark
+          'flex-row-ca-light': !isDark,
         }"
       ></div>
     </div>
@@ -1082,10 +1106,12 @@
         [ngClass]="{
           'material-symbols-show-chart-rounded': true,
           'gradient-orange': isDark,
-          'gradient-blue': !isDark
+          'gradient-blue': !isDark,
         }"
-        >Хто такий трейдер?</h2
-      ><span
+      >
+        Хто такий трейдер?
+      </h2>
+      <span
         class="flex-row-fc"
         [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
         >Трейдер — це людина, яка здійснює купівлю та продаж фінансових
@@ -1101,13 +1127,13 @@
         [ngStyle]="{
           background: isDark
             ? 'rgba(255, 255, 255, 0.08)'
-            : 'rgba(230, 237, 251, 0.7)'
+            : 'rgba(230, 237, 251, 0.7)',
         }"
       >
         <div
           class="naygolovnishe"
           [ngStyle]="{
-            'border-left': isDark ? '5px solid #ffcd29' : '5px solid #0082CC'
+            'border-left': isDark ? '5px solid #ffcd29' : '5px solid #0082CC',
           }"
         >
           <p [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }">
@@ -1128,10 +1154,12 @@
             [ngClass]="{
               'opportunities-risks': true,
               'gradient-orange': isDark,
-              'gradient-blue': !isDark
+              'gradient-blue': !isDark,
             }"
-            >Можливості та ризики</h2
-          ><span
+          >
+            Можливості та ризики
+          </h2>
+          <span
             class="opportunities-risks-38"
             [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
             >Трейдинг приваблює можливістю високих доходів — досвідчені трейдери
@@ -1145,7 +1173,7 @@
               [ngClass]="{
                 'deposit-loss-reasons': true,
                 'gradient-orange': isDark,
-                'gradient-blue': !isDark
+                'gradient-blue': !isDark,
               }"
               >Причини втрати депозиту:</span
             >
@@ -1159,7 +1187,7 @@
                 [ngClass]="{
                   vector: true,
                   'vector-dark': isDark,
-                  'vector-light': !isDark
+                  'vector-light': !isDark,
                 }"
               ></div>
             </div>
@@ -1173,7 +1201,7 @@
                 [ngClass]="{
                   vector: true,
                   'vector-dark': isDark,
-                  'vector-light': !isDark
+                  'vector-light': !isDark,
                 }"
               ></div>
             </div>
@@ -1187,7 +1215,7 @@
                 [ngClass]="{
                   vector: true,
                   'vector-dark': isDark,
-                  'vector-light': !isDark
+                  'vector-light': !isDark,
                 }"
               ></div>
             </div>
@@ -1201,7 +1229,7 @@
                 [ngClass]="{
                   vector: true,
                   'vector-dark': isDark,
-                  'vector-light': !isDark
+                  'vector-light': !isDark,
                 }"
               ></div>
             </div>
@@ -1212,7 +1240,7 @@
             [ngClass]="{
               'successful-trader': true,
               'gradient-orange': isDark,
-              'gradient-blue': !isDark
+              'gradient-blue': !isDark,
             }"
             >Щоб стати успішним трейдером, необхідно:</span
           >
@@ -1221,7 +1249,7 @@
               [ngClass]="{
                 'vector-40': true,
                 'vector-40-dark': isDark,
-                'vector-40-light': !isDark
+                'vector-40-light': !isDark,
               }"
             ></div>
             <span
@@ -1235,7 +1263,7 @@
               [ngClass]="{
                 'vector-40': true,
                 'vector-40-dark': isDark,
-                'vector-40-light': !isDark
+                'vector-40-light': !isDark,
               }"
             ></div>
             <span
@@ -1249,7 +1277,7 @@
               [ngClass]="{
                 'vector-40': true,
                 'vector-40-dark': isDark,
-                'vector-40-light': !isDark
+                'vector-40-light': !isDark,
               }"
             ></div>
             <span
@@ -1263,7 +1291,7 @@
               [ngClass]="{
                 'vector-40': true,
                 'vector-40-dark': isDark,
-                'vector-40-light': !isDark
+                'vector-40-light': !isDark,
               }"
             ></div>
             <span
@@ -1283,14 +1311,14 @@
             [ngClass]="{
               chart: true,
               'chart-dark': isDark,
-              'chart-light': !isDark
+              'chart-light': !isDark,
             }"
           ></div>
           <div
             [ngClass]="{
               'chart-arc': true,
               'chart-arc-dark': isDark,
-              'chart-arc-light': !isDark
+              'chart-arc-light': !isDark,
             }"
           ></div>
         </div>
@@ -1300,7 +1328,7 @@
       [ngClass]="{
         bg_seventh: true,
         'bg_seventh-dark': isDark,
-        'bg_seventh-light': !isDark
+        'bg_seventh-light': !isDark,
       }"
     ></div>
   </div>
@@ -1313,7 +1341,7 @@
           [ngClass]="{
             'img-19': true,
             'img-19-dark': isDark,
-            'img-19-light': !isDark
+            'img-19-light': !isDark,
           }"
         ></div>
       </div>
@@ -1322,9 +1350,10 @@
           [ngClass]="{
             'opportunities-risks': true,
             'gradient-orange': isDark,
-            'gradient-blue': !isDark
+            'gradient-blue': !isDark,
           }"
-          >З чого почати?
+        >
+          З чого почати?
         </h2>
         <div
           class="start-trading-recommendation"
@@ -1346,7 +1375,7 @@
           [ngClass]="{
             'successful-trader': true,
             'gradient-orange': isDark,
-            'gradient-blue': !isDark
+            'gradient-blue': !isDark,
           }"
           >На навчальній платформі ви знайдете:</span
         >
@@ -1393,7 +1422,7 @@
           [ngStyle]="{
             background: isDark
               ? 'rgba(255, 255, 255, 0.08)'
-              : 'rgba(230, 237, 251, 0.7)'
+              : 'rgba(230, 237, 251, 0.7)',
           }"
         >
           <div class=" ">
@@ -1404,7 +1433,7 @@
                 color: isDark ? '#ffffff' : '#0C263A',
                 'border-left': isDark
                   ? '5px solid #ffcd29'
-                  : '5px solid #0082CC'
+                  : '5px solid #0082CC',
               }"
               >Найголовніше — ви зможете опанувати торгову стратегію , яка
               допоможе вам впевнено почуватися на ринку, уникати типових помилок
@@ -1453,7 +1482,7 @@
                 [ngStyle]="{
                   background: isDark
                     ? 'url(assets/redesignArapovTrade/img/logo-new.png) no-repeat center'
-                    : 'url(assets/redesignArapovTrade/img/logo-new-light.png) no-repeat center'
+                    : 'url(assets/redesignArapovTrade/img/logo-new-light.png) no-repeat center',
                 }"
               ></div>
               <span class="loog-text hg">Arapov.Trade</span>
@@ -1488,8 +1517,8 @@
             >
           </div>
           <div class="menu-title-block">
-            <a (click)="navigateTo('uk/books')" class="menu-title_text"
-              > Мої книги</a
+            <a (click)="navigateTo('uk/books')" class="menu-title_text">
+              МОЇ КНИГИ</a
             >
           </div>
         </div>
@@ -1618,7 +1647,7 @@
               target="_blank"
               class="menu-title-block menu-title_text"
               >Фундаментальний аналіз</a
-            > 
+            >
           </div>
           <div class="popular-artickles_artickle">
             <a
@@ -1710,7 +1739,7 @@
             class="fb"
             [ngClass]="{
               'links-dark': isDark,
-              'links-light': !isDark
+              'links-light': !isDark,
             }"
           >
             <a href="https://www.facebook.com/igor.arapov.75">
@@ -1733,7 +1762,7 @@
             class="fb"
             [ngClass]="{
               'links-dark': isDark,
-              'links-light': !isDark
+              'links-light': !isDark,
             }"
           >
             <a
@@ -1758,7 +1787,7 @@
             class="fb"
             [ngClass]="{
               'links-dark': isDark,
-              'links-light': !isDark
+              'links-light': !isDark,
             }"
           >
             <a href="https://ru.tradingview.com/u/Igor_Arapov/">
@@ -1782,7 +1811,7 @@
             class="fb"
             [ngClass]="{
               'links-dark-special': isDark,
-              'links-light-special': !isDark
+              'links-light-special': !isDark,
             }"
           >
             <a href="https://www.youtube.com/@ArapovTrade">
@@ -1811,7 +1840,7 @@
             [ngClass]="{
               'links-dark-special': isDark,
 
-              'links-light-special': !isDark
+              'links-light-special': !isDark,
             }"
           >
             <a href="https://telegram.me/+380506308200">
@@ -1838,7 +1867,7 @@
             class="fb"
             [ngClass]="{
               'links-dark': isDark,
-              'links-light': !isDark
+              'links-light': !isDark,
             }"
           >
             <a href="https://www.instagram.com/arapovtrade/">
@@ -1863,7 +1892,7 @@
       [ngClass]="{
         'bg-shapes-footer': true,
         'bg-shapes-footer-dark': isDark,
-        'bg-shapes-footer-light': !isDark
+        'bg-shapes-footer-light': !isDark,
       }"
     ></div>
   </div>

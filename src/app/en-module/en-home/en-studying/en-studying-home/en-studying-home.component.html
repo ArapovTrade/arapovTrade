@@ -1,50 +1,53 @@
- 
-
 <div
   class="main-container"
   [ngStyle]="{ 'background-color': isDark ? '#141500' : '#FFFFFF' }"
 >
-<div class="mask_drop-menu" *ngIf="menuOpen" style="margin-top: 40px;">
-        <div  
-          class="menu-dropdown"
-          [ngStyle]="{
-            background: isDark ? 'rgba(1, 1, 1, 1)' : 'rgba(255, 255, 255, 1)',
-             
-          }"
+  <div class="mask_drop-menu" *ngIf="menuOpen" style="margin-top: 40px">
+    <div
+      class="menu-dropdown"
+      [ngStyle]="{
+        background: isDark ? 'rgba(1, 1, 1, 1)' : 'rgba(255, 255, 255, 1)',
+      }"
+    >
+      <ul>
+        <li
+          (click)="navigateTo('en/main')"
+          [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+          [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
         >
-          <ul>
-            <li
-              (click)="navigateTo('en/main')"
-              [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-              [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-            >
-              MAIN
-            </li>
-            <li
-              (click)="navigateTo('en/freestudying')"
-              [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-              [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-            >
-              FREE COURSES
-            </li>
-            <li
-              (click)="navigateTo('en')"
-              [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-              [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-            >
-              ABOUT THE AUTHOR
-            </li>
-            <li
-              (click)="navigateTo('en/studying')"
-              [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-              [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-            >
-              PROFESSIONAL COURSES
-            </li>
-          </ul>
-        </div>
-      </div>
-
+          MAIN
+        </li>
+        <li
+          (click)="navigateTo('en/freestudying')"
+          [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+          [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
+        >
+          FREE COURSES
+        </li>
+        <li
+          (click)="navigateTo('en')"
+          [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+          [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
+        >
+          ABOUT THE AUTHOR
+        </li>
+        <li
+          (click)="navigateTo('en/studying')"
+          [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+          [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
+        >
+          PROFESSIONAL COURSES
+        </li>
+        <li
+          (click)="navigateTo('en/books')"
+          [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+          [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
+        >
+          MY BOOKS
+        </li>
+      </ul>
+    </div>
+  </div>
 
   <div class="author-page_section-one">
     <div class="header-new_block" data-aos="fade-down" data-aos-delay="300">
@@ -54,7 +57,7 @@
           [ngStyle]="{
             background: isDark
               ? 'url(assets/redesignArapovTrade/img/logo-new.png) no-repeat center'
-              : 'url(assets/redesignArapovTrade/img/logo-new-light.png) no-repeat center'
+              : 'url(assets/redesignArapovTrade/img/logo-new-light.png) no-repeat center',
           }"
         ></div>
         <span
@@ -193,57 +196,58 @@
         </div>
 
         <div class="menu-switcher" [class.open]="menuOpen">
-            <button
-              class="menu-btn"
-              (click)="toggleMenu()"
-              [ngStyle]="{ background: isDark ? '#2c2a06' : '#DBE2E7' }"
-            >
-              <span class="icon flex" *ngIf="!menuOpen">
-                <img
-                  *ngIf="isDark"
-                  src="assets/redesignArapovTrade/img/menu-button.svg"
-                  alt="menu_icon"
-                />
-                <img
-                  *ngIf="!isDark"
-                  src="assets/redesignArapovTrade/img/menu-button-light.svg"
-                  alt="menu_icon"
-                />
-              </span>
+          <button
+            class="menu-btn"
+            (click)="toggleMenu()"
+            [ngStyle]="{ background: isDark ? '#2c2a06' : '#DBE2E7' }"
+          >
+            <span class="icon flex" *ngIf="!menuOpen">
+              <img
+                *ngIf="isDark"
+                src="assets/redesignArapovTrade/img/menu-button.svg"
+                alt="menu_icon"
+              />
+              <img
+                *ngIf="!isDark"
+                src="assets/redesignArapovTrade/img/menu-button-light.svg"
+                alt="menu_icon"
+              />
+            </span>
 
-              <span class="icon flex cross" *ngIf="menuOpen">
-                <img
-                  *ngIf="isDark"
-                  src="assets/redesignArapovTrade/img/menu-button-cross.svg"
-                  alt="menu_icon"
-                />
-                <img
-                  *ngIf="!isDark"
-                  src="assets/redesignArapovTrade/img/menu-button-cross-light.svg"
-                  alt="menu_icon"
-                />
-              </span>
-            </button>
-          </div>
+            <span class="icon flex cross" *ngIf="menuOpen">
+              <img
+                *ngIf="isDark"
+                src="assets/redesignArapovTrade/img/menu-button-cross.svg"
+                alt="menu_icon"
+              />
+              <img
+                *ngIf="!isDark"
+                src="assets/redesignArapovTrade/img/menu-button-cross-light.svg"
+                alt="menu_icon"
+              />
+            </span>
+          </button>
+        </div>
       </div>
     </div>
     <div class="author-page_main-block" data-aos="fade-up" data-aos-delay="300">
-      <div class="author-page_main-block_image-block img-courses-main-page-desc">
-        <img  
+      <div
+        class="author-page_main-block_image-block img-courses-main-page-desc"
+      >
+        <img
           src="/assets/redesignArapovTrade/img/courses-main-page.png"
           alt="img"
         />
-         
       </div>
 
-      <div class="author-page_main-block_image-block img-courses-main-page-phone" >
-        
-        <img  
+      <div
+        class="author-page_main-block_image-block img-courses-main-page-phone"
+      >
+        <img
           src="/assets/redesignArapovTrade/img/courses-main-page-phone.png"
           alt="img"
         />
       </div>
-
 
       <div class="author-page_main-block_image-block-table">
         <img
@@ -253,16 +257,20 @@
       </div>
       <div class="author-page_main-block_text-block">
         <div class="author-page_main-block_title-block">
-          <h1 class="studying_h1"  [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-            >Trading and investment education for smart investors:
-        </h1>
-          <h2 class="studying_h2" 
+          <h1
+            class="studying_h1"
+            [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+          >
+            Trading and investment education for smart investors:
+          </h1>
+          <h2
+            class="studying_h2"
             [ngClass]="{
               'gradient-orange': isDark,
-              'gradient-blue_author-page': !isDark
+              'gradient-blue_author-page': !isDark,
             }"
           >
-            A professional platform with ready-made solutions 
+            A professional platform with ready-made solutions
           </h2>
           <span [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }">
             for passive income
@@ -272,9 +280,16 @@
           <span
             class="author-page_main-block_description-text"
             [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-            >Paid trading courses with a mentor are not a mandatory step, but a conscious choice for those who want to learn trading faster, with support and a clear structure. <br /><br />
-            All the necessary information for learning is indeed available in my free course—you can study it independently and at your own pace, and most importantly, for free. <br /><br />
-            But if speed, systematic approach, and feedback from an experienced mentor are important to you, then personal coaching will help you save time and avoid the typical mistakes made by most beginner traders at the start of their journey.
+            >Paid trading courses with a mentor are not a mandatory step, but a
+            conscious choice for those who want to learn trading faster, with
+            support and a clear structure. <br /><br />
+            All the necessary information for learning is indeed available in my
+            free course—you can study it independently and at your own pace, and
+            most importantly, for free. <br /><br />
+            But if speed, systematic approach, and feedback from an experienced
+            mentor are important to you, then personal coaching will help you
+            save time and avoid the typical mistakes made by most beginner
+            traders at the start of their journey.
           </span>
         </div>
         <!-- (click)="navigateTo('uk/freestudying')" -->
@@ -283,7 +298,7 @@
           [ngClass]="{
             'author-page_main-block_btn': true,
             'gradient-block-orange': isDark,
-            'gradient-block-blue': !isDark
+            'gradient-block-blue': !isDark,
           }"
         >
           <span
@@ -301,7 +316,7 @@
       [ngStyle]="{
         background: isDark
           ? 'url(/assets/redesignArapovTrade/img/author-page_main-block_bg.png)  no-repeat center'
-          : 'url(/assets/redesignArapovTrade/img/author-page_main-block_bg-light.png) no-repeat center'
+          : 'url(/assets/redesignArapovTrade/img/author-page_main-block_bg-light.png) no-repeat center',
       }"
     ></div>
 
@@ -310,18 +325,19 @@
       [ngStyle]="{
         background: isDark
           ? 'url(/assets/redesignArapovTrade/img/author-page_main-block_bg-image.png) no-repeat'
-          : 'url(/assets/redesignArapovTrade/img/author-page_main-block_bg-image-light.png) no-repeat'
+          : 'url(/assets/redesignArapovTrade/img/author-page_main-block_bg-image-light.png) no-repeat',
       }"
     ></div>
   </div>
   <!-- Second Block -->
 
-  <div data-aos="fade-up" data-aos-delay="300"
+  <div
+    data-aos="fade-up"
+    data-aos-delay="300"
     [ngClass]="{
-          'second-section': true,
-          'second-pad': isDark,
-           
-        }"
+      'second-section': true,
+      'second-pad': isDark,
+    }"
   >
     <div class="second-section_programm-block">
       <div
@@ -329,7 +345,7 @@
           'second-section_programm-block-title': true,
           'second-section_programm-block-title-small': true,
           'gradient-orange': isDark,
-          'gradient-blue_author-page': !isDark
+          'gradient-blue_author-page': !isDark,
         }"
       >
         Curriculum
@@ -338,7 +354,9 @@
         class="author-page_main-block_description-text"
         [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
       >
-        The program covers the key aspects of exchange trading—from an introduction to the financial market and its participants to an in-depth study of technical, fundamental, and volume analysis.
+        The program covers the key aspects of exchange trading—from an
+        introduction to the financial market and its participants to an in-depth
+        study of technical, fundamental, and volume analysis.
       </div>
     </div>
 
@@ -362,7 +380,7 @@
             [ngStyle]="{
               background: isDark
                 ? 'linear-gradient(90deg, rgba(56, 56, 32, 0.50) 0%, rgba(28, 29, 2, 0 ) 100%)'
-                : 'linear-gradient(90deg, rgba(0, 130, 204,  0.12) )'
+                : 'linear-gradient(90deg, rgba(0, 130, 204,  0.12) )',
             }"
           >
             <div class="tab-block_item-title">
@@ -371,7 +389,7 @@
                 [ngClass]="{
                   'second-section_programm-block-title': true,
                   'gradient-orange': isDark,
-                  'gradient-blue_author-page': !isDark
+                  'gradient-blue_author-page': !isDark,
                 }"
                 >Market Analysis</span
               >
@@ -380,7 +398,7 @@
                 [ngClass]="{
                   'second-section_programm-block-title': true,
                   'gradient-orange': isDark,
-                  'gradient-blue_author-page': !isDark
+                  'gradient-blue_author-page': !isDark,
                 }"
                 >02</span
               >
@@ -391,7 +409,8 @@
                 [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
               >
                 1. Types of Market Analysis <br />
-                2. Technical Analysis. Trading System "Working from Levels" <br />
+                2. Technical Analysis. Trading System "Working from Levels"
+                <br />
                 3. Fundamental Analysis
               </span>
             </div>
@@ -401,7 +420,7 @@
             [ngStyle]="{
               background: isDark
                 ? 'linear-gradient(90deg, rgba(56, 56, 32, 0.50) 0%, rgba(28, 29, 2, 0 ) 100%)'
-                : 'linear-gradient(90deg, rgba(0, 130, 204,  0.12) )'
+                : 'linear-gradient(90deg, rgba(0, 130, 204,  0.12) )',
             }"
           >
             <div class="tab-block_item-title">
@@ -411,16 +430,17 @@
                   'second-section_programm-block-title': true,
                   'second-section_programm-block-title-text': true,
                   'gradient-orange': isDark,
-                  'gradient-blue_author-page': !isDark
+                  'gradient-blue_author-page': !isDark,
                 }"
-                >"Trading System and Market Psychology" (based on the Wyckoff Methodology)</span
+                >"Trading System and Market Psychology" (based on the Wyckoff
+                Methodology)</span
               >
               <span
                 class="item-title_head"
                 [ngClass]="{
                   'second-section_programm-block-title': true,
                   'gradient-orange': isDark,
-                  'gradient-blue_author-page': !isDark
+                  'gradient-blue_author-page': !isDark,
                 }"
                 >04</span
               >
@@ -433,7 +453,8 @@
                 1. Money Management <br />
                 2. Compound Interest<br />
                 3. Risk Management<br />
-                4. Behavioral factors in the market (price manipulation as a trigger for action)<br />
+                4. Behavioral factors in the market (price manipulation as a
+                trigger for action)<br />
                 5. "Crowd" Demand Zone (asset distribution by large capital)<br />
                 6. "Crowd" Sell-off Zone (asset accumulation by large capital)
               </span>
@@ -446,7 +467,7 @@
             [ngStyle]="{
               background: isDark
                 ? 'linear-gradient(90deg, rgba(56, 56, 32, 0.50) 0%, rgba(28, 29, 2, 0 ) 100%)'
-                : 'linear-gradient(90deg, rgba(0, 130, 204,  0.12) )'
+                : 'linear-gradient(90deg, rgba(0, 130, 204,  0.12) )',
             }"
           >
             <div class="tab-block_item-title">
@@ -455,7 +476,7 @@
                 [ngClass]="{
                   'second-section_programm-block-title': true,
                   'gradient-orange': isDark,
-                  'gradient-blue_author-page': !isDark
+                  'gradient-blue_author-page': !isDark,
                 }"
                 >Getting to Know the Exchange</span
               >
@@ -464,7 +485,7 @@
                 [ngClass]="{
                   'second-section_programm-block-title': true,
                   'gradient-orange': isDark,
-                  'gradient-blue_author-page': !isDark
+                  'gradient-blue_author-page': !isDark,
                 }"
                 >01</span
               >
@@ -475,8 +496,10 @@
                 [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
               >
                 1. Exchange: Structure and Operating Principle <br />
-                2. The Role of the Exchange in the Financial Sector of the Economy <br />
-                3. Main Participants of the Financial Market — banks, funds, and others
+                2. The Role of the Exchange in the Financial Sector of the
+                Economy <br />
+                3. Main Participants of the Financial Market — banks, funds, and
+                others
                 <br />
                 4. Types of Assets
               </span>
@@ -487,7 +510,7 @@
             [ngStyle]="{
               background: isDark
                 ? 'linear-gradient(90deg, rgba(56, 56, 32, 0.50) 0%, rgba(28, 29, 2, 0 ) 100%)'
-                : 'linear-gradient(90deg, rgba(0, 130, 204,  0.12) )'
+                : 'linear-gradient(90deg, rgba(0, 130, 204,  0.12) )',
             }"
           >
             <div class="tab-block_item-title">
@@ -496,7 +519,7 @@
                 [ngClass]="{
                   'second-section_programm-block-title': true,
                   'gradient-orange': isDark,
-                  'gradient-blue_author-page': !isDark
+                  'gradient-blue_author-page': !isDark,
                 }"
                 >Volumetric Market Analysis</span
               >
@@ -505,7 +528,7 @@
                 [ngClass]="{
                   'second-section_programm-block-title': true,
                   'gradient-orange': isDark,
-                  'gradient-blue_author-page': !isDark
+                  'gradient-blue_author-page': !isDark,
                 }"
                 >03</span
               >
@@ -516,7 +539,8 @@
                 [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
               >
                 1. Market Profile<br />
-                2. Reading the Tape and the Order Book, Market Microstructure <br />
+                2. Reading the Tape and the Order Book, Market Microstructure
+                <br />
                 3. Practice on Real Trading Accounts
               </span>
             </div>
@@ -529,126 +553,119 @@
       [ngStyle]="{
         background: isDark
           ? 'url(/assets/redesignArapovTrade/img/timeline-section-bg-dark.png) no-repeat'
-          : 'url(/assets/redesignArapovTrade/img/timeline-section-bg-light.png) no-repeat'
+          : 'url(/assets/redesignArapovTrade/img/timeline-section-bg-light.png) no-repeat',
       }"
     ></div>
     <div class="timeline-section-bg-shapes"></div>
   </div>
 
-
-
-
-
-
-
-
-  <div class="third-section_container-main" data-aos="fade-up" data-aos-delay="300">
-    <div
-    class="third-section"
-    [ngStyle]="{
-      background: isDark
-        ? 'linear-gradient(90deg, rgba(56, 56, 32, 0.50) 0%, rgba(28, 29, 2, 0 ) 100%)'
-        : 'linear-gradient(90deg, rgba(0, 130, 204,  0.12) )'
-    }"
+  <div
+    class="third-section_container-main"
+    data-aos="fade-up"
+    data-aos-delay="300"
   >
-    <div class="third-section_text-block">
-      <div
-        [ngClass]="{
-          'second-section_programm-block-title': true,
-          'third-section-title-phone': true,
-          'gradient-orange': isDark,
-          'gradient-blue_author-page': !isDark
-        }"
-      >
-        Result
-      </div>
-      <div
-        class="author-page_main-block_description-text"
-        [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-      >
-        You will receive a trading system based on volume reading, and you will also learn how the markets function and gain the practical skill of opening trades under the guidance of a practicing trader, the course mentor.
-      </div>
-      <div
-        (click)="navigateToHomeWithId()"
-        [ngClass]="{
-          'author-page_main-block_btn': true,
-          'third-block-btn': true,
-          'gradient-block-orange': isDark,
-          'gradient-block-blue': !isDark
-        }"
-      >
-        <span
-          class="author-page_main-block_btn-text"
-          [ngStyle]="{ color: !isDark ? '#ffffff' : '#03314b' }"
-          >Apply Now</span
+    <div
+      class="third-section"
+      [ngStyle]="{
+        background: isDark
+          ? 'linear-gradient(90deg, rgba(56, 56, 32, 0.50) 0%, rgba(28, 29, 2, 0 ) 100%)'
+          : 'linear-gradient(90deg, rgba(0, 130, 204,  0.12) )',
+      }"
+    >
+      <div class="third-section_text-block">
+        <div
+          [ngClass]="{
+            'second-section_programm-block-title': true,
+            'third-section-title-phone': true,
+            'gradient-orange': isDark,
+            'gradient-blue_author-page': !isDark,
+          }"
         >
+          Result
+        </div>
+        <div
+          class="author-page_main-block_description-text"
+          [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+        >
+          You will receive a trading system based on volume reading, and you
+          will also learn how the markets function and gain the practical skill
+          of opening trades under the guidance of a practicing trader, the
+          course mentor.
+        </div>
+        <div
+          (click)="navigateToHomeWithId()"
+          [ngClass]="{
+            'author-page_main-block_btn': true,
+            'third-block-btn': true,
+            'gradient-block-orange': isDark,
+            'gradient-block-blue': !isDark,
+          }"
+        >
+          <span
+            class="author-page_main-block_btn-text"
+            [ngStyle]="{ color: !isDark ? '#ffffff' : '#03314b' }"
+            >Apply Now</span
+          >
+        </div>
+      </div>
+      <div class="third-image-block">
+        <div class="third-block_image-container">
+          <img
+            src="assets/redesignArapovTrade/img/third-image-block_img.png"
+            alt="image"
+          />
+        </div>
       </div>
     </div>
-    <div class="third-image-block">
-      <div class="third-block_image-container">
-        <img
-          src="assets/redesignArapovTrade/img/third-image-block_img.png"
-          alt="image"
-        />
-      </div>
-    </div>
-  </div>
     <div
       class="timeline-section-bg third-section-bg"
       [ngStyle]="{
         background: isDark
           ? 'url(/assets/redesignArapovTrade/img/timeline-section-bg-dark.png) no-repeat'
-          : 'url(/assets/redesignArapovTrade/img/timeline-section-bg-light.png) no-repeat'
+          : 'url(/assets/redesignArapovTrade/img/timeline-section-bg-light.png) no-repeat',
       }"
     ></div>
   </div>
 
-   
-  <div  
+  <div
     [ngClass]="{
-           
-          'forth-section': true,
-           'forth-section-container-bg-light':!isDark
-          
-        }"
-  
-  
+      'forth-section': true,
+      'forth-section-container-bg-light': !isDark,
+    }"
   >
     <div
-      
-
       [ngClass]="{
-           
-          'forth-section-container-bg': true,
-           
-          
-        }"
-
+        'forth-section-container-bg': true,
+      }"
       [ngStyle]="{
         background: isDark
           ? 'url(/assets/redesignArapovTrade/img/forth-section-container-bg-dark.png) no-repeat'
-          : 'none'
+          : 'none',
       }"
     ></div>
-    
+
     <div class="forth-section-container">
       <div
         [ngClass]="{
           'second-section_programm-block-title': true,
           'forth-section-title': true,
           'gradient-orange': isDark,
-          'gradient-blue_author-page': !isDark
+          'gradient-blue_author-page': !isDark,
         }"
       >
         Benefits of My Trading Education Approach
       </div>
-      <div class="forth-section-container_tabs-block" data-aos="fade-up" data-aos-delay="300">
+      <div
+        class="forth-section-container_tabs-block"
+        data-aos="fade-up"
+        data-aos-delay="300"
+      >
         <div
           class="forth-section-container_tab"
           [ngStyle]="{
             background: isDark
               ? 'linear-gradient(-23deg, rgba(255, 207, 104, 0.1) 22%, rgba(255, 187, 0, 0 ) 100%)'
-              : '#ffffff'
+              : '#ffffff',
           }"
         >
           <div class="tick-icon">
@@ -669,7 +686,7 @@
                 'second-section_programm-block-title': true,
                 'second-section_programm-block-title-text': true,
                 'gradient-orange': isDark,
-                'gradient-blue_author-page': !isDark
+                'gradient-blue_author-page': !isDark,
               }"
               >Practice Under Guidance</span
             >
@@ -678,7 +695,9 @@
             class="author-page_main-block_description-text"
             [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
           >
-            You don't just study theory—you trade on real accounts under my mentorship. I accompany you at every stage, helping you apply knowledge in practice and minimize mistakes.
+            You don't just study theory—you trade on real accounts under my
+            mentorship. I accompany you at every stage, helping you apply
+            knowledge in practice and minimize mistakes.
           </div>
         </div>
         <div
@@ -686,7 +705,7 @@
           [ngStyle]="{
             background: isDark
               ? 'linear-gradient(-23deg, rgba(255, 207, 104, 0.1) 22%, rgba(255, 187, 0, 0 ) 100%)'
-              : '#ffffff'
+              : '#ffffff',
           }"
         >
           <div class="tick-icon">
@@ -707,7 +726,7 @@
                 'second-section_programm-block-title': true,
                 'second-section_programm-block-title-text': true,
                 'gradient-orange': isDark,
-                'gradient-blue_author-page': !isDark
+                'gradient-blue_author-page': !isDark,
               }"
               >Verified Trading System</span
             >
@@ -716,7 +735,10 @@
             class="author-page_main-block_description-text"
             [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
           >
-            My methodology is based on the Wyckoff concept and analysis of trading volumes. It's not a "magic pill," but a system with a positive mathematical expectation that has proven its effectiveness on my students' real accounts.
+            My methodology is based on the Wyckoff concept and analysis of
+            trading volumes. It's not a "magic pill," but a system with a
+            positive mathematical expectation that has proven its effectiveness
+            on my students' real accounts.
           </div>
         </div>
         <div
@@ -724,7 +746,7 @@
           [ngStyle]="{
             background: isDark
               ? 'linear-gradient(-23deg, rgba(255, 207, 104, 0.1) 22%, rgba(255, 187, 0, 0 ) 100%)'
-              : '#ffffff'
+              : '#ffffff',
           }"
         >
           <div class="tick-icon">
@@ -745,7 +767,7 @@
                 'second-section_programm-block-title': true,
                 'second-section_programm-block-title-text': true,
                 'gradient-orange': isDark,
-                'gradient-blue_author-page': !isDark
+                'gradient-blue_author-page': !isDark,
               }"
               >Integrity and Transparency</span
             >
@@ -754,25 +776,29 @@
             class="author-page_main-block_description-text"
             [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
           >
-            No promises of quick millions. I teach real trading, where success depends on discipline, knowledge, and risk management. My goal is to make you an independent trader, not dependent on signals.
+            No promises of quick millions. I teach real trading, where success
+            depends on discipline, knowledge, and risk management. My goal is to
+            make you an independent trader, not dependent on signals.
           </div>
         </div>
       </div>
     </div>
     <div
-      class="third-section" data-aos="fade-up" data-aos-delay="300"
+      class="third-section"
+      data-aos="fade-up"
+      data-aos-delay="300"
       [ngStyle]="{
         background: isDark
           ? 'linear-gradient(90deg, rgba(56, 56, 32, 0.50) 0%, rgba(28, 29, 2, 0 ) 100%)'
-          : 'linear-gradient(90deg, rgba(0, 130, 204,  0.12) )'
+          : 'linear-gradient(90deg, rgba(0, 130, 204,  0.12) )',
       }"
     >
-      <div class="third-section_text-block  forth-block-pad">
+      <div class="third-section_text-block forth-block-pad">
         <div
           [ngClass]="{
             'second-section_programm-block-title third-title-phone-small': true,
             'gradient-orange': isDark,
-            'gradient-blue_author-page': !isDark
+            'gradient-blue_author-page': !isDark,
           }"
         >
           Ready for more?
@@ -781,10 +807,34 @@
           class="author-page_main-block_description-text"
           [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
         >
-          Training with me is not about instant wealth, but about building a sustainable skill that brings stable income over the long run. You will gain the knowledge, tools, and support to trade confidently in the financial markets. <br />
+          Training with me is not about instant wealth, but about building a
+          sustainable skill that brings stable income over the long run. You
+          will gain the knowledge, tools, and support to trade confidently in
+          the financial markets. <br />
           <br />
-          It's never too late to start <a style="text-decoration: underline; letter-spacing: 1px; font-family: 'Advent Pro'; text-underline-offset: 4px; font-style: italic;" [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }" href="https://youtu.be/fcRKxFr-EW4?si=xh2GoCd_UaxfB29V" target="_blank" rel="nofollow">learning trading</a>! Meet Azer — a 73-year-old student who proves that age is no barrier to mastering trading. A PhD and physicist-biotechnologist, he shares his journey from unprofitable indicator-based trading to successful volume analysis. An inspiring story of how the right education can change your results. <br> <br>
-         Want to learn more about how I can help you achieve your financial goals? Leave a request, and I will personally tell you how to start your path to successful trading!
+          It's never too late to start
+          <a
+            style="
+              text-decoration: underline;
+              letter-spacing: 1px;
+              font-family: &quot;Advent Pro&quot;;
+              text-underline-offset: 4px;
+              font-style: italic;
+            "
+            [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+            href="https://youtu.be/fcRKxFr-EW4?si=xh2GoCd_UaxfB29V"
+            target="_blank"
+            rel="nofollow"
+            >learning trading</a
+          >! Meet Azer — a 73-year-old student who proves that age is no barrier
+          to mastering trading. A PhD and physicist-biotechnologist, he shares
+          his journey from unprofitable indicator-based trading to successful
+          volume analysis. An inspiring story of how the right education can
+          change your results. <br />
+          <br />
+          Want to learn more about how I can help you achieve your financial
+          goals? Leave a request, and I will personally tell you how to start
+          your path to successful trading!
         </div>
         <div
           (click)="navigateToHomeWithId()"
@@ -792,7 +842,7 @@
             'author-page_main-block_btn': true,
             'third-block-btn': true,
             'gradient-block-orange': isDark,
-            'gradient-block-blue': !isDark
+            'gradient-block-blue': !isDark,
           }"
         >
           <span
@@ -819,13 +869,13 @@
     </div>
   </div>
 
-  <div class="fifth-img-section"  >
+  <div class="fifth-img-section">
     <div
       [ngClass]="{
         'second-section_programm-block-title': true,
         'fifth-img-section_title': true,
         'gradient-orange': isDark,
-        'gradient-blue_author-page': !isDark
+        'gradient-blue_author-page': !isDark,
       }"
     >
       An Example of My Students' Trading Results Over 6 Months
@@ -839,7 +889,7 @@
       [ngStyle]="{
         background: isDark
           ? 'url(/assets/redesignArapovTrade/img/shape-one-bg-dark.png) no-repeat'
-          : 'url(/assets/redesignArapovTrade/img/shape-one-bg-light.png) no-repeat'
+          : 'url(/assets/redesignArapovTrade/img/shape-one-bg-light.png) no-repeat',
       }"
     ></div>
   </div>
@@ -851,10 +901,10 @@
           'sixth-block-section_title-block': true,
 
           'gradient-orange': isDark,
-          'gradient-blue_author-page': !isDark
+          'gradient-blue_author-page': !isDark,
         }"
       >
-       Serhiy Cheremisin
+        Serhiy Cheremisin
       </div>
       <div
         class="author-page_main-block_description-text"
@@ -870,7 +920,7 @@
           [ngClass]="{
             'sixth-block-tabs-icon': true,
             'links-dark-special': isDark,
-            'links-light-special': !isDark
+            'links-light-special': !isDark,
           }"
         >
           <img
@@ -887,7 +937,8 @@
           class="sixth-block-tabs_text"
           [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
         >
-          After completing the training, the account was funded with 16,000 USD, and active public trading is being conducted on the MQL5 service.
+          After completing the training, the account was funded with 16,000 USD,
+          and active public trading is being conducted on the MQL5 service.
         </div>
       </div>
 
@@ -896,7 +947,7 @@
           [ngClass]="{
             'sixth-block-tabs-icon': true,
             'links-dark-special': isDark,
-            'links-light-special': !isDark
+            'links-light-special': !isDark,
           }"
         >
           <img
@@ -913,7 +964,12 @@
           class="sixth-block-tabs_text"
           [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
         >
-          Over 11 months of trading, the net profit was 6,237.14 USD, which is 40% of the deposit amount. The total number of completed trades is 789, with a WinRate of 67%, and the average monthly return is 3.57%. Serhiy actively maintains his account publicly on the MQL5 service, where, at the time of writing, he has 8 paid signal subscribers and 242,000 USD in total capital from his subscribers.
+          Over 11 months of trading, the net profit was 6,237.14 USD, which is
+          40% of the deposit amount. The total number of completed trades is
+          789, with a WinRate of 67%, and the average monthly return is 3.57%.
+          Serhiy actively maintains his account publicly on the MQL5 service,
+          where, at the time of writing, he has 8 paid signal subscribers and
+          242,000 USD in total capital from his subscribers.
         </div>
       </div>
 
@@ -922,7 +978,7 @@
           [ngClass]="{
             'sixth-block-tabs-icon': true,
             'links-dark-special': isDark,
-            'links-light-special': !isDark
+            'links-light-special': !isDark,
           }"
         >
           <img
@@ -939,7 +995,8 @@
           class="sixth-block-tabs_text"
           [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
         >
-          In trading, he uses the "Richard Wyckoff" concept and the "false breakout" trading system.
+          In trading, he uses the "Richard Wyckoff" concept and the "false
+          breakout" trading system.
         </div>
       </div>
 
@@ -948,7 +1005,7 @@
           [ngClass]="{
             'sixth-block-tabs-icon': true,
             'links-dark-special': isDark,
-            'links-light-special': !isDark
+            'links-light-special': !isDark,
           }"
         >
           <img
@@ -965,7 +1022,9 @@
           class="sixth-block-tabs_text"
           [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
         >
-         Serhiy uses active capital management formulas to increase the profitability of his trading strategy, which, in turn, boosts the overall expected return over the long run.
+          Serhiy uses active capital management formulas to increase the
+          profitability of his trading strategy, which, in turn, boosts the
+          overall expected return over the long run.
         </div>
       </div>
 
@@ -974,7 +1033,7 @@
           [ngClass]="{
             'sixth-block-tabs-icon': true,
             'links-dark-special': isDark,
-            'links-light-special': !isDark
+            'links-light-special': !isDark,
           }"
         >
           <img
@@ -991,7 +1050,9 @@
           class="sixth-block-tabs_text"
           [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
         >
-          Link to Serhiy's public trading account on the MQL5 website. This account serves as a demonstration of Ihor Arapov's trading system, which is available for free on the site to everyone interested.
+          Link to Serhiy's public trading account on the MQL5 website. This
+          account serves as a demonstration of Ihor Arapov's trading system,
+          which is available for free on the site to everyone interested.
         </div>
       </div>
 
@@ -1000,7 +1061,7 @@
           [ngClass]="{
             'sixth-block-tabs-icon': true,
             'links-dark-special': isDark,
-            'links-light-special': !isDark
+            'links-light-special': !isDark,
           }"
           style="display: flex; align-items: stretch"
         >
@@ -1018,7 +1079,9 @@
           class="sixth-block-tabs_text"
           [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
         >
-          Note: In the video "How not to lose money in trading?" I address the key question that separates a profitable trader from an unprofitable one.
+          Note: In the video "How not to lose money in trading?" I address the
+          key question that separates a profitable trader from an unprofitable
+          one.
         </div>
       </div>
     </div>
@@ -1028,7 +1091,7 @@
       [ngStyle]="{
         background: isDark
           ? 'url(/assets/redesignArapovTrade/img/shape-two-bg-dark.png) no-repeat'
-          : 'url(/assets/redesignArapovTrade/img/shape-two-bg-light.png) no-repeat'
+          : 'url(/assets/redesignArapovTrade/img/shape-two-bg-light.png) no-repeat',
       }"
     ></div>
   </div>
@@ -1039,7 +1102,7 @@
       [ngStyle]="{
         background: isDark
           ? 'linear-gradient(90deg, rgba(56, 56, 32, 0.50) 0%, rgba(28, 29, 2, 0 ) 100%)'
-          : 'linear-gradient(90deg, rgba(0, 130, 204,  0.12) )'
+          : 'linear-gradient(90deg, rgba(0, 130, 204,  0.12) )',
       }"
     >
       <div class="seventh-section_text-block">
@@ -1049,33 +1112,42 @@
             'second-section_programm-block-title': true,
             'seventh-section-title': true,
             'gradient-orange': isDark,
-            'gradient-blue_author-page': !isDark
+            'gradient-blue_author-page': !isDark,
           }"
         >
-        Want to become an experienced trader?
+          Want to become an experienced trader?
         </div>
         <div
           class="author-page_main-block_description-text seventh-section-descr"
           [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
         >
-          The foundation of successful trading is always a trading system with a positive mathematical expectation (or positive expectancy), and nothing else. All profitable traders are united by the presence of such systems. <br />
+          The foundation of successful trading is always a trading system with a
+          positive mathematical expectation (or positive expectancy), and
+          nothing else. All profitable traders are united by the presence of
+          such systems. <br />
           <br />
-          The profitability of traders differs depending on the capital management formulas used. Since there are a large number of these formulas, the distribution of profitability ranges from conservative to high-risk approaches. <br />
+          The profitability of traders differs depending on the capital
+          management formulas used. Since there are a large number of these
+          formulas, the distribution of profitability ranges from conservative
+          to high-risk approaches. <br />
           <br />
-          Experienced traders never inflate risks in trading. Instead, they balance positive mathematical expectation with risk control in an individual trade to achieve a positive result over a series of trades (or in the long run).
+          Experienced traders never inflate risks in trading. Instead, they
+          balance positive mathematical expectation with risk control in an
+          individual trade to achieve a positive result over a series of trades
+          (or in the long run).
         </div>
         <div
           (click)="navigateToHomeWithId()"
           [ngClass]="{
             'author-page_main-block_btn': true,
             'third-block-btn': true,
-            'seventh-btn':true,
+            'seventh-btn': true,
             'gradient-block-orange': isDark,
-            'gradient-block-blue': !isDark
+            'gradient-block-blue': !isDark,
           }"
         >
           <span
-            class="author-page_main-block_btn-text "
+            class="author-page_main-block_btn-text"
             [ngStyle]="{ color: !isDark ? '#ffffff' : '#03314b' }"
             >Apply Now</span
           >
@@ -1110,14 +1182,15 @@
                 [ngStyle]="{
                   background: isDark
                     ? 'url(assets/redesignArapovTrade/img/logo-new.png) no-repeat center'
-                    : 'url(assets/redesignArapovTrade/img/logo-new-light.png) no-repeat center'
+                    : 'url(assets/redesignArapovTrade/img/logo-new-light.png) no-repeat center',
                 }"
               ></div>
               <span class="loog-text hg">Arapov.Trade</span>
             </div>
           </div>
           <span class="footer-text"
-            >Free trading education and practical recommendations for beginners and professionals on how not to lose your deposit.</span
+            >Free trading education and practical recommendations for beginners
+            and professionals on how not to lose your deposit.</span
           >
         </div>
       </div>
@@ -1143,6 +1216,11 @@
               >Free trading education</a
             >
           </div>
+          <div class="menu-title-block">
+            <a (click)="navigateTo('en/books')" class="menu-title_text"
+              >MY BOOKS</a
+            >
+          </div>
         </div>
         <div class="menu">
           <span class="menu-title">Links</span
@@ -1163,27 +1241,49 @@
             class="menu-title-block menu-title_text"
             >Disclaimer</a
           >
+          <a
+            (click)="navigateTo('en/freestudying/about')"
+            class="menu-title-block menu-title_text"
+            >About ARAPOV.TRADE</a
+          >
         </div>
 
         <div class="menu">
-          <span class="menu-title">Our Projects</span
+          <span class="menu-title">Our Projects</span>
+          <a
+            href="https://arapov.education/en/course-en/"
+            target="_blank"
+            class="menu-title-block menu-title_text"
           >
-          <a href="https://arapov.education/en/course-en/" target="_blank" class="menu-title-block menu-title_text">
-              
-           <span class="menu-title-block menu-title_text"
-            >  Quick Start In Trading</span> </a> 
-             <a href="https://arapov.education/en/reg-workshop-en/" target="_blank" class="menu-title-block menu-title_text">
-              
-           <span class="menu-title-block menu-title_text"
-            >  Introduction To Trading</span> </a> 
-             <a href="https://arapov.trade/en/studying" target="_blank" class="menu-title-block menu-title_text">
-              
-           <span class="menu-title-block menu-title_text"
-            >  Professional Courses</span> </a> 
-             <a href="https://arapovcopytrade.com/en/home-en/" target="_blank" class="menu-title-block menu-title_text"> 
-              
-           <span class="menu-title-block menu-title_text"
-            >  Copy-Trading</span> </a> 
+            <span class="menu-title-block menu-title_text">
+              Quick Start In Trading</span
+            >
+          </a>
+          <a
+            href="https://arapov.education/en/reg-workshop-en/"
+            target="_blank"
+            class="menu-title-block menu-title_text"
+          >
+            <span class="menu-title-block menu-title_text">
+              Introduction To Trading</span
+            >
+          </a>
+          <a
+            href="https://arapov.trade/en/studying"
+            target="_blank"
+            class="menu-title-block menu-title_text"
+          >
+            <span class="menu-title-block menu-title_text">
+              Professional Courses</span
+            >
+          </a>
+          <a
+            href="https://arapovcopytrade.com/en/home-en/"
+            target="_blank"
+            class="menu-title-block menu-title_text"
+          >
+            <span class="menu-title-block menu-title_text"> Copy-Trading</span>
+          </a>
         </div>
       </div>
       <div class="popular-artickles">
@@ -1201,7 +1301,7 @@
               >Smart Money</a
             >
           </div>
-           <div class="popular-artickles_artickle">
+          <div class="popular-artickles_artickle">
             <a
               href="https://arapov.trade/en/freestudying/makingmoneyintrading"
               target="_blank"
@@ -1273,7 +1373,7 @@
               >Trending channels</a
             >
           </div>
-           <div class="popular-artickles_artickle">
+          <div class="popular-artickles_artickle">
             <a
               href="https://arapov.trade/en/freestudying/tradingmyths"
               target="_blank"
@@ -1322,8 +1422,6 @@
             >
           </div>
         </div>
-         
-         
       </div>
     </div>
     <div class="component-1f">
@@ -1333,7 +1431,9 @@
           <span class="text-2d">Arapov.Trade</span>
           <div class="pic-14"></div>
           <span class="text-2e">2025. All rights reserved.</span>
-          <span class="text-2e">Sole Proprietor Arapov I. V. TIN 3314507171</span>
+          <span class="text-2e"
+            >Sole Proprietor Arapov I. V. TIN 3314507171</span
+          >
         </div>
         <div class="section-18">
           <!-- facebook -->
@@ -1341,7 +1441,7 @@
             class="fb"
             [ngClass]="{
               'links-dark': isDark,
-              'links-light': !isDark
+              'links-light': !isDark,
             }"
           >
             <a href="https://www.facebook.com/igor.arapov.75">
@@ -1364,7 +1464,7 @@
             class="fb"
             [ngClass]="{
               'links-dark': isDark,
-              'links-light': !isDark
+              'links-light': !isDark,
             }"
           >
             <a
@@ -1389,7 +1489,7 @@
             class="fb"
             [ngClass]="{
               'links-dark': isDark,
-              'links-light': !isDark
+              'links-light': !isDark,
             }"
           >
             <a href="https://ru.tradingview.com/u/Igor_Arapov/">
@@ -1413,7 +1513,7 @@
             class="fb"
             [ngClass]="{
               'links-dark-special': isDark,
-              'links-light-special': !isDark
+              'links-light-special': !isDark,
             }"
           >
             <a href="https://www.youtube.com/@ArapovTrade">
@@ -1442,7 +1542,7 @@
             [ngClass]="{
               'links-dark-special': isDark,
 
-              'links-light-special': !isDark
+              'links-light-special': !isDark,
             }"
           >
             <a href="https://telegram.me/+380506308200">
@@ -1469,7 +1569,7 @@
             class="fb"
             [ngClass]="{
               'links-dark': isDark,
-              'links-light': !isDark
+              'links-light': !isDark,
             }"
           >
             <a href="https://www.instagram.com/arapovtrade/">
@@ -1494,7 +1594,7 @@
       [ngClass]="{
         'bg-shapes-footer': true,
         'bg-shapes-footer-dark': isDark,
-        'bg-shapes-footer-light': !isDark
+        'bg-shapes-footer-light': !isDark,
       }"
     ></div>
   </div>

@@ -221,6 +221,13 @@
             >
               ПРОФЕССИОНАЛЬНЫЕ КУРСЫ
             </li>
+            <li
+              (click)="navigateTo('ru/books')"
+              [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+              [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
+            >
+              МОИ КНИГИ
+            </li>
           </ul>
         </div>
       </div>
@@ -1383,7 +1390,7 @@
           </div>
           <div class="menu-title-block">
             <a (click)="navigateTo('ru/books')" class="menu-title_text"
-              >Мои книги</a
+              >МОИ КНИГИ</a
             >
           </div>
         </div>

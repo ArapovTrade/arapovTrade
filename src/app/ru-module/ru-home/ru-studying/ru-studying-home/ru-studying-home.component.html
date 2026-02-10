@@ -39,6 +39,13 @@
         >
           ПРОФЕССИОНАЛЬНЫЕ КУРСЫ
         </li>
+        <li
+              (click)="navigateTo('ru/books')"
+              [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+              [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
+            >
+              МОИ КНИГИ
+            </li>
       </ul>
     </div>
   </div>
@@ -1216,6 +1223,11 @@
               >Бесплатное обучение трейдингу</a
             >
           </div>
+          <div class="menu-title-block">
+            <a (click)="navigateTo('ru/books')" class="menu-title_text"
+              >МОИ КНИГИ</a
+            >
+          </div>
         </div>
         <div class="menu">
           <span class="menu-title">Ссылки</span
@@ -1235,6 +1247,11 @@
             (click)="navigateTo('ru/disclaimer')"
             class="menu-title-block menu-title_text"
             >Отказ от ответственности</a
+          >
+          <a
+            (click)="navigateTo('ru/freestudying/about')"
+            class="menu-title-block menu-title_text"
+            >Про ARAPOV.TRADE</a
           >
         </div>
 
