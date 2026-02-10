@@ -102,7 +102,7 @@
 
 //section two
 .author-page_section-two {
-  height: 1000px;
+  height: 1100px;
   position: relative;
   display: flex;
   width: 82.6%;
@@ -132,6 +132,8 @@
 ;
     gap: 30px; 
     flex-direction: column;
+    position: relative;
+    z-index: 1231231231;
 }
 
 .proc-block_item {
@@ -356,7 +358,7 @@ flex-direction: column;
  .section-two_image-block{
   width: 100%;
   height: fit-content;
-  margin: 50px 0 180px;
+  margin: 150px 0 180px;
 }
 .section-two_image-block img{
   width: 100%;
