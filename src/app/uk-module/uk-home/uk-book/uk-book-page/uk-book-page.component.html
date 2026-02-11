@@ -6,9 +6,8 @@
     <div
       class="menu-dropdown"
       [ngStyle]="{
-            background: isDark ? 'rgba(1, 1, 1, 1)' : 'rgba(255, 255, 255, 1)',
-             
-          }"
+        background: isDark ? 'rgba(1, 1, 1, 1)' : 'rgba(255, 255, 255, 1)',
+      }"
     >
       <ul>
         <li
@@ -51,7 +50,7 @@
           [ngStyle]="{
             background: isDark
               ? 'url(assets/redesignArapovTrade/img/logo-new.png) no-repeat center'
-              : 'url(assets/redesignArapovTrade/img/logo-new-light.png) no-repeat center'
+              : 'url(assets/redesignArapovTrade/img/logo-new-light.png) no-repeat center',
           }"
         ></div>
         <span
@@ -221,27 +220,33 @@
     <div class="author-page_main-block" data-aos="fade-up" data-aos-delay="300">
       <div class="author-page_main-block_text-block">
         <div class="author-page_main-block_title-block">
-          <h1 class=" " [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }" [ngClass]="{
+          <h1
+            class=" "
+            [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+            [ngClass]="{
               'gradient-orange': isDark,
-              'gradient-blue_author-page': !isDark
-            }">
+              'gradient-blue_author-page': !isDark,
+            }"
+          >
             Список книг з трейдингу
           </h1>
           <p
             class="book_page-text"
-            [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }" 
+            [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
           >
             «<a
               style="text-decoration: underline !important"
               [ngStyle]="{
-                color: isDark ? '#fdff8b' : '#0074e6'
+                color: isDark ? '#fdff8b' : '#0074e6',
               }"
               href="https://ru.wikibooks.org/wiki/Основы_трейдинга"
-              >Основи трейдингу</a> » — серія книг
+              >Основи трейдингу</a
+            >
+            » — серія книг
             <a
               style="text-decoration: underline !important"
               [ngStyle]="{
-                color: isDark ? '#fdff8b' : '#0074e6'
+                color: isDark ? '#fdff8b' : '#0074e6',
               }"
               href="https://ru.wikibooks.org/wiki/Участник:IgorArapov"
             >
@@ -252,7 +257,19 @@
             рішень. Автор адаптує принципи шахової стратегії та методи
             фізико-технічного аналізу для застосування на фінансових ринках. У
             рамках методології основний пріоритет надається методу Вайкоффа та
-            концепції Smart Money.
+            концепції Smart Money. <br />
+            Усі три
+            <a
+              style="text-decoration: underline !important"
+              [ngStyle]="{
+                color: isDark ? '#fdff8b' : '#0074e6',
+              }"
+              href="http://www.irbis-nbuv.gov.ua/cgi-bin/irbis64r_81/cgiirbis_64.exe?Z21ID=&I21DBN=VFEIR&P21DBN=VFEIR&S21STN=1&S21REF=10&S21FMT=fullw&C21COM=S&S21CNR=20&S21P01=3&S21P02=0&S21P03=A=&S21COLORTERMS=0&S21STR=Арапов%2C%20Ігор"
+              >книги</a
+            >
+            серії — «Основи трейдингу», «Основи трейдингу Том 2» та «Психологія
+            трейдингу» — зберігаються у фонді Національної бібліотеки України
+            імені В. І. Вернадського.
           </p>
           <div class="free-courses_main-container_artickle-block">
             <div class="item-flex">
@@ -261,10 +278,10 @@
                 [ngClass]="{
                   'artickle-block_item': true,
                   'shadow-box-dark': isDark,
-                  'shadow-box-light': !isDark
+                  'shadow-box-light': !isDark,
                 }"
                 [ngStyle]="{
-                  background: isDark ? '#060400' : '#ffffff'
+                  background: isDark ? '#060400' : '#ffffff',
                 }"
               >
                 <div class="free-courses_item_container">
@@ -275,7 +292,9 @@
                       itemprop="url"
                     >
                       <img
-                        [src]="'/assets/redesignArapovTrade/img/cover_osnovy_treidynhu_ua.jpg'"
+                        [src]="
+                          '/assets/redesignArapovTrade/img/cover_osnovy_treidynhu_ua.jpg'
+                        "
                         [alt]="'one-book'"
                         itemprop="image"
                         loading="lazy"
@@ -305,7 +324,7 @@
                         [ngClass]="{
                           'read_more-text': true,
                           'read_more-text-dark': isDark,
-                          'read_more-text-light': !isDark
+                          'read_more-text-light': !isDark,
                         }"
                         [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
                       >
@@ -331,10 +350,10 @@
                 [ngClass]="{
                   'artickle-block_item': true,
                   'shadow-box-dark': isDark,
-                  'shadow-box-light': !isDark
+                  'shadow-box-light': !isDark,
                 }"
                 [ngStyle]="{
-                  background: isDark ? '#060400' : '#ffffff'
+                  background: isDark ? '#060400' : '#ffffff',
                 }"
               >
                 <div class="free-courses_item_container">
@@ -377,7 +396,7 @@
                         [ngClass]="{
                           'read_more-text': true,
                           'read_more-text-dark': isDark,
-                          'read_more-text-light': !isDark
+                          'read_more-text-light': !isDark,
                         }"
                         [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
                       >
@@ -405,10 +424,10 @@
                 [ngClass]="{
                   'artickle-block_item': true,
                   'shadow-box-dark': isDark,
-                  'shadow-box-light': !isDark
+                  'shadow-box-light': !isDark,
                 }"
                 [ngStyle]="{
-                  background: isDark ? '#060400' : '#ffffff'
+                  background: isDark ? '#060400' : '#ffffff',
                 }"
               >
                 <div class="free-courses_item_container">
@@ -451,7 +470,7 @@
                         [ngClass]="{
                           'read_more-text': true,
                           'read_more-text-dark': isDark,
-                          'read_more-text-light': !isDark
+                          'read_more-text-light': !isDark,
                         }"
                         [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
                       >
@@ -483,7 +502,7 @@
       [ngStyle]="{
         background: isDark
           ? 'url(/assets/redesignArapovTrade/img/author-page_main-block_bg.png)  no-repeat center'
-          : 'url(/assets/redesignArapovTrade/img/author-page_main-block_bg-light.png) no-repeat center'
+          : 'url(/assets/redesignArapovTrade/img/author-page_main-block_bg-light.png) no-repeat center',
       }"
     ></div>
     <div
@@ -491,7 +510,7 @@
       [ngStyle]="{
         background: isDark
           ? 'url(/assets/redesignArapovTrade/img/author-page_main-block_bg-image.png) no-repeat'
-          : 'url(/assets/redesignArapovTrade/img/author-page_main-block_bg-image-light.png) no-repeat'
+          : 'url(/assets/redesignArapovTrade/img/author-page_main-block_bg-image-light.png) no-repeat',
       }"
     ></div>
   </div>
@@ -508,7 +527,7 @@
                 [ngStyle]="{
                   background: isDark
                     ? 'url(assets/redesignArapovTrade/img/logo-new.png) no-repeat center'
-                    : 'url(assets/redesignArapovTrade/img/logo-new-light.png) no-repeat center'
+                    : 'url(assets/redesignArapovTrade/img/logo-new-light.png) no-repeat center',
                 }"
               ></div>
               <span class="loog-text hg">Arapov.Trade</span>
@@ -618,7 +637,7 @@
             class="fb"
             [ngClass]="{
               'links-dark': isDark,
-              'links-light': !isDark
+              'links-light': !isDark,
             }"
           >
             <a href="https://www.facebook.com/igor.arapov.75">
@@ -641,7 +660,7 @@
             class="fb"
             [ngClass]="{
               'links-dark': isDark,
-              'links-light': !isDark
+              'links-light': !isDark,
             }"
           >
             <a
@@ -666,7 +685,7 @@
             class="fb"
             [ngClass]="{
               'links-dark': isDark,
-              'links-light': !isDark
+              'links-light': !isDark,
             }"
           >
             <a href="https://ru.tradingview.com/u/Igor_Arapov/">
@@ -690,7 +709,7 @@
             class="fb"
             [ngClass]="{
               'links-dark-special': isDark,
-              'links-light-special': !isDark
+              'links-light-special': !isDark,
             }"
           >
             <a href="https://www.youtube.com/@ArapovTrade">
@@ -719,7 +738,7 @@
             [ngClass]="{
               'links-dark-special': isDark,
 
-              'links-light-special': !isDark
+              'links-light-special': !isDark,
             }"
           >
             <a href="https://telegram.me/+380506308200">
@@ -746,7 +765,7 @@
             class="fb"
             [ngClass]="{
               'links-dark': isDark,
-              'links-light': !isDark
+              'links-light': !isDark,
             }"
           >
             <a href="https://www.instagram.com/arapovtrade/">
@@ -771,7 +790,7 @@
       [ngClass]="{
         'bg-shapes-footer': true,
         'bg-shapes-footer-dark': isDark,
-        'bg-shapes-footer-light': !isDark
+        'bg-shapes-footer-light': !isDark,
       }"
     ></div>
   </div>

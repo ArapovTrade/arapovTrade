@@ -14,13 +14,12 @@ import { Subscription } from 'rxjs';
 declare var AOS: any;
 import { DOCUMENT } from '@angular/common';
 
-
 @Component({
   selector: 'app-osnovy-treydinga-tom-two-uk',
   templateUrl: './osnovy-treydinga-tom-two-uk.component.html',
-  styleUrl: './osnovy-treydinga-tom-two-uk.component.scss'
+  styleUrl: './osnovy-treydinga-tom-two-uk.component.scss',
 })
-export class OsnovyTreydingaTomTwoUkComponent 
+export class OsnovyTreydingaTomTwoUkComponent
   implements OnInit, AfterViewInit, OnDestroy
 {
   constructor(
@@ -29,7 +28,7 @@ export class OsnovyTreydingaTomTwoUkComponent
     private router: Router,
     private cdr: ChangeDetectorRef,
     @Inject(DOCUMENT) private document: Document,
-    private themeService: ThemeservService
+    private themeService: ThemeservService,
   ) {}
 
   ngAfterViewInit() {
@@ -52,7 +51,7 @@ export class OsnovyTreydingaTomTwoUkComponent
     this.removeExistingWebPageSchema();
 
     this.titleService.setTitle(
-      'Основи трейдингу. Практика — Безкоштовна книга Ігоря Арапова | 979-8-90243-732-1'
+      'Основи трейдингу. Практика — Безкоштовна книга Ігоря Арапова | 979-8-90243-732-1',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
@@ -67,7 +66,6 @@ export class OsnovyTreydingaTomTwoUkComponent
         'книга трейдинг, навчання трейдингу, форекс для початківців, технічний аналіз, об`ємний аналіз, Ігор Арапов, Smart Money',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-06-07' });
     this.meta.updateTag({
       property: 'og:image',
       content: 'https://arapov.trade/assets/img/photo_mainpage.jpg',
@@ -138,7 +136,7 @@ export class OsnovyTreydingaTomTwoUkComponent
 
   private removeExistingWebPageSchema(): void {
     const scripts = this.document.querySelectorAll(
-      'script[type="application/ld+json"]'
+      'script[type="application/ld+json"]',
     );
 
     scripts.forEach((script) => {
@@ -164,11 +162,14 @@ export class OsnovyTreydingaTomTwoUkComponent
 
   private addWebSiteSchema() {
     const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]')
+      this.document.querySelectorAll('script[type="application/ld+json"]'),
     ).some((script) => {
       try {
         const json = JSON.parse(script.textContent || '{}');
-        return json['@type'] === 'Book' && json['name'] === 'Основи трейдингу. Практика';
+        return (
+          json['@type'] === 'Book' &&
+          json['name'] === 'Основи трейдингу. Практика'
+        );
       } catch {
         return false;
       }
@@ -207,8 +208,8 @@ export class OsnovyTreydingaTomTwoUkComponent
         name: 'Russian',
         alternateName: 'ru',
       },
-      datePublished: '2025-12-18',
-      dateCreated: '2025-12-18',
+      datePublished: '2025-12-18T00:00:00Z',
+      dateModified: '2025-12-19T00:00:00Z',
       copyrightYear: 2025,
       copyrightHolder: {
         '@type': 'Person',
@@ -283,6 +284,27 @@ export class OsnovyTreydingaTomTwoUkComponent
         isbn: '979-8-90243-732-1',
         bookFormat: 'https://schema.org/EBook',
         inLanguage: 'ru',
+
+        url: 'http://www.irbis-nbuv.gov.ua/cgi-bin/irbis64r_81/cgiirbis_64.exe?Z21ID=&I21DBN=VFEIR&P21DBN=VFEIR&S21STN=1&S21REF=10&S21FMT=fullw&C21COM=S&S21CNR=20&S21P01=3&S21P02=0&S21P03=A=&S21COLORTERMS=0&S21STR=Арапов%2C%20Ігор',
+
+        provider: {
+          '@type': 'Library',
+          name: 'Національна бібліотека України імені В. І. Вернадського',
+          url: 'https://nbuv.gov.ua',
+          telephone: '+380 44 525 81 04',
+          priceRange: 'Безкоштовно',
+          image:
+            'https://upload.wikimedia.org/wikipedia/commons/6/69/Библиотека_им._Вернадского.JPG',
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: 'Голосіївський проспект, 3',
+            addressLocality: 'Київ',
+            postalCode: '03039',
+            addressCountry: 'UA',
+          },
+        },
+        sameAs: ['https://www.wikidata.org/wiki/Q138152545'],
+
         potentialAction: {
           '@type': 'ReadAction',
           target: {
@@ -329,7 +351,7 @@ export class OsnovyTreydingaTomTwoUkComponent
 
   private addPersoneSchema() {
     const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]')
+      this.document.querySelectorAll('script[type="application/ld+json"]'),
     ).some((script) => {
       try {
         const json = JSON.parse(script.textContent || '{}');
@@ -409,11 +431,15 @@ export class OsnovyTreydingaTomTwoUkComponent
   }
   private addWebPageSchema() {
     const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]')
+      this.document.querySelectorAll('script[type="application/ld+json"]'),
     ).some((script) => {
       try {
         const json = JSON.parse(script.textContent || '{}');
-        return json['@type'] === 'WebPage' && json['name'] === 'Основи трейдингу. Практика — Безкоштовна книга Ігоря Арапова';
+        return (
+          json['@type'] === 'WebPage' &&
+          json['name'] ===
+            'Основи трейдингу. Практика — Безкоштовна книга Ігоря Арапова'
+        );
       } catch {
         return false;
       }
@@ -431,8 +457,7 @@ export class OsnovyTreydingaTomTwoUkComponent
       '@id': 'https://arapov.trade/uk/books/osnovy-treydinga-tom-two',
       url: 'https://arapov.trade/uk/books/osnovy-treydinga-tom-two',
       name: 'Основи трейдингу. Практика — Безкоштовна книга Ігоря Арапова',
-      description:
-        'Скачати безкоштовно книгу з трейдингу. 979-8-90243-732-1',
+      description: 'Скачати безкоштовно книгу з трейдингу. 979-8-90243-732-1',
       inLanguage: 'uk',
       isPartOf: {
         '@type': 'WebSite',
@@ -448,8 +473,8 @@ export class OsnovyTreydingaTomTwoUkComponent
         '@type': 'Person',
         '@id': 'https://arapov.trade/uk#author',
       },
-      datePublished: '2025-12-18',
-      dateModified: '2025-12-18',
+      datePublished: '2025-12-18T00:00:00Z',
+      dateModified: '2025-12-19T00:00:00Z',
       mainEntity: {
         '@type': 'Book',
         '@id': 'https://arapov.trade/uk/books/osnovy-treydinga-tom-two#book',
@@ -490,11 +515,15 @@ export class OsnovyTreydingaTomTwoUkComponent
 
   private addFAQPageSchema() {
     const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]')
+      this.document.querySelectorAll('script[type="application/ld+json"]'),
     ).some((script) => {
       try {
         const json = JSON.parse(script.textContent || '{}');
-        return json['@type'] === 'FAQPage' && json['name'] === "Питання та відповіді щодо книги 'Основи трейдингу. Практика'";
+        return (
+          json['@type'] === 'FAQPage' &&
+          json['name'] ===
+            "Питання та відповіді щодо книги 'Основи трейдингу. Практика'"
+        );
       } catch {
         return false;
       }
@@ -556,6 +585,4 @@ export class OsnovyTreydingaTomTwoUkComponent
 
     this.document.head.appendChild(script);
   }
-  
 }
-

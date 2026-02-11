@@ -66,7 +66,6 @@ export class PsychologiyaTreydingaUkComponent
         'книга трейдинг, навчання трейдингу, форекс для початківців, технічний аналіз, об`ємний аналіз, Ігор Арапов, Smart Money',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-06-07' });
     this.meta.updateTag({
       property: 'og:image',
       content: 'https://arapov.trade/assets/img/photo_mainpage.jpg',
@@ -208,8 +207,9 @@ export class PsychologiyaTreydingaUkComponent
         name: 'Ukrainian',
         alternateName: 'uk',
       },
-      datePublished: '2025-12-18',
-      dateCreated: '2025-12-18',
+      datePublished: '2025-12-18T00:00:00Z',
+      dateModified: '2025-12-19T00:00:00Z',
+
       copyrightYear: 2025,
       copyrightHolder: {
         '@type': 'Person',
@@ -293,7 +293,7 @@ export class PsychologiyaTreydingaUkComponent
           telephone: '+380 44 525 81 04',
           priceRange: 'Безкоштовно',
           image:
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Vernadsky_National_Library_of_Ukraine.jpg/1280px-Vernadsky_National_Library_of_Ukraine.jpg',
+            'https://upload.wikimedia.org/wikipedia/commons/6/69/Библиотека_им._Вернадского.JPG',
           address: {
             '@type': 'PostalAddress',
             streetAddress: 'Голосіївський проспект, 3',
@@ -472,8 +472,8 @@ export class PsychologiyaTreydingaUkComponent
         '@type': 'Person',
         '@id': 'https://arapov.trade/uk#author',
       },
-      datePublished: '2025-12-18',
-      dateModified: '2025-12-18',
+      datePublished: '2025-12-18T00:00:00Z',
+      dateModified: '2025-12-19T00:00:00Z',
       mainEntity: {
         '@type': 'Book',
         '@id': 'https://arapov.trade/uk/books/psihologiya-treydinga#book',
