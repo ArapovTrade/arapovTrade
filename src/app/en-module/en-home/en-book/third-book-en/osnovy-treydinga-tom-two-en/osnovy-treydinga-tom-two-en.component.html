@@ -6,9 +6,8 @@
     <div
       class="menu-dropdown"
       [ngStyle]="{
-            background: isDark ? 'rgba(1, 1, 1, 1)' : 'rgba(255, 255, 255, 1)',
-             
-          }"
+        background: isDark ? 'rgba(1, 1, 1, 1)' : 'rgba(255, 255, 255, 1)',
+      }"
     >
       <ul>
         <li
@@ -51,7 +50,7 @@
           [ngStyle]="{
             background: isDark
               ? 'url(assets/redesignArapovTrade/img/logo-new.png) no-repeat center'
-              : 'url(assets/redesignArapovTrade/img/logo-new-light.png) no-repeat center'
+              : 'url(assets/redesignArapovTrade/img/logo-new-light.png) no-repeat center',
           }"
         ></div>
         <span
@@ -241,14 +240,14 @@
           [ngClass]="{
             'isbn-block': true,
             'gradient-block-orange': isDark,
-            'podrobnee-light': !isDark
+            'podrobnee-light': !isDark,
           }"
         >
           <p
             [ngStyle]="{ color: !isDark ? '#0C263A' : '#03314b' }"
             class="isbt-text"
           >
-            ISBN:  979-8-90243-755-0
+            ISBN: 979-8-90243-755-0
           </p>
         </div>
       </div>
@@ -263,7 +262,7 @@
             class="author_descr_span"
             [ngClass]="{
               'gradient-orange': isDark,
-              'gradient-blue_author-page': !isDark
+              'gradient-blue_author-page': !isDark,
             }"
           >
             A methodological guide for beginning traders
@@ -334,7 +333,19 @@
             volume analysis using the Wyckoff method, market entry points, risk
             management, and the mathematical model of a profitable trading
             system. Contains real examples on charts. For those who have
-            mastered the basics and are ready for practice.
+            mastered the basics and are ready for practice. <br />
+            This
+            <a
+              class="linkrefinto"
+              target="_blank"
+              href="http://www.irbis-nbuv.gov.ua/cgi-bin/irbis64r_81/cgiirbis_64.exe?Z21ID=&I21DBN=VFEIR&P21DBN=VFEIR&S21STN=1&S21REF=10&S21FMT=fullw&C21COM=S&S21CNR=20&S21P01=3&S21P02=0&S21P03=A=&S21COLORTERMS=0&S21STR=Arapov%2C%20Igor"
+              >book</a
+            >
+            is officially included in the collection of the V. I. Vernadsky
+            National Library of Ukraine — the largest library in the country
+            with a collection of over 15 million items. The library is Ukraine's
+            main scientific and information center under the National Academy of
+            Sciences.
           </span>
         </div>
         <div class="authot_button_block">
@@ -343,7 +354,7 @@
             [ngClass]="{
               'btn-section-one': true,
               'gradient-block-orange': isDark,
-              'gradient-block-blue': !isDark
+              'gradient-block-blue': !isDark,
             }"
           >
             <span
@@ -361,7 +372,7 @@
       [ngStyle]="{
         background: isDark
           ? 'url(/assets/redesignArapovTrade/img/author-page_main-block_bg.png)  no-repeat center'
-          : 'url(/assets/redesignArapovTrade/img/author-page_main-block_bg-light.png) no-repeat center'
+          : 'url(/assets/redesignArapovTrade/img/author-page_main-block_bg-light.png) no-repeat center',
       }"
     ></div>
     <div
@@ -369,7 +380,7 @@
       [ngStyle]="{
         background: isDark
           ? 'url(/assets/redesignArapovTrade/img/author-page_main-block_bg-image.png) no-repeat'
-          : 'url(/assets/redesignArapovTrade/img/author-page_main-block_bg-image-light.png) no-repeat'
+          : 'url(/assets/redesignArapovTrade/img/author-page_main-block_bg-image-light.png) no-repeat',
       }"
     ></div>
   </div>
@@ -556,7 +567,7 @@
         background: isDark
           ? 'rgba(255, 255, 255, 0.08)'
           : 'rgba(0, 131, 205, 0.08)',
-        border: isDark ? ' 1px solid #46483A' : '1px solid #C5E2F2'
+        border: isDark ? ' 1px solid #46483A' : '1px solid #C5E2F2',
       }"
     >
       <div class="author-page_main-block_title-block three-block">
@@ -564,7 +575,7 @@
           class=" "
           [ngClass]="{
             'gradient-orange': isDark,
-            'gradient-blue_author-page': !isDark
+            'gradient-blue_author-page': !isDark,
           }"
           >Do you want professional training?</span
         >
@@ -587,7 +598,7 @@
           class=" "
           [ngClass]="{
             'gradient-orange': isDark,
-            'gradient-blue_author-page': !isDark
+            'gradient-blue_author-page': !isDark,
           }"
           >Choose a convenient way to contact us</span
         >
@@ -602,7 +613,7 @@
             [ngClass]="{
               'three-block_social-links_item': true,
               'three-block_social-links_item-dark': isDark,
-              'three-block_social-links_item-light': !isDark
+              'three-block_social-links_item-light': !isDark,
             }"
             [ngStyle]="{
               background: isDark
@@ -610,7 +621,7 @@
                 : 'rgba(0, 130, 204, 0.10)',
               border: isDark
                 ? '1px solid rgba(255, 205, 41, 0.30)'
-                : '1px solid rgba(0, 130, 204, 0.30)'
+                : '1px solid rgba(0, 130, 204, 0.30)',
             }"
           >
             <svg
@@ -623,7 +634,7 @@
               <path
                 [ngClass]="{
                   'svg-link-dark': isDark,
-                  'svg-link-light': !isDark
+                  'svg-link-light': !isDark,
                 }"
                 fill-rule="evenodd"
                 clip-rule="evenodd"
@@ -640,7 +651,7 @@
             [ngClass]="{
               'three-block_social-links_item': true,
               'three-block_social-links_item-dark': isDark,
-              'three-block_social-links_item-light': !isDark
+              'three-block_social-links_item-light': !isDark,
             }"
             [ngStyle]="{
               background: isDark
@@ -648,7 +659,7 @@
                 : 'rgba(0, 130, 204, 0.10)',
               border: isDark
                 ? '1px solid rgba(255, 205, 41, 0.30)'
-                : '1px solid rgba(0, 130, 204, 0.30)'
+                : '1px solid rgba(0, 130, 204, 0.30)',
             }"
           >
             <svg
@@ -661,7 +672,7 @@
               <path
                 [ngClass]="{
                   'svg-link-dark': isDark,
-                  'svg-link-light': !isDark
+                  'svg-link-light': !isDark,
                 }"
                 fill-rule="evenodd"
                 clip-rule="evenodd"
@@ -679,7 +690,7 @@
             [ngClass]="{
               'three-block_social-links_item': true,
               'three-block_social-links_item-dark': isDark,
-              'three-block_social-links_item-light': !isDark
+              'three-block_social-links_item-light': !isDark,
             }"
             [ngStyle]="{
               background: isDark
@@ -687,7 +698,7 @@
                 : 'rgba(0, 130, 204, 0.10)',
               border: isDark
                 ? '1px solid rgba(255, 205, 41, 0.30)'
-                : '1px solid rgba(0, 130, 204, 0.30)'
+                : '1px solid rgba(0, 130, 204, 0.30)',
             }"
           >
             <svg
@@ -700,7 +711,7 @@
               <path
                 [ngClass]="{
                   'svg-link-dark': isDark,
-                  'svg-link-light': !isDark
+                  'svg-link-light': !isDark,
                 }"
                 fill-rule="evenodd"
                 clip-rule="evenodd"
@@ -725,7 +736,7 @@
                 [ngStyle]="{
                   background: isDark
                     ? 'url(assets/redesignArapovTrade/img/logo-new.png) no-repeat center'
-                    : 'url(assets/redesignArapovTrade/img/logo-new-light.png) no-repeat center'
+                    : 'url(assets/redesignArapovTrade/img/logo-new-light.png) no-repeat center',
                 }"
               ></div>
               <span class="loog-text hg">Arapov.Trade</span>
@@ -839,7 +850,7 @@
             class="fb"
             [ngClass]="{
               'links-dark': isDark,
-              'links-light': !isDark
+              'links-light': !isDark,
             }"
           >
             <a href="https://www.facebook.com/igor.arapov.75">
@@ -862,7 +873,7 @@
             class="fb"
             [ngClass]="{
               'links-dark': isDark,
-              'links-light': !isDark
+              'links-light': !isDark,
             }"
           >
             <a
@@ -887,7 +898,7 @@
             class="fb"
             [ngClass]="{
               'links-dark': isDark,
-              'links-light': !isDark
+              'links-light': !isDark,
             }"
           >
             <a href="https://ru.tradingview.com/u/Igor_Arapov/">
@@ -911,7 +922,7 @@
             class="fb"
             [ngClass]="{
               'links-dark-special': isDark,
-              'links-light-special': !isDark
+              'links-light-special': !isDark,
             }"
           >
             <a href="https://www.youtube.com/@ArapovTrade">
@@ -940,7 +951,7 @@
             [ngClass]="{
               'links-dark-special': isDark,
 
-              'links-light-special': !isDark
+              'links-light-special': !isDark,
             }"
           >
             <a href="https://telegram.me/+380506308200">
@@ -967,7 +978,7 @@
             class="fb"
             [ngClass]="{
               'links-dark': isDark,
-              'links-light': !isDark
+              'links-light': !isDark,
             }"
           >
             <a href="https://www.instagram.com/arapovtrade/">
@@ -992,7 +1003,7 @@
       [ngClass]="{
         'bg-shapes-footer': true,
         'bg-shapes-footer-dark': isDark,
-        'bg-shapes-footer-light': !isDark
+        'bg-shapes-footer-light': !isDark,
       }"
     ></div>
   </div>

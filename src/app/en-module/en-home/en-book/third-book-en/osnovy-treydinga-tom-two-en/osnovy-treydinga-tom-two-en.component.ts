@@ -17,9 +17,9 @@ import { DOCUMENT } from '@angular/common';
 @Component({
   selector: 'app-osnovy-treydinga-tom-two-en',
   templateUrl: './osnovy-treydinga-tom-two-en.component.html',
-  styleUrl: './osnovy-treydinga-tom-two-en.component.scss'
+  styleUrl: './osnovy-treydinga-tom-two-en.component.scss',
 })
-export class OsnovyTreydingaTomTwoEnComponent  
+export class OsnovyTreydingaTomTwoEnComponent
   implements OnInit, AfterViewInit, OnDestroy
 {
   constructor(
@@ -28,7 +28,7 @@ export class OsnovyTreydingaTomTwoEnComponent
     private router: Router,
     private cdr: ChangeDetectorRef,
     @Inject(DOCUMENT) private document: Document,
-    private themeService: ThemeservService
+    private themeService: ThemeservService,
   ) {}
 
   ngAfterViewInit() {
@@ -51,7 +51,7 @@ export class OsnovyTreydingaTomTwoEnComponent
     this.removeExistingWebPageSchema();
 
     this.titleService.setTitle(
-      'Trading Basics. Practice – Free Book by Igor Arapov | ISBN  979-8-90243-755-0'
+      'Trading Basics. Practice – Free Book by Igor Arapov | ISBN  979-8-90243-755-0',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
@@ -66,7 +66,7 @@ export class OsnovyTreydingaTomTwoEnComponent
         'Trading book, trading training, Forex for beginners, technical analysis, volume analysis, Igor Arapov, Smart Money',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-06-07' });
+     
     this.meta.updateTag({
       property: 'og:image',
       content: 'https://arapov.trade/assets/img/photo_mainpage.jpg',
@@ -137,7 +137,7 @@ export class OsnovyTreydingaTomTwoEnComponent
 
   private removeExistingWebPageSchema(): void {
     const scripts = this.document.querySelectorAll(
-      'script[type="application/ld+json"]'
+      'script[type="application/ld+json"]',
     );
 
     scripts.forEach((script) => {
@@ -163,11 +163,14 @@ export class OsnovyTreydingaTomTwoEnComponent
 
   private addWebSiteSchema() {
     const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]')
+      this.document.querySelectorAll('script[type="application/ld+json"]'),
     ).some((script) => {
       try {
         const json = JSON.parse(script.textContent || '{}');
-        return json['@type'] === 'Book' && json['name'] === 'Trading Basics. Practice';
+        return (
+          json['@type'] === 'Book' &&
+          json['name'] === 'Trading Basics. Practice'
+        );
       } catch {
         return false;
       }
@@ -203,11 +206,11 @@ export class OsnovyTreydingaTomTwoEnComponent
       bookEdition: '1st edition',
       inLanguage: {
         '@type': 'Language',
-        name: 'Russian',
-        alternateName: 'ru',
+        name: 'English',
+        alternateName: 'en',
       },
-      datePublished: '2025-12-18',
-      dateCreated: '2025-12-18',
+      datePublished: '2025-12-29T00:00:00Z',
+      dateModified: '2025-12-29T00:00:00Z',
       copyrightYear: 2025,
       copyrightHolder: {
         '@type': 'Person',
@@ -281,7 +284,27 @@ export class OsnovyTreydingaTomTwoEnComponent
         '@type': 'Book',
         isbn: ' 979-8-90243-755-0',
         bookFormat: 'https://schema.org/EBook',
-        inLanguage: 'ru',
+        inLanguage: 'en',
+
+        url: 'http://www.irbis-nbuv.gov.ua/cgi-bin/irbis64r_81/cgiirbis_64.exe?Z21ID=&I21DBN=VFEIR&P21DBN=VFEIR&S21STN=1&S21REF=10&S21FMT=fullw&C21COM=S&S21CNR=20&S21P01=3&S21P02=0&S21P03=A=&S21COLORTERMS=0&S21STR=Arapov%2C%20Igor',
+
+       provider: {
+          '@type': 'Library',
+          name: 'V. I. Vernadsky National Library of Ukraine',
+          url: 'https://nbuv.gov.ua',
+          telephone: '+380 44 525 81 04',
+          priceRange: 'Free',
+          image:
+            'https://upload.wikimedia.org/wikipedia/commons/6/69/Библиотека_им._Вернадского.JPG',
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: 'Holosiivskyi Avenue, 3',
+            addressLocality: 'Kyiv',
+            postalCode: '03039',
+            addressCountry: 'UA',
+          },
+        },
+        sameAs: ['https://www.wikidata.org/wiki/Q138215890'],
         potentialAction: {
           '@type': 'ReadAction',
           target: {
@@ -328,7 +351,7 @@ export class OsnovyTreydingaTomTwoEnComponent
 
   private addPersoneSchema() {
     const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]')
+      this.document.querySelectorAll('script[type="application/ld+json"]'),
     ).some((script) => {
       try {
         const json = JSON.parse(script.textContent || '{}');
@@ -408,11 +431,14 @@ export class OsnovyTreydingaTomTwoEnComponent
   }
   private addWebPageSchema() {
     const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]')
+      this.document.querySelectorAll('script[type="application/ld+json"]'),
     ).some((script) => {
       try {
         const json = JSON.parse(script.textContent || '{}');
-        return json['@type'] === 'WebPage' && json['name'] === 'Trading Basics. Practice – Free Book by Igor Arapov';
+        return (
+          json['@type'] === 'WebPage' &&
+          json['name'] === 'Trading Basics. Practice – Free Book by Igor Arapov'
+        );
       } catch {
         return false;
       }
@@ -430,8 +456,7 @@ export class OsnovyTreydingaTomTwoEnComponent
       '@id': 'https://arapov.trade/en/books/osnovy-treydinga-tom-two',
       url: 'https://arapov.trade/en/books/osnovy-treydinga-tom-two',
       name: 'Trading Basics. Practice – Free Book by Igor Arapov',
-      description:
-        'Download the free book on trading. ISBN  979-8-90243-755-0',
+      description: 'Download the free book on trading. ISBN  979-8-90243-755-0',
       inLanguage: 'en',
       isPartOf: {
         '@type': 'WebSite',
@@ -447,8 +472,8 @@ export class OsnovyTreydingaTomTwoEnComponent
         '@type': 'Person',
         '@id': 'https://arapov.trade/en#author',
       },
-      datePublished: '2025-12-18',
-      dateModified: '2025-12-18',
+      datePublished: '2025-12-29T00:00:00Z',
+      dateModified: '2025-12-29T00:00:00Z',
       mainEntity: {
         '@type': 'Book',
         '@id': 'https://arapov.trade/en/books/osnovy-treydinga-tom-two#book',
@@ -489,11 +514,15 @@ export class OsnovyTreydingaTomTwoEnComponent
 
   private addFAQPageSchema() {
     const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]')
+      this.document.querySelectorAll('script[type="application/ld+json"]'),
     ).some((script) => {
       try {
         const json = JSON.parse(script.textContent || '{}');
-        return json['@type'] === 'FAQPage' && json['name'] === 'Trading Basics. Practice – Free Book by Igor Arapov - FAQ';
+        return (
+          json['@type'] === 'FAQPage' &&
+          json['name'] ===
+            'Trading Basics. Practice – Free Book by Igor Arapov - FAQ'
+        );
       } catch {
         return false;
       }
@@ -547,7 +576,7 @@ export class OsnovyTreydingaTomTwoEnComponent
           name: 'What is the ISBN of the book?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'The book\'s ISBN is  979-8-90243-755-0. This is an International Standard Book Number registered with Bowker Books in Print.',
+            text: "The book's ISBN is  979-8-90243-755-0. This is an International Standard Book Number registered with Bowker Books in Print.",
           },
         },
       ],
@@ -555,6 +584,4 @@ export class OsnovyTreydingaTomTwoEnComponent
 
     this.document.head.appendChild(script);
   }
-  
 }
-

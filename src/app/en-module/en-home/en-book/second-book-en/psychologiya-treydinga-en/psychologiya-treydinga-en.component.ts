@@ -28,7 +28,7 @@ export class PsychologiyaTreydingaEnComponent
     private router: Router,
     private cdr: ChangeDetectorRef,
     @Inject(DOCUMENT) private document: Document,
-    private themeService: ThemeservService
+    private themeService: ThemeservService,
   ) {}
 
   ngAfterViewInit() {
@@ -51,7 +51,7 @@ export class PsychologiyaTreydingaEnComponent
     this.removeExistingWebPageSchema();
 
     this.titleService.setTitle(
-      'Trading Psychology – Free Book by Igor Arapov | ISBN 979-8-90243-138-1'
+      'Trading Psychology – Free Book by Igor Arapov | ISBN 979-8-90243-138-1',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
@@ -66,7 +66,6 @@ export class PsychologiyaTreydingaEnComponent
         'Trading book, trading training, Forex for beginners, technical analysis, volume analysis, Igor Arapov, Smart Money',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-06-07' });
     this.meta.updateTag({
       property: 'og:image',
       content: 'https://arapov.trade/assets/img/photo_mainpage.jpg',
@@ -137,7 +136,7 @@ export class PsychologiyaTreydingaEnComponent
 
   private removeExistingWebPageSchema(): void {
     const scripts = this.document.querySelectorAll(
-      'script[type="application/ld+json"]'
+      'script[type="application/ld+json"]',
     );
 
     scripts.forEach((script) => {
@@ -163,7 +162,7 @@ export class PsychologiyaTreydingaEnComponent
 
   private addWebSiteSchema() {
     const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]')
+      this.document.querySelectorAll('script[type="application/ld+json"]'),
     ).some((script) => {
       try {
         const json = JSON.parse(script.textContent || '{}');
@@ -193,7 +192,6 @@ export class PsychologiyaTreydingaEnComponent
       alternateName: [
         'Trading Psychology',
         'Methodological manual on Financial Trading',
-         
       ],
       headline: 'Trading Psychology — Methodological manual for beginners',
       description:
@@ -207,8 +205,8 @@ export class PsychologiyaTreydingaEnComponent
         name: 'English',
         alternateName: 'en',
       },
-      datePublished: '2025-12-18',
-      dateCreated: '2025-12-18',
+      datePublished: '2025-12-29T00:00:00Z',
+      dateModified: '2025-12-29T00:00:00Z',
       copyrightYear: 2025,
       copyrightHolder: {
         '@type': 'Person',
@@ -283,6 +281,26 @@ export class PsychologiyaTreydingaEnComponent
         isbn: '979-8-90243-138-1',
         bookFormat: 'https://schema.org/EBook',
         inLanguage: 'en',
+        url: 'http://www.irbis-nbuv.gov.ua/cgi-bin/irbis64r_81/cgiirbis_64.exe?Z21ID=&I21DBN=VFEIR&P21DBN=VFEIR&S21STN=1&S21REF=10&S21FMT=fullw&C21COM=S&S21CNR=20&S21P01=3&S21P02=0&S21P03=A=&S21COLORTERMS=0&S21STR=Arapov%2C%20Igor',
+
+        provider: {
+          '@type': 'Library',
+          name: 'V. I. Vernadsky National Library of Ukraine',
+          url: 'https://nbuv.gov.ua',
+          telephone: '+380 44 525 81 04',
+          priceRange: 'Free',
+          image:
+            'https://upload.wikimedia.org/wikipedia/commons/6/69/Библиотека_им._Вернадского.JPG',
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: 'Holosiivskyi Avenue, 3',
+            addressLocality: 'Kyiv',
+            postalCode: '03039',
+            addressCountry: 'UA',
+          },
+        },
+        sameAs: ['https://www.wikidata.org/wiki/Q138216316'],
+
         potentialAction: {
           '@type': 'ReadAction',
           target: {
@@ -329,7 +347,7 @@ export class PsychologiyaTreydingaEnComponent
 
   private addPersoneSchema() {
     const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]')
+      this.document.querySelectorAll('script[type="application/ld+json"]'),
     ).some((script) => {
       try {
         const json = JSON.parse(script.textContent || '{}');
@@ -409,7 +427,7 @@ export class PsychologiyaTreydingaEnComponent
   }
   private addWebPageSchema() {
     const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]')
+      this.document.querySelectorAll('script[type="application/ld+json"]'),
     ).some((script) => {
       try {
         const json = JSON.parse(script.textContent || '{}');
@@ -450,8 +468,8 @@ export class PsychologiyaTreydingaEnComponent
         '@type': 'Person',
         '@id': 'https://arapov.trade/en#author',
       },
-      datePublished: '2025-12-18',
-      dateModified: '2025-12-18',
+      datePublished: '2025-12-29T00:00:00Z',
+      dateModified: '2025-12-29T00:00:00Z',
       mainEntity: {
         '@type': 'Book',
         '@id': 'https://arapov.trade/en/books/psihologiya-treydinga#book',
@@ -492,7 +510,7 @@ export class PsychologiyaTreydingaEnComponent
 
   private addFAQPageSchema() {
     const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]')
+      this.document.querySelectorAll('script[type="application/ld+json"]'),
     ).some((script) => {
       try {
         const json = JSON.parse(script.textContent || '{}');

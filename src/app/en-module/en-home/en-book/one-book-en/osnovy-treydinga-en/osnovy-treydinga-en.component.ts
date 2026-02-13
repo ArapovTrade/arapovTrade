@@ -17,9 +17,9 @@ import { DOCUMENT } from '@angular/common';
 @Component({
   selector: 'app-osnovy-treydinga-en',
   templateUrl: './osnovy-treydinga-en.component.html',
-  styleUrl: './osnovy-treydinga-en.component.scss'
+  styleUrl: './osnovy-treydinga-en.component.scss',
 })
-export class OsnovyTreydingaEnComponent 
+export class OsnovyTreydingaEnComponent
   implements OnInit, AfterViewInit, OnDestroy
 {
   constructor(
@@ -28,7 +28,7 @@ export class OsnovyTreydingaEnComponent
     private router: Router,
     private cdr: ChangeDetectorRef,
     @Inject(DOCUMENT) private document: Document,
-    private themeService: ThemeservService
+    private themeService: ThemeservService,
   ) {}
 
   ngAfterViewInit() {
@@ -51,7 +51,7 @@ export class OsnovyTreydingaEnComponent
     this.removeExistingWebPageSchema();
 
     this.titleService.setTitle(
-      'Trading Basics – Free Book by Igor Arapov | ISBN 979-8-90243-734-5'
+      'Trading Basics – Free Book by Igor Arapov | ISBN 979-8-90243-734-5',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
@@ -66,7 +66,7 @@ export class OsnovyTreydingaEnComponent
         'Trading book, trading training, Forex for beginners, technical analysis, volume analysis, Igor Arapov, Smart Money',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-06-07' });
+     
     this.meta.updateTag({
       property: 'og:image',
       content: 'https://arapov.trade/assets/img/photo_mainpage.jpg',
@@ -137,7 +137,7 @@ export class OsnovyTreydingaEnComponent
 
   private removeExistingWebPageSchema(): void {
     const scripts = this.document.querySelectorAll(
-      'script[type="application/ld+json"]'
+      'script[type="application/ld+json"]',
     );
 
     scripts.forEach((script) => {
@@ -163,7 +163,7 @@ export class OsnovyTreydingaEnComponent
 
   private addWebSiteSchema() {
     const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]')
+      this.document.querySelectorAll('script[type="application/ld+json"]'),
     ).some((script) => {
       try {
         const json = JSON.parse(script.textContent || '{}');
@@ -193,8 +193,7 @@ export class OsnovyTreydingaEnComponent
         'Methodological manual on Financial Trading',
         'Trading Basics',
       ],
-      headline:
-        'Trading Basics — Methodological manual for beginners',
+      headline: 'Trading Basics — Methodological manual for beginners',
       description:
         'Practical guide to financial trading for beginners. The book covers the basics of stock trading, the FOREX market, fundamental, technical and volume analysis, order types, capital management and typical trader mistakes. The author shares 12 years of experience trading on financial markets.',
       isbn: '979-8-90243-734-5',
@@ -203,11 +202,11 @@ export class OsnovyTreydingaEnComponent
       bookEdition: '1st edition',
       inLanguage: {
         '@type': 'Language',
-        name: 'Russian',
-        alternateName: 'ru',
+        name: 'English',
+        alternateName: 'en',
       },
-      datePublished: '2025-12-18',
-      dateCreated: '2025-12-18',
+      datePublished: '2025-12-29T00:00:00Z',
+      dateModified: '2025-12-29T00:00:00Z',
       copyrightYear: 2025,
       copyrightHolder: {
         '@type': 'Person',
@@ -271,7 +270,7 @@ export class OsnovyTreydingaEnComponent
         priceCurrency: 'USD',
         availability: 'https://schema.org/InStock',
         url: 'https://arapov.trade/en/books/osnovy-treydinga',
-        priceValidUntil: '2026-12-31',
+        priceValidUntil: '2026-12-31T00:00:00Z',
         seller: {
           '@type': 'Organization',
           '@id': 'https://arapov.trade/#organization',
@@ -281,7 +280,28 @@ export class OsnovyTreydingaEnComponent
         '@type': 'Book',
         isbn: '979-8-90243-734-5',
         bookFormat: 'https://schema.org/EBook',
-        inLanguage: 'ru',
+        inLanguage: 'en',
+
+         url: 'http://www.irbis-nbuv.gov.ua/cgi-bin/irbis64r_81/cgiirbis_64.exe?Z21ID=&I21DBN=VFEIR&P21DBN=VFEIR&S21STN=1&S21REF=10&S21FMT=fullw&C21COM=S&S21CNR=20&S21P01=3&S21P02=0&S21P03=A=&S21COLORTERMS=0&S21STR=Arapov%2C%20Igor',
+
+       provider: {
+          '@type': 'Library',
+          name: 'V. I. Vernadsky National Library of Ukraine',
+          url: 'https://nbuv.gov.ua',
+          telephone: '+380 44 525 81 04',
+          priceRange: 'Free',
+          image:
+            'https://upload.wikimedia.org/wikipedia/commons/6/69/Библиотека_им._Вернадского.JPG',
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: 'Holosiivskyi Avenue, 3',
+            addressLocality: 'Kyiv',
+            postalCode: '03039',
+            addressCountry: 'UA',
+          },
+        },
+        sameAs: ['https://www.wikidata.org/wiki/Q138214986'],
+
         potentialAction: {
           '@type': 'ReadAction',
           target: {
@@ -328,7 +348,7 @@ export class OsnovyTreydingaEnComponent
 
   private addPersoneSchema() {
     const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]')
+      this.document.querySelectorAll('script[type="application/ld+json"]'),
     ).some((script) => {
       try {
         const json = JSON.parse(script.textContent || '{}');
@@ -408,11 +428,14 @@ export class OsnovyTreydingaEnComponent
   }
   private addWebPageSchema() {
     const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]')
+      this.document.querySelectorAll('script[type="application/ld+json"]'),
     ).some((script) => {
       try {
         const json = JSON.parse(script.textContent || '{}');
-        return json['@type'] === 'WebPage' && json['name'] === 'Trading Basics – Free Book by Igor Arapov';
+        return (
+          json['@type'] === 'WebPage' &&
+          json['name'] === 'Trading Basics – Free Book by Igor Arapov'
+        );
       } catch {
         return false;
       }
@@ -430,8 +453,7 @@ export class OsnovyTreydingaEnComponent
       '@id': 'https://arapov.trade/en/books/osnovy-treydinga',
       url: 'https://arapov.trade/en/books/osnovy-treydinga',
       name: 'Trading Basics – Free Book by Igor Arapov',
-      description:
-        'Download the free book on trading. ISBN 979-8-90243-734-5',
+      description: 'Download the free book on trading. ISBN 979-8-90243-734-5',
       inLanguage: 'en',
       isPartOf: {
         '@type': 'WebSite',
@@ -447,8 +469,8 @@ export class OsnovyTreydingaEnComponent
         '@type': 'Person',
         '@id': 'https://arapov.trade/en#author',
       },
-      datePublished: '2025-12-18',
-      dateModified: '2025-12-18',
+      datePublished: '2025-12-29T00:00:00Z',
+      dateModified: '2025-12-29T00:00:00Z',
       mainEntity: {
         '@type': 'Book',
         '@id': 'https://arapov.trade/en/books/osnovy-treydinga#book',
@@ -489,11 +511,14 @@ export class OsnovyTreydingaEnComponent
 
   private addFAQPageSchema() {
     const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]')
+      this.document.querySelectorAll('script[type="application/ld+json"]'),
     ).some((script) => {
       try {
         const json = JSON.parse(script.textContent || '{}');
-        return json['@type'] === 'FAQPage' && json['name'] === 'Trading Basics – Free Book by Igor Arapov - FAQ';
+        return (
+          json['@type'] === 'FAQPage' &&
+          json['name'] === 'Trading Basics – Free Book by Igor Arapov - FAQ'
+        );
       } catch {
         return false;
       }
@@ -547,7 +572,7 @@ export class OsnovyTreydingaEnComponent
           name: 'What is the ISBN of the book?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'The book\'s ISBN is 979-8-90243-734-5. This is an International Standard Book Number registered with Bowker Books in Print.',
+            text: "The book's ISBN is 979-8-90243-734-5. This is an International Standard Book Number registered with Bowker Books in Print.",
           },
         },
       ],
@@ -555,5 +580,4 @@ export class OsnovyTreydingaEnComponent
 
     this.document.head.appendChild(script);
   }
-  
 }
