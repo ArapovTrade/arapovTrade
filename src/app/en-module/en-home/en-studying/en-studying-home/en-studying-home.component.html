@@ -259,11 +259,14 @@
         <div class="author-page_main-block_title-block">
           <h1
             class="studying_h1"
-            [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+            [ngClass]="{
+              'gradient-orange': isDark,
+              'gradient-blue_author-page': !isDark,
+            }"
           >
-            Trading and investment education for smart investors:
+            Trading Education with Mentor Support
           </h1>
-          <h2
+          <!-- <h2
             class="studying_h2"
             [ngClass]="{
               'gradient-orange': isDark,
@@ -274,22 +277,22 @@
           </h2>
           <span [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }">
             for passive income
-          </span>
+          </span> -->
         </div>
         <div class="author-page_main-block_description">
           <span
             class="author-page_main-block_description-text"
             [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-            >Paid trading courses with a mentor are not a mandatory step, but a
-            conscious choice for those who want to learn trading faster, with
-            support and a clear structure. <br /><br />
-            All the necessary information for learning is indeed available in my
-            free course—you can study it independently and at your own pace, and
-            most importantly, for free. <br /><br />
-            But if speed, systematic approach, and feedback from an experienced
-            mentor are important to you, then personal coaching will help you
-            save time and avoid the typical mistakes made by most beginner
-            traders at the start of their journey.
+            >Personal trading education with a mentor is a conscious choice for
+            those who want to master trading faster, with guidance and a clear
+            structure. <br /><br />
+            All trading theory is available for free — you can study it
+            independently at your own pace. <br /><br />
+            But if you value a systematic approach, real trade analysis, and
+            direct feedback from a practicing mentor — personal training will
+            help you navigate this path much more effectively, save time, and
+            avoid the common mistakes most beginners make. Sessions are held
+            online via Zoom — individually or in a small group.
           </span>
         </div>
         <!-- (click)="navigateTo('uk/freestudying')" -->
@@ -807,10 +810,10 @@
           class="author-page_main-block_description-text"
           [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
         >
-          Training with me is not about instant wealth, but about building a
-          sustainable skill that brings stable income over the long run. You
-          will gain the knowledge, tools, and support to trade confidently in
-          the financial markets. <br />
+          My training is not about instant wealth — it's about building a
+          systematic approach to trading. You will gain the knowledge, tools,
+          and support to confidently navigate financial markets and make
+          well-informed trading decisions. <br />
           <br />
           It's never too late to start
           <a
@@ -827,14 +830,13 @@
             rel="nofollow"
             >learning trading</a
           >! Meet Azer — a 73-year-old student who proves that age is no barrier
-          to mastering trading. A PhD and physicist-biotechnologist, he shares
-          his journey from unprofitable indicator-based trading to successful
-          volume analysis. An inspiring story of how the right education can
-          change your results. <br />
+          to mastering trading. A PhD-holding physicist and biotechnologist, he
+          shares his experience of transitioning from losing indicator-based
+          trading to volume analysis. An inspiring story of how proper education
+          transforms one's approach to the market. <br />
           <br />
-          Want to learn more about how I can help you achieve your financial
-          goals? Leave a request, and I will personally tell you how to start
-          your path to successful trading!
+          Want to learn more? Submit a request, and I will personally tell you
+          about the training format and how it can be beneficial for you.
         </div>
         <div
           (click)="navigateToHomeWithId()"
@@ -869,7 +871,7 @@
     </div>
   </div>
 
-  <div class="fifth-img-section">
+  <!-- <div class="fifth-img-section">
     <div
       [ngClass]="{
         'second-section_programm-block-title': true,
@@ -1094,7 +1096,7 @@
           : 'url(/assets/redesignArapovTrade/img/shape-two-bg-light.png) no-repeat',
       }"
     ></div>
-  </div>
+  </div> -->
 
   <div class="seventh-block-section" data-aos="fade-up" data-aos-delay="300">
     <div
@@ -1121,20 +1123,18 @@
           class="author-page_main-block_description-text seventh-section-descr"
           [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
         >
-          The foundation of successful trading is always a trading system with a
-          positive mathematical expectation (or positive expectancy), and
-          nothing else. All profitable traders are united by the presence of
-          such systems. <br />
+          At the core of systematic trading lies a trading system with positive
+          mathematical expectancy. It is precisely this system that
+          distinguishes a prepared trader from a beginner trading at random.
           <br />
-          The profitability of traders differs depending on the capital
-          management formulas used. Since there are a large number of these
-          formulas, the distribution of profitability ranges from conservative
-          to high-risk approaches. <br />
           <br />
-          Experienced traders never inflate risks in trading. Instead, they
-          balance positive mathematical expectation with risk control in an
-          individual trade to achieve a positive result over a series of trades
-          (or in the long run).
+          Trading results depend on the chosen capital management formulas —
+          from conservative to more active approaches, each carrying its own
+          level of risk. <br />
+          <br />
+          Experienced traders never oversize their risks, but balance between
+          mathematical expectancy and risk control in every trade — this is what
+          ensures a stable approach over the long run.
         </div>
         <div
           (click)="navigateToHomeWithId()"
@@ -1189,8 +1189,7 @@
             </div>
           </div>
           <span class="footer-text"
-            >Free trading education and practical recommendations for beginners
-            and professionals on how not to lose your deposit.</span
+            >100% free trading theory and practical recommendations for beginners and experienced traders.</span
           >
         </div>
       </div>
@@ -1430,7 +1429,7 @@
         <div class="box-b">
           <span class="text-2d">Arapov.Trade</span>
           <div class="pic-14"></div>
-          <span class="text-2e">2025. All rights reserved.</span>
+          <span class="text-2e">2025-2026. All rights reserved.</span>
           <span class="text-2e"
             >Sole Proprietor Arapov I. V. TIN 3314507171</span
           >

@@ -6,9 +6,8 @@
     <div
       class="menu-dropdown"
       [ngStyle]="{
-            background: isDark ? 'rgba(1, 1, 1, 1)' : 'rgba(255, 255, 255, 1)',
-             
-          }"
+        background: isDark ? 'rgba(1, 1, 1, 1)' : 'rgba(255, 255, 255, 1)',
+      }"
     >
       <ul>
         <li
@@ -40,12 +39,12 @@
           ПРОФЕССИОНАЛЬНЫЕ КУРСЫ
         </li>
         <li
-              (click)="navigateTo('ru/books')"
-              [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-              [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-            >
-              МОИ КНИГИ
-            </li>
+          (click)="navigateTo('ru/books')"
+          [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+          [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
+        >
+          МОИ КНИГИ
+        </li>
       </ul>
     </div>
   </div>
@@ -58,7 +57,7 @@
           [ngStyle]="{
             background: isDark
               ? 'url(assets/redesignArapovTrade/img/logo-new.png) no-repeat center'
-              : 'url(assets/redesignArapovTrade/img/logo-new-light.png) no-repeat center'
+              : 'url(assets/redesignArapovTrade/img/logo-new-light.png) no-repeat center',
           }"
         ></div>
         <span
@@ -260,38 +259,40 @@
         <div class="author-page_main-block_title-block">
           <h1
             class="studying_h1"
-            [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-          >
-            Обучение трейдингу и инвестициям для разумных инвесторов:
-          </h1>
-          <h2
-            class="studying_h2"
             [ngClass]="{
               'gradient-orange': isDark,
-              'gradient-blue_author-page': !isDark
+              'gradient-blue_author-page': !isDark,
             }"
+          >
+            Обучение трейдингу с поддержкой наставника
+          </h1>
+          <!-- <h2
+            class="studying_h2"
+            [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+            
           >
             Профессиональная платформа с готовыми решениями
           </h2>
           <span [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }">
             для пассивного дохода
-          </span>
+          </span> -->
         </div>
         <div class="author-page_main-block_description">
           <span
             class="author-page_main-block_description-text"
             [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-            >Платные курсы по трейдингу с наставником — это не обязательный шаг,
-            а осознанный выбор для тех, кто хочет научиться трейдингу быстрее, с
-            поддержкой и чёткой структурой. <br /><br />
+            >Персональное обучение трейдингу с наставником — это осознанный
+            выбор для тех, кто хочет освоить трейдинг быстрее, с поддержкой и
+            чёткой структурой. <br /><br />
 
-            Вся необходимая информация для обучения действительно есть в моём
-            бесплатном курсе — вы можете изучать его самостоятельно и в удобном
-            для себя темпе, а главное — бесплатно. <br /><br />
-            Но если для вас важны скорость, системность и обратная связь от
-            опытного наставника, то персональное обучение поможет вам сэкономить
-            время и избежать типовых ошибок, которые допускает большинство
-            начинающих трейдеров в начале своего пути.
+            Вся теория трейдинга доступна бесплатно — вы можете изучать её
+            самостоятельно в удобном темпе. <br /><br />
+            Но если для вас важны системность, разборы реальных сделок и прямая
+            обратная связь от практикующего наставника — персональное обучение
+            поможет пройти этот путь значительно эффективнее, сэкономить время и
+            избежать типичных ошибок, которые допускает большинство начинающих.
+            Занятия проходят онлайн через Zoom — индивидуально или в небольшой
+            группе.
           </span>
         </div>
         <!-- (click)="navigateTo('uk/freestudying')" -->
@@ -300,7 +301,7 @@
           [ngClass]="{
             'author-page_main-block_btn': true,
             'gradient-block-orange': isDark,
-            'gradient-block-blue': !isDark
+            'gradient-block-blue': !isDark,
           }"
         >
           <span
@@ -318,7 +319,7 @@
       [ngStyle]="{
         background: isDark
           ? 'url(/assets/redesignArapovTrade/img/author-page_main-block_bg.png)  no-repeat center'
-          : 'url(/assets/redesignArapovTrade/img/author-page_main-block_bg-light.png) no-repeat center'
+          : 'url(/assets/redesignArapovTrade/img/author-page_main-block_bg-light.png) no-repeat center',
       }"
     ></div>
 
@@ -327,7 +328,7 @@
       [ngStyle]="{
         background: isDark
           ? 'url(/assets/redesignArapovTrade/img/author-page_main-block_bg-image.png) no-repeat'
-          : 'url(/assets/redesignArapovTrade/img/author-page_main-block_bg-image-light.png) no-repeat'
+          : 'url(/assets/redesignArapovTrade/img/author-page_main-block_bg-image-light.png) no-repeat',
       }"
     ></div>
   </div>
@@ -337,10 +338,9 @@
     data-aos="fade-up"
     data-aos-delay="300"
     [ngClass]="{
-          'second-section': true,
-          'second-pad': isDark,
-           
-        }"
+      'second-section': true,
+      'second-pad': isDark,
+    }"
   >
     <div class="second-section_programm-block">
       <h2
@@ -348,7 +348,7 @@
           'second-section_programm-block-title': true,
           'second-section_programm-block-title-small': true,
           'gradient-orange': isDark,
-          'gradient-blue_author-page': !isDark
+          'gradient-blue_author-page': !isDark,
         }"
       >
         Учебная программа
@@ -383,7 +383,7 @@
             [ngStyle]="{
               background: isDark
                 ? 'linear-gradient(90deg, rgba(56, 56, 32, 0.50) 0%, rgba(28, 29, 2, 0 ) 100%)'
-                : 'linear-gradient(90deg, rgba(0, 130, 204,  0.12) )'
+                : 'linear-gradient(90deg, rgba(0, 130, 204,  0.12) )',
             }"
           >
             <div class="tab-block_item-title">
@@ -392,7 +392,7 @@
                 [ngClass]="{
                   'second-section_programm-block-title': true,
                   'gradient-orange': isDark,
-                  'gradient-blue_author-page': !isDark
+                  'gradient-blue_author-page': !isDark,
                 }"
                 >Анализ рынка</span
               >
@@ -401,7 +401,7 @@
                 [ngClass]="{
                   'second-section_programm-block-title': true,
                   'gradient-orange': isDark,
-                  'gradient-blue_author-page': !isDark
+                  'gradient-blue_author-page': !isDark,
                 }"
                 >02</span
               >
@@ -423,7 +423,7 @@
             [ngStyle]="{
               background: isDark
                 ? 'linear-gradient(90deg, rgba(56, 56, 32, 0.50) 0%, rgba(28, 29, 2, 0 ) 100%)'
-                : 'linear-gradient(90deg, rgba(0, 130, 204,  0.12) )'
+                : 'linear-gradient(90deg, rgba(0, 130, 204,  0.12) )',
             }"
           >
             <div class="tab-block_item-title">
@@ -433,7 +433,7 @@
                   'second-section_programm-block-title': true,
                   'second-section_programm-block-title-text': true,
                   'gradient-orange': isDark,
-                  'gradient-blue_author-page': !isDark
+                  'gradient-blue_author-page': !isDark,
                 }"
                 >«Торговая система и психология рынка» (основана на методологии
                 Вайкоффа)</span
@@ -443,7 +443,7 @@
                 [ngClass]="{
                   'second-section_programm-block-title': true,
                   'gradient-orange': isDark,
-                  'gradient-blue_author-page': !isDark
+                  'gradient-blue_author-page': !isDark,
                 }"
                 >04</span
               >
@@ -470,7 +470,7 @@
             [ngStyle]="{
               background: isDark
                 ? 'linear-gradient(90deg, rgba(56, 56, 32, 0.50) 0%, rgba(28, 29, 2, 0 ) 100%)'
-                : 'linear-gradient(90deg, rgba(0, 130, 204,  0.12) )'
+                : 'linear-gradient(90deg, rgba(0, 130, 204,  0.12) )',
             }"
           >
             <div class="tab-block_item-title">
@@ -479,7 +479,7 @@
                 [ngClass]="{
                   'second-section_programm-block-title': true,
                   'gradient-orange': isDark,
-                  'gradient-blue_author-page': !isDark
+                  'gradient-blue_author-page': !isDark,
                 }"
                 >Знакомство с биржей</span
               >
@@ -488,7 +488,7 @@
                 [ngClass]="{
                   'second-section_programm-block-title': true,
                   'gradient-orange': isDark,
-                  'gradient-blue_author-page': !isDark
+                  'gradient-blue_author-page': !isDark,
                 }"
                 >01</span
               >
@@ -511,7 +511,7 @@
             [ngStyle]="{
               background: isDark
                 ? 'linear-gradient(90deg, rgba(56, 56, 32, 0.50) 0%, rgba(28, 29, 2, 0 ) 100%)'
-                : 'linear-gradient(90deg, rgba(0, 130, 204,  0.12) )'
+                : 'linear-gradient(90deg, rgba(0, 130, 204,  0.12) )',
             }"
           >
             <div class="tab-block_item-title">
@@ -520,7 +520,7 @@
                 [ngClass]="{
                   'second-section_programm-block-title': true,
                   'gradient-orange': isDark,
-                  'gradient-blue_author-page': !isDark
+                  'gradient-blue_author-page': !isDark,
                 }"
                 >Объемный анализ рынка</span
               >
@@ -529,7 +529,7 @@
                 [ngClass]="{
                   'second-section_programm-block-title': true,
                   'gradient-orange': isDark,
-                  'gradient-blue_author-page': !isDark
+                  'gradient-blue_author-page': !isDark,
                 }"
                 >03</span
               >
@@ -553,7 +553,7 @@
       [ngStyle]="{
         background: isDark
           ? 'url(/assets/redesignArapovTrade/img/timeline-section-bg-dark.png) no-repeat'
-          : 'url(/assets/redesignArapovTrade/img/timeline-section-bg-light.png) no-repeat'
+          : 'url(/assets/redesignArapovTrade/img/timeline-section-bg-light.png) no-repeat',
       }"
     ></div>
     <div class="timeline-section-bg-shapes"></div>
@@ -569,7 +569,7 @@
       [ngStyle]="{
         background: isDark
           ? 'linear-gradient(90deg, rgba(56, 56, 32, 0.50) 0%, rgba(28, 29, 2, 0 ) 100%)'
-          : 'linear-gradient(90deg, rgba(0, 130, 204,  0.12) )'
+          : 'linear-gradient(90deg, rgba(0, 130, 204,  0.12) )',
       }"
     >
       <div class="third-section_text-block">
@@ -578,7 +578,7 @@
             'second-section_programm-block-title': true,
             'third-section-title-phone': true,
             'gradient-orange': isDark,
-            'gradient-blue_author-page': !isDark
+            'gradient-blue_author-page': !isDark,
           }"
         >
           Результат
@@ -598,7 +598,7 @@
             'author-page_main-block_btn': true,
             'third-block-btn': true,
             'gradient-block-orange': isDark,
-            'gradient-block-blue': !isDark
+            'gradient-block-blue': !isDark,
           }"
         >
           <span
@@ -622,7 +622,7 @@
       [ngStyle]="{
         background: isDark
           ? 'url(/assets/redesignArapovTrade/img/timeline-section-bg-dark.png) no-repeat'
-          : 'url(/assets/redesignArapovTrade/img/timeline-section-bg-light.png) no-repeat'
+          : 'url(/assets/redesignArapovTrade/img/timeline-section-bg-light.png) no-repeat',
       }"
     ></div>
   </div>
@@ -630,20 +630,17 @@
   <div
     [ngClass]="{
       'forth-section': true,
-      'forth-section-container-bg-light': !isDark
+      'forth-section-container-bg-light': !isDark,
     }"
   >
     <div
       [ngClass]="{
-           
-          'forth-section-container-bg': true,
-           
-          
-        }"
+        'forth-section-container-bg': true,
+      }"
       [ngStyle]="{
         background: isDark
           ? 'url(/assets/redesignArapovTrade/img/forth-section-container-bg-dark.png) no-repeat'
-          : 'none'
+          : 'none',
       }"
     ></div>
 
@@ -653,7 +650,7 @@
           'second-section_programm-block-title': true,
           'forth-section-title': true,
           'gradient-orange': isDark,
-          'gradient-blue_author-page': !isDark
+          'gradient-blue_author-page': !isDark,
         }"
       >
         Преимущества моего подхода к обучению трейдингу
@@ -668,7 +665,7 @@
           [ngStyle]="{
             background: isDark
               ? 'linear-gradient(-23deg, rgba(255, 207, 104, 0.1) 22%, rgba(255, 187, 0, 0 ) 100%)'
-              : '#ffffff'
+              : '#ffffff',
           }"
         >
           <div class="tick-icon">
@@ -689,7 +686,7 @@
                 'second-section_programm-block-title': true,
                 'second-section_programm-block-title-text': true,
                 'gradient-orange': isDark,
-                'gradient-blue_author-page': !isDark
+                'gradient-blue_author-page': !isDark,
               }"
               >Практика под руководством</span
             >
@@ -708,7 +705,7 @@
           [ngStyle]="{
             background: isDark
               ? 'linear-gradient(-23deg, rgba(255, 207, 104, 0.1) 22%, rgba(255, 187, 0, 0 ) 100%)'
-              : '#ffffff'
+              : '#ffffff',
           }"
         >
           <div class="tick-icon">
@@ -729,7 +726,7 @@
                 'second-section_programm-block-title': true,
                 'second-section_programm-block-title-text': true,
                 'gradient-orange': isDark,
-                'gradient-blue_author-page': !isDark
+                'gradient-blue_author-page': !isDark,
               }"
               >Проверенная торговая система</span
             >
@@ -749,7 +746,7 @@
           [ngStyle]="{
             background: isDark
               ? 'linear-gradient(-23deg, rgba(255, 207, 104, 0.1) 22%, rgba(255, 187, 0, 0 ) 100%)'
-              : '#ffffff'
+              : '#ffffff',
           }"
         >
           <div class="tick-icon">
@@ -770,7 +767,7 @@
                 'second-section_programm-block-title': true,
                 'second-section_programm-block-title-text': true,
                 'gradient-orange': isDark,
-                'gradient-blue_author-page': !isDark
+                'gradient-blue_author-page': !isDark,
               }"
               >Честность и прозрачность</span
             >
@@ -794,7 +791,7 @@
       [ngStyle]="{
         background: isDark
           ? 'linear-gradient(90deg, rgba(56, 56, 32, 0.50) 0%, rgba(28, 29, 2, 0 ) 100%)'
-          : 'linear-gradient(90deg, rgba(0, 130, 204,  0.12) )'
+          : 'linear-gradient(90deg, rgba(0, 130, 204,  0.12) )',
       }"
     >
       <div class="third-section_text-block forth-block-pad">
@@ -802,7 +799,7 @@
           [ngClass]="{
             'second-section_programm-block-title third-title-phone-small': true,
             'gradient-orange': isDark,
-            'gradient-blue_author-page': !isDark
+            'gradient-blue_author-page': !isDark,
           }"
         >
           Хотите больше?
@@ -811,17 +808,14 @@
           class="author-page_main-block_description-text"
           [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
         >
-          Обучение у меня — это не про мгновенное богатство, а про построение
-          устойчивого навыка, который приносит стабильный доход на дистанции. Вы
-          получите знания, инструменты и поддержку, чтобы уверенно торговать на
-          финансовых рынках. <br />
+          Обучение у меня — это не про мгновенное богатство, а про построение системного подхода к торговле. Вы получите знания, инструменты и поддержку, чтобы уверенно ориентироваться на финансовых рынках и принимать обоснованные торговые решения. <br />
           <br />
           Никогда не поздно начать
           <a
             style="
               text-decoration: underline;
               letter-spacing: 1px;
-              font-family: 'Advent Pro';
+              font-family: &quot;Advent Pro&quot;;
               text-underline-offset: 4px;
               font-style: italic;
             "
@@ -831,16 +825,10 @@
             rel="nofollow"
             >обучение трейдингу</a
           >
-          ! Познакомьтесь с Азером — 73-летним учеником, который доказывает, что
-          возраст не помеха для освоения трейдинга. Кандидат наук,
-          физик-биотехнолог делится своим опытом перехода от убыточной торговли
-          по индикаторам к прибыльному объемному анализу. Вдохновляющая история
-          о том, как правильное обучение меняет результат.
+          ! Познакомьтесь с Азером — 73-летним учеником, который доказывает, что возраст не является препятствием для освоения трейдинга. Кандидат наук, физик-биотехнолог делится своим опытом перехода от убыточной торговли по индикаторам к объёмному анализу. Вдохновляющая история о том, как правильное обучение меняет подход к рынку.
           <br />
           <br />
-          Хотите узнать больше о том, как я могу помочь вам достичь ваших
-          финансовых целей? Оставьте заявку, и я лично расскажу, как начать путь
-          к успешному трейдингу!
+          Хотите узнать больше? Оставьте заявку, и я лично расскажу о формате обучения и как оно может быть полезным именно для вас.
         </div>
         <div
           (click)="navigateToHomeWithId()"
@@ -848,7 +836,7 @@
             'author-page_main-block_btn': true,
             'third-block-btn': true,
             'gradient-block-orange': isDark,
-            'gradient-block-blue': !isDark
+            'gradient-block-blue': !isDark,
           }"
         >
           <span
@@ -875,13 +863,13 @@
     </div>
   </div>
 
-  <div class="fifth-img-section">
+  <!-- <div class="fifth-img-section">
     <div
       [ngClass]="{
         'second-section_programm-block-title': true,
         'fifth-img-section_title': true,
         'gradient-orange': isDark,
-        'gradient-blue_author-page': !isDark
+        'gradient-blue_author-page': !isDark,
       }"
     >
       Пример результатов торговли моих учеников за 6 месяцев
@@ -895,7 +883,7 @@
       [ngStyle]="{
         background: isDark
           ? 'url(/assets/redesignArapovTrade/img/shape-one-bg-dark.png) no-repeat'
-          : 'url(/assets/redesignArapovTrade/img/shape-one-bg-light.png) no-repeat'
+          : 'url(/assets/redesignArapovTrade/img/shape-one-bg-light.png) no-repeat',
       }"
     ></div>
   </div>
@@ -907,7 +895,7 @@
           'sixth-block-section_title-block': true,
 
           'gradient-orange': isDark,
-          'gradient-blue_author-page': !isDark
+          'gradient-blue_author-page': !isDark,
         }"
       >
         Сергей Черемисин
@@ -926,7 +914,7 @@
           [ngClass]="{
             'sixth-block-tabs-icon': true,
             'links-dark-special': isDark,
-            'links-light-special': !isDark
+            'links-light-special': !isDark,
           }"
         >
           <img
@@ -953,7 +941,7 @@
           [ngClass]="{
             'sixth-block-tabs-icon': true,
             'links-dark-special': isDark,
-            'links-light-special': !isDark
+            'links-light-special': !isDark,
           }"
         >
           <img
@@ -984,7 +972,7 @@
           [ngClass]="{
             'sixth-block-tabs-icon': true,
             'links-dark-special': isDark,
-            'links-light-special': !isDark
+            'links-light-special': !isDark,
           }"
         >
           <img
@@ -1011,7 +999,7 @@
           [ngClass]="{
             'sixth-block-tabs-icon': true,
             'links-dark-special': isDark,
-            'links-light-special': !isDark
+            'links-light-special': !isDark,
           }"
         >
           <img
@@ -1039,7 +1027,7 @@
           [ngClass]="{
             'sixth-block-tabs-icon': true,
             'links-dark-special': isDark,
-            'links-light-special': !isDark
+            'links-light-special': !isDark,
           }"
         >
           <img
@@ -1067,7 +1055,7 @@
           [ngClass]="{
             'sixth-block-tabs-icon': true,
             'links-dark-special': isDark,
-            'links-light-special': !isDark
+            'links-light-special': !isDark,
           }"
           style="display: flex; align-items: stretch"
         >
@@ -1097,10 +1085,10 @@
       [ngStyle]="{
         background: isDark
           ? 'url(/assets/redesignArapovTrade/img/shape-two-bg-dark.png) no-repeat'
-          : 'url(/assets/redesignArapovTrade/img/shape-two-bg-light.png) no-repeat'
+          : 'url(/assets/redesignArapovTrade/img/shape-two-bg-light.png) no-repeat',
       }"
     ></div>
-  </div>
+  </div> -->
 
   <div class="seventh-block-section" data-aos="fade-up" data-aos-delay="300">
     <div
@@ -1108,7 +1096,7 @@
       [ngStyle]="{
         background: isDark
           ? 'linear-gradient(90deg, rgba(56, 56, 32, 0.50) 0%, rgba(28, 29, 2, 0 ) 100%)'
-          : 'linear-gradient(90deg, rgba(0, 130, 204,  0.12) )'
+          : 'linear-gradient(90deg, rgba(0, 130, 204,  0.12) )',
       }"
     >
       <div class="seventh-section_text-block">
@@ -1118,7 +1106,7 @@
             'second-section_programm-block-title': true,
             'seventh-section-title': true,
             'gradient-orange': isDark,
-            'gradient-blue_author-page': !isDark
+            'gradient-blue_author-page': !isDark,
           }"
         >
           Хотите стать опытным трейдером?
@@ -1127,19 +1115,11 @@
           class="author-page_main-block_description-text seventh-section-descr"
           [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
         >
-          В основе успешного трейдинга всегда лежит торговая система с
-          положительным математическим ожиданием и ничего другого. Всех
-          прибыльных трейдеров объединяет наличие таких систем. <br />
+          В основе системного трейдинга лежит торговая система с положительным математическим ожиданием. Именно наличие такой системы отличает подготовленного трейдера от новичка, торгующего наугад. <br />
           <br />
-          Прибыльность трейдеров различается в зависимости от формул управления
-          капиталом, поскольку их существует большое количество, то и
-          распределение по прибыльности идёт от консервативных до
-          высокорискованных. <br />
+          Результаты торговли зависят от выбранных формул управления капиталом — от консервативных до более активных подходов, каждый из которых имеет свой уровень риска. <br />
           <br />
-          Опытные трейдеры никогда не завышают риски в трейдинге, а балансируют
-          между положительным математическим ожиданием и контролем рисков в
-          отдельно взятой сделке для достижения положительного результата на
-          дистанции сделок.
+          Опытные трейдеры не завышают риски, а балансируют между математическим ожиданием и контролем рисков в каждой сделке — именно это обеспечивает стабильность подхода на дистанции.
         </div>
         <div
           (click)="navigateToHomeWithId()"
@@ -1148,7 +1128,7 @@
             'third-block-btn': true,
             'seventh-btn': true,
             'gradient-block-orange': isDark,
-            'gradient-block-blue': !isDark
+            'gradient-block-blue': !isDark,
           }"
         >
           <span
@@ -1187,15 +1167,14 @@
                 [ngStyle]="{
                   background: isDark
                     ? 'url(assets/redesignArapovTrade/img/logo-new.png) no-repeat center'
-                    : 'url(assets/redesignArapovTrade/img/logo-new-light.png) no-repeat center'
+                    : 'url(assets/redesignArapovTrade/img/logo-new-light.png) no-repeat center',
                 }"
               ></div>
               <span class="loog-text hg">Arapov.Trade</span>
             </div>
           </div>
           <span class="footer-text"
-            >Бесплатное обучение трейдингу и практические рекомендации для
-            новичков и профи, чтобы не потерять депозит.</span
+            >100% бесплатная теория трейдинга и практические рекомендации для новичков и опытных трейдеров.</span
           >
         </div>
       </div>
@@ -1437,7 +1416,7 @@
         <div class="box-b">
           <span class="text-2d">Arapov.Trade</span>
           <div class="pic-14"></div>
-          <span class="text-2e">2025. Все права защищены.</span>
+          <span class="text-2e">2025-2026. Все права защищены.</span>
           <span class="text-2e">ФЛП Арапов И.В. ИНН 3314507171</span>
         </div>
         <div class="section-18">
@@ -1446,7 +1425,7 @@
             class="fb"
             [ngClass]="{
               'links-dark': isDark,
-              'links-light': !isDark
+              'links-light': !isDark,
             }"
           >
             <a href="https://www.facebook.com/igor.arapov.75">
@@ -1469,7 +1448,7 @@
             class="fb"
             [ngClass]="{
               'links-dark': isDark,
-              'links-light': !isDark
+              'links-light': !isDark,
             }"
           >
             <a
@@ -1494,7 +1473,7 @@
             class="fb"
             [ngClass]="{
               'links-dark': isDark,
-              'links-light': !isDark
+              'links-light': !isDark,
             }"
           >
             <a href="https://ru.tradingview.com/u/Igor_Arapov/">
@@ -1518,7 +1497,7 @@
             class="fb"
             [ngClass]="{
               'links-dark-special': isDark,
-              'links-light-special': !isDark
+              'links-light-special': !isDark,
             }"
           >
             <a href="https://www.youtube.com/@ArapovTrade">
@@ -1547,7 +1526,7 @@
             [ngClass]="{
               'links-dark-special': isDark,
 
-              'links-light-special': !isDark
+              'links-light-special': !isDark,
             }"
           >
             <a href="https://telegram.me/+380506308200">
@@ -1574,7 +1553,7 @@
             class="fb"
             [ngClass]="{
               'links-dark': isDark,
-              'links-light': !isDark
+              'links-light': !isDark,
             }"
           >
             <a href="https://www.instagram.com/arapovtrade/">
@@ -1599,7 +1578,7 @@
       [ngClass]="{
         'bg-shapes-footer': true,
         'bg-shapes-footer-dark': isDark,
-        'bg-shapes-footer-light': !isDark
+        'bg-shapes-footer-light': !isDark,
       }"
     ></div>
   </div>

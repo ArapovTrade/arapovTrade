@@ -1,55 +1,53 @@
- 
-
 <div
   class="main-container"
   [ngStyle]="{ 'background-color': isDark ? '#141500' : '#FFFFFF' }"
-><div class="mask_drop-menu" *ngIf="menuOpen" style="margin-top: 40px;">
-        <div  
-          class="menu-dropdown"
-          [ngStyle]="{
-            background: isDark ? 'rgba(1, 1, 1, 1)' : 'rgba(255, 255, 255, 1)',
-             
-          }"
+>
+  <div class="mask_drop-menu" *ngIf="menuOpen" style="margin-top: 40px">
+    <div
+      class="menu-dropdown"
+      [ngStyle]="{
+        background: isDark ? 'rgba(1, 1, 1, 1)' : 'rgba(255, 255, 255, 1)',
+      }"
+    >
+      <ul>
+        <li
+          (click)="navigateTo('')"
+          [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+          [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
         >
-          <ul>
-            <li
-              (click)="navigateTo('')"
-              [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-              [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-            >
-              ГОЛОВНА
-            </li>
-            <li
-              (click)="navigateTo('uk/freestudying')"
-              [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-              [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-            >
-              БЕЗКОШТОВНІ КУРСИ
-            </li>
-            <li
-              (click)="navigateTo('uk')"
-              [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-              [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-            >
-              ПРО АВТОРА
-            </li>
-            <li
-              (click)="navigateTo('uk/studying')"
-              [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-              [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-            >
-              ПРОФЕСІЙНІ КУРСИ
-            </li>
-             <li
-              (click)="navigateTo('uk/books')"
-              [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-              [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-            >
-              МОЇ КНИГИ
-            </li>
-          </ul>
-        </div>
-      </div>
+          ГОЛОВНА
+        </li>
+        <li
+          (click)="navigateTo('uk/freestudying')"
+          [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+          [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
+        >
+          БЕЗКОШТОВНІ КУРСИ
+        </li>
+        <li
+          (click)="navigateTo('uk')"
+          [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+          [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
+        >
+          ПРО АВТОРА
+        </li>
+        <li
+          (click)="navigateTo('uk/studying')"
+          [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+          [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
+        >
+          ПРОФЕСІЙНІ КУРСИ
+        </li>
+        <li
+          (click)="navigateTo('uk/books')"
+          [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+          [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
+        >
+          МОЇ КНИГИ
+        </li>
+      </ul>
+    </div>
+  </div>
   <div class="author-page_section-one">
     <div class="header-new_block" data-aos="fade-down" data-aos-delay="300">
       <div class="header-logo-block">
@@ -58,7 +56,7 @@
           [ngStyle]="{
             background: isDark
               ? 'url(assets/redesignArapovTrade/img/logo-new.png) no-repeat center'
-              : 'url(assets/redesignArapovTrade/img/logo-new-light.png) no-repeat center'
+              : 'url(assets/redesignArapovTrade/img/logo-new-light.png) no-repeat center',
           }"
         ></div>
         <span
@@ -196,60 +194,59 @@
           </button>
         </div>
 
-         
         <div class="menu-switcher" [class.open]="menuOpen">
-            <button
-              class="menu-btn"
-              (click)="toggleMenu()"
-              [ngStyle]="{ background: isDark ? '#2c2a06' : '#DBE2E7' }"
-            >
-              <span class="icon flex" *ngIf="!menuOpen">
-                <img
-                  *ngIf="isDark"
-                  src="assets/redesignArapovTrade/img/menu-button.svg"
-                  alt="menu_icon"
-                />
-                <img
-                  *ngIf="!isDark"
-                  src="assets/redesignArapovTrade/img/menu-button-light.svg"
-                  alt="menu_icon"
-                />
-              </span>
+          <button
+            class="menu-btn"
+            (click)="toggleMenu()"
+            [ngStyle]="{ background: isDark ? '#2c2a06' : '#DBE2E7' }"
+          >
+            <span class="icon flex" *ngIf="!menuOpen">
+              <img
+                *ngIf="isDark"
+                src="assets/redesignArapovTrade/img/menu-button.svg"
+                alt="menu_icon"
+              />
+              <img
+                *ngIf="!isDark"
+                src="assets/redesignArapovTrade/img/menu-button-light.svg"
+                alt="menu_icon"
+              />
+            </span>
 
-              <span class="icon flex cross" *ngIf="menuOpen">
-                <img
-                  *ngIf="isDark"
-                  src="assets/redesignArapovTrade/img/menu-button-cross.svg"
-                  alt="menu_icon"
-                />
-                <img
-                  *ngIf="!isDark"
-                  src="assets/redesignArapovTrade/img/menu-button-cross-light.svg"
-                  alt="menu_icon"
-                />
-              </span>
-            </button>
-          </div>
-      
+            <span class="icon flex cross" *ngIf="menuOpen">
+              <img
+                *ngIf="isDark"
+                src="assets/redesignArapovTrade/img/menu-button-cross.svg"
+                alt="menu_icon"
+              />
+              <img
+                *ngIf="!isDark"
+                src="assets/redesignArapovTrade/img/menu-button-cross-light.svg"
+                alt="menu_icon"
+              />
+            </span>
+          </button>
+        </div>
       </div>
     </div>
     <div class="author-page_main-block" data-aos="fade-up" data-aos-delay="300">
-      <div class="author-page_main-block_image-block img-courses-main-page-desc">
-        <img  
+      <div
+        class="author-page_main-block_image-block img-courses-main-page-desc"
+      >
+        <img
           src="/assets/redesignArapovTrade/img/courses-main-page.png"
           alt="img"
         />
-         
       </div>
 
-      <div class="author-page_main-block_image-block img-courses-main-page-phone" >
-        
-        <img  
+      <div
+        class="author-page_main-block_image-block img-courses-main-page-phone"
+      >
+        <img
           src="/assets/redesignArapovTrade/img/courses-main-page-phone.png"
           alt="img"
         />
       </div>
-
 
       <div class="author-page_main-block_image-block-table">
         <img
@@ -259,10 +256,16 @@
       </div>
       <div class="author-page_main-block_text-block">
         <div class="author-page_main-block_title-block">
-          <h1 class="studying_h1" [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-            >Навчання трейдингу та інвестицій для розумних інвесторів:
-        </h1>
-          <h2 class="studying_h2" 
+          <h1
+            class="studying_h1"
+            [ngClass]="{
+              'gradient-orange': isDark,
+              'gradient-blue_author-page': !isDark,
+            }"
+          >
+            Навчання трейдингу з підтримкою наставника
+          </h1>
+          <!-- <h2 class="studying_h2" 
             [ngClass]="{
               'gradient-orange': isDark,
               'gradient-blue_author-page': !isDark
@@ -272,22 +275,23 @@
           </h2>
           <span [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }">
             для пасивного доходу
-          </span>
+          </span> -->
         </div>
         <div class="author-page_main-block_description">
           <span
             class="author-page_main-block_description-text"
             [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-            >Платні курси з трейдингу з наставником — це не обов’язковий крок, а
-            свідомий вибір для тих, хто хоче навчитися трейдингу швидше, з
-            підтримкою та чіткою структурою. <br /><br />
-            Уся необхідна інформація для навчання дійсно є в моєму безкоштовному
-            курсі — ви можете вивчати його самостійно та у зручному для себе
-            темпі, а головне — безкоштовно. <br /><br />
-            Але якщо для вас важливі швидкість, системність і зворотний зв’язок
-            від досвідченого наставника, то персональне навчання допоможе вам
-            заощадити час і уникнути типових помилок, які допускають більшість
-            трейдерів-початківців на початку свого шляху.
+            >Персональне навчання трейдингу з наставником — це свідомий вибір
+            для тих, хто хоче опанувати трейдинг швидше, з підтримкою та чіткою
+            структурою. <br /><br />
+            Уся теорія трейдингу доступна безкоштовно — ви можете вивчати її
+            самостійно у зручному темпі. <br /><br />
+            Але якщо для вас важливі системність, розбори реальних угод та
+            прямий зворотний зв'язок від практикуючого наставника — персональне
+            навчання допоможе пройти цей шлях значно ефективніше, заощадити час
+            і уникнути типових помилок, які допускають більшість початківців.
+            Заняття проходять онлайн через Zoom — індивідуально або в невеликій
+            групі.
           </span>
         </div>
         <!-- (click)="navigateTo('uk/freestudying')" -->
@@ -296,7 +300,7 @@
           [ngClass]="{
             'author-page_main-block_btn': true,
             'gradient-block-orange': isDark,
-            'gradient-block-blue': !isDark
+            'gradient-block-blue': !isDark,
           }"
         >
           <span
@@ -314,7 +318,7 @@
       [ngStyle]="{
         background: isDark
           ? 'url(/assets/redesignArapovTrade/img/author-page_main-block_bg.png)  no-repeat center'
-          : 'url(/assets/redesignArapovTrade/img/author-page_main-block_bg-light.png) no-repeat center'
+          : 'url(/assets/redesignArapovTrade/img/author-page_main-block_bg-light.png) no-repeat center',
       }"
     ></div>
 
@@ -323,18 +327,19 @@
       [ngStyle]="{
         background: isDark
           ? 'url(/assets/redesignArapovTrade/img/author-page_main-block_bg-image.png) no-repeat'
-          : 'url(/assets/redesignArapovTrade/img/author-page_main-block_bg-image-light.png) no-repeat'
+          : 'url(/assets/redesignArapovTrade/img/author-page_main-block_bg-image-light.png) no-repeat',
       }"
     ></div>
   </div>
   <!-- Second Block -->
 
-  <div data-aos="fade-up" data-aos-delay="300"
+  <div
+    data-aos="fade-up"
+    data-aos-delay="300"
     [ngClass]="{
-          'second-section': true,
-          'second-pad': isDark,
-           
-        }"
+      'second-section': true,
+      'second-pad': isDark,
+    }"
   >
     <div class="second-section_programm-block">
       <div
@@ -342,7 +347,7 @@
           'second-section_programm-block-title': true,
           'second-section_programm-block-title-small': true,
           'gradient-orange': isDark,
-          'gradient-blue_author-page': !isDark
+          'gradient-blue_author-page': !isDark,
         }"
       >
         Навчальна програма
@@ -377,7 +382,7 @@
             [ngStyle]="{
               background: isDark
                 ? 'linear-gradient(90deg, rgba(56, 56, 32, 0.50) 0%, rgba(28, 29, 2, 0 ) 100%)'
-                : 'linear-gradient(90deg, rgba(0, 130, 204,  0.12) )'
+                : 'linear-gradient(90deg, rgba(0, 130, 204,  0.12) )',
             }"
           >
             <div class="tab-block_item-title">
@@ -386,7 +391,7 @@
                 [ngClass]="{
                   'second-section_programm-block-title': true,
                   'gradient-orange': isDark,
-                  'gradient-blue_author-page': !isDark
+                  'gradient-blue_author-page': !isDark,
                 }"
                 >Аналіз ринку</span
               >
@@ -395,7 +400,7 @@
                 [ngClass]="{
                   'second-section_programm-block-title': true,
                   'gradient-orange': isDark,
-                  'gradient-blue_author-page': !isDark
+                  'gradient-blue_author-page': !isDark,
                 }"
                 >02</span
               >
@@ -416,7 +421,7 @@
             [ngStyle]="{
               background: isDark
                 ? 'linear-gradient(90deg, rgba(56, 56, 32, 0.50) 0%, rgba(28, 29, 2, 0 ) 100%)'
-                : 'linear-gradient(90deg, rgba(0, 130, 204,  0.12) )'
+                : 'linear-gradient(90deg, rgba(0, 130, 204,  0.12) )',
             }"
           >
             <div class="tab-block_item-title">
@@ -426,7 +431,7 @@
                   'second-section_programm-block-title': true,
                   'second-section_programm-block-title-text': true,
                   'gradient-orange': isDark,
-                  'gradient-blue_author-page': !isDark
+                  'gradient-blue_author-page': !isDark,
                 }"
                 >«Торгова система та психологія ринку» (заснована на методології
                 Вайкоффа)</span
@@ -436,7 +441,7 @@
                 [ngClass]="{
                   'second-section_programm-block-title': true,
                   'gradient-orange': isDark,
-                  'gradient-blue_author-page': !isDark
+                  'gradient-blue_author-page': !isDark,
                 }"
                 >04</span
               >
@@ -465,7 +470,7 @@
             [ngStyle]="{
               background: isDark
                 ? 'linear-gradient(90deg, rgba(56, 56, 32, 0.50) 0%, rgba(28, 29, 2, 0 ) 100%)'
-                : 'linear-gradient(90deg, rgba(0, 130, 204,  0.12) )'
+                : 'linear-gradient(90deg, rgba(0, 130, 204,  0.12) )',
             }"
           >
             <div class="tab-block_item-title">
@@ -474,7 +479,7 @@
                 [ngClass]="{
                   'second-section_programm-block-title': true,
                   'gradient-orange': isDark,
-                  'gradient-blue_author-page': !isDark
+                  'gradient-blue_author-page': !isDark,
                 }"
                 >Знайомство з біржею</span
               >
@@ -483,7 +488,7 @@
                 [ngClass]="{
                   'second-section_programm-block-title': true,
                   'gradient-orange': isDark,
-                  'gradient-blue_author-page': !isDark
+                  'gradient-blue_author-page': !isDark,
                 }"
                 >01</span
               >
@@ -506,7 +511,7 @@
             [ngStyle]="{
               background: isDark
                 ? 'linear-gradient(90deg, rgba(56, 56, 32, 0.50) 0%, rgba(28, 29, 2, 0 ) 100%)'
-                : 'linear-gradient(90deg, rgba(0, 130, 204,  0.12) )'
+                : 'linear-gradient(90deg, rgba(0, 130, 204,  0.12) )',
             }"
           >
             <div class="tab-block_item-title">
@@ -515,7 +520,7 @@
                 [ngClass]="{
                   'second-section_programm-block-title': true,
                   'gradient-orange': isDark,
-                  'gradient-blue_author-page': !isDark
+                  'gradient-blue_author-page': !isDark,
                 }"
                 >Об'ємний аналіз ринку</span
               >
@@ -524,7 +529,7 @@
                 [ngClass]="{
                   'second-section_programm-block-title': true,
                   'gradient-orange': isDark,
-                  'gradient-blue_author-page': !isDark
+                  'gradient-blue_author-page': !isDark,
                 }"
                 >03</span
               >
@@ -548,129 +553,119 @@
       [ngStyle]="{
         background: isDark
           ? 'url(/assets/redesignArapovTrade/img/timeline-section-bg-dark.png) no-repeat'
-          : 'url(/assets/redesignArapovTrade/img/timeline-section-bg-light.png) no-repeat'
+          : 'url(/assets/redesignArapovTrade/img/timeline-section-bg-light.png) no-repeat',
       }"
     ></div>
     <div class="timeline-section-bg-shapes"></div>
   </div>
 
-
-
-
-
-
-
-
-  <div class="third-section_container-main" data-aos="fade-up" data-aos-delay="300">
-    <div
-    class="third-section"
-    [ngStyle]="{
-      background: isDark
-        ? 'linear-gradient(90deg, rgba(56, 56, 32, 0.50) 0%, rgba(28, 29, 2, 0 ) 100%)'
-        : 'linear-gradient(90deg, rgba(0, 130, 204,  0.12) )'
-    }"
+  <div
+    class="third-section_container-main"
+    data-aos="fade-up"
+    data-aos-delay="300"
   >
-    <div class="third-section_text-block">
-      <div
-        [ngClass]="{
-          'second-section_programm-block-title': true,
-          'third-section-title-phone': true,
-          'gradient-orange': isDark,
-          'gradient-blue_author-page': !isDark
-        }"
-      >
-        Результат
-      </div>
-      <div
-        class="author-page_main-block_description-text"
-        [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-      >
-        Ви отримаєте торгову систему, засновану на читанні обсягів, а також ви
-        дізнаєтеся, як функціонують ринки і отримаєте практичну навичку
-        відкриття угод під керівництвом практикуючого трейдера, наставника
-        курсу.
-      </div>
-      <div
-        (click)="navigateToHomeWithId()"
-        [ngClass]="{
-          'author-page_main-block_btn': true,
-          'third-block-btn': true,
-          'gradient-block-orange': isDark,
-          'gradient-block-blue': !isDark
-        }"
-      >
-        <span
-          class="author-page_main-block_btn-text"
-          [ngStyle]="{ color: !isDark ? '#ffffff' : '#03314b' }"
-          >Залишити заявку</span
+    <div
+      class="third-section"
+      [ngStyle]="{
+        background: isDark
+          ? 'linear-gradient(90deg, rgba(56, 56, 32, 0.50) 0%, rgba(28, 29, 2, 0 ) 100%)'
+          : 'linear-gradient(90deg, rgba(0, 130, 204,  0.12) )',
+      }"
+    >
+      <div class="third-section_text-block">
+        <div
+          [ngClass]="{
+            'second-section_programm-block-title': true,
+            'third-section-title-phone': true,
+            'gradient-orange': isDark,
+            'gradient-blue_author-page': !isDark,
+          }"
         >
+          Результат
+        </div>
+        <div
+          class="author-page_main-block_description-text"
+          [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+        >
+          Ви отримаєте торгову систему, засновану на читанні обсягів, а також ви
+          дізнаєтеся, як функціонують ринки і отримаєте практичну навичку
+          відкриття угод під керівництвом практикуючого трейдера, наставника
+          курсу.
+        </div>
+        <div
+          (click)="navigateToHomeWithId()"
+          [ngClass]="{
+            'author-page_main-block_btn': true,
+            'third-block-btn': true,
+            'gradient-block-orange': isDark,
+            'gradient-block-blue': !isDark,
+          }"
+        >
+          <span
+            class="author-page_main-block_btn-text"
+            [ngStyle]="{ color: !isDark ? '#ffffff' : '#03314b' }"
+            >Залишити заявку</span
+          >
+        </div>
+      </div>
+      <div class="third-image-block">
+        <div class="third-block_image-container">
+          <img
+            src="assets/redesignArapovTrade/img/third-image-block_img.png"
+            alt="image"
+          />
+        </div>
       </div>
     </div>
-    <div class="third-image-block">
-      <div class="third-block_image-container">
-        <img
-          src="assets/redesignArapovTrade/img/third-image-block_img.png"
-          alt="image"
-        />
-      </div>
-    </div>
-  </div>
     <div
       class="timeline-section-bg third-section-bg"
       [ngStyle]="{
         background: isDark
           ? 'url(/assets/redesignArapovTrade/img/timeline-section-bg-dark.png) no-repeat'
-          : 'url(/assets/redesignArapovTrade/img/timeline-section-bg-light.png) no-repeat'
+          : 'url(/assets/redesignArapovTrade/img/timeline-section-bg-light.png) no-repeat',
       }"
     ></div>
   </div>
 
-  
-  <div   
+  <div
     [ngClass]="{
-           
-          'forth-section': true,
-           'forth-section-container-bg-light':!isDark
-          
-        }"
-  
-  
+      'forth-section': true,
+      'forth-section-container-bg-light': !isDark,
+    }"
   >
     <div
-      
-
       [ngClass]="{
-           
-          'forth-section-container-bg': true,
-           
-          
-        }"
-
+        'forth-section-container-bg': true,
+      }"
       [ngStyle]="{
         background: isDark
           ? 'url(/assets/redesignArapovTrade/img/forth-section-container-bg-dark.png) no-repeat'
-          : 'none'
+          : 'none',
       }"
     ></div>
-    
-    <div class="forth-section-container" >
+
+    <div class="forth-section-container">
       <div
         [ngClass]="{
           'second-section_programm-block-title': true,
           'forth-section-title': true,
           'gradient-orange': isDark,
-          'gradient-blue_author-page': !isDark
+          'gradient-blue_author-page': !isDark,
         }"
       >
         Переваги мого підходу до навчання трейдингу
       </div>
-      <div class="forth-section-container_tabs-block" data-aos="fade-up" data-aos-delay="300">
+      <div
+        class="forth-section-container_tabs-block"
+        data-aos="fade-up"
+        data-aos-delay="300"
+      >
         <div
           class="forth-section-container_tab"
           [ngStyle]="{
             background: isDark
               ? 'linear-gradient(-23deg, rgba(255, 207, 104, 0.1) 22%, rgba(255, 187, 0, 0 ) 100%)'
-              : '#ffffff'
+              : '#ffffff',
           }"
         >
           <div class="tick-icon">
@@ -691,7 +686,7 @@
                 'second-section_programm-block-title': true,
                 'second-section_programm-block-title-text': true,
                 'gradient-orange': isDark,
-                'gradient-blue_author-page': !isDark
+                'gradient-blue_author-page': !isDark,
               }"
               >Практика під керівництвом</span
             >
@@ -710,7 +705,7 @@
           [ngStyle]="{
             background: isDark
               ? 'linear-gradient(-23deg, rgba(255, 207, 104, 0.1) 22%, rgba(255, 187, 0, 0 ) 100%)'
-              : '#ffffff'
+              : '#ffffff',
           }"
         >
           <div class="tick-icon">
@@ -731,7 +726,7 @@
                 'second-section_programm-block-title': true,
                 'second-section_programm-block-title-text': true,
                 'gradient-orange': isDark,
-                'gradient-blue_author-page': !isDark
+                'gradient-blue_author-page': !isDark,
               }"
               >Перевірена торгова система</span
             >
@@ -751,7 +746,7 @@
           [ngStyle]="{
             background: isDark
               ? 'linear-gradient(-23deg, rgba(255, 207, 104, 0.1) 22%, rgba(255, 187, 0, 0 ) 100%)'
-              : '#ffffff'
+              : '#ffffff',
           }"
         >
           <div class="tick-icon">
@@ -772,7 +767,7 @@
                 'second-section_programm-block-title': true,
                 'second-section_programm-block-title-text': true,
                 'gradient-orange': isDark,
-                'gradient-blue_author-page': !isDark
+                'gradient-blue_author-page': !isDark,
               }"
               >Чесність і прозорість</span
             >
@@ -788,20 +783,22 @@
         </div>
       </div>
     </div>
-    <div data-aos="fade-up" data-aos-delay="300"
+    <div
+      data-aos="fade-up"
+      data-aos-delay="300"
       class="third-section"
       [ngStyle]="{
         background: isDark
           ? 'linear-gradient(90deg, rgba(56, 56, 32, 0.50) 0%, rgba(28, 29, 2, 0 ) 100%)'
-          : 'linear-gradient(90deg, rgba(0, 130, 204,  0.12) )'
+          : 'linear-gradient(90deg, rgba(0, 130, 204,  0.12) )',
       }"
     >
-      <div class="third-section_text-block  forth-block-pad">
+      <div class="third-section_text-block forth-block-pad">
         <div
           [ngClass]="{
             'second-section_programm-block-title third-title-phone-small': true,
             'gradient-orange': isDark,
-            'gradient-blue_author-page': !isDark
+            'gradient-blue_author-page': !isDark,
           }"
         >
           Хочете бiльше?
@@ -810,14 +807,33 @@
           class="author-page_main-block_description-text"
           [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
         >
-          Навчання у мене — це не про миттєве багатство, а про побудову стійкого
-          навику, який приносить стабільний дохід на дистанції. Ви отримаєте
-          знання, інструменти та підтримку, щоб упевнено торгувати на фінансових
-          ринках. <br /> <br>
-          Ніколи не пізно почати <a style="text-decoration: underline; text-underline-offset: 4px; font-style: italic;     letter-spacing: 1px; font-family: 'Advent Pro';" [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }" href="https://youtu.be/fcRKxFr-EW4?si=xh2GoCd_UaxfB29V" target="_blank" rel="nofollow">навчання трейдингу</a>! Познайомтеся з Азером — 73-річним учнем, який доводить, що вік не є перешкодою для освоєння трейдингу. Кандидат наук, фізик-біотехнолог ділиться своїм досвідом переходу від збиткової торгівлі за індикаторами до прибуткового об’ємного аналізу. Натхненна історія про те, як правильне навчання змінює результат. <br> <br>
-          Хочете дізнатися більше про те, як я можу допомогти вам досягти ваших
-          фінансових цілей? Залиште заявку, і я особисто розповім, як почати
-          шлях до успішного трейдингу!
+          Навчання у мене — це не про миттєве багатство, а про побудову
+          системного підходу до торгівлі. Ви отримаєте знання, інструменти та
+          підтримку, щоб впевнено орієнтуватися на фінансових ринках і приймати
+          обґрунтовані торгові рішення. <br />
+          <br />
+          Ніколи не пізно почати
+          <a
+            style="
+              text-decoration: underline;
+              text-underline-offset: 4px;
+              font-style: italic;
+              letter-spacing: 1px;
+              font-family: &quot;Advent Pro&quot;;
+            "
+            [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+            href="https://youtu.be/fcRKxFr-EW4?si=xh2GoCd_UaxfB29V"
+            target="_blank"
+            rel="nofollow"
+            >навчання трейдингу</a
+          >! Познайомтеся з Азером — 73-річним учнем, який доводить, що вік не є
+          перешкодою для освоєння трейдингу. Кандидат наук, фізик-біотехнолог
+          ділиться своїм досвідом переходу від збиткової торгівлі за
+          індикаторами до об'ємного аналізу. Натхненна історія про те, як
+          правильне навчання змінює підхід до ринку. <br />
+          <br />
+          Хочете дізнатися більше? Залиште заявку, і я особисто розповім про
+          формат навчання та як воно може бути корисним саме для вас.
         </div>
         <div
           (click)="navigateToHomeWithId()"
@@ -825,7 +841,7 @@
             'author-page_main-block_btn': true,
             'third-block-btn': true,
             'gradient-block-orange': isDark,
-            'gradient-block-blue': !isDark
+            'gradient-block-blue': !isDark,
           }"
         >
           <span
@@ -852,13 +868,13 @@
     </div>
   </div>
 
-  <div class="fifth-img-section">
+  <!-- <div class="fifth-img-section">
     <div
       [ngClass]="{
         'second-section_programm-block-title': true,
         'fifth-img-section_title': true,
         'gradient-orange': isDark,
-        'gradient-blue_author-page': !isDark
+        'gradient-blue_author-page': !isDark,
       }"
     >
       Приклад результатів торгівлі моїх учнів за 6 місяців
@@ -872,7 +888,7 @@
       [ngStyle]="{
         background: isDark
           ? 'url(/assets/redesignArapovTrade/img/shape-one-bg-dark.png) no-repeat'
-          : 'url(/assets/redesignArapovTrade/img/shape-one-bg-light.png) no-repeat'
+          : 'url(/assets/redesignArapovTrade/img/shape-one-bg-light.png) no-repeat',
       }"
     ></div>
   </div>
@@ -884,7 +900,7 @@
           'sixth-block-section_title-block': true,
 
           'gradient-orange': isDark,
-          'gradient-blue_author-page': !isDark
+          'gradient-blue_author-page': !isDark,
         }"
       >
         Сергій Черемісін
@@ -903,7 +919,7 @@
           [ngClass]="{
             'sixth-block-tabs-icon': true,
             'links-dark-special': isDark,
-            'links-light-special': !isDark
+            'links-light-special': !isDark,
           }"
         >
           <img
@@ -930,7 +946,7 @@
           [ngClass]="{
             'sixth-block-tabs-icon': true,
             'links-dark-special': isDark,
-            'links-light-special': !isDark
+            'links-light-special': !isDark,
           }"
         >
           <img
@@ -961,7 +977,7 @@
           [ngClass]="{
             'sixth-block-tabs-icon': true,
             'links-dark-special': isDark,
-            'links-light-special': !isDark
+            'links-light-special': !isDark,
           }"
         >
           <img
@@ -988,7 +1004,7 @@
           [ngClass]="{
             'sixth-block-tabs-icon': true,
             'links-dark-special': isDark,
-            'links-light-special': !isDark
+            'links-light-special': !isDark,
           }"
         >
           <img
@@ -1016,7 +1032,7 @@
           [ngClass]="{
             'sixth-block-tabs-icon': true,
             'links-dark-special': isDark,
-            'links-light-special': !isDark
+            'links-light-special': !isDark,
           }"
         >
           <img
@@ -1044,7 +1060,7 @@
           [ngClass]="{
             'sixth-block-tabs-icon': true,
             'links-dark-special': isDark,
-            'links-light-special': !isDark
+            'links-light-special': !isDark,
           }"
           style="display: flex; align-items: stretch"
         >
@@ -1074,10 +1090,10 @@
       [ngStyle]="{
         background: isDark
           ? 'url(/assets/redesignArapovTrade/img/shape-two-bg-dark.png) no-repeat'
-          : 'url(/assets/redesignArapovTrade/img/shape-two-bg-light.png) no-repeat'
+          : 'url(/assets/redesignArapovTrade/img/shape-two-bg-light.png) no-repeat',
       }"
     ></div>
-  </div>
+  </div> -->
 
   <div class="seventh-block-section" data-aos="fade-up" data-aos-delay="300">
     <div
@@ -1085,7 +1101,7 @@
       [ngStyle]="{
         background: isDark
           ? 'linear-gradient(90deg, rgba(56, 56, 32, 0.50) 0%, rgba(28, 29, 2, 0 ) 100%)'
-          : 'linear-gradient(90deg, rgba(0, 130, 204,  0.12) )'
+          : 'linear-gradient(90deg, rgba(0, 130, 204,  0.12) )',
       }"
     >
       <div class="seventh-section_text-block">
@@ -1095,7 +1111,7 @@
             'second-section_programm-block-title': true,
             'seventh-section-title': true,
             'gradient-orange': isDark,
-            'gradient-blue_author-page': !isDark
+            'gradient-blue_author-page': !isDark,
           }"
         >
           Хочете стати досвiдченим трейдером?
@@ -1104,31 +1120,30 @@
           class="author-page_main-block_description-text seventh-section-descr"
           [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
         >
-          В основі успішного трейдингу завжди лежить торгова система з
-          позитивним математичним очікуванням і нічого іншого. Усіх прибуткових
-          трейдерів об’єднує наявність таких систем. <br />
+          В основі системного трейдингу лежить торгова система з позитивним
+          математичним очікуванням. Саме наявність такої системи відрізняє
+          підготовленого трейдера від новачка, який торгує навмання. <br />
           <br />
-          Прибутковість трейдерів різниться залежно від формул управління
-          капіталом, оскільки їх є велика кількість, то й розподіл за
-          прибутковістю йде від консервативних до високоризикованих. <br />
+          Результати торгівлі залежать від обраних формул управління капіталом —
+          від консервативних до більш активних підходів, кожен з яких має свій
+          рівень ризику. <br />
           <br />
-          Досвідчені трейдери ніколи не завищують ризики в трейдингу, а
-          балансують між позитивним математичним очікуванням і контролем ризиків
-          в окремо взятій угоді для досягнення позитивного результату на
-          дистанції угод.
+          Досвідчені трейдери не завищують ризики, а балансують між математичним
+          очікуванням і контролем ризиків у кожній угоді — саме це забезпечує
+          стабільність підходу на дистанції.
         </div>
         <div
           (click)="navigateToHomeWithId()"
           [ngClass]="{
             'author-page_main-block_btn': true,
             'third-block-btn': true,
-            'seventh-btn':true,
+            'seventh-btn': true,
             'gradient-block-orange': isDark,
-            'gradient-block-blue': !isDark
+            'gradient-block-blue': !isDark,
           }"
         >
           <span
-            class="author-page_main-block_btn-text "
+            class="author-page_main-block_btn-text"
             [ngStyle]="{ color: !isDark ? '#ffffff' : '#03314b' }"
             >Залишити заявку</span
           >
@@ -1163,15 +1178,14 @@
                 [ngStyle]="{
                   background: isDark
                     ? 'url(assets/redesignArapovTrade/img/logo-new.png) no-repeat center'
-                    : 'url(assets/redesignArapovTrade/img/logo-new-light.png) no-repeat center'
+                    : 'url(assets/redesignArapovTrade/img/logo-new-light.png) no-repeat center',
                 }"
               ></div>
               <span class="loog-text hg">Arapov.Trade</span>
             </div>
           </div>
           <span class="footer-text"
-            >Безкоштовне навчання трейдингу та практичнi рекомендацii для
-            новачкiв i профi, щоб не втратити депозит.</span
+            >100% безкоштовна теорія трейдингу та практичні рекомендації для новачків і досвідчених трейдерів.</span
           >
         </div>
       </div>
@@ -1230,24 +1244,41 @@
         </div>
 
         <div class="menu">
-          <span class="menu-title">Нашi проекти</span
+          <span class="menu-title">Нашi проекти</span>
+          <a
+            href="https://arapov.education/ua/course-ua/"
+            target="_blank"
+            class="menu-title-block menu-title_text"
           >
-          <a href="https://arapov.education/ua/course-ua/" target="_blank" class="menu-title-block menu-title_text">
-              
-           <span class="menu-title-block menu-title_text"
-            >  Швидкий старт у трейдингу</span> </a> 
-             <a href="https://arapov.education/ua/reg-workshop-ua/" target="_blank" class="menu-title-block menu-title_text">
-              
-           <span class="menu-title-block menu-title_text"
-            >  Вступ до трейдингу</span> </a> 
-             <a href="https://arapov.trade/uk/studying" target="_blank" class="menu-title-block menu-title_text">
-              
-           <span class="menu-title-block menu-title_text"
-            >  Професійні курси</span> </a> 
-             <a href="https://arapovcopytrade.com/ua/invest-ua/" target="_blank" class="menu-title-block menu-title_text"> 
-              
-           <span class="menu-title-block menu-title_text"
-            >  Копiтрейдинг</span> </a> 
+            <span class="menu-title-block menu-title_text">
+              Швидкий старт у трейдингу</span
+            >
+          </a>
+          <a
+            href="https://arapov.education/ua/reg-workshop-ua/"
+            target="_blank"
+            class="menu-title-block menu-title_text"
+          >
+            <span class="menu-title-block menu-title_text">
+              Вступ до трейдингу</span
+            >
+          </a>
+          <a
+            href="https://arapov.trade/uk/studying"
+            target="_blank"
+            class="menu-title-block menu-title_text"
+          >
+            <span class="menu-title-block menu-title_text">
+              Професійні курси</span
+            >
+          </a>
+          <a
+            href="https://arapovcopytrade.com/ua/invest-ua/"
+            target="_blank"
+            class="menu-title-block menu-title_text"
+          >
+            <span class="menu-title-block menu-title_text"> Копiтрейдинг</span>
+          </a>
         </div>
       </div>
       <div class="popular-artickles">
@@ -1265,7 +1296,7 @@
               >Смарт мані</a
             >
           </div>
-           <div class="popular-artickles_artickle">
+          <div class="popular-artickles_artickle">
             <a
               href="https://arapov.trade/uk/freestudying/makingmoneyintrading"
               target="_blank"
@@ -1286,7 +1317,8 @@
               href="https://arapov.trade/uk/freestudying/predictmarketprice"
               target="_blank"
               class="menu-title-block menu-title_text"
-              >	Прогноз ціни</a
+            >
+              Прогноз ціни</a
             >
           </div>
           <div class="popular-artickles_artickle">
@@ -1337,7 +1369,7 @@
               >Трендові канали</a
             >
           </div>
-           <div class="popular-artickles_artickle">
+          <div class="popular-artickles_artickle">
             <a
               href="https://arapov.trade/uk/freestudying/tradingmyths"
               target="_blank"
@@ -1386,8 +1418,6 @@
             >
           </div>
         </div>
-         
-         
       </div>
     </div>
     <div class="component-1f">
@@ -1396,8 +1426,8 @@
         <div class="box-b">
           <span class="text-2d">Arapov.Trade</span>
           <div class="pic-14"></div>
-          <span class="text-2e">2025. Всі права захищені.</span><span class="text-2e">ФОП Арапов І.В.
-ІПН 3314507171</span>
+          <span class="text-2e">2025-2026. Всі права захищені.</span
+          ><span class="text-2e">ФОП Арапов І.В. ІПН 3314507171</span>
         </div>
         <div class="section-18">
           <!-- facebook -->
@@ -1405,7 +1435,7 @@
             class="fb"
             [ngClass]="{
               'links-dark': isDark,
-              'links-light': !isDark
+              'links-light': !isDark,
             }"
           >
             <a href="https://www.facebook.com/igor.arapov.75">
@@ -1428,7 +1458,7 @@
             class="fb"
             [ngClass]="{
               'links-dark': isDark,
-              'links-light': !isDark
+              'links-light': !isDark,
             }"
           >
             <a
@@ -1453,7 +1483,7 @@
             class="fb"
             [ngClass]="{
               'links-dark': isDark,
-              'links-light': !isDark
+              'links-light': !isDark,
             }"
           >
             <a href="https://ru.tradingview.com/u/Igor_Arapov/">
@@ -1477,7 +1507,7 @@
             class="fb"
             [ngClass]="{
               'links-dark-special': isDark,
-              'links-light-special': !isDark
+              'links-light-special': !isDark,
             }"
           >
             <a href="https://www.youtube.com/@ArapovTrade">
@@ -1506,7 +1536,7 @@
             [ngClass]="{
               'links-dark-special': isDark,
 
-              'links-light-special': !isDark
+              'links-light-special': !isDark,
             }"
           >
             <a href="https://telegram.me/+380506308200">
@@ -1533,7 +1563,7 @@
             class="fb"
             [ngClass]="{
               'links-dark': isDark,
-              'links-light': !isDark
+              'links-light': !isDark,
             }"
           >
             <a href="https://www.instagram.com/arapovtrade/">
@@ -1558,7 +1588,7 @@
       [ngClass]="{
         'bg-shapes-footer': true,
         'bg-shapes-footer-dark': isDark,
-        'bg-shapes-footer-light': !isDark
+        'bg-shapes-footer-light': !isDark,
       }"
     ></div>
   </div>

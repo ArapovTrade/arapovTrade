@@ -11,7 +11,7 @@
             [ngStyle]="{
               background: isDark
                 ? 'url(assets/redesignArapovTrade/img/logo-new.png) no-repeat center'
-                : 'url(assets/redesignArapovTrade/img/logo-new-light.png) no-repeat center'
+                : 'url(assets/redesignArapovTrade/img/logo-new-light.png) no-repeat center',
             }"
           ></div>
           <span
@@ -148,7 +148,7 @@
               </div>
             </button>
           </div>
-         <!-- Иконка меню и выпадающее меню для планшетов -->
+          <!-- Иконка меню и выпадающее меню для планшетов -->
           <div class="menu-switcher" [class.open]="menuOpen">
             <button
               class="menu-btn"
@@ -189,7 +189,7 @@
         <div
           class="menu-dropdown"
           [ngStyle]="{
-            background: isDark ? 'rgba(1, 1, 1, 1)' : 'rgba(255, 255, 255, 1)'
+            background: isDark ? 'rgba(1, 1, 1, 1)' : 'rgba(255, 255, 255, 1)',
           }"
         >
           <ul>
@@ -254,21 +254,20 @@
                   class="posibnik-dlya-pochatkivtsiv"
                   [ngClass]="{
                     'gradient-orange': isDark,
-                    'gradient-blue': !isDark
+                    'gradient-blue': !isDark,
                   }"
                   >Guide for Beginners</span
                 >
-                </h1>
+              </h1>
               <span
                 class="tekst-opisanye"
                 [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-                >Here is all the key information collected so that you can take
-                the first step into the world of investments confidently and
-                safely.
+                >100% free. All trading theory — articles, video lessons, and
+                step-by-step breakdowns — openly available, with no hidden fees
+                or subscriptions.
                 <span>
-                  This is not dry theory, but a concentrate of many years of
-                  practical experience, created to save your time and protect
-                  you from expensive mistakes.</span
+                  From your first steps to advanced strategies. Learn at your
+                  own pace — all materials are open.</span
                 >
               </span>
               <div class="authot_button_block">
@@ -277,7 +276,7 @@
                   [ngClass]="{
                     'btn-section-one': true,
                     'gradient-block-orange': isDark,
-                    'gradient-block-blue': !isDark
+                    'gradient-block-blue': !isDark,
                   }"
                 >
                   <span
@@ -287,22 +286,24 @@
                   >
                 </div>
 
-                 
-
                 <div
                   class="podrobnee phone"
-                  
                   [ngClass]="{
                     'podrobnee-dark': isDark,
-                    'podrobnee-light': !isDark
+                    'podrobnee-light': !isDark,
                   }"
                 >
-                   
-                  <span class="text-p"><a target="_blank" rel="nofollow" href="https://arapov.education/en/course-en/">Quick start</a> </span>
+                  <span class="text-p"
+                    ><a
+                      target="_blank"
+                      rel="nofollow"
+                      href="https://arapov.education/en/course-en/"
+                      >Quick start</a
+                    >
+                  </span>
                 </div>
               </div>
 
-               
               <div
                 class="follow-us-block"
                 [ngClass]="{ 'follow-pad': !isDark }"
@@ -319,7 +320,7 @@
                       class="fb"
                       [ngClass]="{
                         'links-dark': isDark,
-                        'links-light': !isDark
+                        'links-light': !isDark,
                       }"
                     >
                       <a href="https://www.facebook.com/igor.arapov.75">
@@ -344,7 +345,7 @@
                       class="fb"
                       [ngClass]="{
                         'links-dark': isDark,
-                        'links-light': !isDark
+                        'links-light': !isDark,
                       }"
                     >
                       <a
@@ -371,7 +372,7 @@
                       class="fb"
                       [ngClass]="{
                         'links-dark': isDark,
-                        'links-light': !isDark
+                        'links-light': !isDark,
                       }"
                     >
                       <a href="https://ru.tradingview.com/u/Igor_Arapov/">
@@ -397,7 +398,7 @@
                       class="fb"
                       [ngClass]="{
                         'links-dark-special': isDark,
-                        'links-light-special': !isDark
+                        'links-light-special': !isDark,
                       }"
                     >
                       <a href="https://www.youtube.com/@ArapovTrade">
@@ -431,7 +432,7 @@
                       [ngClass]="{
                         'links-dark-special': isDark,
 
-                        'links-light-special': !isDark
+                        'links-light-special': !isDark,
                       }"
                     >
                       <a href="https://telegram.me/+380506308200">
@@ -460,7 +461,7 @@
                       class="fb"
                       [ngClass]="{
                         'links-dark': isDark,
-                        'links-light': !isDark
+                        'links-light': !isDark,
                       }"
                     >
                       <a href="https://www.instagram.com/arapovtrade/">
@@ -493,7 +494,7 @@
             [ngStyle]="{
               background: isDark
                 ? 'url(assets/redesignArapovTrade/img/imageAuthor.png) no-repeat center'
-                : 'url(assets/redesignArapovTrade/img/imageAuthor-light.png) no-repeat center'
+                : 'url(assets/redesignArapovTrade/img/imageAuthor-light.png) no-repeat center',
             }"
           ></div>
         </div>
@@ -512,14 +513,14 @@
             [ngClass]="{
               arrows: true,
               'arrows-dark': isDark,
-              'arrows-light': !isDark
+              'arrows-light': !isDark,
             }"
           ></div>
           <div
             [ngClass]="{
               bg: true,
               'bg-dark': isDark,
-              'bg-light': !isDark
+              'bg-light': !isDark,
             }"
           ></div>
         </div>
@@ -527,7 +528,7 @@
         <div
           class="igor-info"
           [ngStyle]="{
-            border: isDark ? '2px solid #52493b' : '2px solid #4D5460'
+            border: isDark ? '2px solid #52493b' : '2px solid #4D5460',
           }"
         >
           <div class="avatar"></div>
@@ -543,14 +544,14 @@
             [ngClass]="{
               dorogiy: true,
               'gradient-orange': isDark,
-              'gradient-blue': !isDark
+              'gradient-blue': !isDark,
             }"
             >Dear </span
           ><span
             [ngClass]="{
               chitachu: true,
               'gradient-orange': isDark,
-              'gradient-blue': !isDark
+              'gradient-blue': !isDark,
             }"
             >reader!</span
           >
@@ -593,7 +594,7 @@
           [ngClass]="{
             'youtube-channel': true,
             'gradient-block-orange': isDark,
-            'gradient-block-blue': !isDark
+            'gradient-block-blue': !isDark,
           }"
         >
           <a
@@ -610,7 +611,7 @@
       [ngClass]="{
         background: true,
         'background-dark': isDark,
-        'background-light': !isDark
+        'background-light': !isDark,
       }"
     ></div>
     <div class="about-bg" *ngIf="isDark"></div>
@@ -622,7 +623,7 @@
         [ngClass]="{
           'author-header': true,
           'gradient-orange': isDark,
-          'gradient-blue': !isDark
+          'gradient-blue': !isDark,
         }"
         >About the Author of the Strategy</span
       >
@@ -631,16 +632,15 @@
         [ngStyle]="{
           background: isDark
             ? 'rgba(255, 255, 255, 0.08)'
-            : 'rgba(230, 237, 251, 0.7)'
+            : 'rgba(230, 237, 251, 0.7)',
         }"
       >
         <div class="quote">
           <span
             class="quote-text"
             [ngStyle]="{
-            
-            'color': isDark? '#ffffff' : '#0C263A' ,
-            'border-left': isDark? '5px solid #ffcd29':'5px solid #0082CC',
+              color: isDark ? '#ffffff' : '#0C263A',
+              'border-left': isDark ? '5px solid #ffcd29' : '5px solid #0082CC',
             }"
             >"Success in the market is not the result of superhuman effort, but
             the consequence of a correct system. Every professional was once in
@@ -662,7 +662,7 @@
             [ngStyle]="{
               border: isDark
                 ? '2px solid rgba(255, 255, 255, 0.16)'
-                : '2px solid #D6EBF7'
+                : '2px solid #D6EBF7',
             }"
           >
             <div class="group-6">
@@ -670,7 +670,7 @@
                 [ngClass]="{
                   'text-7': true,
                   'text-7-dark': isDark,
-                  'text-7-light': !isDark
+                  'text-7-light': !isDark,
                 }"
               ></div>
             </div>
@@ -679,12 +679,12 @@
             <span
               class="feature-body"
               [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-              >12 years of experience</span
+              >Over 13 years of experience</span
             ><span
               class="feature-8"
               [ngStyle]="{ color: isDark ? '#ffffff' : '#6D7D89' }"
-              >Trader since 2013, countless successful trades, 60%+ increase to
-              the total deposit over 2 years.</span
+              >Practicing trader since 2013, author of a series of trading books
+              with international ISBNs (Bowker USA)</span
             >
           </div>
         </div>
@@ -694,14 +694,14 @@
             [ngStyle]="{
               border: isDark
                 ? '2px solid rgba(255, 255, 255, 0.16)'
-                : '2px solid #D6EBF7'
+                : '2px solid #D6EBF7',
             }"
           >
             <div
               [ngClass]="{
                 'text-a': true,
                 'text-a-dark': isDark,
-                'text-a-light': !isDark
+                'text-a-light': !isDark,
               }"
             ></div>
           </div>
@@ -713,8 +713,8 @@
             ><span
               class="image-d"
               [ngStyle]="{ color: isDark ? '#ffffff' : '#6D7D89' }"
-              >Systematic approach based on volume analysis, Wyckoff logic, and
-              risk control.</span
+              >A systematic approach based on volume analysis, Wyckoff logic,
+              and risk control</span
             >
           </div>
         </div>
@@ -725,20 +725,23 @@
         [ngClass]="{
           articles: true,
           'articles-dark': isDark,
-          'articles-light': !isDark
+          'articles-light': !isDark,
         }"
       ></div>
       <div
         class="articles-text"
         [ngStyle]="{
-            
-            'background': isDark? 'rgba(255, 255, 255, 0.08)' : 'rgba(0, 136, 255, 0.08)' ,
-            'border': isDark? '2px solid rgba(230, 237, 251, 0.16)':'2px solid rgba(0, 136, 255, 0.16)',
-            }"
+          background: isDark
+            ? 'rgba(255, 255, 255, 0.08)'
+            : 'rgba(0, 136, 255, 0.08)',
+          border: isDark
+            ? '2px solid rgba(230, 237, 251, 0.16)'
+            : '2px solid rgba(0, 136, 255, 0.16)',
+        }"
       >
         <div class="articles-count">
           <span class="articles-recommendations"
-            >130+ educational articles<br /></span
+            >150+ educational articles<br /></span
           ><span class="graphics">with practical recommendations </span>
         </div>
       </div>
@@ -746,14 +749,17 @@
       <div
         class="frame-e"
         [ngStyle]="{
-            
-            'background': isDark? 'rgba(255, 255, 255, 0.08)' : 'rgba(0, 136, 255, 0.08)' ,
-            'border': isDark? '2px solid rgba(230, 237, 251, 0.16)':'2px solid rgba(0, 136, 255, 0.16)',
-            }"
+          background: isDark
+            ? 'rgba(255, 255, 255, 0.08)'
+            : 'rgba(0, 136, 255, 0.08)',
+          border: isDark
+            ? '2px solid rgba(230, 237, 251, 0.16)'
+            : '2px solid rgba(0, 136, 255, 0.16)',
+        }"
       >
         <div class="positive-reviews">
-          <span class="positive-reviews-percent">95% </span
-          ><span class="positive-reviews-text">Positive reviews</span>
+          <span class="positive-reviews-percent">70+ </span
+          ><span class="positive-reviews-text">Videos on YouTube</span>
         </div>
         <div class="frame-f"></div>
       </div>
@@ -768,7 +774,7 @@
         [ngClass]="{
           'background-10': true,
           'background-10-dark': isDark,
-          'background-10-light': !isDark
+          'background-10-light': !isDark,
         }"
       ></div>
       <div class="up-block">
@@ -776,7 +782,7 @@
           [ngClass]="{
             'arrow-11': true,
             'arrow-11-dark': isDark,
-            'arrow-11-light': !isDark
+            'arrow-11-light': !isDark,
           }"
         ></div>
         <div
@@ -784,10 +790,13 @@
           data-aos-delay="300"
           class="trading-definition"
           [ngStyle]="{
-            
-            'background': isDark? 'rgba(255, 255, 255, 0.08)' : 'rgba(0, 131, 205, 0.08)' ,
-            'border': isDark? '2px solid rgba(230, 237, 251, 0.16)':'2px solid #E6EDFB',
-            }"
+            background: isDark
+              ? 'rgba(255, 255, 255, 0.08)'
+              : 'rgba(0, 131, 205, 0.08)',
+            border: isDark
+              ? '2px solid rgba(230, 237, 251, 0.16)'
+              : '2px solid #E6EDFB',
+          }"
         >
           <div class="flex-row-12">
             <div class="info-icon">
@@ -795,7 +804,7 @@
                 [ngClass]="{
                   'group-13': true,
                   'group-13-dark': isDark,
-                  'group-13-light': !isDark
+                  'group-13-light': !isDark,
                 }"
               ></div>
             </div>
@@ -803,10 +812,11 @@
               [ngClass]="{
                 'trading-definition-title': true,
                 'gradient-orange': isDark,
-                'gradient-blue': !isDark
+                'gradient-blue': !isDark,
               }"
-              >What is trading: in simple terms</h2
             >
+              What is trading: in simple terms
+            </h2>
           </div>
           <span
             class="trading-definition-text"
@@ -828,10 +838,12 @@
               [ngClass]="{
                 'osnovi-treidingu': true,
                 'gradient-orange': isDark,
-                'gradient-blue': !isDark
+                'gradient-blue': !isDark,
               }"
-              >Basics of Trading</h2
-            ><span
+            >
+              Basics of Trading
+            </h2>
+            <span
               class="osnovi-treidingu-14"
               [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
               >Trading is the process of buying and selling financial assets
@@ -847,7 +859,7 @@
               [ngClass]="{
                 tab: true,
                 'tab-dark': isDark,
-                'tab-light': !isDark
+                'tab-light': !isDark,
               }"
             >
               <span class="tab-text">Company Stocks</span>
@@ -856,7 +868,7 @@
               [ngClass]="{
                 tab: true,
                 'tab-dark': isDark,
-                'tab-light': !isDark
+                'tab-light': !isDark,
               }"
             >
               <span class="tab-text">Currency (Forex market)</span>
@@ -865,7 +877,7 @@
               [ngClass]="{
                 tab: true,
                 'tab-dark': isDark,
-                'tab-light': !isDark
+                'tab-light': !isDark,
               }"
             >
               <span class="tab-text"
@@ -876,7 +888,7 @@
               [ngClass]="{
                 tab: true,
                 'tab-dark': isDark,
-                'tab-light': !isDark
+                'tab-light': !isDark,
               }"
             >
               <span class="tab-text">Commodities (gold, oil, wheat)</span>
@@ -885,7 +897,7 @@
               [ngClass]="{
                 tab: true,
                 'tab-dark': isDark,
-                'tab-light': !isDark
+                'tab-light': !isDark,
               }"
             >
               <span class="tab-text"
@@ -909,21 +921,21 @@
             [ngClass]="{
               'arrow_fifth-block-rigth': true,
               'arrow_fifth-block-rigth-dark': isDark,
-              'arrow_fifth-block-rigth-light': !isDark
+              'arrow_fifth-block-rigth-light': !isDark,
             }"
           ></div>
           <div
             [ngClass]="{
               'streamline-sharp_pie-chart-remix': true,
               'streamline-sharp_pie-chart-remix-dark': isDark,
-              'streamline-sharp_pie-chart-remix-light': !isDark
+              'streamline-sharp_pie-chart-remix-light': !isDark,
             }"
           ></div>
           <div
             [ngClass]="{
               'BG-shape-fifth_block': true,
               'BG-shape-fifth_block-dark': isDark,
-              'BG-shape-fifth_block-light': !isDark
+              'BG-shape-fifth_block-light': !isDark,
             }"
           ></div>
         </div>
@@ -936,14 +948,14 @@
         [ngClass]="{
           'six-block-graph-img': true,
           'six-block-graph-img-dark': isDark,
-          'six-block-graph-img-light': !isDark
+          'six-block-graph-img-light': !isDark,
         }"
       ></div>
       <div
         [ngClass]="{
           'bg-16': true,
           'bg-16-dark': isDark,
-          'bg-16-light': !isDark
+          'bg-16-light': !isDark,
         }"
       ></div>
       <div class="six-block-main-img"></div>
@@ -951,7 +963,7 @@
         [ngClass]="{
           'flex-row-ca': true,
           'flex-row-ca-dark': isDark,
-          'flex-row-ca-light': !isDark
+          'flex-row-ca-light': !isDark,
         }"
       ></div>
     </div>
@@ -961,10 +973,12 @@
         [ngClass]="{
           'material-symbols-show-chart-rounded': true,
           'gradient-orange': isDark,
-          'gradient-blue': !isDark
+          'gradient-blue': !isDark,
         }"
-        >Who is a trader?</h2
-      ><span
+      >
+        Who is a trader?
+      </h2>
+      <span
         class="flex-row-fc"
         [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
         >A trader is a person who buys and sells financial instruments with the
@@ -979,13 +993,13 @@
         [ngStyle]="{
           background: isDark
             ? 'rgba(255, 255, 255, 0.08)'
-            : 'rgba(230, 237, 251, 0.7)'
+            : 'rgba(230, 237, 251, 0.7)',
         }"
       >
         <div
           class="naygolovnishe"
           [ngStyle]="{
-            'border-left': isDark ? '5px solid #ffcd29' : '5px solid #0082CC'
+            'border-left': isDark ? '5px solid #ffcd29' : '5px solid #0082CC',
           }"
         >
           <p [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }">
@@ -1006,24 +1020,26 @@
             [ngClass]="{
               'opportunities-risks': true,
               'gradient-orange': isDark,
-              'gradient-blue': !isDark
+              'gradient-blue': !isDark,
             }"
-            >Opportunities and Risks</h2
-          ><span
+          >
+            Opportunities and Risks
+          </h2>
+          <span
             class="opportunities-risks-38"
             [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-            >Trading is attractive due to the possibility of high
-            incomes—experienced traders are capable of earning over $1,000 per
-            month, and some significantly more ($2,000–$10,000/month). However,
-            trading is not easy money. Statistically, most newcomers lose their
-            investments within the first few months.</span
+            >Trading attracts with the opportunity to earn on financial markets.
+            However, it is not easy money — trading requires knowledge,
+            discipline, and continuous development. Statistically, most
+            beginners lose their funds within the first months of trading due to
+            common mistakes.</span
           >
           <div class="minuses">
             <span
               [ngClass]="{
                 'deposit-loss-reasons': true,
                 'gradient-orange': isDark,
-                'gradient-blue': !isDark
+                'gradient-blue': !isDark,
               }"
               >Reasons for losing the deposit:</span
             >
@@ -1037,7 +1053,7 @@
                 [ngClass]="{
                   vector: true,
                   'vector-dark': isDark,
-                  'vector-light': !isDark
+                  'vector-light': !isDark,
                 }"
               ></div>
             </div>
@@ -1051,7 +1067,7 @@
                 [ngClass]="{
                   vector: true,
                   'vector-dark': isDark,
-                  'vector-light': !isDark
+                  'vector-light': !isDark,
                 }"
               ></div>
             </div>
@@ -1065,7 +1081,7 @@
                 [ngClass]="{
                   vector: true,
                   'vector-dark': isDark,
-                  'vector-light': !isDark
+                  'vector-light': !isDark,
                 }"
               ></div>
             </div>
@@ -1079,7 +1095,7 @@
                 [ngClass]="{
                   vector: true,
                   'vector-dark': isDark,
-                  'vector-light': !isDark
+                  'vector-light': !isDark,
                 }"
               ></div>
             </div>
@@ -1090,7 +1106,7 @@
             [ngClass]="{
               'successful-trader': true,
               'gradient-orange': isDark,
-              'gradient-blue': !isDark
+              'gradient-blue': !isDark,
             }"
             >To become a successful trader, you need to:</span
           >
@@ -1099,7 +1115,7 @@
               [ngClass]="{
                 'vector-40': true,
                 'vector-40-dark': isDark,
-                'vector-40-light': !isDark
+                'vector-40-light': !isDark,
               }"
             ></div>
             <span
@@ -1113,7 +1129,7 @@
               [ngClass]="{
                 'vector-40': true,
                 'vector-40-dark': isDark,
-                'vector-40-light': !isDark
+                'vector-40-light': !isDark,
               }"
             ></div>
             <span
@@ -1127,7 +1143,7 @@
               [ngClass]="{
                 'vector-40': true,
                 'vector-40-dark': isDark,
-                'vector-40-light': !isDark
+                'vector-40-light': !isDark,
               }"
             ></div>
             <span
@@ -1141,7 +1157,7 @@
               [ngClass]="{
                 'vector-40': true,
                 'vector-40-dark': isDark,
-                'vector-40-light': !isDark
+                'vector-40-light': !isDark,
               }"
             ></div>
             <span
@@ -1161,14 +1177,14 @@
             [ngClass]="{
               chart: true,
               'chart-dark': isDark,
-              'chart-light': !isDark
+              'chart-light': !isDark,
             }"
           ></div>
           <div
             [ngClass]="{
               'chart-arc': true,
               'chart-arc-dark': isDark,
-              'chart-arc-light': !isDark
+              'chart-arc-light': !isDark,
             }"
           ></div>
         </div>
@@ -1178,7 +1194,7 @@
       [ngClass]="{
         bg_seventh: true,
         'bg_seventh-dark': isDark,
-        'bg_seventh-light': !isDark
+        'bg_seventh-light': !isDark,
       }"
     ></div>
   </div>
@@ -1191,7 +1207,7 @@
           [ngClass]="{
             'img-19': true,
             'img-19-dark': isDark,
-            'img-19-light': !isDark
+            'img-19-light': !isDark,
           }"
         ></div>
       </div>
@@ -1200,31 +1216,30 @@
           [ngClass]="{
             'opportunities-risks': true,
             'gradient-orange': isDark,
-            'gradient-blue': !isDark
+            'gradient-blue': !isDark,
           }"
-          >How to start?
+        >
+          How to start?
         </h2>
         <div
           class="start-trading-recommendation"
           [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
         >
           <span
-            >To correctly start trading on the exchange and not lose funds, I
-            recommend taking a free training course. The course covers all key
-            sections of trading theory necessary for a confident start.<br /><br />You
-            can get acquainted with the trading results of the Free Training
-            Course and the effectiveness of the trading system on the public
-            account of the student
+            >To start trading properly and avoid losing your funds, I recommend
+            beginning with free trading theory. It covers all key sections
+            needed for a confident start — from basic concepts to trading
+            strategies.<br /><br />All materials are openly available, with no
+            hidden fees — learn at your own pace and master the market step by
+            step. Each topic includes real examples and detailed explanations.
           </span>
-          MQL5 (signal #2246716). The student ranks 1st on the MQL5 service by
-          the size of their subscribers' capital.
         </div>
 
         <span
           [ngClass]="{
             'successful-trader': true,
             'gradient-orange': isDark,
-            'gradient-blue': !isDark
+            'gradient-blue': !isDark,
           }"
           >On the educational platform, you will find:</span
         >
@@ -1232,29 +1247,31 @@
           <div
             [ngClass]="{ tab: true, 'tab-dark': isDark, 'tab-light': !isDark }"
           >
-            <span class="tab-text">over 130 articles and 70 video lessons</span>
-          </div>
-          <div
-            [ngClass]="{ tab: true, 'tab-dark': isDark, 'tab-light': !isDark }"
-          >
             <span class="tab-text"
-              >explanation of basic and advanced strategies</span
+              >articles and video lessons with explanations</span
             >
           </div>
           <div
             [ngClass]="{ tab: true, 'tab-dark': isDark, 'tab-light': !isDark }"
           >
-            <span class="tab-text">examples of real deals</span>
+            <span class="tab-text"
+              >breakdowns of basic and advanced strategies</span
+            >
           </div>
           <div
             [ngClass]="{ tab: true, 'tab-dark': isDark, 'tab-light': !isDark }"
           >
-            <span class="tab-text">recommendations for choosing a broker</span>
+            <span class="tab-text">real trade examples</span>
           </div>
           <div
             [ngClass]="{ tab: true, 'tab-dark': isDark, 'tab-light': !isDark }"
           >
-            <span class="tab-text">explanation of terms and tools</span>
+            <span class="tab-text">broker selection recommendations</span>
+          </div>
+          <div
+            [ngClass]="{ tab: true, 'tab-dark': isDark, 'tab-light': !isDark }"
+          >
+            <span class="tab-text">explanations of terms and instruments</span>
           </div>
         </div>
       </div>
@@ -1271,7 +1288,7 @@
           [ngStyle]="{
             background: isDark
               ? 'rgba(255, 255, 255, 0.08)'
-              : 'rgba(230, 237, 251, 0.7)'
+              : 'rgba(230, 237, 251, 0.7)',
           }"
         >
           <div class=" ">
@@ -1281,15 +1298,15 @@
                 color: isDark ? '#ffffff' : '#0C263A',
                 'border-left': isDark
                   ? '5px solid #ffcd29'
-                  : '5px solid #0082CC'
+                  : '5px solid #0082CC',
               }"
-              >Most importantly, you will be able to master a trading strategy
-              that will help you feel confident in the market, avoid typical
-              mistakes, and gradually increase profit.<br />Trading is not just
-              a hobby or a game; it's a full-fledged profession that requires
-              effort, self-discipline, and analytical thinking. But if you're
-              ready to invest time and work on yourself, the market offers the
-              opportunity to achieve financial freedom.</span
+              >Most importantly — you will be able to master a trading strategy
+              that will help you feel confident in the market and avoid the
+              common mistakes most beginners make.<br />Trading is a
+              full-fledged profession that requires effort, self-discipline, and
+              analytical thinking. If you are willing to invest time and work on
+              yourself — the financial market opens real opportunities for those
+              who approach trading systematically.</span
             >
           </div>
         </div>
@@ -1301,12 +1318,14 @@
           <span
             class="speach-text"
             [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-            >I wish you success in your learning and the first steps on the path to professional trading!<br /><br /></span
+            >I wish you success in your learning and the first steps on the path
+            to professional trading!<br /><br /></span
           ><span
             class="speach-text-quote"
             [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
             >Best regards, <br />
-            Author of the course "Trading Education from Scratch" — Igor Arapov</span
+            Author of the course "Trading Education from Scratch" — Igor
+            Arapov</span
           >
         </div>
         <span
@@ -1329,14 +1348,14 @@
                 [ngStyle]="{
                   background: isDark
                     ? 'url(assets/redesignArapovTrade/img/logo-new.png) no-repeat center'
-                    : 'url(assets/redesignArapovTrade/img/logo-new-light.png) no-repeat center'
+                    : 'url(assets/redesignArapovTrade/img/logo-new-light.png) no-repeat center',
                 }"
               ></div>
               <span class="loog-text hg">Arapov.Trade</span>
             </div>
           </div>
           <span class="footer-text"
-            >Free trading education and practical recommendations for beginners and pros to avoid losing the deposit.</span
+            >100% free trading theory and practical recommendations for beginners and experienced traders.</span
           >
         </div>
       </div>
@@ -1361,8 +1380,8 @@
           </div>
           <div class="menu-title-block">
             <a (click)="navigateTo('en/freestudying')" class="menu-title_text"
-              >Free Trading Education </a
-            >
+              >Free Trading Education
+            </a>
           </div>
           <div class="menu-title-block">
             <a (click)="navigateTo('en/books')" class="menu-title_text"
@@ -1397,24 +1416,41 @@
         </div>
 
         <div class="menu">
-          <span class="menu-title">Our Projects</span
+          <span class="menu-title">Our Projects</span>
+          <a
+            href="https://arapov.education/en/course-en/"
+            target="_blank"
+            class="menu-title-block menu-title_text"
           >
-          <a href="https://arapov.education/en/course-en/" target="_blank" class="menu-title-block menu-title_text">
-              
-           <span class="menu-title-block menu-title_text"
-            >  Quick Start In Trading</span> </a> 
-             <a href="https://arapov.education/en/reg-workshop-en/" target="_blank" class="menu-title-block menu-title_text">
-              
-           <span class="menu-title-block menu-title_text"
-            >  Introduction To Trading</span> </a> 
-             <a href="https://arapov.trade/en/studying" target="_blank" class="menu-title-block menu-title_text">
-              
-           <span class="menu-title-block menu-title_text"
-            >  Professional Courses</span> </a> 
-             <a href="https://arapovcopytrade.com/en/home-en/" target="_blank" class="menu-title-block menu-title_text"> 
-              
-           <span class="menu-title-block menu-title_text"
-            >  Copy-Trading</span> </a> 
+            <span class="menu-title-block menu-title_text">
+              Quick Start In Trading</span
+            >
+          </a>
+          <a
+            href="https://arapov.education/en/reg-workshop-en/"
+            target="_blank"
+            class="menu-title-block menu-title_text"
+          >
+            <span class="menu-title-block menu-title_text">
+              Introduction To Trading</span
+            >
+          </a>
+          <a
+            href="https://arapov.trade/en/studying"
+            target="_blank"
+            class="menu-title-block menu-title_text"
+          >
+            <span class="menu-title-block menu-title_text">
+              Professional Courses</span
+            >
+          </a>
+          <a
+            href="https://arapovcopytrade.com/en/home-en/"
+            target="_blank"
+            class="menu-title-block menu-title_text"
+          >
+            <span class="menu-title-block menu-title_text"> Copy-Trading</span>
+          </a>
         </div>
       </div>
       <div class="popular-artickles">
@@ -1521,8 +1557,7 @@
             >
           </div>
 
-
-            <div class="popular-artickles_artickle">
+          <div class="popular-artickles_artickle">
             <a
               href="https://arapov.trade/en/freestudying/divergenceonindecators"
               target="_blank"
@@ -1563,8 +1598,10 @@
         <div class="box-b">
           <span class="text-2d">Arapov.Trade</span>
           <div class="pic-14"></div>
-          <span class="text-2e">2025. All rights reserved.</span>
-          <span class="text-2e">Sole Proprietor Arapov I. V. TIN 3314507171</span>
+          <span class="text-2e">2025-2026. All rights reserved.</span>
+          <span class="text-2e"
+            >Sole Proprietor Arapov I. V. TIN 3314507171</span
+          >
         </div>
         <div class="section-18">
           <!-- facebook -->
@@ -1572,7 +1609,7 @@
             class="fb"
             [ngClass]="{
               'links-dark': isDark,
-              'links-light': !isDark
+              'links-light': !isDark,
             }"
           >
             <a href="https://www.facebook.com/igor.arapov.75">
@@ -1595,7 +1632,7 @@
             class="fb"
             [ngClass]="{
               'links-dark': isDark,
-              'links-light': !isDark
+              'links-light': !isDark,
             }"
           >
             <a
@@ -1620,7 +1657,7 @@
             class="fb"
             [ngClass]="{
               'links-dark': isDark,
-              'links-light': !isDark
+              'links-light': !isDark,
             }"
           >
             <a href="https://ru.tradingview.com/u/Igor_Arapov/">
@@ -1644,7 +1681,7 @@
             class="fb"
             [ngClass]="{
               'links-dark-special': isDark,
-              'links-light-special': !isDark
+              'links-light-special': !isDark,
             }"
           >
             <a href="https://www.youtube.com/@ArapovTrade">
@@ -1673,7 +1710,7 @@
             [ngClass]="{
               'links-dark-special': isDark,
 
-              'links-light-special': !isDark
+              'links-light-special': !isDark,
             }"
           >
             <a href="https://telegram.me/+380506308200">
@@ -1700,7 +1737,7 @@
             class="fb"
             [ngClass]="{
               'links-dark': isDark,
-              'links-light': !isDark
+              'links-light': !isDark,
             }"
           >
             <a href="https://www.instagram.com/arapovtrade/">
@@ -1725,7 +1762,7 @@
       [ngClass]="{
         'bg-shapes-footer': true,
         'bg-shapes-footer-dark': isDark,
-        'bg-shapes-footer-light': !isDark
+        'bg-shapes-footer-light': !isDark,
       }"
     ></div>
   </div>
