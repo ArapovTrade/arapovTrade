@@ -68,7 +68,7 @@ export class HomeRuBlogFourtyTwoComponent implements OnInit {
   { title: 'Введение в трейдинг', link: 'https://arapov.education/reg-workshop/' },
   { title: 'Профессиональные курсы', link: 'https://arapov.trade/ru/studying' },
   { title: 'Базовый курс', link: 'https://arapov.trade/ru/freestudying/freeeducation' },
-  { title: 'Копитрейдинг', link: 'https://arapovcopytrade.com' },
+   
 ];
   
   

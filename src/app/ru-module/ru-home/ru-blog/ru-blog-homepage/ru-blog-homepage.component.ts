@@ -162,7 +162,7 @@ export class RuBlogHomepageComponent implements OnInit {
       title: 'Базовый курс',
       link: 'https://arapov.trade/ru/freestudying/freeeducation',
     },
-    { title: 'Копитрейдинг', link: 'https://arapovcopytrade.com' },
+     
   ];
 
   grr!: any;

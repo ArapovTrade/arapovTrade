@@ -92,7 +92,7 @@ export class HomeRuBlogNintySevenComponent implements OnInit {
       title: 'Базовый курс',
       link: 'https://arapov.trade/ru/freestudying/freeeducation',
     },
-    { title: 'Копитрейдинг', link: 'https://arapovcopytrade.com' },
+     
   ];
 
   onGroupChange(event: Event) {

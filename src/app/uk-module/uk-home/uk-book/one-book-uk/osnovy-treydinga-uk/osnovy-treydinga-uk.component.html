@@ -6,9 +6,8 @@
     <div
       class="menu-dropdown"
       [ngStyle]="{
-            background: isDark ? 'rgba(1, 1, 1, 1)' : 'rgba(255, 255, 255, 1)',
-             
-          }"
+        background: isDark ? 'rgba(1, 1, 1, 1)' : 'rgba(255, 255, 255, 1)',
+      }"
     >
       <ul>
         <li
@@ -17,15 +16,13 @@
           [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
         >
           Головна
-
         </li>
         <li
           (click)="navigateTo('')"
           [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
           [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
         >
-         безкоштовнi курси
-
+          безкоштовнi курси
         </li>
         <li
           (click)="navigateTo('uk')"
@@ -33,7 +30,6 @@
           [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
         >
           Про автора
-
         </li>
         <li
           (click)="navigateTo('uk/studying')"
@@ -54,7 +50,7 @@
           [ngStyle]="{
             background: isDark
               ? 'url(assets/redesignArapovTrade/img/logo-new.png) no-repeat center'
-              : 'url(assets/redesignArapovTrade/img/logo-new-light.png) no-repeat center'
+              : 'url(assets/redesignArapovTrade/img/logo-new-light.png) no-repeat center',
           }"
         ></div>
         <span
@@ -69,8 +65,7 @@
           class="nav-list desktop-nav"
           [ngClass]="{ 'menu-item-dark': isDark, 'menu-item-light': !isDark }"
         >
-          <li (click)="navigateTo('')">
-Головна</li>
+          <li (click)="navigateTo('')">Головна</li>
           <li (click)="navigateTo('uk/freestudying')">безкоштовнi курси</li>
           <li (click)="navigateTo('uk')">Про автора</li>
           <li (click)="navigateTo('uk/studying')">Професiйнi курси</li>
@@ -122,19 +117,25 @@
           >
             <li
               [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-              (click)="selectLang('ua'); navigateTo('uk/books/osnovy-treydinga')"
+              (click)="
+                selectLang('ua'); navigateTo('uk/books/osnovy-treydinga')
+              "
             >
               UA
             </li>
             <li
               [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-              (click)="selectLang('ru'); navigateTo('ru/books/osnovy-treydinga')"
+              (click)="
+                selectLang('ru'); navigateTo('ru/books/osnovy-treydinga')
+              "
             >
               RU
             </li>
             <li
               [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-              (click)="selectLang('en'); navigateTo('en/books/osnovy-treydinga')"
+              (click)="
+                selectLang('en'); navigateTo('en/books/osnovy-treydinga')
+              "
             >
               EN
             </li>
@@ -236,7 +237,7 @@
           [ngClass]="{
             'isbn-block': true,
             'gradient-block-orange': isDark,
-            'podrobnee-light': !isDark
+            'podrobnee-light': !isDark,
           }"
         >
           <p
@@ -258,10 +259,10 @@
             class="author_descr_span"
             [ngClass]="{
               'gradient-orange': isDark,
-              'gradient-blue_author-page': !isDark
+              'gradient-blue_author-page': !isDark,
             }"
           >
-           Методичний посібник для трейдерів-початківців
+            Методичний посібник для трейдерів-початківців
           </h2>
         </div>
         <div class="book_block_container">
@@ -307,8 +308,7 @@
           >
             <div class="book_block_container-item-block">
               <p class="book_block_container-item_title">МОВА</p>
-              <p class="book_block_container-item_description">
-Українська</p>
+              <p class="book_block_container-item_description">Українська</p>
             </div>
           </div>
           <div
@@ -328,9 +328,12 @@
             >Практичний посібник з фінансового трейдингу від трейдера з
             12-річним досвідом. У книзі розглянуто основи біржової торгівлі,
             ринок FOREX, три види аналізу ринку, управління капіталом та типові
-            помилки новачків. Ідеально для тих, хто розпочинає шлях у трейдингу.<br />
+            помилки новачків. Ідеально для тих, хто розпочинає шлях у
+            трейдингу.<br />
             Ця
-            <a class="linkrefinto" target="_blank"
+            <a
+              class="linkrefinto"
+              target="_blank"
               href="http://www.irbis-nbuv.gov.ua/cgi-bin/irbis64r_81/cgiirbis_64.exe?Z21ID=&I21DBN=VFEIR&P21DBN=VFEIR&S21STN=1&S21REF=10&S21FMT=fullw&C21COM=S&S21CNR=20&S21P01=3&S21P02=0&S21P03=A=&S21COLORTERMS=0&S21STR=Арапов%2C%20Ігор"
               >книга</a
             >
@@ -346,7 +349,7 @@
             [ngClass]="{
               'btn-section-one': true,
               'gradient-block-orange': isDark,
-              'gradient-block-blue': !isDark
+              'gradient-block-blue': !isDark,
             }"
           >
             <span
@@ -355,8 +358,6 @@
               >Завантажити безкоштовно</span
             >
           </div>
-
-          
         </div>
       </div>
     </div>
@@ -366,7 +367,7 @@
       [ngStyle]="{
         background: isDark
           ? 'url(/assets/redesignArapovTrade/img/author-page_main-block_bg.png)  no-repeat center'
-          : 'url(/assets/redesignArapovTrade/img/author-page_main-block_bg-light.png) no-repeat center'
+          : 'url(/assets/redesignArapovTrade/img/author-page_main-block_bg-light.png) no-repeat center',
       }"
     ></div>
     <div
@@ -374,7 +375,7 @@
       [ngStyle]="{
         background: isDark
           ? 'url(/assets/redesignArapovTrade/img/author-page_main-block_bg-image.png) no-repeat'
-          : 'url(/assets/redesignArapovTrade/img/author-page_main-block_bg-image-light.png) no-repeat'
+          : 'url(/assets/redesignArapovTrade/img/author-page_main-block_bg-image-light.png) no-repeat',
       }"
     ></div>
   </div>
@@ -556,42 +557,14 @@
     </div>
   </div> -->
 
-  
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-   
-
-
-
-
-
-  <div
-    class="author-page_section-three"
-     
-  >
+  <div class="author-page_section-three">
     <div
       class="author-page_section-three-block"
       [ngStyle]="{
         background: isDark
           ? 'rgba(255, 255, 255, 0.08)'
           : 'rgba(0, 131, 205, 0.08)',
-        border: isDark ? ' 1px solid #46483A' : '1px solid #C5E2F2'
+        border: isDark ? ' 1px solid #46483A' : '1px solid #C5E2F2',
       }"
     >
       <div class="author-page_main-block_title-block three-block">
@@ -599,7 +572,7 @@
           class=" "
           [ngClass]="{
             'gradient-orange': isDark,
-            'gradient-blue_author-page': !isDark
+            'gradient-blue_author-page': !isDark,
           }"
           >Хочете професійне навчання?</span
         >
@@ -610,9 +583,9 @@
           class="author-page_main-block_description-text"
           [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
           >Раді бачити ваш інтерес до професійного навчання. Щоб отримати
-          консультацію та забронювати місце, виберіть зручний для вас
-          месенджер і надішліть нам повідомлення. Наприклад, просто напишіть «Хочу
-          на курс». <br />
+          консультацію та забронювати місце, виберіть зручний для вас месенджер
+          і надішліть нам повідомлення. Наприклад, просто напишіть «Хочу на
+          курс». <br />
           Наш менеджер зв'яжеться з вами найближчим часом та відповість на все
           питання.
         </span>
@@ -623,7 +596,7 @@
           class=" "
           [ngClass]="{
             'gradient-orange': isDark,
-            'gradient-blue_author-page': !isDark
+            'gradient-blue_author-page': !isDark,
           }"
           >Виберіть зручний спосіб для зв'язку</span
         >
@@ -638,7 +611,7 @@
             [ngClass]="{
               'three-block_social-links_item': true,
               'three-block_social-links_item-dark': isDark,
-              'three-block_social-links_item-light': !isDark
+              'three-block_social-links_item-light': !isDark,
             }"
             [ngStyle]="{
               background: isDark
@@ -646,7 +619,7 @@
                 : 'rgba(0, 130, 204, 0.10)',
               border: isDark
                 ? '1px solid rgba(255, 205, 41, 0.30)'
-                : '1px solid rgba(0, 130, 204, 0.30)'
+                : '1px solid rgba(0, 130, 204, 0.30)',
             }"
           >
             <svg
@@ -659,7 +632,7 @@
               <path
                 [ngClass]="{
                   'svg-link-dark': isDark,
-                  'svg-link-light': !isDark
+                  'svg-link-light': !isDark,
                 }"
                 fill-rule="evenodd"
                 clip-rule="evenodd"
@@ -676,7 +649,7 @@
             [ngClass]="{
               'three-block_social-links_item': true,
               'three-block_social-links_item-dark': isDark,
-              'three-block_social-links_item-light': !isDark
+              'three-block_social-links_item-light': !isDark,
             }"
             [ngStyle]="{
               background: isDark
@@ -684,7 +657,7 @@
                 : 'rgba(0, 130, 204, 0.10)',
               border: isDark
                 ? '1px solid rgba(255, 205, 41, 0.30)'
-                : '1px solid rgba(0, 130, 204, 0.30)'
+                : '1px solid rgba(0, 130, 204, 0.30)',
             }"
           >
             <svg
@@ -697,7 +670,7 @@
               <path
                 [ngClass]="{
                   'svg-link-dark': isDark,
-                  'svg-link-light': !isDark
+                  'svg-link-light': !isDark,
                 }"
                 fill-rule="evenodd"
                 clip-rule="evenodd"
@@ -715,7 +688,7 @@
             [ngClass]="{
               'three-block_social-links_item': true,
               'three-block_social-links_item-dark': isDark,
-              'three-block_social-links_item-light': !isDark
+              'three-block_social-links_item-light': !isDark,
             }"
             [ngStyle]="{
               background: isDark
@@ -723,7 +696,7 @@
                 : 'rgba(0, 130, 204, 0.10)',
               border: isDark
                 ? '1px solid rgba(255, 205, 41, 0.30)'
-                : '1px solid rgba(0, 130, 204, 0.30)'
+                : '1px solid rgba(0, 130, 204, 0.30)',
             }"
           >
             <svg
@@ -736,7 +709,7 @@
               <path
                 [ngClass]="{
                   'svg-link-dark': isDark,
-                  'svg-link-light': !isDark
+                  'svg-link-light': !isDark,
                 }"
                 fill-rule="evenodd"
                 clip-rule="evenodd"
@@ -750,7 +723,7 @@
   </div>
 
   <!-- Footer -->
- <div class="footer">
+  <div class="footer">
     <div class="footer-main-block">
       <div class="logo-body">
         <div class="frame-29">
@@ -761,7 +734,7 @@
                 [ngStyle]="{
                   background: isDark
                     ? 'url(assets/redesignArapovTrade/img/logo-new.png) no-repeat center'
-                    : 'url(assets/redesignArapovTrade/img/logo-new-light.png) no-repeat center'
+                    : 'url(assets/redesignArapovTrade/img/logo-new-light.png) no-repeat center',
                 }"
               ></div>
               <span class="loog-text hg">Arapov.Trade</span>
@@ -778,9 +751,7 @@
         <div class="menu">
           <span class="menu-title">Меню</span>
           <div class="menu-title-block">
-            <a (click)="navigateTo('')" class="menu-title_text"
-              >Головна</a
-            >
+            <a (click)="navigateTo('')" class="menu-title_text">Головна</a>
           </div>
           <div class="menu-title-block">
             <a (click)="navigateTo('uk')" class="menu-title_text"
@@ -820,27 +791,37 @@
         </div>
 
         <div class="menu">
-          <span class="menu-title">Нашi проекти</span
+          <span class="menu-title">Нашi проекти</span>
+          <a
+            href="https://arapov.education/ua/course-ua/"
+            target="_blank"
+            class="menu-title-block menu-title_text"
           >
-          <a href="https://arapov.education/ua/course-ua/" target="_blank" class="menu-title-block menu-title_text">
-              
-           <span class="menu-title-block menu-title_text"
-            >  Швидкий старт у трейдингу</span> </a> 
-             <a href="https://arapov.education/ua/reg-workshop-ua/" target="_blank" class="menu-title-block menu-title_text">
-              
-           <span class="menu-title-block menu-title_text"
-            >  Вступ до трейдингу</span> </a> 
-             <a href="https://arapov.trade/uk/studying" target="_blank" class="menu-title-block menu-title_text">
-              
-           <span class="menu-title-block menu-title_text"
-            >  Професійні курси</span> </a> 
-             <a href="https://arapovcopytrade.com/ua/invest-ua/" target="_blank" class="menu-title-block menu-title_text"> 
-              
-           <span class="menu-title-block menu-title_text"
-            >  Копiтрейдинг</span> </a> 
+            <span class="menu-title-block menu-title_text">
+              Швидкий старт у трейдингу</span
+            >
+          </a>
+          <a
+            href="https://arapov.education/ua/reg-workshop-ua/"
+            target="_blank"
+            class="menu-title-block menu-title_text"
+          >
+            <span class="menu-title-block menu-title_text">
+              Вступ до трейдингу</span
+            >
+          </a>
+          <a
+            href="https://arapov.trade/uk/studying"
+            target="_blank"
+            class="menu-title-block menu-title_text"
+          >
+            <span class="menu-title-block menu-title_text">
+              Професійні курси</span
+            >
+          </a>
+           
         </div>
       </div>
-      
     </div>
     <div class="component-1f">
       <div class="in-20"></div>
@@ -848,8 +829,8 @@
         <div class="box-b">
           <span class="text-2d">Arapov.Trade</span>
           <div class="pic-14"></div>
-          <span class="text-2e">2025. Всі права захищені.</span><span class="text-2e">ФОП Арапов І.В.
-ІПН 3314507171</span>
+          <span class="text-2e">2025. Всі права захищені.</span
+          ><span class="text-2e">ФОП Арапов І.В. ІПН 3314507171</span>
         </div>
         <div class="section-18">
           <!-- facebook -->
@@ -857,7 +838,7 @@
             class="fb"
             [ngClass]="{
               'links-dark': isDark,
-              'links-light': !isDark
+              'links-light': !isDark,
             }"
           >
             <a href="https://www.facebook.com/igor.arapov.75">
@@ -880,7 +861,7 @@
             class="fb"
             [ngClass]="{
               'links-dark': isDark,
-              'links-light': !isDark
+              'links-light': !isDark,
             }"
           >
             <a
@@ -905,7 +886,7 @@
             class="fb"
             [ngClass]="{
               'links-dark': isDark,
-              'links-light': !isDark
+              'links-light': !isDark,
             }"
           >
             <a href="https://ru.tradingview.com/u/Igor_Arapov/">
@@ -929,7 +910,7 @@
             class="fb"
             [ngClass]="{
               'links-dark-special': isDark,
-              'links-light-special': !isDark
+              'links-light-special': !isDark,
             }"
           >
             <a href="https://www.youtube.com/@ArapovTrade">
@@ -958,7 +939,7 @@
             [ngClass]="{
               'links-dark-special': isDark,
 
-              'links-light-special': !isDark
+              'links-light-special': !isDark,
             }"
           >
             <a href="https://telegram.me/+380506308200">
@@ -985,7 +966,7 @@
             class="fb"
             [ngClass]="{
               'links-dark': isDark,
-              'links-light': !isDark
+              'links-light': !isDark,
             }"
           >
             <a href="https://www.instagram.com/arapovtrade/">
@@ -1010,7 +991,7 @@
       [ngClass]="{
         'bg-shapes-footer': true,
         'bg-shapes-footer-dark': isDark,
-        'bg-shapes-footer-light': !isDark
+        'bg-shapes-footer-light': !isDark,
       }"
     ></div>
   </div>

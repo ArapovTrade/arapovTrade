@@ -84,7 +84,7 @@ export class HomeEnBlogSeventyEightComponent {
       title: 'Basic course',
       link: 'https://arapov.trade/en/freestudying/freeeducation',
     },
-    { title: 'Copy-trading', link: 'https://arapovcopytrade.com/en/home-en/' },
+     
   ];
   onGroupChange(event: Event) {
     const checkbox = event.target as HTMLInputElement;

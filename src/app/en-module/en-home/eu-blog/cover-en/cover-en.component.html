@@ -1,13 +1,12 @@
- 
-
-
-  
- 
 <div
   class="main-container"
-  [ngStyle]="{ 'background-color': isDark ? 'rgba(33,34,5,1)' : 'rgba(255,255,255,1)' }"
-
-  [ngClass]="{ 'dark-theme-main-cont': isDark, 'light-theme-main-cont': !isDark }"
+  [ngStyle]="{
+    'background-color': isDark ? 'rgba(33,34,5,1)' : 'rgba(255,255,255,1)',
+  }"
+  [ngClass]="{
+    'dark-theme-main-cont': isDark,
+    'light-theme-main-cont': !isDark,
+  }"
 >
   <div class="author-page_section-one">
     <div class="header-new_block" data-aos="fade-down" data-aos-delay="300">
@@ -17,7 +16,7 @@
           [ngStyle]="{
             background: isDark
               ? 'url(assets/redesignArapovTrade/img/logo-new.png) no-repeat center'
-              : 'url(assets/redesignArapovTrade/img/logo-new-light.png) no-repeat center'
+              : 'url(assets/redesignArapovTrade/img/logo-new-light.png) no-repeat center',
           }"
         ></div>
         <span
@@ -33,18 +32,17 @@
           [ngClass]="{ 'menu-item-dark': isDark, 'menu-item-light': !isDark }"
         >
           <li (click)="navigateTo('en/main')">Main</li>
-          <li (click)="navigateTo('en/freestudying')" [ngStyle]="{ color: isDark ? '#FFCD29' : '#0082CC' }">free courses</li>
           <li
-            (click)="navigateTo('en')"
-            
+            (click)="navigateTo('en/freestudying')"
+            [ngStyle]="{ color: isDark ? '#FFCD29' : '#0082CC' }"
           >
-            About the author
+            free courses
           </li>
+          <li (click)="navigateTo('en')">About the author</li>
           <li (click)="navigateTo('en/studying')">Professional courses</li>
-          
         </ul>
       </div>
-     
+
       <div class="langAndThere_block">
         <div class="lang-switcher" [class.open]="dropdownOpen">
           <button
@@ -88,30 +86,36 @@
             *ngIf="dropdownOpen"
             [ngStyle]="{ background: isDark ? '#2c2a06' : '#DBE2E7' }"
           >
-             <li
-              [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-                 
-            ><a routerLink="/ru" routerLinkActive="active" hreflang="ru"
-                                        [routerLinkActiveOptions]='{exact:true}'
-                                        (click)=" changeLanguage('ru');selectLang('ru'); setRussian() ">RU</a>
-              
+            <li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+              <a
+                routerLink="/ru"
+                routerLinkActive="active"
+                hreflang="ru"
+                [routerLinkActiveOptions]="{ exact: true }"
+                (click)="changeLanguage('ru'); selectLang('ru'); setRussian()"
+                >RU</a
+              >
             </li>
-            <li
-              [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-              
-            > <a routerLink="/uk" routerLinkActive="active" hreflang="uk"
-                                        [routerLinkActiveOptions]='{exact:true}'
-                                        (click)=" changeLanguage('uk');selectLang('ua'); setUkraine() ">UA</a>
-              
+            <li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+              <a
+                routerLink="/uk"
+                routerLinkActive="active"
+                hreflang="uk"
+                [routerLinkActiveOptions]="{ exact: true }"
+                (click)="changeLanguage('uk'); selectLang('ua'); setUkraine()"
+                >UA</a
+              >
             </li>
-           
-            <li
-              [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-             
-            > <a routerLink="/en" routerLinkActive="active" hreflang="en"
-                                        [routerLinkActiveOptions]='{exact:true}'
-                                        (click)=" changeLanguage('en');selectLang('en'); setEnglish() ">EN</a>
-              
+
+            <li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+              <a
+                routerLink="/en"
+                routerLinkActive="active"
+                hreflang="en"
+                [routerLinkActiveOptions]="{ exact: true }"
+                (click)="changeLanguage('en'); selectLang('en'); setEnglish()"
+                >EN</a
+              >
             </li>
           </ul>
         </div>
@@ -163,90 +167,89 @@
         </div>
 
         <div class="menu-switcher" [class.open]="menuOpen">
-            <button
-              class="menu-btn"
-              (click)="toggleMenu()"
-              [ngStyle]="{ background: isDark ? '#2c2a06' : '#DBE2E7' }"
-            >
-              <span class="icon flex" *ngIf="!menuOpen">
-                <img
-                  *ngIf="isDark"
-                  src="assets/redesignArapovTrade/img/menu-button.svg"
-                  alt="menu_icon"
-                />
-                <img
-                  *ngIf="!isDark"
-                  src="assets/redesignArapovTrade/img/menu-button-light.svg"
-                  alt="menu_icon"
-                />
-              </span>
+          <button
+            class="menu-btn"
+            (click)="toggleMenu()"
+            [ngStyle]="{ background: isDark ? '#2c2a06' : '#DBE2E7' }"
+          >
+            <span class="icon flex" *ngIf="!menuOpen">
+              <img
+                *ngIf="isDark"
+                src="assets/redesignArapovTrade/img/menu-button.svg"
+                alt="menu_icon"
+              />
+              <img
+                *ngIf="!isDark"
+                src="assets/redesignArapovTrade/img/menu-button-light.svg"
+                alt="menu_icon"
+              />
+            </span>
 
-              <span class="icon flex cross" *ngIf="menuOpen">
-                <img
-                  *ngIf="isDark"
-                  src="assets/redesignArapovTrade/img/menu-button-cross.svg"
-                  alt="menu_icon"
-                />
-                <img
-                  *ngIf="!isDark"
-                  src="assets/redesignArapovTrade/img/menu-button-cross-light.svg"
-                  alt="menu_icon"
-                />
-              </span>
-            </button>
-          </div>
-      </div>
-    </div>
-     
-  </div>
-    <div class="mask_drop-menu" *ngIf="menuOpen">
-        <div
-          class="menu-dropdown"
-          [ngStyle]="{
-            background: isDark ? 'rgba(1, 1, 1, 1)' : 'rgba(255, 255, 255, 1)'
-          }"
-        >
-          <ul>
-            <li
-              (click)="navigateTo('en/main')"
-              [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-              [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-            >
-              MAIN
-            </li>
-            <li
-              (click)="navigateTo('en/freestudying')"
-              [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-              [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-            >
-              FREE COURSES
-            </li>
-            <li
-              (click)="navigateTo('en')"
-              [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-              [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-            >
-              ABOUT THE AUTHOR
-            </li>
-            <li
-              (click)="navigateTo('en/studying')"
-              [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-              [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-            >
-              PROFESSIONAL COURSES
-            </li>
-             <li
-              (click)="navigateTo('en/books')"
-              [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-              [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-            >
-              MY BOOKS
-            </li>
-          </ul>
+            <span class="icon flex cross" *ngIf="menuOpen">
+              <img
+                *ngIf="isDark"
+                src="assets/redesignArapovTrade/img/menu-button-cross.svg"
+                alt="menu_icon"
+              />
+              <img
+                *ngIf="!isDark"
+                src="assets/redesignArapovTrade/img/menu-button-cross-light.svg"
+                alt="menu_icon"
+              />
+            </span>
+          </button>
         </div>
       </div>
- 
-<router-outlet>    </router-outlet>
+    </div>
+  </div>
+  <div class="mask_drop-menu" *ngIf="menuOpen">
+    <div
+      class="menu-dropdown"
+      [ngStyle]="{
+        background: isDark ? 'rgba(1, 1, 1, 1)' : 'rgba(255, 255, 255, 1)',
+      }"
+    >
+      <ul>
+        <li
+          (click)="navigateTo('en/main')"
+          [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+          [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
+        >
+          MAIN
+        </li>
+        <li
+          (click)="navigateTo('en/freestudying')"
+          [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+          [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
+        >
+          FREE COURSES
+        </li>
+        <li
+          (click)="navigateTo('en')"
+          [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+          [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
+        >
+          ABOUT THE AUTHOR
+        </li>
+        <li
+          (click)="navigateTo('en/studying')"
+          [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+          [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
+        >
+          PROFESSIONAL COURSES
+        </li>
+        <li
+          (click)="navigateTo('en/books')"
+          [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+          [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
+        >
+          MY BOOKS
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <router-outlet> </router-outlet>
   <!-- Footer -->
   <div class="footer">
     <div class="footer-main-block">
@@ -259,14 +262,15 @@
                 [ngStyle]="{
                   background: isDark
                     ? 'url(assets/redesignArapovTrade/img/logo-new.png) no-repeat center'
-                    : 'url(assets/redesignArapovTrade/img/logo-new-light.png) no-repeat center'
+                    : 'url(assets/redesignArapovTrade/img/logo-new-light.png) no-repeat center',
                 }"
               ></div>
               <span class="loog-text hg">Arapov.Trade</span>
             </div>
           </div>
           <span class="footer-text"
-            >100% free trading theory and practical recommendations for beginners and experienced traders.</span
+            >100% free trading theory and practical recommendations for
+            beginners and experienced traders.</span
           >
         </div>
       </div>
@@ -275,14 +279,12 @@
         <div class="menu">
           <span class="menu-title">Menu</span>
           <div class="menu-title-block">
-            <a (click)="navigateTo('en/main')" class="menu-title_text"
-              >Main</a
-            >
+            <a (click)="navigateTo('en/main')" class="menu-title_text">Main</a>
           </div>
           <div class="menu-title-block">
             <a (click)="navigateTo('en')" class="menu-title_text"
-              >About The Author </a
-            >
+              >About The Author
+            </a>
           </div>
           <div class="menu-title-block">
             <a (click)="navigateTo('en/studying')" class="menu-title_text"
@@ -290,7 +292,9 @@
             >
           </div>
           <div class="menu-title-block">
-            <a href="https://arapov.trade/en/freestudying" class="menu-title_text"
+            <a
+              href="https://arapov.trade/en/freestudying"
+              class="menu-title_text"
               >Free Trading Education</a
             >
           </div>
@@ -319,7 +323,7 @@
             class="menu-title-block menu-title_text"
             >Disclaimer</a
           >
-           <a
+          <a
             (click)="navigateTo('en/freestudying/about')"
             class="menu-title-block menu-title_text"
             >About ARAPOV.TRADE</a
@@ -327,29 +331,36 @@
         </div>
 
         <div class="menu">
-          <span class="menu-title">Our Projects</span
+          <span class="menu-title">Our Projects</span>
+          <a
+            href="https://arapov.education/en/course-en/"
+            target="_blank"
+            class="menu-title-block menu-title_text"
           >
-          <a href="https://arapov.education/en/course-en/" target="_blank" class="menu-title-block menu-title_text">
-              
-           <span class="menu-title-block menu-title_text"
-            >  Quick Start In Trading</span> </a> 
-             <a href="https://arapov.education/en/reg-workshop-en/" target="_blank" class="menu-title-block menu-title_text">
-              
-           <span class="menu-title-block menu-title_text"
-            >  Introduction To Trading</span> </a> 
-             <a href="https://arapov.trade/en/studying" target="_blank" class="menu-title-block menu-title_text">
-              
-           <span class="menu-title-block menu-title_text"
-            >  Professional Courses</span> </a> 
-             <a href="https://arapovcopytrade.com/en/home-en/" target="_blank" class="menu-title-block menu-title_text"> 
-              
-           <span class="menu-title-block menu-title_text"
-            >  Copy-Trading</span> </a> 
+            <span class="menu-title-block menu-title_text">
+              Quick Start In Trading</span
+            >
+          </a>
+          <a
+            href="https://arapov.education/en/reg-workshop-en/"
+            target="_blank"
+            class="menu-title-block menu-title_text"
+          >
+            <span class="menu-title-block menu-title_text">
+              Introduction To Trading</span
+            >
+          </a>
+          <a
+            href="https://arapov.trade/en/studying"
+            target="_blank"
+            class="menu-title-block menu-title_text"
+          >
+            <span class="menu-title-block menu-title_text">
+              Professional Courses</span
+            >
+          </a>
+           
         </div>
-
-
-
-
       </div>
       <div class="popular-artickles">
         <div class="in-20"></div>
@@ -487,8 +498,6 @@
             >
           </div>
         </div>
-         
-         
       </div>
     </div>
     <div class="component-1f">
@@ -498,7 +507,9 @@
           <span class="text-2d">Arapov.Trade</span>
           <div class="pic-14"></div>
           <span class="text-2e">2025-2026. All rights reserved. </span>
-          <span class="text-2e">Sole Proprietor Arapov I. V. TIN 3314507171</span>
+          <span class="text-2e"
+            >Sole Proprietor Arapov I. V. TIN 3314507171</span
+          >
         </div>
         <div class="section-18">
           <!-- facebook -->
@@ -506,7 +517,7 @@
             class="fb"
             [ngClass]="{
               'links-dark': isDark,
-              'links-light': !isDark
+              'links-light': !isDark,
             }"
           >
             <a href="https://www.facebook.com/igor.arapov.75">
@@ -529,7 +540,7 @@
             class="fb"
             [ngClass]="{
               'links-dark': isDark,
-              'links-light': !isDark
+              'links-light': !isDark,
             }"
           >
             <a
@@ -554,7 +565,7 @@
             class="fb"
             [ngClass]="{
               'links-dark': isDark,
-              'links-light': !isDark
+              'links-light': !isDark,
             }"
           >
             <a href="https://ru.tradingview.com/u/Igor_Arapov/">
@@ -578,7 +589,7 @@
             class="fb"
             [ngClass]="{
               'links-dark-special': isDark,
-              'links-light-special': !isDark
+              'links-light-special': !isDark,
             }"
           >
             <a href="https://www.youtube.com/@ArapovTrade">
@@ -607,7 +618,7 @@
             [ngClass]="{
               'links-dark-special': isDark,
 
-              'links-light-special': !isDark
+              'links-light-special': !isDark,
             }"
           >
             <a href="https://telegram.me/+380506308200">
@@ -634,7 +645,7 @@
             class="fb"
             [ngClass]="{
               'links-dark': isDark,
-              'links-light': !isDark
+              'links-light': !isDark,
             }"
           >
             <a href="https://www.instagram.com/arapovtrade/">
@@ -659,7 +670,7 @@
       [ngClass]="{
         'bg-shapes-footer': true,
         'bg-shapes-footer-dark': isDark,
-        'bg-shapes-footer-light': !isDark
+        'bg-shapes-footer-light': !isDark,
       }"
     ></div>
   </div>
