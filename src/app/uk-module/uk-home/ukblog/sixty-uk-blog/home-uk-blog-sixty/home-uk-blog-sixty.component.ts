@@ -86,10 +86,7 @@ export class HomeUkBlogSixtyComponent implements OnInit {
       title: 'Базовий курс',
       link: 'https://arapov.trade/uk/freestudying/freeeducation',
     },
-    {
-      title: 'Копiтрейдинг',
-      link: 'https://arapovcopytrade.com/ua/invest-ua/',
-    },
+     
   ];
 
   onGroupChange(event: Event) {

@@ -72,7 +72,7 @@ export class HomeUkBlogEightyNineComponent implements OnInit  {
     { title: 'Вступ до трейдингу', link: 'https://arapov.education/ua/reg-workshop-ua/' },
     { title: 'Професійні курси', link: 'https://arapov.trade/uk/studying' },
     { title: 'Базовий курс', link: 'https://arapov.trade/uk/freestudying/freeeducation' },
-    { title: 'Копiтрейдинг', link: 'https://arapovcopytrade.com/ua/invest-ua/' },
+     
   ];
   
   
