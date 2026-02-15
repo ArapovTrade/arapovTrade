@@ -82,11 +82,7 @@ export class HomeRuBlogSixtyFiveComponent {
   hoveredIndex: number | null = null;
 
   projects = [
-    { title: 'Быстрый старт', link: 'https://arapov.education/course/' },
-    {
-      title: 'Введение в трейдинг',
-      link: 'https://arapov.education/reg-workshop/',
-    },
+    { title: 'Книги по трейдингу', link: 'https://arapov.trade/ru/books' },
     {
       title: 'Профессиональные курсы',
       link: 'https://arapov.trade/ru/studying',
