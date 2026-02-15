@@ -80,11 +80,7 @@ export class HomeUkFifteenComponent implements OnInit {
   hoveredIndex: number | null = null;
 
   projects = [
-    { title: 'Швидкий старт', link: 'https://arapov.education/ua/course-ua/' },
-    {
-      title: 'Вступ до трейдингу',
-      link: 'https://arapov.education/ua/reg-workshop-ua/',
-    },
+    { title: 'Книги з трейдингу', link: 'https://arapov.trade/uk/books' },
     { title: 'Професійні курси', link: 'https://arapov.trade/uk/studying' },
     {
       title: 'Базовий курс',

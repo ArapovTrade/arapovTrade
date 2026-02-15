@@ -291,15 +291,10 @@
                   [ngClass]="{
                     'podrobnee-dark': isDark,
                     'podrobnee-light': !isDark,
-                  }"
+                  }" 
                 >
                   <span class="text-p"
-                    ><a
-                      target="_blank"
-                      rel="nofollow"
-                      href="https://arapov.education/en/course-en/"
-                      >Quick start</a
-                    >
+                    ><a href="https://arapov.trade/en/studying">Quick start</a>
                   </span>
                 </div>
               </div>
@@ -1384,11 +1379,6 @@
               >Free Trading Education
             </a>
           </div>
-          <div class="menu-title-block">
-            <a (click)="navigateTo('en/books')" class="menu-title_text"
-              >MY BOOKS</a
-            >
-          </div>
         </div>
         <div class="menu">
           <span class="menu-title">Links</span
@@ -1409,33 +1399,20 @@
             class="menu-title-block menu-title_text"
             >Disclaimer</a
           >
-          <a
-            (click)="navigateTo('en/freestudying/about')"
-            class="menu-title-block menu-title_text"
-            >About ARAPOV.TRADE</a
-          >
         </div>
 
         <div class="menu">
           <span class="menu-title">Our Projects</span>
           <a
-            href="https://arapov.education/en/course-en/"
-            target="_blank"
+            (click)="navigateTo('en/freestudying/about')"
             class="menu-title-block menu-title_text"
+            >About ARAPOV.TRADE</a
           >
-            <span class="menu-title-block menu-title_text">
-              Quick Start In Trading</span
+          <div class="menu-title-block">
+            <a (click)="navigateTo('en/books')" class="menu-title_text"
+              >MY BOOKS</a
             >
-          </a>
-          <a
-            href="https://arapov.education/en/reg-workshop-en/"
-            target="_blank"
-            class="menu-title-block menu-title_text"
-          >
-            <span class="menu-title-block menu-title_text">
-              Introduction To Trading</span
-            >
-          </a>
+          </div>
           <a
             href="https://arapov.trade/en/studying"
             target="_blank"
@@ -1445,7 +1422,6 @@
               Professional Courses</span
             >
           </a>
-           
         </div>
       </div>
       <div class="popular-artickles">
