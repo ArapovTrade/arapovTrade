@@ -107,7 +107,7 @@ export class RuStudyingHomeComponent
     });
   }
   navigateToHomeWithId() {
-    window.location.href = 'https://arapov.education/course/';
+    window.location.href = 'https://telegram.me/+380506308200';
   }
   scrollToRegistration() {
     const element = document.getElementById('registrationRu');

@@ -108,12 +108,8 @@ export class UkStudyingHomeComponent
     });
   }
   navigateToHomeWithId() {
-    window.location.href = 'https://arapov.education/ua/course-ua/';
-    // this.router.navigateByUrl('/uk').then(() => {
-    //   setTimeout(() => {
-    //     this.scrollToRegistration();
-    //   }, 100);
-    // });
+    window.location.href = 'https://telegram.me/+380506308200';
+     
   }
   scrollToRegistration() {
     const element = document.getElementById('registration');

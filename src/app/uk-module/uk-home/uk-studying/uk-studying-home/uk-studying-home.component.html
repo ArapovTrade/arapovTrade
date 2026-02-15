@@ -572,7 +572,7 @@
           : 'linear-gradient(90deg, rgba(0, 130, 204,  0.12) )',
       }"
     >
-      <div class="third-section_text-block">
+      <div class="third-section_text-block" style="    margin-bottom: 30px;">
         <div
           [ngClass]="{
             'second-section_programm-block-title': true,
@@ -592,21 +592,7 @@
           відкриття угод під керівництвом практикуючого трейдера, наставника
           курсу.
         </div>
-        <div
-          (click)="navigateToHomeWithId()"
-          [ngClass]="{
-            'author-page_main-block_btn': true,
-            'third-block-btn': true,
-            'gradient-block-orange': isDark,
-            'gradient-block-blue': !isDark,
-          }"
-        >
-          <span
-            class="author-page_main-block_btn-text"
-            [ngStyle]="{ color: !isDark ? '#ffffff' : '#03314b' }"
-            >Залишити заявку</span
-          >
-        </div>
+         
       </div>
       <div class="third-image-block">
         <div class="third-block_image-container">
@@ -1097,7 +1083,7 @@
         >
           Хочете стати досвiдченим трейдером?
         </div>
-        <div
+        <div style="    margin-bottom: 30px;"
           class="author-page_main-block_description-text seventh-section-descr"
           [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
         >
@@ -1113,22 +1099,7 @@
           очікуванням і контролем ризиків у кожній угоді — саме це забезпечує
           стабільність підходу на дистанції.
         </div>
-        <div
-          (click)="navigateToHomeWithId()"
-          [ngClass]="{
-            'author-page_main-block_btn': true,
-            'third-block-btn': true,
-            'seventh-btn': true,
-            'gradient-block-orange': isDark,
-            'gradient-block-blue': !isDark,
-          }"
-        >
-          <span
-            class="author-page_main-block_btn-text"
-            [ngStyle]="{ color: !isDark ? '#ffffff' : '#03314b' }"
-            >Залишити заявку</span
-          >
-        </div>
+        
       </div>
       <div class="third-image-block">
         <div class="seventh-block_image-container">

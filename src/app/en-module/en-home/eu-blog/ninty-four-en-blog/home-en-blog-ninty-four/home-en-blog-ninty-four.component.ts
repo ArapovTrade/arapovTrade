@@ -66,11 +66,7 @@ constructor(
   hoveredIndex: number | null = null;
   
    projects = [
-    { title: 'Quick start', link: 'https://arapov.education/en/course-en/' },
-    {
-      title: 'Introduction to Trading',
-      link: 'https://arapov.education/en/reg-workshop-en/',
-    },
+    { title: 'Trading Books', link: 'https://arapov.trade/en/books' },
     { title: 'Professional courses', link: 'https://arapov.trade/en/studying' },
     {
       title: 'Basic course',
