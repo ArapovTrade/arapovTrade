@@ -1076,7 +1076,13 @@ const routes: Routes = [
         (m) => m.OnehundredSixUkBlogModule
       ),
   },
-
+  {
+    path: 'tradingview-record', //107
+    loadChildren: () =>
+      import('../ukblog/onehundred-seven-uk-blog/onehundred-seven-uk-blog.module').then(
+        (m) => m.OnehundredSevenUkBlogModule
+      ),
+  },
 
     ]
    },

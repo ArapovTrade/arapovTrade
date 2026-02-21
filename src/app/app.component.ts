@@ -270,8 +270,15 @@ export class AppComponent implements OnInit, AfterViewChecked, OnDestroy {
                 : 'Free trading training for beginners from scratch | Igor Arapov';
         } else if (
           segments[1] === 'freestudying' &&
-          segments[2] === 'about'
+          segments[2] === 'tradingview-record'
         ) {
+          title =
+            segments[0] === 'ru'
+              ? '242 идеи, 5 лет публичного анализа: трек-рекорд Игоря Арапова на TradingView'
+              : segments[0] === 'uk'
+                ? '242 ідеї, 5 років публічного аналізу та кілька Editor`s Pick: повний трек-рекорд Ігоря Арапова на TradingView'
+                : '242 Ideas, 5 Years of Public Analysis: Igor Arapov`s Complete TradingView Track Record';
+        } else if (segments[1] === 'freestudying' && segments[2] === 'about') {
           title =
             segments[0] === 'ru'
               ? 'Про ARAPOV.TRADE — Образовательная платформа по трейдингу'
@@ -391,11 +398,25 @@ export class AppComponent implements OnInit, AfterViewChecked, OnDestroy {
               : segments[0] === 'uk'
                 ? 'Безкоштовний курс з трейдингу: 130+ статей та 70 відеоуроків. Вивчіть основи, аналіз, психологію торгівлі та перевірені стратегії'
                 : 'Free Trading Course: 130+ Articles and 70 Video Lessons. Learn the Basics, Analysis, Trading Psychology, and Proven Strategies';
-
-                } else if (
+       
+       
+       
+       
+       
+        } else if (
           segments[1] === 'freestudying' &&
-          segments[2] === 'about'
+          segments[2] === 'tradingview-record'
         ) {
+          description =
+            segments[0] === 'ru'
+              ? 'Бесплатный курс по трейдингу: 130+ статей и 70 видеоуроков. Изучите основы, анализ, психологию торговли и проверенные стратегии'
+              : segments[0] === 'uk'
+                ? 'Ігор Арапов опублікував 242 ідеї на TradingView з 2021 по 2026 рік. Bitcoin, золото, форекс, нафта, індекси та повноцінний курс методу Вайкоффа — детальний розбір усього контенту.'
+                : 'Полный разбор всего опубликованного на TradingView с 2021 по 2026 год. Bitcoin, золото, форекс, индексы, нефть, образовательный курс по методу Вайкоффа.';
+        
+       
+       
+              } else if (segments[1] === 'freestudying' && segments[2] === 'about') {
           description =
             segments[0] === 'ru'
               ? '150 статей, 9 книг с ISBN, 80+ видеоуроков на 3 языках. Бесплатное обучение трейдингу: Smart Money, метод Вайкоффа, объёмный анализ.'
