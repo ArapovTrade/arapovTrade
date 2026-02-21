@@ -299,6 +299,10 @@ export class HomeRuBlogOnehundredSevenComponent implements OnInit {
             { '@type': 'Thing', name: 'Метод Вайкоффа' },
             { '@type': 'Thing', name: 'Объёмный анализ' },
           ],
+          image: [
+            'https://arapov.trade/assets/img/content/tradingview-record.png',
+             
+          ],
           mentions: [
             {
               '@type': 'WebSite',

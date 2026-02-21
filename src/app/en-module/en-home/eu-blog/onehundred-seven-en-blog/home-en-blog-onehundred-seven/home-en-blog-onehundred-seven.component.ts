@@ -282,6 +282,10 @@ export class HomeEnBlogOnehundredSevenComponent implements OnInit {
           inLanguage: 'en',
           datePublished: '2026-02-21T00:00:00Z',
           dateModified: '2026-02-21T00:00:00Z',
+          image: [
+            'https://arapov.trade/assets/img/content/tradingview-record.png',
+             
+          ],
           mainEntity: {
             '@type': 'EducationalOrganization',
             '@id': 'https://arapov.trade/#organization',
