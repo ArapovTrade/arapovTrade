@@ -1090,6 +1090,13 @@ const routes: Routes = [
         (m) => m.OnehundredSevenRuBlogModule
       ),
   },
+  {
+    path: 'youtube', //108
+    loadChildren: () =>
+      import('../ru-blog/onehundred-eight-ru-blog/onehundred-eight-ru-blog.module').then(
+        (m) => m.OnehundredEightRuBlogModule
+      ),
+  },
     ],
   },
 ];

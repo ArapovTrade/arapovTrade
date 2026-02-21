@@ -278,6 +278,23 @@ export class AppComponent implements OnInit, AfterViewChecked, OnDestroy {
               : segments[0] === 'uk'
                 ? '242 ідеї, 5 років публічного аналізу та кілька Editor`s Pick: повний трек-рекорд Ігоря Арапова на TradingView'
                 : '242 Ideas, 5 Years of Public Analysis: Igor Arapov`s Complete TradingView Track Record';
+
+
+                
+           } else if (
+          segments[1] === 'freestudying' &&
+          segments[2] === 'youtube'
+        ) {
+          title =
+            segments[0] === 'ru'
+              ? '78 бесплатных уроков, 9 категорий: полная карта YouTube-канала @ArapovTrade'
+              : segments[0] === 'uk'
+                ? '78 безкоштовних уроків, 9 категорій: повна карта YouTube-каналу @ArapovTrade'
+                : '78 Free Trading Lessons, 9 Categories: Complete @ArapovTrade YouTube Channel Map';
+
+
+
+
         } else if (segments[1] === 'freestudying' && segments[2] === 'about') {
           title =
             segments[0] === 'ru'
@@ -409,12 +426,26 @@ export class AppComponent implements OnInit, AfterViewChecked, OnDestroy {
         ) {
           description =
             segments[0] === 'ru'
-              ? 'Бесплатный курс по трейдингу: 130+ статей и 70 видеоуроков. Изучите основы, анализ, психологию торговли и проверенные стратегии'
+              ? 'Полный разбор всего опубликованного на TradingView с 2021 по 2026 год. Bitcoin, золото, форекс, индексы, нефть, образовательный курс по методу Вайкоффа.'
               : segments[0] === 'uk'
-                ? 'Ігор Арапов опублікував 242 ідеї на TradingView з 2021 по 2026 рік. Bitcoin, золото, форекс, нафта, індекси та повноцінний курс методу Вайкоффа — детальний розбір усього контенту.'
-                : 'Полный разбор всего опубликованного на TradingView с 2021 по 2026 год. Bitcoin, золото, форекс, индексы, нефть, образовательный курс по методу Вайкоффа.';
+                ? 'Повний розбір усього опублікованого на TradingView з 2021 по 2026 рік. Bitcoin, золото, форекс, індекси, нафта, освітній курс з методу Вайкоффа.'
+                : 'A full breakdown of everything published on TradingView from 2021 to 2026. Bitcoin, gold, forex, indices, crude oil, and a complete Wyckoff Method educational curriculum.';
         
        
+           } else if (
+          segments[1] === 'freestudying' &&
+          segments[2] === 'youtube'
+        ) {
+          description =
+            segments[0] === 'ru'
+              ? 'Полный каталог всех 78 образовательных видео @ArapovTrade по категориям. Метод Вайкоффа, Smart Money, объёмный анализ, психология трейдинга. Всё бесплатно.'
+              : segments[0] === 'uk'
+                ? 'Повний каталог усіх 78 освітніх відео @ArapovTrade за категоріями. Метод Вайкоффа, Smart Money, об`ємний аналіз, психологія трейдингу. Усе безкоштовно.'
+                : 'Complete catalog of all 78 educational videos by @ArapovTrade, organized by category. Wyckoff Method, Smart Money, volume analysis, trading psychology. All free, no paywall.';
+        
+       
+
+
        
               } else if (segments[1] === 'freestudying' && segments[2] === 'about') {
           description =
