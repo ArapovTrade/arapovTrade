@@ -1090,6 +1090,14 @@ const routes: Routes = [
         (m) => m.OnehundredEightUkBlogModule
       ),
   },
+  {
+    path: 'curriculum', //109
+    loadChildren: () =>
+      import('../ukblog/onehundred-nine-uk-blog/onehundred-nine-uk-blog.module').then(
+        (m) => m.OnehundredNineUkBlogModule
+      ),
+  },
+
     ]
    },
   

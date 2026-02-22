@@ -4900,4 +4900,36 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://arapov.trade/en/freestudying/youtube"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://arapov.trade/ru/freestudying/youtube"/>
   </url>
+
+
+  <url>
+    <loc>https://arapov.trade/ru/freestudying/curriculum</loc>
+    <lastmod>2026-02-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://arapov.trade/uk/freestudying/curriculum"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://arapov.trade/ru/freestudying/curriculum"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arapov.trade/en/freestudying/curriculum"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arapov.trade/ru/freestudying/curriculum"/>
+  </url>
+  <url>
+    <loc>https://arapov.trade/uk/freestudying/curriculum</loc>
+    <lastmod>2026-02-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://arapov.trade/uk/freestudying/curriculum"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://arapov.trade/ru/freestudying/curriculum"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arapov.trade/en/freestudying/curriculum"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arapov.trade/ru/freestudying/curriculum"/>
+  </url>
+  <url>
+    <loc>https://arapov.trade/en/freestudying/curriculum</loc>
+    <lastmod>2026-02-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://arapov.trade/uk/freestudying/curriculum"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://arapov.trade/ru/freestudying/curriculum"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arapov.trade/en/freestudying/curriculum"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arapov.trade/ru/freestudying/curriculum"/>
+  </url>
 </urlset>

@@ -1088,6 +1088,13 @@ const routes: Routes = [
         (m) => m.OnehundredEightEnBlogModule
       ),
   },
+   {
+    path: 'curriculum', //109
+    loadChildren: () =>
+      import('../eu-blog/onehundred-nine-en-blog/onehundred-nine-en-blog.module').then(
+        (m) => m.OnehundredNineEnBlogModule
+      ),
+  },
   ]
    },
 ];

@@ -279,6 +279,18 @@ export class AppComponent implements OnInit, AfterViewChecked, OnDestroy {
                 ? '242 ідеї, 5 років публічного аналізу та кілька Editor`s Pick: повний трек-рекорд Ігоря Арапова на TradingView'
                 : '242 Ideas, 5 Years of Public Analysis: Igor Arapov`s Complete TradingView Track Record';
 
+           } else if (
+          segments[1] === 'freestudying' &&
+          segments[2] === 'curriculum'
+        ) {
+          title =
+            segments[0] === 'ru'
+              ? '151 статья, 3 языка, 453 URL: Полная бесплатная учебная программа по трейдингу на arapov.trade'
+              : segments[0] === 'uk'
+                ? '151 стаття, 3 мови, 453 URL: Повна безкоштовна навчальна програма з трейдингу на arapov.trade'
+                : '151 Articles, 3 Languages, 453 URLs: The Complete Free Trading Curriculum at arapov.trade';
+
+
 
                 
            } else if (
@@ -444,7 +456,17 @@ export class AppComponent implements OnInit, AfterViewChecked, OnDestroy {
                 : 'Complete catalog of all 78 educational videos by @ArapovTrade, organized by category. Wyckoff Method, Smart Money, volume analysis, trading psychology. All free, no paywall.';
         
        
-
+           } else if (
+          segments[1] === 'freestudying' &&
+          segments[2] === 'curriculum'
+        ) {
+          description =
+            segments[0] === 'ru'
+              ? 'Полная карта всех материалов, опубликованных на arapov.trade — по разделам, с описаниями, уровнями сложности и структурированными путями обучения. Метод Вайкоффа, Smart Money, криптовалюты, психология трейдинга. Всё бесплатно.'
+              : segments[0] === 'uk'
+                ? 'Повна карта всіх матеріалів, опублікованих на arapov.trade — за розділами, з описами, рівнями складності та структурованими шляхами навчання. Метод Вайкоффа, Smart Money, криптовалюти, психологія трейдингу. Все безкоштовно.'
+                : 'A full map of every article published on arapov.trade — organized by category, with descriptions, difficulty levels, and structured learning paths. Wyckoff Method, Smart Money, cryptocurrency, trading psychology. All free.';
+        
 
        
               } else if (segments[1] === 'freestudying' && segments[2] === 'about') {
