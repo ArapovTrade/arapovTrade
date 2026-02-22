@@ -8,7 +8,7 @@
           class=" "
           [ngClass]="{
             'gradient-orange': isDark,
-            'gradient-blue_author-page': !isDark
+            'gradient-blue_author-page': !isDark,
           }"
           >бесплатно</span
         >
@@ -17,9 +17,21 @@
         <span
           class="author-page_main-block_description-text"
           [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-          >Вся теория трейдинга — бесплатно и без ограничений. Детальные видеоуроки, статьи с реальными примерами и пошаговые разборы ключевых тем. От основ рынка до продвинутых торговых стратегий — учитесь в своём темпе, без дедлайнов и скрытых платежей. <br />
+          >Вся теория трейдинга — бесплатно и без ограничений. Детальные
+          видеоуроки, статьи с реальными примерами и
+          <a [ngStyle]="{
+                  color: isDark ? '#fdff8b' : '#0074e6',
+                }"
+               
+                class="linkrefinto"
+                style="text-decoration: underline" href="https://arapov.trade/ru/freestudying/fullvideocourse"
+            >пошаговые разборы ключевых тем</a
+          >
+          . От основ рынка до продвинутых торговых стратегий — учитесь в своём
+          темпе, без дедлайнов и скрытых платежей. <br />
           <br />
-          Это опыт более 13 лет торговли, собранный Игорем Араповым в видеоуроки, статьи и серию книг по трейдингу.
+          Это опыт более 13 лет торговли, собранный Игорем Араповым в
+          видеоуроки, статьи и серию книг по трейдингу.
         </span>
       </div>
 
@@ -29,10 +41,9 @@
           [ngClass]="{
             'btn-section-one': true,
             'gradient-block-orange': isDark,
-            'gradient-block-blue': !isDark
+            'gradient-block-blue': !isDark,
           }"
         >
-         
           <span
             class="author-page_main-block_btn-text"
             [ngStyle]="{ color: !isDark ? '#ffffff' : '#03314b' }"
@@ -44,14 +55,11 @@
           class="podrobnee phone"
           [ngClass]="{
             'podrobnee-dark': isDark,
-            'podrobnee-light': !isDark
+            'podrobnee-light': !isDark,
           }"
         >
           <span class="text-p"
-            ><a
-              (click)="navigateTo('ru/books')"
-              >Книги по трейдингу</a
-            >
+            ><a (click)="navigateTo('ru/books')">Книги по трейдингу</a>
           </span>
         </div>
       </div>
@@ -68,7 +76,7 @@
               class="fb"
               [ngClass]="{
                 'links-dark': isDark,
-                'links-light': !isDark
+                'links-light': !isDark,
               }"
             >
               <a href="https://www.facebook.com/igor.arapov.75">
@@ -91,7 +99,7 @@
               class="fb"
               [ngClass]="{
                 'links-dark': isDark,
-                'links-light': !isDark
+                'links-light': !isDark,
               }"
             >
               <a
@@ -116,7 +124,7 @@
               class="fb"
               [ngClass]="{
                 'links-dark': isDark,
-                'links-light': !isDark
+                'links-light': !isDark,
               }"
             >
               <a href="https://ru.tradingview.com/u/Igor_Arapov/">
@@ -140,7 +148,7 @@
               class="fb"
               [ngClass]="{
                 'links-dark-special': isDark,
-                'links-light-special': !isDark
+                'links-light-special': !isDark,
               }"
             >
               <a href="https://www.youtube.com/@ArapovTrade">
@@ -172,7 +180,7 @@
               [ngClass]="{
                 'links-dark-special': isDark,
 
-                'links-light-special': !isDark
+                'links-light-special': !isDark,
               }"
             >
               <a href="https://telegram.me/+380506308200">
@@ -199,7 +207,7 @@
               class="fb"
               [ngClass]="{
                 'links-dark': isDark,
-                'links-light': !isDark
+                'links-light': !isDark,
               }"
             >
               <a href="https://www.instagram.com/arapovtrade/">
@@ -235,7 +243,7 @@
     [ngStyle]="{
       background: isDark
         ? 'url(/assets/redesignArapovTrade/img/free-courses-page_main-block_bg.png)  no-repeat center'
-        : 'url(/assets/redesignArapovTrade/img/free-courses-page_main-block_bg-light.png) no-repeat center'
+        : 'url(/assets/redesignArapovTrade/img/free-courses-page_main-block_bg-light.png) no-repeat center',
     }"
   ></div>
   <div
@@ -243,7 +251,7 @@
     [ngStyle]="{
       background: isDark
         ? 'url(/assets/redesignArapovTrade/img/free-courses-page_main-block_bg-image.png) no-repeat'
-        : 'url(/assets/redesignArapovTrade/img/free-courses-page_main-block_bg-image-light.png) no-repeat'
+        : 'url(/assets/redesignArapovTrade/img/free-courses-page_main-block_bg-image-light.png) no-repeat',
     }"
   ></div>
   <div [ngClass]="{ image_table_block: isDark }"></div>
@@ -261,7 +269,7 @@
       'search-container': true,
 
       'shadow-box-dark': isDark,
-      'shadow-box-light': !isDark
+      'shadow-box-light': !isDark,
     }"
     [ngStyle]="{ background: !isDark ? '#ffffff' : '#000000' }"
   >
@@ -273,7 +281,7 @@
       <hr
         [ngStyle]="{
           border: isDark ? '1px solid #FFCD29' : '1px solid #0082CC',
-          width: '100%'
+          width: '100%',
         }"
       />
     </div>
@@ -285,7 +293,7 @@
           'search-input-wrapper': true,
           'search-input-wrapper-dark': isDark,
           'search-input-wrapper-light': !isDark,
-          focused: isFocused
+          focused: isFocused,
         }"
       >
         <input
@@ -310,11 +318,8 @@
       <!-- Блок с результатами -->
       <div
         [ngClass]="{
-        'search-results': true,
-         
-
-        
-      }"
+          'search-results': true,
+        }"
         *ngIf="isFocused && displayedArticles.length > 0"
         [ngStyle]="{
           background: isDark ? '#1A1A1A' : '#ffffff',
@@ -323,7 +328,7 @@
             : '1px solid rgba(0, 130, 204, 0.5)',
           boxShadow: isDark
             ? '0px 16px 48px 0px rgba(6, 35, 63, 0.03), 0px 0px 20px 0px rgba(255, 218, 8, 0.5)'
-            : '0px 16px 48px 0px rgba(6, 35, 63, 0.03), 0px 0px 20px 0px rgba(0, 130, 204, 0.5)'
+            : '0px 16px 48px 0px rgba(6, 35, 63, 0.03), 0px 0px 20px 0px rgba(0, 130, 204, 0.5)',
         }"
       >
         <div
@@ -342,7 +347,7 @@
                 [ngClass]="{
                   title: true,
                   'article-title_dark': isDark,
-                  'article-title_light': !isDark
+                  'article-title_light': !isDark,
                 }"
                 >{{ article.titleRus }}</span
               >
@@ -359,7 +364,7 @@
       groups_menu: true,
 
       'shadow-box-dark': isDark,
-      'shadow-box-light': !isDark
+      'shadow-box-light': !isDark,
     }"
     [class.open]="groupsMenuOpen"
     [ngStyle]="{ background: !isDark ? '#ffffff' : '#000000' }"
@@ -372,7 +377,7 @@
       <hr
         [ngStyle]="{
           border: isDark ? '1px solid #FFCD29' : '1px solid #0082CC',
-          width: '100%'
+          width: '100%',
         }"
       />
     </div>
@@ -387,7 +392,7 @@
 
           'search-input-wrapper-dark_group': isDark,
           'search-input-wrapper-light_group': !isDark,
-          focused: isFocused
+          focused: isFocused,
         }"
       >
         <span [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
@@ -396,7 +401,7 @@
         <span class="search-icon"
           ><img
             [ngStyle]="{
-              transform: groupsMenuOpen ? 'rotate(90deg)' : 'rotate(0deg)'
+              transform: groupsMenuOpen ? 'rotate(90deg)' : 'rotate(0deg)',
             }"
             [src]="
               isDark
@@ -412,7 +417,7 @@
         class="search-results"
         *ngIf="isFocused && displayedArticles.length > 0"
         [ngStyle]="{
-          background: isDark ? '#1A1A1A' : '#ffffff'
+          background: isDark ? '#1A1A1A' : '#ffffff',
         }"
       ></div>
     </div>
@@ -426,7 +431,7 @@
           : '1px solid rgba(0, 130, 204, 0.5)',
         boxShadow: isDark
           ? '0px 16px 48px 0px rgba(6, 35, 63, 0.03), 0px 0px 20px 0px rgba(255, 218, 8, 0.5)'
-          : '0px 16px 48px 0px rgba(6, 35, 63, 0.03), 0px 0px 20px 0px rgba(0, 130, 204, 0.5)'
+          : '0px 16px 48px 0px rgba(6, 35, 63, 0.03), 0px 0px 20px 0px rgba(0, 130, 204, 0.5)',
       }"
     >
       <div *ngFor="let group of rusGroups">
@@ -434,7 +439,7 @@
           [ngClass]="{
             'groups_menu-item': true,
             'groups_menu-item-dark': isDark,
-            'groups_menu-item-light': !isDark
+            'groups_menu-item-light': !isDark,
           }"
         >
           <input
@@ -472,10 +477,10 @@
           [ngClass]="{
             'artickle-block_item': true,
             'shadow-box-dark': isDark,
-            'shadow-box-light': !isDark
+            'shadow-box-light': !isDark,
           }"
           [ngStyle]="{
-            background: isDark ? '#060400' : '#ffffff'
+            background: isDark ? '#060400' : '#ffffff',
           }"
         >
           <div class="free-courses_item_container">
@@ -500,7 +505,7 @@
                 background: isDark
                   ? 'rgba(255, 205, 41, 1)'
                   : 'rgba(0, 130, 204, 1)',
-                color: isDark ? '#0C263A' : '#ffffff'
+                color: isDark ? '#0C263A' : '#ffffff',
               }"
             >
               {{ article.groupsRus }}
@@ -529,7 +534,7 @@
                   [ngClass]="{
                     'read_more-text': true,
                     'read_more-text-dark': isDark,
-                    'read_more-text-light': !isDark
+                    'read_more-text-light': !isDark,
                   }"
                   [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
                 >
@@ -588,7 +593,7 @@
       [ngClass]="{
         'custom-paginator': true,
         'custom-paginator-dark  ': isDark,
-        'custom-paginator-light  ': !isDark
+        'custom-paginator-light  ': !isDark,
       }"
       >>
     </mat-paginator>
@@ -604,7 +609,7 @@
             'search-container': true,
 
             'shadow-box-dark': isDark,
-            'shadow-box-light': !isDark
+            'shadow-box-light': !isDark,
           }"
           [ngStyle]="{ background: !isDark ? '#ffffff' : '#000000' }"
         >
@@ -616,7 +621,7 @@
             <hr
               [ngStyle]="{
                 border: isDark ? '1px solid #FFCD29' : '1px solid #0082CC',
-                width: '100%'
+                width: '100%',
               }"
             />
           </div>
@@ -628,7 +633,7 @@
                 'search-input-wrapper': true,
                 'search-input-wrapper-dark': isDark,
                 'search-input-wrapper-light': !isDark,
-                focused: isFocused
+                focused: isFocused,
               }"
             >
               <input
@@ -656,11 +661,11 @@
                 'search-results': true,
 
                 'shadow-box-dark': isDark,
-                'shadow-box-light': !isDark
+                'shadow-box-light': !isDark,
               }"
               *ngIf="isFocused && displayedArticles.length > 0"
               [ngStyle]="{
-                background: isDark ? '#1A1A1A' : '#ffffff'
+                background: isDark ? '#1A1A1A' : '#ffffff',
               }"
             >
               <div
@@ -679,7 +684,7 @@
                       [ngClass]="{
                         title: true,
                         'article-title_dark': isDark,
-                        'article-title_light': !isDark
+                        'article-title_light': !isDark,
                       }"
                       >{{ article.titleRus }}</span
                     >
@@ -698,7 +703,7 @@
             'side-bar_groups-wrapper': true,
 
             'shadow-box-dark': isDark,
-            'shadow-box-light': !isDark
+            'shadow-box-light': !isDark,
           }"
           [ngStyle]="{ background: !isDark ? '#ffffff' : '#000000' }"
         >
@@ -710,7 +715,7 @@
             <hr
               [ngStyle]="{
                 border: isDark ? '1px solid #FFCD29' : '1px solid #0082CC',
-                width: '100%'
+                width: '100%',
               }"
             />
           </div>
@@ -725,13 +730,13 @@
                     ? '#FFCD29'
                     : '#0082CC'
                   : isDark
-                  ? '#ffffff'
-                  : '#0C263A'
+                    ? '#ffffff'
+                    : '#0C263A',
               }"
               [ngClass]="{
                 'side-bar_groups-item': true,
                 'side-bar_groups-item_dark': isDark,
-                'side-bar_groups-item_light': !isDark
+                'side-bar_groups-item_light': !isDark,
               }"
               [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
             >
@@ -759,7 +764,7 @@
           'side-bar_groups-wrapper': true,
           'random-pages_container': true,
           'shadow-box-dark': isDark,
-          'shadow-box-light': !isDark
+          'shadow-box-light': !isDark,
         }"
         [ngStyle]="{ background: !isDark ? '#ffffff' : '#000000' }"
       >
@@ -771,7 +776,7 @@
           <hr
             [ngStyle]="{
               border: isDark ? '1px solid #FFCD29' : '1px solid #0082CC',
-              width: '100%'
+              width: '100%',
             }"
           />
         </div>
@@ -792,7 +797,7 @@
                 class="article-title"
                 [ngClass]="{
                   'article-title_dark': isDark,
-                  'article-title_light': !isDark
+                  'article-title_light': !isDark,
                 }"
               >
                 {{ article.titleRus }}
@@ -809,7 +814,7 @@
           'side-bar_groups-wrapper': true,
           our_projects_container: true,
           'shadow-box-dark': isDark,
-          'shadow-box-light': !isDark
+          'shadow-box-light': !isDark,
         }"
         [ngStyle]="{ color: !isDark ? '#ffffff' : '#000000' }"
       >
@@ -829,7 +834,7 @@
           <hr
             [ngStyle]="{
               border: isDark ? '1px solid #FFCD29' : '1px solid #0082CC',
-              width: '100%'
+              width: '100%',
             }"
           />
         </div>
@@ -852,8 +857,8 @@
                     ? 'rgba(110, 77, 0, 1)'
                     : 'rgba(255, 205, 41, 0.20)'
                   : hoveredIndex === i
-                  ? 'rgba(1, 95, 149, 1)'
-                  : 'rgba(0, 130, 204, 0.20)'
+                    ? 'rgba(1, 95, 149, 1)'
+                    : 'rgba(0, 130, 204, 0.20)',
               }"
             >
               <a [href]="item.link" target="_blank">{{ item.title }}</a>
@@ -870,13 +875,13 @@
             'author-page_section-three-block': true,
 
             'shadow-box-dark': isDark,
-            'shadow-box-light': !isDark
+            'shadow-box-light': !isDark,
           }"
           [ngStyle]="{
             background: isDark
               ? 'rgba(255, 255, 255, 0.08)'
               : 'rgba(0, 131, 205, 0.08)',
-            border: isDark ? ' 1px solid #46483A' : '1px solid #C5E2F2'
+            border: isDark ? ' 1px solid #46483A' : '1px solid #C5E2F2',
           }"
         >
           <div class="author-page_main-block_title-block three-block">
@@ -884,7 +889,7 @@
               class=" "
               [ngClass]="{
                 'gradient-orange': isDark,
-                'gradient-blue_author-page': !isDark
+                'gradient-blue_author-page': !isDark,
               }"
               >Хотите профессиональное обучение?</span
             >
@@ -908,7 +913,7 @@
                 [ngClass]="{
                   'three-block_social-links_item': true,
                   'three-block_social-links_item-dark': isDark,
-                  'three-block_social-links_item-light': !isDark
+                  'three-block_social-links_item-light': !isDark,
                 }"
                 [ngStyle]="{
                   background: isDark
@@ -916,7 +921,7 @@
                     : 'rgba(0, 130, 204, 0.10)',
                   border: isDark
                     ? '1px solid rgba(255, 205, 41, 0.30)'
-                    : '1px solid rgba(0, 130, 204, 0.30)'
+                    : '1px solid rgba(0, 130, 204, 0.30)',
                 }"
               >
                 <svg
@@ -929,7 +934,7 @@
                   <path
                     [ngClass]="{
                       'svg-link-dark': isDark,
-                      'svg-link-light': !isDark
+                      'svg-link-light': !isDark,
                     }"
                     fill-rule="evenodd"
                     clip-rule="evenodd"
@@ -946,7 +951,7 @@
                 [ngClass]="{
                   'three-block_social-links_item': true,
                   'three-block_social-links_item-dark': isDark,
-                  'three-block_social-links_item-light': !isDark
+                  'three-block_social-links_item-light': !isDark,
                 }"
                 [ngStyle]="{
                   background: isDark
@@ -954,7 +959,7 @@
                     : 'rgba(0, 130, 204, 0.10)',
                   border: isDark
                     ? '1px solid rgba(255, 205, 41, 0.30)'
-                    : '1px solid rgba(0, 130, 204, 0.30)'
+                    : '1px solid rgba(0, 130, 204, 0.30)',
                 }"
               >
                 <svg
@@ -967,7 +972,7 @@
                   <path
                     [ngClass]="{
                       'svg-link-dark': isDark,
-                      'svg-link-light': !isDark
+                      'svg-link-light': !isDark,
                     }"
                     fill-rule="evenodd"
                     clip-rule="evenodd"
@@ -985,7 +990,7 @@
                 [ngClass]="{
                   'three-block_social-links_item': true,
                   'three-block_social-links_item-dark': isDark,
-                  'three-block_social-links_item-light': !isDark
+                  'three-block_social-links_item-light': !isDark,
                 }"
                 [ngStyle]="{
                   background: isDark
@@ -993,7 +998,7 @@
                     : 'rgba(0, 130, 204, 0.10)',
                   border: isDark
                     ? '1px solid rgba(255, 205, 41, 0.30)'
-                    : '1px solid rgba(0, 130, 204, 0.30)'
+                    : '1px solid rgba(0, 130, 204, 0.30)',
                 }"
               >
                 <svg
@@ -1006,7 +1011,7 @@
                   <path
                     [ngClass]="{
                       'svg-link-dark': isDark,
-                      'svg-link-light': !isDark
+                      'svg-link-light': !isDark,
                     }"
                     fill-rule="evenodd"
                     clip-rule="evenodd"

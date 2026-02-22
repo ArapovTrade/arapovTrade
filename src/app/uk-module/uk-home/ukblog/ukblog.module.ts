@@ -1097,6 +1097,13 @@ const routes: Routes = [
         (m) => m.OnehundredNineUkBlogModule
       ),
   },
+    {
+    path: 'fullvideocourse', //110
+    loadChildren: () =>
+      import('../ukblog/onehundred-ten-uk-blog/onehundred-ten-uk-blog.module').then(
+        (m) => m.OnehundredTenUkBlogModule
+      ),
+  },
 
     ]
    },

@@ -290,6 +290,21 @@ export class AppComponent implements OnInit, AfterViewChecked, OnDestroy {
                 ? '151 стаття, 3 мови, 453 URL: Повна безкоштовна навчальна програма з трейдингу на arapov.trade'
                 : '151 Articles, 3 Languages, 453 URLs: The Complete Free Trading Curriculum at arapov.trade';
 
+          
+
+            } else if (
+          segments[1] === 'freestudying' &&
+          segments[2] === 'fullvideocourse'
+        ) {
+          title =
+            segments[0] === 'ru'
+              ? 'Бесплатный Курс Трейдинга: Метод Вайкоффа, Объёмный Анализ и Smart Money — Полный Разбор'
+              : segments[0] === 'uk'
+                ? 'Безкоштовний Курс Трейдингу: Метод Вайкоффа, Об’ємний Аналіз і Smart Money — Детальний Огляд'
+                : 'Free Trading Course: Wyckoff Method, Volume Analysis and Smart Money — Complete Breakdown';
+
+
+
 
 
                 
@@ -443,6 +458,22 @@ export class AppComponent implements OnInit, AfterViewChecked, OnDestroy {
                 ? 'Повний розбір усього опублікованого на TradingView з 2021 по 2026 рік. Bitcoin, золото, форекс, індекси, нафта, освітній курс з методу Вайкоффа.'
                 : 'A full breakdown of everything published on TradingView from 2021 to 2026. Bitcoin, gold, forex, indices, crude oil, and a complete Wyckoff Method educational curriculum.';
         
+
+          } else if (
+          segments[1] === 'freestudying' &&
+          segments[2] === 'fullvideocourse'
+        ) {
+          description =
+            segments[0] === 'ru'
+              ? '1,5 часа, более 40 тем, полностью бесплатно. Полный разбор курса трейдинга: метод Вайкоффа, объёмный анализ, Smart Money, управление рисками, психология.'
+              : segments[0] === 'uk'
+                ? '1,5 години, понад 40 тем, повністю безкоштовно. Детальний огляд курсу трейдингу: метод Вайкоффа, об`ємний аналіз, Smart Money, управління ризиками, психологія.'
+                : '90 minutes, 40+ topics, completely free. Full breakdown of a trading course covering the Wyckoff Method, volume analysis, Smart Money, risk management, and trading psychology.';
+        
+
+
+
+
        
            } else if (
           segments[1] === 'freestudying' &&

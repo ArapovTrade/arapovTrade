@@ -18,8 +18,14 @@
           class="author-page_main-block_description-text"
           [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
           >All trading theory — free and without limits. Detailed video
-          lessons, articles with real examples, and step-by-step breakdowns of
-          key topics. From market fundamentals to advanced trading strategies —
+          lessons, articles with real examples, and <a [ngStyle]="{
+                  color: isDark ? '#fdff8b' : '#0074e6',
+                }"
+               
+                class="linkrefinto"
+                style="text-decoration: underline" href="https://arapov.trade/en/freestudying/fullvideocourse"
+            >step-by-step breakdowns of
+          key topics</a> . From market fundamentals to advanced trading strategies —
           learn at your own pace, with no deadlines or hidden fees. <br />
           <br />
           This is over 13 years of trading experience, compiled by Igor Arapov

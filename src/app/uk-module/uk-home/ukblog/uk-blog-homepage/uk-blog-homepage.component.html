@@ -1,5 +1,3 @@
- 
-
 <div class="author-page_section-one">
   <div class="author-page_main-block" data-aos="fade-up" data-aos-delay="300">
     <div class="author-page_main-block_text-block">
@@ -10,18 +8,28 @@
           class=" "
           [ngClass]="{
             'gradient-orange': isDark,
-            'gradient-blue_author-page': !isDark
+            'gradient-blue_author-page': !isDark,
           }"
           >безкоштовно</span
         >
-        </h1>
+      </h1>
       <div class="author-page_main-block_description">
         <span
           class="author-page_main-block_description-text"
           [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-          >Уся теорія трейдингу — безкоштовно і без обмежень. Детальні відеоуроки, статті з реальними прикладами та покрокові розбори ключових тем. Від основ ринку до просунутих торгових стратегій — навчайтесь у своєму темпі, без дедлайнів і прихованих платежів. <br />
+          >Уся теорія трейдингу — безкоштовно і без обмежень. Детальні
+          відеоуроки, статті з реальними прикладами та <a [ngStyle]="{
+                  color: isDark ? '#fdff8b' : '#0074e6',
+                }"
+               
+                class="linkrefinto"
+                style="text-decoration: underline" href="https://arapov.trade/uk/freestudying/fullvideocourse"
+            >покрокові розбори
+          ключових тем</a> . Від основ ринку до просунутих торгових стратегій —
+          навчайтесь у своєму темпі, без дедлайнів і прихованих платежів. <br />
           <br />
-          Це досвід понад 13 років торгівлі, зібраний Ігорем Араповим у відеоуроки, статті та серію книг з трейдингу.
+          Це досвід понад 13 років торгівлі, зібраний Ігорем Араповим у
+          відеоуроки, статті та серію книг з трейдингу.
         </span>
       </div>
       <div class="authot_button_block">
@@ -30,10 +38,9 @@
           [ngClass]="{
             'btn-section-one': true,
             'gradient-block-orange': isDark,
-            'gradient-block-blue': !isDark
+            'gradient-block-blue': !isDark,
           }"
         >
-         
           <span
             class="author-page_main-block_btn-text"
             [ngStyle]="{ color: !isDark ? '#ffffff' : '#03314b' }"
@@ -45,14 +52,11 @@
           class="podrobnee phone"
           [ngClass]="{
             'podrobnee-dark': isDark,
-            'podrobnee-light': !isDark
+            'podrobnee-light': !isDark,
           }"
         >
           <span class="text-p"
-            ><a
-              (click)="navigateTo('uk/books')"
-              >Книги з трейдингу</a
-            >
+            ><a (click)="navigateTo('uk/books')">Книги з трейдингу</a>
           </span>
         </div>
       </div>
@@ -70,7 +74,7 @@
               class="fb"
               [ngClass]="{
                 'links-dark': isDark,
-                'links-light': !isDark
+                'links-light': !isDark,
               }"
             >
               <a href="https://www.facebook.com/igor.arapov.75">
@@ -93,7 +97,7 @@
               class="fb"
               [ngClass]="{
                 'links-dark': isDark,
-                'links-light': !isDark
+                'links-light': !isDark,
               }"
             >
               <a
@@ -118,7 +122,7 @@
               class="fb"
               [ngClass]="{
                 'links-dark': isDark,
-                'links-light': !isDark
+                'links-light': !isDark,
               }"
             >
               <a href="https://ru.tradingview.com/u/Igor_Arapov/">
@@ -142,7 +146,7 @@
               class="fb"
               [ngClass]="{
                 'links-dark-special': isDark,
-                'links-light-special': !isDark
+                'links-light-special': !isDark,
               }"
             >
               <a href="https://www.youtube.com/@ArapovTrade">
@@ -174,7 +178,7 @@
               [ngClass]="{
                 'links-dark-special': isDark,
 
-                'links-light-special': !isDark
+                'links-light-special': !isDark,
               }"
             >
               <a href="https://telegram.me/+380506308200">
@@ -201,7 +205,7 @@
               class="fb"
               [ngClass]="{
                 'links-dark': isDark,
-                'links-light': !isDark
+                'links-light': !isDark,
               }"
             >
               <a href="https://www.instagram.com/arapovtrade/">
@@ -237,7 +241,7 @@
     [ngStyle]="{
       background: isDark
         ? 'url(/assets/redesignArapovTrade/img/free-courses-page_main-block_bg.png)  no-repeat center'
-        : 'url(/assets/redesignArapovTrade/img/free-courses-page_main-block_bg-light.png) no-repeat center'
+        : 'url(/assets/redesignArapovTrade/img/free-courses-page_main-block_bg-light.png) no-repeat center',
     }"
   ></div>
   <div
@@ -245,230 +249,221 @@
     [ngStyle]="{
       background: isDark
         ? 'url(/assets/redesignArapovTrade/img/free-courses-page_main-block_bg-image.png) no-repeat'
-        : 'url(/assets/redesignArapovTrade/img/free-courses-page_main-block_bg-image-light.png) no-repeat'
+        : 'url(/assets/redesignArapovTrade/img/free-courses-page_main-block_bg-image-light.png) no-repeat',
     }"
   ></div>
-    <div  [ngClass]="{'image_table_block':isDark }" ></div>
-    <div class="mask_archive_main" [ngStyle]="{background:isDark?'#000000':'#ffffff'}"></div>
-
+  <div [ngClass]="{ image_table_block: isDark }"></div>
+  <div
+    class="mask_archive_main"
+    [ngStyle]="{ background: isDark ? '#000000' : '#ffffff' }"
+  ></div>
 </div>
 
+<div class="mobile_menu">
+  <!-- search -->
+  <div
+    [ngClass]="{
+      'side-bar_groups-wrapper': true,
+      'search-container': true,
 
-   <div class="mobile_menu">
-    <!-- search -->
+      'shadow-box-dark': isDark,
+      'shadow-box-light': !isDark,
+    }"
+    [ngStyle]="{ background: !isDark ? '#ffffff' : '#000000' }"
+  >
     <div
-         
+      class="side-bar_groups-title"
+      [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+    >
+      Пошук
+      <hr
+        [ngStyle]="{
+          border: isDark ? '1px solid #FFCD29' : '1px solid #0082CC',
+          width: '100%',
+        }"
+      />
+    </div>
 
-         [ngClass]="{
-        'side-bar_groups-wrapper': true,
-        'search-container': true,
-
-        'shadow-box-dark': isDark,
-        'shadow-box-light': !isDark
-      }"
-        [ngStyle]="{ background: !isDark ? '#ffffff' : '#000000' }"
-      >
-        
-        <div
-          class="side-bar_groups-title"
-          [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-        >
-          Пошук
-          <hr
-            [ngStyle]="{
-              border: isDark ? '1px solid #FFCD29' : '1px solid #0082CC',
-              width: '100%'
-            }"
-          />
-        </div>
-
-        <div (click)="$event.stopPropagation()">
-          <!-- Инпут с лупой -->
-          <div
-            [ngClass]="{
-              'search-input-wrapper': true,
-              'search-input-wrapper-dark': isDark,
-              'search-input-wrapper-light': !isDark,
-              focused: isFocused
-            }"
-          >
-            <input
-              type="text"
-              placeholder="Введіть запит"
-              (focus)="onFocus()"
-              (blur)="onBlur()"
-              [(ngModel)]="searchQuery"
-              (input)="onSearchChange()"
-            />
-            <span class="search-icon"
-              ><img
-                [src]="
-                  isDark
-                    ? '/assets/redesignArapovTrade/img/search-icon-light.png'
-                    : '/assets/redesignArapovTrade/img/search-icon-dark.png'
-                "
-                alt="ico"
-            /></span>
-          </div>
-
-          <!-- Блок с результатами -->
-          <div
-             
-              [ngClass]="{
-        'search-results': true,
-         
-
-        
-      }"
-            *ngIf="isFocused && displayedArticles.length > 0"
-            [ngStyle]="{
-              background: isDark ? '#1A1A1A' : '#ffffff',
-              border:isDark? '1px solid rgba(255, 205, 41, 0.5)':'1px solid rgba(0, 130, 204, 0.5)',
-              boxShadow: isDark
-                ? '0px 16px 48px 0px rgba(6, 35, 63, 0.03), 0px 0px 20px 0px rgba(255, 218, 8, 0.5)'
-                : '0px 16px 48px 0px rgba(6, 35, 63, 0.03), 0px 0px 20px 0px rgba(0, 130, 204, 0.5)'
-            }"
-          >
-            <div
-              *ngFor="let article of displayedArticles"
-              class="search-result-item"
-              [style.border-bottom]="
-                isDark
-                  ? '1px solid rgba(255, 205, 41, 0.2)'
-                  : '1px solid rgba(0, 130, 204, 0.2)'
-              "
-            >
-              <a [routerLink]="['/uk/freestudying', article.linkUkr]">
-                <img [src]="article.imgUkr" [alt]="article.titleUkr" />
-                <div class="title-wrapper">
-                  <span
-                    [ngClass]="{
-                      title: true,
-                      'article-title_dark': isDark,
-                      'article-title_light': !isDark
-                    }"
-                    >{{ article.titleUkr }}</span
-                  >
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div> 
-
-      <!-- groups -->
-        
-
-
-    <div
-   
-  [ngClass]="{
-        'side-bar_groups-wrapper': true,
-        'groups_menu': true,
-
-        'shadow-box-dark': isDark,
-        'shadow-box-light': !isDark
-      }"
-  [class.open]="groupsMenuOpen"
-  
-  [ngStyle]="{ background: !isDark ? '#ffffff' : '#000000' }"
->   <div
-          class="side-bar_groups-title"
-          [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-        >
-          Фiльтр по категорiям
-          <hr
-            [ngStyle]="{
-              border: isDark ? '1px solid #FFCD29' : '1px solid #0082CC',
-              width: '100%'
-            }"
-          />
-        </div>
-
-        <div (click)="$event.stopPropagation()">
-          <!-- Инпут с лупой -->
-          <div (click)="toggleGroupsMenu($event)"
-            [ngClass]="{
-              'search-input-wrapper': true,
-              'group-input-wrapper': true,
-
-              'search-input-wrapper-dark_group': isDark,
-              'search-input-wrapper-light_group': !isDark,
-              focused: isFocused
-            }"
-          >
-             <span [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }">Обрати категорiю  </span>
-            <span class="search-icon"
-              ><img [ngStyle]="{ transform: groupsMenuOpen ? 'rotate(90deg)' : 'rotate(0deg)' }"
-                [src]="
-                  isDark
-                    ? '/assets/redesignArapovTrade/img/fa7-solid_angle-down.png'
-                    : '/assets/redesignArapovTrade/img/fa8-solid_angle-down.png'
-                "
-                alt="ico"
-            /></span>
-          </div>
-
-          <!-- Блок с результатами -->
-          <div
-            class="search-results"
-
-            
-
-            *ngIf="isFocused && displayedArticles.length > 0"
-            [ngStyle]="{
-              background: isDark ? '#1A1A1A' : '#ffffff'
-            }"
-          >
-             
-          </div>
-        </div>
-  <!-- Список групп -->
-  <div class="groups_menu-wrapper" 
-  
-  [ngStyle]="{
-              background: isDark ? '#1A1A1A' : '#ffffff',
-              border:isDark? '1px solid rgba(255, 205, 41, 0.5)':'1px solid rgba(0, 130, 204, 0.5)',
-              boxShadow: isDark
-                ? '0px 16px 48px 0px rgba(6, 35, 63, 0.03), 0px 0px 20px 0px rgba(255, 218, 8, 0.5)'
-                : '0px 16px 48px 0px rgba(6, 35, 63, 0.03), 0px 0px 20px 0px rgba(0, 130, 204, 0.5)'
-            }">
-    <div *ngFor="let group of ukrGroups">
-      <label
+    <div (click)="$event.stopPropagation()">
+      <!-- Инпут с лупой -->
+      <div
         [ngClass]="{
-          'groups_menu-item': true,
-          'groups_menu-item-dark': isDark,
-          'groups_menu-item-light': !isDark
+          'search-input-wrapper': true,
+          'search-input-wrapper-dark': isDark,
+          'search-input-wrapper-light': !isDark,
+          focused: isFocused,
         }"
       >
         <input
-          type="checkbox"
-          [checked]="grr.includes(group)"
-          [value]="group"
-          (change)="onGroupChange($event);toggleGroupsMenu($event); moveToTheTop()"
-          [class.checked-class]="checkedGroup.includes(group)"
+          type="text"
+          placeholder="Введіть запит"
+          (focus)="onFocus()"
+          (blur)="onBlur()"
+          [(ngModel)]="searchQuery"
+          (input)="onSearchChange()"
         />
-        <div class="group-name-with-count">
-          <span>{{ group }}</span>
-          <span class="article-count">{{ articleCounts[group] || 0 }}</span>
+        <span class="search-icon"
+          ><img
+            [src]="
+              isDark
+                ? '/assets/redesignArapovTrade/img/search-icon-light.png'
+                : '/assets/redesignArapovTrade/img/search-icon-dark.png'
+            "
+            alt="ico"
+        /></span>
+      </div>
+
+      <!-- Блок с результатами -->
+      <div
+        [ngClass]="{
+          'search-results': true,
+        }"
+        *ngIf="isFocused && displayedArticles.length > 0"
+        [ngStyle]="{
+          background: isDark ? '#1A1A1A' : '#ffffff',
+          border: isDark
+            ? '1px solid rgba(255, 205, 41, 0.5)'
+            : '1px solid rgba(0, 130, 204, 0.5)',
+          boxShadow: isDark
+            ? '0px 16px 48px 0px rgba(6, 35, 63, 0.03), 0px 0px 20px 0px rgba(255, 218, 8, 0.5)'
+            : '0px 16px 48px 0px rgba(6, 35, 63, 0.03), 0px 0px 20px 0px rgba(0, 130, 204, 0.5)',
+        }"
+      >
+        <div
+          *ngFor="let article of displayedArticles"
+          class="search-result-item"
+          [style.border-bottom]="
+            isDark
+              ? '1px solid rgba(255, 205, 41, 0.2)'
+              : '1px solid rgba(0, 130, 204, 0.2)'
+          "
+        >
+          <a [routerLink]="['/uk/freestudying', article.linkUkr]">
+            <img [src]="article.imgUkr" [alt]="article.titleUkr" />
+            <div class="title-wrapper">
+              <span
+                [ngClass]="{
+                  title: true,
+                  'article-title_dark': isDark,
+                  'article-title_light': !isDark,
+                }"
+                >{{ article.titleUkr }}</span
+              >
+            </div>
+          </a>
         </div>
-      </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- groups -->
+
+  <div
+    [ngClass]="{
+      'side-bar_groups-wrapper': true,
+      groups_menu: true,
+
+      'shadow-box-dark': isDark,
+      'shadow-box-light': !isDark,
+    }"
+    [class.open]="groupsMenuOpen"
+    [ngStyle]="{ background: !isDark ? '#ffffff' : '#000000' }"
+  >
+    <div
+      class="side-bar_groups-title"
+      [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+    >
+      Фiльтр по категорiям
+      <hr
+        [ngStyle]="{
+          border: isDark ? '1px solid #FFCD29' : '1px solid #0082CC',
+          width: '100%',
+        }"
+      />
+    </div>
+
+    <div (click)="$event.stopPropagation()">
+      <!-- Инпут с лупой -->
+      <div
+        (click)="toggleGroupsMenu($event)"
+        [ngClass]="{
+          'search-input-wrapper': true,
+          'group-input-wrapper': true,
+
+          'search-input-wrapper-dark_group': isDark,
+          'search-input-wrapper-light_group': !isDark,
+          focused: isFocused,
+        }"
+      >
+        <span [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+          >Обрати категорiю
+        </span>
+        <span class="search-icon"
+          ><img
+            [ngStyle]="{
+              transform: groupsMenuOpen ? 'rotate(90deg)' : 'rotate(0deg)',
+            }"
+            [src]="
+              isDark
+                ? '/assets/redesignArapovTrade/img/fa7-solid_angle-down.png'
+                : '/assets/redesignArapovTrade/img/fa8-solid_angle-down.png'
+            "
+            alt="ico"
+        /></span>
+      </div>
+
+      <!-- Блок с результатами -->
+      <div
+        class="search-results"
+        *ngIf="isFocused && displayedArticles.length > 0"
+        [ngStyle]="{
+          background: isDark ? '#1A1A1A' : '#ffffff',
+        }"
+      ></div>
+    </div>
+    <!-- Список групп -->
+    <div
+      class="groups_menu-wrapper"
+      [ngStyle]="{
+        background: isDark ? '#1A1A1A' : '#ffffff',
+        border: isDark
+          ? '1px solid rgba(255, 205, 41, 0.5)'
+          : '1px solid rgba(0, 130, 204, 0.5)',
+        boxShadow: isDark
+          ? '0px 16px 48px 0px rgba(6, 35, 63, 0.03), 0px 0px 20px 0px rgba(255, 218, 8, 0.5)'
+          : '0px 16px 48px 0px rgba(6, 35, 63, 0.03), 0px 0px 20px 0px rgba(0, 130, 204, 0.5)',
+      }"
+    >
+      <div *ngFor="let group of ukrGroups">
+        <label
+          [ngClass]="{
+            'groups_menu-item': true,
+            'groups_menu-item-dark': isDark,
+            'groups_menu-item-light': !isDark,
+          }"
+        >
+          <input
+            type="checkbox"
+            [checked]="grr.includes(group)"
+            [value]="group"
+            (change)="
+              onGroupChange($event); toggleGroupsMenu($event); moveToTheTop()
+            "
+            [class.checked-class]="checkedGroup.includes(group)"
+          />
+          <div class="group-name-with-count">
+            <span>{{ group }}</span>
+            <span class="article-count">{{ articleCounts[group] || 0 }}</span>
+          </div>
+        </label>
+      </div>
     </div>
   </div>
 </div>
 
-
-
-        
-   
-      </div>
-       
-      <div class="separator" id='scrollToTop' #scrollToTop>
+<div class="separator" id="scrollToTop" #scrollToTop>
   <!-- <div class="line"></div> -->
 </div>
-
-
-
 
 <div class="free-courses_main-container">
   <div class="free-courses_main-container_artickle-block">
@@ -478,15 +473,14 @@
           itemprop="hasPart"
           itemscope
           itemtype="https://schema.org/Article"
-          class="artickle-block_item shadow-box-dark" 
-
-            [ngClass]="{
-        'artickle-block_item': true,
-        'shadow-box-dark': isDark,
-        'shadow-box-light': !isDark
-      }"
+          class="artickle-block_item shadow-box-dark"
+          [ngClass]="{
+            'artickle-block_item': true,
+            'shadow-box-dark': isDark,
+            'shadow-box-light': !isDark,
+          }"
           [ngStyle]="{
-            background: isDark ? '#060400' : '#ffffff'
+            background: isDark ? '#060400' : '#ffffff',
           }"
         >
           <div class="free-courses_item_container">
@@ -511,7 +505,7 @@
                 background: isDark
                   ? 'rgba(255, 205, 41, 1)'
                   : 'rgba(0, 130, 204, 1)',
-                color: isDark ? '#0C263A' : '#ffffff'
+                color: isDark ? '#0C263A' : '#ffffff',
               }"
             >
               {{ article.groupsUkr }}
@@ -540,7 +534,7 @@
                   [ngClass]="{
                     'read_more-text': true,
                     'read_more-text-dark': isDark,
-                    'read_more-text-light': !isDark
+                    'read_more-text-light': !isDark,
                   }"
                   [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
                 >
@@ -588,9 +582,9 @@
         </ng-container>
       </div>
     </div>
- 
-    <!-- [pageSizeOptions]="[6, 10, 20, 50]" --> 
-    <mat-paginator  
+
+    <!-- [pageSizeOptions]="[6, 10, 20, 50]" -->
+    <mat-paginator
       #paginator
       [pageSize]="pageSize"
       [length]="filteredArticles.length"
@@ -599,7 +593,7 @@
       [ngClass]="{
         'custom-paginator': true,
         'custom-paginator-dark  ': isDark,
-        'custom-paginator-light  ': !isDark
+        'custom-paginator-light  ': !isDark,
       }"
       >>
     </mat-paginator>
@@ -608,184 +602,170 @@
   <div class="free-courses_main-container_side-bar">
     <div class="main-container_side-bar_groups">
       <!-- SEARCH -->
-       <div class="menu_desktop"
-       >
+      <div class="menu_desktop">
         <div
           [ngClass]="{
-        'side-bar_groups-wrapper': true,
-        'search-container': true,
+            'side-bar_groups-wrapper': true,
+            'search-container': true,
 
-        'shadow-box-dark': isDark,
-        'shadow-box-light': !isDark
-      }"
-
-        
-        [ngStyle]="{ background: !isDark ? '#ffffff' : '#000000' }"
-      >
-        
-        <div
-          class="side-bar_groups-title"
-          [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+            'shadow-box-dark': isDark,
+            'shadow-box-light': !isDark,
+          }"
+          [ngStyle]="{ background: !isDark ? '#ffffff' : '#000000' }"
         >
-          Пошук
-          <hr
-            [ngStyle]="{
-              border: isDark ? '1px solid #FFCD29' : '1px solid #0082CC',
-              width: '100%'
-            }"
-          />
-        </div>
-
-        <div (click)="$event.stopPropagation()">
-          <!-- Инпут с лупой -->
           <div
-            [ngClass]="{
-              'search-input-wrapper': true,
-              'search-input-wrapper-dark': isDark,
-              'search-input-wrapper-light': !isDark,
-              focused: isFocused
-            }"
-          >
-            <input
-              type="text"
-              placeholder="Введіть запит"
-              (focus)="onFocus()"
-              (blur)="onBlur()"
-              [(ngModel)]="searchQuery"
-              (input)="onSearchChange()"
-            />
-            <span class="search-icon"
-              ><img
-                [src]="
-                  isDark
-                    ? '/assets/redesignArapovTrade/img/search-icon-light.png'
-                    : '/assets/redesignArapovTrade/img/search-icon-dark.png'
-                "
-                alt="ico"
-            /></span>
-          </div>
-
-          <!-- Блок с результатами -->
-          <div
-            
-             [ngClass]="{
-        'search-results': true,
-         
-
-        'shadow-box-dark': isDark,
-        'shadow-box-light': !isDark
-      }"
-            
-            *ngIf="isFocused && displayedArticles.length > 0"
-            [ngStyle]="{
-              background: isDark ? '#1A1A1A' : '#ffffff'
-            }"
-          >
-            <div
-              *ngFor="let article of displayedArticles"
-              class="search-result-item"
-              [style.border-bottom]="
-                isDark
-                  ? '1px solid rgba(255, 205, 41, 0.2)'
-                  : '1px solid rgba(0, 130, 204, 0.2)'
-              "
-            >
-              <a [routerLink]="['/uk/freestudying', article.linkUkr]">
-                <img [src]="article.imgUkr" [alt]="article.titleUkr" />
-                <div class="title-wrapper">
-                  <span
-                    [ngClass]="{
-                      title: true,
-                      'article-title_dark': isDark,
-                      'article-title_light': !isDark
-                    }"
-                    >{{ article.titleUkr }}</span
-                  >
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-       </div>
-      
-       
-      <!-- //Groups -->
-       <div class="groups_phone">
-         <div
-
-           [ngClass]="{
-        'side-bar_groups-wrapper': true,
-        
-
-        'shadow-box-dark': isDark,
-        'shadow-box-light': !isDark
-      }"
-        
-        [ngStyle]="{ background: !isDark ? '#ffffff' : '#000000' }"
-      >
-        <div
-          class="side-bar_groups-title"
-          [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-        >
-          Фiльтр по категорiям
-          <hr
-            [ngStyle]="{
-              border: isDark ? '1px solid #FFCD29' : '1px solid #0082CC',
-              width: '100%'
-            }"
-          />
-        </div>
-
-        <div *ngFor="let group of ukrGroups">
-          <!-- class="inpFlex" -->
-
-          <label
-            [ngStyle]="{
-              color: checkedGroup.includes(group)
-                ? isDark
-                  ? '#FFCD29'
-                  : '#0082CC'
-                : isDark
-                ? '#ffffff'
-                : '#0C263A'
-            }"
-            [ngClass]="{
-              'side-bar_groups-item': true,
-              'side-bar_groups-item_dark': isDark,
-              'side-bar_groups-item_light': !isDark
-            }"
+            class="side-bar_groups-title"
             [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
           >
-            <input
-              type="checkbox"
-              [checked]="grr.includes(group)"
-              [value]="group"
-              (change)="onGroupChange($event)"
-              [class.checked-class]="checkedGroup.includes(group)"
+            Пошук
+            <hr
+              [ngStyle]="{
+                border: isDark ? '1px solid #FFCD29' : '1px solid #0082CC',
+                width: '100%',
+              }"
             />
-            <div class="group-name-with-count">
-              <span (click)="moveToTheTop()" >{{ group }} </span>
-              <span class="article-count">
-                {{ articleCounts[group] || 0 }}
-              </span>
+          </div>
+
+          <div (click)="$event.stopPropagation()">
+            <!-- Инпут с лупой -->
+            <div
+              [ngClass]="{
+                'search-input-wrapper': true,
+                'search-input-wrapper-dark': isDark,
+                'search-input-wrapper-light': !isDark,
+                focused: isFocused,
+              }"
+            >
+              <input
+                type="text"
+                placeholder="Введіть запит"
+                (focus)="onFocus()"
+                (blur)="onBlur()"
+                [(ngModel)]="searchQuery"
+                (input)="onSearchChange()"
+              />
+              <span class="search-icon"
+                ><img
+                  [src]="
+                    isDark
+                      ? '/assets/redesignArapovTrade/img/search-icon-light.png'
+                      : '/assets/redesignArapovTrade/img/search-icon-dark.png'
+                  "
+                  alt="ico"
+              /></span>
             </div>
-          </label>
+
+            <!-- Блок с результатами -->
+            <div
+              [ngClass]="{
+                'search-results': true,
+
+                'shadow-box-dark': isDark,
+                'shadow-box-light': !isDark,
+              }"
+              *ngIf="isFocused && displayedArticles.length > 0"
+              [ngStyle]="{
+                background: isDark ? '#1A1A1A' : '#ffffff',
+              }"
+            >
+              <div
+                *ngFor="let article of displayedArticles"
+                class="search-result-item"
+                [style.border-bottom]="
+                  isDark
+                    ? '1px solid rgba(255, 205, 41, 0.2)'
+                    : '1px solid rgba(0, 130, 204, 0.2)'
+                "
+              >
+                <a [routerLink]="['/uk/freestudying', article.linkUkr]">
+                  <img [src]="article.imgUkr" [alt]="article.titleUkr" />
+                  <div class="title-wrapper">
+                    <span
+                      [ngClass]="{
+                        title: true,
+                        'article-title_dark': isDark,
+                        'article-title_light': !isDark,
+                      }"
+                      >{{ article.titleUkr }}</span
+                    >
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-       </div>
-     
+
+      <!-- //Groups -->
+      <div class="groups_phone">
+        <div
+          [ngClass]="{
+            'side-bar_groups-wrapper': true,
+
+            'shadow-box-dark': isDark,
+            'shadow-box-light': !isDark,
+          }"
+          [ngStyle]="{ background: !isDark ? '#ffffff' : '#000000' }"
+        >
+          <div
+            class="side-bar_groups-title"
+            [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+          >
+            Фiльтр по категорiям
+            <hr
+              [ngStyle]="{
+                border: isDark ? '1px solid #FFCD29' : '1px solid #0082CC',
+                width: '100%',
+              }"
+            />
+          </div>
+
+          <div *ngFor="let group of ukrGroups">
+            <!-- class="inpFlex" -->
+
+            <label
+              [ngStyle]="{
+                color: checkedGroup.includes(group)
+                  ? isDark
+                    ? '#FFCD29'
+                    : '#0082CC'
+                  : isDark
+                    ? '#ffffff'
+                    : '#0C263A',
+              }"
+              [ngClass]="{
+                'side-bar_groups-item': true,
+                'side-bar_groups-item_dark': isDark,
+                'side-bar_groups-item_light': !isDark,
+              }"
+              [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+            >
+              <input
+                type="checkbox"
+                [checked]="grr.includes(group)"
+                [value]="group"
+                (change)="onGroupChange($event)"
+                [class.checked-class]="checkedGroup.includes(group)"
+              />
+              <div class="group-name-with-count">
+                <span (click)="moveToTheTop()">{{ group }} </span>
+                <span class="article-count">
+                  {{ articleCounts[group] || 0 }}
+                </span>
+              </div>
+            </label>
+          </div>
+        </div>
+      </div>
 
       <!-- Random pages -->
       <div
-
-      [ngClass]="{
-        'side-bar_groups-wrapper': true,
-        'random-pages_container': true, 
-        'shadow-box-dark': isDark,
-        'shadow-box-light': !isDark
-      }"
-         
+        [ngClass]="{
+          'side-bar_groups-wrapper': true,
+          'random-pages_container': true,
+          'shadow-box-dark': isDark,
+          'shadow-box-light': !isDark,
+        }"
         [ngStyle]="{ background: !isDark ? '#ffffff' : '#000000' }"
       >
         <div
@@ -796,7 +776,7 @@
           <hr
             [ngStyle]="{
               border: isDark ? '1px solid #FFCD29' : '1px solid #0082CC',
-              width: '100%'
+              width: '100%',
             }"
           />
         </div>
@@ -817,7 +797,7 @@
                 class="article-title"
                 [ngClass]="{
                   'article-title_dark': isDark,
-                  'article-title_light': !isDark
+                  'article-title_light': !isDark,
                 }"
               >
                 {{ article.titleUkr }}
@@ -827,103 +807,87 @@
         </div>
       </div>
 
+      <!-- Our projects  -->
 
-        <!-- Our projects  -->
-
-       <div
-
-
-       [ngClass]="{
-        'side-bar_groups-wrapper': true,
-        'our_projects_container': true, 
-        'shadow-box-dark': isDark,
-        'shadow-box-light': !isDark
-      }"
-         
-        [ngStyle]="{ color: !isDark ? '#ffffff' : '#000000' 
-          
-
-         }"
+      <div
+        [ngClass]="{
+          'side-bar_groups-wrapper': true,
+          our_projects_container: true,
+          'shadow-box-dark': isDark,
+          'shadow-box-light': !isDark,
+        }"
+        [ngStyle]="{ color: !isDark ? '#ffffff' : '#000000' }"
       >
-
-         <!-- [ngStyle]="{  
+        <!-- [ngStyle]="{  
           background: isDark
         ? 'url(/assets/redesignArapovTrade/img/banner.png) no-repeat'
         : 'url(/assets/redesignArapovTrade/img/banner-light.png) no-repeat'
 
          }" -->
-         <div class="banner" > <img  
-          
+        <div class="banner">
+          <img
             [src]="
-                  isDark
-                    ? '/assets/redesignArapovTrade/img/banner.png'
-                    : '/assets/redesignArapovTrade/img/banner-light.jpg'
-                "
-          
-          
-          alt="img"></div>
-         <div class="mask-our_project"></div>
-        <div
-          class="side-bar_groups-title"
-          [ngStyle]="{ color:   '#ffffff'   }"
-        >
+              isDark
+                ? '/assets/redesignArapovTrade/img/banner.png'
+                : '/assets/redesignArapovTrade/img/banner-light.jpg'
+            "
+            alt="img"
+          />
+        </div>
+        <div class="mask-our_project"></div>
+        <div class="side-bar_groups-title" [ngStyle]="{ color: '#ffffff' }">
           Нашi проекти доступнi кожному бажаючому
           <hr
             [ngStyle]="{
-              border: isDark ? '1px solid #FFCD29' : '1px solid #0082CC' ,
-              width: '100%'
+              border: isDark ? '1px solid #FFCD29' : '1px solid #0082CC',
+              width: '100%',
             }"
           />
         </div>
 
-         <div class="our_projects_block">
-          <div class="our_projects_title"  [ngStyle]="{ color:  '#ffffff'   }" >Обирайте тему, що Вас цікавить, та розпочинайте захоплююче навчання</div>
-           
-         
-          <div class="our_projects_buttons">
-  <div class="our_projects_buttons-item"
-       *ngFor="let item of projects; let i = index"
-       (mouseenter)="hoveredIndex = i"
-       (mouseleave)="hoveredIndex = null"
-       [ngStyle]="{
-         border: isDark
-           ? '1px solid #6E4D00'
-           : '1px solid #015F95',
-         background: isDark 
-           ? (hoveredIndex === i 
-               ? 'rgba(110, 77, 0, 1)' 
-               : 'rgba(255, 205, 41, 0.20)')
-           : (hoveredIndex === i 
-               ? 'rgba(1, 95, 149, 1)' 
-               : 'rgba(0, 130, 204, 0.20)')
-       }">
-    <a [href]="item.link" target="_blank">{{ item.title }}</a>
-  </div>
-</div>
+        <div class="our_projects_block">
+          <div class="our_projects_title" [ngStyle]="{ color: '#ffffff' }">
+            Обирайте тему, що Вас цікавить, та розпочинайте захоплююче навчання
+          </div>
 
-        
+          <div class="our_projects_buttons">
+            <div
+              class="our_projects_buttons-item"
+              *ngFor="let item of projects; let i = index"
+              (mouseenter)="hoveredIndex = i"
+              (mouseleave)="hoveredIndex = null"
+              [ngStyle]="{
+                border: isDark ? '1px solid #6E4D00' : '1px solid #015F95',
+                background: isDark
+                  ? hoveredIndex === i
+                    ? 'rgba(110, 77, 0, 1)'
+                    : 'rgba(255, 205, 41, 0.20)'
+                  : hoveredIndex === i
+                    ? 'rgba(1, 95, 149, 1)'
+                    : 'rgba(0, 130, 204, 0.20)',
+              }"
+            >
+              <a [href]="item.link" target="_blank">{{ item.title }}</a>
+            </div>
+          </div>
         </div>
       </div>
-
 
       <!-- Profession education -->
 
       <div class="author-page_section-three">
         <div
-           
+          [ngClass]="{
+            'author-page_section-three-block': true,
 
-        [ngClass]="{
-        'author-page_section-three-block': true,
-         
-        'shadow-box-dark': isDark,
-        'shadow-box-light': !isDark
-      }"
-
+            'shadow-box-dark': isDark,
+            'shadow-box-light': !isDark,
+          }"
           [ngStyle]="{
             background: isDark
               ? 'rgba(255, 255, 255, 0.08)'
               : 'rgba(0, 131, 205, 0.08)',
-            border: isDark ? ' 1px solid #46483A' : '1px solid #C5E2F2'
+            border: isDark ? ' 1px solid #46483A' : '1px solid #C5E2F2',
           }"
         >
           <div class="author-page_main-block_title-block three-block">
@@ -931,7 +895,7 @@
               class=" "
               [ngClass]="{
                 'gradient-orange': isDark,
-                'gradient-blue_author-page': !isDark
+                'gradient-blue_author-page': !isDark,
               }"
               >Хочете професiйне навчання?</span
             >
@@ -945,7 +909,7 @@
               для вас месенджер і надішліть нам повідомлення.
             </span>
           </div>
-              
+
           <div class="author-page_section-three-block_social-links">
             <a
               href="https://telegram.me/+380506308200"
@@ -955,7 +919,7 @@
                 [ngClass]="{
                   'three-block_social-links_item': true,
                   'three-block_social-links_item-dark': isDark,
-                  'three-block_social-links_item-light': !isDark
+                  'three-block_social-links_item-light': !isDark,
                 }"
                 [ngStyle]="{
                   background: isDark
@@ -963,7 +927,7 @@
                     : 'rgba(0, 130, 204, 0.10)',
                   border: isDark
                     ? '1px solid rgba(255, 205, 41, 0.30)'
-                    : '1px solid rgba(0, 130, 204, 0.30)'
+                    : '1px solid rgba(0, 130, 204, 0.30)',
                 }"
               >
                 <svg
@@ -976,7 +940,7 @@
                   <path
                     [ngClass]="{
                       'svg-link-dark': isDark,
-                      'svg-link-light': !isDark
+                      'svg-link-light': !isDark,
                     }"
                     fill-rule="evenodd"
                     clip-rule="evenodd"
@@ -993,7 +957,7 @@
                 [ngClass]="{
                   'three-block_social-links_item': true,
                   'three-block_social-links_item-dark': isDark,
-                  'three-block_social-links_item-light': !isDark
+                  'three-block_social-links_item-light': !isDark,
                 }"
                 [ngStyle]="{
                   background: isDark
@@ -1001,7 +965,7 @@
                     : 'rgba(0, 130, 204, 0.10)',
                   border: isDark
                     ? '1px solid rgba(255, 205, 41, 0.30)'
-                    : '1px solid rgba(0, 130, 204, 0.30)'
+                    : '1px solid rgba(0, 130, 204, 0.30)',
                 }"
               >
                 <svg
@@ -1014,7 +978,7 @@
                   <path
                     [ngClass]="{
                       'svg-link-dark': isDark,
-                      'svg-link-light': !isDark
+                      'svg-link-light': !isDark,
                     }"
                     fill-rule="evenodd"
                     clip-rule="evenodd"
@@ -1032,7 +996,7 @@
                 [ngClass]="{
                   'three-block_social-links_item': true,
                   'three-block_social-links_item-dark': isDark,
-                  'three-block_social-links_item-light': !isDark
+                  'three-block_social-links_item-light': !isDark,
                 }"
                 [ngStyle]="{
                   background: isDark
@@ -1040,7 +1004,7 @@
                     : 'rgba(0, 130, 204, 0.10)',
                   border: isDark
                     ? '1px solid rgba(255, 205, 41, 0.30)'
-                    : '1px solid rgba(0, 130, 204, 0.30)'
+                    : '1px solid rgba(0, 130, 204, 0.30)',
                 }"
               >
                 <svg
@@ -1053,7 +1017,7 @@
                   <path
                     [ngClass]="{
                       'svg-link-dark': isDark,
-                      'svg-link-light': !isDark
+                      'svg-link-light': !isDark,
                     }"
                     fill-rule="evenodd"
                     clip-rule="evenodd"
@@ -1067,11 +1031,4 @@
       </div>
     </div>
   </div>
-
-   
-
-
-
 </div>
-
- 
