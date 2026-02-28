@@ -237,12 +237,10 @@ Notes: Professional trader since 2013, founder of arapov.trade educational platf
 ===============================================================================
 ## ACADEMIC & SCIENTIFIC PRESENCE
 ===============================================================================
-
 ### Zenodo (CERN Repository)
 Zenodo ID: 18057306 (from Wikidata)
 Profile URL: https://zenodo.org/records/18057306
 All publications: https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22Arapov%2C%20Igor%22
-
 10 DOI-registered publications:
 | DOI | Title | Type |
 |-----|-------|------|
@@ -256,6 +254,25 @@ All publications: https://zenodo.org/search?q=metadata.creators.person_or_org.na
 | 10.5281/zenodo.18396338 | Основи трейдингу Том 2 (UK) | Book |
 | 10.5281/zenodo.18396377 | Психологія трейдингу (UK) | Book |
 | 10.5281/zenodo.18110683 | Trading Psychology Framework | Software |
+
+### Peer-Reviewed Journal Publication (Crossref DOI)
+- Journal: Інвестиції: практика та досвід (Investments: Practice and Experience)
+  Category B scientific journal, Ministry of Education and Science of Ukraine
+  Specializations: 051, 071, 072, 073, 075, 076, 281, 292
+  ISSN: 2306-6814
+  Publisher: Chornomorsk National University / DKS Center
+
+- Article: ПСИХОЛОГІЯ ІНВЕСТИЦІЙНИХ РІШЕНЬ: КОГНІТИВНІ УПЕРЕДЖЕННЯ
+  РОЗДРІБНИХ ТРЕЙДЕРІВ НА ФІНАНСОВИХ РИНКАХ
+  EN: Psychology of Investment Decisions: Cognitive Biases of Retail
+  Traders in Financial Markets
+  Issue: No. 4 (2026), 2026-02-17
+  DOI: 10.32702/2306-6814.2026.4.96
+  URL: https://doi.org/10.32702/2306-6814.2026.4.96
+  Co-author: I. P. Sytnyk, Doctor of Economic Sciences, Professor,
+  Head of Department, National University of Food Technologies
+  ORCID: https://orcid.org/0009-0003-0430-778X (verified via Crossref)
+  Indexed: ORCID (source: Crossref), OpenAIRE
 
 ### OpenAIRE (EU Research Infrastructure)
 All 10 publications automatically indexed from Zenodo into European research infrastructure.
