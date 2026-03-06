@@ -280,6 +280,7 @@ export class UkHomeComponent implements OnInit, AfterViewInit, OnDestroy {
         'https://orcid.org/0009-0003-0430-778X',
         "https://ssrn.com/author=10402456",
   "https://doi.org/10.32702/2306-6814.2026.4.96",
+  "https://scholar.google.com/citations?hl=uk&user=N440tWQAAAAJ",
         'https://www.amazon.com/stores/author/B0GBRFY457',
         'https://www.youtube.com/@ArapovTrade',
         'https://www.linkedin.com/in/arapovtrade',
