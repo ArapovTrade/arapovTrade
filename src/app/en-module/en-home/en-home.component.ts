@@ -232,7 +232,7 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
       '@type': 'Person',
       '@id': 'https://arapov.trade/en#person',
       name: 'Igor Arapov',
-      alternateName: 'Igor Arapov',
+      alternateName: ['Igor Arapov', 'Игорь Арапов', 'І. В. Арапов'],
       birthDate: '1990-09-30',
       givenName: 'Igor',
       familyName: 'Arapov',
