@@ -481,14 +481,23 @@
         <span
           class="author-page_main-block_description-text"
           [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-          >Практикующий трейдер, работающий на финансовых рынках с 2013 года.
-          Кандидат в мастера спорта по шахматам — стратегическое мышление и
+          >Практикующий трейдер, работающий на финансовых рынках с
+          <a
+            [ngStyle]="{
+              color: isDark ? '#fdff8b' : '#0074e6',
+            }"
+            target="_blank"
+            class="linkrefinto"
+            style="text-decoration: underline"
+            href="https://wikidata.org/wiki/Q137454477"
+            >2013 года</a
+          >. Кандидат в мастера спорта по шахматам — стратегическое мышление и
           дисциплина стали основой его подхода к торговле. <br /><br />
         </span>
       </div>
 
       <div class="author-page_main-block_proc-block">
-        <div class="proc-block_item">
+        <!-- <div class="proc-block_item">
           <div
             class="proc-block_tick"
             [ngStyle]="{
@@ -531,8 +540,8 @@
               >
             </div>
           </div>
-        </div>
-        <div class="proc-block_item">
+        </div> -->
+        <!-- <div class="proc-block_item">
           <div
             class="proc-block_tick"
             [ngStyle]="{
@@ -574,7 +583,7 @@
               >" — 150+ статей и 70+ видеоуроков
             </div>
           </div>
-        </div>
+        </div> -->
         <div class="proc-block_item">
           <div
             class="proc-block_tick"
@@ -724,29 +733,51 @@
               class="proc-block_descr-text"
               [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
             >
-              Соавтор научной статьи  « <a [ngStyle]="{
-                  color: isDark ? '#fdff8b' : '#0074e6',
-                }"
-                target="_blank"
-                class="linkrefinto"
-                style="text-decoration: underline"
-                href="https://doi.org/10.32702/2306-6814.2026.4.96">Психология инвестиционных решений:
-              когнитивные искажения розничных трейдеров на финансовых
-              рынках</a> » ,
-              опубликованной в фаховом издании Категории «Б» МОН Украины —
-              журнале «Інвестиції: практика та досвід» (№4, 2026).
-              <br />А также автор открытого
-              <a
-                [ngStyle]="{
-                  color: isDark ? '#fdff8b' : '#0074e6',
-                }"
-                class="linkrefinto"
-                target="_blank"
-                style="text-decoration: underline"
-                href="https://ru.wikibooks.org/wiki/Основы_трейдинга"
-                >учебника</a
-              >
-              по трейдингу на платформе Wikibooks (Wikimedia Foundation).
+              <ul>
+                <li>
+                  Автор самостоятельного исследования « <a [ngStyle]="{
+                      color: isDark ? '#fdff8b' : '#0074e6',
+                    }"
+                    target="_blank"
+                    class="linkrefinto"
+                    style="text-decoration: underline" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6254718">From Tilt to System: A
+                  Practitioner's Framework for Managing Cognitive Biases in
+                  Retail Trading</a>» (SSRN 6254718) — четырёхуровневая система
+                  управления когнитивными искажениями розничных трейдеров,
+                  основанная на 13 годах практического опыта.
+                </li>
+                <li>
+                  Соавтор научной статьи «
+                  <a
+                    [ngStyle]="{
+                      color: isDark ? '#fdff8b' : '#0074e6',
+                    }"
+                    target="_blank"
+                    class="linkrefinto"
+                    style="text-decoration: underline"
+                    href="https://doi.org/10.32702/2306-6814.2026.4.96"
+                    >Психология инвестиционных решений: когнитивные искажения
+                    розничных трейдеров на финансовых рынках</a
+                  >
+                  » , опубликованной в фаховом издании Категории «Б» МОН Украины
+                  — журнале «Інвестиції: практика та досвід» (№4, 2026).
+                </li>
+
+                <li>
+                  Автор открытого
+                  <a
+                    [ngStyle]="{
+                      color: isDark ? '#fdff8b' : '#0074e6',
+                    }"
+                    class="linkrefinto"
+                    target="_blank"
+                    style="text-decoration: underline"
+                    href="https://ru.wikibooks.org/wiki/Основы_трейдинга"
+                    >учебника</a
+                  >
+                  по трейдингу на платформе Wikibooks (Wikimedia Foundation).
+                </li>
+              </ul>
             </div>
           </div>
         </div>

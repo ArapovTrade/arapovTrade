@@ -483,14 +483,23 @@
         <span
           class="author-page_main-block_description-text"
           [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-          >Практикуючий трейдер, який працює на фінансових ринках з 2013 року.
+          >Практикуючий трейдер, який працює на фінансових ринках з <a
+                [ngStyle]="{
+                  color: isDark ? '#fdff8b' : '#0074e6',
+                }"
+                target="_blank"
+                class="linkrefinto"
+                style="text-decoration: underline"
+                href="https://wikidata.org/wiki/Q137454477"
+                >2013 року</a
+              >.
           Кандидат у майстри спорту з шахів — стратегічне мислення та дисципліна
           стали основою його підходу до торгівлі. <br /><br />
         </span>
       </div>
 
       <div class="author-page_main-block_proc-block">
-        <div class="proc-block_item">
+        <!-- <div class="proc-block_item">
           <div
             class="proc-block_tick"
             [ngStyle]="{
@@ -533,8 +542,8 @@
               >
             </div>
           </div>
-        </div>
-        <div class="proc-block_item">
+        </div> -->
+        <!-- <div class="proc-block_item">
           <div
             class="proc-block_tick"
             [ngStyle]="{
@@ -578,7 +587,7 @@
               " — 150+ статей та 70+ відеоуроків
             </div>
           </div>
-        </div>
+        </div> -->
         <div class="proc-block_item">
           <div
             class="proc-block_tick"
@@ -728,7 +737,18 @@
               class="proc-block_descr-text"
               [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
             >
-              Співавтор наукової статті «
+            <ul>
+              <li> Автор самостійного дослідження «<a [ngStyle]="{
+                  color: isDark ? '#fdff8b' : '#0074e6',
+                }"
+                target="_blank"
+                class="linkrefinto"
+                style="text-decoration: underline" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6254718"> From Tilt to System: A
+              Practitioner's Framework for Managing Cognitive Biases in Retail
+              Trading</a> » (SSRN 6254718) — чотирирівнева система управління
+              когнітивними упередженнями роздрібних трейдерів, заснована на 13
+              роках практичного досвіду.</li>
+              <li>Співавтор наукової статті «
               <a
                 [ngStyle]="{
                   color: isDark ? '#fdff8b' : '#0074e6',
@@ -741,8 +761,8 @@
                 роздрібних трейдерів на фінансових ринках</a
               >
               », опублікованої у фаховому виданні Категорії «Б» МОН України —
-              журналі «Інвестиції: практика та досвід» (№4, 2026). <br />
-              А також автор відкритого
+              журналі «Інвестиції: практика та досвід» (№4, 2026).</li>
+              <li>Автор відкритого
               <a
                 [ngStyle]="{
                   color: isDark ? '#fdff8b' : '#0074e6',
@@ -753,7 +773,13 @@
                 href="https://ru.wikibooks.org/wiki/Основы_трейдинга"
                 >підручника</a
               >
-              з трейдингу на платформі Wikibooks (Wikimedia Foundation).
+              з трейдингу на платформі Wikibooks (Wikimedia Foundation).</li>
+            </ul>
+
+               
+              
+               
+              
             </div>
           </div>
         </div>

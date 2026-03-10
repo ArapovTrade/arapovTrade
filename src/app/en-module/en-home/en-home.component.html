@@ -480,14 +480,23 @@
         <span
           class="author-page_main-block_description-text"
           [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-          >Practicing trader working on financial markets since 2013. Candidate
-          Master in chess — strategic thinking and discipline became the
-          foundation of his approach to trading. <br /><br />
+          >Practicing trader working on financial markets since
+          <a
+            [ngStyle]="{
+              color: isDark ? '#fdff8b' : '#0074e6',
+            }"
+            target="_blank"
+            class="linkrefinto"
+            style="text-decoration: underline"
+            href="https://wikidata.org/wiki/Q137454477"
+            >2013</a
+          >. Candidate Master in chess — strategic thinking and discipline
+          became the foundation of his approach to trading. <br /><br />
         </span>
       </div>
 
       <div class="author-page_main-block_proc-block">
-        <div class="proc-block_item">
+        <!-- <div class="proc-block_item">
           <div
             class="proc-block_tick"
             [ngStyle]="{
@@ -530,8 +539,8 @@
               >
             </div>
           </div>
-        </div>
-        <div class="proc-block_item">
+        </div> -->
+        <!-- <div class="proc-block_item">
           <div
             class="proc-block_tick"
             [ngStyle]="{
@@ -575,7 +584,7 @@
               " — 150+ articles and 70+ video lessons
             </div>
           </div>
-        </div>
+        </div> -->
         <div class="proc-block_item">
           <div
             class="proc-block_tick"
@@ -726,31 +735,50 @@
               class="proc-block_descr-text"
               [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
             >
-              Co-author of «
-              <a
-                [ngStyle]="{
-                  color: isDark ? '#fdff8b' : '#0074e6',
-                }"
-                target="_blank"
-                class="linkrefinto"
-                style="text-decoration: underline"
-                href="https://doi.org/10.32702/2306-6814.2026.4.96"
-                >Psychology of Investment Decisions: Cognitive Biases of Retail
-                Traders in Financial Markets</a
-              >» , published in the Category B peer-reviewed journal
-              "Investments: Practice and Experience" (No.4, 2026), Ministry of
-              Education and Science of Ukraine. <br />Also the author of an open
-              <a
-                [ngStyle]="{
-                  color: isDark ? '#fdff8b' : '#0074e6',
-                }"
-                class="linkrefinto"
-                target="_blank"
-                style="text-decoration: underline"
-                href="https://ru.wikibooks.org/wiki/Основы_трейдинга"
-                >textbook</a
-              >
-              on trading on Wikibooks platform (Wikimedia Foundation).
+              <ul>
+                <li>
+                  Author of the independent study « <a [ngStyle]="{
+                      color: isDark ? '#fdff8b' : '#0074e6',
+                    }"
+                    target="_blank"
+                    class="linkrefinto"
+                    style="text-decoration: underline" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6254718">From Tilt to System: A
+                  Practitioner's Framework for Managing Cognitive Biases in
+                  Retail Trading</a> » (SSRN 6254718) — a four-layer bias management
+                  framework for retail traders, grounded in 13 years of live
+                  market experience.
+                </li>
+                <li>
+                  Co-author of «
+                  <a
+                    [ngStyle]="{
+                      color: isDark ? '#fdff8b' : '#0074e6',
+                    }"
+                    target="_blank"
+                    class="linkrefinto"
+                    style="text-decoration: underline"
+                    href="https://doi.org/10.32702/2306-6814.2026.4.96"
+                    >Psychology of Investment Decisions: Cognitive Biases of
+                    Retail Traders in Financial Markets</a
+                  >» , published in the Category B peer-reviewed journal
+                  "Investments: Practice and Experience" (No.4, 2026), Ministry
+                  of Education and Science of Ukraine.
+                </li>
+                <li>
+                  Author of an open
+                  <a
+                    [ngStyle]="{
+                      color: isDark ? '#fdff8b' : '#0074e6',
+                    }"
+                    class="linkrefinto"
+                    target="_blank"
+                    style="text-decoration: underline"
+                    href="https://ru.wikibooks.org/wiki/Основы_трейдинга"
+                    >textbook</a
+                  >
+                  on trading on Wikibooks platform (Wikimedia Foundation).
+                </li>
+              </ul>
             </div>
           </div>
         </div>
