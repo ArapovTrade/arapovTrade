@@ -48,13 +48,13 @@ export class UkBookPageComponent implements OnInit, AfterViewInit, OnDestroy {
     this.removeExistingWebPageSchema();
 
     this.titleService.setTitle(
-      'Навчання трейдерів торгівлі на біржі Курс трейдингу від Ігоря Арапова'
+      'Книги з трейдингу Ігоря Арапова — серія «Основи трейдингу»'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Безкоштовний курс з трейдингу Ігоря Арапова: 130+ статей та 70 відео. Вивчайте теханаліз, ризик-менеджмент та торгові стратегії онлайн',
+        'Серія книг «Основи трейдингу» Ігоря Арапова — 9 видань українською, російською та англійською мовами з міжнародними ISBN (Bowker USA) та DOI (Zenodo/CERN). Об`ємний аналіз, метод Вайкоффа, Smart Money, психологія трейдингу. Зберігаються у фонді Національної бібліотеки України імені В. І. Вернадського.',
     });
 
     this.meta.updateTag({

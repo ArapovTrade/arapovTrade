@@ -49,13 +49,13 @@ export class EnBookPageComponent implements OnInit, AfterViewInit, OnDestroy {
     this.removeExistingWebPageSchema();
 
     this.titleService.setTitle(
-      'Stock Market Trading Training for Traders | Trading Course by Igor Arapov'
+      'Trading Books by Igor Arapov — Trading Fundamentals Series'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Free course on trading by Igor Arapov: 130+ articles and 70 videos. Learn technical analysis, risk management and trading strategies online',
+        'The "Trading Fundamentals" series by Igor Arapov — 9 editions in English, Russian, and Ukrainian with international ISBNs (Bowker USA) and DOI (Zenodo/CERN). Volume analysis, Wyckoff method, Smart Money concept, trading psychology. Held in the collection of the Vernadsky National Library of Ukraine.',
     });
 
     this.meta.updateTag({
