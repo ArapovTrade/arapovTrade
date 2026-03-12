@@ -85,13 +85,13 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
       userMessage: new FormControl('', Validators.required),
     });
     this.titleService.setTitle(
-      'Free Trading Training from Scratch | Igor Arapov',
+      'Igor Arapov — Trader, Author, Founder of arapov.trade',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.addTag({
       name: 'description',
       content:
-        'Free trading education from scratch by Igor Arapov — online trading courses, technical and fundamental analysis, trading cryptocurrencies and currency pairs step by step.',
+        'Igor Vitaliyovych Arapov (30.09.1990) — active trader since 2013, Candidate Master of Sport in chess. Author of the "Trading Fundamentals" book series with international ISBNs (Bowker USA), co-author of a peer-reviewed paper in "Investments: Practice and Experience" (Ukraine MES, 2026). Founder of the free educational platform arapov.trade — 151 articles, 78 video lessons in three languages. ORCID 0009-0003-0430-778X · Wikidata Q137454477.',
     });
     this.meta.updateTag({
       name: 'keywords',

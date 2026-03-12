@@ -86,14 +86,14 @@ export class RuHomeComponent implements OnInit, AfterViewInit, OnDestroy {
       userMessage: new FormControl('', Validators.required),
     });
     this.titleService.setTitle(
-      'Обучение трейдингу с нуля бесплатно | Игорь Арапов',
+      'Игорь Арапов — трейдер, автор книг, основатель arapov.trade',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
 
     this.meta.updateTag({
       name: 'description',
       content:
-        'Обучение трейдингу с нуля бесплатно от Игоря Арапова — онлайн-курсы трейдинга, технический и фундаментальный анализ, торговля криптовалютами и валютными парами шаг за шагом.',
+        'Арапов Игорь Витальевич (30.09.1990) — практикующий трейдер с 2013 года, кандидат в мастера спорта по шахматам. Автор серии книг «Основы трейдинга» с международными ISBN (Bowker USA), соавтор научной статьи в журнале «Інвестиції: практика та досвід» (МОН Украины, 2026). Основатель бесплатной образовательной платформы arapov.trade — 151 статья, 78 видеоуроков на трёх языках. ORCID 0009-0003-0430-778X · Wikidata Q137454477.',
     });
     this.meta.updateTag({
       name: 'keywords',
