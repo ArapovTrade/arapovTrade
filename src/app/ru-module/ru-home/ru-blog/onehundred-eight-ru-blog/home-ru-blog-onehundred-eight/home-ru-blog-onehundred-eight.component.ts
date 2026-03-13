@@ -47,12 +47,12 @@ export class HomeRuBlogOnehundredEightComponent implements OnInit {
     this.setPersonSchema();
 
     this.titleService.setTitle(
-      '78 бесплатных уроков, 9 категорий, полный учебный курс по трейдингу: карта YouTube-канала @ArapovTrade',
+      '78 бесплатных уроков по трейдингу | Канал @ArapovTrade | Игорь Арапов',
     );
     this.meta.updateTag({
       name: 'description',
       content:
-        'Полный каталог всех 78 образовательных видео канала @ArapovTrade — по категориям, с описаниями и ссылками. Метод Вайкоффа, Smart Money, криптовалюта, психология трейдинга. Всё бесплатно.',
+        'Полный каталог всех 78 обучающих видео Игоря Арапова на канале @ArapovTrade — по категориям, с описаниями и прямыми ссылками. Метод Вайкоффа, Smart Money, криптовалюта, психология трейдинга. Всё бесплатно.',
     });
 
     this.themeSubscription = this.themeService.getTheme().subscribe((data) => {

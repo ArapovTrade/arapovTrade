@@ -45,14 +45,14 @@ export class HomeRuBlogOnehundredSixComponent implements OnInit {
     this.removeSelectedSchemas();
     this.setArticleSchema();
     this.setPersonSchema();
-    
+
     this.titleService.setTitle(
       'Про ARAPOV.TRADE — Образовательная платформа по трейдингу',
     );
     this.meta.updateTag({
       name: 'description',
       content:
-        '150 статей, 9 книг с ISBN, 80+ видеоуроков на 3 языках. Бесплатное обучение трейдингу: Smart Money, метод Вайкоффа, объёмный анализ.',
+        'Образовательная платформа Игоря Арапова: 151+ статья, 9 книг с ISBN, 78+ видеоуроков на 3 языках. Бесплатное обучение трейдингу: Smart Money, метод Вайкоффа, объёмный анализ.',
     });
 
     this.themeSubscription = this.themeService.getTheme().subscribe((data) => {
@@ -86,7 +86,6 @@ export class HomeRuBlogOnehundredSixComponent implements OnInit {
       title: 'Базовый курс',
       link: 'https://arapov.trade/ru/freestudying/freeeducation',
     },
-    
   ];
 
   onGroupChange(event: Event) {
@@ -321,9 +320,4 @@ export class HomeRuBlogOnehundredSixComponent implements OnInit {
 
     this.addJsonLdSchema(data);
   }
-
-  
-   
-
-   
 }

@@ -57,7 +57,7 @@ export class HomeEnBlogOnehundredNineComponent implements OnInit {
     this.checkedGroup = this.artickleServ.selectedGroups;
 
     this.titleService.setTitle(
-      '151 Articles, 3 Languages, 453 URLs: The Complete Free Trading Curriculum at arapov.trade',
+      'Complete Trading Curriculum | 151+ Articles, 9 Books, 3 Languages | Igor Arapov',
     );
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
@@ -65,7 +65,7 @@ export class HomeEnBlogOnehundredNineComponent implements OnInit {
     this.meta.updateTag({
       name: 'description',
       content:
-        'A full map of every article published on arapov.trade — organized by category, with descriptions, difficulty levels, and structured learning paths. Wyckoff Method, Smart Money, cryptocurrency, trading psychology. All free.',
+        'Complete map of all materials by Igor Arapov — 151+ articles organized by section, difficulty level and learning path. Wyckoff method, Smart Money, cryptocurrency, trading psychology. All free.',
     });
 
     this.gerRandom();

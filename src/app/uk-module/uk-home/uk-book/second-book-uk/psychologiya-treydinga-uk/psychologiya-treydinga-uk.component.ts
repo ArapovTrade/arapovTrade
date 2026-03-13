@@ -51,13 +51,13 @@ export class PsychologiyaTreydingaUkComponent
     this.removeExistingWebPageSchema();
 
     this.titleService.setTitle(
-      'Психологія трейдингу — Безкоштовна книга Ігоря Арапова | ISBN 979-8-90243-504-4',
+      'Психологія трейдингу — Безкоштовна книга Ігоря Арапова',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Завантажити безкоштовно книгу «Психологія трейдингу» — практичний посібник з управління емоціями від Ігоря Арапова. Страх, жадібність, дисципліна, психологія успішного трейдера. ISBN 979-8-90243-504-4',
+        'Безкоштовна книга Ігоря Арапова: страх, жадібність, тілт, FOMO — практичний посібник з управління емоціями та психологією успішного трейдера. ISBN 979-8-90243-504-4',
     });
 
     this.meta.updateTag({

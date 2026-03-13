@@ -34,7 +34,7 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
     private cdr: ChangeDetectorRef,
     private router: Router,
     private themeService: ThemeservService,
-    private artickleServ: ArticlesService
+    private artickleServ: ArticlesService,
   ) {}
   private routerSubscription!: Subscription;
   private themeSubscription!: Subscription;
@@ -63,13 +63,13 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
     this.checkedGroup = this.artickleServ.selectedGroups;
 
     this.titleService.setTitle(
-      'Бесплатное обучение трейдингу для начинающих с нуля | Игорь Арапов'
+      'Бесплатное обучение трейдингу для начинающих | Игорь Арапов',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Бесплатный курс по трейдингу для начинающих с нуля от практикующего трейдера. Более 150 статей и 70 видеоуроков: технический анализ, объёмы, Smart Money, психология торговли.',
+        'Полный бесплатный курс по трейдингу от Игоря Арапова: чтение графиков, объёмный анализ, Smart Money, риск-менеджмент, торговая система.',
     });
 
     this.meta.updateTag({ name: 'datePublished', content: '2025-05-30' });
@@ -124,7 +124,6 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
       title: 'Базовый курс',
       link: 'https://arapov.trade/ru/freestudying/freeeducation',
     },
-     
   ];
 
   onGroupChange(event: Event) {
@@ -194,7 +193,7 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
     // Показываем 5 случайных статей при фокусе, если инпут пуст
     if (!this.searchQuery) {
       const shuffled = [...this.artickleServ.ukrArtickles].sort(
-        () => Math.random() - 0.5
+        () => Math.random() - 0.5,
       );
       this.displayedArticles = shuffled.slice(0, this.maxResults);
     }
@@ -209,7 +208,7 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
   onSearchChange() {
     // Логика асинхронного поиска
     const filtered = this.artickleServ.ukrArtickles.filter((a) =>
-      a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase())
+      a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase()),
     );
     this.displayedArticles = filtered.slice(0, this.maxResults);
   }
@@ -231,7 +230,7 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
     const path: string =
       this.router.url.split('/')[this.router.url.split('/').length - 1];
     let index = this.artickleServ.ukrArtickles.findIndex(
-      (a) => a.linkUkr == path
+      (a) => a.linkUkr == path,
     );
 
     if (this.artickleServ.ukrArtickles.length - 1 == index) {
@@ -248,7 +247,7 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
     const path: string =
       this.router.url.split('/')[this.router.url.split('/').length - 1];
     let index = this.artickleServ.ukrArtickles.findIndex(
-      (a) => a.linkUkr == path
+      (a) => a.linkUkr == path,
     );
 
     if (index == 1) {
@@ -283,7 +282,7 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
     ];
 
     const scripts = this.document.querySelectorAll(
-      'script[type="application/ld+json"]'
+      'script[type="application/ld+json"]',
     );
 
     scripts.forEach((script) => {
@@ -296,7 +295,7 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
 
         const shouldRemove = candidates.some(
           (entry: any) =>
-            entry['@type'] && typesToRemove.includes(entry['@type'])
+            entry['@type'] && typesToRemove.includes(entry['@type']),
         );
 
         if (shouldRemove) {

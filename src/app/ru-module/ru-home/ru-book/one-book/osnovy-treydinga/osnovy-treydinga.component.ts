@@ -51,13 +51,13 @@ export class OsnovyTreydingaComponent
     this.removeExistingWebPageSchema();
 
     this.titleService.setTitle(
-      'Основы трейдинга — Бесплатная книга Игоря Арапова | ISBN 979-8-90243-075-9'
+      'Основы трейдинга — Бесплатная книга Игоря Арапова'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Скачать бесплатно книгу «Основы трейдинга» — методическое пособие для начинающих трейдеров от Игоря Арапова. FOREX, технический анализ, объёмный анализ, Smart Money. ISBN 979-8-90243-075-9',
+        'Бесплатная книга Игоря Арапова для начинающих: механика биржи, технический анализ, уровни поддержки и сопротивления, типы ордеров, управление рисками. ISBN 979-8-90243-075-9',
     });
 
     this.meta.updateTag({

@@ -47,12 +47,12 @@ export class HomeRuBlogOnehundredNineComponent implements OnInit {
     this.setPersonSchema();
 
     this.titleService.setTitle(
-      '151 статья, 3 языка, 453 URL: Полная бесплатная учебная программа по трейдингу на arapov.trade',
+      'Полная учебная программа по трейдингу | 151+ статья, 9 книг, 3 языка | Игорь Арапов',
     );
     this.meta.updateTag({
       name: 'description',
       content:
-        'Полная карта всех материалов, опубликованных на arapov.trade — по разделам, с описаниями, уровнями сложности и структурированными путями обучения. Метод Вайкоффа, Smart Money, криптовалюты, психология трейдинга. Всё бесплатно.',
+        'Полная карта всех материалов от Игоря Арапова — 151+ статья по разделам, уровням сложности и путям обучения. Метод Вайкоффа, Smart Money, криптовалюты, психология трейдинга. Всё бесплатно.',
     });
 
     this.themeSubscription = this.themeService.getTheme().subscribe((data) => {

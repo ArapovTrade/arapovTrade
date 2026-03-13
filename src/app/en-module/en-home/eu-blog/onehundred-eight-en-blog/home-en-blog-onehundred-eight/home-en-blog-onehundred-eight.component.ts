@@ -57,7 +57,7 @@ export class HomeEnBlogOnehundredEightComponent implements OnInit {
     this.checkedGroup = this.artickleServ.selectedGroups;
 
     this.titleService.setTitle(
-      '78 Free Trading Lessons, 9 Categories, Complete Trading Course: @ArapovTrade YouTube Channel Map',
+      '78 Free Trading Lessons | @ArapovTrade Channel | Igor Arapov',
     );
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
@@ -65,7 +65,7 @@ export class HomeEnBlogOnehundredEightComponent implements OnInit {
     this.meta.updateTag({
       name: 'description',
       content:
-        'Complete catalog of all 78 educational videos by @ArapovTrade — organized by category with descriptions and direct links. Wyckoff Method, Smart Money, cryptocurrency, trading psychology. All free.',
+        'Complete catalog of all 78 educational videos by Igor Arapov on @ArapovTrade — organized by category, with descriptions and direct links. Wyckoff method, Smart Money, cryptocurrency, trading psychology. All free.',
     });
 
     this.gerRandom();

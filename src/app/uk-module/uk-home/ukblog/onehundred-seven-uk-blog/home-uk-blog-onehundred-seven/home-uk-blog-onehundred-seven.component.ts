@@ -57,12 +57,12 @@ export class HomeUkBlogOnehundredSevenComponent implements OnInit {
     this.checkedGroup = this.artickleServ.selectedGroups;
 
     this.titleService.setTitle(
-      '242 ідеї, 5 років публічного аналізу та кілька Editor`s Pick: повний трек-рекорд Ігоря Арапова на TradingView',
+      'Ігор Арапов на TradingView: 242 ідеї, 5 років публічного аналізу та кілька Editor`s Pick',
     );
     this.meta.updateTag({
       name: 'description',
       content:
-        'Ігор Арапов опублікував 242 ідеї на TradingView з 2021 по 2026 рік. Bitcoin, золото, форекс, нафта, індекси та повноцінний курс методу Вайкоффа — детальний розбір усього контенту.',
+        'Ігор Арапов — 242 датовані ідеї на TradingView з 2021 по 2026 рік: метод Вайкоффа, об`ємний аналіз, Bitcoin, золото, Forex. Кілька нагород Editor`s Pick. Публічний трек-рекорд з верифікацією через Wikidata Q137454477.',
     });
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });

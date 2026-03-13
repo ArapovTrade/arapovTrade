@@ -56,13 +56,13 @@ export class HomeEnFourtyFiveComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Free trading training from scratch - a complete course for beginners'
+      'Free Trading Education for Beginners | Igor Arapov'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Free trading course for beginners by a professional trader since 2013. 150 articles, 70+ videos: technical analysis, volume analysis, Smart Money concepts, trading psychology.',
+        'Complete free trading course by Igor Arapov: chart reading, volume analysis, Smart Money, risk management, trading system.',
     });
 
     this.meta.updateTag({ name: 'datePublished', content: '2025-05-30' });

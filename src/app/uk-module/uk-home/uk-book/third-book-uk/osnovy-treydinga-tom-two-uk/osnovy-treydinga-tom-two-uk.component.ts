@@ -51,13 +51,13 @@ export class OsnovyTreydingaTomTwoUkComponent
     this.removeExistingWebPageSchema();
 
     this.titleService.setTitle(
-      'Основи трейдингу. Практика — Безкоштовна книга Ігоря Арапова | 979-8-90243-732-1',
+      'Основи трейдингу. Том 2 — Безкоштовна книга Ігоря Арапова',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Завантажити безкоштовно книгу «Основи трейдингу. Практика» — методичне посібник для початкових трейдерів від Ігоря Арапова. FOREX, технічний аналіз, об’ємний аналіз, Smart Money. 979-8-90243-732-1',
+        'Безкоштовна книга Ігоря Арапова: об`ємний аналіз, метод Вайкоффа, Smart Money, полювання за ліквідністю, торгова система з позитивним очікуванням. ISBN 979-8-90243-732-1',
     });
 
     this.meta.updateTag({

@@ -62,7 +62,7 @@ export class HomeUkBlogOnehundredSixComponent implements OnInit {
     this.meta.updateTag({
       name: 'description',
       content:
-        '150 статей, 9 книг з ISBN, 80+ відеоуроків на 3 мовах. Безкоштовне навчання трейдингу: Smart Money, метод Вайкоффа, об`ємний аналіз.',
+        'Освітня платформа Ігоря Арапова: 151+ стаття, 9 книг з ISBN, 78+ відеоуроків на 3 мовах. Безкоштовне навчання трейдингу: Smart Money, метод Вайкоффа, об`ємний аналіз.',
     });
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });

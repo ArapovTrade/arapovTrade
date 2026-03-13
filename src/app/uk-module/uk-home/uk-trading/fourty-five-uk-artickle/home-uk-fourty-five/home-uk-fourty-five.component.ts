@@ -66,7 +66,7 @@ export class HomeUkFourtyFiveComponent implements OnInit {
     this.meta.updateTag({
       name: 'description',
       content:
-        'Безкоштовний курс трейдингу для початківців від практикуючого трейдера з 2013 року. Понад 150 статей, 70 відео: від основ до Smart Money та Вайкоффа.',
+        'Повний безкоштовний курс трейдингу від Ігоря Арапова: читання графіків, об`ємний аналіз, Smart Money, ризик-менеджмент, торгова система.',
     });
 
     this.meta.updateTag({ name: 'datePublished', content: '2025-05-30' });

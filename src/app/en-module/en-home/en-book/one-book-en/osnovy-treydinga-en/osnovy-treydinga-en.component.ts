@@ -51,13 +51,13 @@ export class OsnovyTreydingaEnComponent
     this.removeExistingWebPageSchema();
 
     this.titleService.setTitle(
-      'Trading Basics – Free Book by Igor Arapov | ISBN 979-8-90243-734-5',
+      'Trading Fundamentals — Free Book by Igor Arapov',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Download the free book "Trading Basics" — a methodological guide for beginners by Igor Arapov. FOREX, technical analysis, volume analysis, Smart Money. ISBN 979-8-90243-734-5',
+        'Free book by Igor Arapov for beginners: exchange mechanics, technical analysis, support and resistance levels, order types, risk management. ISBN 979-8-90243-730-7',
     });
 
     this.meta.updateTag({

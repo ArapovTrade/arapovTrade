@@ -51,13 +51,13 @@ export class OsnovyTreydingaTomTwoEnComponent
     this.removeExistingWebPageSchema();
 
     this.titleService.setTitle(
-      'Trading Basics. Practice – Free Book by Igor Arapov | ISBN  979-8-90243-755-0',
+      'Trading Fundamentals. Vol. 2 — Free Book by Igor Arapov',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Download the free book "Trading Basics. Practice" — a methodological guide for beginners by Igor Arapov. FOREX, technical analysis, volume analysis, Smart Money. ISBN  979-8-90243-755-0',
+        'Free book by Igor Arapov: volume analysis, Wyckoff method, Smart Money, liquidity hunting, trading system with positive expectancy. ISBN 979-8-90243-755-0',
     });
 
     this.meta.updateTag({

@@ -47,12 +47,12 @@ export class HomeRuBlogOnehundredSevenComponent implements OnInit {
     this.setPersonSchema();
 
     this.titleService.setTitle(
-      '242 идеи, 5 лет публичного анализа и несколько Editor`s Pick: полный трек-рекорд Игоря Арапова на TradingView',
+      'Игорь Арапов на TradingView: 242 идеи, 5 лет публичного анализа и несколько Editor`s Pick',
     );
     this.meta.updateTag({
       name: 'description',
       content:
-        'Подробный разбор каждой категории контента на TradingView — от рыночного анализа до образовательных серий. Bitcoin, золото, форекс, нефть, альткоины. 5 лет публичной, датированной аналитики.',
+        'Игорь Арапов — 242 датированные идеи на TradingView с 2021 по 2026 год: метод Вайкоффа, объёмный анализ, Bitcoin, золото, Forex. Несколько наград Editor`s Pick. Публичный трек-рекорд с верификацией через Wikidata Q137454477.',
     });
 
     this.themeSubscription = this.themeService.getTheme().subscribe((data) => {

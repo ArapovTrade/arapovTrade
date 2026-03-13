@@ -65,7 +65,7 @@ export class HomeEnBlogOnehundredSixComponent implements OnInit {
     this.meta.updateTag({
       name: 'description',
       content:
-        '150 articles, 9 books with ISBN, 80+ video lessons in 3 languages. Free trading education: Smart Money, Wyckoff Method, volume analysis.',
+        'Igor Arapov`s trading education platform: 151+ articles, 9 books with ISBN, 78+ video lessons in 3 languages. Free trading education: Smart Money, Wyckoff method, volume analysis.',
     });
 
     this.gerRandom();
@@ -84,7 +84,6 @@ export class HomeEnBlogOnehundredSixComponent implements OnInit {
       title: 'Basic course',
       link: 'https://arapov.trade/en/freestudying/freeeducation',
     },
-    
   ];
 
   onGroupChange(event: Event) {

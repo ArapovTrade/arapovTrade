@@ -51,13 +51,13 @@ export class PsychologiyaTreydingaEnComponent
     this.removeExistingWebPageSchema();
 
     this.titleService.setTitle(
-      'Trading Psychology – Free Book by Igor Arapov | ISBN 979-8-90243-138-1',
+      'Trading Psychology — Free Book by Igor Arapov',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Download the free book "Trading Psychology" — a practical guide to emotion management by Igor Arapov. Fear, greed, discipline, psychology of a successful trader. ISBN 979-8-90243-138-1',
+        'Free book by Igor Arapov: fear, greed, tilt, FOMO — a practical guide to emotional management and the psychology of a successful trader. ISBN 979-8-90243-138-1',
     });
 
     this.meta.updateTag({

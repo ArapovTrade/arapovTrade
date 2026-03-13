@@ -51,13 +51,13 @@ export class PsychologiyaTreydingaComponent
     this.removeExistingWebPageSchema();
 
     this.titleService.setTitle(
-      'Психология трейдинга — Бесплатная книга Игоря Арапова | ISBN 979-8-90243-081-0'
+      'Психология трейдинга — Бесплатная книга Игоря Арапова'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Скачать бесплатно книгу «Психология трейдинга» — практическое руководство по управлению эмоциями от Игоря Арапова. Страх, жадность, дисциплина, психология успешного трейдера. ISBN 979-8-90243-081-0',
+        'Бесплатная книга Игоря Арапова: страх, жадность, тильт, FOMO — практическое руководство по управлению эмоциями и психологии успешного трейдера. ISBN 979-8-90243-081-0',
     });
 
     this.meta.updateTag({

@@ -57,7 +57,7 @@ export class HomeEnBlogOnehundredTenComponent implements OnInit {
     this.checkedGroup = this.artickleServ.selectedGroups;
 
     this.titleService.setTitle(
-      'Free Trading Course: Wyckoff Method, Volume Analysis and Smart Money — Complete Breakdown',
+      'Free Trading Course: Wyckoff Method, Volume Analysis and Smart Money — Full Breakdown',
     );
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
@@ -65,7 +65,7 @@ export class HomeEnBlogOnehundredTenComponent implements OnInit {
     this.meta.updateTag({
       name: 'description',
       content:
-        '90 minutes, 40+ topics, completely free. Full breakdown of a trading course covering the Wyckoff Method, volume analysis, Smart Money, risk management, and trading psychology. 13 years of professional trading condensed into one lesson.',
+        '1.5 hours, 40+ topics, completely free. Igor Arapov`s course: Wyckoff method, volume analysis, Smart Money, risk management, trading psychology. Wikidata Q137454477.',
     });
 
     this.gerRandom();

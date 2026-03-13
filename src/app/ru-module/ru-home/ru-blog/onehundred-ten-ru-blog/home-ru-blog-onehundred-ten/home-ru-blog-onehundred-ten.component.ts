@@ -47,12 +47,12 @@ export class HomeRuBlogOnehundredTenComponent implements OnInit {
     this.setPersonSchema();
 
     this.titleService.setTitle(
-      'Бесплатный Курс Трейдинга: Метод Вайкоффа, Объёмный Анализ и Smart Money — Полный Разбор',
+      'Бесплатный курс трейдинга: метод Вайкоффа, объёмный анализ и Smart Money — полный разбор',
     );
     this.meta.updateTag({
       name: 'description',
       content:
-        '1,5 часа, более 40 тем, полностью бесплатно. Полный разбор курса трейдинга: метод Вайкоффа, объёмный анализ, Smart Money, управление рисками, психология. 13 лет профессионального трейдинга в одном уроке.',
+        '1,5 часа, 40+ тем, полностью бесплатно. Курс Игоря Арапова: метод Вайкоффа, объёмный анализ, Smart Money, риск-менеджмент, психология трейдинга. Wikidata Q137454477.',
     });
 
     this.themeSubscription = this.themeService.getTheme().subscribe((data) => {
