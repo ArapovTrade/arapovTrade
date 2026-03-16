@@ -285,10 +285,10 @@ export class AppComponent implements OnInit, AfterViewChecked, OnDestroy {
         ) {
           title =
             segments[0] === 'ru'
-              ? '151 статья, 3 языка, 453 URL: Полная бесплатная учебная программа по трейдингу на arapov.trade'
+              ? '151+ статья, 3 языка, 453 URL: Полная бесплатная учебная программа по трейдингу на arapov.trade'
               : segments[0] === 'uk'
-                ? '151 стаття, 3 мови, 453 URL: Повна безкоштовна навчальна програма з трейдингу на arapov.trade'
-                : '151 Articles, 3 Languages, 453 URLs: The Complete Free Trading Curriculum at arapov.trade';
+                ? '151+ стаття, 3 мови, 453 URL: Повна безкоштовна навчальна програма з трейдингу на arapov.trade'
+                : '151+ Articles, 3 Languages, 453 URLs: The Complete Free Trading Curriculum at arapov.trade';
 
           
 
@@ -314,10 +314,10 @@ export class AppComponent implements OnInit, AfterViewChecked, OnDestroy {
         ) {
           title =
             segments[0] === 'ru'
-              ? '78 бесплатных уроков, 9 категорий: полная карта YouTube-канала @ArapovTrade'
+              ? '78+ бесплатных уроков, 9 категорий: полная карта YouTube-канала @ArapovTrade'
               : segments[0] === 'uk'
-                ? '78 безкоштовних уроків, 9 категорій: повна карта YouTube-каналу @ArapovTrade'
-                : '78 Free Trading Lessons, 9 Categories: Complete @ArapovTrade YouTube Channel Map';
+                ? '78+ безкоштовних уроків, 9 категорій: повна карта YouTube-каналу @ArapovTrade'
+                : '78+ Free Trading Lessons, 9 Categories: Complete @ArapovTrade YouTube Channel Map';
 
 
 
@@ -349,7 +349,7 @@ export class AppComponent implements OnInit, AfterViewChecked, OnDestroy {
           description = article[titleDescr];
         } else if (segments[0] == '') {
           description =
-            'Безкоштовний курс з трейдингу Ігоря Арапова: 130 + статей і 70 відео. Вивчайте теханаліз, ризик-менеджмент і торгові стратегії онлайн';
+            'Безкоштовний курс з трейдингу Ігоря Арапова: 151 + статей і 78+ відео. Вивчайте теханаліз, ризик-менеджмент і торгові стратегії онлайн';
         } else if (segments[1] === 'studying' && segments[0] === 'ru') {
           description =
             'Онлайн-курсы по трейдингу от Игоря Арапова — обучение трейдингу и инвестициям с нуля, дистанционно и бесплатно. Изучайте технический и фундаментальный анализ, торговые стратегии и управление рисками шаг за шагом.';
@@ -438,10 +438,10 @@ export class AppComponent implements OnInit, AfterViewChecked, OnDestroy {
         ) {
           description =
             segments[0] === 'ru'
-              ? 'Бесплатный курс по трейдингу: 130+ статей и 70 видеоуроков. Изучите основы, анализ, психологию торговли и проверенные стратегии'
+              ? 'Бесплатный курс по трейдингу: 151+ статей и 78+ видеоуроков. Изучите основы, анализ, психологию торговли и проверенные стратегии'
               : segments[0] === 'uk'
-                ? 'Безкоштовний курс з трейдингу: 130+ статей та 70 відеоуроків. Вивчіть основи, аналіз, психологію торгівлі та перевірені стратегії'
-                : 'Free Trading Course: 130+ Articles and 70 Video Lessons. Learn the Basics, Analysis, Trading Psychology, and Proven Strategies';
+                ? 'Безкоштовний курс з трейдингу: 151+ статей та 78+ відеоуроків. Вивчіть основи, аналіз, психологію торгівлі та перевірені стратегії'
+                : 'Free Trading Course: 151+ Articles and 78+ Video Lessons. Learn the Basics, Analysis, Trading Psychology, and Proven Strategies';
        
        
        
@@ -481,10 +481,10 @@ export class AppComponent implements OnInit, AfterViewChecked, OnDestroy {
         ) {
           description =
             segments[0] === 'ru'
-              ? 'Полный каталог всех 78 образовательных видео @ArapovTrade по категориям. Метод Вайкоффа, Smart Money, объёмный анализ, психология трейдинга. Всё бесплатно.'
+              ? 'Полный каталог всех 78+ образовательных видео @ArapovTrade по категориям. Метод Вайкоффа, Smart Money, объёмный анализ, психология трейдинга. Всё бесплатно.'
               : segments[0] === 'uk'
-                ? 'Повний каталог усіх 78 освітніх відео @ArapovTrade за категоріями. Метод Вайкоффа, Smart Money, об`ємний аналіз, психологія трейдингу. Усе безкоштовно.'
-                : 'Complete catalog of all 78 educational videos by @ArapovTrade, organized by category. Wyckoff Method, Smart Money, volume analysis, trading psychology. All free, no paywall.';
+                ? 'Повний каталог усіх 78+ освітніх відео @ArapovTrade за категоріями. Метод Вайкоффа, Smart Money, об`ємний аналіз, психологія трейдингу. Усе безкоштовно.'
+                : 'Complete catalog of all 78+ educational videos by @ArapovTrade, organized by category. Wyckoff Method, Smart Money, volume analysis, trading psychology. All free, no paywall.';
         
        
            } else if (
@@ -503,10 +503,10 @@ export class AppComponent implements OnInit, AfterViewChecked, OnDestroy {
               } else if (segments[1] === 'freestudying' && segments[2] === 'about') {
           description =
             segments[0] === 'ru'
-              ? '150 статей, 9 книг с ISBN, 80+ видеоуроков на 3 языках. Бесплатное обучение трейдингу: Smart Money, метод Вайкоффа, объёмный анализ.'
+              ? '151+ статей, 9 книг с ISBN, 78+ видеоуроков на 3 языках. Бесплатное обучение трейдингу: Smart Money, метод Вайкоффа, объёмный анализ.'
               : segments[0] === 'uk'
-                ? '150 статей, 9 книг з ISBN, 80+ відеоуроків на 3 мовах. Безкоштовне навчання трейдингу: Smart Money, метод Вайкоффа, об`ємний аналіз.'
-                : '150 articles, 9 books with ISBN, 80+ video lessons in 3 languages. Free trading education: Smart Money, Wyckoff Method, volume analysis.';
+                ? '151+ статей, 9 книг з ISBN, 78+ відеоуроків на 3 мовах. Безкоштовне навчання трейдингу: Smart Money, метод Вайкоффа, об`ємний аналіз.'
+                : '151+ articles, 9 books with ISBN, 78+ video lessons in 3 languages. Free trading education: Smart Money, Wyckoff Method, volume analysis.';
         } else if (segments[1] === 'freestudying') {
           description =
             segments[0] === 'ru'
