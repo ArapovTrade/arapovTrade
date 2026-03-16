@@ -55,7 +55,7 @@ export class MainpageComponent implements OnInit, AfterViewInit, OnDestroy {
     this.meta.updateTag({
       name: 'description',
       content:
-        'Безкоштовний курс з трейдингу Ігоря Арапова: 130 + статей і 70 відео. Вивчайте теханаліз, ризик-менеджмент і торгові стратегії онлайн',
+        'Безкоштовний курс з трейдингу Ігоря Арапова: 151 + статей і 78+ відео. Вивчайте теханаліз, ризик-менеджмент і торгові стратегії онлайн',
     });
 
     this.meta.updateTag({

@@ -47,7 +47,7 @@ export class RuCryptoHomepageComponent  implements OnInit, AfterViewInit, OnDest
       this.meta.updateTag({
         name: 'description',
         content:
-          'Бесплатный курс по трейдингу Игоря Арапова: 130+ статей и 70 видео. Изучайте теханализ, риск-менеджмент и торговые стратегии онлайн',
+          'Бесплатный курс по трейдингу Игоря Арапова: 151+ статей и 78+ видео. Изучайте теханализ, риск-менеджмент и торговые стратегии онлайн',
       });
   
       this.meta.updateTag({

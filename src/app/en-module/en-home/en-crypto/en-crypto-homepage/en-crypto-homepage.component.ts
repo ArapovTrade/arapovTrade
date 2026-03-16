@@ -56,7 +56,7 @@ export class EnCryptoHomepageComponent
     this.meta.updateTag({
       name: 'description',
       content:
-        'Igor Arapov`s Free Trading Course: 130+ Articles and 70 Videos. Study Technical Analysis, Risk Management, and Trading Strategies Online',
+        'Igor Arapov`s Free Trading Course: 151+ Articles and 78+ Videos. Study Technical Analysis, Risk Management, and Trading Strategies Online',
     });
 
     this.meta.updateTag({
