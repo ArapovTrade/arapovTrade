@@ -83,12 +83,12 @@ export class EnStudyingHomeComponent
       'Online Trading Courses by Igor Arapov | Trading Education from Scratch'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Online trading courses by Igor Arapov — learn trading from scratch, remotely and for free. Study technical and fundamental analysis, trading strategies and risk management step by step.',
     });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'keywords',
       content:
         'trading courses, online trading education, trading from scratch, remote learning, investments, trading strategies',

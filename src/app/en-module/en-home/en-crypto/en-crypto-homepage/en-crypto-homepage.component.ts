@@ -175,7 +175,7 @@ export class EnCryptoHomepageComponent
       name: 'Arapov.Trade',
       alternateName: 'Trading Education',
       description:
-        'Free trading education by Igor Arapov. 130+ articles, 70 video lessons.',
+        'Free trading education by Igor Arapov. 151+ articles, 78+ video lessons.',
       inLanguage: 'en-US',
       publisher: {
         '@type': 'Organization',
