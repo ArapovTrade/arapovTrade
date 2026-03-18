@@ -30,7 +30,8 @@ import { DOCUMENT } from '@angular/common';
 import { FaqservService } from './servises/faqserv.service';
 import { ThemeservService } from './servises/themeserv.service';
 import { Subscription } from 'rxjs';
-
+import { isPlatformBrowser } from '@angular/common';
+import { PLATFORM_ID } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -71,6 +72,7 @@ export class AppComponent implements OnInit, AfterViewChecked, OnDestroy {
     @Inject(DOCUMENT) private document: Document,
     private faqservise: FaqservService,
     private themeServ: ThemeservService,
+    @Inject(PLATFORM_ID) private platformId: Object,
   ) {
     this.renderer = rendererFactory.createRenderer(null, null);
   }
@@ -185,10 +187,45 @@ export class AppComponent implements OnInit, AfterViewChecked, OnDestroy {
           | 'descrUkr'
           | 'descrRus'
           | 'descrEn';
-
+        let personAlterName = [''];
+        let personName = '';
         let title = '';
         if (article) {
           title = article[titleKey];
+          if (segments[0] == '' || segments[0] == 'uk') {
+            personName = 'Ігор Арапов';
+            personAlterName = [
+              'Igor Arapov',
+              'Арапов Игорь',
+              'I. Arapov',
+              'Игорь Арапов',
+              'І. В. Арапов',
+              'Арапов Ігор',
+              'Arapov Igor',
+            ];
+          } else if (segments[0] == 'en') {
+            personName = 'Igor Arapov';
+            personAlterName = [
+              'Ігор Арапов',
+              'Арапов Игорь',
+              'I. Arapov',
+              'Игорь Арапов',
+              'І. В. Арапов',
+              'Арапов Ігор',
+              'Arapov Igor',
+            ];
+          } else if (segments[0] == 'ru') {
+            personName = 'Игорь Арапов';
+            personAlterName = [
+              'Igor Arapov',
+              'Арапов Игорь',
+              'I. Arapov',
+              'Ігор Арапов',
+              'І. В. Арапов',
+              'Арапов Ігор',
+              'Arapov Igor',
+            ];
+          }
         } else if (segments[0] == '') {
           title =
             'Навчання трейдерів торгівлі на біржі | Курс трейдингу від Ігоря Арапова';
@@ -278,8 +315,7 @@ export class AppComponent implements OnInit, AfterViewChecked, OnDestroy {
               : segments[0] === 'uk'
                 ? '242 ідеї, 5 років публічного аналізу та кілька Editor`s Pick: повний трек-рекорд Ігоря Арапова на TradingView'
                 : '242 Ideas, 5 Years of Public Analysis: Igor Arapov`s Complete TradingView Track Record';
-
-           } else if (
+        } else if (
           segments[1] === 'freestudying' &&
           segments[2] === 'curriculum'
         ) {
@@ -289,10 +325,7 @@ export class AppComponent implements OnInit, AfterViewChecked, OnDestroy {
               : segments[0] === 'uk'
                 ? '151+ стаття, 3 мови, 453 URL: Повна безкоштовна навчальна програма з трейдингу на arapov.trade'
                 : '151+ Articles, 3 Languages, 453 URLs: The Complete Free Trading Curriculum at arapov.trade';
-
-          
-
-            } else if (
+        } else if (
           segments[1] === 'freestudying' &&
           segments[2] === 'fullvideocourse'
         ) {
@@ -302,13 +335,7 @@ export class AppComponent implements OnInit, AfterViewChecked, OnDestroy {
               : segments[0] === 'uk'
                 ? 'Безкоштовний Курс Трейдингу: Метод Вайкоффа, Об’ємний Аналіз і Smart Money — Детальний Огляд'
                 : 'Free Trading Course: Wyckoff Method, Volume Analysis and Smart Money — Complete Breakdown';
-
-
-
-
-
-                
-           } else if (
+        } else if (
           segments[1] === 'freestudying' &&
           segments[2] === 'youtube'
         ) {
@@ -318,10 +345,6 @@ export class AppComponent implements OnInit, AfterViewChecked, OnDestroy {
               : segments[0] === 'uk'
                 ? '78+ безкоштовних уроків, 9 категорій: повна карта YouTube-каналу @ArapovTrade'
                 : '78+ Free Trading Lessons, 9 Categories: Complete @ArapovTrade YouTube Channel Map';
-
-
-
-
         } else if (segments[1] === 'freestudying' && segments[2] === 'about') {
           title =
             segments[0] === 'ru'
@@ -442,11 +465,6 @@ export class AppComponent implements OnInit, AfterViewChecked, OnDestroy {
               : segments[0] === 'uk'
                 ? 'Безкоштовний курс з трейдингу: 151+ статей та 78+ відеоуроків. Вивчіть основи, аналіз, психологію торгівлі та перевірені стратегії'
                 : 'Free Trading Course: 151+ Articles and 78+ Video Lessons. Learn the Basics, Analysis, Trading Psychology, and Proven Strategies';
-       
-       
-       
-       
-       
         } else if (
           segments[1] === 'freestudying' &&
           segments[2] === 'tradingview-record'
@@ -457,9 +475,7 @@ export class AppComponent implements OnInit, AfterViewChecked, OnDestroy {
               : segments[0] === 'uk'
                 ? 'Повний розбір усього опублікованого на TradingView з 2021 по 2026 рік. Bitcoin, золото, форекс, індекси, нафта, освітній курс з методу Вайкоффа.'
                 : 'A full breakdown of everything published on TradingView from 2021 to 2026. Bitcoin, gold, forex, indices, crude oil, and a complete Wyckoff Method educational curriculum.';
-        
-
-          } else if (
+        } else if (
           segments[1] === 'freestudying' &&
           segments[2] === 'fullvideocourse'
         ) {
@@ -469,13 +485,7 @@ export class AppComponent implements OnInit, AfterViewChecked, OnDestroy {
               : segments[0] === 'uk'
                 ? '1,5 години, понад 40 тем, повністю безкоштовно. Детальний огляд курсу трейдингу: метод Вайкоффа, об`ємний аналіз, Smart Money, управління ризиками, психологія.'
                 : '90 minutes, 40+ topics, completely free. Full breakdown of a trading course covering the Wyckoff Method, volume analysis, Smart Money, risk management, and trading psychology.';
-        
-
-
-
-
-       
-           } else if (
+        } else if (
           segments[1] === 'freestudying' &&
           segments[2] === 'youtube'
         ) {
@@ -485,9 +495,7 @@ export class AppComponent implements OnInit, AfterViewChecked, OnDestroy {
               : segments[0] === 'uk'
                 ? 'Повний каталог усіх 78+ освітніх відео @ArapovTrade за категоріями. Метод Вайкоффа, Smart Money, об`ємний аналіз, психологія трейдингу. Усе безкоштовно.'
                 : 'Complete catalog of all 78+ educational videos by @ArapovTrade, organized by category. Wyckoff Method, Smart Money, volume analysis, trading psychology. All free, no paywall.';
-        
-       
-           } else if (
+        } else if (
           segments[1] === 'freestudying' &&
           segments[2] === 'curriculum'
         ) {
@@ -497,10 +505,7 @@ export class AppComponent implements OnInit, AfterViewChecked, OnDestroy {
               : segments[0] === 'uk'
                 ? 'Повна карта всіх матеріалів, опублікованих на arapov.trade — за розділами, з описами, рівнями складності та структурованими шляхами навчання. Метод Вайкоффа, Smart Money, криптовалюти, психологія трейдингу. Все безкоштовно.'
                 : 'A full map of every article published on arapov.trade — organized by category, with descriptions, difficulty levels, and structured learning paths. Wyckoff Method, Smart Money, cryptocurrency, trading psychology. All free.';
-        
-
-       
-              } else if (segments[1] === 'freestudying' && segments[2] === 'about') {
+        } else if (segments[1] === 'freestudying' && segments[2] === 'about') {
           description =
             segments[0] === 'ru'
               ? '151+ статей, 9 книг с ISBN, 78+ видеоуроков на 3 языках. Бесплатное обучение трейдингу: Smart Money, метод Вайкоффа, объёмный анализ.'
@@ -546,6 +551,7 @@ export class AppComponent implements OnInit, AfterViewChecked, OnDestroy {
           content: `https://arapov.trade${image}`,
         });
         this.meta.updateTag({ property: 'og:url', content: url });
+        //Обновляет Persona schema
 
         // Оновлюємо Twitter Card теги
         this.meta.updateTag({
@@ -656,8 +662,6 @@ export class AppComponent implements OnInit, AfterViewChecked, OnDestroy {
       this.document.head.appendChild(scriptr);
     }
   }
-
-  private setDefaultMetaTags() {}
 
   private generateBreadcrumbs() {
     const urlPath = this.router.url.split('?')[0].replace(/^\/|\/$/g, '');

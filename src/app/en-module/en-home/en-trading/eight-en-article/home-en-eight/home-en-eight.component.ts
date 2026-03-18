@@ -86,7 +86,7 @@ export class HomeEnEightComponent implements OnInit {
     {
       title: 'Basic course',
       link: 'https://arapov.trade/en/freestudying/freeeducation',
-    }, 
+    },
   ];
 
   onGroupChange(event: Event) {
@@ -318,6 +318,15 @@ export class HomeEnEightComponent implements OnInit {
       '@type': 'Person',
       '@id': 'https://arapov.trade/en#person',
       name: 'Igor Arapov',
+      alternateName: [
+        'Igor Arapov',
+        'Арапов Игорь',
+        'I. Arapov',
+        'Игорь Арапов',
+        'І. В. Арапов',
+        'Арапов Ігор',
+        'Arapov Igor',
+      ],
       url: 'https://arapov.trade/en',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',

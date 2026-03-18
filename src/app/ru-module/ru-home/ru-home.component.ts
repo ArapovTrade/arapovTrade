@@ -261,7 +261,7 @@ export class RuHomeComponent implements OnInit, AfterViewInit, OnDestroy {
       '@type': 'Person',
       '@id': 'https://arapov.trade/ru#person',
       name: 'Игорь Арапов',
-      alternateName: ['Igor Arapov',  'І. В. Арапов', 'I. Arapov'],
+      alternateName: ['Igor Arapov', 'Арапов Игорь', 'І. В. Арапов', 'I. Arapov', 'Ігор Арапов','Арапов Ігор','Arapov Igor'],
       birthDate: '1990-09-30',
       givenName: 'Игорь',
       familyName: 'Арапов',
