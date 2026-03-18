@@ -319,7 +319,7 @@ export class HomeEnEightComponent implements OnInit {
       '@id': 'https://arapov.trade/en#person',
       name: 'Igor Arapov',
       alternateName: [
-        'Igor Arapov',
+        'Ігор Арапов',
         'Арапов Игорь',
         'I. Arapov',
         'Игорь Арапов',
