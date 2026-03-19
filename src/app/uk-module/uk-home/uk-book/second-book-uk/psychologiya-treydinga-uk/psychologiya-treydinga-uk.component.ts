@@ -167,7 +167,9 @@ export class PsychologiyaTreydingaUkComponent
       try {
         const json = JSON.parse(script.textContent || '{}');
         return (
-          json['@type'] === 'Book' && json['name'] === 'Психологія трейдингу'
+          json['@type'] === 'Book' &&
+          json['name'] ===
+            'Психологія трейдингу: Як керувати емоціями та мислити як професіонал'
         );
       } catch {
         return false;
@@ -188,14 +190,13 @@ export class PsychologiyaTreydingaUkComponent
         '@type': 'WebPage',
         '@id': 'https://arapov.trade/uk/books/psihologiya-treydinga',
       },
-      name: 'Психологія трейдингу',
+      name: 'Психологія трейдингу: Як керувати емоціями та мислити як професіонал',
       alternateName: [
-        'Psychology of trading',
-        'Методичний посібник з Фінансового Трейдингу',
-        'Trading Basics',
+        'Психология трейдинга: Как управлять эмоциями и мыслить как профессионал',
+        'Trading psychology. How to Master Your Emotions and Think Like a Professional',
       ],
       headline:
-        'Психологія трейдингу — Методичний посібник для початкових трейдерів',
+        'Психологія трейдингу: Як керувати емоціями та мислити як професіонал',
       description:
         'Завантажити безкоштовно книгу «Психологія трейдингу» — практичний посібник з управління емоціями від Ігоря Арапова. Страх, жадібність, дисципліна, психологія успішного трейдера. ISBN 979-8-90243-504-4',
       isbn: '979-8-90243-504-4',
@@ -205,7 +206,7 @@ export class PsychologiyaTreydingaUkComponent
       inLanguage: {
         '@type': 'Language',
         name: 'Ukrainian',
-        alternateName: 'uk',
+        alternateName: 'ua',
       },
       datePublished: '2025-12-18T00:00:00Z',
       dateModified: '2025-12-19T00:00:00Z',
@@ -213,7 +214,7 @@ export class PsychologiyaTreydingaUkComponent
       copyrightYear: 2025,
       copyrightHolder: {
         '@type': 'Person',
-        '@id': 'https://arapov.trade/ru#author',
+        '@id': 'https://arapov.trade/uk#author',
       },
       genre: ['Business', 'Finance', 'Trading', 'Education', 'Investment'],
       about: [
@@ -264,7 +265,7 @@ export class PsychologiyaTreydingaUkComponent
         url: 'https://arapov.trade/assets/redesignArapovTrade/img/cover_psychology.jpg',
         width: 600,
         height: 900,
-        caption: 'Обкладинка книги «Психологія трейдингу» - Ігор Арапов',
+        caption: '«Психологія трейдингу» - Ігор Арапов',
       },
       url: 'https://arapov.trade/uk/books/psihologiya-treydinga',
       offers: {
@@ -370,11 +371,19 @@ export class PsychologiyaTreydingaUkComponent
       '@type': 'Person',
       '@id': 'https://arapov.trade/uk#author',
       name: 'Ігор Арапов',
-      alternateName: ['Igor Arapov', 'Игорь Арапов'],
+      alternateName: [
+        'Igor Arapov',
+        'Арапов Игорь',
+        'I. Arapov',
+        'Игорь Арапов',
+        'І. В. Арапов',
+        'Арапов Ігор',
+        'Arapov Igor',
+      ],
       givenName: 'Ігор',
       familyName: 'Арапов',
       description:
-        'Український трейдер із 2013 року. Творець освітньої платформи arapov.trade, автор 130+ статей та 70+ відеоуроків з трейдингу. Спеціалізується на Smart Money концепціях, методі Вайкоффа та об`ємному аналізі.',
+        'Український трейдер із 2013 року. Творець освітньої платформи arapov.trade, автор 151+ статей та 78+ відеоуроків з трейдингу. Спеціалізується на Smart Money концепціях, методі Вайкоффа та об`ємному аналізі.',
       url: 'https://arapov.trade',
       image: {
         '@type': 'ImageObject',
@@ -436,7 +445,7 @@ export class PsychologiyaTreydingaUkComponent
         return (
           json['@type'] === 'WebPage' &&
           json['name'] ===
-            'Психологія трейдингу — Безкоштовна книга Ігоря Арапова'
+            'Психологія трейдингу: Як керувати емоціями та мислити як професіонал'
         );
       } catch {
         return false;
@@ -454,7 +463,7 @@ export class PsychologiyaTreydingaUkComponent
       '@type': 'WebPage',
       '@id': 'https://arapov.trade/uk/books/psihologiya-treydinga',
       url: 'https://arapov.trade/uk/books/psihologiya-treydinga',
-      name: 'Психологія трейдингу — Безкоштовна книга Ігоря Арапова',
+      name: 'Психологія трейдингу: Як керувати емоціями та мислити як професіонал',
       description:
         'Скачати безкоштовно книгу з трейдингу. ISBN 979-8-90243-504-4',
       inLanguage: 'uk',

@@ -246,7 +246,7 @@ export class EnBookPageComponent implements OnInit, AfterViewInit, OnDestroy {
           item: {
             '@type': 'Book',
             '@id': 'https://arapov.trade/en/books/osnovy-treydinga#book',
-            name: 'Trading Basics',
+            name: 'Trading fundamentals. Market Basics • Technical Analysis • Volume Analysis',
             isbn: '979-8-90243-734-5',
             inLanguage: 'ru',
             author: {
@@ -262,7 +262,7 @@ export class EnBookPageComponent implements OnInit, AfterViewInit, OnDestroy {
           item: {
             '@type': 'Book',
             '@id': 'https://arapov.trade/en/books/psihologiya-treydinga#book',
-            name: 'Trading Psychology',
+            name: 'Trading psychology. How to Master Your Emotions and Think Like a Professional',
             isbn: '979-8-90243-138-1',
             inLanguage: 'en',
             author: {
@@ -278,7 +278,7 @@ export class EnBookPageComponent implements OnInit, AfterViewInit, OnDestroy {
           item: {
             '@type': 'Book',
             '@id': 'https://arapov.trade/en/books/osnovy-treydinga-tom-two#book',
-            name: 'Trading Basics Volume 2',
+            name: 'Analysis methods. Technical Analysis • Volume Analysis • Practice',
             isbn: '979-8-90243-755-0',
             inLanguage: 'ru',
             author: {

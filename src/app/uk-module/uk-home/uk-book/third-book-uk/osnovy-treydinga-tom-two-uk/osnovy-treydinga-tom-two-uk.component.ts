@@ -168,7 +168,8 @@ export class OsnovyTreydingaTomTwoUkComponent
         const json = JSON.parse(script.textContent || '{}');
         return (
           json['@type'] === 'Book' &&
-          json['name'] === 'Основи трейдингу. Практика'
+          json['name'] ===
+            'Методи аналізу. Технічний аналіз • Об`ємний аналіз • Практика'
         );
       } catch {
         return false;
@@ -189,14 +190,12 @@ export class OsnovyTreydingaTomTwoUkComponent
         '@type': 'WebPage',
         '@id': 'https://arapov.trade/uk/books/osnovy-treydinga-tom-two',
       },
-      name: 'Основи трейдингу. Практика',
+      name: 'Методи аналізу. Технічний аналіз • Об`ємний аналіз • Практика',
       alternateName: [
-        'Osnovy Treydinga. Practic',
-        'Методичний посібник з Фінансового Трейдингу',
-        'Trading Basics',
+        'Методы анализа. Технический анализ • Объёмный анализ • Практика',
+        'Analysis methods. Technical Analysis • Volume Analysis • Practice',
       ],
-      headline:
-        'Основи трейдингу. Практика — Методичний посібник для початкових трейдерів',
+      headline: 'Методи аналізу. Технічний аналіз • Об`ємний аналіз • Практика',
       description:
         'Практичне керівництво по фінансовому трейдингу для початківців. Книга охоплює основи біржової торгівлі, ринок FOREX, фундаментальний, технічний та об’ємний аналіз, види ордерів, управління капіталом та типові помилки трейдерів. Автор ділиться 12-річним досвідом торгівлі на фінансових ринках.',
       isbn: '979-8-90243-732-1',
@@ -205,8 +204,8 @@ export class OsnovyTreydingaTomTwoUkComponent
       bookEdition: '1-е видання',
       inLanguage: {
         '@type': 'Language',
-        name: 'Russian',
-        alternateName: 'ru',
+        name: 'Ukrainian',
+        alternateName: 'ua',
       },
       datePublished: '2025-12-18T00:00:00Z',
       dateModified: '2025-12-19T00:00:00Z',
@@ -264,7 +263,7 @@ export class OsnovyTreydingaTomTwoUkComponent
         url: 'https://arapov.trade/assets/redesignArapovTrade/img/cover_ukr.png',
         width: 600,
         height: 900,
-        caption: 'Обкладинка книги «Основи трейдингу. Практика» - Ігор Арапов',
+        caption: '«Основи трейдингу. Практика» - Ігор Арапов',
       },
       url: 'https://arapov.trade/uk/books/osnovy-treydinga-tom-two',
       offers: {
@@ -283,7 +282,7 @@ export class OsnovyTreydingaTomTwoUkComponent
         '@type': 'Book',
         isbn: '979-8-90243-732-1',
         bookFormat: 'https://schema.org/EBook',
-        inLanguage: 'ru',
+        inLanguage: 'ua',
 
         url: 'http://www.irbis-nbuv.gov.ua/cgi-bin/irbis64r_81/cgiirbis_64.exe?Z21ID=&I21DBN=VFEIR&P21DBN=VFEIR&S21STN=1&S21REF=10&S21FMT=fullw&C21COM=S&S21CNR=20&S21P01=3&S21P02=0&S21P03=A=&S21COLORTERMS=0&S21STR=Арапов%2C%20Ігор',
 
@@ -372,17 +371,25 @@ export class OsnovyTreydingaTomTwoUkComponent
       '@type': 'Person',
       '@id': 'https://arapov.trade/uk#author',
       name: 'Ігор Арапов',
-      alternateName: ['Igor Arapov', 'Игорь Арапов'],
+      alternateName: [
+        'Igor Arapov',
+        'Арапов Игорь',
+        'I. Arapov',
+        'Игорь Арапов',
+        'І. В. Арапов',
+        'Арапов Ігор',
+        'Arapov Igor',
+      ],
       givenName: 'Ігор',
       familyName: 'Арапов',
       description:
-        'Український трейдер із 2013 року. Творець освітньої платформи arapov.trade, автор 130+ статей та 70+ відеоуроків з трейдингу. Спеціалізується на Smart Money концепціях, методі Вайкоффа та об`ємному аналізі.',
+        'Український трейдер із 2013 року. Творець освітньої платформи arapov.trade, автор 151+ статей та 78+ відеоуроків з трейдингу. Спеціалізується на Smart Money концепціях, методі Вайкоффа та об`ємному аналізі.',
       url: 'https://arapov.trade',
       image: {
         '@type': 'ImageObject',
         url: 'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
         width: 400,
-        height: 400,
+        height: 750,
         caption: 'Ігор Арапов — трейдер і автор',
       },
       sameAs: [
@@ -438,7 +445,7 @@ export class OsnovyTreydingaTomTwoUkComponent
         return (
           json['@type'] === 'WebPage' &&
           json['name'] ===
-            'Основи трейдингу. Практика — Безкоштовна книга Ігоря Арапова'
+            'Методы анализа. Технический анализ • Объёмный анализ • Практика'
         );
       } catch {
         return false;
@@ -456,7 +463,7 @@ export class OsnovyTreydingaTomTwoUkComponent
       '@type': 'WebPage',
       '@id': 'https://arapov.trade/uk/books/osnovy-treydinga-tom-two',
       url: 'https://arapov.trade/uk/books/osnovy-treydinga-tom-two',
-      name: 'Основи трейдингу. Практика — Безкоштовна книга Ігоря Арапова',
+      name: 'Методы анализа. Технический анализ • Объёмный анализ • Практика',
       description: 'Скачати безкоштовно книгу з трейдингу. 979-8-90243-732-1',
       inLanguage: 'uk',
       isPartOf: {

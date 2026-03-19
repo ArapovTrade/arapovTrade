@@ -50,9 +50,7 @@ export class PsychologiyaTreydingaEnComponent
   ngOnInit() {
     this.removeExistingWebPageSchema();
 
-    this.titleService.setTitle(
-      'Trading Psychology — Free Book by Igor Arapov',
-    );
+    this.titleService.setTitle('Trading Psychology — Free Book by Igor Arapov');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
@@ -167,7 +165,9 @@ export class PsychologiyaTreydingaEnComponent
       try {
         const json = JSON.parse(script.textContent || '{}');
         return (
-          json['@type'] === 'Book' && json['name'] === 'Trading Psychology'
+          json['@type'] === 'Book' &&
+          json['name'] ===
+            'Trading psychology. How to Master Your Emotions and Think Like a Professional'
         );
       } catch {
         return false;
@@ -188,12 +188,13 @@ export class PsychologiyaTreydingaEnComponent
         '@type': 'WebPage',
         '@id': 'https://arapov.trade/en/books/psihologiya-treydinga',
       },
-      name: 'Trading Psychology',
+      name: 'Trading psychology. How to Master Your Emotions and Think Like a Professional',
       alternateName: [
-        'Trading Psychology',
-        'Methodological manual on Financial Trading',
+        'Психология трейдинга: Как управлять эмоциями и мыслить как профессионал',
+        'Психологія трейдингу: Як керувати емоціями та мислити як професіонал',
       ],
-      headline: 'Trading Psychology — Methodological manual for beginners',
+      headline:
+        'Trading psychology. How to Master Your Emotions and Think Like a Professional',
       description:
         'Download the free book "Trading Psychology" — a practical guide to emotion management by Igor Arapov. Fear, greed, discipline, psychology of a successful trader. ISBN 979-8-90243-138-1',
       isbn: '979-8-90243-138-1',
@@ -368,7 +369,15 @@ export class PsychologiyaTreydingaEnComponent
       '@type': 'Person',
       '@id': 'https://arapov.trade/en#author',
       name: 'Igor Arapov',
-      alternateName: ['Игорь Арапов', 'Ігор Арапов'],
+      alternateName: [
+        'Ігор Арапов',
+        'Арапов Игорь',
+        'I. Arapov',
+        'Игорь Арапов',
+        'І. В. Арапов',
+        'Арапов Ігор',
+        'Arapov Igor',
+      ],
       givenName: 'Igor',
       familyName: 'Arapov',
       description:
@@ -433,7 +442,7 @@ export class PsychologiyaTreydingaEnComponent
         const json = JSON.parse(script.textContent || '{}');
         return (
           json['@type'] === 'WebPage' &&
-          json['name'] === 'Trading Psychology – Free Book by Igor Arapov'
+          json['name'] === 'Trading psychology. How to Master Your Emotions and Think Like a Professional'
         );
       } catch {
         return false;
@@ -451,7 +460,7 @@ export class PsychologiyaTreydingaEnComponent
       '@type': 'WebPage',
       '@id': 'https://arapov.trade/en/books/psihologiya-treydinga',
       url: 'https://arapov.trade/en/books/psihologiya-treydinga',
-      name: 'Trading Psychology – Free Book by Igor Arapov',
+      name: 'Trading psychology. How to Master Your Emotions and Think Like a Professional',
       description: 'Download the free book on trading. ISBN 979-8-90243-138-1',
       inLanguage: 'en',
       isPartOf: {

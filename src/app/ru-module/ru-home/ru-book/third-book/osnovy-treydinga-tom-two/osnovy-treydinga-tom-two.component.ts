@@ -17,9 +17,9 @@ import { DOCUMENT } from '@angular/common';
 @Component({
   selector: 'app-osnovy-treydinga-tom-two',
   templateUrl: './osnovy-treydinga-tom-two.component.html',
-  styleUrl: './osnovy-treydinga-tom-two.component.scss'
+  styleUrl: './osnovy-treydinga-tom-two.component.scss',
 })
-export class OsnovyTreydingaTomTwoComponent  
+export class OsnovyTreydingaTomTwoComponent
   implements OnInit, AfterViewInit, OnDestroy
 {
   constructor(
@@ -28,7 +28,7 @@ export class OsnovyTreydingaTomTwoComponent
     private router: Router,
     private cdr: ChangeDetectorRef,
     @Inject(DOCUMENT) private document: Document,
-    private themeService: ThemeservService
+    private themeService: ThemeservService,
   ) {}
 
   ngAfterViewInit() {
@@ -51,7 +51,7 @@ export class OsnovyTreydingaTomTwoComponent
     this.removeExistingWebPageSchema();
 
     this.titleService.setTitle(
-      'Основы трейдинга. Том 2 — Бесплатная книга Игоря Арапова'
+      'Основы трейдинга. Том 2 — Бесплатная книга Игоря Арапова',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
@@ -137,7 +137,7 @@ export class OsnovyTreydingaTomTwoComponent
 
   private removeExistingWebPageSchema(): void {
     const scripts = this.document.querySelectorAll(
-      'script[type="application/ld+json"]'
+      'script[type="application/ld+json"]',
     );
 
     scripts.forEach((script) => {
@@ -163,11 +163,15 @@ export class OsnovyTreydingaTomTwoComponent
 
   private addWebSiteSchema() {
     const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]')
+      this.document.querySelectorAll('script[type="application/ld+json"]'),
     ).some((script) => {
       try {
         const json = JSON.parse(script.textContent || '{}');
-        return json['@type'] === 'Book' && json['name'] === 'Основы трейдинга. Практика';
+        return (
+          json['@type'] === 'Book' &&
+          json['name'] ===
+            'Методы анализа. Технический анализ • Объёмный анализ • Практика'
+        );
       } catch {
         return false;
       }
@@ -187,14 +191,13 @@ export class OsnovyTreydingaTomTwoComponent
         '@type': 'WebPage',
         '@id': 'https://arapov.trade/ru/books/osnovy-treydinga-tom-two',
       },
-      name: 'Основы трейдинга. Практика',
+      name: 'Методы анализа. Технический анализ • Объёмный анализ • Практика',
       alternateName: [
-        'Osnovy Treydinga',
-        'Методическое пособие по Финансовому Трейдингу',
-        'Trading Basics',
+        'Методи аналізу. Технічний аналіз • Об`ємний аналіз • Практика',
+        'Analysis methods. Technical Analysis • Volume Analysis • Practice',
       ],
       headline:
-        'Основы трейдинга. Практика — Методическое пособие для начинающих трейдеров',
+        'Методы анализа. Технический анализ • Объёмный анализ • Практика',
       description:
         'Практическое руководство по финансовому трейдингу для начинающих. Книга охватывает основы биржевой торговли, рынок FOREX, фундаментальный, технический и объёмный анализ, виды ордеров, управление капиталом и типичные ошибки трейдеров. Автор делится 12-летним опытом торговли на финансовых рынках.',
       isbn: '979-8-90243-078-0',
@@ -206,8 +209,8 @@ export class OsnovyTreydingaTomTwoComponent
         name: 'Russian',
         alternateName: 'ru',
       },
-      datePublished: '2025-12-18',
-      dateCreated: '2025-12-18',
+      datePublished: '2025-12-18T00:00:00Z',
+      dateModified: '2025-12-19T00:00:00Z',
       copyrightYear: 2025,
       copyrightHolder: {
         '@type': 'Person',
@@ -262,7 +265,7 @@ export class OsnovyTreydingaTomTwoComponent
         url: 'https://arapov.trade/assets/redesignArapovTrade/img/cover_tom2.jpg',
         width: 600,
         height: 900,
-        caption: 'Обложка книги «Основы трейдинга. Практика» — Игорь Арапов',
+        caption: '«Основы трейдинга. Практика» — Игорь Арапов',
       },
       url: 'https://arapov.trade/ru/books/osnovy-treydinga-tom-two',
       offers: {
@@ -328,7 +331,7 @@ export class OsnovyTreydingaTomTwoComponent
 
   private addPersoneSchema() {
     const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]')
+      this.document.querySelectorAll('script[type="application/ld+json"]'),
     ).some((script) => {
       try {
         const json = JSON.parse(script.textContent || '{}');
@@ -349,17 +352,25 @@ export class OsnovyTreydingaTomTwoComponent
       '@type': 'Person',
       '@id': 'https://arapov.trade/ru#author',
       name: 'Игорь Арапов',
-      alternateName: ['Igor Arapov', 'Ігор Арапов'],
+      alternateName: [
+        'Igor Arapov',
+        'Арапов Игорь',
+        'I. Arapov',
+        'Ігор Арапов',
+        'І. В. Арапов',
+        'Арапов Ігор',
+        'Arapov Igor',
+      ],
       givenName: 'Игорь',
       familyName: 'Арапов',
       description:
-        'Украинский трейдер с 2013 года. Создатель образовательной платформы arapov.trade, автор 130+ статей и 70+ видеоуроков по трейдингу. Специализируется на Smart Money концепциях, методе Вайкоффа и объёмном анализе.',
+        'Украинский трейдер с 2013 года. Создатель образовательной платформы arapov.trade, автор 151+ статей и 78+ видеоуроков по трейдингу. Специализируется на Smart Money концепциях, методе Вайкоффа и объёмном анализе.',
       url: 'https://arapov.trade',
       image: {
         '@type': 'ImageObject',
         url: 'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
         width: 400,
-        height: 400,
+        height: 750,
         caption: 'Игорь Арапов — трейдер и автор',
       },
       sameAs: [
@@ -408,11 +419,15 @@ export class OsnovyTreydingaTomTwoComponent
   }
   private addWebPageSchema() {
     const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]')
+      this.document.querySelectorAll('script[type="application/ld+json"]'),
     ).some((script) => {
       try {
         const json = JSON.parse(script.textContent || '{}');
-        return json['@type'] === 'WebPage' && json['name'] === 'Основы трейдинга. Практика — Бесплатная книга Игоря Арапова';
+        return (
+          json['@type'] === 'WebPage' &&
+          json['name'] ===
+            'Методы анализа. Технический анализ • Объёмный анализ • Практика'
+        );
       } catch {
         return false;
       }
@@ -429,7 +444,7 @@ export class OsnovyTreydingaTomTwoComponent
       '@type': 'WebPage',
       '@id': 'https://arapov.trade/ru/books/osnovy-treydinga-tom-two',
       url: 'https://arapov.trade/ru/books/osnovy-treydinga-tom-two',
-      name: 'Основы трейдинга. Практика — Бесплатная книга Игоря Арапова',
+      name: 'Методы анализа. Технический анализ • Объёмный анализ • Практика',
       description:
         'Скачать бесплатно книгу по трейдингу. ISBN 979-8-90243-078-0',
       inLanguage: 'ru',
@@ -447,8 +462,8 @@ export class OsnovyTreydingaTomTwoComponent
         '@type': 'Person',
         '@id': 'https://arapov.trade/ru#author',
       },
-      datePublished: '2025-12-18',
-      dateModified: '2025-12-18',
+      datePublished: '2025-12-18T00:00:00Z',
+      dateModified: '2025-12-19T00:00:00Z',
       mainEntity: {
         '@type': 'Book',
         '@id': 'https://arapov.trade/ru/books/osnovy-treydinga-tom-two#book',
@@ -489,11 +504,15 @@ export class OsnovyTreydingaTomTwoComponent
 
   private addFAQPageSchema() {
     const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]')
+      this.document.querySelectorAll('script[type="application/ld+json"]'),
     ).some((script) => {
       try {
         const json = JSON.parse(script.textContent || '{}');
-        return json['@type'] === 'FAQPage' && json['name'] === 'Вопросы и ответы по книге "Основы трейдинга. Практика"';
+        return (
+          json['@type'] === 'FAQPage' &&
+          json['name'] ===
+            'Вопросы и ответы по книге "Основы трейдинга. Практика"'
+        );
       } catch {
         return false;
       }
@@ -555,6 +574,4 @@ export class OsnovyTreydingaTomTwoComponent
 
     this.document.head.appendChild(script);
   }
-  
 }
-

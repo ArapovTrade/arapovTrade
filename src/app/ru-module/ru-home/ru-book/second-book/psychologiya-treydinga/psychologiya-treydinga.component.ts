@@ -17,9 +17,9 @@ import { DOCUMENT } from '@angular/common';
 @Component({
   selector: 'app-psychologiya-treydinga',
   templateUrl: './psychologiya-treydinga.component.html',
-  styleUrl: './psychologiya-treydinga.component.scss'
+  styleUrl: './psychologiya-treydinga.component.scss',
 })
-export class PsychologiyaTreydingaComponent  
+export class PsychologiyaTreydingaComponent
   implements OnInit, AfterViewInit, OnDestroy
 {
   constructor(
@@ -28,7 +28,7 @@ export class PsychologiyaTreydingaComponent
     private router: Router,
     private cdr: ChangeDetectorRef,
     @Inject(DOCUMENT) private document: Document,
-    private themeService: ThemeservService
+    private themeService: ThemeservService,
   ) {}
 
   ngAfterViewInit() {
@@ -51,7 +51,7 @@ export class PsychologiyaTreydingaComponent
     this.removeExistingWebPageSchema();
 
     this.titleService.setTitle(
-      'Психология трейдинга — Бесплатная книга Игоря Арапова'
+      'Психология трейдинга — Бесплатная книга Игоря Арапова',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
@@ -137,7 +137,7 @@ export class PsychologiyaTreydingaComponent
 
   private removeExistingWebPageSchema(): void {
     const scripts = this.document.querySelectorAll(
-      'script[type="application/ld+json"]'
+      'script[type="application/ld+json"]',
     );
 
     scripts.forEach((script) => {
@@ -163,11 +163,15 @@ export class PsychologiyaTreydingaComponent
 
   private addWebSiteSchema() {
     const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]')
+      this.document.querySelectorAll('script[type="application/ld+json"]'),
     ).some((script) => {
       try {
         const json = JSON.parse(script.textContent || '{}');
-        return json['@type'] === 'Book' && json['name'] === 'Психология трейдинга';
+        return (
+          json['@type'] === 'Book' &&
+          json['name'] ===
+            'Психология трейдинга: Как управлять эмоциями и мыслить как профессионал'
+        );
       } catch {
         return false;
       }
@@ -187,14 +191,13 @@ export class PsychologiyaTreydingaComponent
         '@type': 'WebPage',
         '@id': 'https://arapov.trade/ru/books/psihologiya-treydinga',
       },
-      name: 'Психология трейдинга',
+      name: 'Психология трейдинга: Как управлять эмоциями и мыслить как профессионал',
       alternateName: [
-        'Trading Psychology',
-        'Как управлять эмоциями и мыслить как профессиональный трейдер.',
-        'Trading Basics',
+        'Психологія трейдингу: Як керувати емоціями та мислити як професіонал',
+        'Trading psychology. How to Master Your Emotions and Think Like a Professional',
       ],
       headline:
-        'Психология трейдинга — Как управлять эмоциями и мыслить как профессиональный трейдер.',
+        'Психология трейдинга: Как управлять эмоциями и мыслить как профессионал',
       description:
         'Скачать бесплатно книгу «Психология трейдинга» — практическое руководство по управлению эмоциями от Игоря Арапова. Страх, жадность, дисциплина, психология успешного трейдера. ISBN 979-8-90243-081-0',
       isbn: '979-8-90243-081-0',
@@ -206,8 +209,8 @@ export class PsychologiyaTreydingaComponent
         name: 'Russian',
         alternateName: 'ru',
       },
-      datePublished: '2025-12-18',
-      dateCreated: '2025-12-18',
+      datePublished: '2025-12-18T00:00:00Z',
+      dateModified: '2025-12-19T00:00:00Z',
       copyrightYear: 2025,
       copyrightHolder: {
         '@type': 'Person',
@@ -262,7 +265,7 @@ export class PsychologiyaTreydingaComponent
         url: 'https://arapov.trade/assets/redesignArapovTrade/img/cover_psychology.jpg',
         width: 600,
         height: 900,
-        caption: 'Обложка книги «Психология трейдинга» — Игорь Арапов',
+        caption: '«Психология трейдинга» — Игорь Арапов',
       },
       url: 'https://arapov.trade/ru/books/psihologiya-treydinga',
       offers: {
@@ -328,7 +331,7 @@ export class PsychologiyaTreydingaComponent
 
   private addPersoneSchema() {
     const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]')
+      this.document.querySelectorAll('script[type="application/ld+json"]'),
     ).some((script) => {
       try {
         const json = JSON.parse(script.textContent || '{}');
@@ -349,11 +352,19 @@ export class PsychologiyaTreydingaComponent
       '@type': 'Person',
       '@id': 'https://arapov.trade/ru#author',
       name: 'Игорь Арапов',
-      alternateName: ['Igor Arapov', 'Ігор Арапов'],
+      alternateName: [
+        'Igor Arapov',
+        'Арапов Игорь',
+        'I. Arapov',
+        'Ігор Арапов',
+        'І. В. Арапов',
+        'Арапов Ігор',
+        'Arapov Igor',
+      ],
       givenName: 'Игорь',
       familyName: 'Арапов',
       description:
-        'Украинский трейдер с 2013 года. Создатель образовательной платформы arapov.trade, автор 130+ статей и 70+ видеоуроков по трейдингу. Специализируется на Smart Money концепциях, методе Вайкоффа и объёмном анализе.',
+        'Украинский трейдер с 2013 года. Создатель образовательной платформы arapov.trade, автор 151+ статей и 78+ видеоуроков по трейдингу. Специализируется на Smart Money концепциях, методе Вайкоффа и объёмном анализе.',
       url: 'https://arapov.trade',
       image: {
         '@type': 'ImageObject',
@@ -408,11 +419,15 @@ export class PsychologiyaTreydingaComponent
   }
   private addWebPageSchema() {
     const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]')
+      this.document.querySelectorAll('script[type="application/ld+json"]'),
     ).some((script) => {
       try {
         const json = JSON.parse(script.textContent || '{}');
-        return json['@type'] === 'WebPage' && json['name'] === 'Психология трейдинга — Бесплатная книга Игоря Арапова';
+        return (
+          json['@type'] === 'WebPage' &&
+          json['name'] ===
+            'Психология трейдинга: Как управлять эмоциями и мыслить как профессионал'
+        );
       } catch {
         return false;
       }
@@ -429,7 +444,7 @@ export class PsychologiyaTreydingaComponent
       '@type': 'WebPage',
       '@id': 'https://arapov.trade/ru/books/psihologiya-treydinga',
       url: 'https://arapov.trade/ru/books/psihologiya-treydinga',
-      name: 'Психология трейдинга — Бесплатная книга Игоря Арапова',
+      name: 'Психология трейдинга: Как управлять эмоциями и мыслить как профессионал',
       description:
         'Скачать бесплатно книгу по трейдингу. ISBN 979-8-90243-081-0',
       inLanguage: 'ru',
@@ -447,8 +462,8 @@ export class PsychologiyaTreydingaComponent
         '@type': 'Person',
         '@id': 'https://arapov.trade/ru#author',
       },
-      datePublished: '2025-12-18',
-      dateModified: '2025-12-18',
+      datePublished: '2025-12-18T00:00:00Z',
+      dateModified: '2025-12-19T00:00:00Z',
       mainEntity: {
         '@type': 'Book',
         '@id': 'https://arapov.trade/ru/books/psihologiya-treydinga#book',
@@ -489,11 +504,14 @@ export class PsychologiyaTreydingaComponent
 
   private addFAQPageSchema() {
     const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]')
+      this.document.querySelectorAll('script[type="application/ld+json"]'),
     ).some((script) => {
       try {
         const json = JSON.parse(script.textContent || '{}');
-        return json['@type'] === 'FAQPage' && json['name'] === 'Вопросы и ответы по книге "Психология трейдинга"';
+        return (
+          json['@type'] === 'FAQPage' &&
+          json['name'] === 'Вопросы и ответы по книге "Психология трейдинга"'
+        );
       } catch {
         return false;
       }
@@ -555,5 +573,4 @@ export class PsychologiyaTreydingaComponent
 
     this.document.head.appendChild(script);
   }
-  
 }

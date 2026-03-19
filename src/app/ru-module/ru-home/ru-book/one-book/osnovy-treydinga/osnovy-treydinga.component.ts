@@ -28,7 +28,7 @@ export class OsnovyTreydingaComponent
     private router: Router,
     private cdr: ChangeDetectorRef,
     @Inject(DOCUMENT) private document: Document,
-    private themeService: ThemeservService
+    private themeService: ThemeservService,
   ) {}
 
   ngAfterViewInit() {
@@ -51,7 +51,7 @@ export class OsnovyTreydingaComponent
     this.removeExistingWebPageSchema();
 
     this.titleService.setTitle(
-      'Основы трейдинга — Бесплатная книга Игоря Арапова'
+      'Основы трейдинга — Бесплатная книга Игоря Арапова',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
@@ -137,7 +137,7 @@ export class OsnovyTreydingaComponent
 
   private removeExistingWebPageSchema(): void {
     const scripts = this.document.querySelectorAll(
-      'script[type="application/ld+json"]'
+      'script[type="application/ld+json"]',
     );
 
     scripts.forEach((script) => {
@@ -163,11 +163,15 @@ export class OsnovyTreydingaComponent
 
   private addWebSiteSchema() {
     const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]')
+      this.document.querySelectorAll('script[type="application/ld+json"]'),
     ).some((script) => {
       try {
         const json = JSON.parse(script.textContent || '{}');
-        return json['@type'] === 'Book' && json['name'] === 'Основы трейдинга';
+        return (
+          json['@type'] === 'Book' &&
+          json['name'] ===
+            'Теория трейдинга. Основы рынка • Технический анализ • Объёмный анализ'
+        );
       } catch {
         return false;
       }
@@ -187,14 +191,13 @@ export class OsnovyTreydingaComponent
         '@type': 'WebPage',
         '@id': 'https://arapov.trade/ru/books/osnovy-treydinga',
       },
-      name: 'Основы трейдинга',
+      name: 'Теория трейдинга. Основы рынка • Технический анализ • Объёмный анализ',
       alternateName: [
-        'Osnovy Treydinga',
-        'Методическое пособие по Финансовому Трейдингу',
-        'Trading Basics',
+        'Теорія трейдингу. Основи ринку • Технічний аналіз • Об`ємний аналіз',
+        'Trading fundamentals. Market Basics • Technical Analysis • Volume Analysis',
       ],
       headline:
-        'Основы трейдинга — Методическое пособие для начинающих трейдеров',
+        'Теория трейдинга. Основы рынка • Технический анализ • Объёмный анализ',
       description:
         'Практическое руководство по финансовому трейдингу для начинающих. Книга охватывает основы биржевой торговли, рынок FOREX, фундаментальный, технический и объёмный анализ, виды ордеров, управление капиталом и типичные ошибки трейдеров. Автор делится 12-летним опытом торговли на финансовых рынках.',
       isbn: '979-8-90243-075-9',
@@ -206,8 +209,8 @@ export class OsnovyTreydingaComponent
         name: 'Russian',
         alternateName: 'ru',
       },
-      datePublished: '2025-12-18',
-      dateCreated: '2025-12-18',
+      datePublished: '2025-12-18T00:00:00Z',
+      dateModified: '2025-12-19T00:00:00Z',
       copyrightYear: 2025,
       copyrightHolder: {
         '@type': 'Person',
@@ -262,7 +265,7 @@ export class OsnovyTreydingaComponent
         url: 'https://arapov.trade/assets/redesignArapovTrade/img/IMG000.jpg',
         width: 600,
         height: 900,
-        caption: 'Обложка книги «Основы трейдинга» — Игорь Арапов',
+        caption: '«Основы трейдинга» — Игорь Арапов',
       },
       url: 'https://arapov.trade/ru/books/osnovy-treydinga',
       offers: {
@@ -328,7 +331,7 @@ export class OsnovyTreydingaComponent
 
   private addPersoneSchema() {
     const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]')
+      this.document.querySelectorAll('script[type="application/ld+json"]'),
     ).some((script) => {
       try {
         const json = JSON.parse(script.textContent || '{}');
@@ -349,17 +352,25 @@ export class OsnovyTreydingaComponent
       '@type': 'Person',
       '@id': 'https://arapov.trade/ru#author',
       name: 'Игорь Арапов',
-      alternateName: ['Igor Arapov', 'Ігор Арапов'],
+      alternateName: [
+        'Igor Arapov',
+        'Арапов Игорь',
+        'I. Arapov',
+        'Ігор Арапов',
+        'І. В. Арапов',
+        'Арапов Ігор',
+        'Arapov Igor',
+      ],
       givenName: 'Игорь',
       familyName: 'Арапов',
       description:
-        'Украинский трейдер с 2013 года. Создатель образовательной платформы arapov.trade, автор 130+ статей и 70+ видеоуроков по трейдингу. Специализируется на Smart Money концепциях, методе Вайкоффа и объёмном анализе.',
+        'Украинский трейдер с 2013 года. Создатель образовательной платформы arapov.trade, автор 151+ статей и 78+ видеоуроков по трейдингу. Специализируется на Smart Money концепциях, методе Вайкоффа и объёмном анализе.',
       url: 'https://arapov.trade',
       image: {
         '@type': 'ImageObject',
         url: 'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
         width: 400,
-        height: 400,
+        height: 750,
         caption: 'Игорь Арапов — трейдер и автор',
       },
       sameAs: [
@@ -408,11 +419,14 @@ export class OsnovyTreydingaComponent
   }
   private addWebPageSchema() {
     const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]')
+      this.document.querySelectorAll('script[type="application/ld+json"]'),
     ).some((script) => {
       try {
         const json = JSON.parse(script.textContent || '{}');
-        return json['@type'] === 'WebPage' && json['name'] === 'Основы трейдинга — Бесплатная книга Игоря Арапова';
+        return (
+          json['@type'] === 'WebPage' &&
+          json['name'] === 'Теория трейдинга. Основы рынка • Технический анализ • Объёмный анализ'
+        );
       } catch {
         return false;
       }
@@ -429,7 +443,7 @@ export class OsnovyTreydingaComponent
       '@type': 'WebPage',
       '@id': 'https://arapov.trade/ru/books/osnovy-treydinga',
       url: 'https://arapov.trade/ru/books/osnovy-treydinga',
-      name: 'Основы трейдинга — Бесплатная книга Игоря Арапова',
+      name: 'Теория трейдинга. Основы рынка • Технический анализ • Объёмный анализ',
       description:
         'Скачать бесплатно книгу по трейдингу. ISBN 979-8-90243-075-9',
       inLanguage: 'ru',
@@ -447,8 +461,8 @@ export class OsnovyTreydingaComponent
         '@type': 'Person',
         '@id': 'https://arapov.trade/ru#author',
       },
-      datePublished: '2025-12-18',
-      dateModified: '2025-12-18',
+      datePublished: '2025-12-18T00:00:00Z',
+      dateModified: '2025-12-19T00:00:00Z',
       mainEntity: {
         '@type': 'Book',
         '@id': 'https://arapov.trade/ru/books/osnovy-treydinga#book',
@@ -489,11 +503,14 @@ export class OsnovyTreydingaComponent
 
   private addFAQPageSchema() {
     const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]')
+      this.document.querySelectorAll('script[type="application/ld+json"]'),
     ).some((script) => {
       try {
         const json = JSON.parse(script.textContent || '{}');
-        return json['@type'] === 'FAQPage' && json['name'] === 'Вопросы и ответы по книге "Основы трейдинга"';
+        return (
+          json['@type'] === 'FAQPage' &&
+          json['name'] === 'Вопросы и ответы по книге "Основы трейдинга"'
+        );
       } catch {
         return false;
       }
@@ -555,5 +572,4 @@ export class OsnovyTreydingaComponent
 
     this.document.head.appendChild(script);
   }
-  
 }

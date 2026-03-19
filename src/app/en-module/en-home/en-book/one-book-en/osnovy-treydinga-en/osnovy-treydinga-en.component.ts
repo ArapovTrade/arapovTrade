@@ -66,7 +66,6 @@ export class OsnovyTreydingaEnComponent
         'Trading book, trading training, Forex for beginners, technical analysis, volume analysis, Igor Arapov, Smart Money',
     });
 
-     
     this.meta.updateTag({
       property: 'og:image',
       content: 'https://arapov.trade/assets/img/photo_mainpage.jpg',
@@ -167,7 +166,11 @@ export class OsnovyTreydingaEnComponent
     ).some((script) => {
       try {
         const json = JSON.parse(script.textContent || '{}');
-        return json['@type'] === 'Book' && json['name'] === 'Trading Basics';
+        return (
+          json['@type'] === 'Book' &&
+          json['name'] ===
+            'Trading fundamentals. Market Basics • Technical Analysis • Volume Analysis'
+        );
       } catch {
         return false;
       }
@@ -187,13 +190,13 @@ export class OsnovyTreydingaEnComponent
         '@type': 'WebPage',
         '@id': 'https://arapov.trade/en/books/osnovy-treydinga',
       },
-      name: 'Trading Basics',
+      name: 'Trading fundamentals. Market Basics • Technical Analysis • Volume Analysis',
       alternateName: [
-        'Osnovy Treydinga',
-        'Methodological manual on Financial Trading',
-        'Trading Basics',
+        'Теорія трейдингу. Основи ринку • Технічний аналіз • Об`ємний аналіз',
+        'Теория трейдинга. Основы рынка • Технический анализ • Объёмный анализ',
       ],
-      headline: 'Trading Basics — Methodological manual for beginners',
+      headline:
+        'Trading fundamentals. Market Basics • Technical Analysis • Volume Analysis',
       description:
         'Practical guide to financial trading for beginners. The book covers the basics of stock trading, the FOREX market, fundamental, technical and volume analysis, order types, capital management and typical trader mistakes. The author shares 12 years of experience trading on financial markets.',
       isbn: '979-8-90243-734-5',
@@ -261,7 +264,7 @@ export class OsnovyTreydingaEnComponent
         url: 'https://arapov.trade/assets/redesignArapovTrade/img/cover_en.jpg',
         width: 600,
         height: 900,
-        caption: 'Cover of the book "Trading Basics" — Igor Arapov',
+        caption: '"Trading Basics" — Igor Arapov',
       },
       url: 'https://arapov.trade/en/books/osnovy-treydinga',
       offers: {
@@ -282,9 +285,9 @@ export class OsnovyTreydingaEnComponent
         bookFormat: 'https://schema.org/EBook',
         inLanguage: 'en',
 
-         url: 'http://www.irbis-nbuv.gov.ua/cgi-bin/irbis64r_81/cgiirbis_64.exe?Z21ID=&I21DBN=VFEIR&P21DBN=VFEIR&S21STN=1&S21REF=10&S21FMT=fullw&C21COM=S&S21CNR=20&S21P01=3&S21P02=0&S21P03=A=&S21COLORTERMS=0&S21STR=Arapov%2C%20Igor',
+        url: 'http://www.irbis-nbuv.gov.ua/cgi-bin/irbis64r_81/cgiirbis_64.exe?Z21ID=&I21DBN=VFEIR&P21DBN=VFEIR&S21STN=1&S21REF=10&S21FMT=fullw&C21COM=S&S21CNR=20&S21P01=3&S21P02=0&S21P03=A=&S21COLORTERMS=0&S21STR=Arapov%2C%20Igor',
 
-       provider: {
+        provider: {
           '@type': 'Library',
           name: 'V. I. Vernadsky National Library of Ukraine',
           url: 'https://nbuv.gov.ua',
@@ -369,17 +372,25 @@ export class OsnovyTreydingaEnComponent
       '@type': 'Person',
       '@id': 'https://arapov.trade/en#author',
       name: 'Igor Arapov',
-      alternateName: ['Игорь Арапов', 'Ігор Арапов'],
+      alternateName: [
+        'Ігор Арапов',
+        'Арапов Игорь',
+        'I. Arapov',
+        'Игорь Арапов',
+        'І. В. Арапов',
+        'Арапов Ігор',
+        'Arapov Igor',
+      ],
       givenName: 'Igor',
       familyName: 'Arapov',
       description:
-        'Ukrainian trader since 2013. Creator of the educational platform arapov.trade, author of 130+ articles and 70+ video lessons on trading. Specializes in Smart Money Concepts, Wyckoff Method, and volume analysis.',
+        'Ukrainian trader since 2013. Creator of the educational platform arapov.trade, author of 151+ articles and 78+ video lessons on trading. Specializes in Smart Money Concepts, Wyckoff Method, and volume analysis.',
       url: 'https://arapov.trade',
       image: {
         '@type': 'ImageObject',
         url: 'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
         width: 400,
-        height: 400,
+        height: 750,
         caption: 'Igor Arapov - trader and author',
       },
       sameAs: [
@@ -434,7 +445,7 @@ export class OsnovyTreydingaEnComponent
         const json = JSON.parse(script.textContent || '{}');
         return (
           json['@type'] === 'WebPage' &&
-          json['name'] === 'Trading Basics – Free Book by Igor Arapov'
+          json['name'] === 'Trading fundamentals. Market Basics • Technical Analysis • Volume Analysis'
         );
       } catch {
         return false;
@@ -452,7 +463,7 @@ export class OsnovyTreydingaEnComponent
       '@type': 'WebPage',
       '@id': 'https://arapov.trade/en/books/osnovy-treydinga',
       url: 'https://arapov.trade/en/books/osnovy-treydinga',
-      name: 'Trading Basics – Free Book by Igor Arapov',
+      name: 'Trading fundamentals. Market Basics • Technical Analysis • Volume Analysis',
       description: 'Download the free book on trading. ISBN 979-8-90243-734-5',
       inLanguage: 'en',
       isPartOf: {

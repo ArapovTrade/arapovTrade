@@ -245,7 +245,7 @@ export class RuBookPageComponent implements OnInit, AfterViewInit, OnDestroy {
           item: {
             '@type': 'Book',
             '@id': 'https://arapov.trade/ru/books/osnovy-treydinga#book',
-            name: 'Основы трейдинга',
+            name: 'Теория трейдинга. Основы рынка • Технический анализ • Объёмный анализ',
             isbn: '979-8-90243-075-9',
             inLanguage: 'ru',
             author: {
@@ -261,7 +261,7 @@ export class RuBookPageComponent implements OnInit, AfterViewInit, OnDestroy {
           item: {
             '@type': 'Book',
             '@id': 'https://arapov.trade/ru/books/psihologiya-treydinga#book',
-            name: 'Психология трейдинга',
+            name: 'Психология трейдинга: Как управлять эмоциями и мыслить как профессионал',
             isbn: '979-8-90243-081-0',
             inLanguage: 'ru',
             author: {
@@ -277,7 +277,7 @@ export class RuBookPageComponent implements OnInit, AfterViewInit, OnDestroy {
           item: {
             '@type': 'Book',
             '@id': 'https://arapov.trade/ru/books/osnovy-treydinga-tom-two#book',
-            name: 'Основы трейдинга Том 2',
+            name: 'Методы анализа. Технический анализ • Объёмный анализ • Практика',
             isbn: '979-8-90243-078-0',
             inLanguage: 'ru',
             author: {
