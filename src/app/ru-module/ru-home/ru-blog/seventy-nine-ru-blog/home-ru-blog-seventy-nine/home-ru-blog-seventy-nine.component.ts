@@ -321,6 +321,15 @@ export class HomeRuBlogSeventyNineComponent {
       '@type': 'Person',
       '@id': 'https://arapov.trade/ru#person',
       name: 'Игорь Арапов',
+      alternateName: [
+        'Igor Arapov',
+              'Арапов Игорь',
+              'I. Arapov',
+              'Ігор Арапов',
+              'І. В. Арапов',
+              'Арапов Ігор',
+              'Arapov Igor',
+      ],
       url: 'https://arapov.trade/ru',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',

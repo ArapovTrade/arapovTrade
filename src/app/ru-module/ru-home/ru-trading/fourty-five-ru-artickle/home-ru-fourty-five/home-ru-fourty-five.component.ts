@@ -412,6 +412,15 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
       '@type': 'Person',
       '@id': 'https://arapov.trade/ru#person',
       name: 'Игорь Арапов',
+      alternateName: [
+        'Igor Arapov',
+              'Арапов Игорь',
+              'I. Arapov',
+              'Ігор Арапов',
+              'І. В. Арапов',
+              'Арапов Ігор',
+              'Arapov Igor',
+      ],
       url: 'https://arapov.trade/ru',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
@@ -685,6 +694,15 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
         provider: {
           '@type': 'Person',
           name: 'Игорь Арапов',
+      alternateName: [
+        'Igor Arapov',
+              'Арапов Игорь',
+              'I. Arapov',
+              'Ігор Арапов',
+              'І. В. Арапов',
+              'Арапов Ігор',
+              'Arapov Igor',
+      ],
         },
       },
     };

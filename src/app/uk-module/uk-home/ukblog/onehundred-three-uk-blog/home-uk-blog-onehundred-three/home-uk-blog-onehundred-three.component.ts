@@ -312,6 +312,15 @@ export class HomeUkBlogOnehundredThreeComponent implements OnInit {
       '@type': 'Person',
       '@id': 'https://arapov.trade/uk#person',
       name: 'Ігор Арапов',
+      alternateName: [
+        'Igor Arapov',
+              'Арапов Игорь',
+              'I. Arapov',
+              'Игорь Арапов',
+              'І. В. Арапов',
+              'Арапов Ігор',
+              'Arapov Igor',
+      ],
       url: 'https://arapov.trade/uk',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
