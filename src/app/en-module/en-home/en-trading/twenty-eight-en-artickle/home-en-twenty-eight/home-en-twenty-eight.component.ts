@@ -286,7 +286,16 @@ export class HomeEnTwentyEightComponent implements OnInit {
       '@context': 'https://schema.org',
       '@type': 'Person',
       '@id': 'https://arapov.trade/en#person',
-      name: 'Igor Arapov',
+       name: 'Igor Arapov',
+      alternateName: [
+        'Ігор Арапов',
+        'Арапов Игорь',
+        'I. Arapov',
+        'Игорь Арапов',
+        'І. В. Арапов',
+        'Арапов Ігор',
+        'Arapov Igor',
+      ],
       url: 'https://arapov.trade/en',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
