@@ -25,7 +25,7 @@ export class UkBookPageComponent implements OnInit, AfterViewInit, OnDestroy {
     private router: Router,
     private cdr: ChangeDetectorRef,
     @Inject(DOCUMENT) private document: Document,
-    private themeService: ThemeservService
+    private themeService: ThemeservService,
   ) {}
 
   ngAfterViewInit() {
@@ -48,7 +48,7 @@ export class UkBookPageComponent implements OnInit, AfterViewInit, OnDestroy {
     this.removeExistingWebPageSchema();
 
     this.titleService.setTitle(
-      'Книги з трейдингу Ігоря Арапова — серія «Основи трейдингу»'
+      'Книги з трейдингу Ігоря Арапова — серія «Основи трейдингу»',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
@@ -133,7 +133,7 @@ export class UkBookPageComponent implements OnInit, AfterViewInit, OnDestroy {
 
   private removeExistingWebPageSchema(): void {
     const scripts = this.document.querySelectorAll(
-      'script[type="application/ld+json"]'
+      'script[type="application/ld+json"]',
     );
 
     scripts.forEach((script) => {
@@ -153,7 +153,7 @@ export class UkBookPageComponent implements OnInit, AfterViewInit, OnDestroy {
 
   private addWebSiteSchema() {
     const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]')
+      this.document.querySelectorAll('script[type="application/ld+json"]'),
     ).some((script) => {
       try {
         const json = JSON.parse(script.textContent || '{}');
@@ -177,7 +177,7 @@ export class UkBookPageComponent implements OnInit, AfterViewInit, OnDestroy {
       name: 'Arapov.Trade',
       alternateName: 'Навчання трейдингу',
       description:
-        'Безкоштовне навчання трейдингу від Ігоря Арапова. 130+ статей, 70 відеоуроків.трейдингу',
+        'Безкоштовне навчання трейдингу від Ігоря Арапова. 151+ статей, 78+ відеоуроків.трейдингу',
       inLanguage: 'ua-UA',
       publisher: {
         '@type': 'Organization',
@@ -212,7 +212,7 @@ export class UkBookPageComponent implements OnInit, AfterViewInit, OnDestroy {
 
   private addBookSchema() {
     const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]')
+      this.document.querySelectorAll('script[type="application/ld+json"]'),
     ).some((script) => {
       try {
         const json = JSON.parse(script.textContent || '{}');
@@ -276,7 +276,8 @@ export class UkBookPageComponent implements OnInit, AfterViewInit, OnDestroy {
           position: 3,
           item: {
             '@type': 'Book',
-            '@id': 'https://arapov.trade/uk/books/osnovy-treydinga-tom-two#book',
+            '@id':
+              'https://arapov.trade/uk/books/osnovy-treydinga-tom-two#book',
             name: 'Основи трейдингу Том 2',
             isbn: '979-8-90243-732-1',
             inLanguage: 'ru',
