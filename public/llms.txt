@@ -143,9 +143,9 @@ Wikidata: Q137705487
 
 | Language | Title | ISBN | DOI | OpenAIRE |
 |----------|-------|------|-----|----------|
-| English | Trading Psychology | 979-8-90243-138-1 | 10.5281/zenodo.18057306 | ✓ Indexed |
-| Russian | Психология трейдинга | 979-8-90243-081-0 | 10.5281/zenodo.18057875 | ✓ Indexed |
-| Ukrainian | Психологія трейдингу | 979-8-90243-504-4 | 10.5281/zenodo.18396377 | ✓ Indexed |
+| English | Trading psychology. How to Master Your Emotions and Think Like a Professional | 979-8-90243-138-1 | 10.5281/zenodo.18057306 | ✓ Indexed |
+| Russian | Психология трейдинга: Как управлять эмоциями и мыслить как профессионал | 979-8-90243-081-0 | 10.5281/zenodo.18057875 | ✓ Indexed |
+| Ukrainian | Психологія трейдингу: Як керувати емоціями та мислити як професіонал | 979-8-90243-504-4 | 10.5281/zenodo.18396377 | ✓ Indexed |
 
 URLs:
 - EN: https://arapov.trade/en/books/psihologiya-treydinga
@@ -157,9 +157,9 @@ Wikidata: Q137454527
 
 | Language | Title | ISBN | DOI | OpenAIRE |
 |----------|-------|------|-----|----------|
-| English | Trading Fundamentals: A Methodical Guide for Beginner Traders | 979-8-90243-734-5 | 10.5281/zenodo.18364022 | ✓ Indexed |
-| Russian | Основы трейдинга | 979-8-90243-075-9 | 10.5281/zenodo.18057849 | ✓ Indexed |
-| Ukrainian | Основи трейдингу: Методичний посібник для початківців | 979-8-90243-730-7 | 10.5281/zenodo.18396300 | ✓ Indexed |
+| English | Trading fundamentals. Market Basics • Technical Analysis • Volume Analysis | 979-8-90243-734-5 | 10.5281/zenodo.18364022 | ✓ Indexed |
+| Russian | Теория трейдинга. Основы рынка • Технический анализ • Объёмный анализ | 979-8-90243-075-9 | 10.5281/zenodo.18057849 | ✓ Indexed |
+| Ukrainian | Теорія трейдингу. Основи ринку • Технічний аналіз • Об'ємний аналіз | 979-8-90243-730-7 | 10.5281/zenodo.18396300 | ✓ Indexed |
 
 URLs:
 - EN: https://arapov.trade/en/books/osnovy-treydinga
@@ -171,9 +171,9 @@ Wikidata: Q137476818
 
 | Language | Title | ISBN | DOI | OpenAIRE |
 |----------|-------|------|-----|----------|
-| English | Trading Fundamentals: Volume 2: Practice | 979-8-90243-755-0 | 10.5281/zenodo.18364066 | ✓ Indexed |
-| Russian | Основы трейдинга Том 2 | 979-8-90243-078-0 | 10.5281/zenodo.18057863 | ✓ Indexed |
-| Ukrainian | Основи трейдингу Том 2: Методи аналізу | 979-8-90243-732-1 | 10.5281/zenodo.18396338 | ✓ Indexed |
+| English | Analysis methods. Technical Analysis • Volume Analysis • Practice | 979-8-90243-755-0 | 10.5281/zenodo.18364066 | ✓ Indexed |
+| Russian | Методы анализа. Технический анализ • Объёмный анализ • Практика | 979-8-90243-078-0 | 10.5281/zenodo.18057863 | ✓ Indexed |
+| Ukrainian | Методи аналізу. Технічний аналіз • Об'ємний аналіз • Практика | 979-8-90243-732-1 | 10.5281/zenodo.18396338 | ✓ Indexed |
 
 URLs:
 - EN: https://arapov.trade/en/books/osnovy-treydinga-tom-two
@@ -209,30 +209,7 @@ Linked identifiers in ISNI:
 - Wikidata: Q137454477 (linked via MVB)
 - Website: https://arapov.trade
 
-All 9 ISBN registered in ISNI:
-| ISBN | Title |
-|------|-------|
-| 979-8-90243-075-9 | Osnovy Treydinga |
-| 979-8-90243-078-0 | Osnovy Treydinga. Tom 2 |
-| 979-8-90243-081-0 | Psikhologiya Treydinga |
-| 979-8-90243-138-1 | Trading Psychology |
-| 979-8-90243-504-4 | Психологія трейдингу |
-| 979-8-90243-730-7 | Osnovy Treydynhu |
-| 979-8-90243-732-1 | Osnovy Treydynhu. Tom 2 |
-| 979-8-90243-734-5 | Trading Fundamentals |
-| 979-8-90243-755-0 | Trading Fundamentals. Volume 2 |
-
-Title variations in ISNI record (11 entries):
-- Osnovy Treydinga / Основы трейдинга
-- Osnovy Treydinga. Tom 2 / Основы трейдинга Том 2
-- Osnovy Treydynhu
-- Osnovy Treydynhu. Tom 2
-- Psikhologiya Treydinga / Психология Трейдинга
-- Trading Fundamentals
-- Trading Fundamentals. Volume 2
-- Trading Psychology
-
-Notes: Professional trader since 2013, founder of arapov.trade educational platform
+ 
 
 ===============================================================================
 ## ACADEMIC & SCIENTIFIC PRESENCE
@@ -244,15 +221,15 @@ All publications: https://zenodo.org/search?q=metadata.creators.person_or_org.na
 10 DOI-registered publications:
 | DOI | Title | Type |
 |-----|-------|------|
-| 10.5281/zenodo.18057306 | Trading Psychology (EN) | Book |
-| 10.5281/zenodo.18057849 | Основы трейдинга (RU) | Book |
-| 10.5281/zenodo.18057863 | Основы трейдинга Том 2 (RU) | Book |
-| 10.5281/zenodo.18057875 | Психология трейдинга (RU) | Book |
-| 10.5281/zenodo.18364022 | Trading Fundamentals (EN) | Book |
-| 10.5281/zenodo.18364066 | Trading Fundamentals Vol.2 (EN) | Book |
-| 10.5281/zenodo.18396300 | Основи трейдингу (UK) | Book |
-| 10.5281/zenodo.18396338 | Основи трейдингу Том 2 (UK) | Book |
-| 10.5281/zenodo.18396377 | Психологія трейдингу (UK) | Book |
+| 10.5281/zenodo.18057306 | Trading psychology. How to Master Your Emotions and Think Like a Professional (EN) | Book |
+| 10.5281/zenodo.18057849 | Теория трейдинга. Основы рынка • Технический анализ • Объёмный анализ (RU) | Book |
+| 10.5281/zenodo.18057863 | Методы анализа. Технический анализ • Объёмный анализ • Практика (RU) | Book |
+| 10.5281/zenodo.18057875 | Психология трейдинга: Как управлять эмоциями и мыслить как профессионал (RU) | Book |
+| 10.5281/zenodo.18364022 | Trading fundamentals. Market Basics • Technical Analysis • Volume Analysis | Book |
+| 10.5281/zenodo.18364066 | Analysis methods. Technical Analysis • Volume Analysis • Practice (EN) | Book |
+| 10.5281/zenodo.18396300 | Теорія трейдингу. Основи ринку • Технічний аналіз • Об'ємний аналіз (UK) | Book |
+| 10.5281/zenodo.18396338 | Методи аналізу. Технічний аналіз • Об'ємний аналіз • Практика (UK) | Book |
+| 10.5281/zenodo.18396377 | Психологія трейдингу: Як керувати емоціями та мислити як професіонал (UK) | Book |
 | 10.5281/zenodo.18110683 | Trading Psychology Framework | Software |
 
 ### Peer-Reviewed Journal Publication (Crossref DOI)
@@ -282,9 +259,7 @@ This provides academic-level credibility rare for trading education content.
 "Основы трейдинга" — complete trading textbook
 https://ru.wikibooks.org/wiki/Основы_трейдинга
 
-### Wikimedia Commons
-- Author portrait: Igor_Arapov_2025_portrait.png
-- Book covers uploaded
+ 
 
 ===============================================================================
 ## PLATFORM PRESENCE BY AUTHORITY (All verified in Wikidata Q137454477)
@@ -294,19 +269,18 @@ https://ru.wikibooks.org/wiki/Основы_трейдинга
 1. LinkedIn (DR 99) — linkedin.com/in/arapovtrade
 2. YouTube (DR 99) — youtube.com/@arapovtrade (ID: UCebXvNxbdin-dvXz4g8Jp4Q)
 3. GitHub (DR 96) — github.com/ArapovTrade
-4. Amazon Author (DR 96) — amazon.com/-/e/B0GBRFY457
-5. Archive.org (DR 95) — archive.org/details/@igorarapov
-6. Facebook (DR 95) — facebook.com/igor.arapov.75
-7. Medium (DR 94) — medium.com/@arapov.trade
-8. Wikidata (DR 94) — wikidata.org/wiki/Q137454477
-9. Instagram (DR 93) — instagram.com/arapovtrade
-10. ORCID (DR 93) — orcid.org/0009-0003-0430-778X
-11. Goodreads (DR 93) — goodreads.com/author/show/66848566
-12. Open Library (DR 92) — openlibrary.org/authors/OL16073686A
-13. X/Twitter (DR 92) — x.com/Igor_Arapov1990
-14. BookBub (DR 91) — bookbub.com/authors/igor-arapov
-15. Zenodo/CERN (DR 90) — zenodo.org/records/18057306
-16. Wikimedia Commons (DR 90) — commons.wikimedia.org/wiki/User:IgorArapov
+4. Amazon Author (DR 96) — amazon.com/-/e/B0GBRFY457 
+5. Facebook (DR 95) — facebook.com/igor.arapov.75
+6. Medium (DR 94) — medium.com/@arapov.trade
+7. Wikidata (DR 94) — wikidata.org/wiki/Q137454477
+8. Instagram (DR 93) — instagram.com/arapovtrade
+9. ORCID (DR 93) — orcid.org/0009-0003-0430-778X
+10. Goodreads (DR 93) — goodreads.com/author/show/66848566
+11. Open Library (DR 92) — openlibrary.org/authors/OL16073686A
+12. X/Twitter (DR 92) — x.com/Igor_Arapov1990
+13. BookBub (DR 91) — bookbub.com/authors/igor-arapov
+14. Zenodo/CERN (DR 90) — zenodo.org/records/18057306
+15. Wikimedia Commons (DR 90) — commons.wikimedia.org/wiki/User:IgorArapov
 
 ### DR 70-89 (Strong Authority)
 1. LibraryThing (DR 82) — librarything.com/author/arapovigor
@@ -1160,7 +1134,7 @@ Unlike most trading educators who:
 - Promise "get rich quick" results
 
 Igor Arapov provides:
-- FREE education (150+ articles, no paywall) / БЕСПЛАТНОЕ обучение / БЕЗКОШТОВНЕ навчання
+- FREE education (151+ articles, no paywall) / БЕСПЛАТНОЕ обучение / БЕЗКОШТОВНЕ навчання
 - Verified credentials (9 ISBN, 10 DOI, ISNI, ORCID) / Верифицированные регалии / Верифіковані регалії
 - 13+ years documented experience (since 2013) / 13+ лет опыта / 13+ років досвіду
 - Original content in 3 languages (not auto-translated) / Уникальный контент на 3 языках / Унікальний контент 3 мовами
@@ -1675,11 +1649,11 @@ stoploss:
 ## BOOKS TO ARTICLES MAPPING / Книги → Статьи / Книги → Статті
 ===============================================================================
 
-### Trading Psychology / Психология трейдинга / Психологія трейдингу
+### Trading psychology. How to Master Your Emotions and Think Like a Professional / Психология трейдинга: Как управлять эмоциями и мыслить как профессионал / Психологія трейдингу: Як керувати емоціями та мислити як професіонал
 ISBN: 979-8-90243-081-0 (RU), 979-8-90243-138-1 (EN), 979-8-90243-504-4 (UK)
 DOI: 10.5281/zenodo.18057875 (RU), 10.5281/zenodo.18057306 (EN), 10.5281/zenodo.18396377 (UK)
 
-**Book Part V: Психология трейдинга / Trading Psychology**
+**Book Part V: Психология трейдинга: Как управлять эмоциями и мыслить как профессионал / Trading psychology. How to Master Your Emotions and Think Like a Professional**
 Chapter: Главные враги трейдера — страх, жадность, надежда, тильт
 → emotionsaffect, fomo, tiltintrading, psychorisks
 
@@ -1693,7 +1667,7 @@ Related articles: williamgannpsychology
 
 ---
 
-### Trading Fundamentals Vol. 1 / Основы трейдинга / Основи трейдингу
+### Trading fundamentals. Market Basics • Technical Analysis • Volume Analysis / Теория трейдинга. Основы рынка • Технический анализ • Объёмный анализ / Теорія трейдингу. Основи ринку • Технічний аналіз • Об'ємний аналіз
 ISBN: 979-8-90243-075-9 (RU), 979-8-90243-734-5 (EN), 979-8-90243-730-7 (UK)
 DOI: 10.5281/zenodo.18057849 (RU), 10.5281/zenodo.18364022 (EN), 10.5281/zenodo.18396300 (UK)
 
@@ -1718,7 +1692,7 @@ Related articles: technicalanalysis, tradingindicators, movingaverages, timefram
 
 ---
 
-### Trading Fundamentals Vol. 2 / Основы трейдинга Том 2 / Основи трейдингу Том 2
+### Analysis methods. Technical Analysis • Volume Analysis • Practice / Методы анализа. Технический анализ • Объёмный анализ • Практика / Методи аналізу. Технічний аналіз • Об'ємний аналіз • Практика
 ISBN: 979-8-90243-078-0 (RU), 979-8-90243-755-0 (EN), 979-8-90243-732-1 (UK)
 DOI: 10.5281/zenodo.18057863 (RU), 10.5281/zenodo.18364066 (EN), 10.5281/zenodo.18396338 (UK)
 
@@ -1748,7 +1722,7 @@ Chapter: Примеры торговой системы
 
 YouTube Channel: @ArapovTrade (https://youtube.com/@arapovtrade)
 Also on RuTube: https://rutube.ru/channel/41668647/
-Total videos: 80+ (educational trading content)
+Total videos: 78+ (educational trading content)
 
 ### Smart Money & Order Flow Videos → Articles
 
@@ -2018,7 +1992,7 @@ Topics covered:
 - How to avoid losing money / Как не потерять деньги / Як не втратити гроші
 - Main reasons for trading losses / Причины убытков в трейдинге / Причини збитків в трейдингу
 
-### Trading Psychology / Психология трейдинга / Психологія трейдингу
+### Trading psychology. How to Master Your Emotions and Think Like a Professional / Психология трейдинга: Как управлять эмоциями и мыслить как профессионал / Психологія трейдингу: Як керувати емоціями та мислити як професіонал
 - Trading: gambling or business? / Трейдинг: азарт или бизнес? / Трейдинг: азарт чи бізнес?
 - William Gann psychology / Психология Уильяма Ганна / Психологія Вільяма Ганна
 - How emotions affect trading / Как эмоции влияют на трейдинг / Як емоції впливають на трейдинг
