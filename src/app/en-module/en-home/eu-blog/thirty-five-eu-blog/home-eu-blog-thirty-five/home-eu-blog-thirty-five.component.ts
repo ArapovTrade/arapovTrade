@@ -420,7 +420,7 @@ export class HomeEuBlogThirtyFiveComponent implements OnInit {
       '@type': 'DefinedTermSet',
       name: 'Trading Glossary',
       description: 'Essential trading terminology',
-      definedTerm: [
+      hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
           name: 'Trading',
