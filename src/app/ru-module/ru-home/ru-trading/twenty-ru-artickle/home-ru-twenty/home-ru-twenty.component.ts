@@ -446,6 +446,7 @@ export class HomeRuTwentyComponent implements OnInit {
   private setGlossarySchema(): void {
     const data = {
       '@context': 'https://schema.org',
+      '@type': 'DefinedTermSet',
       name: 'Глоссарий Market Profile',
       hasDefinedTerm: [
         {
