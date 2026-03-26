@@ -422,7 +422,7 @@ export class RuHomeComponent implements OnInit, AfterViewInit, OnDestroy {
           },
         },
       ],
-      hasPublication: [
+      workExample: [
         {
           '@type': 'ScholarlyArticle',
           name: 'Психология инвестиционных решений: когнитивные предубеждения розничных трейдеров на финансовых рынках',

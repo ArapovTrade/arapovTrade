@@ -391,7 +391,7 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
           },
         },
       ],
-      hasPublication: [
+      workExample: [
         {
           '@type': 'ScholarlyArticle',
           name: 'Psychology of Investment Decisions: Cognitive Biases of Retail Traders in Financial Markets',

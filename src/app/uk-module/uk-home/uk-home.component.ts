@@ -342,7 +342,7 @@ export class UkHomeComponent implements OnInit, AfterViewInit, OnDestroy {
         },
       ],
 
-      hasPublication: [
+      workExample: [
         // --- НАУКОВІ ПУБЛІКАЦІЇ ---
         {
           '@type': 'ScholarlyArticle',
