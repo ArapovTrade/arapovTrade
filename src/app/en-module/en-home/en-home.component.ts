@@ -695,7 +695,7 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
     // 🛑 защита от повторного добавления (важно для Angular / SPA)
     if (this.document.getElementById(SCRIPT_ID)) return;
 
-    const authorId = 'https://arapov.trade/#author';
+    const authorId = 'https://arapov.trade/en#author';
 
     const books = [
       {
