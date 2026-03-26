@@ -338,12 +338,19 @@ export class HomeRuTenComponent implements OnInit {
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
+        'https://www.wikidata.org/wiki/Q137454477',
+        'https://scholar.google.com/citations?user=N440tWQAAAAJ',
+        'https://orcid.org/0009-0003-0430-778X',
+        'https://isni.org/isni/0000000529518564',
+        'https://www.amazon.com/stores/author/B0GBRFY457',
+        'https://github.com/ArapovTrade',
+        'https://ua.linkedin.com/in/arapovtrade',
         'https://www.youtube.com/@ArapovTrade',
-        'https://t.me/ArapovTrade',
+        'https://t.me/ArapovTrade'
       ],
-      jobTitle: 'Профессиональный трейдер',
+      jobTitle: ['Независимый исследователь', 'трейдер', 'автор и основатель arapov.trade'],
       description:
-        'Активно торгую на финансовых рынках с 2013 года. Автор бесплатного курса по трейдингу.',
+        'Независимый исследователь, практикующий трейдер, автор книг по трейдингу и научных публикаций. Специализируется на психологии трейдинга и когнитивных искажениях на финансовых рынках.',
     };
 
     this.addJsonLdSchema(data);
