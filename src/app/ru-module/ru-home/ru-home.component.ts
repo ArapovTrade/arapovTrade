@@ -273,7 +273,11 @@ export class RuHomeComponent implements OnInit, AfterViewInit, OnDestroy {
       birthDate: '1990-09-30',
       givenName: 'Игорь',
       familyName: 'Арапов',
-      jobTitle: 'Профессиональный трейдер',
+      jobTitle:
+        'Независимый исследователь, трейдер, автор и основатель arapov.trade',
+      description:
+        'Независимый исследователь, практикующий трейдер, автор книг по трейдингу и научных публикаций. Специализируется на психологии трейдинга и когнитивных искажениях на финансовых рынках.',
+
       hasOccupation: {
         '@type': 'Occupation',
         name: 'Trader',
@@ -304,31 +308,16 @@ export class RuHomeComponent implements OnInit, AfterViewInit, OnDestroy {
       award: [
         'Кандидат в мастера спорта по шахматам',
         'Выбор редакции TradingView',
-        'Автор книги «Основы трейдинга» (ISBN 979-8-90243-075-9)',
-        'Автор книги «Психология трейдинга» (ISBN 979-8-90243-081-0)',
-        'Автор книги «Основы трейдинга Том 2» (ISBN 979-8-90243-078-0)',
-        'Автор книги «Психологія трейдингу» (ISBN 979-8-90243-504-4)',
-        'Автор книги «Trading Psychology» (ISBN 979-8-90243-138-1)',
-
-        'Автор книги «Trading Basics» (ISBN 979-8-90243-734-5)',
-        'Автор книги «Основи трейдингу» (ISBN 979-8-90243-730-7)',
-        'Автор книги «Основи трейдингу Том 2» (ISBN 979-8-90243-732-1)',
-        'Автор книги «Trading Basics Volume 2» (ISBN 979-8-90243-755-0)',
       ],
       publishingPrinciples: 'https://arapov.trade/ru/freestudying',
-      description:
-        'Трейдер с 2013 года, автор бесплатного курса обучения трейдингу. Специализация: Smart Money Concepts, метод Вайкоффа, объёмный анализ.',
+
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/author-page_main-block_img-light.png',
       worksFor: {
         '@type': 'Organization',
         '@id': 'https://arapov.trade/#organization',
       },
-      alumniOf: {
-        '@type': 'Organization',
-        name: 'Chess Federation',
-        description: 'Кандидат в мастера спорта по шахматам',
-      },
+
       knowsAbout: [
         'Smart Money Concepts',
         'Wyckoff Method',
@@ -396,6 +385,224 @@ export class RuHomeComponent implements OnInit, AfterViewInit, OnDestroy {
 
       url: 'https://arapov.trade/ru',
       mainEntityOfPage: 'https://arapov.trade/ru',
+
+      subjectOf: [
+        {
+          '@type': 'Article',
+          url: 'https://nuft.edu.ua/news/podiyi/pppro-trejding-i-birzhovu-diyalnist-–-zdobuvacham-osvitnoyi-programi',
+          name: 'Гостевая лекция по трейдингу и биржевой деятельности для студентов образовательной программы «Цифровой бизнес»',
+          datePublished: '2026-03-19T00:00:00Z',
+          publisher: {
+            '@type': 'Organization',
+            name: 'Национальный университет пищевых технологий',
+            url: 'https://nuft.edu.ua',
+          },
+        },
+      ],
+      event: [
+        {
+          '@type': 'Event',
+          name: 'Гостевая лекция по трейдингу и биржевой деятельности',
+          startDate: '2026-03-19T00:00:00+02:00',
+          endDate: '2026-03-19T23:59:00+02:00',
+          location: {
+            '@type': 'Place',
+            name: 'Национальный университет пищевых технологий',
+            sameAs: 'https://www.wikidata.org/wiki/Q4315127',
+          },
+          organizer: {
+            '@type': 'Organization',
+            name: 'НУХТ',
+            url: 'https://nuft.edu.ua',
+          },
+          url: 'https://nuft.edu.ua/news/podiyi/pppro-trejding-i-birzhovu-diyalnist-–-zdobuvacham-osvitnoyi-programi',
+          performer: {
+            '@type': 'Person',
+            '@id': 'https://arapov.trade/ru#person',
+          },
+        },
+      ],
+      hasPublication: [
+        {
+          '@type': 'ScholarlyArticle',
+          name: 'Психология инвестиционных решений: когнитивные предубеждения розничных трейдеров на финансовых рынках',
+          headline:
+            'Psychology of Investment Decisions: Cognitive Biases of Retail Traders in Financial Markets',
+          sameAs: 'https://doi.org/10.32702/2306-6814.2026.4.96',
+          datePublished: '2026-02-17T12:00:00+03:00',
+          isPartOf: {
+            '@type': 'Periodical',
+            name: 'Investytsiyi: praktyka ta dosvid',
+            issn: '2306-6814',
+          },
+          author: [
+            {
+              '@type': 'Person',
+              name: 'Игорь Арапов',
+              sameAs: 'https://www.wikidata.org/wiki/Q137454477',
+            },
+            {
+              '@type': 'Person',
+              name: 'Inna Sytnyk',
+              sameAs: 'https://www.wikidata.org/wiki/Q138787550',
+            },
+          ],
+        },
+        {
+          '@type': 'ScholarlyArticle',
+          name: "From Tilt to System: A Practitioner's Framework for Managing Cognitive Biases in Retail Trading",
+          sameAs: 'https://doi.org/10.5281/ZENODO.18792055',
+          url: 'https://ssrn.com/abstract=6254718',
+          publisher: {
+            '@type': 'Organization',
+            name: 'Social Science Research Network (SSRN)',
+          },
+          author: {
+            '@type': 'Person',
+            name: 'Игорь Арапов',
+            sameAs: 'https://www.wikidata.org/wiki/Q137454477',
+          },
+        },
+        {
+          '@type': 'Book',
+          name: 'Психологія трейдингу: Як керувати емоціями та мислити як професіонал',
+          isbn: '979-8-90243-504-4',
+          sameAs: [
+            'https://doi.org/10.5281/zenodo.18396377',
+            'http://www.irbis-nbuv.gov.ua/cgi-bin/irbis64r_81/cgiirbis_64.exe?Z21ID=&I21DBN=VFEIR&P21DBN=VFEIR&S21STN=1&S21REF=10&S21FMT=fullw&C21COM=S&S21CNR=20&S21P01=3&S21P02=0&S21P03=A=&S21COLORTERMS=0&S21STR=Арапов%252C%2520Ігор',
+          ],
+          inLanguage: 'uk',
+          author: {
+            '@type': 'Person',
+            name: 'Ігор Арапов',
+            sameAs: 'https://www.wikidata.org/wiki/Q137454477',
+          },
+        },
+        {
+          '@type': 'Book',
+          name: 'Психология трейдинга: Как управлять эмоциями и мыслить как профессионал',
+          isbn: '979-8-90243-081-0',
+          sameAs: 'https://doi.org/10.5281/zenodo.18057875',
+          inLanguage: 'ru',
+          author: {
+            '@type': 'Person',
+            name: 'Игорь Арапов',
+            sameAs: 'https://www.wikidata.org/wiki/Q137454477',
+          },
+        },
+        {
+          '@type': 'Book',
+          name: 'Trading psychology. How to Master Your Emotions and Think Like a Professional',
+          isbn: '979-8-90243-138-1',
+          sameAs: [
+            'https://doi.org/10.5281/zenodo.18057306',
+            'http://www.irbis-nbuv.gov.ua/cgi-bin/irbis64r_81/cgiirbis_64.exe?Z21ID=&I21DBN=VFEIR&P21DBN=VFEIR&S21STN=1&S21REF=10&S21FMT=fullw&C21COM=S&S21CNR=20&S21P01=3&S21P02=0&S21P03=A=&S21COLORTERMS=0&S21STR=Arapov%2C%20Igor',
+          ],
+          inLanguage: 'en',
+          author: {
+            '@type': 'Person',
+            name: 'Arapov Igor',
+            sameAs: 'https://www.wikidata.org/wiki/Q137454477',
+          },
+        },
+        {
+          '@type': 'Book',
+          name: "Теорія трейдингу. Основи ринку • Технічний аналіз • Об'ємний аналіз",
+          isbn: '979-8-90243-730-7',
+          sameAs: [
+            'https://doi.org/10.5281/zenodo.18396300',
+            'http://www.irbis-nbuv.gov.ua/cgi-bin/irbis64r_81/cgiirbis_64.exe?Z21ID=&I21DBN=VFEIR&P21DBN=VFEIR&S21STN=1&S21REF=10&S21FMT=fullw&C21COM=S&S21CNR=20&S21P01=3&S21P02=0&S21P03=A=&S21COLORTERMS=0&S21STR=Арапов%252C%2520Ігор',
+          ],
+          inLanguage: 'uk',
+          author: {
+            '@type': 'Person',
+            name: 'Ігор Арапов',
+            sameAs: 'https://www.wikidata.org/wiki/Q137454477',
+          },
+        },
+        {
+          '@type': 'Book',
+          name: 'Теория трейдинга. Основы рынка • Технический анализ • Объёмный анализ',
+          isbn: '979-8-90243-075-9',
+          sameAs: 'https://doi.org/10.5281/zenodo.18057849',
+          inLanguage: 'ru',
+          author: {
+            '@type': 'Person',
+            name: 'Игорь Арапов',
+            sameAs: 'https://www.wikidata.org/wiki/Q137454477',
+          },
+        },
+        {
+          '@type': 'Book',
+          name: 'Trading fundamentals. Market Basics • Technical Analysis • Volume Analysis',
+          isbn: '979-8-90243-734-5',
+          sameAs: [
+            'https://doi.org/10.5281/zenodo.18364022',
+            'http://www.irbis-nbuv.gov.ua/cgi-bin/irbis64r_81/cgiirbis_64.exe?Z21ID=&I21DBN=VFEIR&P21DBN=VFEIR&S21STN=1&S21REF=10&S21FMT=fullw&C21COM=S&S21CNR=20&S21P01=3&S21P02=0&S21P03=A=&S21COLORTERMS=0&S21STR=Arapov%2C%20Igor',
+          ],
+          inLanguage: 'en',
+          author: {
+            '@type': 'Person',
+            name: 'Arapov Igor',
+            sameAs: 'https://www.wikidata.org/wiki/Q137454477',
+          },
+        },
+        {
+          '@type': 'Book',
+          name: "Методи аналізу. Технічний аналіз • Об'ємний аналіз • Практика",
+          isbn: '979-8-90243-732-1',
+          sameAs: [
+            'https://doi.org/10.5281/zenodo.18396338',
+            'http://www.irbis-nbuv.gov.ua/cgi-bin/irbis64r_81/cgiirbis_64.exe?Z21ID=&I21DBN=VFEIR&P21DBN=VFEIR&S21STN=1&S21REF=10&S21FMT=fullw&C21COM=S&S21CNR=20&S21P01=3&S21P02=0&S21P03=A=&S21COLORTERMS=0&S21STR=Арапов%252C%2520Ігор',
+          ],
+          inLanguage: 'uk',
+          author: {
+            '@type': 'Person',
+            name: 'Ігор Арапов',
+            sameAs: 'https://www.wikidata.org/wiki/Q137454477',
+          },
+        },
+        {
+          '@type': 'Book',
+          name: 'Методы анализа. Технический анализ • Объёмный анализ • Практика',
+          isbn: '979-8-90243-078-0',
+          sameAs: 'https://doi.org/10.5281/zenodo.18057863',
+          inLanguage: 'ru',
+          author: {
+            '@type': 'Person',
+            name: 'Игорь Арапов',
+            sameAs: 'https://www.wikidata.org/wiki/Q137454477',
+          },
+        },
+        {
+          '@type': 'Book',
+          name: 'Analysis methods. Technical Analysis • Volume Analysis • Practice',
+          isbn: '979-8-90243-755-0',
+          sameAs: [
+            'https://doi.org/10.5281/zenodo.18364066',
+            'http://www.irbis-nbuv.gov.ua/cgi-bin/irbis64r_81/cgiirbis_64.exe?Z21ID=&I21DBN=VFEIR&P21DBN=VFEIR&S21STN=1&S21REF=10&S21FMT=fullw&C21COM=S&S21CNR=20&S21P01=3&S21P02=0&S21P03=A=&S21COLORTERMS=0&S21STR=Arapov%2C%20Igor',
+          ],
+          inLanguage: 'en',
+          author: {
+            '@type': 'Person',
+            name: 'Arapov Igor',
+            sameAs: 'https://www.wikidata.org/wiki/Q137454477',
+          },
+        },
+      ],
+      alumniOf: [
+        {
+          '@type': 'CollegeOrUniversity',
+          name: 'Oles Honchar Dnipro National University',
+          url: 'https://www.dnu.dp.ua/',
+          sameAs: 'https://www.wikidata.org/wiki/Q137454477',
+        },
+        {
+          '@type': 'Organization',
+          name: 'Chess Federation',
+          description: 'Кандидат в мастера спорта по шахматам',
+        },
+      ],
     });
 
     this.document.head.appendChild(script);

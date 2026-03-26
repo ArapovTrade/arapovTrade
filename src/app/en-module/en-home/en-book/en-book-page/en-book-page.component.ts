@@ -178,7 +178,7 @@ export class EnBookPageComponent implements OnInit, AfterViewInit, OnDestroy {
       name: 'Arapov.Trade',
       alternateName: 'Trading education',
       description:
-        'Free trading education by Igor Arapov. 130+ articles and 70 video lessons.',
+        'Free trading education by Igor Arapov. 151+ articles and 78+ video lessons.',
       inLanguage: 'en-US',
       publisher: {
         '@type': 'Organization',
