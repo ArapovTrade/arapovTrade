@@ -424,15 +424,15 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
     script.text = JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'ProfilePage',
-      '@id': 'https://arapov.trade/en/#page',
-      url: 'https://arapov.trade/en/',
+      '@id': 'https://arapov.trade/en#page',
+      url: 'https://arapov.trade/en',
       name: 'About the Author - Igor Arapov',
       inLanguage: 'en-EN',
       mainEntity: {
         '@id': 'https://arapov.trade/en#person',
       },
       isPartOf: {
-        '@id': 'https://arapov.trade/en/main/#website',
+        '@id': 'https://arapov.trade/en/main#website',
       },
       dateCreated: '2020-01-01T00:00:00+02:00', // ← Добавьте время
       dateModified: '2025-12-15T00:00:00+02:00', // ← Добавьте время

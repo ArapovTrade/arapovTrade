@@ -374,15 +374,15 @@ export class UkHomeComponent implements OnInit, AfterViewInit, OnDestroy {
     script.text = JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'ProfilePage',
-      '@id': 'https://arapov.trade/uk/#page',
-      url: 'https://arapov.trade/uk/',
+      '@id': 'https://arapov.trade/uk#page',
+      url: 'https://arapov.trade/uk',
       name: 'Про автора - Арапов Ігор',
       inLanguage: 'uk-UA',
       mainEntity: {
         '@id': 'https://arapov.trade/uk#person',
       },
       isPartOf: {
-        '@id': 'https://arapov.trade/#website',
+        '@id': 'https://arapov.trade#website',
       },
       dateCreated: '2020-01-01T00:00:00+02:00', // ← Добавьте время
       dateModified: '2025-12-15T00:00:00+02:00', // ← Добавьте время

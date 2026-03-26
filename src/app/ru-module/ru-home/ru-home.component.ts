@@ -460,15 +460,15 @@ export class RuHomeComponent implements OnInit, AfterViewInit, OnDestroy {
     script.text = JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'ProfilePage',
-      '@id': 'https://arapov.trade/ru/#page',
-      url: 'https://arapov.trade/ru/',
+      '@id': 'https://arapov.trade/ru',
+      url: 'https://arapov.trade/ru',
       name: 'Про автора - Арапов Игорь',
       inLanguage: 'ru-RU',
       mainEntity: {
         '@id': 'https://arapov.trade/ru#person',
       },
       isPartOf: {
-        '@id': 'https://arapov.trade/ru/main/#website',
+        '@id': 'https://arapov.trade/ru/main#website',
       },
       dateCreated: '2020-01-01T00:00:00+02:00', // ← Добавьте время
       dateModified: '2025-12-15T00:00:00+02:00', // ← Добавьте время
