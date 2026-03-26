@@ -296,7 +296,6 @@ export class UkHomeComponent implements OnInit, AfterViewInit, OnDestroy {
         'https://www.amazon.com/stores/author/B0GBRFY457',
         'https://www.youtube.com/@ArapovTrade',
         'https://www.linkedin.com/in/arapovtrade',
-        'https://www.mql5.com/ru/signals/2246716?source=External',
         'https://t.me/ArapovTrade',
         'https://ru.wikibooks.org/wiki/Участник:IgorArapov',
         'https://www.google.com/search?kgmid=/g/11ysn_rm8l',
