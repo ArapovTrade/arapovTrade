@@ -280,34 +280,34 @@ export class HomeEnBlogNineComponent implements OnInit {
   //  PERSON
   // ============================================================
   private setPersonSchema(): void {
-    // const data = {
-    //   '@context': 'https://schema.org',
-    //   '@type': 'Person',
-    //   '@id': 'https://arapov.trade/en#person',
-    //   name: 'Igor Arapov',
-    //   alternateName: [
-    //     'Ігор Арапов',
-    //     'Арапов Игорь',
-    //     'I. Arapov',
-    //     'Игорь Арапов',
-    //     'І. В. Арапов',
-    //     'Арапов Ігор',
-    //     'Arapov Igor',
-    //   ],
+    const data = {
+      '@context': 'https://schema.org',
+      '@type': 'Person',
+      '@id': 'https://arapov.trade/en#person',
+      name: 'Igor Arapov',
+      alternateName: [
+        'Ігор Арапов',
+        'Арапов Игорь',
+        'I. Arapov',
+        'Игорь Арапов',
+        'І. В. Арапов',
+        'Арапов Ігор',
+        'Arapov Igor',
+      ],
 
-    //   url: 'https://arapov.trade/en',
-    //   image:
-    //     'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
-    //   sameAs: [
-    //     'https://www.youtube.com/@ArapovTrade',
-    //     'https://t.me/ArapovTrade',
-    //   ],
-    //   jobTitle: 'Professional trader',
-    //   description:
-    //     'I have been actively trading on financial markets since 2013. Author of a free trading course.',
-    // };
+      url: 'https://arapov.trade/en',
+      image:
+        'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
+      sameAs: [
+        'https://www.youtube.com/@ArapovTrade',
+        'https://t.me/ArapovTrade',
+      ],
+      jobTitle: 'Professional trader',
+      description:
+        'I have been actively trading on financial markets since 2013. Author of a free trading course.',
+    };
 
-    // this.addJsonLdSchema(data);
+    this.addJsonLdSchema(data);
   }
 
   // ============================================================
