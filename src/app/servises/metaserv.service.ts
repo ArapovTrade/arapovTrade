@@ -39,6 +39,15 @@ export class MetaservService {
       founder: {
         '@type': 'Person',
         name: 'Ігор Арапов',
+        alternateName: [
+          'Igor Arapov',
+          'Арапов Игорь',
+          'I. Arapov',
+          'Игорь Арапов',
+          'І. В. Арапов',
+          'Арапов Ігор',
+          'Arapov Igor',
+        ],
         jobTitle: 'Трейдер та засновник Arapov Trade',
         sameAs: [
           'https://www.researchgate.net/scientific-contributions/I-V-Arapov-2341564479',
@@ -73,7 +82,7 @@ export class MetaservService {
         'https://t.me/ArapovTrade',
         'https://www.youtube.com/@ArapovTrade',
         'https://www.facebook.com/igor.arapov.75',
-        'https://www.linkedin.com/in/arapovtrade', 
+        'https://www.linkedin.com/in/arapovtrade',
         'https://wa.me/380502933075',
         'https://www.wikidata.org/wiki/Q137454477',
         'viber://chat?number=%2B380502933075',
