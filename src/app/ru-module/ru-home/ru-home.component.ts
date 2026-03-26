@@ -290,7 +290,7 @@ export class RuHomeComponent implements OnInit, AfterViewInit, OnDestroy {
         '@type': 'Occupation',
         name: 'Trader',
         description:
-          'Профессиональный трейдер на финансовых рынках с 2013 года',
+          'Практикующий трейдер на финансовых рынках с 2013 года',
         occupationLocation: {
           '@type': 'Country',
           name: 'Ukraine',
@@ -893,7 +893,7 @@ export class RuHomeComponent implements OnInit, AfterViewInit, OnDestroy {
 
     if (this.document.getElementById(SCRIPT_ID)) return;
 
-    const AUTHOR_ID = 'https://arapov.trade/#author';
+    const AUTHOR_ID = 'https://arapov.trade/ru#author';
     const COAUTHOR_ID = 'https://arapov.trade/#inna-sytnyk';
 
     const books = [
@@ -1006,7 +1006,9 @@ export class RuHomeComponent implements OnInit, AfterViewInit, OnDestroy {
           headline:
             'Psychology of Investment Decisions: Cognitive Biases of Retail Traders in Financial Markets',
           sameAs: ['https://doi.org/10.32702/2306-6814.2026.4.96'],
-          datePublished: '2026-02-17',
+          datePublished: '2026-02-17T00:00:00Z',
+          image:
+        'https://arapov.trade/assets/redesignArapovTrade/img/author-page_main-block_img-light.png',
           inLanguage: 'ru',
           isPartOf: {
             '@type': 'Periodical',
@@ -1020,7 +1022,11 @@ export class RuHomeComponent implements OnInit, AfterViewInit, OnDestroy {
         {
           '@type': 'ScholarlyArticle',
           name: "From Tilt to System: A Practitioner's Framework for Managing Cognitive Biases in Retail Trading",
+          headline:
+            'From Tilt to System: A Practitioner`s Framework for Managing Cognitive Biases in Retail Trading',
           sameAs: ['https://doi.org/10.5281/ZENODO.18792055'],
+          image:
+        'https://arapov.trade/assets/redesignArapovTrade/img/author-page_main-block_img-light.png',
           url: 'https://ssrn.com/abstract=6254718',
           inLanguage: 'en',
           publisher: {
