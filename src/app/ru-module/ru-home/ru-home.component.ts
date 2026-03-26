@@ -80,6 +80,8 @@ export class RuHomeComponent implements OnInit, AfterViewInit, OnDestroy {
     this.removeExistingWebPageSchema();
     this.addPersoneSchema();
     this.addProfilePageSchema();
+    this.addEventSchema();
+    this.addBooksSchema();
     this.registForm = new FormGroup({
       userName: new FormControl('', Validators.required),
       userEmail: new FormControl(null, [Validators.email, Validators.required]),
@@ -230,6 +232,12 @@ export class RuHomeComponent implements OnInit, AfterViewInit, OnDestroy {
           script.remove();
         }
         if (content['@type'] === 'ProfilePage') {
+          script.remove();
+        }
+        if (content['@type'] === 'Event') {
+          script.remove();
+        }
+        if (content['@type'] === 'Book') {
           script.remove();
         }
       } catch (e) {
@@ -399,29 +407,7 @@ export class RuHomeComponent implements OnInit, AfterViewInit, OnDestroy {
           },
         },
       ],
-      event: [
-        {
-          '@type': 'Event',
-          name: 'Гостевая лекция по трейдингу и биржевой деятельности',
-          startDate: '2026-03-19T00:00:00+02:00',
-          endDate: '2026-03-19T23:59:00+02:00',
-          location: {
-            '@type': 'Place',
-            name: 'Национальный университет пищевых технологий',
-            sameAs: 'https://www.wikidata.org/wiki/Q4315127',
-          },
-          organizer: {
-            '@type': 'Organization',
-            name: 'НУХТ',
-            url: 'https://nuft.edu.ua',
-          },
-          url: 'https://nuft.edu.ua/news/podiyi/pppro-trejding-i-birzhovu-diyalnist-–-zdobuvacham-osvitnoyi-programi',
-          performer: {
-            '@type': 'Person',
-            '@id': 'https://arapov.trade/ru#person',
-          },
-        },
-      ],
+
       workExample: [
         {
           '@type': 'ScholarlyArticle',
@@ -645,6 +631,364 @@ export class RuHomeComponent implements OnInit, AfterViewInit, OnDestroy {
       dateCreated: '2020-01-01T00:00:00+02:00', // ← Добавьте время
       dateModified: '2025-12-15T00:00:00+02:00', // ← Добавьте время
     });
+
+    this.document.head.appendChild(script);
+  }
+
+  private addEventSchema() {
+    const exists = Array.from(
+      this.document.querySelectorAll('script[type="application/ld+json"]'),
+    ).some((script) => {
+      try {
+        const json = JSON.parse(script.textContent || '{}');
+        return (
+          json['@type'] === 'Event' &&
+          json['name'] ===
+            'Гостевая лекция по трейдингу и биржевой деятельности'
+        );
+      } catch {
+        return false;
+      }
+    });
+
+    // Если уже существует — выходим
+    if (exists) return;
+
+    // Создаем новый JSON-LD
+    const script = this.document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Event',
+      name: 'Гостевая лекция по трейдингу и биржевой деятельности',
+      description:
+        'Гостевая лекция для студентов образовательной программы «Цифровой бизнес» НУХТ, посвящённая устройству организованных финансовых рынков, структуре CME Group и анализу фьючерса на золото.',
+      startDate: '2026-03-19T00:00:00+02:00',
+      endDate: '2026-03-19T23:59:00+02:00',
+      eventStatus: 'https://schema.org/EventScheduled',
+      image:
+        'https://nuft.edu.ua/assets/images/News/2026/03/19/ekonomteoriya1-18-03-2026.jpg',
+      location: {
+        '@type': 'Place',
+        name: 'Национальный университет пищевых технологий',
+        sameAs: 'https://www.wikidata.org/wiki/Q4315127',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: 'ул. Владимирская 68',
+          addressLocality: 'Киев',
+          addressCountry: 'UA',
+        },
+      },
+      offers: {
+        '@type': 'Offer',
+        price: '0',
+        priceCurrency: 'UAH',
+        availability: 'https://schema.org/InStock',
+      },
+      organizer: {
+        '@type': 'Organization',
+        name: 'НУХТ',
+        url: 'https://nuft.edu.ua',
+      },
+      url: 'https://nuft.edu.ua/news/podiyi/pppro-trejding-i-birzhovu-diyalnist-–-zdobuvacham-osvitnoyi-programi',
+      performer: {
+        '@type': 'Person',
+        '@id': 'https://arapov.trade/ru#person',
+        name: 'Игорь Арапов',
+      },
+    });
+
+    this.document.head.appendChild(script);
+  }
+
+  // private addBooksSchema() {
+  //   const exists = Array.from(
+  //     this.document.querySelectorAll('script[type="application/ld+json"]'),
+  //   ).some((script) => {
+  //     try {
+  //       const json = JSON.parse(script.textContent || '{}');
+  //       return (
+  //         json['@type'] === 'Book' &&
+  //         json['name'] ===
+  //           'Trading psychology. How to Master Your Emotions and Think Like a Professional'
+  //       );
+  //     } catch {
+  //       return false;
+  //     }
+  //   });
+
+  //   if (exists) return;
+
+  //   const books = [
+  //     {
+  //       '@context': 'https://schema.org',
+  //       '@type': 'Book',
+  //       name: 'Психологія трейдингу: Як керувати емоціями та мислити як професіонал',
+  //       isbn: '979-8-90243-504-4',
+  //       inLanguage: 'uk',
+  //       sameAs: [
+  //         'https://doi.org/10.5281/zenodo.18396377',
+  //         'http://www.irbis-nbuv.gov.ua/cgi-bin/irbis64r_81/cgiirbis_64.exe?Z21ID=&I21DBN=VFEIR&P21DBN=VFEIR&S21STN=1&S21REF=10&S21FMT=fullw&C21COM=S&S21CNR=20&S21P01=3&S21P02=0&S21P03=A=&S21COLORTERMS=0&S21STR=Арапов%252C%2520Ігор',
+  //       ],
+  //       author: {
+  //         '@type': 'Person',
+  //         '@id': 'https://arapov.trade/uk#person',
+  //         name: 'Ігор Арапов',
+  //         sameAs: 'https://www.wikidata.org/wiki/Q137454477',
+  //       },
+  //     },
+  //     {
+  //       '@context': 'https://schema.org',
+  //       '@type': 'Book',
+  //       name: 'Психология трейдинга: Как управлять эмоциями и мыслить как профессионал',
+  //       isbn: '979-8-90243-081-0',
+  //       inLanguage: 'ru',
+  //       sameAs: 'https://doi.org/10.5281/zenodo.18057875',
+  //       author: {
+  //         '@type': 'Person',
+  //         '@id': 'https://arapov.trade/ru#person',
+  //         name: 'Игорь Арапов',
+  //         sameAs: 'https://www.wikidata.org/wiki/Q137454477',
+  //       },
+  //     },
+  //     {
+  //       '@context': 'https://schema.org',
+  //       '@type': 'Book',
+  //       name: 'Trading psychology. How to Master Your Emotions and Think Like a Professional',
+  //       isbn: '979-8-90243-138-1',
+  //       inLanguage: 'en',
+  //       sameAs: [
+  //         'https://doi.org/10.5281/zenodo.18057306',
+  //         'http://www.irbis-nbuv.gov.ua/cgi-bin/irbis64r_81/cgiirbis_64.exe?Z21ID=&I21DBN=VFEIR&P21DBN=VFEIR&S21STN=1&S21REF=10&S21FMT=fullw&C21COM=S&S21CNR=20&S21P01=3&S21P02=0&S21P03=A=&S21COLORTERMS=0&S21STR=Arapov%2C%20Igor',
+  //       ],
+  //       author: {
+  //         '@type': 'Person',
+  //         '@id': 'https://arapov.trade/en#person',
+  //         name: 'Arapov Igor',
+  //         sameAs: 'https://www.wikidata.org/wiki/Q137454477',
+  //       },
+  //     },
+  //     {
+  //       '@context': 'https://schema.org',
+  //       '@type': 'Book',
+  //       name: "Теорія трейдингу. Основи ринку • Технічний аналіз • Об'ємний аналіз",
+  //       isbn: '979-8-90243-730-7',
+  //       inLanguage: 'uk',
+  //       sameAs: [
+  //         'https://doi.org/10.5281/zenodo.18396300',
+  //         'http://www.irbis-nbuv.gov.ua/cgi-bin/irbis64r_81/cgiirbis_64.exe?Z21ID=&I21DBN=VFEIR&P21DBN=VFEIR&S21STN=1&S21REF=10&S21FMT=fullw&C21COM=S&S21CNR=20&S21P01=3&S21P02=0&S21P03=A=&S21COLORTERMS=0&S21STR=Арапов%252C%2520Ігор',
+  //       ],
+  //       author: {
+  //         '@type': 'Person',
+  //         '@id': 'https://arapov.trade/uk#person',
+  //         name: 'Ігор Арапов',
+  //         sameAs: 'https://www.wikidata.org/wiki/Q137454477',
+  //       },
+  //     },
+  //     {
+  //       '@context': 'https://schema.org',
+  //       '@type': 'Book',
+  //       name: 'Теория трейдинга. Основы рынка • Технический анализ • Объёмный анализ',
+  //       isbn: '979-8-90243-075-9',
+  //       inLanguage: 'ru',
+  //       sameAs: 'https://doi.org/10.5281/zenodo.18057849',
+  //       author: {
+  //         '@type': 'Person',
+  //         '@id': 'https://arapov.trade/ru#person',
+  //         name: 'Игорь Арапов',
+  //         sameAs: 'https://www.wikidata.org/wiki/Q137454477',
+  //       },
+  //     },
+  //     {
+  //       '@context': 'https://schema.org',
+  //       '@type': 'Book',
+  //       name: 'Trading fundamentals. Market Basics • Technical Analysis • Volume Analysis',
+  //       isbn: '979-8-90243-734-5',
+  //       inLanguage: 'en',
+  //       sameAs: [
+  //         'https://doi.org/10.5281/zenodo.18364022',
+  //         'http://www.irbis-nbuv.gov.ua/cgi-bin/irbis64r_81/cgiirbis_64.exe?Z21ID=&I21DBN=VFEIR&P21DBN=VFEIR&S21STN=1&S21REF=10&S21FMT=fullw&C21COM=S&S21CNR=20&S21P01=3&S21P02=0&S21P03=A=&S21COLORTERMS=0&S21STR=Arapov%2C%20Igor',
+  //       ],
+  //       author: {
+  //         '@type': 'Person',
+  //         '@id': 'https://arapov.trade/en#person',
+  //         name: 'Arapov Igor',
+  //         sameAs: 'https://www.wikidata.org/wiki/Q137454477',
+  //       },
+  //     },
+  //     {
+  //       '@context': 'https://schema.org',
+  //       '@type': 'Book',
+  //       name: "Методи аналізу. Технічний аналіз • Об'ємний аналіз • Практика",
+  //       isbn: '979-8-90243-732-1',
+  //       inLanguage: 'uk',
+  //       sameAs: [
+  //         'https://doi.org/10.5281/zenodo.18396338',
+  //         'http://www.irbis-nbuv.gov.ua/cgi-bin/irbis64r_81/cgiirbis_64.exe?Z21ID=&I21DBN=VFEIR&P21DBN=VFEIR&S21STN=1&S21REF=10&S21FMT=fullw&C21COM=S&S21CNR=20&S21P01=3&S21P02=0&S21P03=A=&S21COLORTERMS=0&S21STR=Арапов%252C%2520Ігор',
+  //       ],
+  //       author: {
+  //         '@type': 'Person',
+  //         '@id': 'https://arapov.trade/uk#person',
+  //         name: 'Ігор Арапов',
+  //         sameAs: 'https://www.wikidata.org/wiki/Q137454477',
+  //       },
+  //     },
+  //     {
+  //       '@context': 'https://schema.org',
+  //       '@type': 'Book',
+  //       name: 'Методы анализа. Технический анализ • Объёмный анализ • Практика',
+  //       isbn: '979-8-90243-078-0',
+  //       inLanguage: 'ru',
+  //       sameAs: 'https://doi.org/10.5281/zenodo.18057863',
+  //       author: {
+  //         '@type': 'Person',
+  //         '@id': 'https://arapov.trade/ru#person',
+  //         name: 'Игорь Арапов',
+  //         sameAs: 'https://www.wikidata.org/wiki/Q137454477',
+  //       },
+  //     },
+  //     {
+  //       '@context': 'https://schema.org',
+  //       '@type': 'Book',
+  //       name: 'Analysis methods. Technical Analysis • Volume Analysis • Practice',
+  //       isbn: '979-8-90243-755-0',
+  //       inLanguage: 'en',
+  //       sameAs: [
+  //         'https://doi.org/10.5281/zenodo.18364066',
+  //         'http://www.irbis-nbuv.gov.ua/cgi-bin/irbis64r_81/cgiirbis_64.exe?Z21ID=&I21DBN=VFEIR&P21DBN=VFEIR&S21STN=1&S21REF=10&S21FMT=fullw&C21COM=S&S21CNR=20&S21P01=3&S21P02=0&S21P03=A=&S21COLORTERMS=0&S21STR=Arapov%2C%20Igor',
+  //       ],
+  //       author: {
+  //         '@type': 'Person',
+  //         '@id': 'https://arapov.trade/en#person',
+  //         name: 'Arapov Igor',
+  //         sameAs: 'https://www.wikidata.org/wiki/Q137454477',
+  //       },
+  //     },
+  //   ];
+
+  //   books.forEach((book) => {
+  //     const script = this.document.createElement('script');
+  //     script.type = 'application/ld+json';
+  //     script.text = JSON.stringify(book);
+  //     this.document.head.appendChild(script);
+  //   });
+  // }
+
+  private addBooksSchema(): void {
+    const SCRIPT_ID = 'books-schema';
+
+    // 🛑 защита от повторного добавления (важно для Angular / SPA)
+    if (this.document.getElementById(SCRIPT_ID)) return;
+
+    const authorId = 'https://arapov.trade/#author';
+
+    const books = [
+      {
+        '@type': 'Book',
+        name: 'Психологія трейдингу: Як керувати емоціями та мислити як професіонал',
+        isbn: '979-8-90243-504-4',
+        inLanguage: 'uk',
+        sameAs: [
+          'https://doi.org/10.5281/zenodo.18396377',
+          'http://www.irbis-nbuv.gov.ua/cgi-bin/irbis64r_81/cgiirbis_64.exe?...',
+        ],
+      },
+      {
+        '@type': 'Book',
+        name: 'Психология трейдинга: Как управлять эмоциями и мыслить как профессионал',
+        isbn: '979-8-90243-081-0',
+        inLanguage: 'ru',
+        sameAs: ['https://doi.org/10.5281/zenodo.18057875'],
+      },
+      {
+        '@type': 'Book',
+        name: 'Trading psychology. How to Master Your Emotions and Think Like a Professional',
+        isbn: '979-8-90243-138-1',
+        inLanguage: 'en',
+        sameAs: [
+          'https://doi.org/10.5281/zenodo.18057306',
+          'http://www.irbis-nbuv.gov.ua/cgi-bin/irbis64r_81/cgiirbis_64.exe?...',
+        ],
+      },
+      {
+        '@type': 'Book',
+        name: "Теорія трейдингу. Основи ринку • Технічний аналіз • Об'ємний аналіз",
+        isbn: '979-8-90243-730-7',
+        inLanguage: 'uk',
+        sameAs: [
+          'https://doi.org/10.5281/zenodo.18396300',
+          'http://www.irbis-nbuv.gov.ua/cgi-bin/irbis64r_81/cgiirbis_64.exe?...',
+        ],
+      },
+      {
+        '@type': 'Book',
+        name: 'Теория трейдинга. Основы рынка • Технический анализ • Объёмный анализ',
+        isbn: '979-8-90243-075-9',
+        inLanguage: 'ru',
+        sameAs: ['https://doi.org/10.5281/zenodo.18057849'],
+      },
+      {
+        '@type': 'Book',
+        name: 'Trading fundamentals. Market Basics • Technical Analysis • Volume Analysis',
+        isbn: '979-8-90243-734-5',
+        inLanguage: 'en',
+        sameAs: [
+          'https://doi.org/10.5281/zenodo.18364022',
+          'http://www.irbis-nbuv.gov.ua/cgi-bin/irbis64r_81/cgiirbis_64.exe?...',
+        ],
+      },
+      {
+        '@type': 'Book',
+        name: "Методи аналізу. Технічний аналіз • Об'ємний аналіз • Практика",
+        isbn: '979-8-90243-732-1',
+        inLanguage: 'uk',
+        sameAs: [
+          'https://doi.org/10.5281/zenodo.18396338',
+          'http://www.irbis-nbuv.gov.ua/cgi-bin/irbis64r_81/cgiirbis_64.exe?...',
+        ],
+      },
+      {
+        '@type': 'Book',
+        name: 'Методы анализа. Технический анализ • Объёмный анализ • Практика',
+        isbn: '979-8-90243-078-0',
+        inLanguage: 'ru',
+        sameAs: ['https://doi.org/10.5281/zenodo.18057863'],
+      },
+      {
+        '@type': 'Book',
+        name: 'Analysis methods. Technical Analysis • Volume Analysis • Practice',
+        isbn: '979-8-90243-755-0',
+        inLanguage: 'en',
+        sameAs: [
+          'https://doi.org/10.5281/zenodo.18364066',
+          'http://www.irbis-nbuv.gov.ua/cgi-bin/irbis64r_81/cgiirbis_64.exe?...',
+        ],
+      },
+    ];
+
+    const schema = {
+      '@context': 'https://schema.org',
+      '@graph': [
+        // 👤 единый автор
+        {
+          '@type': 'Person',
+          '@id': authorId,
+          name: 'Igor Arapov',
+          sameAs: ['https://www.wikidata.org/wiki/Q137454477'],
+        },
+
+        // 📚 книги
+        ...books.map((book) => ({
+          ...book,
+          author: { '@id': authorId },
+        })),
+      ],
+    };
+
+    const script = this.document.createElement('script');
+    script.id = SCRIPT_ID;
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(schema);
 
     this.document.head.appendChild(script);
   }

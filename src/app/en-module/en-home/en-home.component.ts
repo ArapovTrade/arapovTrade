@@ -79,6 +79,9 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
     this.removeExistingWebPageSchema();
     this.addPersoneSchema();
     this.addProfilePageSchema();
+    this.addEventSchema();
+    this.addBooksSchema();
+
     this.registForm = new FormGroup({
       userName: new FormControl('', Validators.required),
       userEmail: new FormControl(null, [Validators.email, Validators.required]),
@@ -368,29 +371,7 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
           },
         },
       ],
-      event: [
-        {
-          '@type': 'Event',
-          name: 'Guest Lecture on Trading and Exchange Activity',
-          startDate: '2026-03-19T00:00:00+02:00',
-          endDate: '2026-03-19T23:59:00+02:00',
-          location: {
-            '@type': 'Place',
-            name: 'National University of Food Technologies',
-            sameAs: 'https://www.wikidata.org/wiki/Q4315127',
-          },
-          organizer: {
-            '@type': 'Organization',
-            name: 'NUFT',
-            url: 'https://nuft.edu.ua',
-          },
-          url: 'https://nuft.edu.ua/news/podiyi/pppro-trejding-i-birzhovu-diyalnist-–-zdobuvacham-osvitnoyi-programi',
-          performer: {
-            '@type': 'Person',
-            '@id': 'https://arapov.trade/en#person',
-          },
-        },
-      ],
+
       workExample: [
         {
           '@type': 'ScholarlyArticle',
@@ -631,9 +612,199 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
         if (content['@type'] === 'ProfilePage') {
           script.remove();
         }
+        if (content['@type'] === 'Event') {
+          script.remove();
+        }
+        if (content['@type'] === 'Book') {
+          script.remove();
+        }
       } catch (e) {
         // Игнорируем некорректные JSON (например, из других источников)
       }
     });
+  }
+
+  private addEventSchema() {
+    const exists = Array.from(
+      this.document.querySelectorAll('script[type="application/ld+json"]'),
+    ).some((script) => {
+      try {
+        const json = JSON.parse(script.textContent || '{}');
+        return (
+          json['@type'] === 'Event' &&
+          json['name'] === 'Guest Lecture on Trading and Exchange Activity'
+        );
+      } catch {
+        return false;
+      }
+    });
+
+    // Если уже существует — выходим
+    if (exists) return;
+
+    // Создаем новый JSON-LD
+    const script = this.document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Event',
+      name: 'Guest Lecture on Trading and Exchange Activity',
+      description:
+        'Guest lecture for Digital Business program students at NUFT, covering organized financial markets, CME Group structure and gold futures volume analysis.',
+      startDate: '2026-03-19T00:00:00+02:00',
+      endDate: '2026-03-19T23:59:00+02:00',
+      eventStatus: 'https://schema.org/EventScheduled',
+      image:
+        'https://nuft.edu.ua/assets/images/News/2026/03/19/ekonomteoriya1-18-03-2026.jpg',
+      location: {
+        '@type': 'Place',
+        name: 'National University of Food Technologies',
+        sameAs: 'https://www.wikidata.org/wiki/Q4315127',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '68 Volodymyrska St',
+          addressLocality: 'Kyiv',
+          addressCountry: 'UA',
+        },
+      },
+      offers: {
+        '@type': 'Offer',
+        price: '0',
+        priceCurrency: 'UAH',
+        availability: 'https://schema.org/InStock',
+      },
+      organizer: {
+        '@type': 'Organization',
+        name: 'NUFT',
+        url: 'https://nuft.edu.ua',
+      },
+      url: 'https://nuft.edu.ua/news/podiyi/pppro-trejding-i-birzhovu-diyalnist-–-zdobuvacham-osvitnoyi-programi',
+      performer: {
+        '@type': 'Person',
+        '@id': 'https://arapov.trade/en#person',
+        name: 'Igor Arapov',
+      },
+    });
+
+    this.document.head.appendChild(script);
+  }
+
+   private addBooksSchema(): void {
+    const SCRIPT_ID = 'books-schema';
+
+    // 🛑 защита от повторного добавления (важно для Angular / SPA)
+    if (this.document.getElementById(SCRIPT_ID)) return;
+
+    const authorId = 'https://arapov.trade/#author';
+
+    const books = [
+      {
+        '@type': 'Book',
+        name: 'Психологія трейдингу: Як керувати емоціями та мислити як професіонал',
+        isbn: '979-8-90243-504-4',
+        inLanguage: 'uk',
+        sameAs: [
+          'https://doi.org/10.5281/zenodo.18396377',
+          'http://www.irbis-nbuv.gov.ua/cgi-bin/irbis64r_81/cgiirbis_64.exe?...',
+        ],
+      },
+      {
+        '@type': 'Book',
+        name: 'Психология трейдинга: Как управлять эмоциями и мыслить как профессионал',
+        isbn: '979-8-90243-081-0',
+        inLanguage: 'ru',
+        sameAs: ['https://doi.org/10.5281/zenodo.18057875'],
+      },
+      {
+        '@type': 'Book',
+        name: 'Trading psychology. How to Master Your Emotions and Think Like a Professional',
+        isbn: '979-8-90243-138-1',
+        inLanguage: 'en',
+        sameAs: [
+          'https://doi.org/10.5281/zenodo.18057306',
+          'http://www.irbis-nbuv.gov.ua/cgi-bin/irbis64r_81/cgiirbis_64.exe?...',
+        ],
+      },
+      {
+        '@type': 'Book',
+        name: "Теорія трейдингу. Основи ринку • Технічний аналіз • Об'ємний аналіз",
+        isbn: '979-8-90243-730-7',
+        inLanguage: 'uk',
+        sameAs: [
+          'https://doi.org/10.5281/zenodo.18396300',
+          'http://www.irbis-nbuv.gov.ua/cgi-bin/irbis64r_81/cgiirbis_64.exe?...',
+        ],
+      },
+      {
+        '@type': 'Book',
+        name: 'Теория трейдинга. Основы рынка • Технический анализ • Объёмный анализ',
+        isbn: '979-8-90243-075-9',
+        inLanguage: 'ru',
+        sameAs: ['https://doi.org/10.5281/zenodo.18057849'],
+      },
+      {
+        '@type': 'Book',
+        name: 'Trading fundamentals. Market Basics • Technical Analysis • Volume Analysis',
+        isbn: '979-8-90243-734-5',
+        inLanguage: 'en',
+        sameAs: [
+          'https://doi.org/10.5281/zenodo.18364022',
+          'http://www.irbis-nbuv.gov.ua/cgi-bin/irbis64r_81/cgiirbis_64.exe?...',
+        ],
+      },
+      {
+        '@type': 'Book',
+        name: "Методи аналізу. Технічний аналіз • Об'ємний аналіз • Практика",
+        isbn: '979-8-90243-732-1',
+        inLanguage: 'uk',
+        sameAs: [
+          'https://doi.org/10.5281/zenodo.18396338',
+          'http://www.irbis-nbuv.gov.ua/cgi-bin/irbis64r_81/cgiirbis_64.exe?...',
+        ],
+      },
+      {
+        '@type': 'Book',
+        name: 'Методы анализа. Технический анализ • Объёмный анализ • Практика',
+        isbn: '979-8-90243-078-0',
+        inLanguage: 'ru',
+        sameAs: ['https://doi.org/10.5281/zenodo.18057863'],
+      },
+      {
+        '@type': 'Book',
+        name: 'Analysis methods. Technical Analysis • Volume Analysis • Practice',
+        isbn: '979-8-90243-755-0',
+        inLanguage: 'en',
+        sameAs: [
+          'https://doi.org/10.5281/zenodo.18364066',
+          'http://www.irbis-nbuv.gov.ua/cgi-bin/irbis64r_81/cgiirbis_64.exe?...',
+        ],
+      },
+    ];
+
+    const schema = {
+      '@context': 'https://schema.org',
+      '@graph': [
+        // 👤 единый автор
+        {
+          '@type': 'Person',
+          '@id': authorId,
+          name: 'Igor Arapov',
+          sameAs: ['https://www.wikidata.org/wiki/Q137454477'],
+        },
+
+        // 📚 книги
+        ...books.map((book) => ({
+          ...book,
+          author: { '@id': authorId },
+        })),
+      ],
+    };
+
+    const script = this.document.createElement('script');
+    script.id = SCRIPT_ID;
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(schema);
+
+    this.document.head.appendChild(script);
   }
 }
