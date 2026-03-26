@@ -56,6 +56,7 @@ export class MetaservService {
           'https://openalex.org/authors/a5127355048',
           'https://ru.tradingview.com/u/Igor_Arapov/',
           'https://www.wikidata.org/wiki/Q137454477',
+          'https://nuft.edu.ua/news/podiyi/pppro-trejding-i-birzhovu-diyalnist-%E2%80%93-zdobuvacham-osvitnoyi-programi',
           'https://orcid.org/0009-0003-0430-778X',
           'https://ssrn.com/author=10402456',
           'https://doi.org/10.32702/2306-6814.2026.4.96',
