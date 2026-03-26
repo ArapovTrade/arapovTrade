@@ -363,6 +363,15 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
           '@type': 'Article',
           url: 'https://nuft.edu.ua/news/podiyi/pppro-trejding-i-birzhovu-diyalnist-–-zdobuvacham-osvitnoyi-programi',
           name: 'Guest Lecture on Trading and Exchange Activity for Digital Business Program Students',
+          image:
+            'https://nuft.edu.ua/assets/images/News/2026/03/19/ekonomteoriya1-18-03-2026.jpg',
+          author: {
+            '@type': 'Person',
+            '@id': 'https://arapov.trade/en#person',
+            name: 'Ігор Арапов',
+          },
+          headline:
+            'Про трейдинг і біржову діяльність – здобувачам освітньої програми «Цифровий бізнес»',
           datePublished: '2026-03-19T00:00:00Z',
           publisher: {
             '@type': 'Organization',
@@ -664,15 +673,20 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
           '@type': 'PostalAddress',
           streetAddress: '68 Volodymyrska St',
           addressLocality: 'Kyiv',
-          addressCountry: 'UA',
+          addressCountry: {
+  '@type': 'Country',
+  name: 'UA',
+},
         },
       },
       offers: {
-        '@type': 'Offer',
-        price: '0',
-        priceCurrency: 'UAH',
-        availability: 'https://schema.org/InStock',
-      },
+  '@type': 'Offer',
+  price: '0',
+  priceCurrency: 'UAH',
+  availability: 'https://schema.org/InStock',
+  url: 'https://nuft.edu.ua/news/podiyi/pppro-trejding-i-birzhovu-diyalnist-–-zdobuvacham-osvitnoyi-programi',
+  validFrom: '2026-03-19T00:00:00+02:00',
+},
       organizer: {
         '@type': 'Organization',
         name: 'NUFT',
@@ -689,7 +703,7 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
     this.document.head.appendChild(script);
   }
 
-   private addBooksSchema(): void {
+  private addBooksSchema(): void {
     const SCRIPT_ID = 'global-schema';
 
     if (this.document.getElementById(SCRIPT_ID)) return;

@@ -400,6 +400,15 @@ export class RuHomeComponent implements OnInit, AfterViewInit, OnDestroy {
           url: 'https://nuft.edu.ua/news/podiyi/pppro-trejding-i-birzhovu-diyalnist-–-zdobuvacham-osvitnoyi-programi',
           name: 'Гостевая лекция по трейдингу и биржевой деятельности для студентов образовательной программы «Цифровой бизнес»',
           datePublished: '2026-03-19T00:00:00Z',
+          image:
+            'https://nuft.edu.ua/assets/images/News/2026/03/19/ekonomteoriya1-18-03-2026.jpg',
+          author: {
+            '@type': 'Person',
+            '@id': 'https://arapov.trade/ru#person',
+            name: 'Ігор Арапов',
+          },
+          headline:
+            'Про трейдинг і біржову діяльність – здобувачам освітньої програми «Цифровий бізнес»',
           publisher: {
             '@type': 'Organization',
             name: 'Национальный университет пищевых технологий',
@@ -676,7 +685,10 @@ export class RuHomeComponent implements OnInit, AfterViewInit, OnDestroy {
           '@type': 'PostalAddress',
           streetAddress: 'ул. Владимирская 68',
           addressLocality: 'Киев',
-          addressCountry: 'UA',
+          addressCountry: {
+            '@type': 'Country',
+            name: 'UA',
+          },
         },
       },
       offers: {
@@ -684,6 +696,8 @@ export class RuHomeComponent implements OnInit, AfterViewInit, OnDestroy {
         price: '0',
         priceCurrency: 'UAH',
         availability: 'https://schema.org/InStock',
+        url: 'https://nuft.edu.ua/news/podiyi/pppro-trejding-i-birzhovu-diyalnist-–-zdobuvacham-osvitnoyi-programi',
+        validFrom: '2026-03-19T00:00:00+02:00',
       },
       organizer: {
         '@type': 'Organization',
