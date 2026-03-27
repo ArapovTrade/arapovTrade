@@ -103,7 +103,7 @@
 
 //section two
 .author-page_section-two {
-  height: 1150px;
+  height: 1200px;
   position: relative;
   display: flex;
   width: 82.6%;
@@ -115,7 +115,8 @@
 }
 .section-two_text-block {
   height: 800px;
-  width: 560px;
+  // width: 560px;
+  width: 650px;
 }
 .section-two_image-block {
   width: 530px;
@@ -128,7 +129,7 @@
     }
 .author-page_main-block_proc-block {
     margin-top: 25px;
-    width: 495px;
+    width: 650px;
         display: flex
 ;
     gap: 30px; 
@@ -138,7 +139,7 @@
 }
 
 .proc-block_item {
-  width: 495px;
+ width: 650px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;

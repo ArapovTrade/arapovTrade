@@ -516,6 +516,17 @@
             href="https://scholar.google.com/citations?user=N440tWQAAAAJ&hl"
             >Google Scholar</a
           >
+          ,
+          <a
+            [ngStyle]="{
+              color: isDark ? '#fdff8b' : '#0074e6',
+            }"
+            target="_blank"
+            class="linkrefinto"
+            style="text-decoration: underline"
+            href="https://www.wikidata.org/wiki/Q137454477"
+            >Q137454477</a
+          >
           ). <br /><br />
         </span>
       </div>
@@ -636,6 +647,7 @@
             >
               Вибір редакції
             </div>
+
             <div
               class="proc-block_descr-text"
               [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
@@ -675,6 +687,56 @@
             </div>
           </div>
         </div>
+
+        <div class="proc-block_item">
+          <div
+            class="proc-block_tick"
+            [ngStyle]="{
+              border: isDark
+                ? '3px solid rgba(255, 255, 255, 0.16)'
+                : '3px solid rgba(0, 130, 204, 0.16)',
+            }"
+          >
+            <img
+              [src]="
+                isDark
+                  ? '/assets/redesignArapovTrade/img/tick-dark.png'
+                  : '/assets/redesignArapovTrade/img/tick-light.png'
+              "
+              alt="img"
+            />
+          </div>
+
+          <div class="proc-block_descr">
+            <div
+              class="proc-block_descr-title"
+              [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+            >
+              Лекції
+            </div>
+
+            <div
+              class="proc-block_descr-text"
+              [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+            >
+              У березні 2026 року Ігор Арапов був запрошений як гостьовий лектор
+              на кафедру економічної теорії
+              <a
+                [ngStyle]="{
+                  color: isDark ? '#fdff8b' : '#0074e6',
+                }"
+                class="linkrefinto"
+                style="text-decoration: underline"
+                href="https://nuft.edu.ua/news/podiyi/pppro-trejding-i-birzhovu-diyalnist-–-zdobuvacham-osvitnoyi-programi"
+                >Національного університету харчових технологій</a
+              >
+              (НУХТ, Київ). Лекція для студентів освітньої програми «Цифровий
+              бізнес» була присвячена устрою організованих фінансових ринків,
+              структурі CME Group та практичному аналізу ф'ючерсу на золото.
+            </div>
+          </div>
+        </div>
+
         <div class="proc-block_item">
           <div
             class="proc-block_tick"

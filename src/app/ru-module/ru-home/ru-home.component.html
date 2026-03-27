@@ -513,6 +513,16 @@
             style="text-decoration: underline"
             href="https://scholar.google.com/citations?user=N440tWQAAAAJ&hl"
             >Google Scholar</a
+          > ,
+          <a
+            [ngStyle]="{
+              color: isDark ? '#fdff8b' : '#0074e6',
+            }"
+            target="_blank"
+            class="linkrefinto"
+            style="text-decoration: underline"
+            href="https://www.wikidata.org/wiki/Q137454477"
+            >Q137454477</a
           >
           ).  <br /><br />
         </span>
@@ -666,6 +676,51 @@
                 href="https://www.tradingview.com/chart/BTCUSDT/mHCWLVux-bitkoin-kripto-zima-nadolgo/"
                 >Выбор редакции</a
               >»
+            </div>
+          </div>
+        </div>
+        <div class="proc-block_item">
+          <div
+            class="proc-block_tick"
+            [ngStyle]="{
+              border: isDark
+                ? '3px solid rgba(255, 255, 255, 0.16)'
+                : '3px solid rgba(0, 130, 204, 0.16)',
+            }"
+          >
+            <img
+              [src]="
+                isDark
+                  ? '/assets/redesignArapovTrade/img/tick-dark.png'
+                  : '/assets/redesignArapovTrade/img/tick-light.png'
+              "
+              alt="img"
+            />
+          </div>
+
+          <div class="proc-block_descr">
+            <div
+              class="proc-block_descr-title"
+              [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+            >
+              Лекции
+            </div>
+
+            <div
+              class="proc-block_descr-text"
+              [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+            >
+              В марте 2026 года Игорь Арапов был приглашён в качестве гостевого лектора на кафедру экономической теории
+              <a
+                [ngStyle]="{
+                  color: isDark ? '#fdff8b' : '#0074e6',
+                }"
+                class="linkrefinto"
+                style="text-decoration: underline"
+                href="https://nuft.edu.ua/news/podiyi/pppro-trejding-i-birzhovu-diyalnist-–-zdobuvacham-osvitnoyi-programi"
+                >Национального университета пищевых технологий</a
+              >
+              (НУХТ, Киев). Лекция для студентов образовательной программы «Цифровой бизнес» была посвящена устройству организованных финансовых рынков, структуре CME Group и практическому анализу фьючерса на золото.
             </div>
           </div>
         </div>
