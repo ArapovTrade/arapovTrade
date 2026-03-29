@@ -6,332 +6,403 @@
           <div class="m-right hero-section"></div>
 
           <div class="free-courses_main-container">
-            <main itemscope itemtype="https://schema.org/Article" lang="en">
-              <header>
-                <h1 itemprop="headline">Martingale method</h1>
-              </header>
+            <main lang="en">
+              <article>
+                <h1 itemprop="headline">
+                  Martingale Method in Trading: Complete Guide to Position
+                  Sizing and Risk Management
+                </h1>
 
-              <article itemprop="articleBody">
-                <h2>What is the Martingale Method?</h2>
-                <p>
-                  <strong>The Martingale method</strong> is one of the most
-                  well-known capital management strategies, used both in
-                  gambling and on financial markets. The essence of the method
-                  is that after each losing trade or bet, the next volume is
-                  doubled, thereby aiming to recover all previous losses and
-                  make a profit on the first successful outcome.
-                </p>
+                <section>
+                  <h2>Understanding the Martingale Method</h2>
+                  <p>
+                    The <dfn>Martingale method</dfn> represents a mathematical
+                    framework for managing trade position sizes based on the
+                    principle of loss recovery through progressive position
+                    scaling. The core concept is straightforward: after each
+                    losing trade, the next position doubles in size,
+                    theoretically allowing the first winning trade to recover
+                    all accumulated losses and generate net profit. To
+                    understand this topic more deeply, I recommend studying
+                    <a
+                      class="linkrefinto"
+                      href="https://arapov.trade/en/freestudying/averagingintrading"
+                      >position averaging</a
+                    >.
+                  </p>
 
-                <p>
-                  This <strong>Martingale strategy</strong> is based on
-                  mathematical probability theory and is widely used in areas
-                  such as <strong>Forex trading</strong>,
-                  <strong>cryptocurrency trading</strong>,
-                  <strong>sports betting</strong>, and even
-                  <strong>roulette</strong>. Despite its simplicity, the method
-                  requires strict adherence to risk management rules and a
-                  sufficient deposit.
-                </p>
+                  <p>
+                    This approach relies on probability theory and the
+                    assumption that an infinite losing streak is statistically
+                    impossible. In practical application, traders employ this
+                    system across currency pairs, cryptocurrencies, and equity
+                    instruments. Successful implementation demands substantial
+                    starting capital and unwavering discipline in following the
+                    rules.
+                  </p>
+                </section>
 
-                <p>
-                  Many traders view
-                  <strong>Martingale as a way to rapidly grow a deposit</strong
-                  >, especially in the early stages of trading. However, it’s
-                  crucial to understand that with the wrong approach, the
-                  strategy can lead to a complete loss of capital.
-                </p>
+                <section>
+                  <h2>Historical Origins of the Strategy</h2>
+                  <p>
+                    The method traces its roots to eighteenth-century France,
+                    where it gained popularity among roulette players. Bets were
+                    placed on equal probability outcomes such as red or black,
+                    odd or even. After each loss, the stake doubled, and the
+                    first win would recover all previous losses while generating
+                    profit equal to the initial bet. Read more about this in the
+                    article:
+                    <a
+                      class="linkrefinto"
+                      href="https://arapov.trade/en/freestudying/mainreasonforlosses"
+                      >The Main Reason for Losses</a
+                    >.
+                  </p>
 
-                <h2>History of the Strategy</h2>
-                <h3>Origins in Gambling</h3>
-                <p>
-                  The history of the <strong>Martingale method</strong> began in
-                  18th-century France. It was originally used in gambling,
-                  particularly in roulette, where players bet on even-money
-                  outcomes — for example, red or black. After a loss, the bet
-                  was doubled, and a win would recover all previous losses plus
-                  profit.
-                </p>
+                  <p>
+                    With the emergence of electronic trading platforms, the
+                    strategy migrated to financial markets. Instead of bets,
+                    traders began using position volumes, and instead of the
+                    roulette wheel, they analyzed price charts of currencies and
+                    stocks. The adaptation preserved the fundamental logic while
+                    introducing new variables: spreads, swaps, and market
+                    <dfn>volatility</dfn>.
+                  </p>
+                </section>
 
-                <p>
-                  The approach became so popular that casino owners had to
-                  introduce maximum bet limits to protect their interests.
-                  <strong>Martingale in roulette</strong> became a symbol of an
-                  aggressive strategy based on mathematical logic but ignoring
-                  real capital constraints.
-                </p>
+                <section>
+                  <h2>Mathematical Mechanics Explained</h2>
+                  <p>
+                    The classical implementation operates on
+                    <dfn>geometric progression</dfn>. The initial position size
+                    is sequentially multiplied by two following each loss.
+                    Starting with 0.01 lots, the second trade becomes 0.02, the
+                    third reaches 0.04, and the fourth hits 0.08. Closing any
+                    position profitably yields returns exceeding the sum of all
+                    prior losses.
+                  </p>
 
-                <h3>Transition to Trading</h3>
-                <p>
-                  With the development of financial markets,
-                  <strong>Martingale</strong> found application in
-                  <strong>trading</strong> and <strong>sports betting</strong>.
-                  It became especially popular among beginner traders looking to
-                  quickly grow their deposits. On exchanges, the strategy was
-                  adapted: instead of bets, trade volumes are used, and instead
-                  of roulette — currency pairs, stocks, and cryptocurrencies.
-                </p>
+                  <p>
+                    Consider a numerical illustration. Suppose each losing trade
+                    results in a 10-dollar loss per 0.01 <dfn>lot</dfn>. The
+                    first loss totals 10 dollars, the second after doubling
+                    reaches 20, and the third climbs to 40. Cumulative losses
+                    stand at 70 dollars. The fourth trade at 0.08 lots, if
+                    successful, generates 80 dollars, covering all losses and
+                    delivering 10 dollars in net profit.
+                  </p>
 
-                <p>
-                  Today, <strong>Martingale in trading</strong> is regarded as a
-                  high-risk but potentially profitable strategy that requires
-                  precise calculation and discipline.
-                </p>
+                  <p>
+                    An alternative approach employs
+                    <dfn>arithmetic progression</dfn>. Position size increases
+                    by a fixed percentage rather than doubling — typically
+                    thirty to fifty percent. This method reduces deposit strain
+                    while requiring more winning trades to break even.
+                  </p>
+                </section>
 
-                <h2>How the Martingale Method Works</h2>
-                <h3>Geometric Progression</h3>
-                <p>
-                  The classic implementation of
-                  <strong>Martingale in trading</strong> is based on geometric
-                  progression. This means that after each losing trade, the
-                  volume of the next position is doubled. Example:
-                </p>
+                <section>
+                  <h2>Practical Application in Forex Trading</h2>
+                  <p>
+                    Currency markets typically see Martingale implemented
+                    through automated trading systems. The algorithm opens a
+                    position with minimum lot size, establishes protective
+                    <dfn>stop loss</dfn> and target
+                    <dfn>take profit</dfn> levels. When the stop triggers, the
+                    robot immediately opens a new trade at double volume in the
+                    same direction.
+                  </p>
 
-                <ul>
-                  <li>First trade — 0.01 lot</li>
-                  <li>Second — 0.02 lot</li>
-                  <li>Third — 0.04 lot</li>
-                </ul>
+                  <p>
+                    Standard configuration for EUR/USD includes initial volume
+                    of 0.01 lots, stop loss at thirty pips, and take profit at
+                    fifty. The risk-reward ratio of one to one-and-a-half
+                    provides positive mathematical expectancy when combined with
+                    the doubling system.
+                  </p>
 
-                <p>
-                  If the third trade closes in profit, it covers the losses from
-                  the first two and brings net income. This approach requires
-                  significant capital, especially during long losing streaks.
-                  <strong>Geometric progression in trading</strong> is a
-                  powerful tool but must be used cautiously.
-                </p>
+                  <p>
+                    Broker commissions and overnight swaps require careful
+                    consideration. Frequent position reopening can significantly
+                    reduce overall profitability or render the strategy
+                    unprofitable entirely.
+                  </p>
+                </section>
 
-                <h3>Arithmetic Progression</h3>
-                <p>
-                  A less aggressive variant is the use of
-                  <strong>arithmetic progression in Martingale</strong>. Here,
-                  the trade volume increases not by doubling, but by a fixed
-                  percentage — for example, 30–50%. This reduces the load on the
-                  deposit and makes the strategy more flexible.
-                </p>
+                <img
+                  src="/assets/img/content/martingale1.jpg"
+                  alt="Chart showing Martingale method application in financial markets"
+                  loading="lazy"
+                />
 
-                <p>
-                  Although this approach requires more winning trades to break
-                  even, it significantly reduces the risk of total capital loss.
-                  <strong>Arithmetic Martingale</strong> is often used in
-                  automated trading systems and manual trading with limited
-                  budgets.
-                </p>
+                <section>
+                  <h2>Cryptocurrency Trading Considerations</h2>
+                  <p>
+                    Cryptocurrency markets exhibit extreme volatility, making
+                    Martingale application particularly hazardous. Daily swings
+                    of ten to fifteen percent occur regularly, and losing
+                    streaks can develop rapidly without warning.
+                  </p>
 
-                <h2>Application of the Martingale Method in Trading</h2>
-                <h3>Martingale on Forex</h3>
-                <p>
-                  On the <strong>Forex market</strong>, the Martingale strategy
-                  is adapted to the specifics of currency pairs and trading
-                  conditions. Automation is often used — trading robots that
-                  open trades according to a set algorithm, taking into account
-                  stop-loss and take-profit levels.
-                </p>
+                  <p>
+                    When trading Bitcoin or altcoins, modified versions with
+                    reduced multiplication coefficients prove more prudent.
+                    Rather than doubling, traders apply factors of 1.5 or 1.3.
+                    This provides greater maneuverability during extended
+                    adverse price movements.
+                  </p>
+                </section>
 
-                <p>Example of <strong>Martingale on Forex</strong>:</p>
+                <section>
+                  <h2>Critical Risks and Limitations</h2>
+                  <p>
+                    The fundamental challenge lies in exponential capital
+                    requirements. After ten consecutive losses, position size
+                    exceeds the initial amount by a thousand times. Few trading
+                    accounts can sustain such <dfn>drawdown</dfn>, and broker
+                    restrictions on maximum lot size may prevent continuation.
+                  </p>
 
-                <ul>
-                  <li>Opening a trade on EUR/USD with 0.01 lot</li>
-                  <li>Stop-loss — 30 pips, take-profit — 50 pips</li>
-                  <li>If stop-loss triggers — next trade with 0.02 lot</li>
-                </ul>
+                  <p>
+                    Psychological pressure intensifies proportionally with
+                    position size. When amounts far exceeding comfort levels are
+                    at stake, traders begin making irrational decisions: closing
+                    trades prematurely or abandoning the strategy at inopportune
+                    moments.
+                  </p>
 
-                <p>
-                  This continues until a profit is made that covers all previous
-                  losses. <strong>Forex and Martingale</strong> is a combination
-                  that requires precise calculation and understanding of market
-                  dynamics.
-                </p>
+                  <p>
+                    Market conditions introduce additional complications.
+                    Extended trends without retracements, news shocks, and
+                    geopolitical events can generate losing sequences that
+                    exceed any reasonable projections.
+                  </p>
+                </section>
 
-                <h3>Martingale in Cryptocurrency Trading</h3>
-                <p>
-                  On <strong>cryptocurrency markets</strong>, the Martingale
-                  strategy is applied with extreme caution. High volatility and
-                  unpredictable price movements can lead to rapid deposit
-                  depletion. However, with proper algorithm settings and
-                  technical analysis, good results are possible.
-                </p>
+                <section>
+                  <h2>Common Implementation Mistakes</h2>
+                  <p>
+                    The most prevalent error involves underestimating required
+                    capital. Beginners launch the strategy with minimal
+                    deposits, hoping for luck. The first extended losing streak
+                    completely wipes out the account.
+                  </p>
 
-                <h2>Advantages of the Martingale Method</h2>
-                <ul>
-                  <li>
-                    <strong>Simplicity of the algorithm</strong> — easy to
-                    implement manually or via a robot
-                  </li>
-                  <li>
-                    <strong>Potential profitability</strong> — with proper
-                    settings, you can quickly go into profit
-                  </li>
-                  <li>
-                    <strong>Automation-friendly</strong> — suitable for building
-                    trading systems
-                  </li>
-                </ul>
-                <div class="flex">
-                  <img
-                    class="pictureImg"
-                    src="/assets/img/content/martingale1.jpg"
-                    loading="lazy"
-                    alt="Chart of Bitcoin dominance on TradingView"
-                  />
-                </div>
-                <h2>Disadvantages and Risks of the Strategy</h2>
-                <h3>High Deposit Requirements</h3>
-                <p>
-                  The <strong>main risk of Martingale</strong> is the need for a
-                  large capital base. A series of losing trades can quickly
-                  drain the deposit.
-                </p>
+                  <p>
+                    The second frequent problem concerns ignoring market
+                    context. Applying Martingale against strong trends
+                    dramatically increases catastrophic loss probability. The
+                    strategy performs better in ranging markets or when trend
+                    direction is clearly understood.
+                  </p>
 
-                <p>For example, with 5 consecutive losing trades:</p>
+                  <p>
+                    The third mistake involves lacking an exit plan. Traders
+                    must predetermine maximum doubling count and acceptable loss
+                    threshold. Without these constraints, the temptation to
+                    continue position building persists until funds are
+                    exhausted.
+                  </p>
+                </section>
 
-                <ul>
-                  <li>0.01 → 0.02 → 0.04 → 0.08 → 0.16 lot</li>
-                  <li>Total volume — 0.31 lot</li>
-                  <li>Drawdown — critical for a small account</li>
-                </ul>
+                <section>
+                  <h2>Guidelines for Safe Application</h2>
+                  <p>
+                    The first rule demands adequate account size. Capital must
+                    withstand minimum eight to ten consecutive losing
+                    operations. Initial position volume should not exceed
+                    one-tenth of one percent of total account balance.
+                  </p>
 
-                <h3>Psychological Pressure</h3>
-                <p>
-                  Traders can experience stress, especially during long losing
-                  streaks. This leads to mistakes and deviation from the
-                  strategy.
-                </p>
-
-                <h2>Examples of Using the Martingale Method</h2>
-                <h3>Example on a Currency Pair</h3>
-                <p>
-                  You trade EUR/USD. Goal — earn $5 (50 pips), stop-loss — 30
-                  pips.
-                </p>
-
-                <ul>
-                  <li>First trade: 0.01 lot → loss $3</li>
-                  <li>Second: 0.02 lot → loss $6</li>
-                  <li>Third: 0.04 lot → profit $20</li>
-                </ul>
-
-                <p>Result: losses covered + net profit $11.</p>
-
-                <h3>Example in Sports Betting</h3>
-                <p>Bet on a team win with odds of 2.0:</p>
-
-                <ul>
-                  <li>First bet — $10 → loss</li>
-                  <li>Second — $20 → loss</li>
-                  <li>Third — $40 → win</li>
-                </ul>
-
-                <p>Win — $80, net profit — $10.</p>
-
-                <h2>Common Mistakes When Using Martingale</h2>
-                <p>
-                  Despite the popularity of the
-                  <strong>Martingale strategy in trading</strong>, it has many
-                  pitfalls. Beginners especially often make mistakes because
-                  they don’t fully understand risk and capital management
-                  principles. Below are the most common errors that can lead to
-                  deposit loss.
-                </p>
-
-                <ul>
-                  <li>
-                    <strong
-                      >Over-increasing lot size without calculation</strong
+                  <p>
+                    The second rule requires strict doubling limits. The optimal
+                    cap stands at four to five iterations. Upon reaching this
+                    threshold, accept the loss and begin a fresh sequence from
+                    minimum size.
+                    <dfn
+                      ><a
+                        class="linkrefinto"
+                        href="https://arapov.trade/en/freestudying/capitalmanagement"
+                        >Risk management</a
+                      ></dfn
                     >
-                    — one of the most dangerous mistakes.
-                  </li>
-                  <li>
-                    <strong>No underlying trading strategy</strong> — blindly
-                    doubling without market analysis is ineffective.
-                  </li>
-                  <li>
-                    <strong>Insufficient deposit</strong> — Martingale with a
-                    small deposit almost guarantees a wipeout.
-                  </li>
-                  <li>
-                    <strong>Ignoring market conditions</strong> — using the
-                    strategy during high volatility or news can be disastrous.
-                  </li>
-                  <li>
-                    <strong>Psychological pressure</strong> — panic after
-                    several losses leads to breaking discipline.
-                  </li>
-                </ul>
+                    plays the decisive role here.
+                  </p>
 
-                <p>
-                  To avoid these mistakes, remember that
-                  <strong>Martingale is not a magic formula</strong> — it’s a
-                  tool that requires a competent approach and strict capital
-                  management rules.
-                </p>
+                  <p>
+                    The third rule mandates trading exclusively with the trend.
+                    Technical analysis must confirm entry direction. Positions
+                    against dominant movement multiply the risk of extended
+                    losing sequences substantially.
+                  </p>
 
-                <h2>Tips for Safe Use of the Martingale Strategy</h2>
-                <p>
-                  If you decide to use
-                  <strong>the Martingale method in trading</strong>, follow
-                  these practical recommendations from experienced traders to
-                  minimize risks:
-                </p>
+                  <p>
+                    The fourth rule involves mandatory demo account testing.
+                    Before risking real capital, execute at least one hundred
+                    trades in simulation to assess actual statistics and maximum
+                    drawdown potential.
+                  </p>
+                </section>
 
-                <ul>
-                  <li>
-                    <strong>Trade only with the trend</strong> — increases the
-                    probability of success.
-                  </li>
-                  <li>
-                    <strong>Limit the number of doublings</strong> — no more
-                    than 4–5 in a row.
-                  </li>
-                  <li>
-                    <strong>Use arithmetic progression</strong> instead of
-                    strict doubling (e.g., +30–50%).
-                  </li>
-                  <li><strong>Test on a demo account first</strong>.</li>
-                  <li>
-                    <strong>Consider asset volatility</strong> — be especially
-                    careful with crypto.
-                  </li>
-                  <li>
-                    <strong>Automate the process</strong> — robots help avoid
-                    emotional decisions.
-                  </li>
-                </ul>
+                <section>
+                  <h2>Modified Strategy Versions</h2>
+                  <p>
+                    <dfn>Anti-Martingale</dfn> represents the mirror approach
+                    where position size increases following profitable trades
+                    and returns to baseline after losses. This system maximizes
+                    gains during winning streaks while containing damage during
+                    adverse periods. Continue your learning with the article:
+                    <a
+                      class="linkrefinto"
+                      href="https://arapov.trade/en/freestudying/tradingsystem"
+                      >Trading System</a
+                    >.
+                  </p>
 
-                <h2>Conclusion</h2>
-                <p>
-                  <strong>The Martingale method</strong> is not just a strategy
-                  — it’s a capital management philosophy based on mathematics
-                  and probability. It can be effective when used correctly, but
-                  it demands a high level of preparation, patience, and
-                  financial stability from the trader.
-                </p>
+                  <p>
+                    Limited Martingale establishes a ceiling on doubling count.
+                    After three or four increases, the sequence terminates with
+                    loss acceptance. This compromise preserves profit potential
+                    while restricting maximum risk exposure.
+                  </p>
 
-                <p>
-                  For those just starting out:
-                  <strong>Martingale is a high-risk strategy</strong>. It does
-                  not forgive mistakes and is unsuitable for impulsive trading.
-                  However, with proper setup and strict rule adherence, it can
-                  become part of a successful trading system.
-                </p>
+                  <p>
+                    Hybrid systems combine elements from multiple approaches.
+                    Initial doublings may be complete while subsequent ones are
+                    partial. Alternatively, size increases apply only under
+                    specific market conditions identified through technical
+                    indicators.
+                  </p>
+                </section>
 
-                <p>
-                  Success in trading depends on many factors: strategy,
-                  psychology, risk management, and continuous learning.
-                  <strong>Martingale in trading</strong> is a tool, not a
-                  guarantee of profit. Use it consciously and only in
-                  combination with other analysis methods.
-                </p>
+                <section>
+                  <h2>Conclusion</h2>
+                  <p>
+                    The Martingale method remains among the most debated trading
+                    strategies. Mathematical elegance attracts newcomers while
+                    potential risks deter seasoned professionals. Truth lies
+                    somewhere between these perspectives. To consolidate this
+                    material, also study:
+                    <a
+                      class="linkrefinto"
+                      href="https://arapov.trade/en/freestudying/psychologyofaveraging"
+                      >The Psychology of Averaging</a
+                    >.
+                  </p>
+
+                  <p>
+                    When applied intelligently with all precautionary measures,
+                    the system can generate consistent returns. However, this
+                    requires substantial capital, iron discipline, and deep
+                    understanding of market mechanics. Success depends on
+                    comprehensive capital management and continuous education in
+                    trading principles.
+                  </p>
+                </section>
+
+                <section>
+                  <h2>Frequently Asked Questions</h2>
+
+                  <mat-accordion>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      [expanded]="true"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          What is the Martingale method in simple terms?
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                      <p>
+                        A money management strategy that doubles position size
+                        after each loss. The goal is recovering all losses with
+                        one winning trade.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          Why is Martingale considered a dangerous strategy?
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                      <p>
+                        Exponential position size growth during losing streaks
+                        can result in complete account wipeout within 5-6
+                        consecutive losing trades.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          Can Martingale be used in Forex
+                          trading?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        Technically yes, many traders apply Martingale to
+                        currency pairs. It requires substantial account size and
+                        strict risk management protocols.
+                      </p>
+                    </mat-expansion-panel>
+
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          What account size is required for Martingale
+                          trading?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        The account must withstand 8-10 consecutive doublings.
+                        Practically, this means having reserves for 10 losing
+                        trades in a row.
+                      </p> </mat-expansion-panel
+                    ><mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          Are there safer alternatives to
+                          Martingale?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        Yes: arithmetic progression, anti-Martingale (doubling
+                        after wins), and limited Martingale with a 3-4 doubling
+                        cap.
+                      </p>
+                    </mat-expansion-panel>
+                  </mat-accordion>
+                </section>
               </article>
 
               <div
                 class=""
                 [ngClass]="{
-                  'next-page-block': true, 
+                  'next-page-block': true,
                 }"
-                [ngStyle]="{ background: isDark ? 'rgba(255, 255, 255, 0.05)' : 'rgba(255, 255, 255, 0.05)',
-                          border:isDark?'rgba(46, 46, 46, 1)':'rgba(0, 130, 204, 0.15)',
-                           
-                         }"
+                [ngStyle]="{
+                  background: isDark
+                    ? 'rgba(255, 255, 255, 0.05)'
+                    : 'rgba(255, 255, 255, 0.05)',
+                  border: isDark
+                    ? 'rgba(46, 46, 46, 1)'
+                    : 'rgba(0, 130, 204, 0.15)',
+                }"
               >
                 <div
                   (click)="goToPreviousPage()"
@@ -339,12 +410,12 @@
                     previous_page: true,
 
                     'shadow-box-dark': isDark,
-                    'shadow-box-light': !isDark
+                    'shadow-box-light': !isDark,
                   }"
                   [ngStyle]="{
                     border: isDark
                       ? '1px solid rgba(46, 46, 46, 1)'
-                      : '1px solid rgba(0, 130, 204, 0.15)'
+                      : '1px solid rgba(0, 130, 204, 0.15)',
                   }"
                 >
                   <svg
@@ -374,12 +445,12 @@
                     next_page: true,
 
                     'shadow-box-dark': isDark,
-                    'shadow-box-light': !isDark
+                    'shadow-box-light': !isDark,
                   }"
                   [ngStyle]="{
                     border: isDark
                       ? '1px solid rgba(46, 46, 46, 1)'
-                      : '1px solid rgba(0, 130, 204, 0.15)'
+                      : '1px solid rgba(0, 130, 204, 0.15)',
                   }"
                 >
                   <span class="previous_page_text-block">
@@ -414,7 +485,7 @@
                       'side-bar_groups-wrapper': true,
 
                       'shadow-box-dark': isDark,
-                      'shadow-box-light': !isDark
+                      'shadow-box-light': !isDark,
                     }"
                     [ngStyle]="{ background: !isDark ? '#ffffff' : '#000000' }"
                   >
@@ -428,7 +499,7 @@
                           border: isDark
                             ? '1px solid #FFCD29'
                             : '1px solid #0082CC',
-                          width: '100%'
+                          width: '100%',
                         }"
                       />
                     </div>
@@ -443,13 +514,13 @@
                               ? '#FFCD29'
                               : '#0082CC'
                             : isDark
-                            ? '#ffffff'
-                            : '#0C263A'
+                              ? '#ffffff'
+                              : '#0C263A',
                         }"
                         [ngClass]="{
                           'side-bar_groups-item': true,
                           'side-bar_groups-item_dark': isDark,
-                          'side-bar_groups-item_light': !isDark
+                          'side-bar_groups-item_light': !isDark,
                         }"
                         [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
                       >
@@ -477,7 +548,7 @@
                     'side-bar_groups-wrapper': true,
                     'random-pages_container': true,
                     'shadow-box-dark': isDark,
-                    'shadow-box-light': !isDark
+                    'shadow-box-light': !isDark,
                   }"
                   [ngStyle]="{ background: !isDark ? '#ffffff' : '#000000' }"
                 >
@@ -491,7 +562,7 @@
                         border: isDark
                           ? '1px solid #FFCD29'
                           : '1px solid #0082CC',
-                        width: '100%'
+                        width: '100%',
                       }"
                     />
                   </div>
@@ -515,7 +586,7 @@
                           class="article-title"
                           [ngClass]="{
                             'article-title_dark': isDark,
-                            'article-title_light': !isDark
+                            'article-title_light': !isDark,
                           }"
                         >
                           {{ article.titleEn }}
@@ -532,7 +603,7 @@
                     'side-bar_groups-wrapper': true,
                     our_projects_container: true,
                     'shadow-box-dark': isDark,
-                    'shadow-box-light': !isDark
+                    'shadow-box-light': !isDark,
                   }"
                   [ngStyle]="{ color: !isDark ? '#ffffff' : '#000000' }"
                 >
@@ -563,7 +634,7 @@
                         border: isDark
                           ? '1px solid #FFCD29'
                           : '1px solid #0082CC',
-                        width: '100%'
+                        width: '100%',
                       }"
                     />
                   </div>
@@ -592,8 +663,8 @@
                               ? 'rgba(110, 77, 0, 1)'
                               : 'rgba(255, 205, 41, 0.20)'
                             : hoveredIndex === i
-                            ? 'rgba(1, 95, 149, 1)'
-                            : 'rgba(0, 130, 204, 0.20)'
+                              ? 'rgba(1, 95, 149, 1)'
+                              : 'rgba(0, 130, 204, 0.20)',
                         }"
                       >
                         <a [href]="item.link" target="_blank">{{
@@ -612,7 +683,7 @@
                       'author-page_section-three-block': true,
 
                       'shadow-box-dark': isDark,
-                      'shadow-box-light': !isDark
+                      'shadow-box-light': !isDark,
                     }"
                     [ngStyle]="{
                       background: isDark
@@ -620,14 +691,14 @@
                         : 'rgba(0, 131, 205, 0.08)',
                       border: isDark
                         ? ' 1px solid #46483A'
-                        : '1px solid #C5E2F2'
+                        : '1px solid #C5E2F2',
                     }"
                   >
                     <div class="author-page_main-block_title-block three-block">
                       <span
                         [ngClass]="{
                           'gradient-orange': isDark,
-                          'gradient-blue': !isDark
+                          'gradient-blue': !isDark,
                         }"
                         >Do you want professional training?</span
                       >
@@ -646,7 +717,7 @@
                         class=" "
                         [ngClass]="{
                           'gradient-orange': isDark,
-                          'gradient-blue': !isDark
+                          'gradient-blue': !isDark,
                         }"
                         >Choose a convenient way to contact us</span
                       >
@@ -660,7 +731,7 @@
                           [ngClass]="{
                             'three-block_social-links_item': true,
                             'three-block_social-links_item-dark': isDark,
-                            'three-block_social-links_item-light': !isDark
+                            'three-block_social-links_item-light': !isDark,
                           }"
                           [ngStyle]="{
                             background: isDark
@@ -668,7 +739,7 @@
                               : 'rgba(0, 130, 204, 0.10)',
                             border: isDark
                               ? '1px solid rgba(255, 205, 41, 0.30)'
-                              : '1px solid rgba(0, 130, 204, 0.30)'
+                              : '1px solid rgba(0, 130, 204, 0.30)',
                           }"
                         >
                           <svg
@@ -681,7 +752,7 @@
                             <path
                               [ngClass]="{
                                 'svg-link-dark': isDark,
-                                'svg-link-light': !isDark
+                                'svg-link-light': !isDark,
                               }"
                               fill-rule="evenodd"
                               clip-rule="evenodd"
@@ -698,7 +769,7 @@
                           [ngClass]="{
                             'three-block_social-links_item': true,
                             'three-block_social-links_item-dark': isDark,
-                            'three-block_social-links_item-light': !isDark
+                            'three-block_social-links_item-light': !isDark,
                           }"
                           [ngStyle]="{
                             background: isDark
@@ -706,7 +777,7 @@
                               : 'rgba(0, 130, 204, 0.10)',
                             border: isDark
                               ? '1px solid rgba(255, 205, 41, 0.30)'
-                              : '1px solid rgba(0, 130, 204, 0.30)'
+                              : '1px solid rgba(0, 130, 204, 0.30)',
                           }"
                         >
                           <svg
@@ -719,7 +790,7 @@
                             <path
                               [ngClass]="{
                                 'svg-link-dark': isDark,
-                                'svg-link-light': !isDark
+                                'svg-link-light': !isDark,
                               }"
                               fill-rule="evenodd"
                               clip-rule="evenodd"
@@ -737,7 +808,7 @@
                           [ngClass]="{
                             'three-block_social-links_item': true,
                             'three-block_social-links_item-dark': isDark,
-                            'three-block_social-links_item-light': !isDark
+                            'three-block_social-links_item-light': !isDark,
                           }"
                           [ngStyle]="{
                             background: isDark
@@ -745,7 +816,7 @@
                               : 'rgba(0, 130, 204, 0.10)',
                             border: isDark
                               ? '1px solid rgba(255, 205, 41, 0.30)'
-                              : '1px solid rgba(0, 130, 204, 0.30)'
+                              : '1px solid rgba(0, 130, 204, 0.30)',
                           }"
                         >
                           <svg
@@ -758,7 +829,7 @@
                             <path
                               [ngClass]="{
                                 'svg-link-dark': isDark,
-                                'svg-link-light': !isDark
+                                'svg-link-light': !isDark,
                               }"
                               fill-rule="evenodd"
                               clip-rule="evenodd"
