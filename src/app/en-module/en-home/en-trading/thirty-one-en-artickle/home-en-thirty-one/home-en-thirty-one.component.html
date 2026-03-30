@@ -1,460 +1,548 @@
 <section class="" id="hero">
-    <div class="container">
-        <div class="section-i">
-            <div class="section-content">
-                <div class="hero-content">
-                    <div class="   m-right hero-section">
+  <div class="container">
+    <div class="section-i">
+      <div class="section-content">
+        <div class="hero-content">
+          <div class="m-right hero-section"></div>
+          <div class="free-courses_main-container">
+            <main lang="en">
+              <article>
+                <header>
+                  <h1 itemprop="headline">
+                    Market Order in Trading: How It Works and When to Use It
+                  </h1>
+                </header>
 
-                    </div>  <div class="free-courses_main-container">
-                    <main itemscope itemtype="https://schema.org/Article" lang="en">
-                        <meta itemprop="headline" content="Market Order: A Complete Guide for Traders" />
-                        
-                        <meta itemprop="datePublished" content="2025-03-29" />
-                        <meta itemprop="dateModified" content="2025-03-29" />
-                        <meta itemprop="description"
-                            content="What is a market order and how does it work? Learn how to use Market Order for quick trade entry and exit, its advantages, disadvantages, and examples of application on exchanges." />
-                        <span itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
-                            <meta itemprop="name" content="https://arapov.trade" />
-                            <span itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
-                                <meta itemprop="url" content="favicon.ico" />
-                            </span>
-                        </span>
-                        <span itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-                            <meta itemprop="url" content="/assets/img/content/marketorder.webp" />
-                            <meta itemprop="width" content="1200" />
-                            <meta itemprop="height" content="630" />
-                            <meta itemprop="caption" content="Market Order in Trading" />
-                        </span>
-                        <header>
-                            <h1>Market Order: What It Is and How It Works</h1>
-                        </header>
+                <section>
+                  <h2>What Is a Market Order</h2>
+                  <p>
+                    A <dfn>market order</dfn> is an instruction to open or close
+                    a position immediately at whatever price the market is
+                    currently offering. It is the most straightforward order
+                    type available on stock, crypto, and forex exchanges — and
+                    the go-to choice whenever execution speed matters more than
+                    getting a specific price. To understand this topic more
+                    deeply, I recommend studying
+                    <a
+                      class="linkrefinto"
+                      href="https://arapov.trade/en/freestudying/ordertypes"
+                      >order types</a
+                    >.
+                  </p>
 
-                        <article itemprop="articleBody">
-                            <section>
-                                <h2>What is a Market Order and Why is it Important for Traders?</h2>
-                                <p><strong>A Market Order</strong> is one of the most common types of trading orders,
-                                    used for the immediate purchase or sale of a financial asset at the current market
-                                    price. This tool is widely utilized on both stock and cryptocurrency exchanges,
-                                    offering traders the ability to react swiftly to market changes. The primary feature
-                                    of a market order is that it executes almost instantly, provided there is sufficient
-                                    volume of opposing orders in the order book.</p>
-                                <p>A market order is an ideal choice for those who prioritize speed and simplicity. It
-                                    does not require the trader to specify a particular price, making it a convenient
-                                    tool for beginners and professionals alike who aim to quickly lock in profits or
-                                    minimize losses. However, despite its popularity, the Market Order comes with
-                                    nuances that must be considered to avoid unwanted financial consequences.</p>
-                                <h3>How Does a Market Order Work: Execution Mechanism</h3>
-                                <p>When you place a market order on an exchange, the system automatically matches your
-                                    request with the best available offers in the <a class="linkrefinto"
-                                        href="https://arapov.trade/en/freestudying/stockorderbook">order book</a>. For
-                                    instance, if you want to buy an asset, the order will be executed at the lowest
-                                    price offered by sellers (ask price). If you’re selling, the transaction will
-                                    complete at the highest price offered by buyers (bid price). This process takes mere
-                                    fractions of a second, making the market order indispensable in a fast-moving
-                                    market.</p>
+                  <p>
+                    The defining characteristic of a market order is guaranteed
+                    execution, provided there is <dfn>liquidity</dfn> in the
+                    order book . The trader does not set a price — the matching
+                    engine does that automatically, pairing the incoming order
+                    with the best available counterparty offers.
+                  </p>
 
-                                <p>Let’s break it down with an example. Suppose you’re trading the BTC/USDT pair on the
-                                    Binance crypto exchange. The current bid price is 60,000 USDT, and the ask price is
-                                    60,050 USDT. If you place a market order to buy 0.1 BTC, the exchange will find
-                                    sellers offering the best price (60,050 USDT) and instantly execute your order.
-                                    Similarly, when selling, the order will be fulfilled at 60,000 USDT, assuming
-                                    there’s sufficient volume in the order book.</p>
+                  <p>
+                    A buy market order fills at the lowest price sellers are
+                    currently asking — the <dfn>ask price</dfn>. A sell market
+                    order fills at the highest price buyers are currently
+                    bidding — the <dfn>bid price</dfn>. The gap between these
+                    two figures is the
+                    <dfn
+                      ><a
+                        class="linkrefinto"
+                        href="https://arapov.trade/en/freestudying/spread"
+                        >spread</a
+                      > </dfn
+                    >, which represents an immediate cost to anyone using market
+                    orders.
+                  </p>
+                </section>
 
-                                <div class="flex">
-                                    <img class="pictureImg" src="/assets/img/content/marketorder.png" loading="lazy"
-                                        alt="Example of Market Order Execution on an Exchange">
-                                </div>
+                <figure>
+                  <img
+                    src="/assets/img/content/marketorder.png"
+                    alt="Market order execution"
+                    loading="lazy"
+                    width="800"
+                    height="450"
+                  />
+                  <figcaption>
+                    How a market order moves through the order book
+                  </figcaption>
+                </figure>
 
-                                <p>However, the execution of a market order heavily depends on the asset’s liquidity
-                                    level. On highly liquid markets, such as trading Bitcoin or stocks of major
-                                    companies (e.g., Apple or Tesla), the difference between the bid and ask prices
-                                    (spread) is minimal, and slippage is barely noticeable. Conversely, on low-liquidity
-                                    markets—like trading rare altcoins or shares of small companies—the price can
-                                    deviate significantly from what you expect, increasing risks for the trader.</p>
+                <section>
+                  <h2>Execution Mechanics</h2>
 
-                                <h3>Key Characteristics of a Market Order</h3>
-                                <p>To better understand how a Market Order functions, it’s important to highlight its
-                                    key features:</p>
-                                <ul>
-                                    <li><strong>Instant Execution</strong>: The order is executed immediately upon
-                                        placement, provided there’s enough volume in the order book. This makes it
-                                        perfect for urgent operations.</li>
-                                    <li><strong>No Price Control</strong>: You cannot predefine the exact price at which
-                                        the trade will occur—it’s determined by the market at the moment of execution.
-                                    </li>
-                                    <li><strong>High Priority</strong>: Market orders take precedence over limit orders,
-                                        as exchanges aim to close them first.</li>
-                                    <li><strong>Market Taker Role</strong>: Traders using Market Orders remove liquidity
-                                        from the order book, unlike market makers who provide it through limit orders.
-                                    </li>
-                                </ul>
+                  <p>
+                    On liquid markets, a market order fills in milliseconds. The
+                    exchange matching engine works through the order book
+                    sequentially, starting at the best available price. If the
+                    order size exceeds the volume available at that level, the
+                    remainder fills at the next price — and so on down the book.
+                  </p>
 
-                                <p>These characteristics make the market order a simple and effective tool, but they
-                                    demand that traders understand the current market conditions. For example, in
-                                    low-liquidity or high-volatility scenarios, instant execution can lead to unexpected
-                                    losses due to slippage.</p>
+                  <p>
+                    Here is a concrete example: a trader places a market buy
+                    order for 1 BTC. The order book shows sellers at 61,000 USDT
+                    (0.4 BTC), 61,080 USDT (0.4 BTC), and 61,150 USDT (0.2 BTC).
+                    The order fills across all three levels, and the weighted
+                    average cost comes out higher than the price the trader saw
+                    when clicking "buy." This gap is called <dfn>slippage</dfn>.
+                  </p>
 
-                            </section>
-                            <section>
-                                <h2>Advantages and Disadvantages of a Market Order: Detailed Analysis</h2>
-                                <p>Like any trading tool, a market order has its strengths and weaknesses. Understanding
-                                    these aspects allows traders to make informed decisions and use Market Orders in
-                                    appropriate situations. Let’s dive deeper into the pros and cons of this order type.
-                                </p>
+                  <p>
+                    For deeply liquid instruments — Bitcoin, Ethereum, large-cap
+                    equities — slippage is typically minimal because the spread
+                    is tight and the order book is dense. For thinly traded
+                    assets — obscure altcoins, small-cap stocks — the difference
+                    between expected and actual fill price can be significant
+                    and should be factored into risk calculations.
+                  </p>
+                </section>
 
-                                <h3>Advantages of a Market Order</h3>
-                                <p>Market orders have earned their popularity due to several undeniable advantages that
-                                    make them essential in certain trading scenarios:</p>
-                                <ul>
-                                    <li><strong>Execution Speed</strong>: A market order executes almost instantly,
-                                        which is crucial in a rapidly changing market. For example, if an asset’s price
-                                        surges, you can enter a position immediately and not miss out on potential
-                                        profits.</li>
-                                    <li><strong>Ease of Use</strong>: You don’t need to analyze charts or set a specific
-                                        price—just select the volume and click "Buy" or "Sell." This makes Market Orders
-                                        accessible even to novice traders.</li>
-                                    <li><strong>Effectiveness in High Volatility</strong>: During sharp price swings
-                                        (e.g., after the release of significant economic data), a market order lets you
-                                        secure a position quickly without waiting for a limit order confirmation.</li>
-                                    <li><strong>Execution Guarantee</strong>: Unlike limit orders that may remain
-                                        pending, a Market Order will always execute as long as there’s liquidity in the
-                                        market.</li>
-                                </ul>
+                <section>
+                  <h2>Advantages and Disadvantages</h2>
 
-                                <p>These benefits make the market order an ideal choice for active traders, such as
-                                    scalpers or those trading on news events. However, like any tool, it has limitations
-                                    that need to be taken into account.</p>
+                  <h3>Advantages</h3>
+                  <p>
+                    Instant execution is the core benefit. When a trade signal
+                    fires, a market order gets you in without the delay and
+                    uncertainty of waiting for a limit order to fill. This is
+                    critical for scalping and news trading , where even a
+                    second's hesitation can mean missing the move entirely.
+                  </p>
 
-                                <h3>Disadvantages of a Market Order</h3>
-                                <p>Despite its versatility, a market order has several drawbacks that can lead to
-                                    undesirable outcomes, especially if used carelessly:</p>
-                                <ul>
-                                    <li><strong>Lack of Price Control</strong>: You cannot predetermine the exact cost
-                                        at which the order will execute. In volatile conditions, this can result in
-                                        buying or selling at a less favorable price than anticipated.</li>
-                                    <li><strong>Slippage Risk</strong>: If your order volume exceeds the available
-                                        liquidity in the order book, the trade may execute at multiple prices,
-                                        increasing the total cost. For instance, when buying 1 BTC on a low-liquidity
-                                        market, the price might slip from 60,000 to 60,200 USDT.</li>
-                                    <li><strong>Higher Fees</strong>: Many exchanges (e.g., Binance or Kraken) charge
-                                        higher fees for market orders since the trader acts as a taker, removing
-                                        liquidity from the market.</li>
-                                    <li><strong>Risks with Large Trades</strong>: Placing a large market order on a
-                                        low-liquidity market can trigger significant price movement in an unfavorable
-                                        direction, particularly relevant for altcoins or small-cap stocks.</li>
-                                </ul>
+                  <p>
+                    Simplicity reduces cognitive load. There is no need to
+                    analyze the order book for an optimal entry price — set the
+                    size and confirm. Knowing the trade will execute removes the
+                    anxiety of watching an unfilled limit order while the market
+                    moves away.
+                  </p>
 
-                                <p>These disadvantages are especially pronounced in unstable markets or when trading
-                                    assets with narrow spreads and low trading volumes. Therefore, it’s critical to
-                                    assess the current market situation before using a market order.</p>
+                  <h3>Disadvantages</h3>
+                  <p>
+                    No price control is the most significant drawback. During
+                    fast-moving markets — after major economic releases, during
+                    stop cascades, or on thin overnight sessions — the fill
+                    price can be meaningfully worse than what was visible on
+                    screen at the moment of order placement.
+                  </p>
 
-                                <h3>When Should You Use a Market Order?</h3>
-                                <p>A market order is a tool best applied in specific trading scenarios. Here are a few
-                                    situations where a Market Order proves most effective:</p>
-                                <ul>
-                                    <li><strong>Urgent Trades</strong>: If the market moves sharply in your favor and
-                                        you need to enter or exit a position quickly, a market order is the best
-                                        solution.</li>
-                                    <li><strong>High Liquidity</strong>: When trading popular assets like BTC, ETH, or
-                                        stocks of major companies, slippage is minimal, making Market Orders a safe
-                                        choice.</li>
-                                    <li><strong><a class="linkrefinto"
-                                                href="https://arapov.trade/en/freestudying/newstrading">News
-                                                Trading</a></strong>: When an asset’s price shifts rapidly after
-                                        significant news (e.g., a U.S. Federal Reserve report or a crypto project
-                                        announcement), a market order allows you to take a position promptly.</li>
-                                </ul>
+                  <p>
+                    Higher fees on most exchanges. As a <dfn>market taker</dfn>,
+                    you remove liquidity from the book, and exchanges typically
+                    charge a premium for that. <dfn>Market makers</dfn> who post
+                    <a
+                      href="https://arapov.trade/en/freestudying/stoplimitorder"
+                      >limit orders</a
+                    >
+                    and provide liquidity often receive discounts or rebates,
+                    giving them a structural cost advantage over frequent
+                    market-order users.
+                  </p>
+                </section>
 
-                                <p>However, if precise execution price matters to you or you’re trading low-liquidity
-                                    assets, consider an alternative—limit orders. They offer more control, though they
-                                    take longer to execute.</p>
+                <section>
+                  <h2>Market Orders in Trading Strategies</h2>
 
-                            </section>
-                            <section>
-                                <h2>How to Use a Market Order on Different Exchanges: A Practical Guide</h2>
-                                <p>A market order is a versatile tool available on most modern trading platforms,
-                                    including cryptocurrency and stock exchanges. However, the process of placing and
-                                    executing it can vary depending on the specific platform. In this section, we’ll
-                                    explore how to use a Market Order on popular exchanges and provide tips to minimize
-                                    risks.</p>
+                  <h3>Scalping</h3>
+                  <p>
+                    Scalpers execute dozens of trades per session, targeting
+                    small intraday moves. The speed guarantee of a market order
+                    is essential — missing an entry by a fraction of a point can
+                    eliminate the edge entirely. The trade-off is taker fees,
+                    which accumulate quickly across high-frequency activity and
+                    must be modeled into the strategy's expected value.
+                  </p>
 
-                                <h3>Market Orders on Cryptocurrency Exchanges</h3>
-                                <p>Cryptocurrency exchanges like <strong>Binance, Bybit, OKX, KuCoin, and
-                                        Kraken</strong> offer user-friendly interfaces for working with market orders.
-                                    These platforms operate 24/7, making them popular among traders who want to trade
-                                    around the clock. The process of placing a market order typically follows these
-                                    steps:</p>
-                                <ol>
-                                    <li>Log into your account and navigate to the trading terminal.</li>
-                                    <li>Select the desired trading pair, such as <strong>ETH/USDT</strong> or
-                                        <strong>XRP/BTC</strong>.</li>
-                                    <li>In the "Order Type" section, choose <strong>Market Order</strong>.</li>
-                                    <li>Specify the volume of the asset you want to buy or sell (e.g., 0.5 ETH).</li>
-                                    <li>Click "Buy" or "Sell"—the trade will execute instantly.</li>
-                                </ol>
+                  <h3>Breakout Trading</h3>
+                  <p>
+                    Breakout strategies require entering the moment price clears
+                    a key support or resistance level. A market order captures
+                    the initial momentum without the risk of a limit order
+                    sitting unfilled while the market accelerates away. The main
+                    hazard is the false breakout — price pierces the level and
+                    reverses, leaving a market-order entry at the worst possible
+                    point.
+                  </p>
 
-                                <p>On some platforms, like Binance, a warning about potential slippage may appear before
-                                    executing a large market order. This is particularly helpful when trading
-                                    significant volumes, as it allows you to assess risks before confirming the trade.
-                                </p>
+                  <h3>News Trading</h3>
+                  <p>
+                    Economic data releases and earnings announcements trigger
+                    sharp, immediate price dislocations. Getting a position on
+                    in the first seconds after the release requires a market
+                    order — limit orders at pre-set levels may never fill once
+                    the price jumps. However, slippage reaches its peak
+                    precisely in these moments, as liquidity temporarily
+                    evaporates and spreads widen dramatically.
+                  </p>
 
-                                <p>Key Note: On crypto exchanges, spreads and liquidity can vary widely depending on the
-                                    trading pair. For example, the spread for BTC/USDT is usually just a few dollars,
-                                    while for less popular pairs (e.g., DOGE/BNB), it can reach 1-2% of the price.</p>
+                  <h3>Closing Losing Positions</h3>
+                  <p>
+                    When a stop-loss level is reached, the priority is exiting
+                    cleanly — not negotiating a better price. A market order
+                    guarantees the exit regardless of current
+                    <a
+                      class="linkrefinto"
+                      href="https://arapov.trade/en/freestudying/pricingandliquidity"
+                      >liquidity</a
+                    >
+                    conditions, including gaps and flash crashes. This execution
+                    certainty is what makes market orders the standard mechanism
+                    underlying stop-loss orders on most platforms.
+                  </p>
 
-                                <h3>Market Orders on Stock Exchanges</h3>
-                                <p>On traditional stock exchanges like <strong>NYSE, NASDAQ, or the Moscow
-                                        Exchange</strong>, market orders are also widely used but come with specific
-                                    nuances. Unlike crypto platforms, the stock market operates on a schedule (e.g.,
-                                    9:30 AM to 4:00 PM local time in the U.S.), and orders are executed only during
-                                    these hours.</p>
-                                <ul>
-                                    <li><strong>Time Restriction</strong>: A market order can only be placed during
-                                        trading sessions. Outside these hours, it’s either rejected or deferred to the
-                                        next day.</li>
-                                    <li><strong>Market Impact</strong>: Large market orders can shift an asset’s price,
-                                        especially for less liquid stocks (e.g., small-cap companies).</li>
-                                    <li><strong>Broker Involvement</strong>: To place an order, you’ll need a brokerage
-                                        platform like <strong>Interactive Brokers, Tinkoff Investments, or
-                                            Exante</strong>. The interface is typically intuitive: select the asset,
-                                        specify the volume, and confirm the trade.</li>
-                                </ul>
+                  <h3>Arbitrage</h3>
+                  <p>
+                    Cross-exchange or cross-instrument arbitrage requires
+                    simultaneous entries on both legs of the trade. Market
+                    orders on each side minimize the timing gap between fills,
+                    reducing the window during which the price differential can
+                    disappear. Profitability depends heavily on keeping fees and
+                    slippage below the captured spread.
+                  </p>
+                </section>
 
-                                <p>In the stock market, market orders are most often used by day traders and scalpers
-                                    who prioritize speed. For instance, if Tesla stocks surge after a new product
-                                    announcement, a Market Order allows you to enter the position instantly.</p>
+                <figure>
+                  <img
+                    src="/assets/img/content/marketorder1.webp"
+                    alt="Market order strategies"
+                    loading="lazy"
+                    width="800"
+                    height="450"
+                  />
+                  <figcaption>
+                    Market orders applied across different trading scenarios
+                  </figcaption>
+                </figure>
 
-                                <h3>How to Minimize Risks When Using a Market Order?</h3>
-                                <p>To ensure the use of a market order is as safe and profitable as possible, follow
-                                    these recommendations:</p>
-                                <ul>
-                                    <li><strong>Trade High-Liquidity Assets</strong>: Opt for pairs or stocks with high
-                                        trading volumes and narrow spreads to reduce slippage risk.</li>
-                                    <li><strong>Check the Spread</strong>: Before placing an order, ensure the
-                                        difference between bid and ask prices is minimal. This is especially critical in
-                                        low-liquidity markets.</li>
-                                    <li><strong>Split Large Orders</strong>: If you plan to buy or sell a large volume,
-                                        break the trade into smaller parts to avoid sharply impacting the price.</li>
-                                    <li><strong>Avoid High Volatility</strong>: Refrain from using Market Orders
-                                        immediately after news releases or during abnormal market movements—this could
-                                        lead to significant losses.</li>
-                                </ul>
+                <section>
+                  <h2>Managing the Risks</h2>
 
-                                <p>By adhering to these simple rules, you can maximize the effectiveness of a market
-                                    order while steering clear of common pitfalls like slippage or inflated fees.</p>
+                  <p>
+                    Stick to instruments with deep order books. Before placing a
+                    market order, check whether there is adequate volume at
+                    nearby price levels to absorb your position without
+                    significant slippage. A tight spread is the clearest signal
+                    of healthy liquidity and low execution cost.
+                  </p>
 
-                            </section>
-                            <section>
-                                <h2>Market Orders in Various Trading Strategies: How to Maximize Benefits</h2>
-                                <p>A market order is a versatile tool employed across a wide range of trading
-                                    strategies. From scalping to news trading, Market Orders help traders respond
-                                    quickly to market events. In this section, we’ll examine how to use a market order
-                                    in popular trading approaches and identify scenarios where it’s best avoided.</p>
+                  <p>
+                    Avoid market orders during periods of extreme volatility —
+                    immediately following major data releases, at the open and
+                    close of trading sessions, and around large options
+                    expirations. Slippage spikes during these windows, and fills
+                    can come in far from the last traded price.
+                  </p>
 
-                                <h3>1. Scalping: Fast Trades with Market Orders</h3>
-                                <p><a class="linkrefinto"
-                                        href="https://arapov.trade/en/freestudying/scalpingintrading">Scalping</a> is a
-                                    strategy where a trader executes numerous trades throughout the day, profiting from
-                                    small price fluctuations. For scalpers, execution speed is a critical factor, and
-                                    this is where market orders shine.</p>
-                                <ul>
-                                    <li><strong>Advantages</strong>: Instant execution allows entry and exit from
-                                        positions without delays, vital for short-term movements.</li>
-                                    <li><strong>Disadvantages</strong>: High fees for market orders can eat into
-                                        profits, especially with small gains.</li>
-                                </ul>
+                  <p>
+                    Break large positions into smaller pieces. A single large
+                    market order can move the price against you, particularly on
+                    less liquid markets. Execution algorithms like TWAP or VWAP
+                    automate this process, distributing the order over time to
+                    achieve a more favorable average price.
+                  </p>
 
-                                <p>Example: A scalper notices the BTC/USDT price rising from 60,000 to 60,050 USDT. They
-                                    place a market order to buy 0.05 BTC and sell a minute later at 60,070 USDT,
-                                    securing a small profit.</p>
+                  <p>
+                    Place a protective stop-loss immediately after the market
+                    order fills. Define your maximum acceptable loss before
+                    entering — this disciplines your decision-making and
+                    prevents emotional overrides if the trade moves against you.
+                  </p>
 
-                                <h3>2. Day Trading: Balancing Speed and Control</h3>
-                                <p>Day traders open and close positions within a single trading session, avoiding
-                                    overnight holds. Market orders enable them to react swiftly to market shifts.</p>
-                                <ul>
-                                    <li><strong>Advantages</strong>: Quick closure of losing positions or profit-taking
-                                        opportunities.</li>
-                                    <li><strong>Disadvantages</strong>: Slippage during high volatility can amplify
-                                        losses.</li>
-                                </ul>
+                  <p>
+                    Monitor the spread before every trade. A widening bid-ask
+                    spread is an early warning of deteriorating liquidity or
+                    rising uncertainty. Some platforms support alerts for
+                    abnormal spread expansion, which can prevent costly entries
+                    during low-liquidity windows.
+                  </p>
+                </section>
 
-                                <p>For instance, a day trader might use a Market Order to sell stocks after an
-                                    unexpected price drop to minimize losses.</p>
+                <section>
+                  <h2>Market Orders vs. Limit Orders</h2>
 
-                                <h3>3. News Trading: Reacting to Events</h3>
-                                <p>News trading involves using market orders to enter trades immediately after the
-                                    release of key economic data or corporate reports. It’s one of the most dynamic
-                                    strategies, where speed is everything.</p>
-                                <ul>
-                                    <li><strong>Advantages</strong>: You can take a position within seconds of a news
-                                        event, outpacing other market participants.</li>
-                                    <li><strong>Disadvantages</strong>: High slippage and price instability in the
-                                        initial minutes post-event can lead to losses.</li>
-                                </ul>
+                  <p>
+                    A <dfn>limit order</dfn> specifies the maximum price for a
+                    buy or the minimum price for a sell. The trade executes only
+                    if the market reaches that level. The trader controls the
+                    price but accepts the risk of non-execution — the order may
+                    expire unfilled if the market never touches the specified
+                    level.
+                  </p>
 
-                                <p>Example: After the Fed announces a rate hike, the price of gold (XAU/USD) starts
-                                    falling. A trader places a market order to sell, aiming to profit from the downward
-                                    move.</p>
+                  <p>
+                    The core trade-off is simple: market orders guarantee
+                    execution, limit orders guarantee price. Choosing between
+                    them comes down to which guarantee matters more in the
+                    current situation. Building a trading system without clarity
+                    on this distinction creates inconsistency in both entries
+                    and risk management.
+                  </p>
 
-                                <div class="flex">
-                                    <img class="pictureImg" src="/assets/img/content/marketorder1.webp" loading="lazy"
-                                        alt="Market Order in Scalping and News Trading Strategies">
-                                </div>
+                  <p>
+                    Professional traders routinely combine both types. Breakout
+                    entries use market orders to secure participation in the
+                    move. Profit targets use limit orders to capture a precise
+                    exit price. Stop-losses, which convert to market orders when
+                    triggered, ensure exits happen regardless of conditions.
+                  </p>
 
-                                <h3>4. High-Frequency Trading (HFT): Automation and Speed</h3>
-                                <p>High-Frequency Trading (HFT) is a strategy where trades are executed by algorithms in
-                                    milliseconds. Market orders play a pivotal role here due to their speed.</p>
-                                <ul>
-                                    <li><strong>Advantages</strong>: Minimal delays enable bots to capitalize on tiny
-                                        price changes.</li>
-                                    <li><strong>Disadvantages</strong>: Requires advanced equipment and low fees, making
-                                        HFT inaccessible to most retail traders.</li>
-                                </ul>
+                  <p>
+                    Fee structures on most exchanges create a financial
+                    incentive to use limit orders where possible. Makers — who
+                    post resting limit orders — are rewarded with lower fees or
+                    rebates for adding liquidity. Takers — who sweep through the
+                    book with market orders — pay a premium. Over a large volume
+                    of trades, this difference materially affects net returns.
+                  </p>
 
-                                <h3>5. Breakout Trading: Capturing Strong Movements</h3>
-                                <p><a class="linkrefinto"
-                                        href="https://arapov.trade/en/freestudying/levelbreakoutstrategy">Breakout
-                                        trading</a> involves entering a trade when the price breaches a key support or
-                                    resistance level. Market orders are perfect for these situations.</p>
-                                <ul>
-                                    <li><strong>Advantages</strong>: Ensures you don’t miss a strong move if the price
-                                        surges upward or downward.</li>
-                                    <li><strong>Disadvantages</strong>: False breakouts can lead to losses, especially
-                                        without stop-losses.</li>
-                                </ul>
+                  <p>
+                    Stop-limit orders occupy a middle ground: they convert to
+                    limit orders (not market orders) when the trigger price is
+                    hit. This preserves price control on the exit but introduces
+                    the risk of non-execution during gaps, leaving a losing
+                    position open if the market jumps past the limit price.
+                  </p>
+                </section>
 
-                                <p>Example: The ETH/USDT price breaks resistance at 4,000 USDT. A trader places a market
-                                    order to buy, expecting further growth.</p>
+                <section>
+                  <h2>Conclusion</h2>
 
-                                <h3>When Should You Avoid Using a Market Order?</h3>
-                                <p>Despite its versatility, there are situations where a Market Order may be inefficient
-                                    or unprofitable:</p>
-                                <ul>
-                                    <li><strong>Low Liquidity</strong>: Trading assets with wide spreads and low volume
-                                        increases slippage risk.</li>
-                                    <li><strong>Precise Price</strong>: If you need to buy or sell at a specific price,
-                                        a limit order is a better fit.</li>
-                                    <li><strong>High Volatility</strong>: During sharp price swings, a market order
-                                        might execute at an unfavorable rate.</li>
-                                </ul>
+                  <p>
+                    A market order is the right tool when getting into or out of
+                    a trade takes priority over the exact price. It is
+                    indispensable for scalping, breakout entries, news
+                    reactions, and disciplined stop-loss execution — scenarios
+                    where the cost of missing the trade exceeds the cost of
+                    modest slippage. To consolidate this material, also study
+                    the
+                    <a
+                      class="linkrefinto"
+                      href="https://arapov.trade/en/freestudying/tradingbasics"
+                      >trading basics</a
+                    >.
+                  </p>
 
-                                <p>Thus, a market order is a powerful tool for active strategies, but its effectiveness
-                                    hinges on choosing the right moment and asset.</p>
+                  <p>
+                    Its effectiveness is highest on liquid markets with tight
+                    spreads and manageable volatility, where slippage is
+                    predictable and small. Combined thoughtfully with limit and
+                    stop orders, the market order becomes part of a well-rounded
+                    execution toolkit rather than a blunt instrument used by
+                    default.
+                  </p>
 
-                            </section>
-                            <section>
-                                <h2>Conclusion: How to Effectively Use a Market Order in Trading</h2>
-                                <p>A market order is one of the fastest and most convenient tools in a trader’s arsenal.
-                                    It’s perfect for situations where speed trumps precision, but it requires careful
-                                    risk management. Understanding how a Market Order works, its pros and cons, and its
-                                    application across different markets will help you use it to your maximum advantage.
-                                </p>
+                  <p>
+                    A few principles to keep in mind: trade instruments with
+                    sufficient depth, avoid market orders during turbulent
+                    conditions, split large orders into smaller tranches, and
+                    always define your exit before you enter. These habits
+                    transform market order usage from reactive to deliberate.
+                  </p>
 
-                                <h3>Key Takeaways About Market Orders</h3>
-                                <ul>
-                                    <li><strong>Instant Execution</strong>: A market order ensures quick trade closure,
-                                        though the price may vary based on market conditions.</li>
-                                    <li><strong>Slippage</strong>: This is the primary risk, especially with
-                                        low-liquidity assets or volatile markets.</li>
-                                    <li><strong>Strategic Applications</strong>: Market Orders excel in scalping, news
-                                        trading, breakouts, and high-frequency trading.</li>
-                                    <li><strong>Combining with Other Tools</strong>: Using stop-losses and other
-                                        protective orders helps minimize losses.</li>
-                                </ul>
+                  <p>
+                    On crypto exchanges, note that liquidity thins significantly
+                    during off-peak hours relative to major time zones — what
+                    looks like a liquid market at midday can behave very
+                    differently at 3 AM UTC. On equity markets, the first and
+                    last minutes of the session carry elevated spreads and
+                    erratic price action that amplify slippage.
+                  </p>
 
-                                <h3>Practical Tips for Traders</h3>
-                                <p>To get the most out of a market order and reduce risks, follow these tips:</p>
-                                <ul>
-                                    <li><strong>Analyze Liquidity</strong>: Before placing an order, check the order
-                                        book volume and spread size.</li>
-                                    <li><strong>Consider Volatility</strong>: In unstable market periods, switch to
-                                        limit orders for greater control.</li>
-                                    <li><strong>Manage Volumes</strong>: Avoid placing large market orders without
-                                        assessing market depth—this can trigger unwanted price shifts.</li>
-                                    <li><strong>Avoid News Events</strong>: If unsure of the price direction, refrain
-                                        from using Market Orders right after major events.</li>
-                                    <li><strong>Choose the Right Platform</strong>: Opt for exchanges with low fees and
-                                        high liquidity, such as Binance or Interactive Brokers.</li>
-                                </ul>
+                  <p>
+                    New traders benefit from observing market order behavior on
+                    a demo account before committing real capital. Logging
+                    actual fill prices against expected prices builds an
+                    empirical sense of when market orders are a clean tool and
+                    when they carry hidden costs. That judgment — knowing which
+                    order type fits the moment — is a hallmark of trading
+                    maturity.
+                  </p>
 
-                                <h3>When to Avoid a Market Order?</h3>
-                                <p>There are scenarios where using a Market Order might be unjustified:</p>
-                                <ul>
-                                    <li><strong>Low Liquidity</strong>: Wide spreads and low trading volume heighten
-                                        slippage chances.</li>
-                                    <li><strong>Anomalous Movements</strong>: Sharp price jumps can result in execution
-                                        at unpredictable rates.</li>
-                                    <li><strong>Long-Term Investments</strong>: For buying assets for the long haul,
-                                        limit orders offer better pricing.</li>
-                                </ul>
+                  <p>
+                    Remember: choose a market order when speed is the
+                    constraint. When price precision matters more, limit orders
+                    give you better cost control and more predictable outcomes.
+                    The ability to make that choice consciously, in real time,
+                    is what separates systematic traders from those who are
+                    simply reacting.
+                  </p>
+                </section>
 
-                                <h3>Final Word</h3>
-                                <p>A market order is a robust and flexible tool that can be your ally in trading if used
-                                    wisely. Recognizing its advantages and limitations allows traders to tailor
-                                    strategies to specific market conditions, minimizing risks and boosting potential
-                                    profits.</p>
+                <section>
+                  <h2>Frequently Asked Questions</h2>
 
-                                <p>For optimal results, combine Market Orders with other order types, such as <strong><a
-                                            class="linkrefinto"
-                                            href="https://arapov.trade/en/freestudying/stoplimitorder">stop-limit
-                                            orders</a></strong>, <strong><a class="linkrefinto"
-                                            href="https://arapov.trade/en/freestudying/stoporder">stop
-                                            orders</a></strong>, and <strong>trailing stops</strong>. This provides the
-                                    flexibility and control needed for successful trading on any market—be it
-                                    cryptocurrencies, stocks, or forex.</p>
+                  <mat-accordion>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      [expanded]="true"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          What is a market order?
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                      <p>
+                        A market order is an instruction to buy or sell an asset
+                        immediately at the best available price. It executes
+                        instantly as long as there is sufficient liquidity in
+                        the order book.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title> What is slippage? </mat-panel-title>
+                      </mat-expansion-panel-header>
+                      <p>
+                        Slippage is the difference between the expected
+                        execution price and the actual fill price. It occurs
+                        when liquidity at the desired price level is
+                        insufficient to fill the entire order.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          When should I use a market order?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        Market orders are best suited for highly liquid
+                        instruments when speed of execution takes priority over
+                        price — scalping, news trading, and breakout entries are
+                        typical use cases.
+                      </p>
+                    </mat-expansion-panel>
 
-                            </section>
-
-
-
-
-
-                       </article>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          What is the difference between a market order and a
+                          limit order?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        A market order executes immediately at the current
+                        market price. A limit order executes only when the
+                        market reaches your specified price. Market orders
+                        guarantee execution; limit orders guarantee price.
+                      </p> </mat-expansion-panel
+                    ><mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          What are the risks of market orders?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        The primary risks are slippage on illiquid markets,
+                        unfavorable fill prices during high volatility, and
+                        higher taker fees charged by most exchanges.
+                      </p>
+                    </mat-expansion-panel>
+                  </mat-accordion>
+                </section>
+              </article>
               <div
                 class=""
                 [ngClass]="{
-                  'next-page-block': true, 
+                  'next-page-block': true,
                 }"
-                [ngStyle]="{ background: isDark ? 'rgba(255, 255, 255, 0.05)' : 'rgba(255, 255, 255, 0.05)',
-                          border:isDark?'rgba(46, 46, 46, 1)':'rgba(0, 130, 204, 0.15)',
-                           
-                         }"
+                [ngStyle]="{
+                  background: isDark
+                    ? 'rgba(255, 255, 255, 0.05)'
+                    : 'rgba(255, 255, 255, 0.05)',
+                  border: isDark
+                    ? 'rgba(46, 46, 46, 1)'
+                    : 'rgba(0, 130, 204, 0.15)',
+                }"
               >
-                         <div    (click)="goToPreviousPage()"
-                         [ngClass]="{
-                  'previous_page': true,
-                  'shadow-box-dark': isDark,
-                  'shadow-box-light': !isDark
-                }"
-                         [ngStyle]="{border:isDark?'1px solid rgba(46, 46, 46, 1)':'1px solid rgba(0, 130, 204, 0.15)'}">
-                         <svg class="previous_page_svg" width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M4.75 0.75L0.75 4.75L4.75 8.75" stroke="#BBC2C7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+                <div
+                  (click)="goToPreviousPage()"
+                  [ngClass]="{
+                    previous_page: true,
+                    'shadow-box-dark': isDark,
+                    'shadow-box-light': !isDark,
+                  }"
+                  [ngStyle]="{
+                    border: isDark
+                      ? '1px solid rgba(46, 46, 46, 1)'
+                      : '1px solid rgba(0, 130, 204, 0.15)',
+                  }"
+                >
+                  <svg
+                    class="previous_page_svg"
+                    width="6"
+                    height="10"
+                    viewBox="0 0 6 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4.75 0.75L0.75 4.75L4.75 8.75"
+                      stroke="#BBC2C7"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
 
-                        <span class="previous_page_text-block" >
-                          PREVIOUS <span class="page_none_block">ARTICLE</span> 
-                        </span>
+                  <span class="previous_page_text-block">
+                    PREVIOUS <span class="page_none_block">ARTICLE</span>
+                  </span>
+                </div>
+                <div
+                  (click)="goToNextPage()"
+                  [ngClass]="{
+                    next_page: true,
 
-                        </div>
-                         <div   (click)="goToNextPage()"
-                         [ngClass]="{
-                  'next_page': true,
-
-                  'shadow-box-dark': isDark,
-                  'shadow-box-light': !isDark
-                }"
-                         [ngStyle]="{border:isDark?'1px solid rgba(46, 46, 46, 1)':'1px solid rgba(0, 130, 204, 0.15)'}">
-                        <span class="previous_page_text-block">
-                           NEXT <span class="page_none_block">ARTICLE</span>  
-                        </span>
-                        <svg  class="previous_page_svg" width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0.75 0.75L4.75 4.75L0.75 8.75" stroke="#BBC2C7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-
-                        </div>
-             </div>
-
-            </main><div class="free-courses_main-container_side-bar">
+                    'shadow-box-dark': isDark,
+                    'shadow-box-light': !isDark,
+                  }"
+                  [ngStyle]="{
+                    border: isDark
+                      ? '1px solid rgba(46, 46, 46, 1)'
+                      : '1px solid rgba(0, 130, 204, 0.15)',
+                  }"
+                >
+                  <span class="previous_page_text-block">
+                    NEXT <span class="page_none_block">ARTICLE</span>
+                  </span>
+                  <svg
+                    class="previous_page_svg"
+                    width="6"
+                    height="10"
+                    viewBox="0 0 6 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0.75 0.75L4.75 4.75L0.75 8.75"
+                      stroke="#BBC2C7"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </main>
+            <div class="free-courses_main-container_side-bar">
               <div class="main-container_side-bar_groups">
                 <!-- //Groups -->
                 <div class="groups_phone">
@@ -463,7 +551,7 @@
                       'side-bar_groups-wrapper': true,
 
                       'shadow-box-dark': isDark,
-                      'shadow-box-light': !isDark
+                      'shadow-box-light': !isDark,
                     }"
                     [ngStyle]="{ background: !isDark ? '#ffffff' : '#000000' }"
                   >
@@ -471,13 +559,13 @@
                       class="side-bar_groups-title"
                       [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
                     >
-                     Filter by category
+                      Filter by category
                       <hr
                         [ngStyle]="{
                           border: isDark
                             ? '1px solid #FFCD29'
                             : '1px solid #0082CC',
-                          width: '100%'
+                          width: '100%',
                         }"
                       />
                     </div>
@@ -492,13 +580,13 @@
                               ? '#FFCD29'
                               : '#0082CC'
                             : isDark
-                            ? '#ffffff'
-                            : '#0C263A'
+                              ? '#ffffff'
+                              : '#0C263A',
                         }"
                         [ngClass]="{
                           'side-bar_groups-item': true,
                           'side-bar_groups-item_dark': isDark,
-                          'side-bar_groups-item_light': !isDark
+                          'side-bar_groups-item_light': !isDark,
                         }"
                         [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
                       >
@@ -519,14 +607,14 @@
                     </div>
                   </div>
                 </div>
- 
+
                 <!-- Random pages -->
                 <div
                   [ngClass]="{
                     'side-bar_groups-wrapper': true,
                     'random-pages_container': true,
                     'shadow-box-dark': isDark,
-                    'shadow-box-light': !isDark
+                    'shadow-box-light': !isDark,
                   }"
                   [ngStyle]="{ background: !isDark ? '#ffffff' : '#000000' }"
                 >
@@ -540,7 +628,7 @@
                         border: isDark
                           ? '1px solid #FFCD29'
                           : '1px solid #0082CC',
-                        width: '100%'
+                        width: '100%',
                       }"
                     />
                   </div>
@@ -564,7 +652,7 @@
                           class="article-title"
                           [ngClass]="{
                             'article-title_dark': isDark,
-                            'article-title_light': !isDark
+                            'article-title_light': !isDark,
                           }"
                         >
                           {{ article.titleEn }}
@@ -581,7 +669,7 @@
                     'side-bar_groups-wrapper': true,
                     our_projects_container: true,
                     'shadow-box-dark': isDark,
-                    'shadow-box-light': !isDark
+                    'shadow-box-light': !isDark,
                   }"
                   [ngStyle]="{ color: !isDark ? '#ffffff' : '#000000' }"
                 >
@@ -612,7 +700,7 @@
                         border: isDark
                           ? '1px solid #FFCD29'
                           : '1px solid #0082CC',
-                        width: '100%'
+                        width: '100%',
                       }"
                     />
                   </div>
@@ -622,9 +710,9 @@
                       class="our_projects_title"
                       [ngStyle]="{ color: '#ffffff' }"
                     >
-                      Choose a topic that interests you and start learning in an engaging way.
+                      Choose a topic that interests you and start learning in an
+                      engaging way.
                     </div>
-             
 
                     <div class="our_projects_buttons">
                       <div
@@ -641,8 +729,8 @@
                               ? 'rgba(110, 77, 0, 1)'
                               : 'rgba(255, 205, 41, 0.20)'
                             : hoveredIndex === i
-                            ? 'rgba(1, 95, 149, 1)'
-                            : 'rgba(0, 130, 204, 0.20)'
+                              ? 'rgba(1, 95, 149, 1)'
+                              : 'rgba(0, 130, 204, 0.20)',
                         }"
                       >
                         <a [href]="item.link" target="_blank">{{
@@ -661,7 +749,7 @@
                       'author-page_section-three-block': true,
 
                       'shadow-box-dark': isDark,
-                      'shadow-box-light': !isDark
+                      'shadow-box-light': !isDark,
                     }"
                     [ngStyle]="{
                       background: isDark
@@ -669,15 +757,14 @@
                         : 'rgba(0, 131, 205, 0.08)',
                       border: isDark
                         ? ' 1px solid #46483A'
-                        : '1px solid #C5E2F2'
+                        : '1px solid #C5E2F2',
                     }"
                   >
                     <div class="author-page_main-block_title-block three-block">
                       <span
-                         
                         [ngClass]="{
                           'gradient-orange': isDark,
-                          'gradient-blue': !isDark
+                          'gradient-blue': !isDark,
                         }"
                         >Do you want professional training?</span
                       >
@@ -687,17 +774,16 @@
                       <span
                         class="author-page_main-block_description-text"
                         [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-                        >To get a consultation and book a place,
-                        choose a convenient messenger for you and send us a
-                        message.
+                        >To get a consultation and book a place, choose a
+                        convenient messenger for you and send us a message.
                       </span>
                     </div>
-                    <div class="author-page_main-descr-block ">
+                    <div class="author-page_main-descr-block">
                       <span
                         class=" "
                         [ngClass]="{
                           'gradient-orange': isDark,
-                          'gradient-blue': !isDark
+                          'gradient-blue': !isDark,
                         }"
                         >Choose a convenient way to contact us</span
                       >
@@ -711,7 +797,7 @@
                           [ngClass]="{
                             'three-block_social-links_item': true,
                             'three-block_social-links_item-dark': isDark,
-                            'three-block_social-links_item-light': !isDark
+                            'three-block_social-links_item-light': !isDark,
                           }"
                           [ngStyle]="{
                             background: isDark
@@ -719,7 +805,7 @@
                               : 'rgba(0, 130, 204, 0.10)',
                             border: isDark
                               ? '1px solid rgba(255, 205, 41, 0.30)'
-                              : '1px solid rgba(0, 130, 204, 0.30)'
+                              : '1px solid rgba(0, 130, 204, 0.30)',
                           }"
                         >
                           <svg
@@ -732,7 +818,7 @@
                             <path
                               [ngClass]="{
                                 'svg-link-dark': isDark,
-                                'svg-link-light': !isDark
+                                'svg-link-light': !isDark,
                               }"
                               fill-rule="evenodd"
                               clip-rule="evenodd"
@@ -749,7 +835,7 @@
                           [ngClass]="{
                             'three-block_social-links_item': true,
                             'three-block_social-links_item-dark': isDark,
-                            'three-block_social-links_item-light': !isDark
+                            'three-block_social-links_item-light': !isDark,
                           }"
                           [ngStyle]="{
                             background: isDark
@@ -757,7 +843,7 @@
                               : 'rgba(0, 130, 204, 0.10)',
                             border: isDark
                               ? '1px solid rgba(255, 205, 41, 0.30)'
-                              : '1px solid rgba(0, 130, 204, 0.30)'
+                              : '1px solid rgba(0, 130, 204, 0.30)',
                           }"
                         >
                           <svg
@@ -770,7 +856,7 @@
                             <path
                               [ngClass]="{
                                 'svg-link-dark': isDark,
-                                'svg-link-light': !isDark
+                                'svg-link-light': !isDark,
                               }"
                               fill-rule="evenodd"
                               clip-rule="evenodd"
@@ -788,7 +874,7 @@
                           [ngClass]="{
                             'three-block_social-links_item': true,
                             'three-block_social-links_item-dark': isDark,
-                            'three-block_social-links_item-light': !isDark
+                            'three-block_social-links_item-light': !isDark,
                           }"
                           [ngStyle]="{
                             background: isDark
@@ -796,7 +882,7 @@
                               : 'rgba(0, 130, 204, 0.10)',
                             border: isDark
                               ? '1px solid rgba(255, 205, 41, 0.30)'
-                              : '1px solid rgba(0, 130, 204, 0.30)'
+                              : '1px solid rgba(0, 130, 204, 0.30)',
                           }"
                         >
                           <svg
@@ -809,7 +895,7 @@
                             <path
                               [ngClass]="{
                                 'svg-link-dark': isDark,
-                                'svg-link-light': !isDark
+                                'svg-link-light': !isDark,
                               }"
                               fill-rule="evenodd"
                               clip-rule="evenodd"
@@ -822,24 +908,10 @@
                   </div>
                 </div>
               </div>
-            
-            
-            
-            
-            
-            
-            
-            
             </div>
           </div>
-
-
-
-                </div>
-
-            </div>
         </div>
+      </div>
     </div>
+  </div>
 </section>
-
- 
