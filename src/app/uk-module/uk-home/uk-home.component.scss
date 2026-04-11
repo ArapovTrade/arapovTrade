@@ -114,7 +114,9 @@
   z-index: 300;
 }
 .section-two_text-block {
-  height: 800px;
+  // height: 800px;
+  height: fit-content;
+
   // width: 560px;
   width: 650px;
 }
@@ -545,13 +547,28 @@ font-size: 24px;
     height: 25px;
   }
 }
-@media (min-width: 490px) and (max-width: 766px){
+@media (min-width: 600px) and (max-width: 766px){
     .follow-us-block{
-     
-     
         top: 680px;
-        
-         
-    
+  }
+} 
+@media (min-width: 543px) and (max-width: 600px){
+    .follow-us-block{
+        top: 700px;
+  }
+} 
+@media (min-width:490px) and (max-width: 543px){
+    .follow-us-block{
+        top: 700px;
+  }
+} 
+@media (min-width:437px) and (max-width: 490px){
+    .follow-us-block{
+        top: 720px;
+  }
+} 
+@media (min-width:365px) and (max-width: 437px){
+    .follow-us-block{
+        top: 740px;
   }
 } 
