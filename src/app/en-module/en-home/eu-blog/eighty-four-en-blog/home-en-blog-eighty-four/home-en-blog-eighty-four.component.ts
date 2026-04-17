@@ -271,7 +271,7 @@ export class HomeEnBlogEightyFourComponent {
             url: 'https://arapov.trade/assets/img/content/engulfing.webp',
           },
           datePublished: '2025-04-15T00:00:00Z',
-          ddateModified: '2026-04-15T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
             '@id': 'https://arapov.trade/en/freestudying/engulfing',

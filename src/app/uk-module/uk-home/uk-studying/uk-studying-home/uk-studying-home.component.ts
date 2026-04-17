@@ -36,7 +36,7 @@ export class UkStudyingHomeComponent
     private rendererFactory: RendererFactory2,
     @Inject(DOCUMENT) private document: Document,
     private titleService: Title,
-    private lang: LangService
+    private lang: LangService,
   ) {
     this.renderer = rendererFactory.createRenderer(null, null);
   }
@@ -80,9 +80,12 @@ export class UkStudyingHomeComponent
     this.addWebSiteSchema();
     this.addReviewSchema();
     this.titleService.setTitle(
-      'Курси трейдингу онлайн від Ігоря Арапова | Навчання трейдингу з нуля'
+      'Курси трейдингу онлайн від Ігоря Арапова | Навчання трейдингу з нуля',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
+
+    this.meta.updateTag({ name: 'dateModified', content: '2026-04-17' });
     this.meta.updateTag({
       name: 'description',
       content:
@@ -109,7 +112,6 @@ export class UkStudyingHomeComponent
   }
   navigateToHomeWithId() {
     window.location.href = 'https://telegram.me/+380506308200';
-     
   }
   scrollToRegistration() {
     const element = document.getElementById('registration');
@@ -178,14 +180,14 @@ export class UkStudyingHomeComponent
     // процент прокрутки блока
     const percent = Math.min(
       Math.max((scrollPos - start) / (end - start), 0),
-      1
+      1,
     );
 
     progress.style.height = `${percent * 100}%`;
   }
   private removeExistingWebPageSchema(): void {
     const scripts = this.document.querySelectorAll(
-      'script[type="application/ld+json"]'
+      'script[type="application/ld+json"]',
     );
 
     scripts.forEach((script) => {
@@ -205,7 +207,7 @@ export class UkStudyingHomeComponent
 
   private addWebSiteSchema() {
     const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]')
+      this.document.querySelectorAll('script[type="application/ld+json"]'),
     ).some((script) => {
       try {
         const json = JSON.parse(script.textContent || '{}');
@@ -283,7 +285,7 @@ export class UkStudyingHomeComponent
 
   private addReviewSchema() {
     const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]')
+      this.document.querySelectorAll('script[type="application/ld+json"]'),
     ).some((script) => {
       try {
         const json = JSON.parse(script.textContent || '{}');
@@ -305,12 +307,18 @@ export class UkStudyingHomeComponent
     script.text = JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'Review',
+      reviewRating: {
+        '@type': 'Rating',
+        ratingValue: 5,
+        bestRating: 5,
+        worstRating: 1,
+      },
       itemReviewed: {
         '@type': 'Course',
         name: 'Професійний курс трейдингу',
         description:
-        "Індивідуальне навчання трейдингу з нуля під керівництвом досвідченого трейдера. Метод Вайкоффа, об'ємний аналіз, практика на реальних рахунках.",
-      
+          "Індивідуальне навчання трейдингу з нуля під керівництвом досвідченого трейдера. Метод Вайкоффа, об'ємний аналіз, практика на реальних рахунках.",
+
         provider: {
           '@type': 'Organization',
           name: 'Arapov.trade',
@@ -326,7 +334,7 @@ export class UkStudyingHomeComponent
       },
       datePublished: '2024-09-01T00:00:00+02:00',
       reviewBody:
-        'За 11 місяців торгівлі чистий прибуток склав 6237.14 USD, що дорівнює 40% від депозиту. WinRate — 67%, середня прибутковість на місяць — 3.57%. Використовую концепцію Річарда Вайкоффа та торгівлю на хибних пробоях.',
+        'Навчання побудоване на методі Вайкоффа та аналізі об`єму. Матеріал доступний, є практичні приклади розбору ринкових ситуацій. Підхід систематичний, без обіцянок швидкого збагачення.',
     });
 
     this.document.head.appendChild(script);

@@ -37,7 +37,7 @@ export class EnStudyingHomeComponent
     @Inject(DOCUMENT) private document: Document,
 
     private titleService: Title,
-    private lang: LangService
+    private lang: LangService,
   ) {
     this.renderer = rendererFactory.createRenderer(null, null);
   }
@@ -80,9 +80,12 @@ export class EnStudyingHomeComponent
     this.addReviewSchema();
     this.lang.setNumber(3);
     this.titleService.setTitle(
-      'Online Trading Courses by Igor Arapov | Trading Education from Scratch'
+      'Online Trading Courses by Igor Arapov | Trading Education from Scratch',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
+
+    this.meta.updateTag({ name: 'dateModified', content: '2026-04-17' });
     this.meta.updateTag({
       name: 'description',
       content:
@@ -176,7 +179,7 @@ export class EnStudyingHomeComponent
     // процент прокрутки блока
     const percent = Math.min(
       Math.max((scrollPos - start) / (end - start), 0),
-      1
+      1,
     );
 
     progress.style.height = `${percent * 100}%`;
@@ -184,7 +187,7 @@ export class EnStudyingHomeComponent
 
   private removeExistingWebPageSchema(): void {
     const scripts = this.document.querySelectorAll(
-      'script[type="application/ld+json"]'
+      'script[type="application/ld+json"]',
     );
 
     scripts.forEach((script) => {
@@ -204,7 +207,7 @@ export class EnStudyingHomeComponent
 
   private addWebSiteSchema() {
     const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]')
+      this.document.querySelectorAll('script[type="application/ld+json"]'),
     ).some((script) => {
       try {
         const json = JSON.parse(script.textContent || '{}');
@@ -235,9 +238,9 @@ export class EnStudyingHomeComponent
         '@type': 'Organization',
         '@id': 'https://arapov.trade/#organization',
         name: 'Arapov Trade',
-         description:
-        'Individual trading education from scratch under the guidance of an experienced trader. Wyckoff Method, Volume Analysis, practice on live accounts.',
-      
+        description:
+          'Individual trading education from scratch under the guidance of an experienced trader. Wyckoff Method, Volume Analysis, practice on live accounts.',
+
         url: 'https://arapov.trade',
       },
       educationalLevel: 'Beginner to Advanced',
@@ -283,7 +286,7 @@ export class EnStudyingHomeComponent
 
   private addReviewSchema() {
     const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]')
+      this.document.querySelectorAll('script[type="application/ld+json"]'),
     ).some((script) => {
       try {
         const json = JSON.parse(script.textContent || '{}');
@@ -305,18 +308,24 @@ export class EnStudyingHomeComponent
     script.text = JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'Review',
+      reviewRating: {
+        '@type': 'Rating',
+        ratingValue: 5,
+        bestRating: 5,
+        worstRating: 1,
+      },
       itemReviewed: {
         '@type': 'Course',
         name: 'Professional Trading Course',
         description:
-        'Individual trading education from scratch under the guidance of an experienced trader. Wyckoff Method, Volume Analysis, practice on live accounts.',
-      
+          'Individual trading education from scratch under the guidance of an experienced trader. Wyckoff Method, Volume Analysis, practice on live accounts.',
+
         provider: {
           '@type': 'Organization',
           name: 'Arapov.trade',
-           description:
-        'Individual trading education from scratch under the guidance of an experienced trader. Wyckoff Method, Volume Analysis, practice on live accounts.',
-      
+          description:
+            'Individual trading education from scratch under the guidance of an experienced trader. Wyckoff Method, Volume Analysis, practice on live accounts.',
+
           url: 'https://arapov.trade',
         },
       },
@@ -326,8 +335,7 @@ export class EnStudyingHomeComponent
       },
       datePublished: '2024-09-01T00:00:00+02:00',
       reviewBody:
-        'Over 11 months of trading, the net profit reached 6,237.14 USD, representing 40% of the initial deposit. Win rate is 67%, with an average monthly return of 3.57%. The strategy is based on Richard Wyckoff’s methodology and false breakout trading.',
-       
+        'The course is built around the Wyckoff method and volume analysis. The material is accessible, with practical examples of real market situations. The approach is systematic, with no promises of quick profits.',
     });
 
     this.document.head.appendChild(script);
