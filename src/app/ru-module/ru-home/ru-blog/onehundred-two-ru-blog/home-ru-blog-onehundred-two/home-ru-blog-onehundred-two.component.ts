@@ -56,7 +56,9 @@ export class HomeRuBlogOnehundredTwoComponent implements OnInit {
       content:
         'Полосы Боллинджера: полное руководство по индикатору. Настройки, стратегии торговли, сжатие и расширение полос, пробои и отскоки.',
     });
+     this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
 
+  this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.themeSubscription = this.themeService.getTheme().subscribe((data) => {
       this.isDark = data;
       this.cdr.detectChanges();
@@ -298,7 +300,8 @@ export class HomeRuBlogOnehundredTwoComponent implements OnInit {
             },
           },
           datePublished: '2025-06-25T00:00:00+02:00',
-          dateModified: '2025-06-25T00:00:00+02:00',
+          dateModified: '2026-04-15T00:00:00Z',
+
           inLanguage: 'ru',
         },
       ],

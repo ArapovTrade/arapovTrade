@@ -66,7 +66,8 @@ export class HomeRuTwentyFiveComponent implements OnInit {
         'Полное руководство по ключевым экономическим показателям. Изучите ВВП, PMI, процентные ставки и их влияние на валютные курсы и инвестиции.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-17' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-01-17' }); this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
+
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/keyeconomicgrowth.webp',
@@ -293,7 +294,7 @@ export class HomeRuTwentyFiveComponent implements OnInit {
             url: 'https://arapov.trade',
           },
           datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2025-12-19T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
             '@id': 'https://arapov.trade/ru/freestudying/keyeconomicgrowth',

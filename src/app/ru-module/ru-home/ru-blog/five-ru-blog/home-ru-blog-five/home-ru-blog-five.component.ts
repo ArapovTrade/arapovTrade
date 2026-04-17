@@ -68,6 +68,7 @@ export class HomeRuBlogFiveComponent implements OnInit {
     });
 
     this.meta.updateTag({ name: 'datePublished', content: '2025-03-26' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/pricingandliquidity.webp',
@@ -286,7 +287,7 @@ export class HomeRuBlogFiveComponent implements OnInit {
           image:
             'https://arapov.trade/assets/img/content/pricingandliquidity1.png',
           datePublished: '2026-03-15T00:00:00Z',
-          dateModified: '2026-03-22T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
           author: {
             '@id': 'https://arapov.trade/ru#person',
           },
@@ -348,9 +349,13 @@ export class HomeRuBlogFiveComponent implements OnInit {
         'https://github.com/ArapovTrade',
         'https://ua.linkedin.com/in/arapovtrade',
         'https://www.youtube.com/@ArapovTrade',
-        'https://t.me/ArapovTrade'
+        'https://t.me/ArapovTrade',
       ],
-      jobTitle: ['Независимый исследователь', 'трейдер', 'автор и основатель arapov.trade'],
+      jobTitle: [
+        'Независимый исследователь',
+        'трейдер',
+        'автор и основатель arapov.trade',
+      ],
       description:
         'Независимый исследователь, практикующий трейдер, автор книг по трейдингу и научных публикаций. Специализируется на психологии трейдинга и когнитивных искажениях на финансовых рынках.',
     };

@@ -1268,31 +1268,49 @@ export class AppComponent implements OnInit, AfterViewChecked, OnDestroy {
     });
 
     // --- Исправленный блок x-default ---
+    // let xDefaultHref = '';
+
+    // if (
+    //   this.router.url === '/ru' ||
+    //   this.router.url === '/ru/' ||
+    //   this.router.url === '/uk/' ||
+    //   this.router.url === '/uk' ||
+    //   this.router.url === '/en/' ||
+    //   this.router.url === '/en'
+    // ) {
+       
+    //   xDefaultHref = 'https://arapov.trade/ru';
+    // } else {
+    //   // Обычное поведение
+    //   xDefaultHref =
+    //     basePath === 'main'
+    //       ? 'https://arapov.trade/ru/main'
+    //       : `https://arapov.trade/ru/${basePath}`;
+    // }
+    
+
+    // xDefaultHref = normalize(xDefaultHref);
+    // const defaultLink = this.renderer.createElement('link');
+    // this.renderer.setAttribute(defaultLink, 'rel', 'alternate');
+    // this.renderer.setAttribute(defaultLink, 'hreflang', 'x-default');
+    // this.renderer.setAttribute(defaultLink, 'href', xDefaultHref);
+    // this.renderer.appendChild(this.document.head, defaultLink);
+
     let xDefaultHref = '';
 
-    if (
-      this.router.url === '/ru' ||
-      this.router.url === '/ru/' ||
-      this.router.url === '/uk/' ||
-      this.router.url === '/uk' ||
-      this.router.url === '/en/' ||
-      this.router.url === '/en'
-    ) {
-      // Специально для https://arapov.trade/ru — без слэша
-      xDefaultHref = 'https://arapov.trade/ru';
-    } else {
-      // Обычное поведение
-      xDefaultHref =
-        basePath === 'main'
-          ? 'https://arapov.trade/ru/main'
-          : `https://arapov.trade/ru/${basePath}`;
-    }
+if (basePath === 'main') {
+  xDefaultHref = 'https://arapov.trade';
+} else {
+  xDefaultHref = `https://arapov.trade/uk/${basePath}`;
+}
 
-    const defaultLink = this.renderer.createElement('link');
-    this.renderer.setAttribute(defaultLink, 'rel', 'alternate');
-    this.renderer.setAttribute(defaultLink, 'hreflang', 'x-default');
-    this.renderer.setAttribute(defaultLink, 'href', xDefaultHref);
-    this.renderer.appendChild(this.document.head, defaultLink);
+xDefaultHref = normalize(xDefaultHref);
+
+const defaultLink = this.renderer.createElement('link');
+this.renderer.setAttribute(defaultLink, 'rel', 'alternate');
+this.renderer.setAttribute(defaultLink, 'hreflang', 'x-default');
+this.renderer.setAttribute(defaultLink, 'href', xDefaultHref);
+this.renderer.appendChild(this.document.head, defaultLink);
   }
 
   //

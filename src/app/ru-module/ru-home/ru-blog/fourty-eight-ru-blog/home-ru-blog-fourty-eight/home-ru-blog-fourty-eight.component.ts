@@ -66,6 +66,7 @@ export class HomeRuBlogFourtyEightComponent implements OnInit {
         'Полное руководство по самостоятельному обучению трейдингу: от базовых понятий до профессиональных стратегий. Практические советы для начинающих трейдеров.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-03' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/selfstudying.webp',
@@ -80,7 +81,7 @@ export class HomeRuBlogFourtyEightComponent implements OnInit {
   hoveredIndex: number | null = null;
 
   projects = [
-     { title: 'Книги по трейдингу', link: 'https://arapov.trade/ru/books' },
+    { title: 'Книги по трейдингу', link: 'https://arapov.trade/ru/books' },
     {
       title: 'Профессиональные курсы',
       link: 'https://arapov.trade/ru/studying',
@@ -89,7 +90,6 @@ export class HomeRuBlogFourtyEightComponent implements OnInit {
       title: 'Базовый курс',
       link: 'https://arapov.trade/ru/freestudying/freeeducation',
     },
-     
   ];
 
   onGroupChange(event: Event) {
@@ -285,7 +285,7 @@ export class HomeRuBlogFourtyEightComponent implements OnInit {
             'Полное руководство по самостоятельному обучению трейдингу: от базовых понятий до профессиональных стратегий. Практические советы для начинающих трейдеров.',
           image: 'https://arapov.trade/assets/img/content/selfstudying1.webp',
           datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2025-12-29T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
           author: {
             '@id': 'https://arapov.trade/ru#person',
           },
@@ -326,15 +326,15 @@ export class HomeRuBlogFourtyEightComponent implements OnInit {
       '@context': 'https://schema.org',
       '@type': 'Person',
       '@id': 'https://arapov.trade/ru#person',
-       name: 'Игорь Арапов',
+      name: 'Игорь Арапов',
       alternateName: [
         'Igor Arapov',
-              'Арапов Игорь',
-              'I. Arapov',
-              'Ігор Арапов',
-              'І. В. Арапов',
-              'Арапов Ігор',
-              'Arapov Igor',
+        'Арапов Игорь',
+        'I. Arapov',
+        'Ігор Арапов',
+        'І. В. Арапов',
+        'Арапов Ігор',
+        'Arapov Igor',
       ],
       url: 'https://arapov.trade/ru',
       image:
@@ -348,9 +348,13 @@ export class HomeRuBlogFourtyEightComponent implements OnInit {
         'https://github.com/ArapovTrade',
         'https://ua.linkedin.com/in/arapovtrade',
         'https://www.youtube.com/@ArapovTrade',
-        'https://t.me/ArapovTrade'
+        'https://t.me/ArapovTrade',
       ],
-      jobTitle: ['Независимый исследователь', 'трейдер', 'автор и основатель arapov.trade'],
+      jobTitle: [
+        'Независимый исследователь',
+        'трейдер',
+        'автор и основатель arapov.trade',
+      ],
       description:
         'Независимый исследователь, практикующий трейдер, автор книг по трейдингу и научных публикаций. Специализируется на психологии трейдинга и когнитивных искажениях на финансовых рынках.',
     };

@@ -56,6 +56,8 @@ export class HomeEnFourtyTwoComponent implements OnInit {
     this.titleService.setTitle(
       'Timeframes in Trading: Complete Guide to Choosing the Right Chart Interval | Arapov.trade',
     );
+    this.meta.updateTag({ name: 'datePublished', content: '2025-02-06' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
@@ -255,7 +257,7 @@ export class HomeEnFourtyTwoComponent implements OnInit {
             'How to choose the right timeframe for trading. Learn about timeframe types, multi-timeframe analysis, and which interval suits your trading style.',
           image: 'https://arapov.trade/assets/img/content/timeframes1.webp',
           datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2025-12-29T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
           author: {
             '@id': 'https://arapov.trade/en#person',
           },

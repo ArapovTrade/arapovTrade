@@ -64,7 +64,9 @@ export class HomeUkBlogSeventyOneComponent {
         'Дізнайтесь, як торгувати на новинах: вплив економічних подій, стратегії трейдингу та мінімізація ризиків від ArapovTrade.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-02-14' });
+     this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
+
+  this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/newstrading.webp',
@@ -296,7 +298,7 @@ export class HomeUkBlogSeventyOneComponent {
             },
           },
           datePublished: '2025-01-10T00:00:00Z',
-          dateModified: '2025-01-10T00:00:00Z',
+     dateModified: '2026-04-15T00:00:00Z',
           articleSection: 'Навчання трейдингу',
           keywords:
             'торгівля на новинах, новинний трейдинг, економічний календар, волатильність, NFP, процентні ставки',

@@ -66,7 +66,7 @@ export class HomeUkBlogFiveComponent implements OnInit {
         'Ціноутворення та ліквідність на фінансових ринках: механізми формування ціни, роль спреду, маркет-мейкери та захист від маніпуляцій. Повний посібник для трейдерів.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-03-26' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-03-26' });  this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/pricingandliquidity.webp',
@@ -281,7 +281,7 @@ export class HomeUkBlogFiveComponent implements OnInit {
           image:
             'https://arapov.trade/assets/img/content/pricingandliquidity1.png',
           datePublished: '2026-03-15T00:00:00Z',
-          dateModified: '2026-03-22T00:00:00Z',
+         dateModified: '2026-04-15T00:00:00Z',
           author: {
             '@id': 'https://arapov.trade/uk#person',
           },

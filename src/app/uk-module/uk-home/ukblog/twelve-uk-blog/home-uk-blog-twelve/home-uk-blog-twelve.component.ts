@@ -51,7 +51,7 @@ export class HomeUkBlogTwelveComponent implements OnInit {
         'Детальний посібник для початківців з торгівлі рівнями: як визначати, використовувати та ефективно торгувати ключові рівні від Arapov.trade.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-04-14' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-14' });this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/tradingoflevels.webp',

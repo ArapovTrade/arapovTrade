@@ -67,7 +67,9 @@ export class HomeUkBlogNintyThreeComponent implements OnInit {
       content:
         'ATR індикатор: повний посібник з вимірювання волатильності ринку та розрахунку стоп-лоссів.',
     });
+     this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
 
+  this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
 
     this.gerRandom();
@@ -281,7 +283,7 @@ export class HomeUkBlogNintyThreeComponent implements OnInit {
           image: 'https://arapov.trade/assets/img/content/atrstrategies.jpg',
 
           datePublished: '2026-03-25T00:00:00Z',
-          dateModified: '2026-03-31T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
           author: { '@id': 'https://arapov.trade/uk#person' },
           publisher: {
             '@type': 'Organization',

@@ -67,7 +67,7 @@ export class HomeRuBlogThirtyEightComponent implements OnInit {
         'Узнайте, как безопасно хранить криптовалюту. Холодные и горячие кошельки, аппаратные устройства, защита приватных ключей и лучшие практики безопасности.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-23' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-01-23' }); this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/cryptostoring.webp',
@@ -299,7 +299,7 @@ export class HomeRuBlogThirtyEightComponent implements OnInit {
             },
           },
           datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2025-12-11T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
             '@id': 'https://arapov.trade/ru/freestudying/cryptostoring',

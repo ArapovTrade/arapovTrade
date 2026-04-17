@@ -64,6 +64,7 @@ export class HomeEnFourtyFourComponent implements OnInit {
     });
 
     this.meta.updateTag({ name: 'datePublished', content: '2025-03-30' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/icebergorders.png',
@@ -260,7 +261,7 @@ export class HomeEnFourtyFourComponent implements OnInit {
             'Learn what iceberg orders are, how banks and hedge funds use hidden orders to mask large positions, and how to detect them on charts for better trading decisions.',
           image: 'https://arapov.trade/assets/img/content/icebergorders1.png',
           datePublished: '2026-03-15T00:00:00Z',
-          dateModified: '2026-03-22T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
           author: {
             '@id': 'https://arapov.trade/en#person',
           },

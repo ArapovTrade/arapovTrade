@@ -67,6 +67,7 @@ export class HomeRuFourtyFourComponent implements OnInit {
     });
 
     this.meta.updateTag({ name: 'datePublished', content: '2025-03-30' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/icebergorders.png',
@@ -286,7 +287,7 @@ export class HomeRuFourtyFourComponent implements OnInit {
             'Узнайте, что такое айсберг ордера (Iceberg Orders), как банки и хедж-фонды используют скрытые заявки для маскировки крупных позиций и как обнаружить их на графике.',
           image: 'https://arapov.trade/assets/img/content/icebergorders1.png',
           datePublished: '2026-03-15T00:00:00Z',
-          dateModified: '2026-03-22T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
           author: {
             '@id': 'https://arapov.trade/ru#person',
           },

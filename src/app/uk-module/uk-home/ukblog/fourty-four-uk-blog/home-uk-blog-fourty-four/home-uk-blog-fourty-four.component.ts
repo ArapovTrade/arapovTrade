@@ -66,7 +66,8 @@ export class HomeUkBlogFourtyFourComponent implements OnInit {
         'Стейкінг криптовалюти: як отримувати пасивний дохід від блокування токенів. Повний посібник з типів стейкінгу, вибору платформи та мінімізації ризиків.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-27' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-01-27' });this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
+
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/cryptostaking.webp',
@@ -299,7 +300,8 @@ export class HomeUkBlogFourtyFourComponent implements OnInit {
             },
           },
           datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2025-12-29T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
+
         },
       ],
     };

@@ -64,7 +64,7 @@ export class HomeUkBlogSeventyEightComponent {
         'FOMO у трейдингу: що таке страх втраченої вигоди, як він впливає на торгівлю та методи його подолання. Психологія трейдера та контроль емоцій.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-02-18' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-02-18' });  this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/fomo.webp',
@@ -282,7 +282,7 @@ export class HomeUkBlogSeventyEightComponent {
             'FOMO у трейдингу: що таке страх втраченої вигоди та методи його подолання.',
           image: 'https://arapov.trade/assets/img/content/fomo.webp',
           datePublished: '2025-09-15T00:00:00Z',
-          dateModified: '2025-12-09T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
           author: { '@id': 'https://arapov.trade/uk#person' },
           publisher: {
             '@type': 'Organization',

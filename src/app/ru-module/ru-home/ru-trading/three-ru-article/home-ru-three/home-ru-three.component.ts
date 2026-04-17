@@ -65,7 +65,7 @@ export class HomeRuThreeComponent implements OnInit {
       content:
         'Полное руководство по биржам: фондовые, товарные, валютные и фьючерсные площадки. Как работает биржа, кто её участники и почему она важна для экономики.',
     });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-04-10' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-10' });this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/znakomstvosbirgey.webp',
@@ -284,7 +284,7 @@ export class HomeRuThreeComponent implements OnInit {
             'Полное руководство по биржам: фондовые, товарные, валютные и фьючерсные площадки. Как работает биржа, кто её участники и почему она важна для экономики.',
           image: 'https://arapov.trade/assets/img/content/2article1pic.jpg',
           datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2025-12-29T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
           author: {
             '@id': 'https://arapov.trade/ru#person',
           },

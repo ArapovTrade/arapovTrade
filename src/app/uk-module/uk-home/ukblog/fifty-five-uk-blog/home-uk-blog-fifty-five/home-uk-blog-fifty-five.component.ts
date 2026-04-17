@@ -65,7 +65,7 @@ export class HomeUkBlogFiftyFiveComponent implements OnInit {
       content:
         'Скальпінг у трейдингу: стратегії, інструменти та управління ризиками. Повний посібник для початківців трейдерів з короткострокової торгівлі на Forex, криптовалютах та фондовому ринку.',
     });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-04-04' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-04' }); this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/scalpingintrading.webp',
@@ -282,7 +282,8 @@ export class HomeUkBlogFiftyFiveComponent implements OnInit {
           image:
             'https://arapov.trade/assets/img/content/scalpingintrading.webp',
           datePublished: '2026-03-15T00:00:00Z',
-          dateModified: '2026-03-22T00:00:00Z',
+         dateModified: '2026-04-15T00:00:00Z',
+
           author: {
             '@id': 'https://arapov.trade/uk#person',
           },

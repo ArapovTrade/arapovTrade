@@ -68,7 +68,7 @@ export class HomeUkBlogThirtySevenComponent implements OnInit {
         'Просідання в трейдингу: види drawdown, причини виникнення, методи аналізу та мінімізації. Практичний посібник з управління ризиками та відновлення капіталу.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-04-02' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-02' }); this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/drawdowns.webp',
@@ -293,7 +293,7 @@ export class HomeUkBlogThirtySevenComponent implements OnInit {
             },
           },
           datePublished: '2026-03-25T00:00:00Z',
-          dateModified: '2026-03-31T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
           image: 'https://arapov.trade/assets/img/content/drawdowns1.webp',
           mainEntityOfPage: {
             '@type': 'WebPage',

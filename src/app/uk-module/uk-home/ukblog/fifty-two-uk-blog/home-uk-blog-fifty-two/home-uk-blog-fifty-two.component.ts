@@ -60,6 +60,9 @@ export class HomeUkBlogFiftyTwoComponent implements OnInit {
       'Анатомія ринкових трендів: практичний посібник трейдера | ArapovTrade',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
+
+    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       name: 'description',
       content:
@@ -277,7 +280,7 @@ export class HomeUkBlogFiftyTwoComponent implements OnInit {
             'Дізнайтеся, як аналізувати тренди на фінансових ринках. Визначення фаз тренду, робота з індикаторами, типові помилки та стратегії торгівлі за трендом.',
           image: 'https://arapov.trade/assets/img/content/trends1.png',
           datePublished: '2026-03-25T00:00:00Z',
-          dateModified: '2026-03-31T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
           author: {
             '@id': 'https://arapov.trade/uk#person',
           },

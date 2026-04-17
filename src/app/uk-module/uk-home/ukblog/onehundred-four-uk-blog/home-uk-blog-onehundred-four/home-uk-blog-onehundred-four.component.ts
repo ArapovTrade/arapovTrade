@@ -65,7 +65,9 @@ export class HomeUkBlogOnehundredFourComponent implements OnInit {
       content:
         'Торгівля Solana SOL: технологія блокчейну, екосистема DeFi, торгові стратегії та управління ризиками для криптотрейдерів.',
     });
+     this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
 
+  this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
 
     this.gerRandom();
@@ -290,7 +292,7 @@ export class HomeUkBlogOnehundredFourComponent implements OnInit {
             },
           },
           datePublished: '2025-07-01T00:00:00+02:00',
-          dateModified: '2025-07-01T00:00:00+02:00',
+          dateModified: '2026-04-15T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
             '@id': 'https://arapov.trade/uk/freestudying/solana',

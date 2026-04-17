@@ -60,6 +60,8 @@ export class HomeRuBlogFourtyComponent implements OnInit {
       'Почему трейдинг такой сложный? Главные причины и решения | Arapov.trade',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       name: 'description',
       content:
@@ -279,7 +281,8 @@ export class HomeRuBlogFourtyComponent implements OnInit {
           description:
             'Комплексный разбор причин сложности трейдинга: психологические барьеры, волатильность рынков, ошибки управления капиталом.',
           datePublished: '2026-03-25T00:00:00Z',
-          dateModified: '2026-03-31T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
+
           author: {
             '@id': 'https://arapov.trade/ru#person',
           },

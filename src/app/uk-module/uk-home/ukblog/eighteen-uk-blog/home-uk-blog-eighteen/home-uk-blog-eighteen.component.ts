@@ -60,6 +60,9 @@ export class HomeUkBlogEighteenComponent implements OnInit {
     this.titleService.setTitle(
       'Об’ємний аналіз ринку в трейдингу | ArapovTrade'
     );
+     this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
+
+  this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
 
@@ -285,7 +288,7 @@ export class HomeUkBlogEighteenComponent implements OnInit {
           image:
             'https://arapov.trade/assets/img/content/volmarketanalisys.webp',
           datePublished: '2025-09-14T00:00:00+03:00',
-          dateModified: '2025-10-14T00:00:00+02:00',
+          dateModified: '2026-04-15T00:00:00Z',
           inLanguage: 'uk',
           author: {
             '@id': 'https://arapov.trade/uk#person',

@@ -28,7 +28,7 @@ export class HomeEnTwentyFiveComponent implements OnInit {
     private themeService: ThemeservService,
     private artickleServ: ArticlesService,
     private renderer: Renderer2,
-    @Inject(DOCUMENT) private document: Document
+    @Inject(DOCUMENT) private document: Document,
   ) {}
   private routerSubscription!: Subscription;
   private themeSubscription!: Subscription;
@@ -55,7 +55,7 @@ export class HomeEnTwentyFiveComponent implements OnInit {
     this.checkedGroup = this.artickleServ.selectedGroups;
 
     this.titleService.setTitle(
-      'Key Economic Growth Indicators: What Drives Financial Markets'
+      'Key Economic Growth Indicators: What Drives Financial Markets',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
@@ -65,6 +65,7 @@ export class HomeEnTwentyFiveComponent implements OnInit {
     });
     this.meta.updateTag({ name: 'author', content: 'Ihor Arapov' });
     this.meta.updateTag({ name: 'datePublished', content: '2025-01-20' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/keyeconomicgrowth.webp',
@@ -83,7 +84,6 @@ export class HomeEnTwentyFiveComponent implements OnInit {
       title: 'Basic course',
       link: 'https://arapov.trade/en/freestudying/freeeducation',
     },
-    
   ];
   onGroupChange(event: Event) {
     const checkbox = event.target as HTMLInputElement;
@@ -143,7 +143,7 @@ export class HomeEnTwentyFiveComponent implements OnInit {
     // Показываем 5 случайных статей при фокусе, если инпут пуст
     if (!this.searchQuery) {
       const shuffled = [...this.artickleServ.ukrArtickles].sort(
-        () => Math.random() - 0.5
+        () => Math.random() - 0.5,
       );
       this.displayedArticles = shuffled.slice(0, this.maxResults);
     }
@@ -156,7 +156,7 @@ export class HomeEnTwentyFiveComponent implements OnInit {
   onSearchChange() {
     // Логика асинхронного поиска
     const filtered = this.artickleServ.ukrArtickles.filter((a) =>
-      a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase())
+      a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase()),
     );
     this.displayedArticles = filtered.slice(0, this.maxResults);
   }
@@ -176,7 +176,7 @@ export class HomeEnTwentyFiveComponent implements OnInit {
     const path: string =
       this.router.url.split('/')[this.router.url.split('/').length - 1];
     let index = this.artickleServ.ukrArtickles.findIndex(
-      (a) => a.linkUkr == path
+      (a) => a.linkUkr == path,
     );
 
     if (this.artickleServ.ukrArtickles.length - 1 == index) {
@@ -191,7 +191,7 @@ export class HomeEnTwentyFiveComponent implements OnInit {
     const path: string =
       this.router.url.split('/')[this.router.url.split('/').length - 1];
     let index = this.artickleServ.ukrArtickles.findIndex(
-      (a) => a.linkUkr == path
+      (a) => a.linkUkr == path,
     );
     if (index == 1) {
       nextpage =
@@ -213,7 +213,7 @@ export class HomeEnTwentyFiveComponent implements OnInit {
     ];
 
     const scripts = this.document.querySelectorAll(
-      'script[type="application/ld+json"]'
+      'script[type="application/ld+json"]',
     );
 
     scripts.forEach((script) => {
@@ -226,7 +226,7 @@ export class HomeEnTwentyFiveComponent implements OnInit {
 
         const shouldRemove = candidates.some(
           (entry: any) =>
-            entry['@type'] && typesToRemove.includes(entry['@type'])
+            entry['@type'] && typesToRemove.includes(entry['@type']),
         );
 
         if (shouldRemove) {
@@ -271,7 +271,7 @@ export class HomeEnTwentyFiveComponent implements OnInit {
             url: 'https://arapov.trade/assets/img/content/keyeconomicgrowth1.png',
           },
           datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2025-12-19T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
             '@id': 'https://arapov.trade/en/freestudying/keyeconomicgrowth',
@@ -291,7 +291,7 @@ export class HomeEnTwentyFiveComponent implements OnInit {
       '@context': 'https://schema.org',
       '@type': 'Person',
       '@id': 'https://arapov.trade/en#person',
-       name: 'Igor Arapov',
+      name: 'Igor Arapov',
       alternateName: [
         'Ігор Арапов',
         'Арапов Игорь',
@@ -305,7 +305,7 @@ export class HomeEnTwentyFiveComponent implements OnInit {
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
-    'https://www.wikidata.org/wiki/Q137454477',
+        'https://www.wikidata.org/wiki/Q137454477',
         'https://scholar.google.com/citations?user=N440tWQAAAAJ',
         'https://orcid.org/0009-0003-0430-778X',
         'https://isni.org/isni/0000000529518564',
@@ -313,11 +313,15 @@ export class HomeEnTwentyFiveComponent implements OnInit {
         'https://github.com/ArapovTrade',
         'https://ua.linkedin.com/in/arapovtrade',
         'https://www.youtube.com/@ArapovTrade',
-        'https://t.me/ArapovTrade'
-  ],
-  jobTitle: ['Independent researcher,', 'trader', 'author and founder of arapov.trade'],
-  description:
-    'Independent researcher, practicing trader, author of books on trading and scientific publications. Specializes in trading psychology and cognitive biases in financial markets.',
+        'https://t.me/ArapovTrade',
+      ],
+      jobTitle: [
+        'Independent researcher,',
+        'trader',
+        'author and founder of arapov.trade',
+      ],
+      description:
+        'Independent researcher, practicing trader, author of books on trading and scientific publications. Specializes in trading psychology and cognitive biases in financial markets.',
     };
 
     this.addJsonLdSchema(data);

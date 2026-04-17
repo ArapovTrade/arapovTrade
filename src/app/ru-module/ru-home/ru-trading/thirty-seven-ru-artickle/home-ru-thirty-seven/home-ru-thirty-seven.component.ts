@@ -66,7 +66,7 @@ export class HomeRuThirtySevenComponent implements OnInit {
       content:
         'Stop Hunting — манипулятивная стратегия Smart Money для выбивания стоп-лоссов. Узнайте, как распознать охоту за стопами и защитить свои позиции на форекс и криптовалютном рынке.',
     });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-03-31' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-03-31' }); this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/stophunting.png',
@@ -297,7 +297,7 @@ export class HomeRuThirtySevenComponent implements OnInit {
             url: 'https://arapov.trade',
           },
           datePublished: '2026-03-15T00:00:00Z',
-          dateModified: '2026-03-22T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
             '@id': 'https://arapov.trade/ru/freestudying/stophunting',

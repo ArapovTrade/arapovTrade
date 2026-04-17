@@ -66,7 +66,9 @@ export class HomeRuBlogSixtyFourComponent {
       content:
         'Торговая стратегия в трейдинге — что это такое, из чего состоит и почему важна для новичков. Примеры реальных сделок с разбором точек входа и выхода.',
     });
+     this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
 
+  this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/prakticrus.jpg',
@@ -309,7 +311,7 @@ export class HomeRuBlogSixtyFourComponent {
           description:
             'Торговая стратегия в трейдинге — что это такое, из чего состоит и почему важна для новичков. Примеры реальных сделок с разбором точек входа и выхода.',
           datePublished: '2025-11-15T00:00:00+02:00',
-          dateModified: '2025-12-15T00:00:00+02:00',
+          dateModified: '2026-04-15T00:00:00Z',
           author: {
             '@id': 'https://arapov.trade/ru#person',
           },

@@ -67,6 +67,7 @@ export class HomeRuBlogSixtySixComponent {
     });
 
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-11' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/peakvolumelevels.webp',
@@ -302,7 +303,7 @@ export class HomeRuBlogSixtySixComponent {
             },
           },
           datePublished: '2024-01-15T10:00:00+00:00',
-          dateModified: '2025-01-03T12:00:00+00:00',
+          dateModified: '2026-04-15T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
             '@id': 'https://arapov.trade/ru/freestudying/peakvolumelevels',
@@ -355,9 +356,13 @@ export class HomeRuBlogSixtySixComponent {
         'https://github.com/ArapovTrade',
         'https://ua.linkedin.com/in/arapovtrade',
         'https://www.youtube.com/@ArapovTrade',
-        'https://t.me/ArapovTrade'
+        'https://t.me/ArapovTrade',
       ],
-      jobTitle: ['Независимый исследователь', 'трейдер', 'автор и основатель arapov.trade'],
+      jobTitle: [
+        'Независимый исследователь',
+        'трейдер',
+        'автор и основатель arapov.trade',
+      ],
       description:
         'Независимый исследователь, практикующий трейдер, автор книг по трейдингу и научных публикаций. Специализируется на психологии трейдинга и когнитивных искажениях на финансовых рынках.',
     };

@@ -66,7 +66,7 @@ export class HomeUkBlogSixtyFiveComponent {
         'Біржовий стакан та стрічка принтів: повний посібник з аналізу Order Book і Time & Sales. Як читати глибину ринку, знаходити великих гравців та уникати маніпуляцій.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-02-11' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-02-11' }); this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/stockorderbook.png',
@@ -294,7 +294,7 @@ export class HomeUkBlogSixtyFiveComponent {
             '@id': 'https://arapov.trade/#organization',
           },
           datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2025-12-29T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
             '@id': 'https://arapov.trade/uk/freestudying/stockorderbook',

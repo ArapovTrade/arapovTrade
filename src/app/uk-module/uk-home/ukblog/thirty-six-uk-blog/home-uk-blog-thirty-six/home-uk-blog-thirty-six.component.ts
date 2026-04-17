@@ -59,7 +59,9 @@ export class HomeUkBlogThirtySixComponent implements OnInit {
     this.titleService.setTitle(
       'Криптовалютний ринок: повний посібник з аналізу та торгівлі | Arapov.trade'
     );
+     this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
 
+  this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
 
     this.meta.updateTag({
@@ -285,7 +287,7 @@ export class HomeUkBlogThirtySixComponent implements OnInit {
           image:
             'https://arapov.trade/assets/img/content/cryptocurrencytrading.webp',
           datePublished: '2025-08-15T00:00:00+02:00',
-          dateModified: '2025-08-15T00:00:00+02:00',
+         dateModified: '2026-04-15T00:00:00Z',
           inLanguage: 'uk',
           author: {
             '@id': 'https://arapov.trade/uk#person',

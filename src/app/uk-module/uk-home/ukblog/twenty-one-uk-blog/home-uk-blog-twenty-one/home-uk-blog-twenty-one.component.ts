@@ -59,7 +59,10 @@ export class HomeUkBlogTwentyOneComponent implements OnInit {
     this.titleService.setTitle(
       'Маркет-мейкер у трейдингу: повний посібник | Arapov.trade',
     );
-    this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+    this.meta.updateTag({ name: 'robots', content: 'index, follow' }); this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
+
+  this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
+
     this.meta.updateTag({
       name: 'description',
       content:
@@ -276,7 +279,7 @@ export class HomeUkBlogTwentyOneComponent implements OnInit {
             'Маркет-мейкер у трейдингу: хто це, як працює та як використовувати їхні стратегії у власній торгівлі.',
           image: 'https://arapov.trade/assets/img/content/marketmaker1.webp',
           datePublished: '2026-03-15T00:00:00Z',
-          dateModified: '2026-03-22T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
 
           author: {
             '@id': 'https://arapov.trade/uk#person',

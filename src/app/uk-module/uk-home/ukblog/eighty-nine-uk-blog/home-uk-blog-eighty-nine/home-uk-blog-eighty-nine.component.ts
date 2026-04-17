@@ -67,7 +67,9 @@ export class HomeUkBlogEightyNineComponent implements OnInit {
       content:
         'Домінація біткоїна (BTC.D): що це таке, як розраховується, історія змін та вплив на альткоїни. Повний гід для трейдерів.',
     });
+     this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
 
+  this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
 
     this.gerRandom();
@@ -283,7 +285,8 @@ export class HomeUkBlogEightyNineComponent implements OnInit {
           image:
             'https://arapov.trade/assets/img/content/bitcoin_dominance_1.png',
           datePublished: '2026-03-25T00:00:00Z',
-          dateModified: '2026-03-31T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
+
           author: {
             '@id': 'https://arapov.trade/uk#person',
           },

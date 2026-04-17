@@ -68,6 +68,7 @@ export class HomeUkTwentyComponent implements OnInit {
     });
 
     this.meta.updateTag({ name: 'datePublished', content: '2025-03-27' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/steidlmayeranalysis.png',
@@ -285,7 +286,8 @@ export class HomeUkTwentyComponent implements OnInit {
           image:
             'https://arapov.trade/assets/img/content/steidlmayeranalysis2.png',
           datePublished: '2026-03-15T00:00:00Z',
-          dateModified: '2026-03-22T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
+
           author: { '@id': 'https://arapov.trade/uk#person' },
           publisher: {
             '@type': 'Organization',
@@ -332,9 +334,13 @@ export class HomeUkTwentyComponent implements OnInit {
         'https://github.com/ArapovTrade',
         'https://ua.linkedin.com/in/arapovtrade',
         'https://www.youtube.com/@ArapovTrade',
-        'https://t.me/ArapovTrade'
+        'https://t.me/ArapovTrade',
       ],
-       jobTitle: ['Незалежний дослідник', 'трейдер', 'автор і засновник arapov.trade'],
+      jobTitle: [
+        'Незалежний дослідник',
+        'трейдер',
+        'автор і засновник arapov.trade',
+      ],
       description:
         'Незалежний дослідник, практикуючий трейдер, автор книг з трейдингу та наукових публікацій. Спеціалізується на психології трейдингу та когнітивних упередженнях на фінансових ринках.',
     };

@@ -31,7 +31,7 @@ export class HomeUkFourtyFiveComponent implements OnInit {
     private router: Router,
     private themeService: ThemeservService,
     private renderer: Renderer2,
-    private artickleServ: ArticlesService
+    private artickleServ: ArticlesService,
   ) {}
   private routerSubscription!: Subscription;
   private themeSubscription!: Subscription;
@@ -60,7 +60,7 @@ export class HomeUkFourtyFiveComponent implements OnInit {
     this.checkedGroup = this.artickleServ.selectedGroups;
 
     this.titleService.setTitle(
-      'Безкоштовне навчання трейдингу для початківців | Ігор Арапов'
+      'Безкоштовне навчання трейдингу для початківців | Ігор Арапов',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
@@ -70,6 +70,7 @@ export class HomeUkFourtyFiveComponent implements OnInit {
     });
 
     this.meta.updateTag({ name: 'datePublished', content: '2025-05-30' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: 'https://arapov.trade/assets/img/content/freeeducationnew.webp',
@@ -118,7 +119,6 @@ export class HomeUkFourtyFiveComponent implements OnInit {
       title: 'Базовий курс',
       link: 'https://arapov.trade/uk/freestudying/freeeducation',
     },
-     
   ];
 
   onGroupChange(event: Event) {
@@ -188,7 +188,7 @@ export class HomeUkFourtyFiveComponent implements OnInit {
     // Показываем 5 случайных статей при фокусе, если инпут пуст
     if (!this.searchQuery) {
       const shuffled = [...this.artickleServ.ukrArtickles].sort(
-        () => Math.random() - 0.5
+        () => Math.random() - 0.5,
       );
       this.displayedArticles = shuffled.slice(0, this.maxResults);
     }
@@ -203,7 +203,7 @@ export class HomeUkFourtyFiveComponent implements OnInit {
   onSearchChange() {
     // Логика асинхронного поиска
     const filtered = this.artickleServ.ukrArtickles.filter((a) =>
-      a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase())
+      a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase()),
     );
     this.displayedArticles = filtered.slice(0, this.maxResults);
   }
@@ -225,7 +225,7 @@ export class HomeUkFourtyFiveComponent implements OnInit {
     const path: string =
       this.router.url.split('/')[this.router.url.split('/').length - 1];
     let index = this.artickleServ.ukrArtickles.findIndex(
-      (a) => a.linkUkr == path
+      (a) => a.linkUkr == path,
     );
 
     if (this.artickleServ.ukrArtickles.length - 1 == index) {
@@ -267,7 +267,7 @@ export class HomeUkFourtyFiveComponent implements OnInit {
     ];
 
     const scripts = this.document.querySelectorAll(
-      'script[type="application/ld+json"]'
+      'script[type="application/ld+json"]',
     );
 
     scripts.forEach((script) => {
@@ -280,7 +280,7 @@ export class HomeUkFourtyFiveComponent implements OnInit {
 
         const shouldRemove = candidates.some(
           (entry: any) =>
-            entry['@type'] && typesToRemove.includes(entry['@type'])
+            entry['@type'] && typesToRemove.includes(entry['@type']),
         );
 
         if (shouldRemove) {
@@ -314,7 +314,7 @@ export class HomeUkFourtyFiveComponent implements OnInit {
           description:
             'Безкоштовний курс трейдингу для початківців від практикуючого трейдера з 2013 року. Понад 130 статей, 70 відео: від основ до Smart Money та Вайкоффа.',
           datePublished: '2025-01-15T00:00:00+02:00',
-          dateModified: '2025-11-15T00:00:00+02:00',
+          dateModified: '2026-04-15T00:00:00Z',
           author: {
             '@id': 'https://arapov.trade/uk#person',
           },
@@ -364,12 +364,12 @@ export class HomeUkFourtyFiveComponent implements OnInit {
       name: 'Ігор Арапов',
       alternateName: [
         'Igor Arapov',
-              'Арапов Игорь',
-              'I. Arapov',
-              'Игорь Арапов',
-              'І. В. Арапов',
-              'Арапов Ігор',
-              'Arapov Igor',
+        'Арапов Игорь',
+        'I. Arapov',
+        'Игорь Арапов',
+        'І. В. Арапов',
+        'Арапов Ігор',
+        'Arapov Igor',
       ],
       url: 'https://arapov.trade/uk',
       image:
@@ -383,9 +383,13 @@ export class HomeUkFourtyFiveComponent implements OnInit {
         'https://github.com/ArapovTrade',
         'https://ua.linkedin.com/in/arapovtrade',
         'https://www.youtube.com/@ArapovTrade',
-        'https://t.me/ArapovTrade'
+        'https://t.me/ArapovTrade',
       ],
-       jobTitle: ['Незалежний дослідник', 'трейдер', 'автор і засновник arapov.trade'],
+      jobTitle: [
+        'Незалежний дослідник',
+        'трейдер',
+        'автор і засновник arapov.trade',
+      ],
       description:
         'Незалежний дослідник, практикуючий трейдер, автор книг з трейдингу та наукових публікацій. Спеціалізується на психології трейдингу та когнітивних упередженнях на фінансових ринках.',
     };
@@ -650,15 +654,15 @@ export class HomeUkFourtyFiveComponent implements OnInit {
         provider: {
           '@type': 'Person',
           name: 'Ігор Арапов',
-      alternateName: [
-        'Igor Arapov',
-              'Арапов Игорь',
-              'I. Arapov',
-              'Игорь Арапов',
-              'І. В. Арапов',
-              'Арапов Ігор',
-              'Arapov Igor',
-      ],
+          alternateName: [
+            'Igor Arapov',
+            'Арапов Игорь',
+            'I. Arapov',
+            'Игорь Арапов',
+            'І. В. Арапов',
+            'Арапов Ігор',
+            'Arapov Igor',
+          ],
         },
       },
     };

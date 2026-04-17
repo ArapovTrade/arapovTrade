@@ -62,7 +62,9 @@ export class HomeEnBlogNintyThreeComponent implements OnInit {
     this.titleService.setTitle(
       'ATR Indicator: Measuring Volatility and Setting Stop-Losses | 2025',
     );
+    this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
 
+    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
 
     this.meta.updateTag({
@@ -282,7 +284,7 @@ export class HomeEnBlogNintyThreeComponent implements OnInit {
           image: 'https://arapov.trade/assets/img/content/atrstrategies.jpg',
 
           datePublished: '2026-03-25T00:00:00Z',
-          dateModified: '2026-03-31T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
           author: { '@id': 'https://arapov.trade/en#person' },
           publisher: {
             '@type': 'Organization',

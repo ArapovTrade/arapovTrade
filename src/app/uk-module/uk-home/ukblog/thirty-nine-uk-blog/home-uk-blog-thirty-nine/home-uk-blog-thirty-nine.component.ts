@@ -68,7 +68,7 @@ export class HomeUkBlogThirtyNineComponent implements OnInit {
         'Повний посібник із безпечного зберігання криптовалют. Порівняння гарячих та холодних гаманців, захист приватних ключів, комбіновані стратегії для збереження цифрових активів.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-23' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-01-23' }); this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/safetostorecrypto.webp',
@@ -302,7 +302,7 @@ export class HomeUkBlogThirtyNineComponent implements OnInit {
             },
           },
           datePublished: '2024-06-15T00:00:00Z',
-          dateModified: '2025-01-04T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
           articleBody:
             'Збереження криптовалютних активів вимагає усвідомленого підходу до безпеки та глибокого розуміння ризиків цифрового простору. На відміну від традиційних фінансів, де банк може відновити втрачену картку або скасувати шахрайську транзакцію, світ криптовалют функціонує за принципом повної персональної відповідальності.',
         },

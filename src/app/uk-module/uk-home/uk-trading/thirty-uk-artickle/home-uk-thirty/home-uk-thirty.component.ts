@@ -66,7 +66,7 @@ export class HomeUkThirtyComponent implements OnInit {
         'Imbalance та FVG у трейдингу: повний посібник із зон ліквідності. Дізнайтеся, як знаходити дисбаланси та Fair Value Gaps для точних входів у ринок.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-03-30' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-03-30' });  this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/imbalanceandfvg.png',
@@ -297,7 +297,7 @@ export class HomeUkThirtyComponent implements OnInit {
             url: 'https://arapov.trade',
           },
           datePublished: '2026-03-15T00:00:00Z',
-          dateModified: '2026-03-22T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
             '@id': 'https://arapov.trade/uk/freestudying/imbalanceandfvg',

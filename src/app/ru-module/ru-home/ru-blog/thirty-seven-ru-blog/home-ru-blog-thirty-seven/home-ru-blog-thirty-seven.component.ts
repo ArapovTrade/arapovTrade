@@ -66,7 +66,7 @@ export class HomeRuBlogThirtySevenComponent implements OnInit {
       content:
         'Просадка в трейдинге: виды drawdown, причины возникновения, методы анализа и минимизации. Практическое руководство по управлению рисками и восстановлению капитала.',
     });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-04-02' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-02' });this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/drawdowns.webp',
@@ -294,7 +294,7 @@ export class HomeRuBlogThirtySevenComponent implements OnInit {
             },
           },
           datePublished: '2026-03-25T00:00:00Z',
-          dateModified: '2026-03-31T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
 
           image: 'https://arapov.trade/assets/img/content/drawdowns1.webp',
           mainEntityOfPage: {

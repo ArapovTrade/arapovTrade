@@ -67,7 +67,9 @@ export class HomeUkBlogNintyFourComponent implements OnInit {
       content:
         'Спред у трейдингу — різниця між ціною купівлі та продажу активу. Дізнайтеся види спредів, фактори впливу та стратегії мінімізації торгових витрат на Форекс.',
     });
+     this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
 
+  this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
 
     this.gerRandom();
@@ -281,7 +283,8 @@ export class HomeUkBlogNintyFourComponent implements OnInit {
             'Повний посібник зі спреду в трейдингу. Розбираємо типи спредів, фактори впливу на розмір та практичні методи зниження торгових витрат.',
           image: 'https://arapov.trade/assets/img/content/spread3.png',
           datePublished: '2026-03-15T00:00:00Z',
-          dateModified: '2026-03-22T00:00:00Z',
+         dateModified: '2026-04-15T00:00:00Z',
+
           author: {
             '@id': 'https://arapov.trade/uk#person',
           },

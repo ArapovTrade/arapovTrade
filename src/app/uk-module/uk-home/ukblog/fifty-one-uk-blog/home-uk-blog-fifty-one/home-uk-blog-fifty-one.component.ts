@@ -65,7 +65,7 @@ export class HomeUkBlogFiftyOneComponent implements OnInit {
       content:
         'Дізнайтеся, як використовувати метод Price Action у трейдингу. Свічкові патерни, рівні підтримки та опору, стратегії торгівлі без індикаторів.',
     });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-04-17' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-17' });this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/candlestickpatterns.webp',
@@ -291,7 +291,7 @@ export class HomeUkBlogFiftyOneComponent implements OnInit {
         },
       },
       datePublished: '2025-01-10T12:00:00+02:00',
-      dateModified: '2025-01-10T12:00:00+02:00',
+    dateModified: '2026-04-15T00:00:00Z',
       mainEntityOfPage: {
         '@type': 'WebPage',
         '@id': 'https://arapov.trade/uk/freestudying/candlestickpatterns',

@@ -66,7 +66,7 @@ export class HomeRuTwentyNineComponent implements OnInit {
         'Почему 90% трейдеров теряют деньги: ловушки Смарт Мани, манипуляции крупных игроков, охота за стоп-лоссами и методы защиты капитала.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-02-04' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-02-04' });  this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/smartmoneytraps.webp',
@@ -306,7 +306,7 @@ export class HomeRuTwentyNineComponent implements OnInit {
             },
           },
           datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2025-12-29T00:00:00Z',
+         dateModified: '2026-04-15T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
             '@id': 'https://arapov.trade/ru/freestudying/smartmoneytraps',

@@ -65,6 +65,7 @@ export class HomeEnThirtyOneComponent implements OnInit {
     });
 
     this.meta.updateTag({ name: 'datePublished', content: '2025-03-29' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/marketorder.webp',
@@ -258,7 +259,7 @@ export class HomeEnThirtyOneComponent implements OnInit {
             'Learn how a market order works, what slippage is, and when to use market orders in your trading strategy. Execution mechanics, risks, and practical tips.',
           image: 'https://arapov.trade/assets/img/content/marketorder.png',
           datePublished: '2026-03-15T00:00:00Z',
-          dateModified: '2026-03-22T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
           author: { '@id': 'https://arapov.trade/en#person' },
           publisher: {
             '@type': 'Organization',

@@ -66,7 +66,7 @@ export class HomeUkBlogSeventyNineComponent {
         'Психологія усереднення в трейдингу: чому ця стратегія небезпечна, які психологічні пастки змушують трейдерів усереднювати та як уникнути втрати депозиту.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-04-10' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-10' });this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/psychologyofaveraging.webp',
@@ -283,7 +283,7 @@ export class HomeUkBlogSeventyNineComponent {
           image:
             'https://arapov.trade/assets/img/content/psychologyofaveraging.webp',
           datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2025-12-29T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
           author: {
             '@id': 'https://arapov.trade/ru#person',
           },

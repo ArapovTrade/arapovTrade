@@ -64,7 +64,7 @@ export class HomeUkBlogFiftyNineComponent implements OnInit {
       content:
         'Детальний посібник з торгівлі на пробій рівнів підтримки та опору. Дізнайтеся, як визначати справжні пробої, використовувати ретести та пін-бари для входу в угоди.',
     });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-04-18' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-18' });this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/levelbreakoutstrategy.webp',
@@ -293,7 +293,8 @@ export class HomeUkBlogFiftyNineComponent implements OnInit {
             },
           },
           datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2025-11-29T00:00:00Z',
+         dateModified: '2026-04-15T00:00:00Z',
+
           mainEntityOfPage: {
             '@type': 'WebPage',
             '@id': 'https://arapov.trade/uk/freestudying/levelbreakoutstrategy',

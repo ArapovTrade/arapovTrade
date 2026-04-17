@@ -54,7 +54,9 @@ export class HomeRuBlogOnehundredOneComponent implements OnInit {
       content:
         'VWAP индикатор: полное руководство. Средневзвешенная цена по объёму, стратегии внутридневной торговли.',
     });
+      this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
 
+  this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.themeSubscription = this.themeService.getTheme().subscribe((data) => {
       this.isDark = data;
       this.cdr.detectChanges();
@@ -296,7 +298,8 @@ export class HomeRuBlogOnehundredOneComponent implements OnInit {
             },
           },
           datePublished: '2025-06-22T00:00:00+02:00',
-          dateModified: '2025-06-22T00:00:00+02:00',
+          dateModified: '2026-04-15T00:00:00Z',
+
           inLanguage: 'ru',
         },
       ],

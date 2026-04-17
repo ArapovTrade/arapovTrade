@@ -65,7 +65,9 @@ export class HomeRuBlogThirtyThreeComponent implements OnInit {
       content:
         'Пин-бар в трейдинге — полное руководство по торговле разворотным паттерном. Бычий и медвежий пин-бар, стратегии входа, управление рисками на форекс и криптовалютах.',
     });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-04-16' });
+     this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
+
+  this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/pinbar.jpg',
@@ -305,7 +307,8 @@ export class HomeRuBlogThirtyThreeComponent implements OnInit {
             },
           },
           datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2025-12-29T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
+
           mainEntityOfPage: {
             '@type': 'WebPage',
             '@id': 'https://arapov.trade/ru/freestudying/pinbar',

@@ -55,6 +55,8 @@ export class HomeEnBlogNineComponent implements OnInit {
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle('How to Predict Price in Trading | ArapovTrade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       name: 'description',
       content:
@@ -260,7 +262,7 @@ export class HomeEnBlogNineComponent implements OnInit {
             },
           },
           datePublished: '2026-03-15T00:00:00Z',
-          dateModified: '2026-03-22T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
             '@id': 'https://arapov.trade/en/freestudying/predictmarketprice',
@@ -299,7 +301,7 @@ export class HomeEnBlogNineComponent implements OnInit {
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
-    'https://www.wikidata.org/wiki/Q137454477',
+        'https://www.wikidata.org/wiki/Q137454477',
         'https://scholar.google.com/citations?user=N440tWQAAAAJ',
         'https://orcid.org/0009-0003-0430-778X',
         'https://isni.org/isni/0000000529518564',
@@ -307,11 +309,15 @@ export class HomeEnBlogNineComponent implements OnInit {
         'https://github.com/ArapovTrade',
         'https://ua.linkedin.com/in/arapovtrade',
         'https://www.youtube.com/@ArapovTrade',
-        'https://t.me/ArapovTrade'
-  ],
-  jobTitle: ['Independent researcher,', 'trader', 'author and founder of arapov.trade'],
-  description:
-    'Independent researcher, practicing trader, author of books on trading and scientific publications. Specializes in trading psychology and cognitive biases in financial markets.',
+        'https://t.me/ArapovTrade',
+      ],
+      jobTitle: [
+        'Independent researcher,',
+        'trader',
+        'author and founder of arapov.trade',
+      ],
+      description:
+        'Independent researcher, practicing trader, author of books on trading and scientific publications. Specializes in trading psychology and cognitive biases in financial markets.',
     };
 
     this.addJsonLdSchema(data);

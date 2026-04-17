@@ -66,7 +66,7 @@ export class HomeUkFourtyThreeComponent implements OnInit {
         'Дізнайтеся, що таке пули ліквідності в трейдингу, як великі гравці маніпулюють ринком та як захистити свій депозит від полювання за стопами.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-02-06' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-02-06' }); this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/liquiditypools.png',
@@ -283,7 +283,7 @@ export class HomeUkFourtyThreeComponent implements OnInit {
             'Дізнайтеся, що таке пули ліквідності в трейдингу, як великі гравці маніпулюють ринком та як захистити свій депозит від полювання за стопами.',
           image: 'https://arapov.trade/assets/img/content/liquiditypools1.png',
           datePublished: '2026-03-15T00:00:00Z',
-          dateModified: '2026-03-22T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
 
           author: {
             '@id': 'https://arapov.trade/uk#person',

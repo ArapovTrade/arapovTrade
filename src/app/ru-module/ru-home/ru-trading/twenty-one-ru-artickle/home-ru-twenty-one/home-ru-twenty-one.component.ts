@@ -66,7 +66,7 @@ export class HomeRuTwentyOneComponent implements OnInit {
         'Как проводить анализ рынка FOREX: экономические факторы, влияние новостей, работа со слухами, циклы рынка и психология трейдинга для принятия прибыльных решений.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-19' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-01-19' }); this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/marketanalysis.webp',
@@ -295,7 +295,7 @@ export class HomeRuTwentyOneComponent implements OnInit {
             },
           },
           datePublished: '2025-06-15T00:00:00+02:00',
-          dateModified: '2025-11-04T00:00:00+02:00',
+          dateModified: '2026-04-15T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
             '@id': 'https://arapov.trade/ru/freestudying/marketanalysisforex',

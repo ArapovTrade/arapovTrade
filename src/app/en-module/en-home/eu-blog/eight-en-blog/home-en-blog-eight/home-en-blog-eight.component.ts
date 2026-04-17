@@ -56,6 +56,8 @@ export class HomeEnBlogEightComponent implements OnInit {
     this.titleService.setTitle(
       'Imbalance in Trading: Complete Guide | Arapov.trade',
     );
+    this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
@@ -265,7 +267,7 @@ export class HomeEnBlogEightComponent implements OnInit {
             },
           },
           datePublished: '2026-03-25T00:00:00Z',
-          dateModified: '2026-03-31T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
             '@id': 'https://arapov.trade/en/freestudying/imbalanceintrading',

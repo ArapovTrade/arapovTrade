@@ -67,6 +67,7 @@ export class HomeRuFourteenComponent implements OnInit {
         'Риски кредитного плеча на Форекс: почему 70% трейдеров теряют деньги. Математика убытков, психология торговли, стратегии снижения рисков при использовании leverage.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-07' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/forexLeverageRisk.webp',
@@ -297,7 +298,7 @@ export class HomeRuFourteenComponent implements OnInit {
             },
           },
           datePublished: '2026-03-25T00:00:00Z',
-          dateModified: '2026-03-31T00:00:00Z',
+        dateModified: '2026-04-15T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
             '@id': 'https://arapov.trade/ru/freestudying/forexleveragerisk',

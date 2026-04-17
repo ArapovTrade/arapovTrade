@@ -66,7 +66,7 @@ export class HomeUkBlogFourtySevenComponent implements OnInit {
         'Повний посібник з фундаментального аналізу фінансових ринків. Вивчіть макроекономічні показники, оцінку компаній та прогнозування трендів для інвестицій.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-19' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-01-19' });this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/fundamentalanalysis.webp',
@@ -288,7 +288,7 @@ export class HomeUkBlogFourtySevenComponent implements OnInit {
           image:
             'https://arapov.trade/assets/img/content/fundamentalanalysis.webp',
           datePublished: '2025-01-15T00:00:00+02:00',
-          dateModified: '2025-11-15T00:00:00+02:00',
+         dateModified: '2026-04-15T00:00:00Z',
           inLanguage: 'uk',
           author: {
             '@id': 'https://arapov.trade/uk#person',

@@ -67,7 +67,9 @@ export class HomeUkBlogNintyComponent implements OnInit {
       content:
         'Метод Мартінгейла у трейдингу: детальний розбір стратегії подвоєння позицій, застосування на Форекс та криптовалютах, розрахунок ризиків для початківців.',
     });
+     this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
 
+  this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
 
     this.gerRandom();
@@ -282,7 +284,7 @@ export class HomeUkBlogNintyComponent implements OnInit {
             'Детальний розбір стратегії подвоєння позицій, застосування на Форекс та криптовалютах, розрахунок ризиків.',
           image: 'https://arapov.trade/assets/img/content/martingale1.jpg',
           datePublished: '2026-03-15T00:00:00Z',
-          dateModified: '2026-03-22T00:00:00Z',
+         dateModified: '2026-04-15T00:00:00Z',
           author: {
             '@id': 'https://arapov.trade/uk#person',
           },

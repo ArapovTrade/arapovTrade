@@ -65,7 +65,9 @@ export class HomeUkBlogSeventeenComponent implements OnInit {
       content:
         'Аналізуємо головні міфи про трейдинг: від ілюзії швидкого збагачення до омани про необхідність великого капіталу. Дізнайтеся правду про біржову торгівлю.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
 
+  this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.gerRandom();
   }
   randomArticleRus: any = [];
@@ -277,7 +279,7 @@ export class HomeUkBlogSeventeenComponent implements OnInit {
             'Аналізуємо головні міфи про трейдинг: від ілюзії швидкого збагачення до омани про необхідність великого капіталу. Дізнайтеся правду про біржову торгівлю.',
           image: 'https://arapov.trade/assets/img/content/tradingmyths1.webp',
           datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2025-12-29T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
           author: {
             '@id': 'https://arapov.trade/uk#person',
           },

@@ -61,7 +61,9 @@ export class HomeUkTwoComponent implements OnInit {
     );
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
 
+    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       name: 'description',
       content:
@@ -278,7 +280,7 @@ export class HomeUkTwoComponent implements OnInit {
             'Детальний словник термінів фінансового ринку для початківців. Основи фондового та валютного ринку, технічний та фундаментальний аналіз, торгові стратегії.',
           image: 'https://arapov.trade/assets/img/content/osnovirinka1.webp',
           datePublished: '2026-03-15T00:00:00Z',
-          dateModified: '2026-03-22T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
           author: {
             '@id': 'https://arapov.trade/uk#person',
           },

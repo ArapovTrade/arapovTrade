@@ -66,7 +66,7 @@ export class HomeUkBlogFourtyThreeComponent implements OnInit {
         'Як аналізувати попит і пропозицію на ринку криптовалют. Вивчіть методи оцінки балансу сил, обсяги торгів, ордербук та стратегії для прибуткового трейдингу.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-25' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-01-25' }); this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/cryptomarketanalysis.png',
@@ -300,7 +300,8 @@ export class HomeUkBlogFourtyThreeComponent implements OnInit {
             },
           },
           datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2025-12-29T00:00:00Z',
+         dateModified: '2026-04-15T00:00:00Z',
+
           articleBody:
             'Криптовалютний ринок працює за базовими економічними законами, де взаємодія покупців і продавців визначає ціноутворення кожного активу...',
         },

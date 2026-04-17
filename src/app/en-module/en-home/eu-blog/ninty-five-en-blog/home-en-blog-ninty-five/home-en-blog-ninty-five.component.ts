@@ -62,6 +62,8 @@ export class HomeEnBlogNintyFiveComponent implements OnInit {
     this.titleService.setTitle('Gold Trading XAUUSD | Complete Trader`s Guide');
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
 
     this.meta.updateTag({
       name: 'description',
@@ -290,7 +292,7 @@ export class HomeEnBlogNintyFiveComponent implements OnInit {
             },
           },
           datePublished: '2025-06-04T00:00:00+02:00',
-          dateModified: '2025-06-04T00:00:00+02:00',
+          dateModified: '2026-04-15T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
             '@id': 'https://arapov.trade/en/freestudying/goldtrading',

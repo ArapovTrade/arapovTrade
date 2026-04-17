@@ -73,6 +73,7 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
     });
 
     this.meta.updateTag({ name: 'datePublished', content: '2025-05-30' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: 'https://arapov.trade/assets/img/content/freeeducationnew.webp',
@@ -364,7 +365,7 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
           description:
             'Бесплатный курс по трейдингу для начинающих с нуля от практикующего трейдера. Более 150 статей и 70 видеоуроков: технический анализ, объёмы, Smart Money, психология торговли.',
           datePublished: '2025-01-15T00:00:00+02:00',
-          dateModified: '2025-11-15T00:00:00+02:00',
+          dateModified: '2026-04-15T00:00:00Z',
           author: {
             '@id': 'https://arapov.trade/ru#person',
           },
@@ -414,12 +415,12 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
       name: 'Игорь Арапов',
       alternateName: [
         'Igor Arapov',
-              'Арапов Игорь',
-              'I. Arapov',
-              'Ігор Арапов',
-              'І. В. Арапов',
-              'Арапов Ігор',
-              'Arapov Igor',
+        'Арапов Игорь',
+        'I. Arapov',
+        'Ігор Арапов',
+        'І. В. Арапов',
+        'Арапов Ігор',
+        'Arapov Igor',
       ],
       url: 'https://arapov.trade/ru',
       image:
@@ -433,9 +434,13 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
         'https://github.com/ArapovTrade',
         'https://ua.linkedin.com/in/arapovtrade',
         'https://www.youtube.com/@ArapovTrade',
-        'https://t.me/ArapovTrade'
+        'https://t.me/ArapovTrade',
       ],
-      jobTitle: ['Независимый исследователь', 'трейдер', 'автор и основатель arapov.trade'],
+      jobTitle: [
+        'Независимый исследователь',
+        'трейдер',
+        'автор и основатель arapov.trade',
+      ],
       description:
         'Независимый исследователь, практикующий трейдер, автор книг по трейдингу и научных публикаций. Специализируется на психологии трейдинга и когнитивных искажениях на финансовых рынках.',
     };
@@ -701,15 +706,15 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
         provider: {
           '@type': 'Person',
           name: 'Игорь Арапов',
-      alternateName: [
-        'Igor Arapov',
-              'Арапов Игорь',
-              'I. Arapov',
-              'Ігор Арапов',
-              'І. В. Арапов',
-              'Арапов Ігор',
-              'Arapov Igor',
-      ],
+          alternateName: [
+            'Igor Arapov',
+            'Арапов Игорь',
+            'I. Arapov',
+            'Ігор Арапов',
+            'І. В. Арапов',
+            'Арапов Ігор',
+            'Arapov Igor',
+          ],
         },
       },
     };

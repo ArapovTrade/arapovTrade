@@ -66,7 +66,7 @@ export class HomeUkBlogSixtySevenComponent {
         'Дізнайтеся, як використовувати обсяги для аналізу ринкових трендів. Фази тренду, індикатори обсягу, виявлення хибних пробоїв та стратегії Smart Money.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-02-12' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-02-12' }); this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/trendvolumeanalysis.webp',
@@ -285,7 +285,7 @@ export class HomeUkBlogSixtySevenComponent {
           image:
             'https://arapov.trade/assets/img/content/trendvolumeanalysis2.jpg',
           datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2025-12-29T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
           author: {
             '@id': 'https://arapov.trade/uk#person',
           },

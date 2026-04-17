@@ -67,15 +67,9 @@ export class HomeRuBlogEightySevenComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
 
-    // this.titleService.setTitle('Що таке імбаланс у трейдингу | Arapov.trade');
-
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-
-    // this.meta.updateTag({
-    //   name: 'description',
-    //   content:
-    //     'Що таке імбаланс у трейдингу, як він впливає на ринок. Приклади, методи виявлення і стратегії з урахуванням ринкового дисбалансу.',
-    // });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
 
     this.gerRandom();
   }
@@ -87,7 +81,7 @@ export class HomeRuBlogEightySevenComponent implements OnInit {
   hoveredIndex: number | null = null;
 
   projects = [
-     { title: 'Книги по трейдингу', link: 'https://arapov.trade/ru/books' },
+    { title: 'Книги по трейдингу', link: 'https://arapov.trade/ru/books' },
     {
       title: 'Профессиональные курсы',
       link: 'https://arapov.trade/ru/studying',
@@ -96,7 +90,6 @@ export class HomeRuBlogEightySevenComponent implements OnInit {
       title: 'Базовый курс',
       link: 'https://arapov.trade/ru/freestudying/freeeducation',
     },
-     
   ];
 
   onGroupChange(event: Event) {
@@ -293,7 +286,7 @@ export class HomeRuBlogEightySevenComponent implements OnInit {
           image: 'https://arapov.trade/assets/img/content/copytrading.png',
 
           datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2025-12-29T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
           author: {
             '@id': 'https://arapov.trade/ru#person',
           },
@@ -322,15 +315,15 @@ export class HomeRuBlogEightySevenComponent implements OnInit {
       '@context': 'https://schema.org',
       '@type': 'Person',
       '@id': 'https://arapov.trade/ru#person',
-       name: 'Игорь Арапов',
+      name: 'Игорь Арапов',
       alternateName: [
         'Igor Arapov',
-              'Арапов Игорь',
-              'I. Arapov',
-              'Ігор Арапов',
-              'І. В. Арапов',
-              'Арапов Ігор',
-              'Arapov Igor',
+        'Арапов Игорь',
+        'I. Arapov',
+        'Ігор Арапов',
+        'І. В. Арапов',
+        'Арапов Ігор',
+        'Arapov Igor',
       ],
       url: 'https://arapov.trade/ru',
       image:
@@ -344,9 +337,13 @@ export class HomeRuBlogEightySevenComponent implements OnInit {
         'https://github.com/ArapovTrade',
         'https://ua.linkedin.com/in/arapovtrade',
         'https://www.youtube.com/@ArapovTrade',
-        'https://t.me/ArapovTrade'
+        'https://t.me/ArapovTrade',
       ],
-      jobTitle: ['Независимый исследователь', 'трейдер', 'автор и основатель arapov.trade'],
+      jobTitle: [
+        'Независимый исследователь',
+        'трейдер',
+        'автор и основатель arapov.trade',
+      ],
       description:
         'Независимый исследователь, практикующий трейдер, автор книг по трейдингу и научных публикаций. Специализируется на психологии трейдинга и когнитивных искажениях на финансовых рынках.',
     };

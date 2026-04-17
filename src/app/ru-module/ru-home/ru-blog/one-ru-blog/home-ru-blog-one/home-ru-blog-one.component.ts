@@ -67,6 +67,7 @@ export class HomeRuBlogOneComponent implements OnInit {
     });
 
     this.meta.updateTag({ name: 'datePublished', content: '2025-01-13' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/blogmarketphases.webp',
@@ -284,7 +285,7 @@ export class HomeRuBlogOneComponent implements OnInit {
           image:
             'https://arapov.trade/assets/img/content/blogmarketphases.webp',
           datePublished: '2026-03-25T00:00:00Z',
-          dateModified: '2026-03-31T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
           author: {
             '@id': 'https://arapov.trade/ru#person',
           },

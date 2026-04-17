@@ -62,7 +62,8 @@ export class HomeEnBlogEightyNineComponent implements OnInit {
     this.titleService.setTitle(
       'Bitcoin Dominance (BTC.D): What It Is and How to Use It in Trading | Igor Arapov',
     );
-
+    this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
 
     this.meta.updateTag({
@@ -284,7 +285,7 @@ export class HomeEnBlogEightyNineComponent implements OnInit {
           image:
             'https://arapov.trade/assets/img/content/bitcoin_dominance_1.png',
           datePublished: '2026-03-25T00:00:00Z',
-          dateModified: '2026-03-31T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
           author: {
             '@id': 'https://arapov.trade/en#person',
           },

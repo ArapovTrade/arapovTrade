@@ -59,6 +59,8 @@ export class HomeRuBlogEighteenComponent implements OnInit {
     this.titleService.setTitle(
       'Объемный анализ рынка в трейдинге | ArapovTrade',
     );
+    this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
@@ -283,7 +285,7 @@ export class HomeRuBlogEighteenComponent implements OnInit {
           image:
             'https://arapov.trade/assets/img/content/volmarketanalisys.webp',
           datePublished: '2025-06-25T00:00:00+03:00',
-          dateModified: '2025-12-24T00:00:00+02:00',
+          dateModified: '2026-04-15T00:00:00Z',
           inLanguage: 'ru',
           author: {
             '@id': 'https://arapov.trade/ru#person',

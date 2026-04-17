@@ -64,6 +64,7 @@ export class HomeEnBlogTwentySixComponent implements OnInit {
     });
     this.meta.updateTag({ name: 'author', content: 'Ihor Arapov' });
     this.meta.updateTag({ name: 'datePublished', content: '2025-01-14' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/ordertypes.webp',
@@ -267,7 +268,7 @@ export class HomeEnBlogTwentySixComponent implements OnInit {
             },
           },
           datePublished: '2026-03-15T00:00:00Z',
-          dateModified: '2026-03-22T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
             '@id': 'https://arapov.trade/en/freestudying/ordertypes',

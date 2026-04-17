@@ -64,7 +64,7 @@ export class HomeUkBlogTwentyThreeComponent implements OnInit {
         'Повний посібник з Bitcoin-ETF. Дізнайтеся, як працюють біржові фонди на біткоїн, їхні переваги, ризики та вплив на криптовалютний ринок.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-21' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-01-21' }); this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/bitcoinetf.webp',
@@ -291,7 +291,7 @@ export class HomeUkBlogTwentyThreeComponent implements OnInit {
             url: 'https://arapov.trade/assets/img/content/bitcoinetf1.webp',
           },
           datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2025-12-11T00:00:00Z',
+        dateModified: '2026-04-15T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
             '@id': 'https://arapov.trade/uk/freestudying/bitcoinetf',

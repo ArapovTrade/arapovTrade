@@ -48,7 +48,9 @@ export class HomeRuBlogTwelveComponent implements OnInit {
       content:
         'Узнайте, как торговать уровнями в трейдинге! Полное руководство по определению и использованию ключевых уровней на Arapov.trade.',
     });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-04-14' });
+     this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
+
+  this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/tradingoflevels.webp',

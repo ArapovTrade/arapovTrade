@@ -60,6 +60,9 @@ export class HomeRuBlogTwentyOneComponent implements OnInit {
       'Маркет-мейкер в трейдинге: полное руководство | Arapov.trade',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
+
+    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       name: 'description',
       content:
@@ -279,7 +282,7 @@ export class HomeRuBlogTwentyOneComponent implements OnInit {
             'Маркет-мейкер в трейдинге: кто это, как работает и как использовать их стратегии в своей торговле. Полное руководство от Игоря Арапова.',
           image: 'https://arapov.trade/assets/img/content/marketmaker1.webp',
           datePublished: '2026-03-15T00:00:00Z',
-          dateModified: '2026-03-22T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
 
           author: {
             '@id': 'https://arapov.trade/ru#person',

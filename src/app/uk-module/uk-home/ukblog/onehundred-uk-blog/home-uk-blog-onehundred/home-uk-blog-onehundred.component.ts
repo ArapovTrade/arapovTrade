@@ -69,7 +69,9 @@ export class HomeUkBlogOnehundredComponent implements OnInit {
     });
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
 
+  this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.gerRandom();
   }
   randomArticleRus: any = [];
@@ -292,7 +294,7 @@ export class HomeUkBlogOnehundredComponent implements OnInit {
             },
           },
           datePublished: '2025-06-19T00:00:00+02:00',
-          dateModified: '2025-06-19T00:00:00+02:00',
+          dateModified: '2026-04-15T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
             '@id': 'https://arapov.trade/uk/freestudying/sp500trading',

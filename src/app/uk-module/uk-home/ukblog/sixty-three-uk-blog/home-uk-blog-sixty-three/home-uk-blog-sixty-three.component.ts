@@ -67,7 +67,7 @@ export class HomeUkBlogSixtyThreeComponent {
         'Дізнайтеся, як Smart Money маніпулюють ринком та контролюють натовп. Методи інституціоналів: хибні пробої, вибивання стопів, новинні маніпуляції. Практичні поради для трейдерів.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-02-08' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-02-08' });this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/smartmoneycontrol.png',
@@ -289,7 +289,7 @@ export class HomeUkBlogSixtyThreeComponent {
             height: 630,
           },
           datePublished: '2026-03-15T00:00:00Z',
-          dateModified: '2026-03-22T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
           author: {
             '@id': 'https://arapov.trade/uk#person',
           },

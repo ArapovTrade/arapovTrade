@@ -66,7 +66,7 @@ export class HomeUkBlogFourtySixComponent implements OnInit {
         'Bitcoin Pizza Day — історія першої покупки за біткоїни 22 травня 2010 року. Дізнайтеся, як 10 000 BTC обміняли на дві піци та чому ця дата змінила фінансовий світ.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-27' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-01-27' });this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/pizzaday.webp',
@@ -284,7 +284,7 @@ export class HomeUkBlogFourtySixComponent implements OnInit {
           description:
             'Bitcoin Pizza Day — історія першої покупки за біткоїни 22 травня 2010 року. Дізнайтеся, як 10 000 BTC обміняли на дві піци та чому ця дата змінила фінансовий світ.',
           datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2025-11-29T00:00:00Z',
+         dateModified: '2026-04-15T00:00:00Z',
           author: {
             '@id': 'https://arapov.trade/uk#person',
           },

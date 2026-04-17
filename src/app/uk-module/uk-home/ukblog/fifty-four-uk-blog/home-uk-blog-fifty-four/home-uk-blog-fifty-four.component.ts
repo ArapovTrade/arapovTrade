@@ -66,7 +66,7 @@ export class HomeUkBlogFiftyFourComponent implements OnInit {
         'Повний посібник із забезпечення безпеки криптовалюти. Захист від хакерів та фішингу, налаштування двофакторної автентифікації, безпечне зберігання великих сум цифрових активів.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-28' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-01-28' }); this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/cryptosafe.webp',
@@ -298,7 +298,7 @@ export class HomeUkBlogFiftyFourComponent implements OnInit {
             },
           },
           datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2025-12-12T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
         },
       ],
     };

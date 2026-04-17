@@ -63,7 +63,7 @@ export class HomeUkBlogEightyTwoComponent {
         'Повний посібник з торгівлі патернами Прапор і Вимпел. Дізнайтеся, як розпізнавати фігури продовження тренду, визначати точки входу та виставляти стоп-лосс і тейк-профіт.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-02-21' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-02-21' }); this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/flagandpennant.webp',
@@ -296,7 +296,7 @@ export class HomeUkBlogEightyTwoComponent {
             },
           },
           datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2025-12-19T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
             '@id': 'https://arapov.trade/uk/freestudying/flagandpennant',

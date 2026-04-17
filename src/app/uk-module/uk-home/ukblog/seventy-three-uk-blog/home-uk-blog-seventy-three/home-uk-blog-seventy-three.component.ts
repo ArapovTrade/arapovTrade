@@ -66,7 +66,9 @@ export class HomeUkBlogSeventyThreeComponent {
         'Повний посібник з макроекономічних показників для трейдерів. Дізнайтеся, як ВВП, інфляція, процентні ставки та зайнятість впливають на фінансові ринки.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-02-16' });
+      this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
+
+  this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/macroeconomicindicators.webp',
@@ -293,7 +295,7 @@ export class HomeUkBlogSeventyThreeComponent {
             },
           },
           datePublished: '2025-06-15T00:00:00Z',
-          dateModified: '2025-11-04T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
             '@id':

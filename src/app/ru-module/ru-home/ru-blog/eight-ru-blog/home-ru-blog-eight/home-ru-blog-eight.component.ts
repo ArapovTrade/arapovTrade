@@ -6,13 +6,13 @@ import {
   Renderer2,
   signal,
 } from '@angular/core';
-import { DOCUMENT } from '@angular/common';
-import { ThemeservService } from '../../../../../servises/themeserv.service';
-import { artickle } from '../../../../../servises/articles.service';
-import { Subscription } from 'rxjs';
-import { NavigationEnd, Router } from '@angular/router';
-import { Meta, Title } from '@angular/platform-browser';
-import { ArticlesService } from '../../../../../servises/articles.service';
+import {DOCUMENT} from '@angular/common';
+import {ThemeservService} from '../../../../../servises/themeserv.service';
+import {artickle} from '../../../../../servises/articles.service';
+import {Subscription} from 'rxjs';
+import {NavigationEnd, Router} from '@angular/router';
+import {Meta, Title} from '@angular/platform-browser';
+import {ArticlesService} from '../../../../../servises/articles.service';
 
 @Component({
   selector: 'app-home-ru-blog-eight',
@@ -29,7 +29,9 @@ export class HomeRuBlogEightComponent implements OnInit {
     private artickleServ: ArticlesService,
     private renderer: Renderer2,
     @Inject(DOCUMENT) private document: Document,
-  ) {}
+  ) {
+  }
+
   private routerSubscription!: Subscription;
   private themeSubscription!: Subscription;
   isDark!: boolean;
@@ -59,7 +61,9 @@ export class HomeRuBlogEightComponent implements OnInit {
     this.titleService.setTitle(
       'Имбаланс в Трейдинге: Полное Руководство | Arapov.trade',
     );
-    this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+    this.meta.updateTag({name: 'robots', content: 'index, follow'});
+    this.meta.updateTag({name: 'datePublished', content: '2025-01-30'});
+    this.meta.updateTag({name: 'dateModified', content: '2026-04-15'});
     this.meta.updateTag({
       name: 'description',
       content:
@@ -68,7 +72,9 @@ export class HomeRuBlogEightComponent implements OnInit {
 
     this.gerRandom();
   }
+
   randomArticleRus: any = [];
+
   gerRandom() {
     this.randomArticleRus = this.artickleServ.getRandomUkArticles();
   }
@@ -76,7 +82,7 @@ export class HomeRuBlogEightComponent implements OnInit {
   hoveredIndex: number | null = null;
 
   projects = [
-    { title: 'Книги по трейдингу', link: 'https://arapov.trade/ru/books' },
+    {title: 'Книги по трейдингу', link: 'https://arapov.trade/ru/books'},
     {
       title: 'Профессиональные курсы',
       link: 'https://arapov.trade/ru/studying',
@@ -92,11 +98,12 @@ export class HomeRuBlogEightComponent implements OnInit {
     const value = checkbox.value;
 
     this.router.navigate(['/ru/freestudying'], {
-      queryParams: { group: value },
+      queryParams: {group: value},
     });
 
     this.checkedGroup = this.artickleServ.selectedGroups;
   }
+
   paginatedArticles = []; // Статьи для отображения на текущей странице
   currentPage = 0;
   pageSize = 10;
@@ -110,7 +117,9 @@ export class HomeRuBlogEightComponent implements OnInit {
       this.themeSubscription.unsubscribe();
     }
   }
+
   hovered: string | null = null;
+
   toggleTheme() {
     this.isDark = !this.isDark;
     this.themeService.setTheme(this.isDark);
@@ -121,6 +130,7 @@ export class HomeRuBlogEightComponent implements OnInit {
   }
 
   articleCounts: { [key: string]: number } = {};
+
   updateArticleCounts() {
     this.articleCounts = {}; // очищаем
 
@@ -135,9 +145,11 @@ export class HomeRuBlogEightComponent implements OnInit {
       });
     });
   }
+
   //popup
   flag1: boolean = false;
   flagTrue1: boolean = true;
+
   searchtoggle(event: Event) {
     this.flag1 = !this.flag1;
     this.flagTrue1 = !this.flagTrue1;
@@ -177,11 +189,12 @@ export class HomeRuBlogEightComponent implements OnInit {
   moveToTheTop() {
     const element = document.getElementById('scrollToTop');
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      element.scrollIntoView({behavior: 'smooth', block: 'start'});
     }
   }
 
   groupsMenuOpen = false;
+
   toggleGroupsMenu(event: Event) {
     this.groupsMenuOpen = !this.groupsMenuOpen;
   }
@@ -214,14 +227,15 @@ export class HomeRuBlogEightComponent implements OnInit {
     if (index == 1) {
       nextpage =
         this.artickleServ.ukrArtickles[
-          this.artickleServ.ukrArtickles.length - 1
-        ].linkUkr;
+        this.artickleServ.ukrArtickles.length - 1
+          ].linkUkr;
     } else {
       nextpage = this.artickleServ.ukrArtickles[index - 1].linkUkr;
     }
 
     this.router.navigate(['/ru/freestudying', nextpage]);
   }
+
   private removeSelectedSchemas(): void {
     const typesToRemove = [
       'Article',
@@ -281,7 +295,7 @@ export class HomeRuBlogEightComponent implements OnInit {
             'Комплексное руководство по имбалансу: виды дисбаланса, методы определения зон, объёмный анализ, стратегии торговли и управление рисками.',
           image:
             'https://arapov.trade/assets/img/content/imbalanceintrading3.png',
-          author: { '@id': 'https://arapov.trade/ru#person' },
+          author: {'@id': 'https://arapov.trade/ru#person'},
           publisher: {
             '@type': 'Organization',
             name: 'ArapovTrade',
@@ -292,7 +306,7 @@ export class HomeRuBlogEightComponent implements OnInit {
             },
           },
           datePublished: '2026-03-25T00:00:00Z',
-          dateModified: '2026-03-31T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
             '@id': 'https://arapov.trade/ru/freestudying/imbalanceintrading',

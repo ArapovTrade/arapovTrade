@@ -59,7 +59,9 @@ export class HomeUkBlogFourtyComponent implements OnInit {
     this.titleService.setTitle(
       'Чому трейдинг такий складний? Головні причини та рішення | Arapov.trade',
     );
-    this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+    this.meta.updateTag({ name: 'robots', content: 'index, follow' });this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
+
+  this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       name: 'description',
       content:
@@ -276,7 +278,7 @@ export class HomeUkBlogFourtyComponent implements OnInit {
           description:
             "Комплексний розбір причин складності трейдингу: психологічні бар'єри, волатильність ринків, помилки управління капіталом.",
           datePublished: '2026-03-25T00:00:00Z',
-          dateModified: '2026-03-31T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
           author: {
             '@id': 'https://arapov.trade/uk#person',
           },

@@ -66,7 +66,7 @@ export class HomeRuThirtyFiveComponent implements OnInit {
       content:
         'Торговая система в трейдинге: виды стратегий, методы оптимизации и тестирования. Полное руководство по созданию прибыльной системы торговли на финансовых рынках.',
     });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-04-08' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-08' }); this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/tradingsystem.webp',
@@ -286,7 +286,7 @@ export class HomeRuThirtyFiveComponent implements OnInit {
             'Торговая система в трейдинге: виды стратегий, методы оптимизации и тестирования. Полное руководство по созданию прибыльной системы торговли на финансовых рынках.',
           image: 'https://arapov.trade/assets/img/content/tradingsystem1.jpg',
           datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2025-12-29T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
           author: {
             '@id': 'https://arapov.trade/ru#person',
           },

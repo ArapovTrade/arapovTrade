@@ -67,6 +67,7 @@ export class HomeRuBlogFiftyEightComponent implements OnInit {
         'Полное руководство по усреднению позиций в трейдинге. Разбираем стратегии DCA, классическое усреднение, антимартингейл. Как избежать ошибок и когда метод работает.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-04' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/averagingintrading.webp',
@@ -287,7 +288,7 @@ export class HomeRuBlogFiftyEightComponent implements OnInit {
           image:
             'https://arapov.trade/assets/img/content/averagingintrading1.webp',
           datePublished: '2026-03-25T00:00:00Z',
-          dateModified: '2026-03-31T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
 
           author: {
             '@id': 'https://arapov.trade/ru#person',

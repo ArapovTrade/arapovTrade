@@ -66,7 +66,7 @@ export class HomeRuThirteenComponent implements OnInit {
         'Что такое валютный риск и как им управлять. Узнайте о хеджировании, диверсификации, роли центральных банков и психологии трейдинга для защиты инвестиций.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-04-07' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-07' });  this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/riskCurrencyExchange.webp',
@@ -284,7 +284,7 @@ export class HomeRuThirteenComponent implements OnInit {
           image:
             'https://arapov.trade/assets/img/content/riskCurrencyExchange1.webp',
           datePublished: '2026-03-15T00:00:00Z',
-          dateModified: '2026-03-22T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
           author: {
             '@id': 'https://arapov.trade/ru#person',
           },

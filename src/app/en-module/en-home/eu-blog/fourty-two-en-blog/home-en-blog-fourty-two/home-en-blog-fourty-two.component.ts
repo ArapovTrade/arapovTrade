@@ -63,6 +63,7 @@ export class HomeEnBlogFourtyTwoComponent implements OnInit {
         'Cryptocurrency risks for beginners: volatility, scams, technical threats. Practical methods to protect capital and trade digital assets safely.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-03' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/cryptocurrencyrisks.webp',
@@ -267,7 +268,7 @@ export class HomeEnBlogFourtyTwoComponent implements OnInit {
             },
           },
           datePublished: '2026-03-25T00:00:00Z',
-          dateModified: '2026-03-31T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
           image:
             'https://arapov.trade/assets/img/content/cryptocurrencyrisks1.webp',
           mainEntityOfPage: {

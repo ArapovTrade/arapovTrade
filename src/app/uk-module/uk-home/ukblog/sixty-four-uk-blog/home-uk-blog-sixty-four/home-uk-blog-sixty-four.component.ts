@@ -67,7 +67,9 @@ export class HomeUkBlogSixtyFourComponent {
       content:
         'Торгова система трейдера — покрокова інструкція з реальними прикладами угод. Як знаходити точки входу, виставляти стоп-лос та фіксувати прибуток.',
     });
+     this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
 
+  this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/prakticuk.jpg',
@@ -306,7 +308,7 @@ export class HomeUkBlogSixtyFourComponent {
           description:
             'Торгова система трейдера — покрокова інструкція з реальними прикладами угод. Як знаходити точки входу, виставляти стоп-лос та фіксувати прибуток.',
           datePublished: '2024-06-15T00:00:00+02:00',
-          dateModified: '2025-01-04T00:00:00+02:00',
+          dateModified: '2026-04-15T00:00:00Z',
           author: {
             '@id': 'https://arapov.trade/uk#person',
           },

@@ -65,7 +65,9 @@ export class HomeRuTwentyThreeComponent implements OnInit {
       content:
         'Узнайте о ключевых мировых фондовых индексах: S&P 500, Dow Jones, NASDAQ, DAX, FTSE 100, Nikkei 225. Как они работают и влияют на рынки.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
 
+  this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.gerRandom();
   }
   randomArticleRus: any = [];
@@ -291,7 +293,7 @@ export class HomeRuTwentyThreeComponent implements OnInit {
             },
           },
           datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2025-12-21T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
             '@id': 'https://arapov.trade/ru/freestudying/worldstockindicates',

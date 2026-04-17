@@ -65,7 +65,7 @@ export class HomeRuThirtyEightComponent implements OnInit {
       content:
         'Полное руководство по управлению капиталом в трейдинге. Риск-менеджмент, мани-менеджмент, стратегии защиты депозита и приумножения прибыли для начинающих трейдеров.',
     });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-04-08' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-08' });this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/capitalmanagement.webp',
@@ -285,7 +285,8 @@ export class HomeRuThirtyEightComponent implements OnInit {
           image:
             'https://arapov.trade/assets/img/content/capitalmanagement1.jpg',
           datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2025-12-29T00:00:00Z',
+         dateModified: '2026-04-15T00:00:00Z',
+
           author: {
             '@id': 'https://arapov.trade/ru#person',
           },

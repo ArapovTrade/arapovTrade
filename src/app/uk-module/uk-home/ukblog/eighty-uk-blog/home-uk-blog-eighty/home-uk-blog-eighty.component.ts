@@ -63,7 +63,7 @@ export class HomeUkBlogEightyComponent {
         'Дізнайтеся, як торгувати патерн Голова та плечі. Класична та перевернута фігура, точки входу, стоп-лосс, тейк-профіт та реальні приклади.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-02-20' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-02-20' }); this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/headandshoulders.png',
@@ -290,7 +290,7 @@ export class HomeUkBlogEightyComponent {
             },
           },
           datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2025-12-11T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
             '@id': 'https://arapov.trade/uk/freestudying/headandshoulders',

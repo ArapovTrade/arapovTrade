@@ -65,6 +65,7 @@ export class HomeEnNineComponent implements OnInit {
         'Currency exchange rate formation: key factors, central bank role, economic indicators influence and market sentiment impact on forex markets.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-11' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/formationExchange.webp',
@@ -83,7 +84,6 @@ export class HomeEnNineComponent implements OnInit {
       title: 'Basic course',
       link: 'https://arapov.trade/en/freestudying/freeeducation',
     },
-     
   ];
   onGroupChange(event: Event) {
     const checkbox = event.target as HTMLInputElement;
@@ -265,7 +265,7 @@ export class HomeEnNineComponent implements OnInit {
             '@id': 'https://arapov.trade/#organization',
           },
           datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2025-12-29T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
           wordCount: 1420,
           inLanguage: 'en',
         },
@@ -283,7 +283,7 @@ export class HomeEnNineComponent implements OnInit {
       '@context': 'https://schema.org',
       '@type': 'Person',
       '@id': 'https://arapov.trade/en#person',
-       name: 'Igor Arapov',
+      name: 'Igor Arapov',
       alternateName: [
         'Ігор Арапов',
         'Арапов Игорь',
@@ -297,7 +297,7 @@ export class HomeEnNineComponent implements OnInit {
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
-    'https://www.wikidata.org/wiki/Q137454477',
+        'https://www.wikidata.org/wiki/Q137454477',
         'https://scholar.google.com/citations?user=N440tWQAAAAJ',
         'https://orcid.org/0009-0003-0430-778X',
         'https://isni.org/isni/0000000529518564',
@@ -305,11 +305,15 @@ export class HomeEnNineComponent implements OnInit {
         'https://github.com/ArapovTrade',
         'https://ua.linkedin.com/in/arapovtrade',
         'https://www.youtube.com/@ArapovTrade',
-        'https://t.me/ArapovTrade'
-  ],
-  jobTitle: ['Independent researcher,', 'trader', 'author and founder of arapov.trade'],
-  description:
-    'Independent researcher, practicing trader, author of books on trading and scientific publications. Specializes in trading psychology and cognitive biases in financial markets.',
+        'https://t.me/ArapovTrade',
+      ],
+      jobTitle: [
+        'Independent researcher,',
+        'trader',
+        'author and founder of arapov.trade',
+      ],
+      description:
+        'Independent researcher, practicing trader, author of books on trading and scientific publications. Specializes in trading psychology and cognitive biases in financial markets.',
     };
 
     this.addJsonLdSchema(data);

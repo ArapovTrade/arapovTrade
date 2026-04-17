@@ -67,7 +67,7 @@ export class HomeUkBlogFourComponent implements OnInit {
         'Дізнайтеся, як уникнути втрат у маржинальній торгівлі. Управління ризиками, кредитне плече, стоп-лосси, психологія трейдингу та перевірені стратегії.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-24' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-01-24' });this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/reasonfordepositeloose.png',
@@ -295,7 +295,7 @@ export class HomeUkBlogFourComponent implements OnInit {
             },
           },
           datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2025-12-13T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
             '@id': 'https://arapov.trade/uk/freestudying/avoidlosingmoney',

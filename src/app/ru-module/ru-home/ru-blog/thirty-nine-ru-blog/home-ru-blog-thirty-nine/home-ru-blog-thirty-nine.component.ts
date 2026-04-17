@@ -28,7 +28,7 @@ export class HomeRuBlogThirtyNineComponent implements OnInit {
     private themeService: ThemeservService,
     private artickleServ: ArticlesService,
     private renderer: Renderer2,
-    @Inject(DOCUMENT) private document: Document
+    @Inject(DOCUMENT) private document: Document,
   ) {}
   private routerSubscription!: Subscription;
   private themeSubscription!: Subscription;
@@ -57,7 +57,7 @@ export class HomeRuBlogThirtyNineComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Где безопасно хранить криптовалюту | Полное руководство'
+      'Где безопасно хранить криптовалюту | Полное руководство',
     );
     this.meta.updateTag({ name: 'robots', content: 'index' });
     this.meta.updateTag({
@@ -66,6 +66,7 @@ export class HomeRuBlogThirtyNineComponent implements OnInit {
         'Полное руководство по безопасному хранению криптовалют. Сравнение горячих и холодных кошельков, защита приватных ключей, комбинированные стратегии для сохранности цифровых активов.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-01-23' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/safetostorecrypto.webp',
@@ -90,7 +91,6 @@ export class HomeRuBlogThirtyNineComponent implements OnInit {
       title: 'Базовый курс',
       link: 'https://arapov.trade/ru/freestudying/freeeducation',
     },
-     
   ];
 
   onGroupChange(event: Event) {
@@ -160,7 +160,7 @@ export class HomeRuBlogThirtyNineComponent implements OnInit {
     // Показываем 5 случайных статей при фокусе, если инпут пуст
     if (!this.searchQuery) {
       const shuffled = [...this.artickleServ.ukrArtickles].sort(
-        () => Math.random() - 0.5
+        () => Math.random() - 0.5,
       );
       this.displayedArticles = shuffled.slice(0, this.maxResults);
     }
@@ -175,7 +175,7 @@ export class HomeRuBlogThirtyNineComponent implements OnInit {
   onSearchChange() {
     // Логика асинхронного поиска
     const filtered = this.artickleServ.ukrArtickles.filter((a) =>
-      a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase())
+      a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase()),
     );
     this.displayedArticles = filtered.slice(0, this.maxResults);
   }
@@ -197,7 +197,7 @@ export class HomeRuBlogThirtyNineComponent implements OnInit {
     const path: string =
       this.router.url.split('/')[this.router.url.split('/').length - 1];
     let index = this.artickleServ.ukrArtickles.findIndex(
-      (a) => a.linkUkr == path
+      (a) => a.linkUkr == path,
     );
 
     if (this.artickleServ.ukrArtickles.length - 1 == index) {
@@ -214,7 +214,7 @@ export class HomeRuBlogThirtyNineComponent implements OnInit {
     const path: string =
       this.router.url.split('/')[this.router.url.split('/').length - 1];
     let index = this.artickleServ.ukrArtickles.findIndex(
-      (a) => a.linkUkr == path
+      (a) => a.linkUkr == path,
     );
 
     if (index == 1) {
@@ -239,7 +239,7 @@ export class HomeRuBlogThirtyNineComponent implements OnInit {
     ];
 
     const scripts = this.document.querySelectorAll(
-      'script[type="application/ld+json"]'
+      'script[type="application/ld+json"]',
     );
 
     scripts.forEach((script) => {
@@ -252,7 +252,7 @@ export class HomeRuBlogThirtyNineComponent implements OnInit {
 
         const shouldRemove = candidates.some(
           (entry: any) =>
-            entry['@type'] && typesToRemove.includes(entry['@type'])
+            entry['@type'] && typesToRemove.includes(entry['@type']),
         );
 
         if (shouldRemove) {
@@ -302,7 +302,7 @@ export class HomeRuBlogThirtyNineComponent implements OnInit {
             },
           },
           datePublished: '2025-06-15T00:00:00Z',
-          dateModified: '2025-12-04T00:00:00Z',
+         dateModified: '2026-04-15T00:00:00Z',
           articleBody:
             'Защита криптовалютных активов требует глубокого понимания различных методов хранения и потенциальных угроз. Владельцы цифровых валют несут полную ответственность за сохранность своих средств, поскольку децентрализованная природа блокчейна исключает возможность обращения в банк или службу поддержки для восстановления утраченных активов.',
         },
@@ -323,12 +323,12 @@ export class HomeRuBlogThirtyNineComponent implements OnInit {
       name: 'Игорь Арапов',
       alternateName: [
         'Igor Arapov',
-              'Арапов Игорь',
-              'I. Arapov',
-              'Ігор Арапов',
-              'І. В. Арапов',
-              'Арапов Ігор',
-              'Arapov Igor',
+        'Арапов Игорь',
+        'I. Arapov',
+        'Ігор Арапов',
+        'І. В. Арапов',
+        'Арапов Ігор',
+        'Arapov Igor',
       ],
       url: 'https://arapov.trade/ru',
       image:
@@ -342,9 +342,13 @@ export class HomeRuBlogThirtyNineComponent implements OnInit {
         'https://github.com/ArapovTrade',
         'https://ua.linkedin.com/in/arapovtrade',
         'https://www.youtube.com/@ArapovTrade',
-        'https://t.me/ArapovTrade'
+        'https://t.me/ArapovTrade',
       ],
-      jobTitle: ['Независимый исследователь', 'трейдер', 'автор и основатель arapov.trade'],
+      jobTitle: [
+        'Независимый исследователь',
+        'трейдер',
+        'автор и основатель arapov.trade',
+      ],
       description:
         'Независимый исследователь, практикующий трейдер, автор книг по трейдингу и научных публикаций. Специализируется на психологии трейдинга и когнитивных искажениях на финансовых рынках.',
     };

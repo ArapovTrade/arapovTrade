@@ -66,7 +66,7 @@ export class HomeRuThirtySixComponent implements OnInit {
         'Механика ложных пробоев в трейдинге: как крупный капитал манипулирует рынком, методы идентификации и стратегии торговли против манипуляций Smart Money',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-02-05' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-02-05' });this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/falsebreakouts.webp',
@@ -286,7 +286,7 @@ export class HomeRuThirtySixComponent implements OnInit {
             'Полное руководство по ложным пробоям: как крупный капитал манипулирует рынком, методы идентификации манипуляций и практические стратегии торговли',
           image: 'https://arapov.trade/assets/img/content/falsebreakouts1.webp',
           datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2025-12-29T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
           author: {
             '@id': 'https://arapov.trade/ru#person',
           },

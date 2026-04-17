@@ -56,7 +56,8 @@ export class HomeRuBlogNintyThreeComponent implements OnInit {
       content:
         'ATR индикатор (Average True Range): полное руководство по измерению волатильности рынка, расчёту стоп-лоссов и построению торговых стратегий на форекс и криптовалютах.',
     });
-
+    this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.themeSubscription = this.themeService.getTheme().subscribe((data) => {
       this.isDark = data;
       this.cdr.detectChanges();
@@ -283,7 +284,7 @@ export class HomeRuBlogNintyThreeComponent implements OnInit {
           image: 'https://arapov.trade/assets/img/content/atrstrategies.jpg',
 
           datePublished: '2026-03-25T00:00:00Z',
-          dateModified: '2026-03-31T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
           author: { '@id': 'https://arapov.trade/ru#person' },
           publisher: {
             '@type': 'Organization',

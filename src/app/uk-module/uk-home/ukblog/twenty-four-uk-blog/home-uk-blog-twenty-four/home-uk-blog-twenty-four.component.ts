@@ -65,7 +65,7 @@ export class HomeUkBlogTwentyFourComponent implements OnInit {
       content:
         'Патерн Прапор у трейдингу: повний посібник з ідентифікації, побудови та торгових стратегій. Дізнайтеся, як використовувати фігуру продовження тренду для прибуткової торгівлі.',
     });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-04-15' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-15' });  this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/flagfigure.webp',
@@ -286,7 +286,7 @@ export class HomeUkBlogTwentyFourComponent implements OnInit {
             'Вичерпний посібник з патерну Прапор: структура фігури, типи прапорів, методи торгівлі та практичні рекомендації для трейдерів усіх рівнів.',
           image: 'https://arapov.trade/assets/img/content/flagfigure.webp',
           datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2025-12-29T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
           author: {
             '@id': 'https://arapov.trade/uk#person',
           },

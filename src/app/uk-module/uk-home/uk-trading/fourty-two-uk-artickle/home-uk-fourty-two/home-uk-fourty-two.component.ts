@@ -65,6 +65,9 @@ export class HomeUkFourtyTwoComponent implements OnInit {
       content:
         'Як обрати таймфрейм для торгівлі. Дізнайтеся про види таймфреймів, мульти-таймфрейм аналіз та який часовий інтервал підійде саме вам.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
+
+    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.gerRandom();
   }
   randomArticleRus: any = [];
@@ -81,7 +84,6 @@ export class HomeUkFourtyTwoComponent implements OnInit {
       title: 'Базовий курс',
       link: 'https://arapov.trade/uk/freestudying/freeeducation',
     },
-     
   ];
 
   onGroupChange(event: Event) {
@@ -276,7 +278,7 @@ export class HomeUkFourtyTwoComponent implements OnInit {
             'Як обрати таймфрейм для торгівлі. Дізнайтеся про види таймфреймів, мульти-таймфрейм аналіз та який часовий інтервал підійде саме вам.',
           image: 'https://arapov.trade/assets/img/content/timeframes1.webp',
           datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2025-12-29T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
           author: {
             '@id': 'https://arapov.trade/uk#person',
           },
@@ -311,12 +313,12 @@ export class HomeUkFourtyTwoComponent implements OnInit {
       name: 'Ігор Арапов',
       alternateName: [
         'Igor Arapov',
-              'Арапов Игорь',
-              'I. Arapov',
-              'Игорь Арапов',
-              'І. В. Арапов',
-              'Арапов Ігор',
-              'Arapov Igor',
+        'Арапов Игорь',
+        'I. Arapov',
+        'Игорь Арапов',
+        'І. В. Арапов',
+        'Арапов Ігор',
+        'Arapov Igor',
       ],
       url: 'https://arapov.trade/uk',
       image:
@@ -330,9 +332,13 @@ export class HomeUkFourtyTwoComponent implements OnInit {
         'https://github.com/ArapovTrade',
         'https://ua.linkedin.com/in/arapovtrade',
         'https://www.youtube.com/@ArapovTrade',
-        'https://t.me/ArapovTrade'
+        'https://t.me/ArapovTrade',
       ],
-       jobTitle: ['Незалежний дослідник', 'трейдер', 'автор і засновник arapov.trade'],
+      jobTitle: [
+        'Незалежний дослідник',
+        'трейдер',
+        'автор і засновник arapov.trade',
+      ],
       description:
         'Незалежний дослідник, практикуючий трейдер, автор книг з трейдингу та наукових публікацій. Спеціалізується на психології трейдингу та когнітивних упередженнях на фінансових ринках.',
     };

@@ -64,6 +64,8 @@ export class HomeEnBlogNintyTwoComponent implements OnInit {
     );
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
 
     this.meta.updateTag({
       name: 'description',
@@ -282,7 +284,8 @@ export class HomeEnBlogNintyTwoComponent implements OnInit {
             'Binary options explained: comprehensive guide covering how they work, types of binary options, risks, and whether you should trade them.',
           image: 'https://arapov.trade/assets/img/content/binarnieoptions1.png',
           datePublished: '2026-03-25T00:00:00Z',
-          dateModified: '2026-03-31T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
+
           author: {
             '@id': 'https://arapov.trade/en#person',
           },

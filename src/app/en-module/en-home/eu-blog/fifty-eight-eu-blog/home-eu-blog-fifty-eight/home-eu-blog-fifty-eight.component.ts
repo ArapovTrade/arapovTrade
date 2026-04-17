@@ -63,6 +63,7 @@ export class HomeEuBlogFiftyEightComponent implements OnInit {
         'Complete guide to position averaging in trading. Learn DCA strategies, classic averaging, anti-martingale. How to avoid mistakes and when the method actually works.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-04' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/averagingintrading.webp',
@@ -260,7 +261,7 @@ export class HomeEuBlogFiftyEightComponent implements OnInit {
           image:
             'https://arapov.trade/assets/img/content/averagingintrading1.webp',
           datePublished: '2026-03-25T00:00:00Z',
-          dateModified: '2026-03-31T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
           author: {
             '@id': 'https://arapov.trade/en#person',
           },

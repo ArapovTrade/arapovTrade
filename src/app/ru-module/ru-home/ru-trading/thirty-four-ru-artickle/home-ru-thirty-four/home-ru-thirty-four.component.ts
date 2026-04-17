@@ -66,7 +66,7 @@ export class HomeRuThirtyFourComponent implements OnInit {
         'Стоп-лимитный ордер — как работает гибридный инструмент трейдинга, сочетающий контроль цены и автоматическую активацию для защиты от проскальзывания',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-03-29' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-03-29' });this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/stoplimitorder1.png',
@@ -294,7 +294,7 @@ export class HomeRuThirtyFourComponent implements OnInit {
             },
           },
           datePublished: '2026-03-15T00:00:00Z',
-          dateModified: '2026-03-22T00:00:00Z',
+         dateModified: '2026-04-15T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
             '@id': 'https://arapov.trade/ru/freestudying/stoplimitorder',

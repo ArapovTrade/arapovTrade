@@ -62,6 +62,9 @@ export class HomeUkBlogThirtyFiveComponent implements OnInit {
     );
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
+
+    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
 
     this.meta.updateTag({
       name: 'description',
@@ -280,7 +283,7 @@ export class HomeUkBlogThirtyFiveComponent implements OnInit {
             'Детальний посібник з основ трейдингу: принципи роботи фінансових ринків, види торгівлі, стратегії, інструменти аналізу та управління ризиками для початківців.',
           image: 'https://arapov.trade/assets/img/content/tradingbasics1.webp',
           datePublished: '2026-03-15T00:00:00Z',
-          dateModified: '2026-03-22T00:00:00Z',
+         dateModified: '2026-04-15T00:00:00Z',
           author: {
             '@id': 'https://arapov.trade/uk#person',
           },
@@ -333,9 +336,13 @@ export class HomeUkBlogThirtyFiveComponent implements OnInit {
         'https://github.com/ArapovTrade',
         'https://ua.linkedin.com/in/arapovtrade',
         'https://www.youtube.com/@ArapovTrade',
-        'https://t.me/ArapovTrade'
+        'https://t.me/ArapovTrade',
       ],
-       jobTitle: ['Незалежний дослідник', 'трейдер', 'автор і засновник arapov.trade'],
+      jobTitle: [
+        'Незалежний дослідник',
+        'трейдер',
+        'автор і засновник arapov.trade',
+      ],
       description:
         'Незалежний дослідник, практикуючий трейдер, автор книг з трейдингу та наукових публікацій. Спеціалізується на психології трейдингу та когнітивних упередженнях на фінансових ринках.',
     };

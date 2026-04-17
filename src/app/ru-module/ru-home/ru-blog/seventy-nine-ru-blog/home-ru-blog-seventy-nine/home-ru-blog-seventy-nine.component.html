@@ -128,7 +128,9 @@
                   <p>
                     Психологическое давление нарастает с каждой докупкой. Чем
                     глубже
-                    <a class="linkrefinto" href="https://arapov.trade/ru/freestudying/drawdowns"
+                    <a
+                      class="linkrefinto"
+                      href="https://arapov.trade/ru/freestudying/drawdowns"
                       >просадка</a
                     >, тем сложнее принимать рациональные решения. Трейдер либо
                     паникует, либо впадает в оцепенение, наблюдая за
@@ -425,17 +427,38 @@
                     </mat-expansion-panel>
                   </mat-accordion>
                 </section>
+                <section>
+                  <h2>Об авторе</h2>
+                  <p>
+                    Автор: Игорь Арапов — практикующий трейдер с 2013 года,
+                    основатель Arapov.Trade, автор серии книг по трейдингу (<a
+                      class="linkrefinto"
+                      href="https://openlibrary.org/authors/OL16073686A/Igor_Arapov"
+                      >Open Library</a
+                    >
+                    ), академический исследователь (<a
+                      class="linkrefinto"
+                      href="https://orcid.org/0009-0003-0430-778X"
+                      >ORCID: 0009-0003-0430-778X</a
+                    >
+                    ).
+                  </p>
+                </section>
               </article>
 
               <div
                 class=""
                 [ngClass]="{
-                  'next-page-block': true, 
+                  'next-page-block': true,
                 }"
-                [ngStyle]="{ background: isDark ? 'rgba(255, 255, 255, 0.05)' : 'rgba(255, 255, 255, 0.05)',
-                          border:isDark?'rgba(46, 46, 46, 1)':'rgba(0, 130, 204, 0.15)',
-                           
-                         }"
+                [ngStyle]="{
+                  background: isDark
+                    ? 'rgba(255, 255, 255, 0.05)'
+                    : 'rgba(255, 255, 255, 0.05)',
+                  border: isDark
+                    ? 'rgba(46, 46, 46, 1)'
+                    : 'rgba(0, 130, 204, 0.15)',
+                }"
               >
                 <div
                   (click)="goToPreviousPage()"
@@ -443,12 +466,12 @@
                     previous_page: true,
 
                     'shadow-box-dark': isDark,
-                    'shadow-box-light': !isDark
+                    'shadow-box-light': !isDark,
                   }"
                   [ngStyle]="{
                     border: isDark
                       ? '1px solid rgba(46, 46, 46, 1)'
-                      : '1px solid rgba(0, 130, 204, 0.15)'
+                      : '1px solid rgba(0, 130, 204, 0.15)',
                   }"
                 >
                   <svg
@@ -478,12 +501,12 @@
                     next_page: true,
 
                     'shadow-box-dark': isDark,
-                    'shadow-box-light': !isDark
+                    'shadow-box-light': !isDark,
                   }"
                   [ngStyle]="{
                     border: isDark
                       ? '1px solid rgba(46, 46, 46, 1)'
-                      : '1px solid rgba(0, 130, 204, 0.15)'
+                      : '1px solid rgba(0, 130, 204, 0.15)',
                   }"
                 >
                   <span class="previous_page_text-block">
@@ -517,7 +540,7 @@
                       'side-bar_groups-wrapper': true,
 
                       'shadow-box-dark': isDark,
-                      'shadow-box-light': !isDark
+                      'shadow-box-light': !isDark,
                     }"
                     [ngStyle]="{ background: !isDark ? '#ffffff' : '#000000' }"
                   >
@@ -531,7 +554,7 @@
                           border: isDark
                             ? '1px solid #FFCD29'
                             : '1px solid #0082CC',
-                          width: '100%'
+                          width: '100%',
                         }"
                       />
                     </div>
@@ -546,13 +569,13 @@
                               ? '#FFCD29'
                               : '#0082CC'
                             : isDark
-                            ? '#ffffff'
-                            : '#0C263A'
+                              ? '#ffffff'
+                              : '#0C263A',
                         }"
                         [ngClass]="{
                           'side-bar_groups-item': true,
                           'side-bar_groups-item_dark': isDark,
-                          'side-bar_groups-item_light': !isDark
+                          'side-bar_groups-item_light': !isDark,
                         }"
                         [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
                       >
@@ -580,7 +603,7 @@
                     'side-bar_groups-wrapper': true,
                     'random-pages_container': true,
                     'shadow-box-dark': isDark,
-                    'shadow-box-light': !isDark
+                    'shadow-box-light': !isDark,
                   }"
                   [ngStyle]="{ background: !isDark ? '#ffffff' : '#000000' }"
                 >
@@ -594,7 +617,7 @@
                         border: isDark
                           ? '1px solid #FFCD29'
                           : '1px solid #0082CC',
-                        width: '100%'
+                        width: '100%',
                       }"
                     />
                   </div>
@@ -618,7 +641,7 @@
                           class="article-title"
                           [ngClass]="{
                             'article-title_dark': isDark,
-                            'article-title_light': !isDark
+                            'article-title_light': !isDark,
                           }"
                         >
                           {{ article.titleRus }}
@@ -635,7 +658,7 @@
                     'side-bar_groups-wrapper': true,
                     our_projects_container: true,
                     'shadow-box-dark': isDark,
-                    'shadow-box-light': !isDark
+                    'shadow-box-light': !isDark,
                   }"
                   [ngStyle]="{ color: !isDark ? '#ffffff' : '#000000' }"
                 >
@@ -666,7 +689,7 @@
                         border: isDark
                           ? '1px solid #FFCD29'
                           : '1px solid #0082CC',
-                        width: '100%'
+                        width: '100%',
                       }"
                     />
                   </div>
@@ -695,8 +718,8 @@
                               ? 'rgba(110, 77, 0, 1)'
                               : 'rgba(255, 205, 41, 0.20)'
                             : hoveredIndex === i
-                            ? 'rgba(1, 95, 149, 1)'
-                            : 'rgba(0, 130, 204, 0.20)'
+                              ? 'rgba(1, 95, 149, 1)'
+                              : 'rgba(0, 130, 204, 0.20)',
                         }"
                       >
                         <a [href]="item.link" target="_blank">{{
@@ -715,7 +738,7 @@
                       'author-page_section-three-block': true,
 
                       'shadow-box-dark': isDark,
-                      'shadow-box-light': !isDark
+                      'shadow-box-light': !isDark,
                     }"
                     [ngStyle]="{
                       background: isDark
@@ -723,14 +746,14 @@
                         : 'rgba(0, 131, 205, 0.08)',
                       border: isDark
                         ? ' 1px solid #46483A'
-                        : '1px solid #C5E2F2'
+                        : '1px solid #C5E2F2',
                     }"
                   >
                     <div class="author-page_main-block_title-block three-block">
                       <span
                         [ngClass]="{
                           'gradient-orange': isDark,
-                          'gradient-blue': !isDark
+                          'gradient-blue': !isDark,
                         }"
                         >Хотите профессиональное обучение?</span
                       >
@@ -750,7 +773,7 @@
                         class=" "
                         [ngClass]="{
                           'gradient-orange': isDark,
-                          'gradient-blue': !isDark
+                          'gradient-blue': !isDark,
                         }"
                         >Выберите удобный способ для связи</span
                       >
@@ -764,7 +787,7 @@
                           [ngClass]="{
                             'three-block_social-links_item': true,
                             'three-block_social-links_item-dark': isDark,
-                            'three-block_social-links_item-light': !isDark
+                            'three-block_social-links_item-light': !isDark,
                           }"
                           [ngStyle]="{
                             background: isDark
@@ -772,7 +795,7 @@
                               : 'rgba(0, 130, 204, 0.10)',
                             border: isDark
                               ? '1px solid rgba(255, 205, 41, 0.30)'
-                              : '1px solid rgba(0, 130, 204, 0.30)'
+                              : '1px solid rgba(0, 130, 204, 0.30)',
                           }"
                         >
                           <svg
@@ -785,7 +808,7 @@
                             <path
                               [ngClass]="{
                                 'svg-link-dark': isDark,
-                                'svg-link-light': !isDark
+                                'svg-link-light': !isDark,
                               }"
                               fill-rule="evenodd"
                               clip-rule="evenodd"
@@ -802,7 +825,7 @@
                           [ngClass]="{
                             'three-block_social-links_item': true,
                             'three-block_social-links_item-dark': isDark,
-                            'three-block_social-links_item-light': !isDark
+                            'three-block_social-links_item-light': !isDark,
                           }"
                           [ngStyle]="{
                             background: isDark
@@ -810,7 +833,7 @@
                               : 'rgba(0, 130, 204, 0.10)',
                             border: isDark
                               ? '1px solid rgba(255, 205, 41, 0.30)'
-                              : '1px solid rgba(0, 130, 204, 0.30)'
+                              : '1px solid rgba(0, 130, 204, 0.30)',
                           }"
                         >
                           <svg
@@ -823,7 +846,7 @@
                             <path
                               [ngClass]="{
                                 'svg-link-dark': isDark,
-                                'svg-link-light': !isDark
+                                'svg-link-light': !isDark,
                               }"
                               fill-rule="evenodd"
                               clip-rule="evenodd"
@@ -841,7 +864,7 @@
                           [ngClass]="{
                             'three-block_social-links_item': true,
                             'three-block_social-links_item-dark': isDark,
-                            'three-block_social-links_item-light': !isDark
+                            'three-block_social-links_item-light': !isDark,
                           }"
                           [ngStyle]="{
                             background: isDark
@@ -849,7 +872,7 @@
                               : 'rgba(0, 130, 204, 0.10)',
                             border: isDark
                               ? '1px solid rgba(255, 205, 41, 0.30)'
-                              : '1px solid rgba(0, 130, 204, 0.30)'
+                              : '1px solid rgba(0, 130, 204, 0.30)',
                           }"
                         >
                           <svg
@@ -862,7 +885,7 @@
                             <path
                               [ngClass]="{
                                 'svg-link-dark': isDark,
-                                'svg-link-light': !isDark
+                                'svg-link-light': !isDark,
                               }"
                               fill-rule="evenodd"
                               clip-rule="evenodd"

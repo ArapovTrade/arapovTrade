@@ -67,15 +67,9 @@ export class HomeRuBlogNintyFourComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
 
-    // this.titleService.setTitle('Що таке імбаланс у трейдингу | Arapov.trade');
-
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-
-    // this.meta.updateTag({
-    //   name: 'description',
-    //   content:
-    //     'Що таке імбаланс у трейдингу, як він впливає на ринок. Приклади, методи виявлення і стратегії з урахуванням ринкового дисбалансу.',
-    // });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
 
     this.gerRandom();
   }
@@ -291,7 +285,7 @@ export class HomeRuBlogNintyFourComponent implements OnInit {
             'Полное руководство по спреду в трейдинге. Разбираем типы спредов, факторы влияния на размер и практические методы снижения торговых издержек.',
           image: 'https://arapov.trade/assets/img/content/spread3.png',
           datePublished: '2026-03-15T00:00:00Z',
-          dateModified: '2026-03-22T00:00:00Z',
+         dateModified: '2026-04-15T00:00:00Z',
 
           author: {
             '@id': 'https://arapov.trade/ru#person',
@@ -355,9 +349,13 @@ export class HomeRuBlogNintyFourComponent implements OnInit {
         'https://github.com/ArapovTrade',
         'https://ua.linkedin.com/in/arapovtrade',
         'https://www.youtube.com/@ArapovTrade',
-        'https://t.me/ArapovTrade'
+        'https://t.me/ArapovTrade',
       ],
-      jobTitle: ['Независимый исследователь', 'трейдер', 'автор и основатель arapov.trade'],
+      jobTitle: [
+        'Независимый исследователь',
+        'трейдер',
+        'автор и основатель arapov.trade',
+      ],
       description:
         'Независимый исследователь, практикующий трейдер, автор книг по трейдингу и научных публикаций. Специализируется на психологии трейдинга и когнитивных искажениях на финансовых рынках.',
     };

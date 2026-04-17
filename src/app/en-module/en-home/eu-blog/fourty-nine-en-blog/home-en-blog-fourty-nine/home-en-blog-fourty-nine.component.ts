@@ -64,6 +64,7 @@ export class HomeEnBlogFourtyNineComponent implements OnInit {
         'Learn how to choose the right trading platform. Compare MetaTrader, TradingView, Interactive Brokers. Selection criteria for beginners and professional traders.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-03' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/choosingtradingplatform.webp',
@@ -270,7 +271,7 @@ export class HomeEnBlogFourtyNineComponent implements OnInit {
             },
           },
           datePublished: '2026-03-25T00:00:00Z',
-          dateModified: '2026-03-31T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
             '@id':

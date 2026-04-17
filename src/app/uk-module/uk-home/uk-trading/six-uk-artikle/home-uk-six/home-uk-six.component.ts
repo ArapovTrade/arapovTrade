@@ -66,7 +66,7 @@ export class HomeUkSixComponent implements OnInit {
         'Алгоритмічні стейблкоїни: принципи роботи, механізми стабілізації, популярні проекти. Переваги та ризики децентралізованих стабільних монет.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-29' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-01-29' });this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/stablecoins.webp',
@@ -299,7 +299,7 @@ export class HomeUkSixComponent implements OnInit {
             },
           },
           datePublished: '2025-06-15T00:00:00+02:00',
-          dateModified: '2025-12-04T00:00:00+02:00',
+          dateModified: '2026-04-15T00:00:00Z',
         },
       ],
     };

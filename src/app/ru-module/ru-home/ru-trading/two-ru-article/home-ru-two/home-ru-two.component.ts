@@ -65,7 +65,9 @@ export class HomeRuTwoComponent implements OnInit {
       content:
         'Подробный словарь терминов финансового рынка для начинающих трейдеров. Основы фондового и валютного рынка, технический и фундаментальный анализ, стратегии торговли.',
     });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
 
+  this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.gerRandom();
   }
   randomArticleRus: any = [];
@@ -279,7 +281,7 @@ export class HomeRuTwoComponent implements OnInit {
             'Подробный словарь терминов финансового рынка для начинающих трейдеров. Основы фондового и валютного рынка, технический и фундаментальный анализ, стратегии торговли.',
           image: 'https://arapov.trade/assets/img/content/osnovirinka1.webp',
           datePublished: '2026-03-15T00:00:00Z',
-          dateModified: '2026-03-22T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
 
           author: {
             '@id': 'https://arapov.trade/ru#person',

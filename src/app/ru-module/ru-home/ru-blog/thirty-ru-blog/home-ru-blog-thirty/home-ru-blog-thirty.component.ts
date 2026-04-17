@@ -66,6 +66,7 @@ export class HomeRuBlogThirtyComponent implements OnInit {
         'Полное руководство по криптовалютам для начинающих трейдеров: блокчейн, Биткойн, Эфириум, выбор биржи, управление рисками и стратегии торговли.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-02' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/cryptocurrencybasics.webp',
@@ -292,7 +293,7 @@ export class HomeRuBlogThirtyComponent implements OnInit {
             },
           },
           datePublished: '2026-03-25T00:00:00Z',
-          dateModified: '2026-03-31T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
             '@id': 'https://arapov.trade/ru/freestudying/cryptocurrencybasics',

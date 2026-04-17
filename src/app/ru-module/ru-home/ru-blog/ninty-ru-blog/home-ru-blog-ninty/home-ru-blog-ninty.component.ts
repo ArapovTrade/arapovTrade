@@ -56,7 +56,8 @@ export class HomeRuBlogNintyComponent implements OnInit {
       content:
         'Метод Мартингейла в трейдинге: полный разбор стратегии удвоения позиций, её применение на Форекс и криптовалютах, расчёт рисков и практические примеры.',
     });
-
+    this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.themeSubscription = this.themeService.getTheme().subscribe((data) => {
       this.isDark = data;
       this.cdr.detectChanges();
@@ -284,7 +285,7 @@ export class HomeRuBlogNintyComponent implements OnInit {
             'Полный разбор стратегии удвоения позиций, её применение на Форекс и криптовалютах, расчёт рисков.',
           image: 'https://arapov.trade/assets/img/content/martingale1.jpg',
           datePublished: '2026-03-15T00:00:00Z',
-          dateModified: '2026-03-22T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
           author: {
             '@id': 'https://arapov.trade/ru#person',
           },

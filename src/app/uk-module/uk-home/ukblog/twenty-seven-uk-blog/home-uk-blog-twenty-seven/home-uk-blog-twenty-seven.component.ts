@@ -65,7 +65,7 @@ export class HomeUkBlogTwentySevenComponent implements OnInit {
       content:
         'Навчіться читати японські свічки: молот, поглинання, доджі, ранкова зірка. Практичний посібник зі свічкового аналізу для трейдерів з прикладами.',
     });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-04-16' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-16' });this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/japanesecandle.jpg',
@@ -283,7 +283,7 @@ export class HomeUkBlogTwentySevenComponent implements OnInit {
           image: 'https://arapov.trade/assets/img/content/japanessecandle1.jpg',
 
           datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2025-12-12T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
           author: {
             '@id': 'https://arapov.trade/uk#person',
           },

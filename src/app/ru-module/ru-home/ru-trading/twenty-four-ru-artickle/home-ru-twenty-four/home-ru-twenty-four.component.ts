@@ -65,7 +65,7 @@ export class HomeRuTwentyFourComponent implements OnInit {
       content:
         'Узнайте, как использовать уровни Фибоначчи в трейдинге. Коррекция, расширение, золотое сечение — построение, стратегии и практические примеры.',
     });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-04-18' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-18' });this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/economicstate.webp',
@@ -295,7 +295,7 @@ export class HomeRuTwentyFourComponent implements OnInit {
             },
           },
           datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2025-12-11T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
             '@id': 'https://arapov.trade/ru/freestudying/fibonaccilevels',

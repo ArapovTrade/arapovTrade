@@ -66,7 +66,7 @@ export class HomeRuThirtyNineComponent implements OnInit {
       content:
         'Соотношение прибыли и убытка (Risk/Reward Ratio) в трейдинге: как рассчитать, оптимизировать и применять для стабильной прибыли на финансовых рынках.',
     });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-04-08' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-08' }); this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/profitandlossratio.webp',
@@ -287,7 +287,7 @@ export class HomeRuThirtyNineComponent implements OnInit {
           image:
             'https://arapov.trade/assets/img/content/profitandlossratio1.webp',
           datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2025-12-29T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
           author: {
             '@id': 'https://arapov.trade/ru#person',
           },

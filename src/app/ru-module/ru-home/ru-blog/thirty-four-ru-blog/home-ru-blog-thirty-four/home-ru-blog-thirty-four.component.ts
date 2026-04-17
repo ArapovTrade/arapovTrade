@@ -67,7 +67,7 @@ export class HomeRuBlogThirtyFourComponent implements OnInit {
         'Полное руководство по стоп-лоссу в трейдинге. Как правильно рассчитать и выставить стоп-лосс, типичные ошибки, стратегии для разных стилей торговли.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-16' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-01-16' });  this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/stoplossmain.png',
@@ -296,7 +296,7 @@ export class HomeRuBlogThirtyFourComponent implements OnInit {
             },
           },
           datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2025-12-29T00:00:00Z',
+          dateModified: '2026-04-15T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
             '@id': 'https://arapov.trade/ru/freestudying/stoploss',

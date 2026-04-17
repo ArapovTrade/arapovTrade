@@ -67,7 +67,7 @@ export class HomeUkBlogTenComponent implements OnInit {
         'Розбираємо основні причини втрати депозиту в трейдингу: відсутність плану, ігнорування ризик-менеджменту, емоційні помилки. Практичні поради зі збереження капіталу.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-04-09' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-04-09' });  this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/mainreasonforlosses.webp',
@@ -284,7 +284,7 @@ export class HomeUkBlogTenComponent implements OnInit {
           image:
             'https://arapov.trade/assets/img/content/reasonfordepositeloose.webp',
           datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2025-12-29T00:00:00Z',
+         dateModified: '2026-04-15T00:00:00Z',
           author: {
             '@id': 'https://arapov.trade/uk#person',
           },
