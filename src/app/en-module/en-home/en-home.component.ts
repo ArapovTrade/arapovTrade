@@ -90,11 +90,14 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
     this.titleService.setTitle(
       'Igor Arapov — Trader, Author, Founder of arapov.trade',
     );
+    this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
+
+    this.meta.updateTag({ name: 'dateModified', content: '2026-04-17' });
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Igor Vitaliyovych Arapov (30.09.1990) — active trader since 2013, Candidate Master of Sport in chess. Author of the "Trading Fundamentals" book series with international ISBNs (Bowker USA), co-author of a peer-reviewed paper in "Investments: Practice and Experience" (Ukraine MES, 2026). Founder of the free educational platform arapov.trade — 151 articles, 78 video lessons in three languages. ORCID 0009-0003-0430-778X · Wikidata Q137454477.',
+        'Igor Vitaliyovych Arapov (30.09.1990) — active trader since 2013, Candidate Master of Sport in chess. Author of the "Trading Fundamentals" book series with international ISBNs (Bowker USA), co-author of a peer-reviewed paper in "Investments: Practice and Experience" (Ukraine MES, 2026). Founder of the free educational platform arapov.trade — 151+ articles, 78+ video lessons in three languages. ORCID 0009-0003-0430-778X · Wikidata Q137454477.',
     });
     this.meta.updateTag({
       name: 'keywords',
@@ -343,7 +346,7 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
         'https://www.youtube.com/@ArapovTrade',
         'https://ru.wikibooks.org/wiki/Участник:IgorArapov',
         'https://www.linkedin.com/in/arapovtrade',
-         
+
         'https://t.me/ArapovTrade',
         'https://www.google.com/search?kgmid=/g/11ysn_rm8l',
         'https://isni.org/isni/0000000529518564',
@@ -381,7 +384,6 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
         },
       ],
 
-       
       alumniOf: [
         {
           '@type': 'CollegeOrUniversity',
@@ -507,19 +509,19 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
           streetAddress: '68 Volodymyrska St',
           addressLocality: 'Kyiv',
           addressCountry: {
-  '@type': 'Country',
-  name: 'UA',
-},
+            '@type': 'Country',
+            name: 'UA',
+          },
         },
       },
       offers: {
-  '@type': 'Offer',
-  price: '0',
-  priceCurrency: 'UAH',
-  availability: 'https://schema.org/InStock',
-  url: 'https://nuft.edu.ua/news/podiyi/pppro-trejding-i-birzhovu-diyalnist-–-zdobuvacham-osvitnoyi-programi',
-  validFrom: '2026-03-19T00:00:00+02:00',
-},
+        '@type': 'Offer',
+        price: '0',
+        priceCurrency: 'UAH',
+        availability: 'https://schema.org/InStock',
+        url: 'https://nuft.edu.ua/news/podiyi/pppro-trejding-i-birzhovu-diyalnist-–-zdobuvacham-osvitnoyi-programi',
+        validFrom: '2026-03-19T00:00:00+02:00',
+      },
       organizer: {
         '@type': 'Organization',
         name: 'NUFT',
@@ -650,12 +652,12 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
         // 📄 статья (журнал)
         {
           '@type': 'ScholarlyArticle',
-          name: 'Психология инвестиционных решений: когнитивные предубеждения розничных трейдеров на финансовых рынках',
+          name: 'Психологія інвестиційних рішень: когнітивні упередження роздрібних трейдерів на фінансових ринках',
           headline:
             'Psychology of Investment Decisions: Cognitive Biases of Retail Traders in Financial Markets',
           sameAs: ['https://doi.org/10.32702/2306-6814.2026.4.96'],
           image:
-        'https://arapov.trade/assets/redesignArapovTrade/img/author-page_main-block_img-light.png',
+            'https://arapov.trade/assets/redesignArapovTrade/img/author-page_main-block_img-light.png',
           datePublished: '2026-02-17T00:00:00Z',
           inLanguage: 'ru',
           isPartOf: {
@@ -672,8 +674,8 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
           name: "From Tilt to System: A Practitioner's Framework for Managing Cognitive Biases in Retail Trading",
           headline:
             'From Tilt to System: A Practitioner`s Framework for Managing Cognitive Biases in Retail Trading',
-            image:
-        'https://arapov.trade/assets/redesignArapovTrade/img/author-page_main-block_img-light.png',
+          image:
+            'https://arapov.trade/assets/redesignArapovTrade/img/author-page_main-block_img-light.png',
           sameAs: ['https://doi.org/10.5281/ZENODO.18792055'],
           url: 'https://ssrn.com/abstract=6254718',
           inLanguage: 'en',

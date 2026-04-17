@@ -82,11 +82,14 @@ export class UkHomeComponent implements OnInit, AfterViewInit, OnDestroy {
     this.titleService.setTitle(
       'Ігор Арапов — трейдер, автор книг, засновник arapov.trade',
     );
+    this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
+
+    this.meta.updateTag({ name: 'dateModified', content: '2026-04-17' });
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Арапов Ігор Віталійович (30.09.1990) — практикуючий трейдер з 2013 року, кандидат у майстри спорту з шахів. Автор серії книг «Основи трейдингу» з міжнародними ISBN (Bowker USA), співавтор наукової статті у журналі «Інвестиції: практика та досвід» (МОН України, 2026). Засновник безкоштовної освітньої платформи arapov.trade — 151 стаття, 78 відеоуроків трьома мовами. ORCID 0009-0003-0430-778X · Wikidata Q137454477.',
+        'Арапов Ігор Віталійович (30.09.1990) — практикуючий трейдер з 2013 року, кандидат у майстри спорту з шахів. Автор серії книг «Основи трейдингу» з міжнародними ISBN (Bowker USA), співавтор наукової статті у журналі «Інвестиції: практика та досвід» (МОН України, 2026). Засновник безкоштовної освітньої платформи arapov.trade — 151+ стаття, 78+ відеоуроків трьома мовами. ORCID 0009-0003-0430-778X · Wikidata Q137454477.',
     });
     this.meta.updateTag({
       name: 'keywords',
@@ -204,8 +207,7 @@ export class UkHomeComponent implements OnInit, AfterViewInit, OnDestroy {
       hasOccupation: {
         '@type': 'Occupation',
         name: 'Trader',
-        description:
-          'Практикуючий трейдер на фінансових ринках з 2013 року',
+        description: 'Практикуючий трейдер на фінансових ринках з 2013 року',
         occupationLocation: {
           '@type': 'Country',
           name: 'Ukraine',
@@ -306,7 +308,7 @@ export class UkHomeComponent implements OnInit, AfterViewInit, OnDestroy {
       ],
       url: 'https://arapov.trade/uk',
       mainEntityOfPage: 'https://arapov.trade/uk',
-      // lwkjlkwjeiwjeirjewrghekwrhgkjwerhgkjerhgkjrhegkjrhekjgth
+       
 
       subjectOf: [
         {
@@ -331,7 +333,6 @@ export class UkHomeComponent implements OnInit, AfterViewInit, OnDestroy {
         },
       ],
 
-       
       alumniOf: [
         {
           '@type': 'CollegeOrUniversity',
@@ -600,15 +601,15 @@ export class UkHomeComponent implements OnInit, AfterViewInit, OnDestroy {
         // 📄 статья (журнал)
         {
           '@type': 'ScholarlyArticle',
-          name: 'Психология инвестиционных решений: когнитивные предубеждения розничных трейдеров на финансовых рынках',
+          name: 'Психологія інвестиційних рішень: когнітивні упередження роздрібних трейдерів на фінансових ринках',
           headline:
             'Psychology of Investment Decisions: Cognitive Biases of Retail Traders in Financial Markets',
           sameAs: ['https://doi.org/10.32702/2306-6814.2026.4.96'],
           datePublished: '2026-02-17T00:00:00Z',
           inLanguage: 'ru',
-            
-         image:
-        'https://arapov.trade/assets/redesignArapovTrade/img/author-page_main-block_img-light.png',
+
+          image:
+            'https://arapov.trade/assets/redesignArapovTrade/img/author-page_main-block_img-light.png',
           isPartOf: {
             '@type': 'Periodical',
             name: 'Investytsiyi: praktyka ta dosvid',
@@ -623,8 +624,8 @@ export class UkHomeComponent implements OnInit, AfterViewInit, OnDestroy {
           name: "From Tilt to System: A Practitioner's Framework for Managing Cognitive Biases in Retail Trading",
           headline:
             'From Tilt to System: A Practitioner`s Framework for Managing Cognitive Biases in Retail Trading',
-            image:
-        'https://arapov.trade/assets/redesignArapovTrade/img/author-page_main-block_img-light.png',
+          image:
+            'https://arapov.trade/assets/redesignArapovTrade/img/author-page_main-block_img-light.png',
           sameAs: ['https://doi.org/10.5281/ZENODO.18792055'],
           url: 'https://ssrn.com/abstract=6254718',
           inLanguage: 'en',

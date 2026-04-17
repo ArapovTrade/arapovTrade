@@ -66,7 +66,7 @@ export class HomeEnFourtyFiveComponent implements OnInit {
     });
 
     this.meta.updateTag({ name: 'datePublished', content: '2025-05-30' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-04-17T00:00:00Z' });
     this.meta.updateTag({
       property: 'og:image',
       content: 'https://arapov.trade/assets/img/content/freeeducationnew.webp',
@@ -266,9 +266,9 @@ export class HomeEnFourtyFiveComponent implements OnInit {
           headline:
             'Free trading training from scratch - a complete course for beginners',
           description:
-            'A free trading course for beginners from scratch, taught by a practicing trader. Over 150 articles and 70 video tutorials: technical analysis, volume, Smart Money, and trading psychology.',
+            'A free trading course for beginners from scratch, taught by a practicing trader. Over 151+ articles and 78+ video tutorials: technical analysis, volume, Smart Money, and trading psychology.',
           datePublished: '2025-01-15T00:00:00+02:00',
-          dateModified: '2026-04-15T00:00:00Z+02:00',
+          dateModified: '2026-04-17T00:00:00Z+02:00',
           author: {
             '@id': 'https://arapov.trade/en#person',
           },
@@ -365,7 +365,7 @@ export class HomeEnFourtyFiveComponent implements OnInit {
           name: 'Can I really learn trading without paying for courses?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: "Absolutely. This course contains 130+ articles and 70 video lessons covering everything from basics to advanced Smart Money strategies. It's designed to give you a complete education without any paid upsells.",
+            text: "Absolutely. This course contains 151+ articles and 78+ video lessons covering everything from basics to advanced Smart Money strategies. It's designed to give you a complete education without any paid upsells.",
           },
         },
         {
@@ -641,7 +641,7 @@ export class HomeEnFourtyFiveComponent implements OnInit {
       hasCourse: {
         '@type': 'Course',
         name: 'Training in trading from scratch',
-        description: 'Over 130 articles and 70 video tutorials on trading',
+        description: 'Over 151+ articles and 78+ video tutorials on trading',
         provider: {
           '@type': 'Person',
           name: 'Ihor Arapov',

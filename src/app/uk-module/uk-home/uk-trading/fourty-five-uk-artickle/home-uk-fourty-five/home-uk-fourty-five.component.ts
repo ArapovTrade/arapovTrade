@@ -70,7 +70,7 @@ export class HomeUkFourtyFiveComponent implements OnInit {
     });
 
     this.meta.updateTag({ name: 'datePublished', content: '2025-05-30' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-04-17' });
     this.meta.updateTag({
       property: 'og:image',
       content: 'https://arapov.trade/assets/img/content/freeeducationnew.webp',
@@ -312,9 +312,9 @@ export class HomeUkFourtyFiveComponent implements OnInit {
           headline:
             'Безкоштовне навчання трейдингу з нуля | Курс 2025 | Ігор Арапов',
           description:
-            'Безкоштовний курс трейдингу для початківців від практикуючого трейдера з 2013 року. Понад 130 статей, 70 відео: від основ до Smart Money та Вайкоффа.',
+            'Безкоштовний курс трейдингу для початківців від практикуючого трейдера з 2013 року. Понад 150+ статей, 78+ відео: від основ до Smart Money та Вайкоффа.',
           datePublished: '2025-01-15T00:00:00+02:00',
-          dateModified: '2026-04-15T00:00:00Z',
+          dateModified: '2026-04-17T00:00:00Z',
           author: {
             '@id': 'https://arapov.trade/uk#person',
           },
@@ -411,7 +411,7 @@ export class HomeUkFourtyFiveComponent implements OnInit {
           name: 'Чи реально опанувати трейдинг самостійно без платних курсів?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Абсолютно реально. Цей курс створювався саме з такою метою — дати повну базу знань безкоштовно. Понад 130 статей та 70 відеоуроків покривають все необхідне: від базових понять до професійних стратегій Smart Money.',
+            text: 'Абсолютно реально. Цей курс створювався саме з такою метою — дати повну базу знань безкоштовно. Понад 151+ статей та 78+ відеоуроків покривають все необхідне: від базових понять до професійних стратегій Smart Money.',
           },
         },
         {
@@ -634,7 +634,7 @@ export class HomeUkFourtyFiveComponent implements OnInit {
       '@id': 'https://arapov.trade/uk/freestudying/freeeducation#program',
       name: 'Безкоштовне навчання трейдингу з нуля',
       description:
-        'Безкоштовний курс трейдингу для початківців від практикуючого трейдера з 2013 року. Понад 130 статей, 70 відео: від основ до Smart Money та Вайкоффа.',
+        'Безкоштовний курс трейдингу для початківців від практикуючого трейдера з 2013 року. Понад 151+ статей, 78+ відео: від основ до Smart Money та Вайкоффа.',
       provider: {
         '@type': 'Person',
         '@id': 'https://arapov.trade/uk#person',
@@ -650,7 +650,7 @@ export class HomeUkFourtyFiveComponent implements OnInit {
       hasCourse: {
         '@type': 'Course',
         name: 'Безкоштовне навчання трейдингу з нуля',
-        description: 'Понад 130 статей та 70 відеоуроків з трейдингу',
+        description: 'Понад 151+ статей та 78+ відеоуроків з трейдингу',
         provider: {
           '@type': 'Person',
           name: 'Ігор Арапов',

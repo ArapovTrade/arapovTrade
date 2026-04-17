@@ -73,7 +73,7 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
     });
 
     this.meta.updateTag({ name: 'datePublished', content: '2025-05-30' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-04-17' });
     this.meta.updateTag({
       property: 'og:image',
       content: 'https://arapov.trade/assets/img/content/freeeducationnew.webp',
@@ -363,9 +363,9 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
           headline:
             'Бесплатное обучение трейдингу с нуля — полный курс для начинающих',
           description:
-            'Бесплатный курс по трейдингу для начинающих с нуля от практикующего трейдера. Более 150 статей и 70 видеоуроков: технический анализ, объёмы, Smart Money, психология торговли.',
+            'Бесплатный курс по трейдингу для начинающих с нуля от практикующего трейдера. Более 151+ статей и 78+ видеоуроков: технический анализ, объёмы, Smart Money, психология торговли.',
           datePublished: '2025-01-15T00:00:00+02:00',
-          dateModified: '2026-04-15T00:00:00Z',
+          dateModified: '2026-04-17T00:00:00Z',
           author: {
             '@id': 'https://arapov.trade/ru#person',
           },
@@ -462,7 +462,7 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
           name: 'Можно ли научиться трейдингу бесплатно?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Да, данный курс содержит более 130 статей и 70 видеоуроков, охватывающих всю необходимую теорию и практику. Материалы достаточны для самостоятельного освоения профессии без дополнительного платного обучения.',
+            text: 'Да, данный курс содержит более 151+ статей и 78+ видеоуроков, охватывающих всю необходимую теорию и практику. Материалы достаточны для самостоятельного освоения профессии без дополнительного платного обучения.',
           },
         },
         {
@@ -702,7 +702,7 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
       hasCourse: {
         '@type': 'Course',
         name: 'Обучение трейдингу с нуля',
-        description: 'Более 130 статей и 70 видеоуроков по трейдингу',
+        description: 'Более 151+ статей и 78+ видеоуроков по трейдингу',
         provider: {
           '@type': 'Person',
           name: 'Игорь Арапов',
