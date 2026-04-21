@@ -88,16 +88,16 @@ export class RuHomeComponent implements OnInit, AfterViewInit, OnDestroy {
       userMessage: new FormControl('', Validators.required),
     });
     this.titleService.setTitle(
-      'Игорь Арапов — трейдер, автор книг, основатель arapov.trade',
+      'Игорь Арапов — независимый исследователь, трейдер, автор',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
       this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
 
-  this.meta.updateTag({ name: 'dateModified', content: '2026-04-17' });
+  this.meta.updateTag({ name: 'dateModified', content: '2026-04-21' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Арапов Игорь Витальевич (30.09.1990) — практикующий трейдер с 2013 года, кандидат в мастера спорта по шахматам. Автор серии книг «Основы трейдинга» с международными ISBN (Bowker USA), соавтор научной статьи в журнале «Інвестиції: практика та досвід» (МОН Украины, 2026). Основатель бесплатной образовательной платформы arapov.trade — 151+ статья, 78+ видеоуроков на трёх языках. ORCID 0009-0003-0430-778X · Wikidata Q137454477.',
+        'Игорь Арапов — независимый исследователь в области психологии инвестиционных решений и поведенческих финансов, практикующий трейдер с 2013 года, автор серии книг по трейдингу.',
     });
     this.meta.updateTag({
       name: 'keywords',
@@ -368,28 +368,12 @@ export class RuHomeComponent implements OnInit, AfterViewInit, OnDestroy {
         'https://www.semanticscholar.org/author/2421286270',
         'https://papers.ssrn.com/Sol3/Cf_Dev/AbsByAuth.cfm?per_id=10402456',
         'https://openalex.org/authors/a5127355048',
-        'https://www.wikidata.org/wiki/Q137454477',
-        'https://ru.tradingview.com/u/Igor_Arapov/',
+        'https://www.wikidata.org/wiki/Q137454477', 
         'https://ssrn.com/author=10402456',
-        'https://scholar.google.com/citations?hl=uk&user=N440tWQAAAAJ',
-        'https://doi.org/10.32702/2306-6814.2026.4.96',
-        'https://orcid.org/0009-0003-0430-778X',
-        'https://www.amazon.com/stores/author/B0GBRFY457',
-        'https://www.youtube.com/@ArapovTrade',
-        'https://www.linkedin.com/in/arapovtrade',
-        
-        'https://t.me/ArapovTrade',
+        'https://scholar.google.com/citations?hl=uk&user=N440tWQAAAAJ', 
+        'https://orcid.org/0009-0003-0430-778X',  
         'https://www.google.com/search?kgmid=/g/11ysn_rm8l',
-        'https://isni.org/isni/0000000529518564',
-        'https://bookwire.bowker.com/author/Igor-Arapov-40225801',
-        'https://www.goodreads.com/author/show/66848566',
-        'https://openlibrary.org/authors/OL16073686A',
-        'https://ru.wikibooks.org/wiki/Основы_трейдинга',
-        'https://www.crunchbase.com/person/igor-arapov',
-        'https://ru.wikibooks.org/wiki/Участник:IgorArapov',
-        'https://www.facebook.com/igor.arapov.75',
-        'https://rutube.ru/channel/41668647',
-        'https://dzen.ru/id/66bf54343761337a416dac58?share_to=link',
+        'https://isni.org/isni/0000000529518564', 
         'http://www.irbis-nbuv.gov.ua/cgi-bin/irbis64r_81/cgiirbis_64.exe?Z21ID=&I21DBN=VFEIR&P21DBN=VFEIR&S21STN=1&S21REF=10&S21FMT=fullw&C21COM=S&S21CNR=20&S21P01=3&S21P02=0&S21P03=A=&S21COLORTERMS=0&S21STR=Арапов%2C%20Ігор',
       ],
 
