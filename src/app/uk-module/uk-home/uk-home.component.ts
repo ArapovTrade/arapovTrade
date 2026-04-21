@@ -204,26 +204,30 @@ export class UkHomeComponent implements OnInit, AfterViewInit, OnDestroy {
       description:
         'Незалежний дослідник, практикуючий трейдер, автор книг з трейдингу та наукових публікацій. Спеціалізується на психології трейдингу та когнітивних упередженнях на фінансових ринках.',
 
-      hasOccupation: {
-        '@type': 'Occupation',
-        name: 'Trader',
-        description: 'Практикуючий трейдер на фінансових ринках з 2013 року',
-        occupationLocation: {
-          '@type': 'Country',
-          name: 'Ukraine',
+      hasOccupation: [
+        {
+          '@type': 'Occupation',
+          name: 'Independent Researcher',
+          description:
+            'Незалежний дослідник у галузі поведінкових фінансів та психології інвестиційних рішень',
         },
-        skills: [
-          'Technical Analysis',
-          'Volume Analysis',
-          'Smart Money Concepts',
-          'Wyckoff Method',
-          'Risk Management',
-        ],
+        {
+          '@type': 'Occupation',
+          name: 'Trader',
+          description: 'Практикуючий трейдер на фінансових ринках з 2013 року',
+        },
+      ],
+      affiliation: {
+        '@type': 'Organization',
+        name: 'Національний університет харчових технологій (НУХТ)',
+        url: 'https://nuft.edu.ua/',
+        sameAs: 'https://www.wikidata.org/wiki/Q4315127',
       },
+
       nationality: {
         '@type': 'Country',
         name: 'Ukraine',
-        alternateName: 'Украина',
+        alternateName: 'Україна',
       },
       knowsLanguage: [
         { '@type': 'Language', name: 'Russian', alternateName: 'ru' },
@@ -244,13 +248,17 @@ export class UkHomeComponent implements OnInit, AfterViewInit, OnDestroy {
       },
 
       knowsAbout: [
+        'behavioral finance',
+        'cognitive biases',
+        'trading psychology',
+        'psychology of investment decisions',
+        'behavioural economics',
         'Smart Money Concepts',
         'Wyckoff Method',
         'Volume Analysis',
         'Technical Analysis',
         'Cryptocurrency Trading',
         'Risk Management',
-        'Trading Psychology',
         'Market Structure',
       ],
       hasCredential: [
@@ -279,21 +287,20 @@ export class UkHomeComponent implements OnInit, AfterViewInit, OnDestroy {
         },
       ],
       sameAs: [
-         'https://www.researchgate.net/scientific-contributions/I-V-Arapov-2341564479',
+        'https://www.researchgate.net/scientific-contributions/I-V-Arapov-2341564479',
         'https://www.semanticscholar.org/author/2421286270',
         'https://papers.ssrn.com/Sol3/Cf_Dev/AbsByAuth.cfm?per_id=10402456',
         'https://openalex.org/authors/a5127355048',
-        'https://www.wikidata.org/wiki/Q137454477', 
+        'https://www.wikidata.org/wiki/Q137454477',
         'https://ssrn.com/author=10402456',
-        'https://scholar.google.com/citations?hl=uk&user=N440tWQAAAAJ', 
-        'https://orcid.org/0009-0003-0430-778X',  
+        'https://scholar.google.com/citations?hl=uk&user=N440tWQAAAAJ',
+        'https://orcid.org/0009-0003-0430-778X',
         'https://www.google.com/search?kgmid=/g/11ysn_rm8l',
-        'https://isni.org/isni/0000000529518564', 
+        'https://isni.org/isni/0000000529518564',
         'http://www.irbis-nbuv.gov.ua/cgi-bin/irbis64r_81/cgiirbis_64.exe?Z21ID=&I21DBN=VFEIR&P21DBN=VFEIR&S21STN=1&S21REF=10&S21FMT=fullw&C21COM=S&S21CNR=20&S21P01=3&S21P02=0&S21P03=A=&S21COLORTERMS=0&S21STR=Арапов%2C%20Ігор',
-       ],
+      ],
       url: 'https://arapov.trade/uk',
       mainEntityOfPage: 'https://arapov.trade/uk',
-       
 
       subjectOf: [
         {
@@ -303,11 +310,7 @@ export class UkHomeComponent implements OnInit, AfterViewInit, OnDestroy {
           datePublished: '2026-03-19T00:00:00Z',
           image:
             'https://nuft.edu.ua/assets/images/News/2026/03/19/ekonomteoriya1-18-03-2026.jpg',
-          author: {
-            '@type': 'Person',
-            '@id': 'https://arapov.trade/uk#person',
-            name: 'Ігор Арапов',
-          },
+          author: { '@id': 'https://arapov.trade/uk#person' },
           headline:
             'Про трейдинг і біржову діяльність – здобувачам освітньої програми «Цифровий бізнес»',
           publisher: {
@@ -323,7 +326,6 @@ export class UkHomeComponent implements OnInit, AfterViewInit, OnDestroy {
           '@type': 'CollegeOrUniversity',
           name: 'Oles Honchar Dnipro National University',
           url: 'https://www.dnu.dp.ua/',
-          sameAs: 'https://www.wikidata.org/wiki/Q137454477',
         },
         {
           '@type': 'Organization',
@@ -371,7 +373,7 @@ export class UkHomeComponent implements OnInit, AfterViewInit, OnDestroy {
         '@id': 'https://arapov.trade#website',
       },
       dateCreated: '2020-01-01T00:00:00+02:00', // ← Добавьте время
-      dateModified: '2025-12-15T00:00:00+02:00', // ← Добавьте время
+      dateModified: '2026-04-21T00:00:00+02:00', // ← Добавьте время
     });
 
     this.document.head.appendChild(script);

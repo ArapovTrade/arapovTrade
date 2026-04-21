@@ -91,9 +91,9 @@ export class RuHomeComponent implements OnInit, AfterViewInit, OnDestroy {
       'Игорь Арапов — независимый исследователь, трейдер, автор',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-      this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
+    this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
 
-  this.meta.updateTag({ name: 'dateModified', content: '2026-04-21' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-04-21' });
     this.meta.updateTag({
       name: 'description',
       content:
@@ -288,23 +288,26 @@ export class RuHomeComponent implements OnInit, AfterViewInit, OnDestroy {
       description:
         'Независимый исследователь, практикующий трейдер, автор книг по трейдингу и научных публикаций. Специализируется на психологии трейдинга и когнитивных искажениях на финансовых рынках.',
 
-      hasOccupation: {
-        '@type': 'Occupation',
-        name: 'Trader',
-        description:
-          'Практикующий трейдер на финансовых рынках с 2013 года',
-        occupationLocation: {
-          '@type': 'Country',
-          name: 'Ukraine',
+      hasOccupation: [
+        {
+          '@type': 'Occupation',
+          name: 'Independent Researcher',
+          description:
+            'Независимый исследователь в области поведенческих финансов и психологии инвестиционных решений',
         },
-        skills: [
-          'Technical Analysis',
-          'Volume Analysis',
-          'Smart Money Concepts',
-          'Wyckoff Method',
-          'Risk Management',
-        ],
-      },
+        {
+          '@type': 'Occupation',
+          name: 'Trader',
+          description: 'Практикующий трейдер на финансовых рынках с 2013 года',
+        },
+      ],
+      affiliation: {
+      '@type': 'Organization',
+      'name': 'Национальный университет пищевых технологий (НУХТ)',
+      'url': 'https://nuft.edu.ua/',
+      'sameAs': 'https://www.wikidata.org/wiki/Q4315127'
+    },
+
       nationality: {
         '@type': 'Country',
         name: 'Ukraine',
@@ -329,13 +332,17 @@ export class RuHomeComponent implements OnInit, AfterViewInit, OnDestroy {
       },
 
       knowsAbout: [
+        'behavioral finance',
+        'cognitive biases',
+        'trading psychology',
+        'psychology of investment decisions',
+        'behavioural economics',
         'Smart Money Concepts',
         'Wyckoff Method',
         'Volume Analysis',
         'Technical Analysis',
         'Cryptocurrency Trading',
         'Risk Management',
-        'Trading Psychology',
         'Market Structure',
       ],
       hasCredential: [
@@ -368,12 +375,12 @@ export class RuHomeComponent implements OnInit, AfterViewInit, OnDestroy {
         'https://www.semanticscholar.org/author/2421286270',
         'https://papers.ssrn.com/Sol3/Cf_Dev/AbsByAuth.cfm?per_id=10402456',
         'https://openalex.org/authors/a5127355048',
-        'https://www.wikidata.org/wiki/Q137454477', 
+        'https://www.wikidata.org/wiki/Q137454477',
         'https://ssrn.com/author=10402456',
-        'https://scholar.google.com/citations?hl=uk&user=N440tWQAAAAJ', 
-        'https://orcid.org/0009-0003-0430-778X',  
+        'https://scholar.google.com/citations?hl=uk&user=N440tWQAAAAJ',
+        'https://orcid.org/0009-0003-0430-778X',
         'https://www.google.com/search?kgmid=/g/11ysn_rm8l',
-        'https://isni.org/isni/0000000529518564', 
+        'https://isni.org/isni/0000000529518564',
         'http://www.irbis-nbuv.gov.ua/cgi-bin/irbis64r_81/cgiirbis_64.exe?Z21ID=&I21DBN=VFEIR&P21DBN=VFEIR&S21STN=1&S21REF=10&S21FMT=fullw&C21COM=S&S21CNR=20&S21P01=3&S21P02=0&S21P03=A=&S21COLORTERMS=0&S21STR=Арапов%2C%20Ігор',
       ],
 
@@ -388,11 +395,7 @@ export class RuHomeComponent implements OnInit, AfterViewInit, OnDestroy {
           datePublished: '2026-03-19T00:00:00Z',
           image:
             'https://nuft.edu.ua/assets/images/News/2026/03/19/ekonomteoriya1-18-03-2026.jpg',
-          author: {
-            '@type': 'Person',
-            '@id': 'https://arapov.trade/ru#person',
-            name: 'Ігор Арапов',
-          },
+         author: { '@id': 'https://arapov.trade/ru#person' },
           headline:
             'Про трейдинг і біржову діяльність – здобувачам освітньої програми «Цифровий бізнес»',
           publisher: {
@@ -403,13 +406,12 @@ export class RuHomeComponent implements OnInit, AfterViewInit, OnDestroy {
         },
       ],
 
-     
       alumniOf: [
         {
           '@type': 'CollegeOrUniversity',
           name: 'Oles Honchar Dnipro National University',
           url: 'https://www.dnu.dp.ua/',
-          sameAs: 'https://www.wikidata.org/wiki/Q137454477',
+          
         },
         {
           '@type': 'Organization',
@@ -457,7 +459,7 @@ export class RuHomeComponent implements OnInit, AfterViewInit, OnDestroy {
         '@id': 'https://arapov.trade/ru/main#website',
       },
       dateCreated: '2020-01-01T00:00:00+02:00', // ← Добавьте время
-      dateModified: '2025-12-15T00:00:00+02:00', // ← Добавьте время
+      dateModified: '2026-04-21T00:00:00+02:00', // ← Добавьте время
     });
 
     this.document.head.appendChild(script);
@@ -533,8 +535,6 @@ export class RuHomeComponent implements OnInit, AfterViewInit, OnDestroy {
 
     this.document.head.appendChild(script);
   }
-
-  
 
   private addBooksSchema(): void {
     const SCRIPT_ID = 'global-schema';
@@ -656,7 +656,7 @@ export class RuHomeComponent implements OnInit, AfterViewInit, OnDestroy {
           sameAs: ['https://doi.org/10.32702/2306-6814.2026.4.96'],
           datePublished: '2026-02-17T00:00:00Z',
           image:
-        'https://arapov.trade/assets/redesignArapovTrade/img/author-page_main-block_img-light.png',
+            'https://arapov.trade/assets/redesignArapovTrade/img/author-page_main-block_img-light.png',
           inLanguage: 'ru',
           isPartOf: {
             '@type': 'Periodical',
@@ -674,7 +674,7 @@ export class RuHomeComponent implements OnInit, AfterViewInit, OnDestroy {
             'From Tilt to System: A Practitioner`s Framework for Managing Cognitive Biases in Retail Trading',
           sameAs: ['https://doi.org/10.5281/ZENODO.18792055'],
           image:
-        'https://arapov.trade/assets/redesignArapovTrade/img/author-page_main-block_img-light.png',
+            'https://arapov.trade/assets/redesignArapovTrade/img/author-page_main-block_img-light.png',
           url: 'https://ssrn.com/abstract=6254718',
           inLanguage: 'en',
           publisher: {

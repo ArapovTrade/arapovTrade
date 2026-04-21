@@ -255,22 +255,26 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
       description:
         'Independent researcher, practicing trader, author of books on trading and scientific publications. Specializes in trading psychology and cognitive biases in financial markets.',
 
-      hasOccupation: {
-        '@type': 'Occupation',
-        name: 'Trader',
-        description: 'A practicing trader in financial markets since 2013',
-        occupationLocation: {
-          '@type': 'Country',
-          name: 'Ukraine',
+      hasOccupation: [
+        {
+          '@type': 'Occupation',
+          name: 'Independent Researcher',
+          description:
+            'Independent researcher in the field of behavioral finance and the psychology of investment decisions`',
         },
-        skills: [
-          'Technical Analysis',
-          'Volume Analysis',
-          'Smart Money Concepts',
-          'Wyckoff Method',
-          'Risk Management',
-        ],
-      },
+        {
+          '@type': 'Occupation',
+          name: 'Trader',
+          description: 'Practicing trader on financial markets since 2013',
+        },
+      ],
+       affiliation: {
+      '@type': 'Organization',
+      'name': 'National University of Food Technologies (NUFT)',
+      'url': 'https://nuft.edu.ua/',
+      'sameAs': 'https://www.wikidata.org/wiki/Q4315127'
+    },
+
       nationality: {
         '@type': 'Country',
         name: 'Ukraine',
@@ -295,13 +299,17 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
       },
 
       knowsAbout: [
+        'behavioral finance',
+        'cognitive biases',
+        'trading psychology',
+        'psychology of investment decisions',
+        'behavioural economics',
         'Smart Money Concepts',
         'Wyckoff Method',
         'Volume Analysis',
         'Technical Analysis',
         'Cryptocurrency Trading',
         'Risk Management',
-        'Trading Psychology',
         'Market Structure',
       ],
       hasCredential: [
@@ -352,11 +360,7 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
           name: 'Guest Lecture on Trading and Exchange Activity for Digital Business Program Students',
           image:
             'https://nuft.edu.ua/assets/images/News/2026/03/19/ekonomteoriya1-18-03-2026.jpg',
-          author: {
-            '@type': 'Person',
-            '@id': 'https://arapov.trade/en#person',
-            name: 'Ігор Арапов',
-          },
+               author: { '@id': 'https://arapov.trade/en#person' },
           headline:
             'Про трейдинг і біржову діяльність – здобувачам освітньої програми «Цифровий бізнес»',
           datePublished: '2026-03-19T00:00:00Z',
@@ -373,7 +377,7 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
           '@type': 'CollegeOrUniversity',
           name: 'Oles Honchar Dnipro National University',
           url: 'https://www.dnu.dp.ua/',
-          sameAs: 'https://www.wikidata.org/wiki/Q137454477',
+           
         },
         {
           '@type': 'Organization',
@@ -421,7 +425,7 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
         '@id': 'https://arapov.trade/en/main#website',
       },
       dateCreated: '2020-01-01T00:00:00+02:00', // ← Добавьте время
-      dateModified: '2025-12-15T00:00:00+02:00', // ← Добавьте время
+      dateModified: '2026-04-21T00:00:00+02:00', // ← Добавьте время
     });
 
     this.document.head.appendChild(script);
