@@ -458,8 +458,23 @@ export class RuHomeComponent implements OnInit, AfterViewInit, OnDestroy {
       name: 'Про автора - Арапов Игорь',
       inLanguage: 'ru-RU',
       mainEntity: {
-        '@id': 'https://arapov.trade/ru#person',
-      },
+      '@id': 'https://arapov.trade/ru#person', // Связь с объектом Person
+      '@type': 'Person',
+      'name': 'Игорь Арапов',
+      // УКАЗЫВАЕМ ВАШИ НАУЧНЫЕ СТАТЬИ ЗДЕСЬ:
+      'hasPublication': [
+        {
+          '@type': 'ScholarlyArticle',
+          '@id': 'https://doi.org/10.32702/2306-6814.2026.4.96',
+          'headline': 'Психология инвестиционных решений: когнитивные искажения розничных трейдеров на финансовых рынках'
+        },
+        {
+          '@type': 'ScholarlyArticle',
+          '@id': 'https://doi.org/10.5281/ZENODO.18792055',
+          'headline': 'From Tilt to System: A Practitioner\'s Framework for Managing Cognitive Biases in Retail Trading'
+        }
+      ]
+    },
       isPartOf: {
         '@id': 'https://arapov.trade/ru/main#website',
       },
@@ -546,7 +561,7 @@ export class RuHomeComponent implements OnInit, AfterViewInit, OnDestroy {
 
     if (this.document.getElementById(SCRIPT_ID)) return;
 
-    const AUTHOR_ID = 'https://arapov.trade/ru#author';
+    const AUTHOR_ID = 'https://arapov.trade/ru#person';
     const COAUTHOR_ID = 'https://nuft.edu.ua/nnieiy/kafedra-et/#inna-sytnyk';
 
     const books = [
