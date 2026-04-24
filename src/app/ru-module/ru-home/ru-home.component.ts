@@ -93,7 +93,12 @@ export class RuHomeComponent implements OnInit, AfterViewInit, OnDestroy {
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
 
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-21' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-04-24' });
+     this.meta.updateTag({
+      name: 'citation_keywords',
+      content:
+        'когнитивные искажения, поведенческие финансы, трейдинг, УДК 336.76:159.9',
+    });
     this.meta.updateTag({
       name: 'description',
       content:
@@ -658,6 +663,11 @@ export class RuHomeComponent implements OnInit, AfterViewInit, OnDestroy {
           image:
             'https://arapov.trade/assets/redesignArapovTrade/img/author-page_main-block_img-light.png',
           inLanguage: 'ru',
+          'identifier': {
+        '@type': 'PropertyValue',
+        'propertyID': 'UDC',
+        'value': '336.76:159.9'
+      },
           isPartOf: {
             '@type': 'Periodical',
             name: 'Investytsiyi: praktyka ta dosvid',
@@ -677,6 +687,11 @@ export class RuHomeComponent implements OnInit, AfterViewInit, OnDestroy {
             'https://arapov.trade/assets/redesignArapovTrade/img/author-page_main-block_img-light.png',
           url: 'https://ssrn.com/abstract=6254718',
           inLanguage: 'en',
+          'identifier': {
+        '@type': 'PropertyValue',
+        'propertyID': 'UDC',
+        'value': '336.76:159.9'
+      },
           publisher: {
             '@type': 'Organization',
             name: 'Social Science Research Network (SSRN)',

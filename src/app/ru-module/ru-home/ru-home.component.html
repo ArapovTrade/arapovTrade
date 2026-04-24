@@ -468,9 +468,9 @@
 
 
   
-  <div class="author-page_section-two" data-aos="fade-up" data-aos-delay="300">
-    <div class="section-two_text-block">
-      <div class="author-page_main-block_title-block">
+  <div class="author-page_section-two" data-aos="fade-up" data-aos-delay="300" id="person">
+    <div class="section-two_text-block" id="author">
+      <div class="author-page_main-block_title-block" >
         <h2
           class=" "
           [ngClass]="{
@@ -595,7 +595,15 @@
               >
               » , опубликованной в журнале категории «Б» МОН Украины
               «Інвестиції: практика та досвід» (№4, 2026). DOI:
-              10.32702/2306-6814.2026.4.96.
+              10.32702/2306-6814.2026.4.96 (<a
+                [ngStyle]="{
+                  color: isDark ? '#fdff8b' : '#0074e6',
+                }"
+                target="_blank"
+                class="linkrefinto"
+                style="text-decoration: underline"
+                href="https://www.wikidata.org/wiki/Q138504696"
+                > УДК 336.76:159.9 </a>).
             </div>
           </div>
         </div>

@@ -92,7 +92,12 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
     );
     this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
 
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-21' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-04-24' });
+     this.meta.updateTag({
+      name: 'citation_keywords',
+      content:
+        'cognitive biases, behavioral finance, trading, UDC 336.76:159.9',
+    });
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
@@ -268,12 +273,12 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
           description: 'Practicing trader on financial markets since 2013',
         },
       ],
-       affiliation: {
-      '@type': 'Organization',
-      'name': 'National University of Food Technologies (NUFT)',
-      'url': 'https://nuft.edu.ua/',
-      'sameAs': 'https://www.wikidata.org/wiki/Q4315127'
-    },
+      affiliation: {
+        '@type': 'Organization',
+        name: 'National University of Food Technologies (NUFT)',
+        url: 'https://nuft.edu.ua/',
+        sameAs: 'https://www.wikidata.org/wiki/Q4315127',
+      },
 
       nationality: {
         '@type': 'Country',
@@ -360,7 +365,7 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
           name: 'Guest Lecture on Trading and Exchange Activity for Digital Business Program Students',
           image:
             'https://nuft.edu.ua/assets/images/News/2026/03/19/ekonomteoriya1-18-03-2026.jpg',
-               author: { '@id': 'https://arapov.trade/en#person' },
+          author: { '@id': 'https://arapov.trade/en#person' },
           headline:
             'Про трейдинг і біржову діяльність – здобувачам освітньої програми «Цифровий бізнес»',
           datePublished: '2026-03-19T00:00:00Z',
@@ -377,7 +382,6 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
           '@type': 'CollegeOrUniversity',
           name: 'Oles Honchar Dnipro National University',
           url: 'https://www.dnu.dp.ua/',
-           
         },
         {
           '@type': 'Organization',
@@ -648,6 +652,11 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
             'https://arapov.trade/assets/redesignArapovTrade/img/author-page_main-block_img-light.png',
           datePublished: '2026-02-17T00:00:00Z',
           inLanguage: 'ru',
+          identifier: {
+            '@type': 'PropertyValue',
+            propertyID: 'UDC',
+            value: '336.76:159.9',
+          },
           isPartOf: {
             '@type': 'Periodical',
             name: 'Investytsiyi: praktyka ta dosvid',
@@ -667,6 +676,11 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
           sameAs: ['https://doi.org/10.5281/ZENODO.18792055'],
           url: 'https://ssrn.com/abstract=6254718',
           inLanguage: 'en',
+          identifier: {
+            '@type': 'PropertyValue',
+            propertyID: 'UDC',
+            value: '336.76:159.9',
+          },
           publisher: {
             '@type': 'Organization',
             name: 'Social Science Research Network (SSRN)',

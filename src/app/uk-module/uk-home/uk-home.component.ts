@@ -84,7 +84,14 @@ export class UkHomeComponent implements OnInit, AfterViewInit, OnDestroy {
     );
     this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
 
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-21' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-04-24' });
+     
+    this.meta.updateTag({
+      name: 'citation_keywords',
+      content:
+        'когнітивні упередження, поведінкові фінанси, трейдинг, УДК 336.76:159.9',
+    });
+
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
@@ -594,7 +601,11 @@ export class UkHomeComponent implements OnInit, AfterViewInit, OnDestroy {
           sameAs: ['https://doi.org/10.32702/2306-6814.2026.4.96'],
           datePublished: '2026-02-17T00:00:00Z',
           inLanguage: 'ru',
-
+          identifier: {
+            '@type': 'PropertyValue',
+            propertyID: 'UDC',
+            value: '336.76:159.9',
+          },
           image:
             'https://arapov.trade/assets/redesignArapovTrade/img/author-page_main-block_img-light.png',
           isPartOf: {
@@ -616,6 +627,11 @@ export class UkHomeComponent implements OnInit, AfterViewInit, OnDestroy {
           sameAs: ['https://doi.org/10.5281/ZENODO.18792055'],
           url: 'https://ssrn.com/abstract=6254718',
           inLanguage: 'en',
+          identifier: {
+            '@type': 'PropertyValue',
+            propertyID: 'UDC',
+            value: '336.76:159.9',
+          },
           publisher: {
             '@type': 'Organization',
             name: 'Social Science Research Network (SSRN)',

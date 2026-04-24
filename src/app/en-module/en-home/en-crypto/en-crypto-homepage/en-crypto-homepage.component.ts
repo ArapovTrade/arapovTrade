@@ -188,7 +188,7 @@ export class EnCryptoHomepageComponent
         },
         founder: {
           '@type': 'Person',
-          '@id': 'https://arapov.trade/#person',
+          '@id': 'https://arapov.trade/en#person',
           name: 'Арапов Ігор Віталійович',
         },
       },

@@ -186,7 +186,7 @@ export class RuCryptoHomepageComponent  implements OnInit, AfterViewInit, OnDest
         },
         founder: {
           '@type': 'Person',
-          '@id': 'https://arapov.trade/#person',
+          '@id': 'https://arapov.trade/ru#person',
           name: 'Арапов Ігор Віталійович',
         },
       },

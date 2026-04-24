@@ -234,7 +234,7 @@ export class MainpageComponent implements OnInit, AfterViewInit, OnDestroy {
         },
         founder: {
           '@type': 'Person',
-          '@id': 'https://arapov.trade/#person',
+          '@id': 'https://arapov.trade/uk#person',
           name: 'Арапов Ігор Віталійович',
         },
       },
