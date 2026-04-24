@@ -462,18 +462,7 @@ export class RuHomeComponent implements OnInit, AfterViewInit, OnDestroy {
       '@type': 'Person',
       'name': 'Игорь Арапов',
       // УКАЗЫВАЕМ ВАШИ НАУЧНЫЕ СТАТЬИ ЗДЕСЬ:
-      'hasPublication': [
-        {
-          '@type': 'ScholarlyArticle',
-          '@id': 'https://doi.org/10.32702/2306-6814.2026.4.96',
-          'headline': 'Психология инвестиционных решений: когнитивные искажения розничных трейдеров на финансовых рынках'
-        },
-        {
-          '@type': 'ScholarlyArticle',
-          '@id': 'https://doi.org/10.5281/ZENODO.18792055',
-          'headline': 'From Tilt to System: A Practitioner\'s Framework for Managing Cognitive Biases in Retail Trading'
-        }
-      ]
+       
     },
       isPartOf: {
         '@id': 'https://arapov.trade/ru/main#website',

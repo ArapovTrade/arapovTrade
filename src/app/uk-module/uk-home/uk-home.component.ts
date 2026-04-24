@@ -378,18 +378,7 @@ export class UkHomeComponent implements OnInit, AfterViewInit, OnDestroy {
       '@type': 'Person',
       'name': 'Ігор Арапов',
       // УКАЗЫВАЕМ ВАШИ НАУЧНЫЕ СТАТЬИ ЗДЕСЬ:
-      'hasPublication': [
-        {
-          '@type': 'ScholarlyArticle',
-          '@id': 'https://doi.org/10.32702/2306-6814.2026.4.96',
-          'headline': 'Психологія інвестиційних рішень: когнітивні упередження роздрібних трейдерів на фінансових ринках'
-        },
-        {
-          '@type': 'ScholarlyArticle',
-          '@id': 'https://doi.org/10.5281/ZENODO.18792055',
-          'headline': 'From Tilt to System: A Practitioner\'s Framework for Managing Cognitive Biases in Retail Trading'
-        }
-      ]
+      
     },
       isPartOf: {
         '@id': 'https://arapov.trade#website',

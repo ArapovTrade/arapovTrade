@@ -427,18 +427,7 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
       '@type': 'Person',
       'name': 'Igor Arapov',
       // УКАЗЫВАЕМ ВАШИ НАУЧНЫЕ СТАТЬИ ЗДЕСЬ:
-      'hasPublication': [
-        {
-          '@type': 'ScholarlyArticle',
-          '@id': 'https://doi.org/10.32702/2306-6814.2026.4.96',
-          'headline': 'Psychology of Investment Decisions: Cognitive Biases of Retail Traders in Financial Markets'
-        },
-        {
-          '@type': 'ScholarlyArticle',
-          '@id': 'https://doi.org/10.5281/ZENODO.18792055',
-          'headline': 'From Tilt to System: A Practitioner\'s Framework for Managing Cognitive Biases in Retail Trading'
-        }
-      ]
+       
     },
       isPartOf: {
         '@id': 'https://arapov.trade/en/main#website',
