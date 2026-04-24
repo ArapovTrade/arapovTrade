@@ -37,10 +37,11 @@ export class MetaservService {
         addressCountry: 'UA',
       },
       founder: {
-        '@id': 'https://arapov.trade/uk#person'
-         
+        '@type': 'Person',
+
+        name: 'Ігор Арапов',
       },
-       
+
       contactPoint: {
         '@type': 'ContactPoint',
         telephone: '+380502933075',
@@ -48,7 +49,6 @@ export class MetaservService {
         areaServed: 'UA',
         availableLanguage: ['Russian', 'Ukrainian', 'English'],
       },
-       
     };
 
     if (isPlatformBrowser(this.platformId)) {
