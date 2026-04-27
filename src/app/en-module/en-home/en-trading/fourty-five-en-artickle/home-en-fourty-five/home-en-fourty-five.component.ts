@@ -322,11 +322,11 @@ export class HomeEnFourtyFiveComponent implements OnInit {
           '@type': 'Article',
           '@id': 'https://arapov.trade/ru/freestudying/freeeducation#article',
           headline:
-            'Free trading training from scratch - a complete course for beginners',
+            'Free Trading Course for Beginners — Igor Arapov',
           description:
-            'A free trading course for beginners from scratch, taught by a practicing trader. Over 151+ articles and 78+ video tutorials: technical analysis, volume, Smart Money, and trading psychology.',
+            'Free trading course from scratch: technical analysis, Wyckoff method, volume analysis, complete trading system with positive mathematical expectancy. 18 sections, live trade breakdowns.',
           datePublished: '2025-01-15T00:00:00+02:00',
-          dateModified: '2026-04-17T00:00:00Z+02:00',
+          dateModified: '2026-04-27T00:00:00Z+02:00',
           author: {
             '@id': 'https://arapov.trade/en#person',
           },
