@@ -60,13 +60,13 @@ export class HomeUkFourtyFiveComponent implements OnInit {
     this.checkedGroup = this.artickleServ.selectedGroups;
 
     this.titleService.setTitle(
-      'Безкоштовне навчання трейдингу для початківців | Ігор Арапов',
+      'Безкоштовний курс з трейдингу для початківців — Ігор Арапов',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Повний безкоштовний курс трейдингу від Ігоря Арапова: читання графіків, об`ємний аналіз, Smart Money, ризик-менеджмент, торгова система.',
+        'Безкоштовний курс з трейдингу з нуля: технічний аналіз, метод Вайкоффа, об`ємний аналіз, торгова система з позитивним математичним очікуванням. 18 розділів, живі розбори угод.',
     });
 
     this.meta.updateTag({ name: 'datePublished', content: '2025-05-30' });
