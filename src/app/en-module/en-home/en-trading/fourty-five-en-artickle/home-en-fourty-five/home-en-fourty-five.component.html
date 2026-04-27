@@ -12,41 +12,41 @@
 
 <p><strong>Introduction</strong></p>
 <ul>
-  <li><a [routerLink]="[]" fragment="start">Where to Begin Learning Trading</a></li>
-  <li><a [routerLink]="[]" fragment="quickstart">What Is a Fast Start in Trading</a></li>
-  <li><a [routerLink]="[]" fragment="how">How to Work Through the Trading Course</a></li>
+  <li><a [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('start')">Where to Begin Learning Trading</a></li>
+  <li><a [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('quickstart')">What Is a Fast Start in Trading</a></li>
+  <li><a [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('how')">How to Work Through the Trading Course</a></li>
 </ul>
 
 <p><strong>Technical Analysis</strong></p>
 <ul>
-  <li><a [routerLink]="[]" fragment="ta">Technical Market Analysis</a></li>
-  <li><a [routerLink]="[]" fragment="phases">Market Phases: Trend and Consolidation</a></li>
-  <li><a [routerLink]="[]" fragment="pcl">Priority Shift Levels</a></li>
-  <li><a [routerLink]="[]" fragment="reversals">Reversal Patterns in Technical Analysis</a></li>
-  <li><a [routerLink]="[]" fragment="strength">How to Determine Trend Strength</a></li>
+  <li><a [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('ta')">Technical Market Analysis</a></li>
+  <li><a [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('phases')">Market Phases: Trend and Consolidation</a></li>
+  <li><a [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('pcl')">Priority Shift Levels</a></li>
+  <li><a [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('reversals')">Reversal Patterns in Technical Analysis</a></li>
+  <li><a [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('strength')">How to Determine Trend Strength</a></li>
 </ul>
 
 <p><strong>Volume Analysis and the Wyckoff Method</strong></p>
 <ul>
-  <li><a [routerLink]="[]" fragment="volume">Volume Market Analysis</a></li>
-  <li><a [routerLink]="[]" fragment="wyckoff">The Wyckoff Method</a></li>
-  <li><a [routerLink]="[]" fragment="effort">The Effort–Result Principle in the Wyckoff Method</a></li>
-  <li><a [routerLink]="[]" fragment="entry">How to Identify a Trade Entry Point</a></li>
+  <li><a [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('volume')">Volume Market Analysis</a></li>
+  <li><a [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('wyckoff')">The Wyckoff Method</a></li>
+  <li><a [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('effort')">The Effort–Result Principle in the Wyckoff Method</a></li>
+  <li><a [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('entry')">How to Identify a Trade Entry Point</a></li>
 </ul>
 
 <p><strong>Psychology and Risk Management</strong></p>
 <ul>
-  <li><a [routerLink]="[]" fragment="psychology">Trading Psychology</a></li>
-  <li><a [routerLink]="[]" fragment="size">How to Calculate Position Size with Risk in Mind</a></li>
-  <li><a [routerLink]="[]" fragment="fear">Fear and Greed in Trading</a></li>
+  <li><a [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('psychology')">Trading Psychology</a></li>
+  <li><a [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('size')">How to Calculate Position Size with Risk in Mind</a></li>
+  <li><a [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('fear')">Fear and Greed in Trading</a></li>
 </ul>
 
 <p><strong>Trading System and Practice</strong></p>
 <ul>
-  <li><a [routerLink]="[]" fragment="system">Trader's Trading System</a></li>
-  <li><a [routerLink]="[]" fragment="math">Mathematical Expectation in Trading: A Profitable System Model</a></li>
-  <li><a [routerLink]="[]" fragment="mistakes">Common Mistakes of Beginning Traders</a></li>
-  <li><a [routerLink]="[]" fragment="demo">How to Start Trading on a Demo Account</a></li>
+  <li><a [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('system')">Trader's Trading System</a></li>
+  <li><a [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('math')">Mathematical Expectation in Trading: A Profitable System Model</a></li>
+  <li><a [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('mistakes')">Common Mistakes of Beginning Traders</a></li>
+  <li><a [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('demo')">How to Start Trading on a Demo Account</a></li>
 </ul>
 <br />
 
@@ -994,7 +994,7 @@
                     class="pictureImg"
                     loading="lazy"
                     src="/assets/img/content/japanYene.png"
-                    alt="Живой пример разбора сделки на фьючерсе Японская Иена — метод Вайкоффа и УСП"
+                    alt="A live example of analyzing a Japanese Yen futures contract - the Wyckoff method and RZP"
                     loading="lazy"
                   />
                 </div>

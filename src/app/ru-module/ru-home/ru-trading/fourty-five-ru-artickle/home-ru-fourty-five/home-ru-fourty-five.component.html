@@ -13,63 +13,63 @@
 
                 <p><strong>Введение</strong></p>
                 <ul>
-                  <li><a [routerLink]="[]" fragment="start"  >С чего начать обучение трейдингу</a></li>
+                  <li><a [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('start')"    >С чего начать обучение трейдингу</a></li>
                   <li>
-                    <a [routerLink]="[]" fragment="quickstart"  
+                    <a [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('quickstart')"    
                       >Что такое быстрый старт в трейдинге</a
                     >
                   </li>
-                  <li><a [routerLink]="[]" fragment="how"  >Как проходить курс по трейдингу</a></li>
+                  <li><a [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('how')"  fragment="how"  >Как проходить курс по трейдингу</a></li>
                 </ul>
 
                 <p><strong>Технический анализ</strong></p>
                 <ul>
-                  <li><a [routerLink]="[]" fragment="ta"  >Технический анализ рынка</a></li>
-                  <li><a [routerLink]="[]" fragment="phases"  >Фазы рынка: тренд и флет</a></li>
-                  <li><a [routerLink]="[]" fragment="pcl"  >Уровни смены приоритета</a></li>
+                  <li><a [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('ta')"     >Технический анализ рынка</a></li>
+                  <li><a [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('phases')"     >Фазы рынка: тренд и флет</a></li>
+                  <li><a [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('pcl')"     >Уровни смены приоритета</a></li>
                   <li>
-                    <a [routerLink]="[]" fragment="reversals"  
+                    <a [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('reversals')"   
                       >Разворотные модели в техническом анализе</a
                     >
                   </li>
-                  <li><a [routerLink]="[]" fragment="strength"  >Как определить силу тренда</a></li>
+                  <li><a [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('strength')"     >Как определить силу тренда</a></li>
                 </ul>
 
                 <p><strong>Объёмный анализ и метод Вайкоффа</strong></p>
                 <ul>
-                  <li><a [routerLink]="[]" fragment="volume"  >Объёмный анализ рынка</a></li>
-                  <li><a [routerLink]="[]" fragment="wyckoff"  >Метод Вайкоффа</a></li>
+                  <li><a [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('volume')"    >Объёмный анализ рынка</a></li>
+                  <li><a [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('wyckoff')"     >Метод Вайкоффа</a></li>
                   <li>
-                    <a  [routerLink]="[]" fragment="effort"  
+                    <a  [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('effort')"    
                       >Принцип усилие — результат в методе Вайкоффа</a
                     >
                   </li>
                   <li>
-                    <a [routerLink]="[]" fragment="entry"  >Как определить точку входа в сделку</a>
+                    <a [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('entry')"     >Как определить точку входа в сделку</a>
                   </li>
                 </ul>
 
                 <p><strong>Психология и риск-менеджмент</strong></p>
                 <ul>
-                  <li><a [routerLink]="[]" fragment="psychology"  >Психология трейдинга</a></li>
+                  <li><a [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('psychology')"     >Психология трейдинга</a></li>
                   <li>
-                    <a [routerLink]="[]" fragment="size"  
+                    <a [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('size')"    
                       >Как рассчитать объём позиции с учётом риска</a
                     >
                   </li>
-                  <li><a [routerLink]="[]" fragment="fear"  >Страх и жадность в трейдинге</a></li>
+                  <li><a [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('fear')"    >Страх и жадность в трейдинге</a></li>
                 </ul>
 
                 <p><strong>Торговая система и практика</strong></p>
                 <ul>
-                  <li><a [routerLink]="[]" fragment="system"  >Торговая система трейдера</a></li>
+                  <li><a [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('system')"     >Торговая система трейдера</a></li>
                   <li>
-                    <a [routerLink]="[]" fragment="math"  >Математическое ожидание в трейдинге</a>
+                    <a [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('math')"    >Математическое ожидание в трейдинге</a>
                   </li>
                   <li>
-                    <a [routerLink]="[]" fragment="mistakes">Типичные ошибки начинающих трейдеров</a>
+                    <a  [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('mistakes')">Типичные ошибки начинающих трейдеров</a>
                   </li>
-                  <li><a [routerLink]="[]" fragment="demo"  >Как начать торговать на демосчёте</a></li>
+                  <li><a [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('demo')"    >Как начать торговать на демосчёте</a></li>
                 </ul>
                 <br />
                 <p>

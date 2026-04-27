@@ -85,28 +85,65 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
 
     this.gerRandom();
 
+    // this.route.fragment.subscribe((fragment) => {
+    //   if (fragment) {
+    //     setTimeout(() => {
+    //       const element = this.document.getElementById(fragment);
+    //       if (element) {
+    //         // Отступ сверху в пикселях, например 80px (зависит от вашего меню)
+    //         const offset = 80;
+
+    //         // Позиция элемента относительно страницы
+    //         const elementPosition =
+    //           element.getBoundingClientRect().top + window.pageYOffset;
+
+    //         // Скроллим с учётом отступа
+    //         window.scrollTo({
+    //           top: elementPosition - offset,
+    //           behavior: 'smooth',
+    //         });
+    //       }
+    //     }, 500);
+    //   }
+    // });
+
     this.route.fragment.subscribe((fragment) => {
       if (fragment) {
-        setTimeout(() => {
-          const element = this.document.getElementById(fragment);
-          if (element) {
-            // Отступ сверху в пикселях, например 80px (зависит от вашего меню)
-            const offset = 80;
-
-            // Позиция элемента относительно страницы
-            const elementPosition =
-              element.getBoundingClientRect().top + window.pageYOffset;
-
-            // Скроллим с учётом отступа
-            window.scrollTo({
-              top: elementPosition - offset,
-              behavior: 'smooth',
-            });
-          }
-        }, 100);
+        this.scrollToFragment(fragment);
       }
     });
   }
+  scrollToFragment(fragment: string) {
+    // requestAnimationFrame надёжнее чем setTimeout
+    requestAnimationFrame(() => {
+      setTimeout(() => {
+        const element = this.document.getElementById(fragment);
+        if (element) {
+          const offset = 80;
+          const top =
+            element.getBoundingClientRect().top + window.pageYOffset - offset;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+      }, 400);
+    });
+  }
+
+  // Вызывай этот метод при клике на ссылку
+  navigateTo(fragment: string) {
+    this.router
+      .navigate([], {
+        fragment,
+        // Это заставляет Angular эмитить событие даже если fragment тот же
+        onSameUrlNavigation: 'reload',
+      })
+      .then(() => {
+        this.scrollToFragment(fragment);
+      });
+  }
+
+  // navigateTo(path: string) {
+  //   this.router.navigate([path]);
+  // }
 
   randomArticleRus: any = [];
   gerRandom() {
@@ -154,10 +191,6 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
   toggleTheme() {
     this.isDark = !this.isDark;
     this.themeService.setTheme(this.isDark);
-  }
-
-  navigateTo(path: string) {
-    this.router.navigate([path]);
   }
 
   articleCounts: { [key: string]: number } = {};

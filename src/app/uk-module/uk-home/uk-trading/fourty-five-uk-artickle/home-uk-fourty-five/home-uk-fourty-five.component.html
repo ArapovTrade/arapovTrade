@@ -12,41 +12,41 @@
 
 <p><strong>Вступ</strong></p>
 <ul>
-  <li><a [routerLink]="[]" fragment="start">З чого почати навчання трейдингу</a></li>
-  <li><a [routerLink]="[]" fragment="quickstart">Що таке швидкий старт у трейдингу</a></li>
-  <li><a [routerLink]="[]" fragment="how">Як проходити курс з трейдингу</a></li>
+  <li><a [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('start')">З чого почати навчання трейдингу</a></li>
+  <li><a [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('quickstart')"   >Що таке швидкий старт у трейдингу</a></li>
+  <li><a [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('how')">Як проходити курс з трейдингу</a></li>
 </ul>
 
 <p><strong>Технічний аналіз</strong></p>
 <ul>
-  <li><a [routerLink]="[]" fragment="ta">Технічний аналіз ринку</a></li>
-  <li><a [routerLink]="[]" fragment="phases">Фази ринку: тренд і флет</a></li>
-  <li><a [routerLink]="[]" fragment="pcl">Рівні зміни пріоритету</a></li>
-  <li><a [routerLink]="[]" fragment="reversals">Розворотні моделі в технічному аналізі</a></li>
-  <li><a [routerLink]="[]" fragment="strength">Як визначити силу тренду</a></li>
+  <li><a [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('ta')" >Технічний аналіз ринку</a></li>
+  <li><a [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('phases')">Фази ринку: тренд і флет</a></li>
+  <li><a [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('pcl')">Рівні зміни пріоритету</a></li>
+  <li><a [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('reversals')">Розворотні моделі в технічному аналізі</a></li>
+  <li><a [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('strength')">Як визначити силу тренду</a></li>
 </ul>
 
 <p><strong>Об'ємний аналіз і метод Вайкоффа</strong></p>
 <ul>
-  <li><a [routerLink]="[]" fragment="volume">Об'ємний аналіз ринку</a></li>
-  <li><a [routerLink]="[]" fragment="wyckoff">Метод Вайкоффа</a></li>
-  <li><a [routerLink]="[]" fragment="effort">Принцип зусилля — результату в методі Вайкоффа</a></li>
-  <li><a [routerLink]="[]" fragment="entry">Як визначити точку входу в угоду</a></li>
+  <li><a [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('volume')">Об'ємний аналіз ринку</a></li>
+  <li><a [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('wyckoff')">Метод Вайкоффа</a></li>
+  <li><a [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('effort')">Принцип зусилля — результату в методі Вайкоффа</a></li>
+  <li><a [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('entry')">Як визначити точку входу в угоду</a></li>
 </ul>
 
 <p><strong>Психологія і ризик-менеджмент</strong></p>
 <ul>
-  <li><a [routerLink]="[]" fragment="psychology">Психологія трейдингу</a></li>
-  <li><a [routerLink]="[]" fragment="size">Як розрахувати об'єм позиції з урахуванням ризику</a></li>
-  <li><a [routerLink]="[]" fragment="fear">Страх і жадібність у трейдингу</a></li>
+  <li><a [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('psychology')">Психологія трейдингу</a></li>
+  <li><a [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('size')">Як розрахувати об'єм позиції з урахуванням ризику</a></li>
+  <li><a [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('fear')">Страх і жадібність у трейдингу</a></li>
 </ul>
 
 <p><strong>Торгова система і практика</strong></p>
 <ul>
-  <li><a [routerLink]="[]" fragment="system">Торгова система трейдера</a></li>
-  <li><a [routerLink]="[]" fragment="math">Математичне очікування в трейдингу: модель прибуткової системи</a></li>
-  <li><a [routerLink]="[]" fragment="mistakes">Типові помилки початківців-трейдерів</a></li>
-  <li><a [routerLink]="[]" fragment="demo">Як почати торгувати на деморахунку</a></li>
+  <li><a [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('system')">Торгова система трейдера</a></li>
+  <li><a [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('math')">Математичне очікування в трейдингу: модель прибуткової системи</a></li>
+  <li><a [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('mistakes')">Типові помилки початківців-трейдерів</a></li>
+  <li><a [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('demo')">Як почати торгувати на деморахунку</a></li>
 </ul>
 <br />
 
@@ -972,7 +972,7 @@
                     class="pictureImg"
                     loading="lazy"
                     src="/assets/img/content/japanYene.png"
-                    alt="Живой пример разбора сделки на фьючерсе Японская Иена — метод Вайкоффа и УСП"
+                    alt="Живий приклад розбору угоди на ф'ючерсі Японська Єна — метод Вайкоффа і РЗП"
                     loading="lazy"
                   />
                 </div>
