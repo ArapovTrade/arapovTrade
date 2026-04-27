@@ -9,6 +9,8 @@ import {
 import { DOCUMENT } from '@angular/common';
 import { ThemeservService } from '../../../../../servises/themeserv.service';
 import { artickle } from '../../../../../servises/articles.service';
+import { ActivatedRoute } from '@angular/router';
+ 
 import { Subscription } from 'rxjs';
 import { NavigationEnd, Router } from '@angular/router';
 import { Meta, Title } from '@angular/platform-browser';
@@ -24,6 +26,9 @@ export class HomeEnFourtyFiveComponent implements OnInit {
     private meta: Meta,
     private titleService: Title,
     private cdr: ChangeDetectorRef,
+    private route: ActivatedRoute,
+        
+    
     private router: Router,
     private themeService: ThemeservService,
     private artickleServ: ArticlesService,
@@ -76,6 +81,27 @@ export class HomeEnFourtyFiveComponent implements OnInit {
       content: `https://arapov.trade/assets/img/content/freeeducationnew.webp`,
     });
     this.gerRandom();
+     this.route.fragment.subscribe((fragment) => {
+      if (fragment) {
+        setTimeout(() => {
+          const element = this.document.getElementById(fragment);
+          if (element) {
+            // Отступ сверху в пикселях, например 80px (зависит от вашего меню)
+            const offset = 80;
+
+            // Позиция элемента относительно страницы
+            const elementPosition =
+              element.getBoundingClientRect().top + window.pageYOffset;
+
+            // Скроллим с учётом отступа
+            window.scrollTo({
+              top: elementPosition - offset,
+              behavior: 'smooth',
+            });
+          }
+        }, 100);
+      }
+    });
   }
   randomArticleRus: any = [];
   gerRandom() {
