@@ -301,10 +301,10 @@ export class AppComponent implements OnInit, AfterViewChecked, OnDestroy {
         ) {
           title =
             segments[0] === 'ru'
-              ? 'Бесплатное обучение трейдингу для начинающих с нуля | Игорь Арапов'
+              ? 'Бесплатный курс по трейдингу для начинающих — Игорь Арапов'
               : segments[0] === 'uk'
-                ? 'Безкоштовне навчання трейдингу для початківців | Ігор Арапов'
-                : 'Free trading training for beginners from scratch | Igor Arapov';
+                ? 'Безкоштовний курс з трейдингу для початківців — Ігор Арапов'
+                : 'Free Trading Course for Beginners — Igor Arapov';
         } else if (
           segments[1] === 'freestudying' &&
           segments[2] === 'tradingview-record'
@@ -461,10 +461,10 @@ export class AppComponent implements OnInit, AfterViewChecked, OnDestroy {
         ) {
           description =
             segments[0] === 'ru'
-              ? 'Бесплатный курс по трейдингу: 151+ статей и 78+ видеоуроков. Изучите основы, анализ, психологию торговли и проверенные стратегии'
+              ? 'Бесплатный курс по трейдингу с нуля: технический анализ, метод Вайкоффа, объёмный анализ, торговая система с положительным математическим ожиданием. 18 разделов, живые разборы сделок.'
               : segments[0] === 'uk'
-                ? 'Безкоштовний курс з трейдингу: 151+ статей та 78+ відеоуроків. Вивчіть основи, аналіз, психологію торгівлі та перевірені стратегії'
-                : 'Free Trading Course: 151+ Articles and 78+ Video Lessons. Learn the Basics, Analysis, Trading Psychology, and Proven Strategies';
+                ? 'Безкоштовний курс з трейдингу з нуля: технічний аналіз, метод Вайкоффа, об`ємний аналіз, торгова система з позитивним математичним очікуванням. 18 розділів, живі розбори угод.'
+                : 'Free trading course from scratch: technical analysis, Wyckoff method, volume analysis, complete trading system with positive mathematical expectancy. 18 sections, live trade breakdowns.';
         } else if (
           segments[1] === 'freestudying' &&
           segments[2] === 'tradingview-record'
