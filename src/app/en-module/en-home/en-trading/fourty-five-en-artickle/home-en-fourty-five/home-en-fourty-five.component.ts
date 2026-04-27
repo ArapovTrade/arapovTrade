@@ -66,7 +66,7 @@ export class HomeEnFourtyFiveComponent implements OnInit {
     });
 
     this.meta.updateTag({ name: 'datePublished', content: '2025-05-30' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-26T00:00:00Z' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-04-27T00:00:00Z' });
     this.meta.updateTag({
       property: 'og:image',
       content: 'https://arapov.trade/assets/img/content/freeeducationnew.webp',
