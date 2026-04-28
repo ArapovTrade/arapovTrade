@@ -73,7 +73,7 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
     });
 
     this.meta.updateTag({ name: 'datePublished', content: '2025-05-30' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-27' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-04-28' });
     this.meta.updateTag({
       property: 'og:image',
       content: 'https://arapov.trade/assets/img/content/freeeducationnew.webp',
@@ -398,7 +398,7 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
           description:
             'Бесплатный курс по трейдингу с нуля: технический анализ, метод Вайкоффа, объёмный анализ, торговая система с положительным математическим ожиданием. 18 разделов, живые разборы сделок.',
           datePublished: '2025-01-15T00:00:00+02:00',
-          dateModified: '2026-04-27T00:00:00Z',
+          dateModified: '2026-04-28T00:00:00Z',
           author: {
             '@id': 'https://arapov.trade/ru#person',
           },

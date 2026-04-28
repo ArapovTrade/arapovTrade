@@ -46,6 +46,12 @@
   <li><a [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('system')">Trader's Trading System</a></li>
   <li><a [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('math')">Mathematical Expectation in Trading: A Profitable System Model</a></li>
   <li><a [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('mistakes')">Common Mistakes of Beginning Traders</a></li>
+   <li>
+                    <a  [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('chooseTheBroker')">How to Choose a Broker for Trading</a>
+                  </li>
+                  <li>
+                    <a  [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('exchange-trade')">What should a beginner trade on the exchange?</a>
+                  </li>
   <li><a [ngStyle]="{'cursor': 'pointer'}" (click)="navigateTo('demo')">How to Start Trading on a Demo Account</a></li>
 </ul>
 <br />
@@ -1080,6 +1086,49 @@
                   patterns on a chart.
                 </p>
 
+
+                <h3>Live Example: Distribution Phase on Euro Futures</h3>
+
+<p>
+  Let's walk through a live example on the Euro futures chart (equivalent to EUR/USD on forex). Last time we analysed the transition from a bearish trend to a bullish one through the <dfn itemscope itemtype="https://schema.org/DefinedTerm"><span itemprop="name">accumulation phase</span></dfn> using the Wyckoff method. Now let's examine the <dfn itemscope itemtype="https://schema.org/DefinedTerm"><span itemprop="name">distribution phase</span></dfn> — how the market transitions from an uptrend to a downtrend. We'll apply the same PCL logic as our reference point and mark points 1 through 5 to track the shift in the market auction. Timeframe is 15 minutes, but the logic applies to any timeframe.
+</p>
+ 
+   <div class="flex">
+                  <img
+                    class="pictureImg"
+                    loading="lazy"
+                    src="/assets/img/content/eutoPhaze.png"
+                    alt="Live example: distribution phase on Euro futures — Wyckoff method and PCL"
+                    loading="lazy"
+                  />
+                </div>
+<p>
+  <strong>1.</strong> We wait for the <dfn itemscope itemtype="https://schema.org/DefinedTerm"><span itemprop="name">buying climax</span></dfn> signal — when demand floods into a key level of interest, which professional money exploits by selling the asset without moving price against their own positions. This is always an up-bar (surge of market buy orders + sell limits), after which price stalls and fails to go higher. The buying climax also marks the beginning of the smart money distribution phase.
+</p>
+
+<p>
+  <strong>2.</strong> Zone 2 is always an entire range in the ultra-high volume area. Until buying pressure weakens, the market won't respond with a decline. But the moment volume on rising bars begins to dry up, we'll always see the market respond with falling prices. This is additional confirmation that Zone 1 was indeed a distribution phase.
+</p>
+
+<p>
+  <strong>3.</strong> As always, the critical moment — we see the first attempt to break through the PCL (support level) after buying pressure weakened within the range. After every first level breakout, we always wait for price reaction. It's essential to wait for wave 3-4 as a "market test" — the buyers' response to sharply lower prices.
+</p>
+
+<p>
+  <strong>4.</strong> The first <dfn itemscope itemtype="https://schema.org/DefinedTerm"><span itemprop="name">lower high</span></dfn> after testing the PCL support boundary — the most important factor in the trading system. If the market forms the first lower high at point 4, we have every reason to declare a trend change. Point 4 is the ideal stop-loss placement — just above the first lower high within the bearish structure.
+</p>
+
+<p>
+  <strong>5.</strong> New effort to the downside — volume is ultra-high or high, a strong sign of new trend development as price holds within the descending structure. Wave 4-5 is the market's response after the successful test (wave "3-4"). Volume also confirms the shift in the market auction direction (sell stop order pressure).
+</p>
+
+<p>
+  The <dfn itemscope itemtype="https://schema.org/DefinedTerm"><span itemprop="name">accumulation and distribution phases</span></dfn> in Wyckoff methodology are mirror images of each other — they may differ in duration, but are structurally always similar. To trade within a trend, you never need to predict the transition before wave 4-5 forms — that is the optimal place to join the new trend structure with a clearly defined protective order.
+</p>
+
+
+
+
                 <h2 id="math">
                   Mathematical Expectation in Trading: A Profitable System Model
                 </h2>
@@ -1195,6 +1244,66 @@
                   psychology and risk management stand alongside technical
                   analysis as equal pillars of this course.
                 </p>
+
+
+                <h2 id="chooseTheBroker">How to Choose a Broker for Trading</h2>
+
+<p>
+  A <dfn itemscope itemtype="https://schema.org/DefinedTerm"><span itemprop="name">broker</span></dfn> is the intermediary between you and the exchange. Your choice directly affects order execution quality, the safety of your funds, and the overall trading experience. Here are the key criteria to evaluate.
+</p>
+
+<ul>
+  <li>
+    <strong>Regulation and licence.</strong> Your broker must operate under a recognised regulator — SEC, CFTC, FCA, or CySEC. This is the minimum guarantee that the firm follows established rules and your funds are protected.
+  </li>
+  <li>
+    <strong>Available instruments.</strong> Confirm the broker provides access to the instruments you plan to trade — futures, forex, stocks, or crypto.
+  </li>
+  <li>
+    <strong>Order execution conditions.</strong> Execution speed and <dfn itemscope itemtype="https://schema.org/DefinedTerm"><span itemprop="name">slippage</span></dfn> matter — especially for active trading. Test both on a demo account before going live.
+  </li>
+  <li>
+    <strong>Commissions and spreads.</strong> Compare the cost per trade across several brokers. High commissions compound over time and significantly reduce profitability, especially with frequent trading.
+  </li>
+  <li>
+    <strong>Trading platform.</strong> A reliable, intuitive terminal is non-negotiable. Most brokers offer their own platforms. Test thoroughly on demo before depositing real funds.
+  </li>
+  <li>
+    <strong>Support quality.</strong> Check how quickly and competently support responds before opening a live account. In a critical moment, this can make a real difference.
+  </li>
+</ul>
+
+<p>
+  Golden rule: never open a live account with a broker without testing them on a demo first. Two to four weeks on demo will reveal the true quality of order execution and platform reliability.
+</p>
+
+
+  <h2 id="exchange-trade">What should a beginner trade on the exchange?</h2>
+
+<p>
+  Financial markets offer an enormous range of trading instruments. For a beginner, the key is not to spread yourself thin — focus on one instrument and learn its behaviour thoroughly. Here are the main categories.
+</p>
+
+<ul>
+  <li>
+    <strong><dfn itemscope itemtype="https://schema.org/DefinedTerm"><span itemprop="name">Futures</span></dfn>.</strong> Contracts to deliver an asset at a future date at a pre-agreed price. Traded on centralised exchanges (CME, CBOT) — which means transparent volume, clear rules, and no broker manipulation. That's why all live examples in this course use Euro and Japanese Yen futures. Volume analysis and the Wyckoff method work most effectively on futures.
+  </li>
+  <li>
+    <strong><dfn itemscope itemtype="https://schema.org/DefinedTerm"><span itemprop="name">Forex</span></dfn>.</strong> The interbank currency market. Runs 24 hours a day, 5 days a week, with high liquidity and a low entry threshold. Downside — a decentralised market without centralised volume data, which complicates volume analysis.
+  </li>
+  <li>
+    <strong><dfn itemscope itemtype="https://schema.org/DefinedTerm"><span itemprop="name">Stocks</span></dfn>.</strong> Shares of ownership in companies. Traded on stock exchanges (NYSE, NASDAQ). Well-suited for longer-term positions. Downside — active trading requires significant capital.
+  </li>
+  <li>
+    <strong><dfn itemscope itemtype="https://schema.org/DefinedTerm"><span itemprop="name">Cryptocurrency</span></dfn>.</strong> High <dfn itemscope itemtype="https://schema.org/DefinedTerm"><span itemprop="name">volatility</span></dfn>, round-the-clock trading. The same technical and volume analysis principles apply here. Downside — elevated risk due to weak regulation and frequent manipulation in low-liquidity coins.
+  </li>
+</ul>
+
+<p>
+  <strong>Recommendation for beginners:</strong> start with one instrument and trade only that. The methods you've learned in this course are universal — they work across all the markets listed above. The key is to choose an instrument with sufficient <dfn itemscope itemtype="https://schema.org/DefinedTerm"><span itemprop="name">liquidity</span></dfn> and trade it on a demo account until you complete 100 trades. Once you show a positive result across those 100 trades — move to a live account.
+</p>
+
+
 
                 <h2 id="demo">How to Start Trading on a Demo Account</h2>
 
