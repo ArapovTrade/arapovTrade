@@ -33,6 +33,14 @@
                       >How to Work Through the Trading Course</a
                     >
                   </li>
+                  <li>
+                    <a
+                      [ngStyle]="{ cursor: 'pointer' }"
+                      (click)="navigateTo('terminal')"
+                      fragment="terminal"
+                      >Introduction to Charts and the Trading Terminal</a
+                    >
+                  </li>
                 </ul>
 
                 <p><strong>Technical Analysis</strong></p>
@@ -324,6 +332,274 @@
                   noticed that beginners struggle with the specific terminology
                   of the profession — and that struggle slows down the learning
                   process and pulls them away from the goal.
+                </p>
+                <h2 id="terminal">
+                  Introduction to Charts and the Trading Terminal
+                </h2>
+
+                <p>
+                  Using TradingView as our example, let's cover the foundational
+                  information you need to understand before starting the course.
+                  Most trading platforms share the same layout: a main chart
+                  area where you watch price action on the instruments you're
+                  interested in, and a lower auxiliary panel for indicators that
+                  help with market analysis and forecasting.
+                </p>
+
+                <p>
+                  We'll use the most popular cryptocurrency — Bitcoin — to walk
+                  through how a trading terminal displays price data and which
+                  elements matter for the analysis methods covered in this
+                  course. The chart has been marked with arrows and numbers —
+                  let's go through each one.
+                </p>
+
+                <div class="flex">
+                  <img
+                    class="pictureImg"
+                    loading="lazy"
+                    src="/assets/img/content/terminal.png"
+                    alt="Introduction to charts and trading terminal TradingView — Bitcoin"
+                    loading="lazy"
+                  />
+                </div>
+                <h3>Instrument Name, Timeframe and Data Source</h3>
+
+                <p>
+                  The top of the terminal displays all the essential information
+                  about the instrument. In our example:
+                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
+                    ><span itemprop="name"
+                      >Bitcoin/TetherUS · 1D · Binance</span
+                    ></dfn
+                  >.
+                </p>
+
+                <ul>
+                  <li>
+                    <strong>Bitcoin/TetherUS</strong> — Bitcoin priced in US
+                    dollar equivalent via the Tether stablecoin
+                  </li>
+                  <li>
+                    <strong>1D</strong> — each bar on the chart represents one
+                    full day of trading
+                  </li>
+                  <li>
+                    <strong>Binance</strong> — the data source providing price
+                    quotes and volume data
+                  </li>
+                </ul>
+
+                <p>
+                  At the time of this analysis, one Bitcoin is trading at
+                  $75,762 — the current price shown on the right-hand price
+                  axis.
+                </p>
+
+                <h3>How to Read the Live Instrument Data</h3>
+
+                <p>
+                  In the top bar of the terminal, next to the instrument name,
+                  four key data points for the current bar are always displayed
+                  — updated in real time:
+                </p>
+
+                <ul>
+                  <li>
+                    <strong>O (Open)</strong> — the price at the start of the
+                    current bar
+                  </li>
+                  <li>
+                    <strong>H (High)</strong> — the highest price reached during
+                    the bar's period
+                  </li>
+                  <li>
+                    <strong>L (Low)</strong> — the lowest price reached during
+                    the bar's period
+                  </li>
+                  <li>
+                    <strong>C (Close)</strong> — the last recorded price (for an
+                    unclosed bar, this is the current market price)
+                  </li>
+                </ul>
+
+                <p>
+                  In our example: O 76,342 / H 77,904 / L 75,705 / C 75,762.
+                  This tells us that during the current day Bitcoin opened at
+                  $76,342, reached a high of $77,904, dipped to $75,705, and is
+                  currently trading at $75,762. These four values form every
+                  single bar on the chart.
+                </p>
+
+                <h3>Bars vs Japanese Candlesticks — What's the Difference?</h3>
+
+                <p>
+                  Different terminals display the same chart data in different
+                  visual formats. The two most common are
+                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
+                    ><span itemprop="name">bars</span></dfn
+                  >
+                  and
+                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
+                    ><span itemprop="name">Japanese candlesticks</span></dfn
+                  >. They are essentially the same thing — both show the same
+                  four values: open, close, high, and low. The difference is
+                  purely visual.
+                </p>
+
+                <p>
+                  A bar uses a vertical line with two horizontal ticks — the
+                  left tick is the open price, the right tick is the close. A
+                  candlestick uses a filled rectangle for the body — green if
+                  price closed higher than it opened, red if it closed lower.
+                  The thin lines above and below the body are called "wicks" or
+                  "shadows" and represent the high and low.
+                </p>
+
+                <p>
+                  This course uses bars, but if your terminal defaults to
+                  candlesticks — that's fine. The analysis logic is identical.
+                </p>
+
+                <h3>The Volume Indicator</h3>
+
+                <p>
+                  The lower auxiliary panel contains the
+                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
+                    ><span itemprop="name">volume indicator</span></dfn
+                  >. It pulls data from Binance and shows the number of
+                  transactions between buyers and sellers over the selected
+                  period — in our case, per day. This is the exact tool we'll be
+                  using in Wyckoff volume analysis throughout the course. The
+                  scale on the right side of the lower panel shows the
+                  transaction count, giving you a sense of exchange trading
+                  activity and allowing you to compare volume levels across
+                  different periods.
+                </p>
+
+                <h3>Why Timeframes Matter</h3>
+
+                <p>
+                  A
+                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
+                    ><span itemprop="name">timeframe</span></dfn
+                  >
+                  is the time scale of the chart. The same asset looks
+                  completely different on different timeframes — but the
+                  underlying market structure doesn't change, only the level of
+                  detail does.
+                </p>
+
+                <p>The practical rule is straightforward:</p>
+
+                <ul>
+                  <li>
+                    <strong>Higher timeframe</strong> (daily, weekly) — shows
+                    the broad market structure, major PCL levels, and the
+                    direction of the primary trend. This is where you decide
+                    which direction to trade.
+                  </li>
+                  <li>
+                    <strong>Lower timeframe</strong> (15 minutes, 1 hour) —
+                    shows detail within the move, helping you find the precise
+                    entry point and place your stop-loss.
+                  </li>
+                </ul>
+
+                <p>
+                  That's why all the live examples in this course are shown on
+                  the 15-minute timeframe — it provides enough detail to see
+                  structure and identify entries. But the same logic applies to
+                  any timeframe, from 5 minutes to the daily chart.
+                </p>
+
+                <h3>The Bullish Bar (Up Bar)</h3>
+
+                <p>
+                  The main chart area displays a bar chart. A
+                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
+                    ><span itemprop="name">bar</span></dfn
+                  >
+                  is the standard way of representing price behaviour over a
+                  time period. Every bar contains 4 key data points:
+                </p>
+
+                <ul>
+                  <li><strong>O (Open)</strong> — the opening price</li>
+                  <li><strong>C (Close)</strong> — the closing price</li>
+                  <li>
+                    <strong>H (High)</strong> — the highest price during the
+                    period
+                  </li>
+                  <li>
+                    <strong>L (Low)</strong> — the lowest price during the
+                    period
+                  </li>
+                </ul>
+
+                <p>
+                  A
+                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
+                    ><span itemprop="name">bullish bar</span></dfn
+                  >
+                  is green — the closing price is higher than the opening price.
+                  This tells us that buyers were more active than sellers during
+                  that period.
+                </p>
+
+                <h3>The Bearish Bar (Down Bar)</h3>
+
+                <p>
+                  A
+                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
+                    ><span itemprop="name">bearish bar</span></dfn
+                  >
+                  is red — it contains the same four data points as a green bar,
+                  but with one key difference: the closing price is lower than
+                  the opening price. This tells us that sellers dominated buyers
+                  during that period.
+                </p>
+
+                <p>
+                  Understanding bar structure is the foundation of technical
+                  analysis — every pattern and signal we cover in this course is
+                  built on the interaction of these four data points.
+                </p>
+
+                <h3>From Bars to Waves — Reading Market Structure</h3>
+
+                <p>
+                  A single bar tells you very little on its own. Real analysis
+                  begins when you look at a sequence of bars — this is how
+                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
+                    ><span itemprop="name">price waves</span></dfn
+                  >
+                  form.
+                </p>
+
+                <p>
+                  A wave is a series of bars moving in the same direction.
+                  Several rising bars in a row form an upward wave; several
+                  declining bars form a downward wave. The alternation of these
+                  waves is what creates the market structure we'll be analysing
+                  throughout the course.
+                </p>
+
+                <p>
+                  Look at any chart — you'll see that price never moves in a
+                  straight line. It moves in waves: impulse up, pullback down,
+                  impulse up again. Or the reverse. This is the natural rhythm
+                  of the market — the constant interaction between buyers and
+                  sellers.
+                </p>
+
+                <p>
+                  That's why in the sections ahead we'll be looking at the
+                  market not through individual bars, but through schematic
+                  examples of waves and structures — ranges, trends, Priority
+                  Change Levels. All of it builds on the same foundation: bars
+                  form waves, waves form structure, and structure tells us which
+                  direction to trade.
                 </p>
 
                 <h2 id="ta">Technical Market Analysis</h2>
@@ -1403,21 +1679,22 @@
                   <dfn itemscope itemtype="https://schema.org/DefinedTerm"
                     ><span itemprop="name">cognitive biases</span></dfn
                   >
-                  of retail traders — a topic well studied by Nobel laureates
-                  (" <a
+                  of retail traders — a topic well studied by Nobel laureates ("
+                  <a
                     target="_blank"
                     class="linkrefinto"
                     href="https://doi.org/10.32702/2306-6814.2026.4.96"
                     >Psychology of Investment Decisions: Cognitive Biases of
-                  Retail Traders in Financial Markets</a> ", journal "Інвестиції:
-                  практика та досвід", №4, 2026, DOI:
-                  10.32702/2306-6814.2026.4.96, UDC 336.76:159.9). Most of these biases emerge
-                  precisely during moments of uncertainty — when a trader cannot
-                  calmly accept that their stop was hit or that profit didn't
-                  reach the target. The key conclusion: psychology fundamentally
-                  works against the retail trader — and the first thing a trader
-                  must do is learn not to allow emotions to influence trading
-                  decisions.
+                    Retail Traders in Financial Markets</a
+                  >
+                  ", journal "Інвестиції: практика та досвід", №4, 2026, DOI:
+                  10.32702/2306-6814.2026.4.96, UDC 336.76:159.9). Most of these
+                  biases emerge precisely during moments of uncertainty — when a
+                  trader cannot calmly accept that their stop was hit or that
+                  profit didn't reach the target. The key conclusion: psychology
+                  fundamentally works against the retail trader — and the first
+                  thing a trader must do is learn not to allow emotions to
+                  influence trading decisions.
                 </p>
 
                 <p>
