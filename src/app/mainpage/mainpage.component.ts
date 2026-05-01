@@ -13,6 +13,7 @@ import { ThemeservService } from '../servises/themeserv.service';
 import { Subscription } from 'rxjs';
 declare var AOS: any;
 import { DOCUMENT } from '@angular/common';
+ 
 @Component({
   selector: 'app-mainpage',
   templateUrl: './mainpage.component.html',

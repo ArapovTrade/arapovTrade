@@ -18,9 +18,10 @@ import { MatPaginatorModule } from '@angular/material/paginator';
  
 import { MainpageComponent } from './mainpage/mainpage.component';
  
-import { MatExpansionModule } from '@angular/material/expansion'; 
+import { MatExpansionModule } from '@angular/material/expansion';
+import { BgImgDirective } from './servises/bg-img.directive'; 
 @NgModule({
-  declarations: [AppComponent, PageNotFoundComponent,   MainpageComponent, ],
+  declarations: [AppComponent, PageNotFoundComponent,   MainpageComponent, BgImgDirective, ],
   imports: [
     BrowserAnimationsModule,
     BrowserModule,

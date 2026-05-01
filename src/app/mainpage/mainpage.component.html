@@ -264,9 +264,9 @@
               <span
                 class="tekst-opisanye"
                 [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-                >100% безкоштовно. Уся теорія трейдингу — статті, відеоуроки, книги та
-                покрокові розбори — у відкритому доступі, без прихованих
-                платежів і підписок.
+                >100% безкоштовно. Уся теорія трейдингу — статті, відеоуроки,
+                книги та покрокові розбори — у відкритому доступі, без
+                прихованих платежів і підписок.
                 <span>
                   Від першого кроку до просунутих стратегій. Навчайтесь у
                   зручному темпі — усі матеріали відкриті.</span
@@ -487,7 +487,8 @@
           </div>
           <div *ngIf="isDark" class="mask-gradient"></div>
 
-          <div
+          <!-- <div
+          
             class="image"
             [ngClass]="{ 'shadow-dark': isDark, 'shadow-light': !isDark }"
             [ngStyle]="{
@@ -495,6 +496,16 @@
                 ? 'url(assets/redesignArapovTrade/img/imageAuthor.png) no-repeat center'
                 : 'url(assets/redesignArapovTrade/img/imageAuthor-light.png) no-repeat center',
             }"
+          ></div> -->
+          <div
+            class="image"
+            [ngClass]="{ 'shadow-dark': isDark, 'shadow-light': !isDark }"
+            style="background-size: 107% 105%"
+            [lazyBackground]="
+              isDark
+                ? 'assets/redesignArapovTrade/img/imageAuthor.png'
+                : 'assets/redesignArapovTrade/img/imageAuthor-light.png'
+            "
           ></div>
         </div>
       </div>
@@ -587,9 +598,14 @@
             просто й невимушено. Там же я підготував плейліст із вивчення
             окремих тем трейдингу у зручних відеороликах. Повний каталог усіх 78
             освітніх відео з описами та структурованими шляхами навчання
-            доступний у розділі <a href="https://arapov.trade/uk/freestudying/youtube"  
-            class="youtube-kanali"
-            [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }">карта YouTube-каналу</a> .</span
+            доступний у розділі
+            <a
+              href="https://arapov.trade/uk/freestudying/youtube"
+              class="youtube-kanali"
+              [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+              >карта YouTube-каналу</a
+            >
+            .</span
           >
         </div>
         <div
@@ -698,7 +714,9 @@
             ><span
               class="feature-8"
               [ngStyle]="{ color: isDark ? '#ffffff' : '#6D7D89' }"
-              >Незалежний дослідник у галузі психології інвестиційних рішень та поведінкових фінансів, автор серії книг з трейдингу із міжнародними ISBN (Bowker USA)</span
+              >Незалежний дослідник у галузі психології інвестиційних рішень та
+              поведінкових фінансів, автор серії книг з трейдингу із
+              міжнародними ISBN (Bowker USA)</span
             >
           </div>
         </div>

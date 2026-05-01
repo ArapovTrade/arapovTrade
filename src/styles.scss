@@ -29,6 +29,7 @@ $projectArapov-theme: mat.define-theme(
   src:url(/assets/fonts/Lato/Lato-Regular.ttf) format('truetype');
   font-weight: 400; /* Regular */
   font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -37,6 +38,7 @@ $projectArapov-theme: mat.define-theme(
   src:url(/assets/fonts/Lato/Lato-SemiBold.ttf) format('truetype');
   font-weight: 700; /* Bold */
   font-style: normal;
+    font-display: swap;
 }
  
 @font-face {
@@ -45,6 +47,7 @@ $projectArapov-theme: mat.define-theme(
   src:url(/assets/fonts/Lato/Lato-LightItalic.ttf) format('truetype');
   font-weight: 400;  
   font-style: italic;
+    font-display: swap;
 }
 @font-face {
   font-family: 'Lato';
@@ -52,6 +55,7 @@ $projectArapov-theme: mat.define-theme(
   src:url(/assets/fonts/Lato/Lato-Light.ttf) format('truetype');
   font-weight: 300;  
   font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -60,6 +64,7 @@ $projectArapov-theme: mat.define-theme(
   src:url(../public/assets/fonts/Lato/Lato-SemiBoldItalic.ttf) format('truetype');
   font-weight: 500;  
   font-style: italic;
+    font-display: swap;
 }
  .main-container, .main-container   {
   max-width: 1580px;
