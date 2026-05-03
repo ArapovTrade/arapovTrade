@@ -71,7 +71,7 @@ export class HomeEnFourtyFiveComponent implements OnInit {
     });
 
     this.meta.updateTag({ name: 'datePublished', content: '2025-05-30' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-05-02T00:00:00Z' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-05-03T00:00:00Z' });
     this.meta.updateTag({
       property: 'og:image',
       content: 'https://arapov.trade/assets/img/content/freeeducationnew.webp',
@@ -81,27 +81,7 @@ export class HomeEnFourtyFiveComponent implements OnInit {
       content: `https://arapov.trade/assets/img/content/freeeducationnew.webp`,
     });
     this.gerRandom();
-    //  this.route.fragment.subscribe((fragment) => {
-    //   if (fragment) {
-    //     setTimeout(() => {
-    //       const element = this.document.getElementById(fragment);
-    //       if (element) {
-    //         // Отступ сверху в пикселях, например 80px (зависит от вашего меню)
-    //         const offset = 80;
-
-    //         // Позиция элемента относительно страницы
-    //         const elementPosition =
-    //           element.getBoundingClientRect().top + window.pageYOffset;
-
-    //         // Скроллим с учётом отступа
-    //         window.scrollTo({
-    //           top: elementPosition - offset,
-    //           behavior: 'smooth',
-    //         });
-    //       }
-    //     }, 100);
-    //   }
-    // });
+     
     this.route.fragment.subscribe((fragment) => {
       if (fragment) {
         this.scrollToFragment(fragment);
@@ -326,7 +306,7 @@ export class HomeEnFourtyFiveComponent implements OnInit {
           description:
             'Free trading course from scratch: technical analysis, Wyckoff method, volume analysis, complete trading system with positive mathematical expectancy. 18 sections, live trade breakdowns.',
           datePublished: '2025-01-15T00:00:00+02:00',
-          dateModified: '2026-05-02T00:00:00Z+02:00',
+          dateModified: '2026-05-03T00:00:00Z+02:00',
           author: {
             '@id': 'https://arapov.trade/en#person',
           },

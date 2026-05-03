@@ -73,7 +73,7 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
     });
 
     this.meta.updateTag({ name: 'datePublished', content: '2025-05-30' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-05-02' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-05-03' });
     this.meta.updateTag({
       property: 'og:image',
       content: 'https://arapov.trade/assets/img/content/freeeducationnew.webp',
@@ -85,27 +85,7 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
 
     this.gerRandom();
 
-    // this.route.fragment.subscribe((fragment) => {
-    //   if (fragment) {
-    //     setTimeout(() => {
-    //       const element = this.document.getElementById(fragment);
-    //       if (element) {
-    //         // Отступ сверху в пикселях, например 80px (зависит от вашего меню)
-    //         const offset = 80;
-
-    //         // Позиция элемента относительно страницы
-    //         const elementPosition =
-    //           element.getBoundingClientRect().top + window.pageYOffset;
-
-    //         // Скроллим с учётом отступа
-    //         window.scrollTo({
-    //           top: elementPosition - offset,
-    //           behavior: 'smooth',
-    //         });
-    //       }
-    //     }, 500);
-    //   }
-    // });
+     
 
     this.route.fragment.subscribe((fragment) => {
       if (fragment) {
@@ -398,7 +378,7 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
           description:
             'Бесплатный курс по трейдингу с нуля: технический анализ, метод Вайкоффа, объёмный анализ, торговая система с положительным математическим ожиданием. 18 разделов, живые разборы сделок.',
           datePublished: '2025-01-15T00:00:00+02:00',
-          dateModified: '2026-05-02T00:00:00Z',
+          dateModified: '2026-05-03T00:00:00Z',
           author: {
             '@id': 'https://arapov.trade/ru#person',
           },
