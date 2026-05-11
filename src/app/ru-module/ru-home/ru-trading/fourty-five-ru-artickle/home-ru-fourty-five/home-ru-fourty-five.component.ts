@@ -73,7 +73,7 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
     });
 
     this.meta.updateTag({ name: 'datePublished', content: '2025-05-30' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-05-03' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-05-11' });
     this.meta.updateTag({
       property: 'og:image',
       content: 'https://arapov.trade/assets/img/content/freeeducationnew.webp',
@@ -84,8 +84,6 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
     });
 
     this.gerRandom();
-
-     
 
     this.route.fragment.subscribe((fragment) => {
       if (fragment) {
@@ -336,8 +334,8 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
       '@graph': [
         {
           '@type': 'VideoObject',
-          '@id': 'https://arapov.trade/ru/freestudying/freeeducation#video',
-          name: 'Бесплатный курс по трейдингу — обзор программы обучения',
+          '@id': 'https://arapov.trade/ru/freestudying/freeeducation#video1',
+          name: 'Бесплатный Курс Трейдинга: метод Вайкоффа и объемный анализ | Smart Money',
           description:
             'Подробный разбор бесплатного курса по трейдингу: на что обращать внимание, зачем нужны разные разделы и какие ключевые темы в них раскрываются. Теория и практика — от базовых понятий до концепции Вайкоффа и чтения биржевых объёмов.',
           thumbnailUrl: 'https://i.ytimg.com/vi/ZHhJqYzyaO4/maxresdefault.jpg',
@@ -345,6 +343,30 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
           duration: 'PT1H30M55S',
           contentUrl: 'https://www.youtube.com/watch?v=ZHhJqYzyaO4',
           embedUrl: 'https://www.youtube.com/embed/ZHhJqYzyaO4',
+          author: {
+            '@type': 'Person',
+            '@id': 'https://arapov.trade/ru#person',
+          },
+          publisher: {
+            '@type': 'Organization',
+            name: 'Arapov Trade',
+            logo: {
+              '@type': 'ImageObject',
+              url: 'https://arapov.trade/assets/img/favicon.ico',
+            },
+          },
+        },
+        {
+          '@type': 'VideoObject',
+          '@id': 'https://arapov.trade/ru/freestudying/freeeducation#video2',
+          name: 'Курс по трейдингу для начинающих | От теории до первой сделки',
+          description:
+            'Бесплатный курс по трейдингу для тех, кто только знакомится с рынком. Никакой лишней теории — только база, торговая система и практика на демосчёте. Разбираем всё с нуля: от торгового терминала до точки входа в сделку по методу Вайкоффа.',
+          thumbnailUrl: 'https://i.ytimg.com/vi/tmiHem6NOZs/maxresdefault.jpg',
+          uploadDate: '2026-05-11T00:00:00+02:00',
+          duration: 'PT45M2S',
+          contentUrl: 'https://www.youtube.com/watch?v=tmiHem6NOZs',
+          embedUrl: 'https://www.youtube.com/embed/tmiHem6NOZs?si=lMeQKyeWBPviIQPq',
           author: {
             '@type': 'Person',
             '@id': 'https://arapov.trade/ru#person',
@@ -378,7 +400,7 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
           description:
             'Бесплатный курс по трейдингу с нуля: технический анализ, метод Вайкоффа, объёмный анализ, торговая система с положительным математическим ожиданием. 18 разделов, живые разборы сделок.',
           datePublished: '2025-01-15T00:00:00+02:00',
-          dateModified: '2026-05-03T00:00:00Z',
+          dateModified: '2026-05-11T00:00:00Z',
           author: {
             '@id': 'https://arapov.trade/ru#person',
           },
@@ -407,9 +429,16 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
             'Smart Money',
             'объёмный анализ',
           ],
-          video: {
-            '@id': 'https://arapov.trade/ru/freestudying/freeeducation#video',
-          },
+          video: [
+            {
+              '@id':
+                'https://arapov.trade/ru/freestudying/freeeducation#video1',
+            },
+            {
+              '@id':
+                'https://arapov.trade/ru/freestudying/freeeducation#video2',
+            },
+          ],
         },
       ],
     };

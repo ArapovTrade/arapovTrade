@@ -10,7 +10,7 @@ import { DOCUMENT } from '@angular/common';
 import { ThemeservService } from '../../../../../servises/themeserv.service';
 import { artickle } from '../../../../../servises/articles.service';
 import { ActivatedRoute } from '@angular/router';
- 
+
 import { Subscription } from 'rxjs';
 import { NavigationEnd, Router } from '@angular/router';
 import { Meta, Title } from '@angular/platform-browser';
@@ -27,8 +27,7 @@ export class HomeEnFourtyFiveComponent implements OnInit {
     private titleService: Title,
     private cdr: ChangeDetectorRef,
     private route: ActivatedRoute,
-        
-    
+
     private router: Router,
     private themeService: ThemeservService,
     private artickleServ: ArticlesService,
@@ -71,7 +70,10 @@ export class HomeEnFourtyFiveComponent implements OnInit {
     });
 
     this.meta.updateTag({ name: 'datePublished', content: '2025-05-30' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-05-03T00:00:00Z' });
+    this.meta.updateTag({
+      name: 'dateModified',
+      content: '2026-05-11T00:00:00Z',
+    });
     this.meta.updateTag({
       property: 'og:image',
       content: 'https://arapov.trade/assets/img/content/freeeducationnew.webp',
@@ -81,14 +83,14 @@ export class HomeEnFourtyFiveComponent implements OnInit {
       content: `https://arapov.trade/assets/img/content/freeeducationnew.webp`,
     });
     this.gerRandom();
-     
+
     this.route.fragment.subscribe((fragment) => {
       if (fragment) {
         this.scrollToFragment(fragment);
       }
     });
   }
-   scrollToFragment(fragment: string) {
+  scrollToFragment(fragment: string) {
     // requestAnimationFrame надёжнее чем setTimeout
     requestAnimationFrame(() => {
       setTimeout(() => {
@@ -301,12 +303,11 @@ export class HomeEnFourtyFiveComponent implements OnInit {
         {
           '@type': 'Article',
           '@id': 'https://arapov.trade/ru/freestudying/freeeducation#article',
-          headline:
-            'Free Trading Course for Beginners — Igor Arapov',
+          headline: 'Free Trading Course for Beginners — Igor Arapov',
           description:
             'Free trading course from scratch: technical analysis, Wyckoff method, volume analysis, complete trading system with positive mathematical expectancy. 18 sections, live trade breakdowns.',
           datePublished: '2025-01-15T00:00:00+02:00',
-          dateModified: '2026-05-03T00:00:00Z+02:00',
+          dateModified: '2026-05-11T00:00:00Z+02:00',
           author: {
             '@id': 'https://arapov.trade/en#person',
           },
@@ -335,9 +336,16 @@ export class HomeEnFourtyFiveComponent implements OnInit {
             'Smart Money',
             'Volume analysis',
           ],
-          video: {
-            '@id': 'https://arapov.trade/en/freestudying/freeeducation#video',
-          },
+          video: [
+            {
+              '@id':
+                'https://arapov.trade/en/freestudying/freeeducation#video1',
+            },
+            {
+              '@id':
+                'https://arapov.trade/en/freestudying/freeeducation#video2',
+            },
+          ],
         },
       ],
     };
@@ -625,8 +633,8 @@ export class HomeEnFourtyFiveComponent implements OnInit {
       '@graph': [
         {
           '@type': 'VideoObject',
-          '@id': 'https://arapov.trade/ru/freestudying/freeeducation#video',
-          name: 'Free Trading Course - Program Overview',
+          '@id': 'https://arapov.trade/ru/freestudying/freeeducation#video1',
+          name: 'Free Trading Course: Wyckoff Method and Volume Analysis | Smart Money',
           description:
             'A detailed analysis of the free trading course: what to pay attention to, the purpose of the different sections, and the key topics they cover. Theory and practice—from basic concepts to the Wyckoff concept and reading exchange volume.',
           thumbnailUrl: 'https://i.ytimg.com/vi/ZHhJqYzyaO4/maxresdefault.jpg',
@@ -634,6 +642,32 @@ export class HomeEnFourtyFiveComponent implements OnInit {
           duration: 'PT1H30M55S',
           contentUrl: 'https://www.youtube.com/watch?v=ZHhJqYzyaO4',
           embedUrl: 'https://www.youtube.com/embed/ZHhJqYzyaO4',
+          author: {
+            '@type': 'Person',
+            '@id': 'https://arapov.trade/en#person',
+          },
+          publisher: {
+            '@type': 'Organization',
+            name: 'Arapov Trade',
+            logo: {
+              '@type': 'ImageObject',
+              url: 'https://arapov.trade/assets/img/favicon.ico',
+            },
+          },
+        },
+
+        {
+          '@type': 'VideoObject',
+          '@id': 'https://arapov.trade/en/freestudying/freeeducation#video2',
+          name: 'Complete Trading Course for Beginners | From Theory to Your First Trade',
+          description:
+            'A free trading course for those who are just getting started with the market. No unnecessary theory — just the essentials, a trading system, and practice on a demo account. We cover everything from scratch: from the trading terminal to the entry point using the Wyckoff Method.',
+          thumbnailUrl: 'https://i.ytimg.com/vi/tmiHem6NOZs/maxresdefault.jpg',
+          uploadDate: '2026-05-11T00:00:00+02:00',
+          duration: 'PT45M2S',
+          contentUrl: 'https://www.youtube.com/watch?v=tmiHem6NOZs',
+          embedUrl:
+            'https://www.youtube.com/embed/tmiHem6NOZs?si=lMeQKyeWBPviIQPq',
           author: {
             '@type': 'Person',
             '@id': 'https://arapov.trade/en#person',

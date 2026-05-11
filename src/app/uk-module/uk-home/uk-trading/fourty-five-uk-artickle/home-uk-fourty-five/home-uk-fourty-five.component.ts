@@ -70,7 +70,10 @@ export class HomeUkFourtyFiveComponent implements OnInit {
     });
 
     this.meta.updateTag({ name: 'datePublished', content: '2025-05-30' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-05-03T00:00:00Z' });
+    this.meta.updateTag({
+      name: 'dateModified',
+      content: '2026-05-11T00:00:00Z',
+    });
     this.meta.updateTag({
       property: 'og:image',
       content: 'https://arapov.trade/assets/img/content/freeeducationnew.webp',
@@ -82,8 +85,7 @@ export class HomeUkFourtyFiveComponent implements OnInit {
 
     this.gerRandom();
 
-     
-      this.route.fragment.subscribe((fragment) => {
+    this.route.fragment.subscribe((fragment) => {
       if (fragment) {
         this.scrollToFragment(fragment);
       }
@@ -94,7 +96,7 @@ export class HomeUkFourtyFiveComponent implements OnInit {
   gerRandom() {
     this.randomArticleRus = this.artickleServ.getRandomUkArticles();
   }
-   scrollToFragment(fragment: string) {
+  scrollToFragment(fragment: string) {
     // requestAnimationFrame надёжнее чем setTimeout
     requestAnimationFrame(() => {
       setTimeout(() => {
@@ -325,7 +327,7 @@ export class HomeUkFourtyFiveComponent implements OnInit {
           description:
             'Безкоштовний курс з трейдингу з нуля: технічний аналіз, метод Вайкоффа, об`ємний аналіз, торгова система з позитивним математичним очікуванням. 18 розділів, живі розбори угод.',
           datePublished: '2025-01-15T00:00:00+02:00',
-          dateModified: '2026-05-03T00:00:00Z',
+          dateModified: '2026-05-11T00:00:00Z',
           author: {
             '@id': 'https://arapov.trade/uk#person',
           },
@@ -354,9 +356,16 @@ export class HomeUkFourtyFiveComponent implements OnInit {
             'Smart Money',
             'об`ємний аналіз',
           ],
-          video: {
-            '@id': 'https://arapov.trade/uk/freestudying/freeeducation#video',
-          },
+          video: [
+            {
+              '@id':
+                'https://arapov.trade/uk/freestudying/freeeducation#video1',
+            },
+            {
+              '@id':
+                'https://arapov.trade/uk/freestudying/freeeducation#video2',
+            },
+          ],
         },
       ],
     };
@@ -690,7 +699,7 @@ export class HomeUkFourtyFiveComponent implements OnInit {
       '@graph': [
         {
           '@type': 'VideoObject',
-          '@id': 'https://arapov.trade/uk/freestudying/freeeducation#video',
+          '@id': 'https://arapov.trade/uk/freestudying/freeeducation#video1',
           name: 'Безкоштовний курс з трейдингу — огляд програми навчання',
           description:
             'Докладний розбір безкоштовного курсу з трейдингу: на що звертати увагу, навіщо потрібні різні розділи та які ключові теми розкриваються. Теорія та практика - від базових понять до концепції Вайкоффа та читання біржових обсягів.',
@@ -699,6 +708,31 @@ export class HomeUkFourtyFiveComponent implements OnInit {
           duration: 'PT1H30M55S',
           contentUrl: 'https://www.youtube.com/watch?v=ZHhJqYzyaO4',
           embedUrl: 'https://www.youtube.com/embed/ZHhJqYzyaO4',
+          author: {
+            '@type': 'Person',
+            '@id': 'https://arapov.trade/uk#person',
+          },
+          publisher: {
+            '@type': 'Organization',
+            name: 'Arapov Trade',
+            logo: {
+              '@type': 'ImageObject',
+              url: 'https://arapov.trade/assets/img/favicon.ico',
+            },
+          },
+        },
+        {
+          '@type': 'VideoObject',
+          '@id': 'https://arapov.trade/uk/freestudying/freeeducation#video2',
+          name: 'Курс з трейдингу для початківців | Від теорії до першої угоди',
+          description:
+            'Безкоштовний курс з трейдингу для тих, хто тільки знайомиться з ринком. Жодної зайвої теорії — лише база, торгова система та практика на демосчунку. Розбираємо все з нуля: від торгового термінала до точки входу в угоду за методом Вайкоффа.',
+          thumbnailUrl: 'https://i.ytimg.com/vi/tmiHem6NOZs/maxresdefault.jpg',
+          uploadDate: '2026-05-11T00:00:00+02:00',
+          duration: 'PT45M2S',
+          contentUrl: 'https://www.youtube.com/watch?v=tmiHem6NOZs',
+          embedUrl:
+            'https://www.youtube.com/embed/tmiHem6NOZs?si=lMeQKyeWBPviIQPq',
           author: {
             '@type': 'Person',
             '@id': 'https://arapov.trade/uk#person',
