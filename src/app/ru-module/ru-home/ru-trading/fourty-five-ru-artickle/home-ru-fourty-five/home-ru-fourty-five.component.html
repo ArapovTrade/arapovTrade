@@ -16,6 +16,13 @@
                   <li>
                     <a
                       [ngStyle]="{ cursor: 'pointer' }"
+                      (click)="navigateTo('roadmap')"
+                      >Дорожная карта курса</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      [ngStyle]="{ cursor: 'pointer' }"
                       (click)="navigateTo('start')"
                       >С чего начать обучение трейдингу</a
                     >
@@ -278,7 +285,7 @@
                   </iframe>
                 </div>
                 <br />
-                <p><strong>Дорожная карта курса:</strong></p>
+                <h2 id="roadmap"> Дорожная карта курса: </h2>
 
                 <ol>
                   <li>

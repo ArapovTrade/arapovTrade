@@ -15,6 +15,13 @@
                   <li>
                     <a
                       [ngStyle]="{ cursor: 'pointer' }"
+                      (click)="navigateTo('roadmap')"
+                      >Course Roadmap</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      [ngStyle]="{ cursor: 'pointer' }"
                       (click)="navigateTo('start')"
                       >Where to Begin Learning Trading</a
                     >
@@ -277,7 +284,7 @@
                   </iframe>
                 </div>
                 <br />
-                <p><strong>Course Roadmap:</strong></p>
+                <h2 id="roadmap"> Course Roadmap: </h2>
 
                 <ol>
                   <li>
