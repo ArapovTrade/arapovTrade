@@ -1,13 +1,18 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    
-
     <meta charset="utf-8" />
 
     <meta name="robots" content="index, follow" />
     <base href="/" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+<link rel="preload" as="script" href="runtime.js">
+<link rel="preload" as="script" href="polyfills.js">
+<link rel="preload" as="script" href="main.js">  
+
+
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <!-- <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
@@ -17,14 +22,12 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-     
 
     <meta
       name="google-site-verification"
       content="LSc_5GLJbfjm2X-eqPDAQStRgGsV5WJ04aiU3R-GjdE"
     />
 
-     
     <script type="text/javascript">
       (function (c, l, a, r, i, t, y) {
         c[a] =
@@ -45,7 +48,6 @@
       data-key="ihptK3+MJ9rvJXdhxhXzjA"
       async
     ></script>
-     
 
     <script
       async
@@ -64,22 +66,48 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+      media="print"
+      onload="this.media = 'all'"
+    />
 
     <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@600;700&display=swap"
+      media="print"
+      onload="this.media = 'all'"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400&display=swap"
+      media="print"
+      onload="this.media = 'all'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@600;700&display=swap"
+      />
+    </noscript>
+    <!-- <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
     />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@600;700&display=swap"
-    />
+    /> -->
 
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400&display=swap"
-    />
-
-   
+    /> -->
 
     <!-- Google Tag Manager -->
     <script>
@@ -95,20 +123,11 @@
       })(window, document, "script", "dataLayer", "GTM-TJ7D7QQ");
     </script>
     <!-- End Google Tag Manager -->
-     <!-- llms -->
-     <link rel="llms" href="https://arapov.trade/llms.txt">
+    <!-- llms -->
+    <link rel="llms" href="https://arapov.trade/llms.txt" />
   </head>
 
   <body class="mat-typography">
-    
-
-
-
-
-    
-
-    
-
     <app-root></app-root>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
