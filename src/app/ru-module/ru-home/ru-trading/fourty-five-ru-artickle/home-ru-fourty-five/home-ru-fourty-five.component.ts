@@ -332,30 +332,7 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
     const data = {
       '@context': 'https://schema.org',
       '@graph': [
-        {
-          '@type': 'VideoObject',
-          '@id': 'https://arapov.trade/ru/freestudying/freeeducation#video1',
-          name: 'Бесплатный Курс Трейдинга: метод Вайкоффа и объемный анализ | Smart Money',
-          description:
-            'Подробный разбор бесплатного курса по трейдингу: на что обращать внимание, зачем нужны разные разделы и какие ключевые темы в них раскрываются. Теория и практика — от базовых понятий до концепции Вайкоффа и чтения биржевых объёмов.',
-          thumbnailUrl: 'https://i.ytimg.com/vi/ZHhJqYzyaO4/maxresdefault.jpg',
-          uploadDate: '2025-11-15T00:00:00+02:00',
-          duration: 'PT1H30M55S',
-          contentUrl: 'https://www.youtube.com/watch?v=ZHhJqYzyaO4',
-          embedUrl: 'https://www.youtube.com/embed/ZHhJqYzyaO4',
-          author: {
-            '@type': 'Person',
-            '@id': 'https://arapov.trade/ru#person',
-          },
-          publisher: {
-            '@type': 'Organization',
-            name: 'Arapov Trade',
-            logo: {
-              '@type': 'ImageObject',
-              url: 'https://arapov.trade/assets/img/favicon.ico',
-            },
-          },
-        },
+        
         {
           '@type': 'VideoObject',
           '@id': 'https://arapov.trade/ru/freestudying/freeeducation#video2',
@@ -430,10 +407,7 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
             'объёмный анализ',
           ],
           video: [
-            {
-              '@id':
-                'https://arapov.trade/ru/freestudying/freeeducation#video1',
-            },
+             
             {
               '@id':
                 'https://arapov.trade/ru/freestudying/freeeducation#video2',

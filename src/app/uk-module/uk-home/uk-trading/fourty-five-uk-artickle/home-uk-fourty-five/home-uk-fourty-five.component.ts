@@ -357,10 +357,7 @@ export class HomeUkFourtyFiveComponent implements OnInit {
             'об`ємний аналіз',
           ],
           video: [
-            {
-              '@id':
-                'https://arapov.trade/uk/freestudying/freeeducation#video1',
-            },
+             
             {
               '@id':
                 'https://arapov.trade/uk/freestudying/freeeducation#video2',
@@ -697,30 +694,7 @@ export class HomeUkFourtyFiveComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@graph': [
-        {
-          '@type': 'VideoObject',
-          '@id': 'https://arapov.trade/uk/freestudying/freeeducation#video1',
-          name: 'Безкоштовний курс з трейдингу — огляд програми навчання',
-          description:
-            'Докладний розбір безкоштовного курсу з трейдингу: на що звертати увагу, навіщо потрібні різні розділи та які ключові теми розкриваються. Теорія та практика - від базових понять до концепції Вайкоффа та читання біржових обсягів.',
-          thumbnailUrl: 'https://i.ytimg.com/vi/ZHhJqYzyaO4/maxresdefault.jpg',
-          uploadDate: '2025-11-15T00:00:00+02:00',
-          duration: 'PT1H30M55S',
-          contentUrl: 'https://www.youtube.com/watch?v=ZHhJqYzyaO4',
-          embedUrl: 'https://www.youtube.com/embed/ZHhJqYzyaO4',
-          author: {
-            '@type': 'Person',
-            '@id': 'https://arapov.trade/uk#person',
-          },
-          publisher: {
-            '@type': 'Organization',
-            name: 'Arapov Trade',
-            logo: {
-              '@type': 'ImageObject',
-              url: 'https://arapov.trade/assets/img/favicon.ico',
-            },
-          },
-        },
+         
         {
           '@type': 'VideoObject',
           '@id': 'https://arapov.trade/uk/freestudying/freeeducation#video2',
