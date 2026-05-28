@@ -4,7 +4,7 @@
       <div class="section-content">
         <div class="hero-content">
           <!-- <div class="m-right hero-section"></div> -->
-            <img
+          <img
             class="hero-section-new"
             loading="lazy"
             src="/assets/img/content/freeeducationnew.webp"
@@ -24,7 +24,7 @@
                       (click)="navigateTo('roadmap')"
                       >Course Roadmap</a
                     >
-                  </li> 
+                  </li>
                   <li>
                     <a
                       [ngStyle]="{ cursor: 'pointer' }"
@@ -128,14 +128,14 @@
                       >Volume Market Analysis</a
                     >
                   </li>
-                    <li>
+                  <li>
                     <a
                       [ngStyle]="{ cursor: 'pointer' }"
                       (click)="navigateTo('ordertypes')"
                       >Types of Exchange Orders</a
                     >
                   </li>
-                   <li>
+                  <li>
                     <a
                       [ngStyle]="{ cursor: 'pointer' }"
                       (click)="navigateTo('working-with-levels')"
@@ -280,7 +280,8 @@
                   only what I actually use in real trading.
                 </p>
                 <br />
-                <div id="video2"
+                <div
+                  id="video2"
                   style="
                     position: relative;
                     padding-bottom: 56.25%;
@@ -304,7 +305,7 @@
                   </iframe>
                 </div>
                 <br />
-                <h2 id="roadmap"> Course Roadmap: </h2>
+                <h2 id="roadmap">Course Roadmap:</h2>
 
                 <ol>
                   <li>
@@ -1405,117 +1406,244 @@
                   behavioral patterns of professional capital and how to
                   interpret these spikes of professional activity.
                 </p>
-<br />
+                <br />
 
                 <h2 id="ordertypes">Types of Exchange Orders</h2>
 
-<div class="flex">
-  <img class="pictureImg" loading="lazy" src="/assets/img/content/ordettypes_en1.png" alt="Types of exchange orders — market and pending orders" />
-</div>
+                <div class="flex">
+                  <img
+                    class="pictureImg"
+                    loading="lazy"
+                    src="/assets/img/content/ordettypes_en1.png"
+                    alt="Types of exchange orders — market and pending orders"
+                  />
+                </div>
 
-<p>
-  An <dfn itemscope itemtype="https://schema.org/DefinedTerm"><span itemprop="name">order</span></dfn> is an instruction to a broker to buy or sell an asset. All orders fall into two main types: market orders and pending orders.
-</p>
+                <p>
+                  An
+                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
+                    ><span itemprop="name">order</span></dfn
+                  >
+                  is an instruction to a broker to buy or sell an asset. All
+                  orders fall into two main types: market orders and pending
+                  orders.
+                </p>
 
-<h3>Market Order</h3>
+                <h3>Market Order</h3>
 
-<p>
-  A <dfn itemscope itemtype="https://schema.org/DefinedTerm"><span itemprop="name">market order</span></dfn> is executed immediately at the current market price. Two types:
-</p>
+                <p>
+                  A
+                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
+                    ><span itemprop="name">market order</span></dfn
+                  >
+                  is executed immediately at the current market price. Two
+                  types:
+                </p>
 
-<ul>
-  <li><strong>Buy</strong> — purchase at the current price</li>
-  <li><strong>Sell</strong> — sale at the current price</li>
-</ul>
+                <ul>
+                  <li><strong>Buy</strong> — purchase at the current price</li>
+                  <li><strong>Sell</strong> — sale at the current price</li>
+                </ul>
 
-<p>
-  Advantage — instant execution. Disadvantage — the price may differ from what was expected due to <dfn itemscope itemtype="https://schema.org/DefinedTerm"><span itemprop="name">slippage</span></dfn>, especially during major news releases when the order book thins out.
-</p>
+                <p>
+                  Advantage — instant execution. Disadvantage — the price may
+                  differ from what was expected due to
+                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
+                    ><span itemprop="name">slippage</span></dfn
+                  >, especially during major news releases when the order book
+                  thins out.
+                </p>
 
-<h3>Pending Order</h3>
+                <h3>Pending Order</h3>
 
-<p>
-  A <dfn itemscope itemtype="https://schema.org/DefinedTerm"><span itemprop="name">pending order</span></dfn> is executed only when price reaches a specified level. Three categories:
-</p>
+                <p>
+                  A
+                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
+                    ><span itemprop="name">pending order</span></dfn
+                  >
+                  is executed only when price reaches a specified level. Three
+                  categories:
+                </p>
 
-<div class="flex">
-  <img class="pictureImg" loading="lazy" src="/assets/img/content/ordettypes_en2.png" alt="Pending order placement relative to current price" />
-</div>
+                <p><strong>Limit:</strong></p>
+                <ul>
+                  <li>
+                    <strong>Buy Limit</strong> — buy below the current price.
+                    Used when the trader expects price to pull back to a level
+                    before moving higher.
+                  </li>
+                  <li>
+                    <strong>Sell Limit</strong> — sell above the current price.
+                    Used when the trader expects price to rise to a resistance
+                    level and reverse downward.
+                  </li>
+                </ul>
 
-<p><strong>Limit:</strong></p>
-<ul>
-  <li><strong>Buy Limit</strong> — buy below the current price. Used when the trader expects price to pull back to a level before moving higher.</li>
-  <li><strong>Sell Limit</strong> — sell above the current price. Used when the trader expects price to rise to a resistance level and reverse downward.</li>
-</ul>
+                <p><strong>Stop:</strong></p>
+                <ul>
+                  <li>
+                    <strong>Buy Stop</strong> — buy above the current price.
+                    Used to enter in the direction of momentum on a resistance
+                    breakout. This is the order type that triggers when price
+                    breaks a PCL level to the upside.
+                  </li>
+                  <li>
+                    <strong>Sell Stop</strong> — sell below the current price.
+                    Used to enter in the direction of momentum on a support
+                    breakout. This is the order type that triggers when price
+                    breaks a PCL level to the downside.
+                  </li>
+                </ul>
 
-<p><strong>Stop:</strong></p>
-<ul>
-  <li><strong>Buy Stop</strong> — buy above the current price. Used to enter in the direction of momentum on a resistance breakout. This is the order type that triggers when price breaks a PCL level to the upside.</li>
-  <li><strong>Sell Stop</strong> — sell below the current price. Used to enter in the direction of momentum on a support breakout. This is the order type that triggers when price breaks a PCL level to the downside.</li>
-</ul>
+                <p><strong>Stop Limit:</strong></p>
+                <ul>
+                  <li>
+                    <strong>Buy Stop Limit</strong> — a combined order:
+                    activates as a Stop above the market, executes as a Limit.
+                    Gives the trader control over the fill price on a breakout.
+                  </li>
+                  <li>
+                    <strong>Sell Stop Limit</strong> — same logic, but for
+                    selling below the market.
+                  </li>
+                </ul>
 
-<p><strong>Stop Limit:</strong></p>
-<ul>
-  <li><strong>Buy Stop Limit</strong> — a combined order: activates as a Stop above the market, executes as a Limit. Gives the trader control over the fill price on a breakout.</li>
-  <li><strong>Sell Stop Limit</strong> — same logic, but for selling below the market.</li>
-</ul>
+                <h3>The Order Book — How Pending Orders Actually Look</h3>
 
-<h3>The Order Book — How Pending Orders Actually Look</h3>
+                <div class="flex">
+                  <img
+                    class="pictureImg"
+                    loading="lazy"
+                    src="/assets/img/content/ordettypes_en2.png"
+                    alt="Exchange order book — Bid, Ask, Last, limit buy and sell orders"
+                  />
+                </div>
 
-<div class="flex">
-  <img class="pictureImg" loading="lazy" src="/assets/img/content/ordettypes_en3.png" alt="Exchange order book — Bid, Ask, Last, limit buy and sell orders" />
-</div>
+                <p>
+                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
+                    ><span itemprop="name">Bid price</span></dfn
+                  >
+                  — the best available buy price, meaning the highest price
+                  buyers are willing to pay right now.
+                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
+                    ><span itemprop="name">Ask price</span></dfn
+                  >
+                  — the best available sell price, the lowest price sellers are
+                  willing to accept. The difference between Bid and Ask is the
+                  spread.
+                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
+                    ><span itemprop="name">Last price</span></dfn
+                  >
+                  — the price of the most recently executed transaction.
+                </p>
 
-<p>
-  <dfn itemscope itemtype="https://schema.org/DefinedTerm"><span itemprop="name">Bid price</span></dfn> — the best available buy price, meaning the highest price buyers are willing to pay right now. <dfn itemscope itemtype="https://schema.org/DefinedTerm"><span itemprop="name">Ask price</span></dfn> — the best available sell price, the lowest price sellers are willing to accept. The difference between Bid and Ask is the spread. <dfn itemscope itemtype="https://schema.org/DefinedTerm"><span itemprop="name">Last price</span></dfn> — the price of the most recently executed transaction.
-</p>
+                <p>
+                  Pending orders sitting in the order book are not always filled
+                  — they often go unexecuted entirely. But at certain moments,
+                  watching the book helps perceptive traders gauge how active
+                  the current market is. One key concept to grasp: pending
+                  orders act as a «barrier» to price movement in either
+                  direction.
+                </p>
+                <h3>How Market Orders Affect Price: A Practical Example</h3>
+                <div class="flex">
+                  <img
+                    class="pictureImg"
+                    loading="lazy"
+                    src="/assets/img/content/ordettypes_en3.png"
+                    alt="Pending order placement relative to current price"
+                  />
+                </div>
+                <p>
+                  Looking at this picture it becomes clear that limit buyers are
+                  blocking price from moving lower, while limit sellers are
+                  blocking price from moving higher. This logic forms the
+                  foundation of the next principle — working with levels and
+                  market liquidity.
+                </p>
+                <br />
+                <h2 id="working-with-levels">
+                  Working With Levels: Liquidity Deficit — Live Chart Example
+                </h2>
+                <div class="flex">
+                  <img
+                    class="pictureImg"
+                    loading="lazy"
+                    src="/assets/img/content/ordettypes_ru4.png"
+                    alt="False breakout and liquidity shortage - Wyckoff method on the Euro futures chart"
+                  />
+                </div>
+                <p>
+                  Now that we understand the types of orders, let's apply the
+                  logic of how they influence price. We'll walk through a
+                  schematic example on Euro futures (CME Group data) to show how
+                  the market reverses at a level after a
+                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
+                    ><span itemprop="name">«false breakout»</span></dfn
+                  >.
+                </p>
 
-<p>
-  Pending orders sitting in the order book are not always filled — they often go unexecuted entirely. But at certain moments, watching the book helps perceptive traders gauge how active the current market is. One key concept to grasp: pending orders act as a «barrier» to price movement in either direction.
-</p>
+                <p>
+                  From the Wyckoff method we take the following principle:
+                  professional money that wants to sell always needs buyers to
+                  sell into. This logic is grounded in the fact that smart
+                  market participants share a similar view of an instrument's
+                  fair value — meaning where they sell, there will never be
+                  enough buyers to hold the price, since professional capital
+                  collectively controls more than 50% of market turnover.
+                </p>
 
-<p>
-  Looking at this picture it becomes clear that limit buyers are blocking price from moving lower, while limit sellers are blocking price from moving higher. This logic forms the foundation of the next principle — working with levels and market liquidity.
-</p>
-<br />
-<h2 id="working-with-levels">Working With Levels: Liquidity Deficit — Live Chart Example</h2>
-<div class="flex">
-  <img class="pictureImg" loading="lazy" src="/assets/img/content/ordettypes_ru4.png" alt="False breakout and liquidity shortage - Wyckoff method on the Euro futures chart" />
-</div>
-<p>
-  Now that we understand the types of orders, let's apply the logic of how they influence price. We'll walk through a schematic example on Euro futures (CME Group data) to show how the market reverses at a level after a <dfn itemscope itemtype="https://schema.org/DefinedTerm"><span itemprop="name">«false breakout»</span></dfn>.
-</p>
+                <p>
+                  That's why we'll examine the Wyckoff concept known as a
+                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
+                    ><span itemprop="name">«Shakeout»</span></dfn
+                  >
+                  or «false level breakout» — the moment when, due to a news
+                  event or any other trigger, price is pushed beyond a level
+                  where a large number of pending orders are sitting, activating
+                  them.
+                </p>
 
-<p>
-  From the Wyckoff method we take the following principle: professional money that wants to sell always needs buyers to sell into. This logic is grounded in the fact that smart market participants share a similar view of an instrument's fair value — meaning where they sell, there will never be enough buyers to hold the price, since professional capital collectively controls more than 50% of market turnover.
-</p>
+                <p>
+                  <strong>1</strong> — We see a massive up-bar. The obvious
+                  conclusion: a large number of Buy Stop orders were triggered,
+                  flooding the market with buyers. On top of that, the level
+                  breakout is a buy signal for many trading systems — adding
+                  even more demand. In the middle of this buying surge,
+                  professional money is quietly selling (Buy Stop + Sell
+                  Limits), continuing to do so until buying activity begins to
+                  dry up at their target price zone. This is a direct expression
+                  of the Wyckoff «effort without result» principle — volume is
+                  being applied to move price, but there's no progress.
+                </p>
 
-<p>
-  That's why we'll examine the Wyckoff concept known as a <dfn itemscope itemtype="https://schema.org/DefinedTerm"><span itemprop="name">«Shakeout»</span></dfn> or «false level breakout» — the moment when, due to a news event or any other trigger, price is pushed beyond a level where a large number of pending orders are sitting, activating them.
-</p>
+                <p>
+                  <strong>2</strong> — We watch the up-bars steadily shrink in
+                  body length — already roughly half the range of the first
+                  aggressive buying bar.
+                </p>
 
-<p>
-  <strong>1</strong> — We see a massive up-bar. The obvious conclusion: a large number of Buy Stop orders were triggered, flooding the market with buyers. On top of that, the level breakout is a buy signal for many trading systems — adding even more demand. In the middle of this buying surge, professional money is quietly selling (Buy Stop + Sell Limits), continuing to do so until buying activity begins to dry up at their target price zone. This is a direct expression of the Wyckoff «effort without result» principle — volume is being applied to move price, but there's no progress.
-</p>
+                <p>
+                  <strong>3</strong> — Aggressive selling with large market
+                  orders, breaking through all local support levels. This bar
+                  typically marks the beginning of a local trend. It happens
+                  because in the high-activity zone, once a liquidity deficit
+                  sets in, large orders have no counterpart to trade against —
+                  so they start actively moving price, in this case pushing it
+                  downward.
+                </p>
 
-<p>
-  <strong>2</strong> — We watch the up-bars steadily shrink in body length — already roughly half the range of the first aggressive buying bar.
-</p>
-
-<p>
-  <strong>3</strong> — Aggressive selling with large market orders, breaking through all local support levels. This bar typically marks the beginning of a local trend. It happens because in the high-activity zone, once a liquidity deficit sets in, large orders have no counterpart to trade against — so they start actively moving price, in this case pushing it downward.
-</p>
-
-<p>
-  The example we've examined is the result of professional capital interacting with current market <dfn itemscope itemtype="https://schema.org/DefinedTerm"><span itemprop="name">liquidity</span></dfn> conditions. For us as traders, the levels where these explosive price moves occur carry special significance — they are excellent reference points for identifying market imbalance and the beginning of a new trend.
-</p>
-
-
-
-
-
-
-
+                <p>
+                  The example we've examined is the result of professional
+                  capital interacting with current market
+                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
+                    ><span itemprop="name">liquidity</span></dfn
+                  >
+                  conditions. For us as traders, the levels where these
+                  explosive price moves occur carry special significance — they
+                  are excellent reference points for identifying market
+                  imbalance and the beginning of a new trend.
+                </p>
 
                 <br />
                 <h2 id="wyckoff">The Wyckoff Method</h2>
@@ -2716,7 +2844,7 @@
                 </p>
 
                 <br />
-                 
+
                 <section>
                   <h2>Frequently Asked Questions</h2>
 
