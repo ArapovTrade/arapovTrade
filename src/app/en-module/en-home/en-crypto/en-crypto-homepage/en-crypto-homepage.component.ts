@@ -50,7 +50,7 @@ export class EnCryptoHomepageComponent
     this.removeExistingWebPageSchema();
 
     this.titleService.setTitle(
-      'Stock Market Trading Training for Traders | Trading Course by Igor Arapov'
+      'Free trading education from Igor Arapov'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
@@ -66,6 +66,8 @@ export class EnCryptoHomepageComponent
     });
 
     this.meta.updateTag({ name: 'datePublished', content: '2025-06-07' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-05-28' });
+
     this.meta.updateTag({
       property: 'og:image',
       content: 'https://arapov.trade/assets/img/photo_mainpage.jpg',

@@ -41,7 +41,7 @@ export class RuCryptoHomepageComponent  implements OnInit, AfterViewInit, OnDest
     this.removeExistingWebPageSchema();
 
       this.titleService.setTitle(
-        'Обучение трейдеров торговле на бирже | Курс трейдинга от Игоря Арапова'
+        'Бесплатное обучение трейдингу от Игоря Арапова'
       );
       this.meta.updateTag({ name: 'robots', content: 'index, follow' });
       this.meta.updateTag({
@@ -57,6 +57,8 @@ export class RuCryptoHomepageComponent  implements OnInit, AfterViewInit, OnDest
       });
   
       this.meta.updateTag({ name: 'datePublished', content: '2025-06-07' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-05-28' });
+
       this.meta.updateTag({
         property: 'og:image',
         content: 'https://arapov.trade/assets/img/photo_mainpage.jpg',

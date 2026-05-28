@@ -50,7 +50,7 @@ export class MainpageComponent implements OnInit, AfterViewInit, OnDestroy {
     this.removeExistingWebPageSchema();
 
     this.titleService.setTitle(
-      'Навчання трейдерів торгівлі на біржі | Курс трейдингу від Ігоря Арапова'
+      'Безкоштовне навчання трейдингу від Ігоря Арапова'
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
@@ -66,11 +66,13 @@ export class MainpageComponent implements OnInit, AfterViewInit, OnDestroy {
     });
 
     this.meta.updateTag({ name: 'datePublished', content: '2025-06-07' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-05-28' });
+
 
     this.meta.updateTag({
       property: 'og:title',
       content:
-        'Навчання трейдерів торгівлі на біржі | Курс трейдингу від Ігоря Арапова',
+        'Безкоштовне навчання трейдингу від Ігоря Арапова',
     });
     this.meta.updateTag({
       property: 'og:description',

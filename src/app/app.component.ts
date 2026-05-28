@@ -228,13 +228,13 @@ export class AppComponent implements OnInit, AfterViewChecked, OnDestroy {
           }
         } else if (segments[0] == '') {
           title =
-            'Навчання трейдерів торгівлі на біржі | Курс трейдингу від Ігоря Арапова';
+            'Безкоштовне навчання трейдингу від Ігоря Арапова';
         } else if (segments[1] === 'main' && segments[0] === 'ru') {
           title =
-            'Обучение трейдеров торговле на бирже | Курс трейдинга от Игоря Арапова';
+            'Бесплатное обучение трейдингу от Игоря Арапова';
         } else if (segments[1] === 'main' && segments[0] === 'en') {
           title =
-            'Stock Market Trading Training for Traders | Trading Course by Igor Arapov';
+            'Free trading education from Igor Arapov';
         } else if (segments[1] === 'studying' && segments[0] === 'ru') {
           title = 'Курсы по трейдингу онлайн | Обучение трейдингу с нуля';
         } else if (segments[1] === 'studying' && segments[0] === 'uk') {
