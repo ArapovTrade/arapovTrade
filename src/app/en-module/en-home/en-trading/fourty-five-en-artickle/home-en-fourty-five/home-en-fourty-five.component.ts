@@ -72,7 +72,7 @@ export class HomeEnFourtyFiveComponent implements OnInit {
     this.meta.updateTag({ name: 'datePublished', content: '2025-05-30' });
     this.meta.updateTag({
       name: 'dateModified',
-      content: '2026-05-11T00:00:00Z',
+      content: '2026-05-28T00:00:00Z',
     });
     this.meta.updateTag({
       property: 'og:image',
@@ -307,7 +307,7 @@ export class HomeEnFourtyFiveComponent implements OnInit {
           description:
             'Free trading course from scratch: technical analysis, Wyckoff method, volume analysis, complete trading system with positive mathematical expectancy. 18 sections, live trade breakdowns.',
           datePublished: '2025-01-15T00:00:00+02:00',
-          dateModified: '2026-05-11T00:00:00Z+02:00',
+          dateModified: '2026-05-28T00:00:00Z+02:00',
           author: {
             '@id': 'https://arapov.trade/en#person',
           },
@@ -637,7 +637,7 @@ export class HomeEnFourtyFiveComponent implements OnInit {
           description:
             'A free trading course for those who are just getting started with the market. No unnecessary theory — just the essentials, a trading system, and practice on a demo account. We cover everything from scratch: from the trading terminal to the entry point using the Wyckoff Method.',
           thumbnailUrl: 'https://i.ytimg.com/vi/tmiHem6NOZs/maxresdefault.jpg',
-          uploadDate: '2026-05-11T00:00:00+02:00',
+          uploadDate: '2026-05-28T00:00:00+02:00',
           duration: 'PT45M2S',
           contentUrl: 'https://www.youtube.com/watch?v=tmiHem6NOZs',
           embedUrl:
