@@ -73,7 +73,7 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
     });
 
     this.meta.updateTag({ name: 'datePublished', content: '2025-05-30' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-05-28' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-05-29' });
     this.meta.updateTag({
       property: 'og:image',
       content: 'https://arapov.trade/assets/img/content/freeeducationnew.webp',
@@ -340,7 +340,7 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
           description:
             'Бесплатный курс по трейдингу для тех, кто только знакомится с рынком. Никакой лишней теории — только база, торговая система и практика на демосчёте. Разбираем всё с нуля: от торгового терминала до точки входа в сделку по методу Вайкоффа.',
           thumbnailUrl: 'https://i.ytimg.com/vi/tmiHem6NOZs/maxresdefault.jpg',
-          uploadDate: '2026-05-28T00:00:00+02:00',
+          uploadDate: '2026-05-29T00:00:00+02:00',
           duration: 'PT45M2S',
           contentUrl: 'https://www.youtube.com/watch?v=tmiHem6NOZs',
           embedUrl: 'https://www.youtube.com/embed/tmiHem6NOZs?si=lMeQKyeWBPviIQPq',
@@ -377,7 +377,7 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
           description:
             'Бесплатный курс по трейдингу с нуля: технический анализ, метод Вайкоффа, объёмный анализ, торговая система с положительным математическим ожиданием. 18 разделов, живые разборы сделок.',
           datePublished: '2025-01-15T00:00:00+02:00',
-          dateModified: '2026-05-28T00:00:00Z',
+          dateModified: '2026-05-29T00:00:00Z',
           author: {
             '@id': 'https://arapov.trade/ru#person',
           },
