@@ -66,7 +66,7 @@ export class MainpageComponent implements OnInit, AfterViewInit, OnDestroy {
     });
 
     this.meta.updateTag({ name: 'datePublished', content: '2025-06-07' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-05-28' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-05-29' });
 
 
     this.meta.updateTag({
