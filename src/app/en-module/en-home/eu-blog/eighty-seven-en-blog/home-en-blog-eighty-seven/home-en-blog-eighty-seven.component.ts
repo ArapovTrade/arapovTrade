@@ -63,7 +63,7 @@ export class HomeEnBlogEightySevenComponent implements OnInit {
       'Copy Trading: How to Earn by Copying Professional Trades | 2025',
     );
     this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-04' });
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
 
     this.meta.updateTag({
@@ -282,8 +282,8 @@ export class HomeEnBlogEightySevenComponent implements OnInit {
             'Learn how copy trading works, which platforms to choose, and how to configure your system for passive income.',
           image: 'https://arapov.trade/assets/img/content/copytrading.png',
 
-          datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
+          datePublished: '2025-06-04T00:00:00Z',
+          dateModified: '2026-06-04T00:00:00Z',
           author: { '@id': 'https://arapov.trade/en#person' },
           publisher: {
             '@type': 'Organization',

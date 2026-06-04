@@ -63,7 +63,7 @@ export class HomeEnBlogNintyEightComponent implements OnInit {
       'Stochastic Oscillator Guide | Trading Strategies',
     );
     this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-04' });
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
 
@@ -294,7 +294,7 @@ export class HomeEnBlogNintyEightComponent implements OnInit {
             },
           },
           datePublished: '2025-06-13T00:00:00+02:00',
-          dateModified: '2026-04-15T00:00:00Z',
+          dateModified: '2026-06-04T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
             '@id': 'https://arapov.trade/en/freestudying/stochastic',

@@ -69,7 +69,7 @@ export class HomeRuBlogEightySevenComponent implements OnInit {
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-04' });
 
     this.gerRandom();
   }
@@ -285,8 +285,8 @@ export class HomeRuBlogEightySevenComponent implements OnInit {
             'Узнайте, как работает копитрейдинг, какие платформы выбрать, как настроить автокопирование и избежать типичных ошибок при пассивном инвестировании.',
           image: 'https://arapov.trade/assets/img/content/copytrading.png',
 
-          datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
+          datePublished: '2025-06-04T00:00:00Z',
+          dateModified: '2026-06-04T00:00:00Z',
           author: {
             '@id': 'https://arapov.trade/ru#person',
           },

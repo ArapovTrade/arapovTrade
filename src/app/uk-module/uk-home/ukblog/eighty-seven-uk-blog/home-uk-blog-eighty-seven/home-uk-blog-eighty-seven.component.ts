@@ -69,7 +69,7 @@ export class HomeUkBlogEightySevenComponent implements OnInit {
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
 
-  this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
+  this.meta.updateTag({ name: 'dateModified', content: '2026-06-04' });
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
 
     this.gerRandom();
@@ -282,8 +282,8 @@ export class HomeUkBlogEightySevenComponent implements OnInit {
             'Дізнайтеся, як працює копітрейдинг, які платформи обрати та як налаштувати систему для пасивного заробітку на криптовалютах, форекс та акціях.',
           image: 'https://arapov.trade/assets/img/content/copytrading.png',
 
-          datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
+          datePublished: '2025-06-04T00:00:00Z',
+          dateModified: '2026-06-04T00:00:00Z',
 
           author: {
             '@id': 'https://arapov.trade/uk#person',

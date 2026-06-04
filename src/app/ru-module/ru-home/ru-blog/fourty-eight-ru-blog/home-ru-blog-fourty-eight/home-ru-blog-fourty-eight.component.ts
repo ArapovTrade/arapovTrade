@@ -66,7 +66,7 @@ export class HomeRuBlogFourtyEightComponent implements OnInit {
         'Полное руководство по самостоятельному обучению трейдингу: от базовых понятий до профессиональных стратегий. Практические советы для начинающих трейдеров.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-03' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-04' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/selfstudying.webp',
@@ -284,8 +284,8 @@ export class HomeRuBlogFourtyEightComponent implements OnInit {
           description:
             'Полное руководство по самостоятельному обучению трейдингу: от базовых понятий до профессиональных стратегий. Практические советы для начинающих трейдеров.',
           image: 'https://arapov.trade/assets/img/content/selfstudying1.webp',
-          datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
+          datePublished: '2025-06-04T00:00:00Z',
+          dateModified: '2026-06-04T00:00:00Z',
           author: {
             '@id': 'https://arapov.trade/ru#person',
           },

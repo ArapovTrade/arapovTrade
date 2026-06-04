@@ -67,7 +67,7 @@ export class HomeRuBlogSixtySixComponent {
     });
 
     this.meta.updateTag({ name: 'datePublished', content: '2025-02-11' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-04' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/peakvolumelevels.webp',
@@ -303,7 +303,7 @@ export class HomeRuBlogSixtySixComponent {
             },
           },
           datePublished: '2024-01-15T10:00:00+00:00',
-          dateModified: '2026-04-15T00:00:00Z',
+          dateModified: '2026-06-04T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
             '@id': 'https://arapov.trade/ru/freestudying/peakvolumelevels',
