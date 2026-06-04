@@ -69,7 +69,7 @@ export class HomeUkBlogThreeComponent implements OnInit {
     });
 
     this.meta.updateTag({ name: 'datePublished', content: '2025-03-31' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-04' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/volatility44.webp',
@@ -282,8 +282,8 @@ export class HomeUkBlogThreeComponent implements OnInit {
           description:
             'Повний посібник з волатильності фінансових ринків: типи волатильності, індикатор ATR, практичне застосування для управління ризиками',
           image: 'https://arapov.trade/assets/img/content/volatility1.webp',
-          datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
+          datePublished: '2025-06-04T00:00:00Z',
+          dateModified: '2026-06-04T00:00:00Z',
           author: {
             '@id': 'https://arapov.trade/uk#person',
           },

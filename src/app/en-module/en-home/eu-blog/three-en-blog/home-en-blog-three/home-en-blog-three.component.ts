@@ -63,7 +63,7 @@ export class HomeEnBlogThreeComponent implements OnInit {
         'Market volatility explained: complete guide to measuring price fluctuations with ATR indicator and practical trading applications',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-03-31' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-04' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/volatility44.webp',
@@ -257,8 +257,8 @@ export class HomeEnBlogThreeComponent implements OnInit {
           description:
             'Complete guide to financial market volatility: types of volatility, ATR indicator, practical applications for risk management',
           image: 'https://arapov.trade/assets/img/content/volatility1.webp',
-          datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
+          datePublished: '2025-06-04T00:00:00Z',
+          dateModified: '2026-06-04T00:00:00Z',
           author: {
             '@id': 'https://arapov.trade/en#person',
           },

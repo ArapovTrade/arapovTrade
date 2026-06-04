@@ -67,7 +67,7 @@ export class HomeRuBlogTwoComponent implements OnInit {
         'Узнайте, что такое дивергенция в трейдинге, как находить бычью и медвежью дивергенцию на RSI, MACD, Stochastic. Практические стратегии торговли.',
     });
     this.meta.updateTag({ name: 'datePublished', content: '2025-04-13' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-04' });
     this.meta.updateTag({
       property: 'og:image',
       content: '/assets/img/content/divergenceonindecators.webp',
@@ -286,8 +286,8 @@ export class HomeRuBlogTwoComponent implements OnInit {
             'Узнайте, что такое дивергенция в трейдинге, как находить бычью и медвежью дивергенцию на RSI, MACD, Stochastic.',
           image: 'https://arapov.trade/assets/img/content/divergence1.png',
 
-          datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
+          datePublished: '2025-06-04T00:00:00Z',
+          dateModified: '2026-06-04T00:00:00Z',
           author: {
             '@id': 'https://arapov.trade/ru#person',
           },
