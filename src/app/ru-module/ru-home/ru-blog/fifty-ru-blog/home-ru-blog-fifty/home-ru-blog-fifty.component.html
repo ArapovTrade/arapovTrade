@@ -6,7 +6,7 @@
           <div class="m-right hero-section"></div>
           <div class="free-courses_main-container">
             <main lang="ru">
-              <article>
+              <!-- <article>
                 <h1>Алгоритмические ордера на бирже: полное руководство</h1>
 
                 <p>
@@ -457,7 +457,181 @@
                         ).
                       </p>
                 </section>
-              </article>
+              </article> -->
+              <article>
+  <header>
+    <h1 itemprop="headline">
+      Алгоритмические ордера
+    </h1>
+  </header>
+
+  <section>
+    <p>
+      <dfn itemscope itemtype="https://schema.org/DefinedTerm"><span itemprop="name">Алгоритмические ордера</span></dfn>
+      представляют собой автоматизированные заявки на покупку или продажу финансовых
+      активов, которые исполняются по заранее запрограммированным правилам без участия
+      человека. Алгоритм анализирует цены, объёмы торгов и ликвидность в реальном времени
+      и принимает решение за миллисекунды. Именно поэтому розничный трейдер с ручным
+      входом всегда находится в проигрышной позиции по скорости исполнения относительно
+      институциональных участников.
+    </p>
+
+    <p>
+      Ключевые типы алгоритмических ордеров которые важно понимать трейдеру.
+      <dfn itemscope itemtype="https://schema.org/DefinedTerm"><span itemprop="name">VWAP</span></dfn>
+      (Volume Weighted Average Price) исполняет ордер по взвешенной средней цене с учётом
+      объёма: институционалы используют его чтобы набрать крупную позицию не двигая рынок.
+      <dfn itemscope itemtype="https://schema.org/DefinedTerm"><span itemprop="name">TWAP</span></dfn>
+      (Time Weighted Average Price) разбивает ордер на равные части во времени.
+      <dfn itemscope itemtype="https://schema.org/DefinedTerm"><span itemprop="name">Iceberg Order</span></dfn>
+      скрывает основную часть объёма заявки, отображая в биржевом стакане лишь малую часть —
+      именно так крупные игроки накапливают позиции незаметно для рынка.
+      <dfn itemscope itemtype="https://schema.org/DefinedTerm"><span itemprop="name">Спуфинг</span></dfn>
+      представляет собой запрещённую манипуляцию при которой размещаются фиктивные ордера для создания
+      ложного впечатления о спросе, после чего они снимаются. Незаконен на регулируемых
+      площадках CME, NYSE, Nasdaq.
+    </p>
+
+    <img
+      src="/assets/img/content/algorithmicorders2.webp"
+      alt="Преимущества алгоритмических ордеров"
+      loading="lazy"
+    />
+  </section>
+
+  <section>
+    <h2>TWAP и VWAP исполнение крупных ордеров</h2>
+
+    <p>
+      Для розничного трейдера понимание алгоритмических ордеров важно не для того
+      чтобы их программировать, а чтобы читать следы институциональной активности на графике.
+      Когда цена планомерно движется в узком диапазоне без видимых причин, скорее всего
+      работает TWAP крупного игрока. Когда объём нарастает у ключевого уровня без импульса —
+      возможно накопление через Iceberg. Подробнее о типах заявок в материале про
+      <a class="linkrefinto" href="https://arapov.trade/ru/freestudying/ordertypes">типы ордеров на бирже</a>.
+    </p>
+
+    <img
+      src="/assets/img/content/algorithmicorders1.webp"
+      alt="Спуфинг и манипуляции на рынке"
+      loading="lazy"
+    />
+
+    <p>
+      Спуфинг и манипуляции через алгоритмические заявки, это то с чем сталкивается
+      каждый трейдер работающий со стаканом ордеров. Крупная заявка появляется в стакане,
+      цена разворачивается, заявка исчезает. Это не случайность. Как распознать такие
+      манипуляции и не стать жертвой разобрано в материале про
+      <a class="linkrefinto" href="https://arapov.trade/ru/freestudying/marketmaker">маркет-мейкера</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>Как распознать алго-исполнение на графике</h2>
+
+    <p>
+      Алгоритмические ордера представляют собой тему за рамками базового курса ArapovTrade.
+      Прежде чем разбираться в алго-исполнении, важно освоить базовую структуру рынка —
+      это разобрано в курсе в разделе
+      <a class="linkrefinto" href="https://arapov.trade/ru/freestudying/freeeducation#working-with-levels">«Работа с уровнями: дефицит ликвидности»</a>.
+      Там показано как крупные игроки используют уровни для набора позиций и почему
+      понимание этой механики важнее знания конкретных типов алгоритмов.
+    </p>
+
+    <p>
+      На канале &#64;ArapovTrade тема разобрана в видео
+      «<a class="linkrefinto" href="https://youtu.be/UUSmwO83Jcg">Алгоритмические ордера: как крупные игроки манипулируют рынком</a>»
+      (8 мин). Там показаны алгоритмические ордера на бирже CME: как институциональные
+      игроки скрывают свои планы и управляют ценой, как классифицируются институциональные
+      ордера и как идентифицировать активность Smart Money через объём на ключевых уровнях.
+    </p>
+  </section>
+  <section>
+                  <h2>Часто задаваемые вопросы</h2>
+
+                  <mat-accordion>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      [expanded]="true"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          Что такое алгоритмические ордера?
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                      <p>
+                        Автоматизированные заявки, исполняемые программными
+                        алгоритмами для оптимизации торговли.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          Какие типы ордеров существуют?
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                      <p>
+                        VWAP, TWAP, Iceberg, Trailing Stop, Pegged Orders и
+                        условные ордера.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title> Что такое VWAP?</mat-panel-title>
+                      </mat-expansion-panel-header>
+                      <p>
+                        Алгоритм исполнения по взвешенной средней цене с учетом
+                        объема торгов.
+                      </p>
+                    </mat-expansion-panel>
+
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title> Что такое спуфинг?</mat-panel-title>
+                      </mat-expansion-panel-header>
+                      <p>
+                        Запрещенная манипуляция с размещением фиктивных ордеров.
+                      </p> </mat-expansion-panel
+                    ><mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          Кому доступны алгоритмические ордера?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        Институциональным инвесторам, HFT-компаниям и розничным
+                        трейдерам через современные платформы.
+                      </p>
+                    </mat-expansion-panel>
+                  </mat-accordion>
+                </section>
+  <section>
+    <h2>Об авторе</h2>
+    <p>
+      Автор: Игорь Арапов — независимый исследователь в области психологии инвестиционных решений
+      и поведенческих финансов, практикующий трейдер с 2013 года, основатель arapov.trade,
+      автор серии книг по трейдингу
+      (<a class="linkrefinto" href="https://openlibrary.org/authors/OL16073686A/Igor_Arapov">Open Library</a>),
+      (<a class="linkrefinto" href="https://orcid.org/0009-0003-0430-778X">ORCID: 0009-0003-0430-778X</a>).
+    </p>
+  </section>
+</article>
 
               <div
                 class=""
