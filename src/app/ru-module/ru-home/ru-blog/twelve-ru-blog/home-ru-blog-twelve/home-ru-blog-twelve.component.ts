@@ -1,4 +1,5 @@
-import { Component, OnInit,ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit,ChangeDetectorRef,
+  signal, } from '@angular/core';
 import { ThemeservService } from '../../../../../servises/themeserv.service';
 import { artickle } from '../../../../../servises/articles.service';
 import { Subscription } from 'rxjs';
@@ -27,6 +28,7 @@ export class HomeRuBlogTwelveComponent implements OnInit {
   ukrGroups: any = [];
  grr!: any;
   checkedGroup!: any;
+  readonly panelOpenState = signal(false);
 
   ngOnInit(): void {
 

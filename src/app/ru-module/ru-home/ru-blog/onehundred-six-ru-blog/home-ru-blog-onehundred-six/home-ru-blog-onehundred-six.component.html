@@ -9,7 +9,6 @@
             <main lang="ru">
               <article>
                 <div>
-                  <!-- Header -->
                   <header class="head_block">
                     <h1>Про ARAPOV.TRADE</h1>
                     <p class="header-stats">
@@ -17,9 +16,24 @@
                     </p>
                   </header>
 
-                  <!-- Платформа в цифрах -->
-                  <h2 class="section-title">Платформа в цифрах</h2>
+                  <p>
+                    arapov.trade это бесплатная библиотека по трейдингу на
+                    русском, украинском и английском. Её ведёт Игорь Арапов,
+                    практикующий трейдер с 2013 года. Все материалы здесь
+                    собраны вокруг одного метода, объёмного анализа по Вайкоффу,
+                    и говорят одним языком.
+                  </p>
 
+                  <p>
+                    Суть метода простая. Цена движется не случайно, за крупными
+                    движениями стоит крупный капитал, и его действия видно по
+                    объёму. Задача трейдера не угадывать, а читать эти следы и
+                    идти за деньгами, а не против них. Вокруг этой идеи и
+                    построены разделы: основы для новичка, технический и
+                    объёмный анализ, психология и управление риском.
+                  </p>
+
+                  <h2 class="section-title">Платформа в цифрах</h2>
                   <div
                     class="block"
                     [ngStyle]="{
@@ -37,8 +51,8 @@
                         [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
                         ><a href="https://arapov.trade/ru/freestudying"
                           >Статьи</a
-                        >
-                      </span>
+                        ></span
+                      >
                       <span
                         class="block-value"
                         [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
@@ -47,7 +61,7 @@
                           [ngStyle]="{ color: isDark ? '#FFCD29' : '#0082CC' }"
                           >151+</span
                         >
-                        × 3 языка  </span
+                        × 3 языка</span
                       >
                     </div>
                     <div class="block-line">
@@ -56,8 +70,8 @@
                         [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
                         ><a href="https://www.youtube.com/@ArapovTrade"
                           >Видеоуроки</a
-                        >
-                      </span>
+                        ></span
+                      >
                       <span
                         class="block-value"
                         [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
@@ -76,8 +90,8 @@
                         ><a
                           href="https://bookwire.bowker.com/books/author/Igor-Arapov/Books-By?authorId=40225801"
                           >Книги</a
-                        >
-                      </span>
+                        ></span
+                      >
                       <span
                         class="block-value"
                         [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
@@ -95,8 +109,8 @@
                         [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
                         ><a href="https://orcid.org/0009-0003-0430-778X"
                           >Публикации</a
-                        >
-                      </span>
+                        ></span
+                      >
                       <span
                         class="block-value"
                         [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
@@ -122,18 +136,39 @@
                     </div>
                   </div>
 
-                  <!-- Статьи -->
+                  <h2 class="section-title">С чего начать</h2>
+                  <p>
+                    Если вы только пришли в трейдинг, не хватайтесь сразу за
+                    сложные стратегии. Логичный путь такой. Сначала основы: что
+                    такое биржа, как читается график, что такое риск и зачем
+                    нужен стоп-лосс. Потом технический анализ и устройство
+                    уровней. И только затем ядро, объёмный анализ и Smart Money,
+                    ради которого всё и затевалось. Психологию стоит подключать
+                    с самого начала и не бросать, потому что сливает депозит
+                    чаще не незнание теории, а эмоции.
+                  </p>
+                  <p>
+                    Чтобы не собирать этот маршрут вручную, есть готовый разбор
+                    по порядку в
+                    <a href="https://arapov.trade/ru/freestudying/freeeducation"
+                      >бесплатном учебном курсе</a
+                    >, а весь список материалов лежит в
+                    <a href="https://arapov.trade/ru/freestudying/curriculum"
+                      >каталоге статей</a
+                    >. Совет один: не торопитесь и применяйте прочитанное на
+                    демосчёте, рынок никуда не денется.
+                  </p>
+
                   <h2 class="section-title">Статьи по категориям</h2>
-                   <div class="youtube-block">
-                     
+                  <div class="youtube-block">
                     <span
                       class="youtube-text"
                       [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-                    >
-                      Полный <a href="https://arapov.trade/ru/freestudying/curriculum"
+                      >Полный
+                      <a href="https://arapov.trade/ru/freestudying/curriculum"
                         >каталог статей</a
                       >
-                         сайта arapov.trade: 151+ материал, 9 разделов</span
+                      сайта arapov.trade: 151+ материал, 9 разделов.</span
                     >
                   </div>
                   <div
@@ -165,8 +200,9 @@
                         }"
                         >19 статей</span
                       >
-                      <span class="block-level">
-                        <i [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+                      <span class="block-level"
+                        ><i
+                          [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
                           >средний → продвинутый</i
                         ></span
                       >
@@ -179,7 +215,6 @@
                       рынка.
                     </p>
                   </div>
-
                   <div
                     class="block"
                     [ngStyle]="{
@@ -209,8 +244,9 @@
                         }"
                         >14 статей</span
                       >
-                      <span class="block-level">
-                        <i [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+                      <span class="block-level"
+                        ><i
+                          [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
                           >продвинутый</i
                         ></span
                       >
@@ -223,7 +259,6 @@
                       маркет-мейкеры.
                     </p>
                   </div>
-
                   <div
                     class="block"
                     [ngStyle]="{
@@ -253,8 +288,9 @@
                         }"
                         >39 статей</span
                       >
-                      <span class="block-level">
-                        <i [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+                      <span class="block-level"
+                        ><i
+                          [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
                           >начинающий</i
                         ></span
                       >
@@ -267,7 +303,6 @@
                       TradingView.
                     </p>
                   </div>
-
                   <div
                     class="block"
                     [ngStyle]="{
@@ -297,8 +332,9 @@
                         }"
                         >8 статей</span
                       >
-                      <span class="block-level">
-                        <i [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+                      <span class="block-level"
+                        ><i
+                          [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
                           >начинающий → продвинутый</i
                         ></span
                       >
@@ -307,10 +343,9 @@
                       class="block-content"
                       [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
                     >
-                      Тильт, FOMO, эмоции, психология Ганна.
+                      Тильт, FOMO, эмоции, дисциплина и работа с просадкой.
                     </p>
                   </div>
-
                   <div
                     class="block"
                     [ngStyle]="{
@@ -340,8 +375,9 @@
                         }"
                         >9 статей</span
                       >
-                      <span class="block-level">
-                        <i [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+                      <span class="block-level"
+                        ><i
+                          [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
                           >начинающий</i
                         ></span
                       >
@@ -350,10 +386,9 @@
                       class="block-content"
                       [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
                     >
-                      Виды ордеров, стоп-лосс, тейк-профит, реквоты.
+                      Виды ордеров, стоп-лосс, тейк-профит, спред, реквоты.
                     </p>
                   </div>
-
                   <div
                     class="block"
                     [ngStyle]="{
@@ -394,11 +429,10 @@
                       class="block-content"
                       [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
                     >
-                      Свечи, паттерны, Фибоначчи, RSI, MACD, Bollinger,
-                      Ichimoku.
+                      Свечи, паттерны, уровни, Фибоначчи, индикаторы и их
+                      ограничения.
                     </p>
                   </div>
-
                   <div
                     class="block"
                     [ngStyle]="{
@@ -428,8 +462,9 @@
                         }"
                         >12 статей</span
                       >
-                      <span class="block-level">
-                        <i [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+                      <span class="block-level"
+                        ><i
+                          [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
                           >средний</i
                         ></span
                       >
@@ -438,10 +473,10 @@
                       class="block-content"
                       [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
                     >
-                      Экономический календарь, ФРС, золото, нефть, S&P 500.
+                      Экономический календарь, ставки ФРС, золото, нефть,
+                      S&amp;P 500.
                     </p>
                   </div>
-
                   <div
                     class="block"
                     [ngStyle]="{
@@ -471,8 +506,9 @@
                         }"
                         >20 статей</span
                       >
-                      <span class="block-level">
-                        <i [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+                      <span class="block-level"
+                        ><i
+                          [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
                           >начинающий → средний</i
                         ></span
                       >
@@ -485,7 +521,6 @@
                       безопасность.
                     </p>
                   </div>
-
                   <div
                     class="block"
                     [ngStyle]="{
@@ -515,8 +550,9 @@
                         }"
                         >1 статья</span
                       >
-                      <span class="block-level">
-                        <i [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+                      <span class="block-level"
+                        ><i
+                          [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
                           >средний</i
                         ></span
                       >
@@ -525,725 +561,21 @@
                       class="block-content"
                       [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
                     >
-                      Практические разборы реальных ситуаций.
+                      Практические разборы реальных ситуаций на графике.
                     </p>
                   </div>
 
-                  <!-- Видео -->
-                  <h2 class="section-title">Видеоуроки по категориям</h2>
-
-                  <div class="youtube-block">
-                    <div
-                      class="youtube-icon"
-                      [ngStyle]="{
-                        background: isDark
-                          ? 'rgba(255, 255, 255, 0.08)'
-                          : 'rgba(0, 136, 255, 0.08)',
-                        border: isDark
-                          ? '2px solid rgba(230, 237, 251, 0.16)'
-                          : '2px solid rgba(0, 136, 255, 0.16)',
-                        color: isDark ? '#ffffff' : '#0082CC',
-                      }"
-                    ></div>
-                    <span
-                      class="youtube-text"
-                      [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+                  <h2 class="section-title">Видеоуроки</h2>
+                  <p>
+                    Теорию из статей дублируют живые разборы на графиках. На
+                    <a href="https://www.youtube.com/@ArapovTrade"
+                      >YouTube-канале</a
                     >
-                      <a href="https://arapov.trade/ru/freestudying/youtube"
-                        >Полный каталог</a
-                      >
-                      образовательных видео канала &#64;ArapovTrade: 78+ уроков,
-                      9 категорий</span
-                    >
-                  </div>
-
-                  <div
-                    class="block"
-                    [ngStyle]="{
-                      background: isDark
-                        ? 'rgba(255, 255, 255, 0.08)'
-                        : 'rgba(0, 131, 205, 0.08)',
-                      border: isDark
-                        ? '2px solid rgba(230, 237, 251, 0.16)'
-                        : '2px solid #E6EDFB',
-                    }"
-                  >
-                    <div
-                      class="block-title"
-                      [ngStyle]="{ color: isDark ? '#FFCD29' : '#0082CC' }"
-                    >
-                      Трейдинг с нуля
-                      <span
-                        class="block-badge"
-                        [ngStyle]="{
-                          background: isDark
-                            ? 'rgba(255, 255, 255, 0.08)'
-                            : 'rgba(0, 136, 255, 0.08)',
-                          border: isDark
-                            ? '2px solid rgba(230, 237, 251, 0.16)'
-                            : '2px solid rgba(0, 136, 255, 0.16)',
-                          color: isDark ? '#ffffff' : '#0082CC',
-                        }"
-                        >15+ видео</span
-                      >
-                      <span class="block-level">
-                        <i [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-                          >начинающий</i
-                        ></span
-                      >
-                    </div>
-                    <p
-                      class="block-content"
-                      [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-                    >
-                      Основы рынка, первые шаги, выбор брокера, демо-счёт.
-                    </p>
-                  </div>
-
-                  <div
-                    class="block"
-                    [ngStyle]="{
-                      background: isDark
-                        ? 'rgba(255, 255, 255, 0.08)'
-                        : 'rgba(0, 131, 205, 0.08)',
-                      border: isDark
-                        ? '2px solid rgba(230, 237, 251, 0.16)'
-                        : '2px solid #E6EDFB',
-                    }"
-                  >
-                    <div
-                      class="block-title"
-                      [ngStyle]="{ color: isDark ? '#FFCD29' : '#0082CC' }"
-                    >
-                      Smart Money Concept
-                      <span
-                        class="block-badge"
-                        [ngStyle]="{
-                          background: isDark
-                            ? 'rgba(255, 255, 255, 0.08)'
-                            : 'rgba(0, 136, 255, 0.08)',
-                          border: isDark
-                            ? '2px solid rgba(230, 237, 251, 0.16)'
-                            : '2px solid rgba(0, 136, 255, 0.16)',
-                          color: isDark ? '#ffffff' : '#0082CC',
-                        }"
-                        >12+ видео</span
-                      >
-                      <span class="block-level">
-                        <i [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-                          >продвинутый</i
-                        ></span
-                      >
-                    </div>
-                    <p
-                      class="block-content"
-                      [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-                    >
-                      Order Blocks, ликвидность, FVG, манипуляции.
-                    </p>
-                  </div>
-
-                  <div
-                    class="block"
-                    [ngStyle]="{
-                      background: isDark
-                        ? 'rgba(255, 255, 255, 0.08)'
-                        : 'rgba(0, 131, 205, 0.08)',
-                      border: isDark
-                        ? '2px solid rgba(230, 237, 251, 0.16)'
-                        : '2px solid #E6EDFB',
-                    }"
-                  >
-                    <div
-                      class="block-title"
-                      [ngStyle]="{ color: isDark ? '#FFCD29' : '#0082CC' }"
-                    >
-                      Метод Вайкоффа
-                      <span
-                        class="block-badge"
-                        [ngStyle]="{
-                          background: isDark
-                            ? 'rgba(255, 255, 255, 0.08)'
-                            : 'rgba(0, 136, 255, 0.08)',
-                          border: isDark
-                            ? '2px solid rgba(230, 237, 251, 0.16)'
-                            : '2px solid rgba(0, 136, 255, 0.16)',
-                          color: isDark ? '#ffffff' : '#0082CC',
-                        }"
-                        >10+ видео</span
-                      >
-                      <span class="block-level">
-                        <i [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-                          >средний → продвинутый</i
-                        ></span
-                      >
-                    </div>
-                    <p
-                      class="block-content"
-                      [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-                    >
-                      Накопление, распределение, фазы рынка.
-                    </p>
-                  </div>
-
-                  <div
-                    class="block"
-                    [ngStyle]="{
-                      background: isDark
-                        ? 'rgba(255, 255, 255, 0.08)'
-                        : 'rgba(0, 131, 205, 0.08)',
-                      border: isDark
-                        ? '2px solid rgba(230, 237, 251, 0.16)'
-                        : '2px solid #E6EDFB',
-                    }"
-                  >
-                    <div
-                      class="block-title"
-                      [ngStyle]="{ color: isDark ? '#FFCD29' : '#0082CC' }"
-                    >
-                      Объёмный анализ
-                      <span
-                        class="block-badge"
-                        [ngStyle]="{
-                          background: isDark
-                            ? 'rgba(255, 255, 255, 0.08)'
-                            : 'rgba(0, 136, 255, 0.08)',
-                          border: isDark
-                            ? '2px solid rgba(230, 237, 251, 0.16)'
-                            : '2px solid rgba(0, 136, 255, 0.16)',
-                          color: isDark ? '#ffffff' : '#0082CC',
-                        }"
-                        >8+ видео</span
-                      >
-                      <span class="block-level">
-                        <i [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-                          >средний</i
-                        ></span
-                      >
-                    </div>
-                    <p
-                      class="block-content"
-                      [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-                    >
-                      Чтение объёмов, кластеры, дельта, футпринт.
-                    </p>
-                  </div>
-
-                  <div
-                    class="block"
-                    [ngStyle]="{
-                      background: isDark
-                        ? 'rgba(255, 255, 255, 0.08)'
-                        : 'rgba(0, 131, 205, 0.08)',
-                      border: isDark
-                        ? '2px solid rgba(230, 237, 251, 0.16)'
-                        : '2px solid #E6EDFB',
-                    }"
-                  >
-                    <div
-                      class="block-title"
-                      [ngStyle]="{ color: isDark ? '#FFCD29' : '#0082CC' }"
-                    >
-                      Психология трейдинга
-                      <span
-                        class="block-badge"
-                        [ngStyle]="{
-                          background: isDark
-                            ? 'rgba(255, 255, 255, 0.08)'
-                            : 'rgba(0, 136, 255, 0.08)',
-                          border: isDark
-                            ? '2px solid rgba(230, 237, 251, 0.16)'
-                            : '2px solid rgba(0, 136, 255, 0.16)',
-                          color: isDark ? '#ffffff' : '#0082CC',
-                        }"
-                        >10+ видео</span
-                      >
-                      <span class="block-level">
-                        <i [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-                          >начинающий → продвинутый</i
-                        ></span
-                      >
-                    </div>
-                    <p
-                      class="block-content"
-                      [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-                    >
-                      Эмоции, дисциплина, тильт, FOMO.
-                    </p>
-                  </div>
-
-                  <div
-                    class="block"
-                    [ngStyle]="{
-                      background: isDark
-                        ? 'rgba(255, 255, 255, 0.08)'
-                        : 'rgba(0, 131, 205, 0.08)',
-                      border: isDark
-                        ? '2px solid rgba(230, 237, 251, 0.16)'
-                        : '2px solid #E6EDFB',
-                    }"
-                  >
-                    <div
-                      class="block-title"
-                      [ngStyle]="{ color: isDark ? '#FFCD29' : '#0082CC' }"
-                    >
-                      Примеры сделок
-                      <span
-                        class="block-badge"
-                        [ngStyle]="{
-                          background: isDark
-                            ? 'rgba(255, 255, 255, 0.08)'
-                            : 'rgba(0, 136, 255, 0.08)',
-                          border: isDark
-                            ? '2px solid rgba(230, 237, 251, 0.16)'
-                            : '2px solid rgba(0, 136, 255, 0.16)',
-                          color: isDark ? '#ffffff' : '#0082CC',
-                        }"
-                        >15+ видео</span
-                      >
-                      <span class="block-level">
-                        <i [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-                          >средний</i
-                        ></span
-                      >
-                    </div>
-                    <p
-                      class="block-content"
-                      [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-                    >
-                      Примеры входов и выходов.
-                    </p>
-                  </div>
-
-                  <div
-                    class="block"
-                    [ngStyle]="{
-                      background: isDark
-                        ? 'rgba(255, 255, 255, 0.08)'
-                        : 'rgba(0, 131, 205, 0.08)',
-                      border: isDark
-                        ? '2px solid rgba(230, 237, 251, 0.16)'
-                        : '2px solid #E6EDFB',
-                    }"
-                  >
-                    <div
-                      class="block-title"
-                      [ngStyle]="{ color: isDark ? '#FFCD29' : '#0082CC' }"
-                    >
-                      Криптовалюты
-                      <span
-                        class="block-badge"
-                        [ngStyle]="{
-                          background: isDark
-                            ? 'rgba(255, 255, 255, 0.08)'
-                            : 'rgba(0, 136, 255, 0.08)',
-                          border: isDark
-                            ? '2px solid rgba(230, 237, 251, 0.16)'
-                            : '2px solid rgba(0, 136, 255, 0.16)',
-                          color: isDark ? '#ffffff' : '#0082CC',
-                        }"
-                        >10+ видео</span
-                      >
-                      <span class="block-level">
-                        <i [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-                          >начинающий → средний</i
-                        ></span
-                      >
-                    </div>
-                    <p
-                      class="block-content"
-                      [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-                    >
-                      Bitcoin, альткоины, анализ крипторынка.
-                    </p>
-                  </div>
-
-                  <!-- Книги -->
-                  <h2 class="section-title">Книги</h2>
-                  <div class="youtube-block">
-                     
-                    <span
-                      class="youtube-text"
-                      [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-                      > 
-                      Полный каталог <a href="https://arapov.trade/ru/books"
-                        >бесплатных книг по трейдингу</a
-                      >
-                      : серия Игоря Арапова</span
-                    >
-                  </div>
-                  <div
-                    class="block"
-                    [ngStyle]="{
-                      background: isDark
-                        ? 'rgba(255, 255, 255, 0.08)'
-                        : 'rgba(0, 131, 205, 0.08)',
-                      border: isDark
-                        ? '2px solid rgba(230, 237, 251, 0.16)'
-                        : '2px solid #E6EDFB',
-                    }"
-                  >
-                    <div
-                      class="block-title"
-                      [ngStyle]="{ color: isDark ? '#FFCD29' : '#0082CC' }"
-                    >
-                      Психология трейдинга: Как управлять эмоциями и мыслить как профессионал
-                    </div>
-                    <div
-                      class="book-lang"
-                      [ngStyle]="{
-                        color: isDark ? '#ffffff' : '#0C263A',
-                        'border-left': isDark
-                          ? '3px solid #ffcd29'
-                          : '3px solid #0082CC',
-                      }"
-                    >
-                      <div class="book-lang-name">English</div>
-                      <div
-                        class="book-ids"
-                        style="font-size: 14px"
-                        [ngStyle]="{
-                          color: isDark
-                            ? 'rgba(255, 255, 255, 75%)'
-                            : 'rgb(12 38 58 / 70%)',
-                        }"
-                      >
-                        ISBN 979-8-90243-138-1 • DOI 10.5281/zenodo.18057306
-                      </div>
-                    </div>
-                    <div
-                      class="book-lang"
-                      [ngStyle]="{
-                        color: isDark ? '#ffffff' : '#0C263A',
-                        'border-left': isDark
-                          ? '3px solid #ffcd29'
-                          : '3px solid #0082CC',
-                      }"
-                    >
-                      <div class="book-lang-name">Русский</div>
-                      <div
-                        class="book-ids"
-                        style="font-size: 14px"
-                        [ngStyle]="{
-                          color: isDark
-                            ? 'rgba(255, 255, 255, 75%)'
-                            : 'rgb(12 38 58 / 70%)',
-                        }"
-                      >
-                        ISBN 979-8-90243-081-0 • DOI 10.5281/zenodo.18057875
-                      </div>
-                    </div>
-                    <div
-                      class="book-lang"
-                      [ngStyle]="{
-                        color: isDark ? '#ffffff' : '#0C263A',
-                        'border-left': isDark
-                          ? '3px solid #ffcd29'
-                          : '3px solid #0082CC',
-                      }"
-                    >
-                      <div class="book-lang-name">Українська</div>
-                      <div
-                        class="book-ids"
-                        style="font-size: 14px"
-                        [ngStyle]="{
-                          color: isDark
-                            ? 'rgba(255, 255, 255, 75%)'
-                            : 'rgb(12 38 58 / 70%)',
-                        }"
-                      >
-                        ISBN 979-8-90243-504-4 • DOI 10.5281/zenodo.18396377
-                      </div>
-                    </div>
-                  </div>
-
-                  <div
-                    class="block"
-                    [ngStyle]="{
-                      background: isDark
-                        ? 'rgba(255, 255, 255, 0.08)'
-                        : 'rgba(0, 131, 205, 0.08)',
-                      border: isDark
-                        ? '2px solid rgba(230, 237, 251, 0.16)'
-                        : '2px solid #E6EDFB',
-                    }"
-                  >
-                    <div
-                      class="block-title"
-                      [ngStyle]="{ color: isDark ? '#FFCD29' : '#0082CC' }"
-                    >
-                      Теория трейдинга. Основы рынка • Технический анализ • Объёмный анализ
-                    </div>
-                    <div
-                      class="book-lang"
-                      [ngStyle]="{
-                        color: isDark ? '#ffffff' : '#0C263A',
-                        'border-left': isDark
-                          ? '3px solid #ffcd29'
-                          : '3px solid #0082CC',
-                      }"
-                    >
-                      <div class="book-lang-name">English</div>
-                      <div
-                        class="book-ids"
-                        style="font-size: 14px"
-                        [ngStyle]="{
-                          color: isDark
-                            ? 'rgba(255, 255, 255, 75%)'
-                            : 'rgb(12 38 58 / 70%)',
-                        }"
-                      >
-                        ISBN 979-8-90243-734-5 • DOI 10.5281/zenodo.18364022
-                      </div>
-                    </div>
-                    <div
-                      class="book-lang"
-                      [ngStyle]="{
-                        color: isDark ? '#ffffff' : '#0C263A',
-                        'border-left': isDark
-                          ? '3px solid #ffcd29'
-                          : '3px solid #0082CC',
-                      }"
-                    >
-                      <div class="book-lang-name">Русский</div>
-                      <div
-                        class="book-ids"
-                        style="font-size: 14px"
-                        [ngStyle]="{
-                          color: isDark
-                            ? 'rgba(255, 255, 255, 75%)'
-                            : 'rgb(12 38 58 / 70%)',
-                        }"
-                      >
-                        ISBN 979-8-90243-075-9 • DOI 10.5281/zenodo.18057849
-                      </div>
-                    </div>
-                    <div
-                      class="book-lang"
-                      [ngStyle]="{
-                        color: isDark ? '#ffffff' : '#0C263A',
-                        'border-left': isDark
-                          ? '3px solid #ffcd29'
-                          : '3px solid #0082CC',
-                      }"
-                    >
-                      <div class="book-lang-name">Українська</div>
-                      <div
-                        class="book-ids"
-                        style="font-size: 14px"
-                        [ngStyle]="{
-                          color: isDark
-                            ? 'rgba(255, 255, 255, 75%)'
-                            : 'rgb(12 38 58 / 70%)',
-                        }"
-                      >
-                        ISBN 979-8-90243-730-7 • DOI 10.5281/zenodo.18396300
-                      </div>
-                    </div>
-                  </div>
-
-                  <div
-                    class="block"
-                    [ngStyle]="{
-                      background: isDark
-                        ? 'rgba(255, 255, 255, 0.08)'
-                        : 'rgba(0, 131, 205, 0.08)',
-                      border: isDark
-                        ? '2px solid rgba(230, 237, 251, 0.16)'
-                        : '2px solid #E6EDFB',
-                    }"
-                  >
-                    <div
-                      class="block-title"
-                      [ngStyle]="{ color: isDark ? '#FFCD29' : '#0082CC' }"
-                    >
-                      Методы анализа. Технический анализ • Объёмный анализ • Практика
-                    </div>
-                    <div
-                      class="book-lang"
-                      [ngStyle]="{
-                        color: isDark ? '#ffffff' : '#0C263A',
-                        'border-left': isDark
-                          ? '3px solid #ffcd29'
-                          : '3px solid #0082CC',
-                      }"
-                    >
-                      <div class="book-lang-name">English</div>
-                      <div
-                        class="book-ids"
-                        style="font-size: 14px"
-                        [ngStyle]="{
-                          color: isDark
-                            ? 'rgba(255, 255, 255, 75%)'
-                            : 'rgb(12 38 58 / 70%)',
-                        }"
-                      >
-                        ISBN 979-8-90243-755-0 • DOI 10.5281/zenodo.18364066
-                      </div>
-                    </div>
-                    <div
-                      class="book-lang"
-                      [ngStyle]="{
-                        color: isDark ? '#ffffff' : '#0C263A',
-                        'border-left': isDark
-                          ? '3px solid #ffcd29'
-                          : '3px solid #0082CC',
-                      }"
-                    >
-                      <div class="book-lang-name">Русский</div>
-                      <div
-                        class="book-ids"
-                        style="font-size: 14px"
-                        [ngStyle]="{
-                          color: isDark
-                            ? 'rgba(255, 255, 255, 75%)'
-                            : 'rgb(12 38 58 / 70%)',
-                        }"
-                      >
-                        ISBN 979-8-90243-078-0 • DOI 10.5281/zenodo.18057863
-                      </div>
-                    </div>
-                    <div
-                      class="book-lang"
-                      [ngStyle]="{
-                        color: isDark ? '#ffffff' : '#0C263A',
-                        'border-left': isDark
-                          ? '3px solid #ffcd29'
-                          : '3px solid #0082CC',
-                      }"
-                    >
-                      <div class="book-lang-name">Українська</div>
-                      <div
-                        class="book-ids"
-                        style="font-size: 14px"
-                        [ngStyle]="{
-                          color: isDark
-                            ? 'rgba(255, 255, 255, 75%)'
-                            : 'rgb(12 38 58 / 70%)',
-                        }"
-                      >
-                        ISBN 979-8-90243-732-1 • DOI 10.5281/zenodo.18396338
-                      </div>
-                    </div>
-                  </div>
-
-                  <div
-                    class="note-block"
-                    [ngStyle]="{
-                      color: isDark ? '#ffffff' : '#0C263A',
-                    }"
-                  >
-                    <strong>Итого:</strong> 9 книг с ISBN (Bowker USA) + 10 DOI
-                    (Zenodo/CERN). Все индексируются в OpenAIRE (научная
-                    инфраструктура ЕС).
-                  </div>
-
-                  <!-- Верификация -->
-                  <h2 class="section-title">Верификация</h2>
-
-                  <div
-                    class="block"
-                    [ngStyle]="{
-                      background: isDark
-                        ? 'rgba(255, 255, 255, 0.08)'
-                        : 'rgba(0, 131, 205, 0.08)',
-                      border: isDark
-                        ? '2px solid rgba(230, 237, 251, 0.16)'
-                        : '2px solid #E6EDFB',
-                    }"
-                  >
-                    <div class="verify-row">
-                      <span
-                        class="verify-name"
-                        [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-                        ><a href="https://isni.org/isni/0000000529518564"
-                          >ISNI</a
-                        >
-                      </span>
-                      <span
-                        class="verify-id"
-                        [ngStyle]="{ color: isDark ? '#FFCD29' : '#0082CC' }"
-                        >0000 0005 2951 8564</span
-                      >
-                    </div>
-                    <div class="verify-row">
-                      <span
-                        class="verify-name"
-                        [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-                        >ORCID</span
-                      >
-                      <span
-                        class="verify-id"
-                        [ngStyle]="{ color: isDark ? '#FFCD29' : '#0082CC' }"
-                        >0009-0003-0430-778X</span
-                      >
-                    </div>
-                    <div class="verify-row">
-                      <span
-                        class="verify-name"
-                        [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-                        >Wikidata</span
-                      >
-                      <span
-                        class="verify-id"
-                        [ngStyle]="{ color: isDark ? '#FFCD29' : '#0082CC' }"
-                        >Q137454477</span
-                      >
-                    </div>
-                    <div class="verify-row">
-                      <span
-                        class="verify-name"
-                        [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-                        >Bowker Bookwire</span
-                      >
-                      <span
-                        class="verify-id"
-                        [ngStyle]="{ color: isDark ? '#FFCD29' : '#0082CC' }"
-                        >40225801</span
-                      >
-                    </div>
-                    <div class="verify-row">
-                      <span
-                        class="verify-name"
-                        [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-                        >Amazon Author</span
-                      >
-                      <span
-                        class="verify-id"
-                        [ngStyle]="{ color: isDark ? '#FFCD29' : '#0082CC' }"
-                        >B0GBRFY457</span
-                      >
-                    </div>
-                  </div>
-
-                  <!-- ИИ -->
-                  <h2
-                    class="section-title"
-                    [ngStyle]="{ color: isDark ? '#FFCD29' : '#0082CC' }"
-                  >
-                    llms.txt
-                  </h2>
-
-                  <div class="ai-block">
-                    <span
-                      class="ai-label"
-                      [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-                      >Машиночитаемая карта контента</span
-                    >
-                    <code
-                      [ngStyle]="{
-                        color: isDark ? '#FFCD29' : '#0082CC',
-                        background: isDark
-                          ? 'rgba(255, 255, 255, 0.08)'
-                          : 'rgba(0, 131, 205, 0.08)',
-                      }"
-                      ><a
-                        style="text-decoration: none"
-                        href="https://arapov.trade/llms.txt"
-                        >https://arapov.trade/llms.txt</a
-                      ></code
-                    >
-                  </div>
+                    выложено 78+ видеоуроков по тем же темам: метод Вайкоффа,
+                    объёмный анализ, Smart Money, управление риском и
+                    психология. Удобно смотреть их параллельно с чтением, чтобы
+                    увидеть метод в движении, а не только на словах.
+                  </p>
                 </div>
               </article>
             </main>

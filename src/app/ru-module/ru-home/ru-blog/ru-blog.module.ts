@@ -175,7 +175,7 @@ const routes: Routes = [
           import('./twenty-three-ru-blog/twenty-three-ru-blog.module').then(
             (m) => m.TwentyThreeRuBlogModule,
           ),
-      },
+      }, 
       {
         path: 'flagfigure', //24
         loadChildren: () =>
@@ -585,7 +585,7 @@ const routes: Routes = [
           ),
       },
       {
-        path: 'econimicfactors',
+        path: 'econimicfactors', 
         loadChildren: () =>
           import('../ru-trading/twenty-two-ru-artickle/twenty-two-ru-artickle.module').then(
             (m) => m.TwentyTwoRuArtickleModule,
@@ -830,7 +830,7 @@ const routes: Routes = [
             (m) => m.SeventyRuBlogModule,
           ),
       },
-      {
+      { 
         path: 'newstrading', //71
         loadChildren: () =>
           import('../ru-blog/seventy-one-ru-blog/seventy-one-ru-blog.module').then(
