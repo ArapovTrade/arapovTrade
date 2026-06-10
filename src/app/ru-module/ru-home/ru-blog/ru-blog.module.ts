@@ -133,7 +133,7 @@ const routes: Routes = [
           import('./seventeen-ru-blog/seventeen-ru-blog.module').then(
             (m) => m.SeventeenRuBlogModule,
           ),
-      },
+      }, 
       {
         path: 'volmarketanalisys', //18
         loadChildren: () =>
