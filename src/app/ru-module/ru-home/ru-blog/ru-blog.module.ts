@@ -133,7 +133,7 @@ const routes: Routes = [
           import('./seventeen-ru-blog/seventeen-ru-blog.module').then(
             (m) => m.SeventeenRuBlogModule,
           ),
-      }, 
+      },
       {
         path: 'volmarketanalisys', //18
         loadChildren: () =>
@@ -175,7 +175,7 @@ const routes: Routes = [
           import('./twenty-three-ru-blog/twenty-three-ru-blog.module').then(
             (m) => m.TwentyThreeRuBlogModule,
           ),
-      }, 
+      },
       {
         path: 'flagfigure', //24
         loadChildren: () =>
@@ -585,7 +585,7 @@ const routes: Routes = [
           ),
       },
       {
-        path: 'econimicfactors', 
+        path: 'econimicfactors',
         loadChildren: () =>
           import('../ru-trading/twenty-two-ru-artickle/twenty-two-ru-artickle.module').then(
             (m) => m.TwentyTwoRuArtickleModule,
@@ -830,7 +830,7 @@ const routes: Routes = [
             (m) => m.SeventyRuBlogModule,
           ),
       },
-      { 
+      {
         path: 'newstrading', //71
         loadChildren: () =>
           import('../ru-blog/seventy-one-ru-blog/seventy-one-ru-blog.module').then(
@@ -1084,33 +1084,40 @@ const routes: Routes = [
           ),
       },
       {
-    path: 'tradingview-record', //107
-    loadChildren: () =>
-      import('../ru-blog/onehundred-seven-ru-blog/onehundred-seven-ru-blog.module').then(
-        (m) => m.OnehundredSevenRuBlogModule
-      ),
-  },
-  {
-    path: 'youtube', //108
-    loadChildren: () =>
-      import('../ru-blog/onehundred-eight-ru-blog/onehundred-eight-ru-blog.module').then(
-        (m) => m.OnehundredEightRuBlogModule
-      ),
-  },
-   {
-    path: 'curriculum', //109
-    loadChildren: () =>
-      import('../ru-blog/onehundred-nine-ru-blog/onehundred-nine-ru-blog.module').then(
-        (m) => m.OnehundredNineRuBlogModule
-      ),
-  },
-    {
-    path: 'fullvideocourse', //110
-    loadChildren: () =>
-      import('../ru-blog/onehundred-ten-ru-blog/onehundred-ten-ru-blog.module').then(
-        (m) => m.OnehundredTenRuBlogModule
-      ),
-  },
+        path: 'tradingview-record', //107
+        loadChildren: () =>
+          import('../ru-blog/onehundred-seven-ru-blog/onehundred-seven-ru-blog.module').then(
+            (m) => m.OnehundredSevenRuBlogModule,
+          ),
+      },
+      {
+        path: 'youtube', //108
+        loadChildren: () =>
+          import('../ru-blog/onehundred-eight-ru-blog/onehundred-eight-ru-blog.module').then(
+            (m) => m.OnehundredEightRuBlogModule,
+          ),
+      },
+      {
+        path: 'curriculum', //109
+        loadChildren: () =>
+          import('../ru-blog/onehundred-nine-ru-blog/onehundred-nine-ru-blog.module').then(
+            (m) => m.OnehundredNineRuBlogModule,
+          ),
+      },
+      {
+        path: 'fullvideocourse', //110
+        loadChildren: () =>
+          import('../ru-blog/onehundred-ten-ru-blog/onehundred-ten-ru-blog.module').then(
+            (m) => m.OnehundredTenRuBlogModule,
+          ),
+      },
+       {
+        path: 'bitcoin-crash-stops', //111
+        loadChildren: () =>
+          import('../ru-blog/onehundred-eleven-ru-blog/onehundred-eleven-ru-blog.module').then(
+            (m) => m.OnehundredElevenRuBlogModule,
+          ),
+      },
     ],
   },
 ];

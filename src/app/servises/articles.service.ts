@@ -106,6 +106,26 @@ export class ArticlesService {
 
   ukrArtickles: artickle[] = [
     {
+      titleUkr: 'Чому на обвалі біткоїна вибиває стопи',
+      linkUkr: 'bitcoin-crash-stops',
+      titleRus: 'Почему на обвале биткоина выбивает стопы',
+      titleEn: 'Why a Bitcoin Crash Hunts Your Stops',
+      descrUkr:
+        'Каскадні ліквідації, маржин-кол і зняття ліквідності на обвалі біткоїна: чому вибиває стопи і зливаються депозити, кого вилітає першим і як захистити рахунок.',
+      descrEn:
+        'Cascading liquidations, margin calls and liquidity grabs in a bitcoin crash: why your stops get hit and deposits blow up, who gets wiped first, and how to protect your account.',
+      descrRus:
+        'Каскадные ликвидации, маржин-колл и снятие ликвидности на обвале биткоина: почему выбивает стопы и сливаются депозиты, кого вылетает первым и как защитить счёт.',
+      realTitleRus: 'Почему на обвале биткоина выбивает стопы | Arapov.trade',
+      realTitleUkr: 'Чому на обвалі біткоїна вибиває стопи | Arapov.trade',
+      realTitleEn: 'Why a Bitcoin Crash Hunts Your Stops | Arapov.trade',
+      imgUkr: '/assets/img/content/bitcoin-crash-stops.png',
+      groupsRus: ['Криптовалюта'],
+      groupsUkr: ['Криптовалюта'],
+      groupsEng: ['Cryptocurrency'],
+      id: 48,
+    },
+    {
       titleUkr: 'Як стати трейдером самостійно?',
       linkUkr: 'selfstudying',
       titleRus: 'Самостоятельное обучение трейдингу',

@@ -108,7 +108,56 @@
   <!-- ============================================ -->
   <!-- СТАТЬИ / ARTICLES (A-Z) -->
   <!-- ============================================ -->
-
+ <url>
+    <loc>https://arapov.trade/ru/freestudying/capitalmanagement</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://arapov.trade/uk/freestudying/capitalmanagement"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://arapov.trade/ru/freestudying/capitalmanagement"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arapov.trade/en/freestudying/capitalmanagement"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arapov.trade/uk/freestudying/capitalmanagement"/>
+  </url>
+  <url>
+    <loc>https://arapov.trade/en/freestudying/capitalmanagement</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://arapov.trade/uk/freestudying/capitalmanagement"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://arapov.trade/ru/freestudying/capitalmanagement"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arapov.trade/en/freestudying/capitalmanagement"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arapov.trade/uk/freestudying/capitalmanagement"/>
+  </url>
+  <url>
+    <loc>https://arapov.trade/uk/freestudying/bitcoin-crash-stops</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://arapov.trade/uk/freestudying/bitcoin-crash-stops"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://arapov.trade/ru/freestudying/bitcoin-crash-stops"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arapov.trade/en/freestudying/bitcoin-crash-stops"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arapov.trade/uk/freestudying/bitcoin-crash-stops"/>
+  </url>
+  <url>
+    <loc>https://arapov.trade/ru/freestudying/bitcoin-crash-stops</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://arapov.trade/uk/freestudying/bitcoin-crash-stops"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://arapov.trade/ru/freestudying/bitcoin-crash-stops"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arapov.trade/en/freestudying/bitcoin-crash-stops"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arapov.trade/uk/freestudying/bitcoin-crash-stops"/>
+  </url>
+  <url>
+    <loc>https://arapov.trade/en/freestudying/bitcoin-crash-stops</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://arapov.trade/uk/freestudying/bitcoin-crash-stops"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://arapov.trade/ru/freestudying/bitcoin-crash-stops"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arapov.trade/en/freestudying/bitcoin-crash-stops"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arapov.trade/uk/freestudying/bitcoin-crash-stops"/>
+  </url>
   <url>
     <loc>https://arapov.trade/uk/freestudying/adviceforbeginners</loc>
     <lastmod>2026-04-15</lastmod>

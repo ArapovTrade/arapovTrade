@@ -1104,6 +1104,13 @@ const routes: Routes = [
         (m) => m.OnehundredTenUkBlogModule
       ),
   },
+  {
+    path: 'bitcoin-crash-stops', //111
+    loadChildren: () =>
+      import('../ukblog/onehundred-eleven-uk-blog/onehundred-eleven-uk-blog.module').then(
+        (m) => m.OnehundredElevenUkBlogModule
+      ),
+  },
 
     ]
    },
