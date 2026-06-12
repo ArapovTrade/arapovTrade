@@ -58,6 +58,16 @@ dropdownOpen = false;
 
 
   ngAfterViewInit() {
+
+    setTimeout(() => {
+      try {
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
+      } catch (e) {
+        console.error('adsbygoogle error', e);
+      }
+    }, 300);
+
+
   setTimeout(() => {
     if (typeof AOS !== 'undefined') {
       AOS.init({

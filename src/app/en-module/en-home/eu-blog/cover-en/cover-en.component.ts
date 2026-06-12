@@ -16,12 +16,15 @@ import { MetaservService } from '../../../../servises/metaserv.service';
  import { Subscription } from 'rxjs';
 declare var AOS: any;
 import { ThemeservService } from '../../../../servises/themeserv.service';
+declare global {
+  interface Window { adsbygoogle: any[]; }
+}
 @Component({
   selector: 'app-cover-en',
   templateUrl: './cover-en.component.html',
   styleUrl: './cover-en.component.scss'
 })
-export class CoverEnComponent {
+export class CoverEnComponent implements   AfterViewInit  {
 
 dropdownOpen = false;
   checkLang!: number;
@@ -57,6 +60,15 @@ dropdownOpen = false;
      
   }
    ngAfterViewInit() {
+setTimeout(() => {
+      try {
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
+      } catch (e) {
+        console.error('adsbygoogle error', e);
+      }
+    }, 300);
+
+
   setTimeout(() => {
     if (typeof AOS !== 'undefined') {
       AOS.init({
