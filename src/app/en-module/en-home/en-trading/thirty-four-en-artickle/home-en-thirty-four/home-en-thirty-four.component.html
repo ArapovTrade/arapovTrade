@@ -6,427 +6,83 @@
           <div class="m-right hero-section"></div>
           <div class="free-courses_main-container">
             <main lang="en">
-              <article>
-                <h1>Stop-Limit Order: The Best of Both Worlds</h1>
+              <header>
+  <h1>What Is a Stop-Limit Order?</h1>
+</header>
+<article>
+  <p>A stop-limit order is an order built from two prices: the stop price switches the order on, and the limit price sets the level beyond which you will not trade, whether dearer or cheaper. It gives control over the fill price, but there is a cost: in a sharp move it may not trigger at all. So for a protective stop I usually prefer guaranteed execution, and keep the stop-limit for calm situations where the exact price matters.</p>
 
-                <p>
-                  Every trading decision involves tradeoffs. Want guaranteed
-                  execution? Market orders deliver it, but at unpredictable
-                  prices. Want price control? Limit orders provide it, but may
-                  never fill. The <dfn>stop-limit order</dfn> attempts to
-                  capture the best of both: automatic activation under specific
-                  conditions plus strict price boundaries for execution.
-                </p>
+  <p>A stop-limit order sounds complicated, but the idea is simple, and it is worth understanding for anyone who sets stops. And stops, in my firm conviction, should always be set. I have been trading since 2013 and never tire of repeating it: trading without a stop is a losing game in advance. The only question is which order closes the risk. This is where the stop-limit has both a strength and an important trap. Let's go through what it is, how it differs from a plain stop-loss, and when to choose which.</p>
 
-                <p>
-                  This hybrid instrument consists of two components: the
-                  <dfn>stop price</dfn>, which triggers activation, and the
-                  <dfn>limit price</dfn>, which defines the execution boundary.
-                  When the market reaches your stop level, the order awakens and
-                  transforms into a regular limit order waiting in the
-                  <dfn>order book</dfn>.
-                </p>
+  <p><strong><i>In this article we'll cover:</i></strong></p>
+  <ul>
+    <li>a stop-limit is an order of two prices: the stop price switches it on, the limit price caps the fill price;</li>
+    <li>its plus is price control, its minus is that in a sharp move it may not fill;</li>
+    <li>a stop-market, by contrast, always fills, but at whatever price is available, sometimes with slippage;</li>
+    <li>for a protective stop the guarantee of exit matters more, so the stop-limit does not fit everywhere.</li>
+  </ul>
 
-                <img
-                  src="/assets/img/content/stoplimitorder.png"
-                  alt="How stop-limit orders work"
-                  loading="lazy"
-                />
+  <p>Let's start with how this two-step order is built.</p>
 
-                <h2>Two-Stage Execution Logic</h2>
+  <h2>What Is a Stop-Limit Order?</h2>
+  <p><dfn itemscope itemtype="https://schema.org/DefinedTerm"><span itemprop="name">Stop-limit order</span></dfn> is a pending order made of two set prices: a stop price and a limit price. It works in two steps. First price reaches the stop price, which switches the order on. Then it places not a market order but a limit order at your limit price, and a limit order fills only at the stated price or better.</p>
+  <p>Here is an example. Suppose you hold an asset and want to exit if it falls to 100. You set the stop price at 100 and the limit price at, say, 99. As soon as price touches 100, a sell order appears at 99 or better. But if the market shoots past 99 too fast, the order simply hangs and does not fill. That is its key feature. It is one of the pending order types, and the full set of <a class="linkrefinto" href="https://arapov.trade/en/freestudying/ordertypes">trading orders</a> is covered separately.</p>
 
-                <p>
-                  Stage one is waiting. The order sits dormant, monitoring
-                  market price. It has no presence in the order book and remains
-                  invisible to other participants. Your intentions stay hidden
-                  until the trigger fires — important for large positions where
-                  showing your hand early invites front-running.
-                </p>
+  <div class="flex">
+    <img class="pictureImg" loading="lazy" src="/assets/img/content/stoplimitorder.png" alt="How a stop-limit order works" />
+  </div>
 
-                <p>
-                  Stage two is activation and execution. The moment price
-                  touches your stop level, the order instantly appears in the
-                  book as a limit order. Now it competes with other orders for
-                  execution. The trade only happens if a counterparty exists
-                  within your limit price range.
-                </p>
+  <h2>Stop-Loss vs Stop-Limit: The Key Difference</h2>
+  <p>It is important not to confuse the two, because they behave differently. A plain stop-loss, also called a stop-market, turns into a market order when the stop price is hit. It fills no matter what, but at whatever price the market shows at that moment. In a calm market that is almost the same price; in a sharp move there can be slippage, and you exit a little worse than planned. A stop-limit, when the stop price is hit, places a limit order. It controls price, so you will not sell below your limit, but the cost of that control is the risk of not filling at all if the market jumps past your price.</p>
+  <p>Put very simply: a stop-market guarantees the exit but not the price, while a stop-limit guarantees the price but not the exit. What a <a class="linkrefinto" href="https://arapov.trade/en/freestudying/stoploss">What Is a Stop-Loss and How to Use It</a> is in general is covered separately, and for an instant fill at market there is the plain <a class="linkrefinto" href="https://arapov.trade/en/freestudying/marketorder">what is a market order</a>.</p>
 
-                <p>
-                  The critical difference from stop-loss: if the market moves
-                  too fast and gaps through your limit level, the order remains
-                  unfilled. Stop-loss orders have no such problem — they execute
-                  at any available price. But this is precisely the stop-limit
-                  advantage: you won't sell your asset for pennies during a
-                  panic crash.
-                </p>
+  <div class="flex">
+    <img class="pictureImg" loading="lazy" src="/assets/img/content/stoplimitorder2.webp" alt="Comparison of order types in trading" />
+  </div>
 
-                <h2>Comparing Order Types</h2>
+  <h2>When a Stop-Limit Beats a Stop-Market</h2>
+  <p>Now the practice: when to choose which. The stop-limit fits where price is critical for you and there is no rush. For example, you want to lock in profit on a calm market and are not willing to give it away to slippage, or you are entering on a retest of a level and want to get in exactly at your price. Here the control over price is justified.</p>
+  <p>A small practical point on the setup. The whole thing turns on the gap between the stop price and the limit price. The closer the limit price is to the stop price, the more precise the fill but the higher the risk it does not trigger at all. The further you move the limit, the more reliable the fill but the larger the possible slippage. Everyone tunes this gap to the volatility of the specific instrument: smaller on a calm asset, larger on a sharp one, and it is worth testing on a demo before it matters with real money.</p>
 
-                <p>
-                  The
-                  <dfn
-                    ><a
-                      class="linkrefinto"
-                      href="https://arapov.trade/en/freestudying/marketorder"
-                      >market order</a
-                    >
-                  </dfn>
-                  is simplest and fastest. Click the button — trade executed.
-                  But on volatile markets or during low <dfn>liquidity</dfn>,
-                  you may receive a price far worse than expected.
-                  <dfn>Slippage</dfn> of several percent is routine for
-                  cryptocurrencies during sharp moves.
-                </p>
+  <h2>My Take: For a Protective Stop, Guarantee the Exit</h2>
+  <p>For the protective stop that saves a deposit, I almost always choose guaranteed execution, meaning a stop-market. The logic is simple: a stop exists to get you out of a loss, not to get you out prettily. If a stop-limit fails to trigger in a sharp collapse, you stay in a falling position, and that is exactly the trading-without-a-stop we work so hard to avoid. This is not advice for you personally, it is my position. The most common mistake sits right here: putting a stop-limit on protection and then failing to exit at the critical moment. The honest limitation is that a stop-market can fill worse than you hoped in a fast market, so the trade-off I accept is a little slippage on the way out in exchange for the certainty of being out at all.</p>
 
-                <p>
-                  The <dfn>limit order</dfn> guarantees price but not execution.
-                  You place a buy order at $100, and it waits in the book until
-                  someone agrees to sell at that price. If the market moves up,
-                  you simply miss the entry.
-                </p>
-                <p>
-                  21:37A regular
-                  <a
-                    class="linkrefinto"
-                    href="https://arapov.trade/en/freestudying/stoporder"
-                    >stop order</a
-                  >
-                  is triggered when the trigger price is reached and immediately
-                  becomes a market order. It guarantees execution, but does not
-                  guarantee the price — in a fast-moving market, you may end up
-                  with a significantly worse price.
-                </p>
-                <p>
-                  Stop-loss activates automatically and executes as a market
-                  order. Execution is guaranteed, price control is not.
-                  Stop-limit adds price control at the cost of execution
-                  guarantee. To understand this topic more deeply, I recommend
-                  studying
-                  <a
-                    class="linkrefinto"
-                    href="https://arapov.trade/en/freestudying/ordertypes"
-                    >order types</a
-                  >.
-                </p>
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <mat-accordion>
+      <mat-expansion-panel class="highlight-box owl_link-box" [expanded]="true">
+        <mat-expansion-panel-header>
+          <mat-panel-title>What is a stop-limit order in simple terms?</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>It is a pending order of two prices. The stop price switches the order on, and the limit price sets the price, or better, that you will accept. It gives control over price but may not fill in a sharp move.</p>
+      </mat-expansion-panel>
+      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+        <mat-expansion-panel-header>
+          <mat-panel-title>How is a stop-limit different from a stop-loss?</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>A stop-loss, or stop-market, becomes a market order when triggered and always fills, but at the available price. A stop-limit places a limit order: it controls price but may not trigger. In short, one guarantees the exit, the other the price.</p>
+      </mat-expansion-panel>
+      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+        <mat-expansion-panel-header>
+          <mat-panel-title>Which is better for a protective stop?</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>In my experience, a stop-market. A protective stop is meant to get you out of a loss for certain. If a stop-limit fails to fill in a sharp move, you stay in a falling position, which is the most dangerous outcome.</p>
+      </mat-expansion-panel>
+      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+        <mat-expansion-panel-header>
+          <mat-panel-title>When should you use a stop-limit?</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>When the exact price matters and there is no rush: locking in profit on a calm market, or entering precisely at your level. In those situations the control over price is justified and the risk of no fill is small.</p>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </section>
 
-                <img
-                  src="/assets/img/content/stoplimitorder2.webp"
-                  alt="Comparing order types in trading"
-                  loading="lazy"
-                />
+  <section>
+    <h2>About the Author</h2>
+    <p>Author: Igor Arapov — independent researcher in the psychology of investment decisions and behavioral finance, practising trader since 2013, founder of arapov.trade, author of a trading book series (<a class="linkrefinto" href="https://openlibrary.org/authors/OL16073686A/Igor_Arapov">Open Library</a>), (<a class="linkrefinto" href="https://orcid.org/0009-0003-0430-778X">ORCID: 0009-0003-0430-778X</a>).</p>
+  </section>
+</article>
 
-                <h2>Real-World Use Cases</h2>
-
-                <p>
-                  <dfn>Breakout</dfn> trading is the ideal application. You see
-                  Bitcoin consolidating below $50,000 for a week. You expect an
-                  upward breakout but don't want to buy on a false move. Set
-                  stop price at $50,200, limit at $50,800. If the breakout is
-                  genuine and gradual, you enter the position. If price jumps to
-                  $52,000 on news, you stay out.
-                </p>
-
-                <p>
-                  Profit protection with control. Bought Ethereum at $2,800,
-                  price rose to $3,200. You want to protect gains but refuse to
-                  sell in a panic. Stop price at $3,100, limit at $3,050. On a
-                  gradual pullback, you exit with profit. On a sharp crash, you
-                  remain in position hoping for recovery.
-                </p>
-
-                <p>
-                  Trading illiquid altcoins practically requires stop-limits. On
-                  a coin with $100,000 daily volume, a regular
-                  <a
-                    class="linkrefinto"
-                    href="https://arapov.trade/en/freestudying/stoploss"
-                    >stop-loss</a
-                  >
-                  might execute 10-15% worse than your target price simply
-                  because the order book lacks sufficient depth. Stop-limit
-                  protects against this scenario, though it risks non-execution.
-                </p>
-
-                <h2>Configuration Guidelines</h2>
-
-                <p>
-                  Stop price selection follows your trading logic. For
-                  protective orders, place it beyond key support levels where
-                  your thesis becomes invalid. For breakout entries, position it
-                  slightly past the level to filter noise and false moves.
-                </p>
-
-                <p>
-                  The gap between stop price and limit price depends on asset
-                  volatility. Bitcoin and Ethereum — 0.5-1% buffer. Less liquid
-                  altcoins — 1-2%. Large-cap stocks — 0.2-0.5%. Too narrow a
-                  range means high non-execution probability. Too wide defeats
-                  the purpose of the limit.
-                </p>
-
-                <p>
-                  Before placing orders, analyze order book depth. If your
-                  position size exceeds available liquidity in your price range,
-                  you risk partial fills or complete absence of counterparties.
-                </p>
-
-                <img
-                  src="/assets/img/content/stoplimitorder3.webp"
-                  alt="Stop-limit order configuration"
-                  loading="lazy"
-                />
-
-                <h2>Common Mistakes</h2>
-
-                <p>
-                  Excessively tight range is the number one cause of unfilled
-                  orders. Traders set a few cents difference and wonder why the
-                  order didn't execute during a <dfn>gap</dfn>. Volatility is
-                  real — account for it.
-                </p>
-
-                <p>
-                  Placing orders before major news. Fed decisions, earnings
-                  reports, regulatory announcements — all can trigger sharp
-                  moves. Your entire range gets gapped through in milliseconds.
-                  Either remove orders before events or widen the range
-                  significantly.
-                </p>
-
-                <p>
-                  Ignoring current liquidity conditions. What works during
-                  active hours fails during quiet periods. Night sessions,
-                  holidays, low-activity periods — liquidity drops, and your
-                  order may hang indefinitely.
-                </p>
-
-                <p>
-                  Confusing parameters. For buy orders, limit price must exceed
-                  stop price. For sell orders, limit must be below stop. Getting
-                  this backward creates an order that can never execute.
-                </p>
-
-                <h2>Stop-Limit vs Stop-Loss: Which to Choose</h2>
-
-                <p>
-                  Stop-limit when price control matters more than execution
-                  guarantee. Large positions where slippage materially affects
-                  results. Illiquid assets where market orders execute
-                  catastrophically. Situations where staying in position beats
-                  exiting at an unacceptable price.
-                </p>
-
-                <p>
-                  Stop-loss when guaranteed exit is the priority. Protection
-                  against major losses on liquid assets where slippage is
-                  minimal. Situations where any exit beats holding.
-                </p>
-
-                <p>
-                  Combined approach offers the best of both. Protect part of
-                  your position with stop-loss for guaranteed exit, part with
-                  stop-limit for price optimization. You get both protection and
-                  control.
-                </p>
-
-                <p>
-                  The stop-limit order is a tool for traders who understand
-                  market mechanics and accept non-execution risk in exchange for
-                  precision. Used correctly, it becomes a powerful element of
-                  any trading system. To consolidate the material, also study
-                  <a
-                    class="linkrefinto"
-                    href="https://arapov.trade/en/freestudying/tradingsystem"
-                    >trading system</a
-                  >
-                  in trading.
-                </p>
-
-                <h2>Market-Specific Considerations</h2>
-
-                <p>
-                  Cryptocurrency markets operate around the clock with extreme
-                  volatility. Stop-limits prove particularly valuable here due
-                  to frequent sharp moves. On exchanges like Binance or OKX,
-                  traders set wider ranges — 1-2% for major coins, 2-3% for
-                  altcoins. Remember that crypto can move 5-10% in minutes
-                  during news events or whale manipulation.
-                </p>
-
-                <p>
-                  Forex markets offer higher liquidity for major pairs. EUR/USD
-                  and GBP/USD typically have tight spreads, and stop-limits with
-                  15-30 pip ranges work well. The exception: economic data
-                  releases when volatility spikes dramatically. Experienced
-                  forex traders either remove orders before NFP and central bank
-                  decisions or widen ranges significantly.
-                </p>
-
-                <p>
-                  Stock markets introduce trading sessions and opening gaps. A
-                  stock might close at $100 and open the next day at $95 after
-                  negative after-hours news. Stop-limits won't protect against
-                  such gaps — they simply remain in the order book. For gap
-                  protection, combine stop-limits with options or diversify
-                  positions across multiple assets.
-                </p>
-
-                <h2>The Psychology Factor</h2>
-
-                <p>
-                  One advantage of stop-limit orders is reduced emotional
-                  burden. When exit parameters are defined in advance, you don't
-                  make decisions under stress during sharp market moves. This
-                  matters especially for beginners prone to impulsive actions.
-                </p>
-
-                <p>
-                  However, there's a flip side. When a stop-limit fails to
-                  execute due to rapid movement, the trader faces a decision
-                  under pressure: close manually at current price or wait for a
-                  return. This creates new stress and can lead to errors. Having
-                  a contingency plan for non-execution scenarios is essential.
-                </p>
-
-                <p>
-                  Discipline in using stop-limits also means not adjusting
-                  parameters based on emotions. If you set the stop price at
-                  $3,000, don't move it to $2,950 as price approaches — this
-                  violates your trading system and transforms controlled risk
-                  into uncontrolled.
-                </p>
-
-                <h2>Practical Recommendations</h2>
-
-                <p>
-                  Start with demo account testing or minimal amounts. Understand
-                  how the mechanism works on your specific exchange — different
-                  platforms have different interfaces and order processing
-                  peculiarities. Binance, Bybit, and Kraken may interpret stop
-                  price differently during high volatility conditions.
-                </p>
-
-                <p>
-                  Keep a journal of your stop-limit orders. Record which
-                  executed, which didn't, and why. Over time you'll see patterns
-                  and can optimize settings for specific assets and market
-                  conditions.
-                </p>
-
-                <p>
-                  Don't forget about fees. On some exchanges, limit orders
-                  (maker) carry lower fees than market orders (taker). Since an
-                  activated stop-limit becomes a limit order, you may save on
-                  fees compared to regular stop-loss that becomes a market
-                  order.
-                </p>
-
-                <p>
-                  Consider time-based adjustments. Volatility typically
-                  increases during session overlaps (London-New York for forex,
-                  US opening for stocks) and decreases during Asian hours for
-                  Western assets. Adjust your stop-limit ranges accordingly —
-                  tighter during calm periods, wider during active ones.
-                </p>
-
-                <section>
-                  <h2>Frequently Asked Questions</h2>
-
-                  <mat-accordion>
-                    <mat-expansion-panel
-                      class="highlight-box owl_link-box"
-                      [expanded]="true"
-                    >
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          How does a stop-limit differ from a stop-loss?
-                        </mat-panel-title>
-                      </mat-expansion-panel-header>
-                      <p>
-                        Stop-loss becomes a market order and executes at any
-                        price. Stop-limit becomes a limit order — you control
-                        price but lose execution guarantee.
-                      </p>
-                    </mat-expansion-panel>
-                    <mat-expansion-panel
-                      class="highlight-box owl_link-box"
-                      (opened)="panelOpenState.set(true)"
-                      (closed)="panelOpenState.set(false)"
-                    >
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          What gap should I set between prices?
-                        </mat-panel-title>
-                      </mat-expansion-panel-header>
-                      <p>
-                        Cryptocurrencies — 0.5–1.5%, stocks — 0.2–0.5%, forex —
-                        10–30 pips. Increase during high volatility.
-                      </p>
-                    </mat-expansion-panel>
-                    <mat-expansion-panel
-                      class="highlight-box owl_link-box"
-                      (opened)="panelOpenState.set(true)"
-                      (closed)="panelOpenState.set(false)"
-                    >
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          Why might the order not execute?</mat-panel-title
-                        >
-                      </mat-expansion-panel-header>
-                      <p>
-                        Price gaps through your limit too fast or insufficient
-                        liquidity exists in the range.
-                      </p>
-                    </mat-expansion-panel>
-
-                    <mat-expansion-panel
-                      class="highlight-box owl_link-box"
-                      (opened)="panelOpenState.set(true)"
-                      (closed)="panelOpenState.set(false)"
-                    >
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          When should I choose stop-limit?</mat-panel-title
-                        >
-                      </mat-expansion-panel-header>
-                      <p>
-                        When working with illiquid assets or when exact
-                        execution price is critical.
-                      </p> </mat-expansion-panel
-                    ><mat-expansion-panel
-                      class="highlight-box owl_link-box"
-                      (opened)="panelOpenState.set(true)"
-                      (closed)="panelOpenState.set(false)"
-                    >
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          Can I use stop-limit for entries?</mat-panel-title
-                        >
-                      </mat-expansion-panel-header>
-                      <p>
-                        Yes, it's common practice for breakout trading
-                        strategies.
-                      </p>
-                    </mat-expansion-panel>
-                  </mat-accordion>
-                </section>
-                <section>
-                  <h2>About the Author</h2>
-                  <p>
-                        Author: Igor Arapov — independent researcher in trading psychology and behavioral finance, practising trader since 2013, founder of arapov.trade, author of a trading book series (<a
-                          class="linkrefinto"
-                          href="https://openlibrary.org/authors/OL16073686A/Igor_Arapov"
-                          >Open Library</a
-                        >
-                        ),   (<a
-                          class="linkrefinto"
-                          href="https://orcid.org/0009-0003-0430-778X"
-                          >ORCID: 0009-0003-0430-778X</a
-                        >
-                        ).
-                      </p>
-                </section>
-              </article>
               <div
                 class=""
                 [ngClass]="{

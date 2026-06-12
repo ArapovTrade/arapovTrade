@@ -819,7 +819,7 @@ const routes: Routes = [
           import('../eu-blog/sixty-nine-en-blog/sixty-nine-en-blog.module').then(
             (m) => m.SixtyNineEnBlogModule,
           ),
-      },
+      }, 
       {
         path: 'wyckoffsvolumeconcept', //70
         loadChildren: () =>

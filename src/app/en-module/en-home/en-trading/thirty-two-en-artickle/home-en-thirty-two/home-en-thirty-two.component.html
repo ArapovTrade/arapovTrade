@@ -7,326 +7,78 @@
           <div class="free-courses_main-container">
             <main lang="en">
               <header>
-                <h1>Stop Order: Your First Line of Defense in Trading</h1>
-              </header>
+  <h1>What Is a Stop Order?</h1>
+</header>
+<article>
+  <p>A stop order is a pending order that triggers when price reaches a level you chose in advance, and at that moment it turns into a market order. It is used both to enter on a breakout and to protect a position. A Buy Stop is placed above the current price, a Sell Stop below it.</p>
 
-              <article>
-                <p>
-                  Markets move against traders constantly. Even carefully
-                  analyzed positions can turn into losses due to unexpected
-                  news, institutional manipulation, or randomness. The
-                  <dfn>stop order</dfn> — a trading instruction that executes
-                  when price reaches a specified level — has become
-                  indispensable for serious traders. To understand this topic
-                  more deeply, I recommend studying
-                  <a
-                    class="linkrefinto"
-                    href="https://arapov.trade/en/freestudying/ordertypes"
-                    >order types</a
-                  >.
-                </p>
+  <p>The stop order is one of the basic tools, and there is nothing to do on the market without it. Many people confuse it with a stop-loss, even though a stop-loss is only one way to use it. I treat stop orders with great respect, because it is precisely the clusters of other people's stops that often move price, and understanding that matters. Let me lay it all out clearly.</p>
 
-                <p>
-                  The concept is simple: define a trigger price, and when the
-                  market reaches it, your order activates automatically. This
-                  limits losses to predetermined amounts, enables breakout
-                  entries, or locks profits without constant monitoring.
-                </p>
+  <p><strong><i>In this article we'll cover:</i></strong></p>
+  <ul>
+    <li>a stop order triggers at a set level and becomes a market order;</li>
+    <li>a Buy Stop is placed above price, a Sell Stop below it;</li>
+    <li>it is used both to enter on a breakout and to protect a position as a stop-loss;</li>
+    <li>clusters of other traders' stops are liquidity that big capital hunts.</li>
+  </ul>
 
-                <img
-                  src="/assets/img/content/stoporder.png"
-                  alt="How stop orders work on a price chart"
-                  loading="lazy"
-                />
+  <p>Let's start with how this order is built.</p>
 
-                <h2>Understanding Different Stop Order Types</h2>
+  <h2>What Is a Stop Order?</h2>
+  <p><dfn itemscope itemtype="https://schema.org/DefinedTerm"><span itemprop="name">Stop order</span></dfn> is a pending order with a set stop price that sleeps until it triggers, and when price touches that level it turns into a market order and fills at the nearest available price.</p>
+  <p>It is important to separate two things here: activation and execution. The stop price only launches the order; the price it actually fills at depends on the market at that moment. On a calm market the difference is tiny, but in a fast move or on a gap there can be slippage, a fill worse than expected. If price control matters more to you, there is the <a class="linkrefinto" href="https://arapov.trade/en/freestudying/stoplimitorder">what is stop limit</a>, which becomes a limit rather than a market order, though then it may not fill at all. To avoid confusion, hold a simple distinction in mind: a market order fills at once at the current price, a limit order waits for a chosen price, and a stop order just hangs and does nothing until its level, like a trigger. That makes it useful when you want to react to a future move that does not exist yet without sitting at the screen to catch it by hand.</p>
 
-                <p>
-                  The <dfn>stop loss</dfn> is the most common protective tool.
-                  When triggered, it converts into a market order and executes
-                  at the current price. This guarantees your exit but introduces
-                  possible <dfn>slippage</dfn> — the difference between intended
-                  and actual execution price during volatile conditions.
-                </p>
+  <div class="flex">
+    <img class="pictureImg" loading="lazy" src="/assets/img/content/stoporder.png" alt="How a stop order works on the price chart" />
+  </div>
 
-                <p>
-                  The <dfn>stop limit</dfn> addresses slippage differently. When
-                  triggered, it becomes a limit order with a specified price
-                  rather than a market order. You gain price control but
-                  sacrifice execution guarantee — if the market gaps through
-                  your limit, the order may remain unfilled.
-                </p>
+  <h2>Buy Stop and Sell Stop: How They Work</h2>
+  <p>Stop orders come in two kinds. A Buy Stop is a buy order placed above the current price, triggering when price rises to it. It is used to enter a long on a breakout of resistance upward, or to close a short. A Sell Stop is the reverse, a sell order below the current price that triggers on a fall, used to enter a short on a breakout of support downward, or to protect a long.</p>
+  <p>Here is a simple example. Say price sits at 100 with resistance at 105 above it. You expect an upward breakout and place a Buy Stop just above 105. If price reaches there, the order triggers and you are automatically in the buy, without missing the move. And to cap the loss, below the entry, say at support of 102, you can immediately place a Sell Stop: that is your stop-loss in case the breakout turns out to be false. In that protective role a Sell Stop is usually called a <a class="linkrefinto" href="https://arapov.trade/en/freestudying/stoploss">stop loss</a>, while in the entry role the stop order is the basis of <a class="linkrefinto" href="https://arapov.trade/en/freestudying/levelbreakoutstrategy">Breakout Trading Strategy Explained</a>. The one thing that matters is not to stick the stop right against the obvious level, or ordinary noise will knock it out.</p>
 
-                <p>
-                  The <dfn>trailing stop</dfn> protects profits in trending
-                  markets. It automatically adjusts as price moves favorably,
-                  maintaining a constant distance from the highest (for longs)
-                  or lowest (for shorts) price reached. When price reverses by
-                  the trailing amount, the stop triggers. For more information,
-                  see the article:
-                  <a href="https://arapov.trade/en/freestudying/stoplimitorder"
-                    >Stop-Limit Order</a
-                  >.
-                </p>
+  <h2>Stop Orders as a Trigger for Price Moves</h2>
+  <p>Now the part for which I consider this topic important. Traders' stops gather in the same obvious places: just beyond the last high, under the last low, behind round numbers. That means a crowd of pending orders sits right beyond the level, and a crowd of orders is liquidity, and big capital knows exactly where it lies.</p>
+  <p>Then comes what volume analysis calls a stop run, or false breakout. Price is pushed sharply beyond the level, other people's stops trigger, a large participant fills its own position on those orders, and then the move reverses. Those who were run out are left on the sidelines, watching the move they were just shaken out of. So a stop should be hidden not right against the obvious level but with some margin, so you are not collected along with the crowd.</p>
 
-                <p>
-                  <dfn>Buy stop</dfn> and <dfn>sell stop</dfn> orders serve
-                  entry purposes. A buy stop activates when price rises above a
-                  level for long entries on breakouts. A sell stop triggers when
-                  price falls below a level for short entries.
-                </p>
+  <h2>My Take: Don't Park Your Stop Where the Crowd Does</h2>
+  <p>I have been trading since 2013, and the way I work is to look first at where the crowd's stops are likely sitting, and then to keep my own well away from them. This is not advice for you personally, it is my method: a stop placed right on the obvious level is an invitation to be swept in the stop run before the real move begins. The honest limitation is that a stop with more margin means a slightly larger loss when you are genuinely wrong, so the trade-off I accept is risking a few more points on the stop distance in exchange for not handing my position to the liquidity hunt. The fix is to size the trade around that wider stop, not to tighten the stop to feel comfortable, because the comfortable stop is exactly the one that gets collected.</p>
 
-                <h2>Calculating Optimal Stop Placement</h2>
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <mat-accordion>
+      <mat-expansion-panel class="highlight-box owl_link-box" [expanded]="true">
+        <mat-expansion-panel-header>
+          <mat-panel-title>How is a stop order different from a stop-loss?</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>A stop order is the order type itself, which triggers at a set level. A stop-loss is its use for protection: the same stop order, placed so as to close a losing position. In other words, a stop-loss is a special case of a stop order.</p>
+      </mat-expansion-panel>
+      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+        <mat-expansion-panel-header>
+          <mat-panel-title>Is a Buy Stop placed above or below price?</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>Above the current price. A Buy Stop triggers when price rises to it, and it is used to enter a buy on an upward breakout. A Sell Stop is the reverse, placed below price, triggering on a fall.</p>
+      </mat-expansion-panel>
+      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+        <mat-expansion-panel-header>
+          <mat-panel-title>Can a stop order fill at a different price than set?</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>Yes. After triggering it becomes a market order, so it fills at the nearest available price. In a fast move or on a gap there can be slippage. If you need price control, a stop-limit is used, but it may not fill at all.</p>
+      </mat-expansion-panel>
+      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+        <mat-expansion-panel-header>
+          <mat-panel-title>Why does my stop often get knocked out before a reversal?</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>Most likely it sits right against an obvious level, where the crowd's stops are clustered. Big capital collects that liquidity with a false breakout and then reverses price. Place your stop with some margin beyond the level, not right on it.</p>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </section>
 
-                <p>
-                  Effective stop placement requires balancing competing needs:
-                  giving trades room to breathe while limiting damage. Place
-                  stops too tight, and fluctuations trigger them. Set them too
-                  wide, and losses become unacceptable.
-                </p>
+  <section>
+    <h2>About the Author</h2>
+    <p>Author: Igor Arapov — independent researcher in the psychology of investment decisions and behavioral finance, practising trader since 2013, founder of arapov.trade, author of a trading book series (<a class="linkrefinto" href="https://openlibrary.org/authors/OL16073686A/Igor_Arapov">Open Library</a>), (<a class="linkrefinto" href="https://orcid.org/0009-0003-0430-778X">ORCID: 0009-0003-0430-778X</a>).</p>
+  </section>
+</article>
 
-                <p>
-                  The <dfn>ATR</dfn> (Average True Range) measures typical price
-                  movement. Place
-                  <a
-                    class="linkrefinto"
-                    href="https://arapov.trade/en/freestudying/stoploss"
-                    >stop losses</a
-                  >
-                  1.5 to 2 ATR from entry under normal conditions, 2.5 to 3 ATR
-                  for volatile assets like cryptocurrencies.
-                </p>
-
-                <p>
-                  Technical analysis adds context. Place stops beyond
-                  significant support for longs or resistance for shorts. Add a
-                  buffer — 0.3 to 0.8 percent — to filter false breakouts.
-                </p>
-
-                <img
-                  src="/assets/img/content/stoporder1.webp"
-                  alt="Stop order placement relative to support levels"
-                  loading="lazy"
-                />
-
-                <h2>Market-Specific Considerations</h2>
-
-                <p>
-                  Cryptocurrency markets operate around the clock with extreme
-                  volatility. Standard stop settings from traditional markets
-                  often prove inadequate. Traders prefer stop limits to control
-                  slippage and trailing stops with wider trails — five to eight
-                  percent — to accommodate larger swings.
-                </p>
-
-                <p>
-                  Forex markets offer high liquidity and predictable volatility
-                  patterns, except during economic data releases when prices can
-                  spike hundreds of pips within seconds. Experienced traders
-                  widen stops before major news or temporarily close positions.
-                </p>
-
-                <p>
-                  Stock markets introduce trading hours and opening gaps. A stop
-                  at a specific price may execute significantly worse if the
-                  market gaps through your level. Stop limits offer some
-                  protection, though they risk non-execution on large gaps.
-                </p>
-
-                <h2>Common Mistakes to Avoid</h2>
-
-                <p>
-                  Placing stops at round numbers is a classic error. Levels like
-                  50, 100, or 1000 attract many participants.
-                  <dfn>Stop hunting</dfn> — price briefly piercing obvious
-                  levels, triggering stops, then reversing — occurs regularly.
-                  Offset stops by several ticks from round numbers.
-                </p>
-
-                <p>
-                  Ignoring volatility conditions leads to systematic triggering.
-                  Review parameters regularly against current ATR values. To
-                  apply this knowledge, study the
-                  <a
-                    class="linkrefinto"
-                    href="https://arapov.trade/en/freestudying/tradingsystem"
-                    >trading rules</a
-                  >.
-                </p>
-
-                <p>
-                  Moving stops against your original plan is an emotional trap
-                  that transforms small losses into account-damaging events.
-                </p>
-
-                <img
-                  src="/assets/img/content/stoporder2.webp"
-                  alt="Common stop order placement errors"
-                  loading="lazy"
-                />
-
-                <h2>Advanced Stop Strategies</h2>
-
-                <p>
-                  The <dfn>OCO order</dfn> (One-Cancels-Other) combines stop
-                  loss and take profit into a linked pair. When either executes,
-                  the system cancels the remaining one — valuable for positions
-                  you cannot monitor continuously.
-                </p>
-
-                <p>
-                  Scaling out across multiple levels reduces dependence on
-                  single stop accuracy. For 1000 units, place stops on 400 at a
-                  nearer level and 600 at a more distant one, preserving part of
-                  your position if markets execute false breakouts. This allows
-                  you to preserve part of your position if the market makes a
-                  false
-                  <a
-                    class="linkrefinto"
-                    href="https://arapov.trade/en/freestudying/levelbreakoutstrategy"
-                    >level breakout</a
-                  >
-                  and returns.
-                </p>
-
-                <p>
-                  Time-based stops offer alternative exit triggers. If a
-                  position fails to develop within a specified timeframe,
-                  closing it frees capital for more promising opportunities.
-                </p>
-
-                <h2>Practical Implementation Guidelines</h2>
-
-                <p>
-                  For beginners, risk per trade should not exceed one to two
-                  percent of account equity. This links stop distance and
-                  position size inversely — wider stops require smaller
-                  positions.
-                </p>
-
-                <p>
-                  Backtesting stop configurations on historical data provides
-                  valuable insight. Test strategies across past periods to see
-                  how often stops would have triggered under various settings.
-                </p>
-
-                <p>
-                  Maintain a trade journal noting stop triggers to identify
-                  patterns. This information enables refinement and improved
-                  protection.
-                </p>
-
-                <p>
-                  The stop order is a risk management instrument, not a profit
-                  guarantee. It preserves capital long enough to find an
-                  approach that works. In trading, survival precedes success,
-                  and properly configured stops form that foundation.
-                </p>
-
-                <section>
-                  <h2>Frequently Asked Questions</h2>
-
-                  <mat-accordion>
-                    <mat-expansion-panel
-                      class="highlight-box owl_link-box"
-                      [expanded]="true"
-                    >
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          What is the difference between stop loss and stop
-                          limit?
-                        </mat-panel-title>
-                      </mat-expansion-panel-header>
-                      <p>
-                        Stop loss guarantees execution but not price — it
-                        becomes a market order. Stop limit guarantees price but
-                        not execution — if markets move too fast, the order may
-                        remain unfilled.
-                      </p>
-                    </mat-expansion-panel>
-                    <mat-expansion-panel
-                      class="highlight-box owl_link-box"
-                      (opened)="panelOpenState.set(true)"
-                      (closed)="panelOpenState.set(false)"
-                    >
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          How far should I place my stop loss?
-                        </mat-panel-title>
-                      </mat-expansion-panel-header>
-                      <p>
-                        Use ATR indicator: place stops 1.5–2 ATR from entry for
-                        most assets. For cryptocurrencies, extend to 2–3 ATR.
-                        Consider support and resistance levels.
-                      </p>
-                    </mat-expansion-panel>
-                    <mat-expansion-panel
-                      class="highlight-box owl_link-box"
-                      (opened)="panelOpenState.set(true)"
-                      (closed)="panelOpenState.set(false)"
-                    >
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          Why do my stops keep getting hit?</mat-panel-title
-                        >
-                      </mat-expansion-panel-header>
-                      <p>
-                        Stops placed too close to entry or at obvious levels
-                        trigger frequently. Place stops beyond key support
-                        levels, avoid round prices where clusters form.
-                      </p>
-                    </mat-expansion-panel>
-
-                    <mat-expansion-panel
-                      class="highlight-box owl_link-box"
-                      (opened)="panelOpenState.set(true)"
-                      (closed)="panelOpenState.set(false)"
-                    >
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          When should I use a trailing stop?</mat-panel-title
-                        >
-                      </mat-expansion-panel-header>
-                      <p>
-                        Use trailing stops in clear trending markets. Avoid
-                        during consolidation or before news. Trail distance:
-                        3–5% for stocks, 5–7% for crypto.
-                      </p> </mat-expansion-panel
-                    ><mat-expansion-panel
-                      class="highlight-box owl_link-box"
-                      (opened)="panelOpenState.set(true)"
-                      (closed)="panelOpenState.set(false)"
-                    >
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          Can I trade without stop orders?</mat-panel-title
-                        >
-                      </mat-expansion-panel-header>
-                      <p>
-                        Trading without stops ignores fundamental risk
-                        management. Only long-term investors with multi-year
-                        horizons might use mental stops instead.
-                      </p>
-                    </mat-expansion-panel>
-                  </mat-accordion>
-                </section>
-                <section>
-                  <h2>About the Author</h2>
-                  <p>
-                        Author: Igor Arapov — independent researcher in trading psychology and behavioral finance, practising trader since 2013, founder of arapov.trade, author of a trading book series (<a
-                          class="linkrefinto"
-                          href="https://openlibrary.org/authors/OL16073686A/Igor_Arapov"
-                          >Open Library</a
-                        >
-                        ),   (<a
-                          class="linkrefinto"
-                          href="https://orcid.org/0009-0003-0430-778X"
-                          >ORCID: 0009-0003-0430-778X</a
-                        >
-                        ).
-                      </p>
-                </section>
-              </article>
               <div
                 class=""
                 [ngClass]="{

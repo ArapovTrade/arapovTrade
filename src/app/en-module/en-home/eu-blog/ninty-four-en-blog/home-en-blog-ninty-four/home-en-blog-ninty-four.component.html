@@ -7,513 +7,76 @@
 
           <div class="free-courses_main-container">
             <main lang="en">
-              <article>
-                <header>
-                  <h1 itemprop="headline">
-                    What is Spread in Trading: Types, Calculation and
-                    Optimization Strategies
-                  </h1>
-                </header>
+              <header>
+  <h1>What Is the Spread in Trading?</h1>
+</header>
+<article>
+  <p>Every time you open a trade you pay the spread: the gap between the buy price and the sell price of an asset at the same instant. It is a hidden cost handed to the broker on entry, and beginners tend to underestimate it. Over a run of trades, and especially with frequent trading, it eats a noticeable slice of the result.</p>
 
-                <section>
-                  <h2>Definition of Spread and Its Role in Trading</h2>
-                  <p>
-                    Understanding trading costs is essential for anyone entering
-                    financial markets. Among these costs, the
-                    <dfn>spread</dfn> stands as one of the most fundamental
-                    concepts that directly affects every transaction a trader
-                    makes. Whether you trade currencies, stocks, or
-                    cryptocurrencies, the spread represents an unavoidable cost
-                    that must be factored into your trading strategy and profit
-                    calculations. To understand this topic more deeply, I
-                    recommend studying
-                    <a
-                      class="linkrefinto"
-                      href="https://arapov.trade/en/freestudying/scalpingintrading"
-                      >scalping</a
-                    >.
-                  </p>
+  <p>The spread often stays in the shadows because it does not look like a familiar commission. But it is where your loss in every trade begins: the moment you open a position you are already down by exactly the spread. Trading since 2013, I have watched this quietly drain accounts, so below I cover what it is, how it hits profit, and how its types differ.</p>
 
-                  <p>
-                    The spread is defined as the difference between two prices
-                    quoted for any financial instrument. The
-                    <dfn>Bid</dfn> price represents the highest amount buyers
-                    are willing to pay for an asset at any given moment. The
-                    <dfn>Ask</dfn> price shows the lowest amount at which
-                    sellers are prepared to part with their holdings. This gap
-                    between buying and selling prices constitutes the spread.
-                    When you open a long position, you enter at the Ask price.
-                    When selling, you exit at the Bid price. This price
-                    differential serves as the implicit cost of executing trades
-                    in financial markets.
-                  </p>
+  <p><strong><i>In this article we'll cover:</i></strong></p>
+  <ul>
+    <li>the spread is the difference between the buy and sell price;</li>
+    <li>it is a cost you pay on every single trade;</li>
+    <li>it hits frequent trading and scalping the hardest;</li>
+    <li>it comes in fixed, floating and near-zero forms.</li>
+  </ul>
 
-                  <p>
-                    Brokers and exchanges use the spread as their primary
-                    revenue source for providing trading services. Every
-                    position opened in the market begins with a small deficit
-                    equal to the spread amount. For a trade to become
-                    profitable, the price must move beyond the spread distance
-                    in your favor. This mechanism ensures that market makers and
-                    liquidity providers are compensated for facilitating trades
-                    and maintaining orderly markets.
-                  </p>
+  <p>Let us start with the definition itself.</p>
 
-                  <p>
-                    Many novice traders overlook spread calculations when
-                    planning their entries and exits. This oversight leads to
-                    disappointment when actual profits fall short of
-                    expectations or when stop-loss orders trigger prematurely.
-                    Developing a systematic approach to accounting for trading
-                    costs helps avoid such mistakes and builds more realistic
-                    profit expectations for each trade.
-                  </p>
-                </section>
+  <div class="flex">
+    <img class="pictureImg" loading="lazy" src="/assets/img/content/spread1.jpg" alt="Spread between the bid and ask prices in a trading terminal" />
+  </div>
 
-                <section>
-                  <h2>Types of Spreads in Financial Markets</h2>
-                  <p>
-                    Financial markets offer traders different spread structures,
-                    each with distinct characteristics that influence strategy
-                    selection and overall trading performance. Understanding
-                    these variations helps traders choose optimal conditions for
-                    their specific approach.
-                  </p>
+  <h2>What Is Spread?</h2>
+  <p>The <dfn itemscope itemtype="https://schema.org/DefinedTerm"><span itemprop="name">spread</span></dfn> is the difference between the buy price, the ask, and the sell price, the bid, of the same asset at a given moment. It works like this: you buy at the higher ask and sell at the lower bid, and the gap between them is the spread. So at the instant you open a trade you are immediately down by that amount, and to reach a profit price must first travel that gap in your favour. In essence it is the broker's main fee for execution, shown in the terminal as a small gap between the two prices and usually measured in points: the more of them, the more each entry and exit costs you.</p>
+  <p>The spread is closely tied to <a class="linkrefinto" href="https://arapov.trade/en/freestudying/pricingandliquidity">pricing and liquidity</a>: the more liquid the market and the more participants in it, the tighter the spread, while a thin, illiquid market widens it. These basics of spread, lot, long and short are also covered in the matching <a class="linkrefinto" href="https://arapov.trade/en/freestudying/freeeducation#spredLotLongShort">section of the course</a>.</p>
 
-                  <h3>Fixed Spread</h3>
-                  <p>
-                    <dfn>Fixed spreads</dfn> maintain a constant value
-                    regardless of market conditions. Brokers predetermine
-                    specific spread amounts that remain unchanged even during
-                    major news releases or volatile price movements. This model
-                    provides predictable trading costs that simplify profit
-                    calculations. Algorithmic trading systems and automated
-                    strategies particularly benefit from stable parameters that
-                    ensure consistent backtesting and live performance. However,
-                    fixed spreads typically exceed floating spreads during
-                    normal market conditions because brokers build in a premium
-                    for guaranteeing stability.
-                  </p>
+  <h2>How Spread Works in Practice</h2>
+  <p>Spreads come in three types. A fixed spread stays constant regardless of the market and is set by the broker. A floating spread moves with the market: tight in calm, liquid hours and sharply wider on news or in illiquid time. There is also a near-zero spread, and here sits a common misconception. Zero spread does not mean free: the broker simply charges differently, usually a fixed commission per trade, so you should compare conditions across all costs at once rather than on one pretty word in an advert.</p>
+  <p>It also helps to know what the size of a spread depends on: the instrument's liquidity, current volatility and the time of the trading session. On popular pairs in active hours the spread is tight, while on exotics or at the moment important news lands it can jump sharply. Across different markets, from the <a class="linkrefinto" href="https://arapov.trade/en/freestudying/forexmarket">forex market</a> to stocks and crypto, spreads are built differently, and their size depends heavily on the broker and account type you choose, so that choice deserves real attention because the difference adds up to real money over distance.</p>
 
-                  <h3>Floating Spread</h3>
-                  <p>
-                    <dfn>Floating spreads</dfn> dynamically adjust based on
-                    current market conditions. During periods of high liquidity
-                    and calm trading, they narrow to minimal values. Major
-                    currency pairs like EUR/USD can see floating spreads as low
-                    as 0.1-0.3 <dfn>pips</dfn> during peak trading hours.
-                    However, during significant economic releases or
-                    geopolitical events, spread values can increase tenfold or
-                    more. This unpredictability creates additional risk but
-                    simultaneously offers opportunities to trade with minimal
-                    costs during favorable periods.
-                  </p>
+  <h2>My Experience: Spread Is Part of the Trade Math</h2>
+  <p>The key thing is that the spread is not a one-off trifle but a cost that repeats in every trade, so the more often you trade the more spreads you pay. For someone holding positions for days a single spread is barely visible against the move. But for <a class="linkrefinto" href="https://arapov.trade/en/freestudying/scalpingintrading">scalping</a>, with dozens of trades a day and targets of a few points, the spread becomes the main enemy and can take the lion's share of profit. This is not personal advice, only how I count costs.</p>
+  <p>I treat the spread as part of a trade's math, because it directly worsens the mathematical expectation: the wider it is, the further price must travel just to break even. A simple example: if the spread is three points, every trade starts three points down, which is a huge slice of a scalper's five-to-ten-point target but a trifle for someone aiming at hundreds. The practical conclusion is that the bigger your target, the smaller the spread's share, so calm trading from levels is almost always cheaper on costs than scrambling on the minutes. My rule since 2013 is plain: it is cheaper to trade rarely and precisely than often and on emotion, and choosing liquid instruments and active sessions keeps the gap small.</p>
 
-                  <h3>Zero-Spread Accounts</h3>
-                  <p>
-                    Zero-spread accounts have gained popularity among
-                    professional traders. Instead of traditional spreads,
-                    participants pay fixed commissions per lot traded. This
-                    model particularly appeals to scalpers and high-frequency
-                    strategies where every fraction of a pip matters. At high
-                    trading volumes, the commission model often proves more
-                    cost-effective than traditional spread-based pricing.
-                  </p>
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <mat-accordion>
+      <mat-expansion-panel class="highlight-box owl_link-box" [expanded]="true">
+        <mat-expansion-panel-header>
+          <mat-panel-title>What is the spread in simple terms?</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>It is the difference between the buy and sell price of an asset at one moment. You buy at the higher price and sell at the lower one, and that gap is the spread. In essence it is the fee you pay the broker on every trade.</p>
+      </mat-expansion-panel>
+      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+        <mat-expansion-panel-header>
+          <mat-panel-title>How does the spread affect profit?</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>It repeats in every trade, so the more often you trade the more you pay. On long trades it is barely felt; in scalping it can eat most of the profit. The wider the spread, the further price must move just to reach break-even.</p>
+      </mat-expansion-panel>
+      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+        <mat-expansion-panel-header>
+          <mat-panel-title>How does a fixed spread differ from a floating one?</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>A fixed spread stays constant and does not depend on the market; the broker sets it. A floating spread narrows in calm, liquid hours and widens on news. Which suits you depends on your trading style and the broker's conditions.</p>
+      </mat-expansion-panel>
+      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+        <mat-expansion-panel-header>
+          <mat-panel-title>Is a zero spread really free?</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>No. With a zero or near-zero spread the broker usually takes a separate fixed commission per trade. So compare accounts by the sum of all costs, not by the spread alone.</p>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </section>
 
-                  <img
-                    src="/assets/img/content/spread1.jpg"
-                    alt="Visualization of spread between Bid and Ask prices in trading terminal"
-                    loading="lazy"
-                  />
-                </section>
+  <section>
+    <h2>About the Author</h2>
+    <p>Author: Igor Arapov, independent researcher in the psychology of investment decisions and behavioral finance, practising trader since 2013, founder of arapov.trade, author of a trading book series (<a class="linkrefinto" href="https://openlibrary.org/authors/OL16073686A/Igor_Arapov">Open Library</a>), (<a class="linkrefinto" href="https://orcid.org/0009-0003-0430-778X">ORCID: 0009-0003-0430-778X</a>).</p>
+  </section>
+</article>
 
-                <section>
-                  <h2>Factors Determining Spread Size</h2>
-                  <p>
-                    Spread values are not arbitrary numbers but result from
-                    complex interactions between market and institutional
-                    factors. Understanding these mechanisms helps traders select
-                    optimal trading conditions and minimize operational costs.
-                  </p>
-
-                  <p>
-                    <dfn
-                      ><a
-                        class="linkrefinto"
-                        href="https://arapov.trade/en/freestudying/pricingandliquidity"
-                        >Liquidity</a
-                      >
-                    </dfn>
-                    plays the determining role in spread formation. Assets with
-                    numerous buyers and sellers exhibit narrow spreads due to
-                    competition among market participants. Major Forex pairs
-                    demonstrate minimal spreads thanks to enormous daily trading
-                    volumes exceeding six trillion dollars. Exotic currency
-                    pairs and small-cap stocks show significantly wider spreads
-                    due to limited participant numbers and reduced trading
-                    activity.
-                  </p>
-
-                  <p>
-                    Trading session timing directly influences spread width.
-                    During the overlap of European and American sessions,
-                    liquidity reaches its peak and spreads narrow to minimum
-                    values. Asian session hours or overnight periods typically
-                    see wider spreads. Holidays and gaps between trading
-                    sessions also feature increased spreads due to reduced
-                    participant activity and lower overall market volume.
-                  </p>
-
-                  <p>
-                    Market volatility substantially widens spreads. During
-                    releases of employment data, central bank interest rate
-                    decisions, or unexpected geopolitical events, spreads can
-                    expand five to ten times or more from their normal levels.
-                    <dfn>Market makers</dfn> widen spreads to protect themselves
-                    from rapid price movements and associated risks during
-                    periods of heightened uncertainty.
-                  </p>
-
-                  <p>
-                    Broker type determines the underlying spread structure.
-                    <dfn>ECN brokers</dfn> provide direct access to interbank
-                    liquidity and offer minimal spreads with added commissions.
-                    Dealing desk brokers act as counterparties to trades and
-                    profit from wider spreads. STP brokers occupy a middle
-                    ground, passing orders through to liquidity providers while
-                    adding a markup to the raw spread.
-                  </p>
-                </section>
-
-                <section>
-                  <h2>Practical Strategies for Managing Spread Costs</h2>
-                  <p>
-                    Professional traders employ multiple approaches to minimize
-                    spread impact on trading results. These methods
-                    substantially reduce operational costs and improve overall
-                    strategy effectiveness across different market conditions. I
-                    also recommend studying
-                    <a
-                      class="linkrefinto"
-                      href="https://arapov.trade/en/freestudying/tradingbasics"
-                      >trading basics</a
-                    >
-                    for a complete picture.
-                  </p>
-
-                  <p>
-                    Selecting optimal trading times helps work with minimal
-                    spreads. Opening positions during peak liquidity periods
-                    reduces transaction costs significantly. Avoiding trades
-                    during major news releases protects against unexpected
-                    spread widening and associated losses that can erode profits
-                    from otherwise successful trades.
-                  </p>
-
-                  <p>
-                    Using limit orders instead of market orders allows traders
-                    to control entry prices more precisely. When limit orders
-                    execute, traders often receive better prices than the
-                    current market quote, effectively earning the spread rather
-                    than paying it. This technique proves especially effective
-                    in volatile markets where spreads fluctuate rapidly.
-                  </p>
-
-                  <p>
-                    Loyalty programs and <dfn>rebate</dfn> services return
-                    portions of spread costs to traders. Many brokers offer
-                    cashback based on trading volume, reducing effective costs
-                    over time. With active trading, accumulated rebates can
-                    amount to significant sums that materially improve overall
-                    performance metrics.
-                  </p>
-
-                  <p>
-                    Comparing conditions across different brokers before opening
-                    accounts helps find the optimal balance of spreads,
-                    commissions, and execution quality. Spread differences
-                    between brokers on identical instruments can reach several
-                    pips, making broker selection a critical decision for active
-                    traders.
-                  </p>
-                </section>
-
-                <section>
-                  <h2>Spread Characteristics Across Market Segments</h2>
-                  <p>
-                    Spread formation mechanisms differ across financial
-                    platforms. Understanding these distinctions helps traders
-                    adapt their strategies to specific market segments and
-                    maximize trading effectiveness.
-                  </p>
-
-                  <p>
-                    The
-                    <a
-                      class="linkrefinto"
-                      href="https://arapov.trade/en/freestudying/forexmarket"
-                      >Forex market</a
-                    >
-                    traditionally offers some of the lowest spreads thanks to
-                    its enormous liquidity. Daily turnover exceeding six
-                    trillion dollars ensures tight spreads on major pairs. Cross
-                    rates and exotic pairs trade with wider spreads due to fewer
-                    active participants and lower overall trading volume.
-                  </p>
-
-                  <p>
-                    Stock markets demonstrate significant spread variation
-                    depending on company capitalization and trading popularity.
-                    Blue-chip stocks with high liquidity enjoy minimal spreads
-                    that facilitate cost-effective trading. Small-cap stocks and
-                    over-the-counter instruments feature wide spreads and low
-                    liquidity that can significantly impact trading costs.
-                  </p>
-
-                  <p>
-                    Cryptocurrency markets exhibit heightened spread volatility
-                    compared to traditional markets. Bitcoin and Ethereum trade
-                    with relatively tight spreads on major exchanges. Low-cap
-                    altcoins carry wide spreads and substantial slippage on
-                    large order execution that can dramatically affect trading
-                    outcomes. Before continuing, please familiarize yourself
-                    with
-                    <a
-                      class="linkrefinto"
-                      href="https://arapov.trade/en/freestudying/marketorder"
-                      >what a market order is</a
-                    >.
-                  </p>
-                </section>
-
-                <section>
-                  <h2>Common Misconceptions About Spreads</h2>
-                  <p>
-                    Beginning traders often harbor incorrect assumptions about
-                    spread nature and significance. Addressing popular myths
-                    helps form proper understanding of this essential trading
-                    element and improves decision-making.
-                  </p>
-
-                  <p>
-                    The first misconception holds that lower spreads are always
-                    better. In practice, ultra-low spreads may be offset by poor
-                    execution quality, requotes, or hidden commissions.
-                    Evaluating total transaction costs rather than just
-                    advertised spreads provides a more accurate picture of
-                    actual trading expenses.
-                  </p>
-
-                  <p>
-                    The second misconception suggests spreads do not matter for
-                    long-term investors. While spread impact decreases with
-                    longer holding periods, regular portfolio rebalancing
-                    accumulates significant costs over time that can
-                    meaningfully reduce long-term returns.
-                  </p>
-
-                  <p>
-                    The third misconception involves the belief that brokers
-                    artificially widen spreads against traders. Regulated
-                    brokers receive quotes from liquidity providers and do not
-                    directly control spread values. Spread widening reflects
-                    genuine market conditions rather than manipulation by
-                    individual brokers.
-                  </p>
-                </section>
-
-                <section>
-                  <h2>Calculating Spread Impact on Trading Results</h2>
-                  <p>
-                    Properly calculating spread influence on trade profitability
-                    is an essential skill for every trader. Without this
-                    understanding, building effective capital management systems
-                    and assessing real strategy returns becomes impossible.
-                  </p>
-
-                  <p>
-                    Opening positions automatically creates a loss equal to the
-                    spread amount. With a 2-pip spread and one standard lot
-                    position on Forex, the immediate loss equals approximately
-                    twenty dollars for most currency pairs. Making ten trades
-                    daily brings cumulative costs to two hundred dollars. Over a
-                    month of active trading, this sum can exceed four thousand
-                    dollars in spread costs alone.
-                  </p>
-
-                  <p>
-                    Scalpers and day traders show particular sensitivity to
-                    spread size. With profit targets of five to ten pips per
-                    trade, a 2-pip spread consumes twenty to forty percent of
-                    potential earnings. Professional scalpers therefore choose
-                    brokers with minimal spreads and actively participate in
-                    rebate programs to recoup a portion of their trading costs.
-                  </p>
-
-                  <p>
-                    Long-term investors and position traders face less spread
-                    impact relative to their expected returns. When holding
-                    positions for weeks or months with targets of hundreds of
-                    pips, initial spreads of two to three pips represent a
-                    negligible fraction of expected profits and can largely be
-                    disregarded in planning.
-                  </p>
-                </section>
-
-                <section>
-                  <h2>Recommendations for Optimizing Trading Costs</h2>
-                  <p>
-                    Reducing spread impact on trading results requires a
-                    comprehensive approach combining multiple methods.
-                    Experienced traders integrate several techniques to achieve
-                    maximum efficiency and result consistency across varying
-                    market conditions.
-                  </p>
-
-                  <p>
-                    Choose brokers with competitive spreads on your preferred
-                    instruments. Compare not only advertised minimum values but
-                    also average spreads under real trading conditions. Pay
-                    attention to spread stability during news events and high
-                    volatility periods when costs can spike dramatically.
-                  </p>
-
-                  <p>
-                    Adapt your trading strategy to the spread characteristics of
-                    chosen instruments. For assets with wide spreads, employ
-                    longer-term strategies with larger profit targets that can
-                    absorb the initial cost. For instruments with tight spreads,
-                    more frequent trading becomes feasible without excessive
-                    cost accumulation.
-                  </p>
-
-                  <p>
-                    Monitor economic calendars and avoid opening positions
-                    immediately before major news releases. Wait for spread
-                    stabilization after data publication before entering the
-                    market. This practice protects against unexpected losses
-                    from spread widening that can turn winning trades into
-                    losers.
-                  </p>
-
-                  <p>
-                    Use demo accounts to test broker trading conditions before
-                    transitioning to live accounts. Pay attention to order
-                    execution speed, slippage patterns, and spread behavior
-                    across different market conditions to ensure the broker
-                    meets your trading requirements.
-                  </p>
-                </section>
-                <section>
-                  <h2>Frequently Asked Questions About Spread</h2>
-
-                  <mat-accordion>
-                    <mat-expansion-panel
-                      class="highlight-box owl_link-box"
-                      [expanded]="true"
-                    >
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          What is spread in trading in simple terms?
-                        </mat-panel-title>
-                      </mat-expansion-panel-header>
-                      <p>
-                        Spread is the difference between the buy price (Ask) and
-                        sell price (Bid) of a financial instrument. It is
-                        essentially a transaction fee that is automatically
-                        charged when opening a position.
-                      </p>
-                    </mat-expansion-panel>
-                    <mat-expansion-panel
-                      class="highlight-box owl_link-box"
-                      (opened)="panelOpenState.set(true)"
-                      (closed)="panelOpenState.set(false)"
-                    >
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          Which is better: fixed or floating spread?
-                        </mat-panel-title>
-                      </mat-expansion-panel-header>
-                      <p>
-                        Fixed spread suits beginners and trading robots due to
-                        its predictability. Floating spread is more advantageous
-                        for experienced traders who can choose optimal trading
-                        times with minimal costs.
-                      </p>
-                    </mat-expansion-panel>
-                    <mat-expansion-panel
-                      class="highlight-box owl_link-box"
-                      (opened)="panelOpenState.set(true)"
-                      (closed)="panelOpenState.set(false)"
-                    >
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          Why does spread widen during news
-                          releases?</mat-panel-title
-                        >
-                      </mat-expansion-panel-header>
-                      <p>
-                        During important economic data releases, volatility
-                        sharply increases. Market makers widen spreads to
-                        protect against risks associated with unpredictable
-                        price movements during these moments.
-                      </p>
-                    </mat-expansion-panel>
-
-                    <mat-expansion-panel
-                      class="highlight-box owl_link-box"
-                      (opened)="panelOpenState.set(true)"
-                      (closed)="panelOpenState.set(false)"
-                    >
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          How to minimize spread impact on
-                          profits?</mat-panel-title
-                        >
-                      </mat-expansion-panel-header>
-                      <p>
-                        Trade during maximum liquidity periods, use limit
-                        orders, choose brokers with competitive spreads, and
-                        participate in rebate programs to recover part of your
-                        trading costs.
-                      </p> </mat-expansion-panel
-                    ><mat-expansion-panel
-                      class="highlight-box owl_link-box"
-                      (opened)="panelOpenState.set(true)"
-                      (closed)="panelOpenState.set(false)"
-                    >
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          Which instruments have the lowest
-                          spreads?</mat-panel-title
-                        >
-                      </mat-expansion-panel-header>
-                      <p>
-                        Minimum spreads are found on major Forex currency pairs:
-                        EUR/USD, GBP/USD, USD/JPY. In stock markets, high-cap
-                        stocks have tight spreads. In crypto, Bitcoin and
-                        Ethereum on major exchanges offer the best spreads.
-                      </p>
-                    </mat-expansion-panel>
-                  </mat-accordion>
-                </section>
-                <section>
-                  <h2>About the Author</h2>
-                  <p>
-                        Author: Igor Arapov — independent researcher in trading psychology and behavioral finance, practising trader since 2013, founder of arapov.trade, author of a trading book series (<a
-                          class="linkrefinto"
-                          href="https://openlibrary.org/authors/OL16073686A/Igor_Arapov"
-                          >Open Library</a
-                        >
-                        ),   (<a
-                          class="linkrefinto"
-                          href="https://orcid.org/0009-0003-0430-778X"
-                          >ORCID: 0009-0003-0430-778X</a
-                        >
-                        ).
-                      </p>
-                </section>
-              </article>
 
               <div
                 class=""

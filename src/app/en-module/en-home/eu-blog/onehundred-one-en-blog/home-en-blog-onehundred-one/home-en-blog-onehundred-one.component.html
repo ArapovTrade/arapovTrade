@@ -8,465 +8,77 @@
           <div class="free-courses_main-container">
             <main lang="en">
               <header>
-                <h1>VWAP Indicator: The Institutional Benchmark</h1>
-              </header>
+  <h1>VWAP Explained: How to Use Volume-Weighted Average Price</h1>
+</header>
+<article>
+  <p>VWAP, the volume-weighted average price, shows the average price an asset has traded at over a session, with each price weighted by how much volume changed hands there. Because busier prices carry more weight, it reflects where the real money actually did business rather than treating every tick equally. Price above the VWAP points to buyers in control for the session, below it to sellers.</p>
 
-              <article>
-                <section>
-                  <p>
-                    <dfn itemscope itemtype="https://schema.org/DefinedTerm"
-                      ><span itemprop="name">VWAP</span></dfn
-                    >
-                    — Volume Weighted Average Price — stands as one of the most
-                    important indicators for intraday traders. Unlike simple
-                    moving averages treating all prices equally, VWAP weights
-                    price by volume, revealing the true average price paid by
-                    market participants. Understanding VWAP provides insight
-                    into institutional activity and execution quality.
-                  </p>
+  <p>Most indicators I have little time for, because they only repackage price. VWAP is different, and that is why I keep it close: it is built on volume, the data I trust most. I have been trading since 2013, and VWAP is one of the few lines on my chart that tells me something price alone cannot, namely where the bulk of real trading happened. Below is what it is, how to read it, and the two caveats that decide how far I trust it.</p>
 
-                  <p>
-                    Originally developed for institutional execution analysis,
-                    VWAP now serves retail traders as powerful
-                    support/resistance indicator. Its objectivity and universal
-                    application make it essential tool for day traders across
-                    all liquid markets. Price relationship to VWAP indicates
-                    whether buyers or sellers control the session. To understand
-                    this topic more deeply, I recommend studying
-                    <a
-                      class="linkrelinto"
-                      href="https://arapov.trade/en/freestudying/tradingindicators"
-                      >technical indicators</a
-                    >
-                    .
-                  </p>
+  <p><strong><i>In this article we'll cover:</i></strong></p>
+  <ul>
+    <li>VWAP is the average price of a session weighted by volume, so busy price levels count more;</li>
+    <li>price above the VWAP shows buyers in control, below it shows sellers;</li>
+    <li>it acts as a fair-value line and a dynamic support or resistance, and institutions use it as a benchmark;</li>
+    <li>it lags like any average and depends entirely on honest volume data, which matters on crypto.</li>
+  </ul>
 
-                  <h2>Calculation Methodology</h2>
-                  <p>
-                    <dfn itemscope itemtype="https://schema.org/DefinedTerm"
-                      ><span itemprop="name">Typical Price</span></dfn
-                    >
-                    forms VWAP's foundation: (High + Low + Close) / 3 for each
-                    period. This three-point average represents consensus price
-                    for each candle more accurately than close alone. Read more
-                    about this in the article
-                    <a
-                      class="linkrelinto"
-                      href="https://arapov.trade/en/freestudying/peakvolumelevels"
-                      >How to analyze trading volume</a
-                    >
-                    .
-                  </p>
+  <p>We will start with what the line actually measures.</p>
 
-                  <p>
-                    VWAP equals cumulative (Typical Price multiplied by Volume)
-                    divided by
-                    <dfn itemscope itemtype="https://schema.org/DefinedTerm"
-                      ><span itemprop="name">Cumulative Volume</span></dfn
-                    >. Each new bar updates numerator and denominator, producing
-                    running weighted average. Early session VWAP moves quickly;
-                    late session VWAP stabilizes as denominator grows.
-                  </p>
+  <h2>What Is VWAP?</h2>
+  <p><dfn itemscope itemtype="https://schema.org/DefinedTerm"><span itemprop="name">VWAP (volume-weighted average price)</span></dfn> is the average price of an asset over a period, weighted by the volume traded at each price. It is calculated by taking the typical price of each bar, the average of its high, low and close, multiplying that by the bar's volume, and dividing the running total by the running total of volume. A candle with ten times the average volume has ten times the pull on the line, which is what separates VWAP from an ordinary average.</p>
+  <p>VWAP is mainly an intraday tool. It resets at the start of each session and builds in real time as trades come in, so by the afternoon it reflects the whole day's activity. That focus on real, traded volume is why it sits naturally within <a class="linkrefinto" href="https://arapov.trade/en/freestudying/volmarketanalisys">volume trading</a> rather than among the price-only indicators.</p>
 
-                  <p>
-                    <dfn itemscope itemtype="https://schema.org/DefinedTerm"
-                      ><span itemprop="name">Session VWAP</span></dfn
-                    >
-                    resets at each session open, starting calculation fresh.
-                    This daily reset makes VWAP purely intraday indicator for
-                    standard application. Extended session trading complicates
-                    interpretation.
-                  </p>
+  <h2>How to Use VWAP</h2>
+  <p>The first use is trend bias. When price holds above the VWAP, the session leans bullish and most of the day's participants are in profit, while price below it leans bearish. The line also works as a dynamic level: in an up-session a pullback toward the VWAP often finds support, and a stretched move far away from it tends to revert back, which is the basis of mean-reversion entries. It pairs well with a high-volume node such as the <a class="linkrefinto" href="https://arapov.trade/en/freestudying/peakvolumelevels">point of control (POC)</a>, where the two volume-based references reinforce each other.</p>
+  <p>Its other role is as a benchmark. Institutions measure the quality of large orders against VWAP, aiming to buy below it and sell above it, which is part of <a class="linkrefinto" href="https://arapov.trade/en/freestudying/smartmoneycontrol">How Smart Money Controls the Market</a>. Because so many participants watch the same line, reactions around it can become self-reinforcing. Standard VWAP resets daily, but anchored VWAP starts from a chosen event, such as an earnings release or a major high, and accumulates across many sessions, which extends the idea to swing and position trading.</p>
 
-                  <div class="flex">
-                    <img
-                      class="pictureImg"
-                      loading="lazy"
-                      src="/assets/img/content/vwap2.png"
-                      alt="VWAP indicator"
-                    />
-                  </div>
+  <h2>My Take on VWAP</h2>
+  <p>VWAP is one of the few indicators I genuinely respect, because it is built on volume rather than on price alone, and volume is the closest thing a chart gives you to the footprint of real money. It marks a fair-value zone for the session, and I treat a price stretched a long way from VWAP as a candidate for a pullback rather than a place to chase.</p>
+  <p>Two caveats decide how far I lean on it. First, it still lags: it is an average of what has already traded, and it resets at an arbitrary session boundary, so it describes the day rather than predicting it. Second, and more important, VWAP is only as honest as the volume feeding it. On regulated futures that volume is trustworthy, but on an unregulated crypto pair the reported volume can be inflated by wash trading, where the same participant buys and sells to fake activity, and that quietly distorts the line. So I trust VWAP far more on a regulated market than on a random altcoin, and either way I still read the raw volume and the levels directly, because they are the cause and VWAP is only a tidy summary of them. None of this is advice for you, it is simply how I have worked at the screen. Used as a volume-aware fair-value guide rather than a signal, VWAP earns its place.</p>
 
-                  <h2>Institutional Application</h2>
-                  <p>
-                    Institutions use VWAP as
-                    <dfn itemscope itemtype="https://schema.org/DefinedTerm"
-                      ><span itemprop="name">execution benchmark</span></dfn
-                    >. Traders filling large orders aim to execute at or better
-                    than VWAP. Buying below VWAP indicates superior execution;
-                    selling above VWAP demonstrates skill. This benchmark drives
-                    enormous
-                    <dfn itemscope itemtype="https://schema.org/DefinedTerm"
-                      ><span itemprop="name">institutional flow</span></dfn
-                    >
-                    toward VWAP.
-                  </p>
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <mat-accordion>
+      <mat-expansion-panel class="highlight-box owl_link-box" [expanded]="true">
+        <mat-expansion-panel-header>
+          <mat-panel-title>What is VWAP in simple terms?</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>VWAP is the volume-weighted average price: the average price of an asset over a session, where prices with more volume count for more. It shows the average level at which the asset actually traded, weighted by real activity.</p>
+      </mat-expansion-panel>
+      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+        <mat-expansion-panel-header>
+          <mat-panel-title>How is VWAP calculated?</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>For each bar you take the typical price, the average of the high, low and close, and multiply it by the bar's volume. You then divide the running total of those values by the running total of volume across the session.</p>
+      </mat-expansion-panel>
+      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+        <mat-expansion-panel-header>
+          <mat-panel-title>What does price above or below VWAP mean?</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>Price above VWAP means the session leans bullish and most participants who traded are in profit. Price below it leans bearish. It is a read on intraday bias, not a guaranteed signal to buy or sell.</p>
+      </mat-expansion-panel>
+      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+        <mat-expansion-panel-header>
+          <mat-panel-title>Is VWAP a leading or lagging indicator?</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>Lagging. Like a moving average, it is built from past price and volume, so it confirms the intraday picture rather than predicting it. The more data accumulates during the session, the smoother and slower it becomes.</p>
+      </mat-expansion-panel>
+      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+        <mat-expansion-panel-header>
+          <mat-panel-title>Can you trade with VWAP alone?</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>It is better used as context. VWAP gives a fair-value reference and a dynamic level, but it works best alongside raw volume, support and resistance, and price action. On unregulated markets, check that the volume behind it is genuine.</p>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </section>
 
-                  <p>
-                    Algorithmic execution strategies slice large orders
-                    throughout session targeting VWAP. This activity creates
-                    self-fulfilling support and resistance as algorithms buy
-                    dips to VWAP and sell rallies to it. Understanding this
-                    dynamic explains VWAP's effectiveness.
-                  </p>
+  <section>
+    <h2>About the Author</h2>
+    <p>Author: Igor Arapov — independent researcher in the psychology of investment decisions and behavioral finance, practising trader since 2013, founder of arapov.trade, author of a trading book series (<a class="linkrefinto" href="https://openlibrary.org/authors/OL16073686A/Igor_Arapov">Open Library</a>), (<a class="linkrefinto" href="https://orcid.org/0009-0003-0430-778X">ORCID: 0009-0003-0430-778X</a>).</p>
+  </section>
+</article>
 
-                  <p>
-                    Performance measurement against VWAP determines trader
-                    compensation at institutions. This high-stakes incentive
-                    ensures VWAP remains focal point for professional execution.
-                    Retail traders benefit from understanding this institutional
-                    focus.
-                  </p>
-
-                  <h2>Trend Identification</h2>
-                  <p>
-                    Price above VWAP indicates bullish session control. Buyers
-                    paying above average price demonstrate willingness to
-                    accumulate. Sustained trading above VWAP confirms uptrend
-                    continuation. Pullbacks to VWAP offer buying opportunities
-                    in bullish context.
-                  </p>
-
-                  <p>
-                    Price below VWAP signals bearish session control. Sellers
-                    accepting below-average prices indicate distribution.
-                    Sustained trading below VWAP confirms downtrend. Rallies to
-                    VWAP offer selling opportunities in bearish context.
-                  </p>
-
-                  <p>
-                    Price oscillating around VWAP suggests balanced session
-                    without clear directional control. Range-bound conditions
-                    prevail until price establishes clear relationship.
-                    Breakouts from VWAP consolidation often initiate directional
-                    moves.
-                  </p>
-
-                  <h2>Standard Deviation Bands</h2>
-                  <p>
-                    <dfn itemscope itemtype="https://schema.org/DefinedTerm"
-                      ><span itemprop="name">VWAP Bands</span></dfn
-                    >
-                    add standard deviation envelopes around VWAP. First standard
-                    deviation band contains approximately 68% of price action.
-                    Second band contains 95%. These create objective
-                    overbought/oversold zones relative to session average.
-                  </p>
-
-                  <p>
-                    Price reaching upper band suggests extended conditions
-                    relative to VWAP.
-                    <dfn itemscope itemtype="https://schema.org/DefinedTerm"
-                      ><span itemprop="name">Mean reversion</span></dfn
-                    >
-                    traders fade moves to bands anticipating return to VWAP.
-                    Strong trends, however, can ride bands without reverting.
-                  </p>
-
-                  <p>
-                    Band touches provide profit targets for VWAP entries. Long
-                    positions from VWAP target upper band. Short positions
-                    target lower band. Defined targets enable systematic trade
-                    management.
-                  </p>
-
-                  <div class="flex">
-                    <img
-                      class="pictureImg"
-                      loading="lazy"
-                      src="/assets/img/content/vwap3.png"
-                      alt="VWAP bands"
-                    />
-                  </div>
-
-                  <h2>Anchored VWAP</h2>
-                  <p>
-                    <dfn itemscope itemtype="https://schema.org/DefinedTerm"
-                      ><span itemprop="name">Anchored VWAP</span></dfn
-                    >
-                    allows starting calculation from any significant point
-                    rather than session open. Earnings announcements, major
-                    highs/lows, news events — anchoring VWAP to these points
-                    reveals average price from that catalyst.
-                  </p>
-
-                  <p>
-                    Swing traders use anchored VWAP from significant pivot
-                    points. This creates relevant support/resistance extending
-                    across multiple sessions. Participants who entered at the
-                    anchor point average into their positions around anchored
-                    VWAP.
-                  </p>
-
-                  <p>
-                    Multiple anchored VWAPs from different points create
-                    confluence zones. Price levels where several anchored VWAPs
-                    converge represent significant support or resistance areas.
-                  </p>
-
-                  <h2>Trading Strategies</h2>
-                  <p>
-                    VWAP pullback strategy buys dips to VWAP in bullish
-                    sessions. After price establishes above VWAP, wait for
-                    retest. Enter long at VWAP touch with stop below. Target
-                    previous high or upper band.
-                  </p>
-
-                  <p>
-                    VWAP breakdown strategy shorts rallies to VWAP in bearish
-                    sessions. After price establishes below VWAP, wait for
-                    rally. Enter short at VWAP test with stop above. Target
-                    previous low or lower band. In addition to this, it is
-                    useful to understand
-                    <a
-                      class="linkrelinto"
-                      href="https://arapov.trade/en/freestudying/steidlmayeranalysis"
-                      >Steidlmayer analysis</a
-                    >.
-                  </p>
-
-                  <p>
-                    Opening range breakout with VWAP confirmation adds filter.
-                    Breakout above opening range with price above VWAP confirms
-                    bullish. Breakdown below range with price below VWAP
-                    confirms bearish.
-                  </p>
-
-                  <div class="flex">
-                    <img
-                      class="pictureImg"
-                      loading="lazy"
-                      src="/assets/img/content/vwap4.png"
-                      alt="VWAP strategies"
-                    />
-                  </div>
-
-                  <h2>Volume Profile Integration</h2>
-                  <p>
-                    <dfn itemscope itemtype="https://schema.org/DefinedTerm"
-                      ><span itemprop="name">Volume Profile</span></dfn
-                    >
-                    complements VWAP by showing volume distribution across price
-                    levels. High volume nodes represent acceptance zones where
-                    significant trading occurred. Low volume nodes suggest
-                    rejection zones price moves through quickly.
-                  </p>
-
-                  <p>
-                    VWAP near volume profile high-volume node creates powerful
-                    support/resistance confluence. Both indicators pointing to
-                    same level increases significance. Confluence zones warrant
-                    larger position sizes.
-                  </p>
-
-                  <h2>Limitations</h2>
-                  <p>
-                    VWAP works best in liquid markets with consistent volume.
-                    Thin markets produce erratic VWAP behavior less useful for
-                    trading. Focus VWAP application on liquid instruments.
-                  </p>
-
-                  <p>
-                    Early session VWAP remains volatile as limited data drives
-                    calculation. Wait for VWAP to stabilize, typically 30-60
-                    minutes into session, before relying heavily on its levels.
-                  </p>
-
-                  <p>
-                    Strong trending days can see price never return to VWAP.
-                    Waiting for pullback misses entire move. Recognizing
-                    momentum conditions prevents over-reliance on VWAP entries.
-                  </p>
-
-                  <h2>Practical Application</h2>
-                  <p>
-                    Begin each session noting opening price relative to previous
-                    VWAP. Gap above suggests bullish continuation. Gap below
-                    indicates bearish pressure. First hour establishes session
-                    character around VWAP.
-                  </p>
-
-                  <p>
-                    Track how price responds to VWAP tests. Clean bounces or
-                    rejections indicate respect. Messy chop around VWAP suggests
-                    indecision. Price response quality guides position sizing.
-                  </p>
-
-                  <p>
-                    Combine VWAP with price action confirmation. Candlestick
-                    patterns at VWAP tests provide timing signals.
-                    Support/resistance confluence with VWAP increases level
-                    significance.
-                  </p>
-                  <section>
-                    <h2>Conclusion</h2>
-                    <p>
-                      VWAP stands far beyond a simple technical indicator—it
-                      represents a window into institutional market behavior and
-                      logic. Volume-weighted average price reveals the true
-                      average price paid by market participants, accounting for
-                      real trading activity. Understanding this mechanism grants
-                      retail traders a competitive edge in identifying
-                      significant levels and forecasting price movement.
-                    </p>
-
-                    <p>
-                      The connection between VWAP and the
-                      <a
-                        class="linkrelinto"
-                        href="https://arapov.trade/en/freestudying/smartmoneycontrol"
-                        >Smart Money</a
-                      >
-                      concept proves particularly critical. Institutional
-                      traders organize their large orders around VWAP, using it
-                      as an execution quality benchmark. Retail traders who
-                      understand this logic can trade in harmony with major
-                      players rather than against them. Accumulation below VWAP
-                      and distribution above—this standard Smart Money pattern
-                      reveals itself through price movement and volume dynamics.
-                    </p>
-
-                    <p>
-                      Integration of VWAP with standard deviation bands creates
-                      a powerful risk management system. Upper band touches in
-                      bullish sessions provide objective profit targets. Lower
-                      band touches in bearish sessions define exit points.
-                      Anchored VWAP extends the tool beyond intraday trading,
-                      allowing swing traders to track the average price of major
-                      institutional entries across weeks and months.
-                    </p>
-
-                    <p>
-                      However, VWAP is not a holy grail. It performs best in
-                      liquid markets, requires time to stabilize at session
-                      open, and can lag during strong trends. Strong trending
-                      days often see price never returning to VWAP. Recognizing
-                      trading regimes and adapting your strategy to market
-                      conditions remains essential for success.
-                    </p>
-
-                    <p>
-                      Combine VWAP with
-                      <a
-                        class="linkrelinto"
-                        href="https://arapov.trade/en/freestudying/volmarketanalisys"
-                        >volume analysis</a
-                      >
-                      and Price Action for maximum effectiveness. High
-                      volatility at VWAP touches signals institutional defense
-                      of price levels. Low volatility suggests potential
-                      breakouts. Practice on demo accounts until mastery,
-                      recognize session quality, and maintain unwavering trading
-                      discipline.
-                    </p>
-
-                    <p>
-                      VWAP awaits disciplined traders who respect institutional
-                      logic and use it as a compass for navigating the market.
-                      Your dedication to understanding this indicator will
-                      unlock doors to consistent and profitable trading.
-                    </p>
-                  </section>
-                </section>
-
-                <section>
-                  <h2>Frequently Asked Questions</h2>
-
-                  <mat-accordion>
-                    <mat-expansion-panel
-                      class="highlight-box owl_link-box"
-                      [expanded]="true"
-                    >
-                      <mat-expansion-panel-header>
-                        <mat-panel-title> What is VWAP? </mat-panel-title>
-                      </mat-expansion-panel-header>
-                      <p>
-                        VWAP is Volume Weighted Average Price - the average
-                        price weighted by volume throughout trading session. It
-                        shows true average price paid by market participants.
-                      </p>
-                    </mat-expansion-panel>
-                    <mat-expansion-panel
-                      class="highlight-box owl_link-box"
-                      (opened)="panelOpenState.set(true)"
-                      (closed)="panelOpenState.set(false)"
-                    >
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          How is VWAP calculated?
-                        </mat-panel-title>
-                      </mat-expansion-panel-header>
-                      <p>
-                        VWAP equals cumulative (Typical Price x Volume) divided
-                        by cumulative Volume. Typical Price is (High + Low +
-                        Close) / 3. Resets at session start.
-                      </p>
-                    </mat-expansion-panel>
-                    <mat-expansion-panel
-                      class="highlight-box owl_link-box"
-                      (opened)="panelOpenState.set(true)"
-                      (closed)="panelOpenState.set(false)"
-                    >
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          Why do institutions use VWAP?</mat-panel-title
-                        >
-                      </mat-expansion-panel-header>
-                      <p>
-                        Institutions benchmark execution against VWAP. Buying
-                        below VWAP or selling above indicates favorable
-                        execution versus market average price.
-                      </p>
-                    </mat-expansion-panel>
-
-                    <mat-expansion-panel
-                      class="highlight-box owl_link-box"
-                      (opened)="panelOpenState.set(true)"
-                      (closed)="panelOpenState.set(false)"
-                    >
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          How to trade with VWAP?</mat-panel-title
-                        >
-                      </mat-expansion-panel-header>
-                      <p>
-                        Price above VWAP indicates bullish bias. Below VWAP
-                        signals bearish. Pullbacks to VWAP in trends offer entry
-                        opportunities with defined risk.
-                      </p> </mat-expansion-panel
-                    ><mat-expansion-panel
-                      class="highlight-box owl_link-box"
-                      (opened)="panelOpenState.set(true)"
-                      (closed)="panelOpenState.set(false)"
-                    >
-                      <mat-expansion-panel-header>
-                        <mat-panel-title> What are VWAP bands?</mat-panel-title>
-                      </mat-expansion-panel-header>
-                      <p>
-                        Standard deviation bands around VWAP create
-                        overbought/oversold zones. First band captures 68% of
-                        price action, second band 95%.
-                      </p>
-                    </mat-expansion-panel>
-                  </mat-accordion>
-                </section>
-                <section>
-                  <h2>About the Author</h2>
-                  <p>
-                        Author: Igor Arapov — independent researcher in trading psychology and behavioral finance, practising trader since 2013, founder of arapov.trade, author of a trading book series (<a
-                          class="linkrefinto"
-                          href="https://openlibrary.org/authors/OL16073686A/Igor_Arapov"
-                          >Open Library</a
-                        >
-                        ),   (<a
-                          class="linkrefinto"
-                          href="https://orcid.org/0009-0003-0430-778X"
-                          >ORCID: 0009-0003-0430-778X</a
-                        >
-                        ).
-                      </p>
-                </section>
-              </article>
 
               <div
                 class=""

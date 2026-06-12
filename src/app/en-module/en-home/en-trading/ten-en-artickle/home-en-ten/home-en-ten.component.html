@@ -7,555 +7,86 @@
           <div class="free-courses_main-container">
             <main lang="en">
               <header>
-                <h1>Trading Positions: Long, Short, and Overnight Rollover</h1>
-              </header>
+  <h1>What Is a Currency Position in Forex?</h1>
+</header>
+<article>
+  <p>Opening a currency position means placing an open trade on an instrument: a long bets on a rising price, while a short bets on a falling one. The two are simply your bet on direction, up or down. Hold a position past the end of the day and a further detail appears, the swap, a charge for rolling it over overnight.</p>
+
+  <p>The words long and short only sound intimidating at first. A position is just your bet on direction, up or down, and once that clicks the rest is mechanics. The detail beginners forget is what happens when a position is carried overnight, and the swaps that come with it. I have been trading since 2013, and I will explain both in plain terms.</p>
+
+  <p><strong><i>In this article we'll cover:</i></strong></p>
+  <ul>
+    <li>a position is an open trade: long for a rise, short for a fall;</li>
+    <li>opening a position means entering, while closing it means the reverse operation;</li>
+    <li>holding a position overnight accrues a swap;</li>
+    <li>the swap depends on the rate difference and can be positive or negative.</li>
+  </ul>
+
+  <p>We will start with the two main kinds of position.</p>
+
+  <div class="flex">
+    <img class="pictureImg" loading="lazy" src="/assets/img/content/position1.png" alt="Long and short positions in trading" />
+  </div>
+
+  <h2>What Is a Currency Position?</h2>
+  <p><dfn itemscope itemtype="https://schema.org/DefinedTerm"><span itemprop="name">A currency position</span></dfn> is an open trade on a currency pair: a long position bets on the price rising, and a short position bets on it falling. A long is intuitive, an ordinary purchase where you buy cheaper to sell dearer. A short confuses people at first, since how do you sell what you do not own. On the currency market it is routine: the instrument is borrowed from the broker, sold, and bought back later, so a trader can profit from a fall as well as a rise.</p>
+  <p>The two carry different risk. In a long, the most you can lose is what you put in. In a short, the loss is in theory unbounded, because the price can keep rising with no ceiling, which is worth holding in mind. The fuller mechanics of long, short, spread, and lot are set out in the <a href="https://arapov.trade/en/freestudying/freeeducation#spredLotLongShort">free course section on long and short</a>.</p>
+
+  <h2>How Currency Positions Work in Practice</h2>
+  <p>Opening a position means entering the market, buying for a long or selling for a short, and closing it means the reverse: selling what you bought, or buying back what you sold short. Profit or loss is locked in only at the close; until then it floats and shifts with the price. Mechanically, entry and exit run through <a class="linkrefinto" href="https://arapov.trade/en/freestudying/ordertypes">order types</a>, a market order filling at once and a pending order triggering at a set level. I always know in advance not only where I open a position but where I will close it by stop and by target, decided before entry rather than in the heat of the moment, which is the core of a <a class="linkrefinto" href="https://arapov.trade/en/freestudying/tradingplan">create a trading plan</a>.</p>
+
+  <div class="flex">
+    <img class="pictureImg" loading="lazy" src="/assets/img/content/position2.webp" alt="How a short position works" />
+  </div>
+
+  <p>If you do not close a position before the trading day ends, it rolls to the next, and a swap arises. It is charged for holding overnight and computed from the interest-rate difference of the two currencies in the pair, so it can be negative, where you pay, or positive, where you receive. The rollover usually happens around five in the evening New York time, when the value date changes. One quirk surprises beginners: on Wednesday the swap is triple, since brokers build in the weekend because trades settle two business days out. A day trader pays none of this by closing within the day, but over days and weeks swaps accumulate and noticeably affect the result, so I count the swap as part of a trade's cost the same way I treat <a class="linkrefinto" href="https://arapov.trade/en/freestudying/capitalmanagement">Money Management in Trading Explained</a>. Buying a higher-rate currency against a lower-rate one can even make the swap positive, the basis of carry strategies, and swap-free accounts exist for those whose beliefs rule out interest, though they usually carry other long-hold fees.</p>
+
+  <h2>My Take on Currency Positions</h2>
+  <p>I decide where I will close a position, by stop and by target, before I ever open it, because a position opened without a planned exit is just a bet dressed up as a trade. That single habit does more for results than any clever entry, since it takes the decision out of the moment when emotion is loudest.</p>
+  <p>Two things I keep front of mind. First, any profit showing on the screen is not yours until you close, so I treat floating gains as weather, not money. Second, the open-ended risk of a short is a real reason to respect the stop, not a reason to fear shorting. And for anything held overnight I budget the swap exactly as I budget the spread, never as an afterthought, because costs ignored are losses postponed. None of this is advice for you, it is simply how I have managed positions since the start.</p>
+
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <mat-accordion>
+      <mat-expansion-panel class="highlight-box owl_link-box" [expanded]="true">
+        <mat-expansion-panel-header>
+          <mat-panel-title>What is the difference between a long and short position?</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>A long is a buy in expectation of a rising price. A short is a sell in expectation of a falling price, where the instrument is borrowed and bought back cheaper. A long profits from a rise, a short from a fall.</p>
+      </mat-expansion-panel>
+      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+        <mat-expansion-panel-header>
+          <mat-panel-title>How do you close an open position?</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>With the reverse operation. You close a long by selling and a short by buying. Profit or loss is locked in at the moment of closing; before that the result floats and changes with the price.</p>
+      </mat-expansion-panel>
+      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+        <mat-expansion-panel-header>
+          <mat-panel-title>What is a swap when holding a position?</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>It is a charge for holding a position overnight, calculated from the interest-rate difference of the two currencies in the pair. It can be a cost or income. On Wednesday it is charged triple to cover the weekend, when the market is closed.</p>
+      </mat-expansion-panel>
+      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+        <mat-expansion-panel-header>
+          <mat-panel-title>How do you avoid swaps?</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>The simplest way is to close positions within the trading day, before the rollover time, so no swap is charged. That is why day traders usually pay none, while swing and position traders have to factor swaps into the trade.</p>
+      </mat-expansion-panel>
+      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+        <mat-expansion-panel-header>
+          <mat-panel-title>What is the risk of a short position?</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>Its loss is in theory unbounded, because a price can keep rising with no ceiling, whereas a long can only lose what you put in. That asymmetry is a strong reason to always use a stop on a short.</p>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </section>
+
+  <section>
+    <h2>About the Author</h2>
+    <p>Author: Igor Arapov — independent researcher in the psychology of investment decisions and behavioral finance, practising trader since 2013, founder of arapov.trade, author of a trading book series (<a class="linkrefinto" href="https://openlibrary.org/authors/OL16073686A/Igor_Arapov">Open Library</a>), (<a class="linkrefinto" href="https://orcid.org/0009-0003-0430-778X">ORCID: 0009-0003-0430-778X</a>).</p>
+  </section>
+</article>
 
-              <article>
-                <section>
-                  <h2>What is a Trading Position</h2>
-                  <p>
-                    A <dfn>position</dfn> represents a trader's commitment
-                    related to buying or selling financial assets. It reflects
-                    current market exposure and expectations regarding future
-                    price movements.
-                  </p>
-
-                  <p>
-                    When opening buy positions on stocks, traders expect growth
-                    to sell later at profit. Positions form the foundation of
-                    any trading strategy regardless of planning horizon.
-                  </p>
-
-                  <img
-                    src="/assets/img/content/position1.png"
-                    alt="Long and short positions in trading"
-                    loading="lazy"
-                  />
-
-                  <p>
-                    Understanding different position types allows choosing
-                    appropriate instruments depending on market conditions, risk
-                    levels, and trading goals.
-                  </p>
-                </section>
-
-                <section>
-                  <h2>Long Position</h2>
-                  <p>
-                    A <dfn>long position</dfn> involves buying assets expecting
-                    value appreciation. This classic approach to profiting from
-                    rising markets is used by investors and traders alike.
-                  </p>
-
-                  <p>
-                    The mechanics are simple: buy low, sell high. The difference
-                    between purchase and sale prices forms trader profit minus
-                    commissions.
-                  </p>
-
-                  <p>
-                    Long positions are popular among investors believing in
-                    long-term market growth or specific sector expansion. They
-                    apply to stocks, bonds, cryptocurrencies, and other assets.
-                  </p>
-
-                  <p>
-                    Successfully using long positions requires analyzing
-                    fundamental factors: company financials, macroeconomic data,
-                    and industry trends. To gain a deeper understanding of this
-                    topic, I recommend studying
-                    <a
-                      class="linkrefinto"
-                      href="https://arapov.trade/en/freestudying/capitalmanagement"
-                      >capital management</a
-                    >.
-                  </p>
-                </section>
-
-                <section>
-                  <h2>Short Position</h2>
-                  <p>
-                    A <dfn>short position</dfn> involves selling assets traders
-                    don't own, hoping for price declines. Traders borrow assets
-                    from brokers, sell them, then buy back cheaper.
-                  </p>
-
-                  <p>
-                    The difference between selling and buying prices constitutes
-                    profit. However, short positions carry high risk since asset
-                    prices can theoretically rise indefinitely.
-                  </p>
-
-                  <img
-                    src="/assets/img/content/position2.webp"
-                    alt="Short position mechanism"
-                    loading="lazy"
-                  />
-
-                  <p>
-                    Short positions prove especially effective during bear
-                    markets and corrections. For successful short trading,
-                    traders use technical analysis to identify trend reversal
-                    signals.
-                  </p>
-                </section>
-
-                <section>
-                  <h2>Position Types by Purpose</h2>
-                  <p>
-                    Speculative positions open to profit from short-term price
-                    fluctuations. They're popular among day traders and scalpers
-                    holding trades from seconds to single days.
-                  </p>
-
-                  <p>
-                    Hedging positions protect portfolios from adverse price
-                    changes. Investors holding stocks may buy put options for
-                    insurance against value decline.
-                  </p>
-
-                  <p>
-                    Investment positions target long-term capital growth.
-                    Traders open them based on fundamental analysis of company
-                    financial stability.
-                  </p>
-
-                  <p>
-                    Arbitrage positions aim to profit from price differences of
-                    identical assets across markets. They require high execution
-                    speed and substantial capital.
-                  </p>
-                </section>
-
-                <section>
-                  <h2>Value Date</h2>
-                  <p>
-                    The <dfn>value date</dfn> determines when transaction
-                    parties must complete settlements. This term is widely used
-                    in currency markets, especially
-                    <a
-                      class="linkrefinto"
-                      href="https://arapov.trade/en/freestudying/forexmarket"
-                      >Forex</a
-                    >
-                    trading.
-                  </p>
-
-                  <p>
-                    Standard spot transaction scheme T+2 assumes settlements two
-                    business days after execution. Monday trades settle on
-                    Wednesday.
-                  </p>
-
-                  <p>
-                    Today (same-day settlements) and Tomorrow (next business
-                    day) schemes also exist. Choice depends on operation urgency
-                    and counterparty requirements.
-                  </p>
-
-                  <p>
-                    Proper value date management helps avoid operational risks:
-                    payment delays, settlement discrepancies, and additional
-                    commissions.
-                  </p>
-                </section>
-
-                <section>
-                  <h2>Position Rollover and Swaps</h2>
-                  <p>
-                    <dfn>Position rollover</dfn> is the process of extending
-                    unclosed trades to next trading days. This allows holding
-                    positions longer without forced closure.
-                  </p>
-
-                  <p>
-                    During rollover, traders receive or pay swaps — fees
-                    depending on interest rate differentials between currency
-                    pairs. Swaps can be positive or negative.
-                  </p>
-
-                  <img
-                    src="/assets/img/content/position3.webp"
-                    alt="Overnight position rollover"
-                    loading="lazy"
-                  />
-
-                  <p>
-                    If interest rates on purchased currencies exceed rates on
-                    sold currencies, traders receive positive swaps. Otherwise,
-                    swaps are debited from accounts.
-                  </p>
-
-                  <p>
-                    Swaps significantly affect long-term trade profitability.
-                    Traders must calculate them in advance when planning
-                    strategies.
-                  </p>
-                </section>
-
-                <section>
-                  <h2>Swap Calculation</h2>
-                  <p>
-                    Swap size depends on several factors. Primary factor is
-                    central bank interest rate differentials for currency pairs.
-                  </p>
-
-                  <p>
-                    Position volume directly affects amounts: more lots mean
-                    higher absolute swap values. Large traders must account for
-                    this when planning.
-                  </p>
-
-                  <p>
-                    Position direction also matters. Long and short positions
-                    have different swaps, sometimes opposite in sign.
-                  </p>
-
-                  <p>
-                    Brokers provide swap calculators on their platforms. Use
-                    them to estimate costs before opening long-term trades.
-                  </p>
-                </section>
-
-                <section>
-                  <h2>Risk Management with Positions</h2>
-                  <p>
-                    Stop-losses are essential for capital protection. They
-                    automatically close positions at specified loss levels,
-                    preventing catastrophic losses.
-                  </p>
-
-                  <p>
-                    The 1-2% rule limits risk per trade. With $10,000 deposits,
-                    maximum position losses shouldn't exceed $100-200.
-                  </p>
-
-                  <p>
-                    Leverage increases both profits and losses. Beginners should
-                    use conservative leverage of 1:10 or lower.
-                  </p>
-
-                  <p>
-                    Diversification reduces dependence on single assets.
-                    Distribute capital across different instruments and markets
-                    for portfolio stabilization.
-                  </p>
-                </section>
-
-                <section>
-                  <h2>Choosing Position Strategies</h2>
-                  <p>
-                    Determine trading horizon first. Short-term traders focus on
-                    speculative positions, long-term traders on investment
-                    positions.
-                  </p>
-
-                  <p>
-                    Consider current market phase. Bull markets favor long
-                    positions, bear markets favor short or hedging positions.
-                  </p>
-
-                  <p>
-                    Analyze instrument characteristics. Cryptocurrencies suit
-                    speculation due to volatility, bonds suit stable income.
-                  </p>
-
-                  <p>
-                    Combining different position types increases flexibility.
-                    Long-term stocks provide stability, short-term trades add
-                    growth potential.
-                  </p>
-                </section>
-
-                <section>
-                  <h2>Psychology of Working with Positions</h2>
-                  <p>
-                    Emotional control proves critically important when managing
-                    positions. Fear causes premature closure of profitable
-                    trades, greed causes holding losing ones too long.
-                  </p>
-
-                  <p>
-                    Following
-                    <a
-                      class="linkrefinto"
-                      href="https://arapov.trade/en/freestudying/tradingplan"
-                      >trading plans</a
-                    >
-                    protects from impulsive decisions. Predetermine entry
-                    points, exits, and protective order levels.
-                  </p>
-
-                  <p>
-                    Accepting losses as part of trading forms proper risk
-                    attitudes. Winning every trade is impossible; overall series
-                    results matter.
-                  </p>
-
-                  <p>
-                    Maintaining trading journals helps analyze mistakes and
-                    improve strategies. Record position opening reasons and
-                    trade outcomes.
-                  </p>
-                </section>
-
-                <section>
-                  <h2>Common Position Management Mistakes</h2>
-                  <p>
-                    Ignoring swaps during long-term trading reduces
-                    profitability. Calculate accumulated costs in advance before
-                    opening positions.
-                  </p>
-
-                  <p>
-                    Absence of stop-losses leads to catastrophic losses. Always
-                    set protective orders regardless of confidence in direction.
-                    Read more about this in the article:
-                    <a
-                      class="linkrefinto"
-                      href="https://arapov.trade/en/freestudying/ordertypes"
-                      >Order Types</a
-                    >.
-                  </p>
-
-                  <p>
-                    Excessive leverage use increases risk of total deposit loss.
-                    Start with conservative leverage and increase gradually.
-                  </p>
-
-                  <p>
-                    Opening positions without analysis often ends in losses.
-                    Combine technical and fundamental analysis for informed
-                    decisions.
-                  </p>
-
-                  <p>
-                    Concentrating capital in single assets increases
-                    <a
-                      class="linkrefinto"
-                      href="https://arapov.trade/en/freestudying/riskcurrencyexchange"
-                      >currency risks</a
-                    >.. Diversify portfolios across different instruments and
-                    markets.
-                  </p>
-                </section>
-
-                <section>
-                  <h2>Tools for Position Management</h2>
-                  <p>
-                    Trading platforms provide all necessary functions: charts,
-                    indicators, calculators, and automated orders.
-                  </p>
-
-                  <p>
-                    Economic calendars help plan trades considering important
-                    events. Data releases can cause sharp price movements.
-                  </p>
-
-                  <p>
-                    Swap and margin calculators allow estimating costs and
-                    deposit requirements before opening positions.
-                  </p>
-
-                  <p>
-                    Trading robots automate strategy execution, eliminating
-                    emotional factors. However, they require thorough testing
-                    before use.
-                  </p>
-                </section>
-
-                <section>
-                  <h2>Advantages of Different Position Types</h2>
-                  <p>
-                    Long positions allow participating in economic growth and
-                    individual company expansion. Investors receive dividends
-                    and capital appreciation from growing assets.
-                  </p>
-
-                  <p>
-                    Short positions enable earning on falling markets. This
-                    proves especially valuable during economic crises and
-                    corrections.
-                  </p>
-
-                  <p>
-                    Hedging positions reduce overall portfolio risk. Protection
-                    from adverse movements allows weathering volatility periods
-                    calmly.
-                  </p>
-
-                  <p>
-                    Arbitrage positions generate profits with minimal market
-                    risk. However, they require significant capital and
-                    technological capabilities.
-                  </p>
-                </section>
-
-                <section>
-                  <h2>Practical Position Management Tips</h2>
-                  <p>
-                    Start with small volumes and increase them as experience
-                    accumulates. This protects capital during learning phases.
-                  </p>
-
-                  <p>
-                    Regularly review open positions and adjust protective
-                    orders. Markets constantly change; strategies must adapt.
-                  </p>
-
-                  <p>
-                    Don't open new positions when emotionally excited. Allow
-                    time to cool down after big wins or losses.
-                  </p>
-
-                  <p>
-                    Study successful traders and their position management
-                    approaches. Others' experience helps avoid typical beginner
-                    mistakes.
-                  </p>
-
-                  <p>
-                    Test new strategies on demo accounts before applying real
-                    funds. This allows evaluating effectiveness without
-                    financial risk.
-                  </p>
-
-                  <p>
-                    Use multiple timeframes for analysis. Higher ones show
-                    overall trends, lower ones show entry and exit points.
-                  </p>
-
-                  <p>
-                    Monitor correlations between assets for better market
-                    dynamics understanding. This helps avoid excessive risk
-                    concentration in portfolios.
-                  </p>
-
-                  <p>
-                    Keep learning continuously as markets evolve constantly.
-                    Professional development separates successful traders from
-                    those who fail long-term.
-                  </p>
-
-                  <p>
-                    Set realistic goals and celebrate achievements. Positive
-                    reinforcement helps maintain motivation throughout trading
-                    careers.
-                  </p>
-
-                  <p>
-                    Build networks with other traders for knowledge sharing and
-                    support. Community involvement accelerates learning and
-                    provides valuable market insights.
-                  </p>
-
-                  <p>
-                    Review performance regularly to identify strengths and
-                    weaknesses. Data-driven analysis of trading results enables
-                    continuous improvement of strategies.
-                  </p>
-                </section>
-
-                <section>
-                  <h2>Frequently Asked Questions</h2>
-
-                  <mat-accordion>
-                    <mat-expansion-panel
-                      class="highlight-box owl_link-box"
-                      [expanded]="true"
-                    >
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          What is a long position?
-                        </mat-panel-title>
-                      </mat-expansion-panel-header>
-                      <p>
-                        A long position is buying assets expecting value
-                        appreciation. Traders buy low and sell high to profit
-                        from price differences.
-                      </p>
-                    </mat-expansion-panel>
-                    <mat-expansion-panel
-                      class="highlight-box owl_link-box"
-                      (opened)="panelOpenState.set(true)"
-                      (closed)="panelOpenState.set(false)"
-                    >
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          How does a short position work?
-                        </mat-panel-title>
-                      </mat-expansion-panel-header>
-                      <p>
-                        A short position involves selling borrowed assets
-                        expecting price decline. Traders borrow from brokers,
-                        sell, then buy back cheaper to return.
-                      </p>
-                    </mat-expansion-panel>
-                    <mat-expansion-panel
-                      class="highlight-box owl_link-box"
-                      (opened)="panelOpenState.set(true)"
-                      (closed)="panelOpenState.set(false)"
-                    >
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          What is a swap in trading?</mat-panel-title
-                        >
-                      </mat-expansion-panel-header>
-                      <p>
-                        A swap is a fee for holding positions overnight,
-                        depending on interest rate differentials between
-                        currency pairs. Can be positive or negative.
-                      </p>
-                    </mat-expansion-panel>
-
-                    <mat-expansion-panel
-                      class="highlight-box owl_link-box"
-                      (opened)="panelOpenState.set(true)"
-                      (closed)="panelOpenState.set(false)"
-                    >
-                      <mat-expansion-panel-header>
-                        <mat-panel-title> What is value date?</mat-panel-title>
-                      </mat-expansion-panel-header>
-                      <p>
-                        Value date is when transaction settlements must be
-                        completed. In Forex, T+2 means settlements occur two
-                        business days after trade execution.
-                      </p> </mat-expansion-panel
-                    ><mat-expansion-panel
-                      class="highlight-box owl_link-box"
-                      (opened)="panelOpenState.set(true)"
-                      (closed)="panelOpenState.set(false)"
-                    >
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          What position types exist?</mat-panel-title
-                        >
-                      </mat-expansion-panel-header>
-                      <p>
-                        Main types include: speculative (short-term profits),
-                        hedging (risk protection), investment (long-term
-                        growth), and arbitrage positions.
-                      </p>
-                    </mat-expansion-panel>
-                  </mat-accordion>
-                </section>
-                <section>
-                  <h2>About the Author</h2>
-                  <p>
-                        Author: Igor Arapov — independent researcher in trading psychology and behavioral finance, practising trader since 2013, founder of arapov.trade, author of a trading book series (<a
-                          class="linkrefinto"
-                          href="https://openlibrary.org/authors/OL16073686A/Igor_Arapov"
-                          >Open Library</a
-                        >
-                        ),   (<a
-                          class="linkrefinto"
-                          href="https://orcid.org/0009-0003-0430-778X"
-                          >ORCID: 0009-0003-0430-778X</a
-                        >
-                        ).
-                      </p>
-                </section>
-              </article>
               <div
                 class=""
                 [ngClass]="{

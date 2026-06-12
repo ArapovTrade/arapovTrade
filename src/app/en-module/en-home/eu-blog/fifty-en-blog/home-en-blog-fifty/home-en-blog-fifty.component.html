@@ -6,404 +6,79 @@
           <div class="m-right hero-section"></div>
           <div class="free-courses_main-container">
             <main lang="en">
-              <article>
-                <h1>Algorithmic Orders in Trading: Complete Guide</h1>
+             <header>
+  <h1>Algorithmic Orders Explained</h1>
+</header>
+<article>
+  <p>Algorithmic orders are orders that large participants execute through algorithms in order to hide their real size. The best known is the iceberg: only a small part shows in the order book, while the main mass is hidden. In my experience they are read more reliably not from the book, but from the volume at a level.</p>
 
-                <p>
-                  <dfn>Algorithmic orders</dfn> are automated requests to buy or
-                  sell financial assets executed using specialized software
-                  algorithms. Such orders are created to optimize the trading
-                  process, increase trade accuracy, and eliminate the human
-                  factor. Algorithms analyze market data in real time — prices,
-                  trading volumes, volatility , and liquidity.
-                </p>
+  <p>A small trader has essentially two buttons on the market: buy and sell. Big capital has more options, and one of them is algorithmic orders. They exist not for decoration but to hide intent, and until you understand them you are playing blind against someone who sees more than you do. So the topic is worth working through calmly.</p>
 
-                <p>
-                  In modern financial markets, algorithmic orders have become an
-                  indispensable tool. They are used by large institutional
-                  investors (hedge funds, banks) and private traders to
-                  implement complex strategies: scalping , arbitrage, risk
-                  hedging, and portfolio management.
-                </p>
+  <p><strong><i>In this article we'll cover:</i></strong></p>
+  <ul>
+    <li>algorithmic orders hide the real volume of big capital;</li>
+    <li>the iceberg shows only its tip in the book, the body is hidden and reloads itself;</li>
+    <li>the book can be faked, while volume is an honest footprint of already executed trades;</li>
+    <li>in my experience a large participant is found more reliably by the volume at a level than in the book.</li>
+  </ul>
 
-                <h2>How Algorithmic Orders Work</h2>
+  <p>Let's start with what these orders even are and why big capital needs them.</p>
 
-                <p>
-                  Algorithmic orders are based on pre-programmed rules and
-                  conditions. For example, an algorithm can be configured to buy
-                  an asset when a certain price is reached or sell when
-                  volatility spikes. Popular
-                  <a
-                    class="linkrefinto"
-                    href="https://arapov.trade/en/freestudying/ordertypes"
-                    >Order Types</a
-                  >
-                  include <dfn>VWAP</dfn> (Volume Weighted Average Price),
-                  <dfn>TWAP</dfn> (Time Weighted Average Price), and orders with
-                  adaptive logic.
-                </p>
+  <h2>What Are Algorithmic Orders and Why They Exist</h2>
+  <p><dfn itemscope itemtype="https://schema.org/DefinedTerm"><span itemprop="name">Algorithmic order</span></dfn> is a large order that executes by a set algorithm and is split into parts, so a participant can buy or sell a big volume without revealing its real size and intent to the market.</p>
+  <p>The point is simple. If you place a huge order in full, everyone sees it in the order book, the list of buy and sell orders, and shifts price against you at once. So big capital almost always works with limit orders and algorithms that feed the volume in small portions, with one goal: to fill at a good price without scaring the market early. There is also a dark side. Spoofing is when a participant places a large order with no intention of filling it, to create a false impression of supply or demand, and then pulls it. That is prohibited manipulation, fined and prosecuted, and it is exactly why the book cannot be trusted one hundred percent. A retail trader neither needs to nor may spoof, but it is worth knowing about, to understand why orders in the book so often vanish. The full set of <a class="linkrefinto" href="https://arapov.trade/en/freestudying/marketmaker">market making</a> mechanics sits separately.</p>
 
-                <p>
-                  Algorithms process huge arrays of data and execute trades in
-                  milliseconds, which is especially important in high-frequency
-                  trading (<dfn>HFT</dfn>). Automation eliminates emotional
-                  decisions, ensuring trading strategy stability.
-                </p>
+  <div class="flex">
+    <img class="pictureImg" loading="lazy" src="/assets/img/content/algorithmicorders2.webp" alt="Advantages of algorithmic orders" />
+  </div>
 
-                <img
-                  src="/assets/img/content/algorithmicorders2.webp"
-                  alt="Algorithmic orders advantages"
-                  loading="lazy"
-                />
+  <h2>The Iceberg Order: How Big Players Hide Size</h2>
+  <p>The iceberg is the clearest example. Picture an iceberg in the ocean: a small tip pokes above the water, while the main block is hidden. It is the same here. Only a small visible part of the order hangs in the book, and the real volume is concealed. As soon as the visible portion fills, the algorithm automatically places the next one of the same size, and so on until the whole hidden volume has gone into the market.</p>
+  <p>Why this is needed. If a large participant showed the whole order at once, everyone else would jump the price immediately, and building the position normally would be impossible. The iceberg lets it quietly execute a big volume without revealing either size or side. The <a class="linkrefinto" href="https://arapov.trade/en/freestudying/icebergorders">hidden order</a> itself is a legal tool, unlike spoofing, and banks and funds use it worldwide. And here is what matters for us: an iceberg can be noticed by price behavior. If orders appear at one level again and again and price cannot push through it, someone large is quietly accumulating or distributing there. The hidden order is given away not by the book but by the price reaction and the volume at that spot.</p>
 
-                <h2>Types of Algorithmic Orders</h2>
+  <h2>How to Recognize Algorithmic Activity in Volume</h2>
+  <p>Here we reach my main tool. A large participant can play games with the book, slip orders in and pull them out, so trusting it is hard. Volume, by contrast, is honest information: it shows the number of already executed trades, and it cannot be faked. So I look not at the book but at the volume at a level.</p>
+  <p>The main sign of a large player is a spike in volume without a movement in price. In volume analysis this is called effort without result, or absorption: there is pressure, yet price stands still, because someone large is absorbing the whole flow of orders with a hidden limit order. Often, just before the move itself, there is a shakeout, a false breakout of the level, a quick stab to knock out stops and collect liquidity, and only then the move goes the intended way. My working order is this: find a strong level, see a volume spike and a liquidity deficit on it, wait for the false breakout, and join big capital with a short stop, the way <a class="linkrefinto" href="https://arapov.trade/en/freestudying/smartmoneycontrol">how institutions move price</a> describes.</p>
 
-                <p>
-                  <dfn
-                    ><a
-                      class="linkrefinto"
-                      href="https://arapov.trade/en/freestudying/icebergorders"
-                      >Iceberg Order</a
-                    >
-                  </dfn>
-                  hides the main part of the order volume, displaying only a
-                  small portion in the order book. This allows large traders to
-                  execute big orders unnoticed, avoiding market price impact.
-                  Hedge funds often use Iceberg for position accumulation.
-                </p>
+  <h2>My Take: Trust Volume, Not the Book</h2>
+  <p>I have been trading since 2013, and the principle has not changed: the book can be faked, the volume cannot. This is not advice for you personally, it is how I work: I find a strong level, look for a volume spike without follow-through and the shakeout that usually precedes the real move, and then join the side big capital has already taken. The beauty of it is that we small participants do not need to hide our size at all, so we can enter easily where big capital has already left its footprint. The honest limitation is that volume confirms presence after the fact rather than predicting the next tick, so I still need a clear level and a tight stop, and I accept that some footprints lead nowhere. How this looks on real examples is shown in <a class="linkrefinto" href="https://youtu.be/UUSmwO83Jcg?t=149">algorithmic orders and volume on the chart</a>.</p>
 
-                <p>
-                  TWAP splits an order into equal parts and executes them over a
-                  specified time interval, targeting the average price for the
-                  period. Ideal for large trades where avoiding market impact is
-                  important.
-                </p>
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <mat-accordion>
+      <mat-expansion-panel class="highlight-box owl_link-box" [expanded]="true">
+        <mat-expansion-panel-header>
+          <mat-panel-title>What are algorithmic orders in simple terms?</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>It is a big order that a program splits into small pieces and feeds into the market in portions. This way a large participant buys or sells a big volume without showing everyone its real size and without moving price against itself too early.</p>
+      </mat-expansion-panel>
+      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+        <mat-expansion-panel-header>
+          <mat-panel-title>How is an iceberg order different from spoofing?</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>An iceberg is a real order, just with a small visible part and the rest hidden. It is legal. Spoofing is a fake order placed to deceive and pulled at once. That is prohibited market manipulation.</p>
+      </mat-expansion-panel>
+      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+        <mat-expansion-panel-header>
+          <mat-panel-title>Can you see algorithmic orders in the order book?</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>Not in full, and that is the whole point. Only the tip shows in the book, and the book can be faked on top of that. It is far more honest to watch volume: a spike of executed trades at a level without a move in price is the footprint of a large participant.</p>
+      </mat-expansion-panel>
+      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+        <mat-expansion-panel-header>
+          <mat-panel-title>Does an ordinary trader need algorithmic orders?</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>There is no need to place them yourself; a small participant has different tasks. But understanding them is useful: it lets you read where big capital sits on the market and enter behind it rather than against it.</p>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </section>
 
-                <p>
-                  VWAP considers trading volume, executing orders at the
-                  volume-weighted average price over a period. Popular among
-                  traders working with large volumes, minimizing market impact
-                  and <dfn>slippage</dfn>. If execution price is better than
-                  VWAP, the trade is considered successful.
-                </p>
+  <section>
+    <h2>About the Author</h2>
+    <p>Author: Igor Arapov — independent researcher in the psychology of investment decisions and behavioral finance, practising trader since 2013, founder of arapov.trade, author of a trading book series (<a class="linkrefinto" href="https://openlibrary.org/authors/OL16073686A/Igor_Arapov">Open Library</a>), (<a class="linkrefinto" href="https://orcid.org/0009-0003-0430-778X">ORCID: 0009-0003-0430-778X</a>).</p>
+  </section>
+</article>
 
-                <p>
-                  Stop-Loss — an automatic order that closes a position when
-                  price reaches a specified loss level. Indispensable for risk
-                  management and capital protection in volatile Forex and crypto
-                  markets.
-                </p>
-
-                <p>
-                  <dfn>Trailing Stop</dfn> — a dynamic stop-loss that
-                  automatically follows price in the profitable direction,
-                  locking in profit when the market reverses. For example, when
-                  an asset rises 5%, the trailing stop moves up, maintaining a
-                  set distance from the maximum.
-                </p>
-
-                <p>
-                  <dfn>Pegged Orders</dfn> automatically adjust price to current
-                  market conditions, pegging to the best bid/ask price. A trader
-                  can set a purchase 0.1% below market price. Popular in
-                  arbitrage strategies.
-                </p>
-
-                <p>
-                  Market Orders with Conditions activate when specified
-                  parameters are met — a certain price, trading volume, or
-                  technical signal. Suitable for complex automated scalping
-                  systems.
-                </p>
-
-                <p>
-                  Sniper Orders "wait" for an exact price level for instant
-                  execution. Used in HFT for entry at key support and resistance
-                  levels .
-                </p>
-
-                <h2>Advantages of Algorithmic Orders</h2>
-
-                <p>
-                  Speed and efficiency — algorithms process data in fractions of
-                  a second, outpacing competitors and capturing short-term price
-                  anomalies. In HFT, algorithms execute thousands of orders per
-                  minute, impossible with manual trading.
-                </p>
-
-                <p>
-                  Execution optimization — TWAP and VWAP types split trades into
-                  parts, distributing them over time or by volume. This avoids
-                  sharp price jumps and achieves execution close to average
-                  market value.
-                </p>
-
-                <p>
-                  Eliminating human factor — algorithms work strictly by rules,
-                  excluding fear, greed, and indecision. Automatic Stop-Loss
-                  closes positions without hesitation in stressful situations.
-                </p>
-
-                <p>
-                  Time savings — algorithms work around the clock, executing
-                  orders even when the trader is absent. Especially relevant for
-                  24/7 cryptocurrency markets.
-                </p>
-
-                <p>
-                  Cost reduction — automation reduces slippage, spreads, and
-                  commissions by optimizing entry and exit points.
-                </p>
-
-                <p>
-                  Versatility — algorithmic orders apply to any assets: stocks,
-                  bonds, cryptocurrencies, commodities. They scale from small
-                  retail trades to managing billion-dollar institutional
-                  portfolios.
-                </p>
-
-                <h2>Risks and Limitations</h2>
-
-                <p>
-                  Technical failures — algorithms depend on server, internet,
-                  and software reliability. Failures can lead to unexecuted
-                  orders or accidental trades. The famous 2010 "Flash Crash" was
-                  caused by an algorithm failure that dropped the Dow Jones 9%
-                  in minutes. To understand this topic more deeply, I recommend
-                  studying
-                  <a
-                    class="linkrefinto"
-                    href="https://arapov.trade/en/freestudying/smartmoneycontrol"
-                    >Smart Money Control</a
-                  >.
-                </p>
-
-                <p>
-                  Dependence on historical data — algorithms are optimized on
-                  past data that doesn't guarantee future success. A strategy
-                  tested on a bull market may fail in a bear season.
-                </p>
-
-                <p>
-                  High cost — developing, testing, and maintaining algorithmic
-                  systems requires significant investment in technology and
-                  specialists.
-                </p>
-
-                <p>
-                  Competition between algorithms — modern markets are flooded
-                  with HFT systems, reducing the effectiveness of simple
-                  strategies for retail traders with limited resources.
-                </p>
-
-                <p>
-                  Overfitting risk — an algorithm too precisely fitted to
-                  historical data loses the ability to adapt to new conditions.
-                </p>
-
-                <p>
-                  Limited flexibility — algorithms act strictly within set
-                  parameters and cannot improvise in unusual situations.
-                  Unexpected macroeconomic news can make an algorithm useless.
-                </p>
-
-                <img
-                  src="/assets/img/content/algorithmicorders1.webp"
-                  alt="Spoofing and market manipulation"
-                  loading="lazy"
-                />
-
-                <h2>Spoofing — Market Manipulation</h2>
-
-                <p>
-                  <dfn>Spoofing</dfn> is a prohibited manipulative strategy
-                  where large fake orders are placed to create a false
-                  impression of supply or demand. The goal is to deceive other
-                  participants and provoke price movement. Read more about this
-                  in the article:
-                  <a
-                    class="linkrefinto"
-                    href="https://arapov.trade/en/freestudying/marketmaker"
-                    >Market Maker</a
-                  >.
-                </p>
-
-                <p>
-                  Spoofing is illegal on regulated platforms (CME, NYSE,
-                  Nasdaq). Violators receive large fines and may face criminal
-                  liability. Exchanges implement monitoring systems to detect
-                  suspicious patterns.
-                </p>
-
-                <p>
-                  To avoid becoming a spoofing victim, analyze the order book ,
-                  identify suspicious large orders that quickly disappear, and
-                  avoid placing stop-losses at obvious levels.
-                </p>
-
-                <h2>Who Can Use Algorithmic Orders</h2>
-
-                <p>
-                  Institutional investors — banks, hedge funds, and pension
-                  funds use algorithms to manage multi-billion portfolios,
-                  applying VWAP and TWAP to reduce transaction costs.
-                </p>
-
-                <p>
-                  HFT companies use complex algorithms for thousands of
-                  operations per second, extracting profit from microscopic
-                  price movements with minimal latency through Co-Location
-                  servers.
-                </p>
-
-                <p>
-                  Proprietary traders develop custom algorithms for arbitrage,
-                  statistical analysis, and news trading.
-                </p>
-
-                <p>
-                  Retail traders gain access through platforms like MetaTrader,
-                  TradingView, NinjaTrader, and APIs of crypto exchanges like
-                  Binance. Ready-made scripts and constructors allow creating
-                  strategies without deep programming knowledge.
-                </p>
-
-                <h2>Platforms for Algorithmic Trading</h2>
-
-                <p>
-                  MetaTrader 5 — popular platform with built-in MQL5 language
-                  for creating expert advisors. Suitable for Forex and CFD
-                  trading.
-                </p>
-
-                <p>
-                  TradingView — platform with convenient Pine Script visual
-                  strategy editor. Allows creating and testing algorithms
-                  directly in the browser.
-                </p>
-
-                <p>
-                  NinjaTrader — professional platform for futures trading with
-                  advanced backtesting and optimization capabilities.
-                </p>
-
-                <p>
-                  Crypto exchange APIs (Binance, Kraken, Bybit) — programmatic
-                  interfaces for direct algorithm connection to cryptocurrency
-                  markets.
-                </p>
-
-                <h2>Conclusion</h2>
-
-                <p>
-                  Algorithmic orders have become an integral part of modern
-                  financial markets. They provide speed, accuracy, and
-                  efficiency unavailable in manual trading. From VWAP and TWAP
-                  to Trailing Stop — each type solves specific trading
-                  optimization tasks.
-                </p>
-
-                <p>
-                  For successful use, study order types, choose a suitable
-                  platform, test strategies on demo accounts, and comply with
-                  regulatory requirements. Algorithmic trading opens new
-                  opportunities for achieving financial goals for both
-                  professionals and beginners. Continue your learning with the
-                  article:
-                  <a
-                    class="linkrefinto"
-                    href="https://arapov.trade/en/freestudying/tradingsystem"
-                    >Trading System</a
-                  >.
-                </p>
-
-                <p>
-                  AI and machine learning integration allows algorithms to
-                  predict trends, analyze news, and adapt to non-standard
-                  conditions. This makes algorithmic trading not just a trend
-                  but a necessity for competitiveness.
-                </p>
-                <section>
-                  <h2>FAQ</h2>
-
-                  <mat-accordion>
-                    <mat-expansion-panel
-                      class="highlight-box owl_link-box"
-                      [expanded]="true"
-                    >
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          What are algorithmic orders?
-                        </mat-panel-title>
-                      </mat-expansion-panel-header>
-                      <p>Automated orders executed by software algorithms.</p>
-                    </mat-expansion-panel>
-                    <mat-expansion-panel
-                      class="highlight-box owl_link-box"
-                      (opened)="panelOpenState.set(true)"
-                      (closed)="panelOpenState.set(false)"
-                    >
-                      <mat-expansion-panel-header>
-                        <mat-panel-title> What types exist? </mat-panel-title>
-                      </mat-expansion-panel-header>
-                      <p>VWAP, TWAP, Iceberg, Trailing Stop, Pegged Orders.</p>
-                    </mat-expansion-panel>
-                    <mat-expansion-panel
-                      class="highlight-box owl_link-box"
-                      (opened)="panelOpenState.set(true)"
-                      (closed)="panelOpenState.set(false)"
-                    >
-                      <mat-expansion-panel-header>
-                        <mat-panel-title> What is VWAP?</mat-panel-title>
-                      </mat-expansion-panel-header>
-                      <p>
-                        Algorithm executing at volume-weighted average price.
-                      </p>
-                    </mat-expansion-panel>
-
-                    <mat-expansion-panel
-                      class="highlight-box owl_link-box"
-                      (opened)="panelOpenState.set(true)"
-                      (closed)="panelOpenState.set(false)"
-                    >
-                      <mat-expansion-panel-header>
-                        <mat-panel-title> What is spoofing?</mat-panel-title>
-                      </mat-expansion-panel-header>
-                      <p>
-                        Illegal manipulation with fake orders.
-                      </p> </mat-expansion-panel
-                    ><mat-expansion-panel
-                      class="highlight-box owl_link-box"
-                      (opened)="panelOpenState.set(true)"
-                      (closed)="panelOpenState.set(false)"
-                    >
-                      <mat-expansion-panel-header>
-                        <mat-panel-title> Who can use them?</mat-panel-title>
-                      </mat-expansion-panel-header>
-                      <p>
-                        Institutional and retail traders through modern
-                        platforms.
-                      </p>
-                    </mat-expansion-panel>
-                  </mat-accordion>
-                </section>
-                <section>
-                  <h2>About the Author</h2>
-                  <p>
-                        Author: Igor Arapov — independent researcher in trading psychology and behavioral finance, practising trader since 2013, founder of arapov.trade, author of a trading book series (<a
-                          class="linkrefinto"
-                          href="https://openlibrary.org/authors/OL16073686A/Igor_Arapov"
-                          >Open Library</a
-                        >
-                        ),   (<a
-                          class="linkrefinto"
-                          href="https://orcid.org/0009-0003-0430-778X"
-                          >ORCID: 0009-0003-0430-778X</a
-                        >
-                        ).
-                      </p>
-                </section>
-              </article>
               <div
                 class=""
                 [ngClass]="{

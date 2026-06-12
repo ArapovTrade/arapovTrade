@@ -7,443 +7,87 @@
 
           <div class="free-courses_main-container">
             <main lang="en">
-              <article>
-                <h1 itemprop="headline">
-                  ATR Indicator: Complete Guide to Measuring Market Volatility
-                </h1>
+             <header>
+  <h1>ATR Indicator: How to Measure Volatility</h1>
+</header>
+<article>
+  <p>ATR, the average true range, measures how much an asset typically moves over a chosen period, which is a direct read on its volatility. It says nothing about direction, only about the size of the swings. For a trader its value is practical: it helps place a stop that random noise will not trigger and shows whether the market is calm or stormy right now.</p>
 
-                <section>
-                  <h2>Understanding Volatility and the Role of ATR</h2>
-                  <p>
-                    Financial markets constantly alternate between periods of
-                    activity and calm. Understanding current market dynamics
-                    determines strategy selection and risk management
-                    parameters. <dfn>ATR</dfn> (Average True Range) represents a
-                    technical indicator developed by Welles Wilder for
-                    objectively measuring market volatility regardless of price
-                    direction. To understand this topic more deeply, I recommend
-                    studying
-                    <a
-                      class="linkrefinto"
-                      href="https://arapov.trade/en/freestudying/tradingindicators"
-                      >technical indicators</a
-                    >.
-                  </p>
-                  <p>
-                    The indicator reflects average price swing amplitude over a
-                    defined time interval. High values indicate active markets
-                    with wide movements, low values suggest consolidation and
-                    narrowing trading ranges. Traders use this information to
-                    adapt trading systems to changing conditions and place
-                    protective orders at optimal distances from entry points.
-                  </p>
-                  <p>
-                    The fundamental characteristic of ATR lies in its neutrality
-                    regarding trend direction. The indicator responds equally to
-                    upward and downward movements, measuring exclusively
-                    oscillation amplitude. This makes it a universal
-                    <a
-                      class="linkrefinto"
-                      href="https://arapov.trade/en/freestudying/capitalmanagement"
-                      >risk management
-                    </a>
-                    tool applicable in any market conditions across all
-                    financial instruments from currency pairs to
-                    cryptocurrencies.
-                  </p>
-                  <p>
-                    The indicator's history dates back to the nineteen
-                    seventies. Welles Wilder introduced ATR in his book on
-                    technical trading systems alongside other well-known
-                    indicators: RSI, Parabolic SAR, and ADX. Since then, Average
-                    True Range has become firmly established in professional
-                    traders' arsenals as a reliable market activity assessment
-                    tool.
-                  </p>
-                </section>
+  <p>I have spent plenty of time on indicators, and for finding entries they gave me nothing useful, since I trade from levels and volume. ATR is the exception I keep. It does not pretend to call buys or sells, it simply measures volatility, and that turns out to be useful, above all for setting a stop. So I treat ATR not as a signal but as a working risk tool. Here is what it is and how it earns its place.</p>
 
-                <section>
-                  <h2>Mathematical Foundation of Indicator Calculation</h2>
-                  <p>
-                    ATR calculation is based on the
-                    <dfn>True Range</dfn> concept, which considers not only
-                    intraday price spread but also potential gaps relative to
-                    previous closing. For each period, the maximum value is
-                    determined from three figures: difference between current
-                    high and low, absolute deviation of high from previous
-                    close, and absolute deviation of low from previous close.
-                  </p>
-                  <p>
-                    Obtained true range values are averaged using exponential
-                    smoothing over the selected period. Standard settings use
-                    fourteen candles, providing balance between sensitivity and
-                    smoothness of readings. Modern trading platforms perform all
-                    calculations automatically, displaying results as a
-                    continuous line below the main price chart.
-                  </p>
-                  <img
-                    src="/assets/img/content/atrindicator333.png"
-                    alt="ATR Indicator on price chart with different periods"
-                    loading="lazy"
-                    width="800"
-                    height="450"
-                  />
-                  <p>
-                    Period selection significantly affects indicator behavior.
-                    Shortening the period increases sensitivity to short-term
-                    volatility changes, suitable for scalping and intraday
-                    trading. Increasing the period creates a smoother line with
-                    delayed reaction, preferable for positional strategies and
-                    medium-term investing.
-                  </p>
-                  <p>
-                    The true range formula accounts for gaps between previous
-                    candle close and current candle open. Such gaps are
-                    especially characteristic of stock markets after weekends or
-                    major news releases. Classical high-minus-low calculation
-                    would miss this information, understating actual volatility.
-                  </p>
-                </section>
+  <p><strong><i>In this article we'll cover:</i></strong></p>
+  <ul>
+    <li>ATR measures volatility, the average size of price moves, and says nothing about direction;</li>
+    <li>its main use is placing a stop that market noise will not trigger, and sizing positions for a fixed risk;</li>
+    <li>an extremely high ATR often marks a climax and a reason to think about taking profit;</li>
+    <li>ATR shows the market phase: a quiet contraction before a move, or an expansion inside an active trend.</li>
+  </ul>
 
-                <section>
-                  <h2>Interpreting ATR Readings</h2>
-                  <p>
-                    The indicator's absolute value reflects average price
-                    movement range in instrument measurement units. For currency
-                    pairs, results are expressed in pips, for stocks and indices
-                    in monetary units or percentages. Comparing current values
-                    with historical levels allows assessment of relative
-                    <dfn
-                      ><a
-                        class="linkrefinto"
-                        href="https://arapov.trade/en/freestudying/volatility"
-                        >volatility</a
-                      >
-                    </dfn>
-                    and market cycle phase determination.
-                  </p>
-                  <p>
-                    Rising ATR signals increasing participant activity and
-                    trading range expansion. Such periods are characterized by
-                    impulsive movements, level breakouts, and new trend
-                    formation. Traders widen protective orders and increase
-                    profit targets, adapting to enhanced market dynamics.
-                  </p>
-                  <p>
-                    Declining ATR indicates volatility compression and market
-                    transition to consolidation phase. Price fluctuations occur
-                    in narrowing ranges, building potential for subsequent
-                    breakouts. Experienced traders prepare for range exits by
-                    placing pending orders beyond
-                    <dfn>consolidation</dfn> boundaries.
-                  </p>
-                  <p>
-                    Extremely high ATR values often coincide with trend movement
-                    climax and precede reversals or deep corrections. Sharp
-                    volatility spikes during prolonged trends warn of possible
-                    driving force exhaustion and market phase changes. Attentive
-                    traders lock profits or tighten protective orders.
-                  </p>
-                  <p>
-                    Seasonal and temporal patterns influence indicator readings.
-                    Volatility typically increases at trading session beginnings
-                    and during European-American session overlaps in forex
-                    markets. Holiday periods and summer months are characterized
-                    by reduced activity and corresponding ATR value drops.
-                  </p>
-                </section>
+  <p>We will start with what ATR is and how it is calculated.</p>
 
-                <section>
-                  <h2>Setting Protective Orders Based on ATR</h2>
-                  <p>
-                    The most common indicator application involves determining
-                    optimal
-                    <dfn
-                      ><a
-                        class="linkrefinto"
-                        href="https://arapov.trade/en/freestudying/stoploss"
-                        >stop-loss</a
-                      >
-                    </dfn>
-                    distance. The classic approach places protective orders at
-                    one to three ATR values from entry point. This methodology
-                    accounts for actual price oscillation amplitude and
-                    minimizes probability of premature triggering from random
-                    market noise.
-                  </p>
-                  <p>
-                    Specific multiplier selection depends on trading style and
-                    risk tolerance. Conservative traders prefer coefficients of
-                    one-point-five to two, providing comfortable allowance for
-                    natural price fluctuations. Aggressive strategies permit
-                    using one ATR, increasing potential reward-to-risk ratio at
-                    the cost of more frequent stop-outs.
-                  </p>
-                  <img
-                    src="/assets/img/content/atrstrategies.jpg"
-                    alt="ATR-based stop-loss strategies"
-                    loading="lazy"
-                    width="800"
-                    height="450"
-                  />
-                  <p>
-                    Dynamic position management is implemented through ATR-based
-                    <dfn>trailing stops</dfn>. Protective orders automatically
-                    follow price while maintaining fixed distance in volatility
-                    units. The method captures significant portions of trend
-                    movements while protecting accumulated profits from sharp
-                    reversals.
-                  </p>
-                  <p>
-                    Alternative approaches combine ATR with technical support
-                    and resistance levels. Calculated distance serves as
-                    reference, while final stop placement adjusts relative to
-                    nearest significant price zones. This hybrid methodology
-                    enhances protection stability through structural barrier
-                    utilization.
-                  </p>
-                  <p>
-                    Position sizing calculation organically connects with
-                    ATR-based stops. Knowing protective order distance in pips
-                    and acceptable risk percentage of deposit, traders determine
-                    optimal trade volume. This approach ensures consistent
-                    capital management regardless of specific instrument
-                    volatility.
-                  </p>
-                </section>
+  <div class="flex">
+    <img class="pictureImg" loading="lazy" src="/assets/img/content/atrindicator333.png" alt="ATR indicator on a price chart with different periods" />
+  </div>
 
-                <section>
-                  <h2>Trading Strategies Using ATR</h2>
-                  <p>
-                    The indicator effectively complements various trading
-                    systems, improving signal quality and optimizing position
-                    management. ATR integration into existing methodology
-                    requires no radical changes; simply add volatility filtering
-                    and adaptive risk parameters.
-                  </p>
-                  <p>
-                    Volatility breakout strategy uses low ATR values as
-                    harbingers of upcoming <dfn>impulses</dfn>. Indicator
-                    compression below historical minimums signals energy
-                    accumulation before sharp movement. Traders place pending
-                    orders beyond current range boundaries anticipating
-                    directional breakouts.
-                  </p>
-                  <p>
-                    Counter-trend trading relies on extreme ATR values as market
-                    overheating indicators. Price traveling seventy to eighty
-                    percent of average daily range increases pullback or
-                    reversal probability. Positions open against current impulse
-                    with tight stops and conservative profit targets.
-                  </p>
+  <h2>What Is ATR?</h2>
+  <p><dfn itemscope itemtype="https://schema.org/DefinedTerm"><span itemprop="name">ATR (average true range)</span></dfn> is an indicator that shows how far price moves on average over a set period, which makes it a measure of volatility rather than direction. It was created by Welles Wilder in 1978. The building block is the true range of a candle, the largest of three distances: high to low, high to the previous close, and low to the previous close.</p>
+  <p>ATR is simply that true range averaged over several candles, most often 14. The key thing to remember is that it shows the size of the move, not its side. A high ATR means big candles and a market ranging widely, a low ATR means small moves and a quiet market. Using it as an entry signal makes no sense, because it has no idea whether price will go up or down. As a reading of <a class="linkrefinto" href="https://arapov.trade/en/freestudying/volatility">market volatility</a>, though, it works very well.</p>
 
-                  <p>
-                    Filtering other indicators' signals through ATR eliminates
-                    weak entries during low activity periods. RSI, MACD, or
-                    moving average crossover signals are accepted only at
-                    sufficient volatility levels guaranteeing movement potential
-                    for reaching profit targets.
-                  </p>
-                  <p>
-                    Adapting profit targets to current volatility increases
-                    trading expectation realism. Take-profit is set as ATR
-                    multiples, ensuring target proportionality to market
-                    conditions. During high volatility, targets expand; during
-                    low volatility, they contract proportionally to indicator
-                    readings.
-                  </p>
-                </section>
+  <h2>How to Use ATR</h2>
+  <p>This is where ATR genuinely helps. A common beginner mistake is setting a stop too tight, right under the entry, where ordinary market noise knocks it out before the idea has a chance. ATR tells you what counts as normal noise for that instrument. A rough rule is to place the stop about 1.5 to 2 ATR away from entry, so it sits beyond the usual wiggle. This is the core of an ATR-based <a class="linkrefinto" href="https://arapov.trade/en/freestudying/stoploss">stop-loss order</a>, and many traders trail it the same way as a trade runs in profit.</p>
 
-                <section>
-                  <h2>Application Specifics Across Different Markets</h2>
-                  <p>
-                    ATR universality allows indicator use on any financial
-                    instruments with minor parameter adaptations. Forex markets
-                    are characterized by relatively stable volatility with
-                    pronounced session fluctuations. Optimal calculation period
-                    is fourteen to twenty candles for daily timeframes.
-                  </p>
-                  <p>
-                    Stock markets demonstrate significant volatility differences
-                    between individual equities. Liquid blue chips show moderate
-                    ATR values, while growth stocks and small caps feature
-                    elevated variability. Individual stop-loss multiplier
-                    calibration accounts for specific issuer characteristics.
-                  </p>
-                  <p>
-                    Cryptocurrency markets are characterized by extreme
-                    volatility significantly exceeding traditional assets. ATR
-                    values are an order of magnitude higher than comparable
-                    currency pair readings, requiring corresponding protective
-                    distance increases. Calculation period shortens to seven to
-                    ten candles for more responsive adaptation.
-                  </p>
-                  <p>
-                    Commodities and futures contracts have their own volatility
-                    patterns. Oil and gold react to geopolitical events with
-                    sharp ATR spikes. Agricultural commodities show seasonal
-                    volatility fluctuations depending on weather conditions and
-                    harvest periods.
-                  </p>
-                </section>
+  <div class="flex">
+    <img class="pictureImg" loading="lazy" src="/assets/img/content/atrstrategies.jpg" alt="ATR stop-loss strategies" />
+  </div>
 
-                <section>
-                  <h2>Combining with Other Analysis Tools</h2>
-                  <p>
-                    Maximum ATR effectiveness is achieved within comprehensive
-                    trading systems combining multiple complementary indicators.
-                    Trend tools determine movement direction, oscillators
-                    identify overbought and oversold conditions, while ATR
-                    ensures risk parameter adaptation to current conditions.
-                  </p>
-                  <p>
-                    Combination with Bollinger Bands creates multi-level
-                    volatility assessment systems. Band expansion coincides with
-                    ATR growth, confirming increased market activity.
-                    Simultaneous narrowing of both indicators forms strong
-                    signals of impending impulses from consolidation.
-                  </p>
-                  <p>
-                    Integration with volume analysis increases volatility signal
-                    reliability. ATR growth against increasing trading volumes
-                    indicates large player participation and raises movement
-                    continuation probability. Divergence between volatility and
-                    activity warns of potential current impulse falseness.
-                  </p>
-                </section>
+  <p>The second use is position sizing. Once you know the typical swing in ATR, you can size the trade so the risk in money stays the same every time: a smaller position on a volatile instrument, a slightly larger one on a calm market, but always the same fixed percentage at risk. That principle sits at the heart of sound <a class="linkrefinto" href="https://arapov.trade/en/freestudying/capitalmanagement">money management</a>. ATR also maps the volatility cycle. A long stretch of low ATR is a contraction, a quiet range that often comes before a strong move, while a rising ATR marks an expansion, the active phase of a trend.</p>
 
-                <section>
-                  <h2>Common Mistakes When Using ATR</h2>
-                  <p>
-                    Beginners often perceive ATR as a signal indicator,
-                    expecting entry directions from it. Such application
-                    contradicts the instrument's nature, designed exclusively
-                    for volatility measurement and risk management. Trading
-                    decisions are based on other analytical methods. To
-                    consolidate this material, also study
-                    <a
-                      class="linkrefinto"
-                      href="https://arapov.trade/en/freestudying/bollingerbands"
-                      >Bollinger Bands</a
-                    >.
-                  </p>
-                  <p>
-                    Ignoring market context when interpreting values leads to
-                    erroneous conclusions. Absolute ATR numbers are informative
-                    only when compared with historical levels of specific
-                    instruments. A high value for one asset may prove average
-                    for another with different volatility profiles.
-                  </p>
-                  <p>
-                    Mechanical application of fixed multipliers without
-                    considering market conditions reduces protective order
-                    effectiveness. Optimal coefficients vary depending on
-                    timeframe, trading style, and current market phase. Regular
-                    parameter reassessment enhances risk management system
-                    adaptability.
-                  </p>
-                </section>
-                <section>
-                  <h2>Frequently Asked Questions</h2>
+  <h2>My Take on the ATR</h2>
+  <p>ATR is the one indicator I have never stopped using, precisely because it makes no attempt to predict direction and only measures the swing I need to size risk against. Where it earns extra attention is at the extremes. When ATR spikes to unusually high values, the market is moving as widely as it gets, candles are huge and emotion is at a peak, and that often coincides with the climax of a move just before it exhausts.</p>
+  <p>For me that is not a command to close everything, just a reason to be careful: if I am already in profit and ATR rockets, I think about taking part of the position off or pulling the stop closer. Chasing price at peak volatility is dangerous, because that is exactly where the market tends to turn. The contraction and expansion phases I actually read through volume and the Wyckoff logic of accumulation and distribution, and ATR simply confirms, in a clean visual way, what the structure already shows. The decision still rests on levels and volume, with ATR highlighting that it is time to pay attention. Keeping risk to a fixed percentage of the account, for me 1 to 2 percent, is the discipline that has kept me trading since 2013. None of this is advice for you, it is the principle that works for me. I show how volatility shifts across phases in this video, <a class="linkrefinto" href="https://youtu.be/IcqI70fxvbg?t=62">ATR indicator: market volatility and taking profit</a>.</p>
 
-                  <mat-accordion>
-                    <mat-expansion-panel
-                      class="highlight-box owl_link-box"
-                      [expanded]="true"
-                    >
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          What does the ATR indicator show?
-                        </mat-panel-title>
-                      </mat-expansion-panel-header>
-                      <p>
-                        ATR shows average price movement range over selected
-                        period, measuring market volatility without indicating
-                        trend direction.
-                      </p>
-                    </mat-expansion-panel>
-                    <mat-expansion-panel
-                      class="highlight-box owl_link-box"
-                      (opened)="panelOpenState.set(true)"
-                      (closed)="panelOpenState.set(false)"
-                    >
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          How to use ATR for stop-loss placement?
-                        </mat-panel-title>
-                      </mat-expansion-panel-header>
-                      <p>
-                        Stop-loss is placed one to three ATR from entry point.
-                        Conservative approach uses multiplier of one-point-five
-                        to two, aggressive allows one ATR.
-                      </p>
-                    </mat-expansion-panel>
-                    <mat-expansion-panel
-                      class="highlight-box owl_link-box"
-                      (opened)="panelOpenState.set(true)"
-                      (closed)="panelOpenState.set(false)"
-                    >
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          What ATR period is best?</mat-panel-title
-                        >
-                      </mat-expansion-panel-header>
-                      <p>
-                        Standard period is fourteen candles. For short-term
-                        trading use seven to ten, for long-term twenty to fifty.
-                      </p>
-                    </mat-expansion-panel>
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <mat-accordion>
+      <mat-expansion-panel class="highlight-box owl_link-box" [expanded]="true">
+        <mat-expansion-panel-header>
+          <mat-panel-title>What is the ATR indicator in simple terms?</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>ATR, the average true range, shows how much price moves on average over a period, which is a measure of volatility. It tells you the size of the swings, not the direction the market will take.</p>
+      </mat-expansion-panel>
+      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+        <mat-expansion-panel-header>
+          <mat-panel-title>How is ATR calculated?</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>First you take the true range of each candle, the largest of three distances between the high, the low, and the previous close. Then those values are averaged over several candles, usually 14.</p>
+      </mat-expansion-panel>
+      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+        <mat-expansion-panel-header>
+          <mat-panel-title>How do you set a stop loss with ATR?</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>Place the stop beyond normal noise, roughly 1.5 to 2 ATR from the entry, so random fluctuations do not knock you out early. The exact multiplier depends on the instrument and your trading style.</p>
+      </mat-expansion-panel>
+      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+        <mat-expansion-panel-header>
+          <mat-panel-title>Can you trade using ATR signals?</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>No. ATR gives no entry signals and knows nothing about direction. Its job is to measure volatility. For entries you need other tools, such as levels and volume.</p>
+      </mat-expansion-panel>
+      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+        <mat-expansion-panel-header>
+          <mat-panel-title>What do high and low ATR mean?</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>A low ATR means a calm market in a contraction phase, which often precedes a move. A high ATR means an active expansion phase, and extreme readings frequently coincide with the climax of a move.</p>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </section>
 
-                    <mat-expansion-panel
-                      class="highlight-box owl_link-box"
-                      (opened)="panelOpenState.set(true)"
-                      (closed)="panelOpenState.set(false)"
-                    >
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          What do high and low ATR values mean?</mat-panel-title
-                        >
-                      </mat-expansion-panel-header>
-                      <p>
-                        High ATR indicates increased volatility with strong
-                        movements. Low ATR signals consolidation and sideways
-                        movement often preceding breakouts.
-                      </p> </mat-expansion-panel
-                    ><mat-expansion-panel
-                      class="highlight-box owl_link-box"
-                      (opened)="panelOpenState.set(true)"
-                      (closed)="panelOpenState.set(false)"
-                    >
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          Can ATR be used as entry signal?</mat-panel-title
-                        >
-                      </mat-expansion-panel-header>
-                      <p>
-                        ATR does not generate entry signals directly. It serves
-                        as volatility measurement and risk management tool
-                        alongside other indicators.
-                      </p>
-                    </mat-expansion-panel>
-                  </mat-accordion>
-                </section>
-                <section>
-                  <h2>About the Author</h2>
-                  <p>
-                        Author: Igor Arapov — independent researcher in trading psychology and behavioral finance, practising trader since 2013, founder of arapov.trade, author of a trading book series (<a
-                          class="linkrefinto"
-                          href="https://openlibrary.org/authors/OL16073686A/Igor_Arapov"
-                          >Open Library</a
-                        >
-                        ),   (<a
-                          class="linkrefinto"
-                          href="https://orcid.org/0009-0003-0430-778X"
-                          >ORCID: 0009-0003-0430-778X</a
-                        >
-                        ).
-                      </p>
-                </section>
-              </article>
+  <section>
+    <h2>About the Author</h2>
+    <p>Author: Igor Arapov — independent researcher in the psychology of investment decisions and behavioral finance, practising trader since 2013, founder of arapov.trade, author of a trading book series (<a class="linkrefinto" href="https://openlibrary.org/authors/OL16073686A/Igor_Arapov">Open Library</a>), (<a class="linkrefinto" href="https://orcid.org/0009-0003-0430-778X">ORCID: 0009-0003-0430-778X</a>).</p>
+  </section>
+</article>
+
 
               <div
                 class=""

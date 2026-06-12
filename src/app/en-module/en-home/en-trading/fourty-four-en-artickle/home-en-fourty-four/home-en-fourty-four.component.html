@@ -6,499 +6,85 @@
           <div class="m-right hero-section"></div>
           <div class="free-courses_main-container">
             <main lang="en">
-              <article>
-                <h1>
-                  Iceberg Orders: The Invisible Weapon of Institutional Traders
-                </h1>
+             <header>
+  <h1>What Are Iceberg Orders?</h1>
+</header>
+<article>
+  <p>An iceberg order is a large order split into small visible parts to hide its real size. Only the tip shows in the order book, while the main mass stays under water, which is where the name comes from. This is how big players build a position without revealing their intentions and without moving price against themselves.</p>
 
-                <p>
-                  Financial markets contain an entire category of tools
-                  specifically designed to conceal the true intentions of major
-                  participants. The <dfn>iceberg order</dfn> stands as one of
-                  the most effective methods for masking massive trading
-                  operations from public view. Like its namesake, this order
-                  type displays only a small fraction of its total volume while
-                  the substantial bulk remains hidden beneath the surface of
-                  market data. This mechanism enables banks, hedge funds, and
-                  institutional investors to handle billion-dollar positions
-                  without triggering panic among other market participants or
-                  alerting competitors to their strategic moves. To understand
-                  this topic more deeply, I recommend studying
-                  <a
-                    class="linkrefinto"
-                    href="https://arapov.trade/en/freestudying/ordertypes"
-                    >order types</a
-                  >.
-                </p>
+  <p>I have said many times that smart money tries to hide its final order, and the iceberg is one of the main tools for it. The logic is simple: if a fund places an order for a million contracts in the book at once, the market sees it and shifts against the fund immediately. So it hides the size and feeds it to the market in small portions. For a trader this means a plain-looking order in the book can have big capital behind it.</p>
 
-                <p>
-                  Understanding hidden order mechanics provides retail traders
-                  with a significant analytical edge. Rather than falling victim
-                  to institutional manipulation repeatedly, you gain the ability
-                  to recognize traces of
-                  <dfn
-                    ><a
-                      class="linkrefinto"
-                      href="https://arapov.trade/en/freestudying/smartmoneycontrol"
-                      >Smart Money</a
-                    >
-                  </dfn>
-                  activity and construct your strategies accordingly. Mastering
-                  this skill requires dedication, but the investment pays
-                  substantial dividends — you begin perceiving the market
-                  through the eyes of those who actually control its movements
-                  and can position yourself alongside their trades rather than
-                  against them.
-                </p>
+  <p><strong><i>In this article we'll cover:</i></strong></p>
+  <ul>
+    <li>an iceberg order is a large order broken into small visible parts with the main volume hidden;</li>
+    <li>big participants use them to avoid moving price against themselves and revealing intent;</li>
+    <li>you can spot an iceberg by an anomaly: a level that does not deplete while the tape shows more volume than the book;</li>
+    <li>without order-book access this is hard for a retail trader, so I watch the footprint in volume instead.</li>
+  </ul>
 
-                <h2>The Mechanics Behind Hidden Orders</h2>
+  <p>Next, in order: what an iceberg order is, why big participants need it, and how to notice its presence in the order book without false illusions.</p>
 
-                <p>
-                  Iceberg order functionality relies on splitting total volume
-                  into visible and hidden portions. Consider this scenario: an
-                  institutional investor plans to acquire a million shares of a
-                  particular company. Placing such an order openly in the
-                  <dfn
-                    ><a
-                      class="linkrefinto"
-                      href="https://arapov.trade/en/freestudying/stockorderbook"
-                      >order book</a
-                    >
-                  </dfn>
-                  would instantly drive prices upward, degrading execution
-                  quality substantially. Instead, the system displays only a
-                  small portion — perhaps ten thousand shares. After this
-                  visible portion fills, the next portion automatically appears,
-                  and the process continues until the entire volume completes
-                  execution over hours or even days.
-                </p>
+  <h2>What Is an Iceberg Order?</h2>
+  <p><dfn itemscope itemtype="https://schema.org/DefinedTerm"><span itemprop="name">Iceberg order</span></dfn> is a large exchange order that, instead of one big order, is broken into a series of small ones. At any moment only a small part shows in the public book, called the visible size, while the main mass is hidden. As soon as the visible portion fills, the next one is automatically placed in its spot, and so on until the whole size is built.</p>
+  <p>It is a special <a class="linkrefinto" href="https://arapov.trade/en/freestudying/algorithmicorders">algorithmic orders</a> type that most exchanges offer specifically for the needs of large participants. An important detail: the price at which an iceberg was executing often later works as a support or resistance level, because there was real big-capital interest there. The CME, where I work, gives access to the order book and the tape; on forex this is harder.</p>
 
-                <p>
-                  This approach solves multiple challenges simultaneously for
-                  the institutional player. First, it minimizes
-                  <dfn>slippage</dfn> — the difference between planned and
-                  actual execution prices that can devastate profitability on
-                  large orders. Second, it preserves anonymity of intentions,
-                  which proves critically important in competitive financial
-                  markets where information leakage costs real money. Third,
-                  large players gain the ability to accumulate or distribute
-                  positions without attracting unwanted attention from
-                  algorithms and other sophisticated participants hunting for
-                  institutional footprints.
-                </p>
+  <div class="flex">
+    <img class="pictureImg" loading="lazy" src="/assets/img/content/icebergorders1.png" alt="Iceberg order structure in the order book" />
+  </div>
 
-                <img
-                  src="/assets/img/content/icebergorders1.png"
-                  alt="Iceberg order structure in the order book"
-                  loading="lazy"
-                />
+  <h2>Why Big Players Use Hidden Orders</h2>
+  <p>The reason is one, and it is the main one: to minimize the impact on price. Picture a fund that needs to sell a huge oil-futures position. If it throws the whole size onto the market in one order, it crashes the price itself and sells far worse, while also triggering panic in everyone else. Splitting into an iceberg lets it exit cleanly, at a better average price, without revealing its intentions to the crowd.</p>
+  <p>Here the iceberg is tightly linked to <a class="linkrefinto" href="https://arapov.trade/en/freestudying/smartmoneycontrol">institutional order flow</a>: a large player builds a position quietly, absorbing opposing orders at a chosen level. When opposing volume keeps appearing at a level and price cannot break it, that is absorption by a hidden order. Retail, which sees only the small orders, does not even suspect it is running into a wall of big capital.</p>
 
-                <h2>Why Institutions Rely on Hidden Orders</h2>
+  <h2>How to Spot an Iceberg Order in the Order Book</h2>
+  <p>There are no direct pointers, since an iceberg is hidden by design, but there are indirect signs. First: trades execute at one price level again and again, yet the order does not deplete, as if someone keeps refilling it. Second: the tape of trades, the record of all executions, shows a large volume passing through, while the <a class="linkrefinto" href="https://arapov.trade/en/freestudying/stockorderbook">depth of market</a> shows only small orders. Third: price gets stuck at a level for a long time with no visible reason. That is the footprint of big capital, the effort behind the result.</p>
+  <p>But I will say it plainly and without romanticism. To really see icebergs you need access to level-two depth, the tape, and cluster tools, and most beginners on forex simply do not have that. And even when an iceberg is visible, you do not know how much volume is still under water, and an iceberg by no means always signals a reversal, sometimes it is just continued accumulation.</p>
 
-                <p>
-                  Major financial institutions operate with capital that dwarfs
-                  retail trader capabilities by orders of magnitude. When a bank
-                  or hedge fund plans a transaction worth hundreds of millions
-                  of dollars, openly placing such an order becomes impossible
-                  without accepting severe execution degradation. The market
-                  would react instantly to such volume appearance, and price
-                  would move substantially before execution completes.
-                  Competitors would gain information about intentions and could
-                  exploit this knowledge to the initiator's detriment through
-                  front-running or adverse positioning.
-                </p>
+  <h2>My Take: Read the Footprint, Not the Order</h2>
+  <p>I have been trading since 2013, and I do not chase the iceberg itself in the book; I read its footprint in the volume and the price reaction at a level. This is not advice for you personally, it is my approach: it matters more to see the result of big capital's actions than to catch every one of its orders. The honest limitation is that the footprint is read after the fact, so it confirms presence rather than predicting the next move, and even a clear absorption can resolve either way. So instead of entering blind on a suspected hidden order, I take the trade on the price-and-volume reaction at the level, treating the iceberg only as a hint that big money is present there.</p>
 
-                <p>
-                  <dfn
-                    ><a
-                      class="linkrefinto"
-                      href="https://arapov.trade/en/freestudying/marketmaker"
-                      >Market makers</a
-                    >
-                  </dfn>
-                  deploy hidden orders to maintain market stability when
-                  handling large client orders that would otherwise disrupt
-                  normal price discovery. Hedge funds employ them for
-                  implementing long-term accumulation or distribution strategies
-                  without creating market noise that would attract attention. On
-                  cryptocurrency markets, iceberg orders help whales — holders
-                  of significant coin volumes — manage their positions without
-                  provoking the volatility that could eliminate profitability of
-                  their carefully planned operations.
-                </p>
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <mat-accordion>
+      <mat-expansion-panel class="highlight-box owl_link-box" [expanded]="true">
+        <mat-expansion-panel-header>
+          <mat-panel-title>What is an iceberg order?</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>It is a large order broken into a series of small ones, of which only a small part shows in the book while the main volume is hidden. As soon as the visible portion fills, the next appears. This is how big players build or unload a position without revealing its real size.</p>
+      </mat-expansion-panel>
+      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+        <mat-expansion-panel-header>
+          <mat-panel-title>Why do banks use hidden orders?</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>To avoid moving price against themselves. A large order placed in full would shift the market and worsen the fill, and would also reveal intent. Splitting into an iceberg lets them build or unload a big size cleanly and at a better average price.</p>
+      </mat-expansion-panel>
+      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+        <mat-expansion-panel-header>
+          <mat-panel-title>How do you detect an iceberg order on the chart?</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>By indirect signs: a level that executes trades again and again without depleting, a large volume in the tape while the book shows small orders, and price stuck at a level with no visible reason. To see it precisely you need level-two depth and the tape.</p>
+      </mat-expansion-panel>
+      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+        <mat-expansion-panel-header>
+          <mat-panel-title>On which markets are iceberg orders used?</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>On almost all exchange markets with a centralized order book: futures, stocks and crypto. They are most visible where level-two data and the tape are available, for example on CME futures. On forex the decentralized structure makes it harder.</p>
+      </mat-expansion-panel>
+      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+        <mat-expansion-panel-header>
+          <mat-panel-title>How do you trade with hidden orders in mind?</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>Do not enter blind: you do not know how much volume is still hidden, and an iceberg does not always lead to a reversal. I use it as a hint that big capital is present at a level, but I take the entry on the price and volume reaction, not on the bare fact of a hidden order.</p>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </section>
 
-                <h2>Identifying Hidden Order Presence</h2>
+  <section>
+    <h2>About the Author</h2>
+    <p>Author: Igor Arapov — independent researcher in the psychology of investment decisions and behavioral finance, practising trader since 2013, founder of arapov.trade, author of a trading book series (<a class="linkrefinto" href="https://openlibrary.org/authors/OL16073686A/Igor_Arapov">Open Library</a>), (<a class="linkrefinto" href="https://orcid.org/0009-0003-0430-778X">ORCID: 0009-0003-0430-778X</a>).</p>
+  </section>
+</article>
 
-                <p>
-                  Despite their concealment, iceberg orders leave characteristic
-                  traces in market data that trained observers can detect. The
-                  first sign involves price stability at a specific level
-                  despite significant trading volume. When an asset receives
-                  powerful pressure from buyers or sellers yet price barely
-                  moves, this may indicate a hidden order absorbing incoming
-                  <dfn>liquidity</dfn> and preventing the expected price
-                  movement from materializing.
-                </p>
-
-                <p>
-                  The second indicator involves constant order refreshing in the
-                  order book. When new limit orders regularly appear at the same
-                  price level replacing executed ones, iceberg probability
-                  increases substantially. The third sign manifests as anomalies
-                  in cluster analysis. <dfn>Footprint Charts</dfn> reveal volume
-                  distribution within each candle at granular price levels.
-                  Repeated large trades at one level without corresponding price
-                  movement represents a classic pattern of hidden institutional
-                  activity that retail traders can learn to recognize.
-                </p>
-
-                <img
-                  src="/assets/img/content/icebergorders2.webp"
-                  alt="Detecting iceberg orders through cluster analysis"
-                  loading="lazy"
-                />
-
-                <h2>Tools for Hidden Order Detection</h2>
-
-                <p>
-                  Modern trading platforms provide sophisticated toolsets for
-                  analyzing hidden liquidity. <dfn>Order flow</dfn>
-                  analysis enables real-time observation of order streams,
-                  identifying imbalances between aggressive buying and selling
-                  that don't match price movement. When market order volume
-                  substantially exceeds price movement, this signals liquidity
-                  absorption by hidden orders on the opposite side of the market
-                  creating resistance or support.
-                </p>
-
-                <p>
-                  The order book remains the foundational observation tool for
-                  any serious trader. Focus attention on levels where orders
-                  refresh regularly after execution — this repetitive pattern
-                  often reveals iceberg activity. Delta analysis displays the
-                  difference between buying and selling pressure — significant
-                  imbalance without corresponding price movement indicates
-                  hidden order opposition. Tick data enables tracking trade
-                  microstructure and identifying automatic order refresh
-                  patterns that characterize institutional execution algorithms.
-                </p>
-
-                <h2>Real-World Scenarios Across Markets</h2>
-
-                <p>
-                  On equity markets, iceberg orders frequently manifest near
-                  significant price levels where institutions have strategic
-                  interest. Consider this situation: technology company shares
-                  trade near a round number. Multiple breakout attempts
-                  encounter invisible resistance — price bounces back each time
-                  it approaches a specific value. Cluster analysis reveals
-                  abnormal selling volume at this level, though no large orders
-                  appear visible in the book. Most likely, an institutional
-                  seller distributes a position through a hidden order while
-                  appearing absent from the market.
-                </p>
-
-                <p>
-                  On forex markets, similar situations arise before major
-                  economic data releases when volatility creates opportunity.
-                  Large banks position iceberg orders at key levels in advance,
-                  accumulating positions in anticipation of the volatility
-                  surge. On cryptocurrency exchanges, hidden orders manage large
-                  positions in relatively lower liquidity conditions
-                  characteristic of digital assets compared to traditional
-                  markets, where even moderate institutional activity can move
-                  prices significantly without proper execution strategy.
-                </p>
-
-                <h2>Trading Strategies Incorporating Hidden Orders</h2>
-
-                <p>
-                  Detecting an iceberg order opens specific trading
-                  opportunities that informed traders can exploit. When a hidden
-                  buy order holds a certain level, this forms a support zone
-                  suitable for long entries with favorable risk-reward
-                  characteristics. The logic follows simply: institutional
-                  capital defends this level, and while the order remains
-                  unfilled, probability of level holding stays elevated. Placing
-                  stop-losses below the hidden demand zone ensures favorable
-                  risk-to-reward ratios when the thesis proves correct.
-                </p>
-
-                <p>
-                  Critically important is avoiding trades against large players
-                  who have positioned significant capital. When cluster analysis
-                  reveals massive buying absorption by a hidden sell order,
-                  opening long positions becomes risky business with poor
-                  probability of success. Instead, wait for buying liquidity
-                  exhaustion and join the movement in the direction of
-                  institutional capital flow. Patience and discipline represent
-                  essential qualities when working with hidden orders —
-                  premature entry often results in being stopped out before the
-                  anticipated move materializes.
-                </p>
-
-                <img
-                  src="/assets/img/content/icebergorders3.png"
-                  alt="Trading strategies based on iceberg orders"
-                  loading="lazy"
-                />
-
-                <h2>Manipulative Aspects of Hidden Orders</h2>
-
-                <p>
-                  Iceberg orders don't always serve exclusively legitimate
-                  trading purposes. Large players deploy them for creating false
-                  signals and manipulating market expectations to their
-                  advantage. Placing the visible portion of a hidden order can
-                  provoke reactions from algorithms and retail traders,
-                  generating liquidity for subsequent movement in the opposite
-                  direction that benefits the institutional initiator while
-                  trapping those who took the bait.
-                </p>
-
-                <p>
-                  A characteristic example involves
-                  <dfn>false breakout</dfn> formation. Price breaks through a
-                  significant level, activating stop orders and attracting new
-                  participants who expect continuation. However, behind the
-                  breakout lurks a massive iceberg order in the opposite
-                  direction, absorbing liquidity and reversing the market.
-                  Traders who entered on the breakout find themselves trapped
-                  with losing positions while institutions fill their orders at
-                  favorable prices. Understanding this mechanism helps avoid
-                  such scenarios consistently.
-                </p>
-
-                <h2>Temporal Patterns in Hidden Order Activity</h2>
-
-                <p>
-                  Institutional players prefer placing iceberg orders during
-                  high-liquidity periods when their activity blends more easily
-                  into normal trading flow. London and New York session openings
-                  on forex, early trading hours on stock exchanges — these
-                  represent typical times for hidden order deployment. During
-                  low-activity periods, any large operation becomes too visible
-                  for effective concealment, defeating the purpose of using
-                  hidden execution strategies.
-                </p>
-
-                <p>
-                  Macroeconomic data releases deserve particular attention from
-                  traders seeking institutional footprints. Banks and funds
-                  prepare positions in advance using iceberg orders for
-                  accumulation in anticipation of volatility spikes. After news
-                  publication, hidden orders may manage sharp movements —
-                  absorbing panic or euphoria depending on the institutional
-                  participant's strategic objectives and positioning established
-                  before the event.
-                </p>
-
-                <h2>Integration with Smart Money Concepts</h2>
-
-                <p>
-                  Iceberg orders don't exist in isolation — they form part of
-                  the comprehensive institutional toolkit that defines market
-                  structure. <dfn>Position accumulation</dfn> through hidden
-                  orders frequently occurs in consolidation zones, building the
-                  foundation for subsequent trending moves that generate
-                  institutional profits. Understanding this connection allows
-                  traders to perceive the complete picture: where large capital
-                  collects liquidity, where it plans to defend positions, and in
-                  which direction it prepares the primary movement.
-                </p>
-
-                <p>
-                  The liquidity pools concept interweaves tightly with iceberg
-                  order mechanics in ways that reveal institutional strategy.
-                  Hidden orders often deploy precisely in zones of maximum
-                  retail stop-loss concentration. Institutional players exploit
-                  panic selling or buying from the crowd to fill their positions
-                  at advantageous prices unavailable through normal market
-                  operations. Recognizing these patterns helps avoid typical
-                  traps and join movements at optimal timing rather than
-                  providing liquidity to better-informed participants.
-                </p>
-
-                <h2>Limitations and Risk Considerations</h2>
-
-                <p>
-                  Identifying iceberg orders doesn't constitute exact science
-                  and demands critical thinking from practitioners. Signs
-                  indicating hidden orders may have alternative explanations
-                  that lead to incorrect conclusions. Price stability at a level
-                  could result from natural supply-demand balance rather than
-                  institutional player presence. False signals remain
-                  inevitable, and traders must employ additional filters for
-                  hypothesis confirmation before committing capital to trades
-                  based on hidden order analysis.
-                </p>
-
-                <p>
-                  Technological advancement continuously complicates hidden
-                  order detection. Institutional algorithms grow increasingly
-                  sophisticated, adding random elements to size and refresh
-                  frequency of the visible order portion. This renders
-                  traditional patterns less reliable and demands constant
-                  analytical skill improvement from retail traders seeking to
-                  maintain edge. What worked last year may not work today as
-                  institutions adapt their execution strategies to avoid
-                  detection.
-                </p>
-
-                <h2>Conclusion</h2>
-
-                <p>
-                  Iceberg orders represent fundamental tools of institutional
-                  trading, understanding which substantially expands any
-                  trader's analytical capabilities. Hidden orders form the
-                  invisible market structure, defining real supply and demand
-                  zones that don't appear in public order book data visible to
-                  most participants. Ability to recognize traces of
-                  institutional activity enables more informed trading decisions
-                  and avoidance of typical retail participant errors that
-                  transfer wealth to better-informed players. To consolidate
-                  this material, also study
-                  <a
-                    class="linkrefinto"
-                    href="https://arapov.trade/en/freestudying/algorithmicorders"
-                    >algorithmic orders</a
-                  >.
-                </p>
-
-                <p>
-                  Developing hidden order analysis skills requires practice and
-                  patience over extended periods. Begin with observing price
-                  behavior at key levels, utilize cluster analysis and order
-                  flow tools for hypothesis confirmation before risking capital.
-                  Gradually you'll learn to perceive what remains hidden from
-                  most market participants and leverage this information for
-                  enhancing your trading effectiveness. Remember: markets
-                  constitute constant confrontation between informed and
-                  uninformed participants, and knowledge of hidden order
-                  mechanics positions you on the winning side of this perpetual
-                  battle for profits.
-                </p>
-
-                <section>
-                  <h2>Frequently Asked Questions</h2>
-
-                  <mat-accordion>
-                    <mat-expansion-panel
-                      class="highlight-box owl_link-box"
-                      [expanded]="true"
-                    >
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          What is an iceberg order?
-                        </mat-panel-title>
-                      </mat-expansion-panel-header>
-                      <p>
-                        An iceberg order is a special type of limit order where
-                        only a small portion of the total volume is displayed in
-                        the order book. The bulk of the order remains hidden and
-                        executes gradually as the visible portion fills.
-                        Institutional players use this tool to mask large
-                        positions from other market participants.
-                      </p>
-                    </mat-expansion-panel>
-                    <mat-expansion-panel
-                      class="highlight-box owl_link-box"
-                      (opened)="panelOpenState.set(true)"
-                      (closed)="panelOpenState.set(false)"
-                    >
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          Why do banks use hidden orders?
-                        </mat-panel-title>
-                      </mat-expansion-panel-header>
-                      <p>
-                        Large financial institutions use iceberg orders to
-                        minimize market impact when executing massive orders.
-                        Placing a large order openly would cause immediate price
-                        movement against their position. Hidden orders allow
-                        gradual accumulation or distribution while maintaining
-                        anonymity.
-                      </p>
-                    </mat-expansion-panel>
-                    <mat-expansion-panel
-                      class="highlight-box owl_link-box"
-                      (opened)="panelOpenState.set(true)"
-                      (closed)="panelOpenState.set(false)"
-                    >
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          How to detect iceberg orders on
-                          charts?</mat-panel-title
-                        >
-                      </mat-expansion-panel-header>
-                      <p>
-                        Signs of iceberg orders include: price holding at a
-                        specific level despite significant trading volume;
-                        continuous refreshing of orders at the same price in the
-                        order book; cluster analysis showing repeated trades at
-                        one price level. Use Footprint Charts and order flow
-                        analysis for confirmation.
-                      </p>
-                    </mat-expansion-panel>
-
-                    <mat-expansion-panel
-                      class="highlight-box owl_link-box"
-                      (opened)="panelOpenState.set(true)"
-                      (closed)="panelOpenState.set(false)"
-                    >
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          On which markets are iceberg orders
-                          used?</mat-panel-title
-                        >
-                      </mat-expansion-panel-header>
-                      <p>
-                        Iceberg orders are used across all major financial
-                        markets: stock exchanges like NYSE and NASDAQ, the Forex
-                        market, and cryptocurrency platforms including Binance,
-                        Kraken, and OKX. Wherever large players work with
-                        substantial volumes, hidden orders become essential
-                        tools.
-                      </p> </mat-expansion-panel
-                    ><mat-expansion-panel
-                      class="highlight-box owl_link-box"
-                      (opened)="panelOpenState.set(true)"
-                      (closed)="panelOpenState.set(false)"
-                    >
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          How to trade considering hidden
-                          orders?</mat-panel-title
-                        >
-                      </mat-expansion-panel-header>
-                      <p>
-                        Identify levels where price consistently holds despite
-                        high volume — these are potential hidden order zones.
-                        Enter trades in the direction of the large player after
-                        confirmation. Avoid trading against obvious accumulation
-                        zones. Use order book analysis and cluster charts for
-                        confirmation.
-                      </p>
-                    </mat-expansion-panel>
-                  </mat-accordion>
-                </section>
-                <section>
-                  <h2>About the Author</h2>
-                  <p>
-                        Author: Igor Arapov — independent researcher in trading psychology and behavioral finance, practising trader since 2013, founder of arapov.trade, author of a trading book series (<a
-                          class="linkrefinto"
-                          href="https://openlibrary.org/authors/OL16073686A/Igor_Arapov"
-                          >Open Library</a
-                        >
-                        ),   (<a
-                          class="linkrefinto"
-                          href="https://orcid.org/0009-0003-0430-778X"
-                          >ORCID: 0009-0003-0430-778X</a
-                        >
-                        ).
-                      </p>
-                </section>
-              </article>
               <div
                 class=""
                 [ngClass]="{

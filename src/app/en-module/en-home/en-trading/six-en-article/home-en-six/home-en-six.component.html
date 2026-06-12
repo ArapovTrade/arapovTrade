@@ -6,538 +6,93 @@
           <div class="m-right hero-section"></div>
           <div class="free-courses_main-container">
             <main lang="en">
-              <header>
-                <h1>Algorithmic Stablecoins: How They Work</h1>
-              </header>
+             <header>
+  <h1>What Are Stablecoins and How Do They Work?</h1>
+</header>
+<article>
+  <p>Stablecoins are crypto tokens built to hold a steady value, usually pegged to one US dollar, so they barely move while the rest of the market swings. They keep that peg in different ways: some hold real dollar reserves, some lock up extra crypto as collateral, and a few rely on an algorithm. For most people they work as digital dollars on the blockchain, used to trade, to move money, or to sit out volatility.</p>
 
-              <article>
-                <p>
-                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
-                    ><span itemprop="name">Algorithmic stablecoins</span></dfn
-                  >
-                  represent an innovative category of digital assets designed to
-                  maintain price stability without reserve backing in
-                  traditional currencies or commodities. Their operation is
-                  based on automated algorithms that regulate supply and demand
-                  balance in real-time through smart contract mechanisms.
-                </p>
+  <p>I have been trading since 2013, and the way I see stablecoins is simple: they are a place to park value, not an asset to bet on. The word "stable" does a lot of marketing here, because under real stress some of them do slip off the dollar. Below I will go through what stablecoins are, how each type holds its peg, and where the risks actually sit, before I add how I treat them myself.</p>
 
-                <p>
-                  Unlike centralized stablecoins such as
-                  <a
-                    class="linkrefinto"
-                    href="https://arapov.trade/en/freestudying/cryptotether"
-                    >Tether (USDT)</a
-                  >
-                  and USD Coin (USDC), backed by dollar reserves in bank
-                  accounts, algorithmic counterparts employ mathematical models
-                  to maintain dollar parity. This ensures complete
-                  decentralization and independence from banking infrastructure,
-                  though it carries significant risks of losing the peg to base
-                  value.
-                </p>
+  <p><strong><i>In this article we'll cover:</i></strong></p>
+  <ul>
+    <li>a stablecoin is a token pegged to a value, usually one dollar, that stays flat while crypto swings;</li>
+    <li>three main types: fiat-backed with reserves, crypto-collateralized, and algorithmic;</li>
+    <li>the peg holds through reserves and redemption, over-collateralization, or supply algorithms;</li>
+    <li>"stable" is conditional: under stress coins can depeg, and the Terra collapse showed how fast.</li>
+  </ul>
 
-                <p>
-                  Algorithmic stablecoins occupy an important place in the
-                  decentralized finance (DeFi) ecosystem, providing users with
-                  the ability to conduct operations without traditional
-                  financial intermediaries. Their development reflects the
-                  <a
-                    class="linkrefinto"
-                    href="https://arapov.trade/en/freestudying/cryptocurrencytrading"
-                    >crypto</a
-                  >
-                  industry's aspiration to create fully autonomous monetary
-                  systems free from centralized control.
-                </p>
+  <p>Let's start with what a stablecoin actually is and which kinds exist.</p>
 
-                <h2 itemscope itemtype="https://schema.org/DefinedTerm">
-                  <span itemprop="name">How Algorithmic Stablecoins Work</span>
-                </h2>
+  <div class="flex">
+    <img class="pictureImg" loading="lazy" src="/assets/img/content/stablecoins2.webp" alt="Types of algorithmic stablecoins" />
+  </div>
 
-                <p>
-                  The key element of algorithmic stablecoin functionality is
-                  automatic balancing mechanisms operating through blockchain
-                  smart contracts. These software protocols execute
-                  predetermined conditions without human intervention, ensuring
-                  continuous market parameter correction.
-                </p>
+  <h2>What Are Stablecoins?</h2>
+  <p><dfn itemscope itemtype="https://schema.org/DefinedTerm"><span itemprop="name">Stablecoin</span></dfn> is a cryptocurrency designed to keep a steady price by tracking another asset, most often the US dollar at one to one. Unlike Bitcoin or <a class="linkrefinto" href="https://arapov.trade/en/freestudying/cryptocurrencybasics">what is crypto</a> in general, which can swing wildly, a stablecoin aims to stay near a dollar.</p>
+  <p>There are three main types. Fiat-backed coins such as <a class="linkrefinto" href="https://arapov.trade/en/freestudying/cryptotether">Tether</a> (USDT) and USDC hold reserves in dollars and short-term assets, one unit of reserve behind each token. Crypto-collateralized coins such as DAI lock up other cryptocurrencies in smart contracts, usually worth more than the coins issued, to absorb crypto's own volatility. Algorithmic coins hold no full backing and try to defend the peg purely through code that expands or shrinks supply. The first two are the workhorses; the third is the experimental and far riskier branch.</p>
 
-                <div class="flex">
-                  <img
-                    class="pictureImg"
-                    loading="lazy"
-                    src="/assets/img/content/stablecoins1.webp"
-                    alt="How algorithmic stablecoins work"
-                  />
-                </div>
+  <h2>How Stablecoins Keep Their Peg</h2>
+  <p>Fiat-backed coins hold the line through reserves and redemption. When the price drifts below a dollar, arbitrage traders buy the coin cheap and redeem it one-for-one with the issuer, pocketing the gap and pushing the price back. When it drifts above, new issuance adds supply. The peg here is only as good as the reserves and the ability to actually redeem.</p>
+  <p>Crypto-collateralized coins use over-collateralization and liquidations: you might lock 150 dollars of Ethereum to mint 100 dollars of the coin, and if the collateral falls too far, smart contracts liquidate the position to protect the peg. Algorithmic coins instead mint and burn supply by rule, issuing more when the price is high and burning when it is low. That logic can look stable in calm periods and unravel fast when trust breaks, which is exactly the weak point of the model.</p>
 
-                <p>
-                  <strong>Token minting and burning.</strong> The basic
-                  stabilization mechanism involves dynamic supply management.
-                  When price exceeds $1, the system generates additional tokens,
-                  increasing supply and reducing value. Price drops below target
-                  level initiate
-                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
-                    ><span itemprop="name">token burning</span></dfn
-                  >—destroying part of the coins to reduce supply and restore
-                  parity.
-                </p>
+  <div class="flex">
+    <img class="pictureImg" loading="lazy" src="/assets/img/content/stablecoins1.webp" alt="How algorithmic stablecoins work" />
+  </div>
 
-                <p>
-                  <strong>Auxiliary tokens.</strong> Many projects employ a
-                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
-                    ><span itemprop="name">dual-token model</span></dfn
-                  >
-                  to absorb price fluctuations. The classic example is TerraUSD
-                  (UST) with LUNA token: stablecoin volatility was transferred
-                  to the secondary asset, allowing the main coin to maintain
-                  stability. However, this very mechanism caused the
-                  catastrophic ecosystem collapse in 2022.
-                </p>
+  <h2>Stablecoin Risks: Depeg, Terra, and Frozen Funds</h2>
+  <p>A stablecoin is designed to be stable, not guaranteed to be. Under market stress even big coins can lose the dollar: USDC briefly fell toward 87 cents during the March 2023 banking scare, and USDT has wobbled in past panics before recovering. A depeg is rarely one event; it is a chain reaction of redemptions, reserve doubts and congestion that widens the gap from a dollar.</p>
+  <p>The sharpest lesson came from the algorithmic side. In May 2022 the TerraUSD coin lost its peg and spiralled, wiping out tens of billions across its ecosystem in days as its paired token collapsed in a death spiral. Add two risks people forget: issuers of centralized coins can freeze tokens at flagged addresses, and regulators worldwide are tightening rules on reserves and redemption. Storing these assets safely is its own subject, covered in how to <a class="linkrefinto" href="https://arapov.trade/en/freestudying/cryptosafe">secure crypto</a>.</p>
 
-                <p>
-                  <strong>Arbitrage incentives.</strong> The
-                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
-                    ><span itemprop="name">arbitrage mechanism</span></dfn
-                  >
-                  attracts traders to participate in rate stabilization. When a
-                  stablecoin trades at $0.95, market participants purchase it at
-                  the reduced price and exchange it for $1 through the protocol,
-                  extracting profit while simultaneously equalizing the rate.
-                </p>
+  <div class="flex">
+    <img class="pictureImg" loading="lazy" src="/assets/img/content/stablecoins3.png" alt="Risks of algorithmic stablecoins" />
+  </div>
 
-                <p>
-                  <strong>Liquidity auctions.</strong> Some protocols use
-                  auction mechanisms to attract new participants contributing
-                  funds to the system. This creates an additional liquidity
-                  buffer strengthening stablecoin resilience to market shocks.
-                </p>
+  <h2>My Take: A Stablecoin Is a Parking Spot, Not a Yield Machine</h2>
+  <p>For me a stablecoin is the cash position between trades, somewhere to sit when I do not want exposure, and nothing more. The trouble starts when people treat it as an investment and chase the double-digit yields that the ads promise; that same chase is what blew up with Terra in 2022, where a famous high yield turned out to be the risk in disguise. My rule is plain: if something pays far above a bank and calls itself stable, the risk has not vanished, it has just moved out of sight. This is not advice for you personally, it is how I work: I lean on transparent, reserve-backed coins for parking only, I keep nothing critical in algorithmic models, and I never put the whole balance in one issuer. The honest limitation is that no stablecoin is risk-free, so the alternative to chasing yield is simply holding less of it and spreading across more than one name.</p>
 
-                <h2 itemscope itemtype="https://schema.org/DefinedTerm">
-                  <span itemprop="name">Leading Algorithmic Stablecoins</span>
-                </h2>
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <mat-accordion>
+      <mat-expansion-panel class="highlight-box owl_link-box" [expanded]="true">
+        <mat-expansion-panel-header>
+          <mat-panel-title>What is a stablecoin in simple terms?</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>It is a crypto token built to hold a steady value, usually one US dollar, so it stays flat while Bitcoin and other coins swing. You use it to trade, to move money, or to park funds during a downturn.</p>
+      </mat-expansion-panel>
+      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+        <mat-expansion-panel-header>
+          <mat-panel-title>Are stablecoins safe?</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>They are steadier than other crypto but not risk-free. Under stress they can depeg, reserves can be questioned, issuers can freeze tokens, and algorithmic ones can fail outright. Treat them as a tool, spread across more than one, and avoid chasing yield on them.</p>
+      </mat-expansion-panel>
+      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+        <mat-expansion-panel-header>
+          <mat-panel-title>What happened to TerraUSD (UST)?</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>In May 2022 the algorithmic coin UST lost its dollar peg and entered a death spiral: its paired token was minted to defend the price, collapsed under the selling, and both crashed within days, erasing tens of billions in value.</p>
+      </mat-expansion-panel>
+      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+        <mat-expansion-panel-header>
+          <mat-panel-title>What is the difference between USDT and USDC?</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>Both are fiat-backed and aim for one dollar, held against reserves. They differ in issuer, reserve disclosure and how they handle redemption, so the practical question with either one is how transparent and redeemable the backing really is.</p>
+      </mat-expansion-panel>
+      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+        <mat-expansion-panel-header>
+          <mat-panel-title>Can a stablecoin lose its peg?</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>Yes. Fiat-backed coins can slip during banking or liquidity stress and usually recover; algorithmic ones can lose the peg permanently, as UST did. So "stable" is conditional, not a guarantee.</p>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </section>
 
-                <p>
-                  Different projects demonstrate varying levels of stability
-                  depending on the applied stabilization model. Analyzing key
-                  representatives of this segment helps understand the strengths
-                  and weaknesses of the algorithmic approach.
-                </p>
+  <section>
+    <h2>About the Author</h2>
+    <p>Author: Igor Arapov — independent researcher in the psychology of investment decisions and behavioral finance, practising trader since 2013, founder of arapov.trade, author of a trading book series (<a class="linkrefinto" href="https://openlibrary.org/authors/OL16073686A/Igor_Arapov">Open Library</a>), (<a class="linkrefinto" href="https://orcid.org/0009-0003-0430-778X">ORCID: 0009-0003-0430-778X</a>).</p>
+  </section>
+</article>
 
-                <p>
-                  <strong>Ampleforth (AMPL).</strong> A unique project employing
-                  the
-                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
-                    ><span itemprop="name">rebasing</span></dfn
-                  >
-                  mechanism—automatic changes to token quantities in user
-                  <a
-                    class="linkrefinto"
-                    href="https://arapov.trade/en/freestudying/cryptostoring"
-                    >crypto wallets</a
-                  >. When market price rises, balances increase; when it falls,
-                  they decrease. AMPL doesn't fix price at $1 but seeks
-                  long-term equilibrium.
-                </p>
-
-                <p>
-                  <strong>Frax (FRAX).</strong> A
-                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
-                    ><span itemprop="name">hybrid stablecoin</span></dfn
-                  >
-                  combining partial backing with real assets and algorithmic
-                  regulation. This approach significantly reduces risks inherent
-                  to fully decentralized systems. The project is actively
-                  integrated into the DeFi ecosystem offering lending and
-                  liquidity mechanisms.
-                </p>
-
-                <p>
-                  <strong>TerraUSD (UST).</strong> Formerly one of the largest
-                  algorithmic stablecoins using a dual-token system with LUNA.
-                  The May 2022 collapse became a clear demonstration of
-                  algorithmic model risks: massive liquidity outflow triggered a
-                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
-                    ><span itemprop="name">death spiral</span></dfn
-                  >
-                  that crashed both coins and destabilized the entire
-                  cryptocurrency market.
-                </p>
-
-                <p>
-                  <strong>Liquity USD (LUSD).</strong> A
-                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
-                    ><span itemprop="name">synthetic stablecoin</span></dfn
-                  >
-                  fully backed by Ethereum collateral without centralized
-                  issuers. Smart contracts automatically liquidate positions
-                  when collateral falls below the
-                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
-                    ><span itemprop="name">liquidation threshold</span></dfn
-                  >. Thanks to crypto-collateralization, LUSD demonstrates high
-                  stability.
-                </p>
-
-                <p>
-                  <strong>USDD.</strong> Algorithmic stablecoin from the Tron
-                  network launched in 2022. Uses regulation mechanisms similar
-                  to UST but with additional reserve guarantees to prevent
-                  similar collapse. Actively used in staking and DeFi
-                  applications within the Tron ecosystem.
-                </p>
-
-                <h2 itemscope itemtype="https://schema.org/DefinedTerm">
-                  <span itemprop="name"
-                    >Classification of Algorithmic Stablecoins</span
-                  >
-                </h2>
-
-                <p>
-                  Algorithmic stablecoins are divided into several categories
-                  depending on the mechanisms used to maintain stability. Each
-                  model possesses specific characteristics determining
-                  reliability and decentralization levels.
-                </p>
-
-                <div class="flex">
-                  <img
-                    class="pictureImg"
-                    loading="lazy"
-                    src="/assets/img/content/stablecoins2.webp"
-                    alt="Types of algorithmic stablecoins"
-                  />
-                </div>
-
-                <p>
-                  <strong>Fully algorithmic.</strong> Lacking any backing and
-                  regulating value exclusively through programmatic methods. The
-                  system automatically adjusts supply in response to market
-                  signals. Ampleforth represents this category, demonstrating
-                  both decentralization benefits and vulnerability to sharp
-                  fluctuations.
-                </p>
-
-                <p>
-                  <strong>Partially collateralized.</strong> Combine reserve
-                  backing with algorithmic regulation. Part of the value is
-                  supported by real assets, increasing stability compared to
-                  fully algorithmic counterparts. FRAX embodies this approach,
-                  balancing between decentralization and reliability.
-                </p>
-
-                <p>
-                  <strong>Dual-token systems.</strong> Use an auxiliary token to
-                  absorb main stablecoin volatility. The additional asset acts
-                  as a buffer absorbing price fluctuations. Terra's collapse
-                  clearly demonstrated this model's vulnerability during
-                  systemic trust crises.
-                </p>
-
-                <p>
-                  <strong>Synthetic.</strong> Rely on derivative contracts and
-                  cryptocurrency collateral to maintain parity. sUSD from
-                  Synthetix represents this category, functioning as a synthetic
-                  asset managed through smart contracts with collateral in other
-                  cryptocurrencies.
-                </p>
-
-                <h2 itemscope itemtype="https://schema.org/DefinedTerm">
-                  <span itemprop="name"
-                    >Benefits of Algorithmic Stablecoins</span
-                  >
-                </h2>
-
-                <p>
-                  Despite associated risks, algorithmic stablecoins possess
-                  significant advantages attracting blockchain ecosystem
-                  participants.
-                </p>
-
-                <p>
-                  <strong>Complete decentralization.</strong> Operating
-                  exclusively on smart contracts eliminates dependence on
-                  banking systems and regulators. Assets cannot be frozen by
-                  centralized issuers, which is critical for users valuing
-                  financial sovereignty.
-                </p>
-
-                <p>
-                  <strong>Automatic self-regulation.</strong> Algorithmic
-                  mechanisms instantly respond to market condition changes,
-                  adjusting supply without human intervention. This minimizes
-                  operational risks and eliminates the need for maintaining
-                  reserves.
-                </p>
-
-                <p>
-                  <strong>Capital efficiency.</strong> Absence of reserve
-                  requirements ensures high liquidity and usage flexibility.
-                  Participants can deploy funds in various DeFi protocols
-                  without locking significant capital volumes.
-                </p>
-
-                <p>
-                  <strong>Innovation potential.</strong> Algorithmic stablecoins
-                  pave the way for fundamentally new financial models:
-                  programmable monetary systems, automatic loan
-                  collateralization, and algorithmic portfolio rebalancing.
-                </p>
-
-                <h2 itemscope itemtype="https://schema.org/DefinedTerm">
-                  <span itemprop="name">Risks of Algorithmic Stablecoins</span>
-                </h2>
-
-                <p>
-                  Despite all innovation, algorithmic stablecoins remain
-                  high-risk assets. Historical experience demonstrates that
-                  unstable regulation models can lead to catastrophic
-                  consequences for investors.
-                </p>
-
-                <p>
-                  <strong
-                    >Volatility and
-                    <dfn itemscope itemtype="https://schema.org/DefinedTerm"
-                      ><span itemprop="name">depeg</span></dfn
-                    >.</strong
-                  >
-                  Automatic mechanisms don't always cope with sharp market
-                  changes. Rapid demand decline can exceed the algorithm's
-                  ability to correct supply, leading to loss of dollar peg and
-                  potential token devaluation.
-                </p>
-
-                <div class="flex">
-                  <img
-                    class="pictureImg"
-                    loading="lazy"
-                    src="/assets/img/content/stablecoins3.png"
-                    alt="Algorithmic stablecoin risks"
-                  />
-                </div>
-
-                <p>
-                  <strong>Death spiral.</strong> The key systemic risk of
-                  algorithmic stablecoins. Loss of investor confidence triggers
-                  a selling cascade: the algorithm is forced to mint additional
-                  auxiliary tokens, devaluing them and intensifying panic. This
-                  is exactly how Terra's collapse unfolded in 2022.
-                </p>
-
-                <p>
-                  <strong>Large player manipulation.</strong> Algorithmic
-                  systems are vulnerable to coordinated attacks by
-                  "whales"—large holders capable of artificially provoking price
-                  fluctuations and mass panic among ordinary users.
-                </p>
-
-                <p>
-                  <strong>Regulatory pressure.</strong> Tightening
-                  cryptocurrency control creates risk of banning or
-                  significantly restricting algorithmic stablecoins. US, EU, and
-                  Chinese regulators are actively discussing strict requirements
-                  for uncollateralized stable coins.
-                </p>
-
-                <p>
-                  <strong>Trust dependency.</strong> Stabilization mechanism
-                  effectiveness is directly determined by participant trust
-                  levels. When liquidity falls or reputation is lost, even
-                  mathematically perfect algorithms prove powerless.
-                </p>
-
-                <h2>Safe Use of Algorithmic Stablecoins</h2>
-
-                <p>
-                  Given the specific risks of this asset class, following proven
-                  practices helps minimize loss probability.
-                </p>
-
-                <p>
-                  <strong>Thorough project research.</strong> Before investing,
-                  study the stabilization mechanism, development team history,
-                  and smart contract audit results. Prefer projects with
-                  transparent documentation and proven stability.
-                </p>
-
-                <p>
-                  <strong>Stablecoin portfolio diversification.</strong>
-                  Distribute funds between collateralized (USDC, DAI) and
-                  algorithmic stablecoins. Diversification protects against
-                  catastrophic losses from individual project failures.
-                </p>
-
-                <p>
-                  <strong>Constant monitoring.</strong> Track stablecoin rates,
-                  project news, and market conditions. Set up alerts for
-                  significant deviations from target price. Early reaction to
-                  warning signals can save investments.
-                </p>
-
-                <p>
-                  <strong>DeFi caution.</strong> When using algorithmic
-                  stablecoins in staking or farming, consider additional smart
-                  contract risks. Don't place critical funds in protocols with
-                  unproven
-                  <a
-                    class="linkrefinto"
-                    href="https://arapov.trade/en/freestudying/cryptosafe"
-                    >cryptocurrency security</a
-                  >.
-                </p>
-
-                <h2>Conclusion</h2>
-
-                <p>
-                  Algorithmic stablecoins embody an ambitious attempt to create
-                  fully decentralized stable money without relying on
-                  traditional financial infrastructure. Despite shocks like
-                  Terra's collapse, the industry continues refining
-                  stabilization models, moving toward more reliable hybrid
-                  solutions.
-                </p>
-
-                <p>
-                  This segment's future is determined by projects' ability to
-                  overcome fundamental vulnerabilities: trust dependency,
-                  manipulation susceptibility, and death spiral risk. Increased
-                  regulatory control may both threaten uncollateralized
-                  stablecoin existence and contribute to improved reliability
-                  through mandatory safety standards. To consolidate this
-                  material, study also
-                  <a
-                    class="linkrefinto"
-                    href="https://arapov.trade/en/freestudying/cryptocurrencybasics"
-                    >cryptocurrency basics</a
-                  >.
-                </p>
-
-                <p>
-                  For investors, algorithmic stablecoins remain high-risk
-                  instruments requiring deep understanding of operational
-                  mechanisms and constant monitoring. A balanced approach,
-                  diversification, and readiness for quick exit will allow using
-                  these innovative assets' benefits while minimizing potential
-                  losses.
-                </p>
-
-                <section>
-                  <h2>Frequently Asked Questions</h2>
-
-                  <mat-accordion>
-                    <mat-expansion-panel
-                      class="highlight-box owl_link-box"
-                      [expanded]="true"
-                    >
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          What is an algorithmic stablecoin?
-                        </mat-panel-title>
-                      </mat-expansion-panel-header>
-                      <p>
-                        An algorithmic stablecoin is a cryptocurrency that
-                        maintains a stable exchange rate without fiat reserve
-                        backing. Stability is achieved through automatic token
-                        supply regulation mechanisms: new coins are issued when
-                        price rises, and some are burned when it falls.
-                      </p>
-                    </mat-expansion-panel>
-                    <mat-expansion-panel
-                      class="highlight-box owl_link-box"
-                      (opened)="panelOpenState.set(true)"
-                      (closed)="panelOpenState.set(false)"
-                    >
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          How do algorithmic stablecoins differ from
-                          collateralized ones?
-                        </mat-panel-title>
-                      </mat-expansion-panel-header>
-                      <p>
-                        Collateralized stablecoins (USDT, USDC) are backed by
-                        dollar reserves or other assets. Algorithmic ones have
-                        no physical backing and regulate rates through smart
-                        contracts and mathematical models, making them fully
-                        decentralized but riskier.
-                      </p>
-                    </mat-expansion-panel>
-                    <mat-expansion-panel
-                      class="highlight-box owl_link-box"
-                      (opened)="panelOpenState.set(true)"
-                      (closed)="panelOpenState.set(false)"
-                    >
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          Why did TerraUSD (UST) collapse?</mat-panel-title
-                        >
-                      </mat-expansion-panel-header>
-                      <p>
-                        The UST collapse in May 2022 occurred due to massive
-                        liquidity outflow. The algorithm failed to handle
-                        selling pressure: attempts to stabilize the rate through
-                        LUNA issuance led to token hyperinflation and the
-                        collapse of both coins. This is a classic example of a
-                        death spiral.
-                      </p>
-                    </mat-expansion-panel>
-
-                    <mat-expansion-panel
-                      class="highlight-box owl_link-box"
-                      (opened)="panelOpenState.set(true)"
-                      (closed)="panelOpenState.set(false)"
-                    >
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          Which algorithmic stablecoins are considered most
-                          stable?</mat-panel-title
-                        >
-                      </mat-expansion-panel-header>
-                      <p>
-                        Hybrid models are considered most stable: FRAX (partial
-                        collateral plus algorithm) and LUSD (full Ethereum
-                        crypto-collateral). They minimize risks of fully
-                        algorithmic systems through additional protection
-                        mechanisms.
-                      </p> </mat-expansion-panel
-                    ><mat-expansion-panel
-                      class="highlight-box owl_link-box"
-                      (opened)="panelOpenState.set(true)"
-                      (closed)="panelOpenState.set(false)"
-                    >
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          Is it safe to invest in algorithmic
-                          stablecoins?</mat-panel-title
-                        >
-                      </mat-expansion-panel-header>
-                      <p>
-                        Algorithmic stablecoins remain high-risk assets. Before
-                        investing, study the project's stabilization mechanism,
-                        team reputation, and track record. Never store all funds
-                        in one asset—diversify between collateralized and
-                        algorithmic stablecoins.
-                      </p>
-                    </mat-expansion-panel>
-                  </mat-accordion>
-                </section>
-                <section>
-                  <h2>About the Author</h2>
-                  <p>
-                        Author: Igor Arapov — independent researcher in trading psychology and behavioral finance, practising trader since 2013, founder of arapov.trade, author of a trading book series (<a
-                          class="linkrefinto"
-                          href="https://openlibrary.org/authors/OL16073686A/Igor_Arapov"
-                          >Open Library</a
-                        >
-                        ),   (<a
-                          class="linkrefinto"
-                          href="https://orcid.org/0009-0003-0430-778X"
-                          >ORCID: 0009-0003-0430-778X</a
-                        >
-                        ).
-                      </p>
-                </section>
-              </article>
               <div
                 class=""
                 [ngClass]="{

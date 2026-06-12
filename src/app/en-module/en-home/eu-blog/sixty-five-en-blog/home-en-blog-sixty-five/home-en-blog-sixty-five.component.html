@@ -7,671 +7,84 @@
           <div class="free-courses_main-container">
             <main lang="en">
               <header>
-                <h1>
-                  Order Book & Time and Sales: The Complete Guide to Reading
-                  Market Microstructure
-                </h1>
-              </header>
+  <h1>The Order Book: What It Is and How to Read It for Trading</h1>
+</header>
+<article>
+  <p>The order book looks frightening: columns of figures that flicker every second. In fact it is simply a list of all buy and sell orders right now. By it you see at what prices and in what volume participants are ready to trade. But I will say an important thing at once. I myself do not trade by the order book and read the market differently, through volume. Why, we'll go through below.</p>
+
+  <p>I trade CME futures and gold, and here is a funny moment. The real CME order book I have nowhere to even show: in my trading program it is simply not there. And that does not stop me working. I look for a large player not in the flickering figures of orders but in the footprints he leaves in volume. The book is useful to understand as the mechanics of the market. But trying to scalp by it I advise no one.</p>
+
+  <p><strong><i>In this article we'll cover:</i></strong></p>
+  <ul>
+    <li>the order book is a slice of all current orders, it shows intentions but changes every second;</li>
+    <li>the bid is the buyers' side, the ask the sellers' side, and the distance between them is the spread;</li>
+    <li>the visible book is often almost empty, so large players hide their size and sit on limit orders;</li>
+    <li>by my experience reading the footprint of large capital is more reliable in volume than in the flickering figures of the book.</li>
+  </ul>
+
+  <p>Let's start with what the book even shows.</p>
+
+  <h2>What Is the Order Book</h2>
+  <p><dfn itemscope itemtype="https://schema.org/DefinedTerm"><span itemprop="name">Order book</span></dfn> is a list of all active orders to buy and sell an asset, arranged by price. It is also called the book of orders. On one side stand the buyers, on the other the sellers. Each line shows the price and the volume that someone is ready to buy or sell at that price.</p>
+  <p>It is important to understand one thing. The book is a slice of time, as if we froze the market for a second and look at what was in it. In real trading these figures jerk constantly, especially on news. Two types of orders live in the book. A limit order waits for its price and stands in the queue. A market order executes at once at the price that is there. When market orders eat up the limit ones, price moves. Large participants almost never hit the market. They sit on limit orders and try not to move price. So their presence is seen not so much in the book as in the <a class="linkrefinto" href="https://arapov.trade/en/freestudying/freeeducation#volume">volume of trades</a>. This is the first thing worth grasping about the book of orders: it shows intentions, but not the whole truth.</p>
+
+  <div class="flex">
+    <img class="pictureImg" loading="lazy" src="/assets/img/content/stockorderbook1.png" alt="The structure of the order book: Bid and Ask" />
+  </div>
+
+  <h2>How to Read the Order Book: Bid, Ask and the Spread</h2>
+  <p>The price in the book is always set by two sides. The bid is the best price at which someone is ready to buy. The ask is the best price at which someone is ready to sell. The distance between them is called the spread. The narrower the spread and the more orders on both sides, the higher the <a class="linkrefinto" href="https://arapov.trade/en/freestudying/pricingandliquidity">liquidity</a> and the calmer price moves.</p>
+  <p>And now what is rarely written about. Often the book is almost empty. On the needed side there are almost no orders. And then even a not-very-large market order drags price far, it simply has nothing to lean on. So an empty book is a risk of sharp moves, not a sign of calm. Large capital uses exactly this: it waits until liquidity in the needed zone dries up, and only then acts. The mechanics of the liquidity deficit I cover in detail in the course section on <a class="linkrefinto" href="https://arapov.trade/en/freestudying/freeeducation#working-with-levels">working with levels</a>. What to do with this as a beginner. Do not try to guess the move by one snapshot of the book. It is a snapshot that a second later will be different. It is far more stable to lean on levels and on volume, where you can already see who really accumulated a position.</p>
+
+  <h2>The Order Book and Market Makers: What Large Players Hide</h2>
+  <p>Now to the most interesting part. Big players and market makers are not interested in showing their true intentions. So tricks appear in the book. The first is spoofing: a large order is placed in the book to scare or lure the crowd, and is pulled before execution. This is manipulation, and on regulated exchanges it is punished. The second is <a class="linkrefinto" href="https://arapov.trade/en/freestudying/icebergorders">iceberg orders</a>: a large volume is split so that only a small tip is visible in the book, while the main part is hidden.</p>
+  <p>The conclusion I came to over years of practice is simple. Chasing these tricks in real time is hard for a retail trader. Speed and algorithms are on the side of the large players. So I look not at the book itself but at its footprint in volume. If a huge volume passed in some zone while price barely moved, then someone large accumulated or distributed a position there. This is the answer to the question of what <a class="linkrefinto" href="https://arapov.trade/en/freestudying/marketmaker">market makers</a> hide. Volume is more important than the book. How the algorithms of large players hide orders and why volume matters more than the book I show on the CME exchange in a separate video on <a class="linkrefinto" href="https://youtu.be/UUSmwO83Jcg?t=149">algorithmic orders</a>.</p>
+
+  <h2>My Take: Read Volume, Not the Flickering Figures</h2>
+  <p>Volume is more important than the order book, and that has been my working principle since I have been trading since 2013: I look for a large player in the footprint he leaves in volume, not in the flickering figures of orders. This is not advice for you personally, it is how I read the market: if a huge volume passed in a zone and price barely moved, someone big accumulated or distributed there, and that tells me more than any wall in the book. The honest limitation is that the book does carry real-time information a volume read gives you only after the fact, so I am deliberately giving up some speed; but the book shows intentions that vanish in a second, while a completed volume footprint cannot be un-traded, and for a retail trader the slower, truer signal beats racing algorithms at their own game.</p>
+
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <mat-accordion>
+      <mat-expansion-panel class="highlight-box owl_link-box" [expanded]="true">
+        <mat-expansion-panel-header>
+          <mat-panel-title>What is the order book in simple terms?</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>It is a list of all current orders to buy and sell at different prices. On the left the buyers, on the right the sellers. By it you see where and in what volume participants are ready to trade right now.</p>
+      </mat-expansion-panel>
+      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+        <mat-expansion-panel-header>
+          <mat-panel-title>What are Bid and Ask in the order book?</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>The bid is the best buy price, the ask the best sell price. The difference between them is called the spread. The narrower it is and the more orders there are, the higher the instrument's liquidity.</p>
+      </mat-expansion-panel>
+      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+        <mat-expansion-panel-header>
+          <mat-panel-title>Can you earn by trading from the order book?</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>In theory yes, but it is hard for a retail trader: speed and algorithms are on the side of the large players. By my experience it is more reliable to read the footprint of large capital in volume than in the flickering orders.</p>
+      </mat-expansion-panel>
+      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+        <mat-expansion-panel-header>
+          <mat-panel-title>What are spoofing and iceberg orders?</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>Spoofing is a large fake order placed for deception and pulled before execution, a forbidden manipulation. An iceberg is when a large volume is split and only a small piece of it is visible in the book.</p>
+      </mat-expansion-panel>
+      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+        <mat-expansion-panel-header>
+          <mat-panel-title>Why is the order book often empty?</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>Because large participants sit on limit orders and do not show the whole volume. When there is little liquidity on the needed side, even a medium order moves price sharply.</p>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </section>
+
+  <section>
+    <h2>About the Author</h2>
+    <p>Author: Igor Arapov — independent researcher in the psychology of investment decisions and behavioral finance, practising trader since 2013, founder of arapov.trade, author of a trading book series (<a class="linkrefinto" href="https://openlibrary.org/authors/OL16073686A/Igor_Arapov">Open Library</a>), (<a class="linkrefinto" href="https://orcid.org/0009-0003-0430-778X">ORCID: 0009-0003-0430-778X</a>).</p>
+  </section>
+</article>
 
-              <article>
-                <p>
-                  Most retail traders make decisions based solely on candlestick
-                  charts and lagging indicators, completely unaware of the tools
-                  that reveal the market's inner workings. The
-                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
-                    ><strong itemprop="name">Order Book</strong></dfn
-                  >
-                  and
-                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
-                    ><strong itemprop="name">Time & Sales</strong></dfn
-                  >
-                  provide a window into real market mechanics — every pending
-                  order, every executed trade, every move by institutional
-                  players visible in real-time.
-                </p>
-
-                <p>
-                  These tools offer something charts cannot: leading
-                  information. Instead of reacting to completed price movements,
-                  you see intentions before they impact price. For scalpers, day
-                  traders, and anyone seeking to understand true market
-                  dynamics, mastering Order Flow analysis represents a
-                  significant competitive edge.
-                </p>
-
-                <section>
-                  <h2>Understanding the Order Book (DOM)</h2>
-
-                  <p>
-                    The
-                    <dfn itemscope itemtype="https://schema.org/DefinedTerm">
-                      <span itemprop="name">Order Book</span> </dfn
-                    >, also called the Depth of Market (DOM) or Level 2,
-                    displays all active limit orders waiting for execution. It
-                    updates continuously — every new order appears, every
-                    cancellation removes an entry, every execution reduces the
-                    corresponding level.
-                  </p>
-
-                  <p>
-                    The structure is straightforward:
-                    <dfn itemscope itemtype="https://schema.org/DefinedTerm"
-                      ><span itemprop="name">Bids</span></dfn
-                    >
-                    (buy orders) stack below current price — buyers waiting for
-                    pullbacks.
-                    <dfn itemscope itemtype="https://schema.org/DefinedTerm"
-                      ><span itemprop="name">Asks</span></dfn
-                    >
-                    (sell orders) stack above — sellers waiting for rallies. The
-                    meeting point determines the current market price.
-                  </p>
-
-                  <h3>Key Order Book Components</h3>
-
-                  <p>
-                    <dfn itemscope itemtype="https://schema.org/DefinedTerm">
-                      <strong itemprop="name">Market Depth</strong>
-                    </dfn>
-                    represents total order volume across price levels. Deep
-                    markets require substantial volume to move price
-                    significantly. Shallow markets move easily — even modest
-                    orders can cause price spikes.
-                  </p>
-
-                  <p>
-                    <dfn itemscope itemtype="https://schema.org/DefinedTerm">
-                      <strong itemprop="name">Spread</strong>
-                    </dfn>
-                    — the gap between best bid and best ask. Tight spreads
-                    indicate high
-                    <a
-                      class="linkrefinto"
-                      href="https://arapov.trade/en/freestudying/pricingandliquidity"
-                      >liquidity</a
-                    >
-                    and active trading. Wide spreads signal low activity,
-                    reduced liquidity, or elevated volatility.
-                  </p>
-
-                  <p>
-                    <strong>Order Imbalance.</strong> When bid volume
-                    significantly exceeds ask volume, potential buying pressure
-                    exists. The reverse — heavy asks — suggests selling
-                    pressure. Imbalances often precede directional moves.
-                  </p>
-
-                  <p>
-                    <strong>Size Clusters (Walls).</strong> Abnormally large
-                    volume at specific levels creates potential support or
-                    resistance zones. However, not every large order represents
-                    genuine intent — some exist purely for manipulation.
-                  </p>
-
-                  <img
-                    src="/assets/img/content/stockorderbook1.png"
-                    alt="Order Book structure - Bid and Ask levels"
-                    loading="lazy"
-                  />
-                </section>
-
-                <section>
-                  <h2>Reading the Order Book Effectively</h2>
-
-                  <p>
-                    Order Book analysis goes beyond watching numbers change.
-                    True skill involves understanding dynamics: how orders
-                    appear and disappear, who places them, whether they actually
-                    execute.
-                  </p>
-
-                  <h3>What to Monitor</h3>
-
-                  <p>
-                    <strong>Rate of Change.</strong> Orders appearing and
-                    vanishing within milliseconds indicate algorithmic activity
-                    or manipulation. Stable orders persisting over time
-                    typically represent more reliable intentions. To understand
-                    this topic more deeply, I recommend studying
-                    <a
-                      class="linkrefinto"
-                      href="https://arapov.trade/en/freestudying/smartmoneycontrol"
-                      >the influence of major players</a
-                    >.
-                  </p>
-
-                  <p>
-                    <strong>Behavior Near Levels.</strong> When price approaches
-                    a large order, observe: does it hold or disappear? Orders
-                    vanishing just before execution represent classic spoofing.
-                    Orders getting absorbed confirm the level's validity.
-                  </p>
-
-                  <p>
-                    <strong>Order Clusters.</strong> Multiple large orders at
-                    adjacent levels create liquidity zones. Such zones
-                    frequently become reversal points or consolidation areas.
-                  </p>
-
-                  <p>
-                    <strong>Response to Trades.</strong> When a large order sits
-                    at a level and trades execute against it, but the displayed
-                    size doesn't decrease — you've found an iceberg order.
-                    Someone large is quietly building a position.
-                  </p>
-                </section>
-
-                <section>
-                  <h2>Time & Sales: The Tape</h2>
-
-                  <p>
-                    <dfn itemscope itemtype="https://schema.org/DefinedTerm">
-                      <strong itemprop="name">Time & Sales</strong>
-                    </dfn>
-                    displays every executed transaction in real-time. While the
-                    Order Book shows intentions (who wants to trade), the tape
-                    shows actions (who actually traded).
-                  </p>
-
-                  <p>
-                    The tape presents a continuous data stream: transaction
-                    price, size, timestamp, and direction. Each line represents
-                    an actual market transaction. Analyzing this flow reveals
-                    genuine activity rather than declared intentions.
-                  </p>
-
-                  <h3>Tape Components</h3>
-
-                  <p>
-                    <strong>Trade Price.</strong> The execution price for each
-                    transaction. Trades at the Ask indicate aggressive buying —
-                    buyers paid sellers' prices. Trades at the Bid indicate
-                    aggressive selling.
-                  </p>
-
-                  <p>
-                    <strong>Trade Size.</strong> Contract or lot count per
-                    transaction. Large sizes (<dfn
-                      itemscope
-                      itemtype="https://schema.org/DefinedTerm"
-                      ><span itemprop="name">prints</span></dfn
-                    >) signal institutional activity or large algorithmic
-                    positions.
-                  </p>
-
-                  <p>
-                    <strong>Color Coding.</strong> Green prints — purchases at
-                    Ask (aggressive buyers). Red prints — sales at Bid
-                    (aggressive sellers). Gray or yellow — trades at mid-price
-                    between Bid and Ask.
-                  </p>
-
-                  <p>
-                    <strong>Flow Speed.</strong> Slow tape indicates
-                    consolidation. Acceleration with large sizes signals
-                    emerging momentum or news reaction.
-                  </p>
-                </section>
-
-                <section>
-                  <h2>Tape Reading Patterns</h2>
-
-                  <p>
-                    Experienced traders don't just watch the tape — they
-                    identify recurring patterns and anomalies signaling
-                    institutional presence.
-                  </p>
-
-                  <h3>Key Signals</h3>
-
-                  <p>
-                    <strong>Large Print Sequences.</strong> Multiple consecutive
-                    large green trades at the same level indicate aggressive
-                    accumulation. An institutional player is buying regardless
-                    of price.
-                  </p>
-
-                  <p>
-                    <dfn itemscope itemtype="https://schema.org/DefinedTerm">
-                      <strong itemprop="name">Absorption</strong>
-                    </dfn>
-                    — heavy selling at Bid without price decline. Limit buyers
-                    are absorbing all selling pressure. Bullish signal — large
-                    players accumulating at support.
-                  </p>
-
-                  <p>
-                    <strong>Impulse Prints.</strong> Sudden burst of large
-                    trades within seconds — reaction to significant events,
-                    level breakouts, or algorithm activation. Often precedes
-                    strong directional movement.
-                  </p>
-
-                  <p>
-                    <strong>Exhaustion.</strong> Decreasing volume and slowing
-                    flow after sustained moves. Driving force depleted —
-                    potential reversal or consolidation ahead.
-                  </p>
-                </section>
-
-                <section>
-                  <h2>Order Book Manipulation Tactics</h2>
-
-                  <p>
-                    The Order Book serves as both analytical tool and
-                    manipulation venue. Large players employ various tactics to
-                    deceive retail traders and secure better entry prices.
-                  </p>
-
-                  <h3>Common Manipulation Methods</h3>
-
-                  <p>
-                    <dfn itemscope itemtype="https://schema.org/DefinedTerm">
-                      <strong itemprop="name">Spoofing</strong>
-                    </dfn>
-                    — placing large fake orders without execution intent. The
-                    goal: create false supply or demand impressions, trigger
-                    price movement, then cancel orders and enter at better
-                    prices. Spoofing is illegal on regulated exchanges but still
-                    occurs.
-                  </p>
-
-                  <p>
-                    <dfn itemscope itemtype="https://schema.org/DefinedTerm">
-                      <strong itemprop="name"
-                        ><a
-                          class="linkrefinto"
-                          href="https://arapov.trade/en/freestudying/icebergorders"
-                          >Iceberg Orders</a
-                        >
-                      </strong>
-                    </dfn>
-                    — hidden orders displaying only small portions of true size.
-                    For example, a trader wants 10,000 contracts but shows only
-                    100. Upon execution, another 100 automatically appears. This
-                    masks true intentions.
-                  </p>
-
-                  <p>
-                    <strong>Layering.</strong> Placing multiple orders across
-                    several levels creating an apparent "wall." As price
-                    approaches, orders cancel layer by layer. Goal:
-                    psychological pressure on other traders.
-                  </p>
-
-                  <p>
-                    <strong>Liquidity Withdrawal Before News.</strong> Before
-                    major events, market makers dramatically reduce Order Book
-                    depth, widening spreads. This protects them from volatility
-                    but traps retail traders.
-                  </p>
-
-                  <img
-                    src="/assets/img/content/stockorderbook3.webp"
-                    alt="Order Book manipulation - spoofing and iceberg orders"
-                    loading="lazy"
-                  />
-                </section>
-
-                <section>
-                  <h2>Combining Order Book and Tape Analysis</h2>
-
-                  <p>
-                    Maximum effectiveness comes from simultaneous analysis of
-                    both tools. The Order Book shows potential — where support
-                    or resistance might exist. The tape confirms reality —
-                    whether those levels actually function.
-                  </p>
-
-                  <h3>Practical Scenarios</h3>
-
-                  <p>
-                    <strong>Level Confirmation.</strong> Large Bid sits at 100.
-                    Price drops toward it. Large green prints appear on the tape
-                    — buyers absorbing sellers. Level confirmed — look for long
-                    entry.
-                  </p>
-
-                  <p>
-                    <strong>False Level.</strong> Large Ask sits at 105. Price
-                    rallies toward it. The order suddenly vanishes moments
-                    before contact. No large sales on tape. Spoofing detected —
-                    level was fake.
-                  </p>
-
-                  <p>
-                    <strong>Hidden Accumulation.</strong> Price consolidates, no
-                    obvious Order Book imbalance. But the tape shows repeated
-                    large Ask purchases. Someone quietly building position —
-                    potential upside impulse coming.
-                  </p>
-
-                  <p>
-                    <strong>Trend Reversal.</strong> During uptrend, large red
-                    prints appear on tape. Meanwhile, large Asks appear in Order
-                    Book without getting absorbed. Buyers losing strength —
-                    reversal possible.
-                  </p>
-
-                  <img
-                    src="/assets/img/content/stockorderbook3.png"
-                    alt="Combined Order Book and Time & Sales analysis"
-                    loading="lazy"
-                  />
-                </section>
-
-                <section>
-                  <h2>Practical Trading Strategies</h2>
-
-                  <h3>Trading from Significant Orders</h3>
-                  <p>
-                    Identify levels with abnormally large orders and trade
-                    bounces from them. Critical: wait for tape confirmation.
-                    When price approaches the level and large trades appear in
-                    the bounce direction — enter position. Stop loss beyond the
-                    large order level.
-                  </p>
-
-                  <h3>Following Large Prints</h3>
-                  <p>
-                    When consecutive large trades appear in one direction on the
-                    tape, institutional presence is confirmed. Enter in the same
-                    direction on pullbacks. Logic: large players won't move
-                    price against themselves.
-                  </p>
-
-                  <h3>Hunting Iceberg Orders</h3>
-                  <p>
-                    When trades continuously execute at a level but Order Book
-                    size doesn't decrease — you've found a hidden order. Trade
-                    in that order's direction: if buying iceberg — look for
-                    longs; if selling iceberg — shorts. For an advanced
-                    understanding, study
-                    <a
-                      class="linkrefinto"
-                      href="https://arapov.trade/en/freestudying/scalpingintrading"
-                      >scalping</a
-                    >.
-                  </p>
-
-                  <h3>Filtering False Breakouts</h3>
-                  <p>
-                    Before entering breakout trades, check the tape. True
-                    breakouts accompany volume surges and large prints in the
-                    breakout direction. Low volume with no large prints — likely
-                    false breakout and reversal.
-                  </p>
-                </section>
-
-                <section>
-                  <h2>
-                    Order Flow Context: When and Where These Tools Work Best
-                  </h2>
-
-                  <p>
-                    Understanding when Order Book and tape analysis provides
-                    reliable signals versus when it becomes noise requires
-                    appreciating market context. These tools perform differently
-                    across various market conditions, instruments, and times.
-                  </p>
-
-                  <h3>Market Conditions</h3>
-
-                  <p>
-                    <strong>Trending Markets.</strong> During established
-                    trends, the tape typically shows consistent directional
-                    pressure — predominantly green prints in uptrends, red in
-                    downtrends. Order Book analysis helps identify pullback
-                    entry zones where large bids appear in uptrends or large
-                    asks in downtrends. Absorption patterns at these levels
-                    confirm trend continuation.
-                  </p>
-
-                  <p>
-                    <strong>Ranging Markets.</strong> In consolidation phases,
-                    both tools help identify range boundaries. Large orders
-                    accumulating at range extremes signal potential reversal
-                    zones. The tape reveals whether boundary tests attract
-                    genuine interest or represent stop-hunting expeditions.
-                  </p>
-
-                  <p>
-                    <strong>High Volatility Periods.</strong> During news
-                    releases and major events, Order Book depth typically
-                    evaporates as
-                    <a
-                      class="linkrefinto"
-                      href="https://arapov.trade/en/freestudying/marketmaker"
-                      >market makers</a
-                    >
-                    withdraw liquidity. Tape speeds accelerate dramatically.
-                    Analysis during these periods requires experience — signals
-                    come fast and manipulation intensifies. Beginners should
-                    observe rather than trade during such times.
-                  </p>
-
-                  <h3>Instrument Considerations</h3>
-
-                  <p>
-                    <strong>Futures Markets.</strong> Order flow analysis
-                    originated and works best in futures — centralized exchange
-                    data, genuine volume figures, visible depth. E-mini S&P 500
-                    (ES), Crude Oil (CL), and Treasury futures provide excellent
-                    order flow signals.
-                  </p>
-
-                  <p>
-                    <strong>Stocks.</strong> Individual equities show reliable
-                    order flow on major exchanges, though dark pool activity
-                    hides significant volume. Highly liquid large-caps work
-                    better than small-caps where manipulation is easier.
-                  </p>
-
-                  <p>
-                    <strong>Forex.</strong> Decentralized forex markets lack
-                    true Order Book data — what brokers show represents only
-                    their internal liquidity. Currency futures on CME provide
-                    actual exchange data for forex order flow analysis.
-                  </p>
-
-                  <p>
-                    <strong>Cryptocurrency.</strong> Crypto exchanges display
-                    Order Books, but manipulation runs rampant on less regulated
-                    venues. Focus on major exchanges with proven liquidity and
-                    consider that significant trading occurs on derivatives
-                    platforms.
-                  </p>
-                </section>
-
-                <section>
-                  <h2>Common Mistakes to Avoid</h2>
-
-                  <p>
-                    <strong>Trusting Large Orders Without Verification.</strong>
-                    Not every substantial Order Book entry represents real
-                    intention. Always verify execution on the tape. The
-                    combination of both tools separates genuine signals from
-                    manipulation attempts.
-                  </p>
-
-                  <p>
-                    <strong>Ignoring Context.</strong> Order Book and tape
-                    behavior differs dramatically in trending versus ranging
-                    markets, across different instruments, and throughout
-                    trading sessions. A large bid that works as support in an
-                    uptrend might simply get steamrolled in a downtrend. Always
-                    consider overall market structure before acting on order
-                    flow signals.
-                  </p>
-
-                  <p>
-                    <strong>Over-Analysis Paralysis.</strong> Don't attempt
-                    tracking every trade and order change — information overload
-                    leads to hesitation and missed opportunities. Focus on
-                    anomalies: abnormally large sizes, unusual activity
-                    clusters, clear imbalances. Let minor fluctuations pass.
-                  </p>
-
-                  <p>
-                    <strong>Trading Illiquid Markets.</strong> In low-liquidity
-                    markets, Order Books are easily manipulated and tape data
-                    becomes unreliable. A single large order can create false
-                    impressions of support or resistance. Use these tools on
-                    active, liquid instruments where genuine price discovery
-                    occurs.
-                  </p>
-
-                  <p>
-                    <strong>Mechanical Rule Following.</strong> Order flow
-                    analysis is not a mechanical system with fixed rules. Large
-                    bid doesn't automatically mean support. Absorption doesn't
-                    guarantee reversal. Develop intuition through screen time —
-                    thousands of hours observing how order flow translates into
-                    price action across different conditions.
-                  </p>
-
-                  <p>
-                    <strong>Ignoring Time of Day.</strong> Order flow
-                    characteristics change throughout the trading session.
-                    Opening minutes show chaotic activity as overnight orders
-                    execute. Midday often brings reduced volume and less
-                    reliable signals. Closing hours see increased institutional
-                    activity. Learn your instrument's daily rhythm.
-                  </p>
-                </section>
-
-                <section>
-                  <h2>Conclusion</h2>
-
-                  <p>
-                    The Order Book and Time & Sales open a window into true
-                    market mechanics. They reveal what hides behind candles and
-                    indicators: participant intentions, actual transactions,
-                    institutional activity, and liquidity zones.
-                  </p>
-
-                  <p>
-                    Mastering these tools requires time and practice. Begin with
-                    observation: watch the Order Book and tape without trading.
-                    Notice patterns, learn to distinguish genuine signals from
-                    manipulation. Gradually develop intuition enabling quick,
-                    accurate decisions.
-                  </p>
-
-                  <p>
-                    Remember: these are tools, not guarantees. Their
-                    effectiveness depends on your market understanding and
-                    disciplined application. Combine them with volume analysis
-                    and market structure comprehension for maximum precision in
-                    your trading decisions.
-                  </p>
-                </section>
-
-                <section>
-                  <h2>Frequently Asked Questions</h2>
-
-                  <mat-accordion>
-                    <mat-expansion-panel
-                      class="highlight-box owl_link-box"
-                      [expanded]="true"
-                    >
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          What is an Order Book in trading?
-                        </mat-panel-title>
-                      </mat-expansion-panel-header>
-                      <p>
-                        The Order Book displays all active limit orders to buy
-                        and sell. Buy orders sit below current price, sell
-                        orders above. It shows how many contracts traders are
-                        willing to trade at each price level.
-                      </p>
-                    </mat-expansion-panel>
-                    <mat-expansion-panel
-                      class="highlight-box owl_link-box"
-                      (opened)="panelOpenState.set(true)"
-                      (closed)="panelOpenState.set(false)"
-                    >
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          How does Time & Sales differ from Order Book?
-                        </mat-panel-title>
-                      </mat-expansion-panel-header>
-                      <p>
-                        The Order Book shows pending orders — intentions. Time &
-                        Sales shows executed trades — actions. The Book answers
-                        'who wants to trade,' the tape answers 'who is actually
-                        trading.'
-                      </p>
-                    </mat-expansion-panel>
-                    <mat-expansion-panel
-                      class="highlight-box owl_link-box"
-                      (opened)="panelOpenState.set(true)"
-                      (closed)="panelOpenState.set(false)"
-                    >
-                      <mat-expansion-panel-header>
-                        <mat-panel-title> What is spoofing?</mat-panel-title>
-                      </mat-expansion-panel-header>
-                      <p>
-                        Spoofing is manipulation using large fake orders to
-                        create false supply or demand impressions. The goal is
-                        to trigger price movement, then cancel orders and enter
-                        at better prices. It's illegal on regulated markets.
-                      </p>
-                    </mat-expansion-panel>
-
-                    <mat-expansion-panel
-                      class="highlight-box owl_link-box"
-                      (opened)="panelOpenState.set(true)"
-                      (closed)="panelOpenState.set(false)"
-                    >
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          What is an iceberg order?</mat-panel-title
-                        >
-                      </mat-expansion-panel-header>
-                      <p>
-                        An iceberg order is hidden, split into small portions.
-                        Only a fraction shows in the Order Book; full size stays
-                        hidden. Allows large players to enter positions without
-                        revealing their true size.
-                      </p> </mat-expansion-panel
-                    ><mat-expansion-panel
-                      class="highlight-box owl_link-box"
-                      (opened)="panelOpenState.set(true)"
-                      (closed)="panelOpenState.set(false)"
-                    >
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          How can I identify manipulation?</mat-panel-title
-                        >
-                      </mat-expansion-panel-header>
-                      <p>
-                        Signs include: orders disappearing before execution,
-                        rapid order appearance/cancellation, Order Book volume
-                        not matching tape transactions. Comparing both tools
-                        helps filter false signals.
-                      </p>
-                    </mat-expansion-panel>
-                  </mat-accordion>
-                </section>
-                <section>
-                  <h2>About the Author</h2>
-                  <p>
-                        Author: Igor Arapov — independent researcher in trading psychology and behavioral finance, practising trader since 2013, founder of arapov.trade, author of a trading book series (<a
-                          class="linkrefinto"
-                          href="https://openlibrary.org/authors/OL16073686A/Igor_Arapov"
-                          >Open Library</a
-                        >
-                        ),   (<a
-                          class="linkrefinto"
-                          href="https://orcid.org/0009-0003-0430-778X"
-                          >ORCID: 0009-0003-0430-778X</a
-                        >
-                        ).
-                      </p>
-                </section>
-              </article>
               <div
                 class=""
                 [ngClass]="{

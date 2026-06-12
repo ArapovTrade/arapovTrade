@@ -6,566 +6,82 @@
           <div class="m-right hero-section"></div>
           <div class="free-courses_main-container">
             <main lang="en">
-              <header>
-                <h1>
-                  Currencies and Quotes: Complete Guide to the Currency Market
-                </h1>
-              </header>
+             <header>
+  <h1>Currency Pairs and Quotes Explained</h1>
+</header>
+<article>
+  <p>A currency quote shows the price of one currency in terms of another. In a pair the first currency is the base and the second is the quote, and the number tells you how much of the quote currency one unit of the base is worth. For example, EUR/USD at 1.08 means one euro costs 1.08 dollars, and when the pair rises the base currency is strengthening.</p>
+
+  <p>Forex is the biggest market in the world, with daily turnover near 9.6 trillion dollars, but none of that matters until you can read the language of quotes. I have been trading since 2013 and work currency pairs among other markets, and I will say it plainly: jumping into trades before you can read a quote is how beginners lose money on nothing. Let's take it calmly: how a quote reads, how direct differs from inverse, and which pairs to look at first.</p>
+
+  <p><strong><i>In this article we'll cover:</i></strong></p>
+  <ul>
+    <li>in a pair the first currency is the base and the second the quote, and the price is always how much quote per one base;</li>
+    <li>a direct quote shows the price of a foreign currency in your own, while an inverse quote is the mirror;</li>
+    <li>major pairs with the dollar are the most liquid, with the tightest spreads, so they suit beginners;</li>
+    <li>the spread is the first hidden cost of entry, and over short trades it works against you.</li>
+  </ul>
+
+  <p>We will start with how a currency quote is read.</p>
+
+  <div class="flex">
+    <img class="pictureImg" loading="lazy" src="/assets/img/content/kursyvaljut.jpg" alt="Trading sessions on the currency market" />
+  </div>
+
+  <h2>What Are Currency Pairs?</h2>
+  <p><dfn itemscope itemtype="https://schema.org/DefinedTerm"><span itemprop="name">A currency quote</span></dfn> is the price of one currency expressed in units of another, written as a pair. The left currency is the base, the right is the quote, and the number is the value of one unit of the base in the quote currency. With EUR/USD at 1.08 the euro is the base and the dollar the quote, so one euro buys 1.08 dollars; at 1.10 the euro has risen, at 1.05 it has fallen. On the <a class="linkrefinto" href="https://arapov.trade/en/freestudying/forexmarket">What Is the Forex Market and How Does It Work?</a> everything is measured in pairs, because a currency has no price on its own, only relative to another.</p>
+  <p>The smallest step in a pair's price is called a pip, usually the fourth decimal place, or the second for yen pairs. You will also see two prices side by side, one to buy and one to sell, and the gap between them is the <a class="linkrefinto" href="https://arapov.trade/en/freestudying/spread">bid-ask spread</a>, measured in pips. That gap is the price you pay the market to enter, which is why a trade sits slightly negative in its first moment.</p>
+
+  <h2>How Currency Pairs Work in Practice</h2>
+  <p>Direct and inverse quotes differ only in your point of reference. A direct quote shows how much of your national currency one unit of a foreign currency costs, the familiar view from a currency exchange. An inverse, or indirect, quote is the mirror: how much foreign currency one unit of your national currency buys. It is the same rate, simply flipped, so there is no confusion if you keep one question in mind: which currency is the unit, and which is the price.</p>
+  <p>Major pairs are the most traded, and each contains the US dollar, such as EUR/USD, GBP/USD, and USD/JPY, with the dollar on roughly nine of every ten trades. Order matters: in EUR/USD the euro is the base, while in USD/JPY the dollar is the base, so 150 means one dollar buys 150 yen. EUR/USD is the busiest pair, around a fifth of all Forex turnover, which carries a practical lesson for a beginner: the more a pair trades, the higher its liquidity and the tighter its spread, so you pay less to enter a major than a thin exotic. Pairs without the dollar, like EUR/JPY, are crosses, priced in effect through the dollar from two majors, and the basics of pairs and instruments sit within <a class="linkrefinto" href="https://arapov.trade/en/freestudying/tradingbasics">trading for beginners</a>.</p>
+
+  <h2>My Take on Currency Pairs</h2>
+  <p>In my experience the specific currency pair matters far less than a beginner thinks: the quote and the list of majors are just the language and the venue, not the strategy. The profit does not come from finding some clever exotic pair, it comes from method, and I look at volume and levels rather than at the currency itself.</p>
+  <p>Forex does have one quirk worth knowing early. With no single trading center there is no true aggregate volume the way exchange-listed futures have, only an approximate picture, which is why on currencies I lean on levels and the dollar index. For that reason I would tell a beginner to start with a single liquid major and a tight spread rather than scattering across ten pairs at once. None of this is advice for you, it is simply how I choose an instrument myself: pick the cleanest venue, then let the method do the work.</p>
+
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <mat-accordion>
+      <mat-expansion-panel class="highlight-box owl_link-box" [expanded]="true">
+        <mat-expansion-panel-header>
+          <mat-panel-title>How do you read a currency quote in simple terms?</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>The left currency in the pair is the base, the right is the quote, and the number is the price of one unit of the base in the quote currency. EUR/USD at 1.08 means one euro buys 1.08 dollars. When the pair rises, the base currency is strengthening.</p>
+      </mat-expansion-panel>
+      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+        <mat-expansion-panel-header>
+          <mat-panel-title>What is the difference between a direct and inverse quote?</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>It is one rate seen from two sides. A direct quote shows the price of a foreign currency in your own, like a currency exchange. An inverse quote shows how much foreign currency one unit of yours buys. The information is the same, just flipped.</p>
+      </mat-expansion-panel>
+      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+        <mat-expansion-panel-header>
+          <mat-panel-title>Which currency pairs are best for a beginner?</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>Majors that include the dollar, since they are the most liquid and have the tightest spreads. Exotic pairs move erratically and charge a wide spread. It makes sense to start with one major, such as EUR/USD, rather than spreading yourself thin.</p>
+      </mat-expansion-panel>
+      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+        <mat-expansion-panel-header>
+          <mat-panel-title>What is the spread in a currency pair?</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>It is the gap between the buy price and the sell price, in effect the fee you pay the market to enter, which is why a trade opens slightly negative. The more liquid the pair, the smaller the spread.</p>
+      </mat-expansion-panel>
+      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+        <mat-expansion-panel-header>
+          <mat-panel-title>What is a pip in Forex?</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>A pip is the smallest standard step in a pair's price, usually the fourth decimal place, or the second decimal for yen pairs. Both price movement and trading costs like the spread are conveniently measured in pips.</p>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </section>
+
+  <section>
+    <h2>About the Author</h2>
+    <p>Author: Igor Arapov — independent researcher in the psychology of investment decisions and behavioral finance, practising trader since 2013, founder of arapov.trade, author of a trading book series (<a class="linkrefinto" href="https://openlibrary.org/authors/OL16073686A/Igor_Arapov">Open Library</a>), (<a class="linkrefinto" href="https://orcid.org/0009-0003-0430-778X">ORCID: 0009-0003-0430-778X</a>).</p>
+  </section>
+</article>
 
-              <article>
-                <section>
-                  <p>
-                    Currency trading provides access to the world's largest
-                    financial market. Trillions of dollars change hands daily,
-                    creating countless opportunities for profit. Understanding
-                    how exchange rates work enables traders to protect savings
-                    from depreciation and grow capital over time. Before
-                    proceeding, please familiarize yourself with the
-                    <a
-                      class="linkrefinto"
-                      href="https://arapov.trade/en/freestudying/tradingbasics"
-                      >trading basics</a
-                    >
-                    .
-                  </p>
-
-                  <p>
-                    Exchange rates reflect the economic strength of issuing
-                    countries. Nations with developed economies, low inflation,
-                    and stable political systems tend to have strong currencies.
-                    Countries facing economic challenges experience pressure on
-                    their monetary units.
-                  </p>
-
-                  <p>
-                    Market participants on the
-                    <a href="https://arapov.trade/en/freestudying/forexmarket"
-                      >Forex currency market</a
-                    >
-                    profit from rate fluctuations by buying currencies at lower
-                    prices and selling at higher ones. Success depends on the
-                    ability to forecast price movements and maintain strict risk
-                    control throughout the trading process.
-                  </p>
-                </section>
-
-                <section>
-                  <h2>Currency Market Fundamentals</h2>
-
-                  <p>
-                    A <dfn>currency pair</dfn> represents the relationship
-                    between two monetary units. The first currency is called the
-                    base, while the second is the quote currency. A
-                    <dfn>quote</dfn> of EUR/USD at 1.0900 means one euro equals
-                    1.0900 US dollars.
-                  </p>
-
-                  <p>
-                    Rising quotes signal strengthening of the base currency.
-                    Falling quotes indicate weakness relative to the quote
-                    currency. Traders analyze these movements to make informed
-                    decisions about entering and exiting positions.
-                  </p>
-
-                  <p>
-                    Major currency pairs combine the US dollar with other
-                    leading currencies. EUR/USD, USD/JPY, and GBP/USD offer the
-                    highest liquidity and tightest spreads.
-                    <dfn>Cross rates</dfn> form without the dollar: EUR/GBP,
-                    EUR/JPY, GBP/CHF.
-                  </p>
-
-                  <p>
-                    Exotic pairs contain currencies from developing nations.
-                    They exhibit high volatility and wide spreads. Trading these
-                    pairs requires more experience and careful position sizing.
-                  </p>
-
-                  <p>
-                    The
-                    <dfn
-                      ><a
-                        class="linkrefinto"
-                        href="https://arapov.trade/en/freestudying/spread"
-                        >spread</a
-                      >
-                    </dfn>
-                    represents the difference between buy and sell prices. It
-                    determines the initial cost of entering a trade. Low spreads
-                    on major pairs make them attractive for active trading
-                    strategies.
-                  </p>
-                </section>
-
-                <section>
-                  <h2>How Exchange Rates Form</h2>
-
-                  <p>
-                    Currency prices result from the balance of supply and
-                    demand. When buyers dominate, rates rise. When sellers
-                    prevail, rates decline. This simple mechanism underlies all
-                    market movements across timeframes.
-                  </p>
-
-                  <p>
-                    Central banks play a crucial role in rate formation through
-                    monetary policy decisions. Interest rate increases attract
-                    foreign investors, strengthening the national currency. Rate
-                    cuts reduce attractiveness and often lead to currency
-                    weakness.
-                  </p>
-
-                  <p>
-                    <dfn>Currency interventions</dfn> represent direct central
-                    bank market involvement. The regulator buys or sells the
-                    national currency to adjust its rate. Such operations
-                    typically occur to stabilize excessive fluctuations or
-                    counter speculative attacks.
-                  </p>
-
-                  <p>
-                    Trade balance affects currency supply and demand
-                    significantly. Exporters convert foreign earnings into local
-                    currency, creating demand. Importers purchase foreign
-                    currency to pay for goods, generating supply of the domestic
-                    unit.
-                  </p>
-
-                  <p>
-                    Capital flows between countries constitute a substantial
-                    portion of currency turnover. Foreign investments in a
-                    country's economy support its currency. Capital outflows
-                    create pressure on exchange rates.
-                  </p>
-                </section>
-
-                <section>
-                  <h2>Economic Factors Affecting Rates</h2>
-
-                  <p>
-                    Macroeconomic indicators determine long-term trends in
-                    currency markets. Gross domestic product reveals economic
-                    growth rates. Strong GDP growth typically accompanies
-                    national currency appreciation.
-                  </p>
-
-                  <p>
-                    Inflation erodes purchasing power over time. High inflation
-                    makes currencies unattractive for savings. Investors prefer
-                    currencies from countries with low, stable inflation rates.
-                  </p>
-
-                  <p>
-                    Unemployment levels reflect labor market conditions.
-                    Declining unemployment signals economic growth and typically
-                    supports the currency. High unemployment indicates
-                    underlying economic problems.
-                  </p>
-
-                  <p>
-                    Central bank interest rate decisions trigger immediate
-                    market reactions. Unexpected rate hikes can strengthen
-                    currencies by several percent within minutes. Market
-                    participants closely monitor central banker statements for
-                    policy clues.
-                  </p>
-
-                  <p>
-                    Business activity indices reveal sentiment in the economy.
-                    Values above fifty indicate expansion, below fifty signal
-                    contraction. Publication of these figures often causes
-                    short-term price movements.
-                  </p>
-
-                  <p>
-                    Retail sales data shows consumer spending patterns. Rising
-                    sales indicate a healthy economy and support the national
-                    currency through improved growth expectations.
-                  </p>
-                </section>
-
-                <section>
-                  <h2>Geopolitics and Exchange Rates</h2>
-
-                  <p>
-                    Political stability proves critical for attracting
-                    investments. Countries with predictable policies and rule of
-                    law draw capital consistently. Their currencies typically
-                    demonstrate stability over time.
-                  </p>
-
-                  <p>
-                    International conflicts create market uncertainty.
-                    Currencies of countries involved in conflicts face selling
-                    pressure. Investors move funds to safe haven assets
-                    including the US dollar, Swiss franc, and Japanese yen.
-                  </p>
-
-                  <p>
-                    Sanctions restrict economic ties with the global community.
-                    This negatively impacts trade and investment, pressuring
-                    national currencies. Anticipation of sanctions can trigger
-                    rate declines before official implementation.
-                  </p>
-
-                  <p>
-                    Trade agreements influence export and import volumes
-                    significantly. Favorable trade terms strengthen national
-                    currencies through increased demand for domestic goods.
-                    Trade wars create uncertainty and currency pressure.
-                  </p>
-
-                  <p>
-                    Elections and government changes generate periods of
-                    heightened volatility. Markets assess likely economic
-                    policies of incoming administrations and adjust positions
-                    accordingly. Unexpected election results can trigger sharp
-                    rate movements.
-                  </p>
-                </section>
-
-                <section>
-                  <h2>Market Analysis Methods</h2>
-
-                  <p>
-                    Technical analysis studies price history to forecast future
-                    changes. Traders use charts, indicators, and patterns to
-                    identify trade entry points. Support and resistance levels
-                    show zones of concentrated supply and demand.
-                  </p>
-
-                  <p>
-                    Moving averages help determine trend direction. Crossovers
-                    of fast and slow averages generate trading signals.
-                    Oscillator indicators show overbought or oversold conditions
-                    for currency pairs.
-                  </p>
-
-                  <p>
-                    Fundamental analysis evaluates fair currency value based on
-                    economic indicators. Analysts compare macroeconomic data
-                    across countries to determine currency prospects and
-                    relative value.
-                  </p>
-
-                  <p>
-                    Both approaches complement each other effectively.
-                    Fundamental analysis identifies trend direction, while
-                    technical analysis pinpoints optimal entry timing.
-                    Professional traders combine multiple methods. Read more
-                    about this in the article:
-                    <a
-                      class="linkrefinto"
-                      href="https://arapov.trade/en/freestudying/pricingandliquidity"
-                      >Market Liquidity</a
-                    >.
-                  </p>
-
-                  <p>
-                    Candlestick analysis allows reading market sentiment through
-                    price patterns. Candlestick formations signal potential
-                    reversals or trend continuation. Experienced traders combine
-                    candlestick signals with other analytical tools.
-                  </p>
-                </section>
-
-                <section>
-                  <h2>Trading Sessions and Their Characteristics</h2>
-
-                  <p>
-                    The currency market operates around the clock five days
-                    weekly. Activity shifts across time zones as
-                    <dfn>trading sessions</dfn> change. Each session has
-                    distinct characteristics worth understanding.
-                  </p>
-
-                  <p>
-                    The Asian session features moderate volatility. Pairs with
-                    Japanese yen and Australian dollar see most activity.
-                    Economic data from Japan and China moves markets during
-                    these hours.
-                  </p>
-
-                  <p>
-                    The European session brings increased trading volume.
-                    Primary activity concentrates in euro and British pound
-                    pairs. Eurozone economic releases trigger significant price
-                    movements.
-                  </p>
-
-                  <p>
-                    The American session exhibits the highest volatility levels.
-                    The overlap with European hours proves especially active. US
-                    economic data affects all dollar pairs across the board.
-                  </p>
-
-                  <p>
-                    Understanding session characteristics helps select optimal
-                    trading times. Traders can focus on periods of peak activity
-                    in their chosen currency pairs.
-                  </p>
-                </section>
-
-                <img
-                  src="/assets/img/content/kursyvaljut.jpg"
-                  alt="Trading Sessions on the Currency Market"
-                  loading="lazy"
-                />
-
-                <section>
-                  <h2>Risk Management in Currency Trading</h2>
-
-                  <p>
-                    Risk control determines long-term market survival. Even
-                    profitable strategies lead to account losses without proper
-                    capital management. Professionals never risk substantial
-                    portions of capital on single trades.
-                  </p>
-
-                  <p>
-                    <dfn>Stop loss</dfn> orders limit potential losses to
-                    predetermined levels. Setting protective orders remains
-                    mandatory for every open position. Stop loss size determines
-                    position sizing at given risk parameters.
-                  </p>
-
-                  <p>
-                    <dfn>Leverage</dfn> allows trading amounts exceeding
-                    personal capital. However, leverage amplifies both potential
-                    profits and possible losses equally. Beginning traders
-                    should use minimal leverage until gaining experience.
-                  </p>
-
-                  <p>
-                    Diversification reduces dependence on single trade outcomes.
-                    Trading multiple uncorrelated pairs distributes risk and
-                    smooths equity curves over time.
-                  </p>
-
-                  <p>
-                    Risk-to-reward ratios should favor potential profits. Target
-                    gains should exceed possible losses by at least one and a
-                    half to two times. This ensures profitability even with
-                    modest win rates.
-                  </p>
-                </section>
-
-                <section>
-                  <h2>Trading Psychology</h2>
-
-                  <p>
-                    Emotional control separates successful traders from losing
-                    ones. Fear and greed represent the main enemies of
-                    profitable trading. Fear causes premature profit-taking or
-                    avoidance of promising setups.
-                  </p>
-
-                  <p>
-                    Greed drives excessive risk-taking and holding losing
-                    positions hoping for reversals. Disciplined adherence to
-                    trading plans protects against emotional decision-making.
-                  </p>
-
-                  <p>
-                    Accepting losses as an inherent part of trading represents a
-                    crucial psychological skill. No strategy achieves perfect
-                    accuracy. Success depends on profit-to-loss ratios rather
-                    than avoiding losses entirely.
-                  </p>
-
-                  <p>
-                    Maintaining a trading journal helps analyze decisions and
-                    identify recurring mistakes. Regular trade review improves
-                    understanding of personal trading style and weaknesses.
-                  </p>
-
-                  <p>
-                    Taking breaks after losing streaks helps restore emotional
-                    balance. Trading while frustrated often leads to additional
-                    mistakes and deeper losses.
-                  </p>
-                </section>
-
-                <section>
-                  <h2>Cryptocurrencies in Currency Trading</h2>
-
-                  <p>
-                    Digital currencies have expanded trading possibilities
-                    significantly. Bitcoin , Ethereum , and other
-                    cryptocurrencies trade against fiat currencies and each
-                    other. High crypto market volatility creates opportunities
-                    for active trading.
-                  </p>
-
-                  <p>
-                    Cryptocurrency quotes form on specialized exchanges based on
-                    supply and demand. Regulatory decisions, technological
-                    updates, and market sentiment trigger sharp price movements.
-                  </p>
-
-                  <p>
-                    Stablecoins provide stability for settlements within the
-                    crypto ecosystem. Dollar pegs make them convenient tools for
-                    profit-taking and volatility protection.
-                  </p>
-
-                  <p>
-                    Correlation between cryptocurrencies and traditional assets
-                    changes over time. During market stress, Bitcoin may behave
-                    as a risk asset, falling alongside equities.
-                  </p>
-                </section>
-
-                <section>
-                  <h2>Practical Recommendations for Beginners</h2>
-
-                  <p>
-                    Start by studying major currency pairs and factors affecting
-                    their movements. Understanding relationships between
-                    economic events and exchange rates forms the foundation for
-                    trading decisions.
-                  </p>
-
-                  <p>
-                    Open a demo account to practice without risking real money.
-                    Demo trading allows platform familiarization and strategy
-                    testing before transitioning to live trading.
-                  </p>
-
-                  <p>
-                    Develop a trading plan with clear entry, exit, and risk
-                    management rules. Plan adherence protects against impulsive
-                    decisions and ensures consistency in trading approach.
-                  </p>
-
-                  <p>
-                    Begin with minimum position sizes and gradually increase as
-                    experience grows. Capital preservation during the initial
-                    learning phase matters more than quick profits. To
-                    consolidate the material, also study
-                    <a
-                      class="linkrefinto"
-                      href="https://arapov.trade/en/freestudying/marketbasics"
-                      >market basics</a
-                    >.
-                  </p>
-
-                  <p>
-                    Study economic calendars and account for major news release
-                    times when planning trades. Key data publications often
-                    trigger sharp movements and spread widening.
-                  </p>
-                </section>
-
-                <section>
-                  <h2>FAQ: Common Questions About Currencies and Quotes</h2>
-
-                  <mat-accordion>
-                    <mat-expansion-panel
-                      class="highlight-box owl_link-box"
-                      [expanded]="true"
-                    >
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          What is a currency quote?
-                        </mat-panel-title>
-                      </mat-expansion-panel-header>
-                      <p>
-                        A currency quote is the price of one currency expressed
-                        in units of another currency. For example, EUR/USD =
-                        1.0900 means one euro costs 1.0900 US dollars.
-                      </p>
-                    </mat-expansion-panel>
-                    <mat-expansion-panel
-                      class="highlight-box owl_link-box"
-                      (opened)="panelOpenState.set(true)"
-                      (closed)="panelOpenState.set(false)"
-                    >
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          What factors affect exchange rates?
-                        </mat-panel-title>
-                      </mat-expansion-panel-header>
-                      <p>
-                        Exchange rates are affected by: central bank interest
-                        rates, economic indicators (GDP, inflation,
-                        unemployment), geopolitical events, trade balance, and
-                        market sentiment of participants.
-                      </p></mat-expansion-panel
-                    >
-                    <mat-expansion-panel
-                      class="highlight-box owl_link-box"
-                      (opened)="panelOpenState.set(true)"
-                      (closed)="panelOpenState.set(false)"
-                    >
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          What is the difference between major and exotic
-                          currency pairs?</mat-panel-title
-                        >
-                      </mat-expansion-panel-header>
-                      <p>
-                        Major pairs include the US dollar and currencies of the
-                        largest economies (EUR/USD, USD/JPY), featuring high
-                        liquidity and low spreads. Exotic pairs contain
-                        currencies of developing countries, characterized by
-                        high volatility and wide spreads.
-                      </p>
-                    </mat-expansion-panel>
-
-                    <mat-expansion-panel
-                      class="highlight-box owl_link-box"
-                      (opened)="panelOpenState.set(true)"
-                      (closed)="panelOpenState.set(false)"
-                    >
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          When is the best time to trade
-                          currencies?</mat-panel-title
-                        >
-                      </mat-expansion-panel-header>
-                      <p>
-                        The highest volatility occurs during the overlap of
-                        European and American sessions. For trading yen pairs,
-                        the Asian session is optimal; for EUR and GBP, the
-                        European session works best.
-                      </p> </mat-expansion-panel
-                    ><mat-expansion-panel
-                      class="highlight-box owl_link-box"
-                      (opened)="panelOpenState.set(true)"
-                      (closed)="panelOpenState.set(false)"
-                    >
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          How to manage risks in currency
-                          trading?</mat-panel-title
-                        >
-                      </mat-expansion-panel-header>
-                      <p>
-                        Key rules: risk no more than 1-2% of deposit per trade,
-                        always use stop losses, avoid excessive leverage, and
-                        diversify trading across multiple currency pairs.
-                      </p>
-                    </mat-expansion-panel>
-                  </mat-accordion>
-                </section>
-                <section>
-                  <h2>About the Author</h2>
-                  <p>
-                        Author: Igor Arapov — independent researcher in trading psychology and behavioral finance, practising trader since 2013, founder of arapov.trade, author of a trading book series (<a
-                          class="linkrefinto"
-                          href="https://openlibrary.org/authors/OL16073686A/Igor_Arapov"
-                          >Open Library</a
-                        >
-                        ),   (<a
-                          class="linkrefinto"
-                          href="https://orcid.org/0009-0003-0430-778X"
-                          >ORCID: 0009-0003-0430-778X</a
-                        >
-                        ).
-                      </p>
-                </section>
-              </article>
 
               <div
                 class=""
