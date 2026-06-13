@@ -123,7 +123,7 @@ export class ArticlesService {
       groupsRus: ['Криптовалюта'],
       groupsUkr: ['Криптовалюта'],
       groupsEng: ['Cryptocurrency'],
-      id: 48,
+      id: 448,
     },
     {
       titleUkr: 'Як стати трейдером самостійно?',
