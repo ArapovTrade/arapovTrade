@@ -19,6 +19,8 @@ import { ThemeservService } from '../../../../servises/themeserv.service';
 declare global {
   interface Window { adsbygoogle: any[]; }
 }
+import { isPlatformBrowser } from '@angular/common';
+import {   PLATFORM_ID } from '@angular/core';
 @Component({
   selector: 'app-cover-en',
   templateUrl: './cover-en.component.html',
@@ -45,11 +47,10 @@ dropdownOpen = false;
       private languageService: ServLangueageService,
       private rendererFactory: RendererFactory2,
       private themeService:ThemeservService,
-
      @Inject(DOCUMENT) private document: Document,
       private meta: Meta,
          private titleService: Title,
-         private metaTegServ: MetaservService,
+         private metaTegServ: MetaservService,@Inject(PLATFORM_ID) private platformId: Object  
     ) {
         
         this.renderer = rendererFactory.createRenderer(null, null);
@@ -60,24 +61,29 @@ dropdownOpen = false;
      
   }
    ngAfterViewInit() {
-setTimeout(() => {
-      try {
-        (window.adsbygoogle = window.adsbygoogle || []).push({});
-      } catch (e) {
-        console.error('adsbygoogle error', e);
-      }
-    }, 300);
-
+// setTimeout(() => {
+//       try {
+//         (window.adsbygoogle = window.adsbygoogle || []).push({});
+//       } catch (e) {
+//         console.error('adsbygoogle error', e);
+//       }
+//     }, 300);
+if (!isPlatformBrowser(this.platformId)) {
+    return;
+  }
 
   setTimeout(() => {
-    if (typeof AOS !== 'undefined') {
-      AOS.init({
-        duration: 1000,
-        once: false,
-        offset: 100
-      });
+    try {
+      (window as any).adsbygoogle =
+        (window as any).adsbygoogle || [];
+
+      (window as any).adsbygoogle.push({});
+    } catch (e) {
+      console.error('adsbygoogle error', e);
     }
-  }, 500); // Задержка 0.5s
+  }, 300);
+
+  
 }
 
   changeLanguage(lang: string) {

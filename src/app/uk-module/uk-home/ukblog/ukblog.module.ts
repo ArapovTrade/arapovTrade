@@ -1055,7 +1055,7 @@ const routes: Routes = [
         (m) => m.OnehundredThreeUkBlogModule
       ),
   },
-  {
+  { 
     path: 'solana', //104
     loadChildren: () =>
       import('../ukblog/onehundred-four-uk-blog/onehundred-four-uk-blog.module').then(

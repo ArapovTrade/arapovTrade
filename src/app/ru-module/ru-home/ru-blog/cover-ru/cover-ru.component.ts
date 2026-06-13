@@ -16,6 +16,8 @@ import { MetaservService } from '../../../../servises/metaserv.service';
  import { Subscription } from 'rxjs';
 declare var AOS: any;
 import { ThemeservService } from '../../../../servises/themeserv.service';
+import { isPlatformBrowser } from '@angular/common';
+import {   PLATFORM_ID } from '@angular/core';
 @Component({
   selector: 'app-cover-ru',
   templateUrl: './cover-ru.component.html',
@@ -45,7 +47,7 @@ dropdownOpen = false;
      @Inject(DOCUMENT) private document: Document,
       private meta: Meta,
          private titleService: Title,
-         private metaTegServ: MetaservService,
+         private metaTegServ: MetaservService,@Inject(PLATFORM_ID) private platformId: Object
     ) {
        
      
@@ -57,26 +59,31 @@ dropdownOpen = false;
   }
 
 ngAfterViewInit() {
-setTimeout(() => {
-      try {
-        (window.adsbygoogle = window.adsbygoogle || []).push({});
-      } catch (e) {
-        console.error('adsbygoogle error', e);
-      }
-    }, 300);
-
-
-
+// setTimeout(() => {
+//       try {
+//         (window.adsbygoogle = window.adsbygoogle || []).push({});
+//       } catch (e) {
+//         console.error('adsbygoogle error', e);
+//       }
+//     }, 300);
+if (!isPlatformBrowser(this.platformId)) {
+    return;
+  }
 
   setTimeout(() => {
-    if (typeof AOS !== 'undefined') {
-      AOS.init({
-        duration: 1000,
-        once: false,
-        offset: 100
-      });
+    try {
+      (window as any).adsbygoogle =
+        (window as any).adsbygoogle || [];
+
+      (window as any).adsbygoogle.push({});
+    } catch (e) {
+      console.error('adsbygoogle error', e);
     }
-  }, 500); // Задержка 0.5s
+  }, 300);
+
+
+
+  
 }
 
   changeLanguage(lang: string) {
