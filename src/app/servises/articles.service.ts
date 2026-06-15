@@ -3275,26 +3275,26 @@ export class ArticlesService {
     groupsEng: ['Trading for Beginners'],
     id: 502,
   },
-  // {
-  //   titleUkr: 'Ейрдроп у крипті: що це і як не натрапити на скам',
-  //   linkUkr: 'airdrop',
-  //   imgUkr: '/assets/img/content/airdrop.jpeg',
-  //   titleRus: 'Эирдроп в крипте: что это и как не попасть на скам',
-  //   titleEn: 'Airdrop in Crypto: What It Is and How to Avoid Scams',
-  //   descrUkr:
-  //     'Що таке ейрдроп, за що проєкти роздають токени, як взяти участь і як відрізнити справжню роздачу від схеми, що краде доступ до гаманця.',
-  //   descrEn:
-  //     'What an airdrop is, why projects give out tokens, how to take part and how to tell a real drop from a scheme that steals wallet access.',
-  //   descrRus:
-  //     'Что такое эирдроп, за что проекты раздают токены, как поучаствовать и как отличить настоящую раздачу от схемы, ворующей доступ к кошельку.',
-  //   realTitleRus: 'Эирдроп в крипте: что это и как не попасть на скам | Arapov.trade',
-  //   realTitleUkr: 'Ейрдроп у крипті: що це і як не натрапити на скам | Arapov.trade',
-  //   realTitleEn: 'Airdrop in Crypto: What It Is and How to Avoid Scams | Arapov.trade',
-  //   groupsRus: ['Криптовалюта'],
-  //   groupsUkr: ['Криптовалюта'],
-  //   groupsEng: ['Cryptocurrency'],
-  //   id: 503,
-  // },
+  {
+    titleUkr: 'Ейрдроп у крипті: що це і як не натрапити на скам',
+    linkUkr: 'airdrop',
+    imgUkr: '/assets/img/content/airdrop.jpeg',
+    titleRus: 'Эирдроп в крипте: что это и как не попасть на скам',
+    titleEn: 'Airdrop in Crypto: What It Is and How to Avoid Scams',
+    descrUkr:
+      'Що таке ейрдроп, за що проєкти роздають токени, як взяти участь і як відрізнити справжню роздачу від схеми, що краде доступ до гаманця.',
+    descrEn:
+      'What an airdrop is, why projects give out tokens, how to take part and how to tell a real drop from a scheme that steals wallet access.',
+    descrRus:
+      'Что такое эирдроп, за что проекты раздают токены, как поучаствовать и как отличить настоящую раздачу от схемы, ворующей доступ к кошельку.',
+    realTitleRus: 'Эирдроп в крипте: что это и как не попасть на скам | Arapov.trade',
+    realTitleUkr: 'Ейрдроп у крипті: що це і як не натрапити на скам | Arapov.trade',
+    realTitleEn: 'Airdrop in Crypto: What It Is and How to Avoid Scams | Arapov.trade',
+    groupsRus: ['Криптовалюта'],
+    groupsUkr: ['Криптовалюта'],
+    groupsEng: ['Cryptocurrency'],
+    id: 503,
+  },
   // {
   //   titleUkr: 'Альтсезон: що це і як пов\'язаний із домінацією біткоїна',
   //   linkUkr: 'altseason',

@@ -1125,13 +1125,13 @@ const routes: Routes = [
             (m) => m.OnehundredThirteenUkBlogModule,
           ),
       },
-  //     {
-  //       path: '114', //114
-  //       loadChildren: () =>
-  //         import('../ukblog/onehundred-fourteen-uk-blog/onehundred-fourteen-uk-blog.module').then(
-  //           (m) => m.OnehundredFourteenUkBlogModule,
-  //         ),
-  //     },
+      {
+        path: 'airdrop', //114
+        loadChildren: () =>
+          import('../ukblog/onehundred-fourteen-uk-blog/onehundred-fourteen-uk-blog.module').then(
+            (m) => m.OnehundredFourteenUkBlogModule,
+          ),
+      },
   //     {
   //       path: '115', //115
   //       loadChildren: () =>
