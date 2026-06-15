@@ -3227,5 +3227,2094 @@ export class ArticlesService {
       groupsEng: ['Technical Analysis'],
       id: 157,
     },
+
+
+
+
+
+
+
+
+    {
+    titleUkr: 'Індикатор ADX: що це і як вимірювати силу тренду',
+    linkUkr: 'adx',
+    imgUkr: '/assets/img/content/adx.jpeg',
+    titleRus: 'Индикатор ADX: что это и как измерять силу тренда',
+    titleEn: 'ADX Indicator: What It Is and How to Measure Trend Strength',
+    descrUkr:
+      'Що показує індикатор ADX, як за ним відрізнити сильний тренд від млявого боковика і чому він вимірює силу руху, але не його напрям.',
+    descrEn:
+      'What the ADX indicator shows, how to tell a strong trend from a sluggish range by it and why it measures the strength of a move, not its direction.',
+    descrRus:
+      'Что показывает индикатор ADX, как по нему отличить сильный тренд от вялого боковика и почему он измеряет силу движения, но не его направление.',
+    realTitleRus: 'Индикатор ADX: что это и как измерять силу тренда | Arapov.trade',
+    realTitleUkr: 'Індикатор ADX: що це і як вимірювати силу тренду | Arapov.trade',
+    realTitleEn: 'ADX Indicator: What It Is and How to Measure Trend Strength | Arapov.trade',
+    groupsRus: ['Технический анализ'],
+    groupsUkr: ['Технічний аналіз'],
+    groupsEng: ['Technical Analysis'],
+    id: 501,
+  },
+  // {
+  //   titleUkr: 'Нейромережі в трейдингу: що вміє ШІ й де його межа',
+  //   linkUkr: 'ai-trading',
+  //   imgUkr: '/assets/img/content/ai-trading.jpeg',
+  //   titleRus: 'Нейросети в трейдинге: что умеет ИИ и где его предел',
+  //   titleEn: 'Neural Networks in Trading: What AI Can and Cannot Do',
+  //   descrUkr:
+  //     'Що нейромережі реально вміють на ринку, а що їм не до снаги, чому ШІ не передбачає майбутнє і як використати його як інструмент, а не оракула.',
+  //   descrEn:
+  //     'What neural networks really can do on the market, what is beyond them, why AI does not predict the future and how to use it as a tool, not an oracle.',
+  //   descrRus:
+  //     'Что нейросети реально умеют на рынке, а что им не под силу, почему ИИ не предсказывает будущее и как использовать его как инструмент, а не оракула.',
+  //   realTitleRus: 'Нейросети в трейдинге: что умеет ИИ и где его предел | Arapov.trade',
+  //   realTitleUkr: 'Нейромережі в трейдингу: що вміє ШІ й де його межа | Arapov.trade',
+  //   realTitleEn: 'Neural Networks in Trading: What AI Can and Cannot Do | Arapov.trade',
+  //   groupsRus: ['Трейдинг для начинающих'],
+  //   groupsUkr: ['Трейдинг для початківців'],
+  //   groupsEng: ['Trading for Beginners'],
+  //   id: 502,
+  // },
+  // {
+  //   titleUkr: 'Ейрдроп у крипті: що це і як не натрапити на скам',
+  //   linkUkr: 'airdrop',
+  //   imgUkr: '/assets/img/content/airdrop.jpeg',
+  //   titleRus: 'Эирдроп в крипте: что это и как не попасть на скам',
+  //   titleEn: 'Airdrop in Crypto: What It Is and How to Avoid Scams',
+  //   descrUkr:
+  //     'Що таке ейрдроп, за що проєкти роздають токени, як взяти участь і як відрізнити справжню роздачу від схеми, що краде доступ до гаманця.',
+  //   descrEn:
+  //     'What an airdrop is, why projects give out tokens, how to take part and how to tell a real drop from a scheme that steals wallet access.',
+  //   descrRus:
+  //     'Что такое эирдроп, за что проекты раздают токены, как поучаствовать и как отличить настоящую раздачу от схемы, ворующей доступ к кошельку.',
+  //   realTitleRus: 'Эирдроп в крипте: что это и как не попасть на скам | Arapov.trade',
+  //   realTitleUkr: 'Ейрдроп у крипті: що це і як не натрапити на скам | Arapov.trade',
+  //   realTitleEn: 'Airdrop in Crypto: What It Is and How to Avoid Scams | Arapov.trade',
+  //   groupsRus: ['Криптовалюта'],
+  //   groupsUkr: ['Криптовалюта'],
+  //   groupsEng: ['Cryptocurrency'],
+  //   id: 503,
+  // },
+  // {
+  //   titleUkr: 'Альтсезон: що це і як пов\'язаний із домінацією біткоїна',
+  //   linkUkr: 'altseason',
+  //   imgUkr: '/assets/img/content/altseason.jpeg',
+  //   titleRus: 'Альтсезон: что это и как связан с доминацией биткоина',
+  //   titleEn: 'Altseason: What It Is and How It Ties to Bitcoin Dominance',
+  //   descrUkr:
+  //     'Що таке альтсезон, чому капітал перетікає з біткоїна в альткоїни, як це пов\'язано з домінацією BTC і чому кінець альтсезону часто болісний.',
+  //   descrEn:
+  //     'What altseason is, why capital flows from bitcoin into altcoins, how it relates to BTC dominance and why the end of altseason is often painful.',
+  //   descrRus:
+  //     'Что такое альтсезон, почему капитал перетекает из биткоина в альткоины, как это связано с доминацией BTC и почему конец альтсезона часто болезненный.',
+  //   realTitleRus: 'Альтсезон: что это и как связан с доминацией биткоина | Arapov.trade',
+  //   realTitleUkr: 'Альтсезон: що це і як пов\'язаний із домінацією біткоїна | Arapov.trade',
+  //   realTitleEn: 'Altseason: What It Is and How It Ties to Bitcoin Dominance | Arapov.trade',
+  //   groupsRus: ['Криптовалюта'],
+  //   groupsUkr: ['Криптовалюта'],
+  //   groupsEng: ['Cryptocurrency'],
+  //   id: 504,
+  // },
+  // {
+  //   titleUkr: 'Бектест стратегії: що це і як не обдурити себе',
+  //   linkUkr: 'backtest',
+  //   imgUkr: '/assets/img/content/backtest.jpeg',
+  //   titleRus: 'Бэктест стратегии: что это и как не обмануть себя',
+  //   titleEn: 'Strategy Backtest: What It Is and How Not to Fool Yourself',
+  //   descrUkr:
+  //     'Що таке бектест торгової стратегії, як чесно тестувати її на історії і чому красиві цифри на минулому оманливі й не дають гарантій.',
+  //   descrEn:
+  //     'What a strategy backtest is, how to test it honestly on history and why pretty numbers on the past are deceptive and give no guarantees.',
+  //   descrRus:
+  //     'Что такое бэктест торговой стратегии, как честно тестировать её на истории и почему красивые цифры на прошлом обманчивы и не дают гарантий.',
+  //   realTitleRus: 'Бэктест стратегии: что это и как не обмануть себя | Arapov.trade',
+  //   realTitleUkr: 'Бектест стратегії: що це і як не обдурити себе | Arapov.trade',
+  //   realTitleEn: 'Strategy Backtest: What It Is and How Not to Fool Yourself | Arapov.trade',
+  //   groupsRus: ['Психология трейдинга'],
+  //   groupsUkr: ['Психологія трейдингу'],
+  //   groupsEng: ['Trading Psychology'],
+  //   id: 505,
+  // },
+  // {
+  //   titleUkr: 'Що таке облігації простими словами: купон, номінал, дохідність',
+  //   linkUkr: 'bonds-coupon-yield',
+  //   imgUkr: '/assets/img/content/bonds-coupon-yield.jpeg',
+  //   titleRus: 'Что такое облигации простыми словами: купон, номинал, доходность',
+  //   titleEn: 'What Are Bonds in Simple Terms: Coupon, Face Value, Yield',
+  //   descrUkr:
+  //     'Що таке облігації, як вони працюють, що таке номінал, купон і дохідність, які бувають види облігацій і наскільки вони надійні для інвестора.',
+  //   descrEn:
+  //     'What bonds are, how they work, what face value, coupon and yield are, what types of bonds exist and how reliable they are for an investor.',
+  //   descrRus:
+  //     'Что такое облигации, как они работают, что такое номинал, купон и доходность, какие бывают виды облигаций и насколько они надёжны для инвестора.',
+  //   realTitleRus: 'Что такое облигации простыми словами: купон, номинал, доходность | Arapov.trade',
+  //   realTitleUkr: 'Що таке облігації простими словами: купон, номінал, дохідність | Arapov.trade',
+  //   realTitleEn: 'What Are Bonds in Simple Terms: Coupon, Face Value, Yield | Arapov.trade',
+  //   groupsRus: ['Фундаментальный анализ'],
+  //   groupsUkr: ['Фундаментальний аналіз'],
+  //   groupsEng: ['Fundamental Analysis'],
+  //   id: 506,
+  // },
+  // {
+  //   titleUkr: 'Брейкер-блок і мітигейшн-блок: що це в Smart Money',
+  //   linkUkr: 'breaker-mitigation-blocks',
+  //   imgUkr: '/assets/img/content/breaker-mitigation-blocks.jpeg',
+  //   titleRus: 'Брейкер-блок и митигейшн-блок: что это в Smart Money',
+  //   titleEn: 'Breaker block and mitigation block: what they are in Smart Money',
+  //   descrUkr:
+  //     'Що таке брейкер-блок і мітигейшн-блок, чим вони відрізняються від ордер-блока і як смарт-мані використовують повернення ціни до цих зон.',
+  //   descrEn:
+  //     'What a breaker block and a mitigation block are, how they differ from an order block and how smart money uses the price return to these zones.',
+  //   descrRus:
+  //     'Что такое брейкер-блок и митигейшн-блок, чем они отличаются от ордер-блока и как смарт-мани используют возврат цены к этим зонам.',
+  //   realTitleRus: 'Брейкер-блок и митигейшн-блок: что это в Smart Money | Arapov.trade',
+  //   realTitleUkr: 'Брейкер-блок і мітигейшн-блок: що це в Smart Money | Arapov.trade',
+  //   realTitleEn: 'Breaker block and mitigation block: what they are in Smart Money | Arapov.trade',
+  //   groupsRus: ['Концепция Смарт Мани'],
+  //   groupsUkr: ['Концепція Смарт Мані'],
+  //   groupsEng: ['Smart Money Concept'],
+  //   id: 507,
+  // },
+  // {
+  //   titleUkr: 'Беззбиток: що це і коли переносити стоп',
+  //   linkUkr: 'breakeven',
+  //   imgUkr: '/assets/img/content/breakeven.jpeg',
+  //   titleRus: 'Безубыток: что это и когда переносить стоп',
+  //   titleEn: 'Breakeven: What It Is and When to Move the Stop',
+  //   descrUkr:
+  //     'Що означає перевести угоду в беззбиток, коли перенесення стопа в точку входу захищає прибуток, а коли вибиває з хорошої позиції зарано.',
+  //   descrEn:
+  //     'What moving a trade to breakeven means, when shifting the stop to entry protects profit and when it knocks you out of a good position too early.',
+  //   descrRus:
+  //     'Что значит перевести сделку в безубыток, когда перенос стопа в точку входа защищает прибыль, а когда выбивает из хорошей позиции слишком рано.',
+  //   realTitleRus: 'Безубыток: что это и когда переносить стоп | Arapov.trade',
+  //   realTitleUkr: 'Беззбиток: що це і коли переносити стоп | Arapov.trade',
+  //   realTitleEn: 'Breakeven: What It Is and When to Move the Stop | Arapov.trade',
+  //   groupsRus: ['Трейдинг для начинающих'],
+  //   groupsUkr: ['Трейдинг для початківців'],
+  //   groupsEng: ['Trading for Beginners'],
+  //   id: 508,
+  // },
+  // {
+  //   titleUkr: 'Бичачий і ведмежий ринок: що це і чим відрізняються',
+  //   linkUkr: 'bull-bear-market',
+  //   imgUkr: '/assets/img/content/bull-bear-market.jpeg',
+  //   titleRus: 'Бычий и медвежий рынок: что это и чем отличаются',
+  //   titleEn: 'Bull and Bear Market: What They Are and How They Differ',
+  //   descrUkr:
+  //     'Що таке бичачий і ведмежий ринок, чим вони відрізняються за настроєм натовпу і чому фазу важливіше визначати за структурою й обсягом, а не за новинами.',
+  //   descrEn:
+  //     'What a bull and a bear market are, how they differ in crowd mood and why the phase is better read by structure and volume than by news.',
+  //   descrRus:
+  //     'Что такое бычий и медвежий рынок, чем они отличаются по настроению толпы и почему фазу важнее определять по структуре и объёму, а не по новостям.',
+  //   realTitleRus: 'Бычий и медвежий рынок: что это и чем отличаются | Arapov.trade',
+  //   realTitleUkr: 'Бичачий і ведмежий ринок: що це і чим відрізняються | Arapov.trade',
+  //   realTitleEn: 'Bull and Bear Market: What They Are and How They Differ | Arapov.trade',
+  //   groupsRus: ['Трейдинг для начинающих'],
+  //   groupsUkr: ['Трейдинг для початківців'],
+  //   groupsEng: ['Trading for Beginners'],
+  //   id: 509,
+  // },
+  // {
+  //   titleUkr: 'Чи може нейромережа передбачити ціну акції або біткоїна',
+  //   linkUkr: 'can-ai-predict-price',
+  //   imgUkr: '/assets/img/content/can-ai-predict-price.jpeg',
+  //   titleRus: 'Может ли нейросеть предсказать цену акции или биткоина',
+  //   titleEn: 'Can a Neural Network Predict a Stock or Bitcoin Price?',
+  //   descrUkr:
+  //     'Чому ринок погано передбачуваний у принципі, що ШІ насправді робить із ціною — рахує ймовірності, а не пророчить, — і як дивитися на прогнози.',
+  //   descrEn:
+  //     'Why the market is poorly predictable in principle, what AI actually does with price (counts odds, not prophesies) and how to read forecasts.',
+  //   descrRus:
+  //     'Почему рынок плохо предсказуем в принципе, что ИИ на самом деле делает с ценой — считает вероятности, а не пророчит, — и как смотреть на прогнозы.',
+  //   realTitleRus: 'Может ли нейросеть предсказать цену акции или биткоина | Arapov.trade',
+  //   realTitleUkr: 'Чи може нейромережа передбачити ціну акції або біткоїна | Arapov.trade',
+  //   realTitleEn: 'Can a Neural Network Predict a Stock or Bitcoin Price? | Arapov.trade',
+  //   groupsRus: ['Трейдинг для начинающих'],
+  //   groupsUkr: ['Трейдинг для початківців'],
+  //   groupsEng: ['Trading for Beginners'],
+  //   id: 510,
+  // },
+  // {
+  //   titleUkr: 'Молот, доджі й вечірня зірка: свічки розвороту',
+  //   linkUkr: 'candle-hammer-doji-star',
+  //   imgUkr: '/assets/img/content/candle-hammer-doji-star.jpeg',
+  //   titleRus: 'Молот, доджи и вечерняя звезда: свечи разворота',
+  //   titleEn: 'Hammer, Doji and Evening Star: Reversal Candles',
+  //   descrUkr:
+  //     'Що означають свічкові патерни молот, доджі й вечірня зірка, як їх читати й чому вони працюють лише на значущих рівнях, а не самі по собі.',
+  //   descrEn:
+  //     'What the hammer, doji and evening star candlestick patterns mean, how to read them and why they work only at significant levels, not on their own.',
+  //   descrRus:
+  //     'Что означают свечные паттерны молот, доджи и вечерняя звезда, как их читать и почему они работают только на значимых уровнях, а не сами по себе.',
+  //   realTitleRus: 'Молот, доджи и вечерняя звезда: свечи разворота | Arapov.trade',
+  //   realTitleUkr: 'Молот, доджі й вечірня зірка: свічки розвороту | Arapov.trade',
+  //   realTitleEn: 'Hammer, Doji and Evening Star: Reversal Candles | Arapov.trade',
+  //   groupsRus: ['Технический анализ'],
+  //   groupsUkr: ['Технічний аналіз'],
+  //   groupsEng: ['Technical Analysis'],
+  //   id: 511,
+  // },
+  // {
+  //   titleUkr: 'Кері-трейд: що це і як заробляють на ставках',
+  //   linkUkr: 'carrytrade',
+  //   imgUkr: '/assets/img/content/carrytrade.jpeg',
+  //   titleRus: 'Кэрри-трейд: что это и как зарабатывают на ставках',
+  //   titleEn: 'Carry Trade: What It Is and How Rate Differences Pay',
+  //   descrUkr:
+  //     'Що таке стратегія кері-трейд, як заробляють на різниці процентних ставок між валютами і який ризик розвертає таку угоду проти вас.',
+  //   descrEn:
+  //     'What the carry trade strategy is, how traders earn on the interest-rate gap between currencies and what risk turns such a trade against you.',
+  //   descrRus:
+  //     'Что такое стратегия кэрри-трейд, как зарабатывают на разнице процентных ставок между валютами и какой риск разворачивает такую сделку против вас.',
+  //   realTitleRus: 'Кэрри-трейд: что это и как зарабатывают на ставках | Arapov.trade',
+  //   realTitleUkr: 'Кері-трейд: що це і як заробляють на ставках | Arapov.trade',
+  //   realTitleEn: 'Carry Trade: What It Is and How Rate Differences Pay | Arapov.trade',
+  //   groupsRus: ['Фундаментальный анализ'],
+  //   groupsUkr: ['Фундаментальний аналіз'],
+  //   groupsEng: ['Fundamental Analysis'],
+  //   id: 512,
+  // },
+  // {
+  //   titleUkr: 'CCI (Commodity Channel Index): що це і як використовувати',
+  //   linkUkr: 'cci',
+  //   imgUkr: '/assets/img/content/cci.jpeg',
+  //   titleRus: 'CCI (Commodity Channel Index): что это и как использовать',
+  //   titleEn: 'CCI (Commodity Channel Index): what it is and how to use it',
+  //   descrUkr:
+  //     'Що таке індикатор CCI, як він вимірює відхилення ціни від середнього, що значать рівні +100 і -100 і чому це не сигнал на вхід сам по собі.',
+  //   descrEn:
+  //     'What the CCI indicator is, how it measures price deviation from the average, what the +100 and -100 levels mean and why it is not an entry signal by itself.',
+  //   descrRus:
+  //     'Что такое индикатор CCI, как он измеряет отклонение цены от среднего, что значат уровни +100 и -100 и почему это не сигнал на вход сам по себе.',
+  //   realTitleRus: 'CCI (Commodity Channel Index): что это и как использовать | Arapov.trade',
+  //   realTitleUkr: 'CCI (Commodity Channel Index): що це і як використовувати | Arapov.trade',
+  //   realTitleEn: 'CCI (Commodity Channel Index): what it is and how to use it | Arapov.trade',
+  //   groupsRus: ['Технический анализ'],
+  //   groupsUkr: ['Технічний аналіз'],
+  //   groupsEng: ['Technical Analysis'],
+  //   id: 513,
+  // },
+  // {
+  //   titleUkr: 'Когнітивні викривлення в трейдингу: як вони заважають і що робити',
+  //   linkUkr: 'cognitive-biases-trading',
+  //   imgUkr: '/assets/img/content/cognitive-biases-trading.jpeg',
+  //   titleRus: 'Когнитивные искажения в трейдинге: как они мешают и что делать',
+  //   titleEn: 'Cognitive Biases in Trading: How They Hurt and What to Do',
+  //   descrUkr:
+  //     'Що таке когнітивні викривлення в трейдингу, які з них шкодять трейдеру найбільше (підтвердження, якір, неприйняття втрат) і як знижувати їх вплив на рішення.',
+  //   descrEn:
+  //     'What cognitive biases in trading are, which of them hurt a trader most (confirmation, anchoring, loss aversion) and how to reduce their influence on decisions.',
+  //   descrRus:
+  //     'Что такое когнитивные искажения в трейдинге, какие вредят больше всего (подтверждение, якорь, неприятие потерь) и как снижать их влияние на решения.',
+  //   realTitleRus: 'Когнитивные искажения в трейдинге: как они мешают и что делать | Arapov.trade',
+  //   realTitleUkr: 'Когнітивні викривлення в трейдингу: як вони заважають і що робити | Arapov.trade',
+  //   realTitleEn: 'Cognitive Biases in Trading: How They Hurt and What to Do | Arapov.trade',
+  //   groupsRus: ['Психология трейдинга'],
+  //   groupsUkr: ['Психологія трейдингу'],
+  //   groupsEng: ['Trading Psychology'],
+  //   id: 514,
+  // },
+  // {
+  //   titleUkr: 'Складний відсоток у трейдингу: як росте депозит',
+  //   linkUkr: 'compounding',
+  //   imgUkr: '/assets/img/content/compounding.jpeg',
+  //   titleRus: 'Сложный процент в трейдинге: как растёт депозит',
+  //   titleEn: 'Compound Interest in Trading: How a Deposit Grows',
+  //   descrUkr:
+  //     'Як працює складний відсоток і реінвестування прибутку, чому невелика перевага на дистанції дає відчутне зростання і де в цієї математики межа.',
+  //   descrEn:
+  //     'How compound interest and reinvesting profit work, why a small edge over a distance gives noticeable growth and where this math has its limit.',
+  //   descrRus:
+  //     'Как работает сложный процент и реинвестирование прибыли, почему небольшое преимущество на дистанции даёт ощутимый рост и где у этой математики предел.',
+  //   realTitleRus: 'Сложный процент в трейдинге: как растёт депозит | Arapov.trade',
+  //   realTitleUkr: 'Складний відсоток у трейдингу: як росте депозит | Arapov.trade',
+  //   realTitleEn: 'Compound Interest in Trading: How a Deposit Grows | Arapov.trade',
+  //   groupsRus: ['Трейдинг для начинающих'],
+  //   groupsUkr: ['Трейдинг для початківців'],
+  //   groupsEng: ['Trading for Beginners'],
+  //   id: 515,
+  // },
+  // {
+  //   titleUkr: 'Контанго і беквордація: що це у ф\'ючерсах простими словами',
+  //   linkUkr: 'contango-backwardation',
+  //   imgUkr: '/assets/img/content/contango-backwardation.jpeg',
+  //   titleRus: 'Контанго и бэквордация: что это в фьючерсах простыми словами',
+  //   titleEn: 'Contango and backwardation: what they mean in futures',
+  //   descrUkr:
+  //     'Що таке контанго і беквордація, чому дальній ф\'ючерс дорожчий або дешевший за ближній: витрати на зберігання, ставка і що це каже трейдеру.',
+  //   descrEn:
+  //     'What contango and backwardation are, why the far futures is more expensive or cheaper than the near one: storage costs, interest and what it tells a trader.',
+  //   descrRus:
+  //     'Что такое контанго и бэквордация, почему дальний фьючерс дороже или дешевле ближнего: издержки хранения, ставка и что это говорит трейдеру.',
+  //   realTitleRus: 'Контанго и бэквордация: что это в фьючерсах простыми словами | Arapov.trade',
+  //   realTitleUkr: 'Контанго і беквордація: що це у ф\'ючерсах простими словами | Arapov.trade',
+  //   realTitleEn: 'Contango and backwardation: what they mean in futures | Arapov.trade',
+  //   groupsRus: ['Фундаментальный анализ'],
+  //   groupsUkr: ['Фундаментальний аналіз'],
+  //   groupsEng: ['Fundamental Analysis'],
+  //   id: 516,
+  // },
+  // {
+  //   titleUkr: 'Звіт COT (Commitment of Traders): як читати позиції великих',
+  //   linkUkr: 'cotreport',
+  //   imgUkr: '/assets/img/content/cotreport.jpeg',
+  //   titleRus: 'Отчёт COT (Commitment of Traders): как читать позиции',
+  //   titleEn: 'COT report (Commitment of Traders): what it is and how to read it',
+  //   descrUkr:
+  //     'Що таке звіт COT, хто такі комерційні та некомерційні трейдери і чому позиції великих учасників це фон, а не сигнал на вхід.',
+  //   descrEn:
+  //     'What the COT report is, who commercial and non-commercial traders are and why the positions of large participants are context, not an entry signal.',
+  //   descrRus:
+  //     'Что такое отчёт COT, кто такие коммерческие и некоммерческие трейдеры и почему позиции крупных участников это фон, а не сигнал на вход.',
+  //   realTitleRus: 'Отчёт COT (Commitment of Traders): как читать позиции | Arapov.trade',
+  //   realTitleUkr: 'Звіт COT (Commitment of Traders): як читати позиції великих | Arapov.trade',
+  //   realTitleEn: 'COT report (Commitment of Traders): what it is and how to read it | Arapov.trade',
+  //   groupsRus: ['Фундаментальный анализ'],
+  //   groupsUkr: ['Фундаментальний аналіз'],
+  //   groupsEng: ['Fundamental Analysis'],
+  //   id: 517,
+  // },
+  // {
+  //   titleUkr: 'Ринкова капіталізація криптовалюти: що це і як рахувати',
+  //   linkUkr: 'crypto-market-cap',
+  //   imgUkr: '/assets/img/content/crypto-market-cap.jpeg',
+  //   titleRus: 'Рыночная капитализация криптовалюты: что это и как считать',
+  //   titleEn: 'Crypto Market Cap: What It Is and How to Calculate It',
+  //   descrUkr:
+  //     'Що таке капіталізація криптовалюти, як вона рахується (ціна × монети в обороті), чим відрізняється від FDV і чому це не гроші, вкладені в монету.',
+  //   descrEn:
+  //     'What crypto market cap is, how it is counted (price by coins in circulation), how it differs from FDV and why it is not money put into a coin.',
+  //   descrRus:
+  //     'Что такое капитализация криптовалюты, как она считается (цена × монеты в обороте), чем отличается от FDV и почему это не деньги, вложенные в монету.',
+  //   realTitleRus: 'Рыночная капитализация криптовалюты: что это и как считать | Arapov.trade',
+  //   realTitleUkr: 'Ринкова капіталізація криптовалюти: що це і як рахувати | Arapov.trade',
+  //   realTitleEn: 'Crypto Market Cap: What It Is and How to Calculate It | Arapov.trade',
+  //   groupsRus: ['Криптовалюта'],
+  //   groupsUkr: ['Криптовалюта'],
+  //   groupsEng: ['Cryptocurrency'],
+  //   id: 518,
+  // },
+  // {
+  //   titleUkr: 'Майнінг криптовалют: що це і як працює',
+  //   linkUkr: 'crypto-mining',
+  //   imgUkr: '/assets/img/content/crypto-mining.jpeg',
+  //   titleRus: 'Майнинг криптовалют: что это и как работает',
+  //   titleEn: 'Cryptocurrency Mining: What It Is and How It Works',
+  //   descrUkr:
+  //     'Що таке майнінг, як комп\'ютери підтверджують блоки й отримують винагороду і чому це не «легкі гроші», а бізнес із витратами на електрику.',
+  //   descrEn:
+  //     'What mining is, how computers confirm blocks and get a reward and why it is not easy money but a business with electricity costs.',
+  //   descrRus:
+  //     'Что такое майнинг, как компьютеры подтверждают блоки и получают награду и почему это не «лёгкие деньги», а бизнес с расходами на электричество.',
+  //   realTitleRus: 'Майнинг криптовалют: что это и как работает | Arapov.trade',
+  //   realTitleUkr: 'Майнінг криптовалют: що це і як працює | Arapov.trade',
+  //   realTitleEn: 'Cryptocurrency Mining: What It Is and How It Works | Arapov.trade',
+  //   groupsRus: ['Криптовалюта'],
+  //   groupsUkr: ['Криптовалюта'],
+  //   groupsEng: ['Cryptocurrency'],
+  //   id: 519,
+  // },
+  // {
+  //   titleUkr: 'Криптосленг: що таке HODL, FUD, FOMO і терміни',
+  //   linkUkr: 'crypto-slang',
+  //   imgUkr: '/assets/img/content/crypto-slang.jpeg',
+  //   titleRus: 'Криптосленг: что такое HODL, FUD, FOMO и термины',
+  //   titleEn: 'Crypto Slang: What HODL, FUD, FOMO and Terms Mean',
+  //   descrUkr:
+  //     'Що означають HODL, FUD, FOMO та інший криптосленг простими словами і чому за модними словами часто стоять звичайні страх і жадібність натовпу.',
+  //   descrEn:
+  //     'What HODL, FUD, FOMO and other crypto slang mean in simple terms and why behind the trendy words often stand ordinary fear and greed of the crowd.',
+  //   descrRus:
+  //     'Что значат HODL, FUD, FOMO и другой криптосленг простыми словами и почему за модными словами часто стоят обычные страх и жадность толпы.',
+  //   realTitleRus: 'Криптосленг: что такое HODL, FUD, FOMO и термины | Arapov.trade',
+  //   realTitleUkr: 'Криптосленг: що таке HODL, FUD, FOMO і терміни | Arapov.trade',
+  //   realTitleEn: 'Crypto Slang: What HODL, FUD, FOMO and Terms Mean | Arapov.trade',
+  //   groupsRus: ['Криптовалюта'],
+  //   groupsUkr: ['Криптовалюта'],
+  //   groupsEng: ['Cryptocurrency'],
+  //   id: 520,
+  // },
+  // {
+  //   titleUkr: 'Кити в криптовалюті: хто це і як рухають ринок',
+  //   linkUkr: 'crypto-whales',
+  //   imgUkr: '/assets/img/content/crypto-whales.jpeg',
+  //   titleRus: 'Киты в криптовалюте: кто это и как двигают рынок',
+  //   titleEn: 'Crypto Whales: Who They Are and How They Move the Market',
+  //   descrUkr:
+  //     'Хто такі криптокити, як великий капітал рухає ціну через обсяг і стіни продажів і чому за ними варто стежити за графіком, а не копіювати наосліп.',
+  //   descrEn:
+  //     'Who crypto whales are, how large capital moves price through volume and sell walls and why to watch them on the chart, not copy blindly.',
+  //   descrRus:
+  //     'Кто такие криптокиты, как крупный капитал двигает цену через объём и стены продаж и почему за ними стоит следить по графику, а не копировать вслепую.',
+  //   realTitleRus: 'Киты в криптовалюте: кто это и как двигают рынок | Arapov.trade',
+  //   realTitleUkr: 'Кити в криптовалюті: хто це і як рухають ринок | Arapov.trade',
+  //   realTitleEn: 'Crypto Whales: Who They Are and How They Move the Market | Arapov.trade',
+  //   groupsRus: ['Криптовалюта'],
+  //   groupsUkr: ['Криптовалюта'],
+  //   groupsEng: ['Cryptocurrency'],
+  //   id: 521,
+  // },
+  // {
+  //   titleUkr: 'Податок на криптовалюту: що важливо знати трейдеру',
+  //   linkUkr: 'cryptotax',
+  //   imgUkr: '/assets/img/content/cryptotax.jpeg',
+  //   titleRus: 'Налог на криптовалюту: что важно знать трейдеру',
+  //   titleEn: 'Crypto Tax: What a Trader Needs to Know',
+  //   descrUkr:
+  //     'Коли виникає податок під час операцій із криптою, чому важливо вести облік угод і навіщо уточнювати правила у своїй країні. Загальний орієнтир, не консультація.',
+  //   descrEn:
+  //     'When tax arises on crypto operations, why tracking your trades matters and why to check the rules in your country. A general guide, not advice.',
+  //   descrRus:
+  //     'Когда возникает налог при операциях с криптой, почему важно вести учёт сделок и зачем уточнять правила в своей стране. Общий ориентир, не консультация.',
+  //   realTitleRus: 'Налог на криптовалюту: что важно знать трейдеру | Arapov.trade',
+  //   realTitleUkr: 'Податок на криптовалюту: що важливо знати трейдеру | Arapov.trade',
+  //   realTitleEn: 'Crypto Tax: What a Trader Needs to Know | Arapov.trade',
+  //   groupsRus: ['Криптовалюта'],
+  //   groupsUkr: ['Криптовалюта'],
+  //   groupsEng: ['Cryptocurrency'],
+  //   id: 522,
+  // },
+  // {
+  //   titleUkr: 'Типи валютних пар: мажори, кроси та екзотика',
+  //   linkUkr: 'currencypairtypes',
+  //   imgUkr: '/assets/img/content/currencypairtypes.jpeg',
+  //   titleRus: 'Типы валютных пар: мажоры, кроссы и экзотика',
+  //   titleEn: 'Types of currency pairs: majors, crosses and exotics',
+  //   descrUkr:
+  //     'Які бувають типи валютних пар, чим мажори відрізняються від крос-пар та екзотики, як пов\'язана ліквідність і спред і чим торгувати новачку.',
+  //   descrEn:
+  //     'What types of currency pairs there are, how majors differ from cross pairs and exotics, how liquidity and spread are related and what a beginner should trade.',
+  //   descrRus:
+  //     'Какие бывают типы валютных пар, чем мажоры отличаются от кросс-пар и экзотики, как связана ликвидность и спред и чем торговать новичку.',
+  //   realTitleRus: 'Типы валютных пар: мажоры, кроссы и экзотика | Arapov.trade',
+  //   realTitleUkr: 'Типи валютних пар: мажори, кроси та екзотика | Arapov.trade',
+  //   realTitleEn: 'Types of currency pairs: majors, crosses and exotics | Arapov.trade',
+  //   groupsRus: ['Трейдинг для начинающих'],
+  //   groupsUkr: ['Трейдинг для початківців'],
+  //   groupsEng: ['Trading for Beginners'],
+  //   id: 523,
+  // },
+  // {
+  //   titleUkr: 'Дейтрейдинг: що це і як працює внутрішньоденна торгівля',
+  //   linkUkr: 'day-trading',
+  //   imgUkr: '/assets/img/content/day-trading.jpeg',
+  //   titleRus: 'Дейтрейдинг: что это и как работает внутридневная торговля',
+  //   titleEn: 'Day Trading: What It Is and How Intraday Trading Works',
+  //   descrUkr:
+  //     'Що таке внутрішньоденна торгівля, чим вона відрізняється від інших стилів, скільки часу вимагає і чому новачку з нею найважче. Без романтики.',
+  //   descrEn:
+  //     'What intraday trading is, how it differs from other styles, how much time it takes and why it is hardest of all for a beginner. No romance.',
+  //   descrRus:
+  //     'Что такое внутридневная торговля, чем она отличается от других стилей, сколько времени требует и почему новичку с ней тяжелее всего. Без романтики.',
+  //   realTitleRus: 'Дейтрейдинг: что это и как работает внутридневная торговля | Arapov.trade',
+  //   realTitleUkr: 'Дейтрейдинг: що це і як працює внутрішньоденна торгівля | Arapov.trade',
+  //   realTitleEn: 'Day Trading: What It Is and How Intraday Trading Works | Arapov.trade',
+  //   groupsRus: ['Трейдинг для начинающих'],
+  //   groupsUkr: ['Трейдинг для початківців'],
+  //   groupsEng: ['Trading for Beginners'],
+  //   id: 524,
+  // },
+  // {
+  //   titleUkr: 'Ділинговий центр (Dealing Desk): відмінність від ECN/STP',
+  //   linkUkr: 'dealingdesk',
+  //   imgUkr: '/assets/img/content/dealingdesk.jpeg',
+  //   titleRus: 'Дилинговый центр (Dealing Desk): чем отличается от ECN/STP',
+  //   titleEn: 'Dealing Desk: what it is and how it differs from ECN/STP',
+  //   descrUkr:
+  //     'Що таке модель Dealing Desk, чим кухня відрізняється від ECN і STP, у чому конфлікт інтересів із трейдером і на що дивитися при виборі брокера.',
+  //   descrEn:
+  //     'What the Dealing Desk model is, how a market maker differs from ECN and STP, where the conflict of interest sits and what to check when choosing a broker.',
+  //   descrRus:
+  //     'Что такое модель Dealing Desk, чем кухня отличается от ECN и STP, в чём конфликт интересов с трейдером и на что смотреть при выборе брокера.',
+  //   realTitleRus: 'Дилинговый центр (Dealing Desk): чем отличается от ECN/STP | Arapov.trade',
+  //   realTitleUkr: 'Ділинговий центр (Dealing Desk): відмінність від ECN/STP | Arapov.trade',
+  //   realTitleEn: 'Dealing Desk: what it is and how it differs from ECN/STP | Arapov.trade',
+  //   groupsRus: ['Трейдинг для начинающих'],
+  //   groupsUkr: ['Трейдинг для початківців'],
+  //   groupsEng: ['Trading for Beginners'],
+  //   id: 525,
+  // },
+  // {
+  //   titleUkr: 'DeFi (децентралізовані фінанси): що це і ризики',
+  //   linkUkr: 'defi',
+  //   imgUkr: '/assets/img/content/defi.jpeg',
+  //   titleRus: 'DeFi (децентрализованные финансы): что это и риски',
+  //   titleEn: 'DeFi (Decentralized Finance): What It Is and the Risks',
+  //   descrUkr:
+  //     'Що таке DeFi, як працюють обмін, кредити й стейкінг без банків на смартконтрактах і які ризики — від дір у коді до втрати коштів — тут реальні.',
+  //   descrEn:
+  //     'What DeFi is, how swaps, loans and staking work without banks on smart contracts and what risks, from code holes to lost funds, are real here.',
+  //   descrRus:
+  //     'Что такое DeFi, как работают обмен, кредиты и стейкинг без банков на смарт-контрактах и какие риски — от дыр в коде до потери средств — тут реальны.',
+  //   realTitleRus: 'DeFi (децентрализованные финансы): что это и риски | Arapov.trade',
+  //   realTitleUkr: 'DeFi (децентралізовані фінанси): що це і ризики | Arapov.trade',
+  //   realTitleEn: 'DeFi (Decentralized Finance): What It Is and the Risks | Arapov.trade',
+  //   groupsRus: ['Криптовалюта'],
+  //   groupsUkr: ['Криптовалюта'],
+  //   groupsEng: ['Cryptocurrency'],
+  //   id: 526,
+  // },
+  // {
+  //   titleUkr: 'Демо-рахунок у трейдингу: що це і чи варто вчитися',
+  //   linkUkr: 'demoaccount',
+  //   imgUkr: '/assets/img/content/demoaccount.jpeg',
+  //   titleRus: 'Демо-счёт в трейдинге: что это и стоит ли учиться',
+  //   titleEn: 'Demo Account in Trading: What It Is and Worth Learning On',
+  //   descrUkr:
+  //     'Навіщо потрібен демо-рахунок, чого на ньому можна навчитися, а чого ні, і чому психологію реальних грошей демо не замінить. Як практикуватися з толком.',
+  //   descrEn:
+  //     'Why a demo account is useful, what you can and cannot learn on it and why a demo will not replace the psychology of real money.',
+  //   descrRus:
+  //     'Зачем нужен демо-счёт, чему на нём можно научиться, а чему нет, и почему психологию реальных денег демо не заменит. Как практиковаться с толком.',
+  //   realTitleRus: 'Демо-счёт в трейдинге: что это и стоит ли учиться | Arapov.trade',
+  //   realTitleUkr: 'Демо-рахунок у трейдингу: що це і чи варто вчитися | Arapov.trade',
+  //   realTitleEn: 'Demo Account in Trading: What It Is and Worth Learning On | Arapov.trade',
+  //   groupsRus: ['Трейдинг для начинающих'],
+  //   groupsUkr: ['Трейдинг для початківців'],
+  //   groupsEng: ['Trading for Beginners'],
+  //   id: 527,
+  // },
+  // {
+  //   titleUkr: 'DEX і CEX: чим децентралізована біржа відрізняється від CEX',
+  //   linkUkr: 'dex-vs-cex',
+  //   imgUkr: '/assets/img/content/dex-vs-cex.jpeg',
+  //   titleRus: 'DEX и CEX: чем децентрализованная биржа отличается от CEX',
+  //   titleEn: 'DEX and CEX: How a Decentralized Exchange Differs from a CEX',
+  //   descrUkr:
+  //     'Що таке DEX і CEX, чим децентралізована біржа відрізняється від централізованої за зберіганням коштів, регуляцією та ліквідністю і що обрати новачку.',
+  //   descrEn:
+  //     'What DEX and CEX are, how a decentralized exchange differs from a centralized one in custody, regulation and liquidity, and what a beginner should choose.',
+  //   descrRus:
+  //     'Что такое DEX и CEX, чем децентрализованная биржа отличается от централизованной по хранению средств, регуляции и ликвидности и что выбрать новичку.',
+  //   realTitleRus: 'DEX и CEX: чем децентрализованная биржа отличается от CEX | Arapov.trade',
+  //   realTitleUkr: 'DEX і CEX: чим децентралізована біржа відрізняється від CEX | Arapov.trade',
+  //   realTitleEn: 'DEX and CEX: How a Decentralized Exchange Differs from a CEX | Arapov.trade',
+  //   groupsRus: ['Криптовалюта'],
+  //   groupsUkr: ['Криптовалюта'],
+  //   groupsEng: ['Cryptocurrency'],
+  //   id: 528,
+  // },
+  // {
+  //   titleUkr: 'Індекс долара (DXY): що це і як його використовує трейдер',
+  //   linkUkr: 'dollar-index-dxy',
+  //   imgUkr: '/assets/img/content/dollar-index-dxy.jpeg',
+  //   titleRus: 'Индекс доллара (DXY): что это и как его использует трейдер',
+  //   titleEn: 'The Dollar Index (DXY): What It Is and How a Trader Uses It',
+  //   descrUkr:
+  //     'Що таке індекс долара DXY, з чого він складається, що ним рухає (ставки ФРС, попит на долар) і як індекс долара допомагає читати форекс і ризик на ринку.',
+  //   descrEn:
+  //     'What the dollar index DXY is, what it consists of, what moves it (Fed rates, demand for the dollar) and how the dollar index helps read forex and market risk.',
+  //   descrRus:
+  //     'Что такое индекс доллара DXY, из чего он состоит, что им двигает (ставки ФРС, спрос на доллар) и как индекс доллара помогает читать форекс и риск на рынке.',
+  //   realTitleRus: 'Индекс доллара (DXY): что это и как его использует трейдер | Arapov.trade',
+  //   realTitleUkr: 'Індекс долара (DXY): що це і як його використовує трейдер | Arapov.trade',
+  //   realTitleEn: 'The Dollar Index (DXY): What It Is and How a Trader Uses It | Arapov.trade',
+  //   groupsRus: ['Фундаментальный анализ'],
+  //   groupsUkr: ['Фундаментальний аналіз'],
+  //   groupsEng: ['Fundamental Analysis'],
+  //   id: 529,
+  // },
+  // {
+  //   titleUkr: 'Equal Highs, Equal Lows і індьюсмент: пастки ліквідності',
+  //   linkUkr: 'equal-highs-lows',
+  //   imgUkr: '/assets/img/content/equal-highs-lows.jpeg',
+  //   titleRus: 'Equal Highs, Equal Lows и индьюсмент: ловушки ликвидности',
+  //   titleEn: 'Equal Highs, Equal Lows and inducement: liquidity traps',
+  //   descrUkr:
+  //     'Що таке Equal Highs і Equal Lows, як над ними накопичується ліквідність і що таке індьюсмент: пастка, що виманює трейдерів перед рухом.',
+  //   descrEn:
+  //     'What Equal Highs and Equal Lows are, how liquidity builds above them and what inducement is: a trap that lures traders in before the move.',
+  //   descrRus:
+  //     'Что такое Equal Highs и Equal Lows, как над ними копится ликвидность и что такое индьюсмент: ловушка, которая выманивает трейдеров перед движением.',
+  //   realTitleRus: 'Equal Highs, Equal Lows и индьюсмент: ловушки ликвидности | Arapov.trade',
+  //   realTitleUkr: 'Equal Highs, Equal Lows і індьюсмент: пастки ліквідності | Arapov.trade',
+  //   realTitleEn: 'Equal Highs, Equal Lows and inducement: liquidity traps | Arapov.trade',
+  //   groupsRus: ['Концепция Смарт Мани'],
+  //   groupsUkr: ['Концепція Смарт Мані'],
+  //   groupsEng: ['Smart Money Concept'],
+  //   id: 530,
+  // },
+  // {
+  //   titleUkr: 'Математичне сподівання угоди: що це і як його рахувати',
+  //   linkUkr: 'expectedvalue',
+  //   imgUkr: '/assets/img/content/expectedvalue.jpeg',
+  //   titleRus: 'Математическое ожидание сделки: что это и как его считать',
+  //   titleEn: 'Expected value of a trade: what it is and how to calculate it',
+  //   descrUkr:
+  //     'Що таке математичне сподівання в трейдингу, як воно пов\'язує вінрейт і співвідношення прибутку до збитку і чому саме воно визначає результат на дистанції.',
+  //   descrEn:
+  //     'What expected value is in trading, how it ties together win rate and the profit-to-loss ratio and why it is what determines the result over the long run.',
+  //   descrRus:
+  //     'Что такое математическое ожидание в трейдинге, как оно связывает винрейт и соотношение прибыли к убытку и почему именно оно определяет результат на дистанции.',
+  //   realTitleRus: 'Математическое ожидание сделки: что это и как его считать | Arapov.trade',
+  //   realTitleUkr: 'Математичне сподівання угоди: що це і як його рахувати | Arapov.trade',
+  //   realTitleEn: 'Expected value of a trade: what it is and how to calculate it | Arapov.trade',
+  //   groupsRus: ['Трейдинг для начинающих'],
+  //   groupsUkr: ['Трейдинг для початківців'],
+  //   groupsEng: ['Trading for Beginners'],
+  //   id: 531,
+  // },
+  // {
+  //   titleUkr: 'Кластерний графік і футпринт: як читати обсяг',
+  //   linkUkr: 'footprint-cluster',
+  //   imgUkr: '/assets/img/content/footprint-cluster.jpeg',
+  //   titleRus: 'Кластерный график и футпринт: как читать объём',
+  //   titleEn: 'Cluster Chart and Footprint: How to Read Volume',
+  //   descrUkr:
+  //     'Що показує кластерний (футпринт) графік, як за ним видно обсяг усередині свічки й де набирає позицію великий гравець. Обсяг як причина руху.',
+  //   descrEn:
+  //     'What a cluster (footprint) chart shows, how volume inside a candle is visible and where large players build positions. Volume as the cause of the move.',
+  //   descrRus:
+  //     'Что показывает кластерный (футпринт) график, как по нему виден объём внутри свечи и где набирает позицию крупный игрок. Объём как причина движения.',
+  //   realTitleRus: 'Кластерный график и футпринт: как читать объём | Arapov.trade',
+  //   realTitleUkr: 'Кластерний графік і футпринт: як читати обсяг | Arapov.trade',
+  //   realTitleEn: 'Cluster Chart and Footprint: How to Read Volume | Arapov.trade',
+  //   groupsRus: ['Объемный анализ рынка'],
+  //   groupsUkr: ['Об`ємний аналіз ринку'],
+  //   groupsEng: ['Market Volume Analysis'],
+  //   id: 532,
+  // },
+  // {
+  //   titleUkr: 'Форвардний тест: що це і чим він відрізняється від бектесту',
+  //   linkUkr: 'forwardtest',
+  //   imgUkr: '/assets/img/content/forwardtest.jpeg',
+  //   titleRus: 'Форвардный тест: что это и чем он отличается от бэктеста',
+  //   titleEn: 'Forward test: what it is and how it differs from a backtest',
+  //   descrUkr:
+  //     'Що таке форвардний тест торгової стратегії, чим він відрізняється від бектесту, чому захищає від підгонки і як провести його на демосчоті.',
+  //   descrEn:
+  //     'What a forward test of a trading strategy is, how it differs from a backtest, why it protects against curve-fitting and how to run it on a demo account.',
+  //   descrRus:
+  //     'Что такое форвардный тест торговой стратегии, чем он отличается от бэктеста, почему защищает от подгонки и как провести его на демосчёте.',
+  //   realTitleRus: 'Форвардный тест: что это и чем он отличается от бэктеста | Arapov.trade',
+  //   realTitleUkr: 'Форвардний тест: що це і чим він відрізняється від бектесту | Arapov.trade',
+  //   realTitleEn: 'Forward test: what it is and how it differs from a backtest | Arapov.trade',
+  //   groupsRus: ['Психология трейдинга'],
+  //   groupsUkr: ['Психологія трейдингу'],
+  //   groupsEng: ['Trading Psychology'],
+  //   id: 533,
+  // },
+  // {
+  //   titleUkr: 'Фрактали Білла Вільямса: що це і як їх використовувати',
+  //   linkUkr: 'fractals',
+  //   imgUkr: '/assets/img/content/fractals.jpeg',
+  //   titleRus: 'Фракталы Билла Вильямса: что это и как их использовать',
+  //   titleEn: 'Bill Williams fractals: what they are and how to use them',
+  //   descrUkr:
+  //     'Що таке фрактали Білла Вільямса, як читається фрактал із п\'яти барів, чому він відмічає локальні екстремуми і в чому його запізнення.',
+  //   descrEn:
+  //     'What Bill Williams fractals are, how a five-bar fractal is read, why it marks local extremes and what its lag is.',
+  //   descrRus:
+  //     'Что такое фракталы Билла Вильямса, как читается фрактал из пяти баров, почему он отмечает локальные экстремумы и в чём его запаздывание.',
+  //   realTitleRus: 'Фракталы Билла Вильямса: что это и как их использовать | Arapov.trade',
+  //   realTitleUkr: 'Фрактали Білла Вільямса: що це і як їх використовувати | Arapov.trade',
+  //   realTitleEn: 'Bill Williams fractals: what they are and how to use them | Arapov.trade',
+  //   groupsRus: ['Технический анализ'],
+  //   groupsUkr: ['Технічний аналіз'],
+  //   groupsEng: ['Technical Analysis'],
+  //   id: 534,
+  // },
+  // {
+  //   titleUkr: 'Funded-акаунт у проп-трейдингу: виплати й вивід прибутку',
+  //   linkUkr: 'funded-account',
+  //   imgUkr: '/assets/img/content/funded-account.jpeg',
+  //   titleRus: 'Funded-аккаунт в проп-трейдинге: выплаты и вывод прибыли',
+  //   titleEn: 'Funded Account in Prop Trading: Payouts and Withdrawals',
+  //   descrUkr:
+  //     'Що таке funded-акаунт, як влаштовані виплати й спліт прибутку, як виводити гроші та які правила легко порушити й втратити фінансування.',
+  //   descrEn:
+  //     'What a funded account is, how payouts and the profit split work, how to withdraw money and which rules are easy to break and lose funding.',
+  //   descrRus:
+  //     'Что такое funded-аккаунт, как устроены выплаты и сплит прибыли, как выводить деньги и какие правила легко нарушить и потерять финансирование.',
+  //   realTitleRus: 'Funded-аккаунт в проп-трейдинге: выплаты и вывод прибыли | Arapov.trade',
+  //   realTitleUkr: 'Funded-акаунт у проп-трейдингу: виплати й вивід прибутку | Arapov.trade',
+  //   realTitleEn: 'Funded Account in Prop Trading: Payouts and Withdrawals | Arapov.trade',
+  //   groupsRus: ['Трейдинг для начинающих'],
+  //   groupsUkr: ['Трейдинг для початківців'],
+  //   groupsEng: ['Trading for Beginners'],
+  //   id: 535,
+  // },
+  // {
+  //   titleUkr: 'Фандинг (funding rate) у крипті: що це і як працює',
+  //   linkUkr: 'fundingrate',
+  //   imgUkr: '/assets/img/content/fundingrate.jpeg',
+  //   titleRus: 'Фандинг (funding rate) в крипте: что это и как работает',
+  //   titleEn: 'Funding Rate in Crypto: What It Is and How It Works',
+  //   descrUkr:
+  //     'Що таке ставка фінансування на безстрокових ф\'ючерсах, хто кому платить, як фандинг впливає на утримання позиції й про що сигналить трейдеру.',
+  //   descrEn:
+  //     'What the funding rate on perpetual futures is, who pays whom, how funding affects holding a position and what it signals to a trader.',
+  //   descrRus:
+  //     'Что такое ставка финансирования на бессрочных фьючерсах, кто кому платит, как фандинг влияет на удержание позиции и о чём он сигналит трейдеру.',
+  //   realTitleRus: 'Фандинг (funding rate) в крипте: что это и как работает | Arapov.trade',
+  //   realTitleUkr: 'Фандинг (funding rate) у крипті: що це і як працює | Arapov.trade',
+  //   realTitleEn: 'Funding Rate in Crypto: What It Is and How It Works | Arapov.trade',
+  //   groupsRus: ['Криптовалюта'],
+  //   groupsUkr: ['Криптовалюта'],
+  //   groupsEng: ['Cryptocurrency'],
+  //   id: 536,
+  // },
+  // {
+  //   titleUkr: 'Експірація ф\'ючерса і опціона: що це і що робити трейдеру',
+  //   linkUkr: 'futures-options-expiration',
+  //   imgUkr: '/assets/img/content/futures-options-expiration.jpeg',
+  //   titleRus: 'Экспирация фьючерса и опциона: что это и что делать трейдеру',
+  //   titleEn: 'Futures and options expiration: what it is and what to do',
+  //   descrUkr:
+  //     'Що таке експірація ф\'ючерса й опціона, як проходить виконання і розрахунок, що таке ролловер і що робити трейдеру перед датою експірації.',
+  //   descrEn:
+  //     'What futures and options expiration is, how settlement works, what a rollover is and what a trader should do before the expiration date.',
+  //   descrRus:
+  //     'Что такое экспирация фьючерса и опциона, как проходит исполнение и расчёт, что такое ролловер и что делать трейдеру перед датой экспирации.',
+  //   realTitleRus: 'Экспирация фьючерса и опциона: что это и что делать трейдеру | Arapov.trade',
+  //   realTitleUkr: 'Експірація ф\'ючерса і опціона: що це і що робити трейдеру | Arapov.trade',
+  //   realTitleEn: 'Futures and options expiration: what it is and what to do | Arapov.trade',
+  //   groupsRus: ['Фундаментальный анализ'],
+  //   groupsUkr: ['Фундаментальний аналіз'],
+  //   groupsEng: ['Fundamental Analysis'],
+  //   id: 537,
+  // },
+  // {
+  //   titleUkr: 'Комісії мережі (газ): що це і чому змінюються',
+  //   linkUkr: 'gas-fees',
+  //   imgUkr: '/assets/img/content/gas-fees.jpeg',
+  //   titleRus: 'Комиссии сети (газ): что это и почему меняются',
+  //   titleEn: 'Network Fees (Gas): What They Are and Why They Change',
+  //   descrUkr:
+  //     'Що таке газ у крипті, з чого складається комісія за транзакцію, чому вона стрибає в години навантаження і як не переплачувати за перекази.',
+  //   descrEn:
+  //     'What gas in crypto is, what a transaction fee consists of, why it spikes in busy hours and how not to overpay for transfers.',
+  //   descrRus:
+  //     'Что такое газ в крипте, из чего складывается комиссия за транзакцию, почему она скачет в часы нагрузки и как не переплачивать за переводы.',
+  //   realTitleRus: 'Комиссии сети (газ): что это и почему меняются | Arapov.trade',
+  //   realTitleUkr: 'Комісії мережі (газ): що це і чому змінюються | Arapov.trade',
+  //   realTitleEn: 'Network Fees (Gas): What They Are and Why They Change | Arapov.trade',
+  //   groupsRus: ['Криптовалюта'],
+  //   groupsUkr: ['Криптовалюта'],
+  //   groupsEng: ['Cryptocurrency'],
+  //   id: 538,
+  // },
+  // {
+  //   titleUkr: 'Хеджування в трейдингу: що це і чи потрібне новачку',
+  //   linkUkr: 'hedging',
+  //   imgUkr: '/assets/img/content/hedging.jpeg',
+  //   titleRus: 'Хеджирование в трейдинге: что это и нужно ли новичку',
+  //   titleEn: 'Hedging in Trading: What It Is and Does a Beginner Need It',
+  //   descrUkr:
+  //     'Що таке хеджування, як страхують позицію від несприятливого руху й чому новачку частіше досить простого стоп-лосса, а не складних схем.',
+  //   descrEn:
+  //     'What hedging is, how a position is insured against an adverse move and why a beginner often just needs a simple stop-loss, not complex schemes.',
+  //   descrRus:
+  //     'Что такое хеджирование, как страхуют позицию от неблагоприятного движения и почему новичку чаще достаточно простого стоп-лосса, а не сложных схем.',
+  //   realTitleRus: 'Хеджирование в трейдинге: что это и нужно ли новичку | Arapov.trade',
+  //   realTitleUkr: 'Хеджування в трейдингу: що це і чи потрібне новачку | Arapov.trade',
+  //   realTitleEn: 'Hedging in Trading: What It Is and Does a Beginner Need It | Arapov.trade',
+  //   groupsRus: ['Трейдинг для начинающих'],
+  //   groupsUkr: ['Трейдинг для початківців'],
+  //   groupsEng: ['Trading for Beginners'],
+  //   id: 539,
+  // },
+  // {
+  //   titleUkr: 'Свічки Heikin Ashi: що це, як читати і в чому їхня небезпека',
+  //   linkUkr: 'heikin-ashi',
+  //   imgUkr: '/assets/img/content/heikin-ashi.jpeg',
+  //   titleRus: 'Свечи Heikin Ashi: что это, как читать и в чём их опасность',
+  //   titleEn: 'Heikin Ashi candles: how to read them and the danger',
+  //   descrUkr:
+  //     'Що таке свічки Heikin Ashi, як вони згладжують ціну, чим відрізняються від японських свічок і чому приховують реальні ціни та розвороти.',
+  //   descrEn:
+  //     'What Heikin Ashi candles are, how they smooth the price, how they differ from Japanese candles and why they hide real prices and reversals.',
+  //   descrRus:
+  //     'Что такое свечи Heikin Ashi, как они сглаживают цену, чем отличаются от японских свечей и почему скрывают реальные цены и развороты.',
+  //   realTitleRus: 'Свечи Heikin Ashi: что это, как читать и в чём их опасность | Arapov.trade',
+  //   realTitleUkr: 'Свічки Heikin Ashi: що це, як читати і в чому їхня небезпека | Arapov.trade',
+  //   realTitleEn: 'Heikin Ashi candles: how to read them and the danger | Arapov.trade',
+  //   groupsRus: ['Технический анализ'],
+  //   groupsUkr: ['Технічний аналіз'],
+  //   groupsEng: ['Technical Analysis'],
+  //   id: 540,
+  // },
+  // {
+  //   titleUkr: 'Хто такий брокер і як обрати брокера для торгівлі на біржі',
+  //   linkUkr: 'how-to-choose-broker',
+  //   imgUkr: '/assets/img/content/how-to-choose-broker.jpeg',
+  //   titleRus: 'Кто такой брокер и как выбрать брокера для торговли на бирже',
+  //   titleEn: 'Who Is a Broker and How to Choose a Broker for Trading',
+  //   descrUkr:
+  //     'Хто такий брокер, чим він відрізняється від біржі, як обрати надійного брокера за регуляцією, ліцензією та комісіями і як не натрапити на кухню.',
+  //   descrEn:
+  //     'Who a broker is, how it differs from an exchange, how to choose a reliable broker by regulation, licence and fees, and how to avoid a dealing-desk scam.',
+  //   descrRus:
+  //     'Кто такой брокер, чем он отличается от биржи, как выбрать надёжного брокера по регуляции, лицензии и комиссиям и как не попасть на кухню.',
+  //   realTitleRus: 'Кто такой брокер и как выбрать брокера для торговли на бирже | Arapov.trade',
+  //   realTitleUkr: 'Хто такий брокер і як обрати брокера для торгівлі на біржі | Arapov.trade',
+  //   realTitleEn: 'Who Is a Broker and How to Choose a Broker for Trading | Arapov.trade',
+  //   groupsRus: ['Трейдинг для начинающих'],
+  //   groupsUkr: ['Трейдинг для початківців'],
+  //   groupsEng: ['Trading for Beginners'],
+  //   id: 541,
+  // },
+  // {
+  //   titleUkr: 'ICO та IDO: що це і як не натрапити на шахраїв',
+  //   linkUkr: 'ico-vs-ido',
+  //   imgUkr: '/assets/img/content/ico-vs-ido.jpeg',
+  //   titleRus: 'ICO и IDO: что это и как не попасть на мошенников',
+  //   titleEn: 'ICO and IDO: What They Are and How to Avoid Scammers',
+  //   descrUkr:
+  //     'Що таке первинні розміщення токенів ICO та IDO, чим вони відрізняються, чому майже не регулюються і за якими червоними прапорцями розпізнати скам.',
+  //   descrEn:
+  //     'What the ICO and IDO token offerings are, how they differ, why they are barely regulated and by which red flags to recognize a scam.',
+  //   descrRus:
+  //     'Что такое первичные размещения токенов ICO и IDO, чем они отличаются, почему почти не регулируются и по каким красным флагам распознать скам.',
+  //   realTitleRus: 'ICO и IDO: что это и как не попасть на мошенников | Arapov.trade',
+  //   realTitleUkr: 'ICO та IDO: що це і як не натрапити на шахраїв | Arapov.trade',
+  //   realTitleEn: 'ICO and IDO: What They Are and How to Avoid Scammers | Arapov.trade',
+  //   groupsRus: ['Криптовалюта'],
+  //   groupsUkr: ['Криптовалюта'],
+  //   groupsEng: ['Cryptocurrency'],
+  //   id: 542,
+  // },
+  // {
+  //   titleUkr: 'Кіллзони ICT: що це і як час сесій впливає на торгівлю',
+  //   linkUkr: 'ict-kill-zones',
+  //   imgUkr: '/assets/img/content/ict-kill-zones.jpeg',
+  //   titleRus: 'Киллзоны ICT: что это и как время сессий влияет на торговлю',
+  //   titleEn: 'ICT Kill Zones: How Session Time Affects Trading',
+  //   descrUkr:
+  //     'Що таке кіллзони ICT, у які години ринок найактивніший і чому час — лише фільтр, а точку входу вирішують рівень і обсяг, а не години на годиннику.',
+  //   descrEn:
+  //     'What ICT kill zones are, in which hours the market is most active and why time is only a filter, while level and volume decide the entry.',
+  //   descrRus:
+  //     'Что такое киллзоны ICT, в какие часы рынок активнее всего и почему время — лишь фильтр, а точку входа решают уровень и объём, а не часы на часах.',
+  //   realTitleRus: 'Киллзоны ICT: что это и как время сессий влияет на торговлю | Arapov.trade',
+  //   realTitleUkr: 'Кіллзони ICT: що це і як час сесій впливає на торгівлю | Arapov.trade',
+  //   realTitleEn: 'ICT Kill Zones: How Session Time Affects Trading | Arapov.trade',
+  //   groupsRus: ['Концепция Смарт Мани'],
+  //   groupsUkr: ['Концепція Смарт Мані'],
+  //   groupsEng: ['Smart Money Concept'],
+  //   id: 543,
+  // },
+  // {
+  //   titleUkr: 'ICT-трейдинг (Inner Circle Trader): що це простими словами',
+  //   linkUkr: 'ict-trading',
+  //   imgUkr: '/assets/img/content/ict-trading.jpeg',
+  //   titleRus: 'ICT-трейдинг (Inner Circle Trader): что это простыми словами',
+  //   titleEn: 'ICT Trading (Inner Circle Trader): What It Is, Simply',
+  //   descrUkr:
+  //     'Хто такий Inner Circle Trader, які ключові концепції в методики ICT і як вони пов\'язані зі Smart Money й методом Вайкоффа. Де користь, а де перебір.',
+  //   descrEn:
+  //     'Who the Inner Circle Trader is, the key concepts of the ICT method and how they tie to Smart Money and Wyckoff. Where it helps and where it overreaches.',
+  //   descrRus:
+  //     'Кто такой Inner Circle Trader, какие ключевые концепции у методики ICT и как они связаны со Smart Money и методом Вайкоффа. Где польза, а где перебор.',
+  //   realTitleRus: 'ICT-трейдинг (Inner Circle Trader): что это простыми словами | Arapov.trade',
+  //   realTitleUkr: 'ICT-трейдинг (Inner Circle Trader): що це простими словами | Arapov.trade',
+  //   realTitleEn: 'ICT Trading (Inner Circle Trader): What It Is, Simply | Arapov.trade',
+  //   groupsRus: ['Концепция Смарт Мани'],
+  //   groupsUkr: ['Концепція Смарт Мані'],
+  //   groupsEng: ['Smart Money Concept'],
+  //   id: 544,
+  // },
+  // {
+  //   titleUkr: 'Layer 2 (L2): що це й навіщо рішення другого рівня',
+  //   linkUkr: 'layer2',
+  //   imgUkr: '/assets/img/content/layer2.jpeg',
+  //   titleRus: 'Layer 2 (L2): что это и зачем решения второго уровня',
+  //   titleEn: 'Layer 2 (L2): What It Is and Why It\'s Needed',
+  //   descrUkr:
+  //     'Що таке мережі другого рівня поверх блокчейна, як вони пришвидшують транзакції й знижують комісії й навіщо це при дорогому газі основної мережі.',
+  //   descrEn:
+  //     'What second-layer networks over a blockchain are, how they speed up transactions and cut fees and why this matters when base-network gas is dear.',
+  //   descrRus:
+  //     'Что такое сети второго уровня поверх блокчейна, как они ускоряют транзакции и снижают комиссии и зачем это нужно при дорогом газе основной сети.',
+  //   realTitleRus: 'Layer 2 (L2): что это и зачем решения второго уровня | Arapov.trade',
+  //   realTitleUkr: 'Layer 2 (L2): що це й навіщо рішення другого рівня | Arapov.trade',
+  //   realTitleEn: 'Layer 2 (L2): What It Is and Why It\'s Needed | Arapov.trade',
+  //   groupsRus: ['Криптовалюта'],
+  //   groupsUkr: ['Криптовалюта'],
+  //   groupsEng: ['Cryptocurrency'],
+  //   id: 545,
+  // },
+  // {
+  //   titleUkr: 'Ліквідація позиції: що це і як її не зловити',
+  //   linkUkr: 'liquidation',
+  //   imgUkr: '/assets/img/content/liquidation.jpeg',
+  //   titleRus: 'Ликвидация позиции: что это и как её не словить',
+  //   titleEn: 'Position Liquidation: What It Is and How to Avoid It',
+  //   descrUkr:
+  //     'Що таке ліквідація на маржинальній торгівлі, за якої ціни вона настає і які правила ризик-менеджменту бережуть рахунок від обнулення одним рухом.',
+  //   descrEn:
+  //     'What liquidation in margin trading is, at what price it hits and which risk-management rules save the account from a one-move blow-up.',
+  //   descrRus:
+  //     'Что такое ликвидация на маржинальной торговле, при какой цене она наступает и какие правила риск-менеджмента берегут счёт от обнуления одним движением.',
+  //   realTitleRus: 'Ликвидация позиции: что это и как её не словить | Arapov.trade',
+  //   realTitleUkr: 'Ліквідація позиції: що це і як її не зловити | Arapov.trade',
+  //   realTitleEn: 'Position Liquidation: What It Is and How to Avoid It | Arapov.trade',
+  //   groupsRus: ['Трейдинг для начинающих'],
+  //   groupsUkr: ['Трейдинг для початківців'],
+  //   groupsEng: ['Trading for Beginners'],
+  //   id: 546,
+  // },
+  // {
+  //   titleUkr: 'Лонг і шорт у трейдингу: що це і як шортити',
+  //   linkUkr: 'longandshort',
+  //   imgUkr: '/assets/img/content/longandshort.jpeg',
+  //   titleRus: 'Лонг и шорт в трейдинге: что это и как шортить',
+  //   titleEn: 'Long and Short in Trading: What They Are and How to Short',
+  //   descrUkr:
+  //     'Простими словами про довгу й коротку позицію: як заробити на зростанні й на падінні, що означає шортити і які ризики в короткої позиції.',
+  //   descrEn:
+  //     'In simple terms about long and short positions: how to earn on a rise and a fall, what shorting means and what risks a short position carries.',
+  //   descrRus:
+  //     'Простыми словами о длинной и короткой позиции: как заработать на росте и на падении, что значит шортить и какие риски у короткой позиции.',
+  //   realTitleRus: 'Лонг и шорт в трейдинге: что это и как шортить | Arapov.trade',
+  //   realTitleUkr: 'Лонг і шорт у трейдингу: що це і як шортити | Arapov.trade',
+  //   realTitleEn: 'Long and Short in Trading: What They Are and How to Short | Arapov.trade',
+  //   groupsRus: ['Трейдинг для начинающих'],
+  //   groupsUkr: ['Трейдинг для початківців'],
+  //   groupsEng: ['Trading for Beginners'],
+  //   id: 547,
+  // },
+  // {
+  //   titleUkr: 'Що таке лот у трейдингу і як розрахувати розмір лота',
+  //   linkUkr: 'lot-size',
+  //   imgUkr: '/assets/img/content/lot-size.jpeg',
+  //   titleRus: 'Что такое лот в трейдинге и как рассчитать размер лота',
+  //   titleEn: 'What Is a Lot in Trading and How to Calculate Lot Size',
+  //   descrUkr:
+  //     'Що таке лот, які бувають види лотів, як розмір лота впливає на вартість пункту і як розрахувати розмір позиції під допустимий ризик.',
+  //   descrEn:
+  //     'What a lot is, what types of lots exist, how lot size affects the pip value, and how to calculate position size to an allowable risk.',
+  //   descrRus:
+  //     'Что такое лот, какие бывают виды лотов, как размер лота влияет на стоимость пункта и как рассчитать размер позиции под допустимый риск.',
+  //   realTitleRus: 'Что такое лот в трейдинге и как рассчитать размер лота | Arapov.trade',
+  //   realTitleUkr: 'Що таке лот у трейдингу і як розрахувати розмір лота | Arapov.trade',
+  //   realTitleEn: 'What Is a Lot in Trading and How to Calculate Lot Size | Arapov.trade',
+  //   groupsRus: ['Трейдинг для начинающих'],
+  //   groupsUkr: ['Трейдинг для початківців'],
+  //   groupsEng: ['Trading for Beginners'],
+  //   id: 548,
+  // },
+  // {
+  //   titleUkr: 'Маржинальна торгівля й плече: що це і ризики',
+  //   linkUkr: 'marginleveragecrypto',
+  //   imgUkr: '/assets/img/content/marginleveragecrypto.jpeg',
+  //   titleRus: 'Маржинальная торговля и плечо: что это и риски',
+  //   titleEn: 'Margin Trading and Leverage: What They Are and the Risks',
+  //   descrUkr:
+  //     'Що таке кредитне плече й маржинальна торгівля, як воно множить і прибуток, і збиток, і чому велике плече — коротка дорога до ліквідації.',
+  //   descrEn:
+  //     'What leverage and margin trading are, how it multiplies both profit and loss, and why large leverage is a short road to liquidation.',
+  //   descrRus:
+  //     'Что такое кредитное плечо и маржинальная торговля, как оно умножает и прибыль, и убыток, и почему большое плечо — короткая дорога к ликвидации.',
+  //   realTitleRus: 'Маржинальная торговля и плечо: что это и риски | Arapov.trade',
+  //   realTitleUkr: 'Маржинальна торгівля й плече: що це і ризики | Arapov.trade',
+  //   realTitleEn: 'Margin Trading and Leverage: What They Are and the Risks | Arapov.trade',
+  //   groupsRus: ['Криптовалюта'],
+  //   groupsUkr: ['Криптовалюта'],
+  //   groupsEng: ['Cryptocurrency'],
+  //   id: 549,
+  // },
+  // {
+  //   titleUkr: 'Що таке консолідація на ринку простими словами',
+  //   linkUkr: 'market-consolidation',
+  //   imgUkr: '/assets/img/content/market-consolidation.jpeg',
+  //   titleRus: 'Что такое консолидация на рынке простыми словами',
+  //   titleEn: 'What Is Consolidation in the Market in Simple Terms',
+  //   descrUkr:
+  //     'Що таке консолідація на ринку, чим вона відрізняється від тренду і флету, як поводиться обсяг у діапазоні і як трейдери торгують пробій та відбій від меж.',
+  //   descrEn:
+  //     'What consolidation is, how it differs from a trend and a flat, how volume behaves in a range, and how traders trade the breakout and the bounce off the edges.',
+  //   descrRus:
+  //     'Что такое консолидация на рынке, чем она отличается от тренда и флэта, как ведёт себя объём в диапазоне и как трейдеры торгуют пробой и отбой от границ.',
+  //   realTitleRus: 'Что такое консолидация на рынке простыми словами | Arapov.trade',
+  //   realTitleUkr: 'Що таке консолідація на ринку простими словами | Arapov.trade',
+  //   realTitleEn: 'What Is Consolidation in the Market in Simple Terms | Arapov.trade',
+  //   groupsRus: ['Технический анализ'],
+  //   groupsUkr: ['Технічний аналіз'],
+  //   groupsEng: ['Technical Analysis'],
+  //   id: 550,
+  // },
+  // {
+  //   titleUkr: 'Структура ринку в трейдингу: BOS і CHoCH простими словами',
+  //   linkUkr: 'market-structure-bos-choch',
+  //   imgUkr: '/assets/img/content/market-structure-bos-choch.jpeg',
+  //   titleRus: 'Структура рынка в трейдинге: BOS и CHoCH простыми словами',
+  //   titleEn: 'Market Structure in Trading: BOS and CHoCH in Simple Terms',
+  //   descrUkr:
+  //     'Що таке структура ринку, як читати максимуми й мінімуми, що таке злам структури BOS і зміна характеру CHoCH і як це допомагає визначити напрям.',
+  //   descrEn:
+  //     'What market structure is, how to read highs and lows, what a break of structure (BOS) and change of character (CHoCH) are, and how it defines direction.',
+  //   descrRus:
+  //     'Что такое структура рынка, как читать максимумы и минимумы, что такое слом структуры BOS и смена характера CHoCH и как это помогает определить направление.',
+  //   realTitleRus: 'Структура рынка в трейдинге: BOS и CHoCH простыми словами | Arapov.trade',
+  //   realTitleUkr: 'Структура ринку в трейдингу: BOS і CHoCH простими словами | Arapov.trade',
+  //   realTitleEn: 'Market Structure in Trading: BOS and CHoCH in Simple Terms | Arapov.trade',
+  //   groupsRus: ['Концепция Смарт Мани'],
+  //   groupsUkr: ['Концепція Смарт Мані'],
+  //   groupsEng: ['Smart Money Concept'],
+  //   id: 551,
+  // },
+  // {
+  //   titleUkr: 'Мемкоїни: що це і чому це казино, а не інвестиція',
+  //   linkUkr: 'memecoins',
+  //   imgUkr: '/assets/img/content/memecoins.jpeg',
+  //   titleRus: 'Мемкоины: что это и почему это казино, а не инвестиция',
+  //   titleEn: 'Memecoins: What They Are and Why It\'s a Casino',
+  //   descrUkr:
+  //     'Що таке мемкоїни, на чому тримається їхня ціна, чому це чиста спекуляція на хайпі і як не лишитися зі знеціненим токеном на руках.',
+  //   descrEn:
+  //     'What memecoins are, what holds their price up, why it is pure speculation on hype and how not to be left holding a worthless token.',
+  //   descrRus:
+  //     'Что такое мемкоины, на чём держится их цена, почему это чистая спекуляция на хайпе и как не остаться с обесценившимся токеном на руках.',
+  //   realTitleRus: 'Мемкоины: что это и почему это казино, а не инвестиция | Arapov.trade',
+  //   realTitleUkr: 'Мемкоїни: що це і чому це казино, а не інвестиція | Arapov.trade',
+  //   realTitleEn: 'Memecoins: What They Are and Why It\'s a Casino | Arapov.trade',
+  //   groupsRus: ['Криптовалюта'],
+  //   groupsUkr: ['Криптовалюта'],
+  //   groupsEng: ['Cryptocurrency'],
+  //   id: 552,
+  // },
+  // {
+  //   titleUkr: 'Індикатор MFI (Money Flow Index): що це і як його читати',
+  //   linkUkr: 'mfi',
+  //   imgUkr: '/assets/img/content/mfi.jpeg',
+  //   titleRus: 'Индикатор MFI (Money Flow Index): что это и как его читать',
+  //   titleEn: 'MFI indicator (Money Flow Index): what it is and how to read it',
+  //   descrUkr:
+  //     'Що таке індикатор MFI, чим він відрізняється від RSI, як читати перекупленість і дивергенцію і чому він чесний лише там, де чесний обсяг.',
+  //   descrEn:
+  //     'What the MFI indicator is, how it differs from RSI, how to read overbought and divergence and why it is honest only where volume is honest.',
+  //   descrRus:
+  //     'Что такое индикатор MFI, чем он отличается от RSI, как читать перекупленность и дивергенцию и почему он честен только там, где честен объём.',
+  //   realTitleRus: 'Индикатор MFI (Money Flow Index): что это и как его читать | Arapov.trade',
+  //   realTitleUkr: 'Індикатор MFI (Money Flow Index): що це і як його читати | Arapov.trade',
+  //   realTitleEn: 'MFI indicator (Money Flow Index): what it is and how to read it | Arapov.trade',
+  //   groupsRus: ['Объемный анализ рынка'],
+  //   groupsUkr: ['Об`ємний аналіз ринку'],
+  //   groupsEng: ['Market Volume Analysis'],
+  //   id: 553,
+  // },
+  // {
+  //   titleUkr: 'Індикатор OBV: що це і як читати обсяг',
+  //   linkUkr: 'obv',
+  //   imgUkr: '/assets/img/content/obv.jpeg',
+  //   titleRus: 'Индикатор OBV: что это и как читать объём',
+  //   titleEn: 'OBV Indicator: What It Is and How to Read Volume',
+  //   descrUkr:
+  //     'Що таке індикатор балансового обсягу OBV, як він підтверджує рух ціни обсягом і про що говорить дивергенція. Обсяг як первинна причина.',
+  //   descrEn:
+  //     'What the On-Balance Volume (OBV) indicator is, how it confirms a price move with volume and what divergence tells. Volume as the primary cause.',
+  //   descrRus:
+  //     'Что такое индикатор балансового объёма OBV, как он подтверждает движение цены объёмом и о чём говорит дивергенция. Объём как первичная причина.',
+  //   realTitleRus: 'Индикатор OBV: что это и как читать объём | Arapov.trade',
+  //   realTitleUkr: 'Індикатор OBV: що це і як читати обсяг | Arapov.trade',
+  //   realTitleEn: 'OBV Indicator: What It Is and How to Read Volume | Arapov.trade',
+  //   groupsRus: ['Объемный анализ рынка'],
+  //   groupsUkr: ['Об`ємний аналіз ринку'],
+  //   groupsEng: ['Market Volume Analysis'],
+  //   id: 554,
+  // },
+  // {
+  //   titleUkr: 'Відкритий інтерес (Open Interest): що це і як його читати',
+  //   linkUkr: 'openinterest',
+  //   imgUkr: '/assets/img/content/openinterest.jpeg',
+  //   titleRus: 'Открытый интерес (Open Interest): что это и как его читать',
+  //   titleEn: 'Open Interest: what it is and how to read it',
+  //   descrUkr:
+  //     'Що таке відкритий інтерес на ф\'ючерсах, чим він відрізняється від обсягу і як зростання або падіння OI разом із ціною підтверджує або послаблює тренд.',
+  //   descrEn:
+  //     'What open interest is on futures, how it differs from volume and how a rise or fall in OI together with price confirms or weakens a trend.',
+  //   descrRus:
+  //     'Что такое открытый интерес на фьючерсах, чем он отличается от объёма и как рост или падение OI вместе с ценой подтверждает или ослабляет тренд.',
+  //   realTitleRus: 'Открытый интерес (Open Interest): что это и как его читать | Arapov.trade',
+  //   realTitleUkr: 'Відкритий інтерес (Open Interest): що це і як його читати | Arapov.trade',
+  //   realTitleEn: 'Open Interest: what it is and how to read it | Arapov.trade',
+  //   groupsRus: ['Объемный анализ рынка'],
+  //   groupsUkr: ['Об`ємний аналіз ринку'],
+  //   groupsEng: ['Market Volume Analysis'],
+  //   id: 555,
+  // },
+  // {
+  //   titleUkr: 'Кореляція валютних пар: що це і як використовувати',
+  //   linkUkr: 'paircorrelation',
+  //   imgUkr: '/assets/img/content/paircorrelation.jpeg',
+  //   titleRus: 'Корреляция валютных пар: что это и как использовать',
+  //   titleEn: 'Currency Pair Correlation: What It Is and How to Use It',
+  //   descrUkr:
+  //     'Що таке кореляція валютних пар, чому схожі пари рухаються разом чи дзеркально і як не відкрити випадково подвійний ризик в один бік.',
+  //   descrEn:
+  //     'What currency pair correlation is, why similar pairs move together or mirror each other and how not to accidentally open a double risk one way.',
+  //   descrRus:
+  //     'Что такое корреляция валютных пар, почему похожие пары двигаются вместе или зеркально и как не открыть случайно двойной риск в одну сторону.',
+  //   realTitleRus: 'Корреляция валютных пар: что это и как использовать | Arapov.trade',
+  //   realTitleUkr: 'Кореляція валютних пар: що це і як використовувати | Arapov.trade',
+  //   realTitleEn: 'Currency Pair Correlation: What It Is and How to Use It | Arapov.trade',
+  //   groupsRus: ['Фундаментальный анализ'],
+  //   groupsUkr: ['Фундаментальний аналіз'],
+  //   groupsEng: ['Fundamental Analysis'],
+  //   id: 556,
+  // },
+  // {
+  //   titleUkr: 'Parabolic SAR: що це за індикатор і як його використовувати',
+  //   linkUkr: 'parabolic-sar',
+  //   imgUkr: '/assets/img/content/parabolic-sar.jpeg',
+  //   titleRus: 'Parabolic SAR: что это за индикатор и как его использовать',
+  //   titleEn: 'Parabolic SAR: what this indicator is and how to use it',
+  //   descrUkr:
+  //     'Що таке індикатор Parabolic SAR, як він показує розворот і трейлінг-стоп, чому він запізнюється у флеті і де його розумно застосовувати.',
+  //   descrEn:
+  //     'What the Parabolic SAR indicator is, how it shows a reversal and a trailing stop, why it lags in a range and where it is sensible to apply it.',
+  //   descrRus:
+  //     'Что такое индикатор Parabolic SAR, как он показывает разворот и трейлинг-стоп, почему он запаздывает во флэте и где его разумно применять.',
+  //   realTitleRus: 'Parabolic SAR: что это за индикатор и как его использовать | Arapov.trade',
+  //   realTitleUkr: 'Parabolic SAR: що це за індикатор і як його використовувати | Arapov.trade',
+  //   realTitleEn: 'Parabolic SAR: what this indicator is and how to use it | Arapov.trade',
+  //   groupsRus: ['Технический анализ'],
+  //   groupsUkr: ['Технічний аналіз'],
+  //   groupsEng: ['Technical Analysis'],
+  //   id: 557,
+  // },
+  // {
+  //   titleUkr: 'Безстрокові ф\'ючерси (perpetual): що це й відмінності',
+  //   linkUkr: 'perpetualfutures',
+  //   imgUkr: '/assets/img/content/perpetualfutures.jpeg',
+  //   titleRus: 'Бессрочные фьючерсы (perpetual): что это и отличия',
+  //   titleEn: 'Perpetual Futures: What They Are and Key Differences',
+  //   descrUkr:
+  //     'Що таке безстрокові ф\'ючерси в крипті, чим відрізняються від звичайних, до чого тут фандинг і чому це інструмент із підвищеним ризиком для новачка.',
+  //   descrEn:
+  //     'What perpetual futures in crypto are, how they differ from classic ones, why funding matters and why they are a higher-risk tool for a beginner.',
+  //   descrRus:
+  //     'Что такое бессрочные фьючерсы в крипте, чем отличаются от обычных, при чём тут фандинг и почему это инструмент с повышенным риском для новичка.',
+  //   realTitleRus: 'Бессрочные фьючерсы (perpetual): что это и отличия | Arapov.trade',
+  //   realTitleUkr: 'Безстрокові ф\'ючерси (perpetual): що це й відмінності | Arapov.trade',
+  //   realTitleEn: 'Perpetual Futures: What They Are and Key Differences | Arapov.trade',
+  //   groupsRus: ['Криптовалюта'],
+  //   groupsUkr: ['Криптовалюта'],
+  //   groupsEng: ['Cryptocurrency'],
+  //   id: 558,
+  // },
+  // {
+  //   titleUkr: 'Піпс, пункт і тик: що це і в чому різниця простими словами',
+  //   linkUkr: 'pip-point-tick',
+  //   imgUkr: '/assets/img/content/pip-point-tick.jpeg',
+  //   titleRus: 'Пипс, пункт и тик: что это и в чём разница простыми словами',
+  //   titleEn: 'Pip, point and tick: what they are and how they differ',
+  //   descrUkr:
+  //     'Що таке піпс, пункт і тик, чим вони відрізняються і навіщо потрібні: піпс на форексі, пункт на акціях, тик на біржі, і як рахувати ризик у тиках.',
+  //   descrEn:
+  //     'What a pip, a point and a tick are and how they differ: a pip on forex, a point on stocks, a tick on the exchange, and how to count risk in ticks.',
+  //   descrRus:
+  //     'Что такое пипс, пункт и тик, чем они отличаются и зачем нужны: пипс на форексе, пункт на акциях, тик на бирже, и как считать риск в тиках.',
+  //   realTitleRus: 'Пипс, пункт и тик: что это и в чём разница простыми словами | Arapov.trade',
+  //   realTitleUkr: 'Піпс, пункт і тик: що це і в чому різниця простими словами | Arapov.trade',
+  //   realTitleEn: 'Pip, point and tick: what they are and how they differ | Arapov.trade',
+  //   groupsRus: ['Трейдинг для начинающих'],
+  //   groupsUkr: ['Трейдинг для початківців'],
+  //   groupsEng: ['Trading for Beginners'],
+  //   id: 559,
+  // },
+  // {
+  //   titleUkr: 'Pivot Points (точки розвороту): що це і як рахувати опорні рівні',
+  //   linkUkr: 'pivot-points',
+  //   imgUkr: '/assets/img/content/pivot-points.jpeg',
+  //   titleRus: 'Pivot Points (точки разворота): что это и как считать',
+  //   titleEn: 'Pivot Points: what they are and how to calculate support levels',
+  //   descrUkr:
+  //     'Що таке Pivot Points, як рахуються опорна точка та рівні підтримки й опору і чому це лише орієнтир, а не сигнал для входу.',
+  //   descrEn:
+  //     'What Pivot Points are, how the pivot point and the support and resistance levels are calculated and why it is only a reference, not an entry signal.',
+  //   descrRus:
+  //     'Что такое Pivot Points, как считаются опорная точка и уровни поддержки и сопротивления и почему это лишь ориентир, а не сигнал для входа.',
+  //   realTitleRus: 'Pivot Points (точки разворота): что это и как считать | Arapov.trade',
+  //   realTitleUkr: 'Pivot Points (точки розвороту): що це і як рахувати опорні рівні | Arapov.trade',
+  //   realTitleEn: 'Pivot Points: what they are and how to calculate support levels | Arapov.trade',
+  //   groupsRus: ['Технический анализ'],
+  //   groupsUkr: ['Технічний аналіз'],
+  //   groupsEng: ['Technical Analysis'],
+  //   id: 560,
+  // },
+  // {
+  //   titleUkr: 'Позиційна торгівля: що це і кому підходить',
+  //   linkUkr: 'position-trading',
+  //   imgUkr: '/assets/img/content/position-trading.jpeg',
+  //   titleRus: 'Позиционная торговля: что это и кому подходит',
+  //   titleEn: 'Position Trading: What It Is and Who It Suits',
+  //   descrUkr:
+  //     'Що таке позиційна торгівля, чим вона відрізняється від свінгу й інвестицій, кому підходить довгий горизонт і чому навіть тут не можна прибирати стоп-лосс.',
+  //   descrEn:
+  //     'What position trading is, how it differs from swing and investing, who the long horizon suits and why even here you cannot remove the stop-loss.',
+  //   descrRus:
+  //     'Что такое позиционная торговля, чем она отличается от свинга и инвестиций, кому подходит долгий горизонт и почему даже тут нельзя убирать стоп-лосс.',
+  //   realTitleRus: 'Позиционная торговля: что это и кому подходит | Arapov.trade',
+  //   realTitleUkr: 'Позиційна торгівля: що це і кому підходить | Arapov.trade',
+  //   realTitleEn: 'Position Trading: What It Is and Who It Suits | Arapov.trade',
+  //   groupsRus: ['Трейдинг для начинающих'],
+  //   groupsUkr: ['Трейдинг для початківців'],
+  //   groupsEng: ['Trading for Beginners'],
+  //   id: 561,
+  // },
+  // {
+  //   titleUkr: 'Що таке постмаркет: торгівля після закриття біржі',
+  //   linkUkr: 'post-market-trading',
+  //   imgUkr: '/assets/img/content/post-market-trading.jpeg',
+  //   titleRus: 'Что такое постмаркет: торговля после закрытия биржи',
+  //   titleEn: 'What Is the Post-Market: Trading After the Exchange Closes',
+  //   descrUkr:
+  //     'Що таке постмаркет, о котрій він іде, чому ціна сильно рухається після закриття біржі на звітах і чим відрізняється від премаркету та основної сесії.',
+  //   descrEn:
+  //     'What the post-market is, when it runs, why the price moves so much after the close on earnings, and how it differs from the pre-market and regular session.',
+  //   descrRus:
+  //     'Что такое постмаркет, во сколько идёт, почему цена сильно двигается после закрытия биржи на отчётах и чем отличается от премаркета и основной сессии.',
+  //   realTitleRus: 'Что такое постмаркет: торговля после закрытия биржи | Arapov.trade',
+  //   realTitleUkr: 'Що таке постмаркет: торгівля після закриття біржі | Arapov.trade',
+  //   realTitleEn: 'What Is the Post-Market: Trading After the Exchange Closes | Arapov.trade',
+  //   groupsRus: ['Трейдинг для начинающих'],
+  //   groupsUkr: ['Трейдинг для початківців'],
+  //   groupsEng: ['Trading for Beginners'],
+  //   id: 562,
+  // },
+  // {
+  //   titleUkr: 'Механізми консенсусу PoW і PoS: що це простими словами',
+  //   linkUkr: 'pow-vs-pos',
+  //   imgUkr: '/assets/img/content/pow-vs-pos.jpeg',
+  //   titleRus: 'Механизмы консенсуса PoW и PoS: что это простыми словами',
+  //   titleEn: 'PoW and PoS Consensus Mechanisms: What They Are, Simply',
+  //   descrUkr:
+  //     'Що таке механізм консенсусу, чим Proof of Work відрізняється від Proof of Stake, до чого тут майнінг і стейкінг і чому жоден з них не «кращий».',
+  //   descrEn:
+  //     'What a consensus mechanism is, how Proof of Work differs from Proof of Stake, why mining and staking matter and why neither one is better.',
+  //   descrRus:
+  //     'Что такое механизм консенсуса, чем Proof of Work отличается от Proof of Stake, при чём тут майнинг и стейкинг и почему ни один из них не «лучше».',
+  //   realTitleRus: 'Механизмы консенсуса PoW и PoS: что это простыми словами | Arapov.trade',
+  //   realTitleUkr: 'Механізми консенсусу PoW і PoS: що це простими словами | Arapov.trade',
+  //   realTitleEn: 'PoW and PoS Consensus Mechanisms: What They Are, Simply | Arapov.trade',
+  //   groupsRus: ['Криптовалюта'],
+  //   groupsUkr: ['Криптовалюта'],
+  //   groupsEng: ['Cryptocurrency'],
+  //   id: 563,
+  // },
+  // {
+  //   titleUkr: 'Power of Three (AMD): накопичення, маніпуляція, скид',
+  //   linkUkr: 'power-of-three',
+  //   imgUkr: '/assets/img/content/power-of-three.jpeg',
+  //   titleRus: 'Power of Three (AMD): накопление, манипуляция, сброс',
+  //   titleEn: 'Power of Three (AMD): The Three Phases of Price',
+  //   descrUkr:
+  //     'Що таке модель Power of Three в концепції Smart Money, як розгортаються фази накопичення, маніпуляції й розподілу і де тут здоровий глузд.',
+  //   descrEn:
+  //     'What the Power of Three model is, how the accumulation, manipulation and distribution phases unfold and why it echoes the Wyckoff method.',
+  //   descrRus:
+  //     'Что такое модель Power of Three в концепции Smart Money, как разворачиваются фазы накопления, манипуляции и распределения и где тут здравый смысл.',
+  //   realTitleRus: 'Power of Three (AMD): накопление, манипуляция, сброс | Arapov.trade',
+  //   realTitleUkr: 'Power of Three (AMD): накопичення, маніпуляція, скид | Arapov.trade',
+  //   realTitleEn: 'Power of Three (AMD): The Three Phases of Price | Arapov.trade',
+  //   groupsRus: ['Концепция Смарт Мани'],
+  //   groupsUkr: ['Концепція Смарт Мані'],
+  //   groupsEng: ['Smart Money Concept'],
+  //   id: 564,
+  // },
+  // {
+  //   titleUkr: 'Що таке премаркет: торги до відкриття біржі',
+  //   linkUkr: 'pre-market-trading',
+  //   imgUkr: '/assets/img/content/pre-market-trading.jpeg',
+  //   titleRus: 'Что такое премаркет: торги до открытия биржи',
+  //   titleEn: 'What Is the Pre-Market: Trading Before the Exchange Opens',
+  //   descrUkr:
+  //     'Що таке премаркет, о котрій він починається, навіщо його дивляться, як він формує геп на відкритті і чим премаркет відрізняється від постмаркету та основної сесії.',
+  //   descrEn:
+  //     'What the pre-market is, when it starts, why people watch it, how it forms the gap at the open, and how the pre-market differs from the post-market and the regular session.',
+  //   descrRus:
+  //     'Что такое премаркет, во сколько он начинается, зачем его смотрят, как он формирует гэп на открытии и чем премаркет отличается от постмаркета и основной сессии.',
+  //   realTitleRus: 'Что такое премаркет: торги до открытия биржи | Arapov.trade',
+  //   realTitleUkr: 'Що таке премаркет: торги до відкриття біржі | Arapov.trade',
+  //   realTitleEn: 'What Is the Pre-Market: Trading Before the Exchange Opens | Arapov.trade',
+  //   groupsRus: ['Трейдинг для начинающих'],
+  //   groupsUkr: ['Трейдинг для початківців'],
+  //   groupsEng: ['Trading for Beginners'],
+  //   id: 565,
+  // },
+  // {
+  //   titleUkr: 'Преміум і дискаунт, equilibrium і OTE: що це в Smart Money',
+  //   linkUkr: 'premium-discount-ote',
+  //   imgUkr: '/assets/img/content/premium-discount-ote.jpeg',
+  //   titleRus: 'Премиум и дискаунт, equilibrium и OTE: что это в Smart Money',
+  //   titleEn: 'Premium and discount, equilibrium and OTE in Smart Money',
+  //   descrUkr:
+  //     'Що таке преміум і дискаунт, де проходить equilibrium і зона OTE, і чому смарт-мані купують у дискаунті, а продають у преміумі.',
+  //   descrEn:
+  //     'What premium and discount are, where equilibrium and the OTE zone sit, and why smart money buys in discount and sells in premium.',
+  //   descrRus:
+  //     'Что такое премиум и дискаунт, где проходит equilibrium и зона OTE, и почему смарт-мани покупают в дискаунте, а продают в премиуме.',
+  //   realTitleRus: 'Премиум и дискаунт, equilibrium и OTE: что это в Smart Money | Arapov.trade',
+  //   realTitleUkr: 'Преміум і дискаунт, equilibrium і OTE: що це в Smart Money | Arapov.trade',
+  //   realTitleEn: 'Premium and discount, equilibrium and OTE in Smart Money | Arapov.trade',
+  //   groupsRus: ['Концепция Смарт Мани'],
+  //   groupsUkr: ['Концепція Смарт Мані'],
+  //   groupsEng: ['Smart Money Concept'],
+  //   id: 566,
+  // },
+  // {
+  //   titleUkr: 'Що таке геп на біржі простими словами і види гепів',
+  //   linkUkr: 'price-gap',
+  //   imgUkr: '/assets/img/content/price-gap.jpeg',
+  //   titleRus: 'Что такое гэп на бирже простыми словами и виды гэпов',
+  //   titleEn: 'What Is a Gap on the Exchange in Simple Terms and Types of Gaps',
+  //   descrUkr:
+  //     'Що таке геп на графіку, чому він утворюється, які бувають види гепів і що означає закриття гепа, а також чи завжди геп закривається.',
+  //   descrEn:
+  //     'What a gap on the chart is, why it forms, what types of gaps exist, what closing a gap means, and whether a gap always closes.',
+  //   descrRus:
+  //     'Что такое гэп на графике, почему он образуется, какие бывают виды гэпов и что значит закрытие гэпа, а также всегда ли гэп закрывается.',
+  //   realTitleRus: 'Что такое гэп на бирже простыми словами и виды гэпов | Arapov.trade',
+  //   realTitleUkr: 'Що таке геп на біржі простими словами і види гепів | Arapov.trade',
+  //   realTitleEn: 'What Is a Gap on the Exchange in Simple Terms and Types of Gaps | Arapov.trade',
+  //   groupsRus: ['Технический анализ'],
+  //   groupsUkr: ['Технічний аналіз'],
+  //   groupsEng: ['Technical Analysis'],
+  //   id: 567,
+  // },
+  // {
+  //   titleUkr: 'Профіт-фактор: що це і як його рахувати',
+  //   linkUkr: 'profitfactor',
+  //   imgUkr: '/assets/img/content/profitfactor.jpeg',
+  //   titleRus: 'Профит-фактор: что это и как его считать',
+  //   titleEn: 'Profit factor: what it is and how to calculate it',
+  //   descrUkr:
+  //     'Що таке профіт-фактор у трейдингу, як він рахується як відношення валового прибутку до валового збитку і чому сам по собі він може обманути.',
+  //   descrEn:
+  //     'What profit factor is in trading, how it is calculated as the ratio of gross profit to gross loss and why on its own it can deceive.',
+  //   descrRus:
+  //     'Что такое профит-фактор в трейдинге, как он считается как отношение валовой прибыли к валовому убытку и почему сам по себе он может обмануть.',
+  //   realTitleRus: 'Профит-фактор: что это и как его считать | Arapov.trade',
+  //   realTitleUkr: 'Профіт-фактор: що це і як його рахувати | Arapov.trade',
+  //   realTitleEn: 'Profit factor: what it is and how to calculate it | Arapov.trade',
+  //   groupsRus: ['Трейдинг для начинающих'],
+  //   groupsUkr: ['Трейдинг для початківців'],
+  //   groupsEng: ['Trading for Beginners'],
+  //   id: 568,
+  // },
+  // {
+  //   titleUkr: 'Проп-трейдинг чи свій депозит: що обрати трейдеру',
+  //   linkUkr: 'prop-vs-deposit',
+  //   imgUkr: '/assets/img/content/prop-vs-deposit.jpeg',
+  //   titleRus: 'Проп-трейдинг или свой депозит: что выбрать трейдеру',
+  //   titleEn: 'Prop Trading or Your Own Deposit: What to Choose',
+  //   descrUkr:
+  //     'Порівнюємо проп-рахунок і торгівлю на своєму депозиті: де менший ризик для гаманця, де жорсткіші правила й кому з новачків проп має сенс.',
+  //   descrEn:
+  //     'We compare a prop account with trading your own deposit: where the wallet risk is lower, where rules are harder and when prop really makes sense.',
+  //   descrRus:
+  //     'Сравниваем проп-счёт и торговлю на своём депозите: где меньше риск для кошелька, где жёстче правила и кому из новичков проп реально имеет смысл.',
+  //   realTitleRus: 'Проп-трейдинг или свой депозит: что выбрать трейдеру | Arapov.trade',
+  //   realTitleUkr: 'Проп-трейдинг чи свій депозит: що обрати трейдеру | Arapov.trade',
+  //   realTitleEn: 'Prop Trading or Your Own Deposit: What to Choose | Arapov.trade',
+  //   groupsRus: ['Трейдинг для начинающих'],
+  //   groupsUkr: ['Трейдинг для початківців'],
+  //   groupsEng: ['Trading for Beginners'],
+  //   id: 569,
+  // },
+  // {
+  //   titleUkr: 'Як пройти челендж проп-фірми: правила і стратегія',
+  //   linkUkr: 'propchallenge',
+  //   imgUkr: '/assets/img/content/propchallenge.jpeg',
+  //   titleRus: 'Как пройти челлендж проп-фирмы: правила и стратегия',
+  //   titleEn: 'How to Pass a Prop Firm Challenge: Rules and Strategy',
+  //   descrUkr:
+  //     'Етапи челенджу проп-фірми, ліміти просадки й денних втрат і спокійна стратегія проходження без гонки за швидким прибутком.',
+  //   descrEn:
+  //     'The stages of a prop firm challenge, drawdown and daily-loss limits, and a calm way to pass it without chasing fast profit.',
+  //   descrRus:
+  //     'Этапы челленджа проп-фирмы, лимиты просадки и дневных потерь и спокойная стратегия прохождения без гонки за быстрой прибылью.',
+  //   realTitleRus: 'Как пройти челлендж проп-фирмы: правила и стратегия | Arapov.trade',
+  //   realTitleUkr: 'Як пройти челендж проп-фірми: правила і стратегія | Arapov.trade',
+  //   realTitleEn: 'How to Pass a Prop Firm Challenge: Rules and Strategy | Arapov.trade',
+  //   groupsRus: ['Трейдинг для начинающих'],
+  //   groupsUkr: ['Трейдинг для початківців'],
+  //   groupsEng: ['Trading for Beginners'],
+  //   id: 570,
+  // },
+  // {
+  //   titleUkr: 'Проп-трейдинг: що це і як пройти челендж проп-фірми',
+  //   linkUkr: 'proptrading',
+  //   imgUkr: '/assets/img/content/proptrading.jpeg',
+  //   titleRus: 'Проп-трейдинг: что это и как пройти челлендж проп-фирмы',
+  //   titleEn: 'Prop Trading: What It Is and How to Pass a Prop Firm Challenge',
+  //   descrUkr:
+  //     'Що таке проп-трейдинг, як влаштований челендж проп-фірми та її правила, скільки реально лишає собі трейдер і які тут підводні камені.',
+  //   descrEn:
+  //     'What prop trading is, how a prop firm challenge and its rules work, how much a trader really keeps and what the hidden catches are.',
+  //   descrRus:
+  //     'Что такое проп-трейдинг, как устроен челлендж проп-фирмы и её правила, сколько реально оставляет себе трейдер и какие тут подводные камни.',
+  //   realTitleRus: 'Проп-трейдинг: что это и как пройти челлендж проп-фирмы | Arapov.trade',
+  //   realTitleUkr: 'Проп-трейдинг: що це і як пройти челендж проп-фірми | Arapov.trade',
+  //   realTitleEn: 'Prop Trading: What It Is and How to Pass a Prop Firm Challenge | Arapov.trade',
+  //   groupsRus: ['Трейдинг для начинающих'],
+  //   groupsUkr: ['Трейдинг для початківців'],
+  //   groupsEng: ['Trading for Beginners'],
+  //   id: 571,
+  // },
+  // {
+  //   titleUkr: 'Графіки Renko і нестандартні типи графіків: що це і навіщо',
+  //   linkUkr: 'renko-charts',
+  //   imgUkr: '/assets/img/content/renko-charts.jpeg',
+  //   titleRus: 'Графики Renko и нестандартные типы графиков: что это и зачем',
+  //   titleEn: 'Renko charts and non-standard chart types: what they are and why',
+  //   descrUkr:
+  //     'Що таке графіки Renko, чим цегляні та інші нестандартні графіки відрізняються від свічок і чому вони прибирають час та обсяг з екрана.',
+  //   descrEn:
+  //     'What Renko charts are, how brick and other non-standard charts differ from candles and why they remove time and volume from the screen.',
+  //   descrRus:
+  //     'Что такое графики Renko, чем кирпичные и другие нестандартные графики отличаются от свечей и почему они убирают время и объём с экрана.',
+  //   realTitleRus: 'Графики Renko и нестандартные типы графиков: что это и зачем | Arapov.trade',
+  //   realTitleUkr: 'Графіки Renko і нестандартні типи графіків: що це і навіщо | Arapov.trade',
+  //   realTitleEn: 'Renko charts and non-standard chart types: what they are and why | Arapov.trade',
+  //   groupsRus: ['Технический анализ'],
+  //   groupsUkr: ['Технічний аналіз'],
+  //   groupsEng: ['Technical Analysis'],
+  //   id: 572,
+  // },
+  // {
+  //   titleUkr: 'Ризик розорення (Risk of Ruin): що це і як його знизити',
+  //   linkUkr: 'riskofruin',
+  //   imgUkr: '/assets/img/content/riskofruin.jpeg',
+  //   titleRus: 'Риск разорения (Risk of Ruin): что это и как его снизить',
+  //   titleEn: 'Risk of ruin: what it is and how to reduce it',
+  //   descrUkr:
+  //     'Що таке ризик розорення в трейдингу, як він залежить від розміру ризику на угоду, вінрейту і серії збитків і чому він зростає швидше, ніж здається.',
+  //   descrEn:
+  //     'What risk of ruin is in trading, how it depends on the risk per trade, win rate and a string of losses and why it grows faster than it seems.',
+  //   descrRus:
+  //     'Что такое риск разорения в трейдинге, как он зависит от размера риска на сделку, винрейта и серии убытков и почему он растёт быстрее, чем кажется.',
+  //   realTitleRus: 'Риск разорения (Risk of Ruin): что это и как его снизить | Arapov.trade',
+  //   realTitleUkr: 'Ризик розорення (Risk of Ruin): що це і як його знизити | Arapov.trade',
+  //   realTitleEn: 'Risk of ruin: what it is and how to reduce it | Arapov.trade',
+  //   groupsRus: ['Трейдинг для начинающих'],
+  //   groupsUkr: ['Трейдинг для початківців'],
+  //   groupsEng: ['Trading for Beginners'],
+  //   id: 573,
+  // },
+  // {
+  //   titleUkr: 'RWA (токенізація активів): що це і навіщо потрібно',
+  //   linkUkr: 'rwa-tokenization',
+  //   imgUkr: '/assets/img/content/rwa-tokenization.jpeg',
+  //   titleRus: 'RWA (токенизация активов): что это и зачем нужно',
+  //   titleEn: 'RWA (Asset Tokenization): What It Is and Why It\'s Needed',
+  //   descrUkr:
+  //     'Що таке токенізація реальних активів (RWA), як нерухомість чи облігації потрапляють у блокчейн і які тут можливості й підводні камені.',
+  //   descrEn:
+  //     'What real-world asset tokenization (RWA) is, how real estate or bonds get onto a blockchain and what opportunities and pitfalls are here.',
+  //   descrRus:
+  //     'Что такое токенизация реальных активов (RWA), как недвижимость или облигации попадают в блокчейн и какие тут возможности и подводные камни.',
+  //   realTitleRus: 'RWA (токенизация активов): что это и зачем нужно | Arapov.trade',
+  //   realTitleUkr: 'RWA (токенізація активів): що це і навіщо потрібно | Arapov.trade',
+  //   realTitleEn: 'RWA (Asset Tokenization): What It Is and Why It\'s Needed | Arapov.trade',
+  //   groupsRus: ['Криптовалюта'],
+  //   groupsUkr: ['Криптовалюта'],
+  //   groupsEng: ['Cryptocurrency'],
+  //   id: 574,
+  // },
+  // {
+  //   titleUkr: 'Що таке шорт-сквіз простими словами на прикладі',
+  //   linkUkr: 'short-squeeze',
+  //   imgUkr: '/assets/img/content/short-squeeze.jpeg',
+  //   titleRus: 'Что такое шорт-сквиз простыми словами на примере',
+  //   titleEn: 'What Is a Short Squeeze in Simple Terms with an Example',
+  //   descrUkr:
+  //     'Що таке шорт-сквіз, як і чому він відбувається, приклад із GameStop і як розпізнати ризик шорт-сквізу за коротким інтересом і тонким обсягом паперів в обігу.',
+  //   descrEn:
+  //     'What a short squeeze is, how and why it happens, the GameStop example, and how to spot the risk of a short squeeze by short interest and a thin float.',
+  //   descrRus:
+  //     'Что такое шорт-сквиз, как и почему он происходит, пример с GameStop и как распознать риск шорт-сквиза по короткому интересу и тонкому объёму бумаг в обращении.',
+  //   realTitleRus: 'Что такое шорт-сквиз простыми словами на примере | Arapov.trade',
+  //   realTitleUkr: 'Що таке шорт-сквіз простими словами на прикладі | Arapov.trade',
+  //   realTitleEn: 'What Is a Short Squeeze in Simple Terms with an Example | Arapov.trade',
+  //   groupsRus: ['Трейдинг для начинающих'],
+  //   groupsUkr: ['Трейдинг для початківців'],
+  //   groupsEng: ['Trading for Beginners'],
+  //   id: 575,
+  // },
+  // {
+  //   titleUkr: 'Прослизання в трейдингу: що це і як зменшити',
+  //   linkUkr: 'slippage',
+  //   imgUkr: '/assets/img/content/slippage.jpeg',
+  //   titleRus: 'Проскальзывание в трейдинге: что это и как уменьшить',
+  //   titleEn: 'Slippage in Trading: What It Is and How to Reduce It',
+  //   descrUkr:
+  //     'Чому угода виконується не за тією ціною, що ви бачили, коли прослизання особливо велике і як зменшити його вплив на результат торгівлі.',
+  //   descrEn:
+  //     'Why a trade fills at a different price than you saw, when slippage is especially large and how to reduce its effect on your trading result.',
+  //   descrRus:
+  //     'Почему сделка исполняется не по той цене, что вы видели, когда проскальзывание особенно велико и как уменьшить его влияние на результат торговли.',
+  //   realTitleRus: 'Проскальзывание в трейдинге: что это и как уменьшить | Arapov.trade',
+  //   realTitleUkr: 'Прослизання в трейдингу: що це і як зменшити | Arapov.trade',
+  //   realTitleEn: 'Slippage in Trading: What It Is and How to Reduce It | Arapov.trade',
+  //   groupsRus: ['Трейдинг для начинающих'],
+  //   groupsUkr: ['Трейдинг для початківців'],
+  //   groupsEng: ['Trading for Beginners'],
+  //   id: 576,
+  // },
+  // {
+  //   titleUkr: 'Смартконтракт: що це і як працює простими словами',
+  //   linkUkr: 'smart-contract',
+  //   imgUkr: '/assets/img/content/smart-contract.jpeg',
+  //   titleRus: 'Смарт-контракт: что это и как работает простыми словами',
+  //   titleEn: 'Smart Contract: What It Is and How It Works, Simply',
+  //   descrUkr:
+  //     'Що таке смартконтракт, як він сам виконує умови угоди за принципом «якщо — то» на блокчейні і де в ньому головний ризик — помилки в коді.',
+  //   descrEn:
+  //     'What a smart contract is, how it self-executes a deal by an if-then rule on a blockchain and where its main risk lies: errors in the code.',
+  //   descrRus:
+  //     'Что такое смарт-контракт, как он сам исполняет условия сделки по принципу «если — то» на блокчейне и где в нём главный риск — ошибки в коде.',
+  //   realTitleRus: 'Смарт-контракт: что это и как работает простыми словами | Arapov.trade',
+  //   realTitleUkr: 'Смартконтракт: що це і як працює простими словами | Arapov.trade',
+  //   realTitleEn: 'Smart Contract: What It Is and How It Works, Simply | Arapov.trade',
+  //   groupsRus: ['Криптовалюта'],
+  //   groupsUkr: ['Криптовалюта'],
+  //   groupsEng: ['Cryptocurrency'],
+  //   id: 577,
+  // },
+  // {
+  //   titleUkr: 'Спот і ф\'ючерси: у чому різниця і що обрати новачку',
+  //   linkUkr: 'spotvsfutures',
+  //   imgUkr: '/assets/img/content/spotvsfutures.jpeg',
+  //   titleRus: 'Спот и фьючерсы: в чём разница и что выбрать новичку',
+  //   titleEn: 'Spot and Futures: The Difference and What a Beginner Picks',
+  //   descrUkr:
+  //     'Чим спот-торгівля відрізняється від ф\'ючерсів, до чого тут плече й строк, де ризик вищий і чому новачку розумніше починати зі споту.',
+  //   descrEn:
+  //     'How spot trading differs from futures, why leverage and term matter, where the risk is higher and why a beginner is wiser to start with spot.',
+  //   descrRus:
+  //     'Чем спот-торговля отличается от фьючерсов, при чём тут плечо и срок, где риск выше и почему новичку разумнее начинать со спота.',
+  //   realTitleRus: 'Спот и фьючерсы: в чём разница и что выбрать новичку | Arapov.trade',
+  //   realTitleUkr: 'Спот і ф\'ючерси: у чому різниця і що обрати новачку | Arapov.trade',
+  //   realTitleEn: 'Spot and Futures: The Difference and What a Beginner Picks | Arapov.trade',
+  //   groupsRus: ['Трейдинг для начинающих'],
+  //   groupsUkr: ['Трейдинг для початківців'],
+  //   groupsEng: ['Trading for Beginners'],
+  //   id: 578,
+  // },
+  // {
+  //   titleUkr: 'Індикатор Supertrend: що це і як його використовувати',
+  //   linkUkr: 'supertrend',
+  //   imgUkr: '/assets/img/content/supertrend.jpeg',
+  //   titleRus: 'Индикатор Supertrend: что это и как его использовать',
+  //   titleEn: 'Supertrend indicator: what it is and how to use it',
+  //   descrUkr:
+  //     'Що таке індикатор Supertrend, як він будується на ATR, чому дає чіткі сигнали розвороту тренду і в чому його слабкість у боковику.',
+  //   descrEn:
+  //     'What the Supertrend indicator is, how it is built on ATR, why it gives clear trend-reversal signals and what its weakness is in a range.',
+  //   descrRus:
+  //     'Что такое индикатор Supertrend, как он строится на ATR, почему даёт чёткие сигналы разворота тренда и в чём его слабость в боковике.',
+  //   realTitleRus: 'Индикатор Supertrend: что это и как его использовать | Arapov.trade',
+  //   realTitleUkr: 'Індикатор Supertrend: що це і як його використовувати | Arapov.trade',
+  //   realTitleEn: 'Supertrend indicator: what it is and how to use it | Arapov.trade',
+  //   groupsRus: ['Технический анализ'],
+  //   groupsUkr: ['Технічний аналіз'],
+  //   groupsEng: ['Technical Analysis'],
+  //   id: 579,
+  // },
+  // {
+  //   titleUkr: 'Своп у трейдингу: що це і як впливає на позицію',
+  //   linkUkr: 'swap',
+  //   imgUkr: '/assets/img/content/swap.jpeg',
+  //   titleRus: 'Своп в трейдинге: что это и как влияет на позицию',
+  //   titleEn: 'Swap in Trading: What It Is and How It Affects a Position',
+  //   descrUkr:
+  //     'Що таке своп — плата за перенесення позиції через ніч, коли він списується чи нараховується і чому важливий при утриманні угоди довше за день.',
+  //   descrEn:
+  //     'What a swap is (the fee for carrying a position overnight), when it is charged or credited and why it matters when holding a trade over a day.',
+  //   descrRus:
+  //     'Что такое своп — плата за перенос позиции через ночь, когда он списывается или начисляется и почему важен при удержании сделки дольше дня.',
+  //   realTitleRus: 'Своп в трейдинге: что это и как влияет на позицию | Arapov.trade',
+  //   realTitleUkr: 'Своп у трейдингу: що це і як впливає на позицію | Arapov.trade',
+  //   realTitleEn: 'Swap in Trading: What It Is and How It Affects a Position | Arapov.trade',
+  //   groupsRus: ['Трейдинг для начинающих'],
+  //   groupsUkr: ['Трейдинг для початківців'],
+  //   groupsEng: ['Trading for Beginners'],
+  //   id: 580,
+  // },
+  // {
+  //   titleUkr: 'Свінг-трейдинг: що це і кому підходить',
+  //   linkUkr: 'swing-trading',
+  //   imgUkr: '/assets/img/content/swing-trading.jpeg',
+  //   titleRus: 'Свинг-трейдинг: что это и кому подходит',
+  //   titleEn: 'Swing Trading: What It Is and Who It Suits',
+  //   descrUkr:
+  //     'Що таке свінг-трейдинг, на якому горизонті тримають угоду й чим він зручний тим, у кого немає часу на постійний моніторинг. Темп між інтрадеєм і позицією.',
+  //   descrEn:
+  //     'What swing trading is, on what horizon a trade is held and why it suits those with no time for constant monitoring, between intraday and position.',
+  //   descrRus:
+  //     'Что такое свинг-трейдинг, на каком горизонте держат сделку и чем он удобен тем, у кого нет времени на постоянный мониторинг. Темп между интрадеем и позицией.',
+  //   realTitleRus: 'Свинг-трейдинг: что это и кому подходит | Arapov.trade',
+  //   realTitleUkr: 'Свінг-трейдинг: що це і кому підходить | Arapov.trade',
+  //   realTitleEn: 'Swing Trading: What It Is and Who It Suits | Arapov.trade',
+  //   groupsRus: ['Трейдинг для начинающих'],
+  //   groupsUkr: ['Трейдинг для початківців'],
+  //   groupsEng: ['Trading for Beginners'],
+  //   id: 581,
+  // },
+  // {
+  //   titleUkr: 'Тейк-профіт: що це і як фіксувати прибуток',
+  //   linkUkr: 'takeprofit',
+  //   imgUkr: '/assets/img/content/takeprofit.jpeg',
+  //   titleRus: 'Тейк-профит: что это и как фиксировать прибыль',
+  //   titleEn: 'Take Profit: What It Is and How to Lock In Profit',
+  //   descrUkr:
+  //     'Що таке тейк-профіт, як ставити ціль за угодою заздалегідь і чому фіксація прибутку за планом важливіша за спроби спіймати самий верх. Жадібність проти системи.',
+  //   descrEn:
+  //     'What take profit is, how to set a trade target in advance and why locking profit by plan beats trying to catch the very top. Greed versus system.',
+  //   descrRus:
+  //     'Что такое тейк-профит, как ставить цель по сделке заранее и почему фиксация прибыли по плану важнее попыток поймать самый верх. Жадность против системы.',
+  //   realTitleRus: 'Тейк-профит: что это и как фиксировать прибыль | Arapov.trade',
+  //   realTitleUkr: 'Тейк-профіт: що це і як фіксувати прибуток | Arapov.trade',
+  //   realTitleEn: 'Take Profit: What It Is and How to Lock In Profit | Arapov.trade',
+  //   groupsRus: ['Трейдинг для начинающих'],
+  //   groupsUkr: ['Трейдинг для початківців'],
+  //   groupsEng: ['Trading for Beginners'],
+  //   id: 582,
+  // },
+  // {
+  //   titleUkr: 'Тейпридинг (читання стрічки): як читати потік ордерів',
+  //   linkUkr: 'tape-reading',
+  //   imgUkr: '/assets/img/content/tape-reading.jpeg',
+  //   titleRus: 'Тейпридинг (чтение ленты): как читать поток ордеров',
+  //   titleEn: 'Tape Reading: How to Read the Order Flow',
+  //   descrUkr:
+  //     'Що таке стрічка Time and Sales, як за потоком угод побачити великого гравця й прихованого продавця і чому новачку простіше читати ту саму логіку за обсягом.',
+  //   descrEn:
+  //     'What the Time and Sales tape is, how to spot a large player and a hidden seller in the trade flow and why a beginner reads the same logic via volume.',
+  //   descrRus:
+  //     'Что такое лента Time and Sales, как по потоку сделок увидеть крупного игрока и скрытого продавца и почему новичку проще читать ту же логику по объёму.',
+  //   realTitleRus: 'Тейпридинг (чтение ленты): как читать поток ордеров | Arapov.trade',
+  //   realTitleUkr: 'Тейпридинг (читання стрічки): як читати потік ордерів | Arapov.trade',
+  //   realTitleEn: 'Tape Reading: How to Read the Order Flow | Arapov.trade',
+  //   groupsRus: ['Объемный анализ рынка'],
+  //   groupsUkr: ['Об`ємний аналіз ринку'],
+  //   groupsEng: ['Market Volume Analysis'],
+  //   id: 583,
+  // },
+  // {
+  //   titleUkr: 'Тиковий обсяг проти реального: чому біржовий обсяг чесніший',
+  //   linkUkr: 'tick-vs-real-volume',
+  //   imgUkr: '/assets/img/content/tick-vs-real-volume.jpeg',
+  //   titleRus: 'Тиковый объём против реального: почему биржевой объём честнее',
+  //   titleEn: 'Tick volume vs real volume: why exchange volume is honest',
+  //   descrUkr:
+  //     'Чим тиковий обсяг відрізняється від реального біржового, чому тиковий спотворює картину і де взяти чесний обсяг: біржові ф\'ючерси CME.',
+  //   descrEn:
+  //     'How tick volume differs from real exchange volume, why tick volume distorts the picture and where to get honest volume: CME exchange futures.',
+  //   descrRus:
+  //     'Чем тиковый объём отличается от реального биржевого, почему тиковый искажает картину и где взять честный объём: биржевые фьючерсы CME.',
+  //   realTitleRus: 'Тиковый объём против реального: почему биржевой объём честнее | Arapov.trade',
+  //   realTitleUkr: 'Тиковий обсяг проти реального: чому біржовий обсяг чесніший | Arapov.trade',
+  //   realTitleEn: 'Tick volume vs real volume: why exchange volume is honest | Arapov.trade',
+  //   groupsRus: ['Объемный анализ рынка'],
+  //   groupsUkr: ['Об`ємний аналіз ринку'],
+  //   groupsEng: ['Market Volume Analysis'],
+  //   id: 584,
+  // },
+  // {
+  //   titleUkr: 'Токеноміка: що це і як оцінити криптопроєкт',
+  //   linkUkr: 'tokenomics',
+  //   imgUkr: '/assets/img/content/tokenomics.jpeg',
+  //   titleRus: 'Токеномика: что это и как оценить криптопроект',
+  //   titleEn: 'Tokenomics: What It Is and How to Assess a Crypto Project',
+  //   descrUkr:
+  //     'Що таке токеноміка, як розподіл монет, емісія й розблокування впливають на ціну і чому за нею видно ризик обвалу ще до купівлі токена.',
+  //   descrEn:
+  //     'What tokenomics is, how coin distribution, issuance and unlocks affect price and why it reveals crash risk before you even buy a token.',
+  //   descrRus:
+  //     'Что такое токеномика, как распределение монет, эмиссия и разблокировки влияют на цену и почему по ней виден риск обвала ещё до покупки токена.',
+  //   realTitleRus: 'Токеномика: что это и как оценить криптопроект | Arapov.trade',
+  //   realTitleUkr: 'Токеноміка: що це і як оцінити криптопроєкт | Arapov.trade',
+  //   realTitleEn: 'Tokenomics: What It Is and How to Assess a Crypto Project | Arapov.trade',
+  //   groupsRus: ['Криптовалюта'],
+  //   groupsUkr: ['Криптовалюта'],
+  //   groupsEng: ['Cryptocurrency'],
+  //   id: 585,
+  // },
+  // {
+  //   titleUkr: 'TON (Toncoin): що це за криптовалюта і які ризики',
+  //   linkUkr: 'toncoin',
+  //   imgUkr: '/assets/img/content/toncoin.jpeg',
+  //   titleRus: 'TON (Toncoin): что это за криптовалюта и какие риски',
+  //   titleEn: 'TON (Toncoin): What This Cryptocurrency Is and Its Risks',
+  //   descrUkr:
+  //     'Що таке блокчейн TON і монета Toncoin, чим він пов\'язаний із Telegram, як влаштований і на які ризики дивитися трейдеру, перш ніж заходити.',
+  //   descrEn:
+  //     'What the TON blockchain and the Toncoin coin are, how it ties to Telegram, how it is built and what risks a trader should watch before entering.',
+  //   descrRus:
+  //     'Что такое блокчейн TON и монета Toncoin, чем он связан с Telegram, как устроен и на какие риски смотреть трейдеру, прежде чем заходить.',
+  //   realTitleRus: 'TON (Toncoin): что это за криптовалюта и какие риски | Arapov.trade',
+  //   realTitleUkr: 'TON (Toncoin): що це за криптовалюта і які ризики | Arapov.trade',
+  //   realTitleEn: 'TON (Toncoin): What This Cryptocurrency Is and Its Risks | Arapov.trade',
+  //   groupsRus: ['Криптовалюта'],
+  //   groupsUkr: ['Криптовалюта'],
+  //   groupsEng: ['Cryptocurrency'],
+  //   id: 586,
+  // },
+  // {
+  //   titleUkr: 'Торгові боти й алготрейдинг: чи довіряти їм гроші',
+  //   linkUkr: 'trading-bots',
+  //   imgUkr: '/assets/img/content/trading-bots.jpeg',
+  //   titleRus: 'Торговые боты и алготрейдинг: доверять ли им деньги',
+  //   titleEn: 'Trading Bots and Algo Trading: Should You Trust Them?',
+  //   descrUkr:
+  //     'Як працюють торгові боти й алгоритми, у чому їхні сильні сторони й реальні ризики та чому «бот, що сам заробляє» найчастіше обман.',
+  //   descrEn:
+  //     'How trading bots and algorithms work, their real strengths and risks, and why a bot that earns on its own is most often a scam.',
+  //   descrRus:
+  //     'Как работают торговые боты и алгоритмы, в чём их сильные стороны и реальные риски и почему «бот, который сам зарабатывает» чаще всего обман.',
+  //   realTitleRus: 'Торговые боты и алготрейдинг: доверять ли им деньги | Arapov.trade',
+  //   realTitleUkr: 'Торгові боти й алготрейдинг: чи довіряти їм гроші | Arapov.trade',
+  //   realTitleEn: 'Trading Bots and Algo Trading: Should You Trust Them? | Arapov.trade',
+  //   groupsRus: ['Трейдинг для начинающих'],
+  //   groupsUkr: ['Трейдинг для початківців'],
+  //   groupsEng: ['Trading for Beginners'],
+  //   id: 587,
+  // },
+  // {
+  //   titleUkr: 'Щоденник трейдера: навіщо він потрібен і як його вести',
+  //   linkUkr: 'tradingjournal',
+  //   imgUkr: '/assets/img/content/tradingjournal.jpeg',
+  //   titleRus: 'Дневник трейдера: зачем он нужен и как его вести',
+  //   titleEn: 'Trading Journal: Why You Need One and How to Keep It',
+  //   descrUkr:
+  //     'Навіщо вести торговий щоденник, що в нього записувати і як він показує реальний вінрейт, помилки та емоції, яких у пам\'яті не видно.',
+  //   descrEn:
+  //     'Why keep a trading journal, what to record in it and how it shows the real win rate, mistakes and emotions that memory hides from you.',
+  //   descrRus:
+  //     'Зачем вести торговый дневник, что в него записывать и как он показывает реальные винрейт, ошибки и эмоции, которых в памяти не видно.',
+  //   realTitleRus: 'Дневник трейдера: зачем он нужен и как его вести | Arapov.trade',
+  //   realTitleUkr: 'Щоденник трейдера: навіщо він потрібен і як його вести | Arapov.trade',
+  //   realTitleEn: 'Trading Journal: Why You Need One and How to Keep It | Arapov.trade',
+  //   groupsRus: ['Психология трейдинга'],
+  //   groupsUkr: ['Психологія трейдингу'],
+  //   groupsEng: ['Trading Psychology'],
+  //   id: 588,
+  // },
+  // {
+  //   titleUkr: 'Торгові сесії форекс: час роботи й коли торгувати',
+  //   linkUkr: 'tradingsessions',
+  //   imgUkr: '/assets/img/content/tradingsessions.jpeg',
+  //   titleRus: 'Торговые сессии форекс: время работы и когда торговать',
+  //   titleEn: 'Forex Trading Sessions: Hours and When to Trade',
+  //   descrUkr:
+  //     'Час азійської, лондонської та нью-йоркської сесій, чому на їх перетині рухи сильніші і в які години новачку торгувати спокійніше.',
+  //   descrEn:
+  //     'The Asian, London and New York session hours, why moves are stronger at their overlap and which hours are calmer for a beginner to trade.',
+  //   descrRus:
+  //     'Время азиатской, лондонской и нью-йоркской сессий, почему на их пересечении движения сильнее и в какие часы новичку торговать спокойнее.',
+  //   realTitleRus: 'Торговые сессии форекс: время работы и когда торговать | Arapov.trade',
+  //   realTitleUkr: 'Торгові сесії форекс: час роботи й коли торгувати | Arapov.trade',
+  //   realTitleEn: 'Forex Trading Sessions: Hours and When to Trade | Arapov.trade',
+  //   groupsRus: ['Трейдинг для начинающих'],
+  //   groupsUkr: ['Трейдинг для початківців'],
+  //   groupsEng: ['Trading for Beginners'],
+  //   id: 589,
+  // },
+  // {
+  //   titleUkr: 'Трейлінг-стоп: що це і як правильно налаштувати',
+  //   linkUkr: 'trailingstop',
+  //   imgUkr: '/assets/img/content/trailingstop.jpeg',
+  //   titleRus: 'Трейлинг-стоп: что это и как правильно настроить',
+  //   titleEn: 'Trailing Stop: What It Is and How to Set It Right',
+  //   descrUkr:
+  //     'Що таке ковзний стоп, як він підтягується за ціною й захищає прибуток у тренді й чому занадто тісний трейлінг вибиває з угоди зарано.',
+  //   descrEn:
+  //     'What a trailing stop is, how it follows price and protects profit in a trend and why too tight a trailing knocks you out of a trade early.',
+  //   descrRus:
+  //     'Что такое скользящий стоп, как он подтягивается за ценой и защищает прибыль в тренде и почему слишком тесный трейлинг выбивает из сделки раньше времени.',
+  //   realTitleRus: 'Трейлинг-стоп: что это и как правильно настроить | Arapov.trade',
+  //   realTitleUkr: 'Трейлінг-стоп: що це і як правильно налаштувати | Arapov.trade',
+  //   realTitleEn: 'Trailing Stop: What It Is and How to Set It Right | Arapov.trade',
+  //   groupsRus: ['Трейдинг для начинающих'],
+  //   groupsUkr: ['Трейдинг для початківців'],
+  //   groupsEng: ['Trading for Beginners'],
+  //   id: 590,
+  // },
+  // {
+  //   titleUkr: 'Дельта обсягу і CVD: що це і як читати кумулятивну дельту',
+  //   linkUkr: 'volume-delta-cvd',
+  //   imgUkr: '/assets/img/content/volume-delta-cvd.jpeg',
+  //   titleRus: 'Дельта объёма и CVD: что это и как читать кумулятивную дельту',
+  //   titleEn: 'Volume delta and CVD: what they are and how to read cumulative delta',
+  //   descrUkr:
+  //     'Що таке дельта обсягу і кумулятивна дельта CVD, як вони показують перевагу покупців або продавців і чому чесна дельта є лише на біржі.',
+  //   descrEn:
+  //     'What volume delta and cumulative delta CVD are, how they show the edge of buyers or sellers and why honest delta exists only on the exchange.',
+  //   descrRus:
+  //     'Что такое дельта объёма и кумулятивная дельта CVD, как они показывают перевес покупателей или продавцов и почему честная дельта есть только на бирже.',
+  //   realTitleRus: 'Дельта объёма и CVD: что это и как читать кумулятивную дельту | Arapov.trade',
+  //   realTitleUkr: 'Дельта обсягу і CVD: що це і як читати кумулятивну дельту | Arapov.trade',
+  //   realTitleEn: 'Volume delta and CVD: what they are and how to read cumulative delta | Arapov.trade',
+  //   groupsRus: ['Объемный анализ рынка'],
+  //   groupsUkr: ['Об`ємний аналіз ринку'],
+  //   groupsEng: ['Market Volume Analysis'],
+  //   id: 591,
+  // },
+  // {
+  //   titleUkr: 'Профіль обсягу в трейдингу: POC, Value Area, VAH і VAL',
+  //   linkUkr: 'volume-profile',
+  //   imgUkr: '/assets/img/content/volume-profile.jpeg',
+  //   titleRus: 'Профиль объёма в трейдинге: POC, Value Area, VAH и VAL',
+  //   titleEn: 'Volume Profile in Trading: POC, Value Area, VAH and VAL',
+  //   descrUkr:
+  //     'Що таке профіль обсягу, що показують POC, Value Area, VAH і VAL, чим профіль обсягу відрізняється від звичайного обсягу і як трейдер використовує його рівні.',
+  //   descrEn:
+  //     'What volume profile is, what POC, Value Area, VAH and VAL show, how volume profile differs from ordinary volume, and how a trader uses its levels.',
+  //   descrRus:
+  //     'Что такое профиль объёма, что показывают POC, Value Area, VAH и VAL, чем профиль объёма отличается от обычного объёма и как трейдер использует его уровни.',
+  //   realTitleRus: 'Профиль объёма в трейдинге: POC, Value Area, VAH и VAL | Arapov.trade',
+  //   realTitleUkr: 'Профіль обсягу в трейдингу: POC, Value Area, VAH і VAL | Arapov.trade',
+  //   realTitleEn: 'Volume Profile in Trading: POC, Value Area, VAH and VAL | Arapov.trade',
+  //   groupsRus: ['Объемный анализ рынка'],
+  //   groupsUkr: ['Об`ємний аналіз ринку'],
+  //   groupsEng: ['Market Volume Analysis'],
+  //   id: 592,
+  // },
+  // {
+  //   titleUkr: 'Що таке дивіденди простими словами: як і коли їх платять',
+  //   linkUkr: 'what-are-dividends',
+  //   imgUkr: '/assets/img/content/what-are-dividends.jpeg',
+  //   titleRus: 'Что такое дивиденды простыми словами: как и когда их платят',
+  //   titleEn: 'What Are Dividends in Simple Terms: How and When They Are Paid',
+  //   descrUkr:
+  //     'Що таке дивіденди, як і коли компанії їх виплачують, що таке дата відсічки й дивідендний геп і чому висока дохідність не завжди привід купувати акцію.',
+  //   descrEn:
+  //     'What dividends are, how and when companies pay them, what the record date and the dividend gap are, and why a high yield is not always a reason to buy a stock.',
+  //   descrRus:
+  //     'Что такое дивиденды, как и когда компании их выплачивают, что такое дата отсечки и дивидендный гэп и почему высокая доходность не всегда повод покупать акцию.',
+  //   realTitleRus: 'Что такое дивиденды простыми словами: как и когда их платят | Arapov.trade',
+  //   realTitleUkr: 'Що таке дивіденди простими словами: як і коли їх платять | Arapov.trade',
+  //   realTitleEn: 'What Are Dividends in Simple Terms: How and When They Are Paid | Arapov.trade',
+  //   groupsRus: ['Фундаментальный анализ'],
+  //   groupsUkr: ['Фундаментальний аналіз'],
+  //   groupsEng: ['Fundamental Analysis'],
+  //   id: 593,
+  // },
+  // {
+  //   titleUkr: 'Що таке CFD простими словами: контракт на різницю цін',
+  //   linkUkr: 'what-is-cfd',
+  //   imgUkr: '/assets/img/content/what-is-cfd.jpeg',
+  //   titleRus: 'Что такое CFD простыми словами: контракт на разницу цен',
+  //   titleEn: 'What Is a CFD in Simple Terms: A Contract for Difference',
+  //   descrUkr:
+  //     'Що таке CFD, як працює торгівля контрактом на різницю, хто виступає контрагентом, які в CFD ризики і чим він відрізняється від володіння активом.',
+  //   descrEn:
+  //     'What a CFD is, how trading a contract for difference works, who the counterparty is, what the risks of a CFD are and how it differs from owning the asset.',
+  //   descrRus:
+  //     'Что такое CFD, как работает торговля контрактом на разницу, кто выступает контрагентом, какие у CFD риски и чем он отличается от владения активом.',
+  //   realTitleRus: 'Что такое CFD простыми словами: контракт на разницу цен | Arapov.trade',
+  //   realTitleUkr: 'Що таке CFD простими словами: контракт на різницю цін | Arapov.trade',
+  //   realTitleEn: 'What Is a CFD in Simple Terms: A Contract for Difference | Arapov.trade',
+  //   groupsRus: ['Трейдинг для начинающих'],
+  //   groupsUkr: ['Трейдинг для початківців'],
+  //   groupsEng: ['Trading for Beginners'],
+  //   id: 594,
+  // },
+  // {
+  //   titleUkr: 'Що таке ETF простими словами і чим він відрізняється від акції',
+  //   linkUkr: 'what-is-etf',
+  //   imgUkr: '/assets/img/content/what-is-etf.jpeg',
+  //   titleRus: 'Что такое ETF простыми словами и чем он отличается от акции',
+  //   titleEn: 'What Is an ETF in Simple Terms and How It Differs from a Stock',
+  //   descrUkr:
+  //     'Що таке ETF, як влаштований біржовий фонд, чим він відрізняється від акції та ПІФа і які в ETF плюси та ризики для інвестора простими словами.',
+  //   descrEn:
+  //     'What an ETF is, how an exchange-traded fund works, how it differs from a stock and a mutual fund, and what the pros and risks of an ETF are for an investor.',
+  //   descrRus:
+  //     'Что такое ETF, как устроен биржевой фонд, чем он отличается от акции и ПИФа и какие у ETF плюсы и риски для инвестора простыми словами.',
+  //   realTitleRus: 'Что такое ETF простыми словами и чем он отличается от акции | Arapov.trade',
+  //   realTitleUkr: 'Що таке ETF простими словами і чим він відрізняється від акції | Arapov.trade',
+  //   realTitleEn: 'What Is an ETF in Simple Terms and How It Differs from a Stock | Arapov.trade',
+  //   groupsRus: ['Трейдинг для начинающих'],
+  //   groupsUkr: ['Трейдинг для початківців'],
+  //   groupsEng: ['Trading for Beginners'],
+  //   id: 595,
+  // },
+  // {
+  //   titleUkr: 'Що таке IPO простими словами і чи варто брати участь',
+  //   linkUkr: 'what-is-ipo',
+  //   imgUkr: '/assets/img/content/what-is-ipo.jpeg',
+  //   titleRus: 'Что такое IPO простыми словами и стоит ли участвовать',
+  //   titleEn: 'What Is an IPO in Simple Terms and Is It Worth Taking Part',
+  //   descrUkr:
+  //     'Що таке IPO, як проходить первинне розміщення акцій, що таке андеррайтер, алокація та lock-up і чому акції часто падають після виходу на біржу.',
+  //   descrEn:
+  //     'What an IPO is, how an initial public offering works, what an underwriter, allocation and lock-up are, and why shares often fall after going public.',
+  //   descrRus:
+  //     'Что такое IPO, как проходит первичное размещение акций, что такое андеррайтер, аллокация и lock-up и почему акции часто падают после выхода на биржу.',
+  //   realTitleRus: 'Что такое IPO простыми словами и стоит ли участвовать | Arapov.trade',
+  //   realTitleUkr: 'Що таке IPO простими словами і чи варто брати участь | Arapov.trade',
+  //   realTitleEn: 'What Is an IPO in Simple Terms and Is It Worth Taking Part | Arapov.trade',
+  //   groupsRus: ['Трейдинг для начинающих'],
+  //   groupsUkr: ['Трейдинг для початківців'],
+  //   groupsEng: ['Trading for Beginners'],
+  //   id: 596,
+  // },
+  // {
+  //   titleUkr: 'Що таке кредитне плече в трейдингу простими словами',
+  //   linkUkr: 'what-is-leverage',
+  //   imgUkr: '/assets/img/content/what-is-leverage.jpeg',
+  //   titleRus: 'Что такое кредитное плечо в трейдинге простыми словами',
+  //   titleEn: 'What Is Leverage in Trading in Simple Terms',
+  //   descrUkr:
+  //     'Що таке кредитне плече, як воно працює, що таке маржа і чим небезпечне велике плече: маржин-кол, ліквідація і чому плече посилює і прибуток, і збиток.',
+  //   descrEn:
+  //     'What leverage is, how it works, what margin is, and why high leverage is dangerous: margin calls, liquidation and why leverage amplifies both profit and loss.',
+  //   descrRus:
+  //     'Что такое кредитное плечо, как оно работает, что такое маржа и чем опасно большое плечо: маржин-колл, ликвидация и почему плечо усиливает и прибыль, и убыток.',
+  //   realTitleRus: 'Что такое кредитное плечо в трейдинге простыми словами | Arapov.trade',
+  //   realTitleUkr: 'Що таке кредитне плече в трейдингу простими словами | Arapov.trade',
+  //   realTitleEn: 'What Is Leverage in Trading in Simple Terms | Arapov.trade',
+  //   groupsRus: ['Трейдинг для начинающих'],
+  //   groupsUkr: ['Трейдинг для початківців'],
+  //   groupsEng: ['Trading for Beginners'],
+  //   id: 597,
+  // },
+  // {
+  //   titleUkr: 'Що таке маржин-кол простими словами і як його уникнути',
+  //   linkUkr: 'what-is-margin-call',
+  //   imgUkr: '/assets/img/content/what-is-margin-call.jpeg',
+  //   titleRus: 'Что такое маржин-колл простыми словами и как его избежать',
+  //   titleEn: 'What Is a Margin Call in Simple Terms and How to Avoid It',
+  //   descrUkr:
+  //     'Що таке маржин-кол, коли він настає, чим відрізняється від стоп-ауту й ліквідації і як не отримати маржин-кол при торгівлі з кредитним плечем.',
+  //   descrEn:
+  //     'What a margin call is, when it happens, how it differs from a stop-out and liquidation, and how to avoid a margin call when trading with leverage.',
+  //   descrRus:
+  //     'Что такое маржин-колл, когда он наступает, чем отличается от стоп-аута и ликвидации и как не получить маржин-колл при торговле с кредитным плечом.',
+  //   realTitleRus: 'Что такое маржин-колл простыми словами и как его избежать | Arapov.trade',
+  //   realTitleUkr: 'Що таке маржин-кол простими словами і як його уникнути | Arapov.trade',
+  //   realTitleEn: 'What Is a Margin Call in Simple Terms and How to Avoid It | Arapov.trade',
+  //   groupsRus: ['Трейдинг для начинающих'],
+  //   groupsUkr: ['Трейдинг для початківців'],
+  //   groupsEng: ['Trading for Beginners'],
+  //   id: 598,
+  // },
+  // {
+  //   titleUkr: 'Що таке NFT простими словами',
+  //   linkUkr: 'what-is-nft',
+  //   imgUkr: '/assets/img/content/what-is-nft.jpeg',
+  //   titleRus: 'Что такое NFT простыми словами',
+  //   titleEn: 'What an NFT Is in Simple Terms',
+  //   descrUkr:
+  //     'Що таке незамінний токен, що насправді купує власник NFT — запис про володіння, а не саму картинку — і чому це високий ризик.',
+  //   descrEn:
+  //     'What a non-fungible token is, what an NFT owner actually buys (a record of ownership, not the picture itself) and why it is high risk.',
+  //   descrRus:
+  //     'Что такое невзаимозаменяемый токен, что на самом деле покупает владелец NFT — запись о владении, а не саму картинку — и почему это высокий риск.',
+  //   realTitleRus: 'Что такое NFT простыми словами | Arapov.trade',
+  //   realTitleUkr: 'Що таке NFT простими словами | Arapov.trade',
+  //   realTitleEn: 'What an NFT Is in Simple Terms | Arapov.trade',
+  //   groupsRus: ['Криптовалюта'],
+  //   groupsUkr: ['Криптовалюта'],
+  //   groupsEng: ['Cryptocurrency'],
+  //   id: 599,
+  // },
+  // {
+  //   titleUkr: 'Переторгівля: що це і як перестати торгувати зайве',
+  //   linkUkr: 'what-is-overtrading',
+  //   imgUkr: '/assets/img/content/what-is-overtrading.jpeg',
+  //   titleRus: 'Переторговля: что это и как перестать торговать лишнее',
+  //   titleEn: 'Overtrading: What It Is and How to Stop Trading Excess',
+  //   descrUkr:
+  //     'Що таке переторгівля, чому зайві угоди тихо зливають депозит через комісії й дисперсію і які ліміти допомагають перестати торгувати на емоціях.',
+  //   descrEn:
+  //     'What overtrading is, why extra trades quietly drain a deposit through fees and variance and which limits help you stop trading on emotions.',
+  //   descrRus:
+  //     'Что такое переторговля, почему лишние сделки тихо сливают депозит через комиссии и дисперсию и какие лимиты помогают перестать торговать на эмоциях.',
+  //   realTitleRus: 'Переторговля: что это и как перестать торговать лишнее | Arapov.trade',
+  //   realTitleUkr: 'Переторгівля: що це і як перестати торгувати зайве | Arapov.trade',
+  //   realTitleEn: 'Overtrading: What It Is and How to Stop Trading Excess | Arapov.trade',
+  //   groupsRus: ['Психология трейдинга'],
+  //   groupsUkr: ['Психологія трейдингу'],
+  //   groupsEng: ['Trading Psychology'],
+  //   id: 600,
+  // },
+  // {
+  //   titleUkr: 'Що таке акція простими словами і як на ній заробляють',
+  //   linkUkr: 'what-is-stock',
+  //   imgUkr: '/assets/img/content/what-is-stock.jpeg',
+  //   titleRus: 'Что такое акция простыми словами и как на ней зарабатывают',
+  //   titleEn: 'What Is a Stock in Simple Terms and How People Earn on It',
+  //   descrUkr:
+  //     'Що таке акція, як на акціях заробляють на зростанні ціни та дивідендах, чим відрізняються звичайні та привілейовані акції і які в них ризики.',
+  //   descrEn:
+  //     'What a stock is, how people earn on stocks through price growth and dividends, how common and preferred shares differ, and what their risks are.',
+  //   descrRus:
+  //     'Что такое акция, как на акциях зарабатывают на росте цены и дивидендах, чем отличаются обыкновенные и привилегированные акции и какие у них риски.',
+  //   realTitleRus: 'Что такое акция простыми словами и как на ней зарабатывают | Arapov.trade',
+  //   realTitleUkr: 'Що таке акція простими словами і як на ній заробляють | Arapov.trade',
+  //   realTitleEn: 'What Is a Stock in Simple Terms and How People Earn on It | Arapov.trade',
+  //   groupsRus: ['Трейдинг для начинающих'],
+  //   groupsUkr: ['Трейдинг для початківців'],
+  //   groupsEng: ['Trading for Beginners'],
+  //   id: 601,
+  // },
+  // {
+  //   titleUkr: 'Whitepaper: що це і як читати вайтпейпер проєкту',
+  //   linkUkr: 'what-is-whitepaper',
+  //   imgUkr: '/assets/img/content/what-is-whitepaper.jpeg',
+  //   titleRus: 'Whitepaper: что это и как читать вайтпейпер проекта',
+  //   titleEn: 'Whitepaper: What It Is and How to Read a Project\'s Paper',
+  //   descrUkr:
+  //     'Що таке вайтпейпер криптопроєкту, що має бути в сильному документі і за якими червоними прапорцями відсіяти скам ще до купівлі токена.',
+  //   descrEn:
+  //     'What a crypto project whitepaper is, what a strong document should contain and by which red flags to filter out a scam before buying a token.',
+  //   descrRus:
+  //     'Что такое вайтпейпер криптопроекта, что должно быть в сильном документе и по каким красным флагам отсеять скам ещё до покупки токена.',
+  //   realTitleRus: 'Whitepaper: что это и как читать вайтпейпер проекта | Arapov.trade',
+  //   realTitleUkr: 'Whitepaper: що це і як читати вайтпейпер проєкту | Arapov.trade',
+  //   realTitleEn: 'Whitepaper: What It Is and How to Read a Project\'s Paper | Arapov.trade',
+  //   groupsRus: ['Криптовалюта'],
+  //   groupsUkr: ['Криптовалюта'],
+  //   groupsEng: ['Cryptocurrency'],
+  //   id: 602,
+  // },
+  // {
+  //   titleUkr: 'Індикатор Williams %R: що це і як його читати',
+  //   linkUkr: 'williamsr',
+  //   imgUkr: '/assets/img/content/williamsr.jpeg',
+  //   titleRus: 'Индикатор Williams %R: что это и как его читать',
+  //   titleEn: 'Williams %R indicator: what it is and how to read it',
+  //   descrUkr:
+  //     'Що таке індикатор Williams %R, як він вимірює положення закриття в діапазоні, що значать зони перекупленості і чому це не сигнал на вхід.',
+  //   descrEn:
+  //     'What the Williams %R indicator is, how it measures the position of the close in the range, what the overbought zones mean and why it is not an entry signal.',
+  //   descrRus:
+  //     'Что такое индикатор Williams %R, как он измеряет положение закрытия в диапазоне, что значат зоны перекупленности и почему это не сигнал на вход.',
+  //   realTitleRus: 'Индикатор Williams %R: что это и как его читать | Arapov.trade',
+  //   realTitleUkr: 'Індикатор Williams %R: що це і як його читати | Arapov.trade',
+  //   realTitleEn: 'Williams %R indicator: what it is and how to read it | Arapov.trade',
+  //   groupsRus: ['Технический анализ'],
+  //   groupsUkr: ['Технічний аналіз'],
+  //   groupsEng: ['Technical Analysis'],
+  //   id: 603,
+  // },
+  // {
+  //   titleUkr: 'Вінрейт: чому високий відсоток перемог не дорівнює прибуток',
+  //   linkUkr: 'win-rate',
+  //   imgUkr: '/assets/img/content/win-rate.jpeg',
+  //   titleRus: 'Винрейт: почему высокий процент побед не равно прибыль',
+  //   titleEn: 'Win Rate: Why a High Win Percentage Isn\'t Profit',
+  //   descrUkr:
+  //     'Що таке вінрейт, як його порахувати й чому високий відсоток перемог без співвідношення ризику до прибутку — прикраса збиткового рахунку. На цифрах.',
+  //   descrEn:
+  //     'What win rate is, how to count it and why a high win percentage without the risk-to-reward ratio is decoration on a losing account. On the numbers.',
+  //   descrRus:
+  //     'Что такое винрейт, как его посчитать и почему высокий процент побед без учёта соотношения риска к прибыли — украшение убыточного счёта. На цифрах.',
+  //   realTitleRus: 'Винрейт: почему высокий процент побед не равно прибыль | Arapov.trade',
+  //   realTitleUkr: 'Вінрейт: чому високий відсоток перемог не дорівнює прибуток | Arapov.trade',
+  //   realTitleEn: 'Win Rate: Why a High Win Percentage Isn\'t Profit | Arapov.trade',
+  //   groupsRus: ['Трейдинг для начинающих'],
+  //   groupsUkr: ['Трейдинг для початківців'],
+  //   groupsEng: ['Trading for Beginners'],
+  //   id: 604,
+  // },
+
   ];
 }

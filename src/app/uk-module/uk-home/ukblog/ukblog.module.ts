@@ -1111,13 +1111,13 @@ const routes: Routes = [
         (m) => m.OnehundredElevenUkBlogModule
       ),
   },
-  // {
-  //   path: '112', //112
-  //   loadChildren: () =>
-  //     import('../ukblog/onehundred-twelve-uk-blog/onehundred-twelve-uk-blog.module').then(
-  //       (m) => m.OnehundredTwelveUkBlogModule
-  //     ),
-  // },
+  {
+    path: 'adx', //112
+    loadChildren: () =>
+      import('../ukblog/onehundred-twelve-uk-blog/onehundred-twelve-uk-blog.module').then(
+        (m) => m.OnehundredTwelveUkBlogModule
+      ),
+  },
   //  {
   //       path: '113', //113
   //       loadChildren: () =>

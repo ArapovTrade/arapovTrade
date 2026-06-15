@@ -1118,13 +1118,13 @@ const routes: Routes = [
             (m) => m.OnehundredElevenRuBlogModule,
           ),
       },
-      // {
-      //   path: '112', //112
-      //   loadChildren: () =>
-      //     import('../ru-blog/onehundred-twelve-ru-blog/onehundred-twelve-ru-blog.module').then(
-      //       (m) => m.OnehundredTwelveRuBlogModule,
-      //     ),
-      // },
+      {
+        path: 'adx', //112
+        loadChildren: () =>
+          import('../ru-blog/onehundred-twelve-ru-blog/onehundred-twelve-ru-blog.module').then(
+            (m) => m.OnehundredTwelveRuBlogModule,
+          ),
+      },
       //  {
       //   path: '113', //113
       //   loadChildren: () =>

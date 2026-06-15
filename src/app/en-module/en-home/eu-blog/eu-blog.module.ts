@@ -1115,13 +1115,13 @@ const routes: Routes = [
             (m) => m.OnehundredElevenEnBlogModule,
           ),
       },
-      // {
-      //   path: '112', //112
-      //   loadChildren: () =>
-      //     import('../eu-blog/onehundred-twelve-en-blog/onehundred-twelve-en-blog.module').then(
-      //       (m) => m.OnehundredTwelveEnBlogModule,
-      //     ),
-      // },
+      {
+        path: 'adx', //112
+        loadChildren: () =>
+          import('../eu-blog/onehundred-twelve-en-blog/onehundred-twelve-en-blog.module').then(
+            (m) => m.OnehundredTwelveEnBlogModule,
+          ),
+      },
       // {
       //   path: '113', //113
       //   loadChildren: () =>
