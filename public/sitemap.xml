@@ -50,7 +50,7 @@
   </url>
   <url>
     <loc>https://arapov.trade/ru/main</loc>
-      <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="uk" href="https://arapov.trade"/>
@@ -60,7 +60,7 @@
   </url>
   <url>
     <loc>https://arapov.trade/en/main</loc>
-      <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="uk" href="https://arapov.trade"/>
@@ -108,7 +108,7 @@
   <!-- ============================================ -->
   <!-- СТАТЬИ / ARTICLES (A-Z) -->
   <!-- ============================================ -->
-  
+
   <url>
     <loc>https://arapov.trade/uk/freestudying/bitcoin-crash-stops</loc>
     <lastmod>2026-06-11</lastmod>
@@ -4863,7 +4863,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://arapov.trade/en/freestudying/about"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://arapov.trade/uk/freestudying/about"/>
   </url>
- 
+
 
   <url>
     <loc>https://arapov.trade/ru/freestudying/tradingview-record</loc>
@@ -4997,5 +4997,37 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://arapov.trade/ru/freestudying/fullvideocourse"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://arapov.trade/en/freestudying/fullvideocourse"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://arapov.trade/uk/freestudying/fullvideocourse"/>
+  </url>
+
+
+  <url>
+    <loc>https://arapov.trade/ru/freestudying/adx</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://arapov.trade/uk/freestudying/adx"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://arapov.trade/ru/freestudying/adx"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arapov.trade/en/freestudying/adx"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arapov.trade/uk/freestudying/adx"/>
+  </url>
+  <url>
+    <loc>https://arapov.trade/uk/freestudying/adx</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://arapov.trade/uk/freestudying/adx"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://arapov.trade/ru/freestudying/adx"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arapov.trade/en/freestudying/adx"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arapov.trade/uk/freestudying/adx"/>
+  </url>
+  <url>
+    <loc>https://arapov.trade/en/freestudying/adx</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://arapov.trade/uk/freestudying/adx"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://arapov.trade/ru/freestudying/adx"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arapov.trade/en/freestudying/adx"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arapov.trade/uk/freestudying/adx"/>
   </url>
 </urlset>
