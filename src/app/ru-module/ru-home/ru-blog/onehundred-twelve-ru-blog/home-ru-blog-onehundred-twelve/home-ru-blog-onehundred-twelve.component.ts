@@ -72,10 +72,7 @@ export class HomeRuBlogOnehundredTwelveComponent {
       property: 'og:image',
       content: '/assets/img/content/adx.jpeg',
     });
-    this.meta.updateTag({
-      name: 'headline',
-      content: 'Поглощение: Bullish и Bearish | ArapovTrade',
-    });
+     
 
     this.gerRandom();
   }

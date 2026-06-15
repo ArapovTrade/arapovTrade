@@ -3255,26 +3255,26 @@ export class ArticlesService {
     groupsEng: ['Technical Analysis'],
     id: 501,
   },
-  // {
-  //   titleUkr: 'Нейромережі в трейдингу: що вміє ШІ й де його межа',
-  //   linkUkr: 'ai-trading',
-  //   imgUkr: '/assets/img/content/ai-trading.jpeg',
-  //   titleRus: 'Нейросети в трейдинге: что умеет ИИ и где его предел',
-  //   titleEn: 'Neural Networks in Trading: What AI Can and Cannot Do',
-  //   descrUkr:
-  //     'Що нейромережі реально вміють на ринку, а що їм не до снаги, чому ШІ не передбачає майбутнє і як використати його як інструмент, а не оракула.',
-  //   descrEn:
-  //     'What neural networks really can do on the market, what is beyond them, why AI does not predict the future and how to use it as a tool, not an oracle.',
-  //   descrRus:
-  //     'Что нейросети реально умеют на рынке, а что им не под силу, почему ИИ не предсказывает будущее и как использовать его как инструмент, а не оракула.',
-  //   realTitleRus: 'Нейросети в трейдинге: что умеет ИИ и где его предел | Arapov.trade',
-  //   realTitleUkr: 'Нейромережі в трейдингу: що вміє ШІ й де його межа | Arapov.trade',
-  //   realTitleEn: 'Neural Networks in Trading: What AI Can and Cannot Do | Arapov.trade',
-  //   groupsRus: ['Трейдинг для начинающих'],
-  //   groupsUkr: ['Трейдинг для початківців'],
-  //   groupsEng: ['Trading for Beginners'],
-  //   id: 502,
-  // },
+  {
+    titleUkr: 'Нейромережі в трейдингу: що вміє ШІ й де його межа',
+    linkUkr: 'ai-trading',
+    imgUkr: '/assets/img/content/ai-trading.jpeg',
+    titleRus: 'Нейросети в трейдинге: что умеет ИИ и где его предел',
+    titleEn: 'Neural Networks in Trading: What AI Can and Cannot Do',
+    descrUkr:
+      'Що нейромережі реально вміють на ринку, а що їм не до снаги, чому ШІ не передбачає майбутнє і як використати його як інструмент, а не оракула.',
+    descrEn:
+      'What neural networks really can do on the market, what is beyond them, why AI does not predict the future and how to use it as a tool, not an oracle.',
+    descrRus:
+      'Что нейросети реально умеют на рынке, а что им не под силу, почему ИИ не предсказывает будущее и как использовать его как инструмент, а не оракула.',
+    realTitleRus: 'Нейросети в трейдинге: что умеет ИИ и где его предел | Arapov.trade',
+    realTitleUkr: 'Нейромережі в трейдингу: що вміє ШІ й де його межа | Arapov.trade',
+    realTitleEn: 'Neural Networks in Trading: What AI Can and Cannot Do | Arapov.trade',
+    groupsRus: ['Трейдинг для начинающих'],
+    groupsUkr: ['Трейдинг для початківців'],
+    groupsEng: ['Trading for Beginners'],
+    id: 502,
+  },
   // {
   //   titleUkr: 'Ейрдроп у крипті: що це і як не натрапити на скам',
   //   linkUkr: 'airdrop',

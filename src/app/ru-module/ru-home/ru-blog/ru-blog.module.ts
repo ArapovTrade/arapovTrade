@@ -1125,13 +1125,13 @@ const routes: Routes = [
             (m) => m.OnehundredTwelveRuBlogModule,
           ),
       },
-      //  {
-      //   path: '113', //113
-      //   loadChildren: () =>
-      //     import('../ru-blog/onehundred-thirteen-ru-blog/onehundred-thirteen-ru-blog.module').then(
-      //       (m) => m.OnehundredThirteenRuBlogModule,
-      //     ),
-      // },
+       {
+        path: 'ai-trading', //113
+        loadChildren: () =>
+          import('../ru-blog/onehundred-thirteen-ru-blog/onehundred-thirteen-ru-blog.module').then(
+            (m) => m.OnehundredThirteenRuBlogModule,
+          ),
+      },
       // {
       //   path: '114', //114
       //   loadChildren: () =>
