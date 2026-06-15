@@ -1146,13 +1146,13 @@ const routes: Routes = [
             (m) => m.OnehundredFifteenRuBlogModule,
           ),
       },
-      // {
-      //   path: '116', //116
-      //   loadChildren: () =>
-      //     import('../ru-blog/onehundred-sixteen-ru-blog/onehundred-sixteen-ru-blog.module').then(
-      //       (m) => m.OnehundredSixteenRuBlogModule,
-      //     ),
-      // },
+      {
+        path: 'backtest', //116
+        loadChildren: () =>
+          import('../ru-blog/onehundred-sixteen-ru-blog/onehundred-sixteen-ru-blog.module').then(
+            (m) => m.OnehundredSixteenRuBlogModule,
+          ),
+      },
       // {
       //   path: '117', //117
       //   loadChildren: () =>

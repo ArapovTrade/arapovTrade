@@ -1143,13 +1143,13 @@ const routes: Routes = [
             (m) => m.OnehundredFifteenEnBlogModule,
           ),
       },
-      // {
-      //   path: '116', //116
-      //   loadChildren: () =>
-      //     import('../eu-blog/onehundred-sixteen-en-blog/onehundred-sixteen-en-blog.module').then(
-      //       (m) => m.OnehundredSixteenEnBlogModule,
-      //     ),
-      // },
+      {
+        path: 'backtest', //116
+        loadChildren: () =>
+          import('../eu-blog/onehundred-sixteen-en-blog/onehundred-sixteen-en-blog.module').then(
+            (m) => m.OnehundredSixteenEnBlogModule,
+          ),
+      },
       // {
       //   path: '117', //117
       //   loadChildren: () =>

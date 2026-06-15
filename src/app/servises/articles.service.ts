@@ -3315,26 +3315,26 @@ export class ArticlesService {
     groupsEng: ['Cryptocurrency'],
     id: 504,
   },
-  // {
-  //   titleUkr: 'Бектест стратегії: що це і як не обдурити себе',
-  //   linkUkr: 'backtest',
-  //   imgUkr: '/assets/img/content/backtest.jpeg',
-  //   titleRus: 'Бэктест стратегии: что это и как не обмануть себя',
-  //   titleEn: 'Strategy Backtest: What It Is and How Not to Fool Yourself',
-  //   descrUkr:
-  //     'Що таке бектест торгової стратегії, як чесно тестувати її на історії і чому красиві цифри на минулому оманливі й не дають гарантій.',
-  //   descrEn:
-  //     'What a strategy backtest is, how to test it honestly on history and why pretty numbers on the past are deceptive and give no guarantees.',
-  //   descrRus:
-  //     'Что такое бэктест торговой стратегии, как честно тестировать её на истории и почему красивые цифры на прошлом обманчивы и не дают гарантий.',
-  //   realTitleRus: 'Бэктест стратегии: что это и как не обмануть себя | Arapov.trade',
-  //   realTitleUkr: 'Бектест стратегії: що це і як не обдурити себе | Arapov.trade',
-  //   realTitleEn: 'Strategy Backtest: What It Is and How Not to Fool Yourself | Arapov.trade',
-  //   groupsRus: ['Психология трейдинга'],
-  //   groupsUkr: ['Психологія трейдингу'],
-  //   groupsEng: ['Trading Psychology'],
-  //   id: 505,
-  // },
+  {
+    titleUkr: 'Бектест стратегії: що це і як не обдурити себе',
+    linkUkr: 'backtest',
+    imgUkr: '/assets/img/content/backtest.jpeg',
+    titleRus: 'Бэктест стратегии: что это и как не обмануть себя',
+    titleEn: 'Strategy Backtest: What It Is and How Not to Fool Yourself',
+    descrUkr:
+      'Що таке бектест торгової стратегії, як чесно тестувати її на історії і чому красиві цифри на минулому оманливі й не дають гарантій.',
+    descrEn:
+      'What a strategy backtest is, how to test it honestly on history and why pretty numbers on the past are deceptive and give no guarantees.',
+    descrRus:
+      'Что такое бэктест торговой стратегии, как честно тестировать её на истории и почему красивые цифры на прошлом обманчивы и не дают гарантий.',
+    realTitleRus: 'Бэктест стратегии: что это и как не обмануть себя | Arapov.trade',
+    realTitleUkr: 'Бектест стратегії: що це і як не обдурити себе | Arapov.trade',
+    realTitleEn: 'Strategy Backtest: What It Is and How Not to Fool Yourself | Arapov.trade',
+    groupsRus: ['Психология трейдинга'],
+    groupsUkr: ['Психологія трейдингу'],
+    groupsEng: ['Trading Psychology'],
+    id: 505,
+  },
   // {
   //   titleUkr: 'Що таке облігації простими словами: купон, номінал, дохідність',
   //   linkUkr: 'bonds-coupon-yield',
