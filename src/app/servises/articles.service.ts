@@ -3295,26 +3295,26 @@ export class ArticlesService {
     groupsEng: ['Cryptocurrency'],
     id: 503,
   },
-  // {
-  //   titleUkr: 'Альтсезон: що це і як пов\'язаний із домінацією біткоїна',
-  //   linkUkr: 'altseason',
-  //   imgUkr: '/assets/img/content/altseason.jpeg',
-  //   titleRus: 'Альтсезон: что это и как связан с доминацией биткоина',
-  //   titleEn: 'Altseason: What It Is and How It Ties to Bitcoin Dominance',
-  //   descrUkr:
-  //     'Що таке альтсезон, чому капітал перетікає з біткоїна в альткоїни, як це пов\'язано з домінацією BTC і чому кінець альтсезону часто болісний.',
-  //   descrEn:
-  //     'What altseason is, why capital flows from bitcoin into altcoins, how it relates to BTC dominance and why the end of altseason is often painful.',
-  //   descrRus:
-  //     'Что такое альтсезон, почему капитал перетекает из биткоина в альткоины, как это связано с доминацией BTC и почему конец альтсезона часто болезненный.',
-  //   realTitleRus: 'Альтсезон: что это и как связан с доминацией биткоина | Arapov.trade',
-  //   realTitleUkr: 'Альтсезон: що це і як пов\'язаний із домінацією біткоїна | Arapov.trade',
-  //   realTitleEn: 'Altseason: What It Is and How It Ties to Bitcoin Dominance | Arapov.trade',
-  //   groupsRus: ['Криптовалюта'],
-  //   groupsUkr: ['Криптовалюта'],
-  //   groupsEng: ['Cryptocurrency'],
-  //   id: 504,
-  // },
+  {
+    titleUkr: 'Альтсезон: що це і як пов\'язаний із домінацією біткоїна',
+    linkUkr: 'altseason',
+    imgUkr: '/assets/img/content/altseason.jpeg',
+    titleRus: 'Альтсезон: что это и как связан с доминацией биткоина',
+    titleEn: 'Altseason: What It Is and How It Ties to Bitcoin Dominance',
+    descrUkr:
+      'Що таке альтсезон, чому капітал перетікає з біткоїна в альткоїни, як це пов\'язано з домінацією BTC і чому кінець альтсезону часто болісний.',
+    descrEn:
+      'What altseason is, why capital flows from bitcoin into altcoins, how it relates to BTC dominance and why the end of altseason is often painful.',
+    descrRus:
+      'Что такое альтсезон, почему капитал перетекает из биткоина в альткоины, как это связано с доминацией BTC и почему конец альтсезона часто болезненный.',
+    realTitleRus: 'Альтсезон: что это и как связан с доминацией биткоина | Arapov.trade',
+    realTitleUkr: 'Альтсезон: що це і як пов\'язаний із домінацією біткоїна | Arapov.trade',
+    realTitleEn: 'Altseason: What It Is and How It Ties to Bitcoin Dominance | Arapov.trade',
+    groupsRus: ['Криптовалюта'],
+    groupsUkr: ['Криптовалюта'],
+    groupsEng: ['Cryptocurrency'],
+    id: 504,
+  },
   // {
   //   titleUkr: 'Бектест стратегії: що це і як не обдурити себе',
   //   linkUkr: 'backtest',

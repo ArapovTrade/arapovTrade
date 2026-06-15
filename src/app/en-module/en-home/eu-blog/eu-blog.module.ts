@@ -1136,13 +1136,13 @@ const routes: Routes = [
             (m) => m.OnehundredFourteenEnBlogModule,
           ),
       },
-      // {
-      //   path: '115', //115
-      //   loadChildren: () =>
-      //     import('../eu-blog/onehundred-fifteen-en-blog/onehundred-fifteen-en-blog.module').then(
-      //       (m) => m.OnehundredFifteenEnBlogModule,
-      //     ),
-      // },
+      {
+        path: 'altseason', //115
+        loadChildren: () =>
+          import('../eu-blog/onehundred-fifteen-en-blog/onehundred-fifteen-en-blog.module').then(
+            (m) => m.OnehundredFifteenEnBlogModule,
+          ),
+      },
       // {
       //   path: '116', //116
       //   loadChildren: () =>

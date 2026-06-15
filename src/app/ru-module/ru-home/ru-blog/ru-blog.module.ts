@@ -1139,13 +1139,13 @@ const routes: Routes = [
             (m) => m.OnehundredFourteenRuBlogModule,
           ),
       },
-      // {
-      //   path: '115', //115
-      //   loadChildren: () =>
-      //     import('../ru-blog/onehundred-fifteen-ru-blog/onehundred-fifteen-ru-blog.module').then(
-      //       (m) => m.OnehundredFifteenRuBlogModule,
-      //     ),
-      // },
+      {
+        path: 'altseason', //115
+        loadChildren: () =>
+          import('../ru-blog/onehundred-fifteen-ru-blog/onehundred-fifteen-ru-blog.module').then(
+            (m) => m.OnehundredFifteenRuBlogModule,
+          ),
+      },
       // {
       //   path: '116', //116
       //   loadChildren: () =>
