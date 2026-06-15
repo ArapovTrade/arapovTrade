@@ -4,12 +4,12 @@ import { HomeUkBlogOnehundredNinetythreeComponent } from './home-uk-blog-onehund
 
 
 
+import { MatExpansionModule } from '@angular/material/expansion';
+import { RouterModule, Routes } from '@angular/router';
+const routes: Routes = [{ path: '', component: HomeUkBlogOnehundredNinetythreeComponent }];
+
 @NgModule({
-  declarations: [
-    HomeUkBlogOnehundredNinetythreeComponent
-  ],
-  imports: [
-    CommonModule
-  ]
+  declarations: [HomeUkBlogOnehundredNinetythreeComponent],
+  imports: [CommonModule,MatExpansionModule, RouterModule.forChild(routes)],
 })
 export class OnehundredNinetythreeUkBlogModule { }

@@ -1115,6 +1115,629 @@ const routes: Routes = [
             (m) => m.OnehundredElevenEnBlogModule,
           ),
       },
+      // {
+      //   path: '112', //112
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-twelve-en-blog/onehundred-twelve-en-blog.module').then(
+      //       (m) => m.OnehundredTwelveEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '113', //113
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-thirteen-en-blog/onehundred-thirteen-en-blog.module').then(
+      //       (m) => m.OnehundredThirteenEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '114', //114
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-fourteen-en-blog/onehundred-fourteen-en-blog.module').then(
+      //       (m) => m.OnehundredFourteenEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '115', //115
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-fifteen-en-blog/onehundred-fifteen-en-blog.module').then(
+      //       (m) => m.OnehundredFifteenEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '116', //116
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-sixteen-en-blog/onehundred-sixteen-en-blog.module').then(
+      //       (m) => m.OnehundredSixteenEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '117', //117
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-seventeen-en-blog/onehundred-seventeen-en-blog.module').then(
+      //       (m) => m.OnehundredSeventeenEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '118', //118
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-eighteen-en-blog/onehundred-eighteen-en-blog.module').then(
+      //       (m) => m.OnehundredEighteenEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '119', //119
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-nineteen-en-blog/onehundred-nineteen-en-blog.module').then(
+      //       (m) => m.OnehundredNineteenEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '120', //120
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-twenty-en-blog/onehundred-twenty-en-blog.module').then(
+      //       (m) => m.OnehundredTwentyEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '121', //121
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-twentyone-en-blog/onehundred-twentyone-en-blog.module').then(
+      //       (m) => m.OnehundredTwentyoneEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '122', //122
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-twentytwo-en-blog/onehundred-twentytwo-en-blog.module').then(
+      //       (m) => m.OnehundredTwentytwoEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '123', //123
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-twentythree-en-blog/onehundred-twentythree-en-blog.module').then(
+      //       (m) => m.OnehundredTwentythreeEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '124', //124
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-twentyfour-en-blog/onehundred-twentyfour-en-blog.module').then(
+      //       (m) => m.OnehundredTwentyfourEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '125', //125
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-twentyfive-en-blog/onehundred-twentyfive-en-blog.module').then(
+      //       (m) => m.OnehundredTwentyfiveEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '126', //126
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-twentysix-en-blog/onehundred-twentysix-en-blog.module').then(
+      //       (m) => m.OnehundredTwentysixEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '127', //127
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-twentyseven-en-blog/onehundred-twentyseven-en-blog.module').then(
+      //       (m) => m.OnehundredTwentysevenEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '128', //128
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-twentyeight-en-blog/onehundred-twentyeight-en-blog.module').then(
+      //       (m) => m.OnehundredTwentyeightEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '129', //129
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-twentynine-en-blog/onehundred-twentynine-en-blog.module').then(
+      //       (m) => m.OnehundredTwentynineEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '130', //130
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-thirty-en-blog/onehundred-thirty-en-blog.module').then(
+      //       (m) => m.OnehundredThirtyEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '131', //131
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-thirtyone-en-blog/onehundred-thirtyone-en-blog.module').then(
+      //       (m) => m.OnehundredThirtyoneEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '132', //132
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-thirtytwo-en-blog/onehundred-thirtytwo-en-blog.module').then(
+      //       (m) => m.OnehundredThirtytwoEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '133', //133
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-thirtythree-en-blog/onehundred-thirtythree-en-blog.module').then(
+      //       (m) => m.OnehundredThirtythreeEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '134', //134
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-thirtyfour-en-blog/onehundred-thirtyfour-en-blog.module').then(
+      //       (m) => m.OnehundredThirtyfourEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '135', //135
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-thirtyfive-en-blog/onehundred-thirtyfive-en-blog.module').then(
+      //       (m) => m.OnehundredThirtyfiveEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '136', //136
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-thirtysix-en-blog/onehundred-thirtysix-en-blog.module').then(
+      //       (m) => m.OnehundredThirtysixEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '137', //137
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-thirtyseven-en-blog/onehundred-thirtyseven-en-blog.module').then(
+      //       (m) => m.OnehundredThirtysevenEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '138', //138
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-thirtyeight-en-blog/onehundred-thirtyeight-en-blog.module').then(
+      //       (m) => m.OnehundredThirtyeightEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '139', //139
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-thirtynine-en-blog/onehundred-thirtynine-en-blog.module').then(
+      //       (m) => m.OnehundredThirtynineEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '140', //140
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-forty-en-blog/onehundred-forty-en-blog.module').then(
+      //       (m) => m.OnehundredFortyEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '141', //141
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-fortyone-en-blog/onehundred-fortyone-en-blog.module').then(
+      //       (m) => m.OnehundredFortyoneEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '142', //142
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-fortytwo-en-blog/onehundred-fortytwo-en-blog.module').then(
+      //       (m) => m.OnehundredFortytwoEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '143', //143
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-fortythree-en-blog/onehundred-fortythree-en-blog.module').then(
+      //       (m) => m.OnehundredFortythreeEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '144', //144
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-fortyfour-en-blog/onehundred-fortyfour-en-blog.module').then(
+      //       (m) => m.OnehundredFortyfourEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '145', //145
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-fortyfive-en-blog/onehundred-fortyfive-en-blog.module').then(
+      //       (m) => m.OnehundredFortyfiveEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '146', //146
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-fortysix-en-blog/onehundred-fortysix-en-blog.module').then(
+      //       (m) => m.OnehundredFortysixEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '147', //147
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-fortyseven-en-blog/onehundred-fortyseven-en-blog.module').then(
+      //       (m) => m.OnehundredFortysevenEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '148', //148
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-fortyeight-en-blog/onehundred-fortyeight-en-blog.module').then(
+      //       (m) => m.OnehundredFortyeightEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '149', //149
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-fortynine-en-blog/onehundred-fortynine-en-blog.module').then(
+      //       (m) => m.OnehundredFortynineEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '150', //150
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-fifty-en-blog/onehundred-fifty-en-blog.module').then(
+      //       (m) => m.OnehundredFiftyEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '151', //151
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-fiftyone-en-blog/onehundred-fiftyone-en-blog.module').then(
+      //       (m) => m.OnehundredFiftyoneEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '152', //152
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-fiftytwo-en-blog/onehundred-fiftytwo-en-blog.module').then(
+      //       (m) => m.OnehundredFiftytwoEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '153', //153
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-fiftythree-en-blog/onehundred-fiftythree-en-blog.module').then(
+      //       (m) => m.OnehundredFiftythreeEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '154', //154
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-fiftyfour-en-blog/onehundred-fiftyfour-en-blog.module').then(
+      //       (m) => m.OnehundredFiftyfourEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '155', //155
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-fiftyfive-en-blog/onehundred-fiftyfive-en-blog.module').then(
+      //       (m) => m.OnehundredFiftyfiveEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '156', //156
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-fiftysix-en-blog/onehundred-fiftysix-en-blog.module').then(
+      //       (m) => m.OnehundredFiftysixEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '157', //157
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-fiftyseven-en-blog/onehundred-fiftyseven-en-blog.module').then(
+      //       (m) => m.OnehundredFiftysevenEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '158', //158
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-fiftyeight-en-blog/onehundred-fiftyeight-en-blog.module').then(
+      //       (m) => m.OnehundredFiftyeightEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '159', //159
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-fiftynine-en-blog/onehundred-fiftynine-en-blog.module').then(
+      //       (m) => m.OnehundredFiftynineEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '160', //160
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-sixty-en-blog/onehundred-sixty-en-blog.module').then(
+      //       (m) => m.OnehundredSixtyEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '161', //161
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-sixtyone-en-blog/onehundred-sixtyone-en-blog.module').then(
+      //       (m) => m.OnehundredSixtyoneEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '162', //162
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-sixtytwo-en-blog/onehundred-sixtytwo-en-blog.module').then(
+      //       (m) => m.OnehundredSixtytwoEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '163', //163
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-sixtythree-en-blog/onehundred-sixtythree-en-blog.module').then(
+      //       (m) => m.OnehundredSixtythreeEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '164', //164
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-sixtyfour-en-blog/onehundred-sixtyfour-en-blog.module').then(
+      //       (m) => m.OnehundredSixtyfourEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '165', //165
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-sixtyfive-en-blog/onehundred-sixtyfive-en-blog.module').then(
+      //       (m) => m.OnehundredSixtyfiveEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '166', //166
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-sixtysix-en-blog/onehundred-sixtysix-en-blog.module').then(
+      //       (m) => m.OnehundredSixtysixEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '167', //167
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-sixtyseven-en-blog/onehundred-sixtyseven-en-blog.module').then(
+      //       (m) => m.OnehundredSixtysevenEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '168', //168
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-sixtyeight-en-blog/onehundred-sixtyeight-en-blog.module').then(
+      //       (m) => m.OnehundredSixtyeightEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '169', //169
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-sixtynine-en-blog/onehundred-sixtynine-en-blog.module').then(
+      //       (m) => m.OnehundredSixtynineEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '170', //170
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-seventy-en-blog/onehundred-seventy-en-blog.module').then(
+      //       (m) => m.OnehundredSeventyEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '171', //171
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-seventyone-en-blog/onehundred-seventyone-en-blog.module').then(
+      //       (m) => m.OnehundredSeventyoneEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '172', //172
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-seventytwo-en-blog/onehundred-seventytwo-en-blog.module').then(
+      //       (m) => m.OnehundredSeventytwoEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '173', //173
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-seventythree-en-blog/onehundred-seventythree-en-blog.module').then(
+      //       (m) => m.OnehundredSeventythreeEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '174', //174
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-seventyfour-en-blog/onehundred-seventyfour-en-blog.module').then(
+      //       (m) => m.OnehundredSeventyfourEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '175', //175
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-seventyfive-en-blog/onehundred-seventyfive-en-blog.module').then(
+      //       (m) => m.OnehundredSeventyfiveEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '176', //176
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-seventysix-en-blog/onehundred-seventysix-en-blog.module').then(
+      //       (m) => m.OnehundredSeventysixEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '177', //177
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-seventyseven-en-blog/onehundred-seventyseven-en-blog.module').then(
+      //       (m) => m.OnehundredSeventysevenEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '178', //178
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-seventyeight-en-blog/onehundred-seventyeight-en-blog.module').then(
+      //       (m) => m.OnehundredSeventyeightEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '179', //179
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-seventynine-en-blog/onehundred-seventynine-en-blog.module').then(
+      //       (m) => m.OnehundredSeventynineEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '180', //180
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-eighty-en-blog/onehundred-eighty-en-blog.module').then(
+      //       (m) => m.OnehundredEightyEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '181', //181
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-eightyone-en-blog/onehundred-eightyone-en-blog.module').then(
+      //       (m) => m.OnehundredEightyoneEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '182', //182
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-eightytwo-en-blog/onehundred-eightytwo-en-blog.module').then(
+      //       (m) => m.OnehundredEightytwoEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '183', //183
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-eightythree-en-blog/onehundred-eightythree-en-blog.module').then(
+      //       (m) => m.OnehundredEightythreeEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '184', //184
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-eightyfour-en-blog/onehundred-eightyfour-en-blog.module').then(
+      //       (m) => m.OnehundredEightyfourEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '185', //185
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-eightyfive-en-blog/onehundred-eightyfive-en-blog.module').then(
+      //       (m) => m.OnehundredEightyfiveEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '186', //186
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-eightysix-en-blog/onehundred-eightysix-en-blog.module').then(
+      //       (m) => m.OnehundredEightysixEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '187', //187
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-eightyseven-en-blog/onehundred-eightyseven-en-blog.module').then(
+      //       (m) => m.OnehundredEightysevenEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '188', //188
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-eightyeight-en-blog/onehundred-eightyeight-en-blog.module').then(
+      //       (m) => m.OnehundredEightyeightEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '189', //189
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-eightynine-en-blog/onehundred-eightynine-en-blog.module').then(
+      //       (m) => m.OnehundredEightynineEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '190', //190
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-ninety-en-blog/onehundred-ninety-en-blog.module').then(
+      //       (m) => m.OnehundredNinetyEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '191', //191
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-ninetyone-en-blog/onehundred-ninetyone-en-blog.module').then(
+      //       (m) => m.OnehundredNinetyoneEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '192', //192
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-ninetytwo-en-blog/onehundred-ninetytwo-en-blog.module').then(
+      //       (m) => m.OnehundredNinetytwoEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '193', //193
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-ninetythree-en-blog/onehundred-ninetythree-en-blog.module').then(
+      //       (m) => m.OnehundredNinetythreeEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '194', //194
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-ninetyfour-en-blog/onehundred-ninetyfour-en-blog.module').then(
+      //       (m) => m.OnehundredNinetyfourEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '195', //195
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-ninetyfive-en-blog/onehundred-ninetyfive-en-blog.module').then(
+      //       (m) => m.OnehundredNinetyfiveEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '196', //196
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-ninetysix-en-blog/onehundred-ninetysix-en-blog.module').then(
+      //       (m) => m.OnehundredNinetysixEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '197', //197
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-ninetyseven-en-blog/onehundred-ninetyseven-en-blog.module').then(
+      //       (m) => m.OnehundredNinetysevenEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '198', //198
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-ninetyeight-en-blog/onehundred-ninetyeight-en-blog.module').then(
+      //       (m) => m.OnehundredNinetyeightEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '199', //199
+      //   loadChildren: () =>
+      //     import('../eu-blog/onehundred-ninetynine-en-blog/onehundred-ninetynine-en-blog.module').then(
+      //       (m) => m.OnehundredNinetynineEnBlogModule,
+      //     ),
+      // },
+      // {
+      //   path: '200', //200
+      //   loadChildren: () =>
+      //     import('../eu-blog/twohundred-en-blog/twohundred-en-blog.module').then(
+      //       (m) => m.TwohundredEnBlogModule,
+      //     ),
+      // },
     ],
   },
 ];
