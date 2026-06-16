@@ -3375,26 +3375,26 @@ export class ArticlesService {
     groupsEng: ['Smart Money Concept'],
     id: 507,
   },
-  // {
-  //   titleUkr: 'Беззбиток: що це і коли переносити стоп',
-  //   linkUkr: 'breakeven',
-  //   imgUkr: '/assets/img/content/breakeven.jpeg',
-  //   titleRus: 'Безубыток: что это и когда переносить стоп',
-  //   titleEn: 'Breakeven: What It Is and When to Move the Stop',
-  //   descrUkr:
-  //     'Що означає перевести угоду в беззбиток, коли перенесення стопа в точку входу захищає прибуток, а коли вибиває з хорошої позиції зарано.',
-  //   descrEn:
-  //     'What moving a trade to breakeven means, when shifting the stop to entry protects profit and when it knocks you out of a good position too early.',
-  //   descrRus:
-  //     'Что значит перевести сделку в безубыток, когда перенос стопа в точку входа защищает прибыль, а когда выбивает из хорошей позиции слишком рано.',
-  //   realTitleRus: 'Безубыток: что это и когда переносить стоп | Arapov.trade',
-  //   realTitleUkr: 'Беззбиток: що це і коли переносити стоп | Arapov.trade',
-  //   realTitleEn: 'Breakeven: What It Is and When to Move the Stop | Arapov.trade',
-  //   groupsRus: ['Трейдинг для начинающих'],
-  //   groupsUkr: ['Трейдинг для початківців'],
-  //   groupsEng: ['Trading for Beginners'],
-  //   id: 508,
-  // },
+  {
+    titleUkr: 'Беззбиток: що це і коли переносити стоп',
+    linkUkr: 'breakeven',
+    imgUkr: '/assets/img/content/breakeven.jpeg',
+    titleRus: 'Безубыток: что это и когда переносить стоп',
+    titleEn: 'Breakeven: What It Is and When to Move the Stop',
+    descrUkr:
+      'Що означає перевести угоду в беззбиток, коли перенесення стопа в точку входу захищає прибуток, а коли вибиває з хорошої позиції зарано.',
+    descrEn:
+      'What moving a trade to breakeven means, when shifting the stop to entry protects profit and when it knocks you out of a good position too early.',
+    descrRus:
+      'Что значит перевести сделку в безубыток, когда перенос стопа в точку входа защищает прибыль, а когда выбивает из хорошей позиции слишком рано.',
+    realTitleRus: 'Безубыток: что это и когда переносить стоп | Arapov.trade',
+    realTitleUkr: 'Беззбиток: що це і коли переносити стоп | Arapov.trade',
+    realTitleEn: 'Breakeven: What It Is and When to Move the Stop | Arapov.trade',
+    groupsRus: ['Трейдинг для начинающих'],
+    groupsUkr: ['Трейдинг для початківців'],
+    groupsEng: ['Trading for Beginners'],
+    id: 508,
+  },
   // {
   //   titleUkr: 'Бичачий і ведмежий ринок: що це і чим відрізняються',
   //   linkUkr: 'bull-bear-market',
