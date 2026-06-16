@@ -3335,26 +3335,26 @@ export class ArticlesService {
     groupsEng: ['Trading Psychology'],
     id: 505,
   },
-  // {
-  //   titleUkr: 'Що таке облігації простими словами: купон, номінал, дохідність',
-  //   linkUkr: 'bonds-coupon-yield',
-  //   imgUkr: '/assets/img/content/bonds-coupon-yield.jpeg',
-  //   titleRus: 'Что такое облигации простыми словами: купон, номинал, доходность',
-  //   titleEn: 'What Are Bonds in Simple Terms: Coupon, Face Value, Yield',
-  //   descrUkr:
-  //     'Що таке облігації, як вони працюють, що таке номінал, купон і дохідність, які бувають види облігацій і наскільки вони надійні для інвестора.',
-  //   descrEn:
-  //     'What bonds are, how they work, what face value, coupon and yield are, what types of bonds exist and how reliable they are for an investor.',
-  //   descrRus:
-  //     'Что такое облигации, как они работают, что такое номинал, купон и доходность, какие бывают виды облигаций и насколько они надёжны для инвестора.',
-  //   realTitleRus: 'Что такое облигации простыми словами: купон, номинал, доходность | Arapov.trade',
-  //   realTitleUkr: 'Що таке облігації простими словами: купон, номінал, дохідність | Arapov.trade',
-  //   realTitleEn: 'What Are Bonds in Simple Terms: Coupon, Face Value, Yield | Arapov.trade',
-  //   groupsRus: ['Фундаментальный анализ'],
-  //   groupsUkr: ['Фундаментальний аналіз'],
-  //   groupsEng: ['Fundamental Analysis'],
-  //   id: 506,
-  // },
+  {
+    titleUkr: 'Що таке облігації простими словами: купон, номінал, дохідність',
+    linkUkr: 'bonds-coupon-yield',
+    imgUkr: '/assets/img/content/bonds-coupon-yield.jpeg',
+    titleRus: 'Что такое облигации простыми словами: купон, номинал, доходность',
+    titleEn: 'What Are Bonds in Simple Terms: Coupon, Face Value, Yield',
+    descrUkr:
+      'Що таке облігації, як вони працюють, що таке номінал, купон і дохідність, які бувають види облігацій і наскільки вони надійні для інвестора.',
+    descrEn:
+      'What bonds are, how they work, what face value, coupon and yield are, what types of bonds exist and how reliable they are for an investor.',
+    descrRus:
+      'Что такое облигации, как они работают, что такое номинал, купон и доходность, какие бывают виды облигаций и насколько они надёжны для инвестора.',
+    realTitleRus: 'Что такое облигации простыми словами: купон, номинал, доходность | Arapov.trade',
+    realTitleUkr: 'Що таке облігації простими словами: купон, номінал, дохідність | Arapov.trade',
+    realTitleEn: 'What Are Bonds in Simple Terms: Coupon, Face Value, Yield | Arapov.trade',
+    groupsRus: ['Фундаментальный анализ'],
+    groupsUkr: ['Фундаментальний аналіз'],
+    groupsEng: ['Fundamental Analysis'],
+    id: 506,
+  },
   // {
   //   titleUkr: 'Брейкер-блок і мітигейшн-блок: що це в Smart Money',
   //   linkUkr: 'breaker-mitigation-blocks',

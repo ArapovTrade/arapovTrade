@@ -5152,4 +5152,36 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://arapov.trade/en/freestudying/backtest"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://arapov.trade/uk/freestudying/backtest"/>
   </url>
+
+
+  <url>
+    <loc>https://arapov.trade/ru/freestudying/bonds-coupon-yield</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://arapov.trade/uk/freestudying/bonds-coupon-yield"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://arapov.trade/ru/freestudying/bonds-coupon-yield"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arapov.trade/en/freestudying/bonds-coupon-yield"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arapov.trade/uk/freestudying/bonds-coupon-yield"/>
+  </url>
+  <url>
+    <loc>https://arapov.trade/uk/freestudying/bonds-coupon-yield</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://arapov.trade/uk/freestudying/bonds-coupon-yield"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://arapov.trade/ru/freestudying/bonds-coupon-yield"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arapov.trade/en/freestudying/bonds-coupon-yield"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arapov.trade/uk/freestudying/bonds-coupon-yield"/>
+  </url>
+  <url>
+    <loc>https://arapov.trade/en/freestudying/bonds-coupon-yield</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://arapov.trade/uk/freestudying/bonds-coupon-yield"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://arapov.trade/ru/freestudying/bonds-coupon-yield"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arapov.trade/en/freestudying/bonds-coupon-yield"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arapov.trade/uk/freestudying/bonds-coupon-yield"/>
+  </url>
 </urlset>

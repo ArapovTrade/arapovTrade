@@ -1153,13 +1153,13 @@ const routes: Routes = [
             (m) => m.OnehundredSixteenRuBlogModule,
           ),
       },
-      // {
-      //   path: '117', //117
-      //   loadChildren: () =>
-      //     import('../ru-blog/onehundred-seventeen-ru-blog/onehundred-seventeen-ru-blog.module').then(
-      //       (m) => m.OnehundredSeventeenRuBlogModule,
-      //     ),
-      // },
+      {
+        path: 'bonds-coupon-yield', //117
+        loadChildren: () =>
+          import('../ru-blog/onehundred-seventeen-ru-blog/onehundred-seventeen-ru-blog.module').then(
+            (m) => m.OnehundredSeventeenRuBlogModule,
+          ),
+      },
       // {
       //   path: '118', //118
       //   loadChildren: () =>
