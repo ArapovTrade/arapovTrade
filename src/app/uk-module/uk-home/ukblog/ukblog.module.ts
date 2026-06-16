@@ -1174,13 +1174,13 @@ const routes: Routes = [
             (m) => m.OnehundredTwentyUkBlogModule,
           ),
       },
-  //     {
-  //       path: '121', //121
-  //       loadChildren: () =>
-  //         import('../ukblog/onehundred-twentyone-uk-blog/onehundred-twentyone-uk-blog.module').then(
-  //           (m) => m.OnehundredTwentyoneUkBlogModule,
-  //         ),
-  //     },
+      {
+        path: 'can-ai-predict-price', //121
+        loadChildren: () =>
+          import('../ukblog/onehundred-twentyone-uk-blog/onehundred-twentyone-uk-blog.module').then(
+            (m) => m.OnehundredTwentyoneUkBlogModule,
+          ),
+      },
   //     {
   //       path: '122', //122
   //       loadChildren: () =>

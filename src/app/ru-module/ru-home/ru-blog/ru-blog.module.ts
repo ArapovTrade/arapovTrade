@@ -1181,13 +1181,13 @@ const routes: Routes = [
             (m) => m.OnehundredTwentyRuBlogModule,
           ),
       },
-      // {
-      //   path: '121', //121
-      //   loadChildren: () =>
-      //     import('../ru-blog/onehundred-twentyone-ru-blog/onehundred-twentyone-ru-blog.module').then(
-      //       (m) => m.OnehundredTwentyoneRuBlogModule,
-      //     ),
-      // },
+      {
+        path: 'can-ai-predict-price', //121
+        loadChildren: () =>
+          import('../ru-blog/onehundred-twentyone-ru-blog/onehundred-twentyone-ru-blog.module').then(
+            (m) => m.OnehundredTwentyoneRuBlogModule,
+          ),
+      },
       // {
       //   path: '122', //122
       //   loadChildren: () =>

@@ -3415,26 +3415,26 @@ export class ArticlesService {
     groupsEng: ['Trading for Beginners'],
     id: 509,
   },
-  // {
-  //   titleUkr: 'Чи може нейромережа передбачити ціну акції або біткоїна',
-  //   linkUkr: 'can-ai-predict-price',
-  //   imgUkr: '/assets/img/content/can-ai-predict-price.jpeg',
-  //   titleRus: 'Может ли нейросеть предсказать цену акции или биткоина',
-  //   titleEn: 'Can a Neural Network Predict a Stock or Bitcoin Price?',
-  //   descrUkr:
-  //     'Чому ринок погано передбачуваний у принципі, що ШІ насправді робить із ціною — рахує ймовірності, а не пророчить, — і як дивитися на прогнози.',
-  //   descrEn:
-  //     'Why the market is poorly predictable in principle, what AI actually does with price (counts odds, not prophesies) and how to read forecasts.',
-  //   descrRus:
-  //     'Почему рынок плохо предсказуем в принципе, что ИИ на самом деле делает с ценой — считает вероятности, а не пророчит, — и как смотреть на прогнозы.',
-  //   realTitleRus: 'Может ли нейросеть предсказать цену акции или биткоина | Arapov.trade',
-  //   realTitleUkr: 'Чи може нейромережа передбачити ціну акції або біткоїна | Arapov.trade',
-  //   realTitleEn: 'Can a Neural Network Predict a Stock or Bitcoin Price? | Arapov.trade',
-  //   groupsRus: ['Трейдинг для начинающих'],
-  //   groupsUkr: ['Трейдинг для початківців'],
-  //   groupsEng: ['Trading for Beginners'],
-  //   id: 510,
-  // },
+  {
+    titleUkr: 'Чи може нейромережа передбачити ціну акції або біткоїна',
+    linkUkr: 'can-ai-predict-price',
+    imgUkr: '/assets/img/content/can-ai-predict-price.jpeg',
+    titleRus: 'Может ли нейросеть предсказать цену акции или биткоина',
+    titleEn: 'Can a Neural Network Predict a Stock or Bitcoin Price?',
+    descrUkr:
+      'Чому ринок погано передбачуваний у принципі, що ШІ насправді робить із ціною — рахує ймовірності, а не пророчить, — і як дивитися на прогнози.',
+    descrEn:
+      'Why the market is poorly predictable in principle, what AI actually does with price (counts odds, not prophesies) and how to read forecasts.',
+    descrRus:
+      'Почему рынок плохо предсказуем в принципе, что ИИ на самом деле делает с ценой — считает вероятности, а не пророчит, — и как смотреть на прогнозы.',
+    realTitleRus: 'Может ли нейросеть предсказать цену акции или биткоина | Arapov.trade',
+    realTitleUkr: 'Чи може нейромережа передбачити ціну акції або біткоїна | Arapov.trade',
+    realTitleEn: 'Can a Neural Network Predict a Stock or Bitcoin Price? | Arapov.trade',
+    groupsRus: ['Трейдинг для начинающих'],
+    groupsUkr: ['Трейдинг для початківців'],
+    groupsEng: ['Trading for Beginners'],
+    id: 510,
+  },
   // {
   //   titleUkr: 'Молот, доджі й вечірня зірка: свічки розвороту',
   //   linkUkr: 'candle-hammer-doji-star',
