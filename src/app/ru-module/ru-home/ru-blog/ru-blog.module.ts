@@ -140,7 +140,7 @@ const routes: Routes = [
           import('./eighteen-ru-blog/eighteen-ru-blog.module').then(
             (m) => m.EighteenRuBlogModule,
           ),
-      },
+      }, 
       {
         path: 'wyckoffmethod', //19
         loadChildren: () =>
