@@ -1192,13 +1192,13 @@ const routes: Routes = [
             (m) => m.OnehundredTwentytwoEnBlogModule,
           ),
       },
-      // {
-      //   path: '123', //123
-      //   loadChildren: () =>
-      //     import('../eu-blog/onehundred-twentythree-en-blog/onehundred-twentythree-en-blog.module').then(
-      //       (m) => m.OnehundredTwentythreeEnBlogModule,
-      //     ),
-      // },
+      {
+        path: 'carrytrade', //123
+        loadChildren: () =>
+          import('../eu-blog/onehundred-twentythree-en-blog/onehundred-twentythree-en-blog.module').then(
+            (m) => m.OnehundredTwentythreeEnBlogModule,
+          ),
+      },
       // {
       //   path: '124', //124
       //   loadChildren: () =>

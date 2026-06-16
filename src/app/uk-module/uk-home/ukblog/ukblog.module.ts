@@ -1188,13 +1188,13 @@ const routes: Routes = [
             (m) => m.OnehundredTwentytwoUkBlogModule,
           ),
       },
-  //     {
-  //       path: '123', //123
-  //       loadChildren: () =>
-  //         import('../ukblog/onehundred-twentythree-uk-blog/onehundred-twentythree-uk-blog.module').then(
-  //           (m) => m.OnehundredTwentythreeUkBlogModule,
-  //         ),
-  //     },
+      {
+        path: 'carrytrade', //123
+        loadChildren: () =>
+          import('../ukblog/onehundred-twentythree-uk-blog/onehundred-twentythree-uk-blog.module').then(
+            (m) => m.OnehundredTwentythreeUkBlogModule,
+          ),
+      },
   //     {
   //       path: '124', //124
   //       loadChildren: () =>

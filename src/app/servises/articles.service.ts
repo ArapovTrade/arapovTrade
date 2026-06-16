@@ -3455,26 +3455,26 @@ export class ArticlesService {
     groupsEng: ['Technical Analysis'],
     id: 511,
   },
-  // {
-  //   titleUkr: 'Кері-трейд: що це і як заробляють на ставках',
-  //   linkUkr: 'carrytrade',
-  //   imgUkr: '/assets/img/content/carrytrade.jpeg',
-  //   titleRus: 'Кэрри-трейд: что это и как зарабатывают на ставках',
-  //   titleEn: 'Carry Trade: What It Is and How Rate Differences Pay',
-  //   descrUkr:
-  //     'Що таке стратегія кері-трейд, як заробляють на різниці процентних ставок між валютами і який ризик розвертає таку угоду проти вас.',
-  //   descrEn:
-  //     'What the carry trade strategy is, how traders earn on the interest-rate gap between currencies and what risk turns such a trade against you.',
-  //   descrRus:
-  //     'Что такое стратегия кэрри-трейд, как зарабатывают на разнице процентных ставок между валютами и какой риск разворачивает такую сделку против вас.',
-  //   realTitleRus: 'Кэрри-трейд: что это и как зарабатывают на ставках | Arapov.trade',
-  //   realTitleUkr: 'Кері-трейд: що це і як заробляють на ставках | Arapov.trade',
-  //   realTitleEn: 'Carry Trade: What It Is and How Rate Differences Pay | Arapov.trade',
-  //   groupsRus: ['Фундаментальный анализ'],
-  //   groupsUkr: ['Фундаментальний аналіз'],
-  //   groupsEng: ['Fundamental Analysis'],
-  //   id: 512,
-  // },
+  {
+    titleUkr: 'Кері-трейд: що це і як заробляють на ставках',
+    linkUkr: 'carrytrade',
+    imgUkr: '/assets/img/content/carrytrade.jpeg',
+    titleRus: 'Кэрри-трейд: что это и как зарабатывают на ставках',
+    titleEn: 'Carry Trade: What It Is and How Rate Differences Pay',
+    descrUkr:
+      'Що таке стратегія кері-трейд, як заробляють на різниці процентних ставок між валютами і який ризик розвертає таку угоду проти вас.',
+    descrEn:
+      'What the carry trade strategy is, how traders earn on the interest-rate gap between currencies and what risk turns such a trade against you.',
+    descrRus:
+      'Что такое стратегия кэрри-трейд, как зарабатывают на разнице процентных ставок между валютами и какой риск разворачивает такую сделку против вас.',
+    realTitleRus: 'Кэрри-трейд: что это и как зарабатывают на ставках | Arapov.trade',
+    realTitleUkr: 'Кері-трейд: що це і як заробляють на ставках | Arapov.trade',
+    realTitleEn: 'Carry Trade: What It Is and How Rate Differences Pay | Arapov.trade',
+    groupsRus: ['Фундаментальный анализ'],
+    groupsUkr: ['Фундаментальний аналіз'],
+    groupsEng: ['Fundamental Analysis'],
+    id: 512,
+  },
   // {
   //   titleUkr: 'CCI (Commodity Channel Index): що це і як використовувати',
   //   linkUkr: 'cci',

@@ -1195,13 +1195,13 @@ const routes: Routes = [
             (m) => m.OnehundredTwentytwoRuBlogModule,
           ),
       },
-      // {
-      //   path: '123', //123
-      //   loadChildren: () =>
-      //     import('../ru-blog/onehundred-twentythree-ru-blog/onehundred-twentythree-ru-blog.module').then(
-      //       (m) => m.OnehundredTwentythreeRuBlogModule,
-      //     ),
-      // },
+      {
+        path: 'carrytrade', //123
+        loadChildren: () =>
+          import('../ru-blog/onehundred-twentythree-ru-blog/onehundred-twentythree-ru-blog.module').then(
+            (m) => m.OnehundredTwentythreeRuBlogModule,
+          ),
+      },
       // {
       //   path: '124', //124
       //   loadChildren: () =>
