@@ -3355,26 +3355,26 @@ export class ArticlesService {
     groupsEng: ['Fundamental Analysis'],
     id: 506,
   },
-  // {
-  //   titleUkr: 'Брейкер-блок і мітигейшн-блок: що це в Smart Money',
-  //   linkUkr: 'breaker-mitigation-blocks',
-  //   imgUkr: '/assets/img/content/breaker-mitigation-blocks.jpeg',
-  //   titleRus: 'Брейкер-блок и митигейшн-блок: что это в Smart Money',
-  //   titleEn: 'Breaker block and mitigation block: what they are in Smart Money',
-  //   descrUkr:
-  //     'Що таке брейкер-блок і мітигейшн-блок, чим вони відрізняються від ордер-блока і як смарт-мані використовують повернення ціни до цих зон.',
-  //   descrEn:
-  //     'What a breaker block and a mitigation block are, how they differ from an order block and how smart money uses the price return to these zones.',
-  //   descrRus:
-  //     'Что такое брейкер-блок и митигейшн-блок, чем они отличаются от ордер-блока и как смарт-мани используют возврат цены к этим зонам.',
-  //   realTitleRus: 'Брейкер-блок и митигейшн-блок: что это в Smart Money | Arapov.trade',
-  //   realTitleUkr: 'Брейкер-блок і мітигейшн-блок: що це в Smart Money | Arapov.trade',
-  //   realTitleEn: 'Breaker block and mitigation block: what they are in Smart Money | Arapov.trade',
-  //   groupsRus: ['Концепция Смарт Мани'],
-  //   groupsUkr: ['Концепція Смарт Мані'],
-  //   groupsEng: ['Smart Money Concept'],
-  //   id: 507,
-  // },
+  {
+    titleUkr: 'Брейкер-блок і мітигейшн-блок: що це в Smart Money',
+    linkUkr: 'breaker-mitigation-blocks',
+    imgUkr: '/assets/img/content/breaker-mitigation-blocks.jpeg',
+    titleRus: 'Брейкер-блок и митигейшн-блок: что это в Smart Money',
+    titleEn: 'Breaker block and mitigation block: what they are in Smart Money',
+    descrUkr:
+      'Що таке брейкер-блок і мітигейшн-блок, чим вони відрізняються від ордер-блока і як смарт-мані використовують повернення ціни до цих зон.',
+    descrEn:
+      'What a breaker block and a mitigation block are, how they differ from an order block and how smart money uses the price return to these zones.',
+    descrRus:
+      'Что такое брейкер-блок и митигейшн-блок, чем они отличаются от ордер-блока и как смарт-мани используют возврат цены к этим зонам.',
+    realTitleRus: 'Брейкер-блок и митигейшн-блок: что это в Smart Money | Arapov.trade',
+    realTitleUkr: 'Брейкер-блок і мітигейшн-блок: що це в Smart Money | Arapov.trade',
+    realTitleEn: 'Breaker block and mitigation block: what they are in Smart Money | Arapov.trade',
+    groupsRus: ['Концепция Смарт Мани'],
+    groupsUkr: ['Концепція Смарт Мані'],
+    groupsEng: ['Smart Money Concept'],
+    id: 507,
+  },
   // {
   //   titleUkr: 'Беззбиток: що це і коли переносити стоп',
   //   linkUkr: 'breakeven',
