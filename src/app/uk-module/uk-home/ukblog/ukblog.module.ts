@@ -1167,13 +1167,13 @@ const routes: Routes = [
             (m) => m.OnehundredNineteenUkBlogModule,
           ),
       },
-  //     {
-  //       path: '120', //120
-  //       loadChildren: () =>
-  //         import('../ukblog/onehundred-twenty-uk-blog/onehundred-twenty-uk-blog.module').then(
-  //           (m) => m.OnehundredTwentyUkBlogModule,
-  //         ),
-  //     },
+      {
+        path: 'bull-bear-market', //120
+        loadChildren: () =>
+          import('../ukblog/onehundred-twenty-uk-blog/onehundred-twenty-uk-blog.module').then(
+            (m) => m.OnehundredTwentyUkBlogModule,
+          ),
+      },
   //     {
   //       path: '121', //121
   //       loadChildren: () =>

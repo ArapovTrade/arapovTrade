@@ -3395,26 +3395,26 @@ export class ArticlesService {
     groupsEng: ['Trading for Beginners'],
     id: 508,
   },
-  // {
-  //   titleUkr: 'Бичачий і ведмежий ринок: що це і чим відрізняються',
-  //   linkUkr: 'bull-bear-market',
-  //   imgUkr: '/assets/img/content/bull-bear-market.jpeg',
-  //   titleRus: 'Бычий и медвежий рынок: что это и чем отличаются',
-  //   titleEn: 'Bull and Bear Market: What They Are and How They Differ',
-  //   descrUkr:
-  //     'Що таке бичачий і ведмежий ринок, чим вони відрізняються за настроєм натовпу і чому фазу важливіше визначати за структурою й обсягом, а не за новинами.',
-  //   descrEn:
-  //     'What a bull and a bear market are, how they differ in crowd mood and why the phase is better read by structure and volume than by news.',
-  //   descrRus:
-  //     'Что такое бычий и медвежий рынок, чем они отличаются по настроению толпы и почему фазу важнее определять по структуре и объёму, а не по новостям.',
-  //   realTitleRus: 'Бычий и медвежий рынок: что это и чем отличаются | Arapov.trade',
-  //   realTitleUkr: 'Бичачий і ведмежий ринок: що це і чим відрізняються | Arapov.trade',
-  //   realTitleEn: 'Bull and Bear Market: What They Are and How They Differ | Arapov.trade',
-  //   groupsRus: ['Трейдинг для начинающих'],
-  //   groupsUkr: ['Трейдинг для початківців'],
-  //   groupsEng: ['Trading for Beginners'],
-  //   id: 509,
-  // },
+  {
+    titleUkr: 'Бичачий і ведмежий ринок: що це і чим відрізняються',
+    linkUkr: 'bull-bear-market',
+    imgUkr: '/assets/img/content/bull-bear-market.jpeg',
+    titleRus: 'Бычий и медвежий рынок: что это и чем отличаются',
+    titleEn: 'Bull and Bear Market: What They Are and How They Differ',
+    descrUkr:
+      'Що таке бичачий і ведмежий ринок, чим вони відрізняються за настроєм натовпу і чому фазу важливіше визначати за структурою й обсягом, а не за новинами.',
+    descrEn:
+      'What a bull and a bear market are, how they differ in crowd mood and why the phase is better read by structure and volume than by news.',
+    descrRus:
+      'Что такое бычий и медвежий рынок, чем они отличаются по настроению толпы и почему фазу важнее определять по структуре и объёму, а не по новостям.',
+    realTitleRus: 'Бычий и медвежий рынок: что это и чем отличаются | Arapov.trade',
+    realTitleUkr: 'Бичачий і ведмежий ринок: що це і чим відрізняються | Arapov.trade',
+    realTitleEn: 'Bull and Bear Market: What They Are and How They Differ | Arapov.trade',
+    groupsRus: ['Трейдинг для начинающих'],
+    groupsUkr: ['Трейдинг для початківців'],
+    groupsEng: ['Trading for Beginners'],
+    id: 509,
+  },
   // {
   //   titleUkr: 'Чи може нейромережа передбачити ціну акції або біткоїна',
   //   linkUkr: 'can-ai-predict-price',

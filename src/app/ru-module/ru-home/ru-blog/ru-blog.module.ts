@@ -1174,13 +1174,13 @@ const routes: Routes = [
             (m) => m.OnehundredNineteenRuBlogModule,
           ),
       },
-      // {
-      //   path: '120', //120
-      //   loadChildren: () =>
-      //     import('../ru-blog/onehundred-twenty-ru-blog/onehundred-twenty-ru-blog.module').then(
-      //       (m) => m.OnehundredTwentyRuBlogModule,
-      //     ),
-      // },
+      {
+        path: 'bull-bear-market', //120
+        loadChildren: () =>
+          import('../ru-blog/onehundred-twenty-ru-blog/onehundred-twenty-ru-blog.module').then(
+            (m) => m.OnehundredTwentyRuBlogModule,
+          ),
+      },
       // {
       //   path: '121', //121
       //   loadChildren: () =>
