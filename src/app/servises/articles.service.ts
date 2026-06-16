@@ -3435,26 +3435,26 @@ export class ArticlesService {
     groupsEng: ['Trading for Beginners'],
     id: 510,
   },
-  // {
-  //   titleUkr: 'Молот, доджі й вечірня зірка: свічки розвороту',
-  //   linkUkr: 'candle-hammer-doji-star',
-  //   imgUkr: '/assets/img/content/candle-hammer-doji-star.jpeg',
-  //   titleRus: 'Молот, доджи и вечерняя звезда: свечи разворота',
-  //   titleEn: 'Hammer, Doji and Evening Star: Reversal Candles',
-  //   descrUkr:
-  //     'Що означають свічкові патерни молот, доджі й вечірня зірка, як їх читати й чому вони працюють лише на значущих рівнях, а не самі по собі.',
-  //   descrEn:
-  //     'What the hammer, doji and evening star candlestick patterns mean, how to read them and why they work only at significant levels, not on their own.',
-  //   descrRus:
-  //     'Что означают свечные паттерны молот, доджи и вечерняя звезда, как их читать и почему они работают только на значимых уровнях, а не сами по себе.',
-  //   realTitleRus: 'Молот, доджи и вечерняя звезда: свечи разворота | Arapov.trade',
-  //   realTitleUkr: 'Молот, доджі й вечірня зірка: свічки розвороту | Arapov.trade',
-  //   realTitleEn: 'Hammer, Doji and Evening Star: Reversal Candles | Arapov.trade',
-  //   groupsRus: ['Технический анализ'],
-  //   groupsUkr: ['Технічний аналіз'],
-  //   groupsEng: ['Technical Analysis'],
-  //   id: 511,
-  // },
+  {
+    titleUkr: 'Молот, доджі й вечірня зірка: свічки розвороту',
+    linkUkr: 'candle-hammer-doji-star',
+    imgUkr: '/assets/img/content/candle-hammer-doji-star.jpeg',
+    titleRus: 'Молот, доджи и вечерняя звезда: свечи разворота',
+    titleEn: 'Hammer, Doji and Evening Star: Reversal Candles',
+    descrUkr:
+      'Що означають свічкові патерни молот, доджі й вечірня зірка, як їх читати й чому вони працюють лише на значущих рівнях, а не самі по собі.',
+    descrEn:
+      'What the hammer, doji and evening star candlestick patterns mean, how to read them and why they work only at significant levels, not on their own.',
+    descrRus:
+      'Что означают свечные паттерны молот, доджи и вечерняя звезда, как их читать и почему они работают только на значимых уровнях, а не сами по себе.',
+    realTitleRus: 'Молот, доджи и вечерняя звезда: свечи разворота | Arapov.trade',
+    realTitleUkr: 'Молот, доджі й вечірня зірка: свічки розвороту | Arapov.trade',
+    realTitleEn: 'Hammer, Doji and Evening Star: Reversal Candles | Arapov.trade',
+    groupsRus: ['Технический анализ'],
+    groupsUkr: ['Технічний аналіз'],
+    groupsEng: ['Technical Analysis'],
+    id: 511,
+  },
   // {
   //   titleUkr: 'Кері-трейд: що це і як заробляють на ставках',
   //   linkUkr: 'carrytrade',

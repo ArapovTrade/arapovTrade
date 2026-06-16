@@ -1185,13 +1185,13 @@ const routes: Routes = [
             (m) => m.OnehundredTwentyoneEnBlogModule,
           ),
       },
-      // {
-      //   path: '122', //122
-      //   loadChildren: () =>
-      //     import('../eu-blog/onehundred-twentytwo-en-blog/onehundred-twentytwo-en-blog.module').then(
-      //       (m) => m.OnehundredTwentytwoEnBlogModule,
-      //     ),
-      // },
+      {
+        path: 'candle-hammer-doji-star', //122
+        loadChildren: () =>
+          import('../eu-blog/onehundred-twentytwo-en-blog/onehundred-twentytwo-en-blog.module').then(
+            (m) => m.OnehundredTwentytwoEnBlogModule,
+          ),
+      },
       // {
       //   path: '123', //123
       //   loadChildren: () =>

@@ -1181,13 +1181,13 @@ const routes: Routes = [
             (m) => m.OnehundredTwentyoneUkBlogModule,
           ),
       },
-  //     {
-  //       path: '122', //122
-  //       loadChildren: () =>
-  //         import('../ukblog/onehundred-twentytwo-uk-blog/onehundred-twentytwo-uk-blog.module').then(
-  //           (m) => m.OnehundredTwentytwoUkBlogModule,
-  //         ),
-  //     },
+      {
+        path: 'candle-hammer-doji-star', //122
+        loadChildren: () =>
+          import('../ukblog/onehundred-twentytwo-uk-blog/onehundred-twentytwo-uk-blog.module').then(
+            (m) => m.OnehundredTwentytwoUkBlogModule,
+          ),
+      },
   //     {
   //       path: '123', //123
   //       loadChildren: () =>
