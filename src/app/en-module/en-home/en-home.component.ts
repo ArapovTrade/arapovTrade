@@ -76,7 +76,7 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
 
   ngOnInit(): void {
     this.lang.setNumber(3);
-   
+
     this.addAuthorPageSchema('en');
 
     this.registForm = new FormGroup({
@@ -217,8 +217,8 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
     this.flag = true;
     this.flagTrue = false;
   }
-  
-/**
+
+  /**
    * Author page — trilingual JSON-LD (uk / ru / en).
    *
    * ONE method, called per language. Call on each page:
@@ -442,13 +442,11 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
         },
 
         // ── Organization ──
-        {
-          '@type': 'Organization',
-          '@id': ORG_ID,
-          name: 'arapov.trade',
-          url: HOME_URL,
-          founder: { '@id': PERSON_ID },
-        },
+        // NOT defined here. The canonical Organization (#organization) is emitted
+        // globally by MetaservService.addOrganizationSchema() with name, url,
+        // legalName, taxID, logo, address, contactPoint and founder → #person.
+        // References below ({ '@id': ORG_ID }) resolve to that global node, since
+        // Google merges all JSON-LD scripts on the page into one graph by @id.
 
         // ── Person (canonical, language-neutral @id) ──
         {
@@ -807,5 +805,4 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
     script.text = JSON.stringify(schema);
     this.document.head.appendChild(script);
   }
-
 }
