@@ -55,20 +55,17 @@ export class HomeEuBlogThirtyThreeComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Pin Bar in Trading: Complete Trading Guide | Arapov.trade',
+      'Market Microstructure: Order Book and Tape | Arapov.trade',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Pin Bar in trading — complete guide to trading this reversal pattern. Bullish and bearish pin bar, entry strategies, risk management on forex and cryptocurrencies.',
+        'How market microstructure works: the order book, the tape, liquidity and iceberg orders. How to read the flow of orders and trades.',
     });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-04-16' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/pinbar.jpg',
-    });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
+
     this.gerRandom();
   }
   randomArticleRus: any = [];
@@ -254,26 +251,37 @@ export class HomeEuBlogThirtyThreeComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          '@id': 'https://arapov.trade/en/freestudying/pinbar#article',
-          headline: 'Pin Bar in Trading: Complete Trading Guide',
+          headline:
+            'Market Microstructure: How Price Forms, the Order Book, Spread, Liquidity and the Market Maker',
           description:
-            'Pin Bar in trading — complete guide to trading this reversal pattern. Bullish and bearish pin bar, entry strategies, risk management.',
+            'How market microstructure works: the order book, the tape, liquidity and iceberg orders. How to read the flow of orders and trades.',
+          author: { '@id': 'https://arapov.trade/#person' },
+          publisher: {
+            '@type': 'Organization',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
+            logo: {
+              '@type': 'ImageObject',
+              url: 'https://arapov.trade/assets/img/favicon.ico',
+            },
+          },
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': 'https://arapov.trade/en/freestudying/market-microstructure',
+          },
           image: {
             '@type': 'ImageObject',
-            url: 'https://arapov.trade/assets/img/content/pinbar1.png',
+            url: 'https://arapov.trade/assets/img/content/stockorderbook.png',
             width: 1200,
             height: 630,
           },
-          author: {
-            '@id': 'https://arapov.trade/en#person',
-          },
-          publisher: {
-            '@type': 'Organization',
-            '@id': 'https://arapov.trade#organization',
-            name: 'Arapov.trade',
-          },
-          datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
+          articleSection: "Trader's Dictionary",
+          keywords:
+            'market microstructure, order book, bid ask, spread, liquidity, volatility, market maker',
+          inLanguage: 'en',
         },
       ],
     };
@@ -288,18 +296,18 @@ export class HomeEuBlogThirtyThreeComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/en#person',
+      '@id': 'https://arapov.trade/#person',
       name: 'Igor Arapov',
       alternateName: [
         'Ігор Арапов',
-        'Арапов Игорь',
-        'I. Arapov',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/en',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -314,12 +322,12 @@ export class HomeEuBlogThirtyThreeComponent implements OnInit {
         'https://t.me/ArapovTrade',
       ],
       jobTitle: [
-        'Independent researcher,',
-        'trader',
-        'author and founder of arapov.trade',
+        'Independent researcher',
+        'Trader',
+        'Author and founder of arapov.trade',
       ],
       description:
-        'Independent researcher, practicing trader, author of books on trading and scientific publications. Specializes in trading psychology and cognitive biases in financial markets.',
+        'Independent researcher, practising trader, author of trading books and scientific publications. Specialises in trading psychology and cognitive biases in financial markets.',
     };
 
     this.addJsonLdSchema(data);
@@ -335,42 +343,42 @@ export class HomeEuBlogThirtyThreeComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'What is a pin bar in trading?',
+          name: 'How does price form on an exchange?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'A pin bar is a candlestick pattern with a long shadow and small body signaling potential price reversal. The long shadow shows rejected price level while the compact body indicates market indecision. The name derives from Pinocchio Bar.',
+            text: "Through the balance of supply and demand. When buyers push harder, price rises until enough sellers step in, and the reverse. Price is the participants' agreement at each moment, while the real imprint of that fight shows up in volume, which is where you see who is holding the move.",
           },
         },
         {
           '@type': 'Question',
-          name: 'How to distinguish bullish from bearish pin bar?',
+          name: 'What are Bid, Ask and the spread?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'A bullish pin bar has a long lower shadow and forms after decline signaling upward reversal. A bearish pin bar has a long upper shadow and appears after rally indicating potential downward reversal.',
+            text: 'Bid is the best price someone will buy at, Ask is the best price someone will sell at. All orders stack up in the order book, and the gap between Bid and Ask is the spread. It is the toll for entering instantly: the moment you open a trade you are already down by the spread.',
           },
         },
         {
           '@type': 'Question',
-          name: 'At which levels is pin bar most effective?',
+          name: 'What is market liquidity and why does a trader need it?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Pin bar is most effective at key support and resistance levels, Fibonacci levels (38.2%, 50%, 61.8%), round numbers, and high volume zones. Patterns without level attachment have low reliability.',
+            text: "It is the market's ability to absorb an order without a noticeable shift in price. A liquid market gives a tight spread and fills near the expected price; a thin one gives a wide spread, slippage and sharp gaps. The zones where stops pile up are liquidity pools, and big capital deliberately drives price toward them.",
           },
         },
         {
           '@type': 'Question',
-          name: 'Where to place stop-loss when trading pin bar?',
+          name: 'Can a beginner trade off the order book?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Stop-loss is placed beyond the long shadow. For bullish pin bar — below shadow minimum, for bearish — above shadow maximum. Recommended risk-to-reward ratio is minimum 1:2.',
+            text: 'In my experience it is hard: the book changes every second, and speed and algorithms sit with the large players, who also hide their orders with spoofing and icebergs. A beginner stands firmer leaning on levels and volume, where you can already see who actually built a position.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Which timeframes are best for trading pin bars?',
+          name: 'Is it true that the market maker hunts my stop?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Most reliable pin bars form on daily (D1) and four-hour (H4) charts. Lower timeframes (M5, M15) contain significant market noise and false signals.',
+            text: 'Not yours personally. He collects liquidity where there is plenty of it, and that means the obvious places the crowd puts stops: round levels and local extremes. More often a trader loses not because of a villain but because he set the stop in the single most predictable spot.',
           },
         },
       ],
@@ -386,37 +394,46 @@ export class HomeEuBlogThirtyThreeComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'How to Trade Pin Bar',
+      '@id': 'https://arapov.trade/en/freestudying/market-microstructure#howto',
+      name: 'How to make sense of market microstructure',
+      description:
+        'A step-by-step walk through how price is born, how the order book, spread and liquidity work, and what role the market maker plays',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Identify trend and key levels',
-          text: 'Use moving averages to determine trend direction. Find key support and resistance levels on the chart.',
+          name: 'Grasp that price is shaped by supply and demand',
+          text: 'Price is always an agreement between those who want to buy and those who want to sell.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Wait for pin bar formation',
-          text: 'Look for a candle with long shadow (at least 2x body size) and small body at a key level.',
+          name: 'Get to grips with the order book, Bid and Ask',
+          text: 'The order book is a list of all live buy and sell orders lined up by price.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Confirm the signal',
-          text: 'Check trading volume and use RSI to confirm overbought/oversold conditions.',
+          name: 'Count the spread as a cost on every trade',
+          text: 'The spread is the difference between the buy price and the sell price, a hidden cost on every trade.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Enter the trade',
-          text: 'Aggressive entry — immediately after pin bar close. Conservative — after breakout of high/low by next candle.',
+          name: 'Learn to see liquidity and its pools',
+          text: "Liquidity is the market's ability to absorb an order without a noticeable change in price.",
         },
         {
           '@type': 'HowToStep',
           position: 5,
-          name: 'Set stop-loss and take-profit',
-          text: 'Stop-loss — beyond the long shadow. Take-profit — at nearest support/resistance level. Minimum 1:2 ratio.',
+          name: 'Fit risk to volatility through ATR',
+          text: 'Volatility is the range of price swings over a period, not the direction of the move.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 6,
+          name: "Understand the market maker's logic and follow capital, not fight it",
+          text: 'The market maker is a professional participant who holds a two-sided quote and supplies liquidity.',
         },
       ],
     };
@@ -431,67 +448,37 @@ export class HomeEuBlogThirtyThreeComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Pin Bar Terminology Glossary',
+      name: 'Glossary of terms in this article',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Pin Bar',
+          name: 'Order book',
           description:
-            'Candlestick pattern with long shadow and small body signaling potential price reversal.',
+            'A list of all live buy and sell orders for an asset lined up by price; also called the book of orders or depth of market.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Bullish Pin Bar',
+          name: 'Spread',
           description:
-            'Reversal pattern with long lower shadow forming after decline indicating potential upward movement.',
+            'The difference between the buy price (Ask) and the sell price (Bid) of one asset at a given moment; a hidden cost on every trade.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Bearish Pin Bar',
+          name: 'Liquidity',
           description:
-            'Reversal pattern with long upper shadow forming after rally indicating potential downward movement.',
+            "The market's ability to absorb a trading order without a noticeable change in price.",
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Candle Shadow',
+          name: 'Volatility',
           description:
-            'Vertical line above or below candle body showing maximum price range for the period.',
+            "A measure of the range of an asset's price swings over a set period; it describes the amplitude of the move, not its direction.",
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Candle Body',
+          name: 'Market maker',
           description:
-            'Rectangular part of candle between opening and closing prices.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'False Breakout',
-          description:
-            'Brief price movement beyond a level with subsequent return. Often forms pin bars.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Price Action',
-          description:
-            'Technical analysis methodology based on studying price movement without indicators.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Level Rejection',
-          description:
-            'Situation where price tests support or resistance level but fails to break through and reverses.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Pattern Confirmation',
-          description:
-            'Additional technical signals strengthening the reliability of a trading setup.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Risk/Reward Ratio',
-          description:
-            'Ratio of potential loss to potential profit in a trade. Minimum 1:2 recommended for pin bars.',
+            'A professional market participant who, by agreement with the exchange, holds a two-sided quote and supplies liquidity.',
         },
       ],
     };

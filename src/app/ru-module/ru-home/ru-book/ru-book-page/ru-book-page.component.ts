@@ -26,20 +26,10 @@ export class RuBookPageComponent implements OnInit, AfterViewInit, OnDestroy {
     private router: Router,
     private cdr: ChangeDetectorRef,
     @Inject(DOCUMENT) private document: Document,
-    private themeService: ThemeservService
+    private themeService: ThemeservService,
   ) {}
 
-  ngAfterViewInit() {
-    setTimeout(() => {
-      if (typeof AOS !== 'undefined') {
-        AOS.init({
-          duration: 1000,
-          once: false,
-          offset: 100,
-        });
-      }
-    }, 500); // Задержка 0.5s
-  }
+  ngAfterViewInit() {}
   isDark!: boolean;
   languages = ['ua', 'en', 'ru']; // какие языки нужны
   currentLang = 'ru';
@@ -49,7 +39,7 @@ export class RuBookPageComponent implements OnInit, AfterViewInit, OnDestroy {
     this.removeExistingWebPageSchema();
 
     this.titleService.setTitle(
-      'Книги по трейдингу Игоря Арапова — серия «Основы трейдинга»'
+      'Книги по трейдингу Игоря Арапова — серия «Основы трейдинга»',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
@@ -64,12 +54,13 @@ export class RuBookPageComponent implements OnInit, AfterViewInit, OnDestroy {
         'Трейдинг, Обучение трейдингу, Технический анализ, Финансовая биржа, Торговая система, Игорь Арапов',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-06-07' });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
     this.meta.updateTag({
       property: 'og:image',
       content: 'https://arapov.trade/assets/img/photo_mainpage.jpg',
     });
     this.addWebSiteSchema();
+    this.addPersonSchema();
     this.addBookSchema();
     this.themeSubscription = this.themeService.getTheme().subscribe((data) => {
       this.isDark = data;
@@ -87,18 +78,6 @@ export class RuBookPageComponent implements OnInit, AfterViewInit, OnDestroy {
   toggleTheme() {
     this.isDark = !this.isDark;
     this.themeService.setTheme(this.isDark);
-
-    this.refreshAOS();
-  }
-  refreshAOS() {
-    if (typeof AOS !== 'undefined') {
-      setTimeout(() => {
-        AOS.refresh(); // Обновление позиций AOS
-        this.cdr.detectChanges(); // Принудительное обнаружение изменений
-      }, 100); // Задержка для синхронизации
-    } else {
-      console.warn('AOS is not defined, refresh skipped');
-    }
   }
 
   toggleDropdown() {
@@ -133,7 +112,7 @@ export class RuBookPageComponent implements OnInit, AfterViewInit, OnDestroy {
 
   private removeExistingWebPageSchema(): void {
     const scripts = this.document.querySelectorAll(
-      'script[type="application/ld+json"]'
+      'script[type="application/ld+json"]',
     );
 
     scripts.forEach((script) => {
@@ -145,15 +124,57 @@ export class RuBookPageComponent implements OnInit, AfterViewInit, OnDestroy {
         if (content['@type'] === 'ItemList') {
           script.remove();
         }
+        if (content['@type'] === 'Person') {
+          script.remove();
+        }
       } catch (e) {
         // Игнорируем некорректные JSON (например, из других источников)
       }
     });
   }
 
+  private addPersonSchema() {
+    const exists = Array.from(
+      this.document.querySelectorAll('script[type="application/ld+json"]'),
+    ).some((script) => {
+      try {
+        const json = JSON.parse(script.textContent || '{}');
+        return (
+          json['@type'] === 'Person' &&
+          json['@id'] === 'https://arapov.trade/#person'
+        );
+      } catch {
+        return false;
+      }
+    });
+
+    // Если уже существует — выходим
+    if (exists) return;
+
+    // Создаем новый JSON-LD
+    const script = this.document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Person',
+      '@id': 'https://arapov.trade/#person',
+      name: 'Арапов Игорь Витальевич',
+      alternateName: 'Igor Arapov',
+      url: 'https://arapov.trade/ru',
+      jobTitle: 'Независимый трейдер и исследователь',
+      sameAs: [
+        'https://orcid.org/0009-0003-0430-778X',
+        'https://www.wikidata.org/wiki/Q137454477',
+        'https://scholar.google.com/citations?user=N440tWQAAAAJ',
+      ],
+    });
+
+    this.document.head.appendChild(script);
+  }
+
   private addWebSiteSchema() {
     const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]')
+      this.document.querySelectorAll('script[type="application/ld+json"]'),
     ).some((script) => {
       try {
         const json = JSON.parse(script.textContent || '{}');
@@ -172,7 +193,7 @@ export class RuBookPageComponent implements OnInit, AfterViewInit, OnDestroy {
     script.text = JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'WebSite',
-      '@id': 'https://arapov.trade/ru/main#website',
+      '@id': 'https://arapov.trade/#website',
       url: 'https://arapov.trade/ru/main',
       name: 'Arapov.Trade',
       alternateName: 'Обучение трейдингу',
@@ -190,8 +211,7 @@ export class RuBookPageComponent implements OnInit, AfterViewInit, OnDestroy {
         },
         founder: {
           '@type': 'Person',
-          '@id': 'https://arapov.trade/ru#person',
-          name: 'Арапов Ігор Віталійович',
+          '@id': 'https://arapov.trade/#person',
         },
       },
     });
@@ -212,7 +232,7 @@ export class RuBookPageComponent implements OnInit, AfterViewInit, OnDestroy {
 
   private addBookSchema() {
     const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]')
+      this.document.querySelectorAll('script[type="application/ld+json"]'),
     ).some((script) => {
       try {
         const json = JSON.parse(script.textContent || '{}');
@@ -248,9 +268,15 @@ export class RuBookPageComponent implements OnInit, AfterViewInit, OnDestroy {
             name: 'Теория трейдинга. Основы рынка • Технический анализ • Объёмный анализ',
             isbn: '979-8-90243-075-9',
             inLanguage: 'ru',
+            bookFormat: 'https://schema.org/EBook',
+            datePublished: '2025-06-07',
             author: {
               '@type': 'Person',
-              '@id': 'https://arapov.trade/ru#author',
+              '@id': 'https://arapov.trade/#person',
+            },
+            publisher: {
+              '@type': 'Organization',
+              '@id': 'https://arapov.trade/#organization',
             },
             url: 'https://arapov.trade/ru/books/osnovy-treydinga',
           },
@@ -264,9 +290,15 @@ export class RuBookPageComponent implements OnInit, AfterViewInit, OnDestroy {
             name: 'Психология трейдинга: Как управлять эмоциями и мыслить как профессионал',
             isbn: '979-8-90243-081-0',
             inLanguage: 'ru',
+            bookFormat: 'https://schema.org/EBook',
+            datePublished: '2025-06-07',
             author: {
               '@type': 'Person',
-              '@id': 'https://arapov.trade/ru#author',
+              '@id': 'https://arapov.trade/#person',
+            },
+            publisher: {
+              '@type': 'Organization',
+              '@id': 'https://arapov.trade/#organization',
             },
             url: 'https://arapov.trade/ru/books/psihologiya-treydinga',
           },
@@ -276,13 +308,20 @@ export class RuBookPageComponent implements OnInit, AfterViewInit, OnDestroy {
           position: 3,
           item: {
             '@type': 'Book',
-            '@id': 'https://arapov.trade/ru/books/osnovy-treydinga-tom-two#book',
+            '@id':
+              'https://arapov.trade/ru/books/osnovy-treydinga-tom-two#book',
             name: 'Методы анализа. Технический анализ • Объёмный анализ • Практика',
             isbn: '979-8-90243-078-0',
             inLanguage: 'ru',
+            bookFormat: 'https://schema.org/EBook',
+            datePublished: '2025-06-07',
             author: {
               '@type': 'Person',
-              '@id': 'https://arapov.trade/ru#author',
+              '@id': 'https://arapov.trade/#person',
+            },
+            publisher: {
+              '@type': 'Organization',
+              '@id': 'https://arapov.trade/#organization',
             },
             url: 'https://arapov.trade/ru/books/osnovy-treydinga-tom-two',
           },

@@ -56,16 +56,18 @@ export class HomeUkBlogSevenComponent implements OnInit {
     this.grr = this.artickleServ.selectedGroups;
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
-    this.titleService.setTitle('Як заробити на трейдингу: повний посібник');
+    this.titleService.setTitle(
+      'Bitcoin-ETF: що це і як впливає на ринок | Arapov.trade',
+    );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Як заробити на трейдингу: практичний посібник з вибору ринку, стратегії торгівлі та управління ризиками для початківців.',
+        'Що таке Bitcoin-ETF, як він працює, чим зручний інвесторам і як притоки у спотові ETF впливають на ринок криптовалют.',
     });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
 
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
     this.gerRandom();
   }
   randomArticleRus: any = [];
@@ -271,40 +273,35 @@ export class HomeUkBlogSevenComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          '@id':
-            'https://arapov.trade/uk/freestudying/makingmoneyintrading#article',
-          headline: 'Як заробити на трейдингу: практичний посібник',
+          headline: 'Bitcoin ETF: що це і як впливає на ринок криптовалют',
           description:
-            'Як заробити на трейдингу: практичний посібник з вибору ринку, стратегії торгівлі та управління ризиками.',
-          image:
-            'https://arapov.trade/assets/img/content/makingmoneyintrading1.webp',
-          datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
-
-          author: {
-            '@id': 'https://arapov.trade/uk#person',
-          },
+            'Що таке Bitcoin-ETF, як він працює, чим зручний інвесторам і як притоки у спотові ETF впливають на ринок криптовалют.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
             '@id': 'https://arapov.trade/#organization',
-            name: 'Pair Trade',
+            name: 'Arapov.Trade',
             url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://arapov.trade/uk/freestudying/makingmoneyintrading',
+            '@id': 'https://arapov.trade/uk/freestudying/bitcoin-etf',
           },
-          articleSection: 'Трейдинг',
-          keywords: [
-            'заробіток на трейдингу',
-            'трейдинг',
-            'Форекс',
-            'торгові стратегії',
-          ],
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/bitcoinetf.webp',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Криптовалюта',
+          keywords: 'bitcoin etf',
+          inLanguage: 'uk',
         },
       ],
     };
@@ -319,18 +316,18 @@ export class HomeUkBlogSevenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/uk#person',
-      name: 'Ігор Арапов',
+      '@id': 'https://arapov.trade/#person',
+      name: 'Igor Arapov',
       alternateName: [
-        'Igor Arapov',
-        'Арапов Игорь',
-        'I. Arapov',
+        'Ігор Арапов',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/uk',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -363,46 +360,37 @@ export class HomeUkBlogSevenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
-      '@id': 'https://arapov.trade/uk/freestudying/makingmoneyintrading#faq',
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'Чи реально заробити на трейдингу новачку?',
+          name: 'Що таке Bitcoin ETF простими словами?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Так, але потрібне навчання, практика на демо-рахунку та суворе дотримання ризик-менеджменту. Близько 20-30% трейдерів виходять на стабільний прибуток після 1-2 років практики.',
+            text: 'Це біржовий фонд, паї якого торгуються як акції, а їхня ціна привʼязана до біткоїна. Він дає доступ до BTC через звичайний брокерський рахунок, без купівлі та зберігання самої монети й приватних ключів.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Скільки грошей потрібно для старту в трейдингу?',
+          name: 'Чим відрізняється спотовий і фʼючерсний Bitcoin ETF?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Мінімальний депозит на Форекс — від 100 доларів. Для комфортної торгівлі рекомендується 500-1000 доларів.',
+            text: 'Спотовий фонд тримає реальні біткоїни, тому його ціна точно йде за курсом. Фʼючерсний відстежує ціну через похідні контракти й може відходити від реальної вартості активу.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Який ринок краще обрати новачку?',
+          name: 'Коли схвалили спотові Bitcoin ETF?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Форекс підходить для старту завдяки високій ліквідності та доступності. Криптовалюти більш волатильні та ризиковані.',
+            text: 'Спотові біткоїн-фонди схвалили у США 10 січня 2024 року, торги почалися наступного дня. До цього понад десять років подібні заявки регулятор відхиляв.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Скільки часу займає трейдинг?',
+          name: 'Як Bitcoin ETF впливає на курс біткоїна?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Залежить від стилю: скальпінг вимагає 4-8 годин на день, свінг-трейдинг — 1-2 години.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Чому більшість трейдерів втрачають гроші?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Основні причини: відсутність навчання, ігнорування ризик-менеджменту, емоційні рішення та завищені очікування.',
+            text: 'Через попит: під припливи у фонди управителі купують реальні біткоїни, і цей тиск видно на ринку. Але відтоки й рішення регулятора тиснуть ціну вниз, тому ETF це тло попиту, а не гарантія зростання.',
           },
         },
       ],
@@ -418,38 +406,28 @@ export class HomeUkBlogSevenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      '@id': 'https://arapov.trade/uk/freestudying/makingmoneyintrading#howto',
-      name: 'Як почати заробляти на трейдингу',
+      '@id': 'https://arapov.trade/uk/freestudying/bitcoin-etf#howto',
+      name: 'Як розібратись і застосувати: що таке Bitcoin ETF і як він впливає на ринок криптовалют',
+      description:
+        'Покроковий розбір теми та її практичне застосування в торгівлі',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Оберіть ринок',
-          text: 'Визначтеся з напрямком: Форекс, акції, криптовалюти чи деривативи.',
+          name: 'Що таке Bitcoin ETF і як він працює',
+          text: 'Bitcoin ETF — це біржовий інвестиційний фонд, паї якого торгуються на фондовій біржі, а їхня ціна привʼязана до вартості біткоїна.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Пройдіть навчання',
-          text: 'Вивчіть основи технічного та фундаментального аналізу.',
+          name: 'Спотові Bitcoin ETF: які запустили і в яких обсягах',
+          text: 'Поворот стався 10 січня 2024 року, коли регулятор США схвалив одразу одинадцять заявок на спотові біткоїн-фонди, а торги стартували наступного дня.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Відкрийте демо-рахунок',
-          text: 'Практикуйтеся мінімум 3 місяці без ризику реальних грошей.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 4,
-          name: 'Розробіть стратегію',
-          text: 'Створіть торговий план з чіткими правилами входу та виходу.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 5,
-          name: 'Почніть з малого',
-          text: 'Переходьте на реальний рахунок з мінімальним депозитом.',
+          name: 'Як Bitcoin ETF впливає на курс BTC та інституційний попит',
+          text: 'Головний вплив не в магії, а в попиті.',
         },
       ],
     };
@@ -464,66 +442,13 @@ export class HomeUkBlogSevenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      '@id': 'https://arapov.trade/uk/freestudying/makingmoneyintrading#terms',
+      name: 'Глосарій термінів статті',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Трейдинг',
+          name: 'Bitcoin ETF',
           description:
-            'Процес купівлі та продажу фінансових інструментів з метою отримання прибутку',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Кредитне плече',
-          description:
-            'Інструмент, що дозволяє торгувати сумами, які перевищують власний депозит',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Скальпінг',
-          description:
-            'Стиль торгівлі з безліччю швидких угод для отримання невеликого прибутку',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Свінг-трейдинг',
-          description:
-            'Торгівля на середньострокових коливаннях цін з утриманням позицій від днів до тижнів',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Технічний аналіз',
-          description:
-            'Метод прогнозування цін на основі графіків та індикаторів',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Фундаментальний аналіз',
-          description:
-            'Оцінка вартості активу на основі економічних показників',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Ризик-менеджмент',
-          description:
-            'Система управління торговими ризиками та розміром позицій',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Волатильність',
-          description: 'Ступінь мінливості ціни активу за певний період',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Ліквідність',
-          description:
-            'Здатність активу швидко продаватися без суттєвої зміни ціни',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Деривативи',
-          description:
-            'Похідні фінансові інструменти, вартість яких залежить від базового активу',
+            'Bitcoin ETF — це біржовий інвестиційний фонд, паї якого торгуються на фондовій біржі, а їхня ціна привʼязана до вартості біткоїна.',
         },
       ],
     };

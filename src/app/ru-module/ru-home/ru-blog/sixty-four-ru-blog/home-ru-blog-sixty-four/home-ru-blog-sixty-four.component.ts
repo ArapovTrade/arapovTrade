@@ -29,7 +29,7 @@ export class HomeRuBlogSixtyFourComponent {
     private artickleServ: ArticlesService,
     private renderer: Renderer2,
     @Inject(DOCUMENT) private document: Document,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
   ) {}
   private routerSubscription!: Subscription;
   private themeSubscription!: Subscription;
@@ -58,7 +58,7 @@ export class HomeRuBlogSixtyFourComponent {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Торговая стратегия в трейдинге — практические примеры для начинающих'
+      'Торговая стратегия в трейдинге — практические примеры для начинающих',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
@@ -66,13 +66,9 @@ export class HomeRuBlogSixtyFourComponent {
       content:
         'Торговая стратегия в трейдинге — что это такое, из чего состоит и почему важна для новичков. Примеры реальных сделок с разбором точек входа и выхода.',
     });
-     this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
 
-  this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/prakticrus.jpg',
-    });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
 
     this.gerRandom();
 
@@ -115,7 +111,6 @@ export class HomeRuBlogSixtyFourComponent {
       title: 'Базовый курс',
       link: 'https://arapov.trade/ru/freestudying/freeeducation',
     },
-     
   ];
 
   onGroupChange(event: Event) {
@@ -185,7 +180,7 @@ export class HomeRuBlogSixtyFourComponent {
     // Показываем 5 случайных статей при фокусе, если инпут пуст
     if (!this.searchQuery) {
       const shuffled = [...this.artickleServ.ukrArtickles].sort(
-        () => Math.random() - 0.5
+        () => Math.random() - 0.5,
       );
       this.displayedArticles = shuffled.slice(0, this.maxResults);
     }
@@ -200,7 +195,7 @@ export class HomeRuBlogSixtyFourComponent {
   onSearchChange() {
     // Логика асинхронного поиска
     const filtered = this.artickleServ.ukrArtickles.filter((a) =>
-      a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase())
+      a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase()),
     );
     this.displayedArticles = filtered.slice(0, this.maxResults);
   }
@@ -222,7 +217,7 @@ export class HomeRuBlogSixtyFourComponent {
     const path: string =
       this.router.url.split('/')[this.router.url.split('/').length - 1];
     let index = this.artickleServ.ukrArtickles.findIndex(
-      (a) => a.linkUkr == path
+      (a) => a.linkUkr == path,
     );
 
     if (this.artickleServ.ukrArtickles.length - 1 == index) {
@@ -239,7 +234,7 @@ export class HomeRuBlogSixtyFourComponent {
     const path: string =
       this.router.url.split('/')[this.router.url.split('/').length - 1];
     let index = this.artickleServ.ukrArtickles.findIndex(
-      (a) => a.linkUkr == path
+      (a) => a.linkUkr == path,
     );
 
     if (index == 1) {
@@ -264,7 +259,7 @@ export class HomeRuBlogSixtyFourComponent {
     ];
 
     const scripts = this.document.querySelectorAll(
-      'script[type="application/ld+json"]'
+      'script[type="application/ld+json"]',
     );
 
     scripts.forEach((script) => {
@@ -277,7 +272,7 @@ export class HomeRuBlogSixtyFourComponent {
 
         const shouldRemove = candidates.some(
           (entry: any) =>
-            entry['@type'] && typesToRemove.includes(entry['@type'])
+            entry['@type'] && typesToRemove.includes(entry['@type']),
         );
 
         if (shouldRemove) {
@@ -305,41 +300,35 @@ export class HomeRuBlogSixtyFourComponent {
       '@graph': [
         {
           '@type': 'Article',
-          '@id': 'https://arapov.trade/ru/freestudying/practic#article',
-          headline:
-            'Торговая стратегия в трейдинге — практические примеры для начинающих',
+          headline: 'Стратегия трейдинга для новичков',
           description:
-            'Торговая стратегия в трейдинге — что это такое, из чего состоит и почему важна для новичков. Примеры реальных сделок с разбором точек входа и выхода.',
-          datePublished: '2025-11-15T00:00:00+02:00',
-          dateModified: '2026-04-15T00:00:00Z',
-          author: {
-            '@id': 'https://arapov.trade/ru#person',
-          },
+            'Узнайте, как построить торговую стратегию в трейдинге: правила входа и выхода, управление рисками, примеры систем для новичков и профи.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'Arapov Trade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
             '@id': 'https://arapov.trade/ru/freestudying/practic',
           },
           image: {
             '@type': 'ImageObject',
-            url: 'https://arapov.trade/assets/img/content/prakticrus.jpg',
+            url: 'https://arapov.trade/assets/img/content/prakticuk.jpg',
+            width: 1200,
+            height: 630,
           },
-          articleSection: 'Трейдинг',
-          keywords: [
-            'торговая стратегия',
-            'трейдинг',
-            'точка входа',
-            'стоп-лосс',
-            'мани-менеджмент',
-            'Price Action',
-          ],
+          articleSection: 'Примеры сделок',
+          keywords: 'торговая стратегия',
+          inLanguage: 'ru',
         },
       ],
     };
@@ -354,18 +343,18 @@ export class HomeRuBlogSixtyFourComponent {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/ru#person',
-      name: 'Игорь Арапов',
+      '@id': 'https://arapov.trade/#person',
+      name: 'Igor Arapov',
       alternateName: [
-        'Igor Arapov',
-              'Арапов Игорь',
-              'I. Arapov',
-              'Ігор Арапов',
-              'І. В. Арапов',
-              'Арапов Ігор',
-              'Arapov Igor',
+        'Ігор Арапов',
+        'Игорь Арапов',
+        'Арапов Игорь',
+        'Арапов Ігор',
+        'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/ru',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -377,9 +366,13 @@ export class HomeRuBlogSixtyFourComponent {
         'https://github.com/ArapovTrade',
         'https://ua.linkedin.com/in/arapovtrade',
         'https://www.youtube.com/@ArapovTrade',
-        'https://t.me/ArapovTrade'
+        'https://t.me/ArapovTrade',
       ],
-      jobTitle: ['Независимый исследователь', 'трейдер', 'автор и основатель arapov.trade'],
+      jobTitle: [
+        'Независимый исследователь',
+        'трейдер',
+        'автор и основатель arapov.trade',
+      ],
       description:
         'Независимый исследователь, практикующий трейдер, автор книг по трейдингу и научных публикаций. Специализируется на психологии трейдинга и когнитивных искажениях на финансовых рынках.',
     };
@@ -394,14 +387,14 @@ export class HomeRuBlogSixtyFourComponent {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
-      '@id': 'https://arapov.trade/ru/freestudying/practic#faq',
+      inLanguage: 'ru',
       mainEntity: [
         {
           '@type': 'Question',
           name: 'Что такое торговая стратегия?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Торговая стратегия — это заранее разработанный набор чётких правил, регулирующих действия трейдера на всех этапах: от входа в сделку до выхода. Она устраняет импровизацию, эмоциональные колебания и субъективность.',
+            text: 'Торговая стратегия это заранее разработанный набор чётких правил, регулирующих действия трейдера на всех этапах: от входа в сделку до выхода. Она устраняет импровизацию, эмоциональные колебания и субъективность.',
           },
         },
         {
@@ -409,15 +402,15 @@ export class HomeRuBlogSixtyFourComponent {
           name: 'Почему трейдинг без стратегии приводит к убыткам?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Без рабочей стратегии трейдинг превращается в азартную игру с отрицательным математическим ожиданием. Это математически подтверждённый факт — хаотичная торговля гарантированно приводит к потере депозита.',
+            text: 'Без рабочей стратегии трейдинг превращается в азартную игру, где шансы резко против вас. Комиссии, спред, эмоции и несдержанный риск работают в минус, поэтому подавляющее большинство трейдеров без системы теряют депозит.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Что такое правило 3 к 1 в трейдинге?',
+          name: 'Что такое правило 3:1 в трейдинге?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Правило 3 к 1 означает, что на каждый доллар риска потенциальная прибыль должна составлять минимум 3 доллара. Расстояние до цели в пунктах должно быть в 3 раза больше, чем расстояние до стоп-лосса.',
+            text: 'Правило 3:1 означает, что на каждый доллар риска потенциальная прибыль должна составлять минимум 3 доллара. Расстояние до цели в пунктах должно быть в 3 раза больше, чем расстояние до стоп-лосса.',
           },
         },
         {
@@ -425,15 +418,15 @@ export class HomeRuBlogSixtyFourComponent {
           name: 'Что такое ложный пробой уровня?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Ложный пробой — это попытка поднять или опустить цену за уровень поддержки/сопротивления, которая не получает продолжения. Часто происходит на повышенных объёмах и используется Smart Money для набора позиций.',
+            text: 'Ложный пробой это попытка поднять или опустить цену за уровень поддержки или сопротивления, которая не получает продолжения. Часто происходит на повышенных объёмах и используется Smart Money для набора позиций и сбора ликвидности.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Какой WinRate считается хорошим для торговой системы?',
+          name: 'Какой WinRate считается рабочим для торговой системы?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'При работе с уровнями классическим считается WinRate около 60-65%. Это означает, что из 100 сделок примерно 63 будут прибыльными. В сочетании с правилом 3 к 1 это обеспечивает стабильный рост депозита.',
+            text: 'При работе с уровнями нормальным считается WinRate около 60-65%, то есть примерно 63 прибыльные сделки из 100. Сам по себе он ничего не гарантирует: важна связка с правилом 3:1 и контролем риска на дистанции.',
           },
         },
       ],
@@ -449,40 +442,40 @@ export class HomeRuBlogSixtyFourComponent {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      '@id': 'https://arapov.trade/ru/freestudying/practic#howto',
-      name: 'Как применить торговую стратегию на практике',
+      inLanguage: 'ru',
+      name: 'Как найти точку входа по торговой системе',
       description:
-        'Пошаговый алгоритм применения торговой стратегии с уровнями и Price Action.',
+        'Пошаговый алгоритм определения точки входа в сделку на продажу от уровня сопротивления по правилам Price Action и Smart Money.',
       step: [
         {
           '@type': 'HowToStep',
-          position: 1,
-          name: 'Определите уровень на старшем таймфрейме',
-          text: 'На графике 4 часа найдите импульсную волну и отметьте зону сопротивления или поддержки как область интереса.',
+          name: 'Определить уровень',
+          text: 'Провести диапазон сопротивления по старшему таймфрейму (×4) и отметить его как зону интереса.',
         },
         {
           '@type': 'HowToStep',
-          position: 2,
-          name: 'Дождитесь пин-бара в зоне',
-          text: 'В отмеченной зоне ждите появления пин-бара — первого признака проблем у покупателей или продавцов.',
+          name: 'Дождаться пин-бар',
+          text: 'В диапазоне уровня дождаться пин-бар как первый признак слабости покупателей и дефицита спроса.',
         },
         {
           '@type': 'HowToStep',
-          position: 3,
-          name: 'Идентифицируйте ложный пробой',
-          text: 'Наблюдайте за попыткой пробить уровень на повышенных объёмах. Неудачная попытка с возвратом цены — сигнал ложного пробоя.',
+          name: 'Идентифицировать ложный пробой',
+          text: 'Распознать попытку пробить уровень на повышенном объёме, которая не получает продолжения и собирает ликвидность.',
         },
         {
           '@type': 'HowToStep',
-          position: 4,
-          name: 'Войдите по паттерну поглощения',
-          text: 'Дождитесь медвежьего или бычьего поглощения и входите при пробое минимума/максимума бара ложного пробоя.',
+          name: 'Войти на медвежьем поглощении',
+          text: 'Открыть сделку в продажу при пробое минимума бара ложного пробоя по паттерну медвежье поглощение.',
         },
         {
           '@type': 'HowToStep',
-          position: 5,
-          name: 'Установите стоп-лосс и цель',
-          text: 'Стоп-лосс ставьте за экстремум ложного пробоя, цель — противоположный импульсный уровень. Проверьте соотношение 3 к 1.',
+          name: 'Выставить стоп-лосс',
+          text: 'Поставить защитный ордер за макушку бара ложного пробоя плюс пара пунктов на комиссию биржи или брокера.',
+        },
+        {
+          '@type': 'HowToStep',
+          name: 'Определить цель и проверить 3:1',
+          text: 'Цель ставится на противоположный импульсный уровень; сделка берётся только если потенциальная прибыль минимум втрое превышает риск.',
         },
       ],
     };
@@ -498,67 +491,72 @@ export class HomeRuBlogSixtyFourComponent {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
       '@id': 'https://arapov.trade/ru/freestudying/practic#terms',
-      name: 'Глоссарий терминов торговой стратегии',
+      inLanguage: 'ru',
+      name: 'Термины торговой стратегии',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
           name: 'Торговая стратегия',
           description:
-            'Набор правил, определяющих условия входа, выхода и управления капиталом в трейдинге.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Стоп-лосс',
-          description:
-            'Защитный ордер, автоматически закрывающий позицию при достижении заданного уровня убытка.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Тейк-профит',
-          description:
-            'Ордер на фиксацию прибыли при достижении ценой заданного целевого уровня.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Price Action',
-          description:
-            'Метод анализа рынка на основе движения цены и свечных паттернов без использования индикаторов.',
+            'Заранее разработанный набор чётких правил входа, выхода и контроля риска, заменяющий импровизацию и эмоции логикой и статистикой.',
+          inDefinedTermSet:
+            'https://arapov.trade/ru/freestudying/practic#terms',
         },
         {
           '@type': 'DefinedTerm',
           name: 'Ложный пробой',
           description:
-            'Движение цены за уровень поддержки или сопротивления с последующим быстрым возвратом.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Пин-бар',
-          description:
-            'Свечной паттерн с длинной тенью и маленьким телом, указывающий на отвержение цены.',
+            'Попытка вывести цену за уровень поддержки или сопротивления без продолжения движения, часто на повышенном объёме.',
+          inDefinedTermSet:
+            'https://arapov.trade/ru/freestudying/practic#terms',
         },
         {
           '@type': 'DefinedTerm',
           name: 'Медвежье поглощение',
           description:
-            'Паттерн из двух свечей, где вторая медвежья свеча полностью перекрывает тело первой бычьей.',
+            'Паттерн Price Action, указывающий на преобладание продавцов; сигнал входа в продажу при пробое минимума бара ложного пробоя.',
+          inDefinedTermSet:
+            'https://arapov.trade/ru/freestudying/practic#terms',
+        },
+        {
+          '@type': 'DefinedTerm',
+          name: 'Правило 3:1',
+          description:
+            'Условие, при котором на каждый доллар риска закладывается минимум 3 доллара потенциальной прибыли.',
+          inDefinedTermSet:
+            'https://arapov.trade/ru/freestudying/practic#terms',
         },
         {
           '@type': 'DefinedTerm',
           name: 'WinRate',
           description:
-            'Процент прибыльных сделок от общего количества сделок в торговой системе.',
+            'Доля прибыльных сделок в торговой системе; при работе с уровнями обычно около 60-65%.',
+          inDefinedTermSet:
+            'https://arapov.trade/ru/freestudying/practic#terms',
         },
         {
           '@type': 'DefinedTerm',
           name: 'Profit Factor',
           description:
-            'Отношение суммы прибыльных сделок к сумме убыточных, показатель эффективности системы.',
+            'Отношение суммарной прибыли к суммарному убытку; минимально достаточным считается 1.8-2 с учётом комиссий.',
+          inDefinedTermSet:
+            'https://arapov.trade/ru/freestudying/practic#terms',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'DrawDown',
+          name: 'Maximal DrawDown',
           description:
-            'Просадка депозита — максимальное снижение баланса счёта от пикового значения.',
+            'Максимальная просадка депозита за период; стоп-лосс ограничивает её глубину, но не отменяет.',
+          inDefinedTermSet:
+            'https://arapov.trade/ru/freestudying/practic#terms',
+        },
+        {
+          '@type': 'DefinedTerm',
+          name: 'Мани-менеджмент',
+          description:
+            'Управление капиталом: какой процент депозита использовать в сделке и как переносить риск из сделки в сделку.',
+          inDefinedTermSet:
+            'https://arapov.trade/ru/freestudying/practic#terms',
         },
       ],
     };

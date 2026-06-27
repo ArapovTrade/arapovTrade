@@ -31,24 +31,15 @@ export class OsnovyTreydingaTomTwoEnComponent
     private themeService: ThemeservService,
   ) {}
 
-  ngAfterViewInit() {
-    setTimeout(() => {
-      if (typeof AOS !== 'undefined') {
-        AOS.init({
-          duration: 1000,
-          once: false,
-          offset: 100,
-        });
-      }
-    }, 500); // Задержка 0.5s
-  }
+  ngAfterViewInit() {}
   isDark!: boolean;
   languages = ['ua', 'en', 'ru']; // какие языки нужны
   currentLang = 'en';
   dropdownOpen = false;
   menuOpen: boolean = false;
   ngOnInit() {
-    this.removeExistingWebPageSchema();
+    this.removeExistingSchema();
+    this.meta.updateTag({ name: 'datePublished', content: '2025-12-18' });
 
     this.titleService.setTitle(
       'Trading Fundamentals. Vol. 2 — Free Book by Igor Arapov',
@@ -65,15 +56,10 @@ export class OsnovyTreydingaTomTwoEnComponent
       content:
         'Trading book, trading training, Forex for beginners, technical analysis, volume analysis, Igor Arapov, Smart Money',
     });
+    this.injectSchema(this.bookSchema());
+    this.injectSchema(this.webPageSchema());
+    this.injectSchema(this.faqSchema());
 
-    this.meta.updateTag({
-      property: 'og:image',
-      content: 'https://arapov.trade/assets/img/photo_mainpage.jpg',
-    });
-    this.addWebSiteSchema();
-    this.addWebPageSchema();
-    this.addFAQPageSchema();
-    this.addPersoneSchema();
     this.themeSubscription = this.themeService.getTheme().subscribe((data) => {
       this.isDark = data;
       this.cdr.detectChanges();
@@ -90,18 +76,6 @@ export class OsnovyTreydingaTomTwoEnComponent
   toggleTheme() {
     this.isDark = !this.isDark;
     this.themeService.setTheme(this.isDark);
-
-    this.refreshAOS();
-  }
-  refreshAOS() {
-    if (typeof AOS !== 'undefined') {
-      setTimeout(() => {
-        AOS.refresh(); // Обновление позиций AOS
-        this.cdr.detectChanges(); // Принудительное обнаружение изменений
-      }, 100); // Задержка для синхронизации
-    } else {
-      console.warn('AOS is not defined, refresh skipped');
-    }
   }
 
   toggleDropdown() {
@@ -134,55 +108,39 @@ export class OsnovyTreydingaTomTwoEnComponent
   }
   hovered: string | null = null;
 
-  private removeExistingWebPageSchema(): void {
-    const scripts = this.document.querySelectorAll(
-      'script[type="application/ld+json"]',
-    );
-
-    scripts.forEach((script) => {
-      try {
-        const content = JSON.parse(script.textContent || '{}');
-        if (content['@type'] === 'Book') {
-          script.remove();
-        }
-        if (content['@type'] === 'Person') {
-          script.remove();
-        }
-        if (content['@type'] === 'WebPage') {
-          script.remove();
-        }
-        if (content['@type'] === 'FAQPage') {
-          script.remove();
-        }
-      } catch (e) {
-        // Игнорируем некорректные JSON (например, из других источников)
-      }
-    });
+  downloadFile() {
+    const link = document.createElement('a');
+    link.href = '/assets/documents/Trading_Fundamentals_Vol2_EN_FINAL-2.epub'; // путь к вашему файлу
+    link.download = 'Trading_Fundamentals_Vol2_EN_FINAL-2.epub'; // имя файла для скачивания
+    link.click();
   }
 
-  private addWebSiteSchema() {
-    const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]'),
-    ).some((script) => {
-      try {
-        const json = JSON.parse(script.textContent || '{}');
-        return (
-          json['@type'] === 'Book' &&
-          json['name'] ===
-            'Analysis methods. Technical Analysis • Volume Analysis • Practice'
-        );
-      } catch {
-        return false;
-      }
-    });
+  openLink(url: string) {
+    window.open(url, '_blank');
+  }
 
-    // Если уже существует — выходим
-    if (exists) return;
+  private removeExistingSchema(): void {
+    this.document
+      .querySelectorAll('script[type="application/ld+json"]')
+      .forEach((script) => {
+        try {
+          const type = JSON.parse(script.textContent || '{}')['@type'];
+          if (['Book', 'WebPage', 'FAQPage'].includes(type)) script.remove();
+        } catch {
+          // игнорируем чужой/битый JSON
+        }
+      });
+  }
 
-    // Создаем новый JSON-LD
+  private injectSchema(data: object): void {
     const script = this.document.createElement('script');
     script.type = 'application/ld+json';
-    script.text = JSON.stringify({
+    script.text = JSON.stringify(data);
+    this.document.head.appendChild(script);
+  }
+
+  private bookSchema() {
+    return {
       '@context': 'https://schema.org',
       '@type': 'Book',
       '@id': 'https://arapov.trade/en/books/osnovy-treydinga-tom-two#book',
@@ -193,28 +151,21 @@ export class OsnovyTreydingaTomTwoEnComponent
       name: 'Analysis methods. Technical Analysis • Volume Analysis • Practice',
       alternateName: [
         'Методы анализа. Технический анализ • Объёмный анализ • Практика',
-        'Методи аналізу. Технічний аналіз • Об`ємний аналіз • Практика',
+        'Методи аналізу. Технічний аналіз • Обʼємний аналіз • Практика',
       ],
       headline:
         'Analysis methods. Technical Analysis • Volume Analysis • Practice',
       description:
         'Practical guide to financial trading for beginners. The book covers the basics of stock trading, the FOREX market, fundamental, technical and volume analysis, order types, capital management and typical trader mistakes. The author shares 12 years of experience trading on financial markets.',
-      isbn: ' 979-8-90243-755-0',
+      isbn: '979-8-90243-755-0',
       numberOfPages: 60,
       bookFormat: 'https://schema.org/EBook',
       bookEdition: '1st edition',
-      inLanguage: {
-        '@type': 'Language',
-        name: 'English',
-        alternateName: 'en',
-      },
+      inLanguage: { '@type': 'Language', name: 'English', alternateName: 'en' },
       datePublished: '2025-12-29T00:00:00Z',
       dateModified: '2025-12-29T00:00:00Z',
       copyrightYear: 2025,
-      copyrightHolder: {
-        '@type': 'Person',
-        '@id': 'https://arapov.trade/en#author',
-      },
+      copyrightHolder: { '@id': 'https://arapov.trade/#person' },
       genre: ['Business', 'Finance', 'Trading', 'Education', 'Investment'],
       about: [
         {
@@ -232,39 +183,21 @@ export class OsnovyTreydingaTomTwoEnComponent
           name: 'Technical analysis',
           sameAs: 'https://ru.wikipedia.org/wiki/Технический_анализ',
         },
-        {
-          '@type': 'Thing',
-          name: 'Fundamental analysis',
-        },
-        {
-          '@type': 'Thing',
-          name: 'Volume analysis',
-        },
-        {
-          '@type': 'Thing',
-          name: 'Capital management',
-        },
-        {
-          '@type': 'Thing',
-          name: 'Smart Money Concepts',
-        },
+        { '@type': 'Thing', name: 'Fundamental analysis' },
+        { '@type': 'Thing', name: 'Volume analysis' },
+        { '@type': 'Thing', name: 'Capital management' },
+        { '@type': 'Thing', name: 'Smart Money Concepts' },
       ],
       keywords:
         'trading, forex, technical analysis, volume analysis, exchange, investments, smart money, trading education',
-      author: {
-        '@type': 'Person',
-        '@id': 'https://arapov.trade/en#author',
-      },
-      publisher: {
-        '@type': 'Organization',
-        '@id': 'https://arapov.trade/#organization',
-      },
+      author: { '@id': 'https://arapov.trade/#person' },
+      publisher: { '@id': 'https://arapov.trade/#organization' },
       image: {
         '@type': 'ImageObject',
         url: 'https://arapov.trade/assets/redesignArapovTrade/img/cover_en_amazon.png',
         width: 600,
         height: 900,
-        caption: '"Trading Basics. Practice" — Igor Arapov',
+        caption: '"Analysis Methods. Practice" — Igor Arapov',
       },
       url: 'https://arapov.trade/en/books/osnovy-treydinga-tom-two',
       offers: {
@@ -274,19 +207,14 @@ export class OsnovyTreydingaTomTwoEnComponent
         availability: 'https://schema.org/InStock',
         url: 'https://arapov.trade/en/books/osnovy-treydinga-tom-two',
         priceValidUntil: '2026-12-31',
-        seller: {
-          '@type': 'Organization',
-          '@id': 'https://arapov.trade/#organization',
-        },
+        seller: { '@id': 'https://arapov.trade/#organization' },
       },
       workExample: {
         '@type': 'Book',
-        isbn: ' 979-8-90243-755-0',
+        isbn: '979-8-90243-755-0',
         bookFormat: 'https://schema.org/EBook',
         inLanguage: 'en',
-
         url: 'http://www.irbis-nbuv.gov.ua/cgi-bin/irbis64r_81/cgiirbis_64.exe?Z21ID=&I21DBN=VFEIR&P21DBN=VFEIR&S21STN=1&S21REF=10&S21FMT=fullw&C21COM=S&S21CNR=20&S21P01=3&S21P02=0&S21P03=A=&S21COLORTERMS=0&S21STR=Arapov%2C%20Igor',
-
         provider: {
           '@type': 'Library',
           name: 'V. I. Vernadsky National Library of Ukraine',
@@ -318,172 +246,31 @@ export class OsnovyTreydingaTomTwoEnComponent
             '@type': 'Offer',
             price: '0',
             priceCurrency: 'USD',
-            eligibleRegion: {
-              '@type': 'Place',
-              name: 'Worldwide',
-            },
+            eligibleRegion: { '@type': 'Place', name: 'Worldwide' },
           },
         },
       },
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: '5',
-        ratingCount: '1',
-        bestRating: '5',
-        worstRating: '1',
-      },
-    });
-
-    this.document.head.appendChild(script);
+       
+    };
   }
 
-  downloadFile() {
-    const link = document.createElement('a');
-    link.href = '/assets/documents/Trading_Fundamentals_Vol2_EN_FINAL-2.epub'; // путь к вашему файлу
-    link.download = 'Trading_Fundamentals_Vol2_EN_FINAL-2.epub'; // имя файла для скачивания
-    link.click();
-  }
-
-  openLink(url: string) {
-    window.open(url, '_blank');
-  }
-
-  private addPersoneSchema() {
-    const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]'),
-    ).some((script) => {
-      try {
-        const json = JSON.parse(script.textContent || '{}');
-        return json['@type'] === 'Person' && json['name'] === 'Igor Arapov';
-      } catch {
-        return false;
-      }
-    });
-
-    // Если уже существует — выходим
-    if (exists) return;
-
-    // Создаем новый JSON-LD
-    const script = this.document.createElement('script');
-    script.type = 'application/ld+json';
-    script.text = JSON.stringify({
-      '@context': 'https://schema.org',
-      '@type': 'Person',
-      '@id': 'https://arapov.trade/en#author',
-      name: 'Igor Arapov',
-      alternateName: [
-        'Ігор Арапов',
-        'Арапов Игорь',
-        'I. Arapov',
-        'Игорь Арапов',
-        'І. В. Арапов',
-        'Арапов Ігор',
-        'Arapov Igor',
-      ],
-      givenName: 'Igor',
-      familyName: 'Arapov',
-      description:
-        'Ukrainian trader since 2013. Creator of the educational platform arapov.trade, author of 151+ articles and 78+ video lessons on trading. Specializes in Smart Money Concepts, Wyckoff Method, and volume analysis.',
-      url: 'https://arapov.trade',
-      image: {
-        '@type': 'ImageObject',
-        url: 'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
-        width: 400,
-        height: 750,
-        caption: 'Igor Arapov - trader and author',
-      },
-      sameAs: [
-        'https://www.youtube.com/@ArapovTrade',
-        'https://t.me/ArapovTrade',
-        'https://www.instagram.com/arapovtrade/',
-      ],
-      jobTitle: 'Трейдер',
-      hasOccupation: {
-        '@type': 'Occupation',
-        name: 'Trader',
-        description: 'Professional trader on financial markets',
-        occupationLocation: {
-          '@type': 'Country',
-          name: 'Ukraine',
-        },
-      },
-      nationality: {
-        '@type': 'Country',
-        name: 'Ukraine',
-        alternateName: 'Украина',
-      },
-      knowsAbout: [
-        'Trading',
-        'Smart Money Concepts',
-        'Wyckoff Method',
-        'Volume Analysis',
-        'Technical Analysis',
-        'Fundamental Analysis',
-        'FOREX',
-        'Stock Market',
-        'Risk Management',
-      ],
-      knowsLanguage: [
-        { '@type': 'Language', name: 'Russian' },
-        { '@type': 'Language', name: 'Ukrainian' },
-        { '@type': 'Language', name: 'English' },
-      ],
-      worksFor: {
-        '@type': 'Organization',
-        '@id': 'https://arapov.trade/#organization',
-      },
-    });
-
-    this.document.head.appendChild(script);
-  }
-  private addWebPageSchema() {
-    const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]'),
-    ).some((script) => {
-      try {
-        const json = JSON.parse(script.textContent || '{}');
-        return (
-          json['@type'] === 'WebPage' &&
-          json['name'] ===
-            'Analysis methods. Technical Analysis • Volume Analysis • Practice'
-        );
-      } catch {
-        return false;
-      }
-    });
-
-    // Если уже существует — выходим
-    if (exists) return;
-
-    // Создаем новый JSON-LD
-    const script = this.document.createElement('script');
-    script.type = 'application/ld+json';
-    script.text = JSON.stringify({
+  private webPageSchema() {
+    return {
       '@context': 'https://schema.org',
       '@type': 'WebPage',
       '@id': 'https://arapov.trade/en/books/osnovy-treydinga-tom-two',
       url: 'https://arapov.trade/en/books/osnovy-treydinga-tom-two',
       name: 'Analysis methods. Technical Analysis • Volume Analysis • Practice',
-      description: 'Download the free book on trading. ISBN  979-8-90243-755-0',
+      description: 'Download the free book on trading. ISBN 979-8-90243-755-0',
       inLanguage: 'en',
-      isPartOf: {
-        '@type': 'WebSite',
-        '@id': 'https://arapov.trade/#website',
-        name: 'arapov.trade',
-        url: 'https://arapov.trade',
-      },
+      isPartOf: { '@id': 'https://arapov.trade/#website' },
       about: {
-        '@type': 'Book',
         '@id': 'https://arapov.trade/en/books/osnovy-treydinga-tom-two#book',
       },
-      author: {
-        '@type': 'Person',
-        '@id': 'https://arapov.trade/en#author',
-      },
+      author: { '@id': 'https://arapov.trade/#person' },
       datePublished: '2025-12-29T00:00:00Z',
       dateModified: '2025-12-29T00:00:00Z',
       mainEntity: {
-        '@type': 'Book',
         '@id': 'https://arapov.trade/en/books/osnovy-treydinga-tom-two#book',
       },
       breadcrumb: {
@@ -515,44 +302,21 @@ export class OsnovyTreydingaTomTwoEnComponent
           },
         ],
       },
-    });
-
-    this.document.head.appendChild(script);
+    };
   }
 
-  private addFAQPageSchema() {
-    const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]'),
-    ).some((script) => {
-      try {
-        const json = JSON.parse(script.textContent || '{}');
-        return (
-          json['@type'] === 'FAQPage' &&
-          json['name'] ===
-            'Trading Basics. Practice – Free Book by Igor Arapov - FAQ'
-        );
-      } catch {
-        return false;
-      }
-    });
-
-    // Если уже существует — выходим
-    if (exists) return;
-
-    // Создаем новый JSON-LD
-    const script = this.document.createElement('script');
-    script.type = 'application/ld+json';
-    script.text = JSON.stringify({
+  private faqSchema() {
+    return {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
-      name: 'Trading Basics. Practice – Free Book by Igor Arapov - FAQ',
+      name: 'Analysis Methods. Practice – Free Book by Igor Arapov - FAQ',
       mainEntity: [
         {
           '@type': 'Question',
           name: 'Is the book really free?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Yes, the book "Trading Basics. Practice" is available for download absolutely free of charge in EPUB format. The author provides it as part of a free educational program on the arapov.trade platform.',
+            text: 'Yes, the book "Analysis Methods. Practice" is available for download absolutely free of charge in EPUB format. The author provides it as part of a free educational program on the arapov.trade platform.',
           },
         },
         {
@@ -576,7 +340,7 @@ export class OsnovyTreydingaTomTwoEnComponent
           name: 'Who is the author of the book?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'The author of the book is Igor Arapov, a practicing trader since 2013. Creator of the educational platform arapov.trade with over 130 articles and a YouTube channel @ArapovTrade with 70+ video tutorials on trading.',
+            text: 'The author of the book is Igor Arapov, a practicing trader since 2013. Creator of the educational platform arapov.trade with 151+ articles and a YouTube channel @ArapovTrade with 78+ video tutorials on trading.',
           },
         },
         {
@@ -584,12 +348,10 @@ export class OsnovyTreydingaTomTwoEnComponent
           name: 'What is the ISBN of the book?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: "The book's ISBN is  979-8-90243-755-0. This is an International Standard Book Number registered with Bowker Books in Print.",
+            text: "The book's ISBN is 979-8-90243-755-0. This is an International Standard Book Number registered with Bowker Books in Print.",
           },
         },
       ],
-    });
-
-    this.document.head.appendChild(script);
+    };
   }
 }

@@ -57,17 +57,17 @@ export class HomeRuBlogThirtySixComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Криптовалютный рынок: полное руководство по анализу и торговле | Arapov.trade',
+      'Копитрейдинг: почему это не трейдинг | Arapov.trade',
     );
     this.meta.updateTag({ name: 'robots', content: 'index' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Полное руководство по анализу криптовалютного рынка: технический и фундаментальный анализ, стратегии торговли, управление рисками и выбор платформы.',
+        'Что такое копитрейдинг, как копировать сделки успешных трейдеров, в чём плюсы, риски и почему слепое копирование часто приводит к потерям.',
     });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
 
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
 
     this.gerRandom();
   }
@@ -277,91 +277,35 @@ export class HomeRuBlogThirtySixComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          mainEntityOfPage: {
-            '@type': 'WebPage',
-            '@id': 'https://arapov.trade/ru/freestudying/cryptocurrencytrading',
-          },
-          headline: 'Криптотрейдинг: полный гайд для начинающих',
+          headline: 'Копитрейдинг: что это и почему это не трейдинг',
           description:
-            'Что такое криптовалюты, как отличить Bitcoin от СКАМ монет, риски мем-коинов и как защитить капитал на крипторынке.',
-          image:
-            'https://arapov.trade/assets/img/content/cryptocurrencytrading.webp',
-          datePublished: '2025-01-15T00:00:00+02:00',
-         dateModified: '2026-04-15T00:00:00Z',
-          inLanguage: 'ru',
-          author: {
-            '@id': 'https://arapov.trade/ru#person',
-          },
+            'Что такое копитрейдинг, как копировать сделки успешных трейдеров, в чём плюсы, риски и почему слепое копирование часто приводит к потерям.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
             '@id': 'https://arapov.trade/#organization',
             name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
-          video: {
-            '@type': 'VideoObject',
-            name: 'Криптовалюты для новичков | Полное руководство',
-            description:
-              'Полное руководство по криптовалютам для новичков! Объясняю простыми словами что такое крипта, как отличить Bitcoin от СКАМ монет, почему мем-коины опасны и как избежать потери денег.',
-            thumbnailUrl: [
-              'https://img.youtube.com/vi/T8zWPUOKcqU/maxresdefault.jpg',
-              'https://img.youtube.com/vi/T8zWPUOKcqU/hqdefault.jpg',
-            ],
-            uploadDate: '2025-09-15T00:00:00+02:00',
-            duration: 'PT22M8S',
-            contentUrl: 'https://www.youtube.com/watch?v=T8zWPUOKcqU',
-            embedUrl: 'https://www.youtube.com/embed/T8zWPUOKcqU',
-            inLanguage: 'ru',
-            keywords:
-              'криптовалюты, биткоин, скам монеты, мем коины, риски криптовалют',
-            hasPart: [
-              {
-                '@type': 'Clip',
-                name: 'Что такое криптовалюты - определение и основы',
-                startOffset: 0,
-                endOffset: 292,
-                url: 'https://www.youtube.com/watch?v=T8zWPUOKcqU&t=0',
-              },
-              {
-                '@type': 'Clip',
-                name: 'Bitcoin - модель эмиссии и преимущества',
-                startOffset: 292,
-                endOffset: 630,
-                url: 'https://www.youtube.com/watch?v=T8zWPUOKcqU&t=292',
-              },
-              {
-                '@type': 'Clip',
-                name: 'Что такое СКАМ криптовалюты - признаки мошенничества',
-                startOffset: 630,
-                endOffset: 786,
-                url: 'https://www.youtube.com/watch?v=T8zWPUOKcqU&t=630',
-              },
-              {
-                '@type': 'Clip',
-                name: 'Мем-коины и ловушки для трейдеров',
-                startOffset: 786,
-                endOffset: 976,
-                url: 'https://www.youtube.com/watch?v=T8zWPUOKcqU&t=786',
-              },
-              {
-                '@type': 'Clip',
-                name: 'Делистинг монет - как биржи выкидывают скам',
-                startOffset: 976,
-                endOffset: 1089,
-                url: 'https://www.youtube.com/watch?v=T8zWPUOKcqU&t=976',
-              },
-              {
-                '@type': 'Clip',
-                name: 'Как защитить деньги на крипторынке',
-                startOffset: 1089,
-                endOffset: 1328,
-                url: 'https://www.youtube.com/watch?v=T8zWPUOKcqU&t=1089',
-              },
-            ],
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': 'https://arapov.trade/ru/freestudying/copy-trading',
           },
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/copytrading_two.png',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Трейдинг для начинающих',
+          keywords: 'копитрейдинг',
+          inLanguage: 'ru',
         },
       ],
     };
@@ -376,18 +320,18 @@ export class HomeRuBlogThirtySixComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/ru#person',
-      name: 'Игорь Арапов',
+      '@id': 'https://arapov.trade/#person',
+      name: 'Igor Arapov',
       alternateName: [
-        'Igor Arapov',
-        'Арапов Игорь',
-        'I. Arapov',
         'Ігор Арапов',
-        'І. В. Арапов',
+        'Игорь Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/ru',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -423,42 +367,42 @@ export class HomeRuBlogThirtySixComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'Что такое криптовалютный рынок?',
+          name: 'Что такое копитрейдинг простыми словами?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Криптовалютный рынок — это глобальная децентрализованная экосистема цифровых активов на базе блокчейн. Работает круглосуточно, позволяя торговать без посредников.',
+            text: 'Это когда сделки выбранного трейдера автоматически дублируются на твоём счёте: каждое его открытие и закрытие пропорционально отражается на депозите. Средства остаются у тебя, а копирование выключается в любой момент. По сути ты доверяешь решения постороннему.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Какие методы анализа криптовалют существуют?',
+          name: 'Копитрейдинг это развод или можно заработать?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Основные методы: фундаментальный анализ (технология, команда, токеномика), технический анализ (индикаторы, уровни) и сентимент-анализ (настроения рынка).',
+            text: 'Сам инструмент не развод, заработать иногда выходит, но цифра в карточке завтрашнюю прибыль не обещает. Независимый разбор сотен тысяч сделок показал, что прошлые результаты не предсказывают будущие, а громкие проценты в топах часто собраны через плечо и глубокий минус, и большинство подписчиков всё равно в убытке.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Как управлять рисками при торговле криптовалютами?',
+          name: 'Как выбрать трейдера для копирования?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Ключевые принципы: стоп-лоссы, риск на сделку до 1-2% капитала, диверсификация портфеля и эмоциональная дисциплина.',
+            text: 'Смотреть не на красивую цифру доходности, а на историю минимум полгода-год с реальной просадкой, на максимальную просадку (спокойные двузначные проценты честнее тысяч), и не класть всё в одного: несколько разнопрофильных с малой долей. И помнить, что рейтинг показывает только уцелевших, слитые счета с витрины исчезают.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Какую стратегию выбрать начинающему трейдеру?',
+          name: 'Почему большинство копировщиков теряют?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Рекомендуется стратегия долгосрочного инвестирования с усреднением стоимости (DCA), снижающая влияние волатильности.',
+            text: 'Исполнителя берут вслепую, а рейтинг поднимает наверх лихачей на плече, и один такой утягивает твой депозит за собой. Добавь сюда задержку и проскальзывание при копировании и скрытый мартингейл под ровной кривой, и станет ясно, почему розница в основном уходит в минус.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Как выбрать криптовалютную биржу?',
+          name: 'Почему копитрейдинг это не трейдинг?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Учитывайте: безопасность (2FA, холодное хранение), ликвидность, комиссии и удобство интерфейса.',
+            text: 'От повторения вслепую мастерство не появляется. Та же западня, что и вера в магический индикатор: ответственность сдвинута на чужого. Пропадёт исполнитель или сольёт счёт, и у тебя на руках остаётся всё тот же ноль в навыках.',
           },
         },
       ],
@@ -474,38 +418,34 @@ export class HomeRuBlogThirtySixComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'Как начать торговать криптовалютами',
-      description: 'Пошаговое руководство для начинающих трейдеров',
+      '@id': 'https://arapov.trade/ru/freestudying/copy-trading#howto',
+      name: 'Как разобраться и применять: Копитрейдинг: что это и почему это не трейдинг',
+      description:
+        'Пошаговый разбор темы и её практическое применение в торговле',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Изучите основы',
-          text: 'Освойте принципы блокчейна, основные криптовалюты и терминологию рынка.',
+          name: 'Что такое копитрейдинг и какие у него виды',
+          text: 'Копитрейдинг это автоматическое дублирование сделок выбранного трейдера на твоём счёте, при котором каждое его открытие и закрытие пропорционально повторяется на твоём депозите.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Выберите биржу',
-          text: 'Зарегистрируйтесь на проверенной платформе с 2FA и высокой ликвидностью.',
+          name: 'Как выбрать трейдера для копирования',
+          text: 'Под капотом всё проходит через брокера или биржу, а вся работа сводится к выбору исполнителя.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Разработайте стратегию',
-          text: 'Определите цели, уровень риска и стиль торговли.',
+          name: 'Можно ли заработать: развод или нет',
+          text: 'Раз заработать иногда выходит, честный вопрос звучит так: развод это или нет.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Настройте риск-менеджмент',
-          text: 'Установите стоп-лоссы и диверсифицируйте портфель.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 5,
-          name: 'Практикуйтесь',
-          text: 'Начните с небольших сумм и ведите торговый журнал.',
+          name: 'Риски копитрейдинга: почему большинство копировщиков теряют',
+          text: 'Корень риска прячется не в платформе, а в самом выборе исполнителя вслепую.',
         },
       ],
     };
@@ -520,58 +460,13 @@ export class HomeRuBlogThirtySixComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Глоссарий криптотрейдинга',
+      name: 'Глоссарий терминов статьи',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Блокчейн',
-          description: 'Распределённый реестр транзакций криптовалюты',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Волатильность',
-          description: 'Степень изменчивости цены актива',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Стоп-лосс',
-          description: 'Ордер на закрытие позиции при убытке',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Ликвидность',
+          name: 'Копитрейдинг',
           description:
-            'Способность актива быстро продаваться без влияния на цену',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Холодный кошелёк',
-          description: 'Хранение криптовалют офлайн для безопасности',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Халвинг',
-          description: 'Сокращение вознаграждения майнеров вдвое',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Альтсезон',
-          description: 'Период опережающего роста альткоинов',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'DeFi',
-          description: 'Децентрализованные финансы на блокчейне',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Стейблкоин',
-          description: 'Криптовалюта с привязкой к доллару',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Смарт-контракт',
-          description: 'Самоисполняющийся код на блокчейне',
+            'Копитрейдинг это автоматическое дублирование сделок выбранного трейдера на твоём счёте, при котором каждое его открытие и закрытие пропорционально повторяется на твоём депозите.',
         },
       ],
     };

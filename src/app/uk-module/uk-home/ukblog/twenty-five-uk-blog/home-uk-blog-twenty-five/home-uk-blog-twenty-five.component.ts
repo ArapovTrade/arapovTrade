@@ -28,7 +28,7 @@ export class HomeUkBlogTwentyFiveComponent implements OnInit {
     private themeService: ThemeservService,
     private artickleServ: ArticlesService,
     private renderer: Renderer2,
-    @Inject(DOCUMENT) private document: Document
+    @Inject(DOCUMENT) private document: Document,
   ) {}
   private routerSubscription!: Subscription;
   private themeSubscription!: Subscription;
@@ -57,20 +57,18 @@ export class HomeUkBlogTwentyFiveComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Маркет-мейкери на криптовалютному ринку | Роль та функції'
+      'Усереднення та мартингейл у трейдингу | Arapov.trade',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Повний посібник з маркет-мейкерів на крипторинку. Дізнайтеся, як вони забезпечують ліквідність, знижують волатильність та впливають на торгівлю криптовалютами.',
+        'Що таке усереднення і метод мартінгейла, чому вони здаються вигідними і як саме зливають депозит новачків. Психологія і математика ризику.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-22' });this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/cryptommakers.webp',
-    });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
+
     this.gerRandom();
   }
   randomArticleRus: any = [];
@@ -87,7 +85,6 @@ export class HomeUkBlogTwentyFiveComponent implements OnInit {
       title: 'Базовий курс',
       link: 'https://arapov.trade/uk/freestudying/freeeducation',
     },
-     
   ];
 
   onGroupChange(event: Event) {
@@ -157,7 +154,7 @@ export class HomeUkBlogTwentyFiveComponent implements OnInit {
     // Показываем 5 случайных статей при фокусе, если инпут пуст
     if (!this.searchQuery) {
       const shuffled = [...this.artickleServ.ukrArtickles].sort(
-        () => Math.random() - 0.5
+        () => Math.random() - 0.5,
       );
       this.displayedArticles = shuffled.slice(0, this.maxResults);
     }
@@ -172,7 +169,7 @@ export class HomeUkBlogTwentyFiveComponent implements OnInit {
   onSearchChange() {
     // Логика асинхронного поиска
     const filtered = this.artickleServ.ukrArtickles.filter((a) =>
-      a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase())
+      a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase()),
     );
     this.displayedArticles = filtered.slice(0, this.maxResults);
   }
@@ -194,7 +191,7 @@ export class HomeUkBlogTwentyFiveComponent implements OnInit {
     const path: string =
       this.router.url.split('/')[this.router.url.split('/').length - 1];
     let index = this.artickleServ.ukrArtickles.findIndex(
-      (a) => a.linkUkr == path
+      (a) => a.linkUkr == path,
     );
 
     if (this.artickleServ.ukrArtickles.length - 1 == index) {
@@ -211,7 +208,7 @@ export class HomeUkBlogTwentyFiveComponent implements OnInit {
     const path: string =
       this.router.url.split('/')[this.router.url.split('/').length - 1];
     let index = this.artickleServ.ukrArtickles.findIndex(
-      (a) => a.linkUkr == path
+      (a) => a.linkUkr == path,
     );
 
     if (index == 1) {
@@ -236,7 +233,7 @@ export class HomeUkBlogTwentyFiveComponent implements OnInit {
     ];
 
     const scripts = this.document.querySelectorAll(
-      'script[type="application/ld+json"]'
+      'script[type="application/ld+json"]',
     );
 
     scripts.forEach((script) => {
@@ -249,7 +246,7 @@ export class HomeUkBlogTwentyFiveComponent implements OnInit {
 
         const shouldRemove = candidates.some(
           (entry: any) =>
-            entry['@type'] && typesToRemove.includes(entry['@type'])
+            entry['@type'] && typesToRemove.includes(entry['@type']),
         );
 
         if (shouldRemove) {
@@ -277,36 +274,37 @@ export class HomeUkBlogTwentyFiveComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          headline: 'Маркет-мейкери на криптовалютному ринку: роль та функції',
+          headline:
+            'Усереднення і мартингейл: чому доливати в збиток небезпечно',
           description:
-            'Повний посібник з маркет-мейкерів на крипторинку. Дізнайтеся, як вони забезпечують ліквідність, знижують волатильність та впливають на торгівлю криптовалютами.',
-          author: {
-            '@id': 'https://arapov.trade/uk#person',
-          },
+            'Що таке усереднення і метод мартінгейла, чому вони здаються вигідними і як саме зливають депозит новачків. Психологія і математика ризику.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'Arapov Trade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
-          image: ['https://arapov.trade/assets/img/content/cryptommakers.webp'],
-          datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://arapov.trade/uk/freestudying/cryptommakers',
+            '@id': 'https://arapov.trade/uk/freestudying/averaging-martingale',
           },
-          articleSection: 'Криптовалюти',
-          keywords: [
-            'маркет-мейкер',
-            'криптовалюта',
-            'ліквідність',
-            'спред',
-            'DEX',
-            'CEX',
-          ],
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/averagingintrading.webp',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Психологія трейдингу',
+          keywords:
+            'усереднення в трейдингу, метод мартингейла, усереднення проти тренду, психологія усереднення, ризик-менеджмент',
+          inLanguage: 'uk',
         },
       ],
     };
@@ -321,18 +319,18 @@ export class HomeUkBlogTwentyFiveComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/uk#person',
-      name: 'Ігор Арапов',
+      '@id': 'https://arapov.trade/#person',
+      name: 'Igor Arapov',
       alternateName: [
-        'Igor Arapov',
-              'Арапов Игорь',
-              'I. Arapov',
-              'Игорь Арапов',
-              'І. В. Арапов',
-              'Арапов Ігор',
-              'Arapov Igor',
+        'Ігор Арапов',
+        'Игорь Арапов',
+        'Арапов Игорь',
+        'Арапов Ігор',
+        'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/uk',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -344,9 +342,13 @@ export class HomeUkBlogTwentyFiveComponent implements OnInit {
         'https://github.com/ArapovTrade',
         'https://ua.linkedin.com/in/arapovtrade',
         'https://www.youtube.com/@ArapovTrade',
-        'https://t.me/ArapovTrade'
+        'https://t.me/ArapovTrade',
       ],
-       jobTitle: ['Незалежний дослідник', 'трейдер', 'автор і засновник arapov.trade'],
+      jobTitle: [
+        'Незалежний дослідник',
+        'трейдер',
+        'автор і засновник arapov.trade',
+      ],
       description:
         'Незалежний дослідник, практикуючий трейдер, автор книг з трейдингу та наукових публікацій. Спеціалізується на психології трейдингу та когнітивних упередженнях на фінансових ринках.',
     };
@@ -364,42 +366,42 @@ export class HomeUkBlogTwentyFiveComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'Хто такі маркет-мейкери у криптовалютах?',
+          name: 'Що таке усереднення в трейдингу?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Маркет-мейкери — це професійні учасники ринку, що забезпечують ліквідність шляхом постійного розміщення ордерів на купівлю та продаж. Вони створюють умови для швидкого виконання угод, мінімізують спреди та стабілізують ціни на криптовалютних біржах.',
+            text: 'Це долив до вже відкритої позиції за іншою ціною, який зсуває вашу середню точку входу. Узяли біткоїн по десять тисяч, він осів до пʼяти, добрали ще один, і середня опустилася до семи з половиною. Для виходу в нуль тепер вистачить удвічі меншого ходу, тільки якщо долив іде проти тренду, він лише відсуває момент зливу депозиту, а не скасовує його.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Як маркет-мейкери заробляють на крипторинку?',
+          name: 'Чому усереднення проти тренду небезпечне?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Маркет-мейкери заробляють на спреді — різниці між ціною купівлі та продажу. Вони купують активи за нижчою ціною (bid) та продають за вищою (ask). Також вони можуть отримувати комісії від бірж за забезпечення ліквідності.',
+            text: 'Бо ви докуповуєте на слабкому ринку, а падає він часто саме затим, щоб винести впертих покупців. Долив без стопа знімає зі збитку стелю, і одна позиція здатна обнулити рахунок. Тренди йдуть далі, ніж здається: євро до долара у 2014-2015 роках сповзло з 1.40 приблизно до 1.05 за кілька місяців, і жодне усереднення там не рятувало.',
           },
         },
         {
           '@type': 'Question',
-          name: 'У чому різниця між маркет-мейкерами на CEX та DEX?',
+          name: 'Що таке метод Мартингейла?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'На централізованих біржах (CEX) маркет-мейкери працюють через ордербук, розміщуючи лімітні заявки. На децентралізованих біржах (DEX) вони забезпечують ліквідність через пули ліквідності, додаючи активи в смарт-контракти для автоматичного обміну.',
+            text: 'Це подвоєння обсягу після кожної втрати в розрахунку перекрити всі збитки одним виграшем. Ставка летить угору по експоненті, один, два, чотири, вісім і далі, тож до сьомого збитку поспіль від вас вимагається вже у 128 разів більше за стартову суму. Ринок уміє тиснути позицію довше, ніж у трейдера лишається грошей на подвоєння, тому досить однієї затяжної серії мінусів, щоб рахунок обнулився.',
           },
         },
         {
           '@type': 'Question',
-          name: "Які ризики пов'язані з маркет-мейкінгом?",
+          name: 'Чому трейдер доливає в мінус?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Основні ризики включають волатильність ринку, технічні збої алгоритмів, регуляторні зміни та конкуренцію. На малоліквідних ринках маркет-мейкери також стикаються з ризиком значних збитків при різких цінових рухах.',
+            text: 'Причина психологічна. Визнати збиток боляче, адже це значить визнати помилку, і замість стопа вмикаються заперечення й надія на розворот. Долив дає хибне відчуття контролю, але по суті це суперечка не з ринком, а з власним его, і маленький збиток він перетворює на великий.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Чому маркет-мейкери важливі для нових токенів?',
+          name: 'Коли усереднення припустиме?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Маркет-мейкери критично важливі для нових токенів, оскільки забезпечують початкову ліквідність. Без них нові проекти страждають від широких спредів, низьких обсягів торгів та високої волатильності, що відлякує трейдерів та інвесторів.',
+            text: 'Лише в одному вигляді: у бік тренду, скромним обсягом і з обовʼязковим стопом на всю позицію. Так ви нарощуєте угоду, яка вже приносить прибуток на відкаті, а не намагаєтеся витягнути потопаючу. За моїм досвідом новачку краще про долив забути і спершу зміцніти на звичайній торгівлі з зрозумілим стопом і акуратним ризиком.',
           },
         },
       ],
@@ -415,39 +417,40 @@ export class HomeUkBlogTwentyFiveComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'Як працюють маркет-мейкери на крипторинку',
+      '@id': 'https://arapov.trade/uk/freestudying/averaging-martingale#howto',
+      name: 'Як розібратись і застосувати: усереднення і мартингейл, і чому доливати в збиток небезпечно',
       description:
-        'Основні етапи роботи маркет-мейкерів на криптовалютному ринку',
+        'Покроковий розбір теми та її практичне застосування в торгівлі',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Аналіз ринкових умов',
-          text: 'Маркет-мейкери аналізують обсяги торгів, спреди, волатильність та поточні тренди для визначення оптимальної стратегії.',
+          name: 'Зрозумійте, що таке усереднення і як рахується середня ціна',
+          text: 'Усереднення — це долив до вже відкритої позиції за новою ціною заради зсуву середньої ціни входу.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Розміщення двосторонніх ордерів',
-          text: 'Одночасно виставляються ордери на купівлю (bid) та продаж (ask), створюючи ліквідність для інших учасників ринку.',
+          name: 'Розберіться, чому долив проти тренду зливає рахунок',
+          text: 'Ось де зарита головна біда.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Алгоритмічне управління',
-          text: 'Алгоритми автоматично коригують ордери в реальному часі, реагуючи на зміни ринкових умов.',
+          name: 'Побачте психологію за доливом у мінус',
+          text: 'Корінь проблеми лежить глибше за техніку, він у голові.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Управління ризиками',
-          text: 'Застосовуються стратегії хеджування, stop-loss ордери та ліміти позицій для захисту від збитків.',
+          name: 'Зрозумійте математику Мартингейла',
+          text: 'Метод Мартингейла — це управління ставкою, за якого після кожного збитку обсяг наступної угоди подвоюється в розрахунку перекрити всі втрати одним виграшем.',
         },
         {
           '@type': 'HowToStep',
           position: 5,
-          name: 'Балансування позицій',
-          text: 'Маркет-мейкери постійно ребалансують свої позиції для підтримання нейтральності відносно напрямку ринку.',
+          name: 'Захистіться планом, фіксованим ризиком і доливом тільки за трендом',
+          text: 'Хороша новина в тому, що від обох пасток є надійний захист, і це торговий план.',
         },
       ],
     };
@@ -462,68 +465,19 @@ export class HomeUkBlogTwentyFiveComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Термінологія маркет-мейкінгу',
-      description: 'Основні терміни криптовалютного маркет-мейкінгу',
+      name: 'Глосарій термінів статті',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Маркет-мейкер',
+          name: 'Усереднення',
           description:
-            'Учасник ринку, що забезпечує ліквідність шляхом постійного розміщення ордерів на купівлю та продаж',
+            'Усереднення — це долив до вже відкритої позиції за новою ціною заради зсуву середньої ціни входу.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Спред',
+          name: 'Метод Мартингейла',
           description:
-            'Різниця між найкращою ціною купівлі (bid) та найкращою ціною продажу (ask)',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Ліквідність',
-          description:
-            'Здатність ринку забезпечувати швидке виконання угод без суттєвого впливу на ціну',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'CEX',
-          description:
-            'Centralized Exchange — централізована біржа з ордербуком та кастодіальним зберіганням активів',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'DEX',
-          description:
-            'Decentralized Exchange — децентралізована біржа на базі смарт-контрактів',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Пул ліквідності',
-          description:
-            'Смарт-контракт із заблокованими активами для автоматичного обміну токенів',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Slippage',
-          description:
-            'Проковзування — різниця між очікуваною та фактичною ціною виконання угоди',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Ордербук',
-          description:
-            'Книга заявок — список усіх активних ордерів на купівлю та продаж активу',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'HFT',
-          description:
-            'High-Frequency Trading — високочастотна торгівля з використанням алгоритмів',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'AMM',
-          description:
-            'Automated Market Maker — автоматичний маркет-мейкер на основі математичних формул',
+            'Метод Мартингейла — це управління ставкою, за якого після кожного збитку обсяг наступної угоди подвоюється в розрахунку перекрити всі втрати одним виграшем.',
         },
       ],
     };

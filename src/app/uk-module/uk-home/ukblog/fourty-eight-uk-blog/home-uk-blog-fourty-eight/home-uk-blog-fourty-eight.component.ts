@@ -57,21 +57,18 @@ export class HomeUkBlogFourtyEightComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Самостійне навчання трейдингу: покрокова інструкція для початківців | Ігор Арапов',
+      'Хвилі Елліотта: основи та структура | Arapov.trade',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Як самостійно навчитися трейдингу: покрокова інструкція від основ до реальної торгівлі. Практичні поради для тих, хто починає з нуля.',
+        'Теорія хвиль Елліотта: імпульси та корекції, структура з п’яти і трьох хвиль, принципи розмітки та обмеження методу в реальній торгівлі.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-04-03' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-06-04' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/selfstudying.webp',
-    });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
+
     this.gerRandom();
   }
   randomArticleRus: any = [];
@@ -277,39 +274,37 @@ export class HomeUkBlogFourtyEightComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          '@id': 'https://arapov.trade/uk/freestudying/selfstudying#article',
           headline:
-            'Самостійне навчання трейдингу: покрокова інструкція для початківців',
+            'Хвильова теорія Елліотта в трейдингу: що це і як застосовувати',
           description:
-            'Як самостійно навчитися трейдингу: покрокова інструкція від основ до реальної торгівлі. Практичні поради для тих, хто починає з нуля.',
-          image: 'https://arapov.trade/assets/img/content/selfstudying1.webp',
-          datePublished: '2025-06-04T00:00:00Z',
-          dateModified: '2026-06-04T00:00:00Z',
-          author: {
-            '@id': 'https://arapov.trade/uk#person',
-          },
+            'Теорія хвиль Елліотта: імпульси та корекції, структура з п’яти і трьох хвиль, принципи розмітки та обмеження методу в реальній торгівлі.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
             '@id': 'https://arapov.trade/#organization',
-            name: 'Arapov Trade',
+            name: 'Arapov.Trade',
             url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://arapov.trade/uk/freestudying/selfstudying',
+            '@id': 'https://arapov.trade/uk/freestudying/elliott-waves',
           },
-          articleSection: 'Навчання трейдингу',
-          keywords: [
-            'самостійне навчання',
-            'трейдинг для початківців',
-            'як почати торгувати',
-            'демо-рахунок',
-            'управління ризиками',
-          ],
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/wavesofelliott.webp',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Технічний аналіз',
+          keywords:
+            'хвилі елліотта, хвильова теорія елліотта, імпульсні та корекційні хвилі, правила хвиль елліотта, фібоначчі, психологія натовпу',
+          inLanguage: 'uk',
         },
       ],
     };
@@ -324,18 +319,18 @@ export class HomeUkBlogFourtyEightComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/uk#person',
-      name: 'Ігор Арапов',
+      '@id': 'https://arapov.trade/#person',
+      name: 'Igor Arapov',
       alternateName: [
-        'Igor Arapov',
-        'Арапов Игорь',
-        'I. Arapov',
+        'Ігор Арапов',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/uk',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -368,46 +363,37 @@ export class HomeUkBlogFourtyEightComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
-      '@id': 'https://arapov.trade/uk/freestudying/selfstudying#faq',
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'Чи реально навчитися трейдингу самостійно?',
+          name: 'Що таке хвилі Елліотта простими словами?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Так, самостійне навчання трейдингу цілком можливе за умови системного підходу. Багато успішних трейдерів пройшли саме цей шлях. Ключові елементи: вивчення термінології, опанування аналізу ринку, тривала практика на демо-рахунку та поступовий перехід до реальної торгівлі з мінімальним капіталом.',
+            text: 'Це теорія, за якою ринок рухається повторюваними циклами з восьми хвиль: пʼять у бік тренду і три проти. В її основі психологія натовпу. Корисна як погляд на настрій ринку, але не як точний прогноз.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Скільки часу потрібно для опанування трейдингу?',
+          name: 'Які три головні правила хвиль Елліотта?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Базові навички можна здобути за 3-6 місяців інтенсивного навчання. Проте для досягнення стабільної прибутковості зазвичай потрібно 1-2 роки практичної торгівлі. Швидкість прогресу залежить від часу, який ви готові присвячувати навчанню та аналізу власних угод.',
+            text: 'Друга хвиля не опускається нижче початку першої. Третя ніколи не буває найкоротшою серед імпульсних. Четверта не заходить на цінову територію першої. Якщо хоч одне правило порушено, розмітка неправильна.',
           },
         },
         {
           '@type': 'Question',
-          name: 'З якої суми починати торгувати?',
+          name: 'Як повʼязані хвилі Елліотта і Фібоначчі?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Рекомендується починати з суми, втрату якої ви можете собі дозволити — зазвичай це $100-500. Спочатку відпрацюйте стратегію на демо-рахунку мінімум 1-2 місяці, потім переходьте на реальний рахунок з мінімальним депозитом, ризикуючи не більше 1-2% капіталу на угоду.',
+            text: 'Рівні Фібоначчі використовують як орієнтири: корекції часто лягають у діапазон від 38 до 62 відсотків, а ціль третьої хвилі нерідко близько 162 відсотків довжини першої. Але це орієнтири ймовірності, а не гарантія.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Який ринок обрати початківцю?',
+          name: 'Чому хвилі Елліотта критикують?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Для початківців оптимальним є ринок Форекс завдяки високій ліквідності, низьким спредам та великій кількості навчальних матеріалів. Популярні валютні пари на кшталт EUR/USD мають передбачувані рухи. Після опанування Форексу можна переходити до фондового ринку або криптовалют.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Як навчитися контролювати емоції під час торгівлі?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: "Контроль емоцій досягається через суворе дотримання торгового плану, обов'язкове використання стоп-лосів, обмеження денних збитків та регулярні перерви. Важливо вести щоденник угод для аналізу помилок і не торгувати в стані стресу або після серії збиткових угод.",
+            text: 'За субʼєктивність: один графік десять аналітиків розмічають по-різному, а самі хвилі легко підганяються заднім числом. У правому краї графіка, де приймається рішення, ясності зазвичай немає. Тому я віддаю перевагу рівням і обсягу.',
           },
         },
       ],
@@ -423,51 +409,28 @@ export class HomeUkBlogFourtyEightComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      '@id': 'https://arapov.trade/uk/freestudying/selfstudying#howto',
-      name: 'Як самостійно опанувати трейдинг',
+      '@id': 'https://arapov.trade/uk/freestudying/elliott-waves#howto',
+      name: 'Як розібратися і застосовувати хвильову теорію Елліотта в трейдингу',
       description:
-        'Покрокова інструкція з освоєння трейдингу без платних курсів',
-      totalTime: 'P6M',
-      estimatedCost: {
-        '@type': 'MonetaryAmount',
-        currency: 'USD',
-        value: '100-500',
-      },
+        'Покроковий розбір теми та її практичне застосування в торгівлі',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Вивчіть базову термінологію',
-          text: 'Опануйте ключові поняття: лонг, шорт, спред, ліквідність, волатильність, маржа, леверидж. Створіть власний словник термінів із визначеннями та прикладами.',
-          url: 'https://arapov.trade/uk/freestudying/selfstudying#terminology',
+          name: 'Зрозумійте, що таке хвильова теорія Елліотта',
+          text: 'Хвильова теорія Елліотта це метод технічного аналізу, який описує рух ринку через повторювані хвилі, що відображають психологію натовпу.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Освойте методи аналізу ринку',
-          text: 'Вивчіть технічний аналіз (графіки, індикатори, рівні підтримки та опору) і фундаментальний аналіз (економічні показники, новини, звіти компаній).',
-          url: 'https://arapov.trade/uk/freestudying/selfstudying#analysis',
+          name: 'Вивчіть структуру 5-3 і три правила',
+          text: 'В імпульсі в кожної хвилі своя психологія.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Оберіть ринок та інструменти',
-          text: 'Визначтеся з ринком (Форекс, акції, криптовалюти) та конкретними інструментами для торгівлі. Почніть з одного ринку та найбільш ліквідних активів.',
-          url: 'https://arapov.trade/uk/freestudying/selfstudying#markets',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 4,
-          name: 'Практикуйтесь на демо-рахунку',
-          text: 'Відкрийте демо-рахунок у надійного брокера та відпрацьовуйте стратегії без ризику втрати реальних грошей мінімум 1-2 місяці до досягнення стабільних результатів.',
-          url: 'https://arapov.trade/uk/freestudying/selfstudying#demo',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 5,
-          name: 'Перейдіть до реальної торгівлі',
-          text: 'Почніть торгувати з мінімальним депозитом, суворо дотримуючись ризик-менеджменту (1-2% на угоду). Ведіть щоденник угод та регулярно аналізуйте результати.',
-          url: 'https://arapov.trade/uk/freestudying/selfstudying#real-trading',
+          name: 'Зважте обмеження теорії: субʼєктивність розмітки',
+          text: 'Тепер як практик.',
         },
       ],
     };
@@ -482,67 +445,13 @@ export class HomeUkBlogFourtyEightComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      '@id': 'https://arapov.trade/uk/freestudying/selfstudying#terms',
-      name: 'Терміни трейдингу',
+      name: 'Глосарій термінів статті',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Лонг',
+          name: 'Хвильова теорія Елліотта',
           description:
-            'Відкриття позиції на купівлю активу з розрахунком на зростання його ціни',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Шорт',
-          description:
-            'Відкриття позиції на продаж активу з розрахунком на падіння його ціни',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Ліквідність',
-          description:
-            'Здатність активу швидко продаватися або купуватися без суттєвої зміни ціни',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Спред',
-          description:
-            'Різниця між ціною купівлі (Ask) та ціною продажу (Bid) активу',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Волатильність',
-          description: 'Показник мінливості ціни активу за певний період часу',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Стоп-лос',
-          description:
-            'Захисний ордер для автоматичного закриття збиткової позиції при досягненні заданого рівня',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Тейк-профіт',
-          description:
-            'Ордер для автоматичної фіксації прибутку при досягненні цільової ціни',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Демо-рахунок',
-          description:
-            'Навчальний торговий рахунок з віртуальними грошима для відпрацювання навичок без ризику',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Ризик-менеджмент',
-          description:
-            'Система управління ризиками в торгівлі для захисту капіталу від великих втрат',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Торговий план',
-          description:
-            'Документ з правилами торгівлі, що включає стратегію, управління капіталом та критерії входу/виходу',
+            'Метод технічного аналізу, який описує рух ринку через повторювані хвилі, що відображають психологію натовпу.',
         },
       ],
     };

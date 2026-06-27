@@ -56,17 +56,15 @@ export class HomeUkBlogFiftyTwoComponent implements OnInit {
     this.grr = this.artickleServ.selectedGroups;
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
-    this.titleService.setTitle(
-      'Анатомія ринкових трендів: практичний посібник трейдера | ArapovTrade',
-    );
+    this.titleService.setTitle('Індикатор ADX: сила тренду | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
 
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Дізнайтеся, як аналізувати тренди на фінансових ринках. Визначення фаз тренду, робота з індикаторами, типові помилки та стратегії торгівлі за трендом.',
+        'Що показує індикатор ADX, як відрізнити сильний тренд від млявого боковика і чому він вимірює силу руху, але не його напрям.',
     });
 
     this.gerRandom();
@@ -273,28 +271,35 @@ export class HomeUkBlogFiftyTwoComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          '@id':
-            'https://arapov.trade/uk/freestudying/anatomyofmarkettrends#article',
-          headline: 'Анатомія ринкових трендів: практичний посібник трейдера',
+          headline: 'Індикатор ADX: що це і як вимірювати силу тренду',
           description:
-            'Дізнайтеся, як аналізувати тренди на фінансових ринках. Визначення фаз тренду, робота з індикаторами, типові помилки та стратегії торгівлі за трендом.',
-          image: 'https://arapov.trade/assets/img/content/trends1.png',
-          datePublished: '2026-03-25T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
-          author: {
-            '@id': 'https://arapov.trade/uk#person',
-          },
+            'Що показує індикатор ADX, як відрізнити сильний тренд від млявого боковика і чому він вимірює силу руху, але не його напрям.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
             '@id': 'https://arapov.trade/#organization',
-            name: 'ArapovTrade',
+            name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
-          mainEntityOfPage:
-            'https://arapov.trade/uk/freestudying/anatomyofmarkettrends',
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': 'https://arapov.trade/uk/freestudying/adx-indicator',
+          },
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/adx.jpeg',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Технічний аналіз',
+          keywords: 'adx (average directional index), технічний аналіз',
+          inLanguage: 'uk',
         },
       ],
     };
@@ -309,18 +314,18 @@ export class HomeUkBlogFiftyTwoComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/uk#person',
-      name: 'Ігор Арапов',
+      '@id': 'https://arapov.trade/#person',
+      name: 'Igor Arapov',
       alternateName: [
-        'Igor Arapov',
-        'Арапов Игорь',
-        'I. Arapov',
+        'Ігор Арапов',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/uk',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -356,42 +361,42 @@ export class HomeUkBlogFiftyTwoComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'Що таке тренд у трейдингу?',
+          name: 'Що показує індикатор ADX?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Тренд — це стійкий напрямок руху ціни активу протягом певного часу. Висхідний тренд формується через підвищення мінімумів та максимумів, низхідний — через їх зниження.',
+            text: 'Силу тренду, але не його напрям. Значення від нуля до ста: що вище, то сильніший рух, неважливо, вгору він чи вниз. Низькі значення говорять про слабкий ринок або боковик, високі про виражений тренд.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Які фази проходить тренд?',
+          name: 'Чи показує ADX напрям ціни?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Тренд розвивається через чотири стадії: накопичення, прискорення, розподіл та розворот. Кожна фаза має характерні ознаки за обсягами та волатильністю.',
+            text: 'Ні. ADX вимірює лише силу руху, але не його сторону. Високе значення буває і у висхідному, і в низхідному тренді. Напрям доводиться визначати іншими інструментами, наприклад за рівнями або за лініями +DI і -DI.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Які індикатори визначають тренд?',
+          name: 'Чи можна входити в угоду за ADX?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Основні індикатори: ковзні середні (MA50, MA200), MACD для визначення моментів зміни напрямку, RSI для оцінки сили руху, ADX для вимірювання сили тренду.',
+            text: "Сам по собі ADX сигналу на вхід не дає. Він лише підтверджує наявність сильного тренду, але не вказує сторону і точку входу, а високе значення часто з'являється вже в розпалі руху. Це фільтр, а не сигнал.",
           },
         },
         {
           '@type': 'Question',
-          name: 'Чому небезпечно торгувати проти тренду?',
+          name: 'З чим поєднувати ADX?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Торгівля проти тренду без підтверджуючих сигналів збільшує ризик збитків. Тренд може тривати значно довше очікувань трейдера.',
+            text: 'З інструментами, що показують напрям: наприклад із ковзними середніми або рівнями. ADX закриває їхнє слабке місце, відсіюючи боковик, де трендові стратегії не працюють, і підтверджуючи силу руху.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Як обсяги допомагають в аналізі?',
+          name: 'Що таке +DI і -DI в ADX?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Обсяги підтверджують силу тренду: зростання обсягів при русі ціни за трендом підтверджує його силу. Дивергенція між ціною та обсягом часто передує розвороту.',
+            text: 'Це дві допоміжні лінії спрямованого руху всередині індикатора: +DI відображає силу покупців, -DI силу продавців. Коли +DI вище за -DI, перевага в зростання, і навпаки. Вони підказують сторону, але саму силу тренду показує лінія ADX, а точку входу я беру за рівнями і обсягом.',
           },
         },
       ],
@@ -407,37 +412,34 @@ export class HomeUkBlogFiftyTwoComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'Як визначити та торгувати за трендом',
+      '@id': 'https://arapov.trade/uk/freestudying/adx-indicator#howto',
+      name: 'Як розібратися і застосувати ADX (Average Directional Index)',
+      description:
+        'Покроковий розбір теми та її практичне застосування в торгівлі',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Визначте напрямок',
-          text: 'Використовуйте ковзні середні MA50 та MA200. Ціна вище обох ліній — висхідний тренд, нижче — низхідний.',
+          name: 'Розберіться, що таке індикатор ADX',
+          text: 'ADX це індикатор сили спрямованого руху, який оцінює, наскільки виражений поточний тренд, але не вказує його сторону, вгору він чи вниз.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Визначте фазу тренду',
-          text: 'Проаналізуйте обсяги та волатильність для розуміння поточної стадії розвитку руху.',
+          name: 'Дізнайтеся, як ADX вимірює силу тренду',
+          text: 'ADX працює через порівняння висхідного і низхідного тиску на ціну через дві лінії спрямованого руху, +DI і -DI.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Знайдіть точку входу',
-          text: 'Входьте на відкатах до рівнів підтримки або до ковзних середніх. Використовуйте рівні Фібоначчі.',
+          name: 'Лінії +DI і -DI та рівні 20/25/40: як читати індикатор',
+          text: 'Лінії +DI і -DI показують сторону, а рівні ADX силу: нижче 20 флет, 20-25 зародження, вище 25 тренд, вище 40 сильний і часто перегрітий.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Встановіть стоп-лос',
-          text: 'Розміщуйте захисний ордер за ключовим рівнем з урахуванням ATR. Ризик — максимум 1-2% депозиту.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 5,
-          name: 'Керуйте позицією',
-          text: 'Переносьте стоп-лос у беззбиток, частково фіксуйте прибуток на ключових рівнях.',
+          name: 'Зрозумійте, чому ADX це фільтр, а не сигнал на вхід',
+          text: 'Сам по собі ADX не каже, коли купувати чи продавати; він підтверджує наявність тренду, а напрям і вхід беруть за рівнями і обсягом.',
         },
       ],
     };
@@ -452,67 +454,19 @@ export class HomeUkBlogFiftyTwoComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Глосарій трейдингових термінів',
+      name: 'Глосарій термінів статті',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Тренд',
+          name: 'ADX (Average Directional Index)',
           description:
-            'Стійкий напрямок руху ціни активу протягом певного періоду часу.',
+            'Індикатор сили спрямованого руху, який оцінює, наскільки виражений поточний тренд, але не вказує його сторону, вгору він чи вниз.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Висхідний тренд',
+          name: '+DI і -DI',
           description:
-            'Бичачий ринок з послідовним підвищенням мінімумів та максимумів ціни.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Низхідний тренд',
-          description:
-            'Ведмежий ринок з послідовним зниженням максимумів та мінімумів.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Флет',
-          description:
-            'Бокове переміщення ціни в горизонтальному коридорі без вираженого напрямку.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Ковзна середня',
-          description:
-            'Індикатор, що згладжує цінові коливання та показує середню ціну за обраний період.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'MACD',
-          description:
-            'Індикатор сходження-розходження ковзних середніх для визначення сили та напрямку тренду.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'RSI',
-          description:
-            'Індекс відносної сили, що показує перекупленість або перепроданість активу.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Фаза накопичення',
-          description:
-            'Початковий етап тренду, коли великі гравці формують позиції при низькій волатильності.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Стоп-лос',
-          description:
-            'Захисний ордер для автоматичного закриття позиції при досягненні рівня збитку.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Обсяговий аналіз',
-          description:
-            'Метод аналізу ринку на основі торгових обсягів для підтвердження сили цінового руху.',
+            'Це дві лінії спрямованого руху всередині ADX: +DI відображає силу покупців, -DI силу продавців; їхнє взаємне положення показує сторону переваги, але не точку входу.',
         },
       ],
     };

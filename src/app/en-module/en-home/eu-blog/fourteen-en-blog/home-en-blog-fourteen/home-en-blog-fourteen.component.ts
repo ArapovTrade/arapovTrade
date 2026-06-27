@@ -55,20 +55,17 @@ export class HomeEnBlogFourteenComponent implements OnInit {
     this.checkedGroup = this.artickleServ.selectedGroups;
 
     this.titleService.setTitle(
-      'Trading vs Investing: Key Differences and How to Choose | ArapovTrade',
+      'Crypto Risks and Scams: How to Stay Safe | Arapov.trade',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Trading vs Investing: key differences, advantages and disadvantages of each approach. How to choose your path to financial independence.',
+        'The main crypto risks and popular scam schemes: fake ICOs, pyramids, phishing and wallet drainers. How to spot fraud and protect your funds.',
     });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-11-07' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/tradingandinvestments.webp',
-    });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
+
     this.gerRandom();
   }
   randomArticleRus: any = [];
@@ -253,41 +250,37 @@ export class HomeEnBlogFourteenComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          '@id':
-            'https://arapov.trade/en/freestudying/tradingandinvestments#article',
           headline:
-            'Trading vs Investing: Key Differences and Strategy Selection',
+            'Crypto Risks and Scams: How a Beginner Can Avoid Losing the Account',
           description:
-            'Trading vs Investing: key differences, advantages and disadvantages of each approach to working in financial markets.',
-          image:
-            'https://arapov.trade/assets/img/content/tradingandinvestments1.webp',
-          datePublished: '2026-03-15T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
-          author: {
-            '@id': 'https://arapov.trade/en#person',
-          },
+            'The main crypto risks and popular scam schemes: fake ICOs, pyramids, phishing and wallet drainers. How to spot fraud and protect your funds.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
             '@id': 'https://arapov.trade/#organization',
-            name: 'Pair Trade',
+            name: 'Arapov.Trade',
             url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://arapov.trade/en/freestudying/tradingandinvestments',
+            '@id': 'https://arapov.trade/en/freestudying/crypto-risks-scams',
           },
-          articleSection: 'Trading',
-          keywords: [
-            'trading',
-            'investing',
-            'trader',
-            'investor',
-            'financial markets',
-          ],
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/cryptoscam.webp',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Cryptocurrency',
+          keywords:
+            'crypto risks, crypto fraud, scam, pump and dump, crypto volatility',
+          inLanguage: 'en',
         },
       ],
     };
@@ -302,19 +295,18 @@ export class HomeEnBlogFourteenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/en#person',
+      '@id': 'https://arapov.trade/#person',
       name: 'Igor Arapov',
       alternateName: [
         'Ігор Арапов',
-        'Арапов Игорь',
-        'I. Arapov',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-
-      url: 'https://arapov.trade/en',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -329,12 +321,12 @@ export class HomeEnBlogFourteenComponent implements OnInit {
         'https://t.me/ArapovTrade',
       ],
       jobTitle: [
-        'Independent researcher,',
-        'trader',
-        'author and founder of arapov.trade',
+        'Independent researcher',
+        'Trader',
+        'Author and founder of arapov.trade',
       ],
       description:
-        'Independent researcher, practicing trader, author of books on trading and scientific publications. Specializes in trading psychology and cognitive biases in financial markets.',
+        'Independent researcher, practising trader, author of trading books and scientific publications. Specialises in trading psychology and cognitive biases in financial markets.',
     };
 
     this.addJsonLdSchema(data);
@@ -347,46 +339,45 @@ export class HomeEnBlogFourteenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
-      '@id': 'https://arapov.trade/en/freestudying/tradingandinvestments#faq',
       mainEntity: [
         {
           '@type': 'Question',
-          name: "What's the difference between a trader and an investor?",
+          name: 'What are the main risks of cryptocurrency?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Traders execute frequent transactions on short time frames, profiting from price fluctuations. Investors hold assets for months or years, earning from value appreciation and dividends.',
+            text: 'Huge volatility, where even Bitcoin has folded 80 percent and small coins can go to zero. Plus fraud and scam coins, technical risks like an exchange hack and lost keys, regulatory decisions by states, and psychology. The last one, mixed with greed and haste, ruins a beginner most often.',
           },
         },
         {
           '@type': 'Question',
-          name: 'How much can you earn from trading?',
+          name: 'What is a crypto scam in simple terms?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Professional traders earn 30-100% annually, but 70-80% of beginners lose their deposit in the first year.',
+            text: 'It is any fraud aimed at stealing your money or access to your wallet: fake projects, pyramids, phishing, counterfeit exchanges, pumping a coin to dump it. Every scheme has one hook, the promise of easy and guaranteed profit, which does not exist on the market.',
           },
         },
         {
           '@type': 'Question',
-          name: 'What starting capital is needed for investing?',
+          name: 'How does a pump and dump scheme work?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'You can start investing with $100-500 through a brokerage account.',
+            text: 'The organizers quietly buy up a cheap, little-known coin, then drive it with signals and ads, painting a frenzy. The crowd jumps in on emotion, and at exactly that moment the organizers dump their volume on the latecomers. The price collapses as fast as it rose, and the crowd is left with a hollow shell.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Can you combine trading and investing?',
+          name: 'Why do scam coins end up at zero?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Yes, professionals keep 70-80% of capital in long-term investments and use 20-30% for active trading.',
+            text: 'Such a coin can be printed endlessly, so supply always outweighs demand and the seller controls the price. After the single shot, turnover in the coin falls, and once it drops below the threshold the exchange wants, the coin is simply delisted. An exchange lives on fees and does not keep an instrument that stopped producing turnover.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Which is more profitable — trading or investing?',
+          name: 'How do you lower the risks when working with crypto?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Statistically, 80% of investors are profitable over 10 years, while 90% of traders are at a loss.',
+            text: 'In my experience, enter only with money you are ready to lose, keep a small risk per trade, do not abuse leverage, and check any project through independent sources rather than its own site. Give no one your keys or seed phrase, and do not believe promises of guaranteed income. Protecting capital saves you here more often than a lucky coin pick.',
           },
         },
       ],
@@ -402,38 +393,40 @@ export class HomeEnBlogFourteenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      '@id': 'https://arapov.trade/en/freestudying/tradingandinvestments#howto',
-      name: 'How to Choose Between Trading and Investing',
+      '@id': 'https://arapov.trade/en/freestudying/crypto-risks-scams#howto',
+      name: 'How to understand crypto risks and not lose the account',
+      description:
+        'A step-by-step breakdown of crypto risks and fraud schemes and their practical use',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Assess available time',
-          text: 'Trading requires 2-8 hours daily, investing needs just a few hours monthly.',
+          name: 'Understand what risks in crypto even exist',
+          text: 'There are noticeably more dangers here than a person sees on the way in, and they are all quite different.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Determine risk profile',
-          text: 'High risk tolerance suits trading, conservative approach fits investing.',
+          name: 'Understand volatility: why a coin can drop 80 percent',
+          text: 'Volatility is the swing of price over a stretch of time, and in crypto it is monstrous.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Evaluate starting capital',
-          text: '$100-500 is enough for trading, more is preferable for investing.',
+          name: 'Learn to recognize scam schemes',
+          text: 'Scam is fraud built to steal your money or access to your wallet.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Complete education',
-          text: 'Study basics on a demo account for at least 3 months.',
+          name: 'Understand the mechanics of pump and dump and delisting',
+          text: 'Pump and dump is a scheme where the organizers first quietly accumulate a cheap, obscure coin, then sharply inflate it and dump it on the crowd.',
         },
         {
           '@type': 'HowToStep',
           position: 5,
-          name: 'Start small',
-          text: 'Test your strategy with small amounts before scaling up.',
+          name: 'Lower risk in advance by simple signs',
+          text: 'The good news is that almost any con can be read in advance, if you do not rush.',
         },
       ],
     };
@@ -448,62 +441,25 @@ export class HomeEnBlogFourteenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      '@id': 'https://arapov.trade/en/freestudying/tradingandinvestments#terms',
+      name: 'Article glossary',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Trading',
+          name: 'Rug pull',
           description:
-            'Active buying and selling of financial instruments on short time frames',
+            "A type of crypto fraud in which a token's creators withdraw liquidity from the pool, collapsing the price and leaving holders unable to sell the coin.",
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Investing',
+          name: 'Scam',
           description:
-            'Long-term capital allocation in assets for income generation',
+            "Any fraud built to steal a trader's funds or access to their wallet: fake projects, pyramids, phishing, counterfeit exchanges, pumping a coin to dump it.",
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Diversification',
+          name: 'Pump and dump',
           description:
-            'Spreading capital across different assets to reduce risk',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Dividends',
-          description: 'Portion of company profits paid to shareholders',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'ETF',
-          description:
-            'Exchange-traded fund that trades like a stock and holds a basket of assets',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Technical Analysis',
-          description:
-            'Price forecasting method based on charts and indicators',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Fundamental Analysis',
-          description: 'Asset valuation based on financial metrics',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Risk Management',
-          description: 'System for controlling trading risks',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Volatility',
-          description: 'Degree of asset price variability',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Portfolio',
-          description: 'Collection of investment assets owned by an individual',
+            'A scheme in which the organizers quietly buy up a cheap coin, artificially inflate its price with ads and signals, and then dump their volume on the crowd they drew in.',
         },
       ],
     };

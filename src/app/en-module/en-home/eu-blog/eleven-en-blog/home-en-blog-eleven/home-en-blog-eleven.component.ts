@@ -54,20 +54,17 @@ export class HomeEnBlogElevenComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      "Trader's Starting Deposit: How Much Capital Do You Need to Start Trading",
+      'Cryptocurrency Basics for Beginners | Arapov.trade',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Learn how much starting capital you need for Forex, stock market, and cryptocurrency trading. A practical guide to choosing the optimal deposit size for trading.',
+        'Cryptocurrency basics for beginners: what blockchain, bitcoin and altcoins are, how the market works and how to start crypto trading safely.',
     });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-04-01' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/starterdeposit.webp',
-    });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
+
     this.gerRandom();
   }
   randomArticleRus: any = [];
@@ -253,27 +250,36 @@ export class HomeEnBlogElevenComponent implements OnInit {
         {
           '@type': 'Article',
           headline:
-            "Trader's Starting Deposit: How Much Capital Do You Need to Start Trading",
+            'Cryptocurrency from Scratch: Basics, Risks and Where a Beginner Should Start',
           description:
-            'A practical guide to determining the optimal starting deposit size for trading in financial markets',
-          image: 'https://arapov.trade/assets/img/content/starterdeposit1.webp',
-          author: {
-            '@id': 'https://arapov.trade/en#person',
-          },
+            'Cryptocurrency basics for beginners: what blockchain, bitcoin and altcoins are, how the market works and how to start crypto trading safely.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'Pair Trade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
-          datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://arapov.trade/en/freestudying/starterdeposit',
+            '@id': 'https://arapov.trade/en/freestudying/crypto-basics',
           },
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/cryptocurrencybasics44.png',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Cryptocurrency',
+          keywords:
+            'cryptocurrency, blockchain, decentralization, crypto exchange, how to start trading crypto, crypto risks, demo account',
+          inLanguage: 'en',
         },
       ],
     };
@@ -288,18 +294,18 @@ export class HomeEnBlogElevenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/en#person',
+      '@id': 'https://arapov.trade/#person',
       name: 'Igor Arapov',
       alternateName: [
         'Ігор Арапов',
-        'Арапов Игорь',
-        'I. Arapov',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/en',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -314,12 +320,12 @@ export class HomeEnBlogElevenComponent implements OnInit {
         'https://t.me/ArapovTrade',
       ],
       jobTitle: [
-        'Independent researcher,',
-        'trader',
-        'author and founder of arapov.trade',
+        'Independent researcher',
+        'Trader',
+        'Author and founder of arapov.trade',
       ],
       description:
-        'Independent researcher, practicing trader, author of books on trading and scientific publications. Specializes in trading psychology and cognitive biases in financial markets.',
+        'Independent researcher, practising trader, author of trading books and scientific publications. Specialises in trading psychology and cognitive biases in financial markets.',
     };
 
     this.addJsonLdSchema(data);
@@ -335,42 +341,50 @@ export class HomeEnBlogElevenComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'What is the minimum deposit needed to start trading Forex?',
+          name: 'What is cryptocurrency in simple terms?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'To start trading Forex, a minimum of $300-500 is recommended. This allows you to follow risk management rules and risk no more than 1-2% of your deposit per trade.',
+            text: 'It is a digital asset issued not by a bank but by a computer network based on a blockchain. You can exchange it directly between people, but no state stands behind it, so the value of most coins rests on demand alone.',
           },
         },
         {
           '@type': 'Question',
-          name: "Why shouldn't I start trading with $10-50?",
+          name: 'What are blockchain and decentralization?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: "With a minimum deposit of $10-50, it's impossible to follow basic risk management rules. Commissions, spreads, and minimum lot sizes make trading with such capital unprofitable.",
+            text: 'A blockchain is a shared ledger of transfer records, a copy of which is held by many participants of the network. Decentralization means there is no single point of control, so a record is almost impossible to forge, but the usual protection is gone too.',
           },
         },
         {
           '@type': 'Question',
-          name: 'How do I calculate the optimal starting deposit size?',
+          name: 'How does cryptocurrency differ from ordinary money?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: "The optimal deposit is calculated based on the rule: risk per trade should not exceed 1-2% of capital. If your average stop-loss is 20 pips and pip value is $1, you'll need at least $500-1000.",
+            text: 'Ordinary money has a state behind it as guarantor; crypto has only the network and demand. Crypto is not regulated by a single body and is far more volatile, and a mistaken transfer no one will reverse.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Should I use borrowed money to fund my trading deposit?',
+          name: 'What risks should a beginner in crypto know?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: "It is strongly not recommended to use borrowed funds for trading. This creates additional psychological pressure and can lead to rash decisions out of fear of losing someone else's money.",
+            text: 'High volatility, the absence of a regulator, and a flood of meme coins and scam projects that get pumped and then delisted. So it is worth sticking to large assets and entering only with money you can afford to lose.',
           },
         },
         {
           '@type': 'Question',
-          name: 'When can I increase my trading deposit size?',
+          name: 'How should a beginner choose a crypto exchange?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Increasing your deposit is recommended only after achieving stable profitability for at least 3-6 months. Before adding funds, ensure your strategy works and you maintain discipline.',
+            text: 'Look at reliability and reputation, the presence of regulation, liquidity, and the size of fees. Ads and bonuses are the last thing to go by. And do not keep all your funds on the exchange; move large amounts to a wallet.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Demo account or straight to a real account: which is better to start with?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'In my experience, only a demo account. On it you break in your method with no risk to money. Move to a real account after a steady plus on demo, and start with minimal amounts.',
           },
         },
       ],
@@ -386,39 +400,58 @@ export class HomeEnBlogElevenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'How to Determine the Optimal Starting Deposit Size',
+      '@id': 'https://arapov.trade/en/freestudying/crypto-basics#howto',
+      name: 'How to understand cryptocurrency and start from scratch',
       description:
-        'Step-by-step guide to calculating the necessary capital for starting to trade in financial markets',
+        'A step-by-step breakdown: what crypto is, why it is risky, and how to take the first step without draining a deposit',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Define your comfortable loss amount',
-          text: 'Establish the maximum amount you can afford to lose without affecting your financial situation. This sum becomes the upper limit of your starting deposit.',
+          name: 'Understand what cryptocurrency is',
+          text: 'Cryptocurrency is a digital asset issued and stored not by a bank but by a computer network based on a blockchain, one you can exchange directly between participants.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Choose your trading strategy',
-          text: 'Determine your trading style: scalping requires more capital due to commissions, while swing trading requires less but needs reserves for drawdowns.',
+          name: 'Get your head around the blockchain',
+          text: 'At the core of any cryptocurrency sits a blockchain.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Calculate minimum deposit by risk rule',
-          text: 'Divide your average stop-loss in monetary terms by 0.01-0.02 (1-2% risk). The result is the minimum deposit needed for proper risk management.',
+          name: 'Understand the types of cryptocurrency',
+          text: 'There are thousands of coins, but for practice it helps to sort them into a few groups.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Test on a demo account',
-          text: 'Spend at least 2-3 weeks trading on a demo account with virtual capital equal to your planned deposit. Evaluate your comfort level.',
+          name: 'Weigh the risks of crypto',
+          text: 'The first difference is the absence of a single regulator.',
         },
         {
           '@type': 'HowToStep',
           position: 5,
-          name: 'Start with the minimum amount',
-          text: 'When transitioning to a live account, start with the lower end of your calculated range. Increase your deposit only after confirming stable results.',
+          name: 'Choose an exchange and a wallet',
+          text: 'Crypto exchange is a venue where cryptocurrencies are bought and sold.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 6,
+          name: 'Place your first trade by a plan',
+          text: 'Say the exchange is chosen and the account funded.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 7,
+          name: 'Learn to read the crypto market',
+          text: 'Once the first trade is behind you, a harder question comes up: how to even tell where the market is looking.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 8,
+          name: 'Start with a demo account',
+          text: 'And the most important advice, the one that will save you money and nerves: start with a demo account.',
         },
       ],
     };
@@ -433,67 +466,19 @@ export class HomeEnBlogElevenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: "Glossary of Terms: Trader's Starting Deposit",
+      name: 'Article glossary',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Starting Deposit',
+          name: 'Cryptocurrency',
           description:
-            'The initial sum of money placed in a brokerage account for executing trading operations in financial markets.',
+            'A digital asset that is issued and stored not by a bank but by a computer network based on a blockchain, and that can be exchanged directly between participants.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Risk Management',
+          name: 'Crypto exchange',
           description:
-            'A system for managing risks in trading, including defining maximum acceptable losses per trade and overall drawdown control.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Leverage',
-          description:
-            "A margin trading mechanism that allows controlling positions exceeding the trader's own capital.",
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Spread',
-          description:
-            "The difference between the buy and sell price of a trading instrument, representing the broker's commission for executing a trade.",
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Drawdown',
-          description:
-            'A temporary decrease in trading capital from its maximum value, expressed in percentage or monetary equivalent.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Margin',
-          description:
-            "Collateral funds blocked by the broker in a trader's account when opening a leveraged position.",
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Demo Account',
-          description:
-            'A practice trading account with virtual funds for trading practice without financial risk.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Volatility',
-          description:
-            'The degree of price variation of a financial instrument over a specific period of time.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Diversification',
-          description:
-            'Distribution of capital among various trading instruments to reduce concentration risks.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Liquidity',
-          description:
-            'The ability of an asset to be quickly sold or bought at market price without significantly affecting quotes.',
+            'A venue where cryptocurrencies are bought and sold; it is chosen first of all by reliability and regulation, not by ads and bonuses.',
         },
       ],
     };

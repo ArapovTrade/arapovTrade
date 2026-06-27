@@ -28,7 +28,7 @@ export class HomeUkBlogFourtyThreeComponent implements OnInit {
     private themeService: ThemeservService,
     private artickleServ: ArticlesService,
     private renderer: Renderer2,
-    @Inject(DOCUMENT) private document: Document
+    @Inject(DOCUMENT) private document: Document,
   ) {}
   private routerSubscription!: Subscription;
   private themeSubscription!: Subscription;
@@ -57,20 +57,17 @@ export class HomeUkBlogFourtyThreeComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Попит і пропозиція в криптовалютах | Повний посібник'
+      'Торгова система: як побудувати та оптимізувати | Arapov.trade',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Як аналізувати попит і пропозицію на ринку криптовалют. Вивчіть методи оцінки балансу сил, обсяги торгів, ордербук та стратегії для прибуткового трейдингу.',
+        'Що таке торгова система, з чого вона складається, як її зібрати, протестувати та оптимізувати, не підганяючи під історію.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-25' }); this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/cryptomarketanalysis.png',
-    });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
 
     this.gerRandom();
   }
@@ -88,7 +85,6 @@ export class HomeUkBlogFourtyThreeComponent implements OnInit {
       title: 'Базовий курс',
       link: 'https://arapov.trade/uk/freestudying/freeeducation',
     },
-     
   ];
 
   onGroupChange(event: Event) {
@@ -158,7 +154,7 @@ export class HomeUkBlogFourtyThreeComponent implements OnInit {
     // Показываем 5 случайных статей при фокусе, если инпут пуст
     if (!this.searchQuery) {
       const shuffled = [...this.artickleServ.ukrArtickles].sort(
-        () => Math.random() - 0.5
+        () => Math.random() - 0.5,
       );
       this.displayedArticles = shuffled.slice(0, this.maxResults);
     }
@@ -173,7 +169,7 @@ export class HomeUkBlogFourtyThreeComponent implements OnInit {
   onSearchChange() {
     // Логика асинхронного поиска
     const filtered = this.artickleServ.ukrArtickles.filter((a) =>
-      a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase())
+      a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase()),
     );
     this.displayedArticles = filtered.slice(0, this.maxResults);
   }
@@ -195,7 +191,7 @@ export class HomeUkBlogFourtyThreeComponent implements OnInit {
     const path: string =
       this.router.url.split('/')[this.router.url.split('/').length - 1];
     let index = this.artickleServ.ukrArtickles.findIndex(
-      (a) => a.linkUkr == path
+      (a) => a.linkUkr == path,
     );
 
     if (this.artickleServ.ukrArtickles.length - 1 == index) {
@@ -212,7 +208,7 @@ export class HomeUkBlogFourtyThreeComponent implements OnInit {
     const path: string =
       this.router.url.split('/')[this.router.url.split('/').length - 1];
     let index = this.artickleServ.ukrArtickles.findIndex(
-      (a) => a.linkUkr == path
+      (a) => a.linkUkr == path,
     );
 
     if (index == 1) {
@@ -237,7 +233,7 @@ export class HomeUkBlogFourtyThreeComponent implements OnInit {
     ];
 
     const scripts = this.document.querySelectorAll(
-      'script[type="application/ld+json"]'
+      'script[type="application/ld+json"]',
     );
 
     scripts.forEach((script) => {
@@ -250,7 +246,7 @@ export class HomeUkBlogFourtyThreeComponent implements OnInit {
 
         const shouldRemove = candidates.some(
           (entry: any) =>
-            entry['@type'] && typesToRemove.includes(entry['@type'])
+            entry['@type'] && typesToRemove.includes(entry['@type']),
         );
 
         if (shouldRemove) {
@@ -278,32 +274,36 @@ export class HomeUkBlogFourtyThreeComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          mainEntityOfPage: {
-            '@type': 'WebPage',
-            '@id': 'https://arapov.trade/uk/freestudying/cryptomarketanalysis',
-          },
-          headline:
-            'Попит і пропозиція в криптовалютах: повний посібник з аналізу ринку',
+          headline: 'Торгова система з нуля: план, бектест і щоденник трейдера',
           description:
-            'Як аналізувати попит і пропозицію на ринку криптовалют. Вивчіть методи оцінки балансу сил, обсяги торгів, ордербук та стратегії для прибуткового трейдингу.',
-          image:
-            'https://arapov.trade/assets/img/content/cryptomarketanalysis1.webp',
-          author: {
-            '@id': 'https://arapov.trade/uk#person',
-          },
+            'Що таке торгова система, з чого вона складається, як її зібрати, протестувати та оптимізувати, не підганяючи під історію.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'ArapovTrade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
-          datePublished: '2025-04-15T00:00:00Z',
-         dateModified: '2026-04-15T00:00:00Z',
-
-          articleBody:
-            'Криптовалютний ринок працює за базовими економічними законами, де взаємодія покупців і продавців визначає ціноутворення кожного активу...',
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': 'https://arapov.trade/uk/freestudying/trading-system',
+          },
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/tradingsystem.webp',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Торгові системи',
+          keywords:
+            'торгова система, торговий план, бектест, щоденник трейдера, перевірка стратегії, демо-рахунок, управління ризиком',
+          inLanguage: 'uk',
         },
       ],
     };
@@ -318,18 +318,18 @@ export class HomeUkBlogFourtyThreeComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/uk#person',
-      name: 'Ігор Арапов',
+      '@id': 'https://arapov.trade/#person',
+      name: 'Igor Arapov',
       alternateName: [
-        'Igor Arapov',
-              'Арапов Игорь',
-              'I. Arapov',
-              'Игорь Арапов',
-              'І. В. Арапов',
-              'Арапов Ігор',
-              'Arapov Igor',
+        'Ігор Арапов',
+        'Игорь Арапов',
+        'Арапов Игорь',
+        'Арапов Ігор',
+        'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/uk',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -341,9 +341,13 @@ export class HomeUkBlogFourtyThreeComponent implements OnInit {
         'https://github.com/ArapovTrade',
         'https://ua.linkedin.com/in/arapovtrade',
         'https://www.youtube.com/@ArapovTrade',
-        'https://t.me/ArapovTrade'
+        'https://t.me/ArapovTrade',
       ],
-       jobTitle: ['Незалежний дослідник', 'трейдер', 'автор і засновник arapov.trade'],
+      jobTitle: [
+        'Незалежний дослідник',
+        'трейдер',
+        'автор і засновник arapov.trade',
+      ],
       description:
         'Незалежний дослідник, практикуючий трейдер, автор книг з трейдингу та наукових публікацій. Спеціалізується на психології трейдингу та когнітивних упередженнях на фінансових ринках.',
     };
@@ -361,42 +365,50 @@ export class HomeUkBlogFourtyThreeComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'Що таке попит і пропозиція на крипторинку?',
+          name: 'Що таке торгова система простими словами?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Попит — це готовність покупців придбати криптовалюту за певною ціною, а пропозиція — кількість монет, яку власники готові продати. Баланс цих сил визначає поточну ринкову ціну активу.',
+            text: 'Це набір заздалегідь заданих правил: коли входити в угоду, коли виходити і яким ризиком ризикувати. Її завдання зробити середній результат на дистанції позитивним і прибрати хаотичні рішення на емоціях. Без системи торгівля перетворюється на орлянку.',
           },
         },
         {
           '@type': 'Question',
-          name: "Як обсяги торгів пов'язані з попитом і пропозицією?",
+          name: 'Чим торговий план відрізняється від системи?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Обсяги торгів показують інтенсивність ринкової активності. Зростаючі обсяги при зростанні ціни підтверджують сильний попит, а високі обсяги при падінні вказують на домінування продавців і надлишкову пропозицію.',
+            text: 'Система це сам метод і сигнал входу. План це ваші особисті правила навколо неї: який ризик на угоду, що торгуєте, а що пропускаєте, коли в ринок краще взагалі не входити. Система відповідає на питання як, план на питання як саме ви себе поводите.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Які інструменти використовують для аналізу балансу попиту і пропозиції?',
+          name: 'Як перевірити торгову систему перед реальними грошима?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Трейдери застосовують ордербук для перегляду заявок, кластерний аналіз обсягів, індикатори OBV та A/D, профіль ринку, а також дані про потоки криптовалют між гаманцями та біржами.',
+            text: 'Спершу бектест на історії, потім перевірка вперед. Прожену правила по минулих даних, потім обовʼязково на нових даних, яких система не бачила, на демо чи маленькому реальному рахунку. Дистанція близько сотні угод показує реальну перевагу з урахуванням витрат.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Чому обмежена емісія впливає на ціну криптовалют?',
+          name: 'Що таке переоптимізація в бектесті?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Обмежений запас, як у Bitcoin з його 21 мільйоном монет, створює дефіцит. При зростанні попиту та фіксованій пропозиції ціна неминуче зростає згідно з законом економіки.',
+            text: 'Це підгонка параметрів стратегії під історію до ідеальної кривої. У підсумку стратегія описує минуле, а не знаходить робочу перевагу, і на нових даних розсипається. Чим точніше вона сидить на історії, тим гірше зазвичай працює далі.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Як дії китів впливають на баланс ринку?',
+          name: 'Навіщо потрібен щоденник трейдера?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Великі власники (кити) здатні різко змінювати баланс попиту і пропозиції. Масовий продаж створює надлишок монет і тисне на ціну вниз, а великі покупки поглинають пропозицію і штовхають ціну вгору.',
+            text: 'Щоб бачити свої повторювані помилки збоку й прибирати їх. Памʼять ненадійна: вдалі угоди памʼятаються, провальні забуваються. Щоденник прибирає цей самообман і показує реальну статистику, якщо записувати причину входу та емоції, а не лише результат.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Яка торгова система краща?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'У моєму досвіді найпростіша з тих, що дають перевагу. Чим більше в системі умов і фільтрів, тим важче їй слідувати. Робоча, але дотримувана система завжди бʼє ідеальну, але кинуту при першому тиску ринку.',
           },
         },
       ],
@@ -412,39 +424,46 @@ export class HomeUkBlogFourtyThreeComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'Як аналізувати попит і пропозицію на крипторинку',
+      '@id': 'https://arapov.trade/uk/freestudying/trading-system#howto',
+      name: 'Як зібрати й перевірити торгову систему',
       description:
-        'Покрокова інструкція з оцінки балансу покупців і продавців для прийняття торгових рішень',
+        'Покроковий розбір: від розуміння, навіщо потрібна система, до її складу, плану, бектесту, перевірки вперед і щоденника трейдера',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Вивчіть ордербук',
-          text: 'Відкрийте книгу ордерів на біржі та проаналізуйте співвідношення заявок на купівлю і продаж. Великі кластери ордерів вказують на значущі цінові рівні.',
+          name: 'Зрозумійте, навіщо потрібна торгова система',
+          text: 'Торгова система це заздалегідь задані правила входу, виходу й ризику, які роблять середній результат на дистанції позитивним.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Проаналізуйте обсяги торгів',
-          text: 'Зіставте динаміку ціни з обсягами. Зростання ціни на високих обсягах підтверджує силу попиту, падіння обсягів при зростанні попереджає про слабкість руху.',
+          name: 'Зберіть систему з входу, виходу й управління ризиком',
+          text: 'Робоча система збирається з умови входу, умов виходу й правил управління ризиком.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Визначте ключові рівні',
-          text: 'Знайдіть зони підтримки, де покупці активно захищають ціну, та опору, де продавці створюють тиск. Ці рівні відображають баланс сил.',
+          name: 'Запишіть особисті правила в торговий план',
+          text: 'Торговий план це письмові особисті правила навколо системи: ризик, дисципліна і те, що ви торгуєте, а що пропускаєте.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Відстежуйте потоки криптовалют',
-          text: 'Моніторте рух монет між гаманцями та біржами. Приплив на біржі сигналізує про готовність до продажу, виведення — про накопичення.',
+          name: 'Перевірте систему бектестом без підгонки',
+          text: 'Бектест проганяє правила по минулій історії, а захист від підгонки це розділення даних на настроювальну й перевірочну частини.',
         },
         {
           '@type': 'HowToStep',
           position: 5,
-          name: 'Враховуйте ринкові настрої',
-          text: 'Аналізуйте індекс страху та жадібності, активність у соціальних мережах та новинний фон. Емоції учасників посилюють дисбаланс попиту і пропозиції.',
+          name: 'Зробіть перевірку вперед на демо',
+          text: 'Після бектесту систему перевіряють вперед на нових даних і близько сотні угод, краще спершу на демо-рахунку.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 6,
+          name: 'Ведіть щоденник трейдера й розбирайте помилки',
+          text: 'Щоденник трейдера на дистанції вскриває повторювані помилки, які памʼять сама ховає.',
         },
       ],
     };
@@ -459,62 +478,31 @@ export class HomeUkBlogFourtyThreeComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Терміни аналізу попиту і пропозиції криптовалют',
-      description: 'Ключові поняття для розуміння ринкової динаміки',
+      name: 'Глосарій термінів статті',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Ордербук',
+          name: 'Торгова система',
           description:
-            'Книга заявок, що відображає всі поточні ордери на купівлю і продаж із зазначенням ціни та обсягу',
+            'Це сукупність заздалегідь заданих правил, які визначають, за яких умов відкривати й закривати угоду і скільки при цьому ризикувати.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Ліквідність',
+          name: 'Торговий план',
           description:
-            'Здатність ринку забезпечувати швидке виконання угод без суттєвого впливу на ціну',
+            'Це письмовий набір правил, за якими ви торгуєте: які інструменти, за яких умов, де вхід, де стоп, де ціль і який ризик.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Кити',
+          name: 'Бектест',
           description:
-            'Великі власники криптовалют, чиї угоди здатні значно впливати на ринкову ціну',
+            'Це перевірка торгової стратегії на історичних даних ринку з метою оцінити, чи був у неї прибуток у минулому і наскільки стабільно вона працювала.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'On-chain аналіз',
+          name: 'Щоденник трейдера',
           description:
-            'Вивчення даних блокчейну для оцінки активності мережі, потоків коштів та поведінки учасників',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Кластерний аналіз обсягів',
-          description:
-            'Метод візуалізації торгової активності на кожному ціновому рівні для виявлення зон накопичення',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Індекс страху та жадібності',
-          description:
-            'Індикатор ринкових настроїв, що вимірює емоційний стан учасників ринку за шкалою від 0 до 100',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Халвінг',
-          description:
-            'Скорочення вдвічі винагороди майнерам, що зменшує темпи емісії нових монет і впливає на пропозицію',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'DeFi',
-          description:
-            'Децентралізовані фінанси — екосистема фінансових застосунків на блокчейні без посередників',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Стейкінг',
-          description:
-            'Блокування криптовалюти для підтримки роботи мережі з отриманням винагороди, що впливає на доступну пропозицію',
+            'Це структуровані записи всіх здійснених угод із зазначенням причин входу й виходу, результату та емоційного стану, які допомагають знаходити й виправляти повторювані помилки.',
         },
       ],
     };

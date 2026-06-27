@@ -60,18 +60,18 @@ export class HomeUkBlogEightComponent implements OnInit {
     this.checkedGroup = this.artickleServ.selectedGroups;
 
     this.titleService.setTitle(
-      'Імбаланс у Трейдингу: Повний Посібник | Arapov.trade',
+      'Bitcoin у трейдингу: аналіз і торгівля BTC у 2026 | Arapov.trade',
     );
-     this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
 
-  this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
 
     this.meta.updateTag({
       name: 'description',
       content:
-        'Імбаланс у трейдингу — повний посібник з дисбалансу попиту та пропозиції. Методи визначення зон імбалансу, об`ємний аналіз, стратегії торгівлі.',
+        'Що таке біткоїн, як працює блокчейн, майнінг та обмежена емісія, у чому цінність BTC і які ризики у першої криптовалюти.',
     });
 
     this.gerRandom();
@@ -278,31 +278,35 @@ export class HomeUkBlogEightComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          '@id':
-            'https://arapov.trade/uk/freestudying/imbalanceintrading#article',
           headline:
-            'Імбаланс у Трейдингу: Повний Посібник з Дисбалансу Попиту та Пропозиції',
+            'Біткоїн у трейдингу: як аналізувати та торгувати BTC у 2026 році',
           description:
-            "Комплексний посібник з імбалансу: види дисбалансу, методи визначення зон, об'ємний аналіз, стратегії торгівлі та управління ризиками.",
-          image:
-            'https://arapov.trade/assets/img/content/imbalanceintrading3.png',
-          author: { '@id': 'https://arapov.trade/uk#person' },
+            'Що таке біткоїн, як працює блокчейн, майнінг та обмежена емісія, у чому цінність BTC і які ризики у першої криптовалюти.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'ArapovTrade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
             url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
-          datePublished: '2026-03-25T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://arapov.trade/uk/freestudying/imbalanceintrading',
+            '@id': 'https://arapov.trade/uk/freestudying/bitcoin-guide',
           },
-          articleSection: 'Трейдинг',
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/bitcoin.webp',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Криптовалюта',
+          keywords: 'біткоїн',
           inLanguage: 'uk',
         },
       ],
@@ -318,18 +322,18 @@ export class HomeUkBlogEightComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/uk#person',
-      name: 'Ігор Арапов',
+      '@id': 'https://arapov.trade/#person',
+      name: 'Igor Arapov',
       alternateName: [
-        'Igor Arapov',
-        'Арапов Игорь',
-        'I. Arapov',
+        'Ігор Арапов',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/uk',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -365,42 +369,34 @@ export class HomeUkBlogEightComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'Що таке імбаланс у трейдингу?',
+          name: 'Що таке біткоїн простими словами?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Імбаланс — це диспропорція між ринковим попитом та пропозицією, що викликає нерівномірний розподіл ліквідності та значний ціновий рух в одному напрямку.',
+            text: 'Біткоїн це перша й найбільша криптовалюта. Цифрові гроші без банку та держави, з жорстким лімітом у 21 мільйон монет. Перекази йдуть напряму між людьми й зберігаються в спільному ланцюжку блоків.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Які види імбалансу існують?',
+          name: 'Як аналізувати біткоїн для торгівлі?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Виділяють три основні види: локальний імбаланс (короткостроковий дисбаланс), структурний імбаланс (довгострокове переважання однієї сторони) та імбаланс ліквідності (маніпуляції великих гравців).',
+            text: 'Я дивлюся на нього як на звичайний актив: спершу ключові рівні, потім обсяги. Рівні показують, де ринок розвертався, а обсяги, хто за цим стоїть. Новини й хайп я майже не беру до уваги.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Як визначити зони імбалансу?',
+          name: 'Де дивитися реальний обсяг по біткоїну?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: "Зони імбалансу визначаються через Market Profile, Delta Volume, Footprint Charts та Order Flow. Ці інструменти показують розподіл об'ємів та потоки заявок.",
+            text: "Я дивлюся обсяг по ф'ючерсах CME, а не по крипто-біржах. На багатьох крипто-біржах обсяг тиковий і його легко завищити, а CME дає справжні дані по контрактах, куди приходить і великий капітал.",
           },
         },
         {
           '@type': 'Question',
-          name: 'Чому ціна повертається в зону імбалансу?',
+          name: 'Чи варто торгувати біткоїн на халвінгу?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Після сильного імпульсного руху в зоні дисбалансу залишається незаповнена ліквідність. Ринок прагне до балансу, тому ціна часто повертається для ретесту.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Як торгувати за зонами імбалансу?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Визначте зону різкого руху без відкатів, дочекайтеся повернення ціни в цю область, знайдіть підтверджуючі сигнали та відкрийте позицію в напрямку тренду.',
+            text: 'Сам халвінг як сигнал я не торгую. Минулі цикли не дають гарантії, а вхід лише через дату в календарі це і є торгівля наосліп. Я працюю за трендом і обсягами, які складаються вже після події.',
           },
         },
       ],
@@ -416,37 +412,34 @@ export class HomeUkBlogEightComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'Як торгувати за імбалансом',
+      '@id': 'https://arapov.trade/uk/freestudying/bitcoin-guide#howto',
+      name: 'Як розібратися і застосувати: Біткоїн у трейдингу у 2026 році',
+      description:
+        'Покроковий розбір теми та її практичне застосування в торгівлі',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Визначення зони дисбалансу',
-          text: 'Знайдіть на графіку область різкого імпульсного руху без значних корекцій.',
+          name: 'Що таке біткоїн і як він працює простими словами',
+          text: 'Біткоїн — це перша й найбільша криптовалюта, цифрові гроші без центрального банку та держави.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: "Аналіз об'ємів",
-          text: 'Проаналізуйте Delta Volume для визначення переважання покупців або продавців.',
+          name: 'Рівні підтримки та опору біткоїна: як їх читати',
+          text: "Біткоїн я читаю тими самими очима, що ф'ючерс або золото.",
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Очікування ретесту',
-          text: 'Дочекайтеся повернення ціни в зону імбалансу та шукайте підтверджуючі сигнали.',
+          name: "Об'ємний аналіз BTC: як читати дії великих гравців",
+          text: 'Рівні показують де, а обсяги показують хто.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Підтвердження входу',
-          text: "Використовуйте свічкові патерни або збільшення об'єму для підтвердження точки входу.",
-        },
-        {
-          '@type': 'HowToStep',
-          position: 5,
-          name: 'Управління ризиками',
-          text: 'Розмістіть стоп-лос за межами зони імбалансу. Співвідношення ризику до прибутку мінімум 1:2.',
+          name: 'Біткоїн і халвінг: як цикл впливає на тренд',
+          text: 'Халвінг — це заплановане скорочення винагороди майнерам удвічі, яке відбувається приблизно раз на чотири роки.',
         },
       ],
     };
@@ -461,66 +454,13 @@ export class HomeUkBlogEightComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Глосарій термінів імбалансу',
+      name: 'Глосарій термінів статті',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Імбаланс',
+          name: 'Біткоїн',
           description:
-            'Диспропорція між попитом та пропозицією що викликає нерівномірний розподіл ліквідності',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Volume Profile',
-          description:
-            "Інструмент що показує розподіл об'єму торгів за ціновими рівнями",
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Delta Volume',
-          description:
-            "Різниця між об'ємами покупок та продажів на ціновому рівні",
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Footprint Charts',
-          description:
-            "Графік що візуалізує угоди всередині свічки з деталізацією за об'ємами",
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Order Flow',
-          description:
-            'Аналіз потоків заявок що показує активність учасників ринку',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Market Profile',
-          description:
-            "Метод аналізу розподілу об'єму та часу за ціновими рівнями",
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Локальний імбаланс',
-          description:
-            'Короткострокове порушення балансу між попитом та пропозицією',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Структурний імбаланс',
-          description:
-            'Довгострокове переважання однієї сторони ринку що формує тренд',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Ретест',
-          description: 'Повернення ціни до рівня для перевірки його значущості',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Кластерний аналіз',
-          description:
-            "Метод аналізу розподілу об'єму за кластерами всередині свічки",
+            'Біткоїн це перша й найбільша криптовалюта, цифрові гроші без центрального банку та держави.',
         },
       ],
     };

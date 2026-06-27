@@ -54,15 +54,15 @@ export class HomeEuBlogThirtyFiveComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Trading Basics for Beginners | Complete Guide 2025',
+      'Trader vs Investor: What’s the Difference | Arapov.trade',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Trading basics for beginners: principles of exchange trading, market types, strategies, risk management and trader psychology. Complete guide by Igor Arapov.',
+        'How a trader differs from an investor, what is better, trading or investing, and how they differ in horizon, risk and approach to the market.',
     });
     this.gerRandom();
   }
@@ -250,27 +250,36 @@ export class HomeEuBlogThirtyFiveComponent implements OnInit {
         {
           '@type': 'Article',
           headline:
-            'Trading Basics for Beginners: Complete Guide to Financial Markets',
+            "Trading vs Investing: What's the Difference and What to Choose",
           description:
-            'Comprehensive guide to trading fundamentals: how financial markets work, trading styles, strategies, analysis tools and risk management for beginner traders.',
-          image: 'https://arapov.trade/assets/img/content/tradingbasics1.webp',
-          datePublished: '2026-03-15T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
-          author: {
-            '@id': 'https://arapov.trade/en#person',
-          },
+            'How a trader differs from an investor, what is better, trading or investing, and how they differ in horizon, risk and approach to the market.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'Arapov.trade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://arapov.trade/en/freestudying/tradingbasics',
+            '@id': 'https://arapov.trade/en/freestudying/trading-vs-investing',
           },
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/tradingandinvestments.webp',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Trading vs investing',
+          keywords:
+            'trading vs investing, trader vs investor, difference, risk control, time horizon, dividends, stop-loss',
+          inLanguage: 'en',
         },
       ],
     };
@@ -285,19 +294,18 @@ export class HomeEuBlogThirtyFiveComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/en#person',
+      '@id': 'https://arapov.trade/#person',
       name: 'Igor Arapov',
       alternateName: [
         'Ігор Арапов',
-        'Арапов Игорь',
-        'I. Arapov',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-
-      url: 'https://arapov.trade/en',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -312,12 +320,12 @@ export class HomeEuBlogThirtyFiveComponent implements OnInit {
         'https://t.me/ArapovTrade',
       ],
       jobTitle: [
-        'Independent researcher,',
-        'trader',
-        'author and founder of arapov.trade',
+        'Independent researcher',
+        'Trader',
+        'Author and founder of arapov.trade',
       ],
       description:
-        'Independent researcher, practicing trader, author of books on trading and scientific publications. Specializes in trading psychology and cognitive biases in financial markets.',
+        'Independent researcher, practising trader, author of trading books and scientific publications. Specialises in trading psychology and cognitive biases in financial markets.',
     };
 
     this.addJsonLdSchema(data);
@@ -333,42 +341,50 @@ export class HomeEuBlogThirtyFiveComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'What is trading in simple terms?',
+          name: "What's the difference between trading and investing?",
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Trading is the activity of buying and selling financial instruments (stocks, currencies, cryptocurrencies, commodities) to profit from changes in their value. Traders analyze markets and make decisions about when to enter and exit positions.',
+            text: 'A trader earns on the price difference over a short horizon, buying cheaper and selling dearer. An investor buys an asset for the long run and earns on its growth and cash flow like dividends. Trading is work; investing is closer to ownership.',
           },
         },
         {
           '@type': 'Question',
-          name: 'How much money do I need to start trading?',
+          name: 'Which is more profitable: trading or investing?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'The minimum amount depends on your chosen market and broker. Forex trading can begin with $100-500, while stock trading typically requires $1000 or more. However, starting with a demo account to practice without risking real money is highly recommended.',
+            text: "Trading's return is potentially higher, but less stable and harder won; it's the price of time, skill and risk. Investing grows more slowly but calmer, historically around 10 to 15 percent a year on a broad index. Which is more profitable depends on how much time and nerve you're ready to put in.",
           },
         },
         {
           '@type': 'Question',
-          name: 'Which trading style is best for beginners?',
+          name: 'Do a trader and an investor look at different things?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: "Swing trading or position trading are recommended for beginners. These styles are less intensive, allow time for analysis and decision-making, and don't require constant screen monitoring.",
+            text: 'Mostly yes. A trader reads the chart, price, volume and levels, that is technical analysis, because over a short horizon current supply and demand set the move. An investor leans on the fundamentals, business profit, dividends and the economy, because they hold for years.',
           },
         },
         {
           '@type': 'Question',
-          name: 'How long does it take to learn trading?',
+          name: 'How does risk control differ?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Basic concepts can be learned in 2-3 months of systematic study. However, developing consistent skills and achieving stable results typically takes 1-3 years of practice with real money.',
+            text: 'In trading the risk is fast and the protection mechanical: a stop-loss and a small risk per trade. In investing the risk is slow, and diversification and a long horizon that smooths out drawdowns do the work. But risk control is needed in both.',
           },
         },
         {
           '@type': 'Question',
-          name: 'What percentage of my account should I risk per trade?',
+          name: 'Is trading riskier than investing?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Professional traders recommend risking no more than 1-2% of your account on any single trade. This conservative approach allows you to survive losing streaks while preserving capital for future opportunities.',
+            text: 'Yes, over a short horizon the risk is faster and concentrated, so a trade can turn against you in minutes. Investing spreads the risk across time and assets, but it is not risk-free either: a deep market drawdown can hit a portfolio hard. The protection is just built differently.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: "What's the better start for a beginner?",
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: "In my experience, someone who isn't ready to sit at the chart every day finds it calmer to start with investing. You can also combine: hold the bulk of your capital in long-term investments and actively trade with a small part, if you have the discipline.",
           },
         },
       ],
@@ -384,39 +400,40 @@ export class HomeEuBlogThirtyFiveComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'How to Start Trading: Step-by-Step Guide',
+      '@id': 'https://arapov.trade/en/freestudying/trading-vs-investing#howto',
+      name: 'How to choose between trading and investing',
       description:
-        'Practical guide for beginners to start trading on financial markets',
+        'A step-by-step look at how trading and investing differ in essence, goals, horizon, profitability and risk control',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Learn the fundamentals',
-          text: 'Master basic concepts: market types, order types, price formation principles. Study technical and fundamental analysis at a foundational level.',
+          name: 'Grasp the key difference between trading and investing',
+          text: 'Trading is earning on the price difference over a short stretch, while investing is buying an asset for the long run; investing has surplus value, trading only the price difference.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Choose your market and broker',
-          text: 'Decide on a trading venue (forex, stocks, cryptocurrencies) and select a reliable broker regulated by a respected authority.',
+          name: 'Match the goal and horizon to yourself',
+          text: "A trader works a short horizon for a regular income and it's a daily profession, while an investor plays the long game to protect and grow capital.",
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Practice on a demo account',
-          text: 'Open a demo account and practice trading strategies without risking real money for at least 2-3 months.',
+          name: 'See which one really pays more',
+          text: "Trading's ceiling is higher than investing's calm 10 to 15 percent a year, but it is the price of time, skill and risk, and without a stop the dispersion eats the account.",
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Develop a trading plan',
-          text: 'Create a clear plan with entry rules, exit criteria, risk management parameters, and position sizing. Follow the plan without deviation.',
+          name: 'Build risk control for your approach',
+          text: "In trading the protection is mechanical, a stop on every trade and small risk; in investing diversification and a long horizon do the work, and in both it's risk control that earns, not guessing.",
         },
         {
           '@type': 'HowToStep',
           position: 5,
-          name: 'Start with small capital',
-          text: 'After achieving consistent demo results, transition to a live account with minimum capital. Gradually increase position sizes as experience grows.',
+          name: 'Choose your path or combine them',
+          text: "If you can't sit at the chart daily, investing is the calmer start; many sensibly combine both, trading only with a small slice they can afford to lose.",
         },
       ],
     };

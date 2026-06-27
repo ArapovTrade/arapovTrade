@@ -28,7 +28,7 @@ export class HomeUkBlogTwentyThreeComponent implements OnInit {
     private themeService: ThemeservService,
     private artickleServ: ArticlesService,
     private renderer: Renderer2,
-    @Inject(DOCUMENT) private document: Document
+    @Inject(DOCUMENT) private document: Document,
   ) {}
   private routerSubscription!: Subscription;
   private themeSubscription!: Subscription;
@@ -56,19 +56,17 @@ export class HomeUkBlogTwentyThreeComponent implements OnInit {
     this.grr = this.artickleServ.selectedGroups;
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
-    this.titleService.setTitle('Bitcoin-ETF: що це таке і як працює');
+    this.titleService.setTitle('Об’ємний аналіз ринку | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Повний посібник з Bitcoin-ETF. Дізнайтеся, як працюють біржові фонди на біткоїн, їхні переваги, ризики та вплив на криптовалютний ринок.',
+        'Як працює об’ємний аналіз ринку: профіль обсягу, кластери, дельта і чому обсяг — первинна причина руху ціни.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-21' }); this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/bitcoinetf.webp',
-    });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
+
     this.gerRandom();
   }
   randomArticleRus: any = [];
@@ -85,7 +83,6 @@ export class HomeUkBlogTwentyThreeComponent implements OnInit {
       title: 'Базовий курс',
       link: 'https://arapov.trade/uk/freestudying/freeeducation',
     },
-     
   ];
 
   onGroupChange(event: Event) {
@@ -155,7 +152,7 @@ export class HomeUkBlogTwentyThreeComponent implements OnInit {
     // Показываем 5 случайных статей при фокусе, если инпут пуст
     if (!this.searchQuery) {
       const shuffled = [...this.artickleServ.ukrArtickles].sort(
-        () => Math.random() - 0.5
+        () => Math.random() - 0.5,
       );
       this.displayedArticles = shuffled.slice(0, this.maxResults);
     }
@@ -170,7 +167,7 @@ export class HomeUkBlogTwentyThreeComponent implements OnInit {
   onSearchChange() {
     // Логика асинхронного поиска
     const filtered = this.artickleServ.ukrArtickles.filter((a) =>
-      a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase())
+      a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase()),
     );
     this.displayedArticles = filtered.slice(0, this.maxResults);
   }
@@ -192,7 +189,7 @@ export class HomeUkBlogTwentyThreeComponent implements OnInit {
     const path: string =
       this.router.url.split('/')[this.router.url.split('/').length - 1];
     let index = this.artickleServ.ukrArtickles.findIndex(
-      (a) => a.linkUkr == path
+      (a) => a.linkUkr == path,
     );
 
     if (this.artickleServ.ukrArtickles.length - 1 == index) {
@@ -209,7 +206,7 @@ export class HomeUkBlogTwentyThreeComponent implements OnInit {
     const path: string =
       this.router.url.split('/')[this.router.url.split('/').length - 1];
     let index = this.artickleServ.ukrArtickles.findIndex(
-      (a) => a.linkUkr == path
+      (a) => a.linkUkr == path,
     );
 
     if (index == 1) {
@@ -234,7 +231,7 @@ export class HomeUkBlogTwentyThreeComponent implements OnInit {
     ];
 
     const scripts = this.document.querySelectorAll(
-      'script[type="application/ld+json"]'
+      'script[type="application/ld+json"]',
     );
 
     scripts.forEach((script) => {
@@ -247,7 +244,7 @@ export class HomeUkBlogTwentyThreeComponent implements OnInit {
 
         const shouldRemove = candidates.some(
           (entry: any) =>
-            entry['@type'] && typesToRemove.includes(entry['@type'])
+            entry['@type'] && typesToRemove.includes(entry['@type']),
         );
 
         if (shouldRemove) {
@@ -275,27 +272,36 @@ export class HomeUkBlogTwentyThreeComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          headline: 'Bitcoin-ETF: що це таке і як працює',
+          headline: "Об'ємний аналіз ринку: повний гайд із читання об'ємів",
           description:
-            'Повний посібник з Bitcoin-ETF. Дізнайтеся, як працюють біржові фонди на біткоїн, їхні переваги, ризики та вплив на криптовалютний ринок.',
-          author: {
-            '@id': 'https://arapov.trade/uk#person',
-          },
+            'Як працює об’ємний аналіз ринку: профіль обсягу, кластери, дельта і чому обсяг — первинна причина руху ціни.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'ArapovTrade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
             url: 'https://arapov.trade',
+            logo: {
+              '@type': 'ImageObject',
+              url: 'https://arapov.trade/assets/img/favicon.ico',
+            },
+          },
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': 'https://arapov.trade/uk/freestudying/volume-analysis',
           },
           image: {
             '@type': 'ImageObject',
-            url: 'https://arapov.trade/assets/img/content/bitcoinetf1.webp',
+            url: 'https://arapov.trade/assets/img/content/volmarketanalisys.webp',
+            width: 1200,
+            height: 630,
           },
-          datePublished: '2025-04-15T00:00:00Z',
-        dateModified: '2026-04-15T00:00:00Z',
-          mainEntityOfPage: {
-            '@type': 'WebPage',
-            '@id': 'https://arapov.trade/uk/freestudying/bitcoinetf',
-          },
+          articleSection: "Об'ємний аналіз",
+          keywords:
+            "об'ємний аналіз, об'єми торгів, зусилля і результат, Вайкофф, Volume Profile, POC, Market Profile, пікові рівні об'єму",
+          inLanguage: 'uk',
         },
       ],
     };
@@ -310,18 +316,18 @@ export class HomeUkBlogTwentyThreeComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/uk#person',
-      name: 'Ігор Арапов',
+      '@id': 'https://arapov.trade/#person',
+      name: 'Igor Arapov',
       alternateName: [
-        'Igor Arapov',
-              'Арапов Игорь',
-              'I. Arapov',
-              'Игорь Арапов',
-              'І. В. Арапов',
-              'Арапов Ігор',
-              'Arapov Igor',
+        'Ігор Арапов',
+        'Игорь Арапов',
+        'Арапов Игорь',
+        'Арапов Ігор',
+        'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/uk',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -333,9 +339,13 @@ export class HomeUkBlogTwentyThreeComponent implements OnInit {
         'https://github.com/ArapovTrade',
         'https://ua.linkedin.com/in/arapovtrade',
         'https://www.youtube.com/@ArapovTrade',
-        'https://t.me/ArapovTrade'
+        'https://t.me/ArapovTrade',
       ],
-       jobTitle: ['Незалежний дослідник', 'трейдер', 'автор і засновник arapov.trade'],
+      jobTitle: [
+        'Незалежний дослідник',
+        'трейдер',
+        'автор і засновник arapov.trade',
+      ],
       description:
         'Незалежний дослідник, практикуючий трейдер, автор книг з трейдингу та наукових публікацій. Спеціалізується на психології трейдингу та когнітивних упередженнях на фінансових ринках.',
     };
@@ -353,42 +363,50 @@ export class HomeUkBlogTwentyThreeComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'Що таке Bitcoin-ETF?',
+          name: "Що таке об'ємний аналіз простими словами?",
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Bitcoin-ETF — це біржовий інвестиційний фонд, що торгується на традиційних біржах і дозволяє інвестувати в біткоїн без прямої купівлі криптовалюти.',
+            text: "Це читання ринку за кількістю угод, а не лише за ціною. Об'єм показує, скільки реально торгували за бар. Якщо за рухом ціни стоїть великий об'єм, значить у ринку є гроші, а якщо об'єм сухий, руху вірити небезпечно.",
           },
         },
         {
           '@type': 'Question',
-          name: 'Чим Bitcoin-ETF відрізняється від купівлі біткоїна?',
+          name: 'Що означає принцип зусилля-результат?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'При купівлі ETF ви володієте часткою фонду, а не самими біткоїнами. Це позбавляє від необхідності керувати криптогаманцем.',
+            text: "Об'єм це зусилля, рух ціни це результат. Велике зусилля має давати великий рух. Якщо об'єм величезний, а ціна стоїть на місці, значить зустрічна сторона поглинає ринок, і це частий сигнал до розвороту.",
           },
         },
         {
           '@type': 'Question',
-          name: 'Які типи Bitcoin-ETF існують?',
+          name: "Як об'єм підтверджує тренд?",
           acceptedAnswer: {
             '@type': 'Answer',
-            text: "Існують спотові ETF (фонд володіє реальними біткоїнами) та ф'ючерсні ETF (фонд використовує ф'ючерсні контракти).",
+            text: "Зростаючий тренд зі зростаючим об'ємом підтверджений, покупці додають. Якщо ціна зростає, а об'єм падає, інтерес гасне і можлива корекція. Високий об'єм на пробої рівня говорить про те, що пробій справжній.",
           },
         },
         {
           '@type': 'Question',
-          name: 'Чому Bitcoin-ETF важливий для ринку?',
+          name: 'Що таке Volume Profile і POC?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Bitcoin-ETF відкриває доступ до криптовалют для інституційних інвесторів, підвищує ліквідність ринку та сприяє інтеграції біткоїна.',
+            text: "Volume Profile показує, скільки об'єму пройшло на кожному ціновому рівні, а не за час. POC це рівень з максимальним об'ємом, точка найбільшого інтересу учасників. Такі зони часто працюють як сильна підтримка і опір.",
           },
         },
         {
           '@type': 'Question',
-          name: 'Які ризики у інвестицій в Bitcoin-ETF?',
+          name: "Чому на форексі нема реальних об'ємів?",
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Основні ризики: комісії фонду, відсутність володіння реальними біткоїнами, залежність від регуляторів, волатильність базового активу.',
+            text: "Форекс це позабіржовий ринок без єдиного центру, тому загальний об'єм угод там не рахується. Доступний лише тиковий об'єм, число змін ціни за час. Він пов'язаний з реальним об'ємом, але з похибкою, тож це орієнтир, а не точні дані.",
+          },
+        },
+        {
+          '@type': 'Question',
+          name: "Чи можна торгувати тільки за об'ємом?",
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: "З мого досвіду ні. Об'єм не дає сигналів сам по собі, він підтверджує або скасовує те, що видно за рівнями й фазою ринку. Найкраще він працює у зв'язці з рівнями, а не замість них.",
           },
         },
       ],
@@ -404,37 +422,58 @@ export class HomeUkBlogTwentyThreeComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'Як інвестувати в Bitcoin-ETF',
+      '@id': 'https://arapov.trade/uk/freestudying/volume-analysis#howto',
+      name: "Як читати ринок за об'ємом",
+      description:
+        "Покроковий розбір об'ємного аналізу: від читання зусилля і результату до входу за реакцією ціни",
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Вивчіть доступні фонди',
-          text: "Порівняйте комісії, ліквідність, репутацію керуючої компанії та тип прив'язки до біткоїна.",
+          name: "Зрозумійте, що вимірює об'єм",
+          text: "Об'єм це кількість контрактів або лотів, що реально змінили власника за бар, і важливе не саме число, а його динаміка до сусідніх барів.",
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Виберіть брокера',
-          text: 'Використовуйте надійного брокера з доступом до бірж NYSE або Nasdaq.',
+          name: 'Читайте зусилля і результат',
+          text: "Порівнюйте об'єм бара (зусилля) з тим, як далеко пішла ціна (результат): великий об'єм при слабкому ході значить, що хтось великий поглинає потік.",
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Відкрийте брокерський рахунок',
-          text: 'Пройдіть верифікацію та поповніть рахунок.',
+          name: "Визначайте силу тренду за об'ємом",
+          text: "Зростаючий тренд на зростаючому об'ємі здоровий, а зростання ціни на падаючому об'ємі сигналить про ослаблення і можливий розворот.",
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Визначте розмір інвестиції',
-          text: 'Вирішіть, яку частку портфеля виділити під Bitcoin-ETF.',
+          name: 'Читайте дефіцит попиту і пропозиції',
+          text: "Причина падіння це дефіцит попиту, коли великий капітал перестає купувати, а причина зростання дефіцит пропозиції; об'єм-хмарочос на барах показує шлях найменшого опору.",
         },
         {
           '@type': 'HowToStep',
           position: 5,
-          name: 'Здійсніть купівлю',
-          text: 'Купіть ETF як звичайну акцію через торговий термінал брокера.',
+          name: 'Знаходьте пікові рівні та POC',
+          text: "За Volume Profile шукайте ціни з максимальним наторгованим об'ємом, POC і зону вартості, де був активний великий капітал.",
+        },
+        {
+          '@type': 'HowToStep',
+          position: 6,
+          name: 'Читайте зону вартості за Market Profile',
+          text: 'Market Profile показує ринок як аукціон: де ціна справедлива, а де дорого чи дешево відносно зони вартості.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 7,
+          name: 'Будуйте вхід за реакцією ціни',
+          text: 'Розмічайте зони на старшому таймфреймі, а вхід беріть на молодшому, за реакцією ціни на рівні, а не за фактом торкання.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 8,
+          name: "Беріть чесний об'єм",
+          text: "Реальний об'єм дивіться на біржових ф'ючерсах із клірингом, наприклад на CME, а не тиковий форексний чи мальований крипти.",
         },
       ],
     };
@@ -449,60 +488,37 @@ export class HomeUkBlogTwentyThreeComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Терміни Bitcoin-ETF',
+      name: 'Глосарій термінів статті',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Bitcoin-ETF',
+          name: "Об'ємний аналіз",
           description:
-            'Біржовий інвестиційний фонд, що відстежує ціну біткоїна',
+            'Метод читання ринку за кількістю угод, що пройшли за період, а не лише за рухом ціни.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Спотовий ETF',
-          description: 'Фонд, що володіє реальними біткоїнами в резерві',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: "Ф'ючерсний ETF",
+          name: 'Принцип зусилля і результату',
           description:
-            "Фонд, що використовує ф'ючерсні контракти для відстеження ціни",
+            "Правило Вайкоффа, за яким об'єм вважається прикладеним зусиллям, а рух ціни його результатом, і ці дві величини завжди звіряють між собою.",
         },
         {
           '@type': 'DefinedTerm',
-          name: 'SEC',
-          description: 'Комісія з цінних паперів та бірж США, регулятор ринку',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Tracking error',
-          description: 'Відхилення ціни ETF від ціни базового активу',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Комісія за управління',
-          description: 'Річна плата фонду за управління активами',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Інституційні інвестори',
-          description: 'Великі інвестори: пенсійні фонди, хедж-фонди, банки',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Ліквідність',
+          name: "Піковий рівень об'єму",
           description:
-            'Здатність швидко купити або продати актив без значного впливу на ціну',
+            "Ціновий рівень, на якому пройшов максимальний об'єм торгів за вибраний період; там був активний великий капітал, тому він працює як сильна підтримка або опір.",
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Криптовалютний гаманець',
-          description: 'Програма або пристрій для зберігання криптовалют',
+          name: 'Market Profile',
+          description:
+            "Спосіб організації даних про ціну, час і об'єм у вигляді розподілу, який показує, на яких цінах ринок провів найбільше часу і угод.",
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Приватний ключ',
-          description: 'Секретний код для доступу до криптовалютних активів',
+          name: 'Дефіцит попиту',
+          description:
+            'Це ситуація, коли великий капітал перестає купувати на поточних цінах і його попит зникає, через що ціну продавлюють решта продавців; дзеркальний дефіцит пропозиції стає причиною зростання.',
         },
       ],
     };

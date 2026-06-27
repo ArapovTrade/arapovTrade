@@ -55,20 +55,17 @@ export class HomeEuBlogThirtyOneComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Support and Resistance Levels: How to Build and Trade Key Price Zones',
+      'Forex Market: How It Works and How to Trade | Arapov.trade',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Learn how to properly build support and resistance levels, determine their strength and use them for trade entries. Practical guide for traders.',
+        'What the Forex market is, who its participants are, how currency pairs and trading sessions work and how to start trading currencies.',
     });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-04-16' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/levelofsupport.webp',
-    });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
+
     this.gerRandom();
   }
   randomArticleRus: any = [];
@@ -255,33 +252,35 @@ export class HomeEuBlogThirtyOneComponent implements OnInit {
         {
           '@type': 'Article',
           headline:
-            'Support and Resistance Levels: How to Build and Trade Key Price Zones',
+            'Forex for Beginners: Market, Positions, Leverage and Sessions',
           description:
-            'Learn how to properly build support and resistance levels, determine their strength and use them for trade entries.',
-          image: {
-            '@type': 'ImageObject',
-            url: 'https://arapov.trade/assets/img/content/levelofsupport.webp',
-            width: 1200,
-            height: 630,
-          },
-          datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
-          author: {
-            '@id': 'https://arapov.trade/en#person',
-          },
+            'What the Forex market is, who its participants are, how currency pairs and trading sessions work and how to start trading currencies.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'Arapov.trade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://arapov.trade/en/freestudying/levelofsupport',
+            '@id': 'https://arapov.trade/en/freestudying/forex-guide',
           },
-          articleSection: 'Technical Analysis',
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/ForexMarket.webp',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Forex',
+          keywords:
+            'forex, currency market, long, short, swap, leverage, currency risk, carry trade, trading sessions, dollar index, DXY',
           inLanguage: 'en',
         },
       ],
@@ -297,18 +296,18 @@ export class HomeEuBlogThirtyOneComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/en#person',
+      '@id': 'https://arapov.trade/#person',
       name: 'Igor Arapov',
       alternateName: [
         'Ігор Арапов',
-        'Арапов Игорь',
-        'I. Arapov',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/en',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -323,12 +322,12 @@ export class HomeEuBlogThirtyOneComponent implements OnInit {
         'https://t.me/ArapovTrade',
       ],
       jobTitle: [
-        'Independent researcher,',
-        'trader',
-        'author and founder of arapov.trade',
+        'Independent researcher',
+        'Trader',
+        'Author and founder of arapov.trade',
       ],
       description:
-        'Independent researcher, practicing trader, author of books on trading and scientific publications. Specializes in trading psychology and cognitive biases in financial markets.',
+        'Independent researcher, practising trader, author of trading books and scientific publications. Specialises in trading psychology and cognitive biases in financial markets.',
     };
 
     this.addJsonLdSchema(data);
@@ -344,42 +343,50 @@ export class HomeEuBlogThirtyOneComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'What is a support level?',
+          name: 'What is forex trading and how does it work?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Support level is a zone on the chart where price decline stops due to buyer activity.',
+            text: 'Forex is the global market for exchanging one currency for another, traded in pairs such as EUR/USD. It is the largest and most liquid market in the world, turning over more than 7 trillion dollars a day, but it is decentralized: there is no single exchange, so no honest centralized volume exists for a currency.',
           },
         },
         {
           '@type': 'Question',
-          name: 'What is a resistance level?',
+          name: 'Is forex trading legal and safe for beginners?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Resistance level is a zone where price growth slows due to prevailing seller supply.',
+            text: 'Forex is legal in most countries when you use a properly regulated broker. Safe is a different question: most retail accounts on these leveraged products lose money, and the main reason is oversized leverage and weak risk control, not the market itself. A stop on every trade and small risk per trade matter far more than the broker you pick.',
           },
         },
         {
           '@type': 'Question',
-          name: 'How to determine level strength?',
+          name: 'How much money do you need to start trading forex?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Level strength is determined by testing frequency, trading volume and formation timeframe.',
+            text: 'You can open an account with very little, but account size is the wrong thing to fix on. What matters is risk per trade: keeping it near one to two percent of the account and sizing the position to that. A tiny account on maximum leverage is far more dangerous than a modest account traded with discipline.',
           },
         },
         {
           '@type': 'Question',
-          name: 'What is a mirror level?',
+          name: 'What leverage should a beginner use?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'After breakout, support becomes resistance and resistance becomes support.',
+            text: 'The question is not the size of the leverage but the risk on the trade. Keep risk near one to two percent of the account and size the position to that. Under EU and UK rules retail traders get about 1:30 on majors, in the US up to 1:50, while offshore brokers lure with 1:100 and higher, which burns an account fastest.',
           },
         },
         {
           '@type': 'Question',
-          name: 'How to trade level breakouts?',
+          name: 'When is the best time to trade forex?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Wait for candle close beyond level with high volume, then enter after retest.',
+            text: 'The strongest window is the overlap of the London and New York sessions, when Europe is still trading and the US has already opened. Participants and liquidity peak there, and so do the cleanest moves on the major dollar, euro and pound pairs. The thin Asian session, the night and pre-holiday days are usually noise.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What is the US Dollar Index (DXY) and why does it matter?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: "DXY is a single number showing the dollar's strength against a basket of six currencies, with the euro by far the heaviest. Because the dollar sits on one side of most pairs, the index points to the likely direction: you read dollar strength on DXY first, then look for the actual entry on the pair's own chart by level and reaction.",
           },
         },
       ],
@@ -395,37 +402,46 @@ export class HomeEuBlogThirtyOneComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'How to build support and resistance levels',
+      '@id': 'https://arapov.trade/en/freestudying/forex-guide#howto',
+      name: 'How to understand the forex market from scratch',
+      description:
+        "A beginner's path: how the market is built, positions, leverage and risk, sessions and the dollar index",
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Select timeframe',
-          text: 'Use higher timeframes D1, W1 for significant levels.',
+          name: 'Understand how the forex market is built',
+          text: 'Forex is a decentralized currency market with no single exchange, so honest centralized volume does not exist for a currency, and it is easier to read by levels and the dollar index.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Find extremes',
-          text: 'Mark price reversal points on historical data.',
+          name: 'Get long, short and the swap straight',
+          text: 'Long is a bet on a rise, short a bet on a fall by selling a borrowed instrument, and holding overnight earns or costs a swap based on the interest-rate difference.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Draw horizontals',
-          text: 'Draw lines through zones with multiple touches.',
+          name: 'Take control of leverage and risk',
+          text: 'Leverage multiplies profit and loss equally, so you size risk first at one to two percent per trade, place the stop, and only then work out the position size.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Check volumes',
-          text: 'Ensure high trading volume near the level.',
+          name: 'Account for the carry trade and its trap',
+          text: 'The carry trade earns the rate differential through the swap, but it is not passive income, it is a leveraged bet on the exchange rate staying calm.',
         },
         {
           '@type': 'HowToStep',
           position: 5,
-          name: 'Confirm strength',
-          text: 'Combine with Fibonacci or moving averages.',
+          name: 'Trade in the right session window',
+          text: 'Volume and movement peak on the London and New York overlap, while the thin Asian session and holidays are better sat out.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 6,
+          name: 'Read the market through the dollar index',
+          text: "The dollar index sets the likely direction across most pairs, while the actual entry is found on the pair's own chart by level and price reaction.",
         },
       ],
     };
@@ -440,57 +456,61 @@ export class HomeEuBlogThirtyOneComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Levels Glossary',
+      name: 'Glossary of terms in this article',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Support Level',
-          description: 'Zone where price decline stops',
+          name: 'Pip',
+          description:
+            'The smallest step in a forex quote, usually the fourth decimal place; price movement and risk are both measured in pips.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Resistance Level',
-          description: 'Zone where price growth stops',
+          name: 'Forex',
+          description:
+            'The international market for exchanging currencies, where one currency is bought for another; you trade not single currencies but pairs, for example EUR/USD.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Mirror Level',
-          description: 'Level that changed role after breakout',
+          name: 'Long position',
+          description:
+            'Buying an asset expecting the price to rise: buy lower to sell higher later.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Breakout',
-          description: 'Price passing through a level',
+          name: 'Short position',
+          description:
+            'Selling an asset expecting a fall: sell a borrowed instrument higher and buy it back cheaper, keeping the difference.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'False Breakout',
-          description: 'Breakout with quick price return',
+          name: 'Leverage',
+          description:
+            'Borrowed capital from the broker that lets you control a position many times larger than your own account by posting only a small margin.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Retest',
-          description: 'Retesting of broken level',
+          name: 'Currency risk',
+          description:
+            'The chance of a loss from an adverse move in the exchange rate against your open position.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Psychological Level',
-          description: 'Round price numbers',
+          name: 'Carry trade',
+          description:
+            'A strategy where a trader borrows in a low interest-rate currency and invests in a high-rate one, earning the rate difference.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Dynamic Level',
-          description: 'Moving averages as support/resistance',
+          name: 'Forex trading session',
+          description:
+            "The period when a given region's financial centre is active and the bulk of currency flow passes through it.",
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Liquidity Zone',
-          description: 'Area of order concentration',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Pivot Point',
-          description: 'Calculated level based on previous period',
+          name: 'Dollar Index',
+          description:
+            "A measure of the US dollar's strength against a basket of six major world currencies, used to judge whether the dollar is gaining or losing.",
         },
       ],
     };

@@ -172,7 +172,7 @@ export class AppComponent implements OnInit, AfterViewChecked, OnDestroy {
 
         // FAQ
 
-        this.addingFaqScript(langCode, urlPath);
+        // this.addingFaqScript(langCode, urlPath);
         // Визначаємо мову та витягуємо відповідний заголовок
         const lang = urlPath.startsWith('uk')
           ? 'Ukr'
@@ -632,36 +632,36 @@ export class AppComponent implements OnInit, AfterViewChecked, OnDestroy {
   }
 
   //FAQ
-  private addingFaqScript(langcode: string, path: string) {
-    const faqSchema = this.faqservise.returnSchema(langcode, path);
+  // private addingFaqScript(langcode: string, path: string) {
+  //   const faqSchema = this.faqservise.returnSchema(langcode, path);
 
-    const scriptss = this.document.querySelectorAll(
-      'script[type="application/ld+json"]',
-    );
-    let faqScript: HTMLScriptElement | any = null;
-    scriptss.forEach((script) => {
-      try {
-        const jsonContent = JSON.parse(script.textContent || '{}');
-        if (jsonContent['@type'] === 'FAQPage') {
-          faqScript = script;
-        }
-      } catch (e) {
-        // Игнорируем некорректный JSON
-      }
-    });
+  //   const scriptss = this.document.querySelectorAll(
+  //     'script[type="application/ld+json"]',
+  //   );
+  //   let faqScript: HTMLScriptElement | any = null;
+  //   scriptss.forEach((script) => {
+  //     try {
+  //       const jsonContent = JSON.parse(script.textContent || '{}');
+  //       if (jsonContent['@type'] === 'FAQPage') {
+  //         faqScript = script;
+  //       }
+  //     } catch (e) {
+  //       // Игнорируем некорректный JSON
+  //     }
+  //   });
 
-    // Если скрипт FAQPage найден, заменяем его
-    if (faqScript) {
-      faqScript.text = JSON.stringify(faqSchema);
-    } else {
-      // Если скрипт не найден, создаём новый
+  //   // Если скрипт FAQPage найден, заменяем его
+  //   if (faqScript) {
+  //     faqScript.text = JSON.stringify(faqSchema);
+  //   } else {
+  //     // Если скрипт не найден, создаём новый
 
-      const scriptr = this.document.createElement('script');
-      scriptr.type = 'application/ld+json';
-      scriptr.text = JSON.stringify(faqSchema);
-      this.document.head.appendChild(scriptr);
-    }
-  }
+  //     const scriptr = this.document.createElement('script');
+  //     scriptr.type = 'application/ld+json';
+  //     scriptr.text = JSON.stringify(faqSchema);
+  //     this.document.head.appendChild(scriptr);
+  //   }
+  // }
 
   private generateBreadcrumbs() {
     const urlPath = this.router.url.split('?')[0].replace(/^\/|\/$/g, '');

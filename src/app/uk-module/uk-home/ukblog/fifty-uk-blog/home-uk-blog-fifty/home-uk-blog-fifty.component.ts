@@ -56,21 +56,16 @@ export class HomeUkBlogFiftyComponent implements OnInit {
     this.grr = this.artickleServ.selectedGroups;
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
-    this.titleService.setTitle('Алгоритмічні ордери на біржі | ArapovTrade');
+    this.titleService.setTitle('Смуги Боллінджера | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Повний посібник з алгоритмічних ордерів. VWAP, TWAP, Iceberg, Trailing Stop та інші типи автоматизованих заявок для ефективної торгівлі.',
+        'Смуги Боллінджера: налаштування, стиснення та розширення, пробої й відскоки від меж. Як індикатор показує волатильність і зони перегріву.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-03-26' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/algorithmicorders.webp',
-    });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
 
     this.gerRandom();
   }
@@ -276,36 +271,35 @@ export class HomeUkBlogFiftyComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          headline: 'Алгоритмічні ордери на біржі: повний посібник',
+          headline: 'Смуги Боллінджера в трейдингу: що це і як застосовувати',
           description:
-            'Детальний посібник з алгоритмічних ордерів на біржі. Типи алгоритмічних ордерів, стратегії виконання, управління ризиками та автоматизація торгівлі.',
-          author: {
-            '@id': 'https://arapov.trade/uk#person',
-          },
+            'Смуги Боллінджера: налаштування, стиснення та розширення, пробої й відскоки від меж. Як індикатор показує волатильність і зони перегріву.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'ArapovTrade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
             url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
-          datePublished: '2026-03-25T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://arapov.trade/uk/freestudying/algorithmicorders',
+            '@id': 'https://arapov.trade/uk/freestudying/bollinger-bands',
           },
           image: {
             '@type': 'ImageObject',
-            url: 'https://arapov.trade/assets/img/content/algorithmicorders.webp',
+            url: 'https://arapov.trade/assets/img/content/bollingerbands1.jpg',
             width: 1200,
             height: 630,
           },
           articleSection: 'Технічний аналіз',
           keywords:
-            'алгоритмічні ордери, алго-трейдинг, біржові ордери, автоматична торгівля, TWAP, VWAP, виконання ордерів',
+            'смуги боллінджера, стиснення смуг боллінджера, волатильність, налаштування смуг боллінджера, стандартне відхилення, обсяг',
           inLanguage: 'uk',
         },
       ],
@@ -321,18 +315,18 @@ export class HomeUkBlogFiftyComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/uk#person',
-      name: 'Ігор Арапов',
+      '@id': 'https://arapov.trade/#person',
+      name: 'Igor Arapov',
       alternateName: [
-        'Igor Arapov',
-        'Арапов Игорь',
-        'I. Arapov',
+        'Ігор Арапов',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/uk',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -368,42 +362,34 @@ export class HomeUkBlogFiftyComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'Що таке алгоритмічні ордери?',
+          name: 'Що показують смуги Боллінджера?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Автоматизовані заявки, що виконуються програмними алгоритмами для оптимізації торгівлі.',
+            text: 'Вони показують волатильність: наскільки далеко ціна пішла від своєї середньої. Канал розширюється на активному ринку і звужується на спокійному. Про напрям руху самі смуги не говорять.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Які типи існують?',
+          name: 'Чи можна торгувати на відскок від країв смуг?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'VWAP, TWAP, Iceberg, Trailing Stop, Pegged Orders та умовні ордери.',
+            text: 'У флеті інколи так, але в тренді це небезпечно: ціна може довго йти вздовж однієї смуги. Я не вважаю торкання смуги сигналом без підтвердження рівнем і обсягом.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Що таке VWAP?',
+          name: 'Що означає стиснення смуг Боллінджера?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Алгоритм виконання за зваженою середньою ціною з урахуванням обсягу торгів.',
+            text: 'Стиснення означає падіння волатильності й накопичення сил перед імпульсом. Це сигнал уваги, а не напряму: куди піде ціна, смуги не показують, тому потрібен аналіз рівня й обсягу.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Що таке спуфінг?',
+          name: 'Які налаштування смуг Боллінджера стандартні?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Заборонена маніпуляція з розміщенням фіктивних ордерів.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Кому доступні алгоритмічні ордери?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Інституційним інвесторам, HFT-компаніям та роздрібним трейдерам через сучасні платформи.',
+            text: 'Стандарт це період 20 і відхилення 2, їх рекомендував автор індикатора. Менший період робить смуги чутливішими й галасливішими, більший згладжує. Новачку простіше почати з дефолтних значень.',
           },
         },
       ],
@@ -419,37 +405,34 @@ export class HomeUkBlogFiftyComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'Як почати використовувати алгоритмічні ордери',
+      '@id': 'https://arapov.trade/uk/freestudying/bollinger-bands#howto',
+      name: 'Як розібратися і застосовувати смуги Боллінджера в трейдингу',
+      description:
+        'Покроковий розбір теми та її практичне застосування в торгівлі',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Вивчіть типи ордерів',
-          text: 'Ознайомтеся з VWAP, TWAP, Iceberg та іншими типами алгоритмічних заявок.',
+          name: 'Зрозумійте, що таке смуги Боллінджера і що вони міряють',
+          text: 'Смуги Боллінджера це індикатор волатильності з трьох ліній: середня смуга це проста ковзна середня, зазвичай з періодом 20, а верхня й нижня відстоять від неї на два стандартних відхилення.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Оберіть платформу',
-          text: 'Оберіть відповідну платформу: MetaTrader, TradingView, API криптобірж.',
+          name: 'Вирішіть, чи торгувати відскок від смуг',
+          text: 'Класична ідея звучить заманливо: ціна торкнулася верхньої смуги, продавай, торкнулася нижньої, купуй.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Протестуйте на демо',
-          text: 'Тестуйте стратегії на демо-рахунку перед реальною торгівлею.',
+          name: 'Читайте стиснення як імпульс, що готується, а не як напрям',
+          text: 'Стиснення, коли канал звужується у вузький коридор, означає, що волатильність упала до мінімуму і ринок копить сили.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Налаштуйте ризик-менеджмент',
-          text: 'Встановіть Stop-Loss і Trailing Stop для захисту капіталу.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 5,
-          name: 'Запустіть у реальному часі',
-          text: 'Починайте з невеликих обсягів і поступово масштабуйте стратегію.',
+          name: 'Використовуйте смуги разом з обсягом і рівнем',
+          text: 'Самі по собі смуги показують лише розмах, а хто за цим розмахом стоїть, видно по обсягу.',
         },
       ],
     };
@@ -464,56 +447,13 @@ export class HomeUkBlogFiftyComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
+      name: 'Глосарій термінів статті',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Алгоритмічний ордер',
-          description: 'Автоматизована заявка за правилами',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'VWAP',
-          description: 'Зважена за обсягом середня ціна',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'TWAP',
-          description: 'Зважена за часом середня ціна',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Iceberg Order',
-          description: 'Ордер зі схованим обсягом',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'HFT',
-          description: 'Високочастотна торгівля',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Trailing Stop',
-          description: 'Динамічний стоп-лосс',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Спуфінг',
-          description: 'Заборонена маніпуляція',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Pegged Order',
-          description: "Ордер, прив'язаний до bid/ask",
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Прослизання',
-          description: 'Різниця цін виконання',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Co-Location',
-          description: 'Розміщення серверів біля біржі',
+          name: 'Смуги Боллінджера (Bollinger Bands)',
+          description:
+            'Індикатор волатильності з трьох ліній: середня смуга це проста ковзна середня, зазвичай з періодом 20, а верхня й нижня відстоять від неї на два стандартних відхилення.',
         },
       ],
     };

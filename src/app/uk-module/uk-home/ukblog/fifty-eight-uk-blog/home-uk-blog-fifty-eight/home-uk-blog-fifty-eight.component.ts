@@ -54,21 +54,16 @@ export class HomeUkBlogFiftyEightComponent implements OnInit {
     this.grr = this.artickleServ.selectedGroups;
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
-    this.titleService.setTitle(
-      'Усереднення в трейдингу: стратегії, ризики та практичне застосування | ArapovTrade',
-    );
+    this.titleService.setTitle('Індикатор Ішимоку: хмара Кумо | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Повний посібник з усереднення позицій у трейдингу. Розбираємо стратегії DCA, класичне усереднення, антимартингейл. Як уникнути помилок та коли метод працює.',
+        'Індикатор Ішимоку: хмара Кумо, лінії Tenkan і Kijun, визначення тренду та сигналів. Як читати систему і не перевантажувати графік.',
     });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-04-04' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/averagingintrading.webp',
-    });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
+
     this.gerRandom();
   }
   randomArticleRus: any = [];
@@ -273,35 +268,36 @@ export class HomeUkBlogFiftyEightComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          '@id':
-            'https://arapov.trade/uk/freestudying/averagingintrading#article',
           headline:
-            'Усереднення в трейдингу: стратегії, ризики та практичне застосування',
+            'Індикатор Ішимоку: хмара, сигнали та чи варто його новачкові',
           description:
-            'Повний посібник з усереднення позицій у трейдингу. Розбираємо стратегії DCA, класичне усереднення, антимартингейл.',
-          image:
-            'https://arapov.trade/assets/img/content/averagingintrading1.webp',
-          datePublished: '2026-03-25T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
-
-          author: {
-            '@id': 'https://arapov.trade/uk#person',
-          },
+            'Індикатор Ішимоку: хмара Кумо, лінії Tenkan і Kijun, визначення тренду та сигналів. Як читати систему і не перевантажувати графік.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
             '@id': 'https://arapov.trade/#organization',
-            name: 'ArapovTrade',
+            name: 'Arapov.Trade',
             url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://arapov.trade/uk/freestudying/averagingintrading',
+            '@id': 'https://arapov.trade/uk/freestudying/ichimoku-cloud',
           },
-          articleSection: 'Трейдинг для початківців',
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/ichimoku1.png',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Технічний аналіз',
+          keywords:
+            'індикатор ішимоку, хмара ішимоку, як читати ішимоку, перетин тенкан кідзюн, налаштування ішимоку, ішимоку для новачків',
           inLanguage: 'uk',
         },
       ],
@@ -317,18 +313,18 @@ export class HomeUkBlogFiftyEightComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/uk#person',
-      name: 'Ігор Арапов',
+      '@id': 'https://arapov.trade/#person',
+      name: 'Igor Arapov',
       alternateName: [
-        'Igor Arapov',
-        'Арапов Игорь',
-        'I. Arapov',
+        'Ігор Арапов',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/uk',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -361,46 +357,37 @@ export class HomeUkBlogFiftyEightComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
-      '@id': 'https://arapov.trade/uk/freestudying/averagingintrading#faq',
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'Що таке усереднення в трейдингу?',
+          name: 'Що показує індикатор Ішимоку простими словами?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Усереднення — це техніка управління позицією, коли трейдер додає обсяг до існуючої угоди в міру руху ціни. Мета — знизити середню ціну входу та покращити точку беззбитковості.',
+            text: 'Він видає одразу кілька речей: напрямок тренду, його силу й зони, де ціна зустрічала підтримку чи опір. Ключовий орієнтир тут хмара: над нею ринок схильний до зростання, під нею до зниження.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Чим DCA відрізняється від класичного усереднення?',
+          name: 'Які налаштування Ішимоку вважаються стандартними?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'DCA (Dollar Cost Averaging) передбачає регулярні покупки на фіксовану суму незалежно від ціни. Класичне усереднення — додавання до позиції при русі проти трейдера. DCA знижує емоційне навантаження та підходить для довгострокових інвестицій.',
+            text: "Класичні значення це 9, 26 і 52. Прийшли вони з японського шестиденного торгового тижня: 9 це близько півтора тижня, 26 приблизно місяць, 52 приблизно два місяці. Багато хто так і тримає їх за замовчуванням, дехто підганяє під п'ятиденний тиждень.",
           },
         },
         {
           '@type': 'Question',
-          name: 'Коли усереднення небезпечне?',
+          name: 'Чи підходить Ішимоку новачкові?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Усереднення особливо ризиковане у сильних трендах, при торгівлі з високим плечем та без чіткого плану виходу. Якщо актив продовжує падати без ознак розвороту, кожне усереднення збільшує збитки.',
+            text: 'Освоєння дається легко, але стартувати новачкові я б із нього не став. Пʼятірка ліній народжує ілюзію глибини, тоді як під ними звичайні середні. Тренд і рівні простіше читати напряму, а до Ішимоку за бажання підійти пізніше.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Скільки разів можна усереднювати позицію?',
+          name: 'Чи можна торгувати лише за хмарою Ішимоку?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Професійні трейдери обмежують усереднення 2-3 додаваннями. Кожне усереднення має бути заплановане заздалегідь з урахуванням рівнів підтримки та загального розміру ризику на угоду.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Чи підходить усереднення для криптовалют?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'DCA добре працює для довгострокового накопичення біткоїна та ефіріуму. Класичне усереднення на крипторинку ризиковане через високу волатильність — корекції на 30-50% не рідкість.',
+            text: 'Як трендовий індикатор на старших таймфреймах хмара тримається непогано. А от єдиним вхідним інструментом вона запізнюється, адже кожна лінія виводиться з уже минулої ціни. Я б підтверджував картину обсягом і реальними рівнями, а не довірявся одній хмарі.',
           },
         },
       ],
@@ -416,40 +403,34 @@ export class HomeUkBlogFiftyEightComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      '@id': 'https://arapov.trade/uk/freestudying/averagingintrading#howto',
-      name: 'Як безпечно застосовувати усереднення в трейдингу',
+      '@id': 'https://arapov.trade/uk/freestudying/ichimoku-cloud#howto',
+      name: 'Як розібратися й застосовувати індикатор Ішимоку в трейдингу',
       description:
-        'Покрокова інструкція з грамотного використання усереднення позицій',
+        'Покроковий розбір індикатора та його практичне застосування в торгівлі',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Визначте тип ринку',
-          text: 'Проаналізуйте, чи знаходиться актив у тренді або боковику. Усереднення ефективніше в боковому ринку та на відкатах у тренді.',
+          name: 'Дізнайтеся, що таке індикатор Ішимоку і з чого він складається',
+          text: 'Ішимоку це індикатор технічного аналізу з пʼяти ліній, який на одному екрані видає напрямок тренду, його силу й зони підтримки та опору.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Розрахуйте рівні входу',
-          text: 'Визначте 2-3 рівні для потенційного усереднення на основі підтримок, Фібоначчі або зон попиту.',
+          name: 'Читайте хмару Ішимоку для тренду й підтримки',
+          text: 'Хмара Кумо це зафарбована область між лініями Сенкоу А і Сенкоу Б, і це серце всього інструмента.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Розподіліть капітал',
-          text: 'Розділіть виділений на угоду капітал на частини. Типовий розподіл: 40% на перший вхід, 35% та 25% на усереднення.',
+          name: 'Читайте сигнали Ішимоку: перетин Тенкан і Кідзюн',
+          text: 'Головний сигнал звуть TK Cross, це перетин швидкої Тенкан і повільної Кідзюн.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Встановіть стоп-лос',
-          text: 'Визначте максимальний збиток для всієї позиції. Стоп має знаходитися за останнім рівнем усереднення.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 5,
-          name: 'Зафіксуйте план виходу',
-          text: 'Заздалегідь визначте цілі по прибутку та умови закриття позиції. Дотримуйтеся плану незалежно від емоцій.',
+          name: 'Визначте, чи підходить Ішимоку новачкові',
+          text: 'Освоїти Ішимоку реально, зазвичай вистачає пари вечорів, щоб завчити пʼять ліній і правила хмари.',
         },
       ],
     };
@@ -464,66 +445,13 @@ export class HomeUkBlogFiftyEightComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      '@id': 'https://arapov.trade/uk/freestudying/averagingintrading#terms',
-      name: 'Глосарій термінів усереднення',
+      name: 'Глосарій термінів статті',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Усереднення',
+          name: 'Ішимоку',
           description:
-            'Метод додавання до існуючої позиції для покращення середньої ціни входу',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'DCA (Dollar Cost Averaging)',
-          description:
-            'Стратегія регулярних покупок на фіксовану суму незалежно від поточної ціни активу',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Антимартингейл',
-          description:
-            'Збільшення позиції після прибуткових угод, протилежність класичному усередненню',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Маржин-кол',
-          description:
-            'Вимога брокера внести додаткове забезпечення при падінні маржі нижче мінімуму',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Кредитне плече',
-          description: 'Співвідношення власних та позикових коштів у торгівлі',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Рівень підтримки',
-          description:
-            'Цінова зона, де попит перевищує пропозицію і ціна схильна відскакувати вгору',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Волатильність',
-          description: 'Ступінь коливання ціни активу за певний період',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Ризик-менеджмент',
-          description:
-            'Система управління ризиками для захисту торгового капіталу',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Стоп-лос',
-          description:
-            'Ордер на автоматичне закриття позиції при досягненні заданого рівня збитку',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Точка беззбитковості',
-          description:
-            'Ціна, при якій позиція не приносить ні прибутку, ні збитку',
+            'Індикатор технічного аналізу з пʼяти ліній, який на одному екрані видає напрямок тренду, його силу й зони підтримки та опору.',
         },
       ],
     };

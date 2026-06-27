@@ -54,21 +54,18 @@ export class HomeEnBlogTwentySixComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Types of Orders in Trading: Complete Guide | ArapovTrade',
+      'Trading Psychology: How to Control Emotions | Arapov.trade',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Complete guide to order types in trading. Market, limit, stop orders, OCO, Iceberg and other order types for effective trading strategies.',
+        'How emotions affect trading: fear, greed, FOMO and tilt. The cognitive biases and the techniques that help you trade by the system.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Ihor Arapov' });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-14' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/ordertypes.webp',
-    });
+
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
+
     this.gerRandom();
   }
   randomArticleRus: any = [];
@@ -253,27 +250,36 @@ export class HomeEnBlogTwentySixComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          headline: 'Types of Orders in Trading: Complete Guide for Traders',
+          headline:
+            'Trading Psychology: Why It Beats Strategy and How to Keep Emotions Under Control',
           description:
-            'Complete guide to order types in trading. Market, limit, stop orders, OCO, Iceberg and other order types for effective trading strategies.',
-          author: {
-            '@id': 'https://arapov.trade/en#person',
-          },
+            'How emotions affect trading: fear, greed, FOMO and tilt. The cognitive biases and the techniques that help you trade by the system.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'ArapovTrade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
-          datePublished: '2026-03-15T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://arapov.trade/en/freestudying/ordertypes',
+            '@id': 'https://arapov.trade/en/freestudying/trading-psychology',
           },
-          image: 'https://arapov.trade/assets/img/content/ordertypes.webp',
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/emotionsaffect.webp',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Trading psychology',
+          keywords:
+            'trading psychology, fear, greed, FOMO, tilt, cognitive biases, discipline',
           inLanguage: 'en',
         },
       ],
@@ -289,19 +295,18 @@ export class HomeEnBlogTwentySixComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/en#person',
+      '@id': 'https://arapov.trade/#person',
       name: 'Igor Arapov',
       alternateName: [
         'Ігор Арапов',
-        'Арапов Игорь',
-        'I. Arapov',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-
-      url: 'https://arapov.trade/en',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -316,12 +321,12 @@ export class HomeEnBlogTwentySixComponent implements OnInit {
         'https://t.me/ArapovTrade',
       ],
       jobTitle: [
-        'Independent researcher,',
-        'trader',
-        'author and founder of arapov.trade',
+        'Independent researcher',
+        'Trader',
+        'Author and founder of arapov.trade',
       ],
       description:
-        'Independent researcher, practicing trader, author of books on trading and scientific publications. Specializes in trading psychology and cognitive biases in financial markets.',
+        'Independent researcher, practising trader, author of trading books and scientific publications. Specialises in trading psychology and cognitive biases in financial markets.',
     };
 
     this.addJsonLdSchema(data);
@@ -337,42 +342,50 @@ export class HomeEnBlogTwentySixComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'What is a market order?',
+          name: 'Is trading psychology really more important than strategy?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'A market order is an instruction to buy or sell an asset immediately at the current market price. It executes instantly when sent to the exchange if liquidity is available.',
+            text: 'Yes, because even a technically sound trader loses money when trades are executed on emotion. The market is neutral; people mostly lose inside their own heads, as fear, greed and haste break any system. So working on psychology is not a soft optional topic but a good half of the result.',
           },
         },
         {
           '@type': 'Question',
-          name: 'What is the difference between limit and stop orders?',
+          name: 'How do fear and greed affect a trader?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'A limit order executes at the specified price or better. A stop order activates when price reaches a level and becomes a market order, used for position protection or trend entry.',
+            text: 'Fear makes you exit profit early and hold a loss hoping it returns. Greed mirrors it, pushing you to overstay a position and risk too much. They work as a pair and swing the trader between extremes, and after a painful loss tilt and the urge to win it all back often follow.',
           },
         },
         {
           '@type': 'Question',
-          name: 'What is a stop-loss?',
+          name: 'What is FOMO and why does it make people buy the top?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'A stop-loss is a protective order that automatically closes a position when a certain loss level is reached. It is a key risk management tool.',
+            text: 'FOMO is the fear of missing a profit when price runs fast without you. It fires exactly when the move is almost over and everyone has already written about it, so the beginner enters at the very top, while professional money is fixing profit at that moment and handing it to the latecomers.',
           },
         },
         {
           '@type': 'Question',
-          name: 'How does a trailing stop work?',
+          name: 'What is tilt and why is it dangerous?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'A trailing stop automatically moves the stop-loss level following price movement in the profitable direction, locking in profits as the trend continues.',
+            text: 'Tilt is the state where, after a painful loss, a trader loses control and starts taking revenge on the market, opening trade after trade just to win it back fast. That is exactly how an account is blown in one evening. The best defence is a pause after a loss and a hard limit on trades.',
           },
         },
         {
           '@type': 'Question',
-          name: 'What is an OCO order?',
+          name: 'How do you remove emotions from trading?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'OCO (One Cancels the Other) is a linked pair of orders where execution of one automatically cancels the other. Usually combines take-profit and stop-loss.',
+            text: "You don't beat emotions in the moment, you take them out of the equation in advance with a trading plan: entries, exits, stop and risk written down before the terminal is open. The stop removes painful hope, small risk lowers fear, and a journal plus a pause after a loss keep you from breaking into revenge trading.",
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How do you overcome the fear of entering a trade?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Fear of entry is almost always about too much risk. Cut the share of the account per trade to one where the loss does not scare you, and write the entry, stop and target in advance, so the plan decides, not emotion in the moment. When the cost of a loss is small and the scenario is set, the hand stops shaking over the button, and practising on a demo account adds calm through habit.',
           },
         },
       ],
@@ -388,37 +401,58 @@ export class HomeEnBlogTwentySixComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'How to Choose the Right Order Type',
+      '@id': 'https://arapov.trade/en/freestudying/trading-psychology#howto',
+      name: 'How to work with psychology in trading',
+      description:
+        "A step-by-step look at a trader's main psychological traps and what to set against them",
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Define your trade goal',
-          text: 'Decide if you need urgent entry/exit (market order) or willing to wait for better price (limit order).',
+          name: 'Accept that the result is decided in your head, not on the chart',
+          text: 'The market is neutral, and the same chart is traded by one as a casino and by another as a business.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Assess market liquidity',
-          text: 'Use limit orders on illiquid markets to avoid slippage.',
+          name: 'Learn to see fear, greed and euphoria in your decisions',
+          text: 'Loss aversion is built so that the pain of a loss is felt more strongly than the joy of an equal gain.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Set protective orders',
-          text: 'Always place stop-loss to limit potential losses.',
+          name: "Recognise FOMO and don't enter at the top",
+          text: 'FOMO fires exactly when the move is almost over and the last in have rushed into the market.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Configure profit taking',
-          text: 'Set take-profit or use trailing stop for automatic profit locking.',
+          name: 'Understand how the crowd hands money to big capital',
+          text: 'The market transfers money from the emotional crowd to cold capital: the crowd sells in fear at the bottom in accumulation and buys in euphoria at the top in distribution, while big capital stands on the other side of its emotions.',
         },
         {
           '@type': 'HowToStep',
           position: 5,
-          name: 'Use combined orders',
-          text: 'Apply OCO orders for automated position management.',
+          name: 'Notice cognitive biases instead of fighting them with willpower',
+          text: 'Cognitive biases are built-in patterns of thinking that, on the market, slip you a convenient picture instead of a cold assessment.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 6,
+          name: 'Survive a drawdown and a streak without revenge',
+          text: 'A losing streak is the normal statistics of a profitable system, not a breakage; keep small risk per trade so a drawdown does not knock you out emotionally, and keep a journal that separates a bad decision from an unlucky outcome.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 7,
+          name: 'Take emotions out of the equation with a plan, a stop and a journal',
+          text: 'Emotions cannot be beaten in the moment, they must be taken out of the equation in advance with a trading plan.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 8,
+          name: 'Walk the path from thrill to discipline consciously',
+          text: "Psychology moves through stages, from a beginner's recklessness through fear and grail-hunting to a maturity where a trade is a line in the journal; the path cannot be skipped, only shortened, by changing how you make decisions rather than hunting a magic indicator.",
         },
       ],
     };
@@ -433,63 +467,43 @@ export class HomeEnBlogTwentySixComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Trading Order Terms',
+      name: 'Glossary of terms in this article',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Market Order',
+          name: 'FOMO',
           description:
-            'An instruction for immediate purchase or sale at the best available price',
+            'The fear of missing out: acute anxiety at the thought of a missed chance to earn, pushing you to enter the market on emotion.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Limit Order',
+          name: 'Tilt',
           description:
-            'An instruction to buy or sell at a specified price or better',
+            'A state in which, after a painful loss, a trader loses control and starts taking revenge on the market with a string of trades to win it back fast.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Stop Order',
+          name: 'Cognitive biases',
           description:
-            'A conditional order that activates when price reaches a specified level',
+            'Systematic errors of thinking that make a trader assess the market and their own trades unobjectively and take irrational decisions.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Stop-Loss',
+          name: 'Trading discipline',
           description:
-            'A protective order for automatic position closure at a loss level',
+            'The habit of acting strictly by rules of entry, exit and risk written in advance, rather than by momentary feelings.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Take-Profit',
-          description: 'An order for automatic profit locking at target price',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Trailing Stop',
-          description: 'A dynamic stop order that follows price movement',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'OCO Order',
+          name: 'Loss aversion',
           description:
-            'A pair of orders where execution of one cancels the other',
+            'A cognitive bias in which the pain of a loss is felt more strongly than the joy of an equal gain, so a trader cuts profit early and holds a loss to the last.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Iceberg Order',
-          description: 'A large order split into parts with hidden volume',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Slippage',
-          description: 'Difference between expected and actual execution price',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Stop-Limit Order',
+          name: 'Drawdown',
           description:
-            'An order that becomes limit instead of market upon activation',
+            'A temporary decline of the trading account after a run of losing trades; for a strategy profitable over the distance, losing streaks are statistically normal and do not mean the method is broken.',
         },
       ],
     };

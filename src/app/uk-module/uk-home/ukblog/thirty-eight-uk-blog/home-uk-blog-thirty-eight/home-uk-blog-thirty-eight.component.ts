@@ -28,7 +28,7 @@ export class HomeUkBlogThirtyEightComponent implements OnInit {
     private themeService: ThemeservService,
     private artickleServ: ArticlesService,
     private renderer: Renderer2,
-    @Inject(DOCUMENT) private document: Document
+    @Inject(DOCUMENT) private document: Document,
   ) {}
   private routerSubscription!: Subscription;
   private themeSubscription!: Subscription;
@@ -57,22 +57,17 @@ export class HomeUkBlogThirtyEightComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Безпечне зберігання криптовалюти: повний посібник | ArapovTrade'
+      'Проп-трейдинг: що це і як пройти челендж | Arapov.trade',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Дізнайтеся, як безпечно зберігати криптовалюту. Холодні та гарячі гаманці, апаратні пристрої, захист приватних ключів та найкращі практики безпеки.',
+        'Що таке проп-трейдинг, як влаштований челендж проп-фірми, її правила, виплати та підводні камені торгівлі на чужому капіталі.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-23' });
-  this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/cryptostoring.webp',
-    });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
 
     this.gerRandom();
   }
@@ -90,7 +85,6 @@ export class HomeUkBlogThirtyEightComponent implements OnInit {
       title: 'Базовий курс',
       link: 'https://arapov.trade/uk/freestudying/freeeducation',
     },
-    
   ];
 
   onGroupChange(event: Event) {
@@ -160,7 +154,7 @@ export class HomeUkBlogThirtyEightComponent implements OnInit {
     // Показываем 5 случайных статей при фокусе, если инпут пуст
     if (!this.searchQuery) {
       const shuffled = [...this.artickleServ.ukrArtickles].sort(
-        () => Math.random() - 0.5
+        () => Math.random() - 0.5,
       );
       this.displayedArticles = shuffled.slice(0, this.maxResults);
     }
@@ -175,7 +169,7 @@ export class HomeUkBlogThirtyEightComponent implements OnInit {
   onSearchChange() {
     // Логика асинхронного поиска
     const filtered = this.artickleServ.ukrArtickles.filter((a) =>
-      a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase())
+      a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase()),
     );
     this.displayedArticles = filtered.slice(0, this.maxResults);
   }
@@ -197,7 +191,7 @@ export class HomeUkBlogThirtyEightComponent implements OnInit {
     const path: string =
       this.router.url.split('/')[this.router.url.split('/').length - 1];
     let index = this.artickleServ.ukrArtickles.findIndex(
-      (a) => a.linkUkr == path
+      (a) => a.linkUkr == path,
     );
 
     if (this.artickleServ.ukrArtickles.length - 1 == index) {
@@ -214,7 +208,7 @@ export class HomeUkBlogThirtyEightComponent implements OnInit {
     const path: string =
       this.router.url.split('/')[this.router.url.split('/').length - 1];
     let index = this.artickleServ.ukrArtickles.findIndex(
-      (a) => a.linkUkr == path
+      (a) => a.linkUkr == path,
     );
 
     if (index == 1) {
@@ -239,7 +233,7 @@ export class HomeUkBlogThirtyEightComponent implements OnInit {
     ];
 
     const scripts = this.document.querySelectorAll(
-      'script[type="application/ld+json"]'
+      'script[type="application/ld+json"]',
     );
 
     scripts.forEach((script) => {
@@ -252,7 +246,7 @@ export class HomeUkBlogThirtyEightComponent implements OnInit {
 
         const shouldRemove = candidates.some(
           (entry: any) =>
-            entry['@type'] && typesToRemove.includes(entry['@type'])
+            entry['@type'] && typesToRemove.includes(entry['@type']),
         );
 
         if (shouldRemove) {
@@ -280,34 +274,34 @@ export class HomeUkBlogThirtyEightComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          headline:
-            'Безпечне зберігання криптовалюти: повний посібник із захисту цифрових активів',
+          headline: 'Проп-трейдинг: що це таке і як пройти челендж проп-фірми',
           description:
-            'Детальний посібник з безпечного зберігання криптовалют. Типи гаманців, захист приватних ключів, апаратні пристрої та поширені помилки.',
-          author: {
-            '@id': 'https://arapov.trade/uk#person',
-          },
+            'Що таке проп-трейдинг, як влаштований челендж проп-фірми, її правила, виплати та підводні камені торгівлі на чужому капіталі.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'ArapovTrade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
             url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
-          datePublished: '2025-04-15T00:00:00Z',
-         dateModified: '2026-04-15T00:00:00Z',
-
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://arapov.trade/uk/freestudying/cryptostoring',
+            '@id': 'https://arapov.trade/uk/freestudying/prop-trading',
           },
           image: {
             '@type': 'ImageObject',
-            url: 'https://arapov.trade/assets/img/content/cryptostoring1.webp',
+            url: 'https://arapov.trade/assets/img/content/prop-trading.jpeg',
+            width: 1200,
+            height: 630,
           },
-          articleSection: 'Криптовалюти',
+          articleSection: 'Трейдинг для початківців',
+          keywords: 'проп-трейдинг',
           inLanguage: 'uk',
         },
       ],
@@ -323,18 +317,18 @@ export class HomeUkBlogThirtyEightComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/uk#person',
-      name: 'Ігор Арапов',
+      '@id': 'https://arapov.trade/#person',
+      name: 'Igor Arapov',
       alternateName: [
-        'Igor Arapov',
-              'Арапов Игорь',
-              'I. Arapov',
-              'Игорь Арапов',
-              'І. В. Арапов',
-              'Арапов Ігор',
-              'Arapov Igor',
+        'Ігор Арапов',
+        'Игорь Арапов',
+        'Арапов Игорь',
+        'Арапов Ігор',
+        'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/uk',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -346,9 +340,13 @@ export class HomeUkBlogThirtyEightComponent implements OnInit {
         'https://github.com/ArapovTrade',
         'https://ua.linkedin.com/in/arapovtrade',
         'https://www.youtube.com/@ArapovTrade',
-        'https://t.me/ArapovTrade'
+        'https://t.me/ArapovTrade',
       ],
-       jobTitle: ['Незалежний дослідник', 'трейдер', 'автор і засновник arapov.trade'],
+      jobTitle: [
+        'Незалежний дослідник',
+        'трейдер',
+        'автор і засновник arapov.trade',
+      ],
       description:
         'Незалежний дослідник, практикуючий трейдер, автор книг з трейдингу та наукових публікацій. Спеціалізується на психології трейдингу та когнітивних упередженнях на фінансових ринках.',
     };
@@ -366,42 +364,42 @@ export class HomeUkBlogThirtyEightComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'Що таке холодний гаманець?',
+          name: 'Що таке проп-трейдинг простими словами?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Холодний гаманець — це спосіб зберігання криптовалюти без постійного підключення до інтернету. До них належать апаратні гаманці (Ledger, Trezor), паперові гаманці та металеві пластини. Вони забезпечують максимальний захист від хакерських атак.',
+            text: "Ви ведете угоди на капітал проп-фірми, а не на свій, і ділите з нею прибуток. Доступ до цього капіталу відкривається після платного відбору, челенджу, де треба набрати цільовий прибуток і не пробити ліміти просадки. Своя прибуткова система при цьому все одно обов'язкова: чужий капітал її не замінює.",
           },
         },
         {
           '@type': 'Question',
-          name: 'Чим відрізняється гарячий гаманець від холодного?',
+          name: 'Скільки коштує челендж проп-фірми і чи можна пройти його безкоштовно?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Гарячий гаманець підключений до інтернету і зручний для частих транзакцій. Холодний гаманець зберігає ключі офлайн і забезпечує максимальну безпеку. Для довгострокового зберігання рекомендуються холодні гаманці.',
+            text: 'Участь платна, найчастіше це кілька сотень доларів за спробу залежно від розміру рахунку. Безкоштовно пройти відбір у справжніх фірм не можна: внесок і є їхній фільтр та частина бізнес-моделі. Якщо вам обіцяють капітал без жодної перевірки, це привід насторожитися.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Що таке seed-фраза і навіщо вона потрібна?',
+          name: 'Чому більшість зливає челендж?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Seed-фраза — це набір з 12-24 слів, що генерується при створенні гаманця. Вона дозволяє відновити доступ до коштів при втраті пристрою. Фразу потрібно зберігати в безпечному місці і ніколи не зберігати в цифровому вигляді.',
+            text: 'Не через погані входи, а через порушення лімітів: пробивають денну втрату або загальну просадку, бо підвищують ризик після прибутку й намагаються відігратися після збитку. Челендж проходить дисципліна й контроль ризику, а не вгадування ринку.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Чи безпечно зберігати криптовалюту на біржі?',
+          name: 'Що таке funded-акаунт і чим він відрізняється від челенджу?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Зберігання на біржі зручне для активної торгівлі, але несе ризики: біржі можуть бути зламані, заблоковані або збанкрутувати. Для довгострокового зберігання рекомендується використовувати особисті гаманці.',
+            text: 'Funded-акаунт це рахунок, який ви отримуєте вже після успішного челенджу і з якого можна виводити свою частку прибутку. Челендж це іспит, funded це робота: ліміти просадки нікуди не діваються, і порушення правил так само легко відбирає фінансування, як і на відборі.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Який апаратний гаманець обрати?',
+          name: 'Чи варто початківцю йти в проп чи краще торгувати на своєму депозиті?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Популярні апаратні гаманці: Ledger Nano X/S, Trezor Model T/One, SafePal. При виборі враховуйте підтримку потрібних криптовалют та репутацію виробника. Купуйте лише у офіційних продавців.',
+            text: 'Якщо прибуткової системи ще немає, проп нічого не вирішить: ви просто заплатите за челендж і зіллєте його тими самими помилками. Спершу має сенс вийти в плюс на невеликому своєму рахунку, а проп підключати як спосіб масштабувати вже працюючий підхід, а не як спосіб його знайти.',
           },
         },
       ],
@@ -417,70 +415,34 @@ export class HomeUkBlogThirtyEightComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      '@id': 'https://arapov.trade/uk/freestudying/cryptostoring#howto',
-      name: 'Як безпечно зберігати криптовалюту',
+      '@id': 'https://arapov.trade/uk/freestudying/prop-trading#howto',
+      name: 'Як розібратися й застосовувати: проп-трейдинг і як пройти челендж проп-фірми',
       description:
-        'Крок за кроком інструкція з безпечного зберігання криптоактивів та захисту від взломів',
+        'Покроковий розбір теми та її практичне застосування в торгівлі',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Визначте розмір та горизонт зберігання',
-          text: 'Оцініть суму криптовалют, яку ви плануєте зберігати, та строки зберігання. Якщо це довгострокове зберігання великої суми, віддайте перевагу холодним гаманцям. Для активної торгівлі малими сумами підійдуть гарячі гаманці.',
+          name: 'Розберіться, що таке проп-трейдинг і звідки у фірми капітал',
+          text: 'Проп-трейдинг це модель, при якій трейдер торгує грошима проп-фірми і ділить з нею підсумковий прибуток у погодженій пропорції.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Виберіть тип гаманця',
-          text: 'Для довгострокового зберігання використовуйте холодні гаманці: апаратні (Ledger, Trezor), паперові або металеві пластини. Для частих транзакцій - гарячі гаманці: мобільні додатки або веб-гаманці. Комбінуйте обидва типи для максимальної безпеки.',
+          name: 'Зрозумійте правила челенджу: денний ліміт, загальна просадка і ризик на угоду',
+          text: 'Челендж проходить не точність входів, а контроль ризику: головне не пробити денну втрату або загальну просадку.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Придбайте апаратний гаманець у офіційного продавця',
-          text: 'Виберіть перевіреного виробника (Ledger, Trezor, SafePal). Купуйте лише у офіційних дилерів або сертифікованих магазинів. Уникайте б/в пристроїв. Перевірте цілісність упаковки при отриманні.',
+          name: 'Дізнайтеся, як працює funded-акаунт, виплати і сплит прибутку',
+          text: 'Funded-акаунт це рахунок після челенджу, з якого виводять частку прибутку.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Генеруйте seed-фразу під час першого використання',
-          text: "Під час ініціалізації гаманця буде згенерована 12-24 словна seed-фраза. Запишіть її на папір у правильному порядку. Ніколи не фотографуйте, не зберігайте в хмарі чи на комп'ютері. Зберігайте в надійному місці - сейфі, скриньці.",
-        },
-        {
-          '@type': 'HowToStep',
-          position: 5,
-          name: 'Встановіть надійний пароль та PIN-код',
-          text: "Встановіть складний пароль для пристрою (якщо підтримується). Встановіть 4-8 значний PIN для апаратного гаманця. Запам'ятайте PIN, але нікому його не повідомляйте. Не використовуйте прості послідовності (1234, 0000).",
-        },
-        {
-          '@type': 'HowToStep',
-          position: 6,
-          name: 'Перевірте адреси та відправте тестову суму',
-          text: 'Перед першим великим переводом відправте мінімальну суму криптовалюти. Переконайтеся, що адреси збігаються та транзакція пройшла успішно. Це підтвердить, що гаманець працює коректно.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 7,
-          name: 'Зберігайте seed-фразу у кількох місцях',
-          text: 'Зробіть 2-3 копії записаної seed-фрази. Зберігайте їх у різних безпечних місцях: вдома в сейфі, у довіреної людини, в банку. Це захистить від втрати доступу при пожежі, крадіжці чи інших НС.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 8,
-          name: 'Використовуйте багаторівневий захист',
-          text: 'Розділіть велику суму між кількома гаманцями. Використовуйте різні паролі для кожного. Подумайте про multi-sig гаманці, які потребують кількох підписів для транзакції. Це запобіжить втраті всіх коштів при компрометації одного гаманця.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 9,
-          name: 'Оновлюйте ПО та використовуйте безпечну мережу',
-          text: "Тримайте ПО гаманця та пристрою в актуальному стані. При підключенні апаратного гаманця використовуйте чистий комп'ютер без вірусів. Уникайте публічного Wi-Fi при проведенні транзакцій. Перевіряйте scam-сайти перед введенням приватних ключів.",
-        },
-        {
-          '@type': 'HowToStep',
-          position: 10,
-          name: 'Перевіряйте адреси перед кожною відправкою',
-          text: 'Завжди перевіряйте адресу отримувача перед підтвердженням. Використовуйте функцію перевірки на пристрої (якщо є). Відправляйте спочатку невелику суму, а потім залишок. Остерігайтесь фішингу та підміненихадрес.',
+          name: 'Вирішіть, іти в проп чи торгувати на своєму депозиті',
+          text: 'Проп масштабує вже працюючу систему, але не створює її: без прибуткового підходу туди рано.',
         },
       ],
     };
@@ -495,67 +457,25 @@ export class HomeUkBlogThirtyEightComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Глосарій зберігання криптовалют',
+      name: 'Глосарій термінів статті',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Приватний ключ',
+          name: 'Проп-трейдинг',
           description:
-            'Криптографічна послідовність, що дає повний контроль над криптовалютними коштами.',
+            'Модель, при якій трейдер веде угоди на гроші проп-фірми і ділить з нею підсумковий прибуток у погодженій пропорції.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Публічний ключ',
+          name: 'Проп-челендж',
           description:
-            'Адреса гаманця, яку можна передавати для отримання криптовалюти.',
+            'Платний відбір, на якому трейдер має набрати цільовий прибуток і не пробити встановлені ліміти просадки.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Seed-фраза',
+          name: 'Funded-акаунт',
           description:
-            'Мнемонічна фраза з 12-24 слів для відновлення доступу до гаманця.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Холодний гаманець',
-          description:
-            'Спосіб зберігання криптовалюти без підключення до інтернету.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Гарячий гаманець',
-          description:
-            'Гаманець з постійним підключенням до інтернету для швидких транзакцій.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Апаратний гаманець',
-          description:
-            'Фізичний пристрій для безпечного зберігання приватних ключів офлайн.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Мультисиг',
-          description:
-            'Гаманець, що вимагає декількох підписів для проведення транзакції.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Кастодіальний гаманець',
-          description:
-            'Гаманець, де приватні ключі зберігаються третьою стороною.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Некастодіальний гаманець',
-          description:
-            'Гаманець з повним контролем користувача над приватними ключами.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'MFA',
-          description:
-            'Багатофакторна автентифікація для додаткового захисту акаунта.',
+            'Фінансований рахунок, який трейдер отримує після успішного челенджу і з якого вже можна виводити свою частку прибутку.',
         },
       ],
     };

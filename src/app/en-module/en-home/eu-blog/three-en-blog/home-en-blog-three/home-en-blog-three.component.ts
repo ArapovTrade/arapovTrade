@@ -53,21 +53,16 @@ export class HomeEnBlogThreeComponent implements OnInit {
     this.grr = this.artickleServ.selectedGroups;
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
-    this.titleService.setTitle(
-      'Market Volatility: Measurement and Trading Applications | Arapov.trade',
-    );
+    this.titleService.setTitle('Order Block in Trading | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Market volatility explained: complete guide to measuring price fluctuations with ATR indicator and practical trading applications',
+        'What an order block is, how to spot the zone where a big player built a position, what types of Order Block exist and how to trade them.',
     });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-03-31' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-06-04' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/volatility44.webp',
-    });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
+
     this.gerRandom();
   }
   randomArticleRus: any = [];
@@ -253,28 +248,35 @@ export class HomeEnBlogThreeComponent implements OnInit {
         {
           '@type': 'Article',
           headline:
-            'Market Volatility: Measurement Techniques and Trading Applications',
+            'Order Block in Trading: What It Is and How to Trade Order Blocks',
           description:
-            'Complete guide to financial market volatility: types of volatility, ATR indicator, practical applications for risk management',
-          image: 'https://arapov.trade/assets/img/content/volatility1.webp',
-          datePublished: '2025-06-04T00:00:00Z',
-          dateModified: '2026-06-04T00:00:00Z',
-          author: {
-            '@id': 'https://arapov.trade/en#person',
-          },
+            'What an order block is, how to spot the zone where a big player built a position, what types of Order Block exist and how to trade them.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'Arapov.trade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
             url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://arapov.trade/en/freestudying/volatility',
+            '@id': 'https://arapov.trade/en/freestudying/order-block',
           },
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/orderblockintrading.webp',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Smart Money',
+          keywords: 'order block',
+          inLanguage: 'en',
         },
       ],
     };
@@ -289,18 +291,18 @@ export class HomeEnBlogThreeComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/en#person',
+      '@id': 'https://arapov.trade/#person',
       name: 'Igor Arapov',
       alternateName: [
         'Ігор Арапов',
-        'Арапов Игорь',
-        'I. Arapov',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/en',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -315,12 +317,12 @@ export class HomeEnBlogThreeComponent implements OnInit {
         'https://t.me/ArapovTrade',
       ],
       jobTitle: [
-        'Independent researcher,',
-        'trader',
-        'author and founder of arapov.trade',
+        'Independent researcher',
+        'Trader',
+        'Author and founder of arapov.trade',
       ],
       description:
-        'Independent researcher, practicing trader, author of books on trading and scientific publications. Specializes in trading psychology and cognitive biases in financial markets.',
+        'Independent researcher, practising trader, author of trading books and scientific publications. Specialises in trading psychology and cognitive biases in financial markets.',
     };
 
     this.addJsonLdSchema(data);
@@ -336,42 +338,42 @@ export class HomeEnBlogThreeComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'What is volatility in trading?',
+          name: 'What is an order block in trading?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Volatility is a statistical measure of price variation over a specific period. High volatility means significant price swings, low volatility indicates stable price behavior.',
+            text: 'It is a price zone where large capital built a position before a strong move, usually the last opposing candle right before the impulse. Think of it as the footprint of smart money on the chart. Price often comes back to that zone, which is why traders use it as a reference for entries.',
           },
         },
         {
           '@type': 'Question',
-          name: 'How does the ATR indicator work?',
+          name: 'How do you identify a bullish order block?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'ATR (Average True Range) measures the average true range of price fluctuations, accounting for gaps. True range is the maximum of high-low difference and deviations from previous close.',
+            text: 'Find a strong move up that broke structure, then mark the last bearish candle right before that rally. That candle is the bullish order block, a demand zone price can return to. It is stronger when it sits on a solid level and is backed by volume.',
           },
         },
         {
           '@type': 'Question',
-          name: 'How to use ATR for stop loss?',
+          name: 'What is the difference between an order block and support or resistance?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Typical approach is setting stop loss at 1.5-3 ATR values from entry point. This accounts for current volatility and prevents premature stop triggers.',
+            text: 'A plain level is often psychological or historical, just a line on the chart. An order block is tied to real activity from large capital and is a specific zone rather than a single line. That makes it tighter than a bare level, but it needs volume to confirm.',
           },
         },
         {
           '@type': 'Question',
-          name: 'What is the difference between historical and implied volatility?',
+          name: 'Order block vs fair value gap (FVG), what is the difference?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Historical volatility is calculated from past prices, implied volatility is extracted from option prices and reflects market expectations about future fluctuations.',
+            text: 'An order block is the candle or zone where large capital built a position. An imbalance, or FVG, is the price gap between candles that the market tends to fill later. Traders often use them together: the block marks the zone of interest, the gap next to it strengthens the case.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Which market has the highest volatility?',
+          name: 'Where do you put the stop-loss on an order block?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Cryptocurrency market has the highest volatility - daily swings of 10-20% are common. Forex is relatively stable, stock market shows sectoral differentiation.',
+            text: 'Beyond the far edge of the block, past its extreme. If price gets there, the zone failed and the idea is off. Entering inside the zone is exactly what lets you keep the stop short and aim the target at the next level with a risk-to-reward from 1 to 3.',
           },
         },
       ],
@@ -387,39 +389,28 @@ export class HomeEnBlogThreeComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'How to Apply ATR in Trading',
+      '@id': 'https://arapov.trade/en/freestudying/order-block#howto',
+      name: 'How to understand and apply: Order Block in trading',
       description:
-        'Step-by-step guide to using ATR indicator for risk management and determining trading parameters',
+        'A step-by-step breakdown of the topic and its practical use in trading',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Configure ATR on chart',
-          text: 'Add ATR indicator to your chart with period 14. Use shorter periods for short-term trading, longer periods for long-term trading.',
+          name: 'What is an order block in trading?',
+          text: 'An order block is a price zone where large capital, institutions and market makers, built a significant position before a strong impulsive move.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Determine current volatility level',
-          text: 'Compare current ATR value with historical average. High values indicate active market, low values indicate consolidation period.',
+          name: 'How to find an order block on a chart',
+          text: 'Finding one is a simple routine that still takes practice.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Calculate stop loss',
-          text: 'Set stop loss at 1.5-3 ATR distance from entry point. Use larger multiplier for volatile instruments.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 4,
-          name: 'Determine profit target',
-          text: 'Set take profit as ATR multiple - usually 2-4 values from entry point depending on strategy.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 5,
-          name: 'Calculate position size',
-          text: 'Normalize risk across instruments: high ATR assets get smaller position size to maintain constant monetary risk.',
+          name: 'How to trade order blocks: entry, stop-loss and target',
+          text: 'The trade is built on the return.',
         },
       ],
     };
@@ -434,64 +425,13 @@ export class HomeEnBlogThreeComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Volatility Trading Glossary',
+      name: 'Glossary of article terms',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Volatility',
+          name: 'Order Block',
           description:
-            'Statistical measure of price variation reflecting intensity of price fluctuations',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'ATR',
-          description:
-            'Average True Range - indicator measuring average true range for volatility assessment',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'True Range',
-          description:
-            'Maximum value of three: High-Low, |High-Close_prev|, |Low-Close_prev|',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Historical Volatility',
-          description: 'Volatility calculated from past price data',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Implied Volatility',
-          description:
-            'Expected volatility extracted from option contract prices',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'VIX',
-          description:
-            'Volatility index measuring S&P 500 options market expectations',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Bollinger Bands',
-          description:
-            'Volatility indicator showing channel around moving average',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Standard Deviation',
-          description: 'Statistical measure of value dispersion from the mean',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Dynamic Stop Loss',
-          description: 'Protective level adapting to current market volatility',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Volatility Regime',
-          description:
-            'Current market state in terms of price fluctuation intensity',
+            'An order block is a price zone where large capital, institutions and market makers, built a significant position before a strong impulsive move.',
         },
       ],
     };

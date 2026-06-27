@@ -53,16 +53,14 @@ export class HomeEnBlogSixComponent implements OnInit {
     this.grr = this.artickleServ.selectedGroups;
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
-    this.titleService.setTitle(
-      'Smart Money Trading: How Institutional Players Move Markets | Arapov.trade',
-    );
+    this.titleService.setTitle('Bitcoin Dominance (BTC.D) | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Smart Money Trading Guide: Learn how institutional traders control market movements. Discover liquidity zones, order blocks, Wyckoff methodology, and strategies to trade alongside big players.',
+        'What Bitcoin dominance (BTC.D) is, why to track this metric and how BTC dominance affects the market and altcoins.',
     });
     this.gerRandom();
   }
@@ -248,41 +246,35 @@ export class HomeEnBlogSixComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          '@id': 'https://arapov.trade/en/freestudying/smartestmoney#article',
           headline:
-            'Smart Money Trading: How Institutional Players Move Markets',
+            'Bitcoin Dominance (BTC.D): What It Is and How to Use It in Analysis',
           description:
-            'Comprehensive guide to Smart Money concepts in trading. Learn how institutional traders control price movements, manage liquidity, and create market patterns.',
-          image: {
-            '@type': 'ImageObject',
-            url: 'https://arapov.trade/assets/img/content/smartestmoney1.webp',
-            width: 1200,
-            height: 630,
-          },
-          author: { '@id': 'https://arapov.trade/en#person' },
+            'What Bitcoin dominance (BTC.D) is, why to track this metric and how BTC dominance affects the market and altcoins.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'Arapov.trade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
-          datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://arapov.trade/en/freestudying/smartestmoney',
+            '@id': 'https://arapov.trade/en/freestudying/bitcoin-dominance',
           },
-          articleSection: 'Trading Education',
-          keywords: [
-            'Smart Money',
-            'institutional trading',
-            'liquidity',
-            'order blocks',
-            'Wyckoff',
-          ],
-          wordCount: 1420,
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/bitcoin_dominance_1.png',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Cryptocurrency',
+          keywords: 'bitcoin dominance',
           inLanguage: 'en',
         },
       ],
@@ -298,18 +290,18 @@ export class HomeEnBlogSixComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/en#person',
+      '@id': 'https://arapov.trade/#person',
       name: 'Igor Arapov',
       alternateName: [
         'Ігор Арапов',
-        'Арапов Игорь',
-        'I. Arapov',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/en',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -324,12 +316,12 @@ export class HomeEnBlogSixComponent implements OnInit {
         'https://t.me/ArapovTrade',
       ],
       jobTitle: [
-        'Independent researcher,',
-        'trader',
-        'author and founder of arapov.trade',
+        'Independent researcher',
+        'Trader',
+        'Author and founder of arapov.trade',
       ],
       description:
-        'Independent researcher, practicing trader, author of books on trading and scientific publications. Specializes in trading psychology and cognitive biases in financial markets.',
+        'Independent researcher, practising trader, author of trading books and scientific publications. Specialises in trading psychology and cognitive biases in financial markets.',
     };
 
     this.addJsonLdSchema(data);
@@ -342,46 +334,37 @@ export class HomeEnBlogSixComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
-      '@id': 'https://arapov.trade/en/freestudying/smartestmoney#faq',
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'What does Smart Money mean in trading?',
+          name: 'What is Bitcoin dominance in simple terms?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Smart Money refers to capital controlled by institutional market participants: investment banks, hedge funds, and market makers. They possess substantial resources and the ability to influence price movements through liquidity management.',
+            text: "It is Bitcoin's share of the whole crypto market cap, in percent. It shows where the money sits right now: in Bitcoin or in altcoins. It is not Bitcoin's price but its market share, around 57 percent in June 2026.",
           },
         },
         {
           '@type': 'Question',
-          name: 'How do institutional traders manipulate markets?',
+          name: 'What does rising Bitcoin dominance mean?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Institutions use fake breakouts, stop hunts, and liquidity grabs. These tactics allow them to accumulate positions at favorable prices before initiating trend movements.',
+            text: 'Most often that capital is leaving altcoins for Bitcoin, and the alts are weakening. It points to a cautious market mood. Falling dominance, the other way, hints at a possible altseason.',
           },
         },
         {
           '@type': 'Question',
-          name: 'What is an order block in trading?',
+          name: 'Can you trade off Bitcoin dominance?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'An order block is the last candle of opposite direction before an impulsive move. It marks where large capital entered the market, and price often returns to these zones for retesting.',
+            text: 'In my experience, no, not as a standalone signal. It is context, not an entry point. The number is distorted by stablecoins and new tokens, and it lags. I look for the entry by levels and volume on the specific instrument.',
           },
         },
         {
           '@type': 'Question',
-          name: 'What are the Wyckoff market phases?',
+          name: 'What level of Bitcoin dominance is normal?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Wyckoff methodology identifies four phases: accumulation (buying at low prices), markup (uptrend), distribution (selling at high prices), and markdown (downtrend).',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'How to avoid Smart Money traps?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Use volume analysis to identify fake breakouts, wait for confirmation before entering, analyze higher timeframes, and place stop-losses at safe distances from obvious levels.',
+            text: 'There is no single correct value; the direction matters more. Historically it fell to about a third of the market and rose toward the 100 percent area in the early years. Watch the trend of dominance, not one frozen number.',
           },
         },
       ],
@@ -397,40 +380,28 @@ export class HomeEnBlogSixComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      '@id': 'https://arapov.trade/en/freestudying/smartestmoney#howto',
-      name: 'How to Trade Using Smart Money Concepts',
+      '@id': 'https://arapov.trade/en/freestudying/bitcoin-dominance#howto',
+      name: 'How to understand and apply: Bitcoin Dominance (BTC.D)',
       description:
-        'Step-by-step guide to applying Smart Money concepts in trading',
+        'A step-by-step breakdown of the topic and its practical use in trading',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Identify zones of interest',
-          text: 'Locate high liquidity areas: support and resistance levels, stop-loss clusters, and order blocks.',
+          name: 'What is Bitcoin dominance on the crypto market',
+          text: 'Bitcoin dominance is the percentage share of Bitcoin in the total capitalization of the whole crypto market.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Analyze price behavior',
-          text: 'Monitor fake breakouts, abnormal volumes, and price reactions at key levels. Determine the Wyckoff market phase.',
+          name: 'How to read BTC.D: rising dominance and altseason',
+          text: 'I suggest reading dominance like any ordinary chart: by trend and levels, not by guesswork.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Find confirmation signals',
-          text: 'Use candlestick patterns, volume analysis, and lower timeframe price action to filter false signals.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 4,
-          name: 'Enter the position',
-          text: 'After confirming direction, enter the trade with a clear stop-loss and take-profit plan.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 5,
-          name: 'Manage the trade',
-          text: 'Take profits at target levels or when market structure changes. Maintain discipline throughout.',
+          name: 'Bitcoin dominance and trading strategies: how to use it',
+          text: 'The main rule I keep in mind: dominance is context, not an entry signal.',
         },
       ],
     };
@@ -445,68 +416,13 @@ export class HomeEnBlogSixComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      '@id': 'https://arapov.trade/en/freestudying/smartestmoney#terms',
-      name: 'Smart Money Trading Terms',
+      name: 'Article glossary',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Smart Money',
+          name: 'Bitcoin dominance',
           description:
-            'Capital of institutional market participants: banks, hedge funds, and market makers capable of influencing price movements.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Liquidity',
-          description:
-            'Volume of available buy and sell orders. High liquidity zones attract large players.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Order Block',
-          description:
-            'The last candle of opposite direction before an impulsive move, marking the entry zone of large capital.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Fake Breakout',
-          description:
-            'A brief price move beyond support or resistance followed by quick reversal.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Imbalance',
-          description:
-            'Difference between supply and demand manifested in sharp price movement without pullbacks.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Accumulation',
-          description:
-            'Market phase where large players secretly buy assets at low prices before an upward move.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Distribution',
-          description:
-            'Market phase where institutions sell accumulated assets to retail traders at high prices.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Stop Hunt',
-          description:
-            'Artificial price movement designed to trigger stop-loss orders of retail traders.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Wyckoff Method',
-          description:
-            'Market analysis concept describing accumulation and distribution cycles driven by large capital.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Market Maker',
-          description:
-            'Large market participant providing liquidity and capable of influencing price direction.',
+            'Bitcoin dominance is the percentage share of Bitcoin in the total capitalization of the whole crypto market.',
         },
       ],
     };

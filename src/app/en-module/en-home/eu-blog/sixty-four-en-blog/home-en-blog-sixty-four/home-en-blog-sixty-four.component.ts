@@ -63,13 +63,8 @@ export class HomeEnBlogSixtyFourComponent {
         'Complete trading system with real trade examples. Step-by-step guide to finding entry points, setting stop-losses, and taking profits using false breakout strategy.',
     });
     this.meta.updateTag({ name: 'author', content: 'Igor Arapov' });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-05-25' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/prakticen.jpg',
-    });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
 
     this.gerRandom();
   }
@@ -256,41 +251,35 @@ export class HomeEnBlogSixtyFourComponent {
       '@graph': [
         {
           '@type': 'Article',
-          '@id': 'https://arapov.trade/en/freestudying/practic#article',
-          headline:
-            'Trading System That Works — Real Examples with Entry & Exit Rules',
+          headline: 'Trading Strategy for Beginners',
           description:
-            'Complete trading system with real trade examples. Step-by-step guide to finding entry points, setting stop-losses, and taking profits using false breakout strategy.',
-          datePublished: '2024-06-15T00:00:00+02:00',
-          dateModified: '2026-04-15T00:00:00Z',
-          author: {
-            '@id': 'https://arapov.trade/en#person',
-          },
+            'Self-study guide for trading by Igor Arapov: step-by-step course from scratch, real strategies and tips for a confident start in trading.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'Arapov Trade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
             '@id': 'https://arapov.trade/en/freestudying/practic',
           },
           image: {
             '@type': 'ImageObject',
-            url: 'https://arapov.trade/assets/img/content/prakticen.jpg',
+            url: 'https://arapov.trade/assets/img/content/prakticuk.jpg',
+            width: 1200,
+            height: 630,
           },
-          articleSection: 'Trading',
-          keywords: [
-            'trading system',
-            'entry point',
-            'stop-loss',
-            'false breakout',
-            'Price Action',
-            'Smart Money',
-          ],
+          articleSection: 'Trade Examples',
+          keywords: 'trading strategy',
+          inLanguage: 'en',
         },
       ],
     };
@@ -305,18 +294,18 @@ export class HomeEnBlogSixtyFourComponent {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/en#person',
+      '@id': 'https://arapov.trade/#person',
       name: 'Igor Arapov',
       alternateName: [
         'Ігор Арапов',
-        'Арапов Игорь',
-        'I. Arapov',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/en',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -331,12 +320,12 @@ export class HomeEnBlogSixtyFourComponent {
         'https://t.me/ArapovTrade',
       ],
       jobTitle: [
-        'Independent researcher,',
+        'Independent researcher',
         'trader',
         'author and founder of arapov.trade',
       ],
       description:
-        'Independent researcher, practicing trader, author of books on trading and scientific publications. Specializes in trading psychology and cognitive biases in financial markets.',
+        'Independent researcher, practising trader, author of trading books and scientific publications. Specialises in trading psychology and cognitive biases in financial markets.',
     };
 
     this.addJsonLdSchema(data);
@@ -349,46 +338,46 @@ export class HomeEnBlogSixtyFourComponent {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
-      '@id': 'https://arapov.trade/en/freestudying/practic#faq',
+      inLanguage: 'en',
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'What makes a trading system profitable?',
+          name: 'What is a trading strategy?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Positive expectancy — when your average win multiplied by win rate exceeds your average loss multiplied by loss rate. A system with 40% winners can be highly profitable if winners are 3x larger than losers.',
+            text: "A trading strategy is a pre-built set of clear rules that govern a trader's actions at every stage, from entering a trade to exiting it. It removes improvisation, emotional swings and subjectivity.",
           },
         },
         {
           '@type': 'Question',
-          name: 'Why is the 3:1 reward-to-risk ratio so important?',
+          name: 'Why does trading without a strategy lead to losses?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: "Math: with 3:1 ratio, you only need 25% winners to break even. At 40% winners, you're solidly profitable. This ratio provides a buffer against random variance and ensures long-term edge despite losing streaks.",
+            text: 'Because without rules, trading becomes a game of chance: commissions, the spread and emotional decisions constantly work against you, and unchecked risk eats the account. The majority of traders without a system and risk control lose their account.',
           },
         },
         {
           '@type': 'Question',
-          name: 'How do you identify a false breakout?',
+          name: 'What is the 3-to-1 rule in trading?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Key signs: price pierces a level on high volume but fails to close beyond it, forms a rejection candle (pin bar), then produces an engulfing pattern in opposite direction. This sequence indicates Smart Money trapped retail traders.',
+            text: 'It means that for every 1 dollar of risk you build in a potential of at least 3 dollars of profit, so the distance to the target is three times the distance to the stop-loss. If a setup does not offer that ratio, the trade is skipped.',
           },
         },
         {
           '@type': 'Question',
-          name: 'When should you skip a trade even with a valid signal?',
+          name: 'What is a false breakout of a level?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: "When the distance to target doesn't provide minimum 3:1 ratio. A perfect setup with poor risk-reward is a losing proposition over time. Discipline means knowing when NOT to trade as much as when to trade.",
+            text: 'It is an attempt to push price beyond a level that fails and quickly returns, often on raised volume, knocking out stops and pulling in breakout orders. It frequently marks the point where Smart Money grabs liquidity before a move in the opposite direction.',
           },
         },
         {
           '@type': 'Question',
-          name: 'How many trades are needed to validate a system?',
+          name: 'What WinRate is considered workable for a trading system?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: "Minimum 50 trades for basic statistics, ideally 100+. Smaller samples are dominated by random variance. This is why demo trading before going live isn't optional — it's essential for system validation.",
+            text: 'A win rate around 60 to 63 percent is classic when working with levels, but the figure alone means little. What matters is the win rate together with the profit factor, about 1.8 to 2 or higher after commissions, which gives a positive expectation over the long run.',
           },
         },
       ],
@@ -404,40 +393,40 @@ export class HomeEnBlogSixtyFourComponent {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      '@id': 'https://arapov.trade/en/freestudying/practic#howto',
-      name: 'False Breakout Entry Method',
+      inLanguage: 'en',
+      name: 'How to Find a Trade Entry with the Trading System',
       description:
-        'Step-by-step process for identifying and trading false breakouts at key levels.',
+        'A step-by-step algorithm for defining a sell entry at a resistance level by the rules of Price Action and Smart Money.',
       step: [
         {
           '@type': 'HowToStep',
-          position: 1,
-          name: 'Mark key level on higher timeframe',
-          text: 'On 4H chart, identify where price previously reversed — this becomes your zone of interest for potential trades.',
+          name: 'Define the level',
+          text: 'Draw the resistance range from the higher (x4) timeframe and mark it as the zone of interest.',
         },
         {
           '@type': 'HowToStep',
-          position: 2,
-          name: 'Watch price approach the zone',
-          text: 'As price returns to the level, look for early weakness signs: pin bars, declining momentum, volume divergence.',
+          name: 'Wait for a pin bar',
+          text: 'In the range of the level, wait for a pin bar as the first sign of buyer weakness and a shortage of demand.',
         },
         {
           '@type': 'HowToStep',
-          position: 3,
           name: 'Identify the false breakout',
-          text: 'Price pushes through level on high volume but fails to hold. This spike triggers stops and breakout orders — creating liquidity for Smart Money.',
+          text: 'Recognise an attempt to break the level on raised volume that gets no continuation and grabs liquidity.',
         },
         {
           '@type': 'HowToStep',
-          position: 4,
-          name: 'Wait for confirmation',
-          text: 'An engulfing candle confirms the false breakout. Entry triggers when price breaks the extreme of this confirmation candle.',
+          name: 'Enter on a bearish engulfing',
+          text: 'Open a sell trade on a break of the low of the false-breakout bar, by the bearish engulfing pattern.',
         },
         {
           '@type': 'HowToStep',
-          position: 5,
-          name: 'Set your orders',
-          text: 'Stop-loss beyond the false breakout high/low. Target at opposite level. Verify minimum 3:1 ratio before entering.',
+          name: 'Place the stop-loss',
+          text: 'Place a protective order beyond the top of the false-breakout bar, plus a couple of points for the exchange or broker commission.',
+        },
+        {
+          '@type': 'HowToStep',
+          name: 'Set the target and check 3-to-1',
+          text: 'The target sits at the opposite impulse level; take the trade only if the potential profit is at least three times the risk.',
         },
       ],
     };
@@ -453,65 +442,72 @@ export class HomeEnBlogSixtyFourComponent {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
       '@id': 'https://arapov.trade/en/freestudying/practic#terms',
-      name: 'Trading System Terminology',
+      inLanguage: 'en',
+      name: 'Trading strategy terms',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Trading System',
+          name: 'Trading strategy',
           description:
-            'Complete set of rules governing entries, exits, and position sizing.',
+            'A pre-built set of clear rules for entry, exit and risk control that replaces improvisation and emotion with logic and statistics.',
+          inDefinedTermSet:
+            'https://arapov.trade/en/freestudying/practic#terms',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Entry Point',
+          name: 'False breakout',
           description:
-            'Specific price and conditions where a trade is initiated.',
+            'An attempt to push price beyond a support or resistance level with no continuation, often on raised volume.',
+          inDefinedTermSet:
+            'https://arapov.trade/en/freestudying/practic#terms',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Stop-Loss',
+          name: 'Bearish engulfing',
           description:
-            'Protective order that exits a losing trade at predetermined price.',
+            'A Price Action pattern showing seller dominance; an entry signal for a sell on a break of the false-breakout bar low.',
+          inDefinedTermSet:
+            'https://arapov.trade/en/freestudying/practic#terms',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Take-Profit',
+          name: '3-to-1 rule',
           description:
-            'Order that automatically locks in gains when target is reached.',
+            'A condition where for every dollar of risk you build in a potential of at least 3 dollars of profit.',
+          inDefinedTermSet:
+            'https://arapov.trade/en/freestudying/practic#terms',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'False Breakout',
+          name: 'Win rate',
           description:
-            'Price move beyond a level that fails to sustain and reverses.',
+            'The share of winning trades in a trading system; when working with levels it is usually around 60 to 65 percent.',
+          inDefinedTermSet:
+            'https://arapov.trade/en/freestudying/practic#terms',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Pin Bar',
+          name: 'Profit factor',
           description:
-            'Candle with long wick and small body showing price rejection.',
+            'The ratio of total profit to total loss; a minimally sufficient figure is 1.8 to 2 once commissions are accounted for.',
+          inDefinedTermSet:
+            'https://arapov.trade/en/freestudying/practic#terms',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Engulfing Pattern',
+          name: 'Maximal drawdown',
           description:
-            "Two-candle pattern where second candle completely covers first candle's body.",
+            'The deepest fall of the account over a period; a stop-loss limits its depth but does not cancel it.',
+          inDefinedTermSet:
+            'https://arapov.trade/en/freestudying/practic#terms',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Win Rate',
-          description: 'Percentage of profitable trades in a trading system.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Profit Factor',
+          name: 'Money management',
           description:
-            'Ratio of gross profit to gross loss — measures system efficiency.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Drawdown',
-          description: 'Maximum peak-to-trough decline in account equity.',
+            'Capital management: what percentage of the account to use in a trade and how to carry risk from trade to trade.',
+          inDefinedTermSet:
+            'https://arapov.trade/en/freestudying/practic#terms',
         },
       ],
     };

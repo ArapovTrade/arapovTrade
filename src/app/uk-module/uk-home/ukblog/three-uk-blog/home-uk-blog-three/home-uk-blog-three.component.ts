@@ -57,7 +57,7 @@ export class HomeUkBlogThreeComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Волатильність ринку: вимірювання та торгові стратегії | Arapov.trade',
+      'Ордер-блок (Order Block) у трейдингу | Arapov.trade',
     );
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
@@ -65,15 +65,12 @@ export class HomeUkBlogThreeComponent implements OnInit {
     this.meta.updateTag({
       name: 'description',
       content:
-        'Волатильність ринку: повний посібник з вимірювання цінових коливань за допомогою індикатора ATR та практичного застосування в торгівлі',
+        'Що таке ордер-блок, як визначити зону, де набирав позицію великий гравець, які бувають види Order Block і як їх торгувати.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-03-31' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-06-04' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/volatility44.webp',
-    });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
+
     this.gerRandom();
   }
   randomArticleRus: any = [];
@@ -278,28 +275,35 @@ export class HomeUkBlogThreeComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          headline: 'Волатильність ринку: вимірювання та торгові стратегії',
+          headline: 'Ордер блок у трейдингу: що це і як торгувати order block',
           description:
-            'Повний посібник з волатильності фінансових ринків: типи волатильності, індикатор ATR, практичне застосування для управління ризиками',
-          image: 'https://arapov.trade/assets/img/content/volatility1.webp',
-          datePublished: '2025-06-04T00:00:00Z',
-          dateModified: '2026-06-04T00:00:00Z',
-          author: {
-            '@id': 'https://arapov.trade/uk#person',
-          },
+            'Що таке ордер-блок, як визначити зону, де набирав позицію великий гравець, які бувають види Order Block і як їх торгувати.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'Arapov.trade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
             url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://arapov.trade/uk/freestudying/volatility',
+            '@id': 'https://arapov.trade/uk/freestudying/order-block',
           },
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/orderblockintrading.webp',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Smart Money',
+          keywords: 'ордер блок',
+          inLanguage: 'uk',
         },
       ],
     };
@@ -314,18 +318,18 @@ export class HomeUkBlogThreeComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/uk#person',
-      name: 'Ігор Арапов',
+      '@id': 'https://arapov.trade/#person',
+      name: 'Igor Arapov',
       alternateName: [
-        'Igor Arapov',
-        'Арапов Игорь',
-        'I. Arapov',
+        'Ігор Арапов',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/uk',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -361,42 +365,42 @@ export class HomeUkBlogThreeComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'Що таке волатильність у трейдингу?',
+          name: 'Що таке ордер блок у трейдингу простими словами?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Волатильність — це ступінь мінливості ціни активу за визначений період. Висока волатильність означає значні цінові коливання, низька — стабільну поведінку ціни.',
+            text: 'Це цінова зона, де великий капітал набрав позицію перед сильним рухом, зазвичай остання протилежна свічка прямо перед імпульсом. По суті це слід розумних грошей на графіку. Ціна часто повертається до цієї зони, тому її беруть як орієнтир для входу.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Як працює індикатор ATR?',
+          name: 'Як визначити бичачий ордер блок на графіку?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'ATR (Average True Range) вимірює середній істинний діапазон цінових коливань, враховуючи гепи. Істинний діапазон — максимум з різниці максиму|ÿму-мініму|ÿму та відхилень від попереднього закриття.',
+            text: 'Знайдіть сильний рух угору, що зламав структуру, і позначте останню ведмежу свічку прямо перед цим ривком. Ця свічка і є бичачий ордер блок, зона попиту, куди ціна може повернутись. Краще, коли вона стоїть на сильному рівні й підкріплена обсягом.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Як використовувати ATR для стоп-лосу?',
+          name: 'Чим ордер блок відрізняється від рівня підтримки?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Типовий підхід — встановлення стоп-лосу на відстані 1.5-3 значень ATR від точки входу. Це дозволяє врахувати поточну волатильність та уникнути передчасного спрацювання стопу.',
+            text: 'Звичайний рівень часто психологічний або історичний, це просто лінія на графіку. Ордер блок привʼязаний до реальної активності великого капіталу і є конкретною зоною, а не рискою. Тому він точніший за голий рівень, але потребує підтвердження обсягом.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Чим відрізняється історична волатильність від імпліцитної?',
+          name: 'Чим ордер блок відрізняється від імбалансу (FVG)?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Історична волатильність розраховується за минулими цінами, імпліцитна — витягується з цін опціонів та відображає очікування ринку щодо майбутніх коливань.',
+            text: 'Ордер блок це свічка або зона, де великий капітал набрав позицію. Імбаланс, або FVG, це ціновий розрив між свічками, який ринок зазвичай прагне заповнити. Їх часто беруть разом: блок показує зону інтересу, а імбаланс поруч підсилює її.',
           },
         },
         {
           '@type': 'Question',
-          name: 'На якому ринку найвища волатильність?',
+          name: 'Де ставити стоп-лосс при торгівлі від ордер блоку?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Криптовалютний ринок відрізняється найвищою волатильністю — денні коливання 10-20% не рідкість. Форекс відносно стабільний, фондовий ринок демонструє секторальну диференціацію.',
+            text: 'За дальню межу ордер блоку, за його екстремум. Якщо ціна туди дійшла, зона не втрималась і сценарій скасовано. Вхід усередині зони якраз і дає короткий стоп, а ціль ставлять на наступному рівні зі співвідношенням ризику до прибутку від 1:3.',
           },
         },
       ],
@@ -412,39 +416,28 @@ export class HomeUkBlogThreeComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'Як застосовувати ATR у торгівлі',
+      '@id': 'https://arapov.trade/uk/freestudying/order-block#howto',
+      name: 'Як розібратись і застосувати: ордер блок у трейдингу',
       description:
-        'Покрокове керівництво з використання індикатора ATR для управління ризиками та визначення торгових параметрів',
+        'Покроковий розбір теми та її практичне застосування в торгівлі',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Налаштуйте ATR на графіку',
-          text: 'Додайте індикатор ATR на графік з періодом 14. Для короткострокової торгівлі використовуйте менший період, для довгострокової — більший.',
+          name: 'Що таке ордер блок у трейдингу',
+          text: 'Ордер блок — це цінова зона, де великий капітал, інституціонали та маркетмейкери, набрав значну позицію перед сильним імпульсним рухом.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Визначте поточний рівень волатильності',
-          text: 'Порівняйте поточне значення ATR з історичним середнім. Високе значення вказує на активний ринок, низьке — на консолідацію.',
+          name: 'Як знайти ордер блок на графіку',
+          text: 'Алгоритм простий, але потребує практики.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Розрахуйте стоп-лос',
-          text: 'Встановіть стоп-лос на відстані 1.5-3 ATR від точки входу. Використовуйте більший множник для волатильних інструментів.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 4,
-          name: 'Визначте цільовий прибуток',
-          text: 'Встановіть тейк-профіт як кратне ATR — зазвичай 2-4 значення від точки входу залежно від стратегії.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 5,
-          name: 'Розрахуйте розмір позиції',
-          text: 'Нормалізуйте ризик між інструментами: активи з високим ATR отримують менший розмір позиції для підтримання постійного грошового ризику.',
+          name: 'Як торгувати від ордер блоку: вхід, стоп-лосс і ціль',
+          text: 'Сама торгівля будується на поверненні.',
         },
       ],
     };
@@ -459,66 +452,13 @@ export class HomeUkBlogThreeComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Глосарій термінів волатильності',
+      name: 'Глосарій термінів статті',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Волатильність',
+          name: 'Ордер блок',
           description:
-            'Ступінь мінливості ціни активу, що відображає інтенсивність цінових коливань',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'ATR',
-          description:
-            'Average True Range — індикатор середнього істинного діапазону для вимірювання волатильності',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Істинний діапазон',
-          description:
-            'Максимальне значення з трьох величин: High-Low, |High-Close_prev|, |Low-Close_prev|',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Історична волатильність',
-          description:
-            'Волатильність, розрахована на основі минулих цінових даних',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Імпліцитна волатильність',
-          description:
-            'Очікувана волатильність, витягнута з цін опціонних контрактів',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'VIX',
-          description:
-            'Індекс волатильності, що вимірює очікування ринку опціонів на S&P 500',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Смуги Боллінджера',
-          description:
-            'Індикатор волатильності у вигляді каналу навколо ковзної середньої',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Стандартне відхилення',
-          description: 'Статистична міра розкиду значень відносно середнього',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Динамічний стоп-лос',
-          description:
-            'Захисний рівень, що адаптується до поточної волатильності ринку',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Режим волатильності',
-          description:
-            'Поточний стан ринку з точки зору інтенсивності цінових коливань',
+            'Ордер блок — це цінова зона, де великий капітал, інституціонали та маркетмейкери, набрав значну позицію перед сильним імпульсним рухом.',
         },
       ],
     };

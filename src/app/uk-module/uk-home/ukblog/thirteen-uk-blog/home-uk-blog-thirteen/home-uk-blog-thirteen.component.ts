@@ -28,7 +28,7 @@ export class HomeUkBlogThirteenComponent implements OnInit {
     private themeService: ThemeservService,
     private artickleServ: ArticlesService,
     private renderer: Renderer2,
-    @Inject(DOCUMENT) private document: Document
+    @Inject(DOCUMENT) private document: Document,
   ) {}
   private routerSubscription!: Subscription;
   private themeSubscription!: Subscription;
@@ -57,20 +57,18 @@ export class HomeUkBlogThirteenComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Хвилі Елліотта: Повний посібник з хвильового аналізу | Arapov.trade'
+      'Безстрокові ф’ючерси та маржинальна торгівля в крипті | Arapov.trade',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Хвилі Елліотта — повний посібник з хвильового аналізу для трейдерів. Імпульсні та корекційні хвилі, правила розмітки, практичне застосування з рівнями Фібоначчі.',
+        'Що таке безстрокові ф’ючерси, кредитне плече та маржинальна торгівля в крипті, до чого тут фандинг і чому велике плече веде до ліквідації.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-04-15' });  this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/wavesofelliott.webp',
-    });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
+
     this.gerRandom();
   }
   randomArticleRus: any = [];
@@ -87,7 +85,6 @@ export class HomeUkBlogThirteenComponent implements OnInit {
       title: 'Базовий курс',
       link: 'https://arapov.trade/uk/freestudying/freeeducation',
     },
-     
   ];
 
   onGroupChange(event: Event) {
@@ -157,7 +154,7 @@ export class HomeUkBlogThirteenComponent implements OnInit {
     // Показываем 5 случайных статей при фокусе, если инпут пуст
     if (!this.searchQuery) {
       const shuffled = [...this.artickleServ.ukrArtickles].sort(
-        () => Math.random() - 0.5
+        () => Math.random() - 0.5,
       );
       this.displayedArticles = shuffled.slice(0, this.maxResults);
     }
@@ -172,7 +169,7 @@ export class HomeUkBlogThirteenComponent implements OnInit {
   onSearchChange() {
     // Логика асинхронного поиска
     const filtered = this.artickleServ.ukrArtickles.filter((a) =>
-      a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase())
+      a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase()),
     );
     this.displayedArticles = filtered.slice(0, this.maxResults);
   }
@@ -194,7 +191,7 @@ export class HomeUkBlogThirteenComponent implements OnInit {
     const path: string =
       this.router.url.split('/')[this.router.url.split('/').length - 1];
     let index = this.artickleServ.ukrArtickles.findIndex(
-      (a) => a.linkUkr == path
+      (a) => a.linkUkr == path,
     );
 
     if (this.artickleServ.ukrArtickles.length - 1 == index) {
@@ -211,7 +208,7 @@ export class HomeUkBlogThirteenComponent implements OnInit {
     const path: string =
       this.router.url.split('/')[this.router.url.split('/').length - 1];
     let index = this.artickleServ.ukrArtickles.findIndex(
-      (a) => a.linkUkr == path
+      (a) => a.linkUkr == path,
     );
 
     if (index == 1) {
@@ -236,7 +233,7 @@ export class HomeUkBlogThirteenComponent implements OnInit {
     ];
 
     const scripts = this.document.querySelectorAll(
-      'script[type="application/ld+json"]'
+      'script[type="application/ld+json"]',
     );
 
     scripts.forEach((script) => {
@@ -249,7 +246,7 @@ export class HomeUkBlogThirteenComponent implements OnInit {
 
         const shouldRemove = candidates.some(
           (entry: any) =>
-            entry['@type'] && typesToRemove.includes(entry['@type'])
+            entry['@type'] && typesToRemove.includes(entry['@type']),
         );
 
         if (shouldRemove) {
@@ -277,39 +274,38 @@ export class HomeUkBlogThirteenComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          '@id': 'https://arapov.trade/uk/freestudying/wavesofelliott#article',
-          headline: 'Хвилі Елліотта: Повний посібник з хвильового аналізу',
+          headline:
+            'Безстрокові фʼючерси і маржа в крипті: що це, фандинг і як не зловити ліквідацію',
           description:
-            'Хвилі Елліотта — повний посібник з хвильового аналізу для трейдерів. Імпульсні та корекційні хвилі, правила розмітки, практичне застосування з рівнями Фібоначчі.',
-          image: {
-            '@type': 'ImageObject',
-            url: 'https://arapov.trade/assets/img/content/wavesofelliott.webp',
-            width: 1200,
-            height: 630,
-          },
-          author: {
-            '@id': 'https://arapov.trade/uk#person',
-          },
+            'Що таке безстрокові ф’ючерси, кредитне плече та маржинальна торгівля в крипті, до чого тут фандинг і чому велике плече веде до ліквідації.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            '@id': 'https://arapov.trade#organization',
-            name: 'Arapov.trade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
             url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
-              url: 'https://arapov.trade/assets/img/content/favicon.ico',
-
-              width: 300,
-              height: 60,
+              url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
-          datePublished: '2025-04-15T00:00:00Z',
-        dateModified: '2026-04-15T00:00:00Z',
-
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://arapov.trade/uk/freestudying/wavesofelliott',
+            '@id':
+              'https://arapov.trade/uk/freestudying/crypto-perpetuals-margin',
           },
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/crypto-perpetuals-margin.png',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Криптовалюта',
+          keywords:
+            'безстрокові фʼючерси, перпетуал, фандинг, кредитне плече, маржа, ліквідація, криптовалюти',
+          inLanguage: 'uk',
         },
       ],
     };
@@ -324,18 +320,18 @@ export class HomeUkBlogThirteenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/uk#person',
-      name: 'Ігор Арапов',
+      '@id': 'https://arapov.trade/#person',
+      name: 'Igor Arapov',
       alternateName: [
-        'Igor Arapov',
-              'Арапов Игорь',
-              'I. Arapov',
-              'Игорь Арапов',
-              'І. В. Арапов',
-              'Арапов Ігор',
-              'Arapov Igor',
+        'Ігор Арапов',
+        'Игорь Арапов',
+        'Арапов Игорь',
+        'Арапов Ігор',
+        'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/uk',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -347,9 +343,13 @@ export class HomeUkBlogThirteenComponent implements OnInit {
         'https://github.com/ArapovTrade',
         'https://ua.linkedin.com/in/arapovtrade',
         'https://www.youtube.com/@ArapovTrade',
-        'https://t.me/ArapovTrade'
+        'https://t.me/ArapovTrade',
       ],
-       jobTitle: ['Незалежний дослідник', 'трейдер', 'автор і засновник arapov.trade'],
+      jobTitle: [
+        'Незалежний дослідник',
+        'трейдер',
+        'автор і засновник arapov.trade',
+      ],
       description:
         'Незалежний дослідник, практикуючий трейдер, автор книг з трейдингу та наукових публікацій. Спеціалізується на психології трейдингу та когнітивних упередженнях на фінансових ринках.',
     };
@@ -364,46 +364,45 @@ export class HomeUkBlogThirteenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
-      '@id': 'https://arapov.trade/uk/freestudying/wavesofelliott#faq',
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'Що таке хвилі Елліотта?',
+          name: 'Що таке безстроковий фʼючерс простими словами?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: "Хвилі Елліотта — це метод технічного аналізу, що описує рух ринку у вигляді повторюваних хвильових циклів. Повний цикл складається з восьми хвиль: п'яти імпульсних у напрямку тренду та трьох корекційних проти нього. Теорія базується на масовій психології учасників ринку.",
+            text: 'Це контракт на ціну активу без дати експірації, який можна тримати скільки завгодно. У звичайного фʼючерса є строк, до якого його ціна сходиться зі спотом, а в безстрокового строку немає, і поряд зі спотом його тримає фандинг. Торгують такі контракти з плечем, тому головний ризик тут не сам інструмент, а розмір плеча.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Які основні правила хвиль Елліотта?',
+          name: 'Що таке фандинг (funding rate)?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Три фундаментальні правила: хвиля 2 ніколи не опускається нижче початку хвилі 1; хвиля 3 ніколи не є найкоротшою серед імпульсних хвиль; хвиля 4 не перетинає цінову територію хвилі 1. Порушення цих правил вказує на помилку в розмітці.',
+            text: 'Фандинг це періодичні виплати між трейдерами, найчастіше кожні вісім годин. Коли перпетуал торгується дорожче спота, лонги платять шортам, коли дешевше, навпаки. Це не комісія біржі, а розрахунок між самими сторонами, який тримає ціну контракту поряд з ринком.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Як застосовувати рівні Фібоначчі з хвилями Елліотта?',
+          name: 'За якою ціною настає ліквідація?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Рівні 38,2%, 50%, 61,8% визначають глибину корекційних хвиль. Розширення 161,8% та 261,8% вказують цілі імпульсних хвиль. Третя хвиля часто досягає 161,8% від довжини першої хвилі. Збіг хвильових цілей з рівнями Фібоначчі підсилює торговий сигнал.',
+            text: 'Залежить від плеча. Грубо, при плечі x100 вистачає руху близько одного відсотка проти вас, при x50 близько двох, при x20 близько пʼяти. Що вище плече, то ближче рівень ліквідації до ціни входу і то легше вибити позицію звичайною ринковою хитавицею.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Яка хвиля найприбутковіша для торгівлі?',
+          name: 'Чим відрізняється ізольована і крос-маржа?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Третя хвиля є найпотужнішою та найприбутковішою для торгівлі. Вона ніколи не буває найкоротшою і часто досягає 161,8-261,8% від першої хвилі. Вхід здійснюється після завершення другої корекційної хвилі, коли тренд уже підтверджений ринком.',
+            text: 'При ізольованій маржі під ризиком тільки застава конкретної позиції, і ліквідація зачепить лише її. При крос-маржі заставою служить весь баланс рахунку, і одна невдала угода здатна потягти за собою все. Новачку безпечніша ізольована: вона обмежує втрату однією угодою.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Які корекційні патерни існують у хвильовому аналізі?',
+          name: 'Яке плече використовувати новачку?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: "Основні корекційні патерни: зигзаг — різка корекція ABC; флет — горизонтальний рух з рівними хвилями; трикутник — п'ять хвиль (A-E), що звужують діапазон. Кожен патерн вказує на різну силу корекції та допомагає визначити момент її завершення.",
+            text: 'Що менше, то далі рівень ліквідації і то спокійніше переживаються звичайні коливання. Високе плече не підвищує шанс заробити, воно лише присуває ліквідацію впритул до входу. Я тримаю плече низьким і ризик на угоду невеликим, у районі одного-двох відсотків від депозиту, і завжди зі стопом.',
           },
         },
       ],
@@ -419,40 +418,35 @@ export class HomeUkBlogThirteenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      '@id': 'https://arapov.trade/uk/freestudying/wavesofelliott#howto',
-      name: 'Як застосовувати хвилі Елліотта в трейдингу',
+      '@id':
+        'https://arapov.trade/uk/freestudying/crypto-perpetuals-margin#howto',
+      name: 'Як розібратись і застосувати: безстрокові фʼючерси і маржа в крипті та як не зловити ліквідацію',
       description:
-        'Покрокове керівництво із застосування хвильового аналізу Елліотта для пошуку торгових можливостей на фінансових ринках.',
+        'Покроковий розбір теми та її практичне застосування в торгівлі',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Визначте глобальний тренд',
-          text: 'Почніть аналіз з денного або тижневого графіка. Знайдіть послідовність імпульсних хвиль (1-2-3-4-5), що вказує напрямок основного тренду. Визначте, чи знаходиться ринок в імпульсній або корекційній фазі.',
+          name: 'Зрозумійте, що таке безстроковий фʼючерс і чому в нього немає строку',
+          text: 'Безстроковий фʼючерс — це похідний контракт на актив без дати експірації, який трейдер може утримувати необмежений час.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Розмітьте хвильову структуру',
-          text: 'Позначте хвилі на графіку, дотримуючись трьох основних правил: хвиля 2 не нижче початку хвилі 1, хвиля 3 не найкоротша, хвиля 4 не перетинає зону хвилі 1. Використовуйте рівні Фібоначчі для перевірки пропорцій.',
+          name: 'Розберіться, як фандинг тримає ціну перпетуала поряд зі спотом',
+          text: 'Фандинг — це періодичні виплати між сторонами угоди, які біржа розраховує кілька разів на день, найчастіше кожні вісім годин, а на частині бірж і частіше.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Знайдіть точку входу',
-          text: "Шукайте вхід після завершення корекційних хвиль. Оптимальні точки: кінець хвилі 2 для участі в третій хвилі, кінець хвилі 4 для п'ятої хвилі, завершення корекції ABC для нового імпульсного циклу.",
+          name: 'Зрозумійте, як маржа і плече множать і прибуток, і збиток',
+          text: 'Маржинальна торгівля це угоди на позикові кошти біржі, де ваші власні гроші служать заставою, її й називають маржею.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Встановіть захисні ордери',
-          text: 'Розмістіть стоп-лос за початком поточної хвилі або за ключовим рівнем Фібоначчі. Розрахуйте розмір позиції так, щоб ризик не перевищував 1-2% від депозиту. Забезпечте співвідношення ризику до прибутку мінімум 1:2.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 5,
-          name: 'Визначте ціль та керуйте позицією',
-          text: "Розрахуйте ціль через розширення Фібоначчі: 161,8% для третьої хвилі, довжина хвилі 1 для п'ятої хвилі. Частково фіксуйте прибуток на проміжних рівнях. Переміщуйте стоп-лос у беззбитковість після руху у вашу сторону.",
+          name: 'Навчіться рахувати ліквідацію і тримати її на відстані',
+          text: 'Ліквідація — це примусове закриття позиції біржею, коли застави перестає вистачати для підтримання відкритої угоди з плечем.',
         },
       ],
     };
@@ -467,69 +461,25 @@ export class HomeUkBlogThirteenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      '@id': 'https://arapov.trade/uk/freestudying/wavesofelliott#glossary',
-      name: 'Глосарій термінів хвильового аналізу',
-      description: 'Ключові терміни та визначення теорії хвиль Елліотта',
+      name: 'Глосарій термінів статті',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Імпульсна хвиля',
+          name: 'Безстроковий фʼючерс',
           description:
-            'Хвиля, що рухається в напрямку основного тренду. Імпульсні хвилі позначаються цифрами 1, 3, 5 та формують основний трендовий рух ринку.',
+            'Безстроковий фʼючерс — це похідний контракт на актив без дати експірації, який трейдер може утримувати необмежений час.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Корекційна хвиля',
+          name: 'Фандинг',
           description:
-            'Хвиля, спрямована проти основного тренду. Корекційні хвилі позначаються цифрами 2, 4 та літерами A, B, C, представляючи відкати в трендовому русі.',
+            'Фандинг — це періодичні виплати між сторонами угоди, які біржа розраховує кілька разів на день, найчастіше кожні вісім годин.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Хвильовий цикл',
+          name: 'Ліквідація',
           description:
-            "Повна структура з восьми хвиль: п'яти імпульсних та трьох корекційних. Кожен цикл відображає завершену фазу ринкового руху.",
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Зигзаг',
-          description:
-            'Корекційний патерн з різкою структурою ABC, де хвиля C зазвичай дорівнює або перевищує хвилю A. Часто зустрічається в хвилях 2 та 4.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Флет',
-          description:
-            'Горизонтальний корекційний патерн, де хвилі A, B, C мають приблизно рівну довжину. Вказує на баланс сил між покупцями та продавцями.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Трикутник',
-          description:
-            "Корекційний патерн з п'яти хвиль (A, B, C, D, E), що послідовно звужують ціновий діапазон. Передує сильному руху в напрямку тренду.",
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Фрактальність',
-          description:
-            'Властивість хвиль Елліотта, при якій кожна хвиля старшого порядку містить повний хвильовий цикл меншого масштабу.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Розширення Фібоначчі',
-          description:
-            "Інструмент для прогнозування цілей імпульсних хвиль. Рівні 161,8% та 261,8% визначають потенційні точки завершення третьої та п'ятої хвиль.",
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Третя хвиля',
-          description:
-            'Найпотужніша та найдовша хвиля в імпульсному циклі. Ніколи не буває найкоротшою серед хвиль 1, 3, 5. Характеризується максимальними обсягами торгів.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Хвильова розмітка',
-          description:
-            'Процес ідентифікації та позначення хвиль на ціновому графіку згідно з правилами теорії Елліотта. Вимагає дотримання трьох фундаментальних правил.',
+            'Ліквідація — це примусове закриття позиції біржею, коли застави перестає вистачати для підтримання відкритої угоди з плечем.',
         },
       ],
     };

@@ -54,22 +54,16 @@ export class HomeEnBlogFourComponent implements OnInit {
     this.grr = this.artickleServ.selectedGroups;
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
-    this.titleService.setTitle(
-      'Margin Trading Without Losses: How to Avoid Losses | ArapovTrade',
-    );
+    this.titleService.setTitle('Smart Money Concept (SMC) | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Learn how to avoid losses in margin trading. Risk management, leverage, stop-losses, trading psychology and proven strategies.',
+        'What the Smart Money Concept is: market structure, liquidity, Order Blocks and FVG. How big players trade and how to read their footprints.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Ihor Arapov' });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-24' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/reasonfordepositeloose.png',
-    });
+
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
 
     this.gerRandom();
   }
@@ -257,35 +251,35 @@ export class HomeEnBlogFourComponent implements OnInit {
         {
           '@type': 'Article',
           headline:
-            'Margin Trading Without Losses: Complete Risk Management Guide',
+            'Smart Money: The Complete Guide to the Smart Money Concept in Trading',
           description:
-            'Comprehensive guide to avoiding losses in margin trading. Capital management, trading psychology, technical tools and proven strategies.',
-          author: {
-            '@id': 'https://arapov.trade/en#person',
-          },
+            'What the Smart Money Concept is: market structure, liquidity, Order Blocks and FVG. How big players trade and how to read their footprints.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'ArapovTrade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
             url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
-          datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://arapov.trade/en/freestudying/avoidlosingmoney',
+            '@id': 'https://arapov.trade/en/freestudying/smart-money-guide',
           },
           image: {
             '@type': 'ImageObject',
-            url: 'https://arapov.trade/assets/img/content/reasonfordepositeloose.png',
+            url: 'https://arapov.trade/assets/img/content/smartmoneyconceptsguide.webp',
             width: 1200,
             height: 630,
           },
-          articleSection: 'Risk Management',
-          keywords: 'margin trading, leverage, risk management, stop-loss',
+          articleSection: 'Smart Money',
+          keywords:
+            'Smart Money, smart money concept, stop hunting, false breakout, smart money traps, order block, liquidity, SMC, volume analysis',
           inLanguage: 'en',
         },
       ],
@@ -301,18 +295,18 @@ export class HomeEnBlogFourComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/en#person',
+      '@id': 'https://arapov.trade/#person',
       name: 'Igor Arapov',
       alternateName: [
         'Ігор Арапов',
-        'Арапов Игорь',
-        'I. Arapov',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/en',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -327,12 +321,12 @@ export class HomeEnBlogFourComponent implements OnInit {
         'https://t.me/ArapovTrade',
       ],
       jobTitle: [
-        'Independent researcher,',
-        'trader',
-        'author and founder of arapov.trade',
+        'Independent researcher',
+        'Trader',
+        'Author and founder of arapov.trade',
       ],
       description:
-        'Independent researcher, practicing trader, author of books on trading and scientific publications. Specializes in trading psychology and cognitive biases in financial markets.',
+        'Independent researcher, practising trader, author of trading books and scientific publications. Specialises in trading psychology and cognitive biases in financial markets.',
     };
 
     this.addJsonLdSchema(data);
@@ -348,42 +342,50 @@ export class HomeEnBlogFourComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'What is margin trading?',
+          name: 'Who are the Smart Money in simple terms?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Margin trading is a form of trading where a trader uses borrowed funds from a broker to open positions exceeding their own capital. Leverage increases both potential profit and loss risks.',
+            text: 'These are the large professional players: banks, funds and market makers. They hold big capital and access to information, so they are the ones who move price, while the retail crowd usually follows behind.',
           },
         },
         {
           '@type': 'Question',
-          name: 'What risk is acceptable per trade?',
+          name: 'How are Smart Money different from retail traders?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Recommended risk per trade is 1-2% of total deposit. This approach allows surviving a series of losing trades without critical damage to the trading account and preserves capital for future opportunities.',
+            text: 'By approach. The crowd trades on emotion, rushes and chases the move, buying high. Large players act coldly, to a plan and with patience, buying low and selling high.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Why is it important to use stop-losses?',
+          name: 'What is stop hunting?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Stop-loss automatically closes position when reaching a set loss level, protecting capital from significant losses. This helps maintain emotional control and avoid panic during unfavorable market movements.',
+            text: "It is a deliberate push of price toward zones where stop-losses are clustered, to trigger them and collect liquidity. Large players drive price into where the crowd's stops sit, take those orders and turn the market around.",
           },
         },
         {
           '@type': 'Question',
-          name: 'What leverage is recommended for beginners?',
+          name: 'How do you tell a false breakout from a real one?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Beginners are recommended to use minimum leverage of 1:2 or 1:3. High leverage significantly increases risks: at 1:20 leverage even a 5% price change can lead to complete position liquidation.',
+            text: 'The main tell is volume. A real breakout runs on rising volume and holds beyond the level, while a false one pops on thin volume and snaps back into the range fast. A quick reversal right after the spike is a clear trap.',
           },
         },
         {
           '@type': 'Question',
-          name: 'What is position liquidation?',
+          name: 'How do you see Smart Money on a chart?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: "Liquidation is forced position closure by the broker when losses reach a level where the deposit cannot cover them. To avoid liquidation, it's important to maintain sufficient margin and use stop-losses.",
+            text: 'By the footprints: abnormal volume spikes, liquidity taken through false breaks of a level, and the accumulation and distribution phases. The main tool here is volume analysis, without it any zone is guesswork.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How do you protect yourself from Smart Money manipulation?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Do not place your stop in the most obvious spots, tight behind an extreme or a round level, give it room. Do not enter at the moment of the false break, wait for the trap to play out and for price to confirm the reversal on volume.',
           },
         },
       ],
@@ -399,58 +401,70 @@ export class HomeEnBlogFourComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      '@id': 'https://arapov.trade/en/freestudying/avoidlosingmoney#howto',
-      name: 'How to Avoid Losses in Margin Trading',
+      '@id': 'https://arapov.trade/en/freestudying/smart-money-guide#howto',
+      name: 'How to read the market by the Smart Money concept',
       description:
-        'Step-by-step guide to risk management and capital protection in margin trading',
+        'A step-by-step walkthrough: who the smart money are, how they manipulate price, and how to follow their footprint in volume',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Define acceptable risk level',
-          text: 'Before starting trading, determine what portion of capital you are willing to lose. It is recommended to risk no more than 1-2% of deposit per trade and maximum 5% per day. This will protect your account from ruin during a series of losing trades.',
+          name: 'Understand who the Smart Money are',
+          text: 'Smart Money are large players with big capital and information: banks, funds and market makers who buy low and sell high.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Set stop-losses for each position',
-          text: 'Before opening a position, determine the stop-loss level below key support levels in advance. Stop-loss will automatically close the position at a loss, protecting your capital from further losses.',
+          name: 'See how they build a position',
+          text: 'Large capital splits the volume into small and iceberg orders, quietly accumulating at the bottom and distributing at the top by Wyckoff logic.',
         },
         {
           '@type': 'HowToStep',
+          name: 'Read the Wyckoff phases behind Smart Money',
+          text: 'Large capital works to a Wyckoff script: accumulation in a low range, a trend along the path of least resistance and distribution at the top; a decline often starts from a demand deficit, not from seller aggression.',
           position: 3,
-          name: 'Use conservative leverage',
-          text: 'Beginning traders are recommended to use 1:2 or 1:3 leverage. Experienced traders can increase leverage depending on asset volatility and market conditions, but avoid maximum leverage.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Conduct analysis before trading',
-          text: 'Study technical analysis (charts, support/resistance levels), fundamental analysis (news, events), and market sentiment. The more data you analyze, the more informed your decisions will be.',
+          name: 'Grasp the mechanic of control',
+          text: 'Control is working with the predictability of the crowd and with liquidity at obvious levels, not a secret conspiracy against you.',
         },
         {
           '@type': 'HowToStep',
           position: 5,
-          name: 'Diversify your portfolio',
-          text: 'Distribute capital across multiple assets and strategies. Never open all positions in one instrument — this will reduce the risk of total loss in case of unfavorable movement of one asset.',
+          name: 'Recognise traps and the false breakout',
+          text: "Stop hunting and the false breakout knock out the crowd's stops; volume is what separates a false break from a real one.",
         },
         {
           '@type': 'HowToStep',
           position: 6,
-          name: 'Reduce position size when approaching loss limit',
-          text: 'If you have lost 3-4% of deposit in a day, close remaining positions and stop trading. This will prevent emotional decisions and protect capital from critical losses.',
+          name: 'Look for the footprint on the chart',
+          text: 'A large player is given away by a volume spike, liquidity taken through a false break and an accumulation range, but without volume any zone is guesswork.',
         },
         {
           '@type': 'HowToStep',
+          name: 'Confirm the footprint by volume, not price alone',
+          text: 'Order blocks and imbalances on pure price are easy to fit after the fact; add exchange volume from CME as the real footprint of large capital, since elevated volume on a rise gives away a buyer, on a fall a seller.',
           position: 7,
-          name: 'Keep a trading journal',
-          text: 'Record each trade: date, asset, position size, entry reason, result. Analyze mistakes and successes to continuously improve your strategy.',
         },
         {
           '@type': 'HowToStep',
           position: 8,
-          name: 'Control emotions',
-          text: 'Margin trading requires psychological stability. Do not open positions in haste, do not increase leverage during losses, and follow your trading plan even if the market moves against you.',
+          name: 'Learn the SMC building blocks',
+          text: 'Liquidity, the order block, the imbalance and structure (BOS and CHoCH) are the tools of the concept, but for a beginner structure and volume matter more.',
+        },
+        {
+          '@type': 'HowToStep',
+          name: 'Do not believe SMC myths and keep your risk',
+          text: "Manipulation is not a conspiracy against you but the large player's need for liquidity at clusters of stops; do not enter every zone in a row and always trade with a stop and a calculated risk per trade.",
+          position: 9,
+        },
+        {
+          '@type': 'HowToStep',
+          position: 10,
+          name: 'Enter behind the large player after the trap',
+          text: 'Find the impulse level, wait for the liquidity grab and the false break, and enter behind the large player with the stop beyond the false break at risk to reward from 1 to 3.',
         },
       ],
     };
@@ -465,69 +479,25 @@ export class HomeEnBlogFourComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Margin Trading Glossary',
-      description:
-        'Key terms and definitions related to margin trading and risk management',
+      name: 'Article glossary',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Margin Trading',
+          name: 'Smart Money',
           description:
-            "Trading using borrowed broker funds, allowing opening positions exceeding trader's own capital.",
+            'Large professional market participants who hold big capital and access to information unavailable to the ordinary trader; literally the money that moves the market.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Leverage',
+          name: 'Stop Hunting',
           description:
-            "Ratio of borrowed funds to trader's own capital. 1:10 leverage allows trading with 10 times the deposit amount.",
+            "A deliberate push of price toward zones where traders' stop-losses are clustered, to trigger those orders and use them as liquidity.",
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Margin',
+          name: 'Accumulation phase',
           description:
-            "Trader's own funds provided as collateral for opening a margin position.",
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Liquidation',
-          description:
-            'Forced position closure by broker when reaching critical loss level to protect borrowed funds.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Stop-Loss',
-          description:
-            'Protective order that automatically closes position when reaching a set loss level.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Take-Profit',
-          description:
-            'Order for automatic position closure when reaching target profit level.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Trailing Stop',
-          description:
-            'Dynamic stop-loss that automatically moves with price, locking in profit on reversal.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Risk Management',
-          description:
-            'System of risk control including position sizing, stop-loss placement and portfolio diversification.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Slippage',
-          description:
-            'Difference between expected and actual order execution price occurring during high volatility or low liquidity.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Margin Call',
-          description:
-            "Broker's request to deposit additional funds to maintain open positions when reaching critical loss level.",
+            'A range, usually after a long fall, in which large capital quietly builds a position from a frightened crowd selling at the bottom; a dull-looking band where the future move is set up.',
         },
       ],
     };

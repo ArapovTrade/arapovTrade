@@ -1,20 +1,28 @@
-import { Injectable, PLATFORM_ID, Inject } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
-import { Meta } from '@angular/platform-browser';
+import { Injectable, PLATFORM_ID, Inject , Renderer2, RendererFactory2} from '@angular/core';
+ 
+import { DOCUMENT } from '@angular/common'
 @Injectable({
   providedIn: 'root',
 })
 export class MetaservService {
+  private renderer: Renderer2;
   constructor(
-    private meta: Meta,
-    @Inject(PLATFORM_ID) private platformId: Object,
-  ) {}
+   @Inject(PLATFORM_ID) private platformId: Object,
+    @Inject(DOCUMENT) private document: Document,
+    rendererFactory: RendererFactory2,
+  ) {this.renderer = rendererFactory.createRenderer(null, null);}
+
+  
+
+
+
 
   addOrganizationSchema() {
     const schema = {
       '@context': 'https://schema.org',
       '@type': 'Organization',
-      name: 'Arapov Trade',
+      '@id': 'https://arapov.trade/#organization',          // ← связка с publisher статей
+      name: 'Arapov.Trade',                                  // ← единое имя (было 'Arapov Trade')
       alternateName: 'Навчання трейдингу від Ігоря Арапова',
       legalName: 'ФОП Арапов І.В.',
       taxID: '3314507171',
@@ -36,12 +44,7 @@ export class MetaservService {
         postalCode: '49130',
         addressCountry: 'UA',
       },
-      founder: {
-        '@type': 'Person',
-
-        name: 'Ігор Арапов',
-      },
-
+      founder: { '@id': 'https://arapov.trade/#person' },    // ← привязка к каноническому Person
       contactPoint: {
         '@type': 'ContactPoint',
         telephone: '+380502933075',
@@ -51,38 +54,25 @@ export class MetaservService {
       },
     };
 
-    if (isPlatformBrowser(this.platformId)) {
-      // Удаляем старые <meta name="schema">
-      const existingMeta = document.querySelectorAll('meta[name="schema"]');
-      existingMeta.forEach((meta) => meta.remove());
-
-      // Удаляем старые <script type="application/ld+json">
-      const existingScripts = document.querySelectorAll(
-        'script[type="application/ld+json"]',
-      );
-      existingScripts.forEach((script) => {
-        try {
-          const data = JSON.parse(script.textContent || '{}');
-          if (data['@type'] === 'Organization') {
-            script.remove();
-          }
-        } catch (e) {
-          // невалидный JSON игнорируем
+    // Снимаем старый Organization-узел, если он уже есть (и на сервере, и в браузере)
+    const existing = this.document.querySelectorAll(
+      'script[type="application/ld+json"]',
+    );
+    existing.forEach((script) => {
+      try {
+        const data = JSON.parse(script.textContent || '{}');
+        if (data['@type'] === 'Organization') {
+          this.renderer.removeChild(script.parentNode, script);
         }
-      });
+      } catch (e) {
+        /* невалидный JSON игнорируем */
+      }
+    });
 
-      // Добавляем новый <meta>
-      // this.meta.addTag({ name: 'schema', content: JSON.stringify(schema) });
-
-      // Добавляем новый <script>
-      const script = document.createElement('script');
-      script.type = 'application/ld+json';
-      script.text = JSON.stringify(schema);
-      document.head.appendChild(script);
-    } else {
-      // На сервере просто добавляем meta
-      this.meta.removeTag('name="schema"'); // удаляем старый, если есть
-      this.meta.addTag({ name: 'schema', content: JSON.stringify(schema) });
-    }
+    // Выводим настоящий JSON-LD <script> ВСЕГДА — и на сервере (SSG), и в браузере
+    const script = this.renderer.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(schema);
+    this.renderer.appendChild(this.document.head, script);
   }
 }

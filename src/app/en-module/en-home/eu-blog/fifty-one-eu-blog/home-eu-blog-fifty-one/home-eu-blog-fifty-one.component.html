@@ -6,93 +6,414 @@
           <div class="m-right hero-section"></div>
           <div class="free-courses_main-container">
             <main lang="en">
-             <header>
-  <h1>Candlestick Patterns Explained for Beginners</h1>
-</header>
-<article>
-  <p>Candlestick patterns are shapes formed by one or more candles on a price chart, such as the pin bar, the engulfing and the inside bar, that traders read as clues about whether buyers or sellers are in control. By themselves they are weak signals, with a hit rate close to 50/50. They begin to carry real weight only when they sit on a strong level and are confirmed by volume.</p>
+              <article>
+                <h1>
+                  The ATR Indicator in Trading: Volatility and Locking In Profit
+                </h1>
 
-  <p>I use these patterns every single day, but never on their own. I stopped using indicators long ago and watch only price and volume, and I have traded that way since 2013. The trap with candlestick patterns is the one most guides stay quiet about: people enter on a pretty candle alone. Let's go through which patterns are actually worth knowing and how to read them as a system rather than a guessing game with pictures.</p>
+                <p>
+                  ATR measures one thing: how widely price travels over a chosen
+                  period. It will tell you nothing about direction, and waiting
+                  for buy-sell signals from it is pointless. What it does hand
+                  you beautifully is a stop that will not fly out on a flat
+                  patch, a rough read on position size, and a quick answer to
+                  whether the market is asleep right now or in a storm. At
+                  bottom it is a ruler for the range of a move, and in that role
+                  ATR is genuinely useful.
+                </p>
 
-  <p><strong><i>In this article we'll cover:</i></strong></p>
-  <ul>
-    <li>candlestick patterns are a way of reading the bare chart through the candles themselves, without indicators;</li>
-    <li>the core ones are simple: the pin bar, the engulfing, the inside bar, plus the pinocchio bar;</li>
-    <li>a bare pattern is just a picture, with a hit rate near 50/50;</li>
-    <li>a pattern comes alive on a strong level with volume, and then even a modest hit rate with good risk-reward pays off.</li>
-  </ul>
+                <p>
+                  I have tried a mountain of indicators in my time, and for
+                  entering a trade not one gave me anything worthwhile. I trade
+                  by levels and volume, and I cleared the colourful panel under
+                  the
+                  <a
+                    class="linkrefinto"
+                    href="https://arapov.trade/en/freestudying/chart-reading"
+                    >chart</a
+                  >
+                  long ago. Only ATR survived, and the reason is simple: it does
+                  not pose as a fortune-teller, it quietly counts the amplitude
+                  and hands back one number. That is already a working tool, not
+                  guesswork. So in my head ATR sits on the risk-management
+                  shelf, next to the stop and the position-size calculation, not
+                  among entry signals.
+                </p>
 
-  <p>First, what they are, which ones are worth knowing, and how to work with them.</p>
+                <p>
+                  <strong><i>In this article we'll cover:</i></strong>
+                </p>
+                <ul>
+                  <li>
+                    ATR shows the average range of a candle and stays silent
+                    about the direction of the move
+                  </li>
+                  <li>
+                    its main use is a stop the market does not sweep with
+                    ordinary noise, and even risk in money terms
+                  </li>
+                  <li>
+                    at its peaks ATR hints the move's fuel is running out, and
+                    that is a reason to think about the exit
+                  </li>
+                  <li>
+                    the ATR level reads the market's phase: compression before a
+                    thrust or expansion in the thick of a trend
+                  </li>
+                </ul>
 
-  <h2>What Are Candlestick Patterns</h2>
-  <p><dfn itemscope itemtype="https://schema.org/DefinedTerm"><span itemprop="name">Candlestick patterns</span></dfn> are formations read directly from the price candles, where decisions come from how price moves rather than from indicators like RSI, MACD or moving averages. Each candle already shows the open, close, high and low, so a pattern is just the market's own footprint. The idea is that price has already absorbed everything, so you look at price itself and not at tools derived from it.</p>
-  <p>That is the appeal of trading from <a class="linkrefinto" href="https://arapov.trade/en/freestudying/japanesecandle">Japanese candlesticks</a>. Indicators are math built from past prices, so by their nature they lag: while a moving average is still thinking about turning, price has already left. There is a hidden trap in the bare chart too, and most guides stay quiet about it, so we will get to it directly.</p>
+                <p>
+                  I'll start with what ATR actually counts and where its single
+                  number comes from.
+                </p>
 
-  <div class="flex">
-    <img class="pictureImg" loading="lazy" src="/assets/img/content/priceaction2.png" alt="Price Action candlestick patterns" />
-  </div>
+                <h2>
+                  What ATR (Average True Range) is and how it is calculated
+                </h2>
+                <p>
+                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
+                    ><span itemprop="name">ATR (Average True Range)</span></dfn
+                  >
+                  is an indicator of the average true range; it shows how much,
+                  on average, price travels over a period. Welles Wilder devised
+                  it back in 1978, and at its base lies the
+                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
+                    ><span itemprop="name">true range</span></dfn
+                  >
+                  of a single candle. You take the largest of three distances:
+                  the candle's own range from top to bottom, the gap from its
+                  high to the previous close, and from the low to that same
+                  close.
+                </p>
+                <p>
+                  The arithmetic after that is dull. These ranges are averaged
+                  over several candles, fourteen by default, and out comes a
+                  single number. It rises equally in a crash and in a rally,
+                  because it counts amplitude and simply ignores the side of the
+                  move. Let me show it plainly. Say a candle ran from 1.0850 to
+                  1.0880, that is thirty pips of visible range, but if the
+                  previous one closed lower, at 1.0840, then the true range is
+                  measured from that close, and it comes to forty pips. The
+                  averaging will take those real forty, not the visible thirty.
+                  That is why ATR is more honest than the plain height of a
+                  candle: it picks up the gaps between candles and does not
+                  understate the real range on which you will be hiding your
+                  stop. What indicators are in general and why most of them lag
+                  I cover in the piece on trading indicators.
+                </p>
+                <img
+                  src="https://arapov.trade/assets/img/content/atrindicator333.png"
+                  alt="The ATR indicator on a price chart with different periods"
+                  loading="lazy"
+                />
+                <p>
+                  <strong>In short: </strong>
+                  <i
+                    >ATR is the range of price averaged over fourteen candles;
+                    it runs high both in a rise and in a fall, so the side of
+                    the move cannot be read from it.</i
+                  >
+                </p>
 
-  <h2>The Core Patterns: Pin Bar, Engulfing, Inside Bar</h2>
-  <p>There are only a few base patterns and they are intuitive. The pin bar is a candle with a long tail and a small body, a trap candle in essence. The long tail shows one side was pushed out and ran out of steam. A bearish pin bar, tail on top, points to weak buyers and a possible sell; a bullish pin bar, tail underneath, points to weak sellers and a possible buy, with the stop hidden behind the candle itself.</p>
-  <p>The <a class="linkrefinto" href="https://arapov.trade/en/freestudying/engulfing">engulfing candle</a> is two candles, where the second body fully covers the first, showing control snapping to the other side. A bearish engulfing makes a useful entry after a false break of a level. The inside bar sits entirely inside the range of the previous, mother candle, usually a pause before continuation, though one printed right on a strong level can warn of a reversal instead. There is one more I like for its honest name, the pinocchio bar: the more the puppet lied, the longer his nose grew, and on the chart it is a candle with a deceptive spike and a long nose-tail. When it appears on a level, the market told a lie about direction, and a reversal usually follows. None of these, including the <a class="linkrefinto" href="https://arapov.trade/en/freestudying/pinbar">pin bar</a>, mean much away from a level.</p>
+                <h2>How to set a stop-loss with ATR</h2>
+                <p>
+                  Here ATR is irreplaceable, and here is why. The typical
+                  beginner's trouble with the stop-loss is that they set it by
+                  eye or right under a local low. The market sweeps such a stop
+                  with ordinary rocking and calmly goes where the trader was
+                  aiming all along. ATR shows the live range right now, so it
+                  makes sense to hide the stop beyond that range rather than
+                  inside it.
+                </p>
+                <p>
+                  On a quiet market the stop comes out tight, on a stormy one
+                  wide, and that is the right dependency: we adapt to the
+                  market, not to our own wish to risk a little less. From the
+                  same range it is handy to work out the position size too, so
+                  that risk in money stays even whether it is a sleepy session
+                  or a news surge. In my experience that is far healthier than
+                  the same stop in pips on every instrument. The concrete risk
+                  figures are everyone's own, and this is not an instruction
+                  aimed at you but my logic: first I work out a sensible stop by
+                  volatility, and only then the size of the trade. A rough
+                  example of the logic itself, with no tie to your money. If ATR
+                  on the working timeframe shows, say, forty pips, hiding a stop
+                  ten pips under the level is pointless; the very first ordinary
+                  candle will sweep it. A buffer of at least one full ATR beyond
+                  the level already takes the stop out of the zone of ordinary
+                  noise. On a longer timeframe ATR is larger and the stop
+                  naturally comes out wider, on a shorter one tighter, and that
+                  is not a whim but a reflection of how the asset breathes right
+                  now. How to count risk per trade off such a range I show in
+                  the
+                  <a
+                    class="linkrefinto"
+                    href="https://arapov.trade/en/freestudying/freeeducation#size"
+                    >course section on position sizing</a
+                  >.
+                </p>
+                <p>
+                  <strong>In short: </strong>
+                  <i
+                    >Hide the stop beyond the current ATR range, not under a
+                    local level: on a calm market it is tighter, on a stormy one
+                    wider, and noise stops sweeping it out.</i
+                  >
+                </p>
 
-  <div class="flex">
-    <img class="pictureImg" loading="lazy" src="/assets/img/content/priceaction3.png" alt="Engulfing pattern" />
-  </div>
+                <h2>ATR multipliers, position size, and the trailing stop</h2>
+                <p>
+                  The next question is how many ATRs the stop should be. A
+                  common convention is a multiple of the current ATR: roughly
+                  one and a half for fast intraday trades, two for swing trades,
+                  three for position trades held longer, the shorter you hold,
+                  the tighter the multiple. None of these numbers is sacred;
+                  they are a starting frame, and the real point is only that the
+                  stop reflects how the asset moves, not a round figure. The
+                  same range also fixes the position size. Knowing the stop
+                  distance in ATR and the money you are prepared to lose, the
+                  size falls out: a volatile instrument earns fewer units, a
+                  calm one more, and the loss in money stays the same across
+                  both. That volatility-normalising is how a serious book keeps
+                  one wild name from quietly dominating its risk.
+                </p>
+                <p>
+                  ATR also makes a clean trailing stop. You trail it a set
+                  number of ATRs, often three, below the highest point the move
+                  has reached, so it keeps wide room while volatility is high
+                  and tightens as it calms, and price has to genuinely turn to
+                  take you out, not just wobble. The three-ATR version has a
+                  name, the chandelier exit. I treat it like all of this: a
+                  frame for letting a winner run without sitting over it candle
+                  by candle, not a magic exit. The decision to stay or step
+                  aside still comes from price and volume at the level, while
+                  ATR only sets how much slack the stop is given. This is not a
+                  recipe for you, it is the order I keep myself: volatility
+                  first, then the stop, then the size.
+                </p>
+                <p>
+                  <strong>In short: </strong>
+                  <i
+                    >Set the stop at a multiple of ATR (about 1.5x intraday, 2x
+                    swing, 3x position) and let the same range fix the position
+                    size, so risk in money stays even across calm and wild
+                    instruments; trailing a few ATRs below the high (the
+                    chandelier exit) lets a winner run while volatility is
+                    wide.</i
+                  >
+                </p>
 
-  <h2>Why Patterns Are 50/50 Without Levels and Volume</h2>
-  <p>Here is the point worth reading the whole article for. A candlestick pattern on its own is close to a coin toss. Head and shoulders, triangles, flags, double tops and the pin bar too, all of them land near 50/50 in how often they fire, working about as often as they fail. Hunting them anywhere on the chart is self-deception. They come alive under two conditions: when they sit on a strong level and when they are confirmed by volume.</p>
-  <p>The logic is plain. A level is where the market's attention is concentrated and where big money actually sits, and volume shows whether there is force behind a move. A pin bar on a level without volume is just one side looking weak; a pin bar on a level with a volume spike is the footprint of large capital. That is the effort and result idea: a strong candle has to be backed by volume or it is worthless. And the money side is reassuring: with a risk-to-reward of 1:3 you only need about a third of trades to work and you still come out ahead over a run, so the goal is the quality of the entry, not guessing right every time.</p>
+                <h2>ATR at its highs: a cue to take profit</h2>
+                <p>
+                  One caveat straight away: reversals are not caught with ATR,
+                  the indicator is no good for that. But there is a pattern, and
+                  I use it. When ATR crawls up to its peaks, the market has
+                  already dragged hard and long in one direction. And since it
+                  does not go one way forever, at a peak of volatility it is
+                  sensible to prepare an exit or at least move the stop to
+                  break-even.
+                </p>
+                <p>
+                  So an extreme ATR value is not a command to close, but a
+                  reminder that the move's fuel is nearly burnt, and what waits
+                  ahead is either a reversal or a slide into a flat. Locking in
+                  profit at such peaks pays better over the distance than
+                  sitting and watching the market take it back. The logic here
+                  is the same as with volume: a sharp range at a peak is most
+                  often the work of those who entered last and on emotion, and
+                  when there is almost no one left to enter, the move simply has
+                  nothing to feed itself on. So I read an ATR extreme not as an
+                  invitation to jump into the surge but as a quiet bell that
+                  profit should come off the table. This is my observation from
+                  practice, not a law of the market, but you can check it on any
+                  chart in a couple of minutes.
+                </p>
+                <p>
+                  <strong>In short: </strong>
+                  <i
+                    >ATR at a peak says the move has run out of breath: not a
+                    signal to close at once, but a reason to pull the stop to
+                    break-even and prepare the exit.</i
+                  >
+                </p>
 
-  <div class="flex">
-    <img class="pictureImg" loading="lazy" src="/assets/img/content/priceaction1.png" alt="Support and resistance levels" />
-  </div>
+                <h2>
+                  Volatility compression and expansion: how ATR helps a trader
+                </h2>
+                <p>
+                  The market breathes. Volatility comes in waves: compression,
+                  then expansion, then compression again, and so around the loop
+                  without end. There is no eternal impulse, and no eternal flat
+                  either. This mechanic has not changed for as long as the
+                  market has existed, and ATR simply makes it visible to the
+                  eye.
+                </p>
+                <p>
+                  A trick from practice, on the open of the European session for
+                  instance. If ATR shows compression and price seems pulled
+                  tight like a spring, get ready for a false break past the
+                  level and work against it. Before a trend reversal there
+                  almost always comes compression first, and behind it a false
+                  break, when price is led past the level to collect other
+                  people's stops. It looks like this. The market tightens, ATR
+                  slides to its lows, the order book goes quiet, and to a
+                  beginner it seems nothing is happening. Then price sharply
+                  false breaks past the level, ATR jumps, the crowd flies in on
+                  the breakout, and at exactly that moment a large participant
+                  hands it their position while price turns back. The
+                  compression was the lull before that false break, and ATR lit
+                  it up in advance for those who knew how to look. This is the
+                  same volume logic I hold to in everything else: the market is
+                  moved not by an indicator but by a large participant, and ATR
+                  only highlights the moment when they are about to make their
+                  move. More on the nature of range itself is in the piece on
+                  market volatility, and a live breakdown of the indicator on
+                  the chart I posted in the
+                  <a class="linkrefinto" href="https://youtu.be/IcqI70fxvbg"
+                    >video on the ATR indicator and market volatility</a
+                  >.
+                </p>
+                <p>
+                  <strong>In short: </strong>
+                  <i
+                    >ATR compression before a session is a setup for a false
+                    break: price is led past the level to collect stops, and it
+                    pays to work against that break rather than after it.</i
+                  >
+                </p>
 
-  <h2>My Take: How I Actually Trade These</h2>
-  <p>I never look at a candle apart from the level it is standing on. My favorite is the pinocchio bar at a level, because a deceptive spike that gets rejected tells me the market just tried to trap someone, and that is information I can act on. In my experience the people who lose with these patterns are the ones chasing accuracy, trying to be right on every candle, instead of chasing the quality of a single entry.</p>
-  <p>I work these signals on the higher timeframes, the daily and four-hour, and I do not trade patterns on news, because the picture breaks there. The math of risk-to-reward does the heavy lifting, not the prettiness of the shape. I show how engulfing and the others behave specifically at levels, on live charts, here: <a class="linkrefinto" href="https://youtu.be/58JiqJj9Gs4">Japanese candlesticks, the 1-2-3 pattern and the pin bar</a>. This is how I act from my own practice, not personal advice for your account.</p>
+                <section>
+                  <h2>Frequently asked questions</h2>
+                  <mat-accordion>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      [expanded]="true"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >What does the ATR indicator show?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        The average range of price over a period, that is,
+                        volatility. It does not hint at the side of the move: an
+                        equally high value appears both in a rise and in a fall.
+                        It is a gauge of amplitude, not a signal to enter.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >How do you set a stop-loss with ATR?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        Hide the stop beyond the current range of the move, not
+                        inside it. On a calm market it comes out tighter, on a
+                        volatile one wider. Because of that, ordinary noise
+                        sweeps it noticeably less often than a stop placed by
+                        eye.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >What ATR multiplier should you use for the
+                          stop?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        A common frame is about 1.5 times ATR for fast intraday
+                        trades, 2 times for swing trades, and 3 times for
+                        position trades held longer: the shorter you hold, the
+                        tighter the multiple. None of these numbers is sacred;
+                        they are a starting point, and the real aim is only that
+                        the stop reflects how the asset moves rather than a
+                        round figure.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >How do you size a position with ATR?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        Take the money you are willing to lose on the trade and
+                        divide it by the stop distance in ATR. A volatile
+                        instrument then gets fewer units and a calm one more, so
+                        the loss in money stays the same across both. That keeps
+                        one wild instrument from dominating your risk.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >Can ATR tell you a reversal?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        Not directly; ATR is not a reversal indicator. But its
+                        high values often coincide with the climax of a move,
+                        and that is a reason to prepare to lock in or to wait
+                        for a shift into a flat, rather than a command to close
+                        this very second.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >What ATR period should you choose?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        Fourteen is the default. That period gives a smoothed
+                        read of the range and covers most tasks. It is worth
+                        changing only for a specific trading style, while a
+                        beginner does better staying on the standard value.
+                      </p>
+                    </mat-expansion-panel>
+                  </mat-accordion>
+                </section>
 
-  <section>
-    <h2>Frequently Asked Questions</h2>
-    <mat-accordion>
-      <mat-expansion-panel class="highlight-box owl_link-box" [expanded]="true">
-        <mat-expansion-panel-header>
-          <mat-panel-title>What are candlestick patterns?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>They are formations read straight from the price candles, with decisions based on how price moves rather than on indicators. The trader reads the candles and the levels instead of RSI or moving averages, looking at the market itself rather than math derived from past price.</p>
-      </mat-expansion-panel>
-      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
-        <mat-expansion-panel-header>
-          <mat-panel-title>What are the main candlestick patterns?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>The base ones are the pin bar, a candle with a long tail and a small body; the engulfing, where the second candle covers the first; and the inside bar, which sits inside the previous candle. The pinocchio bar, with a deceptive spike, belongs here too, along with classic shapes like head and shoulders or flags.</p>
-      </mat-expansion-panel>
-      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
-        <mat-expansion-panel-header>
-          <mat-panel-title>Do candlestick patterns actually work?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>On their own, near 50/50. A bare pattern is a picture and fires about as often as it fails. It starts to work when it forms on a strong level with volume behind it, and with good risk-to-reward you do not need a high hit rate to stay profitable.</p>
-      </mat-expansion-panel>
-      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
-        <mat-expansion-panel-header>
-          <mat-panel-title>How do you avoid false candlestick signals?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>Do not trade bare patterns. Take them only on strong levels and with volume confirmation, work the higher timeframes, and stay out on news. Keep a good risk-to-reward so a single wrong trade does not knock you out of profit over the run.</p>
-      </mat-expansion-panel>
-      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
-        <mat-expansion-panel-header>
-          <mat-panel-title>Pin bar or engulfing: what is the difference?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>A pin bar is a single candle with a long tail showing price rejection. An engulfing is two candles, where the second fully covers the first, showing control passing to the other side. Both carry weight only on a level, and both share the same logic of one side overpowering the other.</p>
-      </mat-expansion-panel>
-    </mat-accordion>
-  </section>
-
-  <section>
-    <h2>About the Author</h2>
-    <p>Author: Igor Arapov — independent researcher in the psychology of investment decisions and behavioral finance, practising trader since 2013, founder of arapov.trade, author of a trading book series (<a class="linkrefinto" href="https://openlibrary.org/authors/OL16073686A/Igor_Arapov">Open Library</a>), (<a class="linkrefinto" href="https://orcid.org/0009-0003-0430-778X">ORCID: 0009-0003-0430-778X</a>).</p>
-  </section>
-</article>
+                <section>
+                  <h2>About the Author</h2>
+                  <p>
+                    Author:
+                    <a class="linkrefinto" href="https://arapov.trade/en"
+                      >Igor Arapov</a
+                    >
+                    — independent researcher in the psychology of investment
+                    decisions and behavioral finance, practising trader since
+                    2013, founder of arapov.trade, author of a trading book
+                    series (<a
+                      class="linkrefinto"
+                      href="https://orcid.org/0009-0003-0430-778X"
+                      >ORCID: 0009-0003-0430-778X</a
+                    >).
+                  </p>
+                </section>
+              </article>
 
               <div
                 class=""

@@ -57,21 +57,18 @@ export class HomeRuBlogFiftyOneComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Price Action в трейдинге: полное руководство | ArapovTrade',
+      'Индикатор ATR: волатильность рынка | Arapov.trade',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Узнайте, как использовать метод Price Action в трейдинге. Свечные паттерны, уровни поддержки и сопротивления, стратегии торговли без индикаторов.',
+        'Что такое индикатор ATR (Average True Range), как он измеряет волатильность и как использовать его для расчёта стопов и размера позиции.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-04-17' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/candlestickpatterns.webp',
-    });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
+
     this.gerRandom();
   }
   randomArticleRus: any = [];
@@ -277,38 +274,41 @@ export class HomeRuBlogFiftyOneComponent implements OnInit {
   private setArticleSchema(): void {
     const data = {
       '@context': 'https://schema.org',
-      '@type': 'Article',
-      headline:
-        'Price Action в трейдинге: полное руководство по торговле без индикаторов',
-      description:
-        'Подробное руководство по методу Price Action. Свечные паттерны (пин-бар, поглощение, внутренний бар), уровни поддержки и сопротивления, стратегии торговли на чистых графиках.',
-      author: {
-        '@id': 'https://arapov.trade/ru#person',
-      },
-      publisher: {
-        '@type': 'Organization',
-        name: 'ArapovTrade',
-        url: 'https://arapov.trade',
-        logo: {
-          '@type': 'ImageObject',
-          url: 'https://arapov.trade/assets/img/favicon.ico',
+      '@graph': [
+        {
+          '@type': 'Article',
+          headline:
+            'Индикатор ATR в трейдинге: волатильность и фиксация прибыли',
+          description:
+            'Что такое индикатор ATR (Average True Range), как он измеряет волатильность и как использовать его для расчёта стопов и размера позиции.',
+          author: { '@id': 'https://arapov.trade/#person' },
+          publisher: {
+            '@type': 'Organization',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
+            logo: {
+              '@type': 'ImageObject',
+              url: 'https://arapov.trade/assets/img/favicon.ico',
+            },
+          },
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': 'https://arapov.trade/ru/freestudying/atr-indicator',
+          },
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/atrindicator.jpg',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Технический анализ',
+          keywords: 'atr (average true range)',
+          inLanguage: 'ru',
         },
-      },
-      datePublished: '2025-01-10T12:00:00+02:00',
-      dateModified: '2026-04-15T00:00:00Z',
-      mainEntityOfPage: {
-        '@type': 'WebPage',
-        '@id': 'https://arapov.trade/ru/freestudying/candlestickpatterns',
-      },
-      image: {
-        '@type': 'ImageObject',
-        url: 'https://arapov.trade/assets/img/content/priceaction1.png',
-        width: 1200,
-        height: 630,
-      },
-      articleSection: 'Технический анализ',
-      keywords: 'Price Action, свечные паттерны, пин-бар, поглощение, трейдинг',
-      inLanguage: 'ru',
+      ],
     };
 
     this.addJsonLdSchema(data);
@@ -321,18 +321,18 @@ export class HomeRuBlogFiftyOneComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/ru#person',
-      name: 'Игорь Арапов',
+      '@id': 'https://arapov.trade/#person',
+      name: 'Igor Arapov',
       alternateName: [
-        'Igor Arapov',
-        'Арапов Игорь',
-        'I. Arapov',
         'Ігор Арапов',
-        'І. В. Арапов',
+        'Игорь Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/ru',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -368,42 +368,34 @@ export class HomeRuBlogFiftyOneComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'Что такое Price Action в трейдинге?',
+          name: 'Что показывает индикатор ATR?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Price Action — это метод технического анализа, основанный на изучении движения цены без использования индикаторов. Трейдеры анализируют чистые ценовые графики, свечные паттерны, уровни поддержки и сопротивления для принятия торговых решений. Метод помогает понять психологию рынка и действия крупных игроков.',
+            text: 'Средний размах цены за период, то есть волатильность. Сторону движения он не подсказывает: одинаково высокое значение бывает и в росте, и в падении. Это измеритель амплитуды, а не сигнал на вход.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Какие основные паттерны Price Action существуют?',
+          name: 'Как поставить стоп-лосс по ATR?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Основные паттерны Price Action включают: пин-бар (свеча с длинной тенью, сигнализирующая о развороте), поглощение (свеча полностью перекрывает предыдущую), внутренний бар (свеча внутри диапазона предыдущей), доджи (нерешительность рынка). Эти паттерны наиболее эффективны на ключевых уровнях поддержки и сопротивления.',
+            text: 'Прятать стоп за текущий размах движения, а не внутри него, обычно на расстоянии от полутора до трёх ATR от уровня. На спокойном рынке он окажется уже, на волатильном шире. За счёт этого обычный шум снимает его заметно реже, чем стоп, выставленный на глаз.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Как определить уровни поддержки и сопротивления?',
+          name: 'Можно ли по ATR определить разворот?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Уровни поддержки и сопротивления определяются по историческим точкам, где цена многократно разворачивалась или консолидировалась. Поддержка — зона, где покупатели останавливают падение цены. Сопротивление — зона, где продавцы препятствуют росту. Значимые уровни подтверждаются множественными касаниями и высокими объёмами торгов.',
+            text: 'Напрямую нет, разворотным индикатором ATR не является. Но его высокие значения часто совпадают с кульминацией движения, и это повод готовить фиксацию или ждать перехода во флет, а не команда закрываться сию секунду.',
           },
         },
         {
           '@type': 'Question',
-          name: 'В чём преимущества торговли по Price Action?',
+          name: 'Какой период ATR выбрать?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Преимущества Price Action: простота анализа без сложных индикаторов, универсальность для любых рынков и таймфреймов, понимание психологии участников рынка, отсутствие запаздывания сигналов (в отличие от индикаторов), возможность видеть действия крупных игроков через свечные формации.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Как избежать ложных сигналов Price Action?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Для фильтрации ложных сигналов: торгуйте паттерны только на значимых уровнях поддержки/сопротивления, дожидайтесь закрытия сигнальной свечи, анализируйте контекст (тренд, волатильность), используйте подтверждение объёмами, избегайте торговли во время важных новостей, комбинируйте несколько таймфреймов для анализа.',
+            text: 'По умолчанию ставят четырнадцать. Такой период даёт сглаженную оценку размаха и закрывает большинство задач. Менять его стоит только под конкретный стиль торговли, а новичку проще остаться на стандартном значении.',
           },
         },
       ],
@@ -419,39 +411,34 @@ export class HomeRuBlogFiftyOneComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'Как торговать по методу Price Action',
+      '@id': 'https://arapov.trade/ru/freestudying/atr-indicator#howto',
+      name: 'Как разобраться и применять: Индикатор ATR в трейдинге: волатильность и фиксация прибыли',
       description:
-        'Пошаговое руководство по применению Price Action для прибыльной торговли на финансовых рынках.',
+        'Пошаговый разбор темы и её практическое применение в торговле',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Определите ключевые уровни на графике',
-          text: 'Найдите значимые зоны поддержки и сопротивления, где цена многократно разворачивалась в прошлом. Отмечайте уровни на старшем таймфрейме (дневной или недельный) для определения глобальной структуры рынка.',
+          name: 'Что такое ATR (Average True Range) — определение и расчёт',
+          text: 'ATR (Average True Range) — это индикатор среднего истинного диапазона, он показывает, на сколько в среднем гуляет цена за период.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Определите направление тренда',
-          text: 'Проанализируйте структуру максимумов и минимумов. Восходящий тренд характеризуется более высокими максимумами и минимумами. Нисходящий — более низкими. Торгуйте в направлении основного тренда для повышения вероятности успеха.',
+          name: 'Как использовать ATR для постановки стоп-лосса',
+          text: 'Тут ATR незаменим, и вот почему.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Дождитесь формирования паттерна',
-          text: 'Ищите свечные паттерны (пин-бар, поглощение, внутренний бар) на ключевых уровнях. Паттерн должен полностью сформироваться — дождитесь закрытия сигнальной свечи перед принятием решения о входе.',
+          name: 'ATR на максимуме: сигнал к фиксации позиции',
+          text: 'Сразу оговорюсь: разворот по ATR не ловят, для этого индикатор не годится.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Проанализируйте контекст сигнала',
-          text: 'Оцените рыночные условия: сила тренда, волатильность, новостной фон. Сигнал пин-бара в направлении тренда надёжнее контртрендового. Проверьте экономический календарь на наличие важных событий.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 5,
-          name: 'Установите стоп-лосс и цель прибыли',
-          text: 'Разместите стоп-лосс за экстремум паттерна или за ключевой уровень. Определите цель прибыли на ближайшем уровне сопротивления или поддержки. Соотношение риска к прибыли должно быть минимум 1:2.',
+          name: 'Фазы сжатия и расширения волатильности: как ATR помогает трейдеру',
+          text: 'Рынок дышит.',
         },
       ],
     };
@@ -466,69 +453,13 @@ export class HomeRuBlogFiftyOneComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Глоссарий терминов Price Action',
-      description:
-        'Основные термины и определения метода Price Action в техническом анализе',
+      name: 'Глоссарий терминов статьи',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Price Action',
+          name: 'ATR (Average True Range)',
           description:
-            'Метод технического анализа, основанный на изучении движения цены без использования индикаторов, анализируя чистые ценовые графики.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Пин-бар (Pin Bar)',
-          description:
-            'Свечной паттерн с длинной тенью и маленьким телом, сигнализирующий о развороте цены и отвержении определённого ценового уровня рынком.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Поглощение (Engulfing)',
-          description:
-            'Паттерн из двух свечей, где вторая свеча полностью перекрывает тело первой, указывая на смену рыночных настроений.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Внутренний бар (Inside Bar)',
-          description:
-            'Свеча, диапазон которой полностью находится внутри диапазона предыдущей материнской свечи, сигнализирующая о консолидации перед пробоем.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Уровень поддержки',
-          description:
-            'Ценовая зона, где спрос превышает предложение и покупатели останавливают падение цены, вызывая отскок вверх.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Уровень сопротивления',
-          description:
-            'Ценовая зона, где предложение превышает спрос и продавцы останавливают рост цены, вызывая отскок вниз.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Доджи (Doji)',
-          description:
-            'Свеча с очень маленьким телом, где цены открытия и закрытия почти совпадают, указывающая на нерешительность рынка.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Фейковый пробой (False Breakout)',
-          description:
-            'Ситуация, когда цена пробивает уровень, но быстро возвращается обратно, заманивая трейдеров в ловушку.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Свинг-хай и Свинг-лоу',
-          description:
-            'Локальные максимумы и минимумы на графике, используемые для определения структуры тренда и ключевых разворотных точек.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Чистый график',
-          description:
-            'Ценовой график без технических индикаторов, отображающий только свечи или бары и используемый в методе Price Action.',
+            'ATR (Average True Range) это индикатор среднего истинного диапазона, он показывает, на сколько в среднем гуляет цена за период.',
         },
       ],
     };

@@ -56,15 +56,15 @@ export class HomeEuBlogSixtyComponent implements OnInit {
     this.checkedGroup = this.artickleServ.selectedGroups;
 
     this.titleService.setTitle(
-      'Trading vs Options: What Should a Trader Choose | ArapovTrade',
+      'Indicators in Trading: Types and Use | Arapov.trade',
     );
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Trading vs Options: comparing two approaches to financial markets. Learn key differences, advantages and disadvantages of each instrument for beginner and experienced traders.',
+        'Indicators in trading: trend ones, oscillators and volume-based. How they work, what they show and why an indicator alone is not a signal.',
     });
     this.gerRandom();
   }
@@ -250,27 +250,37 @@ export class HomeEuBlogSixtyComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          '@id':
-            'https://arapov.trade/en/freestudying/tradingvsoptions#article',
-          headline: 'Trading vs Options: What Should a Trader Choose',
+          headline:
+            'Trading Indicators: Which Work, Why They Lag, and What to Use Instead',
           description:
-            'Comparing trading and options: key differences, advantages and disadvantages of each instrument for beginner and experienced traders.',
-          image:
-            'https://arapov.trade/assets/img/content/tradingvsoptions1.webp',
-          datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
-          author: {
-            '@id': 'https://arapov.trade/en#person',
-          },
+            'Indicators in trading: trend ones, oscillators and volume-based. How they work, what they show and why an indicator alone is not a signal.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
             '@id': 'https://arapov.trade/#organization',
-            name: 'ArapovTrade',
+            name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
+            logo: {
+              '@type': 'ImageObject',
+              url: 'https://arapov.trade/assets/img/favicon.ico',
+            },
           },
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://arapov.trade/en/freestudying/tradingvsoptions',
+            '@id': 'https://arapov.trade/en/freestudying/trading-indicators',
           },
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/trading-indicators.jpeg',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Technical Analysis',
+          keywords:
+            'trading indicators, stochastic, MACD, RSI, divergence, oscillator, volume analysis, ATR, lagging indicators',
+          inLanguage: 'en',
         },
       ],
     };
@@ -285,18 +295,18 @@ export class HomeEuBlogSixtyComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/en#person',
+      '@id': 'https://arapov.trade/#person',
       name: 'Igor Arapov',
       alternateName: [
         'Ігор Арапов',
-        'Арапов Игорь',
-        'I. Arapov',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/en',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -311,12 +321,12 @@ export class HomeEuBlogSixtyComponent implements OnInit {
         'https://t.me/ArapovTrade',
       ],
       jobTitle: [
-        'Independent researcher,',
-        'trader',
-        'author and founder of arapov.trade',
+        'Independent researcher',
+        'Trader',
+        'Author and founder of arapov.trade',
       ],
       description:
-        'Independent researcher, practicing trader, author of books on trading and scientific publications. Specializes in trading psychology and cognitive biases in financial markets.',
+        'Independent researcher, practising trader, author of trading books and scientific publications. Specialises in trading psychology and cognitive biases in financial markets.',
     };
 
     this.addJsonLdSchema(data);
@@ -332,42 +342,42 @@ export class HomeEuBlogSixtyComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'What is better for beginners: trading or options?',
+          name: 'Why do trading indicators lag?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Beginners are recommended to start with traditional stock or currency trading. This allows mastering basic principles of market analysis and risk management. Options require understanding complex concepts such as Greeks and time decay.',
+            text: 'Because any indicator is computed from already-closed candles, that is from past prices. By its nature it shows what the market has already done, not what will be. The lag is not a settings defect but a property of the tool itself, and its ceiling is describing the past.',
           },
         },
         {
           '@type': 'Question',
-          name: 'How much capital is needed for trading and options?',
+          name: 'Do the signals of the stochastic, MACD, and moving averages work?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Trading can be started with a minimum deposit of $100-500 on Forex or crypto exchanges. Options on the US market typically require $2,000 or more.',
+            text: 'On the first trades crossovers often feel like they work, but over a series of hundreds of trades their result is roughly like a coin flip: there is no durable edge, while spread and commission slowly eat into the account. I do not build an entry on them, I look at the level and volume.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Where are risks higher: in trading or options?',
+          name: 'What is divergence in simple terms?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'When buying options, risk is limited to the premium paid. In trading, losses can exceed the initial deposit when using leverage. However, selling options carries unlimited risk.',
+            text: 'A disagreement between price and an indicator: price renews an extreme while the indicator no longer does. A bullish one appears on a fall and hints at a turn up, a bearish one is mirror. But it is only a hint of a weakening impulse, not a ready entry point.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Can trading and options be combined?',
+          name: 'Why does divergence on an indicator often deceive?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Yes, many experienced traders use both instruments. For example, you can trade stocks while hedging positions with put options.',
+            text: 'Because on an indicator it lags and in a strong trend gives a series of false signals: price calmly goes on and shakes out the early buyers. It is more honest to look at the disagreement of price and volume, and to make the decision by a strong level and a reversal candle.',
           },
         },
         {
           '@type': 'Question',
-          name: 'What are Greeks in options?',
+          name: 'Which indicators are actually useful?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Greeks are metrics measuring option price sensitivity to various factors: delta (asset price change), theta (time decay), vega (volatility), gamma (rate of delta change).',
+            text: 'In my experience volume indicators and volatility meters like ATR are useful, because they show the cause of the move, not the trace of price. Lagging oscillators as a signal generator I do not use in my trading, I kept only volume.',
           },
         },
       ],
@@ -383,37 +393,40 @@ export class HomeEuBlogSixtyComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'How to Choose Between Trading and Options',
+      '@id': 'https://arapov.trade/en/freestudying/trading-indicators#howto',
+      name: 'How to treat trading indicators',
+      description:
+        'A step-by-step breakdown of how indicators are built, why they lag, and what to use instead of their signals',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Define your goals',
-          text: 'Decide what you want to achieve: regular income from short-term trading, long-term investments, or portfolio hedging.',
+          name: 'Understand that an indicator is computed from past prices and lags',
+          text: 'Trading indicator is a formula that takes past prices and volumes over a chosen period and turns them into a line, a histogram, or a number on the chart.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Assess your experience',
-          text: 'If you are a beginner, start with trading to master basic skills.',
+          name: 'Check the signals of the stochastic, MACD, and moving averages over a series',
+          text: "Let's take the three most common tools almost every beginner passes through.",
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Determine risk tolerance',
-          text: 'Leveraged trading carries high risks. Buying options limits losses to the premium.',
+          name: 'Work out what divergence is and what it shows',
+          text: 'Divergence is a disagreement between the movement of price and the readings of an indicator, when price sets a new high or low and the indicator no longer confirms that extreme.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Study available instruments',
-          text: 'Open a demo account and try both instruments in a risk-free environment.',
+          name: 'Do not trade divergence blind, wait for the level and volume',
+          text: 'Divergence shows only the weakness of the current move, not an entry point, and that is its subtle spot.',
         },
         {
           '@type': 'HowToStep',
           position: 5,
-          name: 'Start small',
-          text: 'Begin with minimum amounts and gradually increase volumes.',
+          name: 'Lean on volume and volatility, not on oscillator signals',
+          text: 'So what out of all this zoo did I keep?',
         },
       ],
     };
@@ -428,67 +441,25 @@ export class HomeEuBlogSixtyComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Trading and Options Glossary',
+      name: 'Article glossary',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Option',
+          name: 'Trading indicator',
           description:
-            'A derivative financial instrument giving the right to buy or sell an asset at a predetermined price within a specified period.',
+            'A formula that takes past prices and volumes over a chosen period and turns them into a line, a histogram, or a number on the chart.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Call Option',
+          name: 'Oscillator',
           description:
-            'A contract giving the buyer the right to purchase the underlying asset at a fixed price before expiration.',
+            'A type of indicator that measures not price itself but the speed of its change, and looks for extreme states of overbought and oversold.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Put Option',
+          name: 'Divergence',
           description:
-            'A contract giving the buyer the right to sell the underlying asset at a fixed price before expiration.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Premium',
-          description:
-            'The price paid by the buyer to the option seller for the right to execute the contract.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Strike Price',
-          description:
-            'The fixed price at which the option holder can buy or sell the underlying asset.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Expiration',
-          description:
-            'The date when the option contract expires and becomes void.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Delta',
-          description:
-            'Measures option price sensitivity to changes in the underlying asset price.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Theta',
-          description:
-            'Measures time decay - the rate at which option value decreases as expiration approaches.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Hedging',
-          description:
-            'Strategy to protect a portfolio from adverse market movements using derivatives.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Volatility',
-          description:
-            'The degree of price variability of an asset. High volatility increases option premiums.',
+            'A disagreement between the movement of price and the readings of an indicator, when price renews an extreme and the indicator no longer confirms it.',
         },
       ],
     };

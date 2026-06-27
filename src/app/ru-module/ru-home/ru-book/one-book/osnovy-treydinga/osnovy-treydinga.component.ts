@@ -31,24 +31,14 @@ export class OsnovyTreydingaComponent
     private themeService: ThemeservService,
   ) {}
 
-  ngAfterViewInit() {
-    setTimeout(() => {
-      if (typeof AOS !== 'undefined') {
-        AOS.init({
-          duration: 1000,
-          once: false,
-          offset: 100,
-        });
-      }
-    }, 500); // Задержка 0.5s
-  }
+  ngAfterViewInit() {}
   isDark!: boolean;
   languages = ['ua', 'en', 'ru']; // какие языки нужны
   currentLang = 'ru';
   dropdownOpen = false;
   menuOpen: boolean = false;
   ngOnInit() {
-    this.removeExistingWebPageSchema();
+    this.removeExistingSchema();
 
     this.titleService.setTitle(
       'Основы трейдинга — Бесплатная книга Игоря Арапова',
@@ -66,15 +56,12 @@ export class OsnovyTreydingaComponent
         'книга трейдинг, обучение трейдингу, форекс для начинающих, технический анализ, объёмный анализ, Игорь Арапов, Smart Money',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-06-07' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: 'https://arapov.trade/assets/img/photo_mainpage.jpg',
-    });
-    this.addWebSiteSchema();
-    this.addWebPageSchema();
-    this.addFAQPageSchema();
-    this.addPersoneSchema();
+    this.meta.updateTag({ name: 'datePublished', content: '2025-12-18' });
+
+    this.injectSchema(this.bookSchema());
+    this.injectSchema(this.webPageSchema());
+    this.injectSchema(this.faqSchema());
+
     this.themeSubscription = this.themeService.getTheme().subscribe((data) => {
       this.isDark = data;
       this.cdr.detectChanges();
@@ -91,18 +78,6 @@ export class OsnovyTreydingaComponent
   toggleTheme() {
     this.isDark = !this.isDark;
     this.themeService.setTheme(this.isDark);
-
-    this.refreshAOS();
-  }
-  refreshAOS() {
-    if (typeof AOS !== 'undefined') {
-      setTimeout(() => {
-        AOS.refresh(); // Обновление позиций AOS
-        this.cdr.detectChanges(); // Принудительное обнаружение изменений
-      }, 100); // Задержка для синхронизации
-    } else {
-      console.warn('AOS is not defined, refresh skipped');
-    }
   }
 
   toggleDropdown() {
@@ -126,64 +101,44 @@ export class OsnovyTreydingaComponent
   private themeSubscription!: Subscription;
   ngOnDestroy() {
     // Отписка от подписок
-    if (this.routerSubscription) {
-      this.routerSubscription.unsubscribe();
-    }
-    if (this.themeSubscription) {
-      this.themeSubscription.unsubscribe();
-    }
+    this.routerSubscription?.unsubscribe();
+    this.themeSubscription?.unsubscribe();
   }
   hovered: string | null = null;
 
-  private removeExistingWebPageSchema(): void {
-    const scripts = this.document.querySelectorAll(
-      'script[type="application/ld+json"]',
-    );
-
-    scripts.forEach((script) => {
-      try {
-        const content = JSON.parse(script.textContent || '{}');
-        if (content['@type'] === 'Book') {
-          script.remove();
+  private removeExistingSchema(): void {
+    this.document
+      .querySelectorAll('script[type="application/ld+json"]')
+      .forEach((script) => {
+        try {
+          const type = JSON.parse(script.textContent || '{}')['@type'];
+          if (['Book', 'WebPage', 'FAQPage'].includes(type)) script.remove();
+        } catch {
+          // игнорируем чужой/битый JSON
         }
-        if (content['@type'] === 'Person') {
-          script.remove();
-        }
-        if (content['@type'] === 'WebPage') {
-          script.remove();
-        }
-        if (content['@type'] === 'FAQPage') {
-          script.remove();
-        }
-      } catch (e) {
-        // Игнорируем некорректные JSON (например, из других источников)
-      }
-    });
+      });
   }
 
-  private addWebSiteSchema() {
-    const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]'),
-    ).some((script) => {
-      try {
-        const json = JSON.parse(script.textContent || '{}');
-        return (
-          json['@type'] === 'Book' &&
-          json['name'] ===
-            'Теория трейдинга. Основы рынка • Технический анализ • Объёмный анализ'
-        );
-      } catch {
-        return false;
-      }
-    });
+  downloadFile() {
+    const link = document.createElement('a');
+    link.href = '/assets/documents/Trading_Book_ISBN.epub'; // путь к вашему файлу
+    link.download = 'Trading_Book_ISBN.epub'; // имя файла для скачивания
+    link.click();
+  }
 
-    // Если уже существует — выходим
-    if (exists) return;
+  openLink(url: string) {
+    window.open(url, '_blank');
+  }
 
-    // Создаем новый JSON-LD
+  private injectSchema(data: object): void {
     const script = this.document.createElement('script');
     script.type = 'application/ld+json';
-    script.text = JSON.stringify({
+    script.text = JSON.stringify(data);
+    this.document.head.appendChild(script);
+  }
+
+  private bookSchema() {
+    return {
       '@context': 'https://schema.org',
       '@type': 'Book',
       '@id': 'https://arapov.trade/ru/books/osnovy-treydinga#book',
@@ -193,7 +148,7 @@ export class OsnovyTreydingaComponent
       },
       name: 'Теория трейдинга. Основы рынка • Технический анализ • Объёмный анализ',
       alternateName: [
-        'Теорія трейдингу. Основи ринку • Технічний аналіз • Об`ємний аналіз',
+        'Теорія трейдингу. Основи ринку • Технічний аналіз • Обʼємний аналіз',
         'Trading fundamentals. Market Basics • Technical Analysis • Volume Analysis',
       ],
       headline:
@@ -201,21 +156,14 @@ export class OsnovyTreydingaComponent
       description:
         'Практическое руководство по финансовому трейдингу для начинающих. Книга охватывает основы биржевой торговли, рынок FOREX, фундаментальный, технический и объёмный анализ, виды ордеров, управление капиталом и типичные ошибки трейдеров. Автор делится 12-летним опытом торговли на финансовых рынках.',
       isbn: '979-8-90243-075-9',
-      numberOfPages: 60,
+      numberOfPages: 48,
       bookFormat: 'https://schema.org/EBook',
       bookEdition: '1-е издание',
-      inLanguage: {
-        '@type': 'Language',
-        name: 'Russian',
-        alternateName: 'ru',
-      },
+      inLanguage: { '@type': 'Language', name: 'Russian', alternateName: 'ru' },
       datePublished: '2025-12-18T00:00:00Z',
       dateModified: '2025-12-19T00:00:00Z',
       copyrightYear: 2025,
-      copyrightHolder: {
-        '@type': 'Person',
-        '@id': 'https://arapov.trade/ru#author',
-      },
+      copyrightHolder: { '@id': 'https://arapov.trade/#person' },
       genre: ['Business', 'Finance', 'Trading', 'Education', 'Investment'],
       about: [
         {
@@ -233,33 +181,15 @@ export class OsnovyTreydingaComponent
           name: 'Технический анализ',
           sameAs: 'https://ru.wikipedia.org/wiki/Технический_анализ',
         },
-        {
-          '@type': 'Thing',
-          name: 'Фундаментальный анализ',
-        },
-        {
-          '@type': 'Thing',
-          name: 'Объёмный анализ',
-        },
-        {
-          '@type': 'Thing',
-          name: 'Управление капиталом',
-        },
-        {
-          '@type': 'Thing',
-          name: 'Smart Money Concepts',
-        },
+        { '@type': 'Thing', name: 'Фундаментальный анализ' },
+        { '@type': 'Thing', name: 'Объёмный анализ' },
+        { '@type': 'Thing', name: 'Управление капиталом' },
+        { '@type': 'Thing', name: 'Smart Money Concepts' },
       ],
       keywords:
         'трейдинг, форекс, технический анализ, объёмный анализ, биржа, инвестиции, smart money, обучение трейдингу',
-      author: {
-        '@type': 'Person',
-        '@id': 'https://arapov.trade/ru#author',
-      },
-      publisher: {
-        '@type': 'Organization',
-        '@id': 'https://arapov.trade/#organization',
-      },
+      author: { '@id': 'https://arapov.trade/#person' },
+      publisher: { '@id': 'https://arapov.trade/#organization' },
       image: {
         '@type': 'ImageObject',
         url: 'https://arapov.trade/assets/redesignArapovTrade/img/IMG000.jpg',
@@ -275,10 +205,7 @@ export class OsnovyTreydingaComponent
         availability: 'https://schema.org/InStock',
         url: 'https://arapov.trade/ru/books/osnovy-treydinga',
         priceValidUntil: '2026-12-31',
-        seller: {
-          '@type': 'Organization',
-          '@id': 'https://arapov.trade/#organization',
-        },
+        seller: { '@id': 'https://arapov.trade/#organization' },
       },
       workExample: {
         '@type': 'Book',
@@ -299,146 +226,16 @@ export class OsnovyTreydingaComponent
             '@type': 'Offer',
             price: '0',
             priceCurrency: 'USD',
-            eligibleRegion: {
-              '@type': 'Place',
-              name: 'Worldwide',
-            },
+            eligibleRegion: { '@type': 'Place', name: 'Worldwide' },
           },
         },
       },
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: '5',
-        ratingCount: '1',
-        bestRating: '5',
-        worstRating: '1',
-      },
-    });
-
-    this.document.head.appendChild(script);
+       
+    };
   }
 
-  downloadFile() {
-    const link = document.createElement('a');
-    link.href = '/assets/documents/Trading_Book_ISBN.epub'; // путь к вашему файлу
-    link.download = 'Trading_Book_ISBN.epub'; // имя файла для скачивания
-    link.click();
-  }
-
-  openLink(url: string) {
-    window.open(url, '_blank');
-  }
-
-  private addPersoneSchema() {
-    const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]'),
-    ).some((script) => {
-      try {
-        const json = JSON.parse(script.textContent || '{}');
-        return json['@type'] === 'Person' && json['name'] === 'Игорь Арапов';
-      } catch {
-        return false;
-      }
-    });
-
-    // Если уже существует — выходим
-    if (exists) return;
-
-    // Создаем новый JSON-LD
-    const script = this.document.createElement('script');
-    script.type = 'application/ld+json';
-    script.text = JSON.stringify({
-      '@context': 'https://schema.org',
-      '@type': 'Person',
-      '@id': 'https://arapov.trade/ru#author',
-      name: 'Игорь Арапов',
-      alternateName: [
-        'Igor Arapov',
-        'Арапов Игорь',
-        'I. Arapov',
-        'Ігор Арапов',
-        'І. В. Арапов',
-        'Арапов Ігор',
-        'Arapov Igor',
-      ],
-      givenName: 'Игорь',
-      familyName: 'Арапов',
-      description:
-        'Украинский трейдер с 2013 года. Создатель образовательной платформы arapov.trade, автор 151+ статей и 78+ видеоуроков по трейдингу. Специализируется на Smart Money концепциях, методе Вайкоффа и объёмном анализе.',
-      url: 'https://arapov.trade',
-      image: {
-        '@type': 'ImageObject',
-        url: 'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
-        width: 400,
-        height: 750,
-        caption: 'Игорь Арапов — трейдер и автор',
-      },
-      sameAs: [
-        'https://www.youtube.com/@ArapovTrade',
-        'https://t.me/ArapovTrade',
-        'https://www.instagram.com/arapovtrade/',
-      ],
-      jobTitle: 'Трейдер',
-      hasOccupation: {
-        '@type': 'Occupation',
-        name: 'Trader',
-        description: 'Профессиональный трейдер на финансовых рынках',
-        occupationLocation: {
-          '@type': 'Country',
-          name: 'Ukraine',
-        },
-      },
-      nationality: {
-        '@type': 'Country',
-        name: 'Ukraine',
-        alternateName: 'Украина',
-      },
-      knowsAbout: [
-        'Trading',
-        'Smart Money Concepts',
-        'Wyckoff Method',
-        'Volume Analysis',
-        'Technical Analysis',
-        'Fundamental Analysis',
-        'FOREX',
-        'Stock Market',
-        'Risk Management',
-      ],
-      knowsLanguage: [
-        { '@type': 'Language', name: 'Russian' },
-        { '@type': 'Language', name: 'Ukrainian' },
-        { '@type': 'Language', name: 'English' },
-      ],
-      worksFor: {
-        '@type': 'Organization',
-        '@id': 'https://arapov.trade/#organization',
-      },
-    });
-
-    this.document.head.appendChild(script);
-  }
-  private addWebPageSchema() {
-    const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]'),
-    ).some((script) => {
-      try {
-        const json = JSON.parse(script.textContent || '{}');
-        return (
-          json['@type'] === 'WebPage' &&
-          json['name'] === 'Теория трейдинга. Основы рынка • Технический анализ • Объёмный анализ'
-        );
-      } catch {
-        return false;
-      }
-    });
-
-    // Если уже существует — выходим
-    if (exists) return;
-
-    // Создаем новый JSON-LD
-    const script = this.document.createElement('script');
-    script.type = 'application/ld+json';
-    script.text = JSON.stringify({
+  private webPageSchema() {
+    return {
       '@context': 'https://schema.org',
       '@type': 'WebPage',
       '@id': 'https://arapov.trade/ru/books/osnovy-treydinga',
@@ -447,24 +244,12 @@ export class OsnovyTreydingaComponent
       description:
         'Скачать бесплатно книгу по трейдингу. ISBN 979-8-90243-075-9',
       inLanguage: 'ru',
-      isPartOf: {
-        '@type': 'WebSite',
-        '@id': 'https://arapov.trade/#website',
-        name: 'arapov.trade',
-        url: 'https://arapov.trade',
-      },
-      about: {
-        '@type': 'Book',
-        '@id': 'https://arapov.trade/ru/books/osnovy-treydinga#book',
-      },
-      author: {
-        '@type': 'Person',
-        '@id': 'https://arapov.trade/ru#author',
-      },
+      isPartOf: { '@id': 'https://arapov.trade/#website' },
+      about: { '@id': 'https://arapov.trade/ru/books/osnovy-treydinga#book' },
+      author: { '@id': 'https://arapov.trade/#person' },
       datePublished: '2025-12-18T00:00:00Z',
       dateModified: '2025-12-19T00:00:00Z',
       mainEntity: {
-        '@type': 'Book',
         '@id': 'https://arapov.trade/ru/books/osnovy-treydinga#book',
       },
       breadcrumb: {
@@ -496,33 +281,11 @@ export class OsnovyTreydingaComponent
           },
         ],
       },
-    });
-
-    this.document.head.appendChild(script);
+    };
   }
 
-  private addFAQPageSchema() {
-    const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]'),
-    ).some((script) => {
-      try {
-        const json = JSON.parse(script.textContent || '{}');
-        return (
-          json['@type'] === 'FAQPage' &&
-          json['name'] === 'Вопросы и ответы по книге "Основы трейдинга"'
-        );
-      } catch {
-        return false;
-      }
-    });
-
-    // Если уже существует — выходим
-    if (exists) return;
-
-    // Создаем новый JSON-LD
-    const script = this.document.createElement('script');
-    script.type = 'application/ld+json';
-    script.text = JSON.stringify({
+  private faqSchema() {
+    return {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       name: 'Вопросы и ответы по книге "Основы трейдинга"',
@@ -556,7 +319,7 @@ export class OsnovyTreydingaComponent
           name: 'Кто автор книги?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Автор книги — Игорь Арапов, практикующий трейдер с 2013 года. Создатель образовательной платформы arapov.trade с 130+ статьями и YouTube канала @ArapovTrade с 70+ видеоуроками по трейдингу.',
+            text: 'Автор книги — Игорь Арапов, практикующий трейдер с 2013 года. Создатель образовательной платформы arapov.trade с 151+ статьями и YouTube канала @ArapovTrade с 78+ видеоуроками по трейдингу.',
           },
         },
         {
@@ -568,8 +331,6 @@ export class OsnovyTreydingaComponent
           },
         },
       ],
-    });
-
-    this.document.head.appendChild(script);
+    };
   }
 }

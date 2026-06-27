@@ -28,7 +28,7 @@ export class HomeUkBlogFourtyFourComponent implements OnInit {
     private themeService: ThemeservService,
     private artickleServ: ArticlesService,
     private renderer: Renderer2,
-    @Inject(DOCUMENT) private document: Document
+    @Inject(DOCUMENT) private document: Document,
   ) {}
   private routerSubscription!: Subscription;
   private themeSubscription!: Subscription;
@@ -56,22 +56,16 @@ export class HomeUkBlogFourtyFourComponent implements OnInit {
     this.grr = this.artickleServ.selectedGroups;
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
-    this.titleService.setTitle(
-      'Що таке стейкінг криптовалюти? | Пасивний дохід у крипті'
-    );
+    this.titleService.setTitle('Стохастичний осцилятор | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Стейкінг криптовалюти: як отримувати пасивний дохід від блокування токенів. Повний посібник з типів стейкінгу, вибору платформи та мінімізації ризиків.',
+        'Стохастичний осцилятор: налаштування, лінії %K і %D, сигнали перекупленості та перепроданості, дивергенції й поєднання з трендом.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-27' });this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/cryptostaking.webp',
-    });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
 
     this.gerRandom();
   }
@@ -83,13 +77,12 @@ export class HomeUkBlogFourtyFourComponent implements OnInit {
   hoveredIndex: number | null = null;
 
   projects = [
-   { title: 'Книги з трейдингу', link: 'https://arapov.trade/uk/books' },
+    { title: 'Книги з трейдингу', link: 'https://arapov.trade/uk/books' },
     { title: 'Професійні курси', link: 'https://arapov.trade/uk/studying' },
     {
       title: 'Базовий курс',
       link: 'https://arapov.trade/uk/freestudying/freeeducation',
     },
-     
   ];
 
   onGroupChange(event: Event) {
@@ -159,7 +152,7 @@ export class HomeUkBlogFourtyFourComponent implements OnInit {
     // Показываем 5 случайных статей при фокусе, если инпут пуст
     if (!this.searchQuery) {
       const shuffled = [...this.artickleServ.ukrArtickles].sort(
-        () => Math.random() - 0.5
+        () => Math.random() - 0.5,
       );
       this.displayedArticles = shuffled.slice(0, this.maxResults);
     }
@@ -174,7 +167,7 @@ export class HomeUkBlogFourtyFourComponent implements OnInit {
   onSearchChange() {
     // Логика асинхронного поиска
     const filtered = this.artickleServ.ukrArtickles.filter((a) =>
-      a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase())
+      a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase()),
     );
     this.displayedArticles = filtered.slice(0, this.maxResults);
   }
@@ -196,7 +189,7 @@ export class HomeUkBlogFourtyFourComponent implements OnInit {
     const path: string =
       this.router.url.split('/')[this.router.url.split('/').length - 1];
     let index = this.artickleServ.ukrArtickles.findIndex(
-      (a) => a.linkUkr == path
+      (a) => a.linkUkr == path,
     );
 
     if (this.artickleServ.ukrArtickles.length - 1 == index) {
@@ -213,7 +206,7 @@ export class HomeUkBlogFourtyFourComponent implements OnInit {
     const path: string =
       this.router.url.split('/')[this.router.url.split('/').length - 1];
     let index = this.artickleServ.ukrArtickles.findIndex(
-      (a) => a.linkUkr == path
+      (a) => a.linkUkr == path,
     );
 
     if (index == 1) {
@@ -238,7 +231,7 @@ export class HomeUkBlogFourtyFourComponent implements OnInit {
     ];
 
     const scripts = this.document.querySelectorAll(
-      'script[type="application/ld+json"]'
+      'script[type="application/ld+json"]',
     );
 
     scripts.forEach((script) => {
@@ -251,7 +244,7 @@ export class HomeUkBlogFourtyFourComponent implements OnInit {
 
         const shouldRemove = candidates.some(
           (entry: any) =>
-            entry['@type'] && typesToRemove.includes(entry['@type'])
+            entry['@type'] && typesToRemove.includes(entry['@type']),
         );
 
         if (shouldRemove) {
@@ -279,29 +272,36 @@ export class HomeUkBlogFourtyFourComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          mainEntityOfPage: {
-            '@type': 'WebPage',
-            '@id': 'https://arapov.trade/uk/freestudying/cryptostaking',
-          },
-          headline:
-            'Що таке стейкінг криптовалюти? Повний посібник з пасивного доходу',
+          headline: 'Стохастик у трейдингу: що це і коли він працює',
           description:
-            'Стейкінг криптовалюти: як отримувати пасивний дохід від блокування токенів. Повний посібник з типів стейкінгу, вибору платформи та мінімізації ризиків.',
-          image: 'https://arapov.trade/assets/img/content/cryptostaking1.webp',
-          author: {
-            '@id': 'https://arapov.trade/uk#person',
-          },
+            'Стохастичний осцилятор: налаштування, лінії %K і %D, сигнали перекупленості та перепроданості, дивергенції й поєднання з трендом.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'Arapov Trade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
-          datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
-
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': 'https://arapov.trade/uk/freestudying/stochastic-oscillator',
+          },
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/stochastic1.jpg',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Технічний аналіз',
+          keywords:
+            'стохастик, стохастичний осцилятор, перекупленість перепроданість, %K %D, дивергенція стохастика, налаштування стохастика, стохастик у тренді',
+          inLanguage: 'uk',
         },
       ],
     };
@@ -316,18 +316,18 @@ export class HomeUkBlogFourtyFourComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/uk#person',
-      name: 'Ігор Арапов',
+      '@id': 'https://arapov.trade/#person',
+      name: 'Igor Arapov',
       alternateName: [
-        'Igor Arapov',
-              'Арапов Игорь',
-              'I. Arapov',
-              'Игорь Арапов',
-              'І. В. Арапов',
-              'Арапов Ігор',
-              'Arapov Igor',
+        'Ігор Арапов',
+        'Игорь Арапов',
+        'Арапов Игорь',
+        'Арапов Ігор',
+        'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/uk',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -339,9 +339,13 @@ export class HomeUkBlogFourtyFourComponent implements OnInit {
         'https://github.com/ArapovTrade',
         'https://ua.linkedin.com/in/arapovtrade',
         'https://www.youtube.com/@ArapovTrade',
-        'https://t.me/ArapovTrade'
+        'https://t.me/ArapovTrade',
       ],
-       jobTitle: ['Незалежний дослідник', 'трейдер', 'автор і засновник arapov.trade'],
+      jobTitle: [
+        'Незалежний дослідник',
+        'трейдер',
+        'автор і засновник arapov.trade',
+      ],
       description:
         'Незалежний дослідник, практикуючий трейдер, автор книг з трейдингу та наукових публікацій. Спеціалізується на психології трейдингу та когнітивних упередженнях на фінансових ринках.',
     };
@@ -359,42 +363,34 @@ export class HomeUkBlogFourtyFourComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'Що таке стейкінг криптовалюти і як він працює?',
+          name: 'Що показує індикатор стохастик простими словами?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Стейкінг криптовалюти — це процес блокування токенів у спеціалізованому гаманці або на платформі для забезпечення роботи блокчейн-мережі. Натомість учасники отримують винагороду у вигляді нових токенів. Механізм ґрунтується на консенсусі Proof-of-Stake, де валідатори підтверджують транзакції пропорційно обсягу заблокованих активів.',
+            text: 'Він показує, ближче до верху чи до низу свого недавнього діапазону закрилася ціна. Біля верху значення високе, біля низу низьке. По суті це вимірювач імпульсу, а не передбачувач майбутнього.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Яку дохідність можна отримати від стейкінгу?',
+          name: 'Які налаштування стохастика вважаються стандартними?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Дохідність стейкінгу зазвичай становить від 5% до 20% річних залежно від обраної криптовалюти та платформи. Наприклад, стейкінг Ethereum приносить близько 4-5% річних, тоді як нові проекти можуть пропонувати ставки понад 15-20% для залучення валідаторів.',
+            text: 'Найчастіше за замовчуванням ставлять період 14 і згладжування сигнальної лінії на 3, а зони 80 і 20. Це відправні значення, їх підлаштовують під інструмент і таймфрейм. Універсальних цифр немає.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Які ризики існують при стейкінгу криптовалют?',
+          name: 'Чому стохастик дає хибні сигнали в тренді?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Головні ризики стейкінгу охоплюють волатильність ціни токена (падіння курсу може нівелювати дохід), блокування ліквідності (неможливість швидко продати активи), технічні вразливості смарт-контрактів, інфляцію токена та ризики недобросовісних валідаторів при делегованому стейкінгу.',
+            text: 'Бо в сильному тренді ціна довго тримається біля одного краю діапазону. Індикатор залипає вище 80 або нижче 20 і подає сигнал за сигналом проти руху. У флеті цієї проблеми майже немає, там він осмисленіший.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Чим відрізняється ліквідний стейкінг від звичайного?',
+          name: 'Чи можна торгувати лише за стохастиком?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'При звичайному стейкінгу токени блокуються на визначений період і недоступні для операцій. Ліквідний стейкінг дозволяє отримати похідні токени (наприклад, stETH замість ETH), які можна використовувати для торгівлі або DeFi-операцій, зберігаючи при цьому стейкінговий дохід.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Як обрати надійну платформу для стейкінгу?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'При виборі платформи враховуйте репутацію та історію роботи, наявність аудиту безпеки, прозорість умов винагородження, розмір комісій, умови блокування активів та підтримувані криптовалюти. Перевірені платформи — Binance, Kraken, Lido Finance, Coinbase.',
+            text: 'За моїм досвідом ні. Він запізнюється й похідний від ціни, тому поодинці часто обманює. Якщо вже користуватися, то як допоміжним інструментом у флеті, а основу рішення я будую на обсязі й рівнях.',
           },
         },
       ],
@@ -410,39 +406,34 @@ export class HomeUkBlogFourtyFourComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'Як розпочати заробляти на стейкінгу криптовалюти',
+      '@id': 'https://arapov.trade/uk/freestudying/stochastic-oscillator#howto',
+      name: 'Як розібратися й застосовувати стохастик у трейдингу',
       description:
-        'Покрокова інструкція для початку заробітку на стейкінгу криптовалюти від вибору токена до отримання перших винагород',
+        'Покроковий розбір теми та її практичне застосування в торгівлі',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Оберіть криптовалюту для стейкінгу',
-          text: 'Вивчіть доступні PoS-криптовалюти: Ethereum, Cardano, Polkadot, Solana. Оцініть їхній потенціал зростання, історію проекту та розмір стейкінгової дохідності. Віддавайте перевагу перевіреним блокчейнам з активною спільнотою.',
+          name: 'Дізнайтеся, що таке індикатор стохастик',
+          text: 'Стохастик це індикатор імпульсу, який порівнює ціну закриття з діапазоном максимумів і мінімумів за обраний період і малює результат двома лініями на шкалі від 0 до 100.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Оберіть тип та платформу стейкінгу',
-          text: 'Визначтеся між одиночним, пуловим, делегованим або ліквідним стейкінгом. Для початківців рекомендується пуловий або делегований стейкінг на перевірених біржах (Binance, Kraken) або протоколах (Lido, Rocket Pool).',
+          name: 'Читайте сигнали стохастика: перетин ліній і зона перекупленості',
+          text: 'Сигналів у стохастика три.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Придбайте необхідну кількість токенів',
-          text: 'Купіть криптовалюту на надійній біржі. Враховуйте мінімальні вимоги платформи для стейкінгу. Для Ethereum 2.0 повний валідатор потребує 32 ETH, але пули дозволяють брати участь з будь-якою сумою.',
+          name: 'Стохастик у флеті проти тренду: де працює, а де ні',
+          text: 'Ось тут і криється головна пастка індикатора.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Заблокуйте токени у стейкінгу',
-          text: 'Переведіть токени на обрану платформу та активуйте стейкінг. Уважно вивчіть умови: період блокування, розмір комісій, частоту виплат. При ліквідному стейкінгу отримайте похідні токени для додаткових операцій.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 5,
-          name: 'Моніторте та оптимізуйте дохідність',
-          text: 'Регулярно відстежуйте нарахування винагород та стан ринку. Реінвестуйте отримані токени для складного відсотка. За необхідності диверсифікуйте між кількома валідаторами або платформами для зниження ризиків.',
+          name: 'Стохастик і ковзна середня разом: чому вони суперечать одне одному',
+          text: 'Часто новачки вішають на графік одразу кілька індикаторів у надії на точність.',
         },
       ],
     };
@@ -457,69 +448,13 @@ export class HomeUkBlogFourtyFourComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Глосарій термінів криптостейкінгу',
-      description:
-        "Ключові терміни та поняття, пов'язані зі стейкінгом криптовалюти",
+      name: 'Глосарій термінів статті',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Стейкінг',
+          name: 'Стохастик',
           description:
-            'Процес блокування криптовалюти для підтримки операцій блокчейну та отримання винагород',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Proof-of-Stake (PoS)',
-          description:
-            'Механізм консенсусу, при якому валідатори обираються пропорційно кількості заблокованих токенів',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Валідатор',
-          description:
-            'Вузол мережі, що підтверджує транзакції та створює нові блоки в PoS-блокчейні',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Делегований стейкінг',
-          description:
-            'Передача токенів валідатору для стейкінгу зі збереженням права власності',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Ліквідний стейкінг',
-          description:
-            'Стейкінг з випуском похідних токенів, що зберігають ліквідність заблокованих активів',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Пуловий стейкінг',
-          description:
-            "Об'єднання коштів кількох учасників для спільного стейкінгу",
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'APY',
-          description:
-            'Annual Percentage Yield — річна відсоткова дохідність з урахуванням капіталізації',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Слешінг',
-          description:
-            'Штрафний механізм, при якому валідатор втрачає частину заблокованих токенів за порушення',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Період розблокування',
-          description:
-            'Час очікування виведення токенів після деактивації стейкінгу',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Смарт-контракт',
-          description:
-            'Програмний код у блокчейні, що автоматично виконує умови стейкінгу',
+            'Індикатор імпульсу, який порівнює ціну закриття з діапазоном максимумів і мінімумів за обраний період і малює результат двома лініями на шкалі від 0 до 100.',
         },
       ],
     };

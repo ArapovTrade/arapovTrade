@@ -1,6 +1,6 @@
 # Arapov Trade
 
-> Arapov Trade (arapov.trade) is a free trading-education platform by Igor Arapov, a practising trader since 2013 and independent researcher in the psychology of investment decisions and behavioral finance. It teaches a single, consistent method — market structure, volume analysis and the Wyckoff approach — across 151 articles, a structured beginner course, and a published book series, in Russian (site default), Ukrainian and English.
+> Arapov Trade (arapov.trade) is a free trading-education platform by Igor Arapov, a practising trader since 2013 and independent researcher in the psychology of investment decisions and behavioral finance. It teaches a single, consistent method — market structure, volume analysis and the Wyckoff approach — across 151 articles, a structured beginner course, and a published book series, in Russian (the primary authoring language), Ukrainian and English.
 
 The content is educational only: it explains methodology, analysis techniques, risk and psychology. It is not financial advice, does not give trade signals or specific investment recommendations, and makes no profit guarantees.
 
@@ -73,6 +73,7 @@ Every article exists in three languages under the path pattern `https://arapov.t
 - [Wikidata Q137454477](https://www.wikidata.org/wiki/Q137454477): Knowledge Graph entity (also has a Google Knowledge Graph ID).
 - [ISNI 0000 0005 2951 8564](https://isni.org/isni/0000000529518564): Library authority record.
 - [Open Library OL16073686A](https://openlibrary.org/authors/OL16073686A): Author catalog.
+- [Goodreads author](https://www.goodreads.com/author/show/66848566): Reader-facing author catalog.
 - [Bowker Bookwire author page](https://bookwire.bowker.com/author/Igor-Arapov-40225801): Permanent author page in the official US ISBN agency catalog (Bowker).
 - [Zenodo (CERN)](https://zenodo.org/records/18057306): DOI-registered publications.
 - [Google Scholar](https://scholar.google.com/citations?user=N440tWQAAAAJ): Citations profile.
@@ -91,8 +92,9 @@ Every article exists in three languages under the path pattern `https://arapov.t
 
 - [Peer-reviewed paper: Psychology of Investment Decisions — Cognitive Biases of Retail Traders](https://doi.org/10.32702/2306-6814.2026.4.96): Journal "Investments: Practice and Experience," No. 4 (2026); co-authored with Prof. Inna Sytnyk.
 - [SSRN working paper: From Tilt to System — A Practitioner's Framework for Managing Cognitive Biases in Retail Trading](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6254718): Applied framework for managing cognitive biases in retail trading (SSRN 6254718).
-- [Russian site (default language)](https://arapov.trade/ru/main): Homepage in Russian.
-- [Ukrainian site](https://arapov.trade/uk/main): Homepage in Ukrainian.
+- [Ukrainian site (root domain)](https://arapov.trade): Homepage in Ukrainian.
+- [Russian site](https://arapov.trade/ru/main): Homepage in Russian.
+- [English site](https://arapov.trade/en/main): Homepage in English.
 - [Practical Trade Examples](https://arapov.trade/en/freestudying/practic): Worked examples and range-trading practice.
 - [Trading Indicators Overview](https://arapov.trade/en/freestudying/tradingindicators): Why indicators are supplementary, not signals.
-- [Full multilingual article map](https://arapov.trade/en/freestudying): Complete catalog of all 151 articles in three languages.
+- [Full multilingual article map](https://arapov.trade/en/freestudying): Complete catalog of all 151 articles across the three languages.

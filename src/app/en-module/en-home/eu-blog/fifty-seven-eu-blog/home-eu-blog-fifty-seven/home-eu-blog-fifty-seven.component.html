@@ -7,75 +7,442 @@
           <div class="free-courses_main-container">
             <main lang="en">
               <header>
-  <h1>Trading Indicators Explained: Do They Actually Work?</h1>
-</header>
-<article>
-  <p>Trading indicators are math formulas calculated from price, and sometimes volume, that try to turn the chart into a buy or sell signal. They are popular and look convincing, but they share one honest flaw: every one of them is built from data the market has already printed. An indicator is a derivative of price, not its cause, which is why none of them can truly see ahead.</p>
+                <h1>
+                  VWAP in Trading: the Volume-Weighted Average Price and How to
+                  Use It
+                </h1>
+              </header>
+              <article>
+                <p>
+                  VWAP is the average price of a session, weighted by volume. It
+                  shows the price at which the bulk of the day's trades actually
+                  went through from the open, and so it serves as a fair-value
+                  reference for large players. In my experience VWAP is more
+                  useful than the usual oscillators, because volume is baked
+                  into it, but it's not worth treating it as a one-size-fits-all
+                  tool.
+                </p>
 
-  <p>Almost every beginner goes through an indicator phase. Brokers and paid courses push them hard, because they make trading look easy: wait for two lines to cross, then press the button. I went down that road too, writing robots and tuning settings for a long time. The lesson cost me, and it came slowly. So this is my honest breakdown of what indicators can and cannot do, not a pitch for the next holy grail.</p>
+                <p>
+                  Of all the indicators, VWAP is the one I'm most comfortable
+                  with, and the reason is simple. I've traded off volume for a
+                  long time, and VWAP is just about the only popular line that
+                  actually accounts for volume rather than recomputing price
+                  alone. So here it is without my usual skepticism: what kind of
+                  average it is, why big money tracks it, and how to use it
+                  together with volume analysis.
+                </p>
 
-  <p><strong><i>In this article we'll cover:</i></strong></p>
-  <ul>
-    <li>an indicator is a formula computed from price, so it always trails the market;</li>
-    <li>RSI, the stochastic and MACD look like they work on the first few trades, then lose their edge over time;</li>
-    <li>the main trap is treating an indicator as the source of a signal rather than a picture of the past;</li>
-    <li>volume analysis works with raw data, which is why it tells you more than any indicator.</li>
-  </ul>
+                <p>
+                  <strong><i>In this article we'll cover:</i></strong>
+                </p>
+                <ul>
+                  <li>
+                    VWAP is the volume-weighted average price of the day,
+                    showing where the main capital traded;
+                  </li>
+                  <li>
+                    institutions measure execution quality against it, so the
+                    level becomes self-reinforcing;
+                  </li>
+                  <li>
+                    price above VWAP is a buyers' edge for the session, below
+                    VWAP a sellers' edge;
+                  </li>
+                  <li>
+                    in my experience VWAP is strongest where it lines up with a
+                    real level and a volume cluster.
+                  </li>
+                </ul>
 
-  <p>We will start with what indicators are and why they lag by their very nature.</p>
+                <p>
+                  Start with how this average is even calculated and how it
+                  differs from the usual ones.
+                </p>
 
-  <h2>What Are Trading Indicators and Why They Lag</h2>
-  <p>A <dfn itemscope itemtype="https://schema.org/DefinedTerm"><span itemprop="name">trading indicator</span></dfn> is a mathematical function calculated from price or volume and plotted on the chart to suggest a decision. Most indicators belong to classic technical analysis, and they fall into two groups. Lagging indicators, like moving averages and MACD, confirm a trend after it has started. Leading indicators, like the stochastic, try to flag a turn before it happens.</p>
-  <p>The trouble sits inside their design. An indicator is computed from prices that have already occurred, so it is always looking backward. Price moves first, and only then does the indicator reflect it. By the time the moving averages cross or an oscillator fires, the main move is often already done, and you enter on the tail of the trend while larger players are taking profit. Even so-called leading tools are calculated from past data, so the gap between leading and lagging is smaller than it sounds. That does not make indicators useless, but seeing them as a source of exact signals is a dangerous illusion.</p>
+                <div class="flex">
+                  <img
+                    class="pictureImg"
+                    loading="lazy"
+                    src="/assets/img/content/vwap2.png"
+                    alt="VWAP indicator"
+                  />
+                </div>
 
-  <h2>RSI, MACD and Moving Averages in Practice</h2>
-  <p>Take the most popular ones. The <a class="linkrefinto" href="https://arapov.trade/en/freestudying/rsiindicator">RSI</a> and the stochastic are oscillators that mark overbought and oversold zones. It sounds logical, yet in a strong trend they can sit pinned in overbought for weeks while a trader keeps catching false reversals. The <a class="linkrefinto" href="https://arapov.trade/en/freestudying/macdindicator">MACD indicator</a> is built on moving average crossovers and suffers the same delay. Moving averages themselves are just smoothed price history, nothing more.</p>
-  <p>Divergence deserves its own note. The idea, a mismatch between price and the indicator, is sound, but on a lagging oscillator it often arrives too late. This is the standard <a class="linkrefinto" href="https://arapov.trade/en/freestudying/divergenceonindecators">RSI divergence</a> that many traders rely on. I use the same idea but apply it to volume instead: when price makes a new extreme while volume falls, that weakness shows up far more honestly than a line on the RSI. Divergence is worth hunting where there is real data, not on a derived formula.</p>
-  <p>To be fair, indicators are not worthless. They behave very differently by market condition: oscillators can be useful in a quiet, range-bound market, while a moving average or MACD can confirm a trend that is already underway. An RSI reading right at a known level is also a different thing from the same reading floating in open space. The mistake is not using an indicator at all, it is treating it as a standalone signal that predicts the future.</p>
+                <h2>What is VWAP (volume-weighted average price)</h2>
+                <p>
+                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
+                    ><span itemprop="name">VWAP</span></dfn
+                  >
+                  is the volume-weighted average price, that is the sum of each
+                  bar's typical price multiplied by its volume, divided by the
+                  total volume since the session opened. The typical price is
+                  usually taken as the average of the high, the low and the
+                  close.
+                </p>
+                <p>
+                  The key difference from an ordinary moving average is that
+                  VWAP accounts not only for price but for volume too. Where a
+                  lot of trades went through, that price carries more weight.
+                  VWAP is counted cumulatively from the open and resets every
+                  day, which makes it primarily an intraday tool. At the start
+                  of the session the line jerks with every trade, and by the end
+                  of the day it settles down, because a large volume has
+                  accumulated. In practice it's a slice of the price that was
+                  actually traded, and how to read exchange volume itself I
+                  cover separately. It's the same logic as in the
+                  <a
+                    class="linkrefinto"
+                    href="https://arapov.trade/en/freestudying/freeeducation#volume"
+                    >market volume analysis</a
+                  >
+                  in the course. There's also an anchored VWAP, started not from
+                  the open but from a point you pick, a swing low or a news
+                  event, which carries the same idea onto longer horizons.
+                </p>
+                <p>
+                  <strong>In short: </strong>
+                  <i
+                    >VWAP is the volume-weighted average price from the session
+                    open: where more trades went through, that price weighs
+                    more; it's counted cumulatively and resets each day, so it's
+                    primarily an intraday tool.</i
+                  >
+                </p>
 
-  <div class="flex">
-    <img class="pictureImg" loading="lazy" src="/assets/img/content/RSIindicator.jpg" alt="RSI indicator on the chart" />
-  </div>
+                <h2>How institutions use VWAP when entering a position</h2>
+                <p>
+                  Here is the reason VWAP works as a level at all. A large fund
+                  can't buy a big size with one order, or it would push the
+                  price up itself. So the execution is stretched out and then
+                  graded against VWAP: bought on average below the day's VWAP is
+                  good execution, above it poor. Algorithms openly try to build
+                  the position around this average.
+                </p>
+                <p>
+                  What kicks in next is simple mechanics, not magic. Those who
+                  bought above VWAP are sitting at a loss and are glad to get
+                  out at breakeven on a pullback to the average, creating
+                  pressure. Those who sold below it, the reverse. That's why
+                  price returns to VWAP and bounces off it so often. For me the
+                  value is that VWAP is a visible footprint of where large
+                  capital worked, and tracking what smart money does is the very
+                  core of the volume method.
+                </p>
+                <p>
+                  <strong>In short: </strong>
+                  <i
+                    >A large fund stretches its execution and grades it against
+                    VWAP, so algorithms build the position around the average;
+                    those who bought above are glad to exit at breakeven on a
+                    pullback, and because of that price returns to VWAP so
+                    often.</i
+                  >
+                </p>
 
-  <h2>My Take: Why I Trade Volume Instead of Indicators</h2>
-  <p>I spent years on indicators with nothing to show for it, and the lesson was simple: a formula calculated from past price cannot tell you what price will do next. The cruelest part is that on the first few trades they seem to work. A couple of clean signals, and a beginner is sure they found the grail. Over a long run of trades the picture changes.</p>
-  <p>What I put in their place is volume. Volume is not a derivative and not a formula. It is raw data, the real trades passing through the market right now, and it shows whether big capital is stepping in or stepping out at this moment. An oscillator will flash overbought and beg you to sell for the entire length of a strong trend, handing you one losing signal after another. A spike of volume at a specific level tells you instantly whether a large buyer actually showed up. That is fact, not fortune-telling on a formula. So all things equal, I will always take data about real supply and demand over its smoothed reflection. This is not advice for you, just the approach I have used in my own trading since 2013, after trying everything else first. I keep an indicator on the screen as a secondary picture at most, but the decision rests on what volume and levels are doing. I lay out the root problem with indicators in this video, <a class="linkrefinto" href="https://youtu.be/t4eLSS2vh-w?t=129">why your trading indicators don't work</a>, and I cover the same ground in the <a class="linkrefinto" href="https://arapov.trade/en/freestudying/freeeducation#indicatorsInTrading">indicators section of the course</a>.</p>
+                <h2>VWAP as intraday support and resistance</h2>
+                <p>
+                  Reading it here is straightforward. If price holds above VWAP,
+                  the edge is with the buyers, and pullbacks to the line I'd
+                  view as zones of buyer interest. If below, the edge is with
+                  the sellers, and bounces to VWAP are seller zones. When price
+                  churns right on VWAP, that's balance, and there's little point
+                  getting into such a choppy market.
+                </p>
+                <p>
+                  Many platforms also draw
+                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
+                    ><span itemprop="name">VWAP bands</span></dfn
+                  >
+                  at one, two and three standard deviations from VWAP. The idea
+                  is that a move beyond the second or third band is a
+                  statistically strong deviation, and from there price is often
+                  pulled back toward the average. The approach works, but this
+                  is exactly where beginners stumble: they start mechanically
+                  selling at the upper band and buying at the lower one, as if
+                  it were an automatic signal. In my experience the bands are a
+                  hint about being stretched, not a ready signal, and without
+                  confirmation from volume I wouldn't enter off them.
+                </p>
+                <p>
+                  <strong>In short: </strong>
+                  <i
+                    >Price above VWAP is a buyers' edge, below it a sellers'
+                    edge, on the line itself balance; the bands of one to three
+                    deviations hint at being stretched, but that's not a button,
+                    and without volume confirmation I don't enter off them.</i
+                  >
+                </p>
 
-  <section>
-    <h2>Frequently Asked Questions</h2>
-    <mat-accordion>
-      <mat-expansion-panel class="highlight-box owl_link-box" [expanded]="true">
-        <mat-expansion-panel-header>
-          <mat-panel-title>What are trading indicators in simple terms?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>They are math formulas calculated from price or volume and shown on the chart to suggest a decision. Most belong to technical analysis. On their own they are a hint about the past, not a guarantee about the future.</p>
-      </mat-expansion-panel>
-      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
-        <mat-expansion-panel-header>
-          <mat-panel-title>Do RSI and MACD actually work?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>As exact entry signals they are unreliable. In a trend, oscillators give false reversals, and MACD lags because of its moving averages. They feel like they work on the first trades but lose their edge over distance.</p>
-      </mat-expansion-panel>
-      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
-        <mat-expansion-panel-header>
-          <mat-panel-title>Why do indicators lag?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>Because they are calculated from prices that have already happened. Price moves first, and the indicator reflects it afterward. By the time a signal appears, the main move is often already over.</p>
-      </mat-expansion-panel>
-      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
-        <mat-expansion-panel-header>
-          <mat-panel-title>Can you trade without indicators?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>Yes. The alternative is volume analysis and trading from levels. Volume is raw data about real trades and shows what large capital is doing in the moment, instead of a smoothed reflection of past price.</p>
-      </mat-expansion-panel>
-    </mat-accordion>
-  </section>
+                <div class="flex">
+                  <img
+                    class="pictureImg"
+                    loading="lazy"
+                    src="/assets/img/content/vwap3.png"
+                    alt="VWAP bands"
+                  />
+                </div>
 
-  <section>
-    <h2>About the Author</h2>
-    <p>Author: Igor Arapov — independent researcher in the psychology of investment decisions and behavioral finance, practising trader since 2013, founder of arapov.trade, author of a trading book series (<a class="linkrefinto" href="https://openlibrary.org/authors/OL16073686A/Igor_Arapov">Open Library</a>), (<a class="linkrefinto" href="https://orcid.org/0009-0003-0430-778X">ORCID: 0009-0003-0430-778X</a>).</p>
-  </section>
-</article>
+                <h2>
+                  Trade VWAP in practice: the first 15 minutes, liquid names,
+                  and the reclaim
+                </h2>
+                <p>
+                  A line built from volume is only as trustworthy as the volume
+                  under it, and that carries a few practical consequences worth
+                  knowing before you lean on VWAP. In the first fifteen or
+                  twenty minutes of a session it is almost useless: so little
+                  volume has piled up that a single large trade yanks the line
+                  around, and it steadies only as the day fills in. It also
+                  needs a liquid, actively traded instrument; on a thin name the
+                  average is built from next to nothing and the level simply
+                  will not hold. The chart most traders watch it on is the
+                  five-minute, granular enough to see how price interacts with
+                  the line without drowning in the noise of the one-minute.
+                </p>
+                <p>
+                  The cleaner read, in my experience, is not the bare touch of
+                  the line but the reclaim or the rejection. When price has
+                  spent the session below VWAP and then pushes back above it and
+                  holds, that reclaim says control is passing to the buyers; the
+                  mirror, a clean rejection from below, says sellers are
+                  defending the average. And here the rule is the same one I
+                  keep coming back to: a reclaim that arrives with a jump in
+                  volume is worth my attention, while a reclaim on thin volume
+                  is usually an exhale that fades back. VWAP hands me the
+                  reference, the volume tells me whether the move through it is
+                  real.
+                </p>
+                <p>
+                  <strong>In short: </strong>
+                  <i
+                    >VWAP is unreliable in the first 15-20 minutes and on thin
+                    names, and the five-minute chart is its usual home; rather
+                    than the bare touch, I read the reclaim or rejection of the
+                    line and let the volume on it decide whether the move is
+                    real.</i
+                  >
+                </p>
+
+                <h2>
+                  Anchored VWAP: anchoring to an event instead of a daily reset
+                </h2>
+                <p>
+                  A regular VWAP counts from the day's open and resets every
+                  session, so it only describes the current day. An
+                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
+                    ><span itemprop="name">anchored VWAP</span></dfn
+                  >
+                  counts not from the open but from a point you choose yourself,
+                  and it does not reset. You usually drop the anchor on a
+                  meaningful event: a swing low or high, the day of a major news
+                  release or earnings report, the open of the week or month, the
+                  start of a clear move. From there the line accumulates volume
+                  from that point on.
+                </p>
+                <p>
+                  The value is that you see the average price of everyone who
+                  has traded since the event. If price holds above the anchored
+                  VWAP after an important low, buyers from that start are in
+                  profit and control the move; a drop below the line says the
+                  average participant since the event is now underwater. For
+                  swing trading on higher timeframes this is more useful than
+                  the daily VWAP, which has nothing to do with a weekly swing. I
+                  treat it the same way as the daily one: it highlights a fair
+                  price from a reference point rather than giving a signal, and
+                  only an overlap with volume and a level gives it weight.
+                </p>
+                <p>
+                  <strong>In short: </strong>
+                  <i
+                    >An anchored VWAP is the same VWAP but measured from a
+                    chosen point (a swing, news, the week's open) and with no
+                    daily reset, so it works for swing trading on higher
+                    timeframes, not only intraday.</i
+                  >
+                </p>
+
+                <h2>VWAP and volume analysis: using them together</h2>
+                <p>
+                  This is where VWAP comes into its own. On its own it's a
+                  single average line, and like any average it describes what
+                  has already happened. The strength appears when VWAP coincides
+                  with other footprints of large capital. If a VWAP level
+                  overlaps a horizontal level where price turned before, and a
+                  large volume arrives there too, that's no longer just a line
+                  but a zone where three confirmations converge at once.
+                </p>
+                <p>
+                  That's exactly how I look at VWAP. On CME futures, where the
+                  volume is exchange-traded and honest, the average often turns
+                  out to be right where I see a cluster of volume even without
+                  it. In other words VWAP doesn't open a new market for me, but
+                  it conveniently highlights the session's fair price. This
+                  isn't advice for you personally, it's how I work: VWAP comes
+                  as an add-on to volume and levels, not in place of them. Close
+                  to this lies the reading of the market profile, Steidlmayer's
+                  analysis. And why volume is the cause of a move while
+                  indicators are only the consequence is covered in the section
+                  on
+                  <a
+                    class="linkrefinto"
+                    href="https://arapov.trade/en/freestudying/freeeducation#effort"
+                    >effort and result</a
+                  >.
+                </p>
+                <p>
+                  <strong>In short: </strong>
+                  <i
+                    >VWAP's strength appears at a coincidence with a horizontal
+                    level and a large volume, where three confirmations
+                    converge; for me it's an add-on to volume and levels that
+                    conveniently highlights the session's fair price, not a
+                    separate system.</i
+                  >
+                </p>
+                <p>
+                  Where VWAP fits into the overall picture of
+                  <a
+                    class="linkrefinto"
+                    href="https://arapov.trade/en/freestudying/chart-reading"
+                    >reading the chart</a
+                  >, I cover separately.
+                </p>
+
+                <section>
+                  <h2>Frequently asked questions</h2>
+                  <mat-accordion>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      [expanded]="true"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >What does VWAP show in simple terms?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        The average price of the day adjusted for volume: the
+                        price at which the bulk of trades actually went through
+                        from the session open. Price above it means buyers on
+                        average paid more than the average, below it means less.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >How does VWAP differ from a moving
+                          average?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        A moving average counts only prices and weights them
+                        equally or exponentially. VWAP adds volume: bars where
+                        trading was busier weigh more. So VWAP reflects more
+                        accurately where the mass of participants actually was.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >On which markets and timeframes does VWAP
+                          work?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        Classically it's an intraday tool: it's counted from the
+                        session open and resets daily, so it comes into its own
+                        on stocks and futures with clear volume. There's also an
+                        anchored VWAP from a chosen point, which extends its use
+                        to longer horizons.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >Why is VWAP unreliable in the first 15 minutes of the
+                          session?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        Because VWAP is cumulative from the open, so early in
+                        the session almost no volume has accumulated and every
+                        trade swings the line sharply. It only becomes a stable
+                        reference once enough volume builds through the day,
+                        which is why many traders ignore VWAP readings until the
+                        first 15-20 minutes have passed.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >Can you trade with VWAP alone?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        VWAP is a reference, not a ready-made system. In my
+                        experience it's weak on its own, since it's still an
+                        average of past trades. I confirm it with real volume
+                        and levels, and then it earns its keep.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >How does an anchored VWAP differ from a regular
+                          VWAP?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        A regular VWAP counts from the session open and resets
+                        every day, so it is intraday. An anchored VWAP is tied
+                        to a chosen point (a swing low, news, the week's open)
+                        and does not reset, so it suits swing trading on higher
+                        timeframes. The logic is the same; only the starting
+                        point changes.
+                      </p>
+                    </mat-expansion-panel>
+                  </mat-accordion>
+                </section>
+
+                <section>
+                  <h2>About the Author</h2>
+                  <p>
+                    Author:
+                    <a class="linkrefinto" href="https://arapov.trade/en"
+                      >Igor Arapov</a
+                    >
+                    — independent researcher in the psychology of investment
+                    decisions and behavioral finance, practising trader since
+                    2013, founder of arapov.trade, author of a trading book
+                    series (<a
+                      class="linkrefinto"
+                      href="https://orcid.org/0009-0003-0430-778X"
+                      >ORCID: 0009-0003-0430-778X</a
+                    >).
+                  </p>
+                </section>
+              </article>
 
               <div
                 class=""

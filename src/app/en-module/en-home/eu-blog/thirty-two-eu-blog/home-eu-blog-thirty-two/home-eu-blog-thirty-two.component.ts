@@ -54,21 +54,16 @@ export class HomeEuBlogThirtyTwoComponent implements OnInit {
     this.grr = this.artickleServ.selectedGroups;
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
-    this.titleService.setTitle(
-      'Is Trading Education Worth the Investment? | Arapov.trade',
-    );
+    this.titleService.setTitle('How an Exchange Works | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Is trading education worth the investment? Analysis of paid course benefits, self-learning risks, and how to choose quality programs for beginner traders.',
+        'What an exchange is, its types and functions, how trading is organized and how the exchange market differs from OTC. A guide for beginners.',
     });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-04-02' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/purchasingcourses.webp',
-    });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
+
     this.gerRandom();
   }
   randomArticleRus: any = [];
@@ -253,31 +248,36 @@ export class HomeEuBlogThirtyTwoComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          headline: 'Is Trading Education Worth the Investment?',
+          headline:
+            'How a Stock Exchange Works in Plain Terms: Market, Price, Order Book, Clearing',
           description:
-            'Comprehensive analysis of paid trading education benefits, comparison with self-learning, and recommendations for choosing quality courses',
-          author: {
-            '@id': 'https://arapov.trade/en#person',
-          },
+            'What an exchange is, its types and functions, how trading is organized and how the exchange market differs from OTC. A guide for beginners.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'Arapov.trade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
             url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
-          datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://arapov.trade/en/freestudying/purchasingcourses',
+            '@id': 'https://arapov.trade/en/freestudying/how-exchange-works',
           },
-          image:
-            'https://arapov.trade/assets/img/content/purchasingcourses1.webp',
-          articleSection: 'Trading Education',
-          wordCount: 1550,
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/how-exchange-works.jpeg',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Stock exchange',
+          keywords:
+            'stock exchange, broker, order book, clearing, price formation, share, trading sessions',
           inLanguage: 'en',
         },
       ],
@@ -293,18 +293,18 @@ export class HomeEuBlogThirtyTwoComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/en#person',
+      '@id': 'https://arapov.trade/#person',
       name: 'Igor Arapov',
       alternateName: [
         'Ігор Арапов',
-        'Арапов Игорь',
-        'I. Arapov',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/en',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -319,12 +319,12 @@ export class HomeEuBlogThirtyTwoComponent implements OnInit {
         'https://t.me/ArapovTrade',
       ],
       jobTitle: [
-        'Independent researcher,',
-        'trader',
-        'author and founder of arapov.trade',
+        'Independent researcher',
+        'Trader',
+        'Author and founder of arapov.trade',
       ],
       description:
-        'Independent researcher, practicing trader, author of books on trading and scientific publications. Specializes in trading psychology and cognitive biases in financial markets.',
+        'Independent researcher, practising trader, author of trading books and scientific publications. Specialises in trading psychology and cognitive biases in financial markets.',
     };
 
     this.addJsonLdSchema(data);
@@ -340,42 +340,50 @@ export class HomeEuBlogThirtyTwoComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'Should I pay for trading courses when free materials exist?',
+          name: 'What is the difference between a stock exchange and a broker?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Paid courses offer structured curricula, practical exercises, and mentorship that significantly accelerate learning. Free materials are often fragmented and contain outdated information. Investing in quality education pays off through time savings and reduced losses during the initial trading phase.',
+            text: 'The exchange is the trading venue itself, where deals are matched and the price forms. The broker is the intermediary a retail trader uses to reach it. So you trade on the exchange, but through a broker.',
           },
         },
         {
           '@type': 'Question',
-          name: 'How long does it take to learn trading?',
+          name: "How is a stock's price determined?",
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'With a systematic approach, basic skills can be mastered in 2-3 months. Achieving consistent profitability typically requires 6 months to a year of practice. Professional courses shorten this timeline through structured programs and mentor feedback.',
+            text: 'Price is set by the balance of supply and demand. When buyers are keener the price rises; when sellers press, it falls. The current price is the price of the last trade, where a buyer and a seller met, not a number set by anyone.',
           },
         },
         {
           '@type': 'Question',
-          name: 'What skills do trading courses provide?',
+          name: 'What is an order book?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Quality courses teach technical and fundamental analysis, risk management, trading platform operation, and trading psychology. They also develop discipline, emotional control, and systematic thinking skills.',
+            text: 'It is a table of all live buy and sell orders, a real-time map of supply and demand. Limit orders sit in the book and wait for a counterparty, while market orders fill at once and move the price, eating through liquidity.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Can you learn trading on your own?',
+          name: 'What does a clearing house do?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Self-learning is possible but takes significantly longer and carries risks: unstructured knowledge, lack of feedback, and high probability of financial losses from experimenting with real accounts.',
+            text: "It steps between buyer and seller and guarantees the trade settles, removing the risk that the other side won't pay. Thanks to clearing on a regulated exchange like CME, volume is honest and deals are matched transparently.",
           },
         },
         {
           '@type': 'Question',
-          name: 'How to choose quality trading courses?',
+          name: 'What is a share in simple terms?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Consider the instructors experience, availability of practical assignments, access to mentorship, and graduate reviews. A good course includes modules on market analysis, risk management, and psychology. Avoid programs promising quick riches.',
+            text: "It is a security that gives its owner a stake in a company. By buying a share you become a part-owner of the business and gain a claim on part of its profit and, as a rule, a vote at the shareholders' meeting.",
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'When is the best time to trade?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'The most liquid stretch is the overlap of the European and American sessions, around the middle of the European day, when the market holds the most participants. Stepping in during major news releases is risky for a beginner because of chaotic moves.',
           },
         },
       ],
@@ -391,39 +399,58 @@ export class HomeEuBlogThirtyTwoComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'How to Start Learning Trading',
+      '@id': 'https://arapov.trade/en/freestudying/how-exchange-works#howto',
+      name: 'How to make sense of the way an exchange works',
       description:
-        'Step-by-step guide for beginners starting their trading education',
+        'A step-by-step walk-through of how an exchange-traded market is built and how to apply it in trading',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Define your learning goals',
-          text: 'Decide what you want to achieve: master basic concepts, develop a trading strategy, or improve current results.',
+          name: 'Tell the exchange apart from the broker',
+          text: 'The exchange is the centralised venue where trades are matched, while the broker is the intermediary a retail trader uses to reach it.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Study basics independently',
-          text: 'Familiarize yourself with basic terminology and financial market principles through free materials.',
+          name: 'Know the players: big capital and the crowd',
+          text: 'On an exchange, big capital (banks and funds) meets the retail crowd, while the broker, market maker and clearing house provide access and liquidity; the task is to read volume and stand with big capital.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Choose a quality course',
-          text: 'Evaluate the curriculum, instructor experience, and class format. Prefer courses with practical assignments.',
+          name: 'Understand what a share is',
+          text: "A share is the market's basic instrument, a stake in a company whose price in the moment is moved by supply and demand, not by the quality of the business.",
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Practice on a demo account',
-          text: 'Apply your knowledge on a demonstration account without risking real money. Test strategies and analyze results.',
+          name: 'Learn which assets trade, and where',
+          text: 'An exchange carries shares, bonds, futures, commodities and currency under one market design, so start with a single instrument; part of the market, like Forex, is off-exchange, with no single honest volume.',
         },
         {
           '@type': 'HowToStep',
           position: 5,
-          name: 'Keep a trading journal',
-          text: 'Record all trades, analyze successes and mistakes to improve your trading approach.',
+          name: 'Grasp how price is born',
+          text: 'An exchange price is the price of the last trade, born from the balance of supply and demand; a market often falls not from sellers but from demand that has dried up.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 6,
+          name: 'Read the order book and order types',
+          text: 'A limit order sits in the book and waits, while a market order fills at once and moves the price, eating through liquidity; the imbalance in the book shows who is stronger.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 7,
+          name: 'Understand the role of clearing and volume',
+          text: 'Clearing removes the risk of non-payment, so volume on a regulated exchange is honest, and it is that volume that reveals the footprints of smart money.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 8,
+          name: 'Choose your time to trade',
+          text: 'The most liquid moment is the overlap of the London and US sessions; trading less but in that window beats trading all day on a thin market.',
         },
       ],
     };
@@ -438,68 +465,43 @@ export class HomeEuBlogThirtyTwoComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Trading Terms Glossary',
-      description: 'Key terms related to trading education',
+      name: 'Glossary of terms used in the article',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Technical Analysis',
+          name: 'Stock exchange',
           description:
-            'A method of forecasting price movements based on studying charts, patterns, and indicators',
+            'A centralised trading venue where buyers and sellers meet under one set of rules, and the price forms openly through an auction of orders in the book.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Fundamental Analysis',
+          name: 'Share',
           description:
-            'A method of asset valuation based on economic indicators and macroeconomic factors',
+            'A security that locks in a stake in a company for its owner, along with a claim on part of its profit and assets.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Risk Management',
+          name: 'Exchange price',
           description:
-            'A system of risk control methods in trading, including position sizing and protective order placement',
+            'The price of the last trade, where a buyer and a seller met; it is born from the balance of supply and demand, not set from above.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Stop-Loss',
+          name: 'Clearing house',
           description:
-            'A protective order that automatically closes a position when a specified loss level is reached',
+            'An intermediary that steps between buyer and seller and guarantees both sides will meet their obligations on the trade.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Demo Account',
+          name: 'Institutional investors',
           description:
-            'A practice trading account with virtual money for risk-free learning',
+            'A large professional market participant, such as a bank or a fund, with deep capital, research and discipline; unlike the retail crowd, it can noticeably move the price.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Leverage',
+          name: 'Over-the-counter (OTC) market',
           description:
-            'A margin trading tool allowing traders to control amounts exceeding their own capital',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Volatility',
-          description:
-            'A measure of price variability of an asset over a specific time period',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Trading Strategy',
-          description:
-            'A systematic set of rules for entering trades, managing positions, and taking profits',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Trading Psychology',
-          description:
-            'The branch of trading studying the impact of emotions on trading decisions',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Scalping',
-          description:
-            'A short-term trading strategy based on making multiple quick trades with small profits',
+            'Deals struck directly between participants with no single centralised venue and no shared order book; the prime example is the Forex currency market, where no single honest market-wide volume exists.',
         },
       ],
     };

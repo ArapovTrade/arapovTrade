@@ -56,22 +56,18 @@ export class HomeEnBlogTwentyFiveComponent implements OnInit {
     this.checkedGroup = this.artickleServ.selectedGroups;
 
     this.titleService.setTitle(
-      'Market Makers in Cryptocurrency Trading | Role and Functions',
+      'Averaging and Martingale in Trading | Arapov.trade',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Complete guide to market makers in cryptocurrency markets. Learn how they provide liquidity, reduce volatility, and impact crypto trading.',
+        'What averaging and the martingale method are, why they look profitable and how exactly they drain a beginner’s account. The psychology and math of risk.',
     });
 
-    this.meta.updateTag({ name: 'author', content: 'Ihor Arapov' });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-22' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/cryptommakers.webp',
-    });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
+
     this.gerRandom();
   }
   randomArticleRus: any = [];
@@ -257,36 +253,36 @@ export class HomeEnBlogTwentyFiveComponent implements OnInit {
         {
           '@type': 'Article',
           headline:
-            'Market Makers in Cryptocurrency Markets: Role and Functions',
+            'Averaging and the Martingale: Why Adding to a Loss Is Dangerous',
           description:
-            'Complete guide to market makers in cryptocurrency markets. Learn how they provide liquidity, reduce volatility, and impact crypto trading.',
-          author: {
-            '@id': 'https://arapov.trade/en#person',
-          },
+            'What averaging and the martingale method are, why they look profitable and how exactly they drain a beginner’s account. The psychology and math of risk.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'Arapov Trade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
-          datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
-          image: ['https://arapov.trade/assets/img/content/cryptommakers.webp'],
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://arapov.trade/en/freestudying/cryptommakers',
+            '@id': 'https://arapov.trade/en/freestudying/averaging-martingale',
           },
-          articleSection: 'Cryptocurrency',
-          keywords: [
-            'market maker',
-            'cryptocurrency',
-            'liquidity',
-            'spread',
-            'DEX',
-            'CEX',
-          ],
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/averagingintrading.webp',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Trading psychology',
+          keywords:
+            'averaging in trading, martingale method, averaging against the trend, psychology of averaging, risk management',
+          inLanguage: 'en',
         },
       ],
     };
@@ -301,18 +297,18 @@ export class HomeEnBlogTwentyFiveComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/en#person',
+      '@id': 'https://arapov.trade/#person',
       name: 'Igor Arapov',
       alternateName: [
         'Ігор Арапов',
-        'Арапов Игорь',
-        'I. Arapov',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/en',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -327,12 +323,12 @@ export class HomeEnBlogTwentyFiveComponent implements OnInit {
         'https://t.me/ArapovTrade',
       ],
       jobTitle: [
-        'Independent researcher,',
-        'trader',
-        'author and founder of arapov.trade',
+        'Independent researcher',
+        'Trader',
+        'Author and founder of arapov.trade',
       ],
       description:
-        'Independent researcher, practicing trader, author of books on trading and scientific publications. Specializes in trading psychology and cognitive biases in financial markets.',
+        'Independent researcher, practising trader, author of trading books and scientific publications. Specialises in trading psychology and cognitive biases in financial markets.',
     };
 
     this.addJsonLdSchema(data);
@@ -348,42 +344,42 @@ export class HomeEnBlogTwentyFiveComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'What are market makers in cryptocurrency?',
+          name: 'What is averaging in trading?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Market makers are professional market participants who provide liquidity by continuously placing buy and sell orders. They create conditions for fast trade execution, minimize spreads, and stabilize prices on cryptocurrency exchanges.',
+            text: 'It is adding to an already open position at a different price, which shifts your average entry point. You took bitcoin at ten thousand, it settled to five, you added one more, and the average dropped to seven and a half. To break even now half the move is enough, only if the adding goes against the trend, it merely postpones the draining of the account rather than canceling it.',
           },
         },
         {
           '@type': 'Question',
-          name: 'How do market makers earn money in crypto?',
+          name: 'Why is averaging against the trend dangerous?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Market makers earn from the spread — the difference between buy and sell prices. They buy assets at lower prices (bid) and sell at higher prices (ask). They may also receive fees from exchanges for providing liquidity.',
+            text: 'Because you buy more on a weak market, and it often falls precisely to flush out stubborn buyers. Adding without a stop removes the ceiling from the loss, and one position can zero the account. Trends go further than it seems: the euro against the dollar slid from about 1.40 to around 1.05 over several months in 2014 and 2015, and no averaging there saved anyone.',
           },
         },
         {
           '@type': 'Question',
-          name: 'What is the difference between market makers on CEX and DEX?',
+          name: 'What is the Martingale method?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'On centralized exchanges (CEX), market makers work through order books, placing limit orders. On decentralized exchanges (DEX), they provide liquidity through liquidity pools, adding assets to smart contracts for automatic swaps.',
+            text: 'It is doubling the volume after each loss in the hope of covering all the losses with one win. The bet flies up exponentially, one, two, four, eight and on, so that by the seventh loss in a row you are required to put up a hundred and twenty-eight times the starting sum. The market can press a position longer than the trader has money for doublings, so one drawn-out losing streak is enough to zero the account.',
           },
         },
         {
           '@type': 'Question',
-          name: 'What risks are associated with market making?',
+          name: 'Why does a trader average into a loss?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Key risks include market volatility, algorithm technical failures, regulatory changes, and competition. In illiquid markets, market makers also face risk of significant losses during sharp price movements.',
+            text: 'The reason is psychological. Admitting a loss is painful, because it means admitting a mistake, and instead of a stop, denial and hope for a reversal switch on. Adding gives a false sense of control, but in essence it is an argument not with the market but with your own ego, and it turns a small loss into a big one.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Why are market makers important for new tokens?',
+          name: 'When is averaging acceptable?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Market makers are critically important for new tokens as they provide initial liquidity. Without them, new projects suffer from wide spreads, low trading volumes, and high volatility, which discourages traders and investors.',
+            text: 'Only in one form: in the direction of the trend, with a modest volume and a mandatory stop on the whole position. That way you build up a trade that is already bringing profit on a pullback, rather than trying to drag out a sinking one. In my experience a beginner is better off forgetting about adding and first getting stronger on ordinary trading with a clear stop and careful risk.',
           },
         },
       ],
@@ -399,39 +395,40 @@ export class HomeEnBlogTwentyFiveComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'How Market Makers Work in Crypto Markets',
+      '@id': 'https://arapov.trade/en/freestudying/averaging-martingale#howto',
+      name: 'How to understand and apply: averaging and the Martingale, and why adding to a loss is dangerous',
       description:
-        'Key stages of market maker operations in cryptocurrency markets',
+        'A step-by-step breakdown of the topic and its practical use in trading',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Market Conditions Analysis',
-          text: 'Market makers analyze trading volumes, spreads, volatility, and current trends to determine optimal strategy.',
+          name: 'Understand what averaging is and how the average price is calculated',
+          text: 'Averaging is adding to an already open position at a new price in order to shift the average entry price.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Two-sided Order Placement',
-          text: 'Buy (bid) and sell (ask) orders are placed simultaneously, creating liquidity for other market participants.',
+          name: 'Work out why adding against the trend drains the account',
+          text: 'Here is where the main trouble is buried.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Algorithmic Management',
-          text: 'Algorithms automatically adjust orders in real-time, responding to changing market conditions.',
+          name: 'See the psychology behind adding into a loss',
+          text: 'The root of the problem lies deeper than technique, it is in the head.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Risk Management',
-          text: 'Hedging strategies, stop-loss orders, and position limits are applied to protect against losses.',
+          name: 'Understand the mathematics of the Martingale',
+          text: 'The Martingale method is bet management in which, after each loss, the volume of the next trade is doubled in the hope of covering all the losses with a single win.',
         },
         {
           '@type': 'HowToStep',
           position: 5,
-          name: 'Position Balancing',
-          text: 'Market makers continuously rebalance their positions to maintain market direction neutrality.',
+          name: 'Protect yourself with a plan, fixed risk, and adding only with the trend',
+          text: 'The good news is that there is a reliable defense against both traps, and it is a trading plan.',
         },
       ],
     };
@@ -446,67 +443,19 @@ export class HomeEnBlogTwentyFiveComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Market Making Terminology',
-      description: 'Essential terms for cryptocurrency market making',
+      name: 'Glossary of article terms',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Market Maker',
+          name: 'Averaging',
           description:
-            'Market participant providing liquidity through continuous buy and sell order placement',
+            'Averaging is adding to an already open position at a new price in order to shift the average entry price.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Spread',
+          name: 'The Martingale method',
           description:
-            'Difference between best buy price (bid) and best sell price (ask)',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Liquidity',
-          description:
-            "Market's ability to provide fast trade execution without significant price impact",
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'CEX',
-          description:
-            'Centralized Exchange — exchange with order book and custodial asset storage',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'DEX',
-          description:
-            'Decentralized Exchange — exchange based on smart contracts',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Liquidity Pool',
-          description:
-            'Smart contract with locked assets for automatic token swaps',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Slippage',
-          description:
-            'Difference between expected and actual trade execution price',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Order Book',
-          description: 'List of all active buy and sell orders for an asset',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'HFT',
-          description:
-            'High-Frequency Trading — algorithmic trading at millisecond speeds',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'AMM',
-          description:
-            'Automated Market Maker — algorithm-based market maker using mathematical formulas',
+            'The Martingale method is bet management in which, after each loss, the volume of the next trade is doubled in the hope of covering all the losses with a single win.',
         },
       ],
     };

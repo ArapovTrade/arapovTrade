@@ -56,16 +56,14 @@ export class HomeRuBlogEighteenComponent implements OnInit {
     this.grr = this.artickleServ.selectedGroups;
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
-    this.titleService.setTitle(
-      'Объемный анализ рынка в трейдинге | ArapovTrade',
-    );
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
+    this.titleService.setTitle('Стейблкоины и Tether (USDT) | Arapov.trade');
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Полное руководство по объемному анализу рынка. Volume Profile, Delta Volume, Footprint Charts и практические стратегии анализа объемов для трейдеров.',
+        'Что такое стейблкоины, как они держат привязку к доллару, чем USDT отличается от алгоритмических монет и какие у стейблкоинов риски.',
     });
     this.gerRandom();
   }
@@ -275,119 +273,37 @@ export class HomeRuBlogEighteenComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          mainEntityOfPage: {
-            '@type': 'WebPage',
-            '@id': 'https://arapov.trade/ru/freestudying/volmarketanalisys',
-          },
-          headline: 'Объемный анализ рынка в трейдинге | ArapovTrade',
+          headline:
+            'Стейблкоины и Tether: что это, зачем трейдеру и в чём риск',
           description:
-            'Полное руководство по объемному анализу рынка. Volume Profile, Delta Volume, Footprint Charts и практические стратегии анализа объемов для трейдеров.',
-          image:
-            'https://arapov.trade/assets/img/content/volmarketanalisys.webp',
-          datePublished: '2025-06-25T00:00:00+03:00',
-          dateModified: '2026-04-15T00:00:00Z',
-          inLanguage: 'ru',
-          author: {
-            '@id': 'https://arapov.trade/ru#person',
-          },
+            'Что такое стейблкоины, как они держат привязку к доллару, чем USDT отличается от алгоритмических монет и какие у стейблкоинов риски.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
             '@id': 'https://arapov.trade/#organization',
             name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
-          video: {
-            '@type': 'VideoObject',
-            name: 'Индикатор объема - ключевой инструмент технического анализа',
-            description:
-              'Индикатор объема - ключевой инструмент технического анализа для трейдера. Разбираю основы объемного анализа: как читать объемы, определять дисбаланс спроса и предложения, находить Smart Money на рынке.',
-            thumbnailUrl: [
-              'https://img.youtube.com/vi/0pXHZRfVW9E/maxresdefault.jpg',
-              'https://img.youtube.com/vi/0pXHZRfVW9E/hqdefault.jpg',
-            ],
-            uploadDate: '2025-11-24T00:00:00+02:00',
-            duration: 'PT6M54S',
-            contentUrl: 'https://www.youtube.com/watch?v=0pXHZRfVW9E',
-            embedUrl: 'https://www.youtube.com/embed/0pXHZRfVW9E',
-            inLanguage: 'ru',
-            keywords:
-              'объемы в трейдинге, индикатор объема, анализ объемов, Smart Money, биржевой стакан',
-            hasPart: [
-              {
-                '@type': 'Clip',
-                name: 'Откуда берется объем на бирже',
-                startOffset: 39,
-                endOffset: 56,
-                url: 'https://www.youtube.com/watch?v=0pXHZRfVW9E&t=39',
-              },
-              {
-                '@type': 'Clip',
-                name: 'Биржевой стакан - что это и как работает',
-                startOffset: 56,
-                endOffset: 80,
-                url: 'https://www.youtube.com/watch?v=0pXHZRfVW9E&t=56',
-              },
-              {
-                '@type': 'Clip',
-                name: 'Механика движения цены на рынке',
-                startOffset: 80,
-                endOffset: 90,
-                url: 'https://www.youtube.com/watch?v=0pXHZRfVW9E&t=80',
-              },
-              {
-                '@type': 'Clip',
-                name: 'Как увидеть дисбаланс спроса и предложения',
-                startOffset: 90,
-                endOffset: 150,
-                url: 'https://www.youtube.com/watch?v=0pXHZRfVW9E&t=90',
-              },
-              {
-                '@type': 'Clip',
-                name: 'Анализ больших объемов профессионалов',
-                startOffset: 150,
-                endOffset: 160,
-                url: 'https://www.youtube.com/watch?v=0pXHZRfVW9E&t=150',
-              },
-              {
-                '@type': 'Clip',
-                name: 'Как правильно анализировать объемы',
-                startOffset: 160,
-                endOffset: 260,
-                url: 'https://www.youtube.com/watch?v=0pXHZRfVW9E&t=160',
-              },
-              {
-                '@type': 'Clip',
-                name: 'Логика Smart Money в трейдинге',
-                startOffset: 260,
-                endOffset: 316,
-                url: 'https://www.youtube.com/watch?v=0pXHZRfVW9E&t=260',
-              },
-              {
-                '@type': 'Clip',
-                name: 'Медвежий объем - объем продаж',
-                startOffset: 316,
-                endOffset: 327,
-                url: 'https://www.youtube.com/watch?v=0pXHZRfVW9E&t=316',
-              },
-              {
-                '@type': 'Clip',
-                name: 'Бычий объем - объем покупок',
-                startOffset: 327,
-                endOffset: 356,
-                url: 'https://www.youtube.com/watch?v=0pXHZRfVW9E&t=327',
-              },
-              {
-                '@type': 'Clip',
-                name: 'Захват ликвидности профессионалами',
-                startOffset: 356,
-                endOffset: 414,
-                url: 'https://www.youtube.com/watch?v=0pXHZRfVW9E&t=356',
-              },
-            ],
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': 'https://arapov.trade/ru/freestudying/stablecoins-tether',
           },
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/stablecoins.webp',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Криптовалюты',
+          keywords:
+            'стейблкоин, USDT, Tether, USDC, DAI, привязка к доллару, депег',
+          inLanguage: 'ru',
         },
       ],
     };
@@ -402,18 +318,18 @@ export class HomeRuBlogEighteenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/ru#person',
-      name: 'Игорь Арапов',
+      '@id': 'https://arapov.trade/#person',
+      name: 'Igor Arapov',
       alternateName: [
-        'Igor Arapov',
-        'Арапов Игорь',
-        'I. Arapov',
         'Ігор Арапов',
-        'І. В. Арапов',
+        'Игорь Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/ru',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -449,42 +365,42 @@ export class HomeRuBlogEighteenComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'Что такое объемный анализ рынка?',
+          name: 'Что такое стейблкоин простыми словами?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Объемный анализ — это метод технического анализа, основанный на изучении объемов торгов. Он помогает выявить истинные намерения крупных игроков и определить, куда они направляют ликвидность, анализируя количество сделок на разных ценовых уровнях.',
+            text: 'Это криптомонета, которую намеренно держат у стабильной отметки, обычно у доллара в пропорции один к одному. Нужна она, чтобы хранить и гонять стоимость внутри крипты без биткоиновых качелей, а трейдеру служит и кошельком для пауз, и парой для расчётов.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Какие основные инструменты объемного анализа?',
+          name: 'Чем USDT отличается от USDC и DAI?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Основные инструменты: Volume Profile (распределение объемов по ценам), Delta Volume (разница между покупками и продажами), Footprint Charts (детальный анализ ордеров), Open Interest (открытый интерес на фьючерсах).',
+            text: 'USDT крупнее и ликвиднее всех и держится на резервах своего эмитента. USDC выпускает Circle, он тоже долларовый, но берёт открытостью отчётов и ежемесячным аудитом. DAI стоит особняком: он децентрализован и опирается не на доллары в банке, а на криптозалог в смарт-контрактах.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Как объем подтверждает тренд?',
+          name: 'Чем обеспечен USDT и безопасен ли он?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Растущий тренд с увеличением объема подтверждает силу движения. Снижение объема на росте цены сигнализирует об ослаблении тренда. Высокие объемы на пробое уровня подтверждают его истинность.',
+            text: 'За ним стоят живые активы эмитента, и больше восьмидесяти процентов из них это короткие гособлигации США, а оставшееся золото, биткоин и прочее. Но Tether публикует не полный аудит, а заверение, прямой выкуп доступен только крупным клиентам, страховки как у вклада нет, поэтому разумно держать в USDT лишь ту долю, расстаться с которой не страшно.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Как отличить истинный пробой от ложного?',
+          name: 'Может ли обеспеченный стейблкоин потерять привязку?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Истинный пробой сопровождается резким увеличением объема и продолжением движения. Ложный пробой характеризуется низким объемом или его падением после пробоя, что часто приводит к возврату цены в диапазон.',
+            text: 'Да. В марте 2023 года USDC просел примерно до 0,87 доллара, когда часть его резервов застряла в рухнувшем банке SVB, а выкуп на выходные встал. Привязку вернули за пару дней, но это показало: даже полностью обеспеченная монета зависит от банковских каналов и не является безрисковой.',
           },
         },
         {
           '@type': 'Question',
-          name: 'На каких платформах лучше проводить объемный анализ?',
+          name: 'Что случилось с UST и Terra в 2022 году?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Лучшие платформы для объемного анализа: TradingView (базовые индикаторы), ATAS (профессиональный анализ потока ордеров), Bookmap (тепловые карты ликвидности). Выбор зависит от рынка и стиля торговли.',
+            text: 'Весной 2022 года алгоритмический UST сорвался с доллара. Держатели разом побежали к выходу, раскрутилась петля: токен сжигали, связанная LUNA пухла в объёме, и за несколько суток обе монеты осели почти в ноль. Это хрестоматийный провал алгоритмической схемы.',
           },
         },
       ],
@@ -500,39 +416,34 @@ export class HomeRuBlogEighteenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'Как проводить объемный анализ рынка',
+      '@id': 'https://arapov.trade/ru/freestudying/stablecoins-tether#howto',
+      name: 'Как разобраться в стейблкоинах и Tether',
       description:
-        'Пошаговый процесс анализа рыночных объемов для принятия торговых решений',
+        'Пошаговый разбор: что держит привязку, чем отличаются виды стейблкоинов, чем обеспечен USDT и в чём его риски',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Определите рыночный контекст',
-          text: 'Оцените текущую фазу рынка: тренд, флет или консолидация. Объемные уровни работают по-разному в зависимости от рыночных условий.',
+          name: 'Поймите, что держит привязку стейблкоина к доллару',
+          text: 'Стейблкоин — это криптовалюта, чья цена привязана к стабильному активу, чаще всего к доллару США по курсу один к одному.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Используйте мульти-таймфреймовый анализ',
-          text: 'Анализируйте объемы на старших таймфреймах для определения глобальных уровней ликвидности, на младших — для поиска точек входа.',
+          name: 'Сравните USDT, USDC и DAI',
+          text: 'Разберём тройку, которую трейдер встречает чаще всего, потому что именно в них он держит кэш и считает сделки.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Найдите ключевые объемные уровни',
-          text: 'Используйте Volume Profile для определения POC (Point of Control) и зон накопления объема, где концентрируется ликвидность.',
+          name: 'Разберитесь, чем обеспечен Tether в 2026 году',
+          text: 'USDT — это стейблкоин компании Tether с привязкой к доллару один к одному, выпущенный ещё в 2014 году и со временем ставший крупнейшим в мире.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Анализируйте Delta Volume',
-          text: 'Оцените соотношение покупок и продаж. Положительная дельта указывает на преобладание покупателей, отрицательная — продавцов.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 5,
-          name: 'Подтвердите сигналы Price Action',
-          text: 'Комбинируйте объемный анализ со свечными паттернами и уровнями поддержки/сопротивления для повышения точности входов.',
+          name: 'Учитывайте риск депега и держите осознанную долю',
+          text: 'Слово стабильный усыпляет бдительность, а зря, и лучший урок тут дал крах TerraUSD в мае 2022 года.',
         },
       ],
     };
@@ -547,68 +458,19 @@ export class HomeRuBlogEighteenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Термины объемного анализа в трейдинге',
-      description: 'Глоссарий ключевых терминов объемного анализа рынка',
+      name: 'Глоссарий терминов статьи',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Объемный анализ',
+          name: 'Стейблкоин',
           description:
-            'Метод технического анализа, изучающий объемы торгов для определения активности участников рынка и намерений крупных игроков',
+            'Это криптовалюта, чья цена привязана к стабильному активу, чаще всего к доллару США по курсу один к одному; задача такой монеты не скакать, как биткоин, а спокойно стоять около доллара.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Volume Profile',
+          name: 'USDT',
           description:
-            'Индикатор, показывающий распределение торговых объемов по различным ценовым уровням за определенный период',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Delta Volume',
-          description:
-            'Разница между объемом рыночных покупок и продаж, показывающая реальное давление покупателей или продавцов',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'POC',
-          description:
-            'Point of Control — ценовой уровень с максимальным объемом торгов, часто выступающий как зона притяжения цены',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Footprint Charts',
-          description:
-            'Графики, показывающие детальное распределение объемов внутри каждой свечи с разбивкой на покупки и продажи',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Открытый интерес',
-          description:
-            'Количество открытых позиций на фьючерсном рынке, показывающее вовлеченность участников в текущий тренд',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Зона накопления',
-          description:
-            'Ценовой диапазон, где крупные игроки постепенно набирают позиции перед значительным движением цены',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Зона распределения',
-          description:
-            'Ценовой диапазон, где крупные игроки постепенно закрывают позиции, готовясь к развороту тренда',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Тиковый объем',
-          description:
-            'Количество изменений цены за период времени, используемое на рынках без централизованного учета реального объема',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'VWAP',
-          description:
-            'Volume Weighted Average Price — средневзвешенная по объему цена, показывающая справедливую стоимость актива',
+            'Это стейблкоин компании Tether с привязкой к доллару один к одному, выпущенный в 2014 году и ставший крупнейшим стейблкоином в мире.',
         },
       ],
     };

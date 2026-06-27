@@ -53,22 +53,16 @@ export class HomeEuBlogThirtyNineComponent implements OnInit {
     this.grr = this.artickleServ.selectedGroups;
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
-    this.titleService.setTitle(
-      'Where to Safely Store Cryptocurrency | Complete Security Guide',
-    );
+    this.titleService.setTitle('Risk Management in Trading | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Complete guide to secure cryptocurrency storage. Hot vs cold wallets comparison, private key protection, multi-signature solutions, and combined strategies for safeguarding digital assets.',
+        'Risk and capital management: position size, risk per trade, stop-loss and why risk management is what keeps your account alive over time.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Igor Arapov' });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-23' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/safetostorecrypto.webp',
-    });
+
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
 
     this.gerRandom();
   }
@@ -255,31 +249,37 @@ export class HomeEuBlogThirtyNineComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          mainEntityOfPage: {
-            '@type': 'WebPage',
-            '@id': 'https://arapov.trade/en/freestudying/safetostorecrypto',
-          },
           headline:
-            'Where to Safely Store Cryptocurrency: Complete Guide to Digital Asset Security',
+            'Risk Management in Trading: How to Protect Capital and Not Blow the Account',
           description:
-            'Complete guide to secure cryptocurrency storage. Hot vs cold wallets comparison, private key protection, multi-signature solutions, and combined strategies for safeguarding digital assets.',
-          image:
-            'https://arapov.trade/assets/img/content/safetostorecrypto.webp',
-          author: {
-            '@id': 'https://arapov.trade/en#person',
-          },
+            'Risk and capital management: position size, risk per trade, stop-loss and why risk management is what keeps your account alive over time.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'Arapov.trade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
-              url: 'https://arapov.trade/assets/img/content/favicon.ico',
+              url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
-          datePublished: '2025-06-15T00:00:00Z',
-         dateModified: '2026-04-15T00:00:00Z',
-          articleBody:
-            'Protecting cryptocurrency holdings demands thorough understanding of storage methods and security threats facing digital asset owners. Unlike traditional banking where lost cards can be replaced and fraudulent transactions reversed, the blockchain ecosystem operates on principles of absolute personal responsibility.',
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': 'https://arapov.trade/en/freestudying/risk-management',
+          },
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/capitalmanagement.webp',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Risk Management',
+          keywords:
+            'risk management, money management, position size, lot, stop-loss, risk-reward ratio, expected value, drawdown, compound interest',
+          inLanguage: 'en',
         },
       ],
     };
@@ -294,18 +294,18 @@ export class HomeEuBlogThirtyNineComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/en#person',
+      '@id': 'https://arapov.trade/#person',
       name: 'Igor Arapov',
       alternateName: [
         'Ігор Арапов',
-        'Арапов Игорь',
-        'I. Arapov',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/en',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -320,12 +320,12 @@ export class HomeEuBlogThirtyNineComponent implements OnInit {
         'https://t.me/ArapovTrade',
       ],
       jobTitle: [
-        'Independent researcher,',
-        'trader',
-        'author and founder of arapov.trade',
+        'Independent researcher',
+        'Trader',
+        'Author and founder of arapov.trade',
       ],
       description:
-        'Independent researcher, practicing trader, author of books on trading and scientific publications. Specializes in trading psychology and cognitive biases in financial markets.',
+        'Independent researcher, practising trader, author of trading books and scientific publications. Specialises in trading psychology and cognitive biases in financial markets.',
     };
 
     this.addJsonLdSchema(data);
@@ -341,42 +341,50 @@ export class HomeEuBlogThirtyNineComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'What type of wallet should I choose for cryptocurrency storage?',
+          name: 'What is risk management in trading in simple terms?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Your choice depends on usage patterns: hot wallets suit active trading and daily transactions due to instant access, while cold wallets (hardware devices like Ledger, Trezor) are recommended for long-term storage of significant amounts because they isolate private keys from internet connectivity.',
+            text: 'Rules about how much to put into a trade and where to exit it, so a streak of losses does not zero the account. There are two halves: risk management guards the account with small risk and a stop, while money management lifts it through position sizing and working with profit. Without the first, the second loses its meaning.',
           },
         },
         {
           '@type': 'Question',
-          name: 'What is a seed phrase and why is protecting it critical?',
+          name: 'How many percent of the account can you risk in one trade?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'A seed phrase is a sequence of 12 or 24 words that enables wallet recovery. It represents the only method to restore access if your device is lost, so it must be stored securely offline, never photographed, and never shared with anyone under any circumstances.',
+            text: 'One or two percent of the account per trade. Variance is to blame: minuses come in streaks of five to ten in a row even in a working system. At ten percent risk such a streak wipes the account, at one or two it only dents it slightly, and trading goes on.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Is keeping cryptocurrency on exchanges safe?',
+          name: 'How do you calculate position size and lot for your risk?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Exchange storage offers convenience for active trading but carries elevated risks: exchanges can be hacked, freeze assets, or go bankrupt. Keep only funds needed for immediate trading on exchange wallets and transfer the majority of holdings to personal wallets under your direct control.',
+            text: 'From the risk and stop, not by eye. Divide the money risk by the stop in pips and multiply by the pip value. For example, risk two hundred dollars, stop fifty pips, pip ten dollars comes out to 0.4 of a lot. The risk and stop are fixed first, the lot is counted last.',
           },
         },
         {
           '@type': 'Question',
-          name: 'What is multisignature and when should I use it?',
+          name: 'Why is the 1:2 ratio considered the minimum?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Multisignature (multisig) technology requires multiple independent signatures to authorize transactions. It proves valuable for corporate crypto asset management, family investments, and situations requiring distributed control among participants to enhance security.',
+            text: 'At 1:2 it is enough to win about a third of trades to stay in profit, and a third of wins is within reach. Holding more than half steadily is something almost no one manages, which is why 1:1 is loss-making for most. At 1:3 even a quarter of successful entries is enough.',
           },
         },
         {
           '@type': 'Question',
-          name: 'How can I protect against phishing attacks in cryptocurrency?',
+          name: 'Why do you need a stop-loss if it locks in a loss?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Always verify URLs before entering credentials, download applications exclusively from official sources, use bookmarks to access exchanges and wallets, never click links in emails or messages, and enable two-factor authentication through apps (Google Authenticator, Authy) rather than SMS.',
+            text: 'A stop is not a loss but a pre-paid right to keep trading. A small planned minus is cheaper than a hung losing position that eats months of work. That is why it is set right at entry, without shifting it toward the loss, as is a fixed risk per trade.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What matters more: a precise entry or protecting capital?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'In my approach, protecting capital. Because of variance losses come in streaks, and at high risk even a sound system fades before it plays out its edge. Managing risk holds the account more reliably than the accuracy of a single entry.',
           },
         },
       ],
@@ -392,39 +400,46 @@ export class HomeEuBlogThirtyNineComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'How to Set Up Secure Cryptocurrency Storage',
+      '@id': 'https://arapov.trade/en/freestudying/risk-management#howto',
+      name: 'How to build risk management and capital management',
       description:
-        'Step-by-step guide to establishing a robust cryptocurrency storage system using combined security strategies.',
+        'A step-by-step breakdown of capital management: from choosing the risk per trade to calculating size, the stop, the ratio, and the expected value of the system',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Assess Portfolio and Plan Distribution',
-          text: 'Evaluate your crypto holdings and categorize them by purpose: active trading funds (5-10%), operational reserve (10-20%), and long-term investments (70-85%). This distribution will determine your wallet type selection.',
+          name: 'Understand what capital management is made of',
+          text: 'Capital management is a set of rules that decide the share of the account in each trade and protect the account from losses.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Purchase and Configure Hardware Wallet',
-          text: 'Acquire a hardware wallet (Ledger, Trezor, SafePal) exclusively from the official manufacturer. Verify package integrity and security seals before use. Complete initial setup following device instructions.',
+          name: 'Understand why most traders lose',
+          text: "The account is most often killed by excessive risk with no system, against the market's negative expected value.",
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Create and Secure Backup Copies',
-          text: 'Record your seed phrase on physical media (paper, metal plate). Create multiple copies and store them in different secure locations (safe, bank deposit box). Never store digital copies anywhere.',
+          name: 'Keep risk at one to two percent per trade',
+          text: 'Risk of one to two percent of the account per trade is chosen not from caution but because of variance.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Implement Multi-Layer Security',
-          text: 'Enable two-factor authentication on all platforms using authenticator apps (Google Authenticator). Set unique complex passwords for each service. Configure multisignature for substantial holdings if needed.',
+          name: 'Calculate position size and lot from risk and stop',
+          text: 'Position size is not guessed, it is derived from the money risk and the distance to the stop.',
         },
         {
           '@type': 'HowToStep',
           position: 5,
-          name: 'Conduct Regular Security Audits',
-          text: 'Periodically verify wallet firmware is current, analyze transaction history for suspicious activity, update passwords, check backup accessibility, and monitor emerging threats in the cryptocurrency space.',
+          name: 'Set the stop-loss right at entry',
+          text: 'A stop is not a loss but a pre-paid right to stay in the game.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 6,
+          name: 'Build in a risk-reward ratio from 1:2 and check expectancy',
+          text: 'The risk-reward ratio is the lever with which you bring the expected value from minus into plus.',
         },
       ],
     };
@@ -439,68 +454,43 @@ export class HomeEuBlogThirtyNineComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Cryptocurrency Security Glossary',
-      description: 'Essential terms related to secure cryptocurrency storage',
+      name: 'Article glossary',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Private Key',
+          name: 'Capital management',
           description:
-            'A cryptographic code providing complete control over cryptocurrency funds at an associated blockchain address.',
+            'A set of rules that decide the share of the account in each trade and protect the account from losses.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Seed Phrase',
+          name: 'Variance',
           description:
-            'A mnemonic sequence of 12-24 words enabling recovery of a cryptocurrency wallet.',
+            'The unevenness with which losing trades are spread over time: they come not one at a time but in streaks.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Hot Wallet',
+          name: 'Lot',
           description:
-            'A cryptocurrency wallet with constant internet connectivity providing quick access to assets.',
+            'A standardized unit of trade size that sets how much of an asset you trade in one position.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Cold Wallet',
+          name: 'Risk-reward ratio',
           description:
-            'A cryptocurrency storage method without network connection providing maximum protection against remote attacks.',
+            'The ratio of what you risk in a trade to what you expect to earn on it.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Hardware Wallet',
+          name: 'Expected value',
           description:
-            'A physical device storing private keys in an isolated environment protected from malware.',
+            'The average result of a single trade over a long distance.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Multisignature',
+          name: 'Compound interest',
           description:
-            'Technology requiring multiple independent signatures to authorize a cryptocurrency transaction.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Two-Factor Authentication',
-          description:
-            'Account protection method requiring identity verification through two independent channels.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Phishing Attack',
-          description:
-            'Fraudulent scheme to obtain confidential data through fake websites or messages.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Custodial Storage',
-          description:
-            'Storage model where private keys are controlled by a third party (exchange, service provider).',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Non-Custodial Storage',
-          description:
-            'Storage approach where the owner maintains complete control over private keys and bears full security responsibility.',
+            'The accrual of income not only on invested capital but also on the profit already accumulated.',
         },
       ],
     };

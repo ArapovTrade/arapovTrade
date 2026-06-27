@@ -55,22 +55,16 @@ export class HomeEnBlogFourtySixComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
 
-    this.titleService.setTitle(
-      'Bitcoin Pizza Day — The First Bitcoin Purchase | History and Lessons',
-    );
+    this.titleService.setTitle('Moving Averages in Trading | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Bitcoin Pizza Day — the story of the first purchase made with Bitcoin on May 22, 2010. Learn how 10,000 BTC were exchanged for two pizzas and why this date changed financial history.',
+        'Moving averages: SMA and EMA, choosing the period, crossovers and use as dynamic support. How to apply them and where they lag.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Igor Arapov' });
+
     this.meta.updateTag({ name: 'datePublished', content: '2025-01-27' });
     this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/pizzaday.webp',
-    });
 
     this.gerRandom();
   }
@@ -257,39 +251,37 @@ export class HomeEnBlogFourtySixComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          '@id': 'https://arapov.trade/en/freestudying/pizzaday#article',
-          headline: 'Bitcoin Pizza Day — The Historic First Bitcoin Purchase',
+          headline:
+            'Moving Averages in Trading: What They Are and Where They Work',
           description:
-            'Bitcoin Pizza Day — the story of the first purchase made with Bitcoin on May 22, 2010. Learn how 10,000 BTC were exchanged for two pizzas and why this date changed financial history.',
-          datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
-          author: {
-            '@id': 'https://arapov.trade/en#person',
-          },
+            'Moving averages: SMA and EMA, choosing the period, crossovers and use as dynamic support. How to apply them and where they lag.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'Arapov Trade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://arapov.trade/en/freestudying/pizzaday',
+            '@id': 'https://arapov.trade/en/freestudying/moving-averages',
           },
           image: {
             '@type': 'ImageObject',
-            url: 'https://arapov.trade/assets/img/content/pizzaday1.webp',
+            url: 'https://arapov.trade/assets/img/content/movingaverages.webp',
+            width: 1200,
+            height: 630,
           },
-          articleSection: 'Cryptocurrency',
-          keywords: [
-            'Bitcoin Pizza Day',
-            'first Bitcoin purchase',
-            'Laszlo Hanyecz',
-            'Bitcoin history',
-            'cryptocurrency',
-          ],
+          articleSection: 'Technical analysis',
+          keywords:
+            'moving averages, what is a moving average, SMA vs EMA, golden cross death cross, 200 day moving average, moving averages for day trading',
+          inLanguage: 'en',
         },
       ],
     };
@@ -304,18 +296,18 @@ export class HomeEnBlogFourtySixComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/en#person',
+      '@id': 'https://arapov.trade/#person',
       name: 'Igor Arapov',
       alternateName: [
         'Ігор Арапов',
-        'Арапов Игорь',
-        'I. Arapov',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/en',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -330,12 +322,12 @@ export class HomeEnBlogFourtySixComponent implements OnInit {
         'https://t.me/ArapovTrade',
       ],
       jobTitle: [
-        'Independent researcher,',
-        'trader',
-        'author and founder of arapov.trade',
+        'Independent researcher',
+        'Trader',
+        'Author and founder of arapov.trade',
       ],
       description:
-        'Independent researcher, practicing trader, author of books on trading and scientific publications. Specializes in trading psychology and cognitive biases in financial markets.',
+        'Independent researcher, practising trader, author of trading books and scientific publications. Specialises in trading psychology and cognitive biases in financial markets.',
     };
 
     this.addJsonLdSchema(data);
@@ -348,46 +340,53 @@ export class HomeEnBlogFourtySixComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
-      '@id': 'https://arapov.trade/en/freestudying/pizzaday#faq',
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'What is Bitcoin Pizza Day?',
+          name: 'What is a moving average in simple terms?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Bitcoin Pizza Day is a commemorative date on May 22, when in 2010 programmer Laszlo Hanyecz made the first documented purchase of a real product with Bitcoin, exchanging 10,000 BTC for two pizzas.',
+            text: "It's a line that averages price over a chosen number of candles and smooths the market noise, showing the general direction of the trend. With each new candle the calculation window shifts and the average is recomputed.",
           },
         },
         {
           '@type': 'Question',
-          name: 'How much were 10,000 bitcoins worth in 2010?',
+          name: "What's the difference between SMA and EMA?",
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'At the time of the transaction in May 2010, 10,000 bitcoins were worth approximately $41 USD. Today, this amount is valued at hundreds of millions of dollars.',
+            text: 'SMA averages prices equally and gives the smoothest but slowest line. EMA puts more weight on recent prices, so it reacts faster. SMA is handier for a long-term trend, EMA for short timeframes, but both lag.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Who is Laszlo Hanyecz?',
+          name: 'Can you use a moving average as support or resistance?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Laszlo Hanyecz is an American programmer of Hungarian descent who became known as the person who made the first commercial transaction using Bitcoin.',
+            text: 'Many traders do: in an uptrend price often pulls back to a 21 or 50 EMA and bounces, so the line is treated as dynamic support, and as dynamic resistance in a downtrend. It works partly because everyone watches the same average, but the line slides every candle, so I treat it as context and trust a real horizontal level with volume instead.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Why is Bitcoin Pizza Day important to the crypto community?',
+          name: 'Why do moving averages work poorly for active trading?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: "This date symbolizes Bitcoin's transition from a theoretical concept to practical application. The first purchase proved that cryptocurrency could function as a real medium of exchange.",
+            text: 'Because of lag: the line is built from past prices and reports a reversal only after it has already happened. And in a range, price keeps crossing the average, throwing off a stream of false signals.',
           },
         },
         {
           '@type': 'Question',
-          name: 'How is Bitcoin Pizza Day celebrated?',
+          name: 'Are the golden cross and death cross reliable?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'The crypto community celebrates May 22 with promotions and discounts from exchanges, themed meetups, discussions on social media, and charitable initiatives.',
+            text: "They're popular moving-average crossover signals, but they lag heavily. On historical charts they look convincing, while in real time they give an entry after a large part of the move is done, so leaning on them alone is unwise.",
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Where are moving averages actually useful?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: "On long horizons. The 200-day SMA works as a rough filter of the global trend: price above it is a bullish regime, below it bearish. That helps screen stocks for a long-term portfolio, but it's no good as a signal to enter a trade.",
           },
         },
       ],
@@ -403,40 +402,34 @@ export class HomeEnBlogFourtySixComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      '@id': 'https://arapov.trade/en/freestudying/pizzaday#howto',
-      name: 'How to Apply Lessons from Bitcoin Pizza Day History',
+      '@id': 'https://arapov.trade/en/freestudying/moving-averages#howto',
+      name: 'How to understand and use moving averages in trading',
       description:
-        'A step-by-step guide to applying lessons from the first cryptocurrency transaction to your investment strategy.',
+        'A step-by-step walk through the topic and its practical use in trading',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Study Bitcoin History',
-          text: "Familiarize yourself with key events in cryptocurrency development, from Bitcoin's creation by Satoshi Nakamoto in 2009 to the first transaction in 2010.",
+          name: 'Learn what a moving average is',
+          text: 'A moving average is a technical indicator that averages price over a chosen number of periods and smooths the swings, helping you see the trend direction.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Evaluate Long-term Potential',
-          text: 'Analyze assets not just by current price but by their potential role in the future economy. The pizza story shows the importance of long-term thinking.',
+          name: 'Understand why moving averages fail for intraday trading',
+          text: "There's one fundamental reason behind moving averages: lag.",
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Manage Risks Consciously',
-          text: 'Invest only funds you are prepared to lose. Early cryptocurrency investments involve high volatility.',
+          name: 'See how moving averages are used as dynamic support and resistance',
+          text: 'The most popular way people trade an average is as a moving floor or ceiling that price pulls back to.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Engage with the Community',
-          text: 'Join crypto communities, attend events, and exchange experiences with other blockchain technology enthusiasts.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 5,
-          name: 'Apply Cryptocurrencies Practically',
-          text: 'Use cryptocurrencies for real purchases to better understand their function as a medium of exchange.',
+          name: 'See where moving averages help: screening stocks for a long-term portfolio',
+          text: 'It would be dishonest to call moving averages useless altogether.',
         },
       ],
     };
@@ -451,68 +444,19 @@ export class HomeEnBlogFourtySixComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      '@id': 'https://arapov.trade/en/freestudying/pizzaday#terms',
-      name: 'Bitcoin Pizza Day Glossary',
+      name: 'Glossary of terms used in this article',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Bitcoin Pizza Day',
+          name: 'moving average',
           description:
-            'A commemorative date on May 22, when in 2010 the first purchase of a real product with Bitcoin was made.',
+            'A technical indicator that averages price over a chosen number of periods and smooths the swings, helping you see the direction of the trend.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Bitcoin',
+          name: 'golden cross',
           description:
-            'The first decentralized cryptocurrency, created in 2009 by an anonymous developer under the pseudonym Satoshi Nakamoto.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Cryptocurrency',
-          description:
-            'A digital asset that uses cryptography to secure transactions and control the creation of new units.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Blockchain',
-          description:
-            'A distributed database where transactions are recorded as a chain of blocks, ensuring transparency and immutability of data.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Mining',
-          description:
-            'The process of creating new blocks in the blockchain and confirming transactions using computational power.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Volatility',
-          description:
-            'The degree of price variation of an asset over a certain period, characterizing the level of market risk.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Decentralization',
-          description:
-            'The principle of distributing management and control among multiple network participants without a single center of authority.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Crypto Exchange',
-          description:
-            'A platform for buying, selling, and exchanging cryptocurrencies for fiat money or other digital assets.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Bitcointalk',
-          description:
-            'The first major internet forum dedicated to Bitcoin and cryptocurrency discussion, founded by Satoshi Nakamoto.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'HODL',
-          description:
-            'Cryptocurrency slang meaning long-term holding of assets regardless of market fluctuations.',
+            'A golden cross is when a faster moving average (typically the 50-period) crosses above a slower one (the 200-period), read by the market as a shift into a long-term uptrend; the mirror, a death cross, is read as a turn down.',
         },
       ],
     };

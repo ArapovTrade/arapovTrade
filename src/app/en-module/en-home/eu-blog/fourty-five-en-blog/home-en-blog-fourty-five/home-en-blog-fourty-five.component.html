@@ -6,89 +6,410 @@
           <div class="m-right hero-section"></div>
           <div class="free-courses_main-container">
             <main lang="en">
-             <header>
-  <h1>Moving Averages Explained: SMA vs EMA</h1>
-</header>
-<article>
-  <p>A moving average is a line that averages price over a chosen number of candles, smoothing the noise and showing the general trend direction. It comes in two main forms, the simple (SMA) and the exponential (EMA), with the EMA leaning on recent prices. Its defining trait is lag: it is built from the past, so it is close to useless for active intraday trading, while it works fine as a rough filter of the long-term trend.</p>
+              <article>
+                <h1>
+                  RSI indicator explained: what overbought and oversold mean
+                </h1>
 
-  <p>Moving averages are the best-known indicator in trading, with mountains of books written about them. I will say it straight: the only thing I respect on a chart besides volume is more volume, and I do not trade off moving averages myself. But you cannot skip the topic, because every beginner runs into it. I have traded since 2013 on volume rather than on lines, so let's go through it calmly: what it is, why it is close to useless for active trading, and where it does earn its place.</p>
+                <p>
+                  RSI is an oscillator that judges the strength of a fresh price
+                  move and boils it down to a number from 0 to 100. A reading
+                  above 70 is usually called overbought, below 30 oversold. Only
+                  those zones give no command to trade: in a firm trend price
+                  holds overbought for weeks. That is why RSI is valuable as a
+                  hint about the state of the market, not as a button to enter.
+                </p>
 
-  <p><strong><i>In this article we'll cover:</i></strong></p>
-  <ul>
-    <li>a moving average is an averaged price line that smooths noise and shows the trend;</li>
-    <li>the SMA averages prices equally, the EMA weights recent data and reacts faster;</li>
-    <li>the main drawback is lag, which makes moving averages close to useless intraday;</li>
-    <li>the one real use is a coarse long-term trend filter for picking stocks for a portfolio.</li>
-  </ul>
+                <p>
+                  RSI is one of those indicators a beginner runs into first. It
+                  is simple, it is visual, and it breeds the illusion that the
+                  market has finally become predictable: 70 flashed, sell; 30
+                  flashed, buy. Were it that easy, there would be no losers left
+                  on the market long ago. Here it is without the fuss: what RSI
+                  actually shows and where it lets you down.
+                </p>
 
-  <p>In order: what a moving average is, why it works poorly for active trading, and where it has an honest use.</p>
+                <p>
+                  <strong><i>In this article we'll cover:</i></strong>
+                </p>
+                <ul>
+                  <li>
+                    RSI measures the relative strength of rises and falls over a
+                    period and gives a number from 0 to 100
+                  </li>
+                  <li>
+                    the 70 and 30 zones are not a reversal signal but only a
+                    reason to take a closer look, and shorting a trend on
+                    overbought is especially dangerous
+                  </li>
+                  <li>
+                    RSI divergence can be a useful hint that a move is
+                    weakening, but as a lone signal it is unreliable
+                  </li>
+                  <li>
+                    by my observations RSI is worth subordinating to the
+                    analysis of levels and volume, rather than building an entry
+                    on a single indicator
+                  </li>
+                </ul>
 
-  <h2>What Are Moving Averages</h2>
-  <p>A <dfn itemscope itemtype="https://schema.org/DefinedTerm"><span itemprop="name">moving average</span></dfn> is a technical indicator that averages price over a chosen number of periods and smooths the swings, helping you see the direction of the trend. The name says it all: with each new candle the calculation window slides forward and the average is recomputed. It is a basic tool of <a class="linkrefinto" href="https://arapov.trade/en/freestudying/technicalanalysis">technical analysis</a>, and at heart it is a trend indicator whose job is to show where the market is generally looking.</p>
-  <p>There are several types, but two matter in practice. The simple moving average (SMA) adds up the closing prices over the period and divides by their number, giving every candle the same weight. That makes the smoothest but also the most sluggish line. The exponential moving average (EMA) gives more weight to recent prices, so it reacts faster, and it is used more often on short timeframes. The longer the period, the smoother and more inert the line. The 200-day SMA, for example, is treated as the classic reference for the global trend.</p>
+                <p>
+                  To start with, here is how this number on the scale is even
+                  born.
+                </p>
 
-  <div class="flex">
-    <img class="pictureImg" loading="lazy" src="/assets/img/content/movingavarage.png" alt="Example of moving averages on a chart" />
-  </div>
+                <h2>What is the RSI (Relative Strength Index)?</h2>
+                <p>
+                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
+                    ><span itemprop="name"
+                      >RSI (Relative Strength Index)</span
+                    ></dfn
+                  >
+                  is an oscillator that sets the average size of price's rise
+                  against the average size of its fall over a chosen period and
+                  turns them into a number from 0 to 100. Its author, Welles
+                  Wilder, described it in 1978 in the book New Concepts in
+                  Technical Trading Systems. The standard calculation period is
+                  14 candles, recommended by the creator himself.
+                </p>
+                <p>
+                  The idea is straightforward: buyers press harder and RSI
+                  crawls toward the top of the scale, sellers outweigh them and
+                  it slides down. The 50 line cuts the scale in two and roughly
+                  shows whose side the advantage is on right now. By my
+                  observations it is exactly this central line that is more
+                  informative than the hyped 70 and 30 zones, because it is
+                  about the balance of forces rather than a promised reversal.
+                </p>
+                <p>
+                  <strong>In short: </strong>
+                  <i
+                    >RSI is an oscillator from 0 to 100 built from the average
+                    rise and fall over 14 candles; the central 50 line says more
+                    about the balance of forces than the 70 and 30 zones do.</i
+                  >
+                </p>
+                <img
+                  src="https://arapov.trade/assets/img/content/rsiindex4.png"
+                  alt="The RSI indicator on a chart"
+                  loading="lazy"
+                />
 
-  <h2>Why Moving Averages Don't Work for Intraday Trading</h2>
-  <p>The reason is one thing and it is fundamental: lag. The line is built from past prices, so it reports a reversal only after it has already happened. For intraday trading, where the decision has to be made here and now, that is almost a death sentence. By the time the average bends, the move you wanted is gone.</p>
-  <p>Add a flat market to that. The moment price goes sideways, it keeps poking back and forth through the average, and the indicator throws out a flood of false signals that are easy to lose a deposit on. The same goes for the popular crossovers, the golden cross and the death cross: they look convincing on history but in real time they fire well after a large part of the move is done. Reading the <a class="linkrefinto" href="https://arapov.trade/en/freestudying/trendvolumeanalysis">trend volume</a> instead tells you what is actually pushing price, rather than a smoothed echo of where it has been. A walkthrough of why lag is the core problem is here: <a class="linkrefinto" href="https://youtu.be/ykS2QMzM954?t=237">the main problem with moving averages</a>.</p>
+                <h2>RSI signals: overbought above 70 and oversold below 30</h2>
+                <p>
+                  The classic reading goes like this: above 70 the asset is
+                  overbought and supposedly time to sell, below 30 oversold and
+                  time to buy. On a calm range it sometimes fires. But here is
+                  the main trap for a beginner, and it is worth burning into
+                  memory: in a strong trend RSI can hold above 70 for a very
+                  long time while price climbs the whole while. Whoever shorts
+                  merely because of overbought stands against the trend again
+                  and again and loses.
+                </p>
+                <p>
+                  So the grown-up approach is to trade not the entry into the
+                  zone but the exit from it, with confirmation from price. Even
+                  that is not enough for me. Far more honest is to first work
+                  out whether it is a trend or a range right now, and only then
+                  glance at RSI. In a range the extreme zones make sense; in a
+                  trend it is wiser to ignore them or shift the markers. Any
+                  signal I always check against a level and against whether
+                  volume is coming in there.
+                </p>
+                <p>
+                  <strong>In short: </strong>
+                  <i
+                    >The 70 and 30 zones are not a command: in a trend RSI hangs
+                    in the extreme zone for a long time; first decide trend or
+                    range, then check the signal against a level and volume.</i
+                  >
+                </p>
 
-  <div class="flex">
-    <img class="pictureImg" loading="lazy" src="/assets/img/content/movingavarage2.png" alt="The lag of moving averages on a chart" />
-  </div>
+                <h2>RSI divergence: how to use it to spot a reversal</h2>
+                <p>
+                  A
+                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
+                    ><span itemprop="name">divergence</span></dfn
+                  >
+                  is a disagreement between price and the indicator. Bullish
+                  divergence: price sets a new low, but RSI draws a higher low,
+                  which means the sellers' pressure is weakening. The bearish
+                  one mirrors it: a new high on price, but the RSI peak is below
+                  the previous one, the buyers are running out of breath. I lay
+                  out the mechanics in detail in the material on
+                  <a
+                    class="linkrefinto"
+                    href="https://arapov.trade/en/freestudying/trading-indicators"
+                    >divergence on indicators</a
+                  >.
+                </p>
+                <p>
+                  Divergence really can come in handy: it often hints in advance
+                  that a move is losing traction. But by my observations it is
+                  flimsy as a lone signal. The disagreement sometimes drags on
+                  while price still pushes the old way. I take it only together
+                  with a priority-change level and volume: when divergence
+                  coincides with the approach to a strong level and a burst of
+                  volume, now we are talking. On its own it is only a reason to
+                  be wary.
+                </p>
+                <p>
+                  <strong>In short: </strong>
+                  <i
+                    >Divergence hints at a move fading, but solo it is
+                    unreliable and drags on; it works only in tandem with a
+                    strong level and an inflow of volume.</i
+                  >
+                </p>
 
-  <h2>Where Moving Averages Are Useful: A Long-Term Trend Filter</h2>
-  <p>It would be dishonest to say moving averages are useless across the board. They have one worthy use, and it is tied not to speculation but to long horizons. Over big timeframes the lag stops being a problem, because you no longer care about the entry point, only about the fact: is the market in an up phase or a down phase.</p>
-  <p>The classic move is the 200-day SMA as a filter of the global trend. If a stock or an index holds steadily above its 200-day average, that is a bullish regime, and such instruments are worth considering for a long-term portfolio. If price has dropped below it, that is a bearish regime, and it makes sense to hold off on buying. Here the average works not as a trade signal but as a coarse direction filter that screens out the obviously weak names, which is a different job from the rest of the <a class="linkrefinto" href="https://arapov.trade/en/freestudying/tradingindicators">technical indicators</a>. Treat it as a background reference, not an entry tool.</p>
+                <h2>RSI limitations: why the indicator gives false signals</h2>
+                <p>
+                  The root of all the false signals is one. RSI is calculated
+                  from already closed candles, so by its nature it lags and
+                  retells the past. It has no idea about the news, about a large
+                  player, about the level on the left. Hence the frequent
+                  misfires: in a trend it calls against the trend, in a range it
+                  twitches at every ripple.
+                </p>
+                <p>
+                  That is no reason to throw RSI out. I keep it as a decent
+                  gauge of state but a poor generator of entries. Put it next to
+                  other trading indicators or next to the
+                  <a
+                    class="linkrefinto"
+                    href="https://arapov.trade/en/freestudying/macd-indicator"
+                    >MACD indicator</a
+                  >, and the ailment common to them all comes out: derivation
+                  from price. What actually cures that ailment I have gathered
+                  in the
+                  <a
+                    class="linkrefinto"
+                    href="https://arapov.trade/en/freestudying/freeeducation#indicatorsInTrading"
+                    >course section on indicators</a
+                  >.
+                </p>
+                <p>
+                  <strong>In short: </strong>
+                  <i
+                    >RSI is calculated from closed candles and lags, knowing
+                    nothing of the news or a large player; it is a good
+                    thermometer of state but a poor generator of entries.</i
+                  >
+                </p>
 
-  <h2>My Take: Why I Watch Volume, Not the Line</h2>
-  <p>I would rather watch what actually moves price, the volume and the reaction at levels, than an averaged line that lags it. In my experience the traders who get hurt with moving averages are the ones who buy because two lines crossed, with nothing under the cross. A crossing is not demand, it is arithmetic catching up with a move that already happened.</p>
-  <p>So my position is narrow and honest: as a trade signal a moving average does almost nothing for me, but as a background filter of the long-term regime it is fine, and I will not pretend otherwise. If you are building a long portfolio, the 200-day line is a reasonable first screen. If you are trading the day, look at volume and levels and leave the lines off the chart. This is how I act, not personal advice for your account.</p>
+                <h2>
+                  How to actually use RSI: settings, the 50-line, and
+                  combinations
+                </h2>
+                <p>
+                  Since people mostly ask about settings, the short answer is
+                  that the default of 14 is the sane place to start, and there
+                  is no magic number that scrubs out the false signals. A
+                  shorter period like 7 or 9 reacts faster and fires more often,
+                  which simply means more noise; a longer one like 21 smooths
+                  the picture and shows only the bigger momentum shifts. One
+                  adjustment that has real logic behind it: in a strong trend
+                  you can widen the bands from 70/30 to 80/20, so the indicator
+                  flags only genuine extremes instead of every ripple. None of
+                  this turns RSI into a money machine, it only fits the tool to
+                  your horizon.
+                </p>
+                <p>
+                  The use that actually holds up depends on whether the market
+                  trends or ranges. In a range the extremes do their job: near
+                  70 the move is stretched up, near 30 stretched down, and a
+                  mean-reversion read makes sense, best of all where it lines up
+                  with a level. In a trend the extremes mislead you, so the
+                  honest tool is the 50 line: while RSI keeps holding above 50
+                  the buyers are in control and you look for continuation rather
+                  than a top, and below 50 it is the sellers' tape. That is the
+                  same idea seasoned traders lean on, and it fits how I work:
+                  RSI at most confirms the side, while the entry itself comes
+                  from a level and a burst of volume. Put plainly, treat RSI as
+                  a filter that agrees or disagrees with your read of the chart,
+                  never as the trigger by itself.
+                </p>
+                <p>
+                  <strong>In short: </strong>
+                  <i
+                    >Start at 14 and don't chase a magic period; widen the bands
+                    to 80/20 in strong trends; mean-revert from 70/30 only in a
+                    range, lean on the 50 line for trend continuation, and let a
+                    level and volume make the actual entry.</i
+                  >
+                </p>
 
-  <section>
-    <h2>Frequently Asked Questions</h2>
-    <mat-accordion>
-      <mat-expansion-panel class="highlight-box owl_link-box" [expanded]="true">
-        <mat-expansion-panel-header>
-          <mat-panel-title>What is a moving average in simple terms?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>It is a line that averages price over a chosen number of candles and smooths the market noise, showing the general trend direction. With each new candle the calculation window slides and the average is recomputed.</p>
-      </mat-expansion-panel>
-      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
-        <mat-expansion-panel-header>
-          <mat-panel-title>What is the difference between SMA and EMA?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>The SMA averages prices equally and gives the smoothest but slowest line. The EMA weights recent prices more, so it reacts faster. The SMA suits the long-term trend, the EMA suits short timeframes, but both still lag.</p>
-      </mat-expansion-panel>
-      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
-        <mat-expansion-panel-header>
-          <mat-panel-title>Why do moving averages work poorly for active trading?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>Because of lag: the line is built from past prices and reports a reversal only after it has happened. And in a flat market price keeps crossing the average, producing a lot of false signals.</p>
-      </mat-expansion-panel>
-      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
-        <mat-expansion-panel-header>
-          <mat-panel-title>Are the golden cross and death cross reliable?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>They are popular crossover signals, but they lag heavily. On history they look convincing, while in real time they give the entry after a sizeable part of the move is over, so relying on them alone is not wise.</p>
-      </mat-expansion-panel>
-      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
-        <mat-expansion-panel-header>
-          <mat-panel-title>Where are moving averages actually useful?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>On long horizons. The 200-day SMA works as a coarse filter of the global trend: price above it is a bullish regime, below it a bearish one. That helps screen stocks for a long-term portfolio, but it is not an entry signal for a trade.</p>
-      </mat-expansion-panel>
-    </mat-accordion>
-  </section>
+                <h2>My experience</h2>
+                <p>
+                  By my observations, RSI does the most harm to beginners, since
+                  it looks like a ready answer, which it is not at all. When I
+                  started, I cycled through RSI periods in search of the perfect
+                  setting that would filter out the false signals. There simply
+                  is none. There is no magic value, there is an understanding of
+                  context.
+                </p>
+                <p>
+                  My view is unfamiliar to many: RSI is worth keeping on the
+                  <a
+                    class="linkrefinto"
+                    href="https://arapov.trade/en/freestudying/chart-reading"
+                    >chart</a
+                  >
+                  not for signals but as a thermometer of the market's state.
+                  The balance of forces, the fading of an impulse, all of that
+                  it shows respectably. And the entry I look for by a level and
+                  volume, because that is where the intent of a large
+                  participant comes through. If you want to try RSI, start with
+                  the default period of 14 and do not short a trend just because
+                  of the number 70 or 30. This is not a recommendation to you,
+                  it is the principle I hold to myself.
+                </p>
+                <p>
+                  <strong>In short: </strong>
+                  <i
+                    >There is no perfect RSI setting, there is context; keep it
+                    as a thermometer of state and look for the entry by a level
+                    and volume, not trading 70 and 30 against the trend.</i
+                  >
+                </p>
 
-  <section>
-    <h2>About the Author</h2>
-    <p>Author: Igor Arapov — independent researcher in the psychology of investment decisions and behavioral finance, practising trader since 2013, founder of arapov.trade, author of a trading book series (<a class="linkrefinto" href="https://openlibrary.org/authors/OL16073686A/Igor_Arapov">Open Library</a>), (<a class="linkrefinto" href="https://orcid.org/0009-0003-0430-778X">ORCID: 0009-0003-0430-778X</a>).</p>
-  </section>
-</article>
+                <section>
+                  <h2>Frequently asked questions</h2>
+                  <mat-accordion>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      [expanded]="true"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >What does the RSI indicator show in simple
+                          terms?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        With a number from 0 to 100 it shows who is pushing
+                        harder on the market right now, buyers or sellers. The
+                        higher the value, the more aggressively buying ran over
+                        the last stretch; the lower it is, the harder sellers
+                        leaned on price.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >What do overbought and oversold mean on the
+                          RSI?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        A value above 70 is called overbought, below 30
+                        oversold. It does not command a trade. In a strong trend
+                        RSI hangs in the extreme zone for a long while, so
+                        trading against the trend by it is risky.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >Does overbought mean it is time to
+                          sell?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        No, and this is the costliest beginner mistake.
+                        Overbought only means upward momentum is stretched, not
+                        that a reversal is due. In a strong uptrend RSI can hold
+                        above 70 for weeks while price keeps climbing, so
+                        shorting purely because of an extreme reading is a fast
+                        way to lose money against the trend.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >What RSI period is best to set?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        The standard is 14, recommended by the author himself. A
+                        shorter period spawns more signals and noise, a longer
+                        one smooths the picture out. A beginner is calmer
+                        starting with the default 14 and not chasing a magic
+                        setting.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >How should you use RSI in a trend versus a
+                          range?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        In a range the 70 and 30 extremes make sense for a
+                        mean-reversion read, ideally only where they line up
+                        with a level. In a trend the extremes mislead, so the 50
+                        line is the honest tool: while RSI holds above 50 buyers
+                        control the tape and you look for continuation, below 50
+                        it is the sellers' side. The actual entry still comes
+                        from a level and volume.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >Can you spot a reversal from RSI
+                          divergence?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        Divergence hints at a fading move, but as a sole signal
+                        it is unreliable and can drag on for a long time. In my
+                        experience it is worth taking only in tandem with a
+                        level and volume.
+                      </p>
+                    </mat-expansion-panel>
+                  </mat-accordion>
+                </section>
+
+                <section>
+                  <h2>About the Author</h2>
+                  <p>
+                    Author:
+                    <a class="linkrefinto" href="https://arapov.trade/en"
+                      >Igor Arapov</a
+                    >
+                    — independent researcher in the psychology of investment
+                    decisions and behavioral finance, practising trader since
+                    2013, founder of arapov.trade, author of a trading book
+                    series (<a
+                      class="linkrefinto"
+                      href="https://orcid.org/0009-0003-0430-778X"
+                      >ORCID: 0009-0003-0430-778X</a
+                    >).
+                  </p>
+                </section>
+              </article>
 
               <div
                 class=""

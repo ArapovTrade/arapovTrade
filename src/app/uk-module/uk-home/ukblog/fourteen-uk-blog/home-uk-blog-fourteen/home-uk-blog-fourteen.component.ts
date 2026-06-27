@@ -57,20 +57,18 @@ export class HomeUkBlogFourteenComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Трейдинг та інвестиції: у чому різниця і що обрати | ArapovTrade',
+      'Ризики та скам у криптовалюті: як захиститися | Arapov.trade',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Трейдинг та інвестиції: ключові відмінності, переваги та недоліки кожного підходу. Як обрати свій шлях до фінансової незалежності.',
+        'Головні ризики криптовалют і популярні схеми скаму: фейкові ICO, піраміди, фішинг і дрейн-гаманці. Як розпізнати обман і захистити кошти.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-11-07' }); this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/tradingandinvestments.webp',
-    });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
+
     this.gerRandom();
   }
   randomArticleRus: any = [];
@@ -276,42 +274,37 @@ export class HomeUkBlogFourteenComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          '@id':
-            'https://arapov.trade/uk/freestudying/tradingandinvestments#article',
           headline:
-            'Трейдинг та інвестиції: ключові відмінності та вибір стратегії',
+            'Ризики й шахрайство в крипті: як новачкові не втратити депозит',
           description:
-            'Трейдинг та інвестиції: ключові відмінності, переваги та недоліки кожного підходу до роботи на фінансових ринках.',
-          image:
-            'https://arapov.trade/assets/img/content/tradingandinvestments1.webp',
-          datePublished: '2026-03-15T00:00:00Z',
-         dateModified: '2026-04-15T00:00:00Z',
-
-          author: {
-            '@id': 'https://arapov.trade/uk#person',
-          },
+            'Головні ризики криптовалют і популярні схеми скаму: фейкові ICO, піраміди, фішинг і дрейн-гаманці. Як розпізнати обман і захистити кошти.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
             '@id': 'https://arapov.trade/#organization',
-            name: 'Pair Trade',
+            name: 'Arapov.Trade',
             url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://arapov.trade/uk/freestudying/tradingandinvestments',
+            '@id': 'https://arapov.trade/uk/freestudying/crypto-risks-scams',
           },
-          articleSection: 'Трейдинг',
-          keywords: [
-            'трейдинг',
-            'інвестиції',
-            'трейдер',
-            'інвестор',
-            'фінансові ринки',
-          ],
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/cryptoscam.webp',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Криптовалюта',
+          keywords:
+            'ризики криптовалют, шахрайство в крипті, скам, pump and dump, волатильність крипти',
+          inLanguage: 'uk',
         },
       ],
     };
@@ -326,18 +319,18 @@ export class HomeUkBlogFourteenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/uk#person',
-      name: 'Ігор Арапов',
+      '@id': 'https://arapov.trade/#person',
+      name: 'Igor Arapov',
       alternateName: [
-        'Igor Arapov',
-        'Арапов Игорь',
-        'I. Arapov',
+        'Ігор Арапов',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/uk',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -349,9 +342,13 @@ export class HomeUkBlogFourteenComponent implements OnInit {
         'https://github.com/ArapovTrade',
         'https://ua.linkedin.com/in/arapovtrade',
         'https://www.youtube.com/@ArapovTrade',
-        'https://t.me/ArapovTrade'
+        'https://t.me/ArapovTrade',
       ],
-       jobTitle: ['Незалежний дослідник', 'трейдер', 'автор і засновник arapov.trade'],
+      jobTitle: [
+        'Незалежний дослідник',
+        'трейдер',
+        'автор і засновник arapov.trade',
+      ],
       description:
         'Незалежний дослідник, практикуючий трейдер, автор книг з трейдингу та наукових публікацій. Спеціалізується на психології трейдингу та когнітивних упередженнях на фінансових ринках.',
     };
@@ -366,46 +363,45 @@ export class HomeUkBlogFourteenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
-      '@id': 'https://arapov.trade/uk/freestudying/tradingandinvestments#faq',
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'Чим трейдер відрізняється від інвестора?',
+          name: 'Які основні ризики у криптовалюти?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Трейдер здійснює часті угоди на коротких часових інтервалах, заробляючи на цінових коливаннях. Інвестор тримає активи місяцями та роками, отримуючи дохід від зростання вартості та дивідендів.',
+            text: 'Величезна волатильність, коли навіть біткоїн падав на 80 відсотків, а дрібні монети здатні обнулитися. Плюс шахрайство і скам-монети, технічні ризики на кшталт зламу біржі й втрати ключів, регуляторні рішення держав і психологія. Остання, замішана на жадібності й поспіху, губить новачка найчастіше.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Скільки можна заробити на трейдингу?',
+          name: 'Що таке скам у крипті простими словами?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Професійні трейдери заробляють 30-100% річних, але 70-80% новачків втрачають депозит у перший рік.',
+            text: 'Це будь-яке шахрайство заради крадіжки ваших грошей або доступу до гаманця: фейкові проєкти, піраміди, фішинг, підроблені біржі, накачка монети під скид. У всіх схем один гачок, обіцянка легкого й гарантованого прибутку, якого на ринку не буває.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Який початковий капітал потрібен для інвестицій?',
+          name: 'Як працює схема pump and dump?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Почати інвестувати можна з 1000-5000 гривень через брокерський рахунок.',
+            text: 'Організатори по-тихому скуповують дешеву маловідому монету, потім розганяють її сигналами й рекламою, малюючи ажіотаж. Натовп заскакує на емоціях, і рівно в цей момент організатори скидають свій обсяг на тих, хто спізнився. Ціна обвалюється так само швидко, як злетіла, а на руках у натовпу лишається пустушка.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Чи можна поєднувати трейдинг та інвестиції?',
+          name: 'Чому скам-монети зрештою обнулюються?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Так, професіонали тримають 70-80% капіталу в довгострокових інвестиціях і 20-30% використовують для активної торгівлі.',
+            text: 'Таку монету можна друкувати безкінечно, тому пропозиція завжди перекриває попит і продавець контролює ціну. Після єдиного пострілу оборот по монеті падає, і коли він опускається нижче порога, який влаштовує біржу, монету просто делістять. Біржа живе на комісіях і не тримає інструмент, який перестав давати оборот.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Що вигідніше — трейдинг чи інвестиції?',
+          name: 'Як знизити ризики під час роботи з криптою?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Статистично 80% інвесторів у плюсі через 10 років, тоді як 90% трейдерів у мінусі.',
+            text: 'З мого досвіду заходити лише тими грошима, які готові втратити, тримати невеликий ризик на угоду, не зловживати плечем і перевіряти будь-який проєкт через незалежні джерела, а не через його ж сайт. Нікому не віддавати ключі та сід-фразу й не вірити обіцянкам гарантованого доходу. Захист капіталу тут рятує частіше, ніж вдалий вибір монети.',
           },
         },
       ],
@@ -421,38 +417,40 @@ export class HomeUkBlogFourteenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      '@id': 'https://arapov.trade/uk/freestudying/tradingandinvestments#howto',
-      name: 'Як обрати між трейдингом та інвестиціями',
+      '@id': 'https://arapov.trade/uk/freestudying/crypto-risks-scams#howto',
+      name: 'Як розібратися в ризиках крипти й не втратити депозит',
+      description:
+        'Покроковий розбір ризиків і схем шахрайства в криптовалюті та їх практичне застосування',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Оцініть вільний час',
-          text: 'Трейдинг вимагає 2-8 годин щодня, інвестиції — кілька годин на місяць.',
+          name: 'Розберіться, які ризики в крипті взагалі існують',
+          text: 'Небезпек тут помітно більше, ніж бачить людина на вході, і вони геть різні.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Визначте ризик-профіль',
-          text: 'Висока толерантність до ризику — трейдинг, консервативний підхід — інвестиції.',
+          name: 'Зрозумійте волатильність: чому монета може впасти на 80 відсотків',
+          text: 'Волатильність — це розмах цінових гойдалок за відрізок часу, і в крипті він жахливий.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Оцініть початковий капітал',
-          text: 'Для трейдингу достатньо 100-500 доларів, для інвестицій бажано більше.',
+          name: 'Навчіться впізнавати схеми скаму',
+          text: 'Скам — це шахрайство, заточене під крадіжку ваших грошей або доступу до гаманця.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Пройдіть навчання',
-          text: 'Вивчіть основи обраного напрямку на демо-рахунку мінімум 3 місяці.',
+          name: 'Зрозумійте механіку pump and dump і делістингу',
+          text: 'Pump and dump — це схема, у якій організатори спершу тихо набирають дешеву безвісну монету, потім різко її роздувають і зливають на натовп.',
         },
         {
           '@type': 'HowToStep',
           position: 5,
-          name: 'Почніть з малого',
-          text: 'Протестуйте стратегію невеликими сумами перед збільшенням обсягів.',
+          name: 'Знижуйте ризик заздалегідь за простими ознаками',
+          text: 'Тішить те, що майже будь-яке шахрайство читається заздалегідь, якщо не поспішати.',
         },
       ],
     };
@@ -467,62 +465,25 @@ export class HomeUkBlogFourteenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      '@id': 'https://arapov.trade/uk/freestudying/tradingandinvestments#terms',
+      name: 'Глосарій термінів статті',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Трейдинг',
+          name: 'Раг-пул',
           description:
-            'Активна торгівля фінансовими інструментами на коротких часових інтервалах',
+            'Вид крипто-шахрайства, коли творці токена виводять ліквідність із пулу, обвалюючи ціну й позбавляючи власників змоги продати монету.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Інвестиції',
+          name: 'Скам',
           description:
-            'Довгострокове вкладення капіталу в активи для отримання доходу',
+            'Будь-яке шахрайство, націлене на крадіжку коштів трейдера або доступу до його гаманця: фейкові проєкти, піраміди, фішинг, підроблені біржі, накачка монети під скид.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Диверсифікація',
+          name: 'Pump and dump',
           description:
-            'Розподіл капіталу між різними активами для зниження ризиків',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Дивіденди',
-          description: 'Частина прибутку компанії, що виплачується акціонерам',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'ETF',
-          description:
-            'Біржовий фонд, що торгується як акція та містить кошик активів',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Технічний аналіз',
-          description:
-            'Метод прогнозування цін на основі графіків та індикаторів',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Фундаментальний аналіз',
-          description: 'Оцінка вартості активу на основі фінансових показників',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Ризик-менеджмент',
-          description: 'Система управління торговими ризиками',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Волатильність',
-          description: 'Ступінь мінливості ціни активу',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Портфель',
-          description: 'Сукупність інвестиційних активів власника',
+            'Схема, за якої організатори тихо скуповують дешеву монету, штучно розганяють її ціну рекламою та сигналами, а потім скидають свій обсяг на залучений натовп.',
         },
       ],
     };

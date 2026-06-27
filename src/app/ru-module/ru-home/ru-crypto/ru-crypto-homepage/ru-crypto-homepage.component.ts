@@ -148,53 +148,68 @@ export class RuCryptoHomepageComponent  implements OnInit, AfterViewInit, OnDest
       }
     });
   }
+ 
+
 
   private addWebSiteSchema() {
-    const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]')
-    ).some((script) => {
-      try {
-        const json = JSON.parse(script.textContent || '{}');
-        return json['@type'] === 'WebSite' && json['name'] === 'Arapov.Trade';
-      } catch {
-        return false;
-      }
-    });
+  const exists = Array.from(
+    this.document.querySelectorAll('script[type="application/ld+json"]')
+  ).some((script) => {
+    try {
+      const json = JSON.parse(script.textContent || '{}');
+      return json['@type'] === 'WebSite' && json['name'] === 'Arapov.Trade';
+    } catch {
+      return false;
+    }
+  });
 
-    // Если уже существует — выходим
-    if (exists) return;
+  if (exists) return;
 
-    // Создаем новый JSON-LD
-    const script = this.document.createElement('script');
-    script.type = 'application/ld+json';
-    script.text = JSON.stringify({
-      '@context': 'https://schema.org',
-      '@type': 'WebSite',
-      '@id': 'https://arapov.trade/ru/main#website',
-      url: 'https://arapov.trade/ru/main',
+  const script = this.document.createElement('script');
+  script.type = 'application/ld+json';
+  script.text = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': 'https://arapov.trade/#website',
+    url: 'https://arapov.trade/ru',
+    name: 'Arapov.Trade',
+    alternateName: 'Обучение трейдингу',
+    description:
+      'Бесплатное обучение трейдингу от Игоря Арапова. 151+ статей, 78+ видеоуроков.',
+    inLanguage: 'ru-RU',
+    publisher: {
+      '@type': 'Organization',
+      '@id': 'https://arapov.trade/#organization',
       name: 'Arapov.Trade',
-      alternateName: 'Обучение трейдингу',
-      description:
-        'Бесплатное обучение трейдингу от Игоря Арапова. 151+ статей, 78+ видеоуроков.',
-      inLanguage: 'ru-RU',
-      publisher: {
-        '@type': 'Organization',
-        '@id': 'https://arapov.trade/#organization',
-        name: 'Arapov.Trade',
-        url: 'https://arapov.trade',
-        logo: {
-          '@type': 'ImageObject',
-          url: 'https://arapov.trade/favicon.ico',
-        },
-        founder: {
-          '@type': 'Person',
-          '@id': 'https://arapov.trade/ru#person',
-          name: 'Арапов Ігор Віталійович',
-        },
+      url: 'https://arapov.trade',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://arapov.trade/favicon.ico',
       },
-       
-    });
+      founder: {
+        '@type': 'Person',
+        '@id': 'https://arapov.trade/#person',
+        name: 'Игорь Арапов',
+      },
+    },
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate:
+          'https://arapov.trade/ru/freestudying?search={search_term_string}',
+      },
+      'query-input': 'required name=search_term_string',
+    },
+  });
 
-    this.document.head.appendChild(script);
-  }
+  this.document.head.appendChild(script);
+}
+
+
+
+
+
+
+
 }

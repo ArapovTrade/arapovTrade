@@ -1,5 +1,5 @@
 .hero-section {
-    background: url(/assets/img/content/volmarketanalisys.webp) no-repeat bottom right;
+    background: url(/assets/img/content/stablecoins.webp) no-repeat bottom right;
     background-size: 100% 100%;
     color: white;
     height: 250px;
@@ -11,22 +11,26 @@
 
 .pictureImg {
     width: 800px;
-     
+
 }
-.pictureImg2{
+
+.pictureImg2 {
     width: 600px;
-   
+
 }
-.pictureImg2   {
+
+.pictureImg2 {
     width: 500px;
 
 }
- .flex2{
+
+.flex2 {
     display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
- }
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 h2,
 h1 {
     align-self: center;
@@ -42,10 +46,12 @@ h1 {
     h1 {
         text-align: center !important;
     }
-        .flex2 {
-             
-            flex-wrap: nowrap;
-        }
+
+    .flex2 {
+
+        flex-wrap: nowrap;
+    }
+
     .hero-section {
         height: 500px;
     }
@@ -82,9 +88,9 @@ h1 {
      margin-top: 70px; 
     //  margin-bottom: 150px;
 }
-    header h1 {
+    header h1 { 
         margin-top: 0;
-    }
+    }  
  .container main{
     width: 815px;
     margin: 0 !important;

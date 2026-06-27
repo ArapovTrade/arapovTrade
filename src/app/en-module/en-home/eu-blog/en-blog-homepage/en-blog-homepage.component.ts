@@ -48,7 +48,7 @@ export class EnBlogHomepageComponent implements OnInit {
     private router: Router,
     private meta: Meta,
 
-    private titleService: Title
+    private titleService: Title,
   ) {
     this.renderer = rendererFactory.createRenderer(null, null);
   }
@@ -117,7 +117,7 @@ export class EnBlogHomepageComponent implements OnInit {
     this.paginator.itemsPerPageLabel = '';
     this.lang.setNumber(3);
     this.titleService.setTitle(
-      'Online Trading Training | Free Trading Courses from Igor Arapov'
+      'Online Trading Training | Free Trading Courses from Igor Arapov',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
@@ -156,13 +156,12 @@ export class EnBlogHomepageComponent implements OnInit {
   hoveredIndex: number | null = null;
 
   projects = [
-   { title: 'Trading Books', link: 'https://arapov.trade/en/books' },
+    { title: 'Trading Books', link: 'https://arapov.trade/en/books' },
     { title: 'Professional courses', link: 'https://arapov.trade/en/studying' },
     {
       title: 'Basic course',
       link: 'https://arapov.trade/en/freestudying/freeeducation',
     },
-     
   ];
 
   grr!: any;
@@ -286,7 +285,7 @@ export class EnBlogHomepageComponent implements OnInit {
     // Показываем 5 случайных статей при фокусе, если инпут пуст
     if (!this.searchQuery) {
       const shuffled = [...this.artickleServ.ukrArtickles].sort(
-        () => Math.random() - 0.5
+        () => Math.random() - 0.5,
       );
       this.displayedArticles = shuffled.slice(0, this.maxResults);
     }
@@ -301,7 +300,7 @@ export class EnBlogHomepageComponent implements OnInit {
   onSearchChange() {
     // Логика асинхронного поиска
     const filtered = this.artickleServ.ukrArtickles.filter((a) =>
-      a.titleEn.toLowerCase().includes(this.searchQuery.toLowerCase())
+      a.titleEn.toLowerCase().includes(this.searchQuery.toLowerCase()),
     );
     this.displayedArticles = filtered.slice(0, this.maxResults);
   }
@@ -317,107 +316,226 @@ export class EnBlogHomepageComponent implements OnInit {
   toggleGroupsMenu(event: Event) {
     this.groupsMenuOpen = !this.groupsMenuOpen;
   }
-
   private removeExistingWebPageSchema(): void {
     const scripts = this.document.querySelectorAll(
-      'script[type="application/ld+json"]'
+      'script[type="application/ld+json"]',
     );
-
     scripts.forEach((script) => {
       try {
         const content = JSON.parse(script.textContent || '{}');
-        if (content['@type'] === 'CollectionPage') {
+        const graph = content['@graph'] || [content];
+        if (graph.some((n: any) => n['@type'] === 'CollectionPage')) {
           script.remove();
         }
-      } catch (e) {
-        // Игнорируем некорректные JSON (например, из других источников)
-      }
+      } catch (e) {}
     });
   }
+  // private removeExistingWebPageSchema(): void {
+  //   const scripts = this.document.querySelectorAll(
+  //     'script[type="application/ld+json"]'
+  //   );
+
+  //   scripts.forEach((script) => {
+  //     try {
+  //       const content = JSON.parse(script.textContent || '{}');
+  //       if (content['@type'] === 'CollectionPage') {
+  //         script.remove();
+  //       }
+  //     } catch (e) {
+  //       // Игнорируем некорректные JSON (например, из других источников)
+  //     }
+  //   });
+  // }
+
+  // private addWebSiteSchema() {
+  //   const exists = Array.from(
+  //     this.document.querySelectorAll('script[type="application/ld+json"]')
+  //   ).some((script) => {
+  //     try {
+  //       const json = JSON.parse(script.textContent || '{}');
+  //       return json['@type'] === 'CollectionPage' && json['name'] === 'Free Trading Education';
+  //     } catch {
+  //       return false;
+  //     }
+  //   });
+
+  //   // Если уже существует — выходим
+  //   if (exists) return;
+
+  //   // Создаем новый JSON-LD
+  //   const script = this.document.createElement('script');
+  //   script.type = 'application/ld+json';
+  //   script.text = JSON.stringify({
+  //     '@context': 'https://schema.org',
+  //     '@type': 'CollectionPage',
+  //     name: 'Free Trading Education',
+  //     description:
+  //       'Over 150 free trading articles: Smart Money Concepts, Wyckoff Method, Technical Analysis, Crypto Trading. Complete course for beginners.',
+  //     url: 'https://arapov.trade/en/freestudying',
+  //     isPartOf: {
+  //       '@id': 'https://arapov.trade/en/main#website',
+  //     },
+  //     author: {
+  //       '@id': 'https://arapov.trade/en#person',
+  //     },
+  //     about: [
+  //       {
+  //         '@type': 'Thing',
+  //         name: 'Trading Education',
+  //       },
+  //       {
+  //         '@type': 'Thing',
+  //         name: 'Smart Money Concepts',
+  //       },
+  //       {
+  //         '@type': 'Thing',
+  //         name: 'Technical Analysis',
+  //       },
+  //     ],
+  //     mainEntity: {
+  //       '@type': 'ItemList',
+  //       name: 'Main Trading Course Topics',
+  //       numberOfItems: 150,
+  //       itemListOrder: 'ItemListOrderDescending',
+  //       itemListElement: [
+  //         {
+  //           '@type': 'ListItem',
+  //           position: 1,
+  //           name: 'Smart Money Concepts',
+  //           url: 'https://arapov.trade/en/freestudying/smartmoneyconceptsguide',
+  //         },
+  //         {
+  //           '@type': 'ListItem',
+  //           position: 2,
+  //           name: 'Wyckoff Method',
+  //           url: 'https://arapov.trade/en/freestudying/wyckoffmethod',
+  //         },
+  //         {
+  //           '@type': 'ListItem',
+  //           position: 3,
+  //           name: 'Technical Analysis',
+  //           url: 'https://arapov.trade/en/freestudying/technicalanalysis',
+  //         },
+  //         {
+  //           '@type': 'ListItem',
+  //           position: 4,
+  //           name: 'Trading Indicators',
+  //           url: 'https://arapov.trade/en/freestudying/tradingindicators',
+  //         },
+  //         {
+  //           '@type': 'ListItem',
+  //           position: 5,
+  //           name: 'Cryptocurrency Trading',
+  //           url: 'https://arapov.trade/en/freestudying/cryptocurrencytrading',
+  //         },
+  //       ],
+  //     },
+  //   });
+
+  //   this.document.head.appendChild(script);
+  // }
 
   private addWebSiteSchema() {
     const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]')
+      this.document.querySelectorAll('script[type="application/ld+json"]'),
     ).some((script) => {
       try {
         const json = JSON.parse(script.textContent || '{}');
-        return json['@type'] === 'CollectionPage' && json['name'] === 'Free Trading Education';
+        const graph = json['@graph'] || [json];
+        return graph.some(
+          (n: any) =>
+            n['@type'] === 'CollectionPage' &&
+            n['name'] === 'Free Trading Education',
+        );
       } catch {
         return false;
       }
     });
 
-    // Если уже существует — выходим
     if (exists) return;
 
-    // Создаем новый JSON-LD
     const script = this.document.createElement('script');
     script.type = 'application/ld+json';
     script.text = JSON.stringify({
       '@context': 'https://schema.org',
-      '@type': 'CollectionPage',
-      name: 'Free Trading Education',
-      description:
-        'Over 150 free trading articles: Smart Money Concepts, Wyckoff Method, Technical Analysis, Crypto Trading. Complete course for beginners.',
-      url: 'https://arapov.trade/en/freestudying',
-      isPartOf: {
-        '@id': 'https://arapov.trade/en/main#website',
-      },
-      author: {
-        '@id': 'https://arapov.trade/en#person',
-      },
-      about: [
+      '@graph': [
         {
-          '@type': 'Thing',
-          name: 'Trading Education',
+          '@type': 'CollectionPage',
+          '@id': 'https://arapov.trade/en/freestudying#collection',
+          name: 'Free Trading Education',
+          description:
+            'Over 150 free trading articles: Smart Money Concepts, Wyckoff Method, Technical Analysis, Crypto Trading. Complete course for beginners.',
+          url: 'https://arapov.trade/en/freestudying',
+          inLanguage: 'en',
+          isPartOf: { '@id': 'https://arapov.trade/#website' },
+          author: { '@id': 'https://arapov.trade/#person' },
+          publisher: { '@id': 'https://arapov.trade/#organization' },
+          about: [
+            { '@type': 'Thing', name: 'Trading Education' },
+            { '@type': 'Thing', name: 'Smart Money Concepts' },
+            { '@type': 'Thing', name: 'Technical Analysis' },
+          ],
+          mainEntity: {
+            '@type': 'ItemList',
+            name: 'Main Trading Course Topics',
+            numberOfItems: 5,
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Smart Money Concepts',
+                url: 'https://arapov.trade/en/freestudying/smart-money-guide',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Wyckoff Method',
+                url: 'https://arapov.trade/en/freestudying/wyckoff-method',
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: 'Technical Analysis',
+                url: 'https://arapov.trade/en/freestudying/chart-reading',
+              },
+              {
+                '@type': 'ListItem',
+                position: 4,
+                name: 'Trading Indicators',
+                url: 'https://arapov.trade/en/freestudying/trading-indicators',
+              },
+              {
+                '@type': 'ListItem',
+                position: 5,
+                name: 'Cryptocurrency Trading',
+                url: 'https://arapov.trade/en/freestudying/crypto-basics',
+              },
+            ],
+          },
         },
         {
-          '@type': 'Thing',
-          name: 'Smart Money Concepts',
+          '@type': 'Person',
+          '@id': 'https://arapov.trade/#person',
+          name: 'Igor Arapov',
+          url: 'https://arapov.trade/en',
+          sameAs: [
+            'https://www.wikidata.org/wiki/Q137454477',
+            'https://scholar.google.com/citations?user=N440tWQAAAAJ',
+            'https://orcid.org/0009-0003-0430-778X',
+            'https://isni.org/isni/0000000529518564',
+            'https://www.amazon.com/stores/author/B0GBRFY457',
+            'https://github.com/ArapovTrade',
+            'https://ua.linkedin.com/in/arapovtrade',
+            'https://www.youtube.com/@ArapovTrade',
+          ],
         },
         {
-          '@type': 'Thing',
-          name: 'Technical Analysis',
+          '@type': 'Organization',
+          '@id': 'https://arapov.trade/#organization',
+          name: 'Arapov.Trade',
+          url: 'https://arapov.trade',
         },
       ],
-      mainEntity: {
-        '@type': 'ItemList',
-        name: 'Main Trading Course Topics',
-        numberOfItems: 150,
-        itemListOrder: 'ItemListOrderDescending',
-        itemListElement: [
-          {
-            '@type': 'ListItem',
-            position: 1,
-            name: 'Smart Money Concepts',
-            url: 'https://arapov.trade/en/freestudying/smartmoneyconceptsguide',
-          },
-          {
-            '@type': 'ListItem',
-            position: 2,
-            name: 'Wyckoff Method',
-            url: 'https://arapov.trade/en/freestudying/wyckoffmethod',
-          },
-          {
-            '@type': 'ListItem',
-            position: 3,
-            name: 'Technical Analysis',
-            url: 'https://arapov.trade/en/freestudying/technicalanalysis',
-          },
-          {
-            '@type': 'ListItem',
-            position: 4,
-            name: 'Trading Indicators',
-            url: 'https://arapov.trade/en/freestudying/tradingindicators',
-          },
-          {
-            '@type': 'ListItem',
-            position: 5,
-            name: 'Cryptocurrency Trading',
-            url: 'https://arapov.trade/en/freestudying/cryptocurrencytrading',
-          },
-        ],
-      },
     });
 
     this.document.head.appendChild(script);

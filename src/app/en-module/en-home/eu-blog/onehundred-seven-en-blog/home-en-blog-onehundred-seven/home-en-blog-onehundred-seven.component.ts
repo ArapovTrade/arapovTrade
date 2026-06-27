@@ -273,8 +273,7 @@ export class HomeEnBlogOnehundredSevenComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          url: 'https://arapov.trade/ru/freestudying/tradingview-record',
-
+          url: 'https://arapov.trade/en/freestudying/tradingview-record',
           headline:
             "242 Ideas, 5 Years of Public Analysis, and Multiple Editor's Picks: The Complete TradingView Track Record of Igor Arapov",
           description:
@@ -284,15 +283,14 @@ export class HomeEnBlogOnehundredSevenComponent implements OnInit {
           dateModified: '2026-02-21T00:00:00Z',
           image: [
             'https://arapov.trade/assets/img/content/tradingview-record.png',
-             
           ],
           mainEntity: {
-            '@type': 'EducationalOrganization',
-            '@id': 'https://arapov.trade/#organization',
+            '@type': 'Person',
+            '@id': 'https://arapov.trade/#person',
           },
           author: {
             '@type': 'Person',
-            '@id': 'https://arapov.trade/en#person',
+            '@id': 'https://arapov.trade/#person',
           },
           about: [
             { '@type': 'Thing', name: 'Trading' },
@@ -332,8 +330,8 @@ export class HomeEnBlogOnehundredSevenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/en#person',
-       name: 'Igor Arapov',
+      '@id': 'https://arapov.trade/#person',
+      name: 'Igor Arapov',
       alternateName: [
         'Ігор Арапов',
         'Арапов Игорь',
@@ -347,7 +345,7 @@ export class HomeEnBlogOnehundredSevenComponent implements OnInit {
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
-    'https://www.wikidata.org/wiki/Q137454477',
+        'https://www.wikidata.org/wiki/Q137454477',
         'https://scholar.google.com/citations?user=N440tWQAAAAJ',
         'https://orcid.org/0009-0003-0430-778X',
         'https://isni.org/isni/0000000529518564',
@@ -355,11 +353,11 @@ export class HomeEnBlogOnehundredSevenComponent implements OnInit {
         'https://github.com/ArapovTrade',
         'https://ua.linkedin.com/in/arapovtrade',
         'https://www.youtube.com/@ArapovTrade',
-        'https://t.me/ArapovTrade'
-  ],
-  jobTitle: ['Independent researcher,', 'trader', 'author and founder of arapov.trade'],
-  description:
-    'Independent researcher, practicing trader, author of books on trading and scientific publications. Specializes in trading psychology and cognitive biases in financial markets.',
+        'https://t.me/ArapovTrade',
+      ],
+      jobTitle: ['Independent researcher', 'Trader'],
+      description:
+        'Independent researcher, practicing trader, author of books on trading and scientific publications. Specializes in trading psychology and cognitive biases in financial markets.',
     };
 
     this.addJsonLdSchema(data);

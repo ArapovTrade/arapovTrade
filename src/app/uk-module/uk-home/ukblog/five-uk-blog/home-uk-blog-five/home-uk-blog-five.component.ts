@@ -57,20 +57,18 @@ export class HomeUkBlogFiveComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Ціноутворення та ліквідність на фінансових ринках | Ігор Арапов',
+      'XRP (Ripple): особливості аналізу в трейдингу | Arapov.trade',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Ціноутворення та ліквідність на фінансових ринках: механізми формування ціни, роль спреду, маркет-мейкери та захист від маніпуляцій. Повний посібник для трейдерів.',
+        'Що таке XRP і мережа Ripple, як працюють транскордонні платежі, вплив судової справи SEC та ризики для трейдерів.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-03-26' });  this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/pricingandliquidity.webp',
-    });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
+
     this.gerRandom();
   }
   randomArticleRus: any = [];
@@ -275,29 +273,35 @@ export class HomeUkBlogFiveComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          headline: 'Ціноутворення та ліквідність на фінансових ринках',
+          headline: 'XRP (Ripple) у трейдингу: особливості аналізу',
           description:
-            'Повний посібник з механізмів ціноутворення та ліквідності: як формується ціна, роль спреду, функції маркет-мейкерів та захист від маніпуляцій.',
-          image:
-            'https://arapov.trade/assets/img/content/pricingandliquidity1.png',
-          datePublished: '2026-03-15T00:00:00Z',
-         dateModified: '2026-04-15T00:00:00Z',
-          author: {
-            '@id': 'https://arapov.trade/uk#person',
-          },
+            'Що таке XRP і мережа Ripple, як працюють транскордонні платежі, вплив судової справи SEC та ризики для трейдерів.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'Arapov Trade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
             url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://arapov.trade/uk/freestudying/pricingandliquidity',
+            '@id': 'https://arapov.trade/uk/freestudying/xrp-ripple',
           },
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/XRP2.jpg',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Криптовалюта',
+          keywords: 'xrp',
+          inLanguage: 'uk',
         },
       ],
     };
@@ -312,18 +316,18 @@ export class HomeUkBlogFiveComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/uk#person',
-      name: 'Ігор Арапов',
+      '@id': 'https://arapov.trade/#person',
+      name: 'Igor Arapov',
       alternateName: [
-        'Igor Arapov',
-        'Арапов Игорь',
-        'I. Arapov',
+        'Ігор Арапов',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/uk',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -335,9 +339,13 @@ export class HomeUkBlogFiveComponent implements OnInit {
         'https://github.com/ArapovTrade',
         'https://ua.linkedin.com/in/arapovtrade',
         'https://www.youtube.com/@ArapovTrade',
-        'https://t.me/ArapovTrade'
+        'https://t.me/ArapovTrade',
       ],
-       jobTitle: ['Незалежний дослідник', 'трейдер', 'автор і засновник arapov.trade'],
+      jobTitle: [
+        'Незалежний дослідник',
+        'трейдер',
+        'автор і засновник arapov.trade',
+      ],
       description:
         'Незалежний дослідник, практикуючий трейдер, автор книг з трейдингу та наукових публікацій. Спеціалізується на психології трейдингу та когнітивних упередженнях на фінансових ринках.',
     };
@@ -355,42 +363,34 @@ export class HomeUkBlogFiveComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'Що таке ціноутворення на фінансових ринках?',
+          name: 'Що таке XRP простими словами?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Ціноутворення — це процес формування вартості активу через взаємодію покупців та продавців. Ціна визначається балансом попиту та пропозиції, макроекономічними факторами та психологією учасників ринку.',
+            text: 'Це криптовалюта мережі Ripple, створена для швидких і дешевих міжнародних переказів. Вона працює як мостова валюта між різними грошима. Усі сто мільярдів монет випущені при запуску, XRP не майниться.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Що таке ліквідність і чому вона важлива?',
+          name: 'Чим XRP відрізняється від біткоїна?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Ліквідність — це здатність ринку поглинати торгові ордери без значного впливу на ціну. Висока ліквідність забезпечує вузькі спреди, мінімальне прослизання та швидке виконання угод.',
+            text: 'Біткоїн це незалежні цифрові гроші з лімітом емісії та майнінгом. XRP заточений під банківські перекази, не майниться, а великою часткою володіє сама компанія Ripple. Звідси й претензії до його децентралізації.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Що таке спред і як він впливає на торгівлю?',
+          name: 'Чим закінчився суд SEC проти Ripple?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Спред — різниця між ціною купівлі (Ask) та продажу (Bid). Вузький спред знижує витрати на угоду, широкий — збільшує. Спред відображає ліквідність активу.',
+            text: 'У 2025 році справу закрили. Обидві сторони відкликали апеляції, Ripple сплатила знижений штраф. Закріпилося, що роздрібні продажі XRP на біржах не вважаються цінним папером, і це зняло головний регуляторний ризик у США.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Хто такі маркет-мейкери та яка їхня роль?',
+          name: 'Як аналізувати XRP для торгівлі?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Маркет-мейкери — професійні учасники ринку, що постійно виставляють котирування на купівлю та продаж. Вони забезпечують ліквідність, звужують спреди та стабілізують ціни.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Як захиститися від маніпуляцій ліквідністю?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Захист включає: торгівлю на високоліквідних інструментах, розміщення стоп-лосів вдалині від очевидних рівнів, аналіз книги ордерів та критичну оцінку новинного потоку.',
+            text: "За структурою ринку й ключовими рівнями, а не за індикаторами. Добре працюють круглі психологічні позначки та історичні екстремуми. Об'єму криптобірж я не довіряю, тому перевіряю сплески реакцією ціни й тримаю невелику позицію через волатильність.",
           },
         },
       ],
@@ -406,37 +406,28 @@ export class HomeUkBlogFiveComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'Як оцінити ліквідність активу для торгівлі',
+      '@id': 'https://arapov.trade/uk/freestudying/xrp-ripple#howto',
+      name: 'Як розібратися й застосувати: XRP (Ripple) у трейдингу й особливості аналізу',
+      description:
+        'Покроковий розбір теми та її практичне застосування в торгівлі',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Перевірте обсяг торгів',
-          text: 'Вивчіть середньоденний обсяг торгів активу. Високі обсяги вказують на хорошу ліквідність.',
+          name: 'Що таке XRP і для чого використовується Ripple',
+          text: 'XRP це криптовалюта блокчейна XRP Ledger, створена компанією Ripple як мостова валюта для міжнародних платежів.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Оцініть спред',
-          text: 'Порівняйте різницю між цінами Bid та Ask. Вузький спред сигналізує про високу ліквідність.',
+          name: 'Технічний аналіз XRP: ключові рівні',
+          text: 'Особливого підходу для XRP я не вигадую, читаю його так само, як будь-який актив.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Вивчіть глибину ринку',
-          text: 'Проаналізуйте книгу ордерів: наявність великих заявок говорить про достатню глибину ліквідності.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 4,
-          name: 'Врахуйте час торгової сесії',
-          text: 'Ліквідність варіюється протягом дня. Пік активності припадає на перетин основних сесій.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 5,
-          name: 'Протестуйте виконання',
-          text: 'Здійсніть невелику угоду для оцінки реального прослизання та швидкості виконання.',
+          name: 'Регуляторні ризики XRP: вплив судових процесів на ціну',
+          text: 'Ось що робило XRP особливим активом.',
         },
       ],
     };
@@ -451,60 +442,13 @@ export class HomeUkBlogFiveComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Глосарій: ціноутворення та ліквідність',
+      name: 'Глосарій термінів статті',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Ціноутворення',
+          name: 'XRP',
           description:
-            'Процес формування вартості активу через взаємодію попиту та пропозиції',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Ліквідність',
-          description:
-            'Здатність ринку поглинати торгові ордери без суттєвого впливу на ціну',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Спред',
-          description: 'Різниця між кращою ціною купівлі та продажу активу',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Маркет-мейкер',
-          description: 'Професійний учасник ринку, що забезпечує ліквідність',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Прослизання',
-          description:
-            'Різниця між очікуваною та фактичною ціною виконання ордера',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Книга ордерів',
-          description: 'Реєстр активних заявок на купівлю та продаж',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Спуфінг',
-          description: 'Маніпулятивна практика розміщення фальшивих ордерів',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Полювання за стопами',
-          description: 'Цілеспрямований рух ціни до зон скупчення стоп-лосів',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Глибина ринку',
-          description: 'Обсяг заявок у книзі ордерів на різних цінових рівнях',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Волатильність',
-          description: 'Ступінь мінливості ціни активу за певний період',
+            'XRP це криптовалюта блокчейна XRP Ledger, створена компанією Ripple як мостова валюта для міжнародних платежів.',
         },
       ],
     };

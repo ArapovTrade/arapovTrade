@@ -57,20 +57,17 @@ export class HomeRuBlogFiftyComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
 
-    this.titleService.setTitle('Алгоритмические ордера на бирже | ArapovTrade');
+    this.titleService.setTitle('Полосы Боллинджера | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Полное руководство по алгоритмическим ордерам. VWAP, TWAP, Iceberg, Trailing Stop и другие типы автоматизированных заявок для эффективной торговли.',
+        'Полосы Боллинджера: настройки, сжатие и расширение, пробои и отскоки от границ. Как индикатор показывает волатильность и зоны перегрева.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-03-26' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/algorithmicorders.webp',
-    });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
+
     this.gerRandom();
   }
   randomArticleRus: any = [];
@@ -278,36 +275,34 @@ export class HomeRuBlogFiftyComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          headline: 'Алгоритмические ордера на бирже: полное руководство',
+          headline: 'Полосы Боллинджера в трейдинге: что это и как применять',
           description:
-            'Подробное руководство по алгоритмическим ордерам на бирже. Типы алгоритмических ордеров, стратегии исполнения, управление рисками и автоматизация торговли.',
-          author: {
-            '@id': 'https://arapov.trade/ru#person',
-          },
+            'Полосы Боллинджера: настройки, сжатие и расширение, пробои и отскоки от границ. Как индикатор показывает волатильность и зоны перегрева.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'ArapovTrade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
             url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
-          datePublished: '2026-03-25T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://arapov.trade/ru/freestudying/algorithmicorders', // ← уточни URL
+            '@id': 'https://arapov.trade/ru/freestudying/bollinger-bands',
           },
           image: {
             '@type': 'ImageObject',
-            url: 'https://arapov.trade/assets/img/content/algorithmicorders.webp', // ← уточни путь
+            url: 'https://arapov.trade/assets/img/content/bollingerbands1.jpg',
             width: 1200,
             height: 630,
           },
           articleSection: 'Технический анализ',
-          keywords:
-            'алгоритмические ордера, алго-трейдинг, биржевые ордера, автоматическая торговля, TWAP, VWAP, исполнение ордеров',
+          keywords: 'полосы боллинджера (bollinger bands)',
           inLanguage: 'ru',
         },
       ],
@@ -323,18 +318,18 @@ export class HomeRuBlogFiftyComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/ru#person',
-      name: 'Игорь Арапов',
+      '@id': 'https://arapov.trade/#person',
+      name: 'Igor Arapov',
       alternateName: [
-        'Igor Arapov',
-        'Арапов Игорь',
-        'I. Arapov',
         'Ігор Арапов',
-        'І. В. Арапов',
+        'Игорь Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/ru',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -370,42 +365,34 @@ export class HomeRuBlogFiftyComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'Что такое алгоритмические ордера?',
+          name: 'Что показывают полосы Боллинджера?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Алгоритмические ордера — это автоматизированные заявки на покупку или продажу активов, выполняемые с помощью программных алгоритмов для оптимизации торговли.',
+            text: 'Полосы показывают волатильность: насколько далеко цена ушла от своей средней. Канал расширяется на активном рынке и сужается на спокойном. О направлении движения сами полосы не говорят.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Какие типы алгоритмических ордеров существуют?',
+          name: 'Можно ли торговать на отскок от границ полос?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Основные типы: VWAP, TWAP, Iceberg Order, Trailing Stop, Pegged Orders, Sniper Orders и условные рыночные ордера.',
+            text: 'Во флете иногда да, но в тренде это опасно: цена может долго идти вдоль одной полосы. Я не считаю касание полосы сигналом без подтверждения уровнем и объёмом.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Что такое VWAP?',
+          name: 'Что означает сжатие полос Боллинджера?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'VWAP (Volume-Weighted Average Price) — алгоритм, исполняющий ордер по взвешенной средней цене с учетом объема торгов.',
+            text: 'Сжатие означает падение волатильности и накопление сил перед импульсом. Это сигнал внимания, но не направления: куда пойдёт цена, полосы не показывают, поэтому нужен анализ уровня и объёма.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Что такое спуфинг?',
+          name: 'Какие настройки полос Боллинджера стандартные?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Спуфинг — запрещенная манипуляция, при которой размещаются фиктивные ордера для создания ложного впечатления о спросе или предложении.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Кто может использовать алгоритмические ордера?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Алгоритмические ордера доступны институциональным инвесторам, HFT-компаниям, проприетарным трейдерам и розничным трейдерам через современные платформы.',
+            text: 'Стандарт это период 20 и отклонение 2, их рекомендовал автор индикатора. Меньший период делает полосы чувствительнее и шумнее, больший сглаживает. Новичку проще начать с дефолтных значений.',
           },
         },
       ],
@@ -421,37 +408,46 @@ export class HomeRuBlogFiftyComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'Как начать использовать алгоритмические ордера',
+      '@id': 'https://arapov.trade/ru/freestudying/bollinger-bands#howto',
+      name: 'Как разобраться и применять: Полосы Боллинджера в трейдинге: что это и как применять',
+      description:
+        'Пошаговый разбор темы и её практическое применение в торговле',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Изучите типы ордеров',
-          text: 'Ознакомьтесь с VWAP, TWAP, Iceberg и другими типами алгоритмических заявок.',
+          name: 'Что такое полосы Боллинджера (Bollinger Bands) — определение',
+          text: 'Полосы Боллинджера (Bollinger Bands) — это индикатор волатильности из трёх линий: средняя полоса это простая скользящая средняя, обычно с периодом 20, а верхняя и нижняя отстоят от неё на два стандартных отклонения.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Выберите платформу',
-          text: 'Выберите подходящую платформу: MetaTrader, TradingView, API криптобирж.',
+          name: 'Как торговать от границ полос Боллинджера',
+          text: 'Классическая идея звучит заманчиво: цена коснулась верхней полосы, продавай, коснулась нижней, покупай.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Протестируйте на демо',
-          text: 'Тестируйте стратегии на демо-счете перед реальной торговлей.',
+          name: 'Сжатие полос: сигнал готовящегося импульса',
+          text: 'А вот здесь полосы по-настоящему полезны.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Настройте риск-менеджмент',
-          text: 'Установите Stop-Loss и Trailing Stop для защиты капитала.',
+          name: 'Сигналы Боллинджера: проход вдоль полосы, W-дно и M-вершина',
+          text: 'Сам Джон Боллинджер описал несколько фигур на своих полосах, и две из них стоит знать.',
         },
         {
           '@type': 'HowToStep',
           position: 5,
-          name: 'Запустите в реальном времени',
-          text: 'Начните с небольших объемов и постепенно масштабируйте стратегию.',
+          name: '%B и ширина полос: два числа из полос Боллинджера',
+          text: 'У полос Боллинджера есть два полезных производных показателя, о которых новички часто не знают.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 6,
+          name: 'Полосы Боллинджера и объёмный анализ: совместное применение',
+          text: 'Здесь полосы раскрываются лучше всего.',
         },
       ],
     };
@@ -466,59 +462,13 @@ export class HomeRuBlogFiftyComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
+      name: 'Глоссарий терминов статьи',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Алгоритмический ордер',
+          name: 'Полосы Боллинджера (Bollinger Bands)',
           description:
-            'Автоматизированная заявка, исполняемая по заданным правилам',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'VWAP',
-          description:
-            'Volume-Weighted Average Price — взвешенная по объему средняя цена',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'TWAP',
-          description:
-            'Time-Weighted Average Price — взвешенная по времени средняя цена',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Iceberg Order',
-          description: 'Ордер со скрытым объемом для крупных сделок',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'HFT',
-          description: 'High-Frequency Trading — высокочастотная торговля',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Trailing Stop',
-          description: 'Динамический стоп-лосс, следующий за ценой',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Спуфинг',
-          description: 'Запрещенная манипуляция с фиктивными ордерами',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Pegged Order',
-          description: 'Ордер, привязанный к лучшей цене bid/ask',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Проскальзывание',
-          description: 'Разница между ожидаемой и фактической ценой исполнения',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Co-Location',
-          description: 'Размещение серверов вблизи биржевых дата-центров',
+            'Полосы Боллинджера (Bollinger Bands) это индикатор волатильности из трёх линий: средняя полоса это простая скользящая средняя, обычно с периодом 20, а верхняя и нижняя отстоят от неё на два стандартных отклонения.',
         },
       ],
     };

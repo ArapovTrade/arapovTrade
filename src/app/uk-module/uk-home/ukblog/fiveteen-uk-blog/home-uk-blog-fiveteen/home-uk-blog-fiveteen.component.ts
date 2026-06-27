@@ -57,7 +57,7 @@ export class HomeUkBlogFiveteenComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Ф`ючерси: повний посібник з торгівлі | Arapov.trade',
+      'Криптостейкінг: переваги та ризики | Arapov.trade',
     );
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
@@ -65,14 +65,12 @@ export class HomeUkBlogFiveteenComponent implements OnInit {
     this.meta.updateTag({
       name: 'description',
       content:
-        'Що таке ф`ючерси та як ними торгувати? Детальний посібник по ф`ючерсних контрактах: типи, механізм роботи, стратегії торгівлі та управління ризиками.',
+        'Що таке стейкінг криптовалюти, як заробляти на блокуванні монет, яка дохідність реальна і які ризики у стейкінгу.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-04-10' });this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/futurestrading.webp',
-    });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
+
     this.gerRandom();
   }
   randomArticleRus: any = [];
@@ -89,7 +87,6 @@ export class HomeUkBlogFiveteenComponent implements OnInit {
       title: 'Базовий курс',
       link: 'https://arapov.trade/uk/freestudying/freeeducation',
     },
-     
   ];
 
   onGroupChange(event: Event) {
@@ -278,23 +275,35 @@ export class HomeUkBlogFiveteenComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          headline: "Ф'ючерси: повний посібник з торгівлі",
+          headline: 'Стейкінг криптовалют: що це і наскільки це вигідно',
           description:
-            "Комплексний посібник по ф'ючерсних контрактах. Типи ф'ючерсів, механізм роботи, переваги та ризики, стратегії для початківців та досвідчених трейдерів.",
-          image: 'https://arapov.trade/assets/img/content/futurestrading.webp',
-          author: {
-            '@id': 'https://arapov.trade/uk#person',
-          },
+            'Що таке стейкінг криптовалюти, як заробляти на блокуванні монет, яка дохідність реальна і які ризики у стейкінгу.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'Arapov.trade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
-          datePublished: '2025-04-15T00:00:00Z',
-        dateModified: '2026-04-15T00:00:00Z',
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': 'https://arapov.trade/uk/freestudying/crypto-staking',
+          },
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/cryptostaking.webp',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Криптовалюта',
+          keywords: 'стейкінг',
+          inLanguage: 'uk',
         },
       ],
     };
@@ -309,18 +318,18 @@ export class HomeUkBlogFiveteenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/uk#person',
-      name: 'Ігор Арапов',
+      '@id': 'https://arapov.trade/#person',
+      name: 'Igor Arapov',
       alternateName: [
-        'Igor Arapov',
-              'Арапов Игорь',
-              'I. Arapov',
-              'Игорь Арапов',
-              'І. В. Арапов',
-              'Арапов Ігор',
-              'Arapov Igor',
+        'Ігор Арапов',
+        'Игорь Арапов',
+        'Арапов Игорь',
+        'Арапов Ігор',
+        'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/uk',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -332,9 +341,13 @@ export class HomeUkBlogFiveteenComponent implements OnInit {
         'https://github.com/ArapovTrade',
         'https://ua.linkedin.com/in/arapovtrade',
         'https://www.youtube.com/@ArapovTrade',
-        'https://t.me/ArapovTrade'
+        'https://t.me/ArapovTrade',
       ],
-       jobTitle: ['Незалежний дослідник', 'трейдер', 'автор і засновник arapov.trade'],
+      jobTitle: [
+        'Незалежний дослідник',
+        'трейдер',
+        'автор і засновник arapov.trade',
+      ],
       description:
         'Незалежний дослідник, практикуючий трейдер, автор книг з трейдингу та наукових публікацій. Спеціалізується на психології трейдингу та когнітивних упередженнях на фінансових ринках.',
     };
@@ -352,42 +365,42 @@ export class HomeUkBlogFiveteenComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: "Що таке ф'ючерсний контракт?",
+          name: 'Що таке стейкінг криптовалюти простими словами?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: "Ф'ючерс — це стандартизований біржовий контракт, що зобов'язує сторони купити або продати певну кількість базового активу за фіксованою ціною у встановлену дату в майбутньому.",
+            text: 'Це блокування монет у мережі на алгоритмі Proof of Stake, за яке мережа платить винагороду. Ви ніби вносите заставу надійності й допомагаєте підтверджувати транзакції, а натомість отримуєте відсоток, зазвичай у тій самій монеті.',
           },
         },
         {
           '@type': 'Question',
-          name: "Чим ф'ючерси відрізняються від опціонів?",
+          name: 'Скільки можна заробити на стейкінгу?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: "Ф'ючерс — це зобов'язання виконати угоду, тоді як опціон дає право, але не зобов'язання. Покупець опціону може відмовитися від угоди, втративши лише премію.",
+            text: 'Дохідність залежить від мережі й постійно змінюється, зазвичай це кілька відсотків річних, у дрібних мереж буває вища. Гарантованою її вважати не можна: що більше учасників, то менший відсоток на кожного.',
           },
         },
         {
           '@type': 'Question',
-          name: "Яка маржа потрібна для торгівлі ф'ючерсами?",
+          name: 'Чи безпечний стейкінг?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Маржа зазвичай становить 5-15% від вартості контракту. Точний розмір залежить від біржі та волатильності активу.',
+            text: 'Ні, це не безризиковий депозит. Головні ризики це падіння ціни самої монети, заморозка коштів на період розморозки та штрафи за нечесного валідатора. Банківської страховки тут нема.',
           },
         },
         {
           '@type': 'Question',
-          name: "Чи можна заробити на падінні ринку з ф'ючерсами?",
+          name: 'Що вигідніше: стейкінг чи просто тримати монету?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: "Так, ф'ючерси дозволяють відкривати короткі позиції — продавати контракти з метою викупити дешевше. Це дає можливість заробляти на падаючих ринках.",
+            text: 'Залежить від ваших цілей. Стейкінг дає відсоток, але заморожує монети, і швидко вийти при падінні не вийде. З мого досвіду це має сенс лише для активу, який ви й так готові тримати вдовгу.',
           },
         },
         {
           '@type': 'Question',
-          name: "Які ф'ючерси краще для початківців?",
+          name: 'Скільки триває період розморозки і чи можна вивести стейкінг одразу?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: "Початківцям рекомендуються міні-ф'ючерси на індекси, такі як E-mini S&P 500. Вони мають менший розмір контракту та нижчі вимоги до маржі.",
+            text: 'Залежить від мережі. Гнучкий стейкінг на біржі часто дозволяє вийти швидко, а в багатьох мереж є період розморозки (анбондинг): у Cosmos близько 21 дня, у Polkadot до 28 днів, у Solana пара днів. Весь цей час монети не продати, а винагорода зазвичай не нараховується, тому умови краще перевірити до старту.',
           },
         },
       ],
@@ -403,37 +416,34 @@ export class HomeUkBlogFiveteenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: "Як почати торгувати ф'ючерсами",
+      '@id': 'https://arapov.trade/uk/freestudying/crypto-staking#howto',
+      name: 'Як розібратися й застосувати: стейкінг криптовалют і наскільки це вигідно',
+      description:
+        'Покроковий розбір теми та її практичне застосування в торгівлі',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Вивчіть основи',
-          text: "Розберіться в механізмі роботи ф'ючерсів: маржа, плече, експірація, специфікації контрактів.",
+          name: 'Що таке стейкінг криптовалюти — визначення',
+          text: 'Стейкінг це блокування криптовалюти для підтримки роботи блокчейна в обмін на винагороду.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Оберіть брокера',
-          text: "Відкрийте рахунок у ліцензованого брокера з доступом до ф'ючерсних бірж.",
+          name: 'Як працює стейкінг і скільки можна заробити',
+          text: 'Брати участь можна двома шляхами.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Практикуйтесь на демо',
-          text: 'Відпрацюйте стратегії на демо-рахунку мінімум 2-3 місяці.',
+          name: 'Ризики стейкінгу: що потрібно знати перед початком',
+          text: 'Ось тут, як трейдер, я й загострюю увагу.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Почніть з міні-контрактів',
-          text: "Використовуйте міні або мікро-ф'ючерси для обмеження ризиків.",
-        },
-        {
-          '@type': 'HowToStep',
-          position: 5,
-          name: 'Впровадьте ризик-менеджмент',
-          text: "Встановіть правила: максимум 1-2% ризику на угоду, обов'язкові стоп-лоси.",
+          name: 'Блокування, розморозка (unbonding) і слешинг: ключова механіка',
+          text: 'Блокування це строк, поки монета застейкана; анбондинг це період розморозки при виведенні; слешинг це штраф за порушення валідатора.',
         },
       ],
     };
@@ -448,66 +458,25 @@ export class HomeUkBlogFiveteenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: "Глосарій ф'ючерсної торгівлі",
+      name: 'Глосарій термінів статті',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: "Ф'ючерсний контракт",
+          name: 'Стейкінг',
           description:
-            'Стандартизована угода про купівлю або продаж базового активу за фіксованою ціною в майбутньому',
+            'Стейкінг це блокування криптовалюти для підтримки роботи блокчейна в обмін на винагороду.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Маржа',
+          name: 'Анбондинг',
           description:
-            'Заставне забезпечення для відкриття та підтримання позиції',
+            'Анбондинг (період розморозки) це час після запиту на виведення, коли застейкані монети ще не продати, а винагорода за них зазвичай не нараховується.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Кредитне плече',
+          name: 'Слешинг',
           description:
-            'Механізм управління позицією, що перевищує власний капітал трейдера',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Експірація',
-          description: "Дата закінчення терміну дії ф'ючерсного контракту",
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Хеджування',
-          description:
-            "Використання ф'ючерсів для захисту від несприятливої зміни цін",
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Маржин-кол',
-          description:
-            'Вимога брокера поповнити рахунок при падінні маржі нижче мінімального рівня',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Базовий актив',
-          description:
-            "Товар, валюта, індекс або інший інструмент, що лежить в основі ф'ючерсного контракту",
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Відкритий інтерес',
-          description:
-            "Загальна кількість незакритих ф'ючерсних контрактів на ринку",
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Контанго',
-          description:
-            "Ситуація, коли ціна ф'ючерса вища за спотову ціну базового активу",
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Бекворація',
-          description:
-            "Ситуація, коли ціна ф'ючерса нижча за спотову ціну базового активу",
+            'Слешинг це списання частини застейканих монет за порушення валідатором правил мережі; при делегуванні штраф зачіпає й делегатора.',
         },
       ],
     };

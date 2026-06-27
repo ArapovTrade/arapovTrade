@@ -1,60 +1,64 @@
 .hero-section {
-    background: url(/assets/img/content/anatomyofmarkettrends.webp) no-repeat bottom right;
+    background: url(/assets/img/content/adx.jpeg) no-repeat bottom right;
     background-size: 100% 100%;
     color: white;
-        height: 250px;
+    height: 250px;
+}
+
+.section-i {
+    padding: 0;
+}
+
+.pictureImg {
+    width: 800px;
+
+}
+
+h2,
+h1 {
+    align-self: center;
+}
+
+@media (min-width: 700px) {
+    .hero-section {
+        height: 400px;
     }
-    
-    .section-i {
-        padding: 0;
-    }
-    
-    .pictureImg {
-        width: 800px;
-    
-    }
-    
-    h2,
+}
+
+@media (min-width: 900px) {
     h1 {
-        align-self: center;
+        text-align: center !important;
     }
-    
-    @media (min-width: 700px) {
-        .hero-section {
-            height: 400px;
-        }
+
+    .hero-section {
+        height: 500px;
     }
-    
-    @media (min-width: 900px) {
-        h1 {
-            text-align: center !important;
-        }
-    
-        .hero-section {
-            height: 500px;
-        }
+}
+
+@media (min-width: 1100px) {
+    .hero-section {
+        height: 650px;
     }
-    
-    @media (min-width: 1100px) {
-        .hero-section {
-            height: 600px;
-        }
-    }
-    
-    .flex {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .pad6 {
-        padding: 60px 0;
-    }
-    
-    .pad {
-        margin: 10px 30px 40px;
-        text-align: center;
-    }
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pad6 {
+    padding: 60px 0;
+}
+
+.pad {
+    margin: 10px 30px 40px;
+    text-align: center;
+}
+
+.three-block{
+  line-height: 120%;
+}
 
 
 //main block!!!!!!!@!#!@#!@#!@#!@#!@#!
@@ -781,7 +785,4 @@ letter-spacing: 0px;
 .three-block{
   line-height: 40px;
 }
-}.three-block{
-  line-height: 120%;
 }
-

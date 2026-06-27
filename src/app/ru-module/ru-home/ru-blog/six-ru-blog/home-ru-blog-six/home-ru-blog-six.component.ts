@@ -57,17 +57,15 @@ export class HomeRuBlogSixComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
 
-    this.titleService.setTitle(
-      'Smart Money в трейдинге: стратегия крупных игроков | Arapov.trade',
-    );
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
+    this.titleService.setTitle('Доминация биткоина (BTC.D) | Arapov.trade');
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
 
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Smart Money в трейдинге: полное руководство по концепции крупных игроков. Узнайте, как институционалы управляют ликвидностью, создают ловушки и формируют тренды на финансовых рынках.',
+        'Что такое доминация биткоина (BTC.D), зачем следить за этим показателем и как доминирование BTC влияет на рынок и альткоины.',
     });
     this.gerRandom();
   }
@@ -276,40 +274,35 @@ export class HomeRuBlogSixComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          '@id': 'https://arapov.trade/ru/freestudying/smartestmoney#article',
-          headline: 'Smart Money в трейдинге: стратегия крупных игроков',
+          headline:
+            'Доминация Bitcoin (BTC.D): что это и как использовать в анализе',
           description:
-            'Smart Money в трейдинге: полное руководство по концепции крупных игроков. Узнайте, как институционалы управляют ликвидностью, создают ловушки и формируют тренды.',
-          image: {
-            '@type': 'ImageObject',
-            url: 'https://arapov.trade/assets/img/content/smartestmoney1.webp',
-            width: 1200,
-            height: 630,
-          },
-          author: { '@id': 'https://arapov.trade/ru#person' },
+            'Что такое доминация биткоина (BTC.D), зачем следить за этим показателем и как доминирование BTC влияет на рынок и альткоины.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'Arapov.trade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
-          datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://arapov.trade/ru/freestudying/smartestmoney',
+            '@id': 'https://arapov.trade/ru/freestudying/bitcoin-dominance',
           },
-          articleSection: 'Трейдинг',
-          keywords: [
-            'Smart Money',
-            'смарт мани',
-            'ликвидность',
-            'ордерные блоки',
-            'Wyckoff',
-          ],
-          wordCount: 1339,
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/bitcoin_dominance_1.png',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Криптовалюта',
+          keywords: 'доминация bitcoin',
           inLanguage: 'ru',
         },
       ],
@@ -325,18 +318,18 @@ export class HomeRuBlogSixComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/ru#person',
-      name: 'Игорь Арапов',
+      '@id': 'https://arapov.trade/#person',
+      name: 'Igor Arapov',
       alternateName: [
-        'Igor Arapov',
-        'Арапов Игорь',
-        'I. Arapov',
         'Ігор Арапов',
-        'І. В. Арапов',
+        'Игорь Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/ru',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -369,46 +362,37 @@ export class HomeRuBlogSixComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
-      '@id': 'https://arapov.trade/ru/freestudying/smartestmoney#faq',
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'Что такое Smart Money в трейдинге?',
+          name: 'Что такое доминация биткоина простыми словами?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Smart Money — это капитал институциональных участников рынка: банков, хедж-фондов и маркет-мейкеров. Они обладают значительными ресурсами и возможностью влиять на движение цены через управление ликвидностью.',
+            text: 'Это доля биткоина во всей капитализации крипторынка, в процентах. Она показывает, где сейчас сосредоточены деньги: в биткоине или в альткоинах. Это не цена биткоина, а его рыночная доля, в июне 2026 около 57 процентов.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Как Smart Money манипулируют рынком?',
+          name: 'Что значит рост доминации биткоина?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Smart Money используют ложные пробои, охоту на стоп-лоссы и сбор ликвидности. Они создают искусственные движения цены для накопления позиций перед основным трендовым движением.',
+            text: 'Чаще всего то, что капитал уходит из альткоинов в биткоин, а сами альты слабеют. Это говорит об осторожном настроении рынка. Падение доминации наоборот указывает на возможный альтсезон.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Что такое ордерный блок?',
+          name: 'Можно ли торговать по доминации биткоина?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Ордерный блок — это последняя свеча противоположного направления перед импульсным движением. Эти зоны отмечают места входа крупного капитала, и цена часто возвращается к ним для тестирования.',
+            text: 'По моему опыту нет, как по отдельному сигналу. Это контекст, а не точка входа. Цифру искажают стейблкоины и новые токены, и она запаздывает. Вход я ищу по уровням и объёму на конкретном инструменте.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Какие фазы рынка выделяет методология Wyckoff?',
+          name: 'Какая доминация биткоина считается нормальной?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Методология Wyckoff выделяет четыре фазы: накопление (покупка по низким ценам), рост (восходящий тренд), распределение (продажа по высоким ценам) и падение (нисходящий тренд).',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Как избежать ловушек Smart Money?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Используйте объёмный анализ для распознавания ложных пробоев, ожидайте подтверждения перед входом, анализируйте старшие таймфреймы и размещайте стоп-лоссы на безопасном расстоянии от очевидных уровней.',
+            text: 'Единого правильного значения нет, важнее направление. Исторически она опускалась примерно до трети рынка и поднималась к району ста процентов в ранние годы. Смотреть стоит на тренд доминации, а не на одну застывшую цифру.',
           },
         },
       ],
@@ -424,40 +408,28 @@ export class HomeRuBlogSixComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      '@id': 'https://arapov.trade/ru/freestudying/smartestmoney#howto',
-      name: 'Как торговать по концепции Smart Money',
+      '@id': 'https://arapov.trade/ru/freestudying/bitcoin-dominance#howto',
+      name: 'Как разобраться и применять: Доминация Bitcoin (BTC.D): что это и как использовать в анализе',
       description:
-        'Пошаговое руководство по применению концепции Smart Money в трейдинге',
+        'Пошаговый разбор темы и её практическое применение в торговле',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Определите зону интереса',
-          text: 'Найдите области высокой ликвидности: уровни поддержки и сопротивления, зоны скопления стоп-ордеров, ордерные блоки.',
+          name: 'Что такое доминация Bitcoin на крипторынке',
+          text: 'Доминация Bitcoin — это процентная доля биткоина в общей капитализации всего крипторынка.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Проанализируйте поведение цены',
-          text: 'Следите за ложными пробоями, аномальными объёмами и реакцией цены на ключевые уровни. Определите фазу рынка по Wyckoff.',
+          name: 'Как читать BTC.D: рост доминации и альтсезон',
+          text: 'Доминацию я предлагаю читать как обычный график: по тренду и уровням, а не по гаданию.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Найдите подтверждающий сигнал',
-          text: 'Используйте свечные паттерны, объёмный анализ и поведение цены на младших таймфреймах для фильтрации ложных сигналов.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 4,
-          name: 'Войдите в позицию',
-          text: 'После подтверждения направления движения откройте сделку с чётким планом по стоп-лоссу и тейк-профиту.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 5,
-          name: 'Управляйте позицией',
-          text: 'Фиксируйте прибыль по достижении целевого уровня или при изменении структуры рынка. Соблюдайте дисциплину.',
+          name: 'Доминация BTC и торговые стратегии: практическое применение',
+          text: 'Главное правило, которое я держу в голове: доминация это контекст, а не сигнал на вход.',
         },
       ],
     };
@@ -472,68 +444,13 @@ export class HomeRuBlogSixComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      '@id': 'https://arapov.trade/ru/freestudying/smartestmoney#terms',
-      name: 'Термины Smart Money',
+      name: 'Глоссарий терминов статьи',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Smart Money',
+          name: 'Доминация Bitcoin',
           description:
-            'Капитал институциональных участников рынка: банков, хедж-фондов и маркет-мейкеров, способных влиять на движение цены.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Ликвидность',
-          description:
-            'Объём доступных ордеров на покупку и продажу. Зоны высокой ликвидности привлекают крупных игроков.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Ордерный блок',
-          description:
-            'Последняя свеча противоположного направления перед импульсным движением, отмечающая зону входа крупного капитала.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Ложный пробой',
-          description:
-            'Кратковременный выход цены за уровень поддержки или сопротивления с последующим быстрым возвратом.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Дисбаланс',
-          description:
-            'Разница между спросом и предложением, проявляющаяся в резком движении цены без откатов.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Накопление',
-          description:
-            'Фаза рынка, когда крупные игроки скрытно покупают актив по низким ценам перед восходящим движением.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Распределение',
-          description:
-            'Фаза рынка, когда институционалы продают накопленный актив розничным трейдерам по высоким ценам.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Stop Hunt',
-          description:
-            'Охота на стопы — искусственное движение цены для выбивания стоп-ордеров розничных трейдеров.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Методология Wyckoff',
-          description:
-            'Концепция анализа рынка, описывающая циклы накопления и распределения под влиянием крупного капитала.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Маркет-мейкер',
-          description:
-            'Крупный участник рынка, обеспечивающий ликвидность и способный влиять на движение цены.',
+            'Доминация Bitcoin это процентная доля биткоина в общей капитализации всего крипторынка.',
         },
       ],
     };

@@ -54,15 +54,15 @@ export class HomeEuBlogFourtyComponent implements OnInit {
     this.checkedGroup = this.artickleServ.selectedGroups;
 
     this.titleService.setTitle(
-      'Why Is Trading So Hard? Main Reasons and Solutions | Arapov.trade',
+      'Trade Management: Entry, Handling, Exit | Arapov.trade',
     );
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Why is trading so hard? We analyze the main reasons: psychology, volatility, risk management. Practical tips for overcoming trading challenges.',
+        'How to manage a trade after entry: moving to breakeven, partial closing, trailing stop and the discipline of exiting by plan, not emotion.',
     });
     this.gerRandom();
   }
@@ -248,28 +248,36 @@ export class HomeEuBlogFourtyComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          '@id':
-            'https://arapov.trade/en/freestudying/difficulttrading#article',
-          headline: 'Why Is Trading So Hard? Main Reasons and Solutions',
+          headline:
+            'Trade management in trading: take-profit, break-even, trailing and hedge',
           description:
-            'Comprehensive analysis of trading difficulty: psychological barriers, market volatility, capital management mistakes.',
-          datePublished: '2026-03-25T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
-          author: {
-            '@id': 'https://arapov.trade/en#person',
-          },
+            'How to manage a trade after entry: moving to breakeven, partial closing, trailing stop and the discipline of exiting by plan, not emotion.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
             '@id': 'https://arapov.trade/#organization',
-            name: 'Arapov.trade',
+            name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
-          image:
-            'https://arapov.trade/assets/img/content/difficulttrading1.webp',
-          articleSection: 'Trading Education',
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': 'https://arapov.trade/en/freestudying/trade-management',
+          },
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/trade-management.jpeg',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Risk management',
+          keywords:
+            'trade management, take profit, break-even, trailing stop, hedging, locking in profit, moving the stop, exiting a trade',
           inLanguage: 'en',
         },
       ],
@@ -285,19 +293,18 @@ export class HomeEuBlogFourtyComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/en#person',
+      '@id': 'https://arapov.trade/#person',
       name: 'Igor Arapov',
       alternateName: [
         'Ігор Арапов',
-        'Арапов Игорь',
-        'I. Arapov',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-
-      url: 'https://arapov.trade/en',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -312,12 +319,12 @@ export class HomeEuBlogFourtyComponent implements OnInit {
         'https://t.me/ArapovTrade',
       ],
       jobTitle: [
-        'Independent researcher,',
-        'trader',
-        'author and founder of arapov.trade',
+        'Independent researcher',
+        'Trader',
+        'Author and founder of arapov.trade',
       ],
       description:
-        'Independent researcher, practicing trader, author of books on trading and scientific publications. Specializes in trading psychology and cognitive biases in financial markets.',
+        'Independent researcher, practising trader, author of trading books and scientific publications. Specialises in trading psychology and cognitive biases in financial markets.',
     };
 
     this.addJsonLdSchema(data);
@@ -330,46 +337,53 @@ export class HomeEuBlogFourtyComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
-      '@id': 'https://arapov.trade/en/freestudying/difficulttrading#faq',
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'Why do 70% of traders lose money?',
+          name: 'What is trade management in trading?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Main reasons: unrealistic expectations, lack of market knowledge, emotional decisions, and neglecting risk management.',
+            text: 'It is everything you do with a position after the entry: where you lock in profit with the take, when you move the stop to break-even, how you carry the profit with a trailing stop. In essence it is managing your own greed and fear on the exit, since the plan there decides more than the entry itself.',
           },
         },
         {
           '@type': 'Question',
-          name: 'How to overcome fear of losing money?',
+          name: 'Where do you correctly set a take-profit?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Set 1-2% risk per trade, use stop-losses, trade according to plan. Start with a demo account.',
+            text: 'From the structure of the market, not from a desired sum. A logical target is the nearest strong level price will reach with high probability: a little below resistance in a long and a little above support in a short. First you look at how far price can really reach, then you count the profit.',
           },
         },
         {
           '@type': 'Question',
-          name: 'How long does it take to master trading?',
+          name: 'When should you move the stop to break-even?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Basic understanding takes 3-6 months. Consistent profitability usually requires 2-3 years of practice.',
+            text: 'After price has travelled a noticeable distance in your direction and held above a level on volume. Before that moment the move is early: a normal pullback will catch the stop at the entry point and knock you out of a position that would later have worked into the plus.',
           },
         },
         {
           '@type': 'Question',
-          name: 'What is the biggest mistake beginners make?',
+          name: 'What makes an early break-even dangerous?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Trading without strategy and risk management. Excessive risk and emotional decisions.',
+            text: 'A stop moved to zero too early catches the market noise and knocks you out of the trade before it has worked. Price goes off to the target without you. It turns out that, while protecting the profit, the trader cuts off its very source.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Can you make consistent money trading?',
+          name: 'How do you set the distance of a trailing stop?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Yes, with systematic education, strategy development, and strict risk management.',
+            text: 'From how widely the instrument moves and how the move is built, not at random in points. The gap has to hold ordinary pullbacks but not hand back too much. A tight one stops you out on flat ground, a wide one gives back profit, and in a sideways market a trailing stop more often does harm.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Does a beginner need hedging?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'In my experience, no. The main task of a hedge, to limit a loss, is solved more simply and cheaply by an ordinary stop-loss. A hedge holds two opposing positions, adds spread, commissions and the risk of getting confused. A beginner is better off mastering protection by a stop and a risk of one to two percent per trade.',
           },
         },
       ],
@@ -385,38 +399,46 @@ export class HomeEuBlogFourtyComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      '@id': 'https://arapov.trade/en/freestudying/difficulttrading#howto',
-      name: 'How to Overcome Trading Challenges',
+      '@id': 'https://arapov.trade/en/freestudying/trade-management#howto',
+      name: 'How to manage an open trade: take-profit, break-even, trailing and hedge',
+      description:
+        'A step-by-step breakdown of the topic and its practical use in trading',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Learn the basics',
-          text: 'Master technical and fundamental analysis in 2-3 months.',
+          name: 'Understand that trade management begins after the entry',
+          text: 'Trade management is everything a trader does with a position after the entry, to protect and take the profit by plan rather than on emotion.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Practice on demo',
-          text: 'Trade with virtual money for 3-6 months.',
+          name: 'Set the take-profit from levels, not from a desired sum',
+          text: 'The take-profit is set from the structure of the market, from the nearest strong level price will reach with high probability.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Create trading plan',
-          text: 'Document entry conditions, exit rules, and risk limits.',
+          name: 'Count the take in tandem with the stop',
+          text: 'The take on its own decides nothing, what matters is its ratio to the risk by the stop.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Implement risk management',
-          text: 'Risk 1-2% per trade. Always use stop-losses.',
+          name: 'Move the stop to break-even after the move is confirmed',
+          text: 'The stop is moved to break-even only after price has travelled the distance and held above a level on volume.',
         },
         {
           '@type': 'HowToStep',
           position: 5,
-          name: 'Build psychological resilience',
-          text: 'Keep a journal, take breaks, manage stress.',
+          name: 'Set the trailing stop from volatility',
+          text: 'The distance of a trailing stop is set from the volatility of the instrument and the structure of the move.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 6,
+          name: "Don't complicate protection with a hedge if a stop is enough",
+          text: 'A beginner does not need hedging, its task is solved more simply and cheaply by an ordinary stop-loss.',
         },
       ],
     };
@@ -431,58 +453,31 @@ export class HomeEuBlogFourtyComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      '@id': 'https://arapov.trade/en/freestudying/difficulttrading#glossary',
-      name: 'Trading Glossary',
+      name: 'Glossary of terms used in the article',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Volatility',
-          description: 'The degree of price variation over time.',
+          name: 'Trade management',
+          description:
+            'Everything a trader does with a position after the entry, to protect and take the profit by plan rather than on emotion.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Stop-loss',
-          description: 'An order to limit potential losses.',
+          name: 'Take profit',
+          description:
+            'A pending order that automatically closes a position with a profit as soon as price reaches a level set in advance by the trader.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Risk Management',
-          description: 'System for controlling trading risks.',
+          name: 'Break-even',
+          description:
+            'Moving the stop-loss to the opening price of the position, after which the trade stops carrying the risk of a loss and at worst closes at zero.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Leverage',
-          description: 'Trading with borrowed funds.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Diversification',
-          description: 'Spreading capital across assets.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Trading Plan',
-          description: 'Document with trading rules.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Demo Account',
-          description: 'Practice account with virtual money.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Technical Analysis',
-          description: 'Analysis of charts and indicators.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Fundamental Analysis',
-          description: 'Analysis of economic indicators.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Liquidity',
-          description: 'Ability to quickly sell an asset.',
+          name: 'Hedging',
+          description:
+            'Reducing the risk on a main position by opening an opposite or related trade that brings profit when the main one goes into a loss.',
         },
       ],
     };

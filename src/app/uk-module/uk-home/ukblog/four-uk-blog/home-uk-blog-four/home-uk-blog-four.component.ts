@@ -28,7 +28,7 @@ export class HomeUkBlogFourComponent implements OnInit {
     private themeService: ThemeservService,
     private artickleServ: ArticlesService,
     private renderer: Renderer2,
-    @Inject(DOCUMENT) private document: Document
+    @Inject(DOCUMENT) private document: Document,
   ) {}
   private routerSubscription!: Subscription;
   private themeSubscription!: Subscription;
@@ -56,22 +56,17 @@ export class HomeUkBlogFourComponent implements OnInit {
     this.grr = this.artickleServ.selectedGroups;
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
-    this.titleService.setTitle(
-      'Маржинальна торгівля без втрат: як уникнути збитків | ArapovTrade'
-    );
+    this.titleService.setTitle('Концепція Smart Money (SMC) | Arapov.trade');
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Дізнайтеся, як уникнути втрат у маржинальній торгівлі. Управління ризиками, кредитне плече, стоп-лосси, психологія трейдингу та перевірені стратегії.',
+        'Що таке Smart Money Concept: структура ринку, ліквідність, Order Blocks і FVG. Як торгують великі гравці і як читати їхні сліди.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-24' });this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/reasonfordepositeloose.png',
-    });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
 
     this.gerRandom();
   }
@@ -89,7 +84,6 @@ export class HomeUkBlogFourComponent implements OnInit {
       title: 'Базовий курс',
       link: 'https://arapov.trade/uk/freestudying/freeeducation',
     },
-     
   ];
 
   onGroupChange(event: Event) {
@@ -159,7 +153,7 @@ export class HomeUkBlogFourComponent implements OnInit {
     // Показываем 5 случайных статей при фокусе, если инпут пуст
     if (!this.searchQuery) {
       const shuffled = [...this.artickleServ.ukrArtickles].sort(
-        () => Math.random() - 0.5
+        () => Math.random() - 0.5,
       );
       this.displayedArticles = shuffled.slice(0, this.maxResults);
     }
@@ -174,7 +168,7 @@ export class HomeUkBlogFourComponent implements OnInit {
   onSearchChange() {
     // Логика асинхронного поиска
     const filtered = this.artickleServ.ukrArtickles.filter((a) =>
-      a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase())
+      a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase()),
     );
     this.displayedArticles = filtered.slice(0, this.maxResults);
   }
@@ -196,7 +190,7 @@ export class HomeUkBlogFourComponent implements OnInit {
     const path: string =
       this.router.url.split('/')[this.router.url.split('/').length - 1];
     let index = this.artickleServ.ukrArtickles.findIndex(
-      (a) => a.linkUkr == path
+      (a) => a.linkUkr == path,
     );
 
     if (this.artickleServ.ukrArtickles.length - 1 == index) {
@@ -213,7 +207,7 @@ export class HomeUkBlogFourComponent implements OnInit {
     const path: string =
       this.router.url.split('/')[this.router.url.split('/').length - 1];
     let index = this.artickleServ.ukrArtickles.findIndex(
-      (a) => a.linkUkr == path
+      (a) => a.linkUkr == path,
     );
 
     if (index == 1) {
@@ -237,7 +231,7 @@ export class HomeUkBlogFourComponent implements OnInit {
     ];
 
     const scripts = this.document.querySelectorAll(
-      'script[type="application/ld+json"]'
+      'script[type="application/ld+json"]',
     );
 
     scripts.forEach((script) => {
@@ -250,7 +244,7 @@ export class HomeUkBlogFourComponent implements OnInit {
 
         const shouldRemove = candidates.some(
           (entry: any) =>
-            entry['@type'] && typesToRemove.includes(entry['@type'])
+            entry['@type'] && typesToRemove.includes(entry['@type']),
         );
 
         if (shouldRemove) {
@@ -279,36 +273,35 @@ export class HomeUkBlogFourComponent implements OnInit {
         {
           '@type': 'Article',
           headline:
-            'Маржинальна торгівля без втрат: повний посібник з управління ризиками',
+            'Smart Money: повний гайд по концепції розумних грошей у трейдингу',
           description:
-            'Детальний посібник з уникнення втрат у маржинальній торгівлі. Управління капіталом, психологія трейдингу, технічні інструменти та перевірені стратегії.',
-          author: {
-            '@id': 'https://arapov.trade/uk#person',
-          },
+            'Що таке Smart Money Concept: структура ринку, ліквідність, Order Blocks і FVG. Як торгують великі гравці і як читати їхні сліди.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'ArapovTrade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
             url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
-          datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://arapov.trade/uk/freestudying/avoidlosingmoney',
+            '@id': 'https://arapov.trade/uk/freestudying/smart-money-guide',
           },
           image: {
             '@type': 'ImageObject',
-            url: 'https://arapov.trade/assets/img/content/reasonfordepositeloose.png',
+            url: 'https://arapov.trade/assets/img/content/smartmoneyconceptsguide.webp',
             width: 1200,
             height: 630,
           },
-          articleSection: 'Ризик-менеджмент',
+          articleSection: 'Smart Money',
           keywords:
-            'маржинальна торгівля, кредитне плече, управління ризиками, стоп-лосс',
+            "Smart Money, розумні гроші, полювання за стопами, хибний пробій, пастки Smart Money, ордер-блок, ліквідність, SMC, об'ємний аналіз",
           inLanguage: 'uk',
         },
       ],
@@ -324,18 +317,18 @@ export class HomeUkBlogFourComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/uk#person',
-      name: 'Ігор Арапов',
+      '@id': 'https://arapov.trade/#person',
+      name: 'Igor Arapov',
       alternateName: [
-        'Igor Arapov',
-              'Арапов Игорь',
-              'I. Arapov',
-              'Игорь Арапов',
-              'І. В. Арапов',
-              'Арапов Ігор',
-              'Arapov Igor',
+        'Ігор Арапов',
+        'Игорь Арапов',
+        'Арапов Игорь',
+        'Арапов Ігор',
+        'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/uk',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -347,9 +340,13 @@ export class HomeUkBlogFourComponent implements OnInit {
         'https://github.com/ArapovTrade',
         'https://ua.linkedin.com/in/arapovtrade',
         'https://www.youtube.com/@ArapovTrade',
-        'https://t.me/ArapovTrade'
+        'https://t.me/ArapovTrade',
       ],
-       jobTitle: ['Незалежний дослідник', 'трейдер', 'автор і засновник arapov.trade'],
+      jobTitle: [
+        'Незалежний дослідник',
+        'трейдер',
+        'автор і засновник arapov.trade',
+      ],
       description:
         'Незалежний дослідник, практикуючий трейдер, автор книг з трейдингу та наукових публікацій. Спеціалізується на психології трейдингу та когнітивних упередженнях на фінансових ринках.',
     };
@@ -367,42 +364,50 @@ export class HomeUkBlogFourComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'Що таке маржинальна торгівля?',
+          name: 'Хто такі Smart Money простими словами?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Маржинальна торгівля — це форма торгівлі, при якій трейдер використовує позикові кошти брокера для відкриття позицій, що перевищують його власний капітал. Кредитне плече збільшує як потенційний прибуток, так і ризики збитків.',
+            text: 'Це великі професійні учасники ринку: банки, фонди й маркетмейкери. У них великий капітал і доступ до інформації, тому саме вони рухають ціну, а роздрібний натовп частіше йде слідом.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Який ризик допустимий на одну угоду?',
+          name: 'Чим Smart Money відрізняються від роздрібних трейдерів?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Рекомендований ризик на одну угоду становить 1-2% від загального депозиту. Такий підхід дозволяє пережити серію збиткових угод без критичної шкоди для торгового рахунку та зберегти капітал для майбутніх можливостей.',
+            text: 'Підходом. Натовп торгує на емоціях, поспішає й женеться за рухом, купуючи дорого. Великі діють холодно, за планом і з терпінням, купуючи дешево та продаючи дорого.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Чому важливо використовувати стоп-лосси?',
+          name: 'Що таке полювання за стопами (Stop Hunting)?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Стоп-лосс автоматично закриває позицію при досягненні заданого рівня збитків, захищаючи капітал від значних втрат. Це дозволяє зберігати емоційний контроль та уникати паніки при несприятливому русі ринку.',
+            text: 'Це навмисний рух ціни до зон скупчення стоп-лосів, щоб вибити їх і зібрати ліквідність. Великі гравці продавлюють ціну туди, де стоять стопи натовпу, забирають ці заявки й розвертають ринок.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Яке кредитне плече рекомендується для початківців?',
+          name: 'Як відрізнити хибний пробій від справжнього?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Початківцям рекомендується використовувати мінімальне плече 1:2 або 1:3. Високе плече значно збільшує ризики: при плечі 1:20 навіть 5% зміна ціни може призвести до повної ліквідації позиції.',
+            text: "Головна ознака це об'єм. Справжній пробій іде на зростаючому об'ємі й закріплюється за рівнем, а хибний вискакує на тонкому об'ємі та швидко повертається в діапазон. Швидкий розворот після проколу це явна пастка.",
           },
         },
         {
           '@type': 'Question',
-          name: 'Що таке ліквідація позиції?',
+          name: 'Як побачити Smart Money на графіку?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Ліквідація — це примусове закриття позиції брокером, коли збитки досягають рівня, при якому депозит не може їх покрити. Щоб уникнути ліквідації, важливо залишати достатній запас коштів та використовувати стоп-лосси.',
+            text: "За слідами: аномальними сплесками об'єму, зняттям ліквідності через хибні проколи рівнів і фазами накопичення та розподілу. Головний інструмент тут об'ємний аналіз, без нього будь-яка зона це гадання.",
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Як захиститися від маніпуляцій Smart Money?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: "Не ставте стоп у найочевидніших місцях, впритул за екстремумом чи круглим рівнем, давайте йому запас. Не заходьте в момент проколу, а дочекайтеся, поки пастка відпрацює й ціна підтвердить розворот на об'ємі.",
           },
         },
       ],
@@ -418,58 +423,70 @@ export class HomeUkBlogFourComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      '@id': 'https://arapov.trade/ua/freestudying/avoidlosingmoney#howto',
-      name: 'Як уникнути втрат у маржинальній торгівлі',
+      '@id': 'https://arapov.trade/uk/freestudying/smart-money-guide#howto',
+      name: 'Як читати ринок за концепцією Smart Money',
       description:
-        'Покрокове керівництво з управління ризиками та захисту капіталу при маржинальній торгівлі',
+        "Покроковий розбір: хто такі розумні гроші, як вони маніпулюють ціною і як іти за ними по сліду в об'ємі",
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Визначте допустимий рівень ризику',
-          text: 'Перед початком торгівлі встановіть, яку частину капіталу ви готові втратити. Рекомендується ризикувати не більше 1-2% депозиту на одну угоду і максимум 5% на день. Це захистить ваш рахунок від розорення при серії збиткових угод.',
+          name: 'Зрозумійте, хто такі Smart Money',
+          text: 'Smart Money це великі учасники з великим капіталом та інформацією: банки, фонди й маркетмейкери, які купують дешево й продають дорого.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Встановіть стоп-лоси на кожну позицію',
-          text: 'Перед відкриттям позиції заздалегідь визначте рівень стоп-лосу нижче ключових рівнів підтримки. Стоп-лос автоматично закриє позицію при збитку, зберігаючи ваш капітал від подальших втрат.',
+          name: 'Розберіться, як вони набирають позицію',
+          text: "Великий капітал дробить об'єм на дрібні та айсберг-ордери, тихо накопичуючи позицію внизу й розподіляючи її нагорі за логікою Вайкоффа.",
         },
         {
           '@type': 'HowToStep',
+          name: 'Побачте фази Вайкоффа за Smart Money',
+          text: 'Великий капітал працює за сценарієм Вайкоффа: накопичення в боковику внизу, тренд по шляху найменшого опору й розподіл нагорі; падіння часто починається через дефіцит попиту, а не агресію продавців.',
           position: 3,
-          name: 'Використовуйте консервативне кредитне плече',
-          text: 'Початківцям трейдерам рекомендується використовувати плече 1:2 або 1:3. Досвідчені трейдери можуть збільшувати плече залежно від волатильності активу та ринкових умов, але уникайте максимального плеча.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Проведіть аналіз перед угодою',
-          text: 'Вивчіть технічний аналіз (графіки, рівні підтримки/опору), фундаментальний аналіз (новини, події) та ринковий сентимент. Чим більше даних ви аналізуєте, тим обґрунтованіші ваші рішення.',
+          name: 'Зрозумійте механіку контролю',
+          text: 'Контроль це робота з передбачуваністю натовпу й ліквідністю біля очевидних рівнів, а не таємна змова проти вас.',
         },
         {
           '@type': 'HowToStep',
           position: 5,
-          name: 'Диверсифікуйте портфель',
-          text: 'Розподіляйте капітал між кількома активами та стратегіями. Ніколи не відкривайте всі позиції по одному інструменту — це зменшить ризик повної втрати при несприятливому русі одного активу.',
+          name: 'Розпізнавайте пастки й хибний пробій',
+          text: "Полювання за стопами й хибний пробій вибивають стопи натовпу; відрізняє хибний прокол від справжнього об'єм.",
         },
         {
           '@type': 'HowToStep',
           position: 6,
-          name: 'Зменшуйте позицію при наближенні до ліміту втрат',
-          text: 'Якщо за день ви втратили 3-4% депозиту, закрийте решту позицій і припиніть торгівлю. Це запобіжить емоційним рішенням та захистить капітал від критичних збитків.',
+          name: 'Шукайте слід на графіку',
+          text: "Великого видають сплеск об'єму, зняття ліквідності проколом і боковик накопичення, але без об'єму будь-яка зона це гадання.",
         },
         {
           '@type': 'HowToStep',
+          name: "Підтверджуйте слід об'ємом, а не лише ціною",
+          text: "Ордер-блоки й імбаланси за чистою ціною легко підігнати заднім числом; додавайте біржовий об'єм з CME як реальний слід великого капіталу, адже підвищений об'єм на зростанні видає покупця, на падінні продавця.",
           position: 7,
-          name: 'Ведіть щоденник угод',
-          text: 'Записуйте кожну угоду: дату, актив, розмір позиції, причину входу, результат. Аналізуйте помилки та успіхи, щоб постійно вдосконалювати стратегію.',
         },
         {
           '@type': 'HowToStep',
           position: 8,
-          name: 'Контролюйте емоції',
-          text: 'Маржинальна торгівля вимагає психологічної стійкості. Не відкривайте позиції в поспіху, не збільшуйте плече при збитках і дотримуйтесь свого торгового плану, навіть якщо ринок рухається проти вас.',
+          name: 'Опануйте елементи SMC',
+          text: "Ліквідність, ордер-блок, імбаланс і структура (BOS і CHoCH) це інструменти концепції, але новачку важливіші структура й об'єм.",
+        },
+        {
+          '@type': 'HowToStep',
+          name: 'Не вірте міфам SMC і тримайте ризик',
+          text: 'Маніпуляція це не змова проти вас, а потреба великого капіталу в ліквідності біля скупчень стопів; не заходьте в кожну зону поспіль і завжди торгуйте зі стопом і розрахунком ризику на угоду.',
+          position: 9,
+        },
+        {
+          '@type': 'HowToStep',
+          position: 10,
+          name: 'Заходьте за великим після пастки',
+          text: 'Знайдіть імпульсний рівень, дочекайтеся захоплення ліквідності й хибного проколу, і заходьте за великим зі стопом за прокол при ризику до прибутку від 1:3.',
         },
       ],
     };
@@ -484,69 +501,25 @@ export class HomeUkBlogFourComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Глосарій маржинальної торгівлі',
-      description:
-        "Основні терміни та визначення, пов'язані з маржинальною торгівлею та управлінням ризиками",
+      name: 'Глосарій термінів статті',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Маржинальна торгівля',
+          name: 'Smart Money',
           description:
-            'Торгівля з використанням позикових коштів брокера, що дозволяє відкривати позиції, які перевищують власний капітал трейдера.',
+            'Великі професійні учасники ринку, які мають великий капітал і доступ до інформації, недоступної звичайному трейдеру; дослівно розумні гроші.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Кредитне плече',
+          name: 'Stop Hunting',
           description:
-            'Співвідношення позикових коштів до власного капіталу трейдера. Плече 1:10 дозволяє торгувати сумою в 10 разів більшою за депозит.',
+            'Навмисний рух ціни до зон, де скупчилися стоп-лоси трейдерів, щоб вибити ці заявки й використати їх як ліквідність; українською збір стопів.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Маржа',
+          name: 'Фаза накопичення',
           description:
-            'Сума власних коштів трейдера, яка надається як застава для відкриття маржинальної позиції.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Ліквідація',
-          description:
-            'Примусове закриття позиції брокером при досягненні критичного рівня збитків для захисту позикових коштів.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Стоп-лосс',
-          description:
-            'Захисний ордер, що автоматично закриває позицію при досягненні заданого рівня збитків.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Тейк-профіт',
-          description:
-            'Ордер на автоматичне закриття позиції при досягненні цільового рівня прибутку.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Трейлінг-стоп',
-          description:
-            'Динамічний стоп-лосс, який автоматично переміщується слідом за ціною, фіксуючи прибуток при розвороті.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Ризик-менеджмент',
-          description:
-            'Система управління ризиками, що включає визначення розміру позиції, встановлення стоп-лоссів та диверсифікацію портфеля.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Проковзування',
-          description:
-            'Різниця між очікуваною та фактичною ціною виконання ордера, що виникає при високій волатильності або низькій ліквідності.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Маржин-кол',
-          description:
-            'Вимога брокера внести додаткові кошти на рахунок для підтримки відкритих позицій при досягненні критичного рівня збитків.',
+            'Боковик, частіше після довгого падіння, у якому великий капітал тихо набирає позицію в наляканого натовпу, що розпродає активи внизу; зовні нудний діапазон, у якому закладається майбутній рух.',
         },
       ],
     };

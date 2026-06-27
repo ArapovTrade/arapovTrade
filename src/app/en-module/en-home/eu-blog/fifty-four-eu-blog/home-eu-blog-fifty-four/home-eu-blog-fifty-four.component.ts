@@ -53,22 +53,16 @@ export class HomeEuBlogFiftyFourComponent implements OnInit {
     this.grr = this.artickleServ.selectedGroups;
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
-    this.titleService.setTitle(
-      'How to Secure Your Cryptocurrency | Complete Security Guide',
-    );
+    this.titleService.setTitle('Chart Patterns in Trading | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Complete guide to cryptocurrency security. Protection against hackers and phishing, two-factor authentication setup, secure storage strategies for significant digital asset holdings.',
+        'Chart patterns in technical analysis: triangles, flags, head and shoulders, double top. How to spot them and trade the breakouts.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Igor Arapov' });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-28' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/cryptosafe.webp',
-    });
+
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
 
     this.gerRandom();
   }
@@ -254,28 +248,37 @@ export class HomeEuBlogFiftyFourComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          mainEntityOfPage: {
-            '@type': 'WebPage',
-            '@id': 'https://arapov.trade/en/freestudying/cryptosafe',
-          },
           headline:
-            'How to Secure Your Cryptocurrency: Complete Guide to Digital Asset Protection',
+            "Do Chart Patterns Work? What's Real and What's a Coin Flip",
           description:
-            'Complete guide to cryptocurrency security. Protection against hackers and phishing, two-factor authentication setup, secure storage strategies for significant digital asset holdings.',
-          image: 'https://arapov.trade/assets/img/content/cryptosafe1.webp',
-          author: {
-            '@id': 'https://arapov.trade/en#person',
-          },
+            'Chart patterns in technical analysis: triangles, flags, head and shoulders, double top. How to spot them and trade the breakouts.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'Arapov.trade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
-              url: 'https://arapov.trade/assets/img/content/favicon.ico',
+              url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
-          datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': 'https://arapov.trade/en/freestudying/chart-patterns',
+          },
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/keypraicepattern.webp',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Technical analysis',
+          keywords:
+            'chart patterns, do chart patterns work, head and shoulders, double top, triangle pattern, flag and pennant, cup and handle, 1-2-3 pattern, most reliable chart pattern',
+          inLanguage: 'en',
         },
       ],
     };
@@ -290,18 +293,18 @@ export class HomeEuBlogFiftyFourComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/en#person',
+      '@id': 'https://arapov.trade/#person',
       name: 'Igor Arapov',
       alternateName: [
         'Ігор Арапов',
-        'Арапов Игорь',
-        'I. Arapov',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/en',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -316,12 +319,12 @@ export class HomeEuBlogFiftyFourComponent implements OnInit {
         'https://t.me/ArapovTrade',
       ],
       jobTitle: [
-        'Independent researcher,',
-        'trader',
-        'author and founder of arapov.trade',
+        'Independent researcher',
+        'Trader',
+        'Author and founder of arapov.trade',
       ],
       description:
-        'Independent researcher, practicing trader, author of books on trading and scientific publications. Specializes in trading psychology and cognitive biases in financial markets.',
+        'Independent researcher, practising trader, author of trading books and scientific publications. Specialises in trading psychology and cognitive biases in financial markets.',
     };
 
     this.addJsonLdSchema(data);
@@ -337,42 +340,42 @@ export class HomeEuBlogFiftyFourComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'What are the main threats to cryptocurrency assets?',
+          name: 'Do chart patterns actually work?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Key threats include: hacker attacks on exchanges and wallets, phishing schemes using fake websites, loss of private keys or seed phrases, physical theft of storage devices, user errors during transfers, and fraudulent projects promising guaranteed high returns.',
+            text: 'On its own a pattern fills about as often as it fails, and the naked shape gives no statistical edge over a long run of trades. It starts to mean something only on a strong level and with volume behind the move. The success rates quoted online swing from fifty percent to ninety-something because so much depends on who counted and how, so a pattern is not a profit button.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Why is two-factor authentication important for cryptocurrency protection?',
+          name: 'What is the most reliable chart pattern?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Two-factor authentication creates an additional security barrier: even if attackers obtain your password, account access remains blocked without the second factor (code from an authenticator app). Using Google Authenticator or Authy is recommended over SMS codes, which can be intercepted.',
+            text: 'There is nothing reliable in the sense of a guarantee, and every naked shape is roughly a coin flip. Of all of them I lean toward the flag, because it rests on clear mechanics: a sharp impulse shows one side is stronger, and a sluggish pullback is a pause rather than a reversal. The 1-2-3 also stands apart, since you can read large-capital accumulation in it, and entering at point three gives the best risk-to-reward.',
           },
         },
         {
           '@type': 'Question',
-          name: 'How can I recognize a phishing attack in cryptocurrency?',
+          name: 'Why do chart patterns work only about half the time?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Phishing indicators include: minor changes in website URLs, urgent demands to enter credentials, emails threatening account suspension, requests for private keys or seed phrases. Legitimate services never request private keys under any circumstances whatsoever.',
+            text: 'Because the picture itself reverses nothing. The market is moved by participants who saw the picture and acted on it. The whole crowd spots a familiar shape and stacks orders in predictable places, and that is exactly where large capital harvests liquidity: it spikes through the boundary, sweeps stops, and often leaves in the opposite direction. So I watch the level, the false break and the volume, not the shape.',
           },
         },
         {
           '@type': 'Question',
-          name: 'What security measures are needed for storing large cryptocurrency amounts?',
+          name: 'How do reversal and continuation patterns differ?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Use hardware wallets for cold storage, distribute assets across multiple wallets, configure multisignature for transactions, conduct regular security audits, and store key backups in physically protected locations (safe, bank deposit box).',
+            text: 'Reversal patterns hint that a trend is running out of breath and may flip, and they show up at the end of a move: head and shoulders, double top and double bottom. Continuation patterns say the trend will resume after a pause, and those are the flag, pennant, triangle and cup with handle. Either type is worth reading only together with volume and on a higher timeframe.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Is it safe to use public Wi-Fi networks for cryptocurrency operations?',
+          name: 'What should I use instead of chart patterns?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Using public Wi-Fi for cryptocurrency account access is strongly discouraged — such networks are easily intercepted by attackers. When working away from home, use mobile data or a VPN with reliable encryption instead.',
+            text: 'Volume, levels and the Wyckoff approach. I read what large capital is doing rather than try to guess a drawing: which level holds the liquidity, whether there was a false break, and what volume shows on the breakout and retest. Knowing the pattern is still useful, but as a map of crowd psychology rather than a signal for blind trading, and always with a stop and a small risk per trade.',
           },
         },
       ],
@@ -388,39 +391,46 @@ export class HomeEuBlogFiftyFourComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'How to Set Up Comprehensive Cryptocurrency Security',
+      '@id': 'https://arapov.trade/en/freestudying/chart-patterns#howto',
+      name: 'How to read chart patterns without trading them blind',
       description:
-        'Step-by-step guide to creating a multi-layered security system for cryptocurrency assets.',
+        'A step-by-step approach to price patterns and using them properly through level and volume',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Audit Current Security Status',
-          text: 'Inventory all crypto assets and storage locations. Assess the protection level of each wallet and platform, identify vulnerabilities, and create a remediation plan.',
+          name: 'Understand what a chart pattern is and where it comes from',
+          text: 'A chart pattern is a recurring shape the brain finds in the noise of price, but the market is under no obligation to respect it.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Configure Two-Factor Authentication',
-          text: 'Install an authenticator app (Google Authenticator, Authy) and enable 2FA on all cryptocurrency platforms, exchanges, and email accounts. Store recovery backup codes in a secure location.',
+          name: 'Split patterns into reversal and continuation',
+          text: 'Reversals catch the end of a trend, continuations catch its pause, and you read either one only with volume and on a higher timeframe.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Organize Secure Key Storage',
-          text: 'Transfer the majority of assets to a hardware wallet. Record the seed phrase on physical media (paper, metal plate) and place copies in multiple protected locations.',
+          name: 'Study the reversal patterns',
+          text: 'Head and shoulders and the double top and bottom are confirmed only by a neckline break on rising volume; before that they are just a sketch.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Create a Password Management System',
-          text: 'Install a password manager and generate unique complex passwords for each crypto platform. Avoid password reuse and update credentials regularly.',
+          name: 'Study the continuation patterns',
+          text: 'Triangle, flag, pennant and the cup with handle show a pause in the trend, and you take the entry after a hold beyond the boundary with volume confirmation.',
         },
         {
           '@type': 'HowToStep',
           position: 5,
-          name: 'Implement Regular Monitoring',
-          text: 'Set up notifications for account logins and transactions. Periodically check activity history, update wallet firmware, and monitor security news for platforms you use.',
+          name: 'Use the 1-2-3 to enter behind large capital',
+          text: 'On a strong level the 1-2-3 gives an entry at point three with a short stop and the best risk-to-reward ratio.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 6,
+          name: 'Trade the context, not the drawing',
+          text: 'A naked pattern fills roughly fifty-fifty, so the level, the false break and the volume decide, not the shape, and always with a stop.',
         },
       ],
     };
@@ -435,68 +445,55 @@ export class HomeEuBlogFiftyFourComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Cryptocurrency Security Glossary',
-      description: 'Essential terms related to cryptocurrency asset protection',
+      name: 'Glossary of terms used in this article',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Two-Factor Authentication',
+          name: 'Chart pattern',
           description:
-            'Account protection method requiring identity verification through two independent channels — password and temporary code.',
+            'A recurring shape on a price chart that traders use to anticipate the next move; part of classical technical analysis.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Phishing',
+          name: 'Head and shoulders',
           description:
-            'Fraudulent scheme to obtain confidential data through fake websites, emails, or messages.',
+            'A reversal pattern of three peaks with a higher central peak and a neckline beneath them, whose break is taken as a trend-reversal signal.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Cold Storage',
+          name: 'Double top',
           description:
-            'Method of storing cryptocurrency on devices without internet connection for maximum protection against remote attacks.',
+            'A reversal pattern at the top of an uptrend where price stalls twice at roughly the same level and fails to break through the second time.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Hot Wallet',
+          name: 'Triangle',
           description:
-            'Cryptocurrency wallet with constant internet connectivity, convenient for quick transactions.',
+            'A consolidation pattern between two converging lines, where the swing range and volume fade before price exits with an impulse beyond one boundary.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Multisignature',
+          name: 'Flag',
           description:
-            'Technology requiring multiple independent signatures to authorize a transaction.',
+            'A continuation pattern in which, after a sharp impulse, price drifts into a small channel sloped against the move and then breaks out in the trend direction.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Seed Phrase',
+          name: 'Pennant',
           description:
-            'Mnemonic word sequence for recovering access to a cryptocurrency wallet.',
+            'A continuation pattern after an impulse whose consolidation forms a small converging triangle rather than the parallel channel of a flag.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Private Key',
+          name: 'Cup and handle',
           description:
-            'Cryptographic code providing complete control over cryptocurrency funds.',
+            'A bullish continuation pattern where a smooth rounded correction is followed by a short pullback-handle, after which price breaks the prior high upward.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Social Engineering',
+          name: '1-2-3 pattern',
           description:
-            'Psychological manipulation techniques used to obtain confidential information from individuals.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'VPN',
-          description:
-            "Virtual Private Network that encrypts internet traffic and conceals the user's real IP address.",
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Hardware Wallet',
-          description:
-            'Physical device for storing private keys in an isolated, protected environment.',
+            'A reversal pattern of three points where point 1 marks the old extreme, point 2 is the first pullback, and point 3 is a second pullback that does not breach point 1.',
         },
       ],
     };

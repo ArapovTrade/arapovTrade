@@ -54,15 +54,15 @@ export class HomeEnBlogTwentyNineComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Trading for Beginners: Complete Guide 2025 | Arapov.trade',
+      'Bonds: Coupon, Face Value, Yield | Arapov.trade',
     );
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Complete trading guide for beginners 2025. Learn how to choose a market, master technical analysis, develop strategies, and start trading from scratch.',
+        'What bonds are in simple terms, how coupon, face value and yield work, what types exist and how reliable they are for an investor.',
     });
     this.gerRandom();
   }
@@ -248,38 +248,35 @@ export class HomeEnBlogTwentyNineComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          headline:
-            'Trading for Beginners: Complete Guide on How to Start Trading in 2025',
+          headline: 'What Bonds Are in Simple Terms: Coupon, Face Value, Yield',
           description:
-            'Complete trading guide for beginners. Learn how to choose a market, master technical analysis, develop strategies, and start trading from scratch.',
-          image:
-            'https://arapov.trade/assets/img/content/tradingquickstart1.webp',
-          datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
-          author: {
-            '@id': 'https://arapov.trade/en#person',
-          },
+            'What bonds are in simple terms, how coupon, face value and yield work, what types exist and how reliable they are for an investor.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'Arapov.trade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
             url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://arapov.trade/en/freestudying/tradingquickstart',
+            '@id': 'https://arapov.trade/en/freestudying/bonds-guide',
           },
-          articleSection: 'Trading Education',
-          keywords: [
-            'trading for beginners',
-            'how to start trading',
-            'technical analysis',
-            'trading strategies',
-            'risk management',
-          ],
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/bonds-guide.jpeg',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Fundamental Analysis',
+          keywords: 'bonds, coupon, face value, bond yield',
+          inLanguage: 'en',
         },
       ],
     };
@@ -294,18 +291,18 @@ export class HomeEnBlogTwentyNineComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/en#person',
+      '@id': 'https://arapov.trade/#person',
       name: 'Igor Arapov',
       alternateName: [
         'Ігор Арапов',
-        'Арапов Игорь',
-        'I. Arapov',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/en',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -320,12 +317,12 @@ export class HomeEnBlogTwentyNineComponent implements OnInit {
         'https://t.me/ArapovTrade',
       ],
       jobTitle: [
-        'Independent researcher,',
-        'trader',
-        'author and founder of arapov.trade',
+        'Independent researcher',
+        'Trader',
+        'Author and founder of arapov.trade',
       ],
       description:
-        'Independent researcher, practicing trader, author of books on trading and scientific publications. Specializes in trading psychology and cognitive biases in financial markets.',
+        'Independent researcher, practising trader, author of trading books and scientific publications. Specialises in trading psychology and cognitive biases in financial markets.',
     };
 
     this.addJsonLdSchema(data);
@@ -341,42 +338,50 @@ export class HomeEnBlogTwentyNineComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'How much money do I need to start trading?',
+          name: 'What are bonds in simple terms?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'You can start trading with as little as $10-50 on cryptocurrency exchanges or $100-200 on Forex. However, for comfortable trading with proper risk management, a starting capital of $500-1000 is recommended.',
+            text: 'A debt security: by buying it, you lend money to a company or a state at interest. The issuer undertakes to return the face value by the maturity date and to pay coupons along the way.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Can I make money trading without experience?',
+          name: 'How do bonds differ from shares?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Trading without preparation almost guarantees losses. You need to first learn the basics of technical analysis, test strategies on a demo account, and master risk management.',
+            text: 'A share is a stake in a business and a right to part of the profit, while a bond is a debt with fixed terms. The holder of a bond is a creditor, not a co-owner, and the income on it is known in advance.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Which market should a beginner choose?',
+          name: 'What are a coupon and a face value?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'For beginners, the stock market is optimal due to its stability. The cryptocurrency market suits those ready for high volatility. Forex attracts with low entry barriers and high liquidity.',
+            text: 'Face value is the sum the issuer will return at the maturity date. The coupon is the percent it pays for the use of your money, usually once every half-year or year.',
           },
         },
         {
           '@type': 'Question',
-          name: 'How long does it take to learn trading?',
+          name: "What's the difference between the coupon rate and the yield?",
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Basic market understanding can be achieved in 2-3 months of active learning. Developing stable skills requires 6 months to 2 years of practice. Professional level is reached after 3-5 years.',
+            text: "The coupon rate is a fixed percent of the face value, set at issue and unchanged. Yield is measured against the price you actually paid: current yield divides the coupon by today's price, and yield to maturity adds the gap between your price and the face value returned at the end. Compare bonds by yield to maturity, not by the coupon.",
           },
         },
         {
           '@type': 'Question',
-          name: 'What is a demo account and why do I need it?',
+          name: 'Are bonds reliable?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'A demo account is a practice account with virtual money that fully simulates real trading. It allows you to learn the platform and test strategies without risking real funds.',
+            text: "Government bonds are considered among the most reliable, corporate ones are riskier. But reliable does not mean risk-free: the risk of the issuer's default and the risk of a price fall when rates rise remain.",
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Should a trader buy bonds?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: "For a retail trader, buying individual bonds for the coupon is an investor's job rather than a trade. But bond yields are worth watching as a macro signal: they track the central-bank rate, which drives the dollar and through it the risk assets a trader actually deals in.",
           },
         },
       ],
@@ -392,44 +397,40 @@ export class HomeEnBlogTwentyNineComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'How to Start Trading in Financial Markets',
-      description: 'Step-by-step guide for beginner traders',
-      totalTime: 'P3M',
-      estimatedCost: {
-        '@type': 'MonetaryAmount',
-        currency: 'USD',
-        value: '100-500',
-      },
+      '@id': 'https://arapov.trade/en/freestudying/bonds-guide#howto',
+      name: 'How to understand and apply: bonds',
+      description:
+        'A step-by-step breakdown of the topic and its practical application in trading',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Choose the right market',
-          text: 'Determine which market aligns with your goals: stock market for stability, cryptocurrencies for volatility, or Forex for 24/7 trading.',
+          name: 'Understand what a bond is',
+          text: 'A bond is a debt security on which the issuer borrows money from an investor and undertakes to return the face value by the maturity date, paying coupons.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Learn basic terminology',
-          text: 'Master key concepts: liquidity, volatility, spread, leverage. Study technical analysis fundamentals.',
+          name: 'Grasp the key parameters',
+          text: 'A bond has a face value, a coupon, a maturity date, and a yield, and its market price is inversely linked to the central bank rate.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Open a demo account',
-          text: 'Register with a reliable broker and test strategies without risking real money for at least 2-3 months.',
+          name: 'Tell the coupon apart from the yield',
+          text: 'The coupon rate is a fixed percent of face value, while yield is measured against the price you paid; compare bonds by yield to maturity, not by the coupon.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Develop a trading strategy',
-          text: 'Create your trading plan with clear entry and exit rules. Define risk per trade at 1-2% of deposit.',
+          name: 'Tell apart the types and risks',
+          text: "Government bonds are more reliable, corporate ones more profitable, zero-coupon and callable issues change the math; the main risks are the issuer's default and a rate change.",
         },
         {
           '@type': 'HowToStep',
           position: 5,
-          name: 'Transition to real trading',
-          text: 'After stable demo results, open a real account with minimum deposit and strictly follow your strategy.',
+          name: 'Read yields as a macro signal',
+          text: 'Bond yields track the central-bank rate, which moves the dollar and through it risk assets, so the curve works as a barometer of risk-on versus risk-off.',
         },
       ],
     };
@@ -444,67 +445,31 @@ export class HomeEnBlogTwentyNineComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Trading Glossary for Beginners',
+      name: 'Article glossary',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Trading',
+          name: 'Yield to maturity',
           description:
-            'The process of actively buying and selling financial instruments to profit from price changes.',
+            'The full yield of a bond accounting for coupons and the gap between purchase price and face value at maturity; the main metric for comparing issues.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Liquidity',
+          name: 'Duration',
           description:
-            'The ability of an asset to be quickly bought or sold at market price without significantly affecting its value.',
+            'The average period over which a bond investment pays back through coupons and redemption, and a measure of the price sensitivity to interest-rate changes.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Volatility',
+          name: 'Bond',
           description:
-            'The degree of price variation of an asset over a specific period of time.',
+            'A debt security on which the issuer borrows money from an investor and undertakes to return the face value by the maturity date, paying interest in the form of coupons along the way.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Spread',
+          name: 'Coupon rate',
           description:
-            'The difference between the buy price and sell price of an asset.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Leverage',
-          description:
-            'Borrowed capital that allows trading with amounts exceeding your own capital.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Stop-Loss',
-          description:
-            'A protective order that automatically closes a position when price reaches a specified loss level.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Technical Analysis',
-          description:
-            'A method of forecasting price movements based on studying charts and indicators.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Swing Trading',
-          description:
-            'A trading style where positions are held from several days to several weeks.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Scalping',
-          description:
-            'A short-term trading strategy with many quick trades aimed at capturing small profits.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Demo Account',
-          description:
-            'A practice trading account with virtual funds for risk-free learning.',
+            'The fixed annual interest a bond pays as a percent of its face value, set at issue and unchanged for the life of the security, regardless of its market price.',
         },
       ],
     };

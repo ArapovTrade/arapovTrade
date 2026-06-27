@@ -1,5 +1,5 @@
 .hero-section {
-    background: url(/assets/img/content/orderblockintrading.webp) no-repeat bottom right;
+    background: url(/assets/img/content/chart-reading.jpeg) no-repeat bottom right;
     background-size: 100% 100%;
     color: white;
     height: 250px;
@@ -57,11 +57,6 @@ h1 {
 }
 
 
-.three-block{
-  line-height: 120%;
-}
-
-
 //main block!!!!!!!@!#!@#!@#!@#!@#!@#!
 .free-courses_main-container{
     display: flex;
@@ -71,9 +66,9 @@ h1 {
      margin-top: 70px; 
     //  margin-bottom: 150px;
 }
-    header h1 {
+    header h1 { 
         margin-top: 0;
-    }
+    }  
  .container main{
     width: 815px;
     margin: 0 !important;
@@ -786,4 +781,7 @@ letter-spacing: 0px;
 .three-block{
   line-height: 40px;
 }
+}.three-block{
+  line-height: 120%;
 }
+

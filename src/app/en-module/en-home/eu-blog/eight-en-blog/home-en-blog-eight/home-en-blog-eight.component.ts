@@ -54,15 +54,15 @@ export class HomeEnBlogEightComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Imbalance in Trading: Complete Guide | Arapov.trade',
+      'How to Analyze and Trade Bitcoin (BTC) in 2026 | Arapov.trade',
     );
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Imbalance in Trading — Complete guide to supply and demand imbalance. Methods for identifying imbalance zones, volume analysis, and trading strategies.',
+        'What bitcoin is, how the blockchain, mining and limited supply work, where BTC’s value comes from and what risks the first cryptocurrency has.',
     });
     this.gerRandom();
   }
@@ -248,31 +248,34 @@ export class HomeEnBlogEightComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          '@id':
-            'https://arapov.trade/en/freestudying/imbalanceintrading#article',
-          headline:
-            'Imbalance in Trading: Complete Guide to Supply and Demand Imbalance',
+          headline: 'Bitcoin Trading in 2026: How to Analyze and Trade BTC',
           description:
-            'Comprehensive guide to market imbalance: types of imbalance, identification methods, volume analysis, trading strategies and risk management.',
-          image:
-            'https://arapov.trade/assets/img/content/imbalanceintrading3.png',
-          author: { '@id': 'https://arapov.trade/en#person' },
+            'What bitcoin is, how the blockchain, mining and limited supply work, where BTC’s value comes from and what risks the first cryptocurrency has.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'ArapovTrade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
             url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
-          datePublished: '2026-03-25T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://arapov.trade/en/freestudying/imbalanceintrading',
+            '@id': 'https://arapov.trade/en/freestudying/bitcoin-guide',
           },
-          articleSection: 'Trading',
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/bitcoin.webp',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Cryptocurrency',
+          keywords: 'bitcoin',
           inLanguage: 'en',
         },
       ],
@@ -288,19 +291,18 @@ export class HomeEnBlogEightComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/en#person',
+      '@id': 'https://arapov.trade/#person',
       name: 'Igor Arapov',
       alternateName: [
         'Ігор Арапов',
-        'Арапов Игорь',
-        'I. Arapov',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-
-      url: 'https://arapov.trade/en',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -315,12 +317,12 @@ export class HomeEnBlogEightComponent implements OnInit {
         'https://t.me/ArapovTrade',
       ],
       jobTitle: [
-        'Independent researcher,',
-        'trader',
-        'author and founder of arapov.trade',
+        'Independent researcher',
+        'Trader',
+        'Author and founder of arapov.trade',
       ],
       description:
-        'Independent researcher, practicing trader, author of books on trading and scientific publications. Specializes in trading psychology and cognitive biases in financial markets.',
+        'Independent researcher, practising trader, author of trading books and scientific publications. Specialises in trading psychology and cognitive biases in financial markets.',
     };
 
     this.addJsonLdSchema(data);
@@ -336,42 +338,34 @@ export class HomeEnBlogEightComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'What is imbalance in trading?',
+          name: 'What is Bitcoin in simple terms?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Imbalance is a disproportion between market supply and demand causing uneven liquidity distribution and significant price movement in one direction.',
+            text: 'Bitcoin is the first and largest cryptocurrency. Digital money with no bank and no state, with a hard cap of 21 million coins. Transfers go directly between people and are stored in a shared chain of blocks.',
           },
         },
         {
           '@type': 'Question',
-          name: 'What types of imbalance exist?',
+          name: 'How do you analyze Bitcoin for trading?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Three main types exist: local imbalance (short-term), structural imbalance (long-term dominance of one side), and liquidity imbalance (large player manipulations).',
+            text: 'I treat it like any other asset: key levels first, then volume. Levels show where the market turned, volume shows who stood behind it. News and hype I barely factor in.',
           },
         },
         {
           '@type': 'Question',
-          name: 'How to identify imbalance zones?',
+          name: 'Where do you look at real Bitcoin volume?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Imbalance zones are identified through Market Profile, Delta Volume, Footprint Charts, and Order Flow showing volume distribution and order flows.',
+            text: 'I read volume on CME futures, not on crypto exchanges. On many crypto exchanges the volume is tick-based and easy to inflate, while CME gives real contract data, where large capital shows up too.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Why does price return to imbalance zones?',
+          name: 'Should you trade Bitcoin around the halving?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'After strong impulsive movement, unfilled liquidity remains in the imbalance zone. Markets seek balance, so price often returns for retests.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'How to trade imbalance zones?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Identify sharp movement zones without pullbacks, wait for price return, find confirming signals, and open positions in trend direction.',
+            text: 'I do not trade the halving itself as a signal. Past cycles are no guarantee, and entering only because of a date on the calendar is trading blind. I work the trend and the volume that form after the event.',
           },
         },
       ],
@@ -387,37 +381,34 @@ export class HomeEnBlogEightComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'How to Trade Imbalance',
+      '@id': 'https://arapov.trade/en/freestudying/bitcoin-guide#howto',
+      name: 'How to understand and apply: Bitcoin Trading in 2026',
+      description:
+        'A step-by-step breakdown of the topic and its practical use in trading',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Identify imbalance zone',
-          text: 'Find sharp impulsive movement areas without significant corrections on the chart.',
+          name: 'What is Bitcoin and how does it work in simple terms',
+          text: 'Bitcoin is the first and largest cryptocurrency, digital money with no central bank or state.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Analyze volumes',
-          text: 'Analyze Delta Volume to determine buyer or seller dominance.',
+          name: 'Bitcoin support and resistance levels: how to read them',
+          text: 'I read Bitcoin with the same eyes as a futures contract or gold.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Wait for retest',
-          text: 'Wait for price return to imbalance zone and look for confirming signals.',
+          name: 'Bitcoin volume analysis: reading the big holders',
+          text: 'Levels show where, volume shows who.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Confirm entry',
-          text: 'Use candlestick patterns or volume increase to confirm entry point.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 5,
-          name: 'Manage risk',
-          text: 'Place stop-loss beyond imbalance zone. Risk to reward ratio minimum 1:2.',
+          name: 'Bitcoin and the halving: how the cycle shapes the trend',
+          text: 'Halving is the scheduled cut of the miner reward in half, which happens roughly every four years.',
         },
       ],
     };
@@ -432,64 +423,13 @@ export class HomeEnBlogEightComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Imbalance Trading Glossary',
+      name: 'Article glossary',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Imbalance',
+          name: 'Bitcoin',
           description:
-            'Disproportion between supply and demand causing uneven liquidity distribution',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Volume Profile',
-          description:
-            'Tool showing trading volume distribution across price levels',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Delta Volume',
-          description:
-            'Difference between buying and selling volumes at price level',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Footprint Charts',
-          description:
-            'Chart visualizing trades inside candles with volume detail',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Order Flow',
-          description:
-            'Order flow analysis showing market participant activity',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Market Profile',
-          description:
-            'Method analyzing volume and time distribution across price levels',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Local Imbalance',
-          description: 'Short-term disruption of supply and demand balance',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Structural Imbalance',
-          description: 'Long-term dominance of one market side forming trends',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Retest',
-          description: 'Price return to level to verify its significance',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Cluster Analysis',
-          description:
-            'Method analyzing volume distribution in clusters inside candles',
+            'Bitcoin is the first and largest cryptocurrency, digital money with no central bank or state.',
         },
       ],
     };

@@ -55,20 +55,17 @@ export class HomeEnBlogThirteenComponent implements OnInit {
     this.checkedGroup = this.artickleServ.selectedGroups;
 
     this.titleService.setTitle(
-      'Elliott Waves: Complete Guide to Wave Analysis | Arapov.trade',
+      'Crypto Perpetuals and Margin Trading | Arapov.trade',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Elliott Waves — complete guide to wave analysis for traders. Impulse and corrective waves, counting rules, practical application with Fibonacci levels.',
+        'What perpetual futures, leverage and margin trading in crypto are, why funding matters and why high leverage leads to liquidation.',
     });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-04-15' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/wavesofelliott.webp',
-    });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
+
     this.gerRandom();
   }
   randomArticleRus: any = [];
@@ -253,37 +250,38 @@ export class HomeEnBlogThirteenComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          '@id': 'https://arapov.trade/en/freestudying/wavesofelliott#article',
-          headline: 'Elliott Waves: Complete Guide to Wave Analysis',
+          headline:
+            'Perpetual Futures and Margin in Crypto: What They Are, Funding, and How to Avoid Liquidation',
           description:
-            'Elliott Waves — complete guide to wave analysis for traders. Impulse and corrective waves, counting rules, practical application with Fibonacci levels.',
-          image: {
-            '@type': 'ImageObject',
-            url: 'https://arapov.trade/assets/img/content/wavesofelliott.webp',
-            width: 1200,
-            height: 630,
-          },
-          author: {
-            '@id': 'https://arapov.trade/en#person',
-          },
+            'What perpetual futures, leverage and margin trading in crypto are, why funding matters and why high leverage leads to liquidation.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            '@id': 'https://arapov.trade#organization',
-            name: 'Arapov.trade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
             url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
-              url: 'https://arapov.trade/assets/img/content/favicon.ico',
-              width: 300,
-              height: 60,
+              url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
-          datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://arapov.trade/en/freestudying/wavesofelliott',
+            '@id':
+              'https://arapov.trade/en/freestudying/crypto-perpetuals-margin',
           },
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/crypto-perpetuals-margin.png',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Cryptocurrency',
+          keywords:
+            'perpetual futures, perpetual, funding, leverage, margin, liquidation, cryptocurrency',
+          inLanguage: 'en',
         },
       ],
     };
@@ -298,18 +296,18 @@ export class HomeEnBlogThirteenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/en#person',
+      '@id': 'https://arapov.trade/#person',
       name: 'Igor Arapov',
       alternateName: [
         'Ігор Арапов',
-        'Арапов Игорь',
-        'I. Arapov',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/en',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -324,12 +322,12 @@ export class HomeEnBlogThirteenComponent implements OnInit {
         'https://t.me/ArapovTrade',
       ],
       jobTitle: [
-        'Independent researcher,',
-        'trader',
-        'author and founder of arapov.trade',
+        'Independent researcher',
+        'Trader',
+        'Author and founder of arapov.trade',
       ],
       description:
-        'Independent researcher, practicing trader, author of books on trading and scientific publications. Specializes in trading psychology and cognitive biases in financial markets.',
+        'Independent researcher, practising trader, author of trading books and scientific publications. Specialises in trading psychology and cognitive biases in financial markets.',
     };
 
     this.addJsonLdSchema(data);
@@ -342,46 +340,45 @@ export class HomeEnBlogThirteenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
-      '@id': 'https://arapov.trade/en/freestudying/wavesofelliott#faq',
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'What are Elliott Waves?',
+          name: 'What is a perpetual futures contract in simple terms?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Elliott Waves represent a technical analysis method describing market movement as repeating wave cycles. A complete cycle consists of eight waves: five impulse waves in the trend direction and three corrective waves against it. The theory bases itself on mass psychology of market participants.',
+            text: "It is a contract on an asset's price with no expiry date, which can be held as long as you like. A regular future has a term by which its price converges with spot, a perpetual has no term, and funding keeps it near spot. Such contracts are traded with leverage, so the main risk here is not the instrument itself but the size of the leverage.",
           },
         },
         {
           '@type': 'Question',
-          name: 'What are the main Elliott Wave rules?',
+          name: 'What is funding (the funding rate)?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Three fundamental rules govern Elliott Waves: wave 2 never retraces beyond the start of wave 1; wave 3 is never the shortest among impulse waves; wave 4 never enters the price territory of wave 1. Violation of these rules indicates an error in the wave count.',
+            text: "Funding is a periodic payment between traders, most often every eight hours. When a perp trades above spot, longs pay shorts, when below, the other way round. It is not an exchange fee but a settlement between the sides, which holds the contract's price near the market.",
           },
         },
         {
           '@type': 'Question',
-          name: 'How to apply Fibonacci levels with Elliott Waves?',
+          name: 'At what price does liquidation happen?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Levels of 38.2%, 50%, 61.8% determine corrective wave depth. Extensions of 161.8% and 261.8% indicate impulse wave targets. Wave three often reaches 161.8% of wave one length. Confluence of wave targets with Fibonacci levels strengthens the trading signal.',
+            text: 'It depends on leverage. Roughly, at x100 a move of about one percent against you is enough, at x50 about two, at x20 about five. The higher the leverage, the closer the liquidation level to the entry and the easier it is to be knocked out by ordinary market chop.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Which wave is most profitable for trading?',
+          name: 'What is the difference between isolated and cross margin?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'The third wave proves most powerful and profitable for trading. It is never the shortest and often reaches 161.8-261.8% of wave one. Entry occurs after the second corrective wave completion when the trend has market confirmation.',
+            text: 'With isolated margin, only the collateral of a specific position is at risk, and a liquidation hits only it. With cross margin, the whole account balance serves as collateral, and one bad trade can drag everything down. For a beginner isolated is safer: it limits the loss to one trade.',
           },
         },
         {
           '@type': 'Question',
-          name: 'What corrective patterns exist in wave analysis?',
+          name: 'What leverage should a beginner use?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Main corrective patterns include: zigzag — sharp ABC correction; flat — horizontal movement with equal waves; triangle — five waves (A-E) narrowing the range. Each pattern indicates different correction strength and helps identify completion timing.',
+            text: "The smaller the better: the further the liquidation level and the calmer ordinary swings are weathered. High leverage doesn't raise the chance to earn, it only pushes liquidation right up to the entry. I keep leverage low and risk per trade small, around one to two percent of the account, and always with a stop.",
           },
         },
       ],
@@ -397,40 +394,35 @@ export class HomeEnBlogThirteenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      '@id': 'https://arapov.trade/en/freestudying/wavesofelliott#howto',
-      name: 'How to Apply Elliott Waves in Trading',
+      '@id':
+        'https://arapov.trade/en/freestudying/crypto-perpetuals-margin#howto',
+      name: 'How to understand and apply: perpetual futures and margin in crypto and how to avoid liquidation',
       description:
-        'Step-by-step guide to applying Elliott Wave analysis for finding trading opportunities in financial markets.',
+        'A step-by-step breakdown of the topic and its practical use in trading',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Identify the global trend',
-          text: 'Begin analysis on daily or weekly charts. Find the impulse wave sequence (1-2-3-4-5) indicating the main trend direction. Determine whether the market is in an impulse or corrective phase.',
+          name: 'Understand what a perpetual futures contract is and why it has no term',
+          text: 'Perpetual futures contract is a derivative contract on an asset with no expiry date, which a trader can hold for an unlimited time.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Label the wave structure',
-          text: 'Mark waves on the chart following three main rules: wave 2 not below wave 1 start, wave 3 not the shortest, wave 4 not entering wave 1 territory. Use Fibonacci levels to verify proportions.',
+          name: "See how funding keeps the perp's price near spot",
+          text: 'Funding is a periodic payment between the two sides of a trade, which the exchange calculates several times a day, most often every eight hours, and on some exchanges more often.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Find entry points',
-          text: 'Seek entries after corrective wave completions. Optimal points include: wave 2 end for third wave participation, wave 4 end for fifth wave, ABC correction completion for new impulse cycle.',
+          name: 'Understand how margin and leverage multiply both profit and loss',
+          text: "Margin trading means trades on the exchange's borrowed funds, where your own money serves as collateral, and that collateral is called margin.",
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Set protective orders',
-          text: 'Place stop-loss beyond the current wave start or key Fibonacci level. Calculate position size to limit risk to 1-2% of capital. Ensure minimum 1:2 risk-to-reward ratio.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 5,
-          name: 'Determine targets and manage the position',
-          text: 'Calculate targets using Fibonacci extensions: 161.8% for wave three, wave 1 length for wave five. Take partial profits at intermediate levels. Move stop-loss to breakeven after favorable movement.',
+          name: 'Learn to compute liquidation and keep it at a distance',
+          text: 'Liquidation is the forced closing of a position by the exchange when the collateral stops being enough to maintain an open leveraged trade.',
         },
       ],
     };
@@ -445,69 +437,25 @@ export class HomeEnBlogThirteenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      '@id': 'https://arapov.trade/en/freestudying/wavesofelliott#glossary',
-      name: 'Wave Analysis Terminology Glossary',
-      description: 'Key terms and definitions of Elliott Wave Theory',
+      name: 'Glossary of article terms',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Impulse Wave',
+          name: 'Perpetual futures contract',
           description:
-            'A wave moving in the direction of the main trend. Impulse waves carry labels 1, 3, 5 and form the primary trending movement of the market.',
+            'Perpetual futures contract is a derivative contract on an asset with no expiry date, which a trader can hold for an unlimited time.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Corrective Wave',
+          name: 'Funding',
           description:
-            'A wave moving against the main trend. Corrective waves carry labels 2, 4 and letters A, B, C, representing retracements within the trending movement.',
+            'Funding is a periodic payment between the two sides of a trade, which the exchange calculates several times a day, most often every eight hours.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Wave Cycle',
+          name: 'Liquidation',
           description:
-            'A complete structure of eight waves: five impulse and three corrective. Each cycle represents a completed phase of market movement.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Zigzag',
-          description:
-            'A corrective pattern with sharp ABC structure where wave C typically equals or exceeds wave A. Commonly appears in waves 2 and 4.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Flat',
-          description:
-            'A horizontal corrective pattern where waves A, B, C have approximately equal length. Indicates balance between buyers and sellers.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Triangle',
-          description:
-            'A corrective pattern of five waves (A, B, C, D, E) progressively narrowing the price range. Precedes strong movement in trend direction.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Fractality',
-          description:
-            'A property of Elliott Waves where each higher-degree wave contains a complete smaller-scale wave cycle within its structure.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Fibonacci Extension',
-          description:
-            'A tool for projecting impulse wave targets. Levels of 161.8% and 261.8% determine potential completion points for waves three and five.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Wave Three',
-          description:
-            'The most powerful and longest wave in the impulse cycle. Never the shortest among waves 1, 3, 5. Characterized by maximum trading volume.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Wave Count',
-          description:
-            'The process of identifying and labeling waves on price charts according to Elliott Theory rules. Requires adherence to three fundamental rules.',
+            'Liquidation is the forced closing of a position by the exchange when the collateral stops being enough to maintain an open leveraged trade.',
         },
       ],
     };

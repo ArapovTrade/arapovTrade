@@ -7,91 +7,394 @@
           <div class="free-courses_main-container">
             <main lang="en">
               <header>
-  <h1>What Is Crypto Arbitrage and How Does It Work?</h1>
-</header>
-<article>
-  <p>Crypto arbitrage is earning on the price difference of one coin across different venues: you buy it cheaper on one exchange and sell it dearer on another. It sounds like easy, risk-free money. In practice, for an ordinary trader, it stopped working a long time ago, because that gap is eaten in fractions of a second by the robots of large firms, while a beginner's gap is eaten by fees and transfer time.</p>
-
-  <p>Arbitrage sounds like a beginner's dream: buy lower here, sell higher there, and seemingly with no risk at all. People ask me about it regularly. I have been trading since 2013, and I will say it plainly: for a retail trader this turned into an illusion long ago, not because the idea is bad, but because you are playing against opponents whose speed and resources are on a completely different scale. Let's calmly go through what crypto arbitrage is, what types exist, and why it does not work for an ordinary person.</p>
-
-  <p><strong><i>In this article we'll cover:</i></strong></p>
-  <ul>
-    <li>crypto arbitrage is earning on the price gap of one coin across different venues;</li>
-    <li>the main types are cross-exchange arbitrage and triangular arbitrage within one exchange;</li>
-    <li>on paper it looks risk-free, but in practice the gap is instantly eaten by firms' robots;</li>
-    <li>for a retail trader it does not work: speed, fees and transfer time kill it.</li>
-  </ul>
-
-  <p>Let's start with what arbitrage is and why it exists at all.</p>
-
-  <div class="flex">
-    <img class="pictureImg" loading="lazy" src="/assets/img/content/cryptoarbitrage1.webp" alt="How crypto arbitrage works" />
-  </div>
-
-  <h2>What Is Crypto Arbitrage?</h2>
-  <p><dfn itemscope itemtype="https://schema.org/DefinedTerm"><span itemprop="name">Crypto arbitrage</span></dfn> is a way of earning on the difference in the price of the same cryptocurrency on different venues at the same moment. For example, Bitcoin costs slightly more on one exchange than on another. The idea is simple: buy where it is cheaper and immediately sell where it is dearer, taking the difference.</p>
-  <p>Where does that gap come from? The market is not perfectly synchronized: each exchange has its own demand, liquidity and order book, so prices drift apart a little. The interesting part is that arbitrage itself removes the gap: while someone is buying it up, prices realign again, which is why such a difference lives only a fraction of a second. How <a class="linkrefinto" href="https://arapov.trade/en/freestudying/cryptocurrencytrading">Cryptocurrency Trading for Beginners: How to Start</a> works in general is a separate topic, and a warning up front: seeing arbitrage as easy money is a classic beginner trap.</p>
-
-  <h2>Types: Cross-Exchange and Triangular Arbitrage</h2>
-  <p>There are several types, but a beginner only needs the two main ones. Cross-exchange arbitrage is the classic: you buy a coin on one exchange where it is cheaper and sell it on another where it is dearer. The catch is that the coin still has to be moved between exchanges, and that costs time and a network fee.</p>
-  <p>Triangular arbitrage works inside a single exchange. Here you cycle three pairs in a loop, for example dollars into Bitcoin, Bitcoin into Ethereum, Ethereum back into dollars, catching a mismatch in the rates. No transfer between venues is needed, but the mismatches here are tiny, often a fraction of a percent per loop. In both cases you are essentially earning on the <a class="linkrefinto" href="https://arapov.trade/en/freestudying/spread">spread</a>, on the price difference, and in both cases that difference is so small and lives so briefly that one question remains: can you get there before the robots.</p>
-
-  <div class="flex">
-    <img class="pictureImg" loading="lazy" src="/assets/img/content/cryptoarbitrage2.webp" alt="Pros and cons of crypto arbitrage" />
-  </div>
-
-  <h2>Why Arbitrage Is So Hard for Retail Traders</h2>
-  <p>Now the part worth reading for. For an ordinary trader arbitrage does not work, and there are several reasons. Speed comes first. The price gap lives for fractions of a second, and it is bought up not by people but by high-frequency robots of large firms. They build expensive data centers right next to the exchanges so their order arrives milliseconds sooner. Competing with them by hand is impossible; the profit on such short windows goes only to them.</p>
-  <p>Fees and transfers work against you too. By the time you move a coin from one exchange to another, the gap is already gone, and exchange and network fees eat whatever tiny profit was left. Add slippage: on a large amount the price shifts at the very moment of execution, so the calculated profit melts before the transfer. And add capital and competition: to earn a noticeable sum on a penny gap you need huge capital, while the players against you are professional <a class="linkrefinto" href="https://arapov.trade/en/freestudying/cryptommakers">crypto market makers</a> with both the money and the technology.</p>
-
-  <div class="flex">
-    <img class="pictureImg" loading="lazy" src="/assets/img/content/cryptoarbitrage3.webp" alt="Risks of crypto arbitrage" />
-  </div>
-
-  <h2>My Take: For a Retail Trader, Arbitrage Is an Illusion</h2>
-  <p>For a retail trader arbitrage is an illusion, and I say that as someone asked about it constantly. The idea is fine; the problem is that you are racing opponents with vastly more speed, capital and technology, and the penny gap that is left after fees and transfer time is simply not worth the chase. This is not advice for you personally, it is my position: a beginner is far better off putting that energy into a real method and working from levels than into hunting arbitrage. The honest limitation is that arbitrage genuinely does work for large firms with robots and data centers, so the alternative for a normal person is not a faster bot, it is a different game entirely, one where your edge is patience and reading the market rather than raw speed.</p>
-
-  <section>
-    <h2>Frequently Asked Questions</h2>
-    <mat-accordion>
-      <mat-expansion-panel class="highlight-box owl_link-box" [expanded]="true">
-        <mat-expansion-panel-header>
-          <mat-panel-title>What is crypto arbitrage in simple terms?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>It is earning on the price difference of one coin across different venues. You buy cheaper on one exchange and sell dearer on another, taking the difference. It sounds simple, but that gap is tiny and lives only fractions of a second.</p>
-      </mat-expansion-panel>
-      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
-        <mat-expansion-panel-header>
-          <mat-panel-title>What types of crypto arbitrage are there?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>Two main ones: cross-exchange, where you buy on one exchange and sell on another, and triangular, where you cycle three pairs inside one exchange. Both earn on a small mismatch in prices.</p>
-      </mat-expansion-panel>
-      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
-        <mat-expansion-panel-header>
-          <mat-panel-title>Can you really make money on crypto arbitrage?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>Large firms with robots and data centers, yes. A retail trader, in my experience, no. The gap is bought up within milliseconds, and what is left is eaten by fees and the time it takes to transfer between exchanges.</p>
-      </mat-expansion-panel>
-      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
-        <mat-expansion-panel-header>
-          <mat-panel-title>Why is arbitrage not suitable for beginners?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>Because of speed, fees and capital. You are competing with high-frequency robots you cannot outrun by hand. A beginner's energy is better spent on a real method and working from levels.</p>
-      </mat-expansion-panel>
-      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
-        <mat-expansion-panel-header>
-          <mat-panel-title>Is crypto arbitrage really risk-free?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>Only on paper. In practice the gap can vanish before your trade completes, slippage moves the price on size, and transfer and exchange fees can turn a calculated profit into a loss. The "risk-free" label hides those frictions.</p>
-      </mat-expansion-panel>
-    </mat-accordion>
-  </section>
-
-  <section>
-    <h2>About the Author</h2>
-    <p>Author: Igor Arapov — independent researcher in the psychology of investment decisions and behavioral finance, practising trader since 2013, founder of arapov.trade, author of a trading book series (<a class="linkrefinto" href="https://openlibrary.org/authors/OL16073686A/Igor_Arapov">Open Library</a>), (<a class="linkrefinto" href="https://orcid.org/0009-0003-0430-778X">ORCID: 0009-0003-0430-778X</a>).</p>
-  </section>
-</article>
+                <h1>
+                  DeFi (Decentralized Finance): What It Is and What the Risks
+                  Are
+                </h1>
+              </header>
+              <article>
+                <p>
+                  Swap, borrow, earn interest, and all of it running on smart
+                  contracts in a blockchain with no banks and no middlemen: that
+                  is DeFi. A plain crypto wallet is your access, and code, not a
+                  bank clerk, sets the rules. The price of that freedom is risk:
+                  in DeFi you alone answer for your funds, and a flaw in a smart
+                  contract's code can carry them off for good.
+                </p>
+                <p>
+                  DeFi is pitched as the finance of the future without banks,
+                  and there is truth in that, but there is a catch too. I look
+                  at DeFi soberly: freedom without an intermediary also means
+                  full personal responsibility, and not everyone is ready for
+                  it. Here is what DeFi is, what you can do in it, and what real
+                  risks stand behind the pretty idea of decentralization.
+                </p>
+                <p>
+                  <strong><i>In this article we'll cover:</i></strong>
+                </p>
+                <ul>
+                  <li>
+                    DeFi is financial services through smart contracts on a
+                    blockchain, without banks or middlemen;
+                  </li>
+                  <li>
+                    the line between CeFi and DeFi is custody: who actually
+                    holds your coins and keys;
+                  </li>
+                  <li>
+                    in my experience the main price of freedom is personal
+                    responsibility for your own funds;
+                  </li>
+                  <li>
+                    the key risk is a smart contract vulnerability and a hack,
+                    where the money leaves for good.
+                  </li>
+                </ul>
+                <p>Start with what DeFi even is in simple terms.</p>
+                <h2>What DeFi is in simple terms</h2>
+                <p>
+                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
+                    ><span itemprop="name">DeFi</span></dfn
+                  >
+                  is decentralized finance, that is financial services like
+                  currency swaps, lending and earning interest, running directly
+                  through smart contracts on a blockchain, without banks or
+                  other middlemen. The name is short for the English
+                  decentralized finance.
+                </p>
+                <p>
+                  The key element here is the smart contract, program code on a
+                  blockchain that executes automatically once set conditions are
+                  met. Instead of a bank that approves a loan or runs a swap
+                  through its staff, in DeFi all the work is done by this
+                  automatic code. To use a service you do not need a passport
+                  and approval, it is enough to connect a crypto wallet. On one
+                  side, that gives access worldwide, work without middlemen and
+                  without credit-history checks. On the other, all the
+                  responsibility falls on you: there is no bank to turn to if
+                  something has gone wrong. What underlies cryptocurrency in the
+                  first place I break down in the piece on the
+                  <a
+                    class="linkrefinto"
+                    href="https://arapov.trade/en/freestudying/crypto-basics"
+                    >basics of cryptocurrency</a
+                  >.
+                </p>
+                <p>
+                  <strong>In short: </strong>
+                  <i
+                    >DeFi is finance through smart contracts without banks: a
+                    wallet gives access, code sets the rules, but all the
+                    responsibility for your funds is on you too.</i
+                  >
+                </p>
+                <h2>CeFi vs DeFi: who actually holds your money</h2>
+                <p>
+                  The cleanest way to place DeFi is to set it against its
+                  centralized cousin, CeFi. In centralized finance a company
+                  stands in the middle and holds your coins for you: a crypto
+                  exchange, a lending site, a custodial wallet. You sign up, you
+                  pass identity checks, and if you forget a password there is
+                  support to call. The trade is plain: convenience and a safety
+                  net in exchange for trusting a company with your money, the
+                  same company that can freeze your account or fail.
+                </p>
+                <p>
+                  DeFi removes that company. No one holds your coins on your
+                  behalf, the code holds the rules and you hold your own keys.
+                  That is the real dividing line, and it is not a small one. It
+                  gives you control no bank can take away, and it takes away the
+                  one thing beginners miss until it is too late: there is nobody
+                  to call. No reversal, no chargeback, no support ticket that
+                  brings the money back. To me this is the heart of the topic.
+                  DeFi is not "a better bank," it is a different deal where the
+                  safety net is gone and you are the security department. That
+                  suits someone who knows what they are doing, and it punishes
+                  someone who does not.
+                </p>
+                <p>
+                  <strong>In short: </strong>
+                  <i
+                    >The line is custody: CeFi means a company holds your coins
+                    and can help or fail you, DeFi means you hold your keys with
+                    full control and no one to call when it breaks.</i
+                  >
+                </p>
+                <h2>
+                  The building blocks: DEXs, lending, stablecoins, oracles
+                </h2>
+                <p>
+                  DeFi is not one app, it is a set of pieces that snap together,
+                  which is exactly why people call them money legos. The first
+                  piece is the
+                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
+                    ><span itemprop="name"
+                      >decentralized exchange (DEX)</span
+                    ></dfn
+                  >, a protocol that lets you swap tokens straight from your
+                  wallet, with names like Uniswap among the best known. The
+                  second is lending: protocols such as Aave or Compound where
+                  you can deposit coins to earn interest or post them as
+                  collateral to borrow against. The third is stablecoins, coins
+                  pegged to a currency like the dollar, which act as the steady
+                  unit of account that the rest of the system prices things in.
+                  And quietly underneath sits a fourth piece, the oracle, a
+                  service that feeds outside prices onto the blockchain so a
+                  contract knows what an asset is worth.
+                </p>
+                <p>
+                  The fact that any of these can be plugged into any other is
+                  the real power of DeFi, and also a hidden danger. When a
+                  lending protocol leans on a price oracle, and a pool leans on
+                  that lending protocol, a flaw in one link can ripple through
+                  the rest. The whole stack ballooned in the last cycle, with
+                  total funds locked across DeFi rising past 170 billion dollars
+                  at the 2021 peak before collapsing under 40 billion the next
+                  year, which tells you how fast money rushes in on a yield
+                  story and how fast it leaves. For a trader the lesson is
+                  sober: the more pieces a yield depends on, the more places it
+                  can break.
+                </p>
+                <p>
+                  <strong>In short: </strong>
+                  <i
+                    >DeFi stacks four pieces, exchanges, lending, stablecoins
+                    and oracles, that plug into each other, and that same
+                    composability means a fault in one link can spread through
+                    the rest.</i
+                  >
+                </p>
+                <h2>What you can do in DeFi: swaps, loans, pools</h2>
+                <p>
+                  Swapping tokens is the most common thing people do in DeFi,
+                  straight through decentralized exchanges, with no registration
+                  and no middleman between buyer and seller. Next to it stands
+                  lending: you can take a loan against your tokens or, the other
+                  way round, lend funds to a protocol and earn interest for it,
+                  like an account, only in crypto.
+                </p>
+                <p>
+                  The third is liquidity pools and the farming and
+                  <a
+                    class="linkrefinto"
+                    href="https://arapov.trade/en/freestudying/crypto-staking"
+                    >staking</a
+                  >
+                  tied to them, where users put their tokens into a common pool
+                  and get a reward for keeping the service running. It sounds
+                  attractive, but this is exactly where a specific risk hides
+                  that beginners underrate. When the price of one of the pool's
+                  assets changes sharply, the pool mechanics redistribute your
+                  funds not in your favor, and this is called impermanent loss.
+                  In the end simply holding the tokens could have turned out
+                  better than taking part in the pool. So behind every pretty
+                  yield percentage in DeFi sits its own risk, and it needs to be
+                  understood before you put money in. The rule here is simple:
+                  the higher the promised yield, the higher the risk behind it.
+                  Abnormally large percentages almost always mean either a high
+                  chance of losing what you put in, or an outright pyramid,
+                  because free high yield with no risk exists nowhere.
+                </p>
+                <p>
+                  It is useful to see how a swap without an intermediary works
+                  at all. On a classic exchange a buyer and a seller are
+                  matched, while in DeFi they are replaced by an automated
+                  market maker, an AMM: it is a smart contract with a pool of
+                  two tokens, and the price in it is set by a formula from the
+                  ratio of balances, not by an order book. Liquidity is put into
+                  the pool by ordinary users, who earn a share of the fees for
+                  it. But a risk beginners do not know about hides here,
+                  impermanent loss. If the prices of the pool tokens drift far
+                  apart, the formula shifts the balance so that you can withdraw
+                  less than if you had simply held the coins in a wallet. Fee
+                  income sometimes covers this and sometimes does not, and a
+                  pretty annual yield turns out lower than promised.
+                </p>
+                <p>
+                  <strong>In short: </strong>
+                  <i
+                    >Swap tokens, take and give loans, put funds into pools for
+                    interest; one rule holds: the higher the promised
+                    percentage, the higher the risk behind it, and abnormal
+                    figures are either a loss or a pyramid.</i
+                  >
+                </p>
+                <h2>
+                  The risks of DeFi: smart contracts, hacks and responsibility
+                </h2>
+                <p>
+                  A smart contract's code is public, and a public bug is a found
+                  bug sooner or later: that is the core risk of DeFi. Hacks
+                  through vulnerabilities, attacks on bridges between
+                  blockchains and complex manipulations are a constant reality
+                  of DeFi, and in such a hack the funds leave for good, with no
+                  one and nowhere to get them back from. Even an independent
+                  audit of the code by specialized firms only lowers this risk,
+                  it does not remove it fully, since not every vulnerability can
+                  be found.
+                </p>
+                <p>
+                  The second layer of risks is fraud and your own
+                  responsibility. Fake smart contracts and counterfeit protocols
+                  are built on purpose and solely to siphon off the funds of
+                  trusting and inattentive users. And since there is no
+                  middleman, you are the one responsible for security: lose your
+                  wallet key or hand it to scammers, and access to the money is
+                  gone for good. So my approach to DeFi is cautious: it is a
+                  tool for those who understand both smart contracts and the
+                  basics of security, not a way for a beginner to earn quickly
+                  on a percentage. Not your keys, not your coins, and in DeFi
+                  that rule is especially merciless. The general dangers of the
+                  crypto market I break down in the piece on the
+                  <a
+                    class="linkrefinto"
+                    href="https://arapov.trade/en/freestudying/crypto-risks-scams"
+                    >risks of cryptocurrency</a
+                  >, and how to spot a scam and the red flags I show in the
+                  video:
+                  <a class="linkrefinto" href="https://youtu.be/EtL3LleiTnw"
+                    >how to spot red flags and not lose money</a
+                  >.
+                </p>
+                <p>
+                  <strong>In short: </strong>
+                  <i
+                    >The main risk is a hole in the smart contract: the code is
+                    public, the bug will be found, and the money leaves for
+                    good; not your keys, not your coins, and an audit lowers the
+                    risk but does not remove it.</i
+                  >
+                </p>
+                <section>
+                  <h2>Frequently Asked Questions</h2>
+                  <mat-accordion>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      [expanded]="true"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >What is DeFi in simple terms?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        These are financial services like swapping, loans and
+                        interest income, running through smart contracts on a
+                        blockchain, without banks or middlemen. An ordinary
+                        crypto wallet gives access, and code sets the rules.
+                      </p></mat-expansion-panel
+                    >
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >What is the difference between CeFi and
+                          DeFi?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        In CeFi a company holds your coins and runs the service,
+                        the way an exchange or a crypto bank does, so you can
+                        ask someone for help but you also trust them with your
+                        money. In DeFi no one holds your coins: code runs the
+                        service and you keep your own keys, which means more
+                        control and no one to call when something breaks.
+                      </p></mat-expansion-panel
+                    >
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >What can you do in DeFi?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        Swap tokens through decentralized exchanges, take loans
+                        against your tokens or lend funds for interest, and take
+                        part in liquidity pools and staking. Each option has its
+                        own risk.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >What is a DEX and how is it different from a normal
+                          exchange?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        A decentralized exchange lets you swap tokens straight
+                        from your wallet with no account and no company holding
+                        your funds. Instead of matching a buyer and a seller
+                        through an order book, most DEXs use an automated
+                        formula and a pool of coins to set the price.
+                      </p></mat-expansion-panel
+                    >
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >What is the main risk in DeFi?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        A smart contract vulnerability. The code is public, and
+                        where there is a bug it gets exploited and funds leave
+                        for good. Add fake protocols and personal responsibility
+                        for your keys: lose the key, lose the money.
+                      </p></mat-expansion-panel
+                    >
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >What is impermanent loss in a pool?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        It is a liquidity provider's risk: when the price of one
+                        of the pool's assets changes sharply, the pool mechanics
+                        redistribute your funds not in your favor. In the end
+                        simply holding the tokens could have been more
+                        profitable.
+                      </p></mat-expansion-panel
+                    >
+                  </mat-accordion>
+                </section>
+                <section>
+                  <h2>About the Author</h2>
+                  <p>
+                    Author:
+                    <a class="linkrefinto" href="https://arapov.trade/en"
+                      >Igor Arapov</a
+                    >
+                    — independent researcher in the psychology of investment
+                    decisions and behavioral finance, practising trader since
+                    2013, founder of arapov.trade, author of a trading book
+                    series (<a
+                      class="linkrefinto"
+                      href="https://orcid.org/0009-0003-0430-778X"
+                      >ORCID: 0009-0003-0430-778X</a
+                    >).
+                  </p>
+                </section>
+              </article>
 
               <div
                 class=""

@@ -28,7 +28,7 @@ export class HomeUkBlogFiftyFourComponent implements OnInit {
     private themeService: ThemeservService,
     private artickleServ: ArticlesService,
     private renderer: Renderer2,
-    @Inject(DOCUMENT) private document: Document
+    @Inject(DOCUMENT) private document: Document,
   ) {}
   private routerSubscription!: Subscription;
   private themeSubscription!: Subscription;
@@ -56,21 +56,16 @@ export class HomeUkBlogFiftyFourComponent implements OnInit {
     this.grr = this.artickleServ.selectedGroups;
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
-    this.titleService.setTitle(
-      'Як забезпечити безпеку криптовалюти | Повний посібник'
-    );
+    this.titleService.setTitle('Графічні патерни в трейдингу | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Повний посібник із забезпечення безпеки криптовалюти. Захист від хакерів та фішингу, налаштування двофакторної автентифікації, безпечне зберігання великих сум цифрових активів.',
+        'Графічні патерни технічного аналізу: трикутники, прапори, голова і плечі, подвійна вершина. Як їх знаходити і торгувати пробої.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-28' }); this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/cryptosafe.webp',
-    });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
 
     this.gerRandom();
   }
@@ -88,7 +83,6 @@ export class HomeUkBlogFiftyFourComponent implements OnInit {
       title: 'Базовий курс',
       link: 'https://arapov.trade/uk/freestudying/freeeducation',
     },
-     
   ];
 
   onGroupChange(event: Event) {
@@ -158,7 +152,7 @@ export class HomeUkBlogFiftyFourComponent implements OnInit {
     // Показываем 5 случайных статей при фокусе, если инпут пуст
     if (!this.searchQuery) {
       const shuffled = [...this.artickleServ.ukrArtickles].sort(
-        () => Math.random() - 0.5
+        () => Math.random() - 0.5,
       );
       this.displayedArticles = shuffled.slice(0, this.maxResults);
     }
@@ -173,7 +167,7 @@ export class HomeUkBlogFiftyFourComponent implements OnInit {
   onSearchChange() {
     // Логика асинхронного поиска
     const filtered = this.artickleServ.ukrArtickles.filter((a) =>
-      a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase())
+      a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase()),
     );
     this.displayedArticles = filtered.slice(0, this.maxResults);
   }
@@ -195,7 +189,7 @@ export class HomeUkBlogFiftyFourComponent implements OnInit {
     const path: string =
       this.router.url.split('/')[this.router.url.split('/').length - 1];
     let index = this.artickleServ.ukrArtickles.findIndex(
-      (a) => a.linkUkr == path
+      (a) => a.linkUkr == path,
     );
 
     if (this.artickleServ.ukrArtickles.length - 1 == index) {
@@ -212,7 +206,7 @@ export class HomeUkBlogFiftyFourComponent implements OnInit {
     const path: string =
       this.router.url.split('/')[this.router.url.split('/').length - 1];
     let index = this.artickleServ.ukrArtickles.findIndex(
-      (a) => a.linkUkr == path
+      (a) => a.linkUkr == path,
     );
 
     if (index == 1) {
@@ -236,7 +230,7 @@ export class HomeUkBlogFiftyFourComponent implements OnInit {
     ];
 
     const scripts = this.document.querySelectorAll(
-      'script[type="application/ld+json"]'
+      'script[type="application/ld+json"]',
     );
 
     scripts.forEach((script) => {
@@ -249,7 +243,7 @@ export class HomeUkBlogFiftyFourComponent implements OnInit {
 
         const shouldRemove = candidates.some(
           (entry: any) =>
-            entry['@type'] && typesToRemove.includes(entry['@type'])
+            entry['@type'] && typesToRemove.includes(entry['@type']),
         );
 
         if (shouldRemove) {
@@ -277,28 +271,37 @@ export class HomeUkBlogFiftyFourComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          mainEntityOfPage: {
-            '@type': 'WebPage',
-            '@id': 'https://arapov.trade/uk/freestudying/cryptosafe',
-          },
           headline:
-            'Як забезпечити безпеку криптовалюти: повний посібник із захисту цифрових активів',
+            'Чи працюють графічні фігури технічного аналізу: що реально, а що 50/50',
           description:
-            'Повний посібник із забезпечення безпеки криптовалюти. Захист від хакерів та фішингу, налаштування двофакторної автентифікації, безпечне зберігання великих сум цифрових активів.',
-          image: 'https://arapov.trade/assets/img/content/cryptosafe1.webp',
-          author: {
-            '@id': 'https://arapov.trade/uk#person',
-          },
+            'Графічні патерни технічного аналізу: трикутники, прапори, голова і плечі, подвійна вершина. Як їх знаходити і торгувати пробої.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'Arapov.trade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
-              url: 'https://arapov.trade/assets/img/content/favicon.ico',
+              url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
-          datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': 'https://arapov.trade/uk/freestudying/chart-patterns',
+          },
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/keypraicepattern.webp',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Технічний аналіз',
+          keywords:
+            'графічні фігури технічного аналізу, цінові патерни, голова та плечі, подвійна вершина, трикутник, прапор і вимпел, чашка з ручкою, патерн 1-2-3',
+          inLanguage: 'uk',
         },
       ],
     };
@@ -313,18 +316,18 @@ export class HomeUkBlogFiftyFourComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/uk#person',
-      name: 'Ігор Арапов',
+      '@id': 'https://arapov.trade/#person',
+      name: 'Igor Arapov',
       alternateName: [
-        'Igor Arapov',
-              'Арапов Игорь',
-              'I. Arapov',
-              'Игорь Арапов',
-              'І. В. Арапов',
-              'Арапов Ігор',
-              'Arapov Igor',
+        'Ігор Арапов',
+        'Игорь Арапов',
+        'Арапов Игорь',
+        'Арапов Ігор',
+        'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/uk',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -336,9 +339,13 @@ export class HomeUkBlogFiftyFourComponent implements OnInit {
         'https://github.com/ArapovTrade',
         'https://ua.linkedin.com/in/arapovtrade',
         'https://www.youtube.com/@ArapovTrade',
-        'https://t.me/ArapovTrade'
+        'https://t.me/ArapovTrade',
       ],
-       jobTitle: ['Незалежний дослідник', 'трейдер', 'автор і засновник arapov.trade'],
+      jobTitle: [
+        'Незалежний дослідник',
+        'трейдер',
+        'автор і засновник arapov.trade',
+      ],
       description:
         'Незалежний дослідник, практикуючий трейдер, автор книг з трейдингу та наукових публікацій. Спеціалізується на психології трейдингу та когнітивних упередженнях на фінансових ринках.',
     };
@@ -356,42 +363,42 @@ export class HomeUkBlogFiftyFourComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'Які основні загрози існують для криптовалютних активів?',
+          name: 'Чи працюють графічні фігури технічного аналізу?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Ключові загрози включають: хакерські атаки на біржі та гаманці, фішингові схеми з підробленими сайтами, втрату приватних ключів або сід-фраз, фізичну крадіжку пристроїв зберігання, помилки користувачів при переказах та шахрайські проєкти, що обіцяють високу прибутковість.',
+            text: "Сама собою фігура спрацьовує приблизно навпіл, і статистичної переваги на дистанції голий малюнок не дає. По-справжньому вона починає щось означати лише на сильному рівні та з підтвердженням обсягом. Відсотки успішності, що гуляють інтернетом, розходяться від половини до дев'яноста з гаком, бо надто багато залежить від того, хто і як рахував, тож кнопкою прибутку фігуру вважати не можна.",
           },
         },
         {
           '@type': 'Question',
-          name: 'Чому двофакторна автентифікація важлива для захисту криптовалюти?',
+          name: 'Яка фігура найнадійніша?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: "Двофакторна автентифікація створює додатковий бар'єр безпеки: навіть якщо зловмисник дізнається пароль, без другого фактора (коду з додатку-автентифікатора) доступ до акаунту неможливий. Рекомендується використовувати Google Authenticator або Authy замість SMS-кодів.",
+            text: "Надійних у сенсі гарантії немає, голий контур у всіх дає приблизно п'ятдесят на п'ятдесят. З усіх фігур мені ближчий прапор, бо за ним стоїть зрозуміла механіка: різкий імпульс показує, що один бік сильніший, а млявий відкат це пауза, а не розворот. Осібно тримається й патерн 1-2-3: у ньому читається логіка набору позиції великим капіталом, а вхід у точці 3 дає найкраще співвідношення ризику до прибутку.",
           },
         },
         {
           '@type': 'Question',
-          name: 'Як розпізнати фішингову атаку у криптосфері?',
+          name: 'Чому фігури спрацьовують приблизно 50 на 50?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Ознаки фішингу: незначні зміни в URL-адресі сайту, термінові вимоги ввести дані, листи з погрозами блокування акаунту, запити приватних ключів або сід-фраз. Легітимні сервіси ніколи не запитують приватні ключі за жодних обставин.',
+            text: 'Бо картинка сама нічого не розвертає, ринок рухають учасники, які в неї повірили й заворушилися. Упізнавану фігуру бачить увесь натовп і ставить заявки в передбачуваних місцях, а великий капітал саме там збирає ліквідність: проколює межу, знімає стопи й нерідко йде в інший бік. Тому я дивлюся не на форму, а на рівень, хибний прокол та обсяг.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Які заходи безпеки потрібні для зберігання великих сум криптовалюти?',
+          name: 'Чим розворотні фігури відрізняються від фігур продовження?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Використовуйте апаратні гаманці для холодного зберігання, розподіляйте активи між кількома гаманцями, налаштуйте мультипідпис для транзакцій, регулярно проводьте аудит безпеки, зберігайте резервні копії ключів у фізично захищених місцях (сейф, банківська комірка).',
+            text: "Розворотні натякають, що тренд видихається і може змінитися, і з'являються в кінці руху: це голова та плечі, подвійна вершина і подвійне дно. Фігури продовження кажуть, що після паузи тренд піде в той самий бік, і це прапор, вимпел, трикутник та чашка з ручкою. Будь-яку з них варто читати лише разом з обсягом і на старшому таймфреймі.",
           },
         },
         {
           '@type': 'Question',
-          name: 'Чи безпечно використовувати публічні Wi-Fi мережі для криптовалютних операцій?',
+          name: 'Що використовувати замість графічних фігур?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Категорично не рекомендується використовувати публічні Wi-Fi для доступу до криптовалютних акаунтів — такі мережі легко перехоплюються зловмисниками. При необхідності роботи поза домом використовуйте мобільний інтернет або VPN з надійним шифруванням.',
+            text: 'Обсяг, рівні та метод Вайкоффа. Я читаю, що робить великий капітал, а не намагаюся вгадати малюнок: на якому рівні захована ліквідність, чи був хибний прокол, що показує обсяг на пробої та ретесті. Знати фігуру при цьому все одно корисно, але як карту психології натовпу, а не як сигнал для сліпої торгівлі, і завжди зі стопом та невеликим ризиком на угоду.',
           },
         },
       ],
@@ -407,39 +414,46 @@ export class HomeUkBlogFiftyFourComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'Як налаштувати комплексний захист криптовалютних активів',
+      '@id': 'https://arapov.trade/uk/freestudying/chart-patterns#howto',
+      name: 'Як розібратися у графічних фігурах і не торгувати їх наосліп',
       description:
-        'Покрокова інструкція зі створення багаторівневої системи безпеки для криптовалюти.',
+        'Покроковий розбір цінових патернів та їх грамотного застосування через рівень і обсяг',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Аудит поточного стану безпеки',
-          text: 'Проведіть інвентаризацію всіх криптоактивів та місць їх зберігання. Оцініть рівень захисту кожного гаманця та платформи, виявіть слабкі місця та складіть план їх усунення.',
+          name: 'Зрозумійте, що таке цінова фігура й звідки вона береться',
+          text: "Цінова фігура це повторювана форма на графіку, яку мозок знаходить у хаосі, але ринок не зобов'язаний її поважати.",
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Налаштування двофакторної автентифікації',
-          text: 'Встановіть додаток-автентифікатор (Google Authenticator, Authy) та активуйте 2FA на всіх криптовалютних платформах, біржах та електронній пошті. Збережіть резервні коди відновлення в безпечному місці.',
+          name: 'Поділіть фігури на розворотні та продовження',
+          text: 'Розворотні ловлять кінець тренду, продовження його паузу, і будь-яку читають лише разом з обсягом і на старшому таймфреймі.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Організація безпечного зберігання ключів',
-          text: 'Переведіть основну частину активів на апаратний гаманець. Запишіть сід-фразу на фізичний носій (папір, металева пластина) та розмістіть копії в кількох захищених локаціях.',
+          name: 'Вивчіть розворотні фігури',
+          text: 'Голова та плечі й подвійна вершина з дном підтверджуються лише пробоєм лінії шиї на зрослому обсязі, до того це лише начерк.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Створення системи паролів',
-          text: 'Встановіть менеджер паролів та згенеруйте унікальні складні паролі для кожної криптоплатформи. Уникайте повторного використання паролів та регулярно оновлюйте їх.',
+          name: 'Вивчіть фігури продовження',
+          text: 'Трикутник, прапор, вимпел і чашка з ручкою показують паузу в тренді, а вхід беруть після закріплення за межею з підтвердженням обсягом.',
         },
         {
           '@type': 'HowToStep',
           position: 5,
-          name: 'Впровадження регулярного моніторингу',
-          text: 'Налаштуйте сповіщення про входи в акаунти та транзакції. Періодично перевіряйте історію активності, оновлюйте прошивки гаманців та слідкуйте за новинами безпеки використовуваних платформ.',
+          name: 'Освойте патерн 1-2-3 для входу за великим капіталом',
+          text: 'Патерн 1-2-3 на сильному рівні дає вхід у точці 3 з коротким стопом і найкращим співвідношенням ризику до прибутку.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 6,
+          name: 'Торгуйте контекст, а не малюнок',
+          text: 'Гола фігура спрацьовує приблизно навпіл, тож вирішує рівень, хибний прокол та обсяг, а не форма, і завжди зі стопом.',
         },
       ],
     };
@@ -454,69 +468,55 @@ export class HomeUkBlogFiftyFourComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Глосарій криптовалютної безпеки',
-      description:
-        "Основні терміни, пов'язані із захистом криптовалютних активів",
+      name: 'Глосарій термінів статті',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Двофакторна автентифікація',
+          name: 'Цінова фігура',
           description:
-            'Метод захисту акаунту, що вимагає підтвердження особи двома незалежними способами — паролем та тимчасовим кодом.',
+            'Повторювана форма на графіку ціни, за якою трейдери намагаються передбачити подальший рух, частина класичного технічного аналізу.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Фішинг',
+          name: 'Голова та плечі',
           description:
-            'Шахрайська схема отримання конфіденційних даних через підроблені сайти, листи або повідомлення.',
+            'Розворотна фігура з трьох вершин із вищою центральною та лінією шиї під ними, пробій якої прийнято вважати сигналом розвороту тренду.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Холодне зберігання',
+          name: 'Подвійна вершина',
           description:
-            'Метод зберігання криптовалюти на пристроях без підключення до інтернету для максимального захисту від віддалених атак.',
+            'Розворотний патерн на вершині висхідного тренду, де ціна двічі впирається приблизно в один рівень і вдруге не може його пробити.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Гарячий гаманець',
+          name: 'Трикутник',
           description:
-            'Криптовалютний гаманець з постійним інтернет-підключенням, зручний для оперативних транзакцій.',
+            'Патерн консолідації між двома збіжними лініями, де амплітуда коливань і обсяг згасають перед виходом ціни імпульсом за одну з меж.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Мультипідпис',
+          name: 'Прапор',
           description:
-            'Технологія, що вимагає кількох незалежних підписів для авторизації транзакції.',
+            'Патерн продовження тренду, у якому після різкого імпульсу ціна входить у невеликий похилий коридор проти руху, а потім пробиває його в бік тренду.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Сід-фраза',
+          name: 'Вимпел',
           description:
-            'Мнемонічна послідовність слів для відновлення доступу до криптовалютного гаманця.',
+            'Патерн продовження тренду після імпульсу, чия консолідація має форму маленького збіжного трикутника, а не паралельного коридору, як у прапора.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Приватний ключ',
+          name: 'Чашка з ручкою',
           description:
-            'Криптографічний код, що забезпечує повний контроль над криптовалютними коштами.',
+            'Бичачий патерн продовження тренду, у якому за плавною заокругленою корекцією йде короткий відкат-ручка, після чого ціна пробиває попередній максимум угору.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Соціальна інженерія',
+          name: 'Патерн 1-2-3',
           description:
-            'Методи психологічного маніпулювання людьми для отримання конфіденційної інформації.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'VPN',
-          description:
-            'Віртуальна приватна мережа, що шифрує інтернет-трафік та приховує реальну IP-адресу користувача.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Апаратний гаманець',
-          description:
-            'Фізичний пристрій для зберігання приватних ключів в ізольованому захищеному середовищі.',
+            'Розворотна фігура з трьох точок, де точка 1 фіксує екстремум старого руху, точка 2 перший відкат, а точка 3 повторний відкат, що не оновлює точку 1.',
         },
       ],
     };

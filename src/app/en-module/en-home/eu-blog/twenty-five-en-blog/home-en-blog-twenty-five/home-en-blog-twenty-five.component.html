@@ -6,88 +6,456 @@
           <div class="m-right hero-section"></div>
           <div class="free-courses_main-container">
             <main lang="en">
-             <header>
-  <h1>Market Makers in Crypto: How They Work</h1>
-</header>
-<article>
-  <p>A crypto market maker is a large participant that constantly holds buy and sell orders and, by doing so, provides the liquidity that lets you trade at any moment. It earns on the spread, and because crypto is weakly regulated with thin markets, it can move price more than on a classic exchange. For a trader that creates two traps: manipulation on low liquidity, and fake volume that cannot be trusted.</p>
+              <header>
+                <h1>
+                  Averaging and the Martingale: Why Adding to a Loss Is
+                  Dangerous
+                </h1>
+              </header>
+              <article>
+                <p>
+                  Averaging and the Martingale are about the same thing: pour
+                  more money into a losing trade and win it back without
+                  admitting the mistake. The math looks elegant, the account
+                  seems to save itself, and it is on exactly this beauty that
+                  beginners most often burn. Adding has only one safe form, with
+                  the trend, a small lot, and a stop, while doubling after a
+                  loss I consider a direct road to zero.
+                </p>
 
-  <p>Market makers in crypto are the same story as on any market, just with a wild-west twist. Their job is to supply liquidity so you can buy and sell whenever you want. But the crypto market is younger and more weakly regulated, so manipulation and faked numbers are noticeably more common. I have been trading since 2013 and look at this calmly: the task is not to fear big capital, but to understand where it is and not expose yourself to it.</p>
+                <p>
+                  The temptation here is clear: the price has become cheaper, so
+                  the trade seems to have become more profitable, and your hand
+                  reaches out to buy more and bring down the average. I have
+                  known this feeling since the start of my path and once gave a
+                  lot of time to adding and doubling myself, until I grasped a
+                  simple thing: the market can go against you longer than your
+                  account lives. So let's break down without embellishment how
+                  the average price works, why adding against the trend and the
+                  Martingale zero the account, and in which single case
+                  averaging is still allowed.
+                </p>
 
-  <p><strong><i>In this article we'll cover:</i></strong></p>
-  <ul>
-    <li>a crypto market maker is a liquidity provider, on an exchange through the order book, on a DEX through pools;</li>
-    <li>on a thin market price is easy to push, so false breakouts and stop hunts are routine;</li>
-    <li>a large share of crypto exchange volume is faked, which is called wash trading;</li>
-    <li>so I read real volume from CME futures rather than from the numbers of one crypto exchange.</li>
-  </ul>
+                <p>
+                  <strong><i>In this article we'll cover:</i></strong>
+                </p>
+                <ul>
+                  <li>
+                    averaging shifts the average entry price, but against the
+                    trend it only delays the draining of the account;
+                  </li>
+                  <li>
+                    adding without a stop is trading without a stop, and such a
+                    loss has no ceiling;
+                  </li>
+                  <li>
+                    the Martingale grows exponentially, and any long losing
+                    streak erases the account;
+                  </li>
+                  <li>
+                    there is one safe form of adding: with the trend, a small
+                    lot, and a stop on the whole position.
+                  </li>
+                </ul>
 
-  <p>Let's go in order: who these players are in crypto, how they move price, and why crypto exchange volume deserves heavy skepticism.</p>
+                <p>
+                  I'll start with the mechanics, so you can see where that
+                  beautiful average price comes from.
+                </p>
+                <div class="flex">
+                  <img
+                    class="pictureImg"
+                    loading="lazy"
+                    src="/assets/img/content/averagingintrading1.webp"
+                    alt="Diagram of position averaging on a chart with entry levels"
+                  />
+                </div>
 
-  <div class="flex">
-    <img class="pictureImg" loading="lazy" src="/assets/img/content/cryptommakers1.webp" alt="Who crypto market makers are" />
-  </div>
+                <h2>
+                  What is averaging in trading and how is the average price
+                  calculated?
+                </h2>
+                <p>
+                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
+                    ><span itemprop="name">Averaging</span></dfn
+                  >
+                  is adding to an already open position at a new price in order
+                  to shift the average entry price. Take an example I often
+                  draw: you bought one bitcoin at ten thousand, the price slid
+                  to five, you bought a second, and now you have two bitcoins
+                  with an average of seven and a half. To break even now, half
+                  the move is enough.
+                </p>
+                <p>
+                  On the picture it looks like magic: the market seems to lie
+                  down on its own. Practice says the opposite. The trick with
+                  the average price hides one important thing: by halving the
+                  move needed to exit, you increased the volume under the loss
+                  by exactly the same factor. That is, the price for a beautiful
+                  average is a doubled bet in a trade that is still losing.
+                  Adding to a loss means putting fresh money into a position
+                  that is already going against you, and this is one of the most
+                  common beginner mistakes, which I cover separately in the
+                  course section on
+                  <a
+                    class="linkrefinto"
+                    href="https://arapov.trade/en/freestudying/freeeducation#mistakes"
+                    >the typical mistakes of beginners</a
+                  >. The average price by itself heals nothing, it only masks
+                  that the trade should have been closed long ago.
+                </p>
+                <p>
+                  <strong>In short: </strong
+                  ><i
+                    >Averaging moves the average price by adding to a position,
+                    but at x2 volume after a drop from 10 to 5 thousand it is
+                    just a doubled bet in an already losing trade.</i
+                  >
+                </p>
 
-  <h2>Who Are Crypto Market Makers?</h2>
-  <p><dfn itemscope itemtype="https://schema.org/DefinedTerm"><span itemprop="name">Crypto market maker</span></dfn> is a professional participant that posts buy and sell orders at the same time so there is always someone to trade with. It is the same role as the general <a class="linkrefinto" href="https://arapov.trade/en/freestudying/marketmaker">liquidity provider</a> on any market, just with crypto's own quirks.</p>
-  <p>They work on two kinds of venue. On a centralized exchange it is familiar: the market maker places limit orders in the order book and creates market depth. On a decentralized exchange the mechanism is different: there is no classic order book, liquidity is gathered into pools and trades go through them, an approach called automated market making, with the <a class="linkrefinto" href="https://arapov.trade/en/freestudying/liquiditypools">liquidity</a> pools themselves a topic of their own. Add round-the-clock trading and liquidity smeared across hundreds of venues, and you see why crypto behaves more sharply than the classics.</p>
+                <h2>Why averaging against the trend drains the account</h2>
+                <p>
+                  Here is where the main trouble is buried. By adding against
+                  the trend, you buy on a weak market, and it is worth asking:
+                  why is the market falling at all? By my observations it falls
+                  not by accident, but precisely to flush out stubborn buyers. A
+                  bear trend is running, you missed the level where the pros
+                  unloaded, price drops like a stone and hands you more than one
+                  false bottom.
+                </p>
+                <p>
+                  The technical essence is that adding without a stop is exactly
+                  trading without a stop, and such a loss has no ceiling: one
+                  stubborn position can eat the whole account. You get a double
+                  mistake: you go against the move and don't limit the risk,
+                  pouring money into a falling asset. And trends go much further
+                  than a beginner is ready to believe. From my memory, the euro
+                  against the dollar slid from about 1.40 to around 1.05 over
+                  several months in 2014 and 2015, losing more than thirty
+                  cents, and no averaging there would have saved the account
+                  under any scenario. Monetary policy turns, and a currency
+                  drives in one direction for months, not asking how many rounds
+                  you have left for adding. Here the mathematical dead-end opens
+                  up: to survive such a move and keep adding, you would have to
+                  enter with a truly tiny lot, otherwise the money runs out
+                  before the reversal. And adding to infinity is no longer
+                  trading, but simply a frozen account that does not work and
+                  waits for a miracle. How exactly adding against the trend
+                  erases the account I show on live examples in the
+                  <a class="linkrefinto" href="https://youtu.be/7DIGNK9ArcQ"
+                    >video on averaging positions</a
+                  >.
+                </p>
+                <div class="flex">
+                  <img
+                    class="pictureImg"
+                    loading="lazy"
+                    src="/assets/img/content/psychologyofaveraging2.webp"
+                    alt="Psychological traps of averaging"
+                  />
+                </div>
+                <p>
+                  <strong>In short: </strong
+                  ><i
+                    >Adding against the trend buys where the market is driving
+                    the stubborn to the slaughter, and the trend goes far: the
+                    euro slid from about 1.40 to around 1.05 over several months
+                    in 2014 and 2015, and the average price is powerless
+                    here.</i
+                  >
+                </p>
 
-  <h2>How Market Makers Influence Crypto Prices</h2>
-  <p>The key feature of crypto is thin liquidity, especially on smaller coins. The thinner the market, the easier it is to move price, so what would take huge money on a large exchange can be done cheaply on a young token, which is where the higher rate of manipulation comes from.</p>
-  <p>The mechanic is the same as everywhere. Big capital knows where the crowd keeps its stops, and the crowd keeps them in obvious places: under a round number, behind a clear low. Price is pushed there briefly, the stops are taken, liquidity is collected and the move reverses. In volume analysis this is called a false breakout. It is not magic and not a personal hunt for you, just liquidity collection where there is plenty of it, the same logic of <a class="linkrefinto" href="https://arapov.trade/en/freestudying/smartmoneycontrol">smart money</a> control. The defense is simple: do not put your stop in the most predictable spot, move it beyond the level with some margin.</p>
+                <h2>
+                  The psychology of averaging: why a trader adds into a loss
+                </h2>
+                <p>
+                  The root of the problem lies deeper than technique, it is in
+                  the head. Adding to a loss is first of all a psychological
+                  defense. When a trade is in the loss, admitting the loss is
+                  painful, because it means admitting you were wrong. It is far
+                  more pleasant to tell yourself that this is not a loss but a
+                  lucky chance to buy cheaper, and so denial switches on.
+                </p>
+                <p>
+                  Next, hope for a quick reversal kicks in, and the trader
+                  clings to the position to the last, turning a small minus into
+                  a big one. Let me show it on numbers. You took an asset at a
+                  hundred, it fell to ninety, you added at ninety, the average
+                  became ninety-five, and it seems the profit is within reach.
+                  But the fall stretches to eighty, and the loss is already
+                  noticeably heavier, because you increased the position size.
+                  So a neat drawdown swells into a hole. And the honest essence:
+                  by averaging, a person feels he is taking control, while in
+                  fact he only raises the bet in a losing hand. This is an
+                  argument not with the chart but with your own ego, which is
+                  why it is so addictive. Where else emotions hit the account
+                  and how to resist this I cover in the section on
+                  <a
+                    class="linkrefinto"
+                    href="https://arapov.trade/en/freestudying/trading-psychology"
+                    >the psychology of trading</a
+                  >.
+                </p>
+                <div class="flex">
+                  <img
+                    class="pictureImg"
+                    loading="lazy"
+                    src="/assets/img/content/psychologyofaveraging1.png"
+                    alt="The mechanism of averaging in trading"
+                  />
+                </div>
+                <p>
+                  <strong>In short: </strong
+                  ><i
+                    >Adding to a minus is a trade not with the market but with
+                    your own ego: behind it stand denial of the mistake and
+                    hope, and they turn a drawdown to 80 into a real hole.</i
+                  >
+                </p>
 
-  <div class="flex">
-    <img class="pictureImg" loading="lazy" src="/assets/img/content/cryptommakers2.webp" alt="How crypto market makers influence price" />
-  </div>
+                <h2>
+                  The Martingale method: why doubling after a loss zeros the
+                  account
+                </h2>
+                <p>
+                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
+                    ><span itemprop="name">The Martingale method</span></dfn
+                  >
+                  is bet management in which, after each loss, the volume of the
+                  next trade is doubled in the hope of covering all the losses
+                  with a single win. The technique came from eighteenth-century
+                  roulette, where the player doubled the bet after every loss,
+                  and in trading it is a close relative of averaging, only
+                  meaner.
+                </p>
+                <p>
+                  The whole substitution is in one logical error. In roulette
+                  the outcomes are independent, but on the market they are not:
+                  the price can hold a trend for a very long time, and each
+                  doubling against it does not bring the reversal closer, it
+                  only swells the position, which burns faster. Then the
+                  arithmetic kicks in. After a series of losses the volume goes
+                  exponential: one, two, four, eight, sixteen, thirty-two,
+                  sixty-four, and already on the seventh loss in a row you need
+                  a bet a hundred and twenty-eight times the starting one. On
+                  the eighth trade, to return one conditional unit you are
+                  already risking more than two hundred such units, the reward
+                  tiny, the risk monstrous. And a streak of eight to ten losses
+                  in a row is not fantasy, but ordinary
+                  <a
+                    class="linkrefinto"
+                    href="https://arapov.trade/en/freestudying/freeeducation#math"
+                    >variance and the mathematics of risk</a
+                  >, and it is exactly this that zeros the account. And here is
+                  my non-obvious view over the years: the Martingale is
+                  dangerous not because it loses often, but because it wins
+                  small often. A chain of small recoveries instills a false
+                  sense of control, you feel like a genius, and then that long
+                  streak comes and with one blow erases all the accumulated plus
+                  together with the account. That is why I hold doubling after a
+                  loss as a red flag in any strategy or robot: if the Martingale
+                  is at the base, the question is not whether it will blow the
+                  account, but only when exactly.
+                </p>
+                <p>
+                  In no healthy approach will you meet a ratio where you stake
+                  two hundred for the sake of one. And the root of the illusion
+                  is exactly the transfer of casino logic onto the market: in
+                  roulette the previous outcomes do not affect the next, but on
+                  the chart they very much do, because the price moves by trend,
+                  not by tosses of a ball. By doubling against the trend, you do
+                  not raise the chance of a reversal, you only feed the growing
+                  position, which burns the faster the longer the move holds.
+                </p>
+                <div class="flex">
+                  <img
+                    class="pictureImg"
+                    loading="lazy"
+                    src="/assets/img/content/martingale1.jpg"
+                    alt="Chart of the Martingale method applied to financial markets"
+                  />
+                </div>
+                <p>
+                  <strong>In short: </strong
+                  ><i
+                    >On the seventh loss the Martingale needs a x128 bet, and it
+                    is dangerous because it often wins small and trains you to
+                    feel in control, until one long streak erases everything.</i
+                  >
+                </p>
 
-  <h2>Wash Trading: Why Crypto Volume Can't Be Trusted</h2>
-  <p>This is a disease specific to crypto, and for a volume trader it is critical. Wash trading is the faking of volume, where the same coins are cycled back and forth between an entity's own accounts to create the look of busy trading. An exchange or project paints a pretty volume to attract traders, even though there are almost no real trades behind it. By various studies, a huge share of the declared volume on some crypto exchanges turned out to be exactly this kind of fakery, and a 2026 enforcement case made clear it is far more common than many assumed.</p>
-  <p>For a trader the conclusion is harsh: treat the volume figures on a single crypto exchange with skepticism, especially on small coins and dubious venues. This directly breaks naive volume analysis, because the volume lies. The numbers exist to attract attention, since on a young market liquidity is largely perception.</p>
+                <h2>
+                  How not to average into a loss: a plan, risk, and adding only
+                  with the trend
+                </h2>
+                <p>
+                  The good news is that there is a reliable defense against both
+                  traps, and it is a trading plan. The essence is simple: before
+                  entering you decide where the stop is, that is, you set the
+                  maximum allowable loss in advance. The price reached the stop,
+                  and you calmly exit without adding, without hopes, and without
+                  arguing with the chart. The decision is made with a cool head
+                  in advance, not in panic in the middle of the move, when
+                  emotions are off the scale and counting soberly no longer
+                  works.
+                </p>
+                <p>
+                  The replacement for the Martingale is not another way to
+                  double, but the opposite philosophy, fixed small risk. In
+                  every trade I set aside a predefined share of the account for
+                  the loss and do not increase the bet after a loss, so a losing
+                  streak only slightly dents the account rather than zeroing it.
+                  Instead of adding to a losing idea, I fix a small minus on the
+                  stop and go look for the next clean entry at a level and with
+                  volume confirmation, not chasing a falling price. Averaging
+                  itself remains acceptable in one single form: with the trend,
+                  a small lot, and a stop on the whole position. Trading with
+                  the trend already carries a positive expectancy, and adding
+                  with the trend works only as a multiplier to it, whereas
+                  adding against the trend multiplies the loss. The basic frame
+                  of this approach, fixed risk and the priority of the stop, I
+                  lay out in the section on risk management and capital. And the
+                  main thing I learned from my own mistakes: for a beginner it
+                  is important first not to earn, but to survive. An account
+                  that survived with small risk will always live to see new
+                  opportunities, while one zeroed by adding and doubling will
+                  see nothing anymore.
+                </p>
+                <p>
+                  <strong>In short: </strong
+                  ><i
+                    >The plan decides in advance: the stop is hit, you exit; set
+                    a fixed small risk, and allow adding only with the trend as
+                    a multiplier to the plus, not as a rescue of a minus.</i
+                  >
+                </p>
 
-  <h2>My Take: Locate Big Capital, Don't Fear It</h2>
-  <p>Big capital is not the enemy here; the job is to locate it and avoid standing where it collects liquidity. So how do I square this with a method built on volume, when the volume on a random exchange can be faked? I read crypto volume from Bitcoin futures on the regulated CME, where proper clearing makes the numbers far harder to draw. This is not advice for you personally, it is how I work, because you can only trust data you can verify, and the method itself does not change, only the source of the volume does. The honest limitation is that I cannot clean a small token's faked volume, so the alternative is to stay out of thin, dubious coins, keep my stops away from the obvious spots, and lean on a source of volume I can actually trust.</p>
+                <section>
+                  <h2>Frequently Asked Questions</h2>
+                  <mat-accordion>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      [expanded]="true"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >What is averaging in trading?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        It is adding to an already open position at a different
+                        price, which shifts your average entry point. You took
+                        bitcoin at ten thousand, it settled to five, you added
+                        one more, and the average dropped to seven and a half.
+                        To break even now half the move is enough, only if the
+                        adding goes against the trend, it merely postpones the
+                        draining of the account rather than canceling it.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >Why is averaging against the trend
+                          dangerous?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        Because you buy more on a weak market, and it often
+                        falls precisely to flush out stubborn buyers. Adding
+                        without a stop removes the ceiling from the loss, and
+                        one position can zero the account. Trends go further
+                        than it seems: the euro against the dollar slid from
+                        about 1.40 to around 1.05 over several months in 2014
+                        and 2015, and no averaging there saved anyone.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >What is the Martingale method?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        It is doubling the volume after each loss in the hope of
+                        covering all the losses with one win. The bet flies up
+                        exponentially, one, two, four, eight and on, so that by
+                        the seventh loss in a row you are required to put up a
+                        hundred and twenty-eight times the starting sum. The
+                        market can press a position longer than the trader has
+                        money for doublings, so one drawn-out losing streak is
+                        enough to zero the account.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >Why does a trader average into a
+                          loss?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        The reason is psychological. Admitting a loss is
+                        painful, because it means admitting a mistake, and
+                        instead of a stop, denial and hope for a reversal switch
+                        on. Adding gives a false sense of control, but in
+                        essence it is an argument not with the market but with
+                        your own ego, and it turns a small loss into a big one.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >When is averaging acceptable?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        Only in one form: in the direction of the trend, with a
+                        modest volume and a mandatory stop on the whole
+                        position. That way you build up a trade that is already
+                        bringing profit on a pullback, rather than trying to
+                        drag out a sinking one. In my experience a beginner is
+                        better off forgetting about adding and first getting
+                        stronger on ordinary trading with a clear stop and
+                        careful risk.
+                      </p>
+                    </mat-expansion-panel>
+                  </mat-accordion>
+                </section>
 
-  <section>
-    <h2>Frequently Asked Questions</h2>
-    <mat-accordion>
-      <mat-expansion-panel class="highlight-box owl_link-box" [expanded]="true">
-        <mat-expansion-panel-header>
-          <mat-panel-title>Who are crypto market makers in simple terms?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>They are large participants that constantly hold buy and sell orders and provide liquidity. On a regular exchange through the order book, on a decentralized one through liquidity pools. Thanks to them you can make a trade quickly.</p>
-      </mat-expansion-panel>
-      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
-        <mat-expansion-panel-header>
-          <mat-panel-title>Why is there more manipulation in crypto?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>Because of thin liquidity and weak regulation. The smaller a coin, the easier its price is to move, so false breakouts and stop collection at obvious levels happen more often than on large classic markets.</p>
-      </mat-expansion-panel>
-      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
-        <mat-expansion-panel-header>
-          <mat-panel-title>What is wash trading?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>It is the faking of volume, where coins are cycled between an entity's own accounts to create the look of active trading. The declared volume looks large, but real trades are few. On some crypto exchanges a substantial share of volume is faked this way.</p>
-      </mat-expansion-panel>
-      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
-        <mat-expansion-panel-header>
-          <mat-panel-title>Can you trust the volume on a crypto exchange?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>Not blindly. Especially on small coins and dubious venues the volume is often inflated. It is safer to rely on verifiable data, for example the volume from Bitcoin futures on the regulated CME.</p>
-      </mat-expansion-panel>
-      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
-        <mat-expansion-panel-header>
-          <mat-panel-title>How do you protect against market maker manipulation?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>Do not place your stop in obvious places; move it beyond the level with some margin. Avoid small illiquid coins, where manipulation is easiest, and do not trust volume blindly.</p>
-      </mat-expansion-panel>
-    </mat-accordion>
-  </section>
-
-  <section>
-    <h2>About the Author</h2>
-    <p>Author: Igor Arapov — independent researcher in the psychology of investment decisions and behavioral finance, practising trader since 2013, founder of arapov.trade, author of a trading book series (<a class="linkrefinto" href="https://openlibrary.org/authors/OL16073686A/Igor_Arapov">Open Library</a>), (<a class="linkrefinto" href="https://orcid.org/0009-0003-0430-778X">ORCID: 0009-0003-0430-778X</a>).</p>
-  </section>
-</article>
+                <section>
+                  <h2>About the Author</h2>
+                  <p>
+                    Author:
+                    <a class="linkrefinto" href="https://arapov.trade/en"
+                      >Igor Arapov</a
+                    >
+                    — independent researcher in the psychology of investment
+                    decisions and behavioral finance, practising trader since
+                    2013, founder of arapov.trade, author of a trading book
+                    series (<a
+                      class="linkrefinto"
+                      href="https://orcid.org/0009-0003-0430-778X"
+                      >ORCID: 0009-0003-0430-778X</a
+                    >).
+                  </p>
+                </section>
+              </article>
 
               <div
                 class=""

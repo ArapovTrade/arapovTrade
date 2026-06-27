@@ -48,7 +48,7 @@ export class RuBlogHomepageComponent implements OnInit {
     private router: Router,
     private meta: Meta,
     private eRef: ElementRef,
-    private titleService: Title
+    private titleService: Title,
   ) {
     this.renderer = rendererFactory.createRenderer(null, null);
   }
@@ -118,7 +118,7 @@ export class RuBlogHomepageComponent implements OnInit {
     this.paginator.itemsPerPageLabel = '';
 
     this.titleService.setTitle(
-      'Обучение трейдингу онлайн | Бесплатные курсы трейдеров от Игоря Арапова'
+      'Обучение трейдингу онлайн | Бесплатные курсы трейдеров от Игоря Арапова',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
 
@@ -158,7 +158,6 @@ export class RuBlogHomepageComponent implements OnInit {
       title: 'Базовый курс',
       link: 'https://arapov.trade/ru/freestudying/freeeducation',
     },
-     
   ];
 
   grr!: any;
@@ -295,7 +294,7 @@ export class RuBlogHomepageComponent implements OnInit {
     // Показываем 5 случайных статей при фокусе, если инпут пуст
     if (!this.searchQuery) {
       const shuffled = [...this.artickleServ.ukrArtickles].sort(
-        () => Math.random() - 0.5
+        () => Math.random() - 0.5,
       );
       this.displayedArticles = shuffled.slice(0, this.maxResults);
     }
@@ -310,7 +309,7 @@ export class RuBlogHomepageComponent implements OnInit {
   onSearchChange() {
     // Логика асинхронного поиска
     const filtered = this.artickleServ.ukrArtickles.filter((a) =>
-      a.titleRus.toLowerCase().includes(this.searchQuery.toLowerCase())
+      a.titleRus.toLowerCase().includes(this.searchQuery.toLowerCase()),
     );
     this.displayedArticles = filtered.slice(0, this.maxResults);
   }
@@ -326,107 +325,228 @@ export class RuBlogHomepageComponent implements OnInit {
   toggleGroupsMenu(event: Event) {
     this.groupsMenuOpen = !this.groupsMenuOpen;
   }
-
   private removeExistingWebPageSchema(): void {
     const scripts = this.document.querySelectorAll(
-      'script[type="application/ld+json"]'
+      'script[type="application/ld+json"]',
     );
-
     scripts.forEach((script) => {
       try {
         const content = JSON.parse(script.textContent || '{}');
-        if (content['@type'] === 'CollectionPage') {
+        const graph = content['@graph'] || [content];
+        if (graph.some((n: any) => n['@type'] === 'CollectionPage')) {
           script.remove();
         }
-      } catch (e) {
-        // Игнорируем некорректные JSON (например, из других источников)
-      }
+      } catch (e) {}
     });
   }
 
+  // private removeExistingWebPageSchema(): void {
+  //   const scripts = this.document.querySelectorAll(
+  //     'script[type="application/ld+json"]'
+  //   );
+
+  //   scripts.forEach((script) => {
+  //     try {
+  //       const content = JSON.parse(script.textContent || '{}');
+  //       if (content['@type'] === 'CollectionPage') {
+  //         script.remove();
+  //       }
+  //     } catch (e) {
+  //       // Игнорируем некорректные JSON (например, из других источников)
+  //     }
+  //   });
+  // }
+
+  // private addWebSiteSchema() {
+  //   const exists = Array.from(
+  //     this.document.querySelectorAll('script[type="application/ld+json"]')
+  //   ).some((script) => {
+  //     try {
+  //       const json = JSON.parse(script.textContent || '{}');
+  //       return json['@type'] === 'CollectionPage' && json['name'] === 'Бесплатное обучение трейдингу';
+  //     } catch {
+  //       return false;
+  //     }
+  //   });
+
+  //   // Если уже существует — выходим
+  //   if (exists) return;
+
+  //   // Создаем новый JSON-LD
+  //   const script = this.document.createElement('script');
+  //   script.type = 'application/ld+json';
+  //   script.text = JSON.stringify({
+  //     '@context': 'https://schema.org',
+  //     '@type': 'CollectionPage',
+  //     name: 'Бесплатное обучение трейдингу',
+  //     description:
+  //       'Более 150 бесплатных статей по трейдингу: Smart Money Concepts, метод Вайкоффа, технический анализ, криптотрейдинг. Полный курс для начинающих.',
+  //     url: 'https://arapov.trade/ru/freestudying',
+  //     isPartOf: {
+  //       '@id': 'https://arapov.trade/ru/main#website',
+  //     },
+  //     author: {
+  //       '@id': 'https://arapov.trade/ru#person',
+  //     },
+  //     about: [
+  //       {
+  //         '@type': 'Thing',
+  //         name: 'Trading Education',
+  //       },
+  //       {
+  //         '@type': 'Thing',
+  //         name: 'Smart Money Concepts',
+  //       },
+  //       {
+  //         '@type': 'Thing',
+  //         name: 'Technical Analysis',
+  //       },
+  //     ],
+  //     mainEntity: {
+  //       '@type': 'ItemList',
+  //       name: 'Основные темы курса трейдинга',
+  //       numberOfItems: 150,
+  //       itemListOrder: 'ItemListOrderDescending',
+  //       itemListElement: [
+  //         {
+  //           '@type': 'ListItem',
+  //           position: 1,
+  //           name: 'Smart Money Concepts',
+  //           url: 'https://arapov.trade/ru/freestudying/smartmoneyconceptsguide',
+  //         },
+  //         {
+  //           '@type': 'ListItem',
+  //           position: 2,
+  //           name: 'Метод Вайкоффа',
+  //           url: 'https://arapov.trade/ru/freestudying/wyckoffmethod',
+  //         },
+  //         {
+  //           '@type': 'ListItem',
+  //           position: 3,
+  //           name: 'Технический анализ',
+  //           url: 'https://arapov.trade/ru/freestudying/technicalanalysis',
+  //         },
+  //         {
+  //           '@type': 'ListItem',
+  //           position: 4,
+  //           name: 'Торговые индикаторы',
+  //           url: 'https://arapov.trade/ru/freestudying/tradingindicators',
+  //         },
+  //         {
+  //           '@type': 'ListItem',
+  //           position: 5,
+  //           name: 'Криптотрейдинг',
+  //           url: 'https://arapov.trade/ru/freestudying/cryptocurrencytrading',
+  //         },
+  //       ],
+  //     },
+  //   });
+
+  //   this.document.head.appendChild(script);
+  // }
+
   private addWebSiteSchema() {
     const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]')
+      this.document.querySelectorAll('script[type="application/ld+json"]'),
     ).some((script) => {
       try {
         const json = JSON.parse(script.textContent || '{}');
-        return json['@type'] === 'CollectionPage' && json['name'] === 'Бесплатное обучение трейдингу';
+        const graph = json['@graph'] || [json];
+        return graph.some(
+          (n: any) =>
+            n['@type'] === 'CollectionPage' &&
+            n['name'] === 'Бесплатное обучение трейдингу',
+        );
       } catch {
         return false;
       }
     });
 
-    // Если уже существует — выходим
     if (exists) return;
 
-    // Создаем новый JSON-LD
     const script = this.document.createElement('script');
     script.type = 'application/ld+json';
     script.text = JSON.stringify({
       '@context': 'https://schema.org',
-      '@type': 'CollectionPage',
-      name: 'Бесплатное обучение трейдингу',
-      description:
-        'Более 150 бесплатных статей по трейдингу: Smart Money Concepts, метод Вайкоффа, технический анализ, криптотрейдинг. Полный курс для начинающих.',
-      url: 'https://arapov.trade/ru/freestudying',
-      isPartOf: {
-        '@id': 'https://arapov.trade/ru/main#website',
-      },
-      author: {
-        '@id': 'https://arapov.trade/ru#person',
-      },
-      about: [
+      '@graph': [
         {
-          '@type': 'Thing',
-          name: 'Trading Education',
+          '@type': 'CollectionPage',
+          '@id': 'https://arapov.trade/ru/freestudying#collection',
+          name: 'Бесплатное обучение трейдингу',
+          description:
+            'Более 150 бесплатных статей по трейдингу: Smart Money Concepts, метод Вайкоффа, технический анализ, криптотрейдинг. Полный курс для начинающих.',
+          url: 'https://arapov.trade/ru/freestudying',
+          inLanguage: 'ru',
+          isPartOf: { '@id': 'https://arapov.trade/#website' },
+          author: { '@id': 'https://arapov.trade/#person' },
+          publisher: { '@id': 'https://arapov.trade/#organization' },
+          about: [
+            { '@type': 'Thing', name: 'Trading Education' },
+            { '@type': 'Thing', name: 'Smart Money Concepts' },
+            { '@type': 'Thing', name: 'Technical Analysis' },
+          ],
+          mainEntity: {
+            '@type': 'ItemList',
+            name: 'Основные темы курса трейдинга',
+            numberOfItems: 5,
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Smart Money Concepts',
+                url: 'https://arapov.trade/ru/freestudying/smart-money-guide',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Метод Вайкоффа',
+                url: 'https://arapov.trade/ru/freestudying/wyckoff-method',
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: 'Технический анализ',
+                url: 'https://arapov.trade/ru/freestudying/chart-reading',
+              },
+              {
+                '@type': 'ListItem',
+                position: 4,
+                name: 'Торговые индикаторы',
+                url: 'https://arapov.trade/ru/freestudying/trading-indicators',
+              },
+              {
+                '@type': 'ListItem',
+                position: 5,
+                name: 'Криптотрейдинг',
+                url: 'https://arapov.trade/ru/freestudying/crypto-basics',
+              },
+            ],
+          },
         },
         {
-          '@type': 'Thing',
-          name: 'Smart Money Concepts',
+          '@type': 'Person',
+          '@id': 'https://arapov.trade/#person',
+          name: 'Игорь Арапов',
+          url: 'https://arapov.trade/ru',
+          sameAs: [
+            'https://www.wikidata.org/wiki/Q137454477',
+            'https://scholar.google.com/citations?user=N440tWQAAAAJ',
+            'https://orcid.org/0009-0003-0430-778X',
+            'https://isni.org/isni/0000000529518564',
+            'https://www.amazon.com/stores/author/B0GBRFY457',
+            'https://github.com/ArapovTrade',
+            'https://ua.linkedin.com/in/arapovtrade',
+            'https://www.youtube.com/@ArapovTrade',
+            'https://t.me/ArapovTrade',
+          ],
         },
         {
-          '@type': 'Thing',
-          name: 'Technical Analysis',
+          '@type': 'Organization',
+          '@id': 'https://arapov.trade/#organization',
+          name: 'Arapov.Trade',
+          url: 'https://arapov.trade',
         },
       ],
-      mainEntity: {
-        '@type': 'ItemList',
-        name: 'Основные темы курса трейдинга',
-        numberOfItems: 150,
-        itemListOrder: 'ItemListOrderDescending',
-        itemListElement: [
-          {
-            '@type': 'ListItem',
-            position: 1,
-            name: 'Smart Money Concepts',
-            url: 'https://arapov.trade/ru/freestudying/smartmoneyconceptsguide',
-          },
-          {
-            '@type': 'ListItem',
-            position: 2,
-            name: 'Метод Вайкоффа',
-            url: 'https://arapov.trade/ru/freestudying/wyckoffmethod',
-          },
-          {
-            '@type': 'ListItem',
-            position: 3,
-            name: 'Технический анализ',
-            url: 'https://arapov.trade/ru/freestudying/technicalanalysis',
-          },
-          {
-            '@type': 'ListItem',
-            position: 4,
-            name: 'Торговые индикаторы',
-            url: 'https://arapov.trade/ru/freestudying/tradingindicators',
-          },
-          {
-            '@type': 'ListItem',
-            position: 5,
-            name: 'Криптотрейдинг',
-            url: 'https://arapov.trade/ru/freestudying/cryptocurrencytrading',
-          },
-        ],
-      },
     });
 
     this.document.head.appendChild(script);

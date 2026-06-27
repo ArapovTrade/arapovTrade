@@ -28,7 +28,7 @@ export class HomeUkBlogTwentySevenComponent implements OnInit {
     private themeService: ThemeservService,
     private artickleServ: ArticlesService,
     private renderer: Renderer2,
-    @Inject(DOCUMENT) private document: Document
+    @Inject(DOCUMENT) private document: Document,
   ) {}
   private routerSubscription!: Subscription;
   private themeSubscription!: Subscription;
@@ -57,19 +57,17 @@ export class HomeUkBlogTwentySevenComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Японські свічки в трейдингу: як читати графіки та знаходити точки входу'
+      'Торгівля активами: золото, нафта, індекси | Arapov.trade',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Навчіться читати японські свічки: молот, поглинання, доджі, ранкова зірка. Практичний посібник зі свічкового аналізу для трейдерів з прикладами.',
+        'Як торгувати золотом, нафтою та фондовими індексами: фундаментальні драйвери, особливості інструментів і підходи до аналізу.',
     });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-04-16' });this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/japanesecandle.jpg',
-    });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
+
     this.gerRandom();
   }
   randomArticleRus: any = [];
@@ -86,7 +84,6 @@ export class HomeUkBlogTwentySevenComponent implements OnInit {
       title: 'Базовий курс',
       link: 'https://arapov.trade/uk/freestudying/freeeducation',
     },
-     
   ];
 
   onGroupChange(event: Event) {
@@ -156,7 +153,7 @@ export class HomeUkBlogTwentySevenComponent implements OnInit {
     // Показываем 5 случайных статей при фокусе, если инпут пуст
     if (!this.searchQuery) {
       const shuffled = [...this.artickleServ.ukrArtickles].sort(
-        () => Math.random() - 0.5
+        () => Math.random() - 0.5,
       );
       this.displayedArticles = shuffled.slice(0, this.maxResults);
     }
@@ -171,7 +168,7 @@ export class HomeUkBlogTwentySevenComponent implements OnInit {
   onSearchChange() {
     // Логика асинхронного поиска
     const filtered = this.artickleServ.ukrArtickles.filter((a) =>
-      a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase())
+      a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase()),
     );
     this.displayedArticles = filtered.slice(0, this.maxResults);
   }
@@ -193,7 +190,7 @@ export class HomeUkBlogTwentySevenComponent implements OnInit {
     const path: string =
       this.router.url.split('/')[this.router.url.split('/').length - 1];
     let index = this.artickleServ.ukrArtickles.findIndex(
-      (a) => a.linkUkr == path
+      (a) => a.linkUkr == path,
     );
 
     if (this.artickleServ.ukrArtickles.length - 1 == index) {
@@ -210,7 +207,7 @@ export class HomeUkBlogTwentySevenComponent implements OnInit {
     const path: string =
       this.router.url.split('/')[this.router.url.split('/').length - 1];
     let index = this.artickleServ.ukrArtickles.findIndex(
-      (a) => a.linkUkr == path
+      (a) => a.linkUkr == path,
     );
 
     if (index == 1) {
@@ -235,7 +232,7 @@ export class HomeUkBlogTwentySevenComponent implements OnInit {
     ];
 
     const scripts = this.document.querySelectorAll(
-      'script[type="application/ld+json"]'
+      'script[type="application/ld+json"]',
     );
 
     scripts.forEach((script) => {
@@ -248,7 +245,7 @@ export class HomeUkBlogTwentySevenComponent implements OnInit {
 
         const shouldRemove = candidates.some(
           (entry: any) =>
-            entry['@type'] && typesToRemove.includes(entry['@type'])
+            entry['@type'] && typesToRemove.includes(entry['@type']),
         );
 
         if (shouldRemove) {
@@ -277,29 +274,35 @@ export class HomeUkBlogTwentySevenComponent implements OnInit {
         {
           '@type': 'Article',
           headline:
-            'Японські свічки в трейдингу: як читати графіки та знаходити точки входу',
+            'Торгівля активами: золото, нафта і фондові індекси за обсягом і рівнями',
           description:
-            'Навчіться читати японські свічки: молот, поглинання, доджі, ранкова зірка. Практичний посібник зі свічкового аналізу.',
-          image: 'https://arapov.trade/assets/img/content/japanessecandle1.jpg',
-
-          datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
-          author: {
-            '@id': 'https://arapov.trade/uk#person',
-          },
+            'Як торгувати золотом, нафтою та фондовими індексами: фундаментальні драйвери, особливості інструментів і підходи до аналізу.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'Arapov.trade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://arapov.trade/uk/freestudying/japanesecandle',
+            '@id': 'https://arapov.trade/uk/freestudying/assets-trading',
           },
-          articleSection: 'Технічний аналіз',
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/goldtrading1.jpeg',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Фундаментальний аналіз',
+          keywords:
+            'торгівля активами, золото, XAU/USD, нафта, WTI, Brent, фондові індекси, S&P 500, Nasdaq',
           inLanguage: 'uk',
         },
       ],
@@ -315,18 +318,18 @@ export class HomeUkBlogTwentySevenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/uk#person',
-      name: 'Ігор Арапов',
+      '@id': 'https://arapov.trade/#person',
+      name: 'Igor Arapov',
       alternateName: [
-        'Igor Arapov',
-              'Арапов Игорь',
-              'I. Arapov',
-              'Игорь Арапов',
-              'І. В. Арапов',
-              'Арапов Ігор',
-              'Arapov Igor',
+        'Ігор Арапов',
+        'Игорь Арапов',
+        'Арапов Игорь',
+        'Арапов Ігор',
+        'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/uk',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -338,9 +341,13 @@ export class HomeUkBlogTwentySevenComponent implements OnInit {
         'https://github.com/ArapovTrade',
         'https://ua.linkedin.com/in/arapovtrade',
         'https://www.youtube.com/@ArapovTrade',
-        'https://t.me/ArapovTrade'
+        'https://t.me/ArapovTrade',
       ],
-       jobTitle: ['Незалежний дослідник', 'трейдер', 'автор і засновник arapov.trade'],
+      jobTitle: [
+        'Незалежний дослідник',
+        'трейдер',
+        'автор і засновник arapov.trade',
+      ],
       description:
         'Незалежний дослідник, практикуючий трейдер, автор книг з трейдингу та наукових публікацій. Спеціалізується на психології трейдингу та когнітивних упередженнях на фінансових ринках.',
     };
@@ -358,42 +365,42 @@ export class HomeUkBlogTwentySevenComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'Що таке японські свічки?',
+          name: 'Що таке XAU/USD?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Японські свічки — графічний метод відображення цінових рухів, що показує ціни відкриття, закриття, максимум та мінімум за період.',
+            text: "Так позначають ціну тройської унції золота в доларах США, головний тикер золотого ринку. Доступний він майже цілодобово п'ять днів на тиждень, а золото здавна слугує прихистком для капіталу в смутні часи.",
           },
         },
         {
           '@type': 'Question',
-          name: 'Які основні свічкові патерни існують?',
+          name: 'Чим WTI відрізняється від Brent?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Основні патерни: молот, повішений, поглинання, доджі, ранкова зірка, вечірня зірка, марубозу.',
+            text: "WTI це легка малосірчиста нафта США з постачанням у Кушингу на біржі NYMEX. Brent видобувають у Північному морі і торгують на ICE, це світовий орієнтир, до якого прив'язані близько двох третин контрактів; коштує він зазвичай трохи вище за WTI, а розрив між ними звуть спредом Brent-WTI.",
           },
         },
         {
           '@type': 'Question',
-          name: 'Як визначити розворот за свічками?',
+          name: 'Що таке фондовий індекс простими словами?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Розворотні патерни формуються на ключових рівнях та підтверджуються обсягом і індикаторами.',
+            text: 'Так називають кошик акцій групи компаній, чию динаміку передає одна цифра. Не доводиться стежити за сотнею паперів окремо: індекс одразу показує, росте ринок чи падає, тому його й звуть барометром економіки.',
           },
         },
         {
           '@type': 'Question',
-          name: 'На яких таймфреймах працюють свічкові патерни?',
+          name: 'Чим NASDAQ відрізняється від S&P 500?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Свічки працюють на всіх таймфреймах, але сигнали на H4 і вище надійніші.',
+            text: "У NASDAQ сильний технологічний перекіс і майже немає фінансового сектору, тому він рухливіший. S&P 500 влаштований ширше, тримає п'ятсот найбільших компаній з усіх галузей і рахується за капіталізацією, що робить його рівнішим як індикатор.",
           },
         },
         {
           '@type': 'Question',
-          name: 'Як підтвердити свічковий сигнал?',
+          name: 'Який ризик тримати на волатильних активах на кшталт золота й нафти?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Використовуйте обсяг, RSI, MACD, рівні підтримки/опору та Фібоначчі.',
+            text: 'Нижче звичного. Золото й нафта ходять ривками, хід у кілька відсотків за день для них норма, тому на угоду я відвожу близько половини відсотка депозиту і ставлю стоп із запасом під коливання; надто тісний стоп на такому активі вилітає на звичайному шумі.',
           },
         },
       ],
@@ -409,37 +416,34 @@ export class HomeUkBlogTwentySevenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'Як аналізувати японські свічки',
+      '@id': 'https://arapov.trade/uk/freestudying/assets-trading#howto',
+      name: 'Як торгувати золотом, нафтою і фондовими індексами за обсягом і рівнями',
+      description:
+        'Покроковий розбір теми та її практичне застосування в торгівлі',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Визначте тренд',
-          text: 'Використовуйте ковзні середні для розуміння напрямку ринку.',
+          name: 'Розберіться в золоті XAU/USD і його драйверах',
+          text: 'XAU/USD це ціна тройської унції золота в доларах, захисний актив, головний драйвер якого це ставки ФРС; вхід читають за обсягом і рівнями.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Знайдіть ключові рівні',
-          text: 'Позначте зони підтримки та опору на графіку.',
+          name: 'Зрозумійте інструменти нафти і різницю WTI і Brent',
+          text: "Нафту торгують ф'ючерсами CL на WTI на NYMEX і Brent на ICE, а різницю між марками звуть спредом Brent-WTI.",
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Ідентифікуйте патерн',
-          text: 'Знайдіть свічкову формацію: молот, поглинання, доджі.',
+          name: 'Розберіться, як влаштовані і як торгуються фондові індекси',
+          text: "Фондовий індекс це кошик акцій, який торгують через ETF і ф'ючерси, а метод зважування задає, чий вплив вагоміший.",
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Підтвердіть сигнал',
-          text: 'Перевірте обсяг та показання RSI або MACD.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 5,
-          name: 'Увійдіть в угоду',
-          text: 'Встановіть стоп-лосс та тейк-профіт зі співвідношенням 1:2.',
+          name: 'Застосовуйте єдиний метод і знижений ризик на волатильних активах',
+          text: 'Золото, нафту й індекси я читаю однаково, за обсягом і рівнями, а ризик через волатильність тримаю близько половини відсотка.',
         },
       ],
     };
@@ -454,60 +458,25 @@ export class HomeUkBlogTwentySevenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Глосарій японських свічок',
+      name: 'Глосарій термінів статті',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Японська свічка',
+          name: 'XAU/USD',
           description:
-            'Графічний елемент, що показує відкриття, закриття, максимум і мінімум ціни',
+            'Котирування однієї тройської унції золота в доларах США, основний інструмент для торгівлі золотим ринком.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Тіло свічки',
-          description: 'Прямокутник між ціною відкриття та закриття',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Тінь свічки',
-          description: 'Лінії вище та нижче тіла, що показують екстремуми',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Молот',
+          name: 'Спред Brent-WTI',
           description:
-            'Розворотна свічка з маленьким тілом та довгою нижньою тінню',
+            'Різниця в ціні між еталонними марками нафти Brent і WTI, що відображає регіональну динаміку попиту й пропозиції.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Поглинання',
+          name: 'Фондовий індекс',
           description:
-            'Двосвічкова формація, де друга свічка повністю перекриває першу',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Доджі',
-          description: 'Свічка з майже рівними цінами відкриття та закриття',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Марубозу',
-          description: 'Свічка з великим тілом та мінімальними тінями',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Ранкова зірка',
-          description: 'Трисвічкова розворотна формація вгору',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Вечірня зірка',
-          description: 'Трисвічкова розворотна формація вниз',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Повішений',
-          description: 'Ведмежа версія молота на вершині тренду',
+            'Середньозважений показник вартості акцій компаній, що входять до його складу, який зводить динаміку цілого ринку до одного числа.',
         },
       ],
     };

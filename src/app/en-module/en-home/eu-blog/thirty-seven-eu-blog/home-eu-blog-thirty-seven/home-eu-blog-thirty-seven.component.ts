@@ -55,20 +55,17 @@ export class HomeEuBlogThirtySevenComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Trading Drawdown: Risk Management and Capital Recovery | Arapov.trade',
+      'Trading Platforms and Broker: How to Choose | Arapov.trade',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Trading drawdown explained: types of drawdown, causes, analysis methods and minimization strategies. Practical guide to risk management and capital recovery.',
+        'How to choose a broker and trading platform: regulation, fees, order execution and what a beginner should check to avoid a dealing-desk scam.',
     });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-04-02' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/drawdowns.webp',
-    });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
+
     this.gerRandom();
   }
   randomArticleRus: any = [];
@@ -192,7 +189,7 @@ export class HomeEuBlogThirtySevenComponent implements OnInit {
     let index = this.artickleServ.ukrArtickles.findIndex(
       (a) => a.linkUkr == path,
     );
-    if (index == 1) {
+    if (index == 0) {
       nextpage =
         this.artickleServ.ukrArtickles[
           this.artickleServ.ukrArtickles.length - 1
@@ -253,35 +250,36 @@ export class HomeEuBlogThirtySevenComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          headline: 'Trading Drawdown: Risk Management and Capital Recovery',
+          headline: 'Platforms, Tools and the Broker: Where a Trader Starts',
           description:
-            'Comprehensive guide to drawdown management: types of drawdown, causes, analysis methods, minimization strategies and capital recovery techniques.',
-          author: {
-            '@id': 'https://arapov.trade/en#person',
-          },
+            'How to choose a broker and trading platform: regulation, fees, order execution and what a beginner should check to avoid a dealing-desk scam.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'Arapov.trade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
-          datePublished: '2026-03-25T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
-          image: 'https://arapov.trade/assets/img/content/drawdowns1.webp',
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://arapov.trade/en/freestudying/drawdowns',
+            '@id': 'https://arapov.trade/en/freestudying/platforms-broker',
           },
-          articleSection: 'Trading',
-          keywords: [
-            'drawdown',
-            'risk management',
-            'capital management',
-            'account recovery',
-            'trading psychology',
-          ],
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/platforms-broker.jpeg',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Trading for beginners',
+          keywords:
+            'trading platform, trading terminal, TradingView, demo account, broker, how to choose a broker',
+          inLanguage: 'en',
         },
       ],
     };
@@ -296,19 +294,18 @@ export class HomeEuBlogThirtySevenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/en#person',
+      '@id': 'https://arapov.trade/#person',
       name: 'Igor Arapov',
       alternateName: [
         'Ігор Арапов',
-        'Арапов Игорь',
-        'I. Arapov',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-
-      url: 'https://arapov.trade/en',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -323,12 +320,12 @@ export class HomeEuBlogThirtySevenComponent implements OnInit {
         'https://t.me/ArapovTrade',
       ],
       jobTitle: [
-        'Independent researcher,',
-        'trader',
-        'author and founder of arapov.trade',
+        'Independent researcher',
+        'Trader',
+        'Author and founder of arapov.trade',
       ],
       description:
-        'Independent researcher, practicing trader, author of books on trading and scientific publications. Specializes in trading psychology and cognitive biases in financial markets.',
+        'Independent researcher, practising trader, author of trading books and scientific publications. Specialises in trading psychology and cognitive biases in financial markets.',
     };
 
     this.addJsonLdSchema(data);
@@ -344,42 +341,42 @@ export class HomeEuBlogThirtySevenComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'What is drawdown in trading?',
+          name: 'Which trading platform should a beginner choose?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Drawdown is a temporary decline in trading capital from its peak value to its current or minimum level. This metric is expressed in percentage or absolute terms and serves as a key indicator for assessing trading strategy risk.',
+            text: 'The logical start is TradingView. The free plan is enough, everything opens in the browser, the charts are clear, and a practice demo account is built in from the start. A program crammed with features only throws a beginner off: at the start a clean chart with volume and an order button is plenty.',
           },
         },
         {
           '@type': 'Question',
-          name: 'What level of drawdown is considered acceptable?',
+          name: 'What is TradingView and how is it useful to a trader?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'For conservative strategies, acceptable drawdown is up to 10-15%, for moderate strategies up to 20-25%, and for aggressive strategies up to 30-35%. Drawdown exceeding 50% is critically dangerous as it requires 100% profit to recover capital.',
+            text: "It's a browser platform for charts and market analysis: quotes for stocks, currencies, crypto and futures, drawing tools and indicators. It's handy because everything sits in one window, you can start for free without installing anything, and your markup and levels are easy to save and return to later.",
           },
         },
         {
           '@type': 'Question',
-          name: 'How to minimize drawdowns in trading?',
+          name: 'Can you trade on TradingView for free?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Key minimization methods include: limiting risk per trade to 1-2% of capital, mandatory use of stop-losses, portfolio diversification, reducing position sizes during losing streaks, and following a trading plan.',
+            text: "Yes, through the demo account, also called paper trading. It's a practice account with real quotes and virtual money, available on any plan including the free one, and it needs no card. The account holds 100,000 virtual dollars, and the balance can be reset whenever you like.",
           },
         },
         {
           '@type': 'Question',
-          name: 'How to recover capital after a deep drawdown?',
+          name: 'Who is a broker and how does it differ from an exchange?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Recovery requires reducing risks, analyzing loss causes, focusing on trade quality over quantity, and gradually increasing positions as the account grows. Avoid attempting to recover quickly through aggressive trading.',
+            text: "A broker is a licensed intermediary firm: it passes your orders to the exchange and keeps a commission for it. The exchange is the trading venue itself, where buyers and sellers meet. The account is opened with the broker, since on their own a retail trader can't get onto the exchange.",
           },
         },
         {
           '@type': 'Question',
-          name: 'What is the difference between maximum and current drawdown?',
+          name: 'What is a bucket shop in trading?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Maximum drawdown represents the largest capital decline from peak to trough across entire trading history. Current drawdown is the immediate decline from the most recent peak, a dynamic metric that changes with each trade.',
+            text: "A bucket shop is an imitation of a broker: the client's trades aren't routed out to the exchange but kept inside the firm, which profits from the client's loss. It gives itself away with excessive leverage, account bonuses, persistent calls and promises of quick money. A simple rule: the louder the income guarantees, the more carefully you check the license and the withdrawal process.",
           },
         },
       ],
@@ -395,39 +392,34 @@ export class HomeEuBlogThirtySevenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'How to Manage Trading Drawdowns',
+      '@id': 'https://arapov.trade/en/freestudying/platforms-broker#howto',
+      name: 'How to assemble a trading setup: platform, demo account, broker',
       description:
-        'Step-by-step guide to controlling drawdowns and recovering trading capital',
+        'A step-by-step walk through what a beginner needs to start: a terminal for analysis, a demo account for practice, and a regulated broker to route trades to the market',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Define acceptable risk level',
-          text: 'Establish maximum acceptable drawdown for your strategy and limit risk per trade to 1-2% of capital.',
+          name: 'Understand what a trading terminal is and why you need one',
+          text: 'A trading terminal is an application that gives access to exchange trading: it holds the chart, a set of analytical tools, and a button to place a trade.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Set up protective orders',
-          text: 'Place stop-losses for every position based on technical analysis, not arbitrary loss amounts.',
+          name: 'Get to grips with TradingView as your main platform',
+          text: "TradingView is a free browser platform where it's convenient to read the chart, draw levels and practise on the built-in demo account.",
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Monitor drawdown metrics',
-          text: 'Track current, average, and maximum drawdown, analyze recovery time and recovery factor.',
+          name: 'Set the chart up for volume and test the system on a demo account',
+          text: 'Strip off the extra indicators, leave the bars, the levels and volume at the bottom, and test the method on a demo account with virtual money.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Apply risk reduction rules',
-          text: 'At 5% drawdown, reduce trade size by half. At 10%, pause trading for analysis.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 5,
-          name: 'Recover capital systematically',
-          text: 'After drawdown, reduce risks, analyze mistakes, focus on quality setups, and gradually increase positions.',
+          name: 'Choose a broker by regulation, not by fees',
+          text: 'A reliable broker has a license from a recognised regulator and segregated funds, and only after that do the fees and withdrawals matter.',
         },
       ],
     };
@@ -442,67 +434,25 @@ export class HomeEuBlogThirtySevenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Drawdown Management Glossary',
+      name: 'Glossary of terms used in this article',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Drawdown',
+          name: 'Trading terminal',
           description:
-            'Temporary decline in trading capital from peak value to current or minimum level',
+            'An application that gives access to exchange trading: it holds the chart, a set of analytical tools, and a button to buy or sell.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Maximum Drawdown',
+          name: 'TradingView',
           description:
-            'The largest capital decline from peak to trough over a specified trading period',
+            'An online browser platform for charts and market analysis that gathers stock, currency, crypto and futures quotes in one window together with drawing tools and indicators.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Recovery Factor',
+          name: 'Broker',
           description:
-            'Ratio of accumulated profit to maximum drawdown, indicating strategy efficiency',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Risk Management',
-          description:
-            'System of controlling trading risks including position sizing and protective orders',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Stop-Loss',
-          description:
-            'Protective order that automatically closes a position at a predetermined loss level',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Recovery Time',
-          description:
-            'Period required to return capital to previous peak after a drawdown',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Diversification',
-          description:
-            'Distribution of capital across different assets to reduce overall portfolio risk',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Volatility',
-          description:
-            'Degree of price variation affecting potential drawdown magnitude',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Win Rate',
-          description:
-            'Percentage of profitable trades affecting drawdown frequency and depth',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Position Sizing',
-          description:
-            'Method of determining trade size based on risk parameters and account balance',
+            'A licensed intermediary through which a trader gets access to exchange trading and places trades, while the broker takes a commission for it.',
         },
       ],
     };

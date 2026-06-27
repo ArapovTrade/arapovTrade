@@ -76,11 +76,8 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
 
   ngOnInit(): void {
     this.lang.setNumber(3);
-    this.removeExistingWebPageSchema();
-    this.addPersoneSchema();
-    this.addProfilePageSchema();
-    this.addEventSchema();
-    this.addBooksSchema();
+   
+    this.addAuthorPageSchema('en');
 
     this.registForm = new FormGroup({
       userName: new FormControl('', Validators.required),
@@ -93,7 +90,7 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
     this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
 
     this.meta.updateTag({ name: 'dateModified', content: '2026-04-24' });
-     this.meta.updateTag({
+    this.meta.updateTag({
       name: 'citation_keywords',
       content:
         'cognitive biases, behavioral finance, trading, UDC 336.76:159.9',
@@ -132,7 +129,7 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   navigateToStudy() {
-    this.router.navigateByUrl('/uk/studying');
+    this.router.navigateByUrl('/en/studying');
   }
 
   private routerSubscription!: Subscription;
@@ -220,442 +217,481 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
     this.flag = true;
     this.flagTrue = false;
   }
-  private addPersoneSchema() {
-    const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]'),
-    ).some((script) => {
-      try {
-        const json = JSON.parse(script.textContent || '{}');
-        return json['@type'] === 'Person' && json['name'] === 'Igor Arapov';
-      } catch {
-        return false;
-      }
-    });
+  
 
-    // Если уже существует — выходим
-    if (exists) return;
+  /**
+   * Author page — trilingual JSON-LD (uk / ru / en).
+   *
+   * ONE method, called per language. Call on each page:
+   *   this.addAuthorPageSchema('uk');   // on /uk
+   *   this.addAuthorPageSchema('ru');   // on /ru
+   *   this.addAuthorPageSchema('en');   // on /en
+   *
+   * Key idea: entities (Person, books, articles, org, event) use LANGUAGE-NEUTRAL @ids
+   * (arapov.trade/#person, not /uk#person), so all three pages describe the SAME entity.
+   * Only the ProfilePage node + a few localized text strings change per language.
+   *
+   * Aligned with Wikidata Q137454477. Amazon/ASIN excluded. Open Library included.
+   * NUFT = Q4315127 (confirmed).
+   */
+  private addAuthorPageSchema(lang: 'uk' | 'ru' | 'en'): void {
+    const SCRIPT_ID = 'author-page-schema';
 
-    // Создаем новый JSON-LD
-    const script = this.document.createElement('script');
-    script.type = 'application/ld+json';
-    script.text = JSON.stringify({
-      '@context': 'https://schema.org',
-      '@type': 'Person',
-      '@id': 'https://arapov.trade/en#person',
-      name: 'Igor Arapov',
-      alternateName: [
-        'Ігор Арапов',
-        'Арапов Игорь',
-        'I. Arapov',
-        'Игорь Арапов',
-        'І. В. Арапов',
-        'Арапов Ігор',
-        'Arapov Igor',
-      ],
-      birthDate: '1990-09-30',
-      givenName: 'Igor',
-      familyName: 'Arapov',
-      jobTitle:
-        'Independent researcher, trader, author and founder of arapov.trade',
-      description:
-        'Independent researcher, practicing trader, author of books on trading and scientific publications. Specializes in trading psychology and cognitive biases in financial markets.',
-
-      hasOccupation: [
-        {
-          '@type': 'Occupation',
-          name: 'Independent Researcher',
-          description:
-            'Independent researcher in the field of behavioral finance and the psychology of investment decisions`',
-        },
-        {
-          '@type': 'Occupation',
-          name: 'Trader',
-          description: 'Practicing trader on financial markets since 2013',
-        },
-      ],
-      affiliation: {
-        '@type': 'Organization',
-        name: 'National University of Food Technologies (NUFT)',
-        url: 'https://nuft.edu.ua/',
-        sameAs: 'https://www.wikidata.org/wiki/Q4315127',
-      },
-
-      nationality: {
-        '@type': 'Country',
-        name: 'Ukraine',
-        alternateName: 'Украина',
-      },
-      knowsLanguage: [
-        { '@type': 'Language', name: 'Russian', alternateName: 'ru' },
-        { '@type': 'Language', name: 'Ukrainian', alternateName: 'uk' },
-        { '@type': 'Language', name: 'English', alternateName: 'en' },
-      ],
-      award: [
-        'Candidate for Master of Sports in Chess',
-        'TradingView Editor`s Choice',
-      ],
-      publishingPrinciples: 'https://arapov.trade/en/freestudying',
-
-      image:
-        'https://arapov.trade/assets/redesignArapovTrade/img/author-page_main-block_img-light.png',
-      worksFor: {
-        '@type': 'Organization',
-        '@id': 'https://arapov.trade/#organization',
-      },
-
-      knowsAbout: [
-        'behavioral finance',
-        'cognitive biases',
-        'trading psychology',
-        'psychology of investment decisions',
-        'behavioural economics',
-        'Smart Money Concepts',
-        'Wyckoff Method',
-        'Volume Analysis',
-        'Technical Analysis',
-        'Cryptocurrency Trading',
-        'Risk Management',
-        'Market Structure',
-      ],
-      hasCredential: [
-        {
-          '@type': 'EducationalOccupationalCredential',
-          name: 'Professional Trader',
-          credentialCategory: 'Experience',
-          dateCreated: '2013',
-        },
-      ],
-      identifier: [
-        {
-          '@type': 'PropertyValue',
-          propertyID: 'Google Knowledge Graph',
-          value: 'kg:/g/11ysn_rm8l',
-        },
-        {
-          '@type': 'PropertyValue',
-          propertyID: 'ORCID',
-          value: '0009-0003-0430-778X',
-        },
-        {
-          '@type': 'PropertyValue',
-          propertyID: 'Wikidata',
-          value: 'Q137454477',
-        },
-      ],
-      sameAs: [
-        'https://www.researchgate.net/scientific-contributions/I-V-Arapov-2341564479',
-        'https://www.semanticscholar.org/author/2421286270',
-        'https://papers.ssrn.com/Sol3/Cf_Dev/AbsByAuth.cfm?per_id=10402456',
-        'https://openalex.org/authors/a5127355048',
-        'https://www.wikidata.org/wiki/Q137454477',
-        'https://ssrn.com/author=10402456',
-        'https://scholar.google.com/citations?hl=uk&user=N440tWQAAAAJ',
-        'https://orcid.org/0009-0003-0430-778X',
-        'https://www.google.com/search?kgmid=/g/11ysn_rm8l',
-        'https://isni.org/isni/0000000529518564',
-        'http://www.irbis-nbuv.gov.ua/cgi-bin/irbis64r_81/cgiirbis_64.exe?Z21ID=&I21DBN=VFEIR&P21DBN=VFEIR&S21STN=1&S21REF=10&S21FMT=fullw&C21COM=S&S21CNR=20&S21P01=3&S21P02=0&S21P03=A=&S21COLORTERMS=0&S21STR=Арапов%2C%20Ігор',
-      ],
-      url: 'https://arapov.trade/en',
-      mainEntityOfPage: 'https://arapov.trade/en',
-
-      subjectOf: [
-        {
-          '@type': 'Article',
-          url: 'https://nuft.edu.ua/news/podiyi/pppro-trejding-i-birzhovu-diyalnist-–-zdobuvacham-osvitnoyi-programi',
-          name: 'Guest Lecture on Trading and Exchange Activity for Digital Business Program Students',
-          image:
-            'https://nuft.edu.ua/assets/images/News/2026/03/19/ekonomteoriya1-18-03-2026.jpg',
-          author: { '@id': 'https://arapov.trade/en#person' },
-          headline:
-            'Про трейдинг і біржову діяльність – здобувачам освітньої програми «Цифровий бізнес»',
-          datePublished: '2026-03-19T00:00:00Z',
-          publisher: {
-            '@type': 'Organization',
-            name: 'National University of Food Technologies',
-            url: 'https://nuft.edu.ua',
-          },
-        },
-      ],
-
-      alumniOf: [
-        {
-          '@type': 'CollegeOrUniversity',
-          name: 'Oles Honchar Dnipro National University',
-          url: 'https://www.dnu.dp.ua/',
-        },
-        {
-          '@type': 'Organization',
-          name: 'Chess Federation',
-          description: 'Candidate Master of Sport in Chess',
-        },
-      ],
-    });
-
-    this.document.head.appendChild(script);
-  }
-
-  private addProfilePageSchema() {
-    const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]'),
-    ).some((script) => {
-      try {
-        const json = JSON.parse(script.textContent || '{}');
-        return (
-          json['@type'] === 'ProfilePage' &&
-          json['name'] === 'About the Author - Igor Arapov'
-        );
-      } catch {
-        return false;
-      }
-    });
-
-    // Если уже существует — выходим
-    if (exists) return;
-
-    // Создаем новый JSON-LD
-    const script = this.document.createElement('script');
-    script.type = 'application/ld+json';
-    script.text = JSON.stringify({
-      '@context': 'https://schema.org',
-      '@type': 'ProfilePage',
-      '@id': 'https://arapov.trade/en#page',
-      url: 'https://arapov.trade/en',
-      name: 'About the Author - Igor Arapov',
-      inLanguage: 'en-EN',
-      mainEntity: {
-      '@id': 'https://arapov.trade/en#person', // Связь с объектом Person
-      '@type': 'Person',
-      'name': 'Igor Arapov',
-      // УКАЗЫВАЕМ ВАШИ НАУЧНЫЕ СТАТЬИ ЗДЕСЬ:
-       
-    },
-      isPartOf: {
-        '@id': 'https://arapov.trade/en/main#website',
-      },
-      dateCreated: '2020-01-01T00:00:00+02:00', // ← Добавьте время
-      dateModified: '2026-04-21T00:00:00+02:00', // ← Добавьте время
-    });
-
-    this.document.head.appendChild(script);
-  }
-  private removeExistingWebPageSchema(): void {
-    const scripts = this.document.querySelectorAll(
-      'script[type="application/ld+json"]',
-    );
-
-    scripts.forEach((script) => {
-      try {
-        const content = JSON.parse(script.textContent || '{}');
-        if (content['@type'] === 'Person') {
-          script.remove();
+    // SPA-safe: on language switch remove the previous graph (and any legacy
+    // per-type scripts from the old deploy) so the head doesn't go stale.
+    this.document.getElementById(SCRIPT_ID)?.remove();
+    this.document
+      .querySelectorAll('script[type="application/ld+json"]')
+      .forEach((s) => {
+        try {
+          const j = JSON.parse(s.textContent || '{}');
+          const t = j['@type'];
+          if (
+            t === 'Person' ||
+            t === 'ProfilePage' ||
+            t === 'Event' ||
+            t === 'Book' ||
+            j['@graph']
+          ) {
+            s.remove();
+          }
+        } catch {
+          /* ignore non-JSON */
         }
-        if (content['@type'] === 'ProfilePage') {
-          script.remove();
-        }
-        if (content['@type'] === 'Event') {
-          script.remove();
-        }
-        if (content['@type'] === 'Book') {
-          script.remove();
-        }
-      } catch (e) {
-        // Игнорируем некорректные JSON (например, из других источников)
-      }
-    });
-  }
+      });
 
-  private addEventSchema() {
-    const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]'),
-    ).some((script) => {
-      try {
-        const json = JSON.parse(script.textContent || '{}');
-        return (
-          json['@type'] === 'Event' &&
-          json['name'] === 'Guest Lecture on Trading and Exchange Activity'
-        );
-      } catch {
-        return false;
-      }
-    });
+    // ── Language-neutral entity ids (shared across uk/ru/en) ──
+    const PERSON_ID = 'https://arapov.trade/#person';
+    const COAUTHOR_ID = 'https://arapov.trade/#inna-sytnyk';
+    const ORG_ID = 'https://arapov.trade/#organization';
+    const WEBSITE_ID = 'https://arapov.trade/#website';
+    const NUFT_ID = 'https://arapov.trade/#nuft';
 
-    // Если уже существует — выходим
-    if (exists) return;
+    // Author page for this language: /uk, /ru, /en
+    const PAGE_URL = `https://arapov.trade/${lang}`;
 
-    // Создаем новый JSON-LD
-    const script = this.document.createElement('script');
-    script.type = 'application/ld+json';
-    script.text = JSON.stringify({
-      '@context': 'https://schema.org',
-      '@type': 'Event',
-      name: 'Guest Lecture on Trading and Exchange Activity',
-      description:
-        'Guest lecture for Digital Business program students at NUFT, covering organized financial markets, CME Group structure and gold futures volume analysis.',
-      startDate: '2026-03-19T00:00:00+02:00',
-      endDate: '2026-03-19T23:59:00+02:00',
-      eventStatus: 'https://schema.org/EventScheduled',
-      image:
-        'https://nuft.edu.ua/assets/images/News/2026/03/19/ekonomteoriya1-18-03-2026.jpg',
-      location: {
-        '@type': 'Place',
-        name: 'National University of Food Technologies',
-        sameAs: 'https://www.wikidata.org/wiki/Q4315127',
-        address: {
-          '@type': 'PostalAddress',
-          streetAddress: '68 Volodymyrska St',
-          addressLocality: 'Kyiv',
-          addressCountry: {
-            '@type': 'Country',
-            name: 'UA',
-          },
-        },
+    // Homepage for this language: uk = site root, ru/en = /{lang}/main
+    const HOME_URL =
+      lang === 'uk'
+        ? 'https://arapov.trade'
+        : `https://arapov.trade/${lang}/main`;
+
+    // ── Localized strings (the only things that differ per language) ──
+    const L = {
+      uk: {
+        inLanguage: 'uk-UA',
+        pageName: 'Про автора — Ігор Арапов',
+        personName: 'Ігор Арапов',
+        jobTitle:
+          'Незалежний дослідник, трейдер, автор і засновник arapov.trade',
+        description:
+          'Незалежний дослідник у сфері поведінкових фінансів та психології трейдингу, ' +
+          'трейдер на фінансових ринках і автор публікацій з трейдингу та поведінкових фінансів.',
+        award: [
+          'Кандидат у майстри спорту з шахів',
+          'Вибір редакції TradingView',
+        ],
+        nuftName: 'Національний університет харчових технологій',
+        coauthorName: 'Інна Ситник',
+        eventName: 'Гостьова лекція з трейдингу та біржової діяльності',
+        eventDesc:
+          'Гостьова лекція для здобувачів освітньої програми «Цифровий бізнес» НУХТ, ' +
+          'присвячена устрою організованих фінансових ринків, структурі CME Group та аналізу фʼючерсу на золото.',
       },
-      offers: {
-        '@type': 'Offer',
-        price: '0',
-        priceCurrency: 'UAH',
-        availability: 'https://schema.org/InStock',
-        url: 'https://nuft.edu.ua/news/podiyi/pppro-trejding-i-birzhovu-diyalnist-–-zdobuvacham-osvitnoyi-programi',
-        validFrom: '2026-03-19T00:00:00+02:00',
+      ru: {
+        inLanguage: 'ru-RU',
+        pageName: 'Об авторе — Игорь Арапов',
+        personName: 'Игорь Арапов',
+        jobTitle:
+          'Независимый исследователь, трейдер, автор и основатель arapov.trade',
+        description:
+          'Независимый исследователь в области поведенческих финансов и психологии трейдинга, ' +
+          'трейдер на финансовых рынках и автор публикаций по трейдингу и поведенческим финансам.',
+        award: [
+          'Кандидат в мастера спорта по шахматам',
+          'Выбор редакции TradingView',
+        ],
+        nuftName: 'Национальный университет пищевых технологий',
+        coauthorName: 'Инна Сытник',
+        eventName: 'Гостевая лекция по трейдингу и биржевой деятельности',
+        eventDesc:
+          'Гостевая лекция для студентов образовательной программы «Цифровой бизнес» НУХТ, ' +
+          'посвящённая устройству организованных финансовых рынков, структуре CME Group и анализу фьючерса на золото.',
       },
-      organizer: {
-        '@type': 'Organization',
-        name: 'NUFT',
-        url: 'https://nuft.edu.ua',
+      en: {
+        inLanguage: 'en',
+        pageName: 'About the author — Igor Arapov',
+        personName: 'Igor Arapov',
+        jobTitle:
+          'Independent researcher, trader, author and founder of arapov.trade',
+        description:
+          'Independent researcher in behavioral finance and trading psychology, ' +
+          'trader in financial markets, and author of trading and behavioral finance publications.',
+        award: [
+          'Candidate Master of Sports in chess',
+          "TradingView Editors' Pick",
+        ],
+        nuftName: 'National University of Food Technologies',
+        coauthorName: 'Inna Sytnyk',
+        eventName: 'Guest lecture on trading and exchange markets',
+        eventDesc:
+          'Guest lecture for students of the "Digital Business" programme at NUFT, on the structure ' +
+          'of organized financial markets, CME Group, and analysis of the gold futures.',
       },
-      url: 'https://nuft.edu.ua/news/podiyi/pppro-trejding-i-birzhovu-diyalnist-–-zdobuvacham-osvitnoyi-programi',
-      performer: {
-        '@type': 'Person',
-        '@id': 'https://arapov.trade/en#person',
-        name: 'Igor Arapov',
-      },
-    });
+    }[lang];
 
-    this.document.head.appendChild(script);
-  }
-
-  private addBooksSchema(): void {
-    const SCRIPT_ID = 'global-schema';
-
-    if (this.document.getElementById(SCRIPT_ID)) return;
-
-    const AUTHOR_ID = 'https://arapov.trade/en#person';
-    const COAUTHOR_ID = 'https://nuft.edu.ua/nnieiy/kafedra-et/#inna-sytnyk';
-
+    // ── Books (identical on every page — titles stay in their own language) ──
     const books = [
       {
-        '@type': 'Book',
-        name: 'Психологія трейдингу: Як керувати емоціями та мислити як професіонал',
-        isbn: '979-8-90243-504-4',
-        inLanguage: 'uk',
-        sameAs: [
-          'https://doi.org/10.5281/zenodo.18396377',
-          'http://www.irbis-nbuv.gov.ua/cgi-bin/irbis64r_81/cgiirbis_64.exe?...',
-        ],
-      },
-      {
-        '@type': 'Book',
-        name: 'Психология трейдинга: Как управлять эмоциями и мыслить как профессионал',
-        isbn: '979-8-90243-081-0',
-        inLanguage: 'ru',
-        sameAs: ['https://doi.org/10.5281/zenodo.18057875'],
-      },
-      {
-        '@type': 'Book',
-        name: 'Trading psychology. How to Master Your Emotions and Think Like a Professional',
-        isbn: '979-8-90243-138-1',
-        inLanguage: 'en',
-        sameAs: [
-          'https://doi.org/10.5281/zenodo.18057306',
-          'http://www.irbis-nbuv.gov.ua/cgi-bin/irbis64r_81/cgiirbis_64.exe?...',
-        ],
-      },
-      {
-        '@type': 'Book',
         name: "Теорія трейдингу. Основи ринку • Технічний аналіз • Об'ємний аналіз",
         isbn: '979-8-90243-730-7',
         inLanguage: 'uk',
         sameAs: [
+          'https://www.wikidata.org/wiki/Q138151887',
           'https://doi.org/10.5281/zenodo.18396300',
-          'http://www.irbis-nbuv.gov.ua/cgi-bin/irbis64r_81/cgiirbis_64.exe?...',
         ],
       },
       {
-        '@type': 'Book',
+        name: 'Trading fundamentals. Market Basics • Technical Analysis • Volume Analysis',
+        isbn: '979-8-90243-734-5',
+        inLanguage: 'en',
+        sameAs: [
+          'https://www.wikidata.org/wiki/Q138214986',
+          'https://doi.org/10.5281/zenodo.18364022',
+        ],
+      },
+      {
         name: 'Теория трейдинга. Основы рынка • Технический анализ • Объёмный анализ',
         isbn: '979-8-90243-075-9',
         inLanguage: 'ru',
         sameAs: ['https://doi.org/10.5281/zenodo.18057849'],
       },
       {
-        '@type': 'Book',
-        name: 'Trading fundamentals. Market Basics • Technical Analysis • Volume Analysis',
-        isbn: '979-8-90243-734-5',
-        inLanguage: 'en',
-        sameAs: [
-          'https://doi.org/10.5281/zenodo.18364022',
-          'http://www.irbis-nbuv.gov.ua/cgi-bin/irbis64r_81/cgiirbis_64.exe?...',
-        ],
-      },
-      {
-        '@type': 'Book',
         name: "Методи аналізу. Технічний аналіз • Об'ємний аналіз • Практика",
         isbn: '979-8-90243-732-1',
         inLanguage: 'uk',
         sameAs: [
+          'https://www.wikidata.org/wiki/Q138152545',
           'https://doi.org/10.5281/zenodo.18396338',
-          'http://www.irbis-nbuv.gov.ua/cgi-bin/irbis64r_81/cgiirbis_64.exe?...',
         ],
       },
       {
-        '@type': 'Book',
+        name: 'Analysis methods. Technical Analysis • Volume Analysis • Practice',
+        isbn: '979-8-90243-755-0',
+        inLanguage: 'en',
+        sameAs: [
+          'https://www.wikidata.org/wiki/Q138215890',
+          'https://doi.org/10.5281/zenodo.18364066',
+        ],
+      },
+      {
         name: 'Методы анализа. Технический анализ • Объёмный анализ • Практика',
         isbn: '979-8-90243-078-0',
         inLanguage: 'ru',
         sameAs: ['https://doi.org/10.5281/zenodo.18057863'],
       },
       {
-        '@type': 'Book',
-        name: 'Analysis methods. Technical Analysis • Volume Analysis • Practice',
-        isbn: '979-8-90243-755-0',
+        name: 'Психологія трейдингу: Як керувати емоціями та мислити як професіонал',
+        isbn: '979-8-90243-504-4',
+        inLanguage: 'uk',
+        sameAs: [
+          'https://www.wikidata.org/wiki/Q137827249',
+          'https://doi.org/10.5281/zenodo.18396377',
+        ],
+      },
+      {
+        name: 'Trading psychology. How to Master Your Emotions and Think Like a Professional',
+        isbn: '979-8-90243-138-1',
         inLanguage: 'en',
         sameAs: [
-          'https://doi.org/10.5281/zenodo.18364066',
-          'http://www.irbis-nbuv.gov.ua/cgi-bin/irbis64r_81/cgiirbis_64.exe?...',
+          'https://www.wikidata.org/wiki/Q138216316',
+          'https://doi.org/10.5281/zenodo.18057306',
         ],
+      },
+      {
+        name: 'Психология трейдинга: Как управлять эмоциями и мыслить как профессионал',
+        isbn: '979-8-90243-081-0',
+        inLanguage: 'ru',
+        sameAs: ['https://doi.org/10.5281/zenodo.18057875'],
       },
     ];
 
     const schema = {
       '@context': 'https://schema.org',
       '@graph': [
-        // 👤 основной автор
+        // ── ProfilePage (per language) ──
         {
-          '@type': 'Person',
-          '@id': AUTHOR_ID,
-          name: 'Igor Arapov',
-          sameAs: ['https://www.wikidata.org/wiki/Q137454477'],
+          '@type': 'ProfilePage',
+          '@id': `${PAGE_URL}#page`,
+          url: PAGE_URL,
+          name: L.pageName,
+          inLanguage: L.inLanguage,
+          isPartOf: { '@id': WEBSITE_ID },
+          mainEntity: { '@id': PERSON_ID },
+          dateCreated: '2020-01-01T00:00:00+02:00',
+          dateModified: '2026-06-20T00:00:00+02:00',
         },
 
-        // 👤 соавтор
+        // ── WebSite (define fully in your global schema; reference here) ──
+        {
+          '@type': 'WebSite',
+          '@id': WEBSITE_ID,
+          url: HOME_URL,
+          name: 'arapov.trade',
+          publisher: { '@id': ORG_ID },
+          inLanguage: ['uk', 'ru', 'en'],
+        },
+
+        // ── Organization ──
+        {
+          '@type': 'Organization',
+          '@id': ORG_ID,
+          name: 'arapov.trade',
+          url: HOME_URL,
+          founder: { '@id': PERSON_ID },
+        },
+
+        // ── Person (canonical, language-neutral @id) ──
+        {
+          '@type': 'Person',
+          '@id': PERSON_ID,
+          name: L.personName,
+          alternateName: [
+            'Igor Arapov',
+            'Ігор Арапов',
+            'Игорь Арапов',
+            'I. V. Arapov',
+            'І. В. Арапов',
+          ],
+          givenName: lang === 'en' ? 'Igor' : lang === 'ru' ? 'Игорь' : 'Ігор',
+          familyName:
+            lang === 'en' ? 'Arapov' : lang === 'ru' ? 'Арапов' : 'Арапов',
+          birthDate: '1990-09-30',
+          jobTitle: L.jobTitle,
+          description: L.description,
+          url: PAGE_URL,
+          mainEntityOfPage: PAGE_URL,
+          image:
+            'https://arapov.trade/assets/redesignArapovTrade/img/author-page_main-block_img-light.png',
+
+          nationality: {
+            '@type': 'Country',
+            name: 'Ukraine',
+            alternateName: 'Україна',
+          },
+          knowsLanguage: [
+            { '@type': 'Language', name: 'Russian', alternateName: 'ru' },
+            { '@type': 'Language', name: 'Ukrainian', alternateName: 'uk' },
+            { '@type': 'Language', name: 'English', alternateName: 'en' },
+          ],
+          hasOccupation: [
+            {
+              '@type': 'Role',
+              startDate: '2013',
+              hasOccupation: {
+                '@type': 'Occupation',
+                name: 'Trader',
+              },
+            },
+            {
+              '@type': 'Role',
+              startDate: '2026',
+              hasOccupation: {
+                '@type': 'Occupation',
+                name: 'Independent Researcher',
+              },
+            },
+          ],
+          affiliation: { '@id': NUFT_ID },
+          worksFor: { '@id': ORG_ID },
+          publishingPrinciples: `https://arapov.trade/${lang}/freestudying`,
+
+          knowsAbout: [
+            'behavioral finance',
+            'trading psychology',
+            'cognitive biases',
+            'psychology of investment decisions',
+            'financial markets',
+            'technical analysis',
+            'volume analysis',
+            'Wyckoff Method',
+            'Smart Money Concepts',
+            'market structure',
+            'risk management',
+          ],
+          alumniOf: {
+            '@type': 'CollegeOrUniversity',
+            name: 'Oles Honchar Dnipro National University',
+            url: 'https://www.dnu.dp.ua/',
+          },
+          hasCredential: [
+            {
+              '@type': 'EducationalOccupationalCredential',
+              name: 'Professional Trader',
+              credentialCategory: 'Experience',
+              dateCreated: '2013',
+            },
+          ],
+          award: L.award,
+
+          identifier: [
+            {
+              '@type': 'PropertyValue',
+              propertyID: 'ORCID',
+              value: '0009-0003-0430-778X',
+            },
+            {
+              '@type': 'PropertyValue',
+              propertyID: 'ISNI',
+              value: '0000 0005 2951 8564',
+            },
+            {
+              '@type': 'PropertyValue',
+              propertyID: 'Wikidata',
+              value: 'Q137454477',
+            },
+            {
+              '@type': 'PropertyValue',
+              propertyID: 'Google Knowledge Graph',
+              value: 'kg:/g/11ysn_rm8l',
+            },
+            {
+              '@type': 'PropertyValue',
+              propertyID: 'Google Scholar',
+              value: 'N440tWQAAAAJ',
+            },
+            {
+              '@type': 'PropertyValue',
+              propertyID: 'OpenAlex',
+              value: 'A5127355048',
+            },
+            {
+              '@type': 'PropertyValue',
+              propertyID: 'Semantic Scholar',
+              value: '2421286270',
+            },
+            { '@type': 'PropertyValue', propertyID: 'SSRN', value: '10402456' },
+            {
+              '@type': 'PropertyValue',
+              propertyID: 'ResearchGate',
+              value: '2341564479',
+            },
+            {
+              '@type': 'PropertyValue',
+              propertyID: 'Goodreads',
+              value: '66848566',
+            },
+            {
+              '@type': 'PropertyValue',
+              propertyID: 'Open Library',
+              value: 'OL16073686A',
+            },
+          ],
+          sameAs: [
+            'https://www.wikidata.org/wiki/Q137454477',
+            'https://orcid.org/0009-0003-0430-778X',
+            'https://isni.org/isni/0000000529518564',
+            `https://scholar.google.com/citations?user=N440tWQAAAAJ&hl=${lang}`,
+            'https://openalex.org/A5127355048',
+            'https://www.semanticscholar.org/author/2421286270',
+            'https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=10402456',
+            'https://www.researchgate.net/scientific-contributions/2341564479',
+            'https://www.google.com/search?kgmid=/g/11ysn_rm8l',
+            'https://www.linkedin.com/in/igor-arapov',
+            'https://medium.com/@arapov.trade',
+            'https://www.youtube.com/channel/UCebXvNxbdin-dvXz4g8Jp4Q',
+            'https://www.goodreads.com/author/show/66848566',
+            'https://openlibrary.org/authors/OL16073686A',
+            'https://bookwire.bowker.com/author/Igor-Arapov-40225801',
+            'http://www.irbis-nbuv.gov.ua/cgi-bin/irbis64r_81/cgiirbis_64.exe?Z21ID=&I21DBN=VFEIR&P21DBN=VFEIR&S21STN=1&S21REF=10&S21FMT=fullw&C21COM=S&S21CNR=20&S21P01=3&S21P02=0&S21P03=A=&S21COLORTERMS=0&S21STR=%D0%90%D1%80%D0%B0%D0%BF%D0%BE%D0%B2%2C%20%D0%86%D0%B3%D0%BE%D1%80',
+          ],
+
+          subjectOf: [
+            {
+              '@type': 'NewsArticle',
+              name: 'Про трейдинг і біржову діяльність – здобувачам освітньої програми «Цифровий бізнес»',
+              headline:
+                'Про трейдинг і біржову діяльність – здобувачам освітньої програми «Цифровий бізнес»',
+              author: {
+                '@type': 'Organization',
+                name: 'National University of Food Technologies',
+                url: 'https://nuft.edu.ua/',
+              },
+              url: 'https://nuft.edu.ua/news/podiyi/pppro-trejding-i-birzhovu-diyalnist-%E2%80%93-zdobuvacham-osvitnoyi-programi',
+              datePublished: '2026-03-19T14:00:00+02:00',
+              inLanguage: 'uk',
+              image:
+                'https://nuft.edu.ua/assets/images/News/2026/03/19/ekonomteoriya1-18-03-2026.jpg',
+              publisher: { '@id': NUFT_ID },
+            },
+            {
+              '@type': 'NewsArticle',
+              headline:
+                'Незважаючи на війну та кризи: Ігор Арапов пояснює, хто завжди заробляє на фондових ринках',
+              name: 'Незважаючи на війну та кризи: Ігор Арапов пояснює, хто завжди заробляє на фондових ринках',
+              author: {
+                '@type': 'Organization',
+                name: 'ua.news',
+                url: 'https://ua.news/',
+              },
+              datePublished: '2026-04-15T19:00:00+02:00',
+              image:
+                'https://cdn-cabinet.ua.news/uploads/images/sulzhenko/kaver_arapov.webp',
+              url: 'https://ua.news/ua/money/nezvazhaiuchi-na-viinu-ta-krizi-igor-arapov-poiasniuie-khto-zavzhdi-zarobliaie-na-fondovikh-rinkakh',
+              inLanguage: 'uk',
+              publisher: {
+                '@type': 'Organization',
+                name: 'ua.news',
+                url: 'https://ua.news',
+              },
+            },
+          ],
+        },
+
+        // ── Co-author ──
         {
           '@type': 'Person',
           '@id': COAUTHOR_ID,
-          name: 'Inna Sytnyk',
-          sameAs: ['https://www.wikidata.org/wiki/Q138787550'],
+          name: L.coauthorName,
+          alternateName: [
+            'Inna Sytnyk',
+            'Інна Ситник',
+            'Инна Сытник',
+            'I. P. Sytnyk',
+          ],
+          jobTitle: 'Doctor of Science, Head of Department',
+          affiliation: { '@id': NUFT_ID },
+          sameAs: [
+            'https://www.wikidata.org/wiki/Q138787550',
+            'https://orcid.org/0000-0002-3906-770X',
+          ],
         },
 
-        // 📄 статья (журнал)
+        // ── NUFT (shared) ──
+        {
+          '@type': 'CollegeOrUniversity',
+          '@id': NUFT_ID,
+          name: L.nuftName,
+          alternateName: 'НУХТ',
+          url: 'https://nuft.edu.ua',
+          sameAs: 'https://www.wikidata.org/wiki/Q4315127',
+        },
+
+        // ── Journal article (Igor + Inna) ──
         {
           '@type': 'ScholarlyArticle',
+          '@id': 'https://arapov.trade/#article-investplan',
           name: 'Психологія інвестиційних рішень: когнітивні упередження роздрібних трейдерів на фінансових ринках',
           headline:
             'Psychology of Investment Decisions: Cognitive Biases of Retail Traders in Financial Markets',
-          sameAs: ['https://doi.org/10.32702/2306-6814.2026.4.96'],
-          image:
-            'https://arapov.trade/assets/redesignArapovTrade/img/author-page_main-block_img-light.png',
-          datePublished: '2026-02-17T00:00:00Z',
-          inLanguage: 'ru',
+          inLanguage: 'uk',
+          datePublished: '2026-02-17T14:00:00+02:00',
+          author: [{ '@id': PERSON_ID }, { '@id': COAUTHOR_ID }],
+          url: 'https://nayka.com.ua/index.php/investplan/article/view/9062/9212',
+          sameAs: [
+            'https://www.wikidata.org/wiki/Q138504696',
+            'https://doi.org/10.32702/2306-6814.2026.4.96',
+          ],
           identifier: {
             '@type': 'PropertyValue',
             propertyID: 'UDC',
@@ -663,23 +699,29 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
           },
           isPartOf: {
             '@type': 'Periodical',
-            name: 'Investytsiyi: praktyka ta dosvid',
+            name: 'Інвестиції: практика та досвід',
             issn: '2306-6814',
           },
-          author: [{ '@id': AUTHOR_ID }, { '@id': COAUTHOR_ID }],
-        },
-
-        // 📄 статья (SSRN / Zenodo)
-        {
-          '@type': 'ScholarlyArticle',
-          name: "From Tilt to System: A Practitioner's Framework for Managing Cognitive Biases in Retail Trading",
-          headline:
-            'From Tilt to System: A Practitioner`s Framework for Managing Cognitive Biases in Retail Trading',
           image:
             'https://arapov.trade/assets/redesignArapovTrade/img/author-page_main-block_img-light.png',
-          sameAs: ['https://doi.org/10.5281/ZENODO.18792055'],
-          url: 'https://ssrn.com/abstract=6254718',
+        },
+
+        // ── SSRN preprint ──
+        {
+          '@type': 'ScholarlyArticle',
+          '@id': 'https://arapov.trade/#article-ssrn',
+          name: "From Tilt to System: A Practitioner's Framework for Managing Cognitive Biases in Retail Trading",
+          headline:
+            "From Tilt to System: A Practitioner's Framework for Managing Cognitive Biases in Retail Trading",
+          creativeWorkStatus: 'Preprint',
           inLanguage: 'en',
+          datePublished: '2026-02-17T14:00:00+02:00',
+          author: { '@id': PERSON_ID },
+          url: 'https://ssrn.com/abstract=6254718',
+          sameAs: [
+            'https://www.wikidata.org/wiki/Q138496096',
+            'https://doi.org/10.5281/zenodo.18792055',
+          ],
           identifier: {
             '@type': 'PropertyValue',
             propertyID: 'UDC',
@@ -689,14 +731,74 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
             '@type': 'Organization',
             name: 'Social Science Research Network (SSRN)',
           },
-          author: { '@id': AUTHOR_ID },
+          image:
+            'https://arapov.trade/assets/redesignArapovTrade/img/author-page_main-block_img-light.png',
         },
 
-        // 📚 книги
-        ...books.map((book) => ({
-          ...book,
-          author: { '@id': AUTHOR_ID },
+        // ── Wikibook ──
+        {
+          '@type': 'Book',
+          '@id': 'https://arapov.trade/#wikibook',
+          name: 'Основи трейдингу',
+          alternateName: ['Основы трейдинга', 'Fundamentals of Trading'],
+          bookFormat: 'https://schema.org/EBook',
+          inLanguage: ['uk', 'ru', 'en'],
+          author: { '@id': PERSON_ID },
+          datePublished: '2025-12-25T14:00:00+02:00',
+          sameAs: [
+            'https://www.wikidata.org/wiki/Q137644825',
+            'https://uk.wikibooks.org/wiki/Основи_трейдингу',
+            'https://ru.wikibooks.org/wiki/Основы_трейдинга',
+            'https://en.wikibooks.org/wiki/Fundamentals_of_Trading',
+          ],
+        },
+
+        // ── Printed books ──
+        ...books.map((b) => ({
+          '@type': 'Book',
+          name: b.name,
+          isbn: b.isbn,
+          inLanguage: b.inLanguage,
+          author: { '@id': PERSON_ID },
+          publisher: { '@id': ORG_ID },
+          sameAs: b.sameAs,
         })),
+
+        // ── Guest lecture ──
+        {
+          '@type': 'Event',
+          '@id': 'https://arapov.trade/#lecture-nuft-2026',
+          name: L.eventName,
+          description: L.eventDesc,
+          startDate: '2026-03-19T14:00:00+02:00',
+          endDate: '2026-03-19T15:30:00+02:00',
+          eventStatus: 'https://schema.org/EventScheduled',
+          eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+          image:
+            'https://nuft.edu.ua/assets/images/News/2026/03/19/ekonomteoriya1-18-03-2026.jpg',
+          url: 'https://nuft.edu.ua/news/podiyi/pppro-trejding-i-birzhovu-diyalnist-%E2%80%93-zdobuvacham-osvitnoyi-programi',
+          location: {
+            '@type': 'Place',
+            '@id': NUFT_ID,
+            address: {
+              '@type': 'PostalAddress',
+              streetAddress: 'вул. Володимирська, 68',
+              addressLocality: 'Київ',
+              postalCode: '01601',
+              addressCountry: 'UA',
+            },
+          },
+          organizer: { '@id': NUFT_ID },
+          performer: { '@id': PERSON_ID },
+          offers: {
+            '@type': 'Offer',
+            price: '0',
+            priceCurrency: 'UAH',
+            availability: 'https://schema.org/InStock',
+            url: 'https://nuft.edu.ua/news/podiyi/pppro-trejding-i-birzhovu-diyalnist-%E2%80%93-zdobuvacham-osvitnoyi-programi',
+            validFrom: '2026-03-19T00:00:00+02:00',
+          },
+        },
       ],
     };
 
@@ -704,7 +806,6 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
     script.id = SCRIPT_ID;
     script.type = 'application/ld+json';
     script.text = JSON.stringify(schema);
-
     this.document.head.appendChild(script);
   }
 }

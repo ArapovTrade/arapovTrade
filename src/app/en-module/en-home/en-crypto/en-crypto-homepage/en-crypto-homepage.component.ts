@@ -27,7 +27,7 @@ export class EnCryptoHomepageComponent
     private router: Router,
     private cdr: ChangeDetectorRef,
     @Inject(DOCUMENT) private document: Document,
-    private themeService: ThemeservService
+    private themeService: ThemeservService,
   ) {}
 
   ngAfterViewInit() {
@@ -49,9 +49,7 @@ export class EnCryptoHomepageComponent
   ngOnInit() {
     this.removeExistingWebPageSchema();
 
-    this.titleService.setTitle(
-      'Free trading education from Igor Arapov'
-    );
+    this.titleService.setTitle('Free trading education from Igor Arapov');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
@@ -136,7 +134,7 @@ export class EnCryptoHomepageComponent
 
   private removeExistingWebPageSchema(): void {
     const scripts = this.document.querySelectorAll(
-      'script[type="application/ld+json"]'
+      'script[type="application/ld+json"]',
     );
 
     scripts.forEach((script) => {
@@ -151,9 +149,57 @@ export class EnCryptoHomepageComponent
     });
   }
 
+  // private addWebSiteSchema() {
+  //   const exists = Array.from(
+  //     this.document.querySelectorAll('script[type="application/ld+json"]')
+  //   ).some((script) => {
+  //     try {
+  //       const json = JSON.parse(script.textContent || '{}');
+  //       return json['@type'] === 'WebSite' && json['name'] === 'Arapov.Trade';
+  //     } catch {
+  //       return false;
+  //     }
+  //   });
+
+  //   // Если уже существует — выходим
+  //   if (exists) return;
+
+  //   // Создаем новый JSON-LD
+  //   const script = this.document.createElement('script');
+  //   script.type = 'application/ld+json';
+  //   script.text = JSON.stringify({
+  //     '@context': 'https://schema.org',
+  //     '@type': 'WebSite',
+  //     '@id': 'https://arapov.trade/en/main#website',
+  //     url: 'https://arapov.trade/en/main',
+  //     name: 'Arapov.Trade',
+  //     alternateName: 'Trading Education',
+  //     description:
+  //       'Free trading education by Igor Arapov. 151+ articles, 78+ video lessons.',
+  //     inLanguage: 'en-US',
+  //     publisher: {
+  //       '@type': 'Organization',
+  //       '@id': 'https://arapov.trade/#organization',
+  //       name: 'Arapov.Trade',
+  //       url: 'https://arapov.trade',
+  //       logo: {
+  //         '@type': 'ImageObject',
+  //         url: 'https://arapov.trade/favicon.ico',
+  //       },
+  //       founder: {
+  //         '@type': 'Person',
+  //         '@id': 'https://arapov.trade/en#person',
+  //         name: 'Арапов Ігор Віталійович',
+  //       },
+  //     },
+  //   });
+
+  //   this.document.head.appendChild(script);
+  // }
+
   private addWebSiteSchema() {
     const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]')
+      this.document.querySelectorAll('script[type="application/ld+json"]'),
     ).some((script) => {
       try {
         const json = JSON.parse(script.textContent || '{}');
@@ -172,8 +218,8 @@ export class EnCryptoHomepageComponent
     script.text = JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'WebSite',
-      '@id': 'https://arapov.trade/en/main#website',
-      url: 'https://arapov.trade/en/main',
+      '@id': 'https://arapov.trade/#website',
+      url: 'https://arapov.trade/en',
       name: 'Arapov.Trade',
       alternateName: 'Trading Education',
       description:
@@ -190,8 +236,8 @@ export class EnCryptoHomepageComponent
         },
         founder: {
           '@type': 'Person',
-          '@id': 'https://arapov.trade/en#person',
-          name: 'Арапов Ігор Віталійович',
+          '@id': 'https://arapov.trade/#person',
+          name: 'Igor Arapov',
         },
       },
     });

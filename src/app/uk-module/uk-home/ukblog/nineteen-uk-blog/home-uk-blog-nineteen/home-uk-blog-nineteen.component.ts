@@ -56,17 +56,17 @@ export class HomeUkBlogNineteenComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Метод Вайкоффа у трейдингу | Повний посібник 2025',
+      'Токеноміка: як оцінити криптопроєкт | Arapov.trade',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
 
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
 
     this.meta.updateTag({
       name: 'description',
       content:
-        'Метод Вайкоффа у трейдингу: детальний посібник з аналізу ринкових фаз, виявлення дій великих гравців та побудови торгових стратегій.',
+        'Що таке токеноміка, як розподіл монет, емісія й розблокування впливають на ціну і чому за нею видно ризик обвалу ще до купівлі токена.',
     });
 
     this.gerRandom();
@@ -274,83 +274,35 @@ export class HomeUkBlogNineteenComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          mainEntityOfPage: {
-            '@type': 'WebPage',
-            '@id': 'https://arapov.trade/uk/freestudying/wyckoffmethod',
-          },
-          headline: 'Метод Вайкоффа у трейдингу | Повний посібник 2025',
+          headline: 'Токеноміка: що це і як оцінити криптопроєкт',
           description:
-            'Метод Вайкоффа у трейдингу: детальний посібник з аналізу ринкових фаз, виявлення дій великих гравців та побудови торгових стратегій.',
-          image: 'https://arapov.trade/assets/img/content/wyckoffmethod.webp',
-          datePublished: '2025-03-15T00:00:00+02:00',
-          dateModified: '2026-04-15T00:00:00Z',
-          inLanguage: 'uk',
-          author: {
-            '@id': 'https://arapov.trade/uk#person',
-          },
+            'Що таке токеноміка, як розподіл монет, емісія й розблокування впливають на ціну і чому за нею видно ризик обвалу ще до купівлі токена.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
             '@id': 'https://arapov.trade/#organization',
             name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
-          video: {
-            '@type': 'VideoObject',
-            name: 'Метод Вайкоффа для начинающих трейдеров: полное руководство по объемному анализу',
-            description:
-              'Метод Вайкоффа для начинающих трейдеров: полное руководство по объемному анализу рынка. Узнайте, как следовать за крупными деньгами и использовать фазы накопления и распределения.',
-            thumbnailUrl: [
-              'https://img.youtube.com/vi/-oEWnPGRVqs/maxresdefault.jpg',
-              'https://img.youtube.com/vi/-oEWnPGRVqs/hqdefault.jpg',
-            ],
-            uploadDate: '2024-06-15T00:00:00+02:00',
-            duration: 'PT7M41S',
-            contentUrl: 'https://www.youtube.com/watch?v=-oEWnPGRVqs',
-            embedUrl: 'https://www.youtube.com/embed/-oEWnPGRVqs',
-            inLanguage: 'ru',
-            keywords:
-              'метод Вайкоффа, Wyckoff, объемный анализ, VSA, фазы рынка, накопление, распределение',
-            hasPart: [
-              {
-                '@type': 'Clip',
-                name: 'Введение в метод Вайкоффа для начинающих',
-                startOffset: 0,
-                endOffset: 45,
-                url: 'https://www.youtube.com/watch?v=-oEWnPGRVqs&t=0',
-              },
-              {
-                '@type': 'Clip',
-                name: 'История метода Вайкоффа - почему работает с 1905 года',
-                startOffset: 45,
-                endOffset: 195,
-                url: 'https://www.youtube.com/watch?v=-oEWnPGRVqs&t=45',
-              },
-              {
-                '@type': 'Clip',
-                name: 'Суть концепции Вайкоффа - следуйте за профессионалами',
-                startOffset: 195,
-                endOffset: 280,
-                url: 'https://www.youtube.com/watch?v=-oEWnPGRVqs&t=195',
-              },
-              {
-                '@type': 'Clip',
-                name: 'Фазы рынка: накопление и распределение',
-                startOffset: 280,
-                endOffset: 380,
-                url: 'https://www.youtube.com/watch?v=-oEWnPGRVqs&t=280',
-              },
-              {
-                '@type': 'Clip',
-                name: 'Как крупный капитал собирает и распределяет позиции',
-                startOffset: 380,
-                endOffset: 461,
-                url: 'https://www.youtube.com/watch?v=-oEWnPGRVqs&t=380',
-              },
-            ],
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': 'https://arapov.trade/uk/freestudying/tokenomics',
           },
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/tokenomics.jpeg',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Криптовалюта',
+          keywords: 'токеноміка, криптовалюти',
+          inLanguage: 'uk',
         },
       ],
     };
@@ -365,18 +317,18 @@ export class HomeUkBlogNineteenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/uk#person',
-      name: 'Ігор Арапов',
+      '@id': 'https://arapov.trade/#person',
+      name: 'Igor Arapov',
       alternateName: [
-        'Igor Arapov',
-        'Арапов Игорь',
-        'I. Arapov',
+        'Ігор Арапов',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/uk',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -412,42 +364,42 @@ export class HomeUkBlogNineteenComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'Що таке метод Вайкоффа?',
+          name: 'Що таке токеноміка простими словами?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Метод Вайкоффа — це аналітична система для розуміння поведінки великих інституційних учасників ринку через аналіз цінових графіків та обсягів торгів.',
+            text: 'Це внутрішня економіка токена: правила його випуску, розподілу, корисності та стимулів. Разом вони визначають баланс попиту і пропозиції, а отже, багато в чому й долю ціни токена.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Які фази ринку виділяє Вайкофф?',
+          name: 'Які параметри токеноміки найважливіші?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Вайкофф виділяє акумуляцію, markup, дистрибуцію та markdown.',
+            text: 'Пропозиція (загальна і в обігу), емісія та інфляція, розподіл токенів за групами, графік вестингу і, головне, корисність токена. Саме реальне застосування дає попиту опору, а не лише хайп.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Що таке спринг?',
+          name: 'Які червоні прапорці в токеноміці?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Спринг — хибний пробій нижньої межі діапазону накопичення для збору ліквідності.',
+            text: 'Короткий вестинг команди або відсутність графіка розблокувань, величезна частка токенів в інсайдерів і відсутність реальної користі в токена. Останнє перетворює проєкт на чисту спекуляцію, як у мемкоїнів.',
           },
         },
         {
           '@type': 'Question',
-          name: "Навіщо потрібен об'ємний аналіз?",
+          name: 'Чи гарантує хороша токеноміка зростання ціни?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Обсяги підтверджують справжність цінових рухів та виявляють присутність великих гравців.',
+            text: 'Ні. Хороша токеноміка це лише одна з умов і фільтр, що відсіює завідомо слабкі проєкти. Її відсутність майже завжди поганий знак, але її наявність не обіцяє прибутку. Рішення і ризик завжди лишаються на вас.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Чи працює Вайкофф на криптовалютах?',
+          name: 'Де дивитися графік розблокувань токена і коли буде анлок?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Так, криптовалютний ринок демонструє яскраві патерни Вайкоффа завдяки концентрації капіталу.',
+            text: 'Календар розблокувань показують профільні сервіси на кшталт TokenUnlocks та агрегатори на кшталт CoinGecko, а першоджерело це технічний опис проєкту. Дивіться не на абсолютне число токенів, а на частку від обігу і на тип розблокування: великий кліфф тисне на ціну сильніше, ніж плавний лінійний вестинг.',
           },
         },
       ],
@@ -463,37 +415,34 @@ export class HomeUkBlogNineteenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'Як торгувати за методом Вайкоффа',
+      '@id': 'https://arapov.trade/uk/freestudying/tokenomics#howto',
+      name: 'Як розібратися і застосувати: Токеноміка',
+      description:
+        'Покроковий розбір теми та її практичне застосування в торгівлі',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Визначте фазу ринку',
-          text: 'Проаналізуйте графік на старшому таймфреймі',
+          name: 'Розберіться, що таке токеноміка простими словами',
+          text: 'Токеноміка — це внутрішня економіка криптотокена: сукупність правил його випуску, розподілу, корисності та стимулів для власників, які разом визначають баланс попиту і пропозиції.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Знайдіть патерни',
-          text: 'Ідентифікуйте спринг або аптраст',
+          name: 'Ключові параметри токеноміки',
+          text: 'Щоб оцінити токеноміку, достатньо розібрати кілька ключових параметрів.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Підтвердіть обсягами',
-          text: "Перевірте сигнал за допомогою об'ємного аналізу",
+          name: 'Дізнайтеся, як відрізнити продуманий проєкт від пустушки',
+          text: 'Зводячи все докупи, хорошу токеноміку видають кілька ознак: обмежена і зрозуміла пропозиція, розумний розподіл без надмірної частки в інсайдерів, прозорий і не надто короткий графік вестингу та, головне, реальна корисність токена.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Відкрийте позицію',
-          text: 'Встановіть вхід та стоп-лосс',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 5,
-          name: 'Керуйте ризиком',
-          text: 'Перенесіть стоп у беззбиток після досягнення цілі',
+          name: 'Вестинг, кліфф і анлоки: як читати графік розблокування',
+          text: 'Вестинг це графік заморозки, анлок це подія за ним; лінійний розблок плавний, кліфф виходить разом; дивіться частку від обігу і календар розблокувань.',
         },
       ],
     };
@@ -508,47 +457,25 @@ export class HomeUkBlogNineteenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Глосарій Вайкоффа',
+      name: 'Глосарій термінів статті',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Акумуляція',
-          description: 'Фаза прихованого накопичення позицій',
+          name: 'Токеноміка',
+          description:
+            'Внутрішня економіка криптотокена: сукупність правил його випуску, розподілу, корисності та стимулів для власників, які разом визначають баланс попиту і пропозиції.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Дистрибуція',
-          description: 'Фаза розподілу позицій',
+          name: 'Анлок',
+          description:
+            'Анлок (розблокування) це подія, коли чергова порція заздалегідь заморожених токенів виходить в обіг за графіком вестингу.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Спринг',
-          description: 'Хибний пробій підтримки',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Аптраст',
-          description: 'Хибний пробій опору',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Markup',
-          description: 'Висхідний тренд',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Markdown',
-          description: 'Спадний тренд',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Дельта обсягу',
-          description: 'Різниця покупок та продажів',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Профіль обсягу',
-          description: 'Розподіл активності за рівнями',
+          name: 'Кліфф',
+          description:
+            'Кліфф це разове розблокування великого траншу токенів в одну дату, яке при слабкому попиті здатне помітно обвалити ціну.',
         },
       ],
     };

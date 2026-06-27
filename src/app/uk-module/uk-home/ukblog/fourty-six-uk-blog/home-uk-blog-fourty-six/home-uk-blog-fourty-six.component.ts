@@ -28,7 +28,7 @@ export class HomeUkBlogFourtySixComponent implements OnInit {
     private themeService: ThemeservService,
     private artickleServ: ArticlesService,
     private renderer: Renderer2,
-    @Inject(DOCUMENT) private document: Document
+    @Inject(DOCUMENT) private document: Document,
   ) {}
   private routerSubscription!: Subscription;
   private themeSubscription!: Subscription;
@@ -56,21 +56,16 @@ export class HomeUkBlogFourtySixComponent implements OnInit {
     this.grr = this.artickleServ.selectedGroups;
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
-    this.titleService.setTitle(
-      'Bitcoin Pizza Day — перша покупка за біткоїни | Значення та уроки'
-    );
+    this.titleService.setTitle('Ковзні середні в трейдингу | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Bitcoin Pizza Day — історія першої покупки за біткоїни 22 травня 2010 року. Дізнайтеся, як 10 000 BTC обміняли на дві піци та чому ця дата змінила фінансовий світ.',
+        'Ковзні середні: SMA та EMA, вибір періоду, перетини та використання як динамічної підтримки. Як застосовувати і де вони запізнюються.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-27' });this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/pizzaday.webp',
-    });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
 
     this.gerRandom();
   }
@@ -88,7 +83,6 @@ export class HomeUkBlogFourtySixComponent implements OnInit {
       title: 'Базовий курс',
       link: 'https://arapov.trade/uk/freestudying/freeeducation',
     },
-     
   ];
 
   onGroupChange(event: Event) {
@@ -158,7 +152,7 @@ export class HomeUkBlogFourtySixComponent implements OnInit {
     // Показываем 5 случайных статей при фокусе, если инпут пуст
     if (!this.searchQuery) {
       const shuffled = [...this.artickleServ.ukrArtickles].sort(
-        () => Math.random() - 0.5
+        () => Math.random() - 0.5,
       );
       this.displayedArticles = shuffled.slice(0, this.maxResults);
     }
@@ -173,7 +167,7 @@ export class HomeUkBlogFourtySixComponent implements OnInit {
   onSearchChange() {
     // Логика асинхронного поиска
     const filtered = this.artickleServ.ukrArtickles.filter((a) =>
-      a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase())
+      a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase()),
     );
     this.displayedArticles = filtered.slice(0, this.maxResults);
   }
@@ -195,7 +189,7 @@ export class HomeUkBlogFourtySixComponent implements OnInit {
     const path: string =
       this.router.url.split('/')[this.router.url.split('/').length - 1];
     let index = this.artickleServ.ukrArtickles.findIndex(
-      (a) => a.linkUkr == path
+      (a) => a.linkUkr == path,
     );
 
     if (this.artickleServ.ukrArtickles.length - 1 == index) {
@@ -212,7 +206,7 @@ export class HomeUkBlogFourtySixComponent implements OnInit {
     const path: string =
       this.router.url.split('/')[this.router.url.split('/').length - 1];
     let index = this.artickleServ.ukrArtickles.findIndex(
-      (a) => a.linkUkr == path
+      (a) => a.linkUkr == path,
     );
 
     if (index == 1) {
@@ -237,7 +231,7 @@ export class HomeUkBlogFourtySixComponent implements OnInit {
     ];
 
     const scripts = this.document.querySelectorAll(
-      'script[type="application/ld+json"]'
+      'script[type="application/ld+json"]',
     );
 
     scripts.forEach((script) => {
@@ -250,7 +244,7 @@ export class HomeUkBlogFourtySixComponent implements OnInit {
 
         const shouldRemove = candidates.some(
           (entry: any) =>
-            entry['@type'] && typesToRemove.includes(entry['@type'])
+            entry['@type'] && typesToRemove.includes(entry['@type']),
         );
 
         if (shouldRemove) {
@@ -278,40 +272,37 @@ export class HomeUkBlogFourtySixComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          '@id': 'https://arapov.trade/uk/freestudying/pizzaday#article',
           headline:
-            'Bitcoin Pizza Day — перша покупка за біткоїни в історії криптовалют',
+            'Ковзні середні в трейдингу: SMA, EMA і де вони реально працюють',
           description:
-            'Bitcoin Pizza Day — історія першої покупки за біткоїни 22 травня 2010 року. Дізнайтеся, як 10 000 BTC обміняли на дві піци та чому ця дата змінила фінансовий світ.',
-          datePublished: '2025-04-15T00:00:00Z',
-         dateModified: '2026-04-15T00:00:00Z',
-          author: {
-            '@id': 'https://arapov.trade/uk#person',
-          },
+            'Ковзні середні: SMA та EMA, вибір періоду, перетини та використання як динамічної підтримки. Як застосовувати і де вони запізнюються.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'Arapov Trade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://arapov.trade/uk/freestudying/pizzaday',
+            '@id': 'https://arapov.trade/uk/freestudying/moving-averages',
           },
           image: {
             '@type': 'ImageObject',
-            url: 'https://arapov.trade/assets/img/content/pizzaday1.webp',
+            url: 'https://arapov.trade/assets/img/content/movingaverages.webp',
+            width: 1200,
+            height: 630,
           },
-          articleSection: 'Криптовалюти',
-          keywords: [
-            'Bitcoin Pizza Day',
-            'перша покупка за біткоїни',
-            'Ласло Хейніц',
-            'історія біткоїна',
-            'криптовалюти',
-          ],
+          articleSection: 'Технічний аналіз',
+          keywords:
+            'ковзні середні, що таке ковзна середня, різниця SMA EMA, золотий хрест хрест смерті, 200-денна ковзна середня, ковзні середні для трейдингу',
+          inLanguage: 'uk',
         },
       ],
     };
@@ -326,18 +317,18 @@ export class HomeUkBlogFourtySixComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/uk#person',
-      name: 'Ігор Арапов',
+      '@id': 'https://arapov.trade/#person',
+      name: 'Igor Arapov',
       alternateName: [
-        'Igor Arapov',
-              'Арапов Игорь',
-              'I. Arapov',
-              'Игорь Арапов',
-              'І. В. Арапов',
-              'Арапов Ігор',
-              'Arapov Igor',
+        'Ігор Арапов',
+        'Игорь Арапов',
+        'Арапов Игорь',
+        'Арапов Ігор',
+        'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/uk',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -349,9 +340,13 @@ export class HomeUkBlogFourtySixComponent implements OnInit {
         'https://github.com/ArapovTrade',
         'https://ua.linkedin.com/in/arapovtrade',
         'https://www.youtube.com/@ArapovTrade',
-        'https://t.me/ArapovTrade'
+        'https://t.me/ArapovTrade',
       ],
-       jobTitle: ['Незалежний дослідник', 'трейдер', 'автор і засновник arapov.trade'],
+      jobTitle: [
+        'Незалежний дослідник',
+        'трейдер',
+        'автор і засновник arapov.trade',
+      ],
       description:
         'Незалежний дослідник, практикуючий трейдер, автор книг з трейдингу та наукових публікацій. Спеціалізується на психології трейдингу та когнітивних упередженнях на фінансових ринках.',
     };
@@ -366,46 +361,45 @@ export class HomeUkBlogFourtySixComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
-      '@id': 'https://arapov.trade/uk/freestudying/pizzaday#faq',
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'Що таке Bitcoin Pizza Day?',
+          name: 'Що таке ковзна середня простими словами?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: "Bitcoin Pizza Day — це пам'ятна дата 22 травня, коли у 2010 році програміст Ласло Хейніц здійснив першу зареєстровану покупку реального товару за біткоїни, обмінявши 10 000 BTC на дві піци.",
+            text: 'Це лінія, яка усереднює ціну за обрану кількість свічок і згладжує ринковий шум, показуючи загальний напрямок тренду. З кожною новою свічкою вікно розрахунку зсувається, і середнє перераховується наново.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Скільки коштували 10 000 біткоїнів у 2010 році?',
+          name: 'Яка різниця між SMA та EMA?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'На момент угоди у травні 2010 року 10 000 біткоїнів коштували приблизно 41 долар США. Сьогодні ця сума оцінюється у сотні мільйонів доларів.',
+            text: 'SMA усереднює ціни порівну й дає найгладкішу, але повільну лінію. EMA надає більшу вагу свіжим цінам, тому реагує швидше. SMA зручніша для довгострокового тренду, EMA для коротких таймфреймів, але обидві запізнюються.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Хто такий Ласло Хейніц?',
+          name: 'Чому ковзні середні погано працюють для активної торгівлі?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Ласло Хейніц (Laszlo Hanyecz) — американський програміст угорського походження, який став відомим як людина, що здійснила першу комерційну транзакцію з використанням біткоїна.',
+            text: 'Через запізнення: лінія будується за минулими цінами й повідомляє про розворот уже після того, як він стався. А у флеті ціна постійно перетинає середню, породжуючи безліч хибних сигналів.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Чому Bitcoin Pizza Day важливий для криптоспільноти?',
+          name: 'Чи надійні золотий хрест і хрест смерті?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Ця дата символізує перехід біткоїна від теоретичної концепції до практичного застосування. Перша покупка довела, що криптовалюта може функціонувати як реальний засіб обміну.',
+            text: 'Це популярні сигнали перетину ковзних, але вони сильно запізнюються. На історії виглядають переконливо, а в реальному часі дають вхід уже після значної частини руху, тому покладатися на них поодинці не варто.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Як відзначають Bitcoin Pizza Day?',
+          name: 'Де ковзні середні справді корисні?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Криптоспільнота відзначає 22 травня акціями та знижками від бірж, тематичними зустрічами ентузіастів, обговореннями у соціальних мережах та благодійними ініціативами.',
+            text: 'На довгих горизонтах. Двохсотденна SMA працює як грубий фільтр глобального тренду: ціна вище неї це бичачий режим, нижче ведмежий. Це допомагає відбирати акції в довгостроковий портфель, але не годиться як сигнал для входу в угоду.',
           },
         },
       ],
@@ -421,40 +415,28 @@ export class HomeUkBlogFourtySixComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      '@id': 'https://arapov.trade/uk/freestudying/pizzaday#howto',
-      name: 'Як застосувати уроки історії Bitcoin Pizza Day',
+      '@id': 'https://arapov.trade/uk/freestudying/moving-averages#howto',
+      name: 'Як розібратися й застосовувати ковзні середні в трейдингу',
       description:
-        'Покрокова інструкція щодо застосування уроків першої криптовалютної транзакції у вашій інвестиційній стратегії.',
+        'Покроковий розбір теми та її практичне застосування в торгівлі',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Вивчіть історію біткоїна',
-          text: 'Ознайомтеся з ключовими подіями розвитку криптовалют, починаючи зі створення біткоїна Сатоші Накамото у 2009 році та першої транзакції у 2010 році.',
+          name: 'Дізнайтеся, що таке ковзна середня',
+          text: 'Ковзна середня це технічний індикатор, який усереднює ціну за обрану кількість періодів і згладжує коливання, допомагаючи побачити напрямок тренду.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Оцініть довгостроковий потенціал',
-          text: 'Аналізуйте активи не лише за поточною ціною, а й за їхньою потенційною роллю у майбутній економіці. Історія з піцою показує важливість довгострокового мислення.',
+          name: 'Зрозумійте, чому ковзні середні не годяться для внутрішньоденної торгівлі',
+          text: 'Причина в ковзних середніх одна й фундаментальна: запізнення.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Керуйте ризиками свідомо',
-          text: "Інвестуйте лише ті кошти, які готові втратити. Ранні інвестиції у криптовалюти пов'язані з високою волатильністю.",
-        },
-        {
-          '@type': 'HowToStep',
-          position: 4,
-          name: 'Долучайтеся до спільноти',
-          text: 'Приєднуйтеся до криптоспільнот, відвідуйте заходи та обмінюйтеся досвідом з іншими ентузіастами блокчейн-технологій.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 5,
-          name: 'Застосовуйте криптовалюти практично',
-          text: 'Використовуйте криптовалюти для реальних покупок, щоб краще зрозуміти їхнє функціонування як засобу обміну.',
+          name: 'Побачте, де ковзні середні корисні: відбір акцій у довгостроковий портфель',
+          text: 'Було б нечесно сказати, що ковзні середні взагалі марні.',
         },
       ],
     };
@@ -469,72 +451,16 @@ export class HomeUkBlogFourtySixComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      '@id': 'https://arapov.trade/uk/freestudying/pizzaday#terms',
-      name: 'Глосарій термінів Bitcoin Pizza Day',
+      name: 'Глосарій термінів статті',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Bitcoin Pizza Day',
+          name: 'Ковзна середня',
           description:
-            "Пам'ятна дата 22 травня, коли у 2010 році було здійснено першу покупку реального товару за біткоїни.",
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Біткоїн',
-          description:
-            'Перша децентралізована криптовалюта, створена у 2009 році анонімним розробником під псевдонімом Сатоші Накамото.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Криптовалюта',
-          description:
-            'Цифровий актив, що використовує криптографію для забезпечення безпеки транзакцій та контролю створення нових одиниць.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Блокчейн',
-          description:
-            'Розподілена база даних, у якій транзакції записуються у вигляді ланцюжка блоків, забезпечуючи прозорість та незмінність даних.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Майнінг',
-          description:
-            'Процес створення нових блоків у блокчейні та підтвердження транзакцій з використанням обчислювальних потужностей.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Волатильність',
-          description:
-            'Ступінь мінливості ціни активу за певний період часу, що характеризує рівень ринкового ризику.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Децентралізація',
-          description:
-            'Принцип розподілу управління та контролю між багатьма учасниками мережі без єдиного центру влади.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Криптобіржа',
-          description:
-            'Платформа для купівлі, продажу та обміну криптовалют на фіатні гроші або інші цифрові активи.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Bitcointalk',
-          description:
-            'Перший великий інтернет-форум, присвячений обговоренню біткоїна та криптовалют, заснований Сатоші Накамото.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'HODL',
-          description:
-            'Криптовалютний сленг, що означає довгострокове утримання активів незалежно від ринкових коливань.',
+            'Технічний індикатор, який усереднює ціну за обрану кількість періодів і згладжує коливання, допомагаючи побачити напрямок тренду.',
         },
       ],
     };
-
     this.addJsonLdSchema(data);
   }
 }

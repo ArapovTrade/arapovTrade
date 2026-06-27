@@ -54,20 +54,17 @@ export class HomeEnBlogFourtyEightComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Self-Learning Trading: Complete Guide for Beginners | Igor Arapov',
+      'Elliott Waves: Basics and Structure | Arapov.trade',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Complete guide to self-learning trading: from basic concepts to professional strategies. Practical advice for aspiring traders starting from scratch.',
+        'Elliott Wave theory: impulses and corrections, the five- and three-wave structure, labeling principles and the method’s limits in real trading.',
     });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-04-03' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-06-04' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/selfstudying.webp',
-    });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
+
     this.gerRandom();
   }
   randomArticleRus: any = [];
@@ -253,38 +250,37 @@ export class HomeEnBlogFourtyEightComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          '@id': 'https://arapov.trade/en/freestudying/selfstudying#article',
-          headline: 'Self-Learning Trading: Complete Guide for Beginners',
+          headline:
+            'Elliott Wave Theory in Trading: What It Is and How to Use It',
           description:
-            'Complete guide to self-learning trading: from basic concepts to professional strategies. Practical advice for aspiring traders starting from scratch.',
-          image: 'https://arapov.trade/assets/img/content/selfstudying1.webp',
-          datePublished: '2025-06-04T00:00:00Z',
-          dateModified: '2026-06-04T00:00:00Z',
-          author: {
-            '@id': 'https://arapov.trade/en#person',
-          },
+            'Elliott Wave theory: impulses and corrections, the five- and three-wave structure, labeling principles and the method’s limits in real trading.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
             '@id': 'https://arapov.trade/#organization',
-            name: 'Arapov Trade',
+            name: 'Arapov.Trade',
             url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://arapov.trade/en/freestudying/selfstudying',
+            '@id': 'https://arapov.trade/en/freestudying/elliott-waves',
           },
-          articleSection: 'Trading Education',
-          keywords: [
-            'self-learning',
-            'trading for beginners',
-            'how to start trading',
-            'demo account',
-            'risk management',
-          ],
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/wavesofelliott.webp',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Technical Analysis',
+          keywords:
+            'elliott wave theory, elliott waves, impulse and corrective waves, elliott wave rules, fibonacci, crowd psychology',
+          inLanguage: 'en',
         },
       ],
     };
@@ -299,18 +295,18 @@ export class HomeEnBlogFourtyEightComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/en#person',
+      '@id': 'https://arapov.trade/#person',
       name: 'Igor Arapov',
       alternateName: [
         'Ігор Арапов',
-        'Арапов Игорь',
-        'I. Arapov',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/en',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -325,12 +321,12 @@ export class HomeEnBlogFourtyEightComponent implements OnInit {
         'https://t.me/ArapovTrade',
       ],
       jobTitle: [
-        'Independent researcher,',
-        'trader',
-        'author and founder of arapov.trade',
+        'Independent researcher',
+        'Trader',
+        'Author and founder of arapov.trade',
       ],
       description:
-        'Independent researcher, practicing trader, author of books on trading and scientific publications. Specializes in trading psychology and cognitive biases in financial markets.',
+        'Independent researcher, practising trader, author of trading books and scientific publications. Specialises in trading psychology and cognitive biases in financial markets.',
     };
 
     this.addJsonLdSchema(data);
@@ -343,46 +339,37 @@ export class HomeEnBlogFourtyEightComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
-      '@id': 'https://arapov.trade/en/freestudying/selfstudying#faq',
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'Is it possible to learn trading on your own without courses?',
+          name: 'What are Elliott waves in simple terms?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Yes, self-learning trading is entirely possible with a systematic approach. Many successful traders started exactly this way. Key elements include: studying terminology, mastering market analysis, extensive practice on a demo account, and gradual transition to real trading with minimal capital.',
+            text: 'A theory that the market moves in repeating cycles of eight waves: five with the trend and three against it. At its core is crowd psychology. It is useful as a read on market mood, but not as a precise forecast.',
           },
         },
         {
           '@type': 'Question',
-          name: 'How long does it take to learn trading?',
+          name: 'What are the three main rules of Elliott waves?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: "Basic skills can be acquired in 3-6 months of intensive study. However, achieving consistent profitability typically requires 1-2 years of practical trading. Learning speed depends on the time you're willing to dedicate to studying the market and analyzing your trades.",
+            text: 'The second wave does not drop below the start of the first. The third is never the shortest of the impulse waves. The fourth does not enter the price territory of the first. If even one rule is broken, the count is wrong.',
           },
         },
         {
           '@type': 'Question',
-          name: 'How much money should I start trading with?',
+          name: 'How are Elliott waves and Fibonacci connected?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: "It's recommended to start with an amount you can afford to lose — typically $100-500. First, practice your strategy on a demo account for at least 1-2 months, then transition to a real account with minimal deposit, risking no more than 1-2% of capital per trade.",
+            text: 'Fibonacci levels are used as guides: corrections often land in the 38 to 62 percent range, and the target of the third wave is frequently around 162 percent of the length of the first. But these are probability guides, not a guarantee.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Which market should beginners choose?',
+          name: 'Why are Elliott waves criticized?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'For beginners, the Forex market is optimal due to high liquidity, low spreads, and abundance of educational materials. Popular currency pairs like EUR/USD have predictable movements. After mastering Forex, you can move to the stock market or cryptocurrencies.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'How to control emotions while trading?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: "Emotional control is achieved through strict adherence to a trading plan, mandatory use of stop-losses, limiting daily losses, and regular breaks. It's important to keep a trading journal to analyze mistakes and avoid trading when stressed or after a series of losing trades.",
+            text: 'For subjectivity: ten analysts mark the same chart in different ways, and the waves themselves are easily fitted in hindsight. At the right edge of the chart, where the decision is made, there is usually no clarity. That is why I prefer levels and volume.',
           },
         },
       ],
@@ -398,51 +385,28 @@ export class HomeEnBlogFourtyEightComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      '@id': 'https://arapov.trade/en/freestudying/selfstudying#howto',
-      name: 'How to Learn Trading on Your Own',
+      '@id': 'https://arapov.trade/en/freestudying/elliott-waves#howto',
+      name: 'How to understand and use Elliott Wave Theory in trading',
       description:
-        'Step-by-step guide to mastering trading without paid courses',
-      totalTime: 'P6M',
-      estimatedCost: {
-        '@type': 'MonetaryAmount',
-        currency: 'USD',
-        value: '100-500',
-      },
+        'A step-by-step breakdown of the topic and its practical use in trading',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Learn basic terminology',
-          text: 'Master key concepts: long, short, spread, liquidity, volatility, margin, leverage. Create your own glossary of terms with definitions and examples.',
-          url: 'https://arapov.trade/en/freestudying/selfstudying#terminology',
+          name: 'Understand what Elliott Wave Theory is',
+          text: 'Elliott Wave Theory is a method of technical analysis that describes market movement through repeating waves that reflect crowd psychology.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Master market analysis methods',
-          text: 'Study technical analysis (charts, indicators, support and resistance levels) and fundamental analysis (economic indicators, news, company reports).',
-          url: 'https://arapov.trade/en/freestudying/selfstudying#analysis',
+          name: 'Learn the five-three structure and the three rules',
+          text: 'In an impulse each wave has its own psychology.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Choose your market and instruments',
-          text: 'Decide on a market (Forex, stocks, cryptocurrencies) and specific instruments for trading. Start with one market and the most liquid assets.',
-          url: 'https://arapov.trade/en/freestudying/selfstudying#markets',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 4,
-          name: 'Practice on a demo account',
-          text: 'Open a demo account with a reliable broker and practice strategies without risking real money for at least 1-2 months until achieving consistent results.',
-          url: 'https://arapov.trade/en/freestudying/selfstudying#demo',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 5,
-          name: 'Transition to real trading',
-          text: 'Start trading with minimal deposit, strictly following risk management (1-2% per trade). Keep a trading journal and regularly analyze your results.',
-          url: 'https://arapov.trade/en/freestudying/selfstudying#real-trading',
+          name: 'Weigh the limits of the theory: the subjectivity of the count',
+          text: 'Now, as a practitioner.',
         },
       ],
     };
@@ -457,68 +421,13 @@ export class HomeEnBlogFourtyEightComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      '@id': 'https://arapov.trade/en/freestudying/selfstudying#terms',
-      name: 'Trading Terms',
+      name: 'Article glossary',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Long Position',
+          name: 'Elliott Wave Theory',
           description:
-            'Opening a buy position on an asset expecting its price to rise',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Short Position',
-          description:
-            'Opening a sell position on an asset expecting its price to fall',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Liquidity',
-          description:
-            'The ability of an asset to be quickly bought or sold without significant price change',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Spread',
-          description:
-            'The difference between the buy price (Ask) and sell price (Bid) of an asset',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Volatility',
-          description:
-            'A measure of price variability of an asset over a specific period',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Stop-Loss',
-          description:
-            'A protective order for automatically closing a losing position when a specified level is reached',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Take-Profit',
-          description:
-            'An order for automatically locking in profit when a target price is reached',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Demo Account',
-          description:
-            'A practice trading account with virtual money for developing skills without risk',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Risk Management',
-          description:
-            'A system for managing trading risks to protect capital from significant losses',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Trading Plan',
-          description:
-            'A document with trading rules including strategy, capital management, and entry/exit criteria',
+            'A method of technical analysis that describes market movement through repeating waves that reflect crowd psychology.',
         },
       ],
     };

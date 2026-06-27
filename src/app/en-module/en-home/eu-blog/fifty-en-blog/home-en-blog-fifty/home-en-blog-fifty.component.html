@@ -6,78 +6,428 @@
           <div class="m-right hero-section"></div>
           <div class="free-courses_main-container">
             <main lang="en">
-             <header>
-  <h1>Algorithmic Orders Explained</h1>
-</header>
-<article>
-  <p>Algorithmic orders are orders that large participants execute through algorithms in order to hide their real size. The best known is the iceberg: only a small part shows in the order book, while the main mass is hidden. In my experience they are read more reliably not from the book, but from the volume at a level.</p>
+              <article>
+                <h1>
+                  Bollinger Bands in Trading: What They Are and How to Use Them
+                </h1>
 
-  <p>A small trader has essentially two buttons on the market: buy and sell. Big capital has more options, and one of them is algorithmic orders. They exist not for decoration but to hide intent, and until you understand them you are playing blind against someone who sees more than you do. So the topic is worth working through calmly.</p>
+                <p>
+                  Three lines wrap around price and breathe with it, the channel
+                  puffing out when the market is wild and pulling in when it is
+                  calm. Those are the Bollinger Bands, and as a volatility map
+                  they are genuinely useful, but the familiar habit of trading
+                  bounces off the edges in a trend tends to fail more often than
+                  it works. You get the most from them together with
+                  <a
+                    class="linkrefinto"
+                    href="https://arapov.trade/en/freestudying/chart-reading"
+                    >levels</a
+                  >
+                  and volume, not as a standalone signal.
+                </p>
 
-  <p><strong><i>In this article we'll cover:</i></strong></p>
-  <ul>
-    <li>algorithmic orders hide the real volume of big capital;</li>
-    <li>the iceberg shows only its tip in the book, the body is hidden and reloads itself;</li>
-    <li>the book can be faked, while volume is an honest footprint of already executed trades;</li>
-    <li>in my experience a large participant is found more reliably by the volume at a level than in the book.</li>
-  </ul>
+                <p>
+                  Bollinger Bands look pretty and win you over instantly: price
+                  seems locked in a corridor, bouncing off the walls, just trade
+                  edge to edge. I used to look at them exactly that way myself.
+                  On a calm market it even works, and then a trend shows up and
+                  all that comfort falls apart. So let us be honest about where
+                  the bands really help and where they hand you a false sense of
+                  control.
+                </p>
 
-  <p>Let's start with what these orders even are and why big capital needs them.</p>
+                <p>
+                  <strong><i>In this article we'll cover:</i></strong>
+                </p>
+                <ul>
+                  <li>
+                    Bollinger Bands measure volatility, they are not a buy or
+                    sell signal
+                  </li>
+                  <li>
+                    trading bounces off the edges is dangerous in a trend,
+                    because price can walk one band for a long time
+                  </li>
+                  <li>
+                    a squeeze is useful: it flags a building impulse, though it
+                    does not tell you the direction
+                  </li>
+                  <li>
+                    in my experience the bands open up only paired with levels
+                    and volume, on their own they are unreliable
+                  </li>
+                </ul>
 
-  <h2>What Are Algorithmic Orders and Why They Exist</h2>
-  <p><dfn itemscope itemtype="https://schema.org/DefinedTerm"><span itemprop="name">Algorithmic order</span></dfn> is a large order that executes by a set algorithm and is split into parts, so a participant can buy or sell a big volume without revealing its real size and intent to the market.</p>
-  <p>The point is simple. If you place a huge order in full, everyone sees it in the order book, the list of buy and sell orders, and shifts price against you at once. So big capital almost always works with limit orders and algorithms that feed the volume in small portions, with one goal: to fill at a good price without scaring the market early. There is also a dark side. Spoofing is when a participant places a large order with no intention of filling it, to create a false impression of supply or demand, and then pulls it. That is prohibited manipulation, fined and prosecuted, and it is exactly why the book cannot be trusted one hundred percent. A retail trader neither needs to nor may spoof, but it is worth knowing about, to understand why orders in the book so often vanish. The full set of <a class="linkrefinto" href="https://arapov.trade/en/freestudying/marketmaker">market making</a> mechanics sits separately.</p>
+                <p>
+                  First, about what this channel is built from and what it
+                  actually measures.
+                </p>
 
-  <div class="flex">
-    <img class="pictureImg" loading="lazy" src="/assets/img/content/algorithmicorders2.webp" alt="Advantages of algorithmic orders" />
-  </div>
+                <h2>What Are Bollinger Bands and What Do They Measure?</h2>
+                <p>
+                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
+                    ><span itemprop="name">Bollinger Bands</span></dfn
+                  >
+                  are a volatility indicator made of three lines: the middle
+                  band is a simple moving average, usually with a period of 20,
+                  and the upper and lower bands sit two standard deviations away
+                  from it. The financial analyst John Bollinger came up with
+                  them in the early 1980s.
+                </p>
+                <p>
+                  That spread is measured by the
+                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
+                    ><span itemprop="name">standard deviation</span></dfn
+                  >, a statistical gauge of how far price scatters around its
+                  average. On the default settings, roughly 95 percent of price
+                  moves stay inside the bands, so a move outside them is rare
+                  and signals an extreme state. The key thing to take from this:
+                  the width of the channel is about the size of the move, not
+                  its direction. The market gets stormy and the bands puff out;
+                  it goes quiet and they pull in. In practice it is a relative
+                  of ATR, only drawn right on top of price instead of on a
+                  separate scale below. The nature of these meters I cover in
+                  more detail in the section on
+                  <a
+                    class="linkrefinto"
+                    href="https://arapov.trade/en/freestudying/freeeducation#indicatorsInTrading"
+                    >indicators in trading</a
+                  >, and the core idea there is simple: an indicator describes
+                  what has already happened to price, it does not predict the
+                  future. The bands are an honest thermometer of the market, but
+                  a thermometer does not cure, it only shows the temperature.
+                </p>
+                <p>
+                  <strong>In short: </strong>
+                  <i
+                    >The bands are a thermometer of volatility set two standard
+                    deviations from the average; they show the size of the move
+                    but stay silent about its direction.</i
+                  >
+                </p>
+                <img
+                  src="https://arapov.trade/assets/img/content/bollingerbands2.jpg"
+                  alt="Bollinger Bands on a price chart"
+                  loading="lazy"
+                />
 
-  <h2>The Iceberg Order: How Big Players Hide Size</h2>
-  <p>The iceberg is the clearest example. Picture an iceberg in the ocean: a small tip pokes above the water, while the main block is hidden. It is the same here. Only a small visible part of the order hangs in the book, and the real volume is concealed. As soon as the visible portion fills, the algorithm automatically places the next one of the same size, and so on until the whole hidden volume has gone into the market.</p>
-  <p>Why this is needed. If a large participant showed the whole order at once, everyone else would jump the price immediately, and building the position normally would be impossible. The iceberg lets it quietly execute a big volume without revealing either size or side. The <a class="linkrefinto" href="https://arapov.trade/en/freestudying/icebergorders">hidden order</a> itself is a legal tool, unlike spoofing, and banks and funds use it worldwide. And here is what matters for us: an iceberg can be noticed by price behavior. If orders appear at one level again and again and price cannot push through it, someone large is quietly accumulating or distributing there. The hidden order is given away not by the book but by the price reaction and the volume at that spot.</p>
+                <h2>Should You Trade Bounces Off the Bands?</h2>
+                <p>
+                  The classic idea sounds tempting: price touched the upper
+                  band, sell; touched the lower band, buy. On a sideways, calm
+                  market it sometimes pays off, price really does wander wall to
+                  wall. But here is the trap beginners burn on. In a strong
+                  trend price presses against one of the bands and walks along
+                  it for a long time, printing one new extreme after another.
+                  Whoever sells the upper band in a rising trend keeps standing
+                  against the move and stacking losses until the account runs
+                  out. I caught those losses myself in my early years, until the
+                  trend taught me to respect its strength.
+                </p>
+                <p>
+                  So a touch of the band I do not treat as a signal on its own.
+                  That is my position, and it lines up with what John Bollinger
+                  said himself: there is nothing about a tag of a band that is,
+                  in and of itself, a signal. The band only tells you the move
+                  has gone far relative to the average, not that it is over.
+                  Before I do anything at the edge, I look at whether it is a
+                  trend or a flat right now, whether there is a significant
+                  level nearby, and whether confirming volume is coming in.
+                  Without that context the edge of a band is just a line, not a
+                  reason to trade. It is the same problem with any indicator
+                  signal taken alone: on the first few trades it looks like it
+                  works, and over a series it drains the account, which is shown
+                  clearly in a
+                  <a class="linkrefinto" href="https://youtu.be/FyScD5LP1hQ"
+                    >video on why indicators like MACD let you down over a
+                    series</a
+                  >. With the bands it is exactly the same story: they describe
+                  the state, and the decision belongs to the level and the
+                  volume.
+                </p>
+                <p>
+                  <strong>In short: </strong>
+                  <i
+                    >A touch of the band is not a signal: in a trend price walks
+                    along it for a long time, so at the edge I first read the
+                    phase, the level and the volume.</i
+                  >
+                </p>
 
-  <h2>How to Recognize Algorithmic Activity in Volume</h2>
-  <p>Here we reach my main tool. A large participant can play games with the book, slip orders in and pull them out, so trusting it is hard. Volume, by contrast, is honest information: it shows the number of already executed trades, and it cannot be faked. So I look not at the book but at the volume at a level.</p>
-  <p>The main sign of a large player is a spike in volume without a movement in price. In volume analysis this is called effort without result, or absorption: there is pressure, yet price stands still, because someone large is absorbing the whole flow of orders with a hidden limit order. Often, just before the move itself, there is a shakeout, a false breakout of the level, a quick stab to knock out stops and collect liquidity, and only then the move goes the intended way. My working order is this: find a strong level, see a volume spike and a liquidity deficit on it, wait for the false breakout, and join big capital with a short stop, the way <a class="linkrefinto" href="https://arapov.trade/en/freestudying/smartmoneycontrol">how institutions move price</a> describes.</p>
+                <h2>What Does a Bollinger Band Squeeze Mean?</h2>
+                <p>
+                  This is where the bands are genuinely useful. A squeeze, when
+                  the channel narrows into a tight corridor, means volatility
+                  has dropped to a minimum and the market is gathering strength.
+                  Like a coiled spring: a stretch of quiet is almost always
+                  followed by a sharp move. The longer and tighter the squeeze,
+                  the stronger the shot that usually comes out of it. I use this
+                  with ATR too, the logic is the same: low volatility is not
+                  forever, the market breathes, and an inhale is followed by an
+                  exhale. A narrow channel on a higher timeframe after a long
+                  lull I read almost as an alarm: something is building, and it
+                  is time to mark levels on both sides in advance so the move
+                  does not catch me off guard.
+                </p>
+                <p>
+                  The one limit to keep in mind: a squeeze tells you an impulse
+                  is coming, but says nothing about which way it will fire. So
+                  on its own it is not an entry signal, it is an attention
+                  signal. Often, right before a trending move, the market makes
+                  a false break out of the narrow channel, sweeps the stops of
+                  those who rushed in on the breakout, and only then goes for
+                  real, frequently in the opposite direction. So I read a
+                  squeeze as an invitation to get ready and watch the level, not
+                  as a command to buy the first false break past the edge. I
+                  wait for the market itself to show the side with a hold and
+                  with volume, and only then I join in.
+                </p>
+                <p>
+                  <strong>In short: </strong>
+                  <i
+                    >A squeeze is an attention signal, not a direction one: the
+                    market is gathering strength, but it shows the side with a
+                    hold and volume, not with the first false break out of the
+                    channel.</i
+                  >
+                </p>
 
-  <h2>My Take: Trust Volume, Not the Book</h2>
-  <p>I have been trading since 2013, and the principle has not changed: the book can be faked, the volume cannot. This is not advice for you personally, it is how I work: I find a strong level, look for a volume spike without follow-through and the shakeout that usually precedes the real move, and then join the side big capital has already taken. The beauty of it is that we small participants do not need to hide our size at all, so we can enter easily where big capital has already left its footprint. The honest limitation is that volume confirms presence after the fact rather than predicting the next tick, so I still need a clear level and a tight stop, and I accept that some footprints lead nowhere. How this looks on real examples is shown in <a class="linkrefinto" href="https://youtu.be/UUSmwO83Jcg?t=149">algorithmic orders and volume on the chart</a>.</p>
+                <h2>
+                  Measuring the squeeze: BandWidth and the Keltner Channel
+                </h2>
+                <p>
+                  A squeeze is easier to act on when you measure it instead of
+                  eyeballing it. The simplest tool is BandWidth, which plots the
+                  distance between the upper and lower bands as a single number:
+                  when that number drops to its lowest in many months, the
+                  compression is real, not just a chart that happens to look a
+                  touch tight. A neater check, popularised by John Carter, is to
+                  overlay a Keltner Channel, a similar envelope built from the
+                  average range. While the Bollinger Bands sit entirely inside
+                  the Keltner Channel the squeeze is on, and the moment they
+                  push back outside it the squeeze fires. That turns a vague
+                  impression into a rule you can actually see.
+                </p>
+                <p>
+                  Useful as that is, it changes nothing about the core limit. A
+                  measured squeeze tells you only that volatility has compressed
+                  to an extreme and a move is loading, never which way it will
+                  break. So I treat BandWidth or the Keltner overlay as a
+                  cleaner alarm clock, not as a direction signal: when it rings
+                  I mark the levels on both sides and wait for price to choose a
+                  side with a hold and with volume. The measurement sharpens the
+                  timing of my attention, while the decision still belongs to
+                  the level and the volume.
+                </p>
+                <p>
+                  <strong>In short: </strong>
+                  <i
+                    >BandWidth puts a number on the squeeze and a Keltner
+                    Channel overlay turns it into a rule (bands inside means on,
+                    outside means it fires), but a measured squeeze still only
+                    flags that a move is loading, never its direction.</i
+                  >
+                </p>
 
-  <section>
-    <h2>Frequently Asked Questions</h2>
-    <mat-accordion>
-      <mat-expansion-panel class="highlight-box owl_link-box" [expanded]="true">
-        <mat-expansion-panel-header>
-          <mat-panel-title>What are algorithmic orders in simple terms?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>It is a big order that a program splits into small pieces and feeds into the market in portions. This way a large participant buys or sells a big volume without showing everyone its real size and without moving price against itself too early.</p>
-      </mat-expansion-panel>
-      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
-        <mat-expansion-panel-header>
-          <mat-panel-title>How is an iceberg order different from spoofing?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>An iceberg is a real order, just with a small visible part and the rest hidden. It is legal. Spoofing is a fake order placed to deceive and pulled at once. That is prohibited market manipulation.</p>
-      </mat-expansion-panel>
-      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
-        <mat-expansion-panel-header>
-          <mat-panel-title>Can you see algorithmic orders in the order book?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>Not in full, and that is the whole point. Only the tip shows in the book, and the book can be faked on top of that. It is far more honest to watch volume: a spike of executed trades at a level without a move in price is the footprint of a large participant.</p>
-      </mat-expansion-panel>
-      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
-        <mat-expansion-panel-header>
-          <mat-panel-title>Does an ordinary trader need algorithmic orders?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>There is no need to place them yourself; a small participant has different tasks. But understanding them is useful: it lets you read where big capital sits on the market and enter behind it rather than against it.</p>
-      </mat-expansion-panel>
-    </mat-accordion>
-  </section>
+                <h2>
+                  How to Use Bollinger Bands With Volume (and the Right
+                  Settings)
+                </h2>
+                <p>
+                  This is where the bands open up best. On their own they show
+                  only the size of the move, but who stands behind that size
+                  shows up in volume. Price moves past the band on rising
+                  volume, that tells of real strength, there is money behind it.
+                  It moves past the edge on weak volume, most likely it is an
+                  exhale, and the move will quickly snap back into the channel.
+                  That combination is exactly what separates a real breakout
+                  from an empty false break, which a single band cannot tell
+                  apart. In practice I look at it this way: price broke the
+                  upper band, I immediately shift my eyes to the volume
+                  indicator below. Volume jumped above average, the move is
+                  real, money is behind it, and it can be worked in its
+                  direction. Volume is sluggish while price is outside the band,
+                  it is an exhale on a thin market, and I wait for the return
+                  into the channel instead of buying the highs. The same break
+                  past the edge on different volume means the exact opposite
+                  things.
+                </p>
+                <p>
+                  In my experience it is the trio of bands plus volume plus
+                  level that gives the meaning a single indicator lacks. The
+                  band shows price has gone far, volume confirms or denies the
+                  strength, the level sets the point of decision. And my view,
+                  which parts ways with most teaching pictures: do not trade a
+                  bounce off the band just because price touched it. First read
+                  the market phase and look at the volume. Leave the default
+                  settings, period 20 and deviation 2, and use the bands for two
+                  things: to see the squeeze before an impulse and to gauge how
+                  far price has gone from the average. The bands are useful
+                  exactly in the part where they measure, and they cost you
+                  money in the part where people try to turn them into an entry
+                  generator. What to replace a blind indicator signal with and
+                  how to read volume I put together in the
+                  <a
+                    class="linkrefinto"
+                    href="https://arapov.trade/en/freestudying/freeeducation#volume"
+                    >free course section on volume analysis</a
+                  >. It is also worth comparing the bands with the
+                  <a
+                    class="linkrefinto"
+                    href="https://arapov.trade/en/freestudying/atr-indicator"
+                    >ATR indicator</a
+                  >
+                  and other trading indicators, to see their shared nature: they
+                  are all derived from price. This is not advice to you
+                  personally, it is the principle I stick to: for an entry I
+                  still need a level and an understanding of current volatility,
+                  not one pretty line.
+                </p>
+                <p>
+                  <strong>In short: </strong>
+                  <i
+                    >The trio of band plus volume plus level separates a real
+                    breakout from an exhale, and one line on its own cannot do
+                    that.</i
+                  >
+                </p>
 
-  <section>
-    <h2>About the Author</h2>
-    <p>Author: Igor Arapov — independent researcher in the psychology of investment decisions and behavioral finance, practising trader since 2013, founder of arapov.trade, author of a trading book series (<a class="linkrefinto" href="https://openlibrary.org/authors/OL16073686A/Igor_Arapov">Open Library</a>), (<a class="linkrefinto" href="https://orcid.org/0009-0003-0430-778X">ORCID: 0009-0003-0430-778X</a>).</p>
-  </section>
-</article>
+                <section>
+                  <h2>Frequently Asked Questions</h2>
+                  <mat-accordion>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      [expanded]="true"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >What do Bollinger Bands show?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        They show volatility: how far price has moved from its
+                        average. The channel widens on an active market and
+                        narrows on a calm one. About the direction of the move
+                        the bands themselves say nothing.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >Does price touching the band mean overbought and time
+                          to sell?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        No. John Bollinger himself stressed that a tag of a band
+                        is not, in and of itself, a signal. In a trend price
+                        walks one band for a long time, printing new extremes,
+                        so selling the upper band in an uptrend just stacks
+                        losses. A touch only says the move has gone far from the
+                        average, not that it is over.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >Can you trade bounces off the bands?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        In a flat sometimes yes, but in a trend it is dangerous:
+                        price can walk one band for a long time. I do not treat
+                        a touch of the band as a signal without confirmation
+                        from a level and volume.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >What does a Bollinger Band squeeze
+                          mean?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        A squeeze means volatility is dropping and the market is
+                        gathering strength before an impulse. It is an attention
+                        signal, not a direction one: where price will go the
+                        bands do not show, so you need analysis of the level and
+                        volume.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >How do you measure a Bollinger Band squeeze
+                          objectively?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        With the BandWidth indicator, which plots the distance
+                        between the bands as a number: a multi-month low means a
+                        real squeeze. A neater check is to overlay a Keltner
+                        Channel, when the Bollinger Bands sit entirely inside it
+                        the squeeze is on, and when they break back outside it
+                        fires. Either way the measure flags only that a move is
+                        loading, never its direction.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >What are the standard Bollinger Bands
+                          settings?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        The standard is a period of 20 and a deviation of 2,
+                        recommended by the indicator's author. A smaller period
+                        makes the bands more sensitive and noisier, a larger one
+                        smooths them. A beginner is better off starting with the
+                        default values.
+                      </p>
+                    </mat-expansion-panel>
+                  </mat-accordion>
+                </section>
+
+                <section>
+                  <h2>About the Author</h2>
+                  <p>
+                    Author:
+                    <a class="linkrefinto" href="https://arapov.trade/en"
+                      >Igor Arapov</a
+                    >
+                    — independent researcher in the psychology of investment
+                    decisions and behavioral finance, practising trader since
+                    2013, founder of arapov.trade, author of a trading book
+                    series (<a
+                      class="linkrefinto"
+                      href="https://orcid.org/0009-0003-0430-778X"
+                      >ORCID: 0009-0003-0430-778X</a
+                    >).
+                  </p>
+                </section>
+              </article>
 
               <div
                 class=""

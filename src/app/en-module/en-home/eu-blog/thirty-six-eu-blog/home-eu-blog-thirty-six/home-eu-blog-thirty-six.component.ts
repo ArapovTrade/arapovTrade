@@ -55,15 +55,15 @@ export class HomeEuBlogThirtySixComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Cryptocurrency Market: Complete Guide to Analysis and Trading | Arapov.trade',
+      'Copy Trading: Why It`s Not Really Trading | Arapov.trade',
     );
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Complete guide to cryptocurrency market analysis: technical and fundamental analysis, trading strategies, risk management, and platform selection.',
+        'What copy trading is, how to copy the trades of successful traders, the pros, the risks and why blind copying often leads to losses.',
     });
 
     this.gerRandom();
@@ -251,92 +251,35 @@ export class HomeEuBlogThirtySixComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          mainEntityOfPage: {
-            '@type': 'WebPage',
-            '@id': 'https://arapov.trade/en/freestudying/cryptocurrencytrading',
-          },
-          headline:
-            'Cryptocurrency Market: Complete Guide to Analysis and Trading | Arapov.trade',
+          headline: "Copy trading: what it is and why it's not really trading",
           description:
-            'Complete guide to cryptocurrency market analysis: technical and fundamental analysis, trading strategies, risk management, and platform selection.',
-          image:
-            'https://arapov.trade/assets/img/content/cryptocurrencytrading.webp',
-          datePublished: '2025-09-15T00:00:00+02:00',
-          dateModified: '2026-04-15T00:00:00Z',
-          inLanguage: 'en',
-          author: {
-            '@id': 'https://arapov.trade/en#person',
-          },
+            'What copy trading is, how to copy the trades of successful traders, the pros, the risks and why blind copying often leads to losses.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
             '@id': 'https://arapov.trade/#organization',
             name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
-          video: {
-            '@type': 'VideoObject',
-            name: 'Криптовалюты для новичков | Полное руководство',
-            description:
-              'Полное руководство по криптовалютам для новичков! Объясняю простыми словами что такое крипта, как отличить Bitcoin от СКАМ монет, почему мем-коины опасны и как избежать потери денег.',
-            thumbnailUrl: [
-              'https://img.youtube.com/vi/T8zWPUOKcqU/maxresdefault.jpg',
-              'https://img.youtube.com/vi/T8zWPUOKcqU/hqdefault.jpg',
-            ],
-            uploadDate: '2025-09-15T00:00:00+02:00',
-            duration: 'PT22M8S',
-            contentUrl: 'https://www.youtube.com/watch?v=T8zWPUOKcqU',
-            embedUrl: 'https://www.youtube.com/embed/T8zWPUOKcqU',
-            inLanguage: 'ru',
-            keywords:
-              'криптовалюты, биткоин, скам монеты, мем коины, риски криптовалют',
-            hasPart: [
-              {
-                '@type': 'Clip',
-                name: 'Что такое криптовалюты - определение и основы',
-                startOffset: 0,
-                endOffset: 292,
-                url: 'https://www.youtube.com/watch?v=T8zWPUOKcqU&t=0',
-              },
-              {
-                '@type': 'Clip',
-                name: 'Bitcoin - модель эмиссии и преимущества',
-                startOffset: 292,
-                endOffset: 630,
-                url: 'https://www.youtube.com/watch?v=T8zWPUOKcqU&t=292',
-              },
-              {
-                '@type': 'Clip',
-                name: 'Что такое СКАМ криптовалюты - признаки мошенничества',
-                startOffset: 630,
-                endOffset: 786,
-                url: 'https://www.youtube.com/watch?v=T8zWPUOKcqU&t=630',
-              },
-              {
-                '@type': 'Clip',
-                name: 'Мем-коины и ловушки для трейдеров',
-                startOffset: 786,
-                endOffset: 976,
-                url: 'https://www.youtube.com/watch?v=T8zWPUOKcqU&t=786',
-              },
-              {
-                '@type': 'Clip',
-                name: 'Делистинг монет - как биржи выкидывают скам',
-                startOffset: 976,
-                endOffset: 1089,
-                url: 'https://www.youtube.com/watch?v=T8zWPUOKcqU&t=976',
-              },
-              {
-                '@type': 'Clip',
-                name: 'Как защитить деньги на крипторынке',
-                startOffset: 1089,
-                endOffset: 1328,
-                url: 'https://www.youtube.com/watch?v=T8zWPUOKcqU&t=1089',
-              },
-            ],
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': 'https://arapov.trade/en/freestudying/copy-trading',
           },
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/copytrading_two.png',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Trading for beginners',
+          keywords: 'copy trading',
+          inLanguage: 'en',
         },
       ],
     };
@@ -351,18 +294,18 @@ export class HomeEuBlogThirtySixComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/en#person',
+      '@id': 'https://arapov.trade/#person',
       name: 'Igor Arapov',
       alternateName: [
         'Ігор Арапов',
-        'Арапов Игорь',
-        'I. Arapov',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/en',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -377,12 +320,12 @@ export class HomeEuBlogThirtySixComponent implements OnInit {
         'https://t.me/ArapovTrade',
       ],
       jobTitle: [
-        'Independent researcher,',
-        'trader',
-        'author and founder of arapov.trade',
+        'Independent researcher',
+        'Trader',
+        'Author and founder of arapov.trade',
       ],
       description:
-        'Independent researcher, practicing trader, author of books on trading and scientific publications. Specializes in trading psychology and cognitive biases in financial markets.',
+        'Independent researcher, practising trader, author of trading books and scientific publications. Specialises in trading psychology and cognitive biases in financial markets.',
     };
 
     this.addJsonLdSchema(data);
@@ -398,42 +341,50 @@ export class HomeEuBlogThirtySixComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'What is the cryptocurrency market?',
+          name: 'What is copy trading?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'The cryptocurrency market is a global decentralized ecosystem of digital assets built on blockchain technology. It operates 24/7, enabling trading without intermediaries.',
+            text: 'It is when the deals of a chosen trader are automatically duplicated on your account: every open and close of theirs is reflected proportionally on your account. The funds stay with you, and copying can be switched off at any moment.',
           },
         },
         {
           '@type': 'Question',
-          name: 'What methods exist for analyzing cryptocurrencies?',
+          name: 'Can you make money with copy trading?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Main methods include fundamental analysis (technology, team, tokenomics), technical analysis (indicators, levels), and sentiment analysis (market mood monitoring).',
+            text: "It happens, but the figure on the card promises nothing about tomorrow's profit. A loud percentage often hides an aggressive style with leverage and a deep drawdown. Regulators have made brokers state plainly: retail mostly ends up at a loss.",
           },
         },
         {
           '@type': 'Question',
-          name: 'How to manage risks when trading cryptocurrencies?',
+          name: 'Is copy trading good for beginners?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Key principles: stop-losses, risk per trade limited to 1-2% of capital, portfolio diversification, and emotional discipline.',
+            text: 'Only as a learning tool, not a shortcut. Watching how an experienced trader sizes positions and handles a drawdown can teach a beginner a lot, but treating it as guaranteed income is the fast way to lose. Start on a demo, allocate only a small sum you can afford to lose, diversify across a few traders, and keep building your own understanding alongside.',
           },
         },
         {
           '@type': 'Question',
-          name: 'What strategy should a beginner choose?',
+          name: 'Why do most copiers lose?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Dollar-cost averaging (DCA) strategy is recommended for long-term investing, reducing volatility impact without constant monitoring.',
+            text: 'The performer is picked blindly, and the ranking pushes daredevils on leverage to the top, and one of those drags your account down with them. On top of that you do not manage the risk and do not understand what the copied trader is doing each move for.',
           },
         },
         {
           '@type': 'Question',
-          name: 'How to choose a cryptocurrency exchange?',
+          name: 'How do you choose a trader to copy?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Consider: security (2FA, cold storage), liquidity, fees, and interface convenience.',
+            text: 'Not by the biggest return. Look for a track record of at least six months to a year that has lived through a real drawdown, judge the trader by their maximum drawdown rather than the headline percentage, and prefer calm double-digit returns to triple-digit fireworks built on leverage. Then spread your funds across several different traders so one blow-up does not sink the account.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: "Why isn't copy trading really trading?",
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Skill does not appear from blind repetition. It is the same trap as faith in a magic indicator: the responsibility is shifted onto someone else. Let the performer disappear or blow up the account, and you are left with the very same zero.',
           },
         },
       ],
@@ -449,42 +400,37 @@ export class HomeEuBlogThirtySixComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'How to Start Trading Cryptocurrencies',
-      description: 'Step-by-step guide for beginner traders',
+      '@id': 'https://arapov.trade/en/freestudying/copy-trading#howto',
+      name: 'How to understand and apply: copy trading and why it is not trading',
+      description:
+        'A step-by-step breakdown of the topic and its practical use in trading',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Learn the basics',
-          text: 'Master blockchain principles, major cryptocurrencies, and market terminology.',
+          name: 'What copy trading is',
+          text: "Copy trading is the automatic duplication of a chosen trader's deals on your account, where each of their opens and closes is repeated proportionally on your account.",
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Choose an exchange',
-          text: 'Register on a verified platform with 2FA and high liquidity.',
+          name: 'How copy trading works on popular platforms',
+          text: 'Under the hood it all runs through a broker.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Develop a strategy',
-          text: 'Define your goals, risk tolerance, and trading style.',
+          name: 'Use copy trading as a learning tool, not a shortcut',
+          text: 'Treated as a window onto how a trader sizes positions and handles a drawdown, copying can teach you, if you start small, diversify and study the method.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Set up risk management',
-          text: 'Establish stop-losses and diversify your portfolio.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 5,
-          name: 'Practice',
-          text: 'Start with small amounts and maintain a trading journal.',
+          name: 'Copy trading risks: why most copiers lose',
+          text: 'The root of the risk hides not in the platform but in the very choice of performer.',
         },
       ],
     };
-
     this.addJsonLdSchema(data);
   }
 
@@ -495,59 +441,19 @@ export class HomeEuBlogThirtySixComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Crypto Trading Glossary',
+      name: 'Glossary of terms used in the article',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Blockchain',
+          name: 'Copy trading',
           description:
-            'Distributed ledger recording cryptocurrency transactions',
+            "The automatic duplication of a chosen trader's deals on your account, where each of their opens and closes is repeated proportionally on your account.",
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Volatility',
-          description: 'Degree of price variation over time',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Stop-loss',
-          description: 'Order to close position at predetermined loss level',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Liquidity',
-          description: 'Ability to quickly buy or sell without affecting price',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Cold wallet',
-          description: 'Offline cryptocurrency storage for maximum security',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Halving',
+          name: 'drawdown',
           description:
-            'Bitcoin mining reward reduction occurring every four years',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Altseason',
-          description: 'Period when altcoins outperform Bitcoin',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'DeFi',
-          description: 'Decentralized finance applications on blockchain',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Stablecoin',
-          description: 'Cryptocurrency pegged to stable asset like USD',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Smart contract',
-          description: 'Self-executing code on blockchain',
+            'The deepest peak-to-trough fall an account suffers, measured in percent; it shows how much of the capital a trader is willing to risk and matters more than the headline return.',
         },
       ],
     };

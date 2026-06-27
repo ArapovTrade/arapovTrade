@@ -58,21 +58,18 @@ export class HomeRuBlogTwentySevenComponent implements OnInit {
     this.checkedGroup = this.artickleServ.selectedGroups;
 
     this.titleService.setTitle(
-      'Японские свечи в трейдинге: как читать графики и находить точки входа',
+      'Торговля активами: золото, нефть, индексы | Arapov.trade',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Научитесь читать японские свечи: молот, поглощение, доджи, утренняя звезда. Практическое руководство по свечному анализу для трейдеров с примерами.',
+        'Как торговать золотом, нефтью и фондовыми индексами: фундаментальные драйверы, особенности инструментов и подходы к анализу.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-04-16' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/japanesecandle.jpg',
-    });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
+
     this.gerRandom();
   }
   randomArticleRus: any = [];
@@ -282,30 +279,35 @@ export class HomeRuBlogTwentySevenComponent implements OnInit {
         {
           '@type': 'Article',
           headline:
-            'Японские свечи в трейдинге: как читать графики и находить точки входа',
+            'Торговля активами: золото, нефть и фондовые индексы по объёму и уровням',
           description:
-            'Научитесь читать японские свечи: молот, поглощение, доджи, утренняя звезда. Практическое руководство по свечному анализу.',
-          image: 'https://arapov.trade/assets/img/content/japanessecandle1.jpg',
-
-          datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
-
-          author: {
-            '@id': 'https://arapov.trade/ru#person',
-          },
+            'Как торговать золотом, нефтью и фондовыми индексами: фундаментальные драйверы, особенности инструментов и подходы к анализу.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'Arapov.trade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://arapov.trade/ru/freestudying/japanesecandle',
+            '@id': 'https://arapov.trade/ru/freestudying/assets-trading',
           },
-          articleSection: 'Технический анализ',
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/goldtrading1.jpeg',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Фундаментальный анализ',
+          keywords:
+            'торговля активами, торговля золотом, торговля нефтью, фондовые индексы, S&P 500',
           inLanguage: 'ru',
         },
       ],
@@ -321,18 +323,18 @@ export class HomeRuBlogTwentySevenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/ru#person',
-      name: 'Игорь Арапов',
+      '@id': 'https://arapov.trade/#person',
+      name: 'Igor Arapov',
       alternateName: [
-        'Igor Arapov',
-        'Арапов Игорь',
-        'I. Arapov',
         'Ігор Арапов',
-        'І. В. Арапов',
+        'Игорь Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/ru',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -368,42 +370,42 @@ export class HomeRuBlogTwentySevenComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'Что такое японские свечи?',
+          name: 'Что такое XAU/USD?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Японские свечи — графический метод отображения ценовых движений, показывающий цены открытия, закрытия, максимум и минимум за период.',
+            text: 'Так обозначают цену тройской унции золота в долларах США, главный тикер золотого рынка. Доступен он почти круглые сутки пять дней в неделю, а золото издавна служит убежищем для капитала в смутные времена.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Какие основные свечные паттерны существуют?',
+          name: 'Чем WTI отличается от Brent?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Основные паттерны: молот, повешенный, поглощение, доджи, утренняя звезда, вечерняя звезда, марубозу.',
+            text: 'WTI это лёгкая малосернистая нефть США с поставкой в Кушинге на бирже NYMEX. Brent добывают в Северном море и торгуют на ICE, это мировой ориентир, к которому привязаны около двух третей контрактов; стоит он обычно чуть выше WTI, а разрыв между ними зовут спредом Brent-WTI.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Как определить разворот по свечам?',
+          name: 'Что такое фондовый индекс простыми словами?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Разворотные паттерны (молот, поглощение) формируются на ключевых уровнях и подтверждаются объёмом и индикаторами.',
+            text: 'Так называют корзину акций группы компаний, чью динамику передаёт одна цифра. Не приходится следить за сотней бумаг по отдельности: индекс сразу показывает, растёт рынок или падает, потому его и зовут барометром экономики.',
           },
         },
         {
           '@type': 'Question',
-          name: 'На каких таймфреймах работают свечные паттерны?',
+          name: 'Чем NASDAQ отличается от S&P 500?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Свечи работают на всех таймфреймах, но сигналы на H4 и выше надёжнее из-за меньшего рыночного шума.',
+            text: 'У NASDAQ сильный технологический перекос и почти нет финансового сектора, оттого он подвижнее. S&P 500 устроен шире, держит пятьсот крупнейших компаний из всех отраслей и считается по капитализации, что делает его ровнее как индикатор.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Как подтвердить свечной сигнал?',
+          name: 'Какой риск держать на волатильных активах вроде золота и нефти?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Используйте объём, RSI, MACD, уровни поддержки/сопротивления и Фибоначчи для подтверждения.',
+            text: 'Ниже привычного. Золото и нефть ходят рывками, ход в несколько процентов за день для них норма, поэтому на сделку я отвожу около половины процента депозита и ставлю стоп с запасом под колебания; чересчур тесный стоп на таком активе вылетает на обычном шуме.',
           },
         },
       ],
@@ -419,37 +421,34 @@ export class HomeRuBlogTwentySevenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'Как анализировать японские свечи',
+      '@id': 'https://arapov.trade/ru/freestudying/assets-trading#howto',
+      name: 'Как подходить к торговле золотом, нефтью и индексами',
+      description:
+        'Разбор торговли волатильными активами: инструменты, различия марок и индексов и единый подход через объём и уровни',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Определите тренд',
-          text: 'Используйте скользящие средние для понимания направления рынка.',
+          name: 'Разберитесь в золоте XAU/USD и его драйверах',
+          text: 'XAU/USD это цена тройской унции золота в долларах, защитный актив, который сильнее всего реагирует на политику ФРС и реальные ставки.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Найдите ключевые уровни',
-          text: 'Отметьте зоны поддержки и сопротивления на графике.',
+          name: 'Поймите инструменты нефти и разницу WTI и Brent',
+          text: 'Нефть торгуют фьючерсами CL на WTI на NYMEX и Brent на ICE, а разницу между марками называют спредом Brent-WTI.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Идентифицируйте паттерн',
-          text: 'Найдите свечную формацию: молот, поглощение, доджи.',
+          name: 'Разберитесь, как устроены и как торгуются фондовые индексы',
+          text: 'Фондовый индекс это корзина акций, которую торгуют через ETF и фьючерсы, а способ взвешивания определяет, кто двигает индекс сильнее.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Подтвердите сигнал',
-          text: 'Проверьте объём и показания RSI или MACD.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 5,
-          name: 'Войдите в сделку',
-          text: 'Установите стоп-лосс и тейк-профит с соотношением 1:2.',
+          name: 'Применяйте единый метод и пониженный риск на волатильных активах',
+          text: 'Золото, нефть и индексы я читаю одинаково, по объёму и уровням, а риск из-за волатильности держу ниже обычного.',
         },
       ],
     };
@@ -464,60 +463,25 @@ export class HomeRuBlogTwentySevenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Глоссарий японских свечей',
+      name: 'Глоссарий терминов статьи',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Японская свеча',
+          name: 'XAU/USD',
           description:
-            'Графический элемент, показывающий открытие, закрытие, максимум и минимум цены',
+            'Котировка одной тройской унции золота в долларах США, основной инструмент для торговли золотом.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Тело свечи',
-          description: 'Прямоугольник между ценой открытия и закрытия',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Тень свечи',
-          description: 'Линии выше и ниже тела, показывающие экстремумы',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Молот',
+          name: 'Спред Brent-WTI',
           description:
-            'Разворотная свеча с маленьким телом и длинной нижней тенью',
+            'Разница в цене между эталонными марками нефти Brent и WTI, отражающая региональные дисбалансы спроса и предложения.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Поглощение',
+          name: 'Фондовый индекс',
           description:
-            'Двухсвечная формация, где вторая свеча полностью перекрывает первую',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Доджи',
-          description: 'Свеча с почти равными ценами открытия и закрытия',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Марубозу',
-          description: 'Свеча с большим телом и минимальными тенями',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Утренняя звезда',
-          description: 'Трёхсвечная разворотная формация вверх',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Вечерняя звезда',
-          description: 'Трёхсвечная разворотная формация вниз',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Повешенный',
-          description: 'Медвежья версия молота на вершине тренда',
+            'Средневзвешенный показатель стоимости акций входящих в его состав компаний, отражающий динамику рынка одним числом.',
         },
       ],
     };

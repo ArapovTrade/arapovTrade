@@ -55,15 +55,15 @@ export class HomeEnBlogNineteenComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Wyckoff Method in Trading | Complete Guide 2025',
+      'Tokenomics: How to Assess a Crypto Project | Arapov.trade',
     );
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Wyckoff Method in Trading: Complete guide to market cycle analysis, accumulation and distribution phases, volume analysis and Smart Money trading strategies.',
+        'What tokenomics is, how coin distribution, issuance and unlocks affect price and why it reveals crash risk before you even buy a token.',
     });
     this.gerRandom();
   }
@@ -250,83 +250,36 @@ export class HomeEnBlogNineteenComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          mainEntityOfPage: {
-            '@type': 'WebPage',
-            '@id': 'https://arapov.trade/en/freestudying/wyckoffmethod',
-          },
-          headline: 'Wyckoff Method in Trading | Complete Guide 2025',
+          headline:
+            'Tokenomics: What It Is and How to Evaluate a Crypto Project',
           description:
-            'Wyckoff Method in Trading: Complete guide to market cycle analysis, accumulation and distribution phases, volume analysis and Smart Money trading strategies.',
-          image: 'https://arapov.trade/assets/img/content/wyckoffmethod.webp',
-          datePublished: '2025-03-15T00:00:00+02:00',
-          dateModified: '2026-04-15T00:00:00Z',
-          inLanguage: 'en',
-          author: {
-            '@id': 'https://arapov.trade/en#person',
-          },
+            'What tokenomics is, how coin distribution, issuance and unlocks affect price and why it reveals crash risk before you even buy a token.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
             '@id': 'https://arapov.trade/#organization',
             name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
-          video: {
-            '@type': 'VideoObject',
-            name: 'Метод Вайкоффа для начинающих трейдеров: полное руководство по объемному анализу',
-            description:
-              'Метод Вайкоффа для начинающих трейдеров: полное руководство по объемному анализу рынка. Узнайте, как следовать за крупными деньгами и использовать фазы накопления и распределения.',
-            thumbnailUrl: [
-              'https://img.youtube.com/vi/-oEWnPGRVqs/maxresdefault.jpg',
-              'https://img.youtube.com/vi/-oEWnPGRVqs/hqdefault.jpg',
-            ],
-            uploadDate: '2024-06-15T00:00:00+02:00',
-            duration: 'PT7M41S',
-            contentUrl: 'https://www.youtube.com/watch?v=-oEWnPGRVqs',
-            embedUrl: 'https://www.youtube.com/embed/-oEWnPGRVqs',
-            inLanguage: 'ru',
-            keywords:
-              'метод Вайкоффа, Wyckoff, объемный анализ, VSA, фазы рынка, накопление, распределение',
-            hasPart: [
-              {
-                '@type': 'Clip',
-                name: 'Введение в метод Вайкоффа для начинающих',
-                startOffset: 0,
-                endOffset: 45,
-                url: 'https://www.youtube.com/watch?v=-oEWnPGRVqs&t=0',
-              },
-              {
-                '@type': 'Clip',
-                name: 'История метода Вайкоффа - почему работает с 1905 года',
-                startOffset: 45,
-                endOffset: 195,
-                url: 'https://www.youtube.com/watch?v=-oEWnPGRVqs&t=45',
-              },
-              {
-                '@type': 'Clip',
-                name: 'Суть концепции Вайкоффа - следуйте за профессионалами',
-                startOffset: 195,
-                endOffset: 280,
-                url: 'https://www.youtube.com/watch?v=-oEWnPGRVqs&t=195',
-              },
-              {
-                '@type': 'Clip',
-                name: 'Фазы рынка: накопление и распределение',
-                startOffset: 280,
-                endOffset: 380,
-                url: 'https://www.youtube.com/watch?v=-oEWnPGRVqs&t=280',
-              },
-              {
-                '@type': 'Clip',
-                name: 'Как крупный капитал собирает и распределяет позиции',
-                startOffset: 380,
-                endOffset: 461,
-                url: 'https://www.youtube.com/watch?v=-oEWnPGRVqs&t=380',
-              },
-            ],
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': 'https://arapov.trade/en/freestudying/tokenomics',
           },
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/tokenomics.jpeg',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Cryptocurrency',
+          keywords: 'tokenomics, cryptocurrency',
+          inLanguage: 'en',
         },
       ],
     };
@@ -341,18 +294,18 @@ export class HomeEnBlogNineteenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/en#person',
+      '@id': 'https://arapov.trade/#person',
       name: 'Igor Arapov',
       alternateName: [
         'Ігор Арапов',
-        'Арапов Игорь',
-        'I. Arapov',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/en',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -367,12 +320,12 @@ export class HomeEnBlogNineteenComponent implements OnInit {
         'https://t.me/ArapovTrade',
       ],
       jobTitle: [
-        'Independent researcher,',
-        'trader',
-        'author and founder of arapov.trade',
+        'Independent researcher',
+        'Trader',
+        'Author and founder of arapov.trade',
       ],
       description:
-        'Independent researcher, practicing trader, author of books on trading and scientific publications. Specializes in trading psychology and cognitive biases in financial markets.',
+        'Independent researcher, practising trader, author of trading books and scientific publications. Specialises in trading psychology and cognitive biases in financial markets.',
     };
 
     this.addJsonLdSchema(data);
@@ -388,42 +341,50 @@ export class HomeEnBlogNineteenComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'What is the Wyckoff Method?',
+          name: 'What is tokenomics in simple terms?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'The Wyckoff Method is an analytical framework for understanding institutional market behavior through price and volume analysis. It helps traders identify accumulation and distribution phases where large operators build or liquidate positions.',
+            text: "It is the internal economy of a token: the rules of its issuance, distribution, utility, and incentives. Together they set the balance of supply and demand, and so largely the fate of the token's price.",
           },
         },
         {
           '@type': 'Question',
-          name: 'What are the four market phases in Wyckoff?',
+          name: 'Which tokenomics parameters are the most important?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Wyckoff identifies four phases: Accumulation (smart money buying), Markup (uptrend), Distribution (smart money selling), and Markdown (downtrend). Each phase has distinct characteristics in price structure and volume patterns.',
+            text: 'Supply (total and circulating), emission and inflation, distribution across groups, the vesting schedule, and above all the utility of the token. Real use is what gives demand support, not just hype.',
           },
         },
         {
           '@type': 'Question',
-          name: 'What is a Spring in Wyckoff analysis?',
+          name: 'Can bad tokenomics destroy a coin?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'A Spring is a false breakdown below the support of an accumulation range designed to trigger stop losses and attract sellers. Smart money uses this liquidity to complete their buying. Price quickly reverses back into the range with increasing volume.',
+            text: "Yes, and the textbook case is Terra's UST and LUNA in 2022. The peg was held by a mint-and-burn loop between two tokens rather than by real collateral, and once confidence cracked the loop ran in reverse and both coins fell to near zero in days. A self-referential or unlimited-mint design with nothing real underneath carries a built-in death spiral.",
           },
         },
         {
           '@type': 'Question',
-          name: 'How does volume analysis work in Wyckoff?',
+          name: 'What are the red flags in tokenomics?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Volume confirms price movements. Rising volume on price advances indicates trend strength, while declining volume suggests weakness. Volume profile shows value areas, delta volume reveals buying or selling dominance.',
+            text: "Short team vesting or no unlock schedule, a huge share of tokens in insiders' hands, and no real utility for the token. The last turns the project into pure speculation, as with meme coins.",
           },
         },
         {
           '@type': 'Question',
-          name: 'Does Wyckoff work for cryptocurrency trading?',
+          name: 'Does good tokenomics guarantee a price rise?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'The Wyckoff Method works exceptionally well on cryptocurrency markets due to concentrated ownership among large holders. Whales create distinct accumulation zones before major rallies. The methodology helps distinguish organic accumulation from manipulation.',
+            text: 'No. Good tokenomics is only one of the conditions and a filter that screens out plainly weak projects. Its absence is almost always a bad sign, but its presence promises no profit. The decision and the risk always stay with you.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Where can you check a token unlock schedule and when is the next unlock?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Unlock calendars are shown by dedicated services such as TokenUnlocks and aggregators such as CoinGecko, while the primary source is the project documentation. Look not at the absolute number of tokens but at the share of circulating supply and at the unlock type: a large cliff presses the price harder than a smooth linear vesting.',
           },
         },
       ],
@@ -439,37 +400,40 @@ export class HomeEnBlogNineteenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'How to Trade Using the Wyckoff Method',
+      '@id': 'https://arapov.trade/en/freestudying/tokenomics#howto',
+      name: 'How to understand and apply: Tokenomics',
+      description:
+        'A step-by-step breakdown of the topic and its practical use in trading',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Identify the current market phase',
-          text: 'Analyze higher timeframe charts to determine if the market is in accumulation, markup, distribution, or markdown phase.',
+          name: 'Understand what tokenomics is in simple terms',
+          text: 'Tokenomics is the internal economy of a crypto token: the set of rules for its issuance, distribution, utility, and incentives for holders, which together set the balance of supply and demand.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Locate key patterns',
-          text: 'Identify characteristic Wyckoff patterns: springs in accumulation or upthrusts in distribution zones.',
+          name: 'The key parameters of tokenomics',
+          text: 'To assess tokenomics, it is enough to break down a few key parameters.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Confirm with volume',
-          text: 'Verify trading signals using volume analysis. Genuine breakouts are accompanied by volume expansion.',
+          name: 'Vesting, the cliff, and unlocks: how to read the unlock schedule',
+          text: 'Vesting is the freeze schedule, an unlock is the event on it; linear is smooth, a cliff lands at once; watch the share of supply and the unlock calendar.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Execute entry with stop loss',
-          text: 'Open position after pattern confirmation. Place protective stop beyond the pattern extreme.',
+          name: 'Tokenomics in the wild: bitcoin, ether, and how a coin dies',
+          text: "Bitcoin and ether show two opposite but workable models, while Terra's LUNA shows a self-referential design that spiraled to zero.",
         },
         {
           '@type': 'HowToStep',
           position: 5,
-          name: 'Manage position risk',
-          text: 'Move stop to breakeven after reaching intermediate target. Take partial profits at key levels.',
+          name: 'Learn to tell a solid project from a hollow one',
+          text: 'Putting it all together, good tokenomics is given away by a few signs: a limited and clear supply, a reasonable distribution with no excessive insider share, a transparent and not-too-short vesting schedule, and above all the real utility of the token.',
         },
       ],
     };
@@ -484,52 +448,31 @@ export class HomeEnBlogNineteenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Wyckoff Method Glossary',
+      name: 'Article glossary',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Accumulation',
+          name: 'Tokenomics',
           description:
-            'Phase where institutional players quietly build positions within a trading range before an uptrend',
+            'The internal economy of a crypto token: the set of rules for its issuance, distribution, utility, and incentives for holders, which together set the balance of supply and demand.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Distribution',
+          name: 'fully diluted valuation (FDV)',
           description:
-            'Phase where smart money gradually exits positions before a downtrend begins',
+            'Fully diluted valuation is the market capitalization a token would have if every token that will ever exist were already in circulation; a large gap from the current capitalization signals a lot of future supply still to come.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Spring',
+          name: 'unlock',
           description:
-            'False breakdown below support in accumulation range to collect liquidity',
+            'An unlock is the event when the next batch of previously frozen tokens enters circulation according to the vesting schedule.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Upthrust',
+          name: 'cliff',
           description:
-            'False breakout above resistance in distribution range to trap late buyers',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Markup',
-          description: 'Uptrend phase following completed accumulation',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Markdown',
-          description: 'Downtrend phase following completed distribution',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Volume Delta',
-          description:
-            'Difference between aggressive buying and selling volume',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Volume Profile',
-          description: 'Distribution of trading activity across price levels',
+            'A cliff is a one-off unlock of a large tranche of tokens on a single date, which in weak demand can knock the price down noticeably.',
         },
       ],
     };

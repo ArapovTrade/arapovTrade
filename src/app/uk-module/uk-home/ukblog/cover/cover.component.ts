@@ -174,7 +174,7 @@ isDark!:boolean  ;
 
 
 
-      //  this.metaTegServ.addOrganizationSchema();
+       this.metaTegServ.addOrganizationSchema();
       this.languageService.languageCode$.subscribe((code) => {
         this.checkLang = code;
         this.searchSer.setLange(this.checkLang);

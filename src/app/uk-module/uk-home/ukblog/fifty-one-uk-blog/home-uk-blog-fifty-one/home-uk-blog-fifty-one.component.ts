@@ -28,7 +28,7 @@ export class HomeUkBlogFiftyOneComponent implements OnInit {
     private themeService: ThemeservService,
     private artickleServ: ArticlesService,
     private renderer: Renderer2,
-    @Inject(DOCUMENT) private document: Document
+    @Inject(DOCUMENT) private document: Document,
   ) {}
   private routerSubscription!: Subscription;
   private themeSubscription!: Subscription;
@@ -57,19 +57,17 @@ export class HomeUkBlogFiftyOneComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Price Action у трейдингу: повний посібник | ArapovTrade'
+      'Індикатор ATR: волатильність ринку | Arapov.trade',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Дізнайтеся, як використовувати метод Price Action у трейдингу. Свічкові патерни, рівні підтримки та опору, стратегії торгівлі без індикаторів.',
+        'Що таке індикатор ATR (Average True Range), як він вимірює волатильність і як використати його для розрахунку стопів та розміру позиції.',
     });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-04-17' });this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/candlestickpatterns.webp',
-    });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
+
     this.gerRandom();
   }
   randomArticleRus: any = [];
@@ -80,13 +78,12 @@ export class HomeUkBlogFiftyOneComponent implements OnInit {
   hoveredIndex: number | null = null;
 
   projects = [
-   { title: 'Книги з трейдингу', link: 'https://arapov.trade/uk/books' },
+    { title: 'Книги з трейдингу', link: 'https://arapov.trade/uk/books' },
     { title: 'Професійні курси', link: 'https://arapov.trade/uk/studying' },
     {
       title: 'Базовий курс',
       link: 'https://arapov.trade/uk/freestudying/freeeducation',
     },
-    
   ];
 
   onGroupChange(event: Event) {
@@ -156,7 +153,7 @@ export class HomeUkBlogFiftyOneComponent implements OnInit {
     // Показываем 5 случайных статей при фокусе, если инпут пуст
     if (!this.searchQuery) {
       const shuffled = [...this.artickleServ.ukrArtickles].sort(
-        () => Math.random() - 0.5
+        () => Math.random() - 0.5,
       );
       this.displayedArticles = shuffled.slice(0, this.maxResults);
     }
@@ -171,7 +168,7 @@ export class HomeUkBlogFiftyOneComponent implements OnInit {
   onSearchChange() {
     // Логика асинхронного поиска
     const filtered = this.artickleServ.ukrArtickles.filter((a) =>
-      a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase())
+      a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase()),
     );
     this.displayedArticles = filtered.slice(0, this.maxResults);
   }
@@ -193,7 +190,7 @@ export class HomeUkBlogFiftyOneComponent implements OnInit {
     const path: string =
       this.router.url.split('/')[this.router.url.split('/').length - 1];
     let index = this.artickleServ.ukrArtickles.findIndex(
-      (a) => a.linkUkr == path
+      (a) => a.linkUkr == path,
     );
 
     if (this.artickleServ.ukrArtickles.length - 1 == index) {
@@ -210,7 +207,7 @@ export class HomeUkBlogFiftyOneComponent implements OnInit {
     const path: string =
       this.router.url.split('/')[this.router.url.split('/').length - 1];
     let index = this.artickleServ.ukrArtickles.findIndex(
-      (a) => a.linkUkr == path
+      (a) => a.linkUkr == path,
     );
 
     if (index == 1) {
@@ -235,7 +232,7 @@ export class HomeUkBlogFiftyOneComponent implements OnInit {
     ];
 
     const scripts = this.document.querySelectorAll(
-      'script[type="application/ld+json"]'
+      'script[type="application/ld+json"]',
     );
 
     scripts.forEach((script) => {
@@ -248,7 +245,7 @@ export class HomeUkBlogFiftyOneComponent implements OnInit {
 
         const shouldRemove = candidates.some(
           (entry: any) =>
-            entry['@type'] && typesToRemove.includes(entry['@type'])
+            entry['@type'] && typesToRemove.includes(entry['@type']),
         );
 
         if (shouldRemove) {
@@ -273,38 +270,41 @@ export class HomeUkBlogFiftyOneComponent implements OnInit {
   private setArticleSchema(): void {
     const data = {
       '@context': 'https://schema.org',
-      '@type': 'Article',
-      headline:
-        'Price Action у трейдингу: повний посібник з торгівлі без індикаторів',
-      description:
-        'Детальний посібник з методу Price Action. Свічкові патерни (пін-бар, поглинання, внутрішній бар), рівні підтримки та опору, стратегії торгівлі на чистих графіках.',
-      author: {
-        '@id': 'https://arapov.trade/uk#person',
-      },
-      publisher: {
-        '@type': 'Organization',
-        name: 'ArapovTrade',
-        url: 'https://arapov.trade',
-        logo: {
-          '@type': 'ImageObject',
-          url: 'https://arapov.trade/assets/img/favicon.ico',
+      '@graph': [
+        {
+          '@type': 'Article',
+          headline:
+            'Індикатор ATR у трейдингу: волатильність і фіксація прибутку',
+          description:
+            'Що таке індикатор ATR (Average True Range), як він вимірює волатильність і як використати його для розрахунку стопів та розміру позиції.',
+          author: { '@id': 'https://arapov.trade/#person' },
+          publisher: {
+            '@type': 'Organization',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
+            logo: {
+              '@type': 'ImageObject',
+              url: 'https://arapov.trade/assets/img/favicon.ico',
+            },
+          },
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': 'https://arapov.trade/uk/freestudying/atr-indicator',
+          },
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/atrindicator.jpg',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Технічний аналіз',
+          keywords: 'atr (average true range)',
+          inLanguage: 'uk',
         },
-      },
-      datePublished: '2025-01-10T12:00:00+02:00',
-    dateModified: '2026-04-15T00:00:00Z',
-      mainEntityOfPage: {
-        '@type': 'WebPage',
-        '@id': 'https://arapov.trade/uk/freestudying/candlestickpatterns',
-      },
-      image: {
-        '@type': 'ImageObject',
-        url: 'https://arapov.trade/assets/img/content/priceaction1.png',
-        width: 1200,
-        height: 630,
-      },
-      articleSection: 'Технічний аналіз',
-      keywords: 'Price Action, свічкові патерни, пін-бар, поглинання, трейдинг',
-      inLanguage: 'uk',
+      ],
     };
 
     this.addJsonLdSchema(data);
@@ -317,18 +317,18 @@ export class HomeUkBlogFiftyOneComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/uk#person',
-      name: 'Ігор Арапов',
+      '@id': 'https://arapov.trade/#person',
+      name: 'Igor Arapov',
       alternateName: [
-        'Igor Arapov',
-              'Арапов Игорь',
-              'I. Arapov',
-              'Игорь Арапов',
-              'І. В. Арапов',
-              'Арапов Ігор',
-              'Arapov Igor',
+        'Ігор Арапов',
+        'Игорь Арапов',
+        'Арапов Игорь',
+        'Арапов Ігор',
+        'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/uk',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -340,9 +340,13 @@ export class HomeUkBlogFiftyOneComponent implements OnInit {
         'https://github.com/ArapovTrade',
         'https://ua.linkedin.com/in/arapovtrade',
         'https://www.youtube.com/@ArapovTrade',
-        'https://t.me/ArapovTrade'
+        'https://t.me/ArapovTrade',
       ],
-       jobTitle: ['Незалежний дослідник', 'трейдер', 'автор і засновник arapov.trade'],
+      jobTitle: [
+        'Незалежний дослідник',
+        'трейдер',
+        'автор і засновник arapov.trade',
+      ],
       description:
         'Незалежний дослідник, практикуючий трейдер, автор книг з трейдингу та наукових публікацій. Спеціалізується на психології трейдингу та когнітивних упередженнях на фінансових ринках.',
     };
@@ -360,42 +364,34 @@ export class HomeUkBlogFiftyOneComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'Що таке Price Action у трейдингу?',
+          name: 'Що показує індикатор ATR?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Price Action — це метод технічного аналізу, заснований на вивченні руху ціни без використання індикаторів. Трейдери аналізують чисті цінові графіки, свічкові патерни, рівні підтримки та опору для прийняття торгових рішень. Метод допомагає зрозуміти психологію ринку та дії великих гравців.',
+            text: 'Середній розмах ціни за період, тобто волатильність. Сторону руху він не підказує: однаково високе значення буває і в зростанні, і в падінні. Це вимірювач амплітуди, а не сигнал на вхід.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Які основні патерни Price Action існують?',
+          name: 'Як поставити стоп-лосс за ATR?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Основні патерни Price Action включають: пін-бар (свічка з довгою тінню, що сигналізує про розворот), поглинання (свічка повністю перекриває попередню), внутрішній бар (свічка всередині діапазону попередньої), доджі (нерішучість ринку). Ці патерни найбільш ефективні на ключових рівнях підтримки та опору.',
+            text: 'Ховати стоп за поточний розмах руху, а не всередині нього. На спокійному ринку він вийде вужчим, на волатильному ширшим. За рахунок цього звичайний шум знімає його помітно рідше, ніж стоп, виставлений на око.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Як визначити рівні підтримки та опору?',
+          name: 'Чи можна за ATR визначити розворот?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Рівні підтримки та опору визначаються за історичними точками, де ціна багаторазово розверталася або консолідувалася. Підтримка — зона, де покупці зупиняють падіння ціни. Опір — зона, де продавці перешкоджають зростанню. Значущі рівні підтверджуються множинними дотиками та високими обсягами торгів.',
+            text: 'Напряму ні, розворотним індикатором ATR не є. Але його високі значення часто збігаються з кульмінацією руху, і це привід готувати фіксацію або чекати переходу у флет, а не команда закриватися цієї ж миті.',
           },
         },
         {
           '@type': 'Question',
-          name: 'У чому переваги торгівлі за Price Action?',
+          name: 'Який період ATR обрати?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Переваги Price Action: простота аналізу без складних індикаторів, універсальність для будь-яких ринків та таймфреймів, розуміння психології учасників ринку, відсутність запізнення сигналів (на відміну від індикаторів), можливість бачити дії великих гравців через свічкові формації.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Як уникнути хибних сигналів Price Action?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Для фільтрації хибних сигналів: торгуйте патерни лише на значущих рівнях підтримки/опору, чекайте закриття сигнальної свічки, аналізуйте контекст (тренд, волатильність), використовуйте підтвердження обсягами, уникайте торгівлі під час важливих новин, комбінуйте кілька таймфреймів для аналізу.',
+            text: 'За замовчуванням ставлять чотирнадцять. Такий період дає згладжену оцінку розмаху і закриває більшість задач. Міняти його варто лише під конкретний стиль торгівлі, а новачку простіше лишитися на стандартному значенні.',
           },
         },
       ],
@@ -411,39 +407,34 @@ export class HomeUkBlogFiftyOneComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'Як торгувати за методом Price Action',
+      '@id': 'https://arapov.trade/uk/freestudying/atr-indicator#howto',
+      name: 'Як розібратися й застосовувати індикатор ATR у трейдингу',
       description:
-        'Покроковий посібник із застосування Price Action для прибуткової торгівлі на фінансових ринках.',
+        'Покроковий розбір того, що міряє ATR і як застосовувати його в торгівлі',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Визначте ключові рівні на графіку',
-          text: 'Знайдіть значущі зони підтримки та опору, де ціна багаторазово розверталася в минулому. Позначайте рівні на старшому таймфреймі (денний або тижневий) для визначення глобальної структури ринку.',
+          name: 'Що таке ATR (Average True Range) і як він рахується',
+          text: 'ATR (Average True Range) це індикатор середнього істинного діапазону; він показує, на скільки в середньому гуляє ціна за період.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Визначте напрямок тренду',
-          text: 'Проаналізуйте структуру максимумів та мінімумів. Висхідний тренд характеризується вищими максимумами та мінімумами. Низхідний — нижчими. Торгуйте в напрямку основного тренду для підвищення ймовірності успіху.',
+          name: 'Як ставити стоп-лосс за ATR',
+          text: 'ATR показує живий розмах прямо зараз, тому стоп логічно ховати за цим розмахом, а не всередині нього.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Дочекайтеся формування патерну',
-          text: 'Шукайте свічкові патерни (пін-бар, поглинання, внутрішній бар) на ключових рівнях. Патерн має повністю сформуватися — дочекайтеся закриття сигнальної свічки перед прийняттям рішення про вхід.',
+          name: 'ATR на максимумі: сигнал зафіксувати позицію',
+          text: 'Розворот за ATR не ловлять, але його крайні значення натякають, що паливо руху майже вигоріло і час готувати вихід.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Проаналізуйте контекст сигналу',
-          text: 'Оцініть ринкові умови: сила тренду, волатильність, новинний фон. Сигнал пін-бару в напрямку тренду надійніший за контртрендовий. Перевірте економічний календар на наявність важливих подій.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 5,
-          name: 'Встановіть стоп-лосс та ціль прибутку',
-          text: 'Розмістіть стоп-лосс за екстремум патерну або за ключовий рівень. Визначте ціль прибутку на найближчому рівні опору або підтримки. Співвідношення ризику до прибутку має бути мінімум 1:2.',
+          name: 'Фази стиснення та розширення волатильності: як ATR допомагає трейдеру',
+          text: 'Ринок дихає: стиснення, потім розширення, потім знову стиснення, і ATR робить цей ритм видимим оку.',
         },
       ],
     };
@@ -458,69 +449,13 @@ export class HomeUkBlogFiftyOneComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Глосарій термінів Price Action',
-      description:
-        'Основні терміни та визначення методу Price Action у технічному аналізі',
+      name: 'Глосарій термінів статті',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Price Action',
+          name: 'ATR (Average True Range)',
           description:
-            'Метод технічного аналізу, заснований на вивченні руху ціни без використання індикаторів, аналізуючи чисті цінові графіки.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Пін-бар (Pin Bar)',
-          description:
-            'Свічковий патерн з довгою тінню та маленьким тілом, що сигналізує про розворот ціни та відторгнення певного цінового рівня ринком.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Поглинання (Engulfing)',
-          description:
-            'Патерн з двох свічок, де друга свічка повністю перекриває тіло першої, вказуючи на зміну ринкових настроїв.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Внутрішній бар (Inside Bar)',
-          description:
-            'Свічка, діапазон якої повністю знаходиться всередині діапазону попередньої материнської свічки, що сигналізує про консолідацію перед пробоєм.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Рівень підтримки',
-          description:
-            'Цінова зона, де попит перевищує пропозицію і покупці зупиняють падіння ціни, викликаючи відскок вгору.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Рівень опору',
-          description:
-            'Цінова зона, де пропозиція перевищує попит і продавці зупиняють зростання ціни, викликаючи відскок вниз.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Доджі (Doji)',
-          description:
-            'Свічка з дуже маленьким тілом, де ціни відкриття та закриття майже збігаються, що вказує на нерішучість ринку.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Фейковий пробій (False Breakout)',
-          description:
-            'Ситуація, коли ціна пробиває рівень, але швидко повертається назад, заманюючи трейдерів у пастку.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Свінг-хай та Свінг-лоу',
-          description:
-            'Локальні максимуми та мінімуми на графіку, що використовуються для визначення структури тренду та ключових розворотних точок.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Чистий графік',
-          description:
-            'Ціновий графік без технічних індикаторів, що відображає лише свічки або бари та використовується в методі Price Action.',
+            'ATR (Average True Range) це індикатор середнього істинного діапазону; він показує, на скільки в середньому гуляє ціна за період.',
         },
       ],
     };

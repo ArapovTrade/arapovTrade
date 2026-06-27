@@ -54,21 +54,17 @@ export class HomeEnBlogTwentyThreeComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
 
-    this.titleService.setTitle('Bitcoin ETF: What It Is and How It Works');
+    this.titleService.setTitle('Market Volume Analysis | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Complete guide to Bitcoin ETF. Learn how exchange-traded funds on bitcoin work, their advantages, risks, and impact on the cryptocurrency market.',
+        'How market volume analysis works: volume profile, clusters, delta and why volume is the primary cause of price movement.',
     });
 
-    this.meta.updateTag({ name: 'author', content: 'Ihor Arapov' });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-21' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/bitcoinetf.webp',
-    });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
+
     this.gerRandom();
   }
   randomArticleRus: any = [];
@@ -254,27 +250,37 @@ export class HomeEnBlogTwentyThreeComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          headline: 'Bitcoin ETF: What It Is and How It Works',
+          headline:
+            'Market Volume Analysis: A Complete Guide to Reading Volume',
           description:
-            'Complete guide to Bitcoin ETF. Learn how exchange-traded funds on bitcoin work, their advantages, risks, and impact on the cryptocurrency market.',
-          author: {
-            '@id': 'https://arapov.trade/en#person',
-          },
+            'How market volume analysis works: volume profile, clusters, delta and why volume is the primary cause of price movement.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'ArapovTrade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
             url: 'https://arapov.trade',
+            logo: {
+              '@type': 'ImageObject',
+              url: 'https://arapov.trade/assets/img/favicon.ico',
+            },
+          },
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': 'https://arapov.trade/en/freestudying/volume-analysis',
           },
           image: {
             '@type': 'ImageObject',
-            url: 'https://arapov.trade/assets/img/content/bitcoinetf1.webp',
+            url: 'https://arapov.trade/assets/img/content/volmarketanalisys.webp',
+            width: 1200,
+            height: 630,
           },
-          datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
-          mainEntityOfPage: {
-            '@type': 'WebPage',
-            '@id': 'https://arapov.trade/en/freestudying/bitcoinetf',
-          },
+          articleSection: 'Volume analysis',
+          keywords:
+            'volume analysis, trading volume, effort and result, Wyckoff, Volume Profile, POC, Market Profile, peak volume levels',
+          inLanguage: 'en',
         },
       ],
     };
@@ -289,18 +295,18 @@ export class HomeEnBlogTwentyThreeComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/en#person',
+      '@id': 'https://arapov.trade/#person',
       name: 'Igor Arapov',
       alternateName: [
         'Ігор Арапов',
-        'Арапов Игорь',
-        'I. Arapov',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/en',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -315,12 +321,12 @@ export class HomeEnBlogTwentyThreeComponent implements OnInit {
         'https://t.me/ArapovTrade',
       ],
       jobTitle: [
-        'Independent researcher,',
-        'trader',
-        'author and founder of arapov.trade',
+        'Independent researcher',
+        'Trader',
+        'Author and founder of arapov.trade',
       ],
       description:
-        'Independent researcher, practicing trader, author of books on trading and scientific publications. Specializes in trading psychology and cognitive biases in financial markets.',
+        'Independent researcher, practising trader, author of trading books and scientific publications. Specialises in trading psychology and cognitive biases in financial markets.',
     };
 
     this.addJsonLdSchema(data);
@@ -336,42 +342,50 @@ export class HomeEnBlogTwentyThreeComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'What is a Bitcoin ETF?',
+          name: 'What is volume analysis in simple terms?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: "A Bitcoin ETF is an exchange-traded fund that trades on traditional exchanges and allows investing in bitcoin without directly purchasing cryptocurrency. The fund tracks bitcoin's price through ownership of real coins or futures contracts.",
+            text: 'It is reading the market by the number of trades, not by price alone. Volume shows how much was really traded per bar. If a large volume stands behind a price move, there is money in the market, and if the volume is dry, the move is dangerous to trust.',
           },
         },
         {
           '@type': 'Question',
-          name: 'How does Bitcoin ETF differ from buying bitcoin?',
+          name: 'What does the effort-result principle mean?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'When buying an ETF, you own shares of the fund, not the bitcoins themselves. This eliminates the need to manage a crypto wallet but excludes the ability to use coins in DeFi or for transfers.',
+            text: 'Volume is the effort, the price move is the result. A big effort should give a big move. If the volume is huge but price stands still, the opposite side is absorbing the market, and that is a frequent signal of a reversal.',
           },
         },
         {
           '@type': 'Question',
-          name: 'What types of Bitcoin ETF exist?',
+          name: 'How does volume confirm a trend?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: "There are spot ETFs (fund owns real bitcoins) and futures ETFs (fund uses futures contracts). Spot ETFs more accurately reflect bitcoin's price, while futures may have deviations.",
+            text: 'A rising trend on rising volume is confirmed, buyers are adding. If price rises while volume falls, interest is fading and a correction is possible. High volume on a level breakout says the breakout is real.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Why is Bitcoin ETF important for the market?',
+          name: 'What are Volume Profile and POC?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: "Bitcoin ETF opens access to cryptocurrencies for institutional investors, increases market liquidity, creates regulatory transparency, and promotes bitcoin's integration into traditional finance.",
+            text: 'Volume Profile shows how much volume passed at each price level, not over time. POC is the level with the maximum volume, the point of greatest participant interest. Such zones often work as strong support and resistance.',
           },
         },
         {
           '@type': 'Question',
-          name: 'What are the risks of investing in Bitcoin ETF?',
+          name: 'Why are there no real volumes on forex?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Main risks: fund fees reduce returns, lack of ownership of real bitcoins, dependence on regulatory decisions, base asset volatility, potential price deviations in futures ETFs.',
+            text: 'Forex is an over-the-counter market with no single center, so total trade volume is not counted there. Only tick volume is available, the number of price changes over time. It correlates with real volume but with error, so it is a guide, not exact data.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Can you trade on volume alone?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'In my experience, no. Volume gives no signals on its own, it confirms or cancels what is visible from levels and the market phase. It works best paired with levels, not instead of them.',
           },
         },
       ],
@@ -387,37 +401,58 @@ export class HomeEnBlogTwentyThreeComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'How to Invest in Bitcoin ETF',
+      '@id': 'https://arapov.trade/en/freestudying/volume-analysis#howto',
+      name: 'How to read the market by volume',
+      description:
+        'A step-by-step breakdown of volume analysis: from reading effort and result to entering on the price reaction',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Research available funds',
-          text: 'Compare fees, liquidity, management company reputation, and type of bitcoin tracking (spot or futures).',
+          name: 'Understand what volume measures',
+          text: 'Volume is the number of contracts or lots that really changed hands per bar, and what matters is not the figure itself but its dynamic relative to neighboring bars.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Choose a broker',
-          text: 'Use a reliable broker with access to NYSE or Nasdaq exchanges where Bitcoin ETFs trade.',
+          name: 'Read effort and result',
+          text: "Compare the bar's volume (effort) with how far price travelled (result): big volume on a weak move means someone large is absorbing the flow.",
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Open a brokerage account',
-          text: 'Complete verification and fund your account. No crypto exchange account is required to purchase ETF.',
+          name: 'Gauge trend strength by volume',
+          text: 'A rising trend on rising volume is healthy, while a price rise on falling volume signals weakening and a possible reversal.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Determine investment size',
-          text: 'Decide what portion of your portfolio to allocate to Bitcoin ETF. Consider cryptocurrency volatility.',
+          name: 'Read the deficit of demand and supply',
+          text: 'The cause of a fall is a deficit of demand, when large capital stops buying, and the cause of a rise is a deficit of supply; a skyscraper of volume on bars shows the path of least resistance.',
         },
         {
           '@type': 'HowToStep',
           position: 5,
-          name: 'Make the purchase',
-          text: "Buy ETF like a regular stock through your broker's trading terminal. Monitor performance and rebalance your portfolio.",
+          name: 'Find peak levels and the POC',
+          text: 'With Volume Profile look for prices with the maximum traded volume, the POC and the value area, where large capital was active.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 6,
+          name: 'Read the value area by Market Profile',
+          text: 'Market Profile shows the market as an auction: where price is fair, and where it is expensive or cheap relative to the value area.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 7,
+          name: 'Build the entry on the price reaction',
+          text: 'Mark the zones on the higher timeframe, but take the entry on the lower one, by the price reaction at the level, not on the touch itself.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 8,
+          name: 'Take honest volume',
+          text: 'Look at real volume on cleared exchange futures, for example on the CME, not the forex tick or the painted crypto one.',
         },
       ],
     };
@@ -432,59 +467,37 @@ export class HomeEnBlogTwentyThreeComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Bitcoin ETF Terms',
+      name: 'Article glossary',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Bitcoin ETF',
-          description: "Exchange-traded fund that tracks bitcoin's price",
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Spot ETF',
-          description: 'Fund that holds real bitcoins in reserve',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Futures ETF',
-          description: 'Fund that uses futures contracts to track price',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'SEC',
+          name: 'Volume analysis',
           description:
-            'US Securities and Exchange Commission, market regulator',
+            'A method of reading the market by the number of trades that passed over a period, not just by the price move.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Tracking error',
-          description: 'Deviation of ETF price from underlying asset price',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Management fee',
-          description: 'Annual fee paid to fund for asset management',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Institutional investors',
-          description: 'Large investors: pension funds, hedge funds, banks',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Liquidity',
+          name: 'Effort and result principle',
           description:
-            'Ability to quickly buy or sell an asset without significantly affecting its price',
+            'A Wyckoff rule by which volume is treated as the applied effort and the price move as its result, and these two are always checked against each other.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Cryptocurrency wallet',
-          description: 'Software or device for storing cryptocurrencies',
+          name: 'Peak volume level',
+          description:
+            'A price level at which the maximum trading volume passed over a chosen period; large capital was active there, so it works as strong support or resistance.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Private key',
-          description: 'Secret code for accessing cryptocurrency assets',
+          name: 'Market Profile',
+          description:
+            'A way of organizing data on price, time and volume as a distribution that shows at which prices the market spent the most time and trades.',
+        },
+        {
+          '@type': 'DefinedTerm',
+          name: 'Demand deficit',
+          description:
+            'A situation where large capital stops buying at current prices and its demand disappears, so the remaining sellers push price down; the mirror supply deficit becomes the cause of a rise.',
         },
       ],
     };

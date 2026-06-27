@@ -53,14 +53,14 @@ export class HomeEnBlogNineComponent implements OnInit {
     this.grr = this.artickleServ.selectedGroups;
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
-    this.titleService.setTitle('How to Predict Price in Trading | ArapovTrade');
+    this.titleService.setTitle('Bitcoin Halving: What It Is | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Complete guide to price forecasting in financial markets. Technical and fundamental analysis, indicators, volume analysis, and proven strategies for predicting price movements.',
+        'What Bitcoin halving is, when it happens, how the reward cut affects supply and why this event matters to miners and investors.',
     });
 
     this.gerRandom();
@@ -247,29 +247,34 @@ export class HomeEnBlogNineComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          headline: 'How to Predict Price in Trading: Complete Guide',
+          headline: 'Bitcoin Halving: What It Is and How It Affects the Price',
           description:
-            'Complete guide to price forecasting in financial markets. Technical and fundamental analysis, indicators, volume analysis, and proven strategies for predicting price movements.',
-          author: {
-            '@id': 'https://arapov.trade/en#person',
-          },
+            'What Bitcoin halving is, when it happens, how the reward cut affects supply and why this event matters to miners and investors.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'ArapovTrade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
-          datePublished: '2026-03-15T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://arapov.trade/en/freestudying/predictmarketprice',
+            '@id': 'https://arapov.trade/en/freestudying/bitcoin-halving',
           },
-          image:
-            'https://arapov.trade/assets/img/content/predictmarketprice1.webp',
-          articleSection: 'Trading',
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/halving.webp',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Cryptocurrency',
+          keywords: 'bitcoin halving',
           inLanguage: 'en',
         },
       ],
@@ -285,19 +290,18 @@ export class HomeEnBlogNineComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/en#person',
+      '@id': 'https://arapov.trade/#person',
       name: 'Igor Arapov',
       alternateName: [
         'Ігор Арапов',
-        'Арапов Игорь',
-        'I. Arapov',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-
-      url: 'https://arapov.trade/en',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -312,12 +316,12 @@ export class HomeEnBlogNineComponent implements OnInit {
         'https://t.me/ArapovTrade',
       ],
       jobTitle: [
-        'Independent researcher,',
-        'trader',
-        'author and founder of arapov.trade',
+        'Independent researcher',
+        'Trader',
+        'Author and founder of arapov.trade',
       ],
       description:
-        'Independent researcher, practicing trader, author of books on trading and scientific publications. Specializes in trading psychology and cognitive biases in financial markets.',
+        'Independent researcher, practising trader, author of trading books and scientific publications. Specialises in trading psychology and cognitive biases in financial markets.',
     };
 
     this.addJsonLdSchema(data);
@@ -333,42 +337,34 @@ export class HomeEnBlogNineComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'What is the most effective price prediction method?',
+          name: 'What is the bitcoin halving in simple terms?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'The most effective approach combines technical and fundamental analysis with volume analysis. Technical analysis identifies entry points, fundamental analysis determines overall direction, and volume analysis confirms signal validity.',
+            text: 'It is an event coded into bitcoin where the miner reward per block is cut in half roughly every four years. This slows the issue of new coins and keeps supply scarce under the hard cap of 21 million bitcoins.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Which indicators are best for price forecasting?',
+          name: 'When were the halvings, and when is the next one?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'The most popular indicators include moving averages (MA, EMA) for trend identification, RSI for overbought/oversold conditions, MACD for momentum and reversals, Bollinger Bands for volatility, and Ichimoku for comprehensive analysis.',
+            text: 'Halvings have already happened in 2012, 2016, 2020 and in April 2024. The reward fell from 50 to 25, then 12.5, then 6.25, then 3.125 coins per block. The next is expected around April 2028, dropping the reward to 1.5625 coins.',
           },
         },
         {
           '@type': 'Question',
-          name: 'How does volume analysis help in forecasting?',
+          name: "Does the halving guarantee a rise in bitcoin's price?",
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Volume confirms the strength of price movements. Rising prices on high volume confirm the trend. Volume divergence with price warns of potential reversals. Abnormal volume spikes signal institutional activity.',
+            text: 'No. Bitcoin rose after past halvings, but the strength of the move fades with each cycle, and timing alignment does not prove cause. The past does not guarantee the future, so trading on the narrative alone is risky.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Why is multiple timeframe analysis important?',
+          name: 'Should you buy bitcoin before the halving?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Multiple timeframe analysis allows seeing the bigger picture on higher timeframes while finding precise entries on lower ones. This improves win rates and risk-reward ratios by aligning trades with dominant trends.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'What is the biggest mistake in price forecasting?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'The biggest mistake is trading against the trend without valid reasons and ignoring risk management. Even accurate forecasts cannot guarantee profits if a trader risks too much capital on single trades.',
+            text: 'The date is known years ahead, so the market often prices the rise in before the event, and buying on the hype frequently lands you on a local top. In my experience it is wiser to decide by the chart and volume than by the calendar.',
           },
         },
       ],
@@ -384,39 +380,34 @@ export class HomeEnBlogNineComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'How to Forecast Price in Financial Markets',
+      '@id': 'https://arapov.trade/en/freestudying/bitcoin-halving#howto',
+      name: 'How to understand and apply: the Bitcoin halving and how it affects the price',
       description:
-        'Step-by-step process for predicting price movements to make informed trading decisions',
+        'A step-by-step read of the topic and its practical use in trading',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Identify the Overall Trend',
-          text: 'Use moving averages and high/low analysis on higher timeframes to determine the dominant trend direction before looking for trade setups.',
+          name: 'What the bitcoin halving is and its history',
+          text: 'The halving is an event coded into bitcoin where the miner reward for a mined block is cut exactly in half, which slows the appearance of new coins.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Find Key Levels',
-          text: 'Identify support and resistance levels, Fibonacci retracements, and volume concentration zones where price may reverse or accelerate.',
+          name: 'How the halving affects the bitcoin price across past cycles',
+          text: 'The logic is simple: the supply of new coins falls, demand holds or grows, and that pushes price up.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Analyze Technical Indicators',
-          text: 'Apply technical indicators (RSI, MACD, Bollinger Bands) to confirm signals and assess market momentum and potential reversals.',
+          name: 'The 2024 halving: what happened to the price',
+          text: 'The fourth halving took place in April 2024 at block 840,000: the reward fell from 6.25 to 3.125 coins, and daily issue of new bitcoins dropped from about 900 to about 450.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Check Volume',
-          text: 'Verify that volume supports the price movement. High volume on breakouts confirms their validity and increases probability of follow-through.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 5,
-          name: 'Consider Fundamental Factors',
-          text: 'Check the economic calendar and news background. Avoid entries before major news releases or factor their potential impact into your analysis.',
+          name: 'Trading the halving: myth and reality',
+          text: 'The main myth runs like this: buy before the halving and get rich.',
         },
       ],
     };
@@ -431,69 +422,13 @@ export class HomeEnBlogNineComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Price Forecasting Terms in Trading',
-      description:
-        'Glossary of key terms for price prediction in financial markets',
+      name: 'Article glossary',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Technical Analysis',
+          name: 'Halving',
           description:
-            'A method of forecasting prices based on studying historical price data, chart patterns, and technical indicators',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Fundamental Analysis',
-          description:
-            'An analytical method based on economic, political, and financial factors that influence asset value',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Moving Average',
-          description:
-            'An indicator that calculates average price over a defined period to smooth fluctuations and identify trends',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'RSI',
-          description:
-            'Relative Strength Index - an indicator measuring price change speed and magnitude to identify overbought or oversold conditions',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'MACD',
-          description:
-            'Moving Average Convergence Divergence - an indicator showing the relationship between two moving averages to identify momentum and reversals',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Support Level',
-          description:
-            'A price level where demand is strong enough to stop price decline and cause a bounce upward',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Resistance Level',
-          description:
-            'A price level where supply is strong enough to stop price advance and cause a pullback downward',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Volume Analysis',
-          description:
-            'A method analyzing trading volume to confirm price movements and detect institutional activity',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Divergence',
-          description:
-            'A discrepancy between price movement and indicator readings that often signals potential trend reversal',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Bollinger Bands',
-          description:
-            'A volatility indicator consisting of a moving average and two standard deviation lines to identify extreme price levels',
+            'An event coded into bitcoin where the miner reward for a mined block is cut exactly in half, which slows the appearance of new coins.',
         },
       ],
     };

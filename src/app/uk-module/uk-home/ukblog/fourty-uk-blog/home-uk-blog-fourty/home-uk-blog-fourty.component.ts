@@ -57,15 +57,16 @@ export class HomeUkBlogFourtyComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Чому трейдинг такий складний? Головні причини та рішення | Arapov.trade',
+      'Управління угодою: вхід, супровід, вихід | Arapov.trade',
     );
-    this.meta.updateTag({ name: 'robots', content: 'index, follow' });this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
+    this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
 
-  this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Чому трейдинг такий складний? Розбираємо головні причини: психологія, волатильність, ризик-менеджмент. Практичні поради для подолання труднощів у трейдингу.',
+        'Як керувати угодою після входу: перенесення в беззбиток, часткова фіксація, трейлінг-стоп і дисципліна виходу за планом, а не за емоціями.',
     });
 
     this.gerRandom();
@@ -272,28 +273,36 @@ export class HomeUkBlogFourtyComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          '@id':
-            'https://arapov.trade/uk/freestudying/difficulttrading#article',
-          headline: 'Чому трейдинг такий складний? Головні причини та рішення',
+          headline:
+            'Управління угодою в трейдингу: тейк-профіт, беззбиток, трейлінг і хедж',
           description:
-            "Комплексний розбір причин складності трейдингу: психологічні бар'єри, волатильність ринків, помилки управління капіталом.",
-          datePublished: '2026-03-25T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
-          author: {
-            '@id': 'https://arapov.trade/uk#person',
-          },
+            'Як керувати угодою після входу: перенесення в беззбиток, часткова фіксація, трейлінг-стоп і дисципліна виходу за планом, а не за емоціями.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
             '@id': 'https://arapov.trade/#organization',
-            name: 'Arapov.trade',
+            name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
-          image:
-            'https://arapov.trade/assets/img/content/difficulttrading1.webp',
-          articleSection: 'Навчання трейдингу',
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': 'https://arapov.trade/uk/freestudying/trade-management',
+          },
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/trade-management.jpeg',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Ризик-менеджмент',
+          keywords:
+            'управління угодою, тейк-профіт, беззбиток, трейлінг-стоп, хеджування, фіксація прибутку, перенесення стопа, вихід з угоди',
           inLanguage: 'uk',
         },
       ],
@@ -309,18 +318,18 @@ export class HomeUkBlogFourtyComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/uk#person',
-      name: 'Ігор Арапов',
+      '@id': 'https://arapov.trade/#person',
+      name: 'Igor Arapov',
       alternateName: [
-        'Igor Arapov',
-        'Арапов Игорь',
-        'I. Arapov',
+        'Ігор Арапов',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/uk',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -353,46 +362,53 @@ export class HomeUkBlogFourtyComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
-      '@id': 'https://arapov.trade/uk/freestudying/difficulttrading#faq',
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'Чому 70% трейдерів втрачають гроші?',
+          name: 'Що таке управління угодою в трейдингу?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Основні причини: нереалістичні очікування, відсутність знань про ринки, емоційні рішення та нехтування ризик-менеджментом.',
+            text: 'Це все, що ви робите з позицією після входу: де фіксуєте прибуток тейком, коли переносите стоп у беззбиток, як ведете прибуток трейлінгом. По суті це управління власними жадібністю і страхом на виході, адже план там вирішує більше, ніж сам вхід.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Як подолати страх втрати грошей?',
+          name: 'Де правильно ставити тейк-профіт?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Встановлюйте ризик 1-2% на угоду, використовуйте стоп-лоси, торгуйте за планом. Починайте з демо-рахунку.',
+            text: 'Від структури ринку, а не від бажаної суми. Логічна ціль це найближчий сильний рівень, до якого ціна дійде з великою ймовірністю: трохи нижче опору в лонзі і трохи вище підтримки в шорті. Спершу дивитеся, докуди реально дійде ціна, потім рахуєте прибуток.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Скільки часу потрібно для освоєння трейдингу?',
+          name: 'Коли переносити стоп у беззбиток?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Базове розуміння — 3-6 місяців. Стабільний прибуток — 2-3 роки практики.',
+            text: "Після того як ціна пройшла у ваш бік помітний шлях і закріпилася за рівнем на об'ємі. До цього моменту перенесення рано: звичайний відкат зачепить стоп у точці входу і виб'є вас із позиції, яка потім відпрацювала б у плюс.",
           },
         },
         {
           '@type': 'Question',
-          name: 'Яка головна помилка початківців?',
+          name: 'Чим небезпечний ранній беззбиток?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Торгівля без стратегії та ризик-менеджменту. Надмірний ризик і рішення на емоціях.',
+            text: 'Стоп, перенесений у нуль занадто рано, чіпляє ринковий шум і виносить вас з угоди до того, як вона відпрацювала. Ціна йде до цілі вже без вас. Виходить, що, захищаючи прибуток, трейдер ріже його ж власне джерело.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Чи можна заробляти трейдингом стабільно?',
+          name: 'Як налаштувати дистанцію трейлінг-стопа?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Так, при системному навчанні, розробці стратегії та суворому ризик-менеджменті.',
+            text: "Від того, наскільки широко ходить інструмент і як іде рух, а не навмання в пунктах. Зазор зобов'язаний вміщати рядові відкати, але не повертати зайве. Тісний вибиває на рівному місці, широкий віддає прибуток, а в боковику трейлінг частіше шкодить.",
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Чи потрібне хеджування початківцю?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: "У моєму досвіді ні. Головну задачу хеджу, обмежити збиток, простіше і дешевше розв'язує звичайний стоп-лосс. Хедж тримає дві зустрічні позиції, додає спред, комісії і ризик заплутатися. Початківцю надійніше освоїти захист стопом і ризик один-два відсотки на угоду.",
           },
         },
       ],
@@ -408,38 +424,46 @@ export class HomeUkBlogFourtyComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      '@id': 'https://arapov.trade/uk/freestudying/difficulttrading#howto',
-      name: 'Як подолати складнощі в трейдингу',
+      '@id': 'https://arapov.trade/uk/freestudying/trade-management#howto',
+      name: 'Як керувати відкритою угодою: тейк-профіт, беззбиток, трейлінг і хедж',
+      description:
+        'Покроковий розбір теми та її практичне застосування в торгівлі',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Вивчіть основи',
-          text: 'Опануйте технічний і фундаментальний аналіз за 2-3 місяці.',
+          name: 'Зрозумійте, що управління угодою починається після входу',
+          text: 'Управління угодою це все, що трейдер робить з позицією після входу, щоб захистити й забрати прибуток за планом, а не на емоціях.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Практика на демо',
-          text: 'Торгуйте віртуальними грошима 3-6 місяців.',
+          name: 'Ставте тейк-профіт від рівнів, а не від бажаної суми',
+          text: 'Тейк-профіт ставлять від структури ринку, від найближчого сильного рівня, до якого ціна дійде з великою ймовірністю.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Торговий план',
-          text: 'Створіть план з умовами входу, виходу та ризик-лімітами.',
+          name: "Рахуйте тейк у зв'язці зі стопом",
+          text: 'Сам по собі тейк нічого не вирішує, важливе його відношення до ризику за стопом.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Ризик-менеджмент',
-          text: 'Ризик на угоду 1-2%. Завжди використовуйте стоп-лоси.',
+          name: 'Переносьте стоп у беззбиток після підтвердження руху',
+          text: "Стоп у беззбиток переносять тільки після того, як ціна пройшла шлях і закріпилася за рівнем на об'ємі.",
         },
         {
           '@type': 'HowToStep',
           position: 5,
-          name: 'Психологічна стійкість',
-          text: 'Ведіть щоденник, робіть перерви, керуйте стресом.',
+          name: 'Налаштовуйте трейлінг-стоп від волатильності',
+          text: 'Дистанцію трейлінг-стопа задають від волатильності інструмента і структури руху.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 6,
+          name: 'Не ускладнюйте захист хеджем, якщо вистачає стопа',
+          text: "Початківцю хеджування не потрібне, його задачу простіше і дешевше розв'язує звичайний стоп-лосс.",
         },
       ],
     };
@@ -454,58 +478,31 @@ export class HomeUkBlogFourtyComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      '@id': 'https://arapov.trade/uk/freestudying/difficulttrading#glossary',
-      name: 'Глосарій трейдингу',
+      name: 'Глосарій термінів статті',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Волатильність',
-          description: 'Ступінь мінливості ціни активу.',
+          name: 'Управління угодою',
+          description:
+            'Усе, що трейдер робить з позицією після входу, щоб захистити й забрати прибуток за планом, а не на емоціях.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Стоп-лос',
-          description: 'Ордер для обмеження збитків.',
+          name: 'Тейк-профіт',
+          description:
+            'Відкладений ордер, який автоматично закриває позицію з прибутком, щойно ціна досягає заздалегідь заданого трейдером рівня.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Ризик-менеджмент',
-          description: 'Система управління торговими ризиками.',
+          name: 'Беззбиток',
+          description:
+            'Перенесення стоп-лосса на рівень ціни відкриття позиції, після якого угода перестає нести ризик збитку і в найгіршому разі закривається в нуль.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Кредитне плече',
-          description: 'Торгівля позиковими коштами.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Диверсифікація',
-          description: 'Розподіл капіталу між активами.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Торговий план',
-          description: 'Документ з правилами торгівлі.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Демо-рахунок',
-          description: 'Навчальний рахунок з віртуальними грошима.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Технічний аналіз',
-          description: 'Аналіз графіків та індикаторів.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Фундаментальний аналіз',
-          description: 'Аналіз економічних показників.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Ліквідність',
-          description: 'Здатність швидко продати актив.',
+          name: 'Хеджування',
+          description:
+            "Зниження ризику за основною позицією за рахунок відкриття протилежної або пов'язаної угоди, яка приносить прибуток, коли основна йде в збиток.",
         },
       ],
     };

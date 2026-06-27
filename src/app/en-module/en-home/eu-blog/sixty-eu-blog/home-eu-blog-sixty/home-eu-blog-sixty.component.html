@@ -6,79 +6,481 @@
           <div class="m-right hero-section"></div>
           <div class="free-courses_main-container">
             <main lang="en">
-             <header>
-  <h1>Trading vs Options: What's the Difference?</h1>
-</header>
-<article>
-  <p>The difference is simple: in classic trading you buy or sell the asset itself, or a future, and earn on the price move, while an option gives you the right, but not the obligation, to make a trade at a fixed price. I trade directionally myself, in futures and spot, reading volume and levels, and I treat options as a separate and more complex discipline.</p>
+              <header>
+                <h1>
+                  Trading Indicators: Which Work, Why They Lag, and What to Use
+                  Instead
+                </h1>
+              </header>
+              <article>
+                <p>
+                  Math tools that recompute price and volume into lines and
+                  signals on a chart, trading indicators come in useful and
+                  useless kinds. Some genuinely help: gauging volatility, sizing
+                  a stop, spotting a big player's activity. But most popular
+                  oscillators lag, and their buy-sell signals over a long run
+                  work close to chance. So I keep the useful tools and have
+                  dropped the lagging signals from my own trading.
+                </p>
 
-  <p>Let me state my position up front, to be fair. Options are neither worse nor better, they are simply a different tool with their own logic. But my method is built on reading price and volume at a level, and options add two more layers on top: time and volatility. I do not need them for directional trading, so I do not use them, yet every trader should understand the difference in order to choose with open eyes. I have traded since 2013.</p>
+                <p>
+                  When I first came into trading, I started exactly like almost
+                  everyone: with indicators. They are easy to put on a chart,
+                  every book explains them clearly, and it feels like here it
+                  is, the entry button. After a few years of experiments I
+                  dropped them, keeping only volume, and behind that sits a
+                  simple mechanism worth understanding once. Let's calmly go
+                  through how an indicator is built, why the stochastic and MACD
+                  lag, what divergence is, and what I look at instead of their
+                  signals.
+                </p>
 
-  <p><strong><i>In this article we'll cover:</i></strong></p>
-  <ul>
-    <li>an option is a right, not an obligation, unlike a future, which obliges you;</li>
-    <li>an option buyer's risk is capped at the premium, while a seller's risk can be enormous;</li>
-    <li>the main trap of options is time decay: you can be right on direction and still lose;</li>
-    <li>I choose directional trading because it is simpler and clearer for my method.</li>
-  </ul>
+                <p>
+                  <strong><i>In this article we'll cover:</i></strong>
+                </p>
+                <ul>
+                  <li>
+                    an indicator is computed from past prices, so by nature it
+                    reacts after the move, not before it;
+                  </li>
+                  <li>
+                    oscillators like the stochastic and moving-average
+                    crossovers run close to a coin flip over a long series;
+                  </li>
+                  <li>
+                    divergence is a hint of a weakening impulse, but on an
+                    indicator it lags and in a trend it deceives;
+                  </li>
+                  <li>
+                    in my experience volume and volatility are what help,
+                    because they show the cause, not the trace of price.
+                  </li>
+                </ul>
 
-  <p>Let us start with what an option is and how it differs from a future.</p>
+                <p>Let's start with how an indicator is even built inside.</p>
 
-  <h2>What Are Trading Vs Options?</h2>
-  <p>An <dfn itemscope itemtype="https://schema.org/DefinedTerm"><span itemprop="name">option</span></dfn> is a contract giving the right, but not the obligation, to buy or sell an asset at a pre-agreed price, the strike, up to a certain date. The right to buy is a call, the right to sell a put, and for that right the buyer pays a premium. If the market goes the wrong way, the buyer simply lets the option expire and loses only that premium, no more.</p>
-  <p>Here is the key difference from a future. A future is an obligation with symmetric risk: both profit and loss are unbounded. An option is asymmetric: the buyer's maximum loss is the premium, but the seller's risk can be enormous. On top of that an option has a lifespan and a built-in decay of value over time, which a future does not. The nature of these <a class="linkrefinto" href="https://arapov.trade/en/freestudying/derivatives">what are derivatives</a> is covered separately.</p>
+                <h2>What Are Trading Indicators and Why Do They Lag?</h2>
+                <p>
+                  A
+                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
+                    ><span itemprop="name">trading indicator</span></dfn
+                  >
+                  is a formula that takes past prices and volumes over a chosen
+                  period and turns them into a line, a histogram, or a number on
+                  the chart. The key word here is past: any calculation leans on
+                  candles that have already closed, so by its nature an
+                  indicator shows what the market has already done.
+                </p>
+                <p>
+                  By the task they solve, it is convenient to split them into
+                  groups. Trend ones show direction: moving averages,
+                  <a
+                    class="linkrefinto"
+                    href="https://arapov.trade/en/freestudying/adx-indicator"
+                    >ADX</a
+                  >, parabolic. An
+                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
+                    ><span itemprop="name">oscillator</span></dfn
+                  >
+                  is a type of indicator that looks for extreme states,
+                  overbought and oversold: RSI, the stochastic, and CCI belong
+                  here. Volume ones gauge participant activity: Volume and OBV.
+                  Volatility indicators measure the size of the move:
+                  <a
+                    class="linkrefinto"
+                    href="https://arapov.trade/en/freestudying/atr-indicator"
+                    >ATR</a
+                  >
+                  and
+                  <a
+                    class="linkrefinto"
+                    href="https://arapov.trade/en/freestudying/bollinger-bands"
+                    >Bollinger Bands</a
+                  >. That is the whole zoo a beginner sees in the terminal list.
+                  The heavier tools beginners pin special hopes on belong here
+                  too: the
+                  <a
+                    class="linkrefinto"
+                    href="https://arapov.trade/en/freestudying/ichimoku-cloud"
+                    >Ichimoku cloud</a
+                  >,
+                  <a
+                    class="linkrefinto"
+                    href="https://arapov.trade/en/freestudying/elliott-waves"
+                    >Elliott waves</a
+                  >, and
+                  <a
+                    class="linkrefinto"
+                    href="https://arapov.trade/en/freestudying/fibonacci-levels"
+                    >Fibonacci levels</a
+                  >. They all lie nicely on history but give no edge without
+                  volume and context, and I pass the same verdict on the
+                  fashionable
+                  <a
+                    class="linkrefinto"
+                    href="https://arapov.trade/en/freestudying/ai-in-trading"
+                    >artificial intelligence in trading</a
+                  >, since any model learns on the past and stays, in essence,
+                  one more lagging predictor. Now about the lag: it is not a
+                  flaw of a particular indicator, it is its property. A moving
+                  average averages price over the last N bars, and while the
+                  slow average is only thinking about turning, price has long
+                  since left. Expecting such a tool to predict the future is
+                  pointless: it honestly describes the past, and that is its
+                  ceiling. The general nature of
+                  <a
+                    class="linkrefinto"
+                    href="https://arapov.trade/en/freestudying/freeeducation#indicatorsInTrading"
+                    >indicators in trading</a
+                  >
+                  I go through in more detail in the course section.
+                </p>
+                <div class="flex">
+                  <img
+                    class="pictureImg"
+                    loading="lazy"
+                    src="/assets/img/content/RSIindicator.jpg"
+                    alt="The RSI indicator on a chart"
+                  />
+                </div>
+                <p>
+                  <strong>In short: </strong
+                  ><i
+                    >An indicator is a formula built from past closed candles,
+                    so by nature it shows what the market has already done; the
+                    lag is not a settings defect but a property, and the ceiling
+                    of an indicator is describing the past.</i
+                  >
+                </p>
 
-  <div class="flex">
-    <img class="pictureImg" loading="lazy" src="/assets/img/content/tradingvsoptions1.webp" alt="Trading versus options: the key differences" />
-  </div>
+                <h2>
+                  Stochastic, MACD, and Moving Averages: Do the Signals Actually
+                  Work?
+                </h2>
+                <p>
+                  Let's take the three most common tools almost every beginner
+                  passes through. Moving averages, or movings, are averaged
+                  price over a period, and entry signals are built on their
+                  crossover. MACD is calculated as the difference of a fast and
+                  a slow exponential average with periods 12 and 26, plus a
+                  signal line over 9 periods. The stochastic compares the
+                  current close with the price range over a period and swings
+                  from 0 to 100.
+                </p>
+                <p>
+                  Next I will speak from my practice, and this is precisely my
+                  position, not a proven law of the market. On the first trades
+                  such signals often feel like they work, and yes, sometimes a
+                  crossover really does catch a good low under a level, I traded
+                  that way myself when I started. But over a series of a hundred
+                  and three hundred trades the result comes out roughly like a
+                  coin flip: the indicator is wrong more often than it is right,
+                  while spread and commission slowly eat into the account. The
+                  point is not that the signal never works, it is that it has no
+                  durable edge. Add to that a frequent paradox: the stochastic
+                  shouts buy while the moving average at the same time says
+                  sell, and the trader freezes in a stupor. I am not calling to
+                  throw these tools out entirely, I just do not build an entry
+                  on them. Instead of a line crossover I look at where the level
+                  is, whether confirming volume is coming, how price behaves at
+                  that level, and then the same stochastic turns from a signal
+                  generator into a modest hint about the state of the market.
+                </p>
+                <div class="flex">
+                  <img
+                    class="pictureImg"
+                    loading="lazy"
+                    src="/assets/img/content/MACDindicatorpng.png"
+                    alt="The MACD indicator on a chart"
+                  />
+                </div>
+                <p>
+                  <strong>In short: </strong
+                  ><i
+                    >Crossovers of the
+                    <a
+                      class="linkrefinto"
+                      href="https://arapov.trade/en/freestudying/stochastic-oscillator"
+                      >stochastic</a
+                    >, MACD, and movings feel like they work on the first
+                    trades, but over a hundred to three hundred trades they come
+                    out like a coin flip with no durable edge; I do not build an
+                    entry on them, I look at the level and volume.</i
+                  >
+                </p>
 
-  <h2>How Trading Vs Options Work in Practice</h2>
-  <p>The choice depends on what suits you. Stocks are a simple, clear entry for an investor: you buy a share of a company, hold it as long as you like, and at most lose what you put in. Futures give direct directional trading with leverage and real exchange volume, and they are my choice precisely because I read large capital through volume. Options are the instrument of flexible strategies: hedging positions, playing volatility, building spreads.</p>
-  <p>My logic is plain. For a trader who trades the price move, transparency matters, and <a class="linkrefinto" href="https://arapov.trade/en/freestudying/futurestrading">trade futures</a> are transparent: price follows the asset, with no time decay and no complex formulas. Options are more powerful and flexible, but you pay for that flexibility in complexity. I prefer to see the result of large capital's effort directly in volume, the same effort-and-result principle, rather than juggling the greeks and volatility.</p>
+                <h2>What Is Divergence and How Does It Look on a Chart?</h2>
+                <p>
+                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
+                    ><span itemprop="name">Divergence</span></dfn
+                  >
+                  is a disagreement between the movement of price and the
+                  readings of an indicator, when price sets a new high or low
+                  and the indicator no longer confirms that extreme. The
+                  mechanics: oscillators like RSI or the stochastic measure not
+                  price itself but the speed of its change, the momentum. While
+                  the trend is healthy, price and the indicator move side by
+                  side, and when the move runs out of steam, price still creeps
+                  the old way by inertia while the indicator has already turned.
+                </p>
+                <p>
+                  Ordinary divergence comes in two kinds. A bullish one appears
+                  on a fall: price draws a new, lower low while the indicator
+                  draws a low higher than the previous one, meaning sellers are
+                  pressing weaker than price suggests, and that is a hint of a
+                  turn up. A bearish one is mirror: price makes a new high while
+                  the indicator makes a lower peak, buyers are running out of
+                  steam. There is also a hidden divergence, which on the
+                  contrary hints at a continuation of the trend. Most often the
+                  disagreement is looked for on RSI, where values above 70 are
+                  overbought and below 30 oversold, and in those extreme zones
+                  the signal is considered firmer, and on MACD through its
+                  histogram. But remember the word hint: the indicator here is
+                  derivative of price, it brings no new information from
+                  outside, it only recomputes differently what is already on the
+                  chart. How RSI is built inside I go through separately in the
+                  piece on the RSI indicator.
+                </p>
+                <div class="flex">
+                  <img
+                    class="pictureImg"
+                    loading="lazy"
+                    src="/assets/img/content/divergence1.png"
+                    alt="Types of divergence in trading: bullish, bearish, and hidden"
+                  />
+                </div>
+                <p>
+                  <strong>In short: </strong
+                  ><i
+                    >Divergence is a disagreement of price and an indicator:
+                    price gives a new extreme while the indicator does not;
+                    bullish hints up, bearish down, hidden at continuation, but
+                    it is a hint of a weakening impulse, not an entry point.</i
+                  >
+                </p>
 
-  <h2>My Experience: Why I Trade Direction, Not Options</h2>
-  <p>The main trap for a beginner in options is time decay, the fading of value as time passes, which speeds up as expiry nears. The cruellest situation is this: you buy a call, you are right on direction, price goes up, and the option still loses value because time and a drop in volatility ate the premium. Right about the market, yet in the red, and that confuses newcomers more than anything. This is not personal advice.</p>
-  <p>On top sits the pricing complexity: an option's value is driven by the asset price, time, the interest rate and volatility, and to control that you must understand the so-called greeks. Selling naked options is separately dangerous, because there the risk can be unlimited. So I made my choice early, back in 2013: simple directional trading with a clear stop and the math of the system instead of the nonlinear risk of options. Options are a perfectly workable tool, but a beginner can easily get burned with them without proper <a class="linkrefinto" href="https://arapov.trade/en/freestudying/capitalmanagement">capital management</a>.</p>
+                <h2>Why Divergence on an Indicator Deceives You</h2>
+                <p>
+                  Divergence shows only the weakness of the current move, not an
+                  entry point, and that is its subtle spot. On its own it often
+                  appears long before a real turn, and in a strong trend it
+                  gives a series of false signals: price calmly goes on and
+                  shakes out the early buyers. Trading it blind means catching
+                  falling knives.
+                </p>
+                <p>
+                  Let me show on an example how this looks in life. On the
+                  four-hour chart of gold price makes a new low while RSI draws
+                  a higher low, a bullish divergence is in plain sight. The
+                  crowd buys at once, expecting a turn. I do not enter the
+                  market on this alone: I wait until price comes up to a strong
+                  level and a reversal candle appears there with a burst of
+                  volume. If there is no volume, the divergence stays a pretty
+                  picture while price goes lower. Divergence says maybe, and the
+                  decision I make by the level and volume. And here is my main
+                  takeaway on this topic: it is more honest to look at the
+                  disagreement of price not with an oscillator but with volume.
+                  When price crawls to a new low while volume on that move
+                  falls, that is the real weakness, visible by the cause and not
+                  by a derivative of price. It is the same logic of
+                  <a
+                    class="linkrefinto"
+                    href="https://arapov.trade/en/freestudying/freeeducation#effort"
+                    >effort and result</a
+                  >: no volume, no trust in the move.
+                </p>
+                <div class="flex">
+                  <img
+                    class="pictureImg"
+                    loading="lazy"
+                    src="/assets/img/content/divergency2.jpg"
+                    alt="Bullish divergence on the RSI indicator"
+                  />
+                </div>
+                <p>
+                  <strong>In short: </strong
+                  ><i
+                    >On an indicator divergence lags and in a strong trend gives
+                    false signals; on gold 4H I do not enter on divergence
+                    alone, I wait for the level, a reversal candle, and volume,
+                    and it is more honest to look at the disagreement of price
+                    with volume rather than with an oscillator.</i
+                  >
+                </p>
 
-  <div class="flex">
-    <img class="pictureImg" loading="lazy" src="/assets/img/content/tradingvsoptions2.webp" alt="Options trading strategies and their uses" />
-  </div>
+                <h2>
+                  Which Indicators Are Actually Useful: Volume and Volatility
+                </h2>
+                <p>
+                  So what out of all this zoo did I keep? Two classes of tools
+                  help, and both show the cause, not the trace. The first is
+                  volume indicators: volume is the imprint of real participant
+                  activity, by it you can see whether big capital came into a
+                  point or price is being pushed by emptiness. The second is
+                  volatility meters like ATR, which is convenient to use for
+                  sizing the stop width and the position, not as an entry
+                  signal.
+                </p>
+                <p>
+                  The difference is fundamental. A lagging oscillator is a
+                  derivative of price, by definition it catches up to the market
+                  rather than forecasting it: it waited for the bar to form,
+                  recomputed by the formula, gave a signal, and you are already
+                  late. Volume, on the other hand, shows the very effort that
+                  moves price, so I build the decision on levels and volume,
+                  while an indicator at best complements the picture but never
+                  replaces an understanding of supply and demand. The volume
+                  approach versus the indicator one I go through in detail in
+                  the piece on volume analysis, and how ATR helps to dose risk,
+                  in the piece on the ATR indicator. This is not a call to
+                  delete every indicator from the chart, it is my honest
+                  conclusion over the years: look not for the perfect indicator
+                  but for the cause of the move. Why I dropped indicators and
+                  what I use instead I show on a chart in the video:
+                  <a
+                    class="linkrefinto"
+                    href="https://youtu.be/t4eLSS2vh-w?t=129"
+                    >why indicators lag</a
+                  >.
+                </p>
+                <p>
+                  <strong>In short: </strong
+                  ><i
+                    >Volume and volatility (ATR) are useful, because they show
+                    the cause, not the trace; an oscillator by definition
+                    catches up to the market, so I build the decision on levels
+                    and volume, while an indicator only complements but never
+                    replaces an understanding of supply and demand.</i
+                  >
+                </p>
+                <p>
+                  How indicators fit into a whole reading of the
+                  <a
+                    class="linkrefinto"
+                    href="https://arapov.trade/en/freestudying/chart-reading"
+                    >chart</a
+                  >
+                  I go through in a separate piece.
+                </p>
 
-  <section>
-    <h2>Frequently Asked Questions</h2>
-    <mat-accordion>
-      <mat-expansion-panel class="highlight-box owl_link-box" [expanded]="true">
-        <mat-expansion-panel-header>
-          <mat-panel-title>Which is better for a beginner, trading or options?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>For most beginners, directional trading is simpler: the logic is transparent, with no time decay and no complex formulas. Options do offer capped risk for the buyer, but their complexity of time, volatility and the greeks easily confuses newcomers. I suggest learning to read price and volume first.</p>
-      </mat-expansion-panel>
-      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
-        <mat-expansion-panel-header>
-          <mat-panel-title>How much capital do you need for trading and options?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>You can start small in both, especially through micro-contracts or cheap options. But capital is secondary; risk management matters far more. Selling options, by the way, needs noticeably more funds because of the high potential risk.</p>
-      </mat-expansion-panel>
-      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
-        <mat-expansion-panel-header>
-          <mat-panel-title>Where is the risk higher, in trading or options?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>It depends on the role. An option buyer's risk is capped at the premium, which is even safer than a future. But an option seller and a futures trader can carry very large risk. And in options, time also works against you, which it does not in ordinary trading.</p>
-      </mat-expansion-panel>
-      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
-        <mat-expansion-panel-header>
-          <mat-panel-title>Can you combine trading and options?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>Yes, many do: hedging a futures position with an option or building combined strategies. It is a workable approach for experienced traders. But a beginner is better off not spreading thin and bringing one instrument to a good level first.</p>
-      </mat-expansion-panel>
-    </mat-accordion>
-  </section>
+                <section>
+                  <h2>Frequently Asked Questions</h2>
+                  <mat-accordion>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      [expanded]="true"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >Why do trading indicators lag?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        Because any indicator is computed from already-closed
+                        candles, that is from past prices. By its nature it
+                        shows what the market has already done, not what will
+                        be. The lag is not a settings defect but a property of
+                        the tool itself, and its ceiling is describing the past.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >Do the signals of the stochastic, MACD, and moving
+                          averages work?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        On the first trades crossovers often feel like they
+                        work, but over a series of hundreds of trades their
+                        result is roughly like a coin flip: there is no durable
+                        edge, while spread and commission slowly eat into the
+                        account. I do not build an entry on them, I look at the
+                        level and volume.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >What is divergence in simple terms?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        A disagreement between price and an indicator: price
+                        renews an extreme while the indicator no longer does. A
+                        bullish one appears on a fall and hints at a turn up, a
+                        bearish one is mirror. But it is only a hint of a
+                        weakening impulse, not a ready entry point.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >Why does divergence on an indicator often
+                          deceive?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        Because on an indicator it lags and in a strong trend
+                        gives a series of false signals: price calmly goes on
+                        and shakes out the early buyers. It is more honest to
+                        look at the disagreement of price and volume, and to
+                        make the decision by a strong level and a reversal
+                        candle.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >Which indicators are actually
+                          useful?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        In my experience volume indicators and volatility meters
+                        like ATR are useful, because they show the cause of the
+                        move, not the trace of price. Lagging oscillators as a
+                        signal generator I do not use in my trading, I kept only
+                        volume.
+                      </p>
+                    </mat-expansion-panel>
+                  </mat-accordion>
+                </section>
 
-  <section>
-    <h2>About the Author</h2>
-    <p>Author: Igor Arapov, independent researcher in the psychology of investment decisions and behavioral finance, practising trader since 2013, founder of arapov.trade, author of a trading book series (<a class="linkrefinto" href="https://openlibrary.org/authors/OL16073686A/Igor_Arapov">Open Library</a>), (<a class="linkrefinto" href="https://orcid.org/0009-0003-0430-778X">ORCID: 0009-0003-0430-778X</a>).</p>
-  </section>
-</article>
+                <section>
+                  <h2>About the Author</h2>
+                  <p>
+                    Author:
+                    <a class="linkrefinto" href="https://arapov.trade/en"
+                      >Igor Arapov</a
+                    >
+                    — independent researcher in the psychology of investment
+                    decisions and behavioral finance, practising trader since
+                    2013, founder of arapov.trade, author of a trading book
+                    series (<a
+                      class="linkrefinto"
+                      href="https://orcid.org/0009-0003-0430-778X"
+                      >ORCID: 0009-0003-0430-778X</a
+                    >).
+                  </p>
+                </section>
+              </article>
 
               <div
                 class=""

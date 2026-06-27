@@ -47,6 +47,7 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
     this.removeSelectedSchemas();
     this.setArticleSchema();
     this.setPersonSchema();
+    this.setBreadcrumbSchema();
     this.setFaqSchema();
     this.setHowToSchema();
     this.setVideoObjectSchema();
@@ -72,8 +73,8 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
         'Бесплатный курс по трейдингу с нуля: технический анализ, метод Вайкоффа, объёмный анализ, торговая система с положительным математическим ожиданием. 18 разделов, живые разборы сделок.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-05-30' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-05-29' });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
     this.meta.updateTag({
       property: 'og:image',
       content: 'https://arapov.trade/assets/img/content/freeeducationnew.webp',
@@ -291,28 +292,24 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
       'Person',
       'VideoObject',
       'EducationalOccupationalProgram',
+
+      'BreadcrumbList',
+      'Course', // NEW
     ];
 
     const scripts = this.document.querySelectorAll(
       'script[type="application/ld+json"]',
     );
-
     scripts.forEach((script) => {
       try {
         const json = JSON.parse(script.textContent || '{}');
-
-        // Массив, объект-граф или одиночный объект
         const candidates =
           json['@graph'] ?? (Array.isArray(json) ? json : [json]);
-
         const shouldRemove = candidates.some(
           (entry: any) =>
             entry['@type'] && typesToRemove.includes(entry['@type']),
         );
-
-        if (shouldRemove) {
-          script.remove();
-        }
+        if (shouldRemove) script.remove();
       } catch {
         /* ignore invalid */
       }
@@ -329,10 +326,9 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
   //  VIDEOOBJECT
   // ============================================================
   private setVideoObjectSchema(): void {
-    const data = {
+    this.addJsonLdSchema({
       '@context': 'https://schema.org',
       '@graph': [
-        
         {
           '@type': 'VideoObject',
           '@id': 'https://arapov.trade/ru/freestudying/freeeducation#video2',
@@ -343,30 +339,19 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
           uploadDate: '2026-05-29T00:00:00+02:00',
           duration: 'PT45M2S',
           contentUrl: 'https://www.youtube.com/watch?v=tmiHem6NOZs',
-          embedUrl: 'https://www.youtube.com/embed/tmiHem6NOZs?si=lMeQKyeWBPviIQPq',
-          author: {
-            '@type': 'Person',
-            '@id': 'https://arapov.trade/ru#person',
-          },
-          publisher: {
-            '@type': 'Organization',
-            name: 'Arapov Trade',
-            logo: {
-              '@type': 'ImageObject',
-              url: 'https://arapov.trade/assets/img/favicon.ico',
-            },
-          },
+          embedUrl:
+            'https://www.youtube.com/embed/tmiHem6NOZs?si=lMeQKyeWBPviIQPq',
+          author: { '@id': 'https://arapov.trade/#person' },
+          publisher: { '@id': 'https://arapov.trade/#organization' },
         },
       ],
-    };
-
-    this.addJsonLdSchema(data);
+    });
   }
   // ============================================================
   //  ARTICLE
   // ============================================================
   private setArticleSchema(): void {
-    const data = {
+    this.addJsonLdSchema({
       '@context': 'https://schema.org',
       '@graph': [
         {
@@ -377,18 +362,9 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
           description:
             'Бесплатный курс по трейдингу с нуля: технический анализ, метод Вайкоффа, объёмный анализ, торговая система с положительным математическим ожиданием. 18 разделов, живые разборы сделок.',
           datePublished: '2025-01-15T00:00:00+02:00',
-          dateModified: '2026-05-29T00:00:00Z',
-          author: {
-            '@id': 'https://arapov.trade/ru#person',
-          },
-          publisher: {
-            '@type': 'Organization',
-            name: 'Arapov Trade',
-            logo: {
-              '@type': 'ImageObject',
-              url: 'https://arapov.trade/assets/img/favicon.ico',
-            },
-          },
+          dateModified: '2026-06-25T00:00:00+02:00', // ← сведено к одной дате (была рассинхронизация с meta)
+          author: { '@id': 'https://arapov.trade/#person' },
+          publisher: { '@id': 'https://arapov.trade/#organization' },
           mainEntityOfPage: {
             '@type': 'WebPage',
             '@id': 'https://arapov.trade/ru/freestudying/freeeducation',
@@ -407,7 +383,6 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
             'объёмный анализ',
           ],
           video: [
-             
             {
               '@id':
                 'https://arapov.trade/ru/freestudying/freeeducation#video2',
@@ -415,19 +390,17 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
           ],
         },
       ],
-    };
-
-    this.addJsonLdSchema(data);
+    });
   }
 
   // ============================================================
   //  PERSON
   // ============================================================
   private setPersonSchema(): void {
-    const data = {
+    this.addJsonLdSchema({
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/ru#person',
+      '@id': 'https://arapov.trade/#person',
       name: 'Игорь Арапов',
       alternateName: [
         'Igor Arapov',
@@ -459,9 +432,7 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
       ],
       description:
         'Независимый исследователь, практикующий трейдер, автор книг по трейдингу и научных публикаций. Специализируется на психологии трейдинга и когнитивных искажениях на финансовых рынках.',
-    };
-
-    this.addJsonLdSchema(data);
+    });
   }
 
   // ============================================================
@@ -603,7 +574,34 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
 
     this.addJsonLdSchema(data);
   }
-
+  // HLEBLIE KROHI
+  private setBreadcrumbSchema(): void {
+    this.addJsonLdSchema({
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      '@id': 'https://arapov.trade/ru/freestudying/freeeducation#breadcrumb',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Главная',
+          item: 'https://arapov.trade/ru',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Бесплатное обучение',
+          item: 'https://arapov.trade/ru/freestudying',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'Бесплатный курс по трейдингу для начинающих',
+          item: 'https://arapov.trade/ru/freestudying/freeeducation',
+        },
+      ],
+    });
+  }
   // ============================================================
   //  GLOSSARY
   // ============================================================
@@ -719,19 +717,7 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
         '@type': 'Course',
         name: 'Обучение трейдингу с нуля',
         description: 'Более 151+ статей и 78+ видеоуроков по трейдингу',
-        provider: {
-          '@type': 'Person',
-          name: 'Игорь Арапов',
-          alternateName: [
-            'Igor Arapov',
-            'Арапов Игорь',
-            'I. Arapov',
-            'Ігор Арапов',
-            'І. В. Арапов',
-            'Арапов Ігор',
-            'Arapov Igor',
-          ],
-        },
+        provider: { '@id': 'https://arapov.trade/#person' },
       },
     };
 

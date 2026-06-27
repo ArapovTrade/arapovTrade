@@ -28,7 +28,7 @@ export class HomeUkBlogThirtyNineComponent implements OnInit {
     private themeService: ThemeservService,
     private artickleServ: ArticlesService,
     private renderer: Renderer2,
-    @Inject(DOCUMENT) private document: Document
+    @Inject(DOCUMENT) private document: Document,
   ) {}
   private routerSubscription!: Subscription;
   private themeSubscription!: Subscription;
@@ -57,7 +57,7 @@ export class HomeUkBlogThirtyNineComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Де безпечно зберігати криптовалюту | Повний посібник'
+      'Управління ризиками в трейдингу | Arapov.trade',
     );
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
@@ -65,14 +65,11 @@ export class HomeUkBlogThirtyNineComponent implements OnInit {
     this.meta.updateTag({
       name: 'description',
       content:
-        'Повний посібник із безпечного зберігання криптовалют. Порівняння гарячих та холодних гаманців, захист приватних ключів, комбіновані стратегії для збереження цифрових активів.',
+        'Управління ризиками і капіталом: розмір позиції, ризик на угоду, стоп-лосс і чому саме ризик-менеджмент зберігає депозит на дистанції.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-23' }); this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/safetostorecrypto.webp',
-    });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
 
     this.gerRandom();
   }
@@ -90,7 +87,6 @@ export class HomeUkBlogThirtyNineComponent implements OnInit {
       title: 'Базовий курс',
       link: 'https://arapov.trade/uk/freestudying/freeeducation',
     },
-     
   ];
 
   onGroupChange(event: Event) {
@@ -160,7 +156,7 @@ export class HomeUkBlogThirtyNineComponent implements OnInit {
     // Показываем 5 случайных статей при фокусе, если инпут пуст
     if (!this.searchQuery) {
       const shuffled = [...this.artickleServ.ukrArtickles].sort(
-        () => Math.random() - 0.5
+        () => Math.random() - 0.5,
       );
       this.displayedArticles = shuffled.slice(0, this.maxResults);
     }
@@ -175,7 +171,7 @@ export class HomeUkBlogThirtyNineComponent implements OnInit {
   onSearchChange() {
     // Логика асинхронного поиска
     const filtered = this.artickleServ.ukrArtickles.filter((a) =>
-      a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase())
+      a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase()),
     );
     this.displayedArticles = filtered.slice(0, this.maxResults);
   }
@@ -197,7 +193,7 @@ export class HomeUkBlogThirtyNineComponent implements OnInit {
     const path: string =
       this.router.url.split('/')[this.router.url.split('/').length - 1];
     let index = this.artickleServ.ukrArtickles.findIndex(
-      (a) => a.linkUkr == path
+      (a) => a.linkUkr == path,
     );
 
     if (this.artickleServ.ukrArtickles.length - 1 == index) {
@@ -214,7 +210,7 @@ export class HomeUkBlogThirtyNineComponent implements OnInit {
     const path: string =
       this.router.url.split('/')[this.router.url.split('/').length - 1];
     let index = this.artickleServ.ukrArtickles.findIndex(
-      (a) => a.linkUkr == path
+      (a) => a.linkUkr == path,
     );
 
     if (index == 1) {
@@ -239,7 +235,7 @@ export class HomeUkBlogThirtyNineComponent implements OnInit {
     ];
 
     const scripts = this.document.querySelectorAll(
-      'script[type="application/ld+json"]'
+      'script[type="application/ld+json"]',
     );
 
     scripts.forEach((script) => {
@@ -252,7 +248,7 @@ export class HomeUkBlogThirtyNineComponent implements OnInit {
 
         const shouldRemove = candidates.some(
           (entry: any) =>
-            entry['@type'] && typesToRemove.includes(entry['@type'])
+            entry['@type'] && typesToRemove.includes(entry['@type']),
         );
 
         if (shouldRemove) {
@@ -280,31 +276,37 @@ export class HomeUkBlogThirtyNineComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          mainEntityOfPage: {
-            '@type': 'WebPage',
-            '@id': 'https://arapov.trade/uk/freestudying/safetostorecrypto',
-          },
           headline:
-            'Де безпечно зберігати криптовалюту: повний посібник із захисту цифрових активів',
+            'Ризик-менеджмент у трейдингу: як зберегти капітал і не злити депозит',
           description:
-            'Повний посібник із безпечного зберігання криптовалют. Порівняння гарячих та холодних гаманців, захист приватних ключів, комбіновані стратегії для збереження цифрових активів.',
-          image:
-            'https://arapov.trade/assets/img/content/safetostorecrypto.webp',
-          author: {
-            '@id': 'https://arapov.trade/uk#person',
-          },
+            'Управління ризиками і капіталом: розмір позиції, ризик на угоду, стоп-лосс і чому саме ризик-менеджмент зберігає депозит на дистанції.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'Arapov.trade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
-              url: 'https://arapov.trade/assets/img/content/favicon.ico',
+              url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
-          datePublished: '2024-06-15T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
-          articleBody:
-            'Збереження криптовалютних активів вимагає усвідомленого підходу до безпеки та глибокого розуміння ризиків цифрового простору. На відміну від традиційних фінансів, де банк може відновити втрачену картку або скасувати шахрайську транзакцію, світ криптовалют функціонує за принципом повної персональної відповідальності.',
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': 'https://arapov.trade/uk/freestudying/risk-management',
+          },
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/capitalmanagement.webp',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Ризик-менеджмент',
+          keywords:
+            'ризик-менеджмент, управління капіталом, розмір позиції, лот, стоп-лос, співвідношення ризик/прибуток, математичне сподівання, просадка, складний відсоток',
+          inLanguage: 'uk',
         },
       ],
     };
@@ -319,18 +321,18 @@ export class HomeUkBlogThirtyNineComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/uk#person',
-      name: 'Ігор Арапов',
+      '@id': 'https://arapov.trade/#person',
+      name: 'Igor Arapov',
       alternateName: [
-        'Igor Arapov',
-              'Арапов Игорь',
-              'I. Arapov',
-              'Игорь Арапов',
-              'І. В. Арапов',
-              'Арапов Ігор',
-              'Arapov Igor',
+        'Ігор Арапов',
+        'Игорь Арапов',
+        'Арапов Игорь',
+        'Арапов Ігор',
+        'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/uk',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -342,9 +344,13 @@ export class HomeUkBlogThirtyNineComponent implements OnInit {
         'https://github.com/ArapovTrade',
         'https://ua.linkedin.com/in/arapovtrade',
         'https://www.youtube.com/@ArapovTrade',
-        'https://t.me/ArapovTrade'
+        'https://t.me/ArapovTrade',
       ],
-       jobTitle: ['Незалежний дослідник', 'трейдер', 'автор і засновник arapov.trade'],
+      jobTitle: [
+        'Незалежний дослідник',
+        'трейдер',
+        'автор і засновник arapov.trade',
+      ],
       description:
         'Незалежний дослідник, практикуючий трейдер, автор книг з трейдингу та наукових публікацій. Спеціалізується на психології трейдингу та когнітивних упередженнях на фінансових ринках.',
     };
@@ -362,42 +368,50 @@ export class HomeUkBlogThirtyNineComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'Який тип гаманця обрати для зберігання криптовалюти?',
+          name: 'Що таке ризик-менеджмент у трейдингу простими словами?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Для активного трейдингу підійдуть гарячі гаманці з миттєвим доступом до коштів. Для довгострокового зберігання значних сум рекомендуються апаратні гаманці (Ledger, Trezor), які ізолюють приватні ключі від інтернету та забезпечують максимальний рівень захисту.',
+            text: 'Правила про те, скільки ставити в угоду і де з неї виходити, щоб смуга збитків не обнулила рахунок. Половин дві: ризик-менеджмент малим ризиком і стопом охороняє депозит, а мані-менеджмент через розрахунок обсягу і роботу з прибутком його піднімає. Без першої друга втрачає сенс.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Що таке сід-фраза і як її правильно зберігати?',
+          name: 'Скільки відсотків депозиту можна ризикувати в одній угоді?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Сід-фраза — це послідовність з 12 або 24 слів, яка дозволяє відновити доступ до криптогаманця. Її потрібно записати на папері або металевій пластині та зберігати в безпечному місці офлайн. Категорично не можна фотографувати фразу, зберігати в хмарних сервісах або передавати іншим особам.',
+            text: 'Один-два відсотки рахунку на угоду. Винна дисперсія: мінуси приходять серіями по пʼять-десять поспіль навіть у робочій системі. На десяти відсотках ризику така серія зносить депозит, на відсотку-двох лише трохи просаджує, і торгівля йде далі.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Чи безпечно тримати криптовалюту на біржі?',
+          name: 'Як розрахувати розмір позиції і лот під ризик?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Біржі зручні для активної торгівлі, але несуть підвищені ризики: можливі зломи, банкрутства або заморожування коштів. На біржових гаманцях варто тримати лише суми для поточних операцій, основні активи краще переводити на особисті гаманці під власним контролем.',
+            text: 'Від ризику і стопа, а не на око. Грошовий ризик ділять на стоп у пунктах і множать на ціну пункта. Наприклад, ризик двісті доларів, стоп пʼятдесят пунктів, пункт десять доларів виводять на 0,4 лота. Ризик і стоп фіксують першими, лот рахують останнім.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Що таке мультипідпис та коли він потрібен?',
+          name: 'Чому співвідношення 1:2 вважається мінімумом?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Мультипідпис (multisig) — це технологія, що вимагає кількох незалежних підписів для підтвердження транзакції. Вона корисна для корпоративного управління криптоактивами, сімейних інвестицій та ситуацій, де потрібно розподілити контроль між учасниками для підвищення безпеки.',
+            text: 'На 1:2 досить вигравати близько третини угод, щоб лишатися в плюсі, а третину перемог узяти до снаги. Тримати більше половини стабільно майже ніхто не вміє, тому 1:1 для більшості збиткове. На 1:3 вистачає вже й чверті вдалих входів.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Як захиститися від фішингових атак у криптосфері?',
+          name: 'Навіщо потрібен стоп-лос, якщо він фіксує збиток?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Перевіряйте URL-адреси перед введенням даних, завантажуйте додатки виключно з офіційних джерел, використовуйте закладки для доступу до бірж, не переходьте за посиланнями з листів, увімкніть двофакторну автентифікацію через додатки (Google Authenticator, Authy) замість SMS.',
+            text: 'Стоп це не збиток, а заздалегідь оплачене право продовжувати торгувати. Маленький плановий мінус дешевший за завислу збиткову позицію, що зʼїдає місяці роботи. Тому його й ставлять одразу при вході, не зсуваючи в бік збитку, як і фіксований ризик на угоду.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Що важливіше: точний вхід чи захист капіталу?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'У моєму підході захист капіталу. Через дисперсію збитки йдуть смугами, і при великому ризику навіть тямуща система гасне раніше, ніж відіграє своє. Управління ризиком тримає рахунок надійніше, ніж влучність окремо взятого входу.',
           },
         },
       ],
@@ -413,39 +427,46 @@ export class HomeUkBlogThirtyNineComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'Як налаштувати безпечне зберігання криптовалюти',
+      '@id': 'https://arapov.trade/uk/freestudying/risk-management#howto',
+      name: 'Як вибудувати ризик-менеджмент і управління капіталом',
       description:
-        'Покрокова інструкція з організації надійної системи зберігання криптовалютних активів із використанням комбінованих стратегій.',
+        'Покроковий розбір управління капіталом: від вибору ризику на угоду до розрахунку обсягу, стопа, співвідношення і математичного сподівання системи',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Аналіз портфеля та планування розподілу',
-          text: 'Оцініть обсяг ваших криптоактивів та визначте їх призначення: кошти для активної торгівлі (5-10%), оперативний резерв (10-20%), довгострокові інвестиції (70-85%). Цей розподіл визначить вибір типів гаманців.',
+          name: 'Розберіться, з чого складається управління капіталом',
+          text: 'Управління капіталом це набір правил, які визначають частку рахунку в кожній угоді і бережуть депозит від втрат.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Придбання та налаштування апаратного гаманця',
-          text: 'Придбайте апаратний гаманець (Ledger, Trezor, SafePal) виключно у офіційного виробника. Перевірте цілісність упаковки та захисні пломби. Виконайте початкове налаштування згідно з інструкціями.',
+          name: 'Зрозумійте, чому втрачає більшість',
+          text: 'Депозит найчастіше вбиває завищений ризик без системи на тлі відʼємного математичного сподівання ринку.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Створення та захист резервних копій',
-          text: 'Запишіть сід-фразу на фізичний носій (папір, металева пластина). Створіть кілька копій та розмістіть їх у різних безпечних місцях (сейф, банківська комірка). Ніколи не зберігайте цифрові копії.',
+          name: 'Тримайте ризик один-два відсотки на угоду',
+          text: 'Ризик один-два відсотки депозиту на угоду обирають не з обережності, а через дисперсію.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Налаштування багаторівневого захисту',
-          text: 'Активуйте двофакторну автентифікацію на всіх платформах через додатки (Google Authenticator). Встановіть унікальні складні паролі для кожного сервісу. За потреби налаштуйте мультипідпис для великих сум.',
+          name: 'Розрахуйте розмір позиції і лот від ризику і стопа',
+          text: 'Обсяг позиції не вгадують, його виводять з грошового ризику і відстані до стопа.',
         },
         {
           '@type': 'HowToStep',
           position: 5,
-          name: 'Регулярний аудит та оновлення системи безпеки',
-          text: 'Періодично перевіряйте актуальність прошивок гаманців, аналізуйте історію транзакцій на підозрілу активність, оновлюйте паролі, контролюйте збереження резервних копій та слідкуйте за новими загрозами.',
+          name: 'Ставте стоп-лос одразу при вході',
+          text: 'Стоп це не втрата, а заздалегідь оплачене право лишитися в грі.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 6,
+          name: 'Закладайте співвідношення ризик/прибуток від 1:2 і перевіряйте сподівання',
+          text: 'Співвідношення ризик/прибуток це важіль, яким ви виводите математичне сподівання з мінуса в плюс.',
         },
       ],
     };
@@ -460,69 +481,42 @@ export class HomeUkBlogThirtyNineComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Глосарій термінів безпеки криптовалют',
-      description:
-        "Основні терміни, пов'язані з безпечним зберіганням криптовалютних активів",
+      name: 'Глосарій термінів статті',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Приватний ключ',
+          name: 'Управління капіталом',
           description:
-            "Криптографічний код, що забезпечує повний контроль над криптовалютними коштами на пов'язаній адресі блокчейну.",
+            'Набір правил, які визначають частку рахунку в кожній угоді і бережуть депозит від втрат.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Сід-фраза',
+          name: 'Дисперсія',
           description:
-            'Мнемонічна послідовність з 12-24 слів для відновлення доступу до криптовалютного гаманця.',
+            'Нерівномірність, з якою збиткові угоди розподіляються в часі: вони йдуть не по одній, а серіями.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Гарячий гаманець',
+          name: 'Лот',
           description:
-            'Криптовалютний гаманець з постійним підключенням до інтернету, що забезпечує швидкий доступ до активів.',
+            'Стандартизована одиниця обсягу угоди, яка задає, якою кількістю активу ви торгуєте в одній позиції.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Холодний гаманець',
+          name: 'Співвідношення ризик/прибуток',
           description:
-            'Спосіб зберігання криптовалюти без підключення до мережі, що забезпечує максимальний захист від віддалених атак.',
+            'Відношення того, чим ви ризикуєте в угоді, до того, що розраховуєте на ній заробити.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Апаратний гаманець',
-          description:
-            'Фізичний пристрій для зберігання приватних ключів в ізольованому середовищі, захищеному від шкідливого ПЗ.',
+          name: 'Математичне сподівання',
+          description: 'Середній результат однієї угоди на довгій дистанції.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Мультипідпис',
+          name: 'Складний відсоток',
           description:
-            'Технологія, що вимагає кількох незалежних підписів для авторизації криптовалютної транзакції.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Двофакторна автентифікація',
-          description:
-            'Метод захисту акаунту, що вимагає підтвердження особи двома незалежними способами.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Фішингова атака',
-          description:
-            'Шахрайська схема отримання конфіденційних даних через підроблені сайти або повідомлення.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Кастодіальне зберігання',
-          description:
-            'Модель зберігання криптовалюти, при якій приватні ключі контролюються третьою стороною (біржею, сервісом).',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Некастодіальне зберігання',
-          description:
-            'Спосіб зберігання, при якому власник повністю контролює приватні ключі та несе відповідальність за безпеку.',
+            'Нарахування доходу не тільки на вкладений капітал, а й на вже накопичений прибуток.',
         },
       ],
     };

@@ -55,21 +55,17 @@ export class HomeEuBlogThirtyEightComponent implements OnInit {
     this.checkedGroup = this.artickleServ.selectedGroups;
 
     this.titleService.setTitle(
-      'Secure Cryptocurrency Storage: Complete Guide | ArapovTrade',
+      'Prop Trading: What It Is and How to Pass a Challenge | Arapov.trade',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Learn how to safely store cryptocurrency. Cold and hot wallets, hardware devices, private key protection and best security practices.',
+        'What prop trading is, how a prop firm challenge works, its rules, payouts and the hidden catches of trading on someone else’s capital.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Igor Arapov' });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-23' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/cryptostoring.webp',
-    });
+
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
 
     this.gerRandom();
   }
@@ -256,32 +252,34 @@ export class HomeEuBlogThirtyEightComponent implements OnInit {
         {
           '@type': 'Article',
           headline:
-            'Secure Cryptocurrency Storage: Complete Guide to Protecting Digital Assets',
+            'Prop trading: what it is and how to pass a prop firm challenge',
           description:
-            'Comprehensive guide to secure cryptocurrency storage. Wallet types, private key protection, hardware devices and common mistakes.',
-          author: {
-            '@id': 'https://arapov.trade/en#person',
-          },
+            'What prop trading is, how a prop firm challenge works, its rules, payouts and the hidden catches of trading on someone else’s capital.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'ArapovTrade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
             url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
-          datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://arapov.trade/en/freestudying/cryptostoring',
+            '@id': 'https://arapov.trade/en/freestudying/prop-trading',
           },
           image: {
             '@type': 'ImageObject',
-            url: 'https://arapov.trade/assets/img/content/cryptostoring1.webp',
+            url: 'https://arapov.trade/assets/img/content/prop-trading.jpeg',
+            width: 1200,
+            height: 630,
           },
-          articleSection: 'Cryptocurrency',
+          articleSection: 'Trading for beginners',
+          keywords: 'prop trading',
           inLanguage: 'en',
         },
       ],
@@ -297,18 +295,18 @@ export class HomeEuBlogThirtyEightComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/en#person',
+      '@id': 'https://arapov.trade/#person',
       name: 'Igor Arapov',
       alternateName: [
         'Ігор Арапов',
-        'Арапов Игорь',
-        'I. Arapov',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/en',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -323,12 +321,12 @@ export class HomeEuBlogThirtyEightComponent implements OnInit {
         'https://t.me/ArapovTrade',
       ],
       jobTitle: [
-        'Independent researcher,',
-        'trader',
-        'author and founder of arapov.trade',
+        'Independent researcher',
+        'Trader',
+        'Author and founder of arapov.trade',
       ],
       description:
-        'Independent researcher, practicing trader, author of books on trading and scientific publications. Specializes in trading psychology and cognitive biases in financial markets.',
+        'Independent researcher, practising trader, author of trading books and scientific publications. Specialises in trading psychology and cognitive biases in financial markets.',
     };
 
     this.addJsonLdSchema(data);
@@ -344,42 +342,42 @@ export class HomeEuBlogThirtyEightComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'What is a cold wallet?',
+          name: 'What is prop trading in simple terms?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'A cold wallet is a cryptocurrency storage method without constant internet connection. These include hardware wallets (Ledger, Trezor), paper wallets and metal plates. They provide maximum protection from hacker attacks.',
+            text: "You run your deals on a prop firm's capital rather than your own, and split the profit with it. Access to that capital opens after a paid selection, the challenge, where you have to hit a target profit and not break the drawdown limits. A profitable system of your own is still required all the same: someone else's capital does not replace it.",
           },
         },
         {
           '@type': 'Question',
-          name: "What's the difference between hot and cold wallets?",
+          name: 'How much does a prop firm challenge cost and can you pass it for free?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Hot wallets are connected to the internet and convenient for frequent transactions. Cold wallets store keys offline providing maximum security. Cold wallets are recommended for long-term storage.',
+            text: 'Entry is paid, most often a few hundred dollars per attempt depending on the account size. You cannot pass the selection of a real firm for free: the fee is their filter and part of the business model. If you are promised capital with no check at all, that is a reason to be wary.',
           },
         },
         {
           '@type': 'Question',
-          name: 'What is a seed phrase and why is it needed?',
+          name: 'Why do most people fail the challenge?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Seed phrase is a set of 12-24 words generated when creating a wallet. It allows restoring access to funds if device is lost. Store it in a safe place and never save it digitally.',
+            text: 'Not because of bad entries, but because of breaking the limits: they break the daily loss or the overall drawdown, because they raise the risk after a profit and try to win back after a loss. The challenge is passed by discipline and risk control, not by guessing the market.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Is it safe to store cryptocurrency on an exchange?',
+          name: 'What is a funded account and how does it differ from the challenge?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Exchange storage is convenient for active trading but carries risks: exchanges can be hacked, blocked or go bankrupt. For long-term storage use personal wallets where you control private keys.',
+            text: 'A funded account is the account you get after a successful challenge and from which you can withdraw your share of the profit. The challenge is an exam, funded is the work: the drawdown limits do not go anywhere, and breaking the rules takes the funding away just as easily as during the selection.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Which hardware wallet should I choose?',
+          name: 'Should a beginner go for a prop firm or trade their own account?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Popular hardware wallets: Ledger Nano X/S, Trezor Model T/One, SafePal. Consider supported cryptocurrencies and manufacturer reputation. Buy only from official sellers.',
+            text: 'If there is no profitable system yet, prop solves nothing: you simply pay for the challenge and blow it with the same mistakes. It makes sense to first come out to a plus on a small account of your own, and to plug in prop as a way to scale an approach that already works, not as a way to find one.',
           },
         },
       ],
@@ -395,70 +393,34 @@ export class HomeEuBlogThirtyEightComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      '@id': 'https://arapov.trade/en/freestudying/cryptostoring#howto',
-      name: 'How to safely store cryptocurrency',
+      '@id': 'https://arapov.trade/en/freestudying/prop-trading#howto',
+      name: 'How to understand and apply: prop trading and how to pass a prop firm challenge',
       description:
-        'Step-by-step guide to secure storage of crypto assets and protection against hacks',
+        'A step-by-step breakdown of the topic and its practical use in trading',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Determine storage amount and time horizon',
-          text: 'Assess the amount of cryptocurrency you plan to store and the storage period. If this is long-term storage of a large sum, prefer cold wallets. For active trading with small amounts, hot wallets are suitable.',
+          name: "Understand what prop trading is and where the firm's capital comes from",
+          text: "Prop trading is a model where a trader trades the prop firm's money and splits the final profit with it in an agreed proportion.",
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Choose wallet type',
-          text: 'For long-term storage use cold wallets: hardware (Ledger, Trezor), paper or metal plates. For frequent transactions - hot wallets: mobile apps or web wallets. Combine both types for maximum security.',
+          name: 'Learn the rules of the challenge: daily limit, overall drawdown and risk per trade',
+          text: 'The challenge tests not the accuracy of entries but the control of risk: the main thing is not to break the daily loss or the overall drawdown.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Purchase hardware wallet from official seller',
-          text: 'Choose a trusted manufacturer (Ledger, Trezor, SafePal). Buy only from official dealers or certified stores. Avoid used devices. Check package integrity upon receipt.',
+          name: 'Find out how a funded account works, payouts and profit split',
+          text: 'A funded account is the account after the challenge, from which you withdraw your share of the profit.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Generate seed phrase on first use',
-          text: 'During wallet initialization, a 12-24 word seed phrase will be generated. Write it down on paper in the correct order. Never photograph, save to cloud or computer. Store in a secure place - safe, box, chest.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 5,
-          name: 'Set strong password and PIN code',
-          text: 'Set a strong password for the device (if supported). Set a 4-8 digit PIN for hardware wallet. Remember the PIN but do not share it with anyone. Do not use simple sequences (1234, 0000).',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 6,
-          name: 'Verify addresses and send test amount',
-          text: 'Before the first large transfer, send a minimum amount of cryptocurrency. Make sure addresses match and transaction completed successfully. This will confirm the wallet is working correctly.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 7,
-          name: 'Backup seed phrase in multiple locations',
-          text: 'Make 2-3 copies of the written seed phrase. Store them in different secure places: at home in a safe, with a trusted person, in a bank. This protects against loss of access in case of fire, theft or other emergencies.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 8,
-          name: 'Use multi-level protection',
-          text: 'Split large amounts between multiple wallets. Use different passwords for each. Consider multi-sig wallets requiring multiple signatures for transactions. This prevents loss of all funds if one wallet is compromised.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 9,
-          name: 'Update software and use secure network',
-          text: 'Keep wallet and device software up to date. When connecting hardware wallet, use a clean virus-free computer. Avoid public Wi-Fi when conducting transactions. Check for scam sites before entering private keys.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 10,
-          name: 'Verify addresses before each send',
-          text: 'Always verify recipient address before confirming. Use device verification function (if available). Send a small amount first, then the remainder. Beware of phishing and substituted addresses.',
+          name: 'Decide whether to go for prop or trade your own account',
+          text: 'Prop scales an already working system but does not create it: without a profitable approach it is too early to go there.',
         },
       ],
     };
@@ -473,64 +435,25 @@ export class HomeEuBlogThirtyEightComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Cryptocurrency Storage Glossary',
+      name: 'Glossary of terms used in the article',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Private Key',
+          name: 'Prop trading',
           description:
-            'Cryptographic sequence giving full control over cryptocurrency funds.',
+            "A model in which a trader runs deals on a prop firm's money and splits the final profit with it in an agreed proportion.",
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Public Key',
+          name: 'Prop challenge',
           description:
-            'Wallet address that can be shared to receive cryptocurrency.',
+            'A paid evaluation in which a trader must reach a target profit and not break the established drawdown limits.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Seed Phrase',
-          description: 'Mnemonic phrase of 12-24 words for wallet recovery.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Cold Wallet',
+          name: 'Funded account',
           description:
-            'Cryptocurrency storage method without internet connection.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Hot Wallet',
-          description:
-            'Wallet with constant internet connection for quick transactions.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Hardware Wallet',
-          description:
-            'Physical device for secure offline private key storage.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Multisig',
-          description:
-            'Wallet requiring multiple signatures to execute transaction.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Custodial Wallet',
-          description: 'Wallet where private keys are stored by third party.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Non-custodial Wallet',
-          description: 'Wallet with full user control over private keys.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'MFA',
-          description:
-            'Multi-factor authentication for additional account protection.',
+            'A financed account that a trader receives after a successful challenge and from which they can already withdraw their share of the profit.',
         },
       ],
     };

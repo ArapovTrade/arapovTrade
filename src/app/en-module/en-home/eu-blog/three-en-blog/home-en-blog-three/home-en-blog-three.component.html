@@ -6,79 +6,449 @@
           <div class="m-right hero-section"></div>
           <div class="free-courses_main-container">
             <main lang="en">
-            <header>
-  <h1>What Is Volatility in Trading?</h1>
-</header>
-<article>
-  <p>Volatility measures how widely an asset's price swings over a period of time. High volatility means large moves and more uncertainty, while low volatility means calm, more predictable behaviour. For a working trader, the current level of volatility is the basis for choosing a strategy and setting the risk parameters of every trade.</p>
+              <header>
+                <h1>
+                  Order Block in Trading: What It Is and How to Trade Order
+                  Blocks
+                </h1>
+              </header>
+              <article>
+                <p>
+                  Most traders draw order blocks all over the chart, then wonder
+                  why price walks straight through them. A real order block is
+                  rare. It only appears where big money ran out of
+                  counterparties and had to push a large order through the
+                  market, and the giveaway is a spike in volume, not a tidy
+                  rectangle.
+                </p>
 
-  <p>Markets are in constant motion, and prices swing under everything from macro data to the psychology of the crowd. Trading since 2013, I treat the ability to read how intense those swings are as part of the decision itself, not a side detail. Below I cover what volatility is, what drives it, and how I actually use it.</p>
+                <p>
+                  There is a lot of noise around order blocks, especially in
+                  crypto, where they get sold as a finished holy grail. I use
+                  the order block myself as a strong reference, but I add two
+                  filters to it, volume and a higher timeframe, and below I show
+                  where I refuse to enter without them.
+                </p>
 
-  <p><strong><i>In this article we'll cover:</i></strong></p>
-  <ul>
-    <li>volatility is the size and speed of an asset's price swings;</li>
-    <li>it is driven by macro events, central banks and the fear and greed of the crowd;</li>
-    <li>the ATR indicator is a practical way to measure it on any instrument;</li>
-    <li>I match my stop size and position size to the current volatility, not to fixed points.</li>
-  </ul>
+                <p>
+                  <strong><i>In this article we'll cover:</i></strong>
+                </p>
+                <ul>
+                  <li>
+                    an order block marks the zone where large capital built a
+                    position, the last opposing candle right before a strong
+                    impulse;
+                  </li>
+                  <li>
+                    a bullish order block is the last bearish candle before a
+                    move up, a bearish one is the last bullish candle before a
+                    move down;
+                  </li>
+                  <li>
+                    price often returns to the order block, and that return is
+                    what traders use as an entry;
+                  </li>
+                  <li>
+                    a rectangle without a volume spike is just a candle, so
+                    volume is the filter that separates a real block from a
+                    drawing.
+                  </li>
+                </ul>
 
-  <p>Let us start with the definition.</p>
+                <p>
+                  Let's start with the definition and with what actually
+                  separates an order block from any other candle on the chart.
+                </p>
 
-  <div class="flex">
-    <img class="pictureImg" loading="lazy" src="/assets/img/content/volatility1.webp" alt="Market volatility chart with the ATR indicator" />
-  </div>
+                <h2>What is an order block in trading?</h2>
+                <p>
+                  An
+                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
+                    ><span itemprop="name">order block</span></dfn
+                  >
+                  is a price zone where large capital, institutions and market
+                  makers, built a significant position before a strong impulsive
+                  move. On the chart it usually shows up as the last opposing
+                  candle before the push: the last down candle before a sharp
+                  rally, or the last up candle before a sharp drop. The
+                  fingerprint where smart money stepped into the market.
+                </p>
+                <p>
+                  The mechanics are simple once you see them. Big players
+                  normally hide their size behind limit orders so they don't
+                  move price against themselves. An order block is the opposite:
+                  there weren't enough sellers to fill a huge buy, so the order
+                  had to be pushed through at market, and that pushing creates
+                  the sharp impulse. The presence of large capital shows up as a
+                  burst of volume, the effort and result principle. The full
+                  Smart Money picture sits in the
+                  <a
+                    class="linkrefinto"
+                    href="https://arapov.trade/en/freestudying/smart-money-guide"
+                    >Smart Money guide</a
+                  >.
+                </p>
+                <p>
+                  They split into two kinds. A bullish order block is the last
+                  bearish candle before a strong rise, a demand zone where big
+                  money loaded longs. A bearish one is the last bullish candle
+                  before a strong fall, where they loaded shorts. There is also
+                  mitigation: the block is considered to have done its job once
+                  price comes back into it and bounces, confirming the interest.
+                  The same block rarely fires twice: once price has tagged it,
+                  most of the orders there are already filled.
+                </p>
+                <p>
+                  Right next to an order block you almost always find
+                  <a
+                    class="linkrefinto"
+                    href="https://arapov.trade/en/freestudying/imbalance-fvg"
+                    >an imbalance, also called an FVG</a
+                  >, a price gap the impulse leaves behind. It is the area the
+                  market skipped so fast that price often returns later to close
+                  it. A strong order block and an imbalance sitting together
+                  reinforce each other: the block shows where the position was
+                  built, the gap confirms the exit was fast and heavy. I read
+                  that pair as one zone of interest, not two separate things.
+                </p>
+                <p>
+                  It also helps to know the reverse case, when the block fails
+                  to hold. If price slices clean through, the old block often
+                  flips role: a broken demand zone starts acting as resistance,
+                  a supply zone as support. That flipped block is called a
+                  breaker block. No magic, just a level changing priority:
+                  traders who loaded inside the original block and ended up
+                  underwater close their loss on the retrace, and their orders
+                  shove the market the other way.
+                </p>
+                <p>
+                  And here is the link that explains why the block works at all,
+                  not just how to mark it. The order block is the same
+                  accumulation zone Wyckoff described: the last opposing candle
+                  before the impulse sits exactly where large capital was
+                  finishing its build, in essence in the area of the spring and
+                  the last point of support on the way out of the range. That is
+                  why the block holds price: unfilled volume of the large player
+                  is left inside it, and when price returns he tops up the
+                  position, filling those orders. SMC calls this mitigation, but
+                  to me it is the old Wyckoff logic under a new name, and I read
+                  the block not as a coloured zone from a script but as a
+                  footprint of accumulation in volume.
+                </p>
+                <p>
+                  <strong>In short: </strong
+                  ><i
+                    >An order block is the last opposing candle before an
+                    impulse, the footprint of a position built by big money:
+                    bullish is a demand zone, bearish a supply zone, and a
+                    volume spike is what confirms it.</i
+                  >
+                </p>
 
-  <h2>What Is Volatility?</h2>
-  <p><dfn itemscope itemtype="https://schema.org/DefinedTerm"><span itemprop="name">Volatility</span></dfn> is a statistical measure of how much an asset's returns are spread out over a chosen interval. High readings point to large price swings and raised uncertainty; low readings mark stable periods with predictable behaviour. Price swings are really the market searching for balance between supply and demand: each new piece of information, a report, a data release, a political statement, makes participants reprice what they think an asset is worth, and the intensity of that repricing is the level of volatility.</p>
-  <p>The fundamental drivers include macroeconomic uncertainty, shifts in central-bank policy, geopolitical risk and seasonal factors, with interest-rate decisions and earnings reports classic triggers of sharp jumps. The psychological side matters just as much: fear and greed amplify moves, and panic in a crisis can multiply volatility against calm periods. By type, historical volatility is computed from past prices, implied volatility is pulled from option prices and reflects expectations of future swings, and realized volatility is measured after the fact. Volatility also spikes around the news, which is why it pairs closely with <a class="linkrefinto" href="https://arapov.trade/en/freestudying/newstrading">trading on news</a>.</p>
+                <div class="flex">
+                  <img
+                    class="pictureImg"
+                    loading="lazy"
+                    src="/assets/img/content/orderblocks.png"
+                    alt="Types of order blocks in trading"
+                  />
+                </div>
 
-  <h2>How Volatility Works in Practice</h2>
-  <p>The practical way to measure it is the <a class="linkrefinto" href="https://arapov.trade/en/freestudying/atrindikator">ATR Indicator: How to Measure Volatility</a>. ATR, the Average True Range developed by Welles Wilder, averages the true range of price swings while accounting for gaps between sessions, with a standard period of fourteen bars that traders shorten for sensitivity or lengthen to smooth out noise. Its absolute value means little on its own; a currency pair that typically moves thirty points and a stock with a five-dollar daily range cannot be compared directly, so ATR is always read against the instrument's own history.</p>
-  <p>From there it has clear uses. An ATR-based stop adapts to conditions: a fixed stop in points triggers too often on a volatile market and leaves too much risk on a calm one, while placing the stop one-and-a-half to three times ATR from entry solves that. Position sizing through ATR normalizes risk across instruments, giving volatile assets a smaller size and quiet ones a larger size so the money risked stays constant. Targets can be set as a multiple of ATR for realistic expectations, and a dynamic stop on ATR widens as volatility rises and tightens as it falls. Volatility also works as a filter: a breakout on rising volatility has better odds than the same signal during a squeeze, extremely low volatility often precedes a strong directional move as the market coils, and extreme highs can mark a climax. A related volatility tool, <a class="linkrefinto" href="https://arapov.trade/en/freestudying/bollingerbands">Bollinger Bands Explained: How to Use Them in Trading</a>, shows the same expansion and contraction visually.</p>
+                <h2>How to find an order block on a chart</h2>
+                <p>
+                  Finding one is a simple routine that still takes practice.
+                  First, spot a strong impulsive move that broke the previous
+                  market structure. Second, mark the last opposing candle right
+                  before that impulse: for longs the last down candle before the
+                  rally, for shorts the last up candle before the drop. Third,
+                  check the context, the block should sit at a meaningful level
+                  with clear volume.
+                </p>
+                <p>
+                  A common question is how an order block differs from a plain
+                  level. An ordinary support or resistance line is often
+                  psychological or historical, just a line where price once
+                  turned. An order block is a specific zone tied to real
+                  activity from large capital, which makes it tighter than a
+                  bare line. Hunt for it on higher timeframes, daily and
+                  four-hour, where there is less noise.
+                </p>
+                <p>
+                  There is one detail without which the order block produces a
+                  lot of false blocks. The impulse after the block has to break
+                  structure, meaning it takes out the previous significant high
+                  for longs or low for shorts. That break is called a break of
+                  structure, and it is what separates a genuine reversal block
+                  from a random candle before ordinary chop. Once I have the
+                  block, I tighten its borders: the candle body is the core of
+                  the zone, the long wicks I treat as a buffer. A narrow, clean
+                  block is more reliable than a wide blurry one that swallows
+                  half the screen.
+                </p>
+                <p>
+                  Then there is timeframe nesting. I find the large block on the
+                  daily or four-hour, then refine the entry inside it on a lower
+                  timeframe, where I can see how price reacts to the zone. Often
+                  a small fifteen-minute block sits inside the big daily one,
+                  and entering from it gives an even tighter stop, less risk
+                  without losing the quality of the zone.
+                </p>
+                <p>
+                  Here is what it looks like on a chart. Price sat in a tight
+                  range, then one large candle broke the top and flew up, taking
+                  out the previous high, so it broke structure. I go back to
+                  where the impulse started and find the last down candle before
+                  that push, and its body is the bullish order block. I mark the
+                  zone by the candle body, check whether the impulse carried a
+                  volume spike, and wait for the return. If price comes back and
+                  reacts, I have an entry with a short stop under the block. If
+                  it slices straight through, I stay out.
+                </p>
+                <p>
+                  <strong>In short: </strong
+                  ><i
+                    >A real block sits in front of an impulse that breaks
+                    structure, and the core of the zone is the candle body: find
+                    it on the higher timeframe, refine the entry on a lower
+                    one.</i
+                  >
+                </p>
 
-  <h2>My Experience: Match Your Risk to the Volatility</h2>
-  <p>This is how I handle it, and it is my approach rather than personal advice. I do not trade on indicator signals, but I do use ATR as a measuring stick: my stop and my position size are tied to the current volatility, not to a fixed number of points. On a volatile or news-driven market fixed stops get knocked out too often, and on a quiet one they leave more risk than the move warrants, so anchoring both to ATR keeps the actual money at risk steady whatever the instrument is doing.</p>
-  <p>The other half is reading volatility as context. A market coiled in extremely low volatility is usually building energy for an impulse, while an extreme spike can signal a climax and a turn, so I take volatility as a hint about what kind of move is likely rather than a signal in itself. And I do not chase the volatility of a news release; the shape of the move breaks under that pressure, and I would rather wait for calmer structure where my levels actually hold. I walk through measuring volatility and taking profit with ATR in my video on the <a class="linkrefinto" href="https://youtu.be/IcqI70fxvbg">ATR indicator and volatility</a>.</p>
+                <h2>How to trade order blocks: entry, stop-loss and target</h2>
+                <p>
+                  The trade is built on the return. You wait for price to come
+                  back to the order block and test the zone. Inside it you look
+                  for confirmation, a reaction in price or a small structure
+                  shift your way, and only then enter along that original
+                  impulse. A bullish block is traded long, a bearish one short.
+                  Entering right inside the zone gives a short stop, the main
+                  edge of the approach.
+                </p>
+                <p>
+                  The stop goes beyond the far edge of the block, past its
+                  extreme: if price gets there, the idea has already failed. The
+                  target sits at the next level or wherever liquidity is parked,
+                  and the risk-to-reward is usually kept from 1 to 3. One thing
+                  to keep straight: an order block is not a holy grail, price
+                  runs through it sometimes, so an entry without volume
+                  confirmation is risky.
+                </p>
+                <p>
+                  Let me put it in the order I actually use. First I wait for
+                  price to come back to the block, ideally after it swept some
+                  liquidity on the way, a false break through equal highs or
+                  lows. That strengthens the case: big money collected the stops
+                  first, then came to defend its zone. Inside the block I watch
+                  the reaction, a reversal candle, a volume spike, a small
+                  structure shift my way. Only then do I enter, stop beyond the
+                  far edge of the zone, target toward the opposite liquidity,
+                  the nearest pool of stops the market will reach for.
+                </p>
+                <p>
+                  The combination I rate highest is a block with a liquidity
+                  sweep. Picture stops piled under equal lows, price spikes
+                  through them, collects the liquidity, then turns and leaves a
+                  bullish order block on that very spike. A return to that block
+                  is two things lining up in one spot: collected liquidity and a
+                  position-building zone. In my experience those are the entries
+                  that work most often, because there is clear mechanics behind
+                  them, not just a pretty rectangle.
+                </p>
+                <p>
+                  And here is what an order block does not do. It doesn't tell
+                  you when price will return, sometimes a couple of candles,
+                  sometimes weeks. It doesn't guarantee a bounce, price can pass
+                  straight through, so a stop is mandatory. And it doesn't work
+                  detached from the trend, a block along the higher trend is
+                  more reliable than a counter-trend one used to catch a
+                  reversal out of nowhere. I keep those three limits in mind and
+                  don't ask the tool for more than it can give.
+                </p>
+                <p>
+                  The common mistakes are the same every time. Jumping into
+                  every rectangle that looks like a block, with no break of
+                  structure and no volume. Taking a block against a strong
+                  trend, hoping to catch a reversal on flat ground. Putting the
+                  stop inside the zone, too tight, where ordinary noise knocks
+                  it out. Trading blocks on low timeframes, where there are
+                  dozens and almost all are empty. Each is cured by the same
+                  thing, patience and the habit of waiting for confirmation
+                  instead of a drawing.
+                </p>
+                <p>
+                  Now my own take. A clean order block shows up far less often
+                  than the articles suggest. ...the exception, not the rule. A
+                  true order block forms only when there weren't enough
+                  counterparties and the large order had to be pushed through at
+                  market. That is why clean zones are rare, and the eye needs
+                  training. So my main rule: without volume any rectangle can be
+                  called an order block, but it is just a candle. I don't enter
+                  a zone without confirmation, I see the burst of activity and
+                  the reaction first, then enter. And to be plain, the order
+                  block is not a grail. Price runs through it regularly, so my
+                  stop is always beyond the far edge of the zone. I don't trade
+                  order blocks on news at all, too much random movement there.
+                  This is not advice for you personally, it is how I act myself.
+                  I am not talking you out of order blocks, the opposite, it is
+                  a strong reference I use too, I just add two filters, volume
+                  and a higher timeframe. Why the volume spike matters is
+                  explained by the
+                  <a
+                    class="linkrefinto"
+                    href="https://arapov.trade/en/freestudying/freeeducation#effort"
+                    >effort and result principle</a
+                  >, and how the order block fits into the wider
+                  <a
+                    class="linkrefinto"
+                    href="https://arapov.trade/en/freestudying/freeeducation#working-with-levels"
+                    >work with levels</a
+                  >
+                  is covered in the free course. How an order block looks and
+                  forms on a live chart, I show on gold in
+                  <a
+                    class="linkrefinto"
+                    href="https://youtu.be/KbUSZm7D_rc?t=270"
+                    >the video on what an order block is and how to trade it</a
+                  >.
+                </p>
+                <p>
+                  <strong>In short: </strong
+                  ><i
+                    >Enter on the return into the block after a liquidity sweep
+                    and a reaction with volume, stop beyond the far edge of the
+                    zone, target at the opposite pool, risk-to-reward from 1 to
+                    3.</i
+                  >
+                </p>
 
-  <div class="flex">
-    <img class="pictureImg" loading="lazy" src="/assets/img/content/volatility4.webp" alt="Comparison of ATR with other volatility indicators" />
-  </div>
+                <div class="flex">
+                  <img
+                    class="pictureImg"
+                    loading="lazy"
+                    src="/assets/img/content/orderblockintrading2.webp"
+                    alt="Order block trading strategies"
+                  />
+                </div>
 
-  <section>
-    <h2>Frequently Asked Questions</h2>
-    <mat-accordion>
-      <mat-expansion-panel class="highlight-box owl_link-box" [expanded]="true">
-        <mat-expansion-panel-header>
-          <mat-panel-title>What is volatility in trading?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>It is a measure of how much and how fast an asset's price swings over a period. High volatility means big, quick moves and more uncertainty; low volatility means smaller, calmer changes. It measures the size of movement, not its direction.</p>
-      </mat-expansion-panel>
-      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
-        <mat-expansion-panel-header>
-          <mat-panel-title>What causes high volatility?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>Macroeconomic uncertainty, central-bank rate decisions, geopolitical events and earnings reports, amplified by the fear and greed of the crowd. Volatility tends to spike around major news and during illiquid hours, and it falls in calm, liquid periods.</p>
-      </mat-expansion-panel>
-      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
-        <mat-expansion-panel-header>
-          <mat-panel-title>How do you measure volatility?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>A common practical tool is ATR, the Average True Range, which averages the true range of swings over a period such as fourteen bars. It is read against the instrument's own history and used to size stops and positions. Historical and implied volatility are statistical measures of past and expected movement.</p>
-      </mat-expansion-panel>
-      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
-        <mat-expansion-panel-header>
-          <mat-panel-title>Is high volatility good or bad for trading?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>It is neither; it is context. High volatility means bigger opportunities and bigger risk, low volatility means calmer, smaller moves. What matters is matching your strategy and your risk size to the current level rather than ignoring it.</p>
-      </mat-expansion-panel>
-    </mat-accordion>
-  </section>
+                <section>
+                  <h2>Frequently Asked Questions</h2>
+                  <mat-accordion>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      [expanded]="true"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >What is an order block in trading?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        It is a price zone where large capital built a position
+                        before a strong move, usually the last opposing candle
+                        right before the impulse. Think of it as the footprint
+                        of smart money on the chart. Price often comes back to
+                        that zone, which is why traders use it as a reference
+                        for entries.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >How do you identify a bullish order
+                          block?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        Find a strong move up that broke structure, then mark
+                        the last bearish candle right before that rally. That
+                        candle is the bullish order block, a demand zone price
+                        can return to. It is stronger when it sits on a solid
+                        level and is backed by volume.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >What is the difference between an order block and
+                          support or resistance?
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                      <p>
+                        A plain level is often psychological or historical, just
+                        a line on the chart. An order block is tied to real
+                        activity from large capital and is a specific zone
+                        rather than a single line. That makes it tighter than a
+                        bare level, but it needs volume to confirm.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >Order block vs fair value gap (FVG), what is the
+                          difference?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        An order block is the candle or zone where large capital
+                        built a position. An imbalance, or FVG, is the price gap
+                        between candles that the market tends to fill later.
+                        Traders often use them together: the block marks the
+                        zone of interest, the gap next to it strengthens the
+                        case.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >Where do you put the stop-loss on an order
+                          block?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        Beyond the far edge of the block, past its extreme. If
+                        price gets there, the zone failed and the idea is off.
+                        Entering inside the zone is exactly what lets you keep
+                        the stop short and aim the target at the next level with
+                        a risk-to-reward from 1 to 3.
+                      </p>
+                    </mat-expansion-panel>
+                  </mat-accordion>
+                </section>
 
-  <section>
-    <h2>About the Author</h2>
-    <p>Author: Igor Arapov, independent researcher in the psychology of investment decisions and behavioral finance, practising trader since 2013, founder of arapov.trade, author of a trading book series (<a class="linkrefinto" href="https://openlibrary.org/authors/OL16073686A/Igor_Arapov">Open Library</a>), (<a class="linkrefinto" href="https://orcid.org/0009-0003-0430-778X">ORCID: 0009-0003-0430-778X</a>).</p>
-  </section>
-</article>
+                <section>
+                  <h2>About the Author</h2>
+                  <p>
+                    Author:
+                    <a class="linkrefinto" href="https://arapov.trade/en"
+                      >Igor Arapov</a
+                    >
+                    — independent researcher in the psychology of investment
+                    decisions and behavioral finance, practising trader since
+                    2013, founder of arapov.trade, author of a trading book
+                    series (<a
+                      class="linkrefinto"
+                      href="https://orcid.org/0009-0003-0430-778X"
+                      >ORCID: 0009-0003-0430-778X</a
+                    >).
+                  </p>
+                </section>
+              </article>
 
               <div
                 class=""

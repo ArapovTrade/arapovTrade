@@ -55,21 +55,17 @@ export class HomeEnBlogFourtyThreeComponent implements OnInit {
     this.checkedGroup = this.artickleServ.selectedGroups;
 
     this.titleService.setTitle(
-      'Supply and Demand in Cryptocurrencies | Complete Guide',
+      'Trading System: How to Build and Optimize | Arapov.trade',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'How to analyze supply and demand in the cryptocurrency market. Learn methods to assess market forces, trading volume, order book analysis, and strategies for profitable crypto trading.',
+        'What a trading system is, what it consists of, how to build, test and optimize it without curve-fitting it to past data.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Igor Arapov' });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-25' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/cryptomarketanalysis.png',
-    });
+
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
 
     this.gerRandom();
   }
@@ -256,31 +252,37 @@ export class HomeEnBlogFourtyThreeComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          mainEntityOfPage: {
-            '@type': 'WebPage',
-            '@id': 'https://arapov.trade/en/freestudying/cryptomarketanalysis',
-          },
           headline:
-            'Supply and Demand in Cryptocurrencies: Complete Guide to Market Analysis',
+            "A Trading System from Scratch: Plan, Backtest and Trader's Journal",
           description:
-            'How to analyze supply and demand in the cryptocurrency market. Learn methods to assess market forces, trading volume, order book analysis, and strategies for profitable crypto trading.',
-          image:
-            'https://arapov.trade/assets/img/content/cryptomarketanalysis1.webp',
-          author: {
-            '@id': 'https://arapov.trade/en#person',
-          },
+            'What a trading system is, what it consists of, how to build, test and optimize it without curve-fitting it to past data.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'ArapovTrade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
-          datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
-          articleBody:
-            'The cryptocurrency market operates on fundamental economic principles where the interaction between buyers and sellers determines the price of every digital asset...',
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': 'https://arapov.trade/en/freestudying/trading-system',
+          },
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/tradingsystem.webp',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Trading systems',
+          keywords:
+            "trading system, trading plan, backtest, trader's journal, strategy testing, demo account, risk management",
+          inLanguage: 'en',
         },
       ],
     };
@@ -295,18 +297,18 @@ export class HomeEnBlogFourtyThreeComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/en#person',
+      '@id': 'https://arapov.trade/#person',
       name: 'Igor Arapov',
       alternateName: [
         'Ігор Арапов',
-        'Арапов Игорь',
-        'I. Arapov',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/en',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -321,12 +323,12 @@ export class HomeEnBlogFourtyThreeComponent implements OnInit {
         'https://t.me/ArapovTrade',
       ],
       jobTitle: [
-        'Independent researcher,',
-        'trader',
-        'author and founder of arapov.trade',
+        'Independent researcher',
+        'Trader',
+        'Author and founder of arapov.trade',
       ],
       description:
-        'Independent researcher, practicing trader, author of books on trading and scientific publications. Specializes in trading psychology and cognitive biases in financial markets.',
+        'Independent researcher, practising trader, author of trading books and scientific publications. Specialises in trading psychology and cognitive biases in financial markets.',
     };
 
     this.addJsonLdSchema(data);
@@ -342,42 +344,50 @@ export class HomeEnBlogFourtyThreeComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'What is supply and demand in the crypto market?',
+          name: 'What is a trading system in simple terms?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: "Demand represents buyers' willingness to purchase cryptocurrency at a specific price, while supply is the quantity of coins holders are willing to sell. The balance of these forces determines the current market price of an asset.",
+            text: "It's a set of preset rules: when to enter a trade, when to exit and how much to risk. Its job is to make the average result over the distance positive and remove chaotic decisions made on emotion. Without a system, trading turns into a coin toss.",
           },
         },
         {
           '@type': 'Question',
-          name: 'How is trading volume related to supply and demand?',
+          name: 'How does a trading plan differ from a system?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Trading volume shows the intensity of market activity. Rising volume during price increases confirms strong demand, while high volume during price drops indicates seller dominance and excess supply.',
+            text: "The system is the method and the entry signal itself. The plan is your personal rules around it: what risk per trade, what you trade and what you skip, when it's better not to enter the market at all. The system answers the question of how, the plan answers how exactly you behave.",
           },
         },
         {
           '@type': 'Question',
-          name: 'What tools are used to analyze supply and demand balance?',
+          name: 'How do you test a trading system before real money?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Traders use order books to view orders, cluster volume analysis, OBV and A/D indicators, market profile, and data on cryptocurrency flows between wallets and exchanges.',
+            text: "First a backtest on history, then a forward test. Run the rules over past data, then necessarily over new data the system hasn't seen, on demo or a small real account. A distance of about a hundred trades shows the real edge with costs taken into account.",
           },
         },
         {
           '@type': 'Question',
-          name: 'Why does limited supply affect cryptocurrency prices?',
+          name: 'What is overoptimization in a backtest?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: "Limited supply, like Bitcoin's 21 million coin cap, creates scarcity. When demand increases with fixed supply, prices inevitably rise according to basic economic law.",
+            text: "It's fitting the strategy's parameters to history up to a perfect curve. As a result the strategy describes the past rather than finding a working edge, and on new data it falls apart. The more precisely it sits on history, the worse it usually works afterward.",
           },
         },
         {
           '@type': 'Question',
-          name: 'How do whale actions affect market balance?',
+          name: "Why do you need a trader's journal?",
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Large holders (whales) can dramatically shift the supply and demand balance. Mass selling creates an oversupply and pushes prices down, while large purchases absorb supply and drive prices up.',
+            text: 'To see your recurring mistakes from the outside and remove them. Memory is unreliable: the lucky trades are remembered, the failed ones forgotten. The journal removes this self-deception and shows the real statistics, if you record the reason for entry and the emotions, not just the result.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Which trading system is best?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: "In my experience the simplest of those that give an edge. The more conditions and filters in a system, the harder it is to follow. A working but followed system always beats a perfect one abandoned at the market's first pressure.",
           },
         },
       ],
@@ -393,39 +403,46 @@ export class HomeEnBlogFourtyThreeComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'How to Analyze Supply and Demand in the Crypto Market',
+      '@id': 'https://arapov.trade/en/freestudying/trading-system#howto',
+      name: 'How to build and test a trading system',
       description:
-        'Step-by-step guide to assessing buyer and seller balance for trading decisions',
+        "A step-by-step walk: from understanding why a system is needed, to its composition, the plan, the backtest, the forward test and the trader's journal",
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Study the Order Book',
-          text: 'Open the order book on your exchange and analyze the ratio of buy and sell orders. Large order clusters indicate significant price levels.',
+          name: 'Understand why you need a trading system',
+          text: 'A trading system is preset rules of entry, exit and risk that make the average result over the distance positive.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Analyze Trading Volume',
-          text: 'Compare price dynamics with volume. Price increases on high volume confirm demand strength, while declining volume during rallies warns of weak momentum.',
+          name: 'Assemble the system from entry, exit and risk management',
+          text: 'A working system is assembled from an entry condition, exit conditions and risk-management rules.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Identify Key Levels',
-          text: 'Find support zones where buyers actively defend price, and resistance zones where sellers create pressure. These levels reflect the balance of power.',
+          name: 'Write your personal rules into a trading plan',
+          text: 'A trading plan is the written personal rules around the system: risk, discipline and what you trade and what you skip.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Track Cryptocurrency Flows',
-          text: 'Monitor coin movement between wallets and exchanges. Inflows to exchanges signal readiness to sell, while outflows indicate accumulation.',
+          name: 'Test the system with a backtest without curve-fitting',
+          text: 'A backtest runs the rules over past history, and the defence against fitting is splitting the data into a tuning part and a validation part.',
         },
         {
           '@type': 'HowToStep',
           position: 5,
-          name: 'Consider Market Sentiment',
-          text: 'Analyze the fear and greed index, social media activity, and news background. Participant emotions amplify supply and demand imbalances.',
+          name: 'Run a forward test on demo',
+          text: 'After the backtest the system is tested forward on new data over about a hundred trades, better first on a demo account.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 6,
+          name: "Keep a trader's journal and review your mistakes",
+          text: "A trader's journal over the distance reveals the recurring mistakes that memory itself hides.",
         },
       ],
     };
@@ -440,62 +457,31 @@ export class HomeEnBlogFourtyThreeComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Cryptocurrency Supply and Demand Analysis Terms',
-      description: 'Key concepts for understanding market dynamics',
+      name: 'Glossary of terms used in this article',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Order Book',
+          name: 'Trading system',
           description:
-            'A list displaying all current buy and sell orders with price and volume information',
+            'A set of preset rules that determine under what conditions to open and close a trade and how much to risk in doing so.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Liquidity',
+          name: 'Trading plan',
           description:
-            "The market's ability to facilitate quick trade execution without significant price impact",
+            'A written set of rules by which you trade: which instruments, in what conditions, where the entry, where the stop, where the target and what risk.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Whales',
+          name: 'Backtest',
           description:
-            'Large cryptocurrency holders whose trades can significantly influence market price',
+            "A check of a trading strategy on the market's historical data, to assess whether it had profit in the past and how stably it worked.",
         },
         {
           '@type': 'DefinedTerm',
-          name: 'On-chain Analysis',
+          name: "Trader's journal",
           description:
-            'Study of blockchain data to assess network activity, fund flows, and participant behavior',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Cluster Volume Analysis',
-          description:
-            'Method of visualizing trading activity at each price level to identify accumulation zones',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Fear and Greed Index',
-          description:
-            "Market sentiment indicator measuring participants' emotional state on a scale from 0 to 100",
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Halving',
-          description:
-            'Reduction by half of miner rewards, decreasing new coin issuance rate and affecting supply',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'DeFi',
-          description:
-            'Decentralized finance — ecosystem of financial applications on blockchain without intermediaries',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Staking',
-          description:
-            'Locking cryptocurrency to support network operations while earning rewards, affecting available supply',
+            'A structured record of all the trades made, with the reasons for entry and exit, the result and the emotional state, which helps to find and fix recurring mistakes.',
         },
       ],
     };

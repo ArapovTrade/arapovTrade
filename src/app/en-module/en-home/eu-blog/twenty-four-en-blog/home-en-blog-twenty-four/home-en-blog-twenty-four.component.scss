@@ -1,5 +1,5 @@
 .hero-section {
-    background: url(/assets/img/content/flagfigure.webp) no-repeat bottom right;
+    background: url(/assets/img/content/wyckoffmethod.webp) no-repeat bottom right;
     background-size: 100% 100%;
     color: white;
     height: 250px;
@@ -57,6 +57,10 @@ h1 {
     text-align: center;
 }
 
+.three-block{
+  line-height: 120%;
+}
+
 
 //main block!!!!!!!@!#!@#!@#!@#!@#!@#!
 .free-courses_main-container{
@@ -67,9 +71,9 @@ h1 {
      margin-top: 70px; 
     //  margin-bottom: 150px;
 }
-    header h1 { 
+    header h1 {
         margin-top: 0;
-    }  
+    }
  .container main{
     width: 815px;
     margin: 0 !important;
@@ -157,12 +161,12 @@ width: 100%;
 
   .article-title_light:hover {
     color: #0082cc !important;
-  } 
+  }
 
 .image_table_block{
   display: none !important;
 }
- 
+
 .mask_archive_main{
   display: none;
 }
@@ -782,7 +786,4 @@ letter-spacing: 0px;
 .three-block{
   line-height: 40px;
 }
-}.three-block{
-  line-height: 120%;
 }
-

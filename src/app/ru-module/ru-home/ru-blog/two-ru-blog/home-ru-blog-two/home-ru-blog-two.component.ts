@@ -58,20 +58,17 @@ export class HomeRuBlogTwoComponent implements OnInit {
     this.checkedGroup = this.artickleServ.selectedGroups;
 
     this.titleService.setTitle(
-      'Дивергенция в трейдинге: полное руководство по торговле на расхождениях',
+      'Пулы ликвидности: что это и как работают | Arapov.trade',
     );
     this.meta.updateTag({ name: 'robots', content: 'index' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Узнайте, что такое дивергенция в трейдинге, как находить бычью и медвежью дивергенцию на RSI, MACD, Stochastic. Практические стратегии торговли.',
+        'Что такое пулы ликвидности, как Smart Money находят ликвидность за уровнями и используют скрытые зоны для манипуляции ценой.',
     });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-04-13' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-06-04' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/divergenceonindecators.webp',
-    });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
+
     this.gerRandom();
   }
   randomArticleRus: any = [];
@@ -280,31 +277,34 @@ export class HomeRuBlogTwoComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          headline:
-            'Дивергенция в трейдинге: полное руководство по торговле на расхождениях',
+          headline: 'Пулы ликвидности в трейдинге: что это и как использовать',
           description:
-            'Узнайте, что такое дивергенция в трейдинге, как находить бычью и медвежью дивергенцию на RSI, MACD, Stochastic.',
-          image: 'https://arapov.trade/assets/img/content/divergence1.png',
-
-          datePublished: '2025-06-04T00:00:00Z',
-          dateModified: '2026-06-04T00:00:00Z',
-          author: {
-            '@id': 'https://arapov.trade/ru#person',
-          },
+            'Что такое пулы ликвидности, как Smart Money находят ликвидность за уровнями и используют скрытые зоны для манипуляции ценой.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'Arapov.trade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id':
-              'https://arapov.trade/ru/freestudying/divergenceonindecators',
+            '@id': 'https://arapov.trade/ru/freestudying/liquidity-pools',
           },
-          articleSection: 'Технический анализ',
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/liquiditypools.png',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Smart Money',
+          keywords: 'пул ликвидности',
           inLanguage: 'ru',
         },
       ],
@@ -320,18 +320,18 @@ export class HomeRuBlogTwoComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/ru#person',
-      name: 'Игорь Арапов',
+      '@id': 'https://arapov.trade/#person',
+      name: 'Igor Arapov',
       alternateName: [
-        'Igor Arapov',
-        'Арапов Игорь',
-        'I. Arapov',
         'Ігор Арапов',
-        'І. В. Арапов',
+        'Игорь Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/ru',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -367,42 +367,42 @@ export class HomeRuBlogTwoComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'Что такое дивергенция в трейдинге?',
+          name: 'Что такое пулы ликвидности в трейдинге?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Дивергенция — расхождение между направлением цены и показаниями индикатора, сигнализирующее об ослаблении тренда.',
+            text: 'Это зоны на графике, где скапливается много стоп-ордеров и отложенных заявок, обычно над максимумами и под минимумами. Они притягивают цену, потому что дают крупному капиталу объём для исполнения больших позиций. По сути это топливо для рыночных движений.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Какие индикаторы использовать для дивергенции?',
+          name: 'Что такое захват и снятие ликвидности?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'RSI, MACD и Stochastic — наиболее эффективные индикаторы для поиска дивергенции.',
+            text: 'Это сбор чужих стопов через ложный прокол уровня. Крупный капитал направляет цену к зоне, где лежат стопы, выбивает их и получает встречный объём для своей позиции. Так он входит или выходит без сильного проскальзывания.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Чем отличается скрытая дивергенция?',
+          name: 'Что такое стоп-хантинг и как от него защититься?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Обычная дивергенция сигнализирует о развороте, скрытая — о продолжении тренда.',
+            text: 'Стоп-хантинг это сбор стопов через ложный прокол уровня. Чтобы не стать его жертвой, не ставьте стопы прямо на очевидных максимумах и минимумах, где их ждёт весь рынок, давайте им запас. И входите не в момент прокола, а после реакции цены на развороте.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Почему дивергенция даёт ложные сигналы?',
+          name: 'Почему цена часто разворачивается после сбора ликвидности?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Ложные сигналы возникают в сильных трендах и на низких таймфреймах.',
+            text: 'Потому что прокол был нужен не для движения в ту сторону, а чтобы собрать стопы и набрать позицию. Когда объём получен, толкать цену в сторону прокола больше незачем, и она идёт в истинном направлении. Но иногда после захвата рынок наоборот продолжает тренд: крупный капитал так добирает позицию по ходу движения.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Как подтвердить дивергенцию?',
+          name: 'Пул ликвидности в трейдинге и в DeFi это одно и то же?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Требуется ключевой уровень, разворотный паттерн и рост объёма.',
+            text: 'Нет, это разные вещи с похожим названием. В трейдинге пул ликвидности это зона стопов на графике, куда тянется цена. В DeFi пул ликвидности это запас токенов в смарт-контракте, который обеспечивает обмен на децентрализованной бирже. В этой статье речь только о первом значении.',
           },
         },
       ],
@@ -418,37 +418,34 @@ export class HomeRuBlogTwoComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'Как торговать по дивергенции',
+      '@id': 'https://arapov.trade/ru/freestudying/liquidity-pools#howto',
+      name: 'Как разобраться и применять: Пулы ликвидности в трейдинге: что это и как использовать',
+      description:
+        'Пошаговый разбор темы и её практическое применение в торговле',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Определите тренд',
-          text: 'Используйте скользящие средние или ADX.',
+          name: 'Что такое зоны ликвидности в трейдинге',
+          text: 'Пул ликвидности — это зона на графике, где скапливается множество стоп-ордеров и отложенных заявок.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Найдите уровни',
-          text: 'Определите поддержку, сопротивление, Фибоначчи.',
+          name: 'Захват ликвидности: как крупные игроки ищут стопы',
+          text: 'Механика такая.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Идентифицируйте дивергенцию',
-          text: 'Сравните экстремумы цены и индикатора.',
+          name: 'Как найти зоны ликвидности на графике',
+          text: 'Искать пулы проще, чем кажется, потому что они лежат в самых очевидных местах.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Подтвердите сигнал',
-          text: 'Дождитесь свечного паттерна или роста объёма.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 5,
-          name: 'Управляйте риском',
-          text: 'Стоп за экстремумом, риск к прибыли 1:2.',
+          name: 'Снятие ликвидности и ложный пробой: стратегия входа',
+          text: 'Главное правило: сам прокол это ещё не сигнал на вход, а только повод присмотреться.',
         },
       ],
     };
@@ -463,57 +460,13 @@ export class HomeRuBlogTwoComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Глоссарий дивергенции',
+      name: 'Глоссарий терминов статьи',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Дивергенция',
-          description: 'Расхождение цены и индикатора',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Бычья дивергенция',
-          description: 'Цена ниже, индикатор выше',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Медвежья дивергенция',
-          description: 'Цена выше, индикатор ниже',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Скрытая дивергенция',
-          description: 'Подтверждает продолжение тренда',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'RSI',
-          description: 'Индекс относительной силы 0-100',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'MACD',
-          description: 'Схождение/расхождение скользящих',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Stochastic',
-          description: 'Осциллятор цены закрытия',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Импульс',
-          description: 'Скорость изменения цены',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Перекупленность',
-          description: 'RSI выше 70',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Перепроданность',
-          description: 'RSI ниже 30',
+          name: 'Пул ликвидности',
+          description:
+            'Пул ликвидности это зона на графике, где скапливается множество стоп-ордеров и отложенных заявок.',
         },
       ],
     };

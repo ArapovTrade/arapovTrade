@@ -7,83 +7,728 @@
           <div class="free-courses_main-container">
             <main lang="en">
               <header>
-  <h1>What Is a Stop-Loss and How to Use It</h1>
-</header>
-<article>
-  <p>A stop-loss is an automatic order that closes a position when price reaches a loss level you set in advance. Its job is simple: to limit the loss on a single trade and stop the market from wiping out your deposit. It should be placed not on round numbers but beyond a structural level with some margin, otherwise you simply get knocked out.</p>
+                <h1>
+                  Order Types on the Exchange: Every Order and How to Use It
+                </h1>
+              </header>
+              <article>
+                <p>
+                  The order you choose decides your fill price, your slippage
+                  and, quietly, whose side of the market you stand on. Retail
+                  clicks market orders and pays for the hurry, while the big
+                  money places patient limit orders and lets price come to it.
+                  Learn the whole toolkit, from a plain market order to the
+                  hidden orders of smart money, and you stop playing blind
+                  against someone who sees more than you do.
+                </p>
 
-  <p>A stop-loss is your friend, though beginners for some reason fear it. The rule I repeat is one: it must sit in every trade. Without it you are a hostage to the situation. Sharp news lands, a central bank turns, and a small loss becomes a hole in the deposit in a couple of minutes. With a stop the loss always stays under control. By my experience, losing a deposit almost always starts with one thing: a person does not control risk because they do not understand where to place the stop. Let's start there.</p>
+                <p>
+                  The topic looks like a dull alphabet, yet the line between a
+                  beginner and a professional runs right through it. I noticed a
+                  pattern long ago: retail almost always hammers market orders
+                  and pays for the rush, while professionals calmly post limit
+                  orders and wait for the market to come to their price. Years
+                  at the screen made my own choice plain, for patient orders and
+                  a stop on every single trade. I have gathered every order type
+                  into one walkthrough, from the simple market order to the
+                  hidden orders of smart money, so you stop trading blind
+                  against someone who sees more than you.
+                </p>
 
-  <p><strong><i>In this article we'll cover:</i></strong></p>
-  <ul>
-    <li>a stop-loss must sit in every trade, or the loss will sooner or later become uncontrollable;</li>
-    <li>place it beyond a structural level with margin, not right at the entry and not on round numbers;</li>
-    <li>the market deliberately knocks out stops where the crowd places them, and this is no accident;</li>
-    <li>the main protection is a fixed risk per trade and the habit of never moving a stop into a loss.</li>
-  </ul>
+                <p>
+                  <strong><i>In this article, we'll cover:</i></strong>
+                </p>
+                <ul>
+                  <li>
+                    how a market order differs from a limit one, and why you pay
+                    for speed in slippage;
+                  </li>
+                  <li>
+                    how the stop order and stop-limit work, and why clusters of
+                    stops move price;
+                  </li>
+                  <li>
+                    how to place a stop-loss by the level, and why the market
+                    deliberately knocks it out;
+                  </li>
+                  <li>
+                    how big capital hides volume in icebergs and algorithms, and
+                    how to read its footprint by volume.
+                  </li>
+                </ul>
 
-  <p>Let's go in order: what a stop-loss is, how to place it correctly, and why the market loves to knock it out.</p>
+                <p>
+                  Let's start with the foundation: what an order is and what its
+                  basic types are.
+                </p>
 
-  <h2>What Is a Stop-Loss?</h2>
-  <p><dfn itemscope itemtype="https://schema.org/DefinedTerm"><span itemprop="name">Stop-loss</span></dfn> is a protective order that automatically closes a position when price reaches a preset loss level. It is one of the basic <a class="linkrefinto" href="https://arapov.trade/en/freestudying/freeeducation#ordertypes">order types</a>, and its only goal is to limit the loss and preserve capital.</p>
-  <p>Why it is needed is easiest to see in reverse. Most traders trade with leverage, which means that if price moves far enough against you, the account zeroes itself, without your involvement. A stop-loss closes the trade earlier, at a loss you calculated in advance. Without it you become a hostage: sharp news comes out, and instead of a small loss you get a hole in the deposit. So my rule is hard: a stop sits in every trade, and it is set at entry, not later. Beginners often neglect the stop, not from laziness but because they do not know where to place it, so they put it at random, get knocked out, and grow disappointed in the tool itself. The problem is not the stop, but the place it was put.</p>
+                <div class="flex">
+                  <img
+                    class="pictureImg"
+                    loading="lazy"
+                    src="https://arapov.trade/assets/img/content/typesoforders.png"
+                    alt="Types of exchange orders"
+                  />
+                </div>
 
-  <div class="flex">
-    <img class="pictureImg" loading="lazy" src="/assets/img/content/stoploss1.png" alt="What a stop-loss is" />
-  </div>
+                <h2>What a trading order is and the types that exist</h2>
+                <p>
+                  An
+                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
+                    ><span itemprop="name">order</span></dfn
+                  >
+                  is an instruction to the broker to buy or sell an asset under
+                  certain rules, and its type directly decides both the price
+                  and the speed of the fill. There are several kinds, but it all
+                  rests on three pillars.
+                </p>
+                <p>
+                  The first pillar is the market order: it fills immediately at
+                  the current price, handing you speed but not control over
+                  price. The second is the limit order: it triggers only at your
+                  price or better, giving control but no guarantee that price
+                  even reaches it. The third is the stop order, a pending
+                  command that hangs idle until price gets to a set level, and
+                  only then comes alive. Everything else grows from these three:
+                  stop-limit, stop-loss, trailing stop, and the hidden orders of
+                  big capital. The full map of orders with their triggers I have
+                  gathered in the
+                  <a
+                    class="linkrefinto"
+                    href="https://arapov.trade/en/freestudying/freeeducation#ordertypes"
+                    >course section on exchange order types</a
+                  >, and a visual breakdown of each kind I show in the clip on
+                  <a class="linkrefinto" href="https://youtu.be/twCT_cfz7Kg"
+                    >order types on the exchange: limit, market and stop</a
+                  >.
+                </p>
+                <p>
+                  An order has not only a type but also a lifetime, which
+                  beginners forget. A day order expires at the end of the
+                  trading session if it has not filled. A good-till-cancelled
+                  order (GTC) hangs until you remove it yourself or it triggers.
+                  There are also strict execution conditions: fill or kill (FOK)
+                  demands the whole size be filled at once and in full or
+                  cancelled, immediate or cancel (IOC) fills whatever it can
+                  right now and drops the rest. Separately there is OCO, one
+                  cancels the other: you place two orders together, a
+                  take-profit and a stop-loss, and the moment one fires the
+                  other is removed automatically. To me this is a working detail
+                  of discipline: an OCO pair closes the trade by plan even when
+                  I am away from the terminal, and stops a forgotten order from
+                  living a life of its own.
+                </p>
+                <p>
+                  <strong>In short: </strong
+                  ><i
+                    >An order is a command to the broker on set conditions, and
+                    it all rests on three pillars: the market order is speed
+                    without price control, the limit order is price control
+                    without a fill guarantee, the stop is a sleeping order until
+                    its level.</i
+                  >
+                </p>
 
-  <h2>How to Place a Stop-Loss by Levels</h2>
-  <p>The stop should sit where your scenario counts as broken, not at a random distance. I place it beyond a structural level: behind the local low for a buy, behind the local high for a sell, with a small margin for volatility. The logic is simple. As long as price has not gone past that level, the trade idea is still alive; once it has, you were wrong, and there is no sense sitting in a loss.</p>
-  <p>The second half of the job is the size of the risk. I do not risk more than one to two percent of the deposit on a single trade, and the position size is calculated from that risk, not the other way round, since a losing streak is inevitable and at one to two percent it will not kill you. An entry also makes sense only when the possible profit is at least twice the risk. The money side is covered in <a class="linkrefinto" href="https://arapov.trade/en/freestudying/capitalmanagement">position sizing</a>, and once a trade is in profit the stop can be trailed behind price, moved behind each new local extreme in a trend. What you must categorically not do is move the stop toward the loss in the hope that price reverses, since that breaks the whole plan, as part of a sound <a class="linkrefinto" href="https://arapov.trade/en/freestudying/tradingplan">plan template</a>.</p>
+                <div class="flex">
+                  <img
+                    class="pictureImg"
+                    loading="lazy"
+                    src="https://arapov.trade/assets/img/content/marketorder.png"
+                    alt="Execution of a market order"
+                  />
+                </div>
 
-  <h2>Why the Market Hunts Stops: Stop Hunting</h2>
-  <p>Many people notice it: you place a stop, it is swept at once, and price goes where you wanted. This is not paranoia and not chance. Big capital understands perfectly where the crowd keeps its stops, and the crowd keeps them in the most obvious places: right under a round number, just beyond a clear level. Liquidity gathers there, and price is sometimes pushed there on purpose.</p>
-  <p>In volume analysis this is called a shakeout or false breakout. Price is led briefly beyond the level, the crowd's stops are knocked out, that liquidity is collected, and the move reverses. Your stop in an obvious place is a gift to those with the algorithms and the capital, which is why I keep repeating: do not give your stop away, place it beyond the level with margin so an ordinary shakeout does not touch it. Volume helps you spot the shakeout: a breakout on weak volume that quickly returns is almost certainly false. The deeper mechanics sit in <a class="linkrefinto" href="https://arapov.trade/en/freestudying/stophunting">stop run</a>.</p>
+                <h2>Market order: speed at the cost of slippage</h2>
+                <p>
+                  A
+                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
+                    ><span itemprop="name">market order</span></dfn
+                  >
+                  is an instruction to the broker to buy or sell an asset
+                  immediately at the best price available at that moment. It is
+                  the simplest and most beloved order of beginners, and for that
+                  reason the most underrated on risk: behind the harmless buy
+                  button hides a fee for haste.
+                </p>
+                <p>
+                  The mechanics go like this. Your order is matched against the
+                  opposing ones in the order book, starting from the best price.
+                  If your size is larger than what stands on the first level,
+                  the order begins to walk the book, taking the next levels at
+                  ever worse prices, literally eating liquidity and shifting the
+                  quote. That is where slippage comes from, the gap between the
+                  price you saw on the screen and the price of the real fill. Do
+                  not confuse it with the spread: the spread is the static gap
+                  between buy and sell, while slippage is the extra movement
+                  your own order causes on top of the spread. It bites hardest
+                  in illiquid hours, on thin instruments and at the moment of
+                  important news, when liquidity providers scatter. There is a
+                  hidden ambush too: the market is watched by algorithms that
+                  spot a large market order and move price to meet it, so a big
+                  size poured in by one order almost always fills worse than the
+                  same size fed in parts. A rough guide on sizing: when your
+                  order clearly outweighs what is posted at the best price, a
+                  market order will almost surely hand you slippage, and the
+                  thinner the market, the wider it runs.
+                </p>
+                <p>
+                  <strong>In short: </strong
+                  ><i
+                    >A market order fills instantly, but a large size walks the
+                    book and moves price itself, and the fee for speed is the
+                    spread plus slippage, which bites hardest on a thin market
+                    and on news.</i
+                  >
+                </p>
 
-  <h2>My Take: A Stop in Every Trade, Never Moved into a Loss</h2>
-  <p>I have been trading since 2013, and two rules have never changed for me: a stop sits in every single trade, and it is never moved toward the loss. This is not advice for you personally, it is how I work: the stop goes beyond the structural level with margin, the risk is a fixed one to two percent, and the position size bends to that risk rather than the risk bending to the size I want. The honest limitation is that a stop placed with margin means a slightly bigger loss when I am genuinely wrong, but that is the price of not being collected in the shakeout, and it is a price I pay gladly. How a false breakout looks on the chart and how not to fall for it is shown in <a class="linkrefinto" href="https://youtu.be/XYNyIUZ6nVc?t=360">how to set a stop-loss correctly</a>.</p>
+                <h2>Limit order, and why big money trades with it</h2>
+                <p>
+                  The limit order is built as the mirror of the market one: it
+                  fills only at your price or better, meaning buy, but no dearer
+                  than this mark. You gain control over price, but in exchange
+                  you lose the guarantee of a fill, since price may not reach
+                  your level at all. That is exactly why exchanges advise
+                  beginners to enter with limit orders, so as not to gift money
+                  to the market on slippage.
+                </p>
+                <p>
+                  And now an observation that puts a lot in place. Professional
+                  participants work mainly with limit orders, while retail
+                  hammers market ones. The logic is direct: a market order takes
+                  liquidity and moves price against itself, and on a large size
+                  that is huge loss a big player cannot afford. So he posts
+                  limit orders and waits patiently for the market to come to his
+                  price. The result is a paradox that overturned my own
+                  approach: the crowd, with its market orders, pours liquidity
+                  into the market, while big money, with limit orders, calmly
+                  lifts it at a price convenient to itself. This is not advice
+                  to you, just a principle borrowed from those who really move
+                  the market: I try to enter where I await price, not chase it
+                  with a market order. There is a handy hybrid too: place a
+                  limit order right at the current price and wait literally a
+                  couple of seconds, which is often enough to fill without
+                  slippage and lose almost nothing in speed.
+                </p>
+                <p>
+                  <strong>In short: </strong
+                  ><i
+                    >A limit order is price control at the cost of an
+                    unguaranteed fill; big money enters with limits so as not to
+                    push price against itself, and lifts the very liquidity the
+                    crowd pours in with its market orders.</i
+                  >
+                </p>
 
-  <section>
-    <h2>Frequently Asked Questions</h2>
-    <mat-accordion>
-      <mat-expansion-panel class="highlight-box owl_link-box" [expanded]="true">
-        <mat-expansion-panel-header>
-          <mat-panel-title>What is a stop-loss in simple terms?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>It is a protective order that closes a trade by itself at a preset loss. It limits the loss and stops the market from zeroing your deposit on a sharp move against you.</p>
-      </mat-expansion-panel>
-      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
-        <mat-expansion-panel-header>
-          <mat-panel-title>What percentage of the deposit should you risk per trade?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>In my experience it is sensible to keep the risk within one to two percent per trade. Then even a run of losses in a row will not destroy the account, and the position size is calculated from that risk.</p>
-      </mat-expansion-panel>
-      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
-        <mat-expansion-panel-header>
-          <mat-panel-title>Where do you place a stop-loss so it is not knocked out?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>Beyond a structural level with margin, not right at the entry and not on a round number. The crowd places stops in obvious spots, and that is exactly where the market most often drags price.</p>
-      </mat-expansion-panel>
-      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
-        <mat-expansion-panel-header>
-          <mat-panel-title>Can you move a stop-loss?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>Toward profit, yes, that is a trailing stop. Toward the loss, never. Moving a stop further out in the hope of a reversal is an emotion that ends in a large loss.</p>
-      </mat-expansion-panel>
-      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
-        <mat-expansion-panel-header>
-          <mat-panel-title>What is a trailing stop?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>A moving stop-loss that follows price in the profitable direction. It locks in the profit already gained and, in a trend, is moved behind each new local extreme.</p>
-      </mat-expansion-panel>
-    </mat-accordion>
-  </section>
+                <div class="flex">
+                  <img
+                    class="pictureImg"
+                    loading="lazy"
+                    src="https://arapov.trade/assets/img/content/stoporder.png"
+                    alt="How a stop order works on the price chart"
+                  />
+                </div>
 
-  <section>
-    <h2>About the Author</h2>
-    <p>Author: Igor Arapov — independent researcher in the psychology of investment decisions and behavioral finance, practising trader since 2013, founder of arapov.trade, author of a trading book series (<a class="linkrefinto" href="https://openlibrary.org/authors/OL16073686A/Igor_Arapov">Open Library</a>), (<a class="linkrefinto" href="https://orcid.org/0009-0003-0430-778X">ORCID: 0009-0003-0430-778X</a>).</p>
-  </section>
-</article>
+                <h2>Stop order: Buy Stop, Sell Stop and how it moves price</h2>
+                <p>
+                  A
+                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
+                    ><span itemprop="name">stop order</span></dfn
+                  >
+                  is a pending order with a set stop price that sleeps until it
+                  triggers, and when price touches that level it turns into a
+                  market order and fills at the nearest available price. It
+                  matters to separate activation from execution here: the stop
+                  price only launches the order, while the exact price it fills
+                  at is decided by the market at that moment, and on a gap
+                  slippage is possible.
+                </p>
+                <p>
+                  It comes in two kinds. A Buy Stop is set above the current
+                  price, to enter a buy on a break of resistance upward; a Sell
+                  Stop below, to enter a sell on a break of support downward.
+                  Here is an example: price stands at 100, resistance above it
+                  at 105, you wait for the break and place a Buy Stop just above
+                  105, and if price reaches there you are automatically in the
+                  buy, not having missed the move. The trailing stop, which
+                  follows price at a set distance, belongs here too. And now the
+                  main thing, the reason I count the topic important: stop
+                  orders move price. When a cluster of stops triggers, they all
+                  turn into market orders at once and spill into the market,
+                  pushing price further the same way, sometimes in an avalanche.
+                  That is why big capital so loves zones where pending orders
+                  stand thick, it is ready fuel for a thrust, and here the
+                  effort-and-result pairing works in pure form: the avalanche of
+                  market orders becomes the very effort that shoves the quote.
+                </p>
+                <p>
+                  <strong>In short: </strong
+                  ><i
+                    >A stop order sleeps until its level and on the touch
+                    becomes a market order; a Buy Stop is set above price, a
+                    Sell Stop below, and a cluster of stops, when triggered,
+                    spills into the market in an avalanche, so stop zones are
+                    fuel for a move.</i
+                  >
+                </p>
+
+                <div class="flex">
+                  <img
+                    class="pictureImg"
+                    loading="lazy"
+                    src="https://arapov.trade/assets/img/content/stoplimitorder.png"
+                    alt="How a stop-limit order works"
+                  />
+                </div>
+
+                <h2>Stop-limit order: price control vs a guaranteed exit</h2>
+                <p>
+                  A
+                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
+                    ><span itemprop="name">stop-limit order</span></dfn
+                  >
+                  is a pending order made of two prices: a stop price and a
+                  limit price. It works in two steps: first price reaches the
+                  stop price, which switches the order on, and then it places
+                  not a market but a limit order at your limit price, which will
+                  fill only at that price or better.
+                </p>
+                <p>
+                  Here is an example. Say you hold an asset and want out on a
+                  fall to 100: you set the stop price at 100 and the limit price
+                  at 99. The moment price touches 100, a sell order at 99 or
+                  higher appears, but if the market shoots past 99 too fast, the
+                  order simply hangs and does not fill. That is the whole
+                  difference from an ordinary stop-loss, also called a
+                  stop-market: that one becomes a market order on triggering and
+                  fills in any case, but at the available price, sometimes with
+                  slippage. Put briefly, the stop-market guarantees the exit but
+                  not the price, while the stop-limit guarantees the price but
+                  not the exit. So the stop-limit fits where price is critical
+                  for you and there is no rush: to lock profit on a calm market
+                  or to enter on a retest of a level strictly at your mark. But
+                  for a protective stop, the one that saves the account, I
+                  almost always choose a guaranteed fill, that is, the
+                  stop-market. The logic is simple: a stop exists to get you out
+                  of a loss, not to get you out gracefully. If in a sharp
+                  collapse the stop-limit fails to fill, you stay in a falling
+                  position, and that is exactly the trading-without-a-stop we
+                  avoid by every means.
+                </p>
+                <p>
+                  <strong>In short: </strong
+                  ><i
+                    >A stop-limit is an order of two prices that controls the
+                    price but may not fill, while a stop-market fills always at
+                    the available price: one guarantees the price, the other the
+                    exit, so for protecting the account I take the
+                    stop-market.</i
+                  >
+                </p>
+
+                <div class="flex">
+                  <img
+                    class="pictureImg"
+                    loading="lazy"
+                    src="https://arapov.trade/assets/img/content/stoploss1.png"
+                    alt="What a stop-loss is"
+                  />
+                </div>
+
+                <h2>
+                  Stop-loss: how to place it and why every trade needs one
+                </h2>
+                <p>
+                  A
+                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
+                    ><span itemprop="name">stop-loss</span></dfn
+                  >
+                  is a protective order that automatically closes a position
+                  when price reaches a preset loss level. Its single job is to
+                  cap the loss in one trade and not let the market zero the
+                  account, and in my firm conviction it must stand on every
+                  single trade.
+                </p>
+                <p>
+                  Its value is easiest to see from the opposite side. Most
+                  people trade with leverage, which means that if price runs
+                  against you far enough, the account zeros on its own, without
+                  your part in it. A stop closes the trade earlier, at a loss
+                  counted in advance. Beginners drop it not out of laziness but
+                  from not knowing where to put it: they slap it down blind, get
+                  knocked out, and trust in the tool melts, though the fault
+                  lies not with the stop but with the chosen spot. I hide it
+                  behind a structural level, under a local low in a buy or above
+                  a local high in a sell, adding a small buffer for volatility,
+                  since as long as price has not broken that point, the trade's
+                  scenario still holds. The second half of the task is the size
+                  of the risk: on one trade I set aside no more than a couple of
+                  percent of the account, and it is to that sum I fit the size,
+                  not the other way round. This is not advice to you, just how I
+                  act, since a string of losses is inevitable, and at a risk of
+                  a couple of percent it will not kill you, while at ten a few
+                  in a row will do. And an entry is worth taking at all only
+                  when the possible profit is at least twice the risk. How to
+                  count size against risk is laid out in detail in the guide to
+                  risk management and capital control.
+                </p>
+                <p>
+                  <strong>In short: </strong
+                  ><i
+                    >A stop-loss closes the position itself at a loss counted in
+                    advance, and with leverage the account zeros on a sharp move
+                    without it; you set it behind a structural level with a
+                    buffer and from it size the position at one-to-two-percent
+                    risk per trade.</i
+                  >
+                </p>
+
+                <div class="flex">
+                  <img
+                    class="pictureImg"
+                    loading="lazy"
+                    src="https://arapov.trade/assets/img/content/TrailingStopOrder.png"
+                    alt="Trailing stop order"
+                  />
+                </div>
+
+                <h2>
+                  Why the market hunts your stops: the mechanics of stop hunting
+                </h2>
+                <p>
+                  A picture familiar to many: you just placed a stop, it was
+                  swept at once, and price went exactly where you thought it
+                  would. This is not paranoia and not chance. Big money knows
+                  perfectly where the crowd stacks its stops, and it stacks them
+                  in the most readable spots: snug under a round number and
+                  right behind an eye-catching level. That is where liquidity
+                  gathers, and at times the quote is deliberately driven into
+                  the zone.
+                </p>
+                <p>
+                  In the language of volume analysis this is a shakeout, also
+                  called a false break. Price is briefly led past the level, the
+                  crowd's stops are knocked out, that liquidity is collected,
+                  and price is turned back, leaving those who were swept on the
+                  sidelines. In essence a stop left in a predictable spot is a
+                  free gift to those with capital and algorithms. Hence the
+                  conclusion I repeat constantly: do not give your stop away for
+                  free, hide it not on the level itself but behind it, with a
+                  buffer, so you are not collected together with the crowd.
+                  Volume gives the shakeout away: a weak flow on the break
+                  itself plus a fast return of price almost always means a false
+                  move. The deeper logic of false break and liquidity collection
+                  I lay out in the course section on
+                  <a
+                    class="linkrefinto"
+                    href="https://arapov.trade/en/freestudying/freeeducation#working-with-levels"
+                    >working with levels and the liquidity deficit</a
+                  >.
+                </p>
+                <p>
+                  <strong>In short: </strong
+                  ><i
+                    >The market knocks out stops where the crowd holds them,
+                    behind a round number and an obvious level: price is led
+                    there by a false break on weak volume and turned back, so I
+                    hide my stop behind the level with a buffer, not on it.</i
+                  >
+                </p>
+
+                
+
+                <h2>Trailing stop: a moving guard for your profit</h2>
+                <p>
+                  A
+                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
+                    ><span itemprop="name">trailing stop</span></dfn
+                  >
+                  is a moving stop-loss that pulls up after price as the trade
+                  goes into profit and protects the gain already taken. Unlike
+                  an ordinary stop, it does not stand still but trails the
+                  market at a set distance.
+                </p>
+                <p>
+                  As soon as the trade is in profit, I pull the stop up after
+                  price: in a trend I set it behind each fresh local extreme,
+                  gradually locking profit and trimming risk. And here is what
+                  you absolutely must not do: move the stop toward the loss in
+                  the hope that price will turn, because that breaks the whole
+                  plan and almost always ends in a large loss. The rule here is
+                  simple and iron: a stop may be moved only toward profit and
+                  never toward loss. A stop is set once and then held purely on
+                  discipline, as part of the trading plan, not as a variable you
+                  feel like nudging just so as not to close in the red.
+                </p>
+                <p>
+                  <strong>In short: </strong
+                  ><i
+                    >A trailing stop pulls protection along after price and
+                    locks the gain already taken, jumping behind fresh extremes;
+                    moving a stop is allowed only into profit and on no account
+                    into loss in the hope of a turn.</i
+                  >
+                </p>
+
+                <div class="flex">
+                  <img
+                    class="pictureImg"
+                    loading="lazy"
+                    src="https://arapov.trade/assets/img/content/icebergorders1.png"
+                    alt="Structure of an iceberg order in the order book"
+                  />
+                </div>
+
+                <h2>Iceberg order: how big players hide position size</h2>
+                <p>
+                  An
+                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
+                    ><span itemprop="name">iceberg order</span></dfn
+                  >
+                  is a large exchange order that, instead of one big order, is
+                  laid out as a run of small ones. At any instant only a small
+                  visible share sticks out in the public order book, while the
+                  main mass is hidden under the water, hence the name.
+                </p>
+                <p>
+                  The moment the visible portion fills, the next one of the same
+                  size steps in to take its place, and so on in a loop until the
+                  whole hidden volume has gone into the market. Why a big
+                  participant wants this is clear: dump, say, a sell order for a
+                  huge oil position all at once, and he presses price down
+                  himself, sells worse and sows panic on top. Slicing into an
+                  iceberg lets him leave quietly, at a better average, without
+                  giving his plan away to the rest. On the chart this is tightly
+                  linked to absorption: when opposing volume surfaces again and
+                  again at one level and price just cannot break it, someone big
+                  is quietly swallowing the flow with a hidden limit order. That
+                  level's price then often works as support or resistance. But
+                  without romance: to see icebergs live you need access to a
+                  level-two order book, the time and sales tape and cluster
+                  tools, and most beginners on forex simply do not have that.
+                  And on display an iceberg does not say how much volume is
+                  still under the water, and not always promises a turn. So I do
+                  not chase the iceberg itself in the order book, but read its
+                  footprint in volume and in price reaction at the level.
+                </p>
+                <p>
+                  <strong>In short: </strong
+                  ><i
+                    >An iceberg is a big order cut into visible slices with the
+                    mass hidden; at a level it looks like absorption of the
+                    opposing flow, but without L2 and the tape a beginner finds
+                    it easier to catch its imprint in volume than the hidden
+                    order itself.</i
+                  >
+                </p>
+                <div class="flex">
+                  <img
+                    class="pictureImg"
+                    loading="lazy"
+                    src="https://arapov.trade/assets/img/content/algorithmicorders.webp"
+                    alt="Algorithmic orders on the exchange"
+                  />
+                </div>
+                <h2>
+                  Algorithmic orders and spoofing: why I read volume, not the
+                  order book
+                </h2>
+                <p>
+                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
+                    ><span itemprop="name">Algorithmic orders</span></dfn
+                  >
+                  are large orders executed by a set algorithm and cut into
+                  parts, so a participant can buy or sell a big size without
+                  showing the market the real size and intent. The iceberg is
+                  only their best-known kind, and the point of all of them is
+                  one: to hide the intent.
+                </p>
+                <p>
+                  The logic is direct. Post a huge order whole and it is spotted
+                  in the order book at once and price is moved against you, so
+                  big money sprinkles size in small portions, picked so they get
+                  lost in the ordinary flow. But the order book has a dark side.
+                  Spoofing is when a big player posts an imposing order he has
+                  no intention of filling, paints fake demand or supply, and
+                  then pulls it. That manipulation is outside the law, it draws
+                  fines and lawsuits, and it is precisely such tricks that mean
+                  the order book cannot be taken at face value. Volume, though,
+                  is an honest thing: it shows already-executed trades, and it
+                  cannot be faked. So I look not into the order book but at
+                  volume at the level. The chief imprint of a big player for me
+                  is a spike of volume without a price move, that very effort
+                  without result, when pressure is there but price stands,
+                  because someone big is eating the whole flow with a hidden
+                  limit order. My working order is this: find a strong level,
+                  see a spike of volume and a liquidity deficit on it, wait for
+                  a false break and slot in behind the big capital with a tight
+                  stop. This is not advice to you, just how I act, and the whole
+                  beauty is that we, the small participants, need not hide
+                  volume: we calmly enter where big capital has already left its
+                  tracks.
+                </p>
+                <p>
+                  <strong>In short: </strong
+                  ><i
+                    >An algo order slices a big order so big capital gathers
+                    size without moving price; the order book can be faked with
+                    spoofing, volume cannot, so I look for the big player by a
+                    spike of volume without a price move at a strong level.</i
+                  >
+                </p>
+
+                <p>
+                  Orders are a working tool, but they truly come alive only when
+                  you see how price forms from the orders in the book and who
+                  really steers its movement. The logical next step is to work
+                  through
+                  <a
+                    class="linkrefinto"
+                    href="https://arapov.trade/en/freestudying/how-exchange-works"
+                    >how an exchange works</a
+                  >
+                  as a whole, from the order book and the candle, and to return
+                  with that understanding to the choice of order in each
+                  particular trade.
+                </p>
+
+                <section>
+                  <h2>Frequently asked questions</h2>
+                  <mat-accordion>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      [expanded]="true"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >What is the difference between a market order and a
+                          limit order?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        A market order fills instantly at any available price:
+                        you get speed but pay the spread and possible slippage.
+                        A limit order fills only at your price or better and
+                        gives control, yet its fill is not guaranteed, since
+                        price may never reach it.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >What is a stop order and how does it move
+                          price?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        It is a pending order that sleeps until its level and on
+                        the touch of the stop price turns into a market order.
+                        When a cluster of such orders triggers, they all spill
+                        into the market at once and push price further the same
+                        way, so stop zones serve as fuel for sharp moves.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >Where should you place a stop-loss?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        Not on a round number and not right next to your entry,
+                        but behind a structural level with a buffer, where the
+                        trade's scenario counts as broken, and from there you
+                        size the position at around one to two percent of the
+                        account per trade.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >Stop-limit vs stop-market: which one protects
+                          you?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        A stop-market becomes a market order and always fills,
+                        but at the available price, sometimes with slippage. A
+                        stop-limit places a limit order and controls the price
+                        but may not fill if the market jumps past it. In short:
+                        one guarantees the exit, the other the price.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >Why does the market keep hitting my stop
+                          loss?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        Most often because it sits in an obvious place where the
+                        crowd's stops gather, under a round number or right
+                        behind a clear level. Liquidity rests there, and price
+                        is sometimes pushed into it on purpose with a false
+                        break. A stop with a buffer behind the level lowers the
+                        chance of that sweep.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >What is an iceberg order and how do you read big
+                          players?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        An iceberg is a large order cut into visible portions,
+                        with only the tip showing in the order book and the main
+                        volume hidden. The order book can be faked, while volume
+                        records already-executed trades, so big capital is more
+                        reliably found by a spike of volume without a price move
+                        at a strong level.
+                      </p>
+                    </mat-expansion-panel>
+                  </mat-accordion>
+                </section>
+
+                <section>
+                  <h2>About the Author</h2>
+                  <p>
+                    Author:
+                    <a class="linkrefinto" href="https://arapov.trade/en"
+                      >Igor Arapov</a
+                    >
+                    — independent researcher in the psychology of investment
+                    decisions and behavioral finance, practising trader since
+                    2013, founder of arapov.trade, author of a trading book
+                    series (<a
+                      class="linkrefinto"
+                      href="https://orcid.org/0009-0003-0430-778X"
+                      >ORCID: 0009-0003-0430-778X</a
+                    >).
+                  </p>
+                </section>
+              </article>
 
               <div
                 class=""

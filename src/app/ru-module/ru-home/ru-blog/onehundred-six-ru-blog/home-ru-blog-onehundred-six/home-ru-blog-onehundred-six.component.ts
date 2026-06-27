@@ -288,7 +288,7 @@ export class HomeRuBlogOnehundredSixComponent implements OnInit {
           },
           author: {
             '@type': 'Person',
-            '@id': 'https://arapov.trade/ru#person',
+            '@id': 'https://arapov.trade/#person',
           },
         },
       ],
@@ -304,7 +304,7 @@ export class HomeRuBlogOnehundredSixComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/ru#person',
+      '@id': 'https://arapov.trade/#person',
        name: 'Игорь Арапов',
       alternateName: [
         'Igor Arapov',

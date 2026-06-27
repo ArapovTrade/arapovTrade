@@ -30,7 +30,7 @@ export class HomeUkBlogSixtyFourComponent {
     private artickleServ: ArticlesService,
     private renderer: Renderer2,
     @Inject(DOCUMENT) private document: Document,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
   ) {}
   private routerSubscription!: Subscription;
   private themeSubscription!: Subscription;
@@ -59,7 +59,7 @@ export class HomeUkBlogSixtyFourComponent {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Торгова система трейдера — практичний посібник з прикладами угод'
+      'Торгова система трейдера — практичний посібник з прикладами угод',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
@@ -67,13 +67,9 @@ export class HomeUkBlogSixtyFourComponent {
       content:
         'Торгова система трейдера — покрокова інструкція з реальними прикладами угод. Як знаходити точки входу, виставляти стоп-лос та фіксувати прибуток.',
     });
-     this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
 
-  this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/prakticuk.jpg',
-    });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
 
     this.gerRandom();
     this.route.fragment.subscribe((fragment) => {
@@ -112,7 +108,6 @@ export class HomeUkBlogSixtyFourComponent {
       title: 'Базовий курс',
       link: 'https://arapov.trade/uk/freestudying/freeeducation',
     },
-     
   ];
 
   onGroupChange(event: Event) {
@@ -182,7 +177,7 @@ export class HomeUkBlogSixtyFourComponent {
     // Показываем 5 случайных статей при фокусе, если инпут пуст
     if (!this.searchQuery) {
       const shuffled = [...this.artickleServ.ukrArtickles].sort(
-        () => Math.random() - 0.5
+        () => Math.random() - 0.5,
       );
       this.displayedArticles = shuffled.slice(0, this.maxResults);
     }
@@ -197,7 +192,7 @@ export class HomeUkBlogSixtyFourComponent {
   onSearchChange() {
     // Логика асинхронного поиска
     const filtered = this.artickleServ.ukrArtickles.filter((a) =>
-      a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase())
+      a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase()),
     );
     this.displayedArticles = filtered.slice(0, this.maxResults);
   }
@@ -219,7 +214,7 @@ export class HomeUkBlogSixtyFourComponent {
     const path: string =
       this.router.url.split('/')[this.router.url.split('/').length - 1];
     let index = this.artickleServ.ukrArtickles.findIndex(
-      (a) => a.linkUkr == path
+      (a) => a.linkUkr == path,
     );
 
     if (this.artickleServ.ukrArtickles.length - 1 == index) {
@@ -236,7 +231,7 @@ export class HomeUkBlogSixtyFourComponent {
     const path: string =
       this.router.url.split('/')[this.router.url.split('/').length - 1];
     let index = this.artickleServ.ukrArtickles.findIndex(
-      (a) => a.linkUkr == path
+      (a) => a.linkUkr == path,
     );
 
     if (index == 1) {
@@ -261,7 +256,7 @@ export class HomeUkBlogSixtyFourComponent {
     ];
 
     const scripts = this.document.querySelectorAll(
-      'script[type="application/ld+json"]'
+      'script[type="application/ld+json"]',
     );
 
     scripts.forEach((script) => {
@@ -274,7 +269,7 @@ export class HomeUkBlogSixtyFourComponent {
 
         const shouldRemove = candidates.some(
           (entry: any) =>
-            entry['@type'] && typesToRemove.includes(entry['@type'])
+            entry['@type'] && typesToRemove.includes(entry['@type']),
         );
 
         if (shouldRemove) {
@@ -302,24 +297,22 @@ export class HomeUkBlogSixtyFourComponent {
       '@graph': [
         {
           '@type': 'Article',
-          '@id': 'https://arapov.trade/uk/freestudying/practic#article',
-          headline:
-            'Торгова система трейдера — практичний посібник з прикладами угод',
+          headline: 'Стратегії трейдингу з нуля',
           description:
-            'Торгова система трейдера — покрокова інструкція з реальними прикладами угод. Як знаходити точки входу, виставляти стоп-лос та фіксувати прибуток.',
-          datePublished: '2024-06-15T00:00:00+02:00',
-          dateModified: '2026-04-15T00:00:00Z',
-          author: {
-            '@id': 'https://arapov.trade/uk#person',
-          },
+            'Дізнайтесь практичні рекомендації з трейдингу: торгова система, точки входу, мані-менеджмент і ризики від ArapovTrade.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'Arapov Trade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
             '@id': 'https://arapov.trade/uk/freestudying/practic',
@@ -327,16 +320,12 @@ export class HomeUkBlogSixtyFourComponent {
           image: {
             '@type': 'ImageObject',
             url: 'https://arapov.trade/assets/img/content/prakticuk.jpg',
+            width: 1200,
+            height: 630,
           },
-          articleSection: 'Трейдинг',
-          keywords: [
-            'торгова система',
-            'трейдинг',
-            'точка входу',
-            'стоп-лос',
-            'Price Action',
-            'хибний пробій',
-          ],
+          articleSection: 'Приклади угод',
+          keywords: 'торгова стратегія',
+          inLanguage: 'uk',
         },
       ],
     };
@@ -351,18 +340,18 @@ export class HomeUkBlogSixtyFourComponent {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/uk#person',
-      name: 'Ігор Арапов',
+      '@id': 'https://arapov.trade/#person',
+      name: 'Igor Arapov',
       alternateName: [
-        'Igor Arapov',
-              'Арапов Игорь',
-              'I. Arapov',
-              'Игорь Арапов',
-              'І. В. Арапов',
-              'Арапов Ігор',
-              'Arapov Igor',
+        'Ігор Арапов',
+        'Игорь Арапов',
+        'Арапов Игорь',
+        'Арапов Ігор',
+        'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/uk',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -374,9 +363,13 @@ export class HomeUkBlogSixtyFourComponent {
         'https://github.com/ArapovTrade',
         'https://ua.linkedin.com/in/arapovtrade',
         'https://www.youtube.com/@ArapovTrade',
-        'https://t.me/ArapovTrade'
+        'https://t.me/ArapovTrade',
       ],
-       jobTitle: ['Незалежний дослідник', 'трейдер', 'автор і засновник arapov.trade'],
+      jobTitle: [
+        'Незалежний дослідник',
+        'трейдер',
+        'автор і засновник arapov.trade',
+      ],
       description:
         'Незалежний дослідник, практикуючий трейдер, автор книг з трейдингу та наукових публікацій. Спеціалізується на психології трейдингу та когнітивних упередженнях на фінансових ринках.',
     };
@@ -391,46 +384,46 @@ export class HomeUkBlogSixtyFourComponent {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
-      '@id': 'https://arapov.trade/uk/freestudying/practic#faq',
+      inLanguage: 'uk',
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'Навіщо потрібна торгова система?',
+          name: 'Що таке торгова стратегія?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Система замінює хаотичні рішення на чіткий алгоритм дій. Без неї торгівля перетворюється на азартну гру з негативним математичним очікуванням — гарантовану втрату грошей на дистанції.',
+            text: 'Торгова стратегія це заздалегідь розроблений набір чітких правил, що регулюють дії трейдера на всіх етапах: від входу в угоду до виходу. Вона усуває імпровізацію, емоційні коливання й субʼєктивність.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Що входить до торгової системи?',
+          name: 'Чому трейдинг без стратегії призводить до збитків?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Чотири компоненти: правила входу (коли відкривати угоду), правила виходу (стоп-лос і тейк-профіт), управління капіталом (скільки ризикувати) та психологічна дисципліна (як дотримуватися правил).',
+            text: 'Без робочої стратегії трейдинг перетворюється на азартну гру, де шанси різко проти вас. Комісії, спред, емоції й нестриманий ризик працюють у мінус, тому переважна більшість трейдерів без системи втрачають депозит.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Чому важливе співвідношення 3 до 1?',
+          name: 'Що таке правило 3:1 у трейдингу?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'При співвідношенні прибутку до ризику 3:1 вам достатньо виграти лише 30-40% угод, щоб залишатися в плюсі. Кожна виграшна угода перекриває три програшні. Це математична основа прибуткової торгівлі.',
+            text: 'Правило 3:1 означає, що на кожен долар ризику потенційний прибуток має становити мінімум 3 долари. Відстань до цілі в пунктах має бути в 3 рази більшою, ніж відстань до стоп-лосса.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Як розпізнати хибний пробій?',
+          name: 'Що таке хибний пробій рівня?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: "Ознаки: ціна виходить за рівень на підвищеному обсязі, формується свічка з довгою тінню (пін-бар), потім з'являється протилежна свічка поглинання. Після цього ціна повертається в діапазон і рухається у зворотному напрямку.",
+            text: 'Хибний пробій це спроба підняти або опустити ціну за рівень підтримки або опору, яка не отримує продовження. Часто відбувається на підвищених обсягах і використовується Smart Money для набору позицій і збору ліквідності.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Скільки угод потрібно для оцінки системи?',
+          name: 'Який WinRate вважається робочим для торгової системи?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Мінімум 40-50 угод для базової статистики, оптимально — 100+. Менша вибірка не дає достовірної картини через випадкові коливання. Саме тому важливо спочатку торгувати на демо-рахунку.',
+            text: 'При роботі з рівнями нормальним вважається WinRate близько 60-65%, тобто приблизно 63 прибуткові угоди зі 100. Сам по собі він нічого не гарантує: важлива звʼязка з правилом 3:1 і контролем ризику на дистанції.',
           },
         },
       ],
@@ -446,40 +439,40 @@ export class HomeUkBlogSixtyFourComponent {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      '@id': 'https://arapov.trade/uk/freestudying/practic#howto',
-      name: 'Алгоритм пошуку точки входу',
+      inLanguage: 'uk',
+      name: 'Як знайти точку входу за торговою системою',
       description:
-        'Покрокова інструкція для знаходження торгових сигналів за методом хибних пробоїв.',
+        'Покроковий алгоритм визначення точки входу в угоду на продаж від рівня опору за правилами Price Action і Smart Money.',
       step: [
         {
           '@type': 'HowToStep',
-          position: 1,
-          name: 'Знайдіть ключовий рівень',
-          text: 'На старшому таймфреймі (4H) визначте зону, де ціна раніше зупинялася — це ваш рівень опору або підтримки.',
+          name: 'Визначити рівень',
+          text: 'Провести діапазон опору за старшим таймфреймом (×4) і позначити його як зону інтересу.',
         },
         {
           '@type': 'HowToStep',
-          position: 2,
-          name: 'Чекайте підхід ціни',
-          text: 'Спостерігайте, як ціна наближається до рівня. Шукайте ознаки слабкості: пін-бари, зменшення обсягів.',
+          name: 'Дочекатися пін-бар',
+          text: 'У діапазоні рівня дочекатися пін-бар як першу ознаку слабкості покупців і дефіциту попиту.',
         },
         {
           '@type': 'HowToStep',
-          position: 3,
-          name: 'Ідентифікуйте хибний пробій',
-          text: 'Ціна виходить за рівень, але не закріплюється. Обсяг високий, але результату немає — ознака поглинання.',
+          name: 'Ідентифікувати хибний пробій',
+          text: 'Розпізнати спробу пробити рівень на підвищеному обсязі, яка не отримує продовження і збирає ліквідність.',
         },
         {
           '@type': 'HowToStep',
-          position: 4,
-          name: 'Чекайте підтвердження',
-          text: 'Формування свічки поглинання підтверджує хибність пробою. Вхід — при пробої екстремуму цієї свічки.',
+          name: 'Увійти на ведмежому поглинанні',
+          text: 'Відкрити угоду на продаж при пробої мінімуму бару хибного пробою за патерном ведмеже поглинання.',
         },
         {
           '@type': 'HowToStep',
-          position: 5,
-          name: 'Виставте захисні ордери',
-          text: 'Стоп-лос — за максимум хибного пробою. Тейк-профіт — протилежний рівень. Перевірте співвідношення мінімум 3:1.',
+          name: 'Виставити стоп-лосс',
+          text: 'Поставити захисний ордер за макушку бару хибного пробою плюс пара пунктів на комісію біржі або брокера.',
+        },
+        {
+          '@type': 'HowToStep',
+          name: 'Визначити ціль і перевірити 3:1',
+          text: 'Ціль ставиться на протилежний імпульсний рівень; угода береться лише якщо потенційний прибуток щонайменше втричі перевищує ризик.',
         },
       ],
     };
@@ -495,64 +488,72 @@ export class HomeUkBlogSixtyFourComponent {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
       '@id': 'https://arapov.trade/uk/freestudying/practic#terms',
-      name: 'Термінологія торгової системи',
+      inLanguage: 'uk',
+      name: 'Терміни торгової стратегії',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Торгова система',
+          name: 'Торгова стратегія',
           description:
-            'Комплекс правил, що визначає умови входу, виходу та управління ризиками в торгівлі.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Точка входу',
-          description: 'Момент відкриття торгової позиції за сигналом системи.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Стоп-лос',
-          description:
-            'Захисний ордер для автоматичного закриття збиткової позиції.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Тейк-профіт',
-          description:
-            'Ордер для автоматичної фіксації прибутку при досягненні цілі.',
+            'Заздалегідь розроблений набір чітких правил входу, виходу й контролю ризику, що замінює імпровізацію та емоції логікою і статистикою.',
+          inDefinedTermSet:
+            'https://arapov.trade/uk/freestudying/practic#terms',
         },
         {
           '@type': 'DefinedTerm',
           name: 'Хибний пробій',
           description:
-            'Вихід ціни за рівень без закріплення з подальшим розворотом.',
+            'Спроба вивести ціну за рівень підтримки або опору без продовження руху, часто на підвищеному обсязі.',
+          inDefinedTermSet:
+            'https://arapov.trade/uk/freestudying/practic#terms',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Пін-бар',
+          name: 'Ведмеже поглинання',
           description:
-            'Свічка з довгою тінню і коротким тілом — сигнал відторгнення ціни.',
+            'Патерн Price Action, що вказує на переважання продавців; сигнал входу на продаж при пробої мінімуму бару хибного пробою.',
+          inDefinedTermSet:
+            'https://arapov.trade/uk/freestudying/practic#terms',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Поглинання',
+          name: 'Правило 3:1',
           description:
-            'Патерн з двох свічок, де друга повністю перекриває тіло першої.',
+            'Умова, за якої на кожен долар ризику закладається мінімум 3 долари потенційного прибутку.',
+          inDefinedTermSet:
+            'https://arapov.trade/uk/freestudying/practic#terms',
         },
         {
           '@type': 'DefinedTerm',
           name: 'WinRate',
-          description: 'Відсоток прибуткових угод від загальної кількості.',
+          description:
+            'Частка прибуткових угод у торговій системі; при роботі з рівнями зазвичай близько 60-65%.',
+          inDefinedTermSet:
+            'https://arapov.trade/uk/freestudying/practic#terms',
         },
         {
           '@type': 'DefinedTerm',
           name: 'Profit Factor',
           description:
-            'Співвідношення загального прибутку до загального збитку.',
+            'Відношення сумарного прибутку до сумарного збитку; мінімально достатнім вважається 1.8-2 з урахуванням комісій.',
+          inDefinedTermSet:
+            'https://arapov.trade/uk/freestudying/practic#terms',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'DrawDown',
-          description: 'Максимальна просадка рахунку від пікового значення.',
+          name: 'Maximal DrawDown',
+          description:
+            'Максимальна просадка депозиту за період; стоп-лосс обмежує її глибину, але не скасовує.',
+          inDefinedTermSet:
+            'https://arapov.trade/uk/freestudying/practic#terms',
+        },
+        {
+          '@type': 'DefinedTerm',
+          name: 'Мані-менеджмент',
+          description:
+            'Управління капіталом: який відсоток депозиту використовувати в угоді і як переносити ризик з угоди в угоду.',
+          inDefinedTermSet:
+            'https://arapov.trade/uk/freestudying/practic#terms',
         },
       ],
     };

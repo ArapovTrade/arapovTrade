@@ -53,22 +53,16 @@ export class HomeEnBlogTwentyEightComponent implements OnInit {
     this.grr = this.artickleServ.selectedGroups;
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
-    this.titleService.setTitle(
-      'Alternative Blockchains: Overview and Differences | Arapov.trade',
-    );
+    this.titleService.setTitle('Fundamental Market Analysis | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Alternative blockchains: complete overview of Solana, Polkadot, Avalanche, Cardano. Consensus mechanisms, advantages, disadvantages and place in Web3 ecosystem.',
+        'The basics of fundamental analysis: economic indicators, central bank rates, news and how they affect the market and exchange rates.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Ihor Arapov' });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-22' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/altblockchains.webp',
-    });
+
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
 
     this.gerRandom();
   }
@@ -255,31 +249,37 @@ export class HomeEnBlogTwentyEightComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          headline: 'Alternative Blockchains: Overview and Differences',
+          headline:
+            'Fundamental Analysis in Trading: A Full Guide to Macro, Rates and News',
           description:
-            'Complete overview of alternative blockchains: Solana, Polkadot, Avalanche, Cardano and their place in Web3',
-          author: {
-            '@id': 'https://arapov.trade/en#person',
-          },
+            'The basics of fundamental analysis: economic indicators, central bank rates, news and how they affect the market and exchange rates.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'Arapov.trade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
-          datePublished: '2025-01-10T12:00:00+02:00',
-          dateModified: '2026-04-15T00:00:00Z',
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://arapov.trade/en/freestudying/altblockchains',
+            '@id': 'https://arapov.trade/en/freestudying/fundamental-analysis',
           },
-          image: 'https://arapov.trade/assets/img/content/altblockchains1.webp',
-          articleSection: 'Trading Education',
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/fundamentalanalysis.webp',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Fundamental analysis',
           keywords:
-            'alternative blockchains, Solana, Polkadot, Avalanche, Cardano, Polygon, Web3, DeFi, Layer 1',
-          inLanguage: 'ru',
+            'fundamental analysis, economic factors, macroeconomic indicators, GDP, PMI, inflation, key rate, the Fed, economic calendar, news trading, volume analysis',
+          inLanguage: 'en',
         },
       ],
     };
@@ -294,18 +294,18 @@ export class HomeEnBlogTwentyEightComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/en#person',
+      '@id': 'https://arapov.trade/#person',
       name: 'Igor Arapov',
       alternateName: [
         'Ігор Арапов',
-        'Арапов Игорь',
-        'I. Arapov',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/en',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -320,12 +320,12 @@ export class HomeEnBlogTwentyEightComponent implements OnInit {
         'https://t.me/ArapovTrade',
       ],
       jobTitle: [
-        'Independent researcher,',
-        'trader',
-        'author and founder of arapov.trade',
+        'Independent researcher',
+        'Trader',
+        'Author and founder of arapov.trade',
       ],
       description:
-        'Independent researcher, practicing trader, author of books on trading and scientific publications. Specializes in trading psychology and cognitive biases in financial markets.',
+        'Independent researcher, practising trader, author of trading books and scientific publications. Specialises in trading psychology and cognitive biases in financial markets.',
     };
 
     this.addJsonLdSchema(data);
@@ -341,42 +341,50 @@ export class HomeEnBlogTwentyEightComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'What are alternative blockchains?',
+          name: 'What is fundamental analysis in simple terms?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Alternative blockchains are networks developed as improved versions of Bitcoin and Ethereum. They solve problems of scalability, high fees and low transaction speeds using innovative consensus mechanisms.',
+            text: "It's the valuation of an asset through the economy, rates and reporting, to understand its fair value. Cheaper than fair value the asset is considered undervalued, more expensive overvalued. For a long-term investor it's a powerful tool, while for a trader it answers the question of why the price moves, but not when to enter.",
           },
         },
         {
           '@type': 'Question',
-          name: 'How does Solana differ from Ethereum?',
+          name: 'Which economic factors move the market?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Solana uses Proof-of-History mechanism providing up to 65,000 transactions per second with minimal fees. Ethereum runs on PoS and processes about 15-30 TPS on the base layer.',
+            text: 'Central-bank rates, inflation, employment, the trade balance, business activity (PMI), commodity and gold prices, and geopolitics. The rate affects currencies most of all, because it sets the cost of money in the economy.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Which blockchain is best for DeFi?',
+          name: 'What does PMI show and why does the 50 mark matter?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Popular DeFi blockchains include Ethereum (ecosystem and liquidity), Solana (speed and low fees), Avalanche and Polygon. Choice depends on project priorities.',
+            text: 'PMI is a business-activity index built from surveys of purchasing managers. The 50 mark is the watershed: above it the economy is expanding, below it contracting. The indicator is leading, so the market reacts to it more keenly than to the lagging GDP.',
           },
         },
         {
           '@type': 'Question',
-          name: 'What are parachains in Polkadot?',
+          name: 'How does the Fed rate affect the dollar and risk assets?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: "Parachains are independent blockchains running parallel to Polkadot's main network. They provide high scalability and allow creating specialized networks.",
+            text: "A rate hike makes money more expensive, usually strengthens the dollar and pressures stocks and crypto. A cut makes money cheaper, weakens the dollar and supports risk assets and gold. From the decision to the economy's real reaction there's a lag, as a rule more than half a year.",
           },
         },
         {
           '@type': 'Question',
-          name: 'Are alternative blockchains secure?',
+          name: 'Should you trade the release of economic news?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Security depends on project maturity, number of validators and completed audits. Younger projects may have vulnerabilities. Use proven networks with developed ecosystems.',
+            text: "In my experience you shouldn't pile in at the moment of release: the spread widens, price is thrown in both directions, and a double spike collects stops even with the direction correctly guessed. It's wiser to know about releases in advance, wait out the burst and enter on the price's reaction at a level.",
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What should you use instead of fundamental analysis for entry?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: "Volume analysis. Fundamentals are kept as a background and the direction of the wind, while the entry is taken by volume and the price's reaction at strong levels, where the footprint of large capital is visible. The principle is simple: first see the action on the chart, then enter, rather than guessing the news in advance.",
           },
         },
       ],
@@ -392,38 +400,46 @@ export class HomeEnBlogTwentyEightComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'How to Choose an Alternative Blockchain for Your Project',
-      description: 'Criteria for selecting the right blockchain platform',
+      '@id': 'https://arapov.trade/en/freestudying/fundamental-analysis#howto',
+      name: 'How a trader should work with fundamental analysis',
+      description:
+        'A step-by-step walk through macroeconomics for a trader: from understanding the factors and indicators to working with the calendar and entering by volume instead of the news',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Evaluate scalability',
-          text: 'Determine required network throughput. Solana or Avalanche suit high-load applications.',
+          name: 'Understand that fundamentals answer why, not when',
+          text: "Fundamental analysis values an asset's fair value through the economy and rates, answering the question of why the price moves, but not when to enter.",
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Analyze fees',
-          text: 'Compare transaction costs across platforms. Low fees matter for microtransactions.',
+          name: 'Know which factors move the markets',
+          text: 'Markets are moved by central-bank rates, inflation, employment, the trade balance, business activity, commodities, gold and geopolitics.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Study the ecosystem',
-          text: 'Assess available tools, dApps and integrations. Developed ecosystem accelerates development.',
+          name: 'Read the key indicators: GDP, PMI, inflation, employment',
+          text: 'The main indicators are GDP as overall growth, PMI as business activity, inflation and employment data.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Check compatibility',
-          text: 'Choose platforms with bridge support if cross-chain interaction is needed.',
+          name: 'Watch the rate and central-bank decisions',
+          text: "A central bank's key rate is the strongest fundamental lever for the dollar and risk assets.",
         },
         {
           '@type': 'HowToStep',
           position: 5,
-          name: 'Assess security',
-          text: 'Review audit history, validator count and network reputation in the community.',
+          name: 'Use the economic calendar defensively',
+          text: 'The economic calendar is needed first of all so as not to be caught off guard and not to open a trade right before a strong news release.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 6,
+          name: 'Enter by volume at a level, not by the news itself',
+          text: "The entry is better taken by volume and the price's reaction at a strong level, after the action of large capital has become visible.",
         },
       ],
     };
@@ -438,65 +454,43 @@ export class HomeEnBlogTwentyEightComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Alternative Blockchains Glossary',
+      name: 'Glossary of terms used in this article',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Layer 1',
+          name: 'Fundamental analysis',
           description:
-            'Base blockchain layer with its own consensus mechanism and security',
+            'A method of valuing an asset through the study of economic and financial factors: central-bank rates, inflation, company reporting and the state of the industry.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Layer 2',
+          name: 'GDP',
           description:
-            'Scaling solutions built on top of base blockchain to increase throughput',
+            "The total value of all the goods and services a country has produced over a period, and the main gauge of the economy's size and growth.",
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Proof-of-Stake',
+          name: 'Key rate',
           description:
-            'Consensus mechanism where validators confirm transactions based on staked tokens',
+            'The percentage at which the central bank lends to commercial banks, the main lever for managing the cost of money in the economy.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Proof-of-History',
+          name: 'Fed',
           description:
-            "Solana's timestamping mechanism for accelerating transaction processing",
+            "The Federal Reserve System, the central bank of the United States, which manages the country's monetary policy through the interest rate and the quantity of money in the economy.",
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Sharding',
+          name: 'Economic calendar',
           description:
-            'Technology dividing network into segments for parallel transaction processing',
+            'A table of upcoming economic events with the date, time and degree of their importance, where for each event the forecast, the previous value and the actual result are shown.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Parachains',
+          name: 'News trading',
           description:
-            'Independent blockchains in Polkadot ecosystem running in parallel',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'TPS',
-          description: 'Transactions Per Second — network throughput metric',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Bridge',
-          description:
-            'Protocol for transferring assets between different blockchains',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'dApp',
-          description: 'Decentralized application running on blockchain',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Validator',
-          description:
-            'Network participant confirming transactions and receiving rewards',
+            'A style of trading in which a trader tries to earn on a sharp price move at the moment an important economic news release comes out.',
         },
       ],
     };

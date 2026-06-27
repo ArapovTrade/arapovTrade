@@ -55,21 +55,18 @@ export class HomeEnBlogFourtySevenComponent implements OnInit {
     this.checkedGroup = this.artickleServ.selectedGroups;
 
     this.titleService.setTitle(
-      'Fundamental Analysis: Principles and Methods for Asset Valuation',
+      'MACD Indicator: Signals and Divergences | Arapov.trade',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Complete guide to fundamental analysis of financial markets. Learn macroeconomic indicators, company valuation, and trend forecasting for successful investing.',
+        'The MACD indicator: settings, signal line and histogram, crossovers and divergences. How to read its signals and avoid false ones.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Ihor Arapov' });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-17' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/fundamentalanalysis.webp',
-    });
+
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
+
     this.gerRandom();
   }
   randomArticleRus: any = [];
@@ -255,78 +252,36 @@ export class HomeEnBlogFourtySevenComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          mainEntityOfPage: {
-            '@type': 'WebPage',
-            '@id': 'https://arapov.trade/en/freestudying/fundamentalanalysis',
-          },
           headline:
-            'Fundamental Analysis: Principles and Methods for Asset Valuation',
+            'MACD indicator explained: why it works worse than you expect',
           description:
-            'Complete guide to fundamental analysis of financial markets. Learn macroeconomic indicators, company valuation, and trend forecasting for successful investing.',
-          image:
-            'https://arapov.trade/assets/img/content/fundamentalanalysis.webp',
-          datePublished: '2025-01-15T00:00:00+02:00',
-          dateModified: '2026-04-15T00:00:00Z',
-          inLanguage: 'en',
-          author: {
-            '@id': 'https://arapov.trade/en#person',
-          },
+            'The MACD indicator: settings, signal line and histogram, crossovers and divergences. How to read its signals and avoid false ones.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
             '@id': 'https://arapov.trade/#organization',
             name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
-          video: {
-            '@type': 'VideoObject',
-            name: 'Фундаментальный анализ рынка | Почему не работает для трейдеров',
-            description:
-              'Почему фундаментальный анализ рынка не работает для розничных трейдеров? Разбираем метод Вайкоффа и объясняем, как крупные игроки торгуют против новостей, используя инсайдерскую информацию и объёмный анализ.',
-            thumbnailUrl: [
-              'https://img.youtube.com/vi/6o21L5mLTrA/maxresdefault.jpg',
-              'https://img.youtube.com/vi/6o21L5mLTrA/hqdefault.jpg',
-            ],
-            uploadDate: '2025-07-15T00:00:00+02:00',
-            duration: 'PT8M25S',
-            contentUrl: 'https://www.youtube.com/watch?v=6o21L5mLTrA',
-            embedUrl: 'https://www.youtube.com/embed/6o21L5mLTrA',
-            inLanguage: 'ru',
-            keywords:
-              'фундаментальный анализ, метод Вайкоффа, крупные игроки, инсайдерская информация, трейдинг',
-            hasPart: [
-              {
-                '@type': 'Clip',
-                name: 'Почему мы не используем фундаментальный анализ в трейдинге',
-                startOffset: 0,
-                endOffset: 59,
-                url: 'https://www.youtube.com/watch?v=6o21L5mLTrA&t=0',
-              },
-              {
-                '@type': 'Clip',
-                name: 'Цитата Ричарда Вайкоффа о крупных операторах рынка',
-                startOffset: 59,
-                endOffset: 161,
-                url: 'https://www.youtube.com/watch?v=6o21L5mLTrA&t=59',
-              },
-              {
-                '@type': 'Clip',
-                name: 'Проницательность крупного капитала и инсайдерская информация',
-                startOffset: 161,
-                endOffset: 210,
-                url: 'https://www.youtube.com/watch?v=6o21L5mLTrA&t=161',
-              },
-              {
-                '@type': 'Clip',
-                name: 'Крупные деньги торгуют будущую стоимость, а не текущую цену',
-                startOffset: 210,
-                endOffset: 505,
-                url: 'https://www.youtube.com/watch?v=6o21L5mLTrA&t=210',
-              },
-            ],
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': 'https://arapov.trade/en/freestudying/macd-indicator',
           },
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/macdindicator.png',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Technical analysis',
+          keywords: 'macd',
+          inLanguage: 'en',
         },
       ],
     };
@@ -341,18 +296,18 @@ export class HomeEnBlogFourtySevenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/en#person',
+      '@id': 'https://arapov.trade/#person',
       name: 'Igor Arapov',
       alternateName: [
         'Ігор Арапов',
-        'Арапов Игорь',
-        'I. Arapov',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/en',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -367,12 +322,12 @@ export class HomeEnBlogFourtySevenComponent implements OnInit {
         'https://t.me/ArapovTrade',
       ],
       jobTitle: [
-        'Independent researcher,',
-        'trader',
-        'author and founder of arapov.trade',
+        'Independent researcher',
+        'Trader',
+        'Author and founder of arapov.trade',
       ],
       description:
-        'Independent researcher, practicing trader, author of books on trading and scientific publications. Specializes in trading psychology and cognitive biases in financial markets.',
+        'Independent researcher, practising trader, author of trading books and scientific publications. Specialises in trading psychology and cognitive biases in financial markets.',
     };
 
     this.addJsonLdSchema(data);
@@ -388,42 +343,50 @@ export class HomeEnBlogFourtySevenComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'What is fundamental analysis?',
+          name: 'How does the MACD indicator work in simple terms?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: "Fundamental analysis is an asset valuation method based on studying economic, financial, and industry factors. Its goal is to determine an asset's fair value and identify undervalued or overvalued instruments.",
+            text: 'MACD compares a fast and a slow moving average. When the fast one outruns the slow one, the line rises; when it falls behind, the line drops. The crossover of the MACD line and the signal line is treated as a buy or sell signal.',
           },
         },
         {
           '@type': 'Question',
-          name: 'What indicators are used in fundamental analysis?',
+          name: 'What are the standard MACD settings?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Main indicators include: macroeconomic (GDP, inflation, interest rates), corporate (revenue, profit, P/E, P/B), and industry factors (demand dynamics, competitive environment, regulatory changes).',
+            text: "The classic parameters are 12, 26 and 9, proposed by the indicator's author. Shorter periods make MACD more sensitive and noisier, longer ones smooth the signals out. There is no point a beginner chasing some special setting.",
           },
         },
         {
           '@type': 'Question',
-          name: 'How does fundamental analysis differ from technical analysis?',
+          name: 'What timeframe is the MACD best on?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Fundamental analysis studies economic factors and fair asset value for long-term investments. Technical analysis focuses on charts, patterns, and volumes for short-term trading.',
+            text: 'It is cleaner on higher timeframes, the daily and above, where there is less noise. On one or five-minute charts MACD prints a stream of crossings that lead nowhere, so for intraday work it tends to mislead more than it helps. Either way it stays a lagging read of past price.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Which markets is fundamental analysis applicable to?',
+          name: 'Why does MACD give false signals?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: "Fundamental analysis applies to stock markets, forex, commodity markets, and cryptocurrency markets. Methods are adapted to each market's specifics.",
+            text: 'Because it is calculated from past prices and therefore lags. On a reversal and in a range it often draws the crossover after the move has already happened, so the signal turns out false. That is a property of the formula, not a settings error.',
           },
         },
         {
           '@type': 'Question',
-          name: 'What mistakes are made in fundamental analysis?',
+          name: 'What should you use instead of MACD?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Typical mistakes: blind trust in financial statements, ignoring macroeconomic factors, lack of diversification, underestimating market sentiment impact on short-term dynamics.',
+            text: 'In my experience the edge comes from working with supply and demand levels, volume and price action. These tools show the cause of the move rather than its trace, and with that approach MACD is needed at most as background.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What is MACD divergence?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'It is a mismatch between price and the indicator. A bearish divergence is when price makes a new high but MACD does not, hinting at weakening growth; a bullish one when price makes a new low but MACD does not. It is treated as one of the more useful signals because it shows up before a reversal, but it is no guarantee either: without confirmation from volume and a level I do not enter off it.',
           },
         },
       ],
@@ -439,37 +402,40 @@ export class HomeEnBlogFourtySevenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'How to Conduct Fundamental Analysis',
+      '@id': 'https://arapov.trade/en/freestudying/macd-indicator#howto',
+      name: 'How to understand and apply: the MACD indicator and why it works worse than you expect',
+      description:
+        'A step-by-step breakdown of the topic and its practical use in trading',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Study macroeconomics',
-          text: 'Analyze key indicators: GDP, inflation, central bank interest rates, unemployment levels. These data determine the overall state of the economy.',
+          name: 'What the MACD indicator is and how it is calculated',
+          text: 'MACD is an indicator of the convergence and divergence of moving averages that shows the difference between a fast and a slow average.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Evaluate the industry',
-          text: 'Study demand and supply dynamics in the industry, competitive environment, regulatory changes, and technological trends affecting the sector.',
+          name: 'MACD signals: line crossover, histogram, the zero line, and divergence',
+          text: 'Four basic signals: the crossover of the MACD and signal lines, the histogram, the zero-line cross, and divergence between price and the indicator.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Analyze the company',
-          text: 'Study financial statements: revenue, net profit, debt load. Calculate key ratios P/E, P/B, ROE for valuation.',
+          name: 'MACD settings and timeframes, and which signal comes first',
+          text: 'The default 12, 26, 9 is the starting point; faster settings and lower timeframes add false crossovers, and the histogram slope leads the signal-line and zero-line crosses.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Determine fair value',
-          text: "Compare the asset's market price with calculated fair value. Undervalued assets represent investment opportunities.",
+          name: 'MACD vs the stochastic: the paradox of contradictory signals',
+          text: 'What follows is from my practice, and it is my position.',
         },
         {
           '@type': 'HowToStep',
           position: 5,
-          name: 'Consider risks',
-          text: 'Assess geopolitical, currency, and industry risks. Diversify your portfolio to reduce potential losses.',
+          name: 'Why MACD lags and what works better',
+          text: 'The reason for the lag is in the construction itself.',
         },
       ],
     };
@@ -484,63 +450,31 @@ export class HomeEnBlogFourtySevenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Fundamental Analysis Terms',
+      name: 'Glossary of terms used in the article',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Fundamental analysis',
+          name: 'MACD',
           description:
-            'Asset valuation method based on economic, financial, and industry factors',
+            'An indicator of the convergence and divergence of moving averages that shows the difference between a fast and a slow average.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Fair value',
+          name: 'signal line',
           description:
-            'Calculated intrinsic asset value based on fundamental indicators',
+            "The signal line is a 9-period exponential moving average of the MACD line itself; a crossover between the MACD line and the signal line is the indicator's most-watched buy or sell signal.",
         },
         {
           '@type': 'DefinedTerm',
-          name: 'P/E ratio',
+          name: 'MACD histogram',
           description:
-            'Price-to-earnings ratio showing how much investors pay per unit of profit',
+            'The MACD histogram is the gap between the MACD line and the signal line: growing bars show building momentum, shrinking bars show it fading.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'P/B ratio',
-          description: 'Price-to-book ratio comparing market and book value',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'GDP',
-          description: 'Gross Domestic Product measuring total economic output',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Inflation',
+          name: 'MACD divergence',
           description:
-            'Rise in general price level reducing currency purchasing power',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Interest rate',
-          description:
-            'Central bank rate affecting borrowing costs in the economy',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Dividend yield',
-          description: 'Ratio of annual dividends to stock market price',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'ROE',
-          description:
-            'Return on equity measuring capital utilization efficiency',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Debt load',
-          description: "Ratio of borrowed funds to company's equity",
+            'MACD divergence is a mismatch between price and the indicator: price prints a new extreme while MACD does not, treated as an early hint that momentum is weakening.',
         },
       ],
     };

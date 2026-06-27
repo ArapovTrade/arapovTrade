@@ -54,20 +54,17 @@ export class HomeEuBlogFiftyEightComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Averaging in Trading: Strategies, Risks, and Practical Application | ArapovTrade',
+      'Ichimoku Cloud Indicator: Kumo Cloud | Arapov.trade',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Complete guide to position averaging in trading. Learn DCA strategies, classic averaging, anti-martingale. How to avoid mistakes and when the method actually works.',
+        'The Ichimoku indicator: the Kumo cloud, Tenkan and Kijun lines, reading trend and signals. How to use the system without cluttering the chart.',
     });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-04-04' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/averagingintrading.webp',
-    });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
+
     this.gerRandom();
   }
   randomArticleRus: any = [];
@@ -252,34 +249,35 @@ export class HomeEuBlogFiftyEightComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          '@id':
-            'https://arapov.trade/en/freestudying/averagingintrading#article',
-          headline:
-            'Averaging in Trading: Strategies, Risks, and Practical Application',
+          headline: 'Ichimoku Cloud in Trading: How to Read It and Should You',
           description:
-            'Complete guide to position averaging in trading. Learn DCA strategies, classic averaging, anti-martingale.',
-          image:
-            'https://arapov.trade/assets/img/content/averagingintrading1.webp',
-          datePublished: '2026-03-25T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
-          author: {
-            '@id': 'https://arapov.trade/en#person',
-          },
+            'The Ichimoku indicator: the Kumo cloud, Tenkan and Kijun lines, reading trend and signals. How to use the system without cluttering the chart.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
             '@id': 'https://arapov.trade/#organization',
-            name: 'ArapovTrade',
+            name: 'Arapov.Trade',
             url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://arapov.trade/en/freestudying/averagingintrading',
+            '@id': 'https://arapov.trade/en/freestudying/ichimoku-cloud',
           },
-          articleSection: 'Trading for Beginners',
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/ichimoku1.png',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Technical analysis',
+          keywords:
+            'ichimoku cloud, ichimoku indicator, how to read ichimoku, tenkan kijun cross, ichimoku settings, ichimoku for beginners',
           inLanguage: 'en',
         },
       ],
@@ -295,19 +293,18 @@ export class HomeEuBlogFiftyEightComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/en#person',
+      '@id': 'https://arapov.trade/#person',
       name: 'Igor Arapov',
       alternateName: [
         'Ігор Арапов',
-        'Арапов Игорь',
-        'I. Arapov',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-
-      url: 'https://arapov.trade/en',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -322,12 +319,12 @@ export class HomeEuBlogFiftyEightComponent implements OnInit {
         'https://t.me/ArapovTrade',
       ],
       jobTitle: [
-        'Independent researcher,',
-        'trader',
-        'author and founder of arapov.trade',
+        'Independent researcher',
+        'Trader',
+        'Author and founder of arapov.trade',
       ],
       description:
-        'Independent researcher, practicing trader, author of books on trading and scientific publications. Specializes in trading psychology and cognitive biases in financial markets.',
+        'Independent researcher, practising trader, author of trading books and scientific publications. Specialises in trading psychology and cognitive biases in financial markets.',
     };
 
     this.addJsonLdSchema(data);
@@ -340,46 +337,37 @@ export class HomeEuBlogFiftyEightComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
-      '@id': 'https://arapov.trade/en/freestudying/averagingintrading#faq',
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'What is averaging in trading?',
+          name: 'What does the Ichimoku cloud show in simple terms?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Averaging is a position management technique where traders add volume to existing trades as price moves. The goal is to lower the average entry price and improve the breakeven point.',
+            text: 'It hands you several things at once: the direction of the trend, its strength, and the zones where price met support or resistance. The key reference is the cloud: above it the market leans toward a rise, below it toward a fall.',
           },
         },
         {
           '@type': 'Question',
-          name: 'How does DCA differ from classic averaging?',
+          name: 'What are the standard Ichimoku settings?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'DCA (Dollar Cost Averaging) involves regular purchases of a fixed amount regardless of price. Classic averaging means adding to a position when price moves against the trader. DCA reduces emotional burden and suits long-term investments.',
+            text: 'The classic values are 9, 26 and 52. They come from the old Japanese six-day trading week: 9 is about a week and a half, 26 roughly a month, 52 roughly two months. Many leave them on default, while some retune them for a five-day week.',
           },
         },
         {
           '@type': 'Question',
-          name: 'When is averaging dangerous?',
+          name: 'Is the Ichimoku cloud good for beginners?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Averaging is particularly risky in strong trends, when trading with high leverage, and without a clear exit plan. If an asset keeps falling without reversal signs, each averaging increases losses.',
+            text: "It's easy enough to learn, but I wouldn't start a beginner on it. The five lines create an illusion of depth, while underneath sit ordinary moving averages. Trend and levels are simpler to read directly, and you can come to Ichimoku later if you want.",
           },
         },
         {
           '@type': 'Question',
-          name: 'How many times can you average a position?',
+          name: 'Can you trade with the Ichimoku cloud alone?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Professional traders limit averaging to 2-3 additions. Each averaging should be planned in advance considering support levels and total risk per trade.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Is averaging suitable for cryptocurrencies?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'DCA works well for long-term Bitcoin and Ethereum accumulation. Classic averaging in crypto is risky due to high volatility — 30-50% corrections are common.',
+            text: "As a trend indicator on higher timeframes the cloud holds up fairly well. As your only entry tool it lags, since every line is derived from price that has already passed. I'd confirm the picture with volume and real levels rather than trust the cloud on its own.",
           },
         },
       ],
@@ -395,39 +383,34 @@ export class HomeEuBlogFiftyEightComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      '@id': 'https://arapov.trade/en/freestudying/averagingintrading#howto',
-      name: 'How to Safely Apply Averaging in Trading',
-      description: 'Step-by-step guide to proper position averaging',
+      '@id': 'https://arapov.trade/en/freestudying/ichimoku-cloud#howto',
+      name: 'How to understand and use the Ichimoku cloud in trading',
+      description:
+        'A step-by-step walk through the indicator and its practical use in trading',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Identify market type',
-          text: 'Analyze whether the asset is trending or ranging. Averaging works better in sideways markets and during pullbacks within trends.',
+          name: "Learn what the Ichimoku indicator is and what it's made of",
+          text: 'Ichimoku is a technical-analysis indicator of five lines that, on a single screen, gives trend direction, its strength and zones of support and resistance.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Calculate entry levels',
-          text: 'Determine 2-3 levels for potential averaging based on support zones, Fibonacci retracements, or demand areas.',
+          name: 'Read the Ichimoku cloud for trend and support',
+          text: "The Kumo cloud is the shaded area between Senkou A and Senkou B, and it's the heart of the whole tool.",
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Allocate capital',
-          text: 'Split the capital allocated for the trade into portions. Typical distribution: 40% for initial entry, 35% and 25% for averaging.',
+          name: 'Read Ichimoku signals: the Tenkan and Kijun cross',
+          text: 'The main signal is the TK cross, the crossing of the fast Tenkan and the slow Kijun.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Set stop-loss',
-          text: 'Define maximum loss for the entire position. The stop should be placed beyond the last averaging level.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 5,
-          name: 'Document exit plan',
-          text: 'Pre-define profit targets and position closing conditions. Follow the plan regardless of emotions.',
+          name: 'Decide whether Ichimoku suits a beginner',
+          text: 'Learning Ichimoku is realistic, usually a couple of evenings to memorise the five lines and the cloud rules.',
         },
       ],
     };
@@ -442,65 +425,13 @@ export class HomeEuBlogFiftyEightComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      '@id': 'https://arapov.trade/en/freestudying/averagingintrading#terms',
-      name: 'Averaging Terms Glossary',
+      name: 'Glossary of terms used in this article',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Averaging',
+          name: 'Ichimoku',
           description:
-            'Method of adding to an existing position to improve average entry price',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'DCA (Dollar Cost Averaging)',
-          description:
-            'Strategy of regular purchases of a fixed amount regardless of current asset price',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Anti-Martingale',
-          description:
-            'Increasing position after profitable trades, opposite of classic averaging',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Margin Call',
-          description:
-            "Broker's demand to deposit additional funds when margin falls below minimum",
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Leverage',
-          description: 'Ratio of own funds to borrowed funds in trading',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Support Level',
-          description:
-            'Price zone where demand exceeds supply and price tends to bounce upward',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Volatility',
-          description: 'Degree of asset price fluctuation over a given period',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Risk Management',
-          description: 'System of managing risks to protect trading capital',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Stop-Loss',
-          description:
-            'Order for automatic position closure when a specified loss level is reached',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Breakeven Point',
-          description:
-            'Price at which a position yields neither profit nor loss',
+            'A technical-analysis indicator of five lines that, on a single screen, gives the direction of the trend, its strength and zones of support and resistance.',
         },
       ],
     };

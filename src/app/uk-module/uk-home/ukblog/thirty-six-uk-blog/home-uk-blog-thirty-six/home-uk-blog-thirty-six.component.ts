@@ -28,7 +28,7 @@ export class HomeUkBlogThirtySixComponent implements OnInit {
     private themeService: ThemeservService,
     private artickleServ: ArticlesService,
     private renderer: Renderer2,
-    @Inject(DOCUMENT) private document: Document
+    @Inject(DOCUMENT) private document: Document,
   ) {}
   private routerSubscription!: Subscription;
   private themeSubscription!: Subscription;
@@ -57,17 +57,17 @@ export class HomeUkBlogThirtySixComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Криптовалютний ринок: повний посібник з аналізу та торгівлі | Arapov.trade'
+      'Копітрейдинг: чому це не трейдинг | Arapov.trade',
     );
-     this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
 
-  this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
 
     this.meta.updateTag({
       name: 'description',
       content:
-        'Повний посібник з аналізу криптовалютного ринку: технічний та фундаментальний аналіз, торгові стратегії, управління ризиками та вибір платформи.',
+        'Що таке копітрейдинг, як копіювати угоди успішних трейдерів, у чому плюси, ризики і чому сліпе копіювання часто веде до втрат.',
     });
 
     this.gerRandom();
@@ -86,7 +86,6 @@ export class HomeUkBlogThirtySixComponent implements OnInit {
       title: 'Базовий курс',
       link: 'https://arapov.trade/uk/freestudying/freeeducation',
     },
-     
   ];
 
   onGroupChange(event: Event) {
@@ -156,7 +155,7 @@ export class HomeUkBlogThirtySixComponent implements OnInit {
     // Показываем 5 случайных статей при фокусе, если инпут пуст
     if (!this.searchQuery) {
       const shuffled = [...this.artickleServ.ukrArtickles].sort(
-        () => Math.random() - 0.5
+        () => Math.random() - 0.5,
       );
       this.displayedArticles = shuffled.slice(0, this.maxResults);
     }
@@ -171,7 +170,7 @@ export class HomeUkBlogThirtySixComponent implements OnInit {
   onSearchChange() {
     // Логика асинхронного поиска
     const filtered = this.artickleServ.ukrArtickles.filter((a) =>
-      a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase())
+      a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase()),
     );
     this.displayedArticles = filtered.slice(0, this.maxResults);
   }
@@ -193,7 +192,7 @@ export class HomeUkBlogThirtySixComponent implements OnInit {
     const path: string =
       this.router.url.split('/')[this.router.url.split('/').length - 1];
     let index = this.artickleServ.ukrArtickles.findIndex(
-      (a) => a.linkUkr == path
+      (a) => a.linkUkr == path,
     );
 
     if (this.artickleServ.ukrArtickles.length - 1 == index) {
@@ -210,7 +209,7 @@ export class HomeUkBlogThirtySixComponent implements OnInit {
     const path: string =
       this.router.url.split('/')[this.router.url.split('/').length - 1];
     let index = this.artickleServ.ukrArtickles.findIndex(
-      (a) => a.linkUkr == path
+      (a) => a.linkUkr == path,
     );
 
     if (index == 1) {
@@ -235,7 +234,7 @@ export class HomeUkBlogThirtySixComponent implements OnInit {
     ];
 
     const scripts = this.document.querySelectorAll(
-      'script[type="application/ld+json"]'
+      'script[type="application/ld+json"]',
     );
 
     scripts.forEach((script) => {
@@ -248,7 +247,7 @@ export class HomeUkBlogThirtySixComponent implements OnInit {
 
         const shouldRemove = candidates.some(
           (entry: any) =>
-            entry['@type'] && typesToRemove.includes(entry['@type'])
+            entry['@type'] && typesToRemove.includes(entry['@type']),
         );
 
         if (shouldRemove) {
@@ -276,92 +275,35 @@ export class HomeUkBlogThirtySixComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          mainEntityOfPage: {
-            '@type': 'WebPage',
-            '@id': 'https://arapov.trade/uk/freestudying/cryptocurrencytrading',
-          },
-          headline:
-            'Криптовалютний ринок: повний посібник з аналізу та торгівлі | Arapov.trade',
+          headline: 'Копітрейдинг: що це і чому це не трейдинг',
           description:
-            'Повний посібник з аналізу криптовалютного ринку: технічний та фундаментальний аналіз, торгові стратегії, управління ризиками та вибір платформи.',
-          image:
-            'https://arapov.trade/assets/img/content/cryptocurrencytrading.webp',
-          datePublished: '2025-08-15T00:00:00+02:00',
-         dateModified: '2026-04-15T00:00:00Z',
-          inLanguage: 'uk',
-          author: {
-            '@id': 'https://arapov.trade/uk#person',
-          },
+            'Що таке копітрейдинг, як копіювати угоди успішних трейдерів, у чому плюси, ризики і чому сліпе копіювання часто веде до втрат.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
             '@id': 'https://arapov.trade/#organization',
             name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
-          video: {
-            '@type': 'VideoObject',
-            name: 'Криптовалюты для новичков | Полное руководство',
-            description:
-              'Полное руководство по криптовалютам для новичков! Объясняю простыми словами что такое крипта, как отличить Bitcoin от СКАМ монет, почему мем-коины опасны и как избежать потери денег.',
-            thumbnailUrl: [
-              'https://img.youtube.com/vi/T8zWPUOKcqU/maxresdefault.jpg',
-              'https://img.youtube.com/vi/T8zWPUOKcqU/hqdefault.jpg',
-            ],
-            uploadDate: '2025-08-15T00:00:00+02:00',
-            duration: 'PT22M8S',
-            contentUrl: 'https://www.youtube.com/watch?v=T8zWPUOKcqU',
-            embedUrl: 'https://www.youtube.com/embed/T8zWPUOKcqU',
-            inLanguage: 'ru',
-            keywords:
-              'криптовалюты, биткоин, скам монеты, мем коины, риски криптовалют',
-            hasPart: [
-              {
-                '@type': 'Clip',
-                name: 'Что такое криптовалюты - определение и основы',
-                startOffset: 0,
-                endOffset: 292,
-                url: 'https://www.youtube.com/watch?v=T8zWPUOKcqU&t=0',
-              },
-              {
-                '@type': 'Clip',
-                name: 'Bitcoin - модель эмиссии и преимущества',
-                startOffset: 292,
-                endOffset: 630,
-                url: 'https://www.youtube.com/watch?v=T8zWPUOKcqU&t=292',
-              },
-              {
-                '@type': 'Clip',
-                name: 'Что такое СКАМ криптовалюты - признаки мошенничества',
-                startOffset: 630,
-                endOffset: 786,
-                url: 'https://www.youtube.com/watch?v=T8zWPUOKcqU&t=630',
-              },
-              {
-                '@type': 'Clip',
-                name: 'Мем-коины и ловушки для трейдеров',
-                startOffset: 786,
-                endOffset: 976,
-                url: 'https://www.youtube.com/watch?v=T8zWPUOKcqU&t=786',
-              },
-              {
-                '@type': 'Clip',
-                name: 'Делистинг монет - как биржи выкидывают скам',
-                startOffset: 976,
-                endOffset: 1089,
-                url: 'https://www.youtube.com/watch?v=T8zWPUOKcqU&t=976',
-              },
-              {
-                '@type': 'Clip',
-                name: 'Как защитить деньги на крипторынке',
-                startOffset: 1089,
-                endOffset: 1328,
-                url: 'https://www.youtube.com/watch?v=T8zWPUOKcqU&t=1089',
-              },
-            ],
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': 'https://arapov.trade/uk/freestudying/copy-trading',
           },
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/copytrading_two.png',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Трейдинг для початківців',
+          keywords: 'копітрейдинг',
+          inLanguage: 'uk',
         },
       ],
     };
@@ -376,18 +318,18 @@ export class HomeUkBlogThirtySixComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/uk#person',
-      name: 'Ігор Арапов',
+      '@id': 'https://arapov.trade/#person',
+      name: 'Igor Arapov',
       alternateName: [
-        'Igor Arapov',
-              'Арапов Игорь',
-              'I. Arapov',
-              'Игорь Арапов',
-              'І. В. Арапов',
-              'Арапов Ігор',
-              'Arapov Igor',
+        'Ігор Арапов',
+        'Игорь Арапов',
+        'Арапов Игорь',
+        'Арапов Ігор',
+        'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/uk',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -399,9 +341,13 @@ export class HomeUkBlogThirtySixComponent implements OnInit {
         'https://github.com/ArapovTrade',
         'https://ua.linkedin.com/in/arapovtrade',
         'https://www.youtube.com/@ArapovTrade',
-        'https://t.me/ArapovTrade'
+        'https://t.me/ArapovTrade',
       ],
-       jobTitle: ['Незалежний дослідник', 'трейдер', 'автор і засновник arapov.trade'],
+      jobTitle: [
+        'Незалежний дослідник',
+        'трейдер',
+        'автор і засновник arapov.trade',
+      ],
       description:
         'Незалежний дослідник, практикуючий трейдер, автор книг з трейдингу та наукових публікацій. Спеціалізується на психології трейдингу та когнітивних упередженнях на фінансових ринках.',
     };
@@ -419,42 +365,34 @@ export class HomeUkBlogThirtySixComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'Що таке криптовалютний ринок?',
+          name: 'Що таке копітрейдинг?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Криптовалютний ринок — це глобальна децентралізована екосистема цифрових активів на базі блокчейн. Працює цілодобово, дозволяючи торгувати без посередників.',
+            text: 'Це коли угоди обраного трейдера автоматично дублюються на твоєму рахунку: кожне його відкриття й закриття пропорційно відображається на депозиті. Кошти лишаються в тебе, а копіювання вимикається будь-якої миті.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Які методи аналізу криптовалют існують?',
+          name: 'Чи можна заробити на копітрейдингу?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Основні методи: фундаментальний аналіз (технологія, команда, токеноміка), технічний аналіз (індикатори, рівні) та сентимент-аналіз (настрої ринку).',
+            text: "Трапляється, але цифра в картці завтрашнього прибутку не обіцяє. Під гучним відсотком часто ховається агресивний стиль із плечем і глибоким мінусом. Регулятори зобов'язали брокерів прямо вказувати: роздріб здебільшого йде в збиток.",
           },
         },
         {
           '@type': 'Question',
-          name: 'Як керувати ризиками при торгівлі криптовалютами?',
+          name: 'Чому більшість копіювальників втрачають?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Ключові принципи: стоп-лоси, ризик на угоду до 1-2% капіталу, диверсифікація портфеля та емоційна дисципліна.',
+            text: 'Виконавця беруть наосліп, а рейтинг піднімає нагору лихачів на плечі, і один такий утягує твій депозит за собою. До того ж ризиком ти не керуєш і не розумієш, заради чого копійований робить кожен хід.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Яку стратегію обрати початківцю?',
+          name: 'Чому копітрейдинг це не трейдинг?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Рекомендується стратегія довгострокового інвестування з усередненням вартості (DCA), що знижує вплив волатильності.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Як обрати криптовалютну біржу?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Враховуйте: безпеку (2FA, холодне зберігання), ліквідність, комісії та зручність інтерфейсу.',
+            text: "Від повторення наосліп майстерність не з'являється. Та сама пастка, що й віра в магічний індикатор: відповідальність зсунута на чужого. Зникне виконавець або зіллє рахунок, і в тебе на руках лишається все той самий нуль.",
           },
         },
       ],
@@ -470,38 +408,28 @@ export class HomeUkBlogThirtySixComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'Як почати торгувати криптовалютами',
-      description: 'Покроковий посібник для трейдерів-початківців',
+      '@id': 'https://arapov.trade/uk/freestudying/copy-trading#howto',
+      name: 'Як розібратися й застосовувати: копітрейдинг і чому це не трейдинг',
+      description:
+        'Покроковий розбір теми та її практичне застосування в торгівлі',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Вивчіть основи',
-          text: 'Опануйте принципи блокчейну, основні криптовалюти та термінологію ринку.',
+          name: 'Що таке копітрейдинг',
+          text: 'Копітрейдинг — це автоматичне дублювання угод обраного трейдера на твоєму рахунку, при якому кожне його відкриття й закриття пропорційно повторюється на твоєму депозиті.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Оберіть біржу',
-          text: 'Зареєструйтесь на перевіреній платформі з 2FA та високою ліквідністю.',
+          name: 'Як працює копітрейдинг на популярних платформах',
+          text: 'Під капотом усе проходить через брокера.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Розробіть стратегію',
-          text: 'Визначте цілі, рівень ризику та стиль торгівлі.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 4,
-          name: 'Налаштуйте ризик-менеджмент',
-          text: 'Встановіть стоп-лоси та диверсифікуйте портфель.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 5,
-          name: 'Практикуйтесь',
-          text: 'Почніть з невеликих сум та ведіть торговий журнал.',
+          name: 'Ризики копітрейдингу: чому більшість копіювальників втрачають',
+          text: 'Корінь ризику ховається не в платформі, а в самому виборі виконавця.',
         },
       ],
     };
@@ -516,57 +444,13 @@ export class HomeUkBlogThirtySixComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Глосарій криптотрейдингу',
+      name: 'Глосарій термінів статті',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Блокчейн',
-          description: 'Розподілений реєстр транзакцій криптовалюти',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Волатильність',
-          description: 'Ступінь мінливості ціни активу',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Стоп-лос',
-          description: 'Ордер на закриття позиції при збитку',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Ліквідність',
-          description: 'Здатність активу швидко продаватися без впливу на ціну',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Холодний гаманець',
-          description: 'Зберігання криптовалют офлайн для безпеки',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Халвінг',
-          description: 'Скорочення винагороди майнерів удвічі',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Альтсезон',
-          description: 'Період випереджаючого зростання альткоїнів',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'DeFi',
-          description: 'Децентралізовані фінанси на блокчейні',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Стейблкоїн',
-          description: "Криптовалюта з прив'язкою до долара",
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Смарт-контракт',
-          description: 'Самовиконуваний код на блокчейні',
+          name: 'Копітрейдинг',
+          description:
+            'Автоматичне дублювання угод обраного трейдера на твоєму рахунку, при якому кожне його відкриття й закриття пропорційно повторюється на твоєму депозиті.',
         },
       ],
     };

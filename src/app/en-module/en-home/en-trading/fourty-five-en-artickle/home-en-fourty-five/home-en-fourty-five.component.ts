@@ -47,6 +47,7 @@ export class HomeEnFourtyFiveComponent implements OnInit {
     this.setArticleSchema();
     this.setPersonSchema();
     this.setFaqSchema();
+    this.setBreadcrumbSchema();
     this.setHowToSchema();
     this.setVideoObjectSchema();
     this.setGlossarySchema();
@@ -69,10 +70,10 @@ export class HomeEnFourtyFiveComponent implements OnInit {
         'Free trading course from scratch: technical analysis, Wyckoff method, volume analysis, complete trading system with positive mathematical expectancy. 18 sections, live trade breakdowns.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-05-30' });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
     this.meta.updateTag({
       name: 'dateModified',
-      content: '2026-05-29T00:00:00Z',
+      content: '2026-06-25T00:00:00Z',
     });
     this.meta.updateTag({
       property: 'og:image',
@@ -258,28 +259,23 @@ export class HomeEnFourtyFiveComponent implements OnInit {
       'Person',
       'VideoObject',
       'EducationalOccupationalProgram',
+      'BreadcrumbList',
+      'Course', // NEW (Organization сюда НЕ добавлять)
     ];
 
     const scripts = this.document.querySelectorAll(
       'script[type="application/ld+json"]',
     );
-
     scripts.forEach((script) => {
       try {
         const json = JSON.parse(script.textContent || '{}');
-
-        // Массив, объект-граф или одиночный объект
         const candidates =
           json['@graph'] ?? (Array.isArray(json) ? json : [json]);
-
         const shouldRemove = candidates.some(
           (entry: any) =>
             entry['@type'] && typesToRemove.includes(entry['@type']),
         );
-
-        if (shouldRemove) {
-          script.remove();
-        }
+        if (shouldRemove) script.remove();
       } catch {
         /* ignore invalid */
       }
@@ -297,28 +293,19 @@ export class HomeEnFourtyFiveComponent implements OnInit {
   //  ARTICLE
   // ============================================================
   private setArticleSchema(): void {
-    const data = {
+    this.addJsonLdSchema({
       '@context': 'https://schema.org',
       '@graph': [
         {
           '@type': 'Article',
-          '@id': 'https://arapov.trade/ru/freestudying/freeeducation#article',
+          '@id': 'https://arapov.trade/en/freestudying/freeeducation#article', // ← было /ru/ (баг A)
           headline: 'Free Trading Course for Beginners — Igor Arapov',
           description:
             'Free trading course from scratch: technical analysis, Wyckoff method, volume analysis, complete trading system with positive mathematical expectancy. 18 sections, live trade breakdowns.',
           datePublished: '2025-01-15T00:00:00+02:00',
-          dateModified: '2026-05-29T00:00:00Z+02:00',
-          author: {
-            '@id': 'https://arapov.trade/en#person',
-          },
-          publisher: {
-            '@type': 'Organization',
-            name: 'Arapov Trade',
-            logo: {
-              '@type': 'ImageObject',
-              url: 'https://arapov.trade/assets/img/favicon.ico',
-            },
-          },
+          dateModified: '2026-06-25T00:00:00+02:00', // ← было '2026-05-29T00:00:00Z+02:00' (баг B)
+          author: { '@id': 'https://arapov.trade/#person' },
+          publisher: { '@id': 'https://arapov.trade/#organization' },
           mainEntityOfPage: {
             '@type': 'WebPage',
             '@id': 'https://arapov.trade/en/freestudying/freeeducation',
@@ -337,7 +324,6 @@ export class HomeEnFourtyFiveComponent implements OnInit {
             'Volume analysis',
           ],
           video: [
-            
             {
               '@id':
                 'https://arapov.trade/en/freestudying/freeeducation#video2',
@@ -345,19 +331,17 @@ export class HomeEnFourtyFiveComponent implements OnInit {
           ],
         },
       ],
-    };
-
-    this.addJsonLdSchema(data);
+    });
   }
 
   // ============================================================
   //  PERSON
   // ============================================================
   private setPersonSchema(): void {
-    const data = {
+    this.addJsonLdSchema({
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/en#person',
+      '@id': 'https://arapov.trade/#person',
       name: 'Igor Arapov',
       alternateName: [
         'Ігор Арапов',
@@ -383,15 +367,13 @@ export class HomeEnFourtyFiveComponent implements OnInit {
         'https://t.me/ArapovTrade',
       ],
       jobTitle: [
-        'Independent researcher,',
+        'Independent researcher',
         'trader',
         'author and founder of arapov.trade',
-      ],
+      ], // ← убрал хвостовую запятую в первом элементе
       description:
         'Independent researcher, practicing trader, author of books on trading and scientific publications. Specializes in trading psychology and cognitive biases in financial markets.',
-    };
-
-    this.addJsonLdSchema(data);
+    });
   }
 
   // ============================================================
@@ -625,11 +607,9 @@ export class HomeEnFourtyFiveComponent implements OnInit {
   //  VIDEOOBJECT
   // ============================================================
   private setVideoObjectSchema(): void {
-    const data = {
+    this.addJsonLdSchema({
       '@context': 'https://schema.org',
       '@graph': [
-        
-
         {
           '@type': 'VideoObject',
           '@id': 'https://arapov.trade/en/freestudying/freeeducation#video2',
@@ -642,40 +622,25 @@ export class HomeEnFourtyFiveComponent implements OnInit {
           contentUrl: 'https://www.youtube.com/watch?v=tmiHem6NOZs',
           embedUrl:
             'https://www.youtube.com/embed/tmiHem6NOZs?si=lMeQKyeWBPviIQPq',
-          author: {
-            '@type': 'Person',
-            '@id': 'https://arapov.trade/en#person',
-          },
-          publisher: {
-            '@type': 'Organization',
-            name: 'Arapov Trade',
-            logo: {
-              '@type': 'ImageObject',
-              url: 'https://arapov.trade/assets/img/favicon.ico',
-            },
-          },
+          author: { '@id': 'https://arapov.trade/#person' },
+          publisher: { '@id': 'https://arapov.trade/#organization' },
         },
       ],
-    };
-
-    this.addJsonLdSchema(data);
+    });
   }
 
   // ============================================================
   //  EducationalOccupationalProgram
   // ============================================================
   private setEducationalOccupationalProgramSchema(): void {
-    const data = {
+    this.addJsonLdSchema({
       '@context': 'https://schema.org',
       '@type': 'EducationalOccupationalProgram',
       '@id': 'https://arapov.trade/en/freestudying/freeeducation#program',
       name: 'Free trading course',
       description:
         'A complete trading training program from scratch: from basic concepts to a professional trading system',
-      provider: {
-        '@type': 'Person',
-        '@id': 'https://arapov.trade/en#person',
-      },
+      provider: { '@id': 'https://arapov.trade/#person' },
       timeToComplete: 'P3M',
       occupationalCategory: 'Trader',
       programType: 'Online course',
@@ -688,13 +653,36 @@ export class HomeEnFourtyFiveComponent implements OnInit {
         '@type': 'Course',
         name: 'Training in trading from scratch',
         description: 'Over 151+ articles and 78+ video tutorials on trading',
-        provider: {
-          '@type': 'Person',
-          name: 'Ihor Arapov',
-        },
+        provider: { '@id': 'https://arapov.trade/#person' }, // ← было инлайн 'Ihor Arapov'
       },
-    };
+    });
+  }
 
-    this.addJsonLdSchema(data);
+  private setBreadcrumbSchema(): void {
+    this.addJsonLdSchema({
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      '@id': 'https://arapov.trade/en/freestudying/freeeducation#breadcrumb',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: 'https://arapov.trade/en',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Free education',
+          item: 'https://arapov.trade/en/freestudying',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'Free Trading Course for Beginners',
+          item: 'https://arapov.trade/en/freestudying/freeeducation',
+        },
+      ],
+    });
   }
 }

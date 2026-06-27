@@ -53,19 +53,18 @@ export class HomeEuBlogFiftyOneComponent implements OnInit {
     this.grr = this.artickleServ.selectedGroups;
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
-    this.titleService.setTitle('Price Action: A Complete Guide');
+    this.titleService.setTitle(
+      'ATR Indicator: Market Volatility | Arapov.trade',
+    );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Learn everything about the Price Action method: its core principles, popular patterns, strategies, and practical examples. A complete guide for beginner and experienced traders.',
+        'What the ATR (Average True Range) indicator is, how it measures volatility and how to use it to set stops and calculate position size.',
     });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-04-17' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/candlestickpatterns.webp',
-    });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
+
     this.gerRandom();
   }
   randomArticleRus: any = [];
@@ -248,39 +247,41 @@ export class HomeEuBlogFiftyOneComponent implements OnInit {
   private setArticleSchema(): void {
     const data = {
       '@context': 'https://schema.org',
-      '@type': 'Article',
-      headline:
-        'Price Action Trading: Complete Guide to Indicator-Free Trading',
-      description:
-        'Comprehensive guide to Price Action method. Candlestick patterns (pin bar, engulfing, inside bar), support and resistance levels, clean chart trading strategies.',
-      author: {
-        '@id': 'https://arapov.trade/en#person',
-      },
-      publisher: {
-        '@type': 'Organization',
-        name: 'ArapovTrade',
-        url: 'https://arapov.trade',
-        logo: {
-          '@type': 'ImageObject',
-          url: 'https://arapov.trade/assets/img/favicon.ico',
+      '@graph': [
+        {
+          '@type': 'Article',
+          headline:
+            'The ATR Indicator in Trading: Volatility and Locking In Profit',
+          description:
+            'What the ATR (Average True Range) indicator is, how it measures volatility and how to use it to set stops and calculate position size.',
+          author: { '@id': 'https://arapov.trade/#person' },
+          publisher: {
+            '@type': 'Organization',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
+            logo: {
+              '@type': 'ImageObject',
+              url: 'https://arapov.trade/assets/img/favicon.ico',
+            },
+          },
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': 'https://arapov.trade/en/freestudying/atr-indicator',
+          },
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/atrindicator.jpg',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Technical Analysis',
+          keywords: 'atr (average true range)',
+          inLanguage: 'en',
         },
-      },
-      datePublished: '2025-01-10T12:00:00+02:00',
-      dateModified: '2026-04-15T00:00:00Z',
-      mainEntityOfPage: {
-        '@type': 'WebPage',
-        '@id': 'https://arapov.trade/en/freestudying/candlestickpatterns',
-      },
-      image: {
-        '@type': 'ImageObject',
-        url: 'https://arapov.trade/assets/img/content/priceaction1.png',
-        width: 1200,
-        height: 630,
-      },
-      articleSection: 'Technical Analysis',
-      keywords:
-        'Price Action, candlestick patterns, pin bar, engulfing, trading',
-      inLanguage: 'en',
+      ],
     };
 
     this.addJsonLdSchema(data);
@@ -294,18 +295,18 @@ export class HomeEuBlogFiftyOneComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/en#person',
+      '@id': 'https://arapov.trade/#person',
       name: 'Igor Arapov',
       alternateName: [
         'Ігор Арапов',
-        'Арапов Игорь',
-        'I. Arapov',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/en',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -320,12 +321,12 @@ export class HomeEuBlogFiftyOneComponent implements OnInit {
         'https://t.me/ArapovTrade',
       ],
       jobTitle: [
-        'Independent researcher,',
-        'trader',
-        'author and founder of arapov.trade',
+        'Independent researcher',
+        'Trader',
+        'Author and founder of arapov.trade',
       ],
       description:
-        'Independent researcher, practicing trader, author of books on trading and scientific publications. Specializes in trading psychology and cognitive biases in financial markets.',
+        'Independent researcher, practising trader, author of trading books and scientific publications. Specialises in trading psychology and cognitive biases in financial markets.',
     };
 
     this.addJsonLdSchema(data);
@@ -341,42 +342,50 @@ export class HomeEuBlogFiftyOneComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'What is Price Action in trading?',
+          name: 'What does the ATR indicator show?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Price Action is a technical analysis method based on studying price movement without using indicators. Traders analyze clean price charts, candlestick patterns, support and resistance levels to make trading decisions. The method helps understand market psychology and actions of major players.',
+            text: 'The average range of price over a period, that is, volatility. It does not hint at the side of the move: an equally high value appears both in a rise and in a fall. It is a gauge of amplitude, not a signal to enter.',
           },
         },
         {
           '@type': 'Question',
-          name: 'What are the main Price Action patterns?',
+          name: 'How do you set a stop-loss with ATR?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: "Main Price Action patterns include: pin bar (candle with long wick signaling reversal), engulfing (candle completely covers the previous one), inside bar (candle within previous candle's range), doji (market indecision). These patterns are most effective at key support and resistance levels.",
+            text: 'Hide the stop beyond the current range of the move, not inside it. On a calm market it comes out tighter, on a volatile one wider. Because of that, ordinary noise sweeps it noticeably less often than a stop placed by eye.',
           },
         },
         {
           '@type': 'Question',
-          name: 'How to identify support and resistance levels?',
+          name: 'What ATR multiplier should you use for the stop?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Support and resistance levels are identified by historical points where price repeatedly reversed or consolidated. Support is a zone where buyers stop price decline. Resistance is a zone where sellers prevent price growth. Significant levels are confirmed by multiple touches and high trading volumes.',
+            text: 'A common frame is about 1.5 times ATR for fast intraday trades, 2 times for swing trades, and 3 times for position trades held longer: the shorter you hold, the tighter the multiple. None of these numbers is sacred; they are a starting point, and the real aim is only that the stop reflects how the asset moves rather than a round figure.',
           },
         },
         {
           '@type': 'Question',
-          name: 'What are the advantages of Price Action trading?',
+          name: 'How do you size a position with ATR?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: "Price Action advantages: simplicity of analysis without complex indicators, universality for any markets and timeframes, understanding market participant psychology, no signal lag (unlike indicators), ability to see major players' actions through candlestick formations.",
+            text: 'Take the money you are willing to lose on the trade and divide it by the stop distance in ATR. A volatile instrument then gets fewer units and a calm one more, so the loss in money stays the same across both. That keeps one wild instrument from dominating your risk.',
           },
         },
         {
           '@type': 'Question',
-          name: 'How to avoid false Price Action signals?',
+          name: 'Can ATR tell you a reversal?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'To filter false signals: trade patterns only at significant support/resistance levels, wait for signal candle closure, analyze context (trend, volatility), use volume confirmation, avoid trading during major news events, combine multiple timeframes for analysis.',
+            text: 'Not directly; ATR is not a reversal indicator. But its high values often coincide with the climax of a move, and that is a reason to prepare to lock in or to wait for a shift into a flat, rather than a command to close this very second.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What ATR period should you choose?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Fourteen is the default. That period gives a smoothed read of the range and covers most tasks. It is worth changing only for a specific trading style, while a beginner does better staying on the standard value.',
           },
         },
       ],
@@ -392,39 +401,40 @@ export class HomeEuBlogFiftyOneComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'How to Trade Using Price Action Method',
+      '@id': 'https://arapov.trade/en/freestudying/atr-indicator#howto',
+      name: 'How to understand and apply the ATR indicator in trading',
       description:
-        'Step-by-step guide to applying Price Action for profitable trading in financial markets.',
+        'A step-by-step look at what ATR measures and how to apply it in trading',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Identify key levels on the chart',
-          text: 'Find significant support and resistance zones where price repeatedly reversed in the past. Mark levels on higher timeframes (daily or weekly) to determine the global market structure.',
+          name: 'What ATR (Average True Range) is and how it is calculated',
+          text: 'ATR (Average True Range) is an indicator of the average true range; it shows how much price travels on average over a period.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Determine trend direction',
-          text: 'Analyze the structure of highs and lows. An uptrend is characterized by higher highs and higher lows. A downtrend shows lower highs and lows. Trade in the direction of the main trend to increase success probability.',
+          name: 'How to set a stop-loss with ATR',
+          text: 'ATR shows the live range right now, so the stop is logically hidden beyond that range rather than inside it.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Wait for pattern formation',
-          text: 'Look for candlestick patterns (pin bar, engulfing, inside bar) at key levels. The pattern must fully form — wait for the signal candle to close before deciding on entry.',
+          name: 'ATR multipliers, position size, and the trailing stop',
+          text: 'Set the stop at a multiple of ATR, let the same range fix the position size, and trail the stop a few ATRs below the high to let a winner run.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Analyze signal context',
-          text: 'Evaluate market conditions: trend strength, volatility, news background. A pin bar signal in the trend direction is more reliable than counter-trend. Check the economic calendar for important events.',
+          name: 'ATR at its highs: a cue to take profit',
+          text: "ATR is not used to catch reversals, but its extreme readings hint the move's fuel is nearly burnt and it is time to prepare an exit.",
         },
         {
           '@type': 'HowToStep',
           position: 5,
-          name: 'Set stop-loss and profit target',
-          text: 'Place stop-loss beyond the pattern extreme or key level. Determine profit target at the nearest resistance or support level. Risk-to-reward ratio should be at least 1:2.',
+          name: 'Volatility compression and expansion: how ATR helps a trader',
+          text: 'The market breathes: compression, then expansion, then compression again, and ATR makes that rhythm visible to the eye.',
         },
       ],
     };
@@ -439,69 +449,19 @@ export class HomeEuBlogFiftyOneComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Price Action Glossary',
-      description:
-        'Key terms and definitions of Price Action method in technical analysis',
+      name: 'Glossary of terms in this article',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Price Action',
+          name: 'ATR (Average True Range)',
           description:
-            'Technical analysis method based on studying price movement without indicators, analyzing clean price charts.',
+            'ATR (Average True Range) is an indicator of the average true range; it shows how much price travels on average over a period.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Pin Bar',
+          name: 'true range',
           description:
-            'Candlestick pattern with a long wick and small body, signaling price reversal and market rejection of a certain price level.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Engulfing Pattern',
-          description:
-            "Two-candle pattern where the second candle completely covers the first candle's body, indicating a shift in market sentiment.",
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Inside Bar',
-          description:
-            "A candle whose range is completely within the previous mother candle's range, signaling consolidation before a breakout.",
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Support Level',
-          description:
-            'Price zone where demand exceeds supply and buyers stop price decline, causing an upward bounce.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Resistance Level',
-          description:
-            'Price zone where supply exceeds demand and sellers stop price growth, causing a downward bounce.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Doji',
-          description:
-            'A candle with very small body where opening and closing prices nearly coincide, indicating market indecision.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'False Breakout',
-          description:
-            'Situation when price breaks through a level but quickly returns, trapping traders.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Swing High and Swing Low',
-          description:
-            'Local highs and lows on the chart used to determine trend structure and key reversal points.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Clean Chart',
-          description:
-            'Price chart without technical indicators, displaying only candles or bars, used in Price Action method.',
+            "The true range of a candle is the largest of three distances: the candle's own high-to-low range, the gap from its high to the previous close, and from its low to that close, so it captures gaps between candles.",
         },
       ],
     };

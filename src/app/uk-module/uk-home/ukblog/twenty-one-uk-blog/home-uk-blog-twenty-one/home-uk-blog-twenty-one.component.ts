@@ -13,7 +13,7 @@ import { Subscription } from 'rxjs';
 import { NavigationEnd, Router } from '@angular/router';
 import { Meta, Title } from '@angular/platform-browser';
 import { ArticlesService } from '../../../../../servises/articles.service';
-
+ 
 @Component({
   selector: 'app-home-uk-blog-twenty-one',
   templateUrl: './home-uk-blog-twenty-one.component.html',
@@ -57,18 +57,19 @@ export class HomeUkBlogTwentyOneComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Маркет-мейкер у трейдингу: повний посібник | Arapov.trade',
+      'Solana (SOL): гайд по криптовалюті | Arapov.trade',
     );
-    this.meta.updateTag({ name: 'robots', content: 'index, follow' }); this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
+    this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
 
-  this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
 
     this.meta.updateTag({
       name: 'description',
       content:
-        'Маркет-мейкер у трейдингу: хто це, як працює та як використовувати їхні стратегії у власній торгівлі. Повний посібник від Ігоря Арапова.',
+        'Що таке Solana, як влаштований блокчейн SOL, його екосистема DeFi і NFT, переваги швидкості та ризики для трейдерів та інвесторів.',
     });
-
+ 
     this.gerRandom();
   }
   randomArticleRus: any = [];
@@ -274,37 +275,35 @@ export class HomeUkBlogTwentyOneComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          headline: 'Маркет-мейкер у трейдингу: повний посібник',
+          headline: 'Solana (SOL) у трейдингу: аналіз і особливості',
           description:
-            'Маркет-мейкер у трейдингу: хто це, як працює та як використовувати їхні стратегії у власній торгівлі.',
-          image: 'https://arapov.trade/assets/img/content/marketmaker1.webp',
-          datePublished: '2026-03-15T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
-
-          author: {
-            '@id': 'https://arapov.trade/uk#person',
-          },
+            'Що таке Solana, як влаштований блокчейн SOL, його екосистема DeFi і NFT, переваги швидкості та ризики для трейдерів та інвесторів.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'Arapov Trade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
             url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://arapov.trade/uk/freestudying/marketmaker',
+            '@id': 'https://arapov.trade/uk/freestudying/solana-guide',
           },
-          articleSection: 'Навчання трейдингу',
-          keywords: [
-            'маркет мейкер',
-            'market maker',
-            'ліквідність',
-            'маніпуляції ринку',
-            'Smart Money',
-          ],
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/sol1.jpg',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Криптовалюта',
+          keywords: 'solana',
+          inLanguage: 'uk',
         },
       ],
     };
@@ -319,18 +318,18 @@ export class HomeUkBlogTwentyOneComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/uk#person',
-      name: 'Ігор Арапов',
+      '@id': 'https://arapov.trade/#person',
+      name: 'Igor Arapov',
       alternateName: [
-        'Igor Arapov',
-        'Арапов Игорь',
-        'I. Arapov',
+        'Ігор Арапов',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/uk',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -366,42 +365,42 @@ export class HomeUkBlogTwentyOneComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'Хто такий маркет-мейкер простими словами?',
+          name: 'Що таке Solana простими словами?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Маркет-мейкер — це великий учасник ринку, який забезпечує ліквідність, постійно виставляючи заявки на купівлю та продаж. Завдяки маркет-мейкерам трейдери можуть швидко укладати угоди за справедливими цінами.',
+            text: 'Це швидкий блокчейн і його токен SOL, запущений у 2020 році. Мережа робить ставку на високу швидкість і дешеві комісії, тому на ній багато DeFi-застосунків, NFT і мемкоїнів. Для трейдера SOL це великий, але дуже волатильний актив.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Як маркет-мейкери заробляють гроші?',
+          name: 'Чим Solana відрізняється від Ethereum?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Маркет-мейкери отримують прибуток зі спреду між ціною купівлі та продажу, комісій від бірж за підтримку ліквідності, а також від напрямлених угод на основі аналізу потоку ордерів.',
+            text: 'Solana швидша і дешевша в комісіях, але до надійності її мережі є питання через минулі збої. Ethereum повільніший і дорожчий, зате вважається усталенішим і децентралізованішим. Це різні ставки: продуктивність проти надійності.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Чи маніпулюють маркет-мейкери ринком?',
+          name: 'Як аналізувати SOL?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Маркет-мейкери використовують техніки управління ліквідністю: хибні пробої, полювання на стопи, спуфінг. Однак їхня основна функція — забезпечення ліквідності.',
+            text: 'Я читаю його за структурою ринку і ключовими рівнями, а не за індикаторами. Добре працюють круглі психологічні позначки. Реальний обсяг дивлюся за фʼючерсами CME, бо обсягу нерегульованих криптобірж довіряти не можна.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Як визначити присутність маркет-мейкера на графіку?',
+          name: 'Які ризики торгівлі Solana?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Ознаки активності: сплески обсягу без руху ціни, хибні пробої зі швидким поверненням, довгі тіні свічок на важливих рівнях, аномальна активність у періоди низької ліквідності.',
+            text: 'Висока волатильність: SOL валиться сильніше за ринок на падінні. Плюс історія збоїв мережі і тонка ліквідність у моменти паніки. Тому позицію варто тримати невелику і закладати ризик заздалегідь, а не лізти на хайпі.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Як торгувати разом з маркет-мейкерами?',
+          name: 'Що таке Proof of History у Solana?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Аналізуйте обсяги для виявлення накопичення позицій, уникайте входів на очевидних рівнях, чекайте підтвердження після хибних пробоїв, розміщуйте стопи за межами зон полювання.',
+            text: 'Це криптографічний годинник Solana: механізм, який проставляє транзакціям мітки часу і заздалегідь вибудовує їх по порядку, ще до узгодження між валідаторами. Поверх Proof of Stake це дозволяє обробляти тисячі транзакцій за секунду з дуже низькою комісією. Зворотний бік цієї гонитви за швидкістю це навантажувальні збої, через які мережа кілька разів зупинялася.',
           },
         },
       ],
@@ -417,39 +416,34 @@ export class HomeUkBlogTwentyOneComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'Як виявити та використовувати активність маркет-мейкера',
+      '@id': 'https://arapov.trade/uk/freestudying/solana-guide#howto',
+      name: 'Як розібратись і застосувати: Solana у трейдингу, аналіз і особливості',
       description:
-        'Покрокова інструкція з визначення дій маркет-мейкерів та використання цієї інформації для покращення торгових результатів.',
+        'Покроковий розбір теми та її практичне застосування в торгівлі',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Аналіз обсягів',
-          text: "Вивчіть об'ємні показники за допомогою Volume Profile та Delta Volume. Шукайте аномалії: високий обсяг без руху ціни вказує на накопичення позицій.",
+          name: 'Що таке Solana і чим вона відрізняється від Ethereum',
+          text: 'Solana — це високошвидкісний блокчейн і його токен SOL, запущені у 2020 році командою Анатолія Яковенка, колишнього інженера Qualcomm.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Визначення ключових рівнів',
-          text: 'Відзначте зони ліквідності: області за рівнями підтримки та опору, де розміщують стоп-ордери.',
+          name: 'Що під капотом Solana: Proof of History, швидкість і плата за неї',
+          text: 'Швидкість Solana забезпечує Proof of History поверх Proof of Stake: тисячі TPS і дешеві комісії, але та сама гонитва за швидкістю це причина збоїв мережі.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Спостереження за хибними пробоями',
-          text: 'Якщо ціна швидко повертається в діапазон після пробою, це ознака збору ліквідності маркет-мейкером.',
+          name: 'Технічний аналіз SOL: рівні та структура ринку',
+          text: 'Жодної особливої магії для SOL я не вигадую, читаю його тими ж очима, що фʼючерс чи золото.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Підтвердження входу',
-          text: 'Дочекайтеся свічкових патернів, зміни дельти обсягу, тесту рівня без нового пробою.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 5,
-          name: 'Управління позицією',
-          text: 'Розміщуйте стоп-лоси за межами очевидних зон ліквідності. Використовуйте ATR для розрахунку відстані.',
+          name: 'Ризики торгівлі Solana: волатильність і ліквідність',
+          text: 'Тут важливо тверезо розуміти, у що лізеш.',
         },
       ],
     };
@@ -464,67 +458,19 @@ export class HomeUkBlogTwentyOneComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Глосарій термінів маркет-мейкінгу',
+      name: 'Глосарій термінів статті',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Маркет-мейкер',
+          name: 'Solana',
           description:
-            'Великий учасник ринку, що забезпечує ліквідність шляхом постійного виставлення заявок на купівлю та продаж',
+            'Solana — це високошвидкісний блокчейн і його токен SOL, запущені у 2020 році командою Анатолія Яковенка, колишнього інженера Qualcomm.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Ліквідність',
+          name: 'Proof of History',
           description:
-            'Здатність ринку забезпечувати швидке виконання угод без суттєвого впливу на ціну',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Спред',
-          description:
-            'Різниця між найкращою ціною купівлі та найкращою ціною продажу активу',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Хибний пробій',
-          description:
-            'Короткочасний рух ціни за ключовий рівень з подальшим швидким поверненням',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Полювання на стопи',
-          description:
-            'Рух ціни до зон скупчення стоп-ордерів для їх активації та збору ліквідності',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Спуфінг',
-          description:
-            'Розміщення великих фіктивних ордерів для створення ілюзії попиту або пропозиції',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Order Flow',
-          description:
-            'Потік ордерів — аналіз послідовності та обсягу ринкових заявок',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Volume Profile',
-          description:
-            'Інструмент аналізу розподілу обсягу торгів за ціновими рівнями',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Delta Volume',
-          description:
-            'Різниця між обсягом покупок та продажів на ціновому рівні',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'HFT',
-          description:
-            'High-Frequency Trading — високочастотний трейдинг з алгоритмами',
+            'Proof of History це механізм Solana, який проставляє транзакціям мітки часу і вибудовує їх по порядку ще до узгодження між валідаторами; поверх Proof of Stake це дає високу швидкість мережі.',
         },
       ],
     };

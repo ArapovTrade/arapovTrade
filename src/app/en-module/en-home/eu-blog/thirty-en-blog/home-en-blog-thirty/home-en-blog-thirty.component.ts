@@ -54,21 +54,16 @@ export class HomeEnBlogThirtyComponent implements OnInit {
     this.grr = this.artickleServ.selectedGroups;
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
-    this.titleService.setTitle(
-      'Cryptocurrency Trading: Complete Beginner`s Guide | Arapov.trade',
-    );
+    this.titleService.setTitle('Derivatives, Futures and Spot | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Complete cryptocurrency trading guide for beginners: blockchain technology, Bitcoin, Ethereum, exchange selection, risk management strategies and trading fundamentals.',
+        'What derivatives are, how futures and options differ from spot, how leverage works and which instrument a beginner should choose.',
     });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-04-02' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/cryptocurrencybasics.webp',
-    });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
+
     this.gerRandom();
   }
   randomArticleRus: any = [];
@@ -253,30 +248,38 @@ export class HomeEnBlogThirtyComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          headline: "Cryptocurrency Trading: Complete Beginner's Guide",
+          headline:
+            'Derivatives, Futures and Spot: the Differences and What a Beginner Should Trade',
           description:
-            'Complete cryptocurrency trading guide for beginners: blockchain technology, Bitcoin, Ethereum, exchange selection, risk management strategies and trading fundamentals.',
-          author: {
-            '@id': 'https://arapov.trade/en#person',
-          },
+            'What derivatives are, how futures and options differ from spot, how leverage works and which instrument a beginner should choose.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'Arapov.trade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
-          datePublished: '2026-03-25T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://arapov.trade/en/freestudying/cryptocurrencybasics',
+            '@id':
+              'https://arapov.trade/en/freestudying/derivatives-futures-spot',
           },
-          image:
-            'https://arapov.trade/assets/img/content/cryptocurrencybasics1.webp',
-          articleSection: 'Trading Education',
-          keywords: 'cryptocurrency, trading, blockchain, Bitcoin, Ethereum',
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/derivatives-futures-spot.jpeg',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: "Trader's Dictionary",
+          keywords:
+            'derivatives, futures contract, spot, spot vs futures, leverage, cash-settled futures',
+          inLanguage: 'en',
         },
       ],
     };
@@ -291,19 +294,18 @@ export class HomeEnBlogThirtyComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/en#person',
+      '@id': 'https://arapov.trade/#person',
       name: 'Igor Arapov',
       alternateName: [
         'Ігор Арапов',
-        'Арапов Игорь',
-        'I. Arapov',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-
-      url: 'https://arapov.trade/en',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -318,12 +320,12 @@ export class HomeEnBlogThirtyComponent implements OnInit {
         'https://t.me/ArapovTrade',
       ],
       jobTitle: [
-        'Independent researcher,',
-        'trader',
-        'author and founder of arapov.trade',
+        'Independent researcher',
+        'Trader',
+        'Author and founder of arapov.trade',
       ],
       description:
-        'Independent researcher, practicing trader, author of books on trading and scientific publications. Specializes in trading psychology and cognitive biases in financial markets.',
+        'Independent researcher, practising trader, author of trading books and scientific publications. Specialises in trading psychology and cognitive biases in financial markets.',
     };
 
     this.addJsonLdSchema(data);
@@ -339,42 +341,42 @@ export class HomeEnBlogThirtyComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'How much money do I need to start trading cryptocurrency?',
+          name: 'What are derivatives in simple terms?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Most exchanges allow you to start with as little as $10. Demo accounts provide risk-free practice environments where you can learn trading mechanics using virtual funds before committing real capital.',
+            text: 'A derivative is a contract whose price is tied to an underlying asset: a stock, a currency, oil, gold or an index. You never buy the asset itself, you trade an agreement on it that rises and falls along with that asset. The family splits into exchange-traded futures and options plus over-the-counter forwards and swaps.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Which cryptocurrencies are best for beginners?',
+          name: 'Do you own the asset when you trade futures?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Bitcoin (BTC) and Ethereum (ETH) are optimal choices for newcomers due to their high liquidity and market stability. Stablecoins like USDT and USDC help preserve capital during volatile periods.',
+            text: 'No. A futures contract is a position on price, not ownership. You post margin, a small slice of the contract, and a clearing house sits between buyer and seller. Most futures are cash-settled, so no barrel of oil ever shows up: at expiry the parties settle in money, and a speculator usually closes the position well before that.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Is it safe to keep cryptocurrency on an exchange?',
+          name: 'Why do futures prices differ from the spot price?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Exchange storage is convenient for active trading but carries hacking risks. For long-term holdings, hardware wallets like Ledger or Trezor provide superior security by storing private keys offline.',
+            text: 'Because a futures price reflects an asset delivered later, not right now. The gap comes from the cost of carry: financing, storage and time to expiry. When futures trade above spot it is called contango, when below, backwardation. As expiry approaches the two prices converge. On crypto perpetuals there is no expiry, so a funding payment does the same job instead.',
           },
         },
         {
           '@type': 'Question',
-          name: 'What is volatility and why does it matter in crypto?',
+          name: 'Why are futures dangerous for a beginner?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: "Volatility measures price fluctuation intensity. Cryptocurrency's high volatility creates profit opportunities through price swings but also increases risk. Traders use volatility for short-term gains while managing exposure through position sizing.",
+            text: 'Built-in leverage. You post only margin, a small fraction of the contract, yet profit and loss are counted on the full contract size. A two percent move against you eats far more than two percent of your account, and on top come daily mark-to-market, a margin call and forced liquidation. On crypto futures the swings are wider still because speculative money floods in.',
           },
         },
         {
           '@type': 'Question',
-          name: 'How can I protect my crypto assets from theft?',
+          name: 'Spot or futures, what should a beginner choose?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Enable two-factor authentication on all platforms, never share private keys, store significant holdings in hardware wallets, avoid suspicious links and phishing attempts, and use unique strong passwords for each service.',
+            text: 'In my view, start on spot: no leverage, no liquidation, and you cannot lose more than you put in, so you learn to read the market calmly. Move to futures later, once leverage, margin and liquidation are clear in your head and your risk stays controlled. The simple rule: buy and hold an asset for months is spot, you need to short, stay flexible and read honest exchange volume is futures.',
           },
         },
       ],
@@ -390,38 +392,41 @@ export class HomeEnBlogThirtyComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'How to Start Trading Cryptocurrency',
-      description: 'Step-by-step guide for beginner cryptocurrency traders',
+      '@id':
+        'https://arapov.trade/en/freestudying/derivatives-futures-spot#howto',
+      name: 'How to make sense of derivatives, futures and spot',
+      description:
+        'A step-by-step walk through derivative instruments, the futures contract and spot, and how they apply in practical trading',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Learn the fundamentals',
-          text: 'Study blockchain technology, wallet types, order mechanics, and basic technical analysis. Free resources like Binance Academy and CoinGecko Learn provide comprehensive educational content.',
+          name: 'Grasp what a derivative is',
+          text: 'A derivative is a contract whose value is tied to an underlying asset, so you trade an agreement on the asset rather than the asset itself.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Choose a reputable exchange',
-          text: 'Compare trading fees, available instruments, security measures, and user reviews. Consider regulatory compliance and supported payment methods in your jurisdiction.',
+          name: 'See how a futures contract works',
+          text: 'A futures contract is a standardised, binding exchange contract cleared through a clearing house, and most futures are cash-settled with no physical delivery.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Set up security measures',
-          text: 'Enable two-factor authentication, create strong unique passwords, and consider purchasing a hardware wallet for long-term storage of significant holdings.',
+          name: 'Compare spot and futures',
+          text: 'On spot you own the asset with no leverage or liquidation, on futures you trade a leveraged position on price with the risk of forced closure.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Develop a trading plan',
-          text: 'Define your financial goals, acceptable risk levels, entry and exit strategies. Implement the 2% rule: never risk more than 2% of your trading capital on a single position.',
+          name: 'Understand why futures hurt beginners',
+          text: 'Margin is tiny but profit and loss are counted on the full contract, while daily mark-to-market and a margin call can close the position by force.',
         },
         {
           '@type': 'HowToStep',
           position: 5,
-          name: 'Practice with small amounts',
-          text: 'Start with demo accounts or minimal capital to understand market mechanics and your emotional responses. Scale up gradually as your skills and confidence develop.',
+          name: 'Pick the instrument that fits your task',
+          text: 'A beginner is safer starting on spot with no leverage and moving to futures deliberately, once leverage, margin and liquidation are understood.',
         },
       ],
     };
@@ -436,68 +441,25 @@ export class HomeEnBlogThirtyComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Cryptocurrency Trading Glossary',
-      description: 'Essential terms and concepts for cryptocurrency trading',
+      name: 'Glossary of terms in this article',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Cryptocurrency',
+          name: 'Derivative',
           description:
-            'A digital asset using cryptographic protocols for secure transactions and controlled creation of new units',
+            'A derivative financial instrument whose value is tied to the price of another, underlying asset: a stock, a currency, a commodity, an index or a rate.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Blockchain',
+          name: 'Futures contract',
           description:
-            'A distributed ledger technology consisting of sequential blocks, each containing transaction data and linked to the previous block through cryptographic hashes',
+            'A standardised exchange contract binding one side to buy and the other to sell an asset at a price agreed in advance for a set date in the future.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Bitcoin',
+          name: 'Spot',
           description:
-            'The first decentralized cryptocurrency, created in 2009 with a maximum supply capped at 21 million coins',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Volatility',
-          description:
-            'A statistical measure indicating the degree of price variation over a specific time period',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Stop-loss',
-          description:
-            'A protective order that automatically closes a position when a predetermined loss level is reached',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'HODL',
-          description:
-            'A long-term holding strategy maintaining cryptocurrency positions regardless of market fluctuations',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Altcoin',
-          description:
-            'Any cryptocurrency other than Bitcoin, often offering unique technical features or use cases',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'DeFi',
-          description:
-            'Decentralized Finance - an ecosystem of blockchain-based financial applications operating without intermediaries',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Private key',
-          description:
-            'A secret cryptographic code providing complete access to a cryptocurrency wallet',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Smart contract',
-          description:
-            'Self-executing code on a blockchain that automatically enforces agreement terms without intermediaries',
+            'A market where the trade settles here and now and the buyer immediately takes ownership of the asset itself, with no leverage.',
         },
       ],
     };

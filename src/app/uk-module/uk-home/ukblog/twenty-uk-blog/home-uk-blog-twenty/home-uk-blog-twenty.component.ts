@@ -28,7 +28,7 @@ export class HomeUkBlogTwentyComponent implements OnInit {
     private themeService: ThemeservService,
     private artickleServ: ArticlesService,
     private renderer: Renderer2,
-    @Inject(DOCUMENT) private document: Document
+    @Inject(DOCUMENT) private document: Document,
   ) {}
   private routerSubscription!: Subscription;
   private themeSubscription!: Subscription;
@@ -56,21 +56,21 @@ export class HomeUkBlogTwentyComponent implements OnInit {
     this.grr = this.artickleServ.selectedGroups;
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
-    this.titleService.setTitle('Що таке скам у криптовалюті | Arapov.trade');
+    this.titleService.setTitle(
+      'Зберігання криптовалюти: гаманці та безпека | Arapov.trade',
+    );
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
 
     this.meta.updateTag({
       name: 'description',
       content:
-        'Що таке скам у криптовалюті: види шахрайства, ознаки фейкових проєктів, фішинг, піраміди та способи захисту ваших криптоактивів від шахраїв.',
+        'Як безпечно зберігати криптовалюту: гарячі та холодні гаманці, сід-фраза, апаратні гаманці та правила захисту активів від крадіжки.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-21' });this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/cryptoscam.webp',
-    });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
+
     this.gerRandom();
   }
   randomArticleRus: any = [];
@@ -87,7 +87,6 @@ export class HomeUkBlogTwentyComponent implements OnInit {
       title: 'Базовий курс',
       link: 'https://arapov.trade/uk/freestudying/freeeducation',
     },
-     
   ];
 
   onGroupChange(event: Event) {
@@ -157,7 +156,7 @@ export class HomeUkBlogTwentyComponent implements OnInit {
     // Показываем 5 случайных статей при фокусе, если инпут пуст
     if (!this.searchQuery) {
       const shuffled = [...this.artickleServ.ukrArtickles].sort(
-        () => Math.random() - 0.5
+        () => Math.random() - 0.5,
       );
       this.displayedArticles = shuffled.slice(0, this.maxResults);
     }
@@ -172,7 +171,7 @@ export class HomeUkBlogTwentyComponent implements OnInit {
   onSearchChange() {
     // Логика асинхронного поиска
     const filtered = this.artickleServ.ukrArtickles.filter((a) =>
-      a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase())
+      a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase()),
     );
     this.displayedArticles = filtered.slice(0, this.maxResults);
   }
@@ -194,7 +193,7 @@ export class HomeUkBlogTwentyComponent implements OnInit {
     const path: string =
       this.router.url.split('/')[this.router.url.split('/').length - 1];
     let index = this.artickleServ.ukrArtickles.findIndex(
-      (a) => a.linkUkr == path
+      (a) => a.linkUkr == path,
     );
 
     if (this.artickleServ.ukrArtickles.length - 1 == index) {
@@ -211,7 +210,7 @@ export class HomeUkBlogTwentyComponent implements OnInit {
     const path: string =
       this.router.url.split('/')[this.router.url.split('/').length - 1];
     let index = this.artickleServ.ukrArtickles.findIndex(
-      (a) => a.linkUkr == path
+      (a) => a.linkUkr == path,
     );
 
     if (index == 1) {
@@ -236,7 +235,7 @@ export class HomeUkBlogTwentyComponent implements OnInit {
     ];
 
     const scripts = this.document.querySelectorAll(
-      'script[type="application/ld+json"]'
+      'script[type="application/ld+json"]',
     );
 
     scripts.forEach((script) => {
@@ -249,7 +248,7 @@ export class HomeUkBlogTwentyComponent implements OnInit {
 
         const shouldRemove = candidates.some(
           (entry: any) =>
-            entry['@type'] && typesToRemove.includes(entry['@type'])
+            entry['@type'] && typesToRemove.includes(entry['@type']),
         );
 
         if (shouldRemove) {
@@ -277,35 +276,36 @@ export class HomeUkBlogTwentyComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          headline: 'Що таке скам у криптовалюті: види шахрайства та захист',
+          headline: 'Безпечне зберігання крипти: де тримати монети у 2026 році',
           description:
-            'Що таке скам у криптовалюті: види шахрайства, ознаки фейкових проєктів, фішинг, піраміди та способи захисту ваших криптоактивів від шахраїв.',
-          author: {
-            '@id': 'https://arapov.trade/uk#person',
-          },
+            'Як безпечно зберігати криптовалюту: гарячі та холодні гаманці, сід-фраза, апаратні гаманці та правила захисту активів від крадіжки.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'Arapov.trade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
-          datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://arapov.trade/uk/freestudying/cryptoscam',
+            '@id': 'https://arapov.trade/uk/freestudying/crypto-storage',
           },
-          image: 'https://arapov.trade/assets/img/content/cryptoscam1.webp',
-          articleSection: 'Навчання трейдингу',
-          keywords: [
-            'скам криптовалюта',
-            'шахрайство',
-            'фішинг',
-            'криптопіраміди',
-            'безпека',
-          ],
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/cryptostoring44.webp',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Криптовалюта',
+          keywords:
+            'зберігання криптовалюти, холодний гаманець, апаратний гаманець, сід-фраза, Ledger, Trezor',
+          inLanguage: 'uk',
         },
       ],
     };
@@ -320,18 +320,18 @@ export class HomeUkBlogTwentyComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/uk#person',
-      name: 'Ігор Арапов',
+      '@id': 'https://arapov.trade/#person',
+      name: 'Igor Arapov',
       alternateName: [
-        'Igor Arapov',
-              'Арапов Игорь',
-              'I. Arapov',
-              'Игорь Арапов',
-              'І. В. Арапов',
-              'Арапов Ігор',
-              'Arapov Igor',
+        'Ігор Арапов',
+        'Игорь Арапов',
+        'Арапов Игорь',
+        'Арапов Ігор',
+        'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/uk',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -343,9 +343,13 @@ export class HomeUkBlogTwentyComponent implements OnInit {
         'https://github.com/ArapovTrade',
         'https://ua.linkedin.com/in/arapovtrade',
         'https://www.youtube.com/@ArapovTrade',
-        'https://t.me/ArapovTrade'
+        'https://t.me/ArapovTrade',
       ],
-       jobTitle: ['Незалежний дослідник', 'трейдер', 'автор і засновник arapov.trade'],
+      jobTitle: [
+        'Незалежний дослідник',
+        'трейдер',
+        'автор і засновник arapov.trade',
+      ],
       description:
         'Незалежний дослідник, практикуючий трейдер, автор книг з трейдингу та наукових публікацій. Спеціалізується на психології трейдингу та когнітивних упередженнях на фінансових ринках.',
     };
@@ -363,42 +367,34 @@ export class HomeUkBlogTwentyComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'Що таке скам у криптовалюті?',
+          name: 'Де найбезпечніше зберігати криптовалюту?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Скам у криптовалюті — це шахрайство, спрямоване на крадіжку коштів або особистих даних користувачів. Включає фейкові ICO, фішингові атаки, пірамідальні схеми та підроблені біржі. Шахраї використовують довірливість та брак знань для обману як новачків, так і досвідчених інвесторів.',
+            text: 'Основний капітал безпечніше тримати в холодному гаманці без підключення до інтернету, краще на апаратному пристрої на кшталт Ledger або Trezor. На біржі варто лишати тільки те, чим ви торгуєте просто зараз, бо там ключі належать не вам.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Як розпізнати криптовалютний скам?',
+          name: 'Чим гарячий гаманець відрізняється від холодного?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Ознаки скаму: нереалістичні обіцянки гарантованого прибутку, анонімна команда без публічних профілів, відсутність White Paper або дорожньої карти, тиск на термінове прийняття рішень, ухилення від запитань про структуру проєкту.',
+            text: 'Гарячий гаманець підключений до інтернету і зручний для частих операцій, але через звʼязок із мережею вразливий до зломів і фішингу. Холодний тримає ключі офлайн і захищений від віддалених атак, зате для повсякденної торгівлі незручний.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Які види криптоскаму найпоширеніші?',
+          name: 'Чи можна фотографувати сід-фразу?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Основні види: фейкові ICO з професійними сайтами без реального продукту, фішингові сайти що копіюють біржі, піраміди Понці з виплатами за рахунок нових учасників, підроблені біржі що не дозволяють вивести кошти, rug pull у DeFi проєктах.',
+            text: 'Ні. Сід-фраза має жити тільки офлайн. Фото в галереї, скриншот, нотатка в хмарі чи повідомлення самому собі в месенджері це прямий шлях до крадіжки, бо будь-який такий файл може витекти.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Як захистити свої криптоактиви від шахраїв?',
+          name: 'Чи безпечно зберігати криптовалюту на біржі?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Використовуйте апаратні гаманці для зберігання, увімкніть двофакторну автентифікацію, перевіряйте URL сайтів перед введенням даних, вивчайте проєкти через незалежні джерела, ніколи не діліться приватними ключами та seed-фразами.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Що робити якщо став жертвою криптоскаму?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: "Негайно змініть паролі на всіх пов'язаних акаунтах, повідомте про шахрайство в правоохоронні органи та на платформу де стався інцидент, попередьте спільноту в соціальних мережах, збережіть усі докази для можливого розслідування.",
+            text: 'Тільки для активної торгівлі та невеликих сум. На біржі монети по суті вам не належать, ключами розпоряджається майданчик, а його можуть зламати або заморозити вивід, що в історії крипти траплялося не раз.',
           },
         },
       ],
@@ -414,39 +410,34 @@ export class HomeUkBlogTwentyComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'Як захиститися від криптовалютного скаму',
+      '@id': 'https://arapov.trade/uk/freestudying/crypto-storage#howto',
+      name: 'Як безпечно зберігати криптовалюту',
       description:
-        'Покрокова інструкція із захисту ваших криптоактивів від шахраїв',
+        'Покроковий розбір: який гаманець обрати, як захистити сід-фразу і де тримати основний капітал',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Перевірте проєкт перед інвестуванням',
-          text: 'Вивчіть White Paper, команду розробників, їхні публічні профілі в LinkedIn. Перевірте історію проєкту та відгуки на незалежних платформах на кшталт Reddit та BitcoinTalk.',
+          name: 'Розберіться, чим гарячий гаманець відрізняється від холодного',
+          text: 'Криптовалютний гаманець — це сховище не самих монет, а ключів до них, і цей момент новачки пропускають найчастіше.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Використовуйте надійні гаманці та біржі',
-          text: 'Зберігайте криптовалюту на апаратних гаманцях Ledger або Trezor. Використовуйте лише перевірені біржі з ліцензіями та гарною репутацією.',
+          name: 'Виберіть для довгого зберігання апаратний гаманець',
+          text: 'Апаратний гаманець — це невеликий фізичний пристрій, створений лише для зберігання ключів офлайн, і найпрактичніший вид холодного зберігання.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Увімкніть двофакторну автентифікацію',
-          text: 'Активуйте 2FA на всіх криптовалютних платформах. Використовуйте застосунки-автентифікатори замість SMS для більшої безпеки.',
+          name: 'Захистіть сід-фразу і тримайте її тільки офлайн',
+          text: 'Сід-фраза — це набір із 12 або 24 слів, за яким гаманець відновлюється на будь-якому сумісному пристрої.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Перевіряйте URL-адреси сайтів',
-          text: 'Завжди перевіряйте адресу сайту перед введенням даних. Додавайте офіційні сайти до закладок. Остерігайтеся посилань з неперевірених джерел.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 5,
-          name: 'Ніколи не діліться приватними ключами',
-          text: 'Зберігайте seed-фрази та приватні ключі офлайн. Ніколи не вводьте їх на сайтах і не повідомляйте третім особам, навіть якщо вони представляються службою підтримки.',
+          name: 'Розділіть біржовий і заощаджувальний гаманець',
+          text: 'Коли монети лежать на біржі, ключами розпоряджається вона, а не ви.',
         },
       ],
     };
@@ -461,68 +452,25 @@ export class HomeUkBlogTwentyComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Терміни криптовалютного шахрайства',
-      description: 'Глосарій ключових понять у сфері криптоскаму',
+      name: 'Глосарій термінів статті',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Скам',
+          name: 'Криптовалютний гаманець',
           description:
-            'Шахрайство, спрямоване на крадіжку грошових коштів або конфіденційної інформації користувачів криптовалют',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Фішинг',
-          description:
-            'Вид шахрайства, при якому зловмисники створюють підроблені сайти або застосунки для крадіжки облікових даних користувачів',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Піраміда Понці',
-          description:
-            'Шахрайська схема, де дохід ранніх інвесторів виплачується за рахунок вкладень нових учасників',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'ICO (Initial Coin Offering)',
-          description:
-            'Первинне розміщення токенів для залучення інвестицій у криптовалютний проєкт',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Rug Pull',
-          description:
-            'Шахрайство в DeFi, коли розробники забирають ліквідність з пулу та зникають з коштами інвесторів',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Соціальна інженерія',
-          description:
-            'Методи психологічного маніпулювання для отримання конфіденційної інформації від жертв',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Seed-фраза',
-          description:
-            'Набір слів для відновлення доступу до криптогаманця, який ніколи не можна розкривати третім особам',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: '2FA (двофакторна автентифікація)',
-          description:
-            'Метод захисту акаунту, що вимагає підтвердження входу через другий канал окрім пароля',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'White Paper',
-          description:
-            'Технічний документ проєкту, що описує його концепцію, технологію та план розвитку',
+            'Сховище не самих монет, а ключів до них; самі монети завжди перебувають у блокчейні, а гаманець тримає закритий ключ, який підтверджує, що вони ваші.',
         },
         {
           '@type': 'DefinedTerm',
           name: 'Апаратний гаманець',
           description:
-            'Фізичний пристрій для безпечного зберігання приватних ключів криптовалют офлайн',
+            'Невеликий фізичний пристрій, створений лише для зберігання ключів офлайн; приватний ключ ніколи не покидає пристрій, а транзакція підписується всередині нього.',
+        },
+        {
+          '@type': 'DefinedTerm',
+          name: 'Сід-фраза',
+          description:
+            'Набір із 12 або 24 слів, який повністю відновлює доступ до гаманця на будь-якому сумісному пристрої; по суті це гроші в текстовому вигляді.',
         },
       ],
     };

@@ -1,5 +1,5 @@
 .hero-section {
-    background: url(/assets/img/content/japanesecandle.jpg) no-repeat bottom right;
+    background: url(/assets/img/content/goldtrading1.jpeg) no-repeat bottom right;
     background-size: 100% 100%;
     color: white;
     height: 250px;
@@ -10,10 +10,11 @@
 }
 
 .pictureImg {
-    width:700px;
-    
+    width: 700px;
+
 }
-.pictureImgSmall{
+
+.pictureImgSmall {
     width: 600px;
 }
 
@@ -57,6 +58,10 @@ h1 {
 .pad {
     margin: 10px 30px 40px;
     text-align: center;
+}
+
+.three-block{
+  line-height: 120%;
 }
 
 
@@ -784,7 +789,4 @@ letter-spacing: 0px;
 .three-block{
   line-height: 40px;
 }
-}.three-block{
-  line-height: 120%;
 }
-

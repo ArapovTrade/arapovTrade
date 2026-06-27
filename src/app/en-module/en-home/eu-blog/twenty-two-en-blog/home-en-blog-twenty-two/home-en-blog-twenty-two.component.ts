@@ -53,23 +53,18 @@ export class HomeEnBlogTwentyTwoComponent implements OnInit {
     this.grr = this.artickleServ.selectedGroups;
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
-    this.titleService.setTitle(
-      'Cryptocurrency Arbitrage: What It Is and How to Profit | Arapov.trade',
-    );
+    this.titleService.setTitle('DeFi: Decentralized Finance | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Cryptocurrency arbitrage: complete guide to profiting from price differences between exchanges. Types of arbitrage, strategies, risks and practical examples.',
+        'What DeFi is, how swaps, loans and staking work without banks on smart contracts and what risks, from code holes to lost funds, are real here.',
     });
 
     this.meta.updateTag({ name: 'author', content: 'Ihor Arapov' });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-21' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/cryptoarbitrage.webp',
-    });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
+
     this.gerRandom();
   }
   randomArticleRus: any = [];
@@ -255,31 +250,36 @@ export class HomeEnBlogTwentyTwoComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          headline: 'Cryptocurrency Arbitrage: What It Is and How to Profit',
+          headline:
+            'DeFi (Decentralized Finance): What It Is and What the Risks Are',
           description:
-            'Complete guide to cryptocurrency arbitrage: types, strategies, risks and practical examples',
-          author: {
-            '@id': 'https://arapov.trade/en#person',
-          },
+            'What DeFi is, how swaps, loans and staking work without banks on smart contracts and what risks, from code holes to lost funds, are real here.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'Arapov.trade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
-          datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://arapov.trade/en/freestudying/cryptoarbitrage',
+            '@id': 'https://arapov.trade/en/freestudying/defi',
           },
-          image:
-            'https://arapov.trade/assets/img/content/cryptoarbitrage1.webp',
-          articleSection: 'Trading Education',
-          keywords:
-            'cryptocurrency arbitrage, crypto arbitrage, cross-exchange arbitrage, triangular arbitrage, crypto trading',
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/defi.jpeg',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Cryptocurrency',
+          keywords: 'defi, cryptocurrency',
+          inLanguage: 'en',
         },
       ],
     };
@@ -294,18 +294,18 @@ export class HomeEnBlogTwentyTwoComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/en#person',
+      '@id': 'https://arapov.trade/#person',
       name: 'Igor Arapov',
       alternateName: [
         'Ігор Арапов',
-        'Арапов Игорь',
-        'I. Arapov',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/en',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -320,12 +320,12 @@ export class HomeEnBlogTwentyTwoComponent implements OnInit {
         'https://t.me/ArapovTrade',
       ],
       jobTitle: [
-        'Independent researcher,',
-        'trader',
-        'author and founder of arapov.trade',
+        'Independent researcher',
+        'Trader',
+        'Author and founder of arapov.trade',
       ],
       description:
-        'Independent researcher, practicing trader, author of books on trading and scientific publications. Specializes in trading psychology and cognitive biases in financial markets.',
+        'Independent researcher, practising trader, author of trading books and scientific publications. Specialises in trading psychology and cognitive biases in financial markets.',
     };
 
     this.addJsonLdSchema(data);
@@ -341,42 +341,50 @@ export class HomeEnBlogTwentyTwoComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'What is cryptocurrency arbitrage?',
+          name: 'What is DeFi in simple terms?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Cryptocurrency arbitrage is a strategy of profiting from price differences of the same asset across different exchanges. Traders buy crypto on a platform with lower prices and sell on an exchange with higher prices, earning profit minus fees.',
+            text: 'These are financial services like swapping, loans and interest income, running through smart contracts on a blockchain, without banks or middlemen. An ordinary crypto wallet gives access, and code sets the rules.',
           },
         },
         {
           '@type': 'Question',
-          name: 'What types of crypto arbitrage exist?',
+          name: 'What is the difference between CeFi and DeFi?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Main types include: cross-exchange arbitrage (buying and selling on different exchanges), triangular arbitrage (exchanging through three currencies on one exchange), cross-market arbitrage (spot and futures), and regional arbitrage.',
+            text: 'In CeFi a company holds your coins and runs the service, the way an exchange or a crypto bank does, so you can ask someone for help but you also trust them with your money. In DeFi no one holds your coins: code runs the service and you keep your own keys, which means more control and no one to call when something breaks.',
           },
         },
         {
           '@type': 'Question',
-          name: 'How much can you earn from arbitrage?',
+          name: 'What can you do in DeFi?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Typical profit is 0.5-3% per trade. With active trading and substantial capital, monthly returns can reach 5-15%.',
+            text: 'Swap tokens through decentralized exchanges, take loans against your tokens or lend funds for interest, and take part in liquidity pools and staking. Each option has its own risk.',
           },
         },
         {
           '@type': 'Question',
-          name: 'What risks are associated with crypto arbitrage?',
+          name: 'What is a DEX and how is it different from a normal exchange?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Main risks include: transaction delays, high fees, price volatility, account blocking by exchanges, platform technical failures and regulatory restrictions.',
+            text: 'A decentralized exchange lets you swap tokens straight from your wallet with no account and no company holding your funds. Instead of matching a buyer and a seller through an order book, most DEXs use an automated formula and a pool of coins to set the price.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Are bots necessary for arbitrage?',
+          name: 'What is the main risk in DeFi?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Bots significantly increase efficiency by automating opportunity detection and trade execution. However, beginners should first master manual arbitrage to understand the process mechanics.',
+            text: 'A smart contract vulnerability. The code is public, and where there is a bug it gets exploited and funds leave for good. Add fake protocols and personal responsibility for your keys: lose the key, lose the money.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What is impermanent loss in a pool?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: "It is a liquidity provider's risk: when the price of one of the pool's assets changes sharply, the pool mechanics redistribute your funds not in your favor. In the end simply holding the tokens could have been more profitable.",
           },
         },
       ],
@@ -392,38 +400,40 @@ export class HomeEnBlogTwentyTwoComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'How to Start Earning from Cryptocurrency Arbitrage',
-      description: 'Step-by-step guide to crypto arbitrage',
+      '@id': 'https://arapov.trade/en/freestudying/defi#howto',
+      name: 'How to understand and apply: DeFi',
+      description:
+        'A step-by-step read of the topic and its practical use in trading',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Register on exchanges',
-          text: 'Create accounts on several reliable exchanges and complete verification. Use at least 3-5 platforms.',
+          name: 'Understand what DeFi is in simple terms',
+          text: 'DeFi is decentralized finance, that is financial services like currency swaps, lending and earning interest, running directly through smart contracts on a blockchain, without banks or other middlemen.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Fund your accounts',
-          text: 'Distribute capital across exchanges. Keep funds in stablecoins (USDT, USDC) for quick response.',
+          name: 'Tell CeFi and DeFi apart by who holds your money',
+          text: 'The dividing line is custody: in CeFi a company holds your coins, in DeFi you hold your own keys and code runs the service.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Set up price monitoring',
-          text: 'Use price tracking tools (CoinGecko, CoinMarketCap) or specialized arbitrage scanners.',
+          name: 'Know the building blocks: DEXs, lending, stablecoins, oracles',
+          text: 'DeFi is not one app but a stack of pieces that snap together: exchanges, lending protocols, stablecoins, and the oracles that feed them prices.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Calculate fees',
-          text: 'Account for all costs: trading fees, deposits and withdrawals, network fees.',
+          name: 'Understand what you can do in DeFi: swaps, loans, pools',
+          text: 'There is plenty you can do in DeFi, and it is worth knowing the basics.',
         },
         {
           '@type': 'HowToStep',
           position: 5,
-          name: 'Execute the trade',
-          text: 'When finding a profitable opportunity, quickly buy on one exchange and sell on another.',
+          name: 'The risks of DeFi: smart contracts, hacks and responsibility',
+          text: 'The main risk of DeFi is a smart contract vulnerability.',
         },
       ],
     };
@@ -438,66 +448,19 @@ export class HomeEnBlogTwentyTwoComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Cryptocurrency Arbitrage Glossary',
+      name: 'Article glossary',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Arbitrage',
+          name: 'DeFi',
           description:
-            'Strategy of profiting from price differences of the same asset on different markets',
+            'DeFi is decentralized finance, that is financial services like currency swaps, lending and earning interest, running directly through smart contracts on a blockchain, without banks or other middlemen.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Cross-exchange arbitrage',
+          name: 'decentralized exchange (DEX)',
           description:
-            'Buying cryptocurrency on one exchange and selling on another with higher price',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Triangular arbitrage',
-          description:
-            'Sequential exchange of three currencies on one exchange to extract profit from rate discrepancies',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Spread',
-          description: 'Difference between buy and sell price of an asset',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Liquidity',
-          description:
-            'Ability to quickly buy or sell an asset without significantly affecting price',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Stablecoin',
-          description:
-            'Cryptocurrency with value pegged to a stable asset like USD',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'DEX',
-          description:
-            'Decentralized exchange without intermediaries or central control',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Arbitrage bot',
-          description:
-            'Software for automated detection and execution of arbitrage trades',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Slippage',
-          description:
-            'Difference between expected and actual order execution price',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'P2P arbitrage',
-          description:
-            'Arbitrage using peer-to-peer platforms for buying and selling cryptocurrency',
+            'A decentralized exchange is a protocol that lets users swap tokens directly from their own wallets without a company holding the funds, usually pricing trades with an automated formula and a pool of coins instead of an order book.',
         },
       ],
     };

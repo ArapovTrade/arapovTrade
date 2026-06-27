@@ -55,21 +55,17 @@ export class HomeEnBlogFiveComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Pricing and Liquidity in Financial Markets | Igor Arapov',
+      'XRP (Ripple) Trading: What Makes Analysis Different | Arapov.trade',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Pricing and liquidity in financial markets: price formation mechanisms, spread role, market makers, and protection from manipulation. Complete trader`s guide.',
+        'What XRP and the Ripple network are, how cross-border payments work, the impact of the SEC case and the risks for traders.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-03-26' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/pricingandliquidity.webp',
-    });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
 
     this.gerRandom();
   }
@@ -255,28 +251,36 @@ export class HomeEnBlogFiveComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          headline: 'Pricing and Liquidity in Financial Markets',
+          headline:
+            'XRP (Ripple) in Trading: What Makes Its Analysis Different',
           description:
-            'Complete guide to pricing and liquidity mechanisms: how prices form, spread role, market maker functions, and protection from manipulation.',
-          image:
-            'https://arapov.trade/assets/img/content/pricingandliquidity1.png',
-          datePublished: '2026-03-15T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
-          author: {
-            '@id': 'https://arapov.trade/en#person',
-          },
+            'What XRP and the Ripple network are, how cross-border payments work, the impact of the SEC case and the risks for traders.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'Arapov Trade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://arapov.trade/en/freestudying/pricingandliquidity',
+            '@id': 'https://arapov.trade/en/freestudying/xrp-ripple',
           },
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/XRP2.jpg',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Cryptocurrency',
+          keywords: 'xrp',
+          inLanguage: 'en',
         },
       ],
     };
@@ -291,19 +295,18 @@ export class HomeEnBlogFiveComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/en#person',
+      '@id': 'https://arapov.trade/#person',
       name: 'Igor Arapov',
       alternateName: [
         'Ігор Арапов',
-        'Арапов Игорь',
-        'I. Arapov',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-
-      url: 'https://arapov.trade/en',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -318,12 +321,12 @@ export class HomeEnBlogFiveComponent implements OnInit {
         'https://t.me/ArapovTrade',
       ],
       jobTitle: [
-        'Independent researcher,',
-        'trader',
-        'author and founder of arapov.trade',
+        'Independent researcher',
+        'Trader',
+        'Author and founder of arapov.trade',
       ],
       description:
-        'Independent researcher, practicing trader, author of books on trading and scientific publications. Specializes in trading psychology and cognitive biases in financial markets.',
+        'Independent researcher, practising trader, author of trading books and scientific publications. Specialises in trading psychology and cognitive biases in financial markets.',
     };
 
     this.addJsonLdSchema(data);
@@ -339,42 +342,34 @@ export class HomeEnBlogFiveComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'What is pricing in financial markets?',
+          name: 'What is XRP in simple terms?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Pricing is the process of determining asset value through buyer and seller interaction. Price is determined by supply and demand balance, macroeconomic factors, and market participant psychology.',
+            text: 'It is the cryptocurrency of the Ripple network, built for fast and cheap cross-border transfers. It works as a bridge currency between different currencies. All one hundred billion coins were issued at launch, XRP is not mined.',
           },
         },
         {
           '@type': 'Question',
-          name: 'What is liquidity and why does it matter?',
+          name: 'How does XRP differ from bitcoin?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: "Liquidity is the market's ability to absorb trading orders without significant price impact. High liquidity provides narrow spreads, minimal slippage, and fast trade execution.",
+            text: 'Bitcoin is independent digital money with a capped issuance and mining. XRP is tailored for bank transfers, is not mined, and a large share is owned by Ripple the company. Hence the complaints about its decentralization.',
           },
         },
         {
           '@type': 'Question',
-          name: 'What is spread and how does it affect trading?',
+          name: 'How did the SEC case against Ripple end?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Spread is the difference between buy (Ask) and sell (Bid) prices. Narrow spread reduces transaction costs, wide spread increases them. Spread reflects asset liquidity.',
+            text: 'In 2025 the case was closed. Both sides dropped their appeals and Ripple paid a reduced fine. It was settled that retail XRP sales on exchanges are not a security, and that removed the main regulatory risk in the US.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Who are market makers and what is their role?',
+          name: 'How do you analyze XRP for trading?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Market makers are professional participants who continuously post buy and sell quotes. They provide liquidity, narrow spreads, and stabilize prices.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'How to protect from liquidity manipulation?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Trade highly liquid instruments, place stop-losses away from obvious levels, analyze order books for anomalies, and critically evaluate news flow.',
+            text: 'By market structure and key levels, not by indicators. Round psychological marks and historical extremes work well. I do not trust crypto-exchange volume, so I re-check spikes by the price reaction and keep a small position because of the volatility.',
           },
         },
       ],
@@ -390,37 +385,28 @@ export class HomeEnBlogFiveComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'How to Assess Asset Liquidity for Trading',
+      '@id': 'https://arapov.trade/en/freestudying/xrp-ripple#howto',
+      name: 'How to understand and apply: XRP (Ripple) in trading and what makes its analysis different',
+      description:
+        'A step-by-step read of the topic and its practical use in trading',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Check trading volume',
-          text: 'Study average daily trading volume. High volumes indicate good liquidity.',
+          name: 'What XRP is and what Ripple is used for',
+          text: 'XRP is the cryptocurrency of the XRP Ledger blockchain, created by Ripple as a bridge currency for cross-border payments.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Evaluate spread',
-          text: 'Compare Bid and Ask price difference. Narrow spread signals high liquidity.',
+          name: 'Technical analysis of XRP: key levels',
+          text: 'I invent no special approach for XRP, I read it the same way as any asset.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Study market depth',
-          text: 'Analyze order book: large orders at multiple levels indicate sufficient depth.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 4,
-          name: 'Consider session timing',
-          text: 'Liquidity varies throughout the day. Peak activity occurs during major session overlaps.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 5,
-          name: 'Test execution',
-          text: 'Execute small trade to assess actual slippage and execution speed.',
+          name: 'XRP regulatory risk: how court cases moved the price',
+          text: 'This is what made XRP a special asset.',
         },
       ],
     };
@@ -435,61 +421,13 @@ export class HomeEnBlogFiveComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Pricing and Liquidity Glossary',
+      name: 'Article glossary',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Pricing',
+          name: 'XRP',
           description:
-            'Process of asset value formation through supply and demand interaction',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Liquidity',
-          description:
-            "Market's ability to absorb orders without significant price impact",
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Spread',
-          description: 'Difference between best buy and sell prices',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Market Maker',
-          description:
-            'Professional participant providing liquidity through continuous quoting',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Slippage',
-          description: 'Difference between expected and actual execution price',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Order Book',
-          description:
-            'Registry of active buy and sell orders with prices and volumes',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Spoofing',
-          description: 'Manipulative practice of placing fake orders',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Stop Hunting',
-          description: 'Targeted price movement toward stop-loss clusters',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Market Depth',
-          description: 'Order volume in order book at various price levels',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Volatility',
-          description: 'Degree of price variability over specific time period',
+            'XRP is the cryptocurrency of the XRP Ledger blockchain, created by Ripple as a bridge currency for cross-border payments.',
         },
       ],
     };

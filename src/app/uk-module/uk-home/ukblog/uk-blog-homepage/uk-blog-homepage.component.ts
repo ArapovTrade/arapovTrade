@@ -48,7 +48,7 @@ export class UkBlogHomepageComponent implements OnInit {
     private titleService: Title,
     private paginator: MatPaginatorIntl,
     private lang: LangService,
-    private eRef: ElementRef
+    private eRef: ElementRef,
   ) {
     this.renderer = rendererFactory.createRenderer(null, null);
   }
@@ -121,7 +121,7 @@ export class UkBlogHomepageComponent implements OnInit {
     this.paginator.itemsPerPageLabel = '';
     this.lang.setNumber(1);
     this.titleService.setTitle(
-      'Навчання трейдингу онлайн | Безкоштовні курси трейдерів від Ігоря Арапова'
+      'Навчання трейдингу онлайн | Безкоштовні курси трейдерів від Ігоря Арапова',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
@@ -151,13 +151,12 @@ export class UkBlogHomepageComponent implements OnInit {
 
   projects = [
     { title: 'Книги з трейдингу', link: 'https://arapov.trade/uk/books' },
-     
+
     { title: 'Професійні курси', link: 'https://arapov.trade/uk/studying' },
     {
       title: 'Базовий курс',
       link: 'https://arapov.trade/uk/freestudying/freeeducation',
     },
-     
   ];
 
   grr!: any;
@@ -307,7 +306,7 @@ export class UkBlogHomepageComponent implements OnInit {
     // Показываем 5 случайных статей при фокусе, если инпут пуст
     if (!this.searchQuery) {
       const shuffled = [...this.artickleServ.ukrArtickles].sort(
-        () => Math.random() - 0.5
+        () => Math.random() - 0.5,
       );
       this.displayedArticles = shuffled.slice(0, this.maxResults);
     }
@@ -322,7 +321,7 @@ export class UkBlogHomepageComponent implements OnInit {
   onSearchChange() {
     // Логика асинхронного поиска
     const filtered = this.artickleServ.ukrArtickles.filter((a) =>
-      a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase())
+      a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase()),
     );
     this.displayedArticles = filtered.slice(0, this.maxResults);
   }
@@ -339,108 +338,228 @@ export class UkBlogHomepageComponent implements OnInit {
     this.groupsMenuOpen = !this.groupsMenuOpen;
   }
 
+  // private removeExistingWebPageSchema(): void {
+  //   const scripts = this.document.querySelectorAll(
+  //     'script[type="application/ld+json"]'
+  //   );
+
+  //   scripts.forEach((script) => {
+  //     try {
+  //       const content = JSON.parse(script.textContent || '{}');
+  //       if (content['@type'] === 'CollectionPage') {
+  //         script.remove();
+  //       }
+  //     } catch (e) {
+  //       // Игнорируем некорректные JSON (например, из других источников)
+  //     }
+  //   });
+  // }
   private removeExistingWebPageSchema(): void {
     const scripts = this.document.querySelectorAll(
-      'script[type="application/ld+json"]'
+      'script[type="application/ld+json"]',
     );
-
     scripts.forEach((script) => {
       try {
         const content = JSON.parse(script.textContent || '{}');
-        if (content['@type'] === 'CollectionPage') {
+        const graph = content['@graph'] || [content];
+        if (graph.some((n: any) => n['@type'] === 'CollectionPage')) {
           script.remove();
         }
-      } catch (e) {
-        // Игнорируем некорректные JSON (например, из других источников)
-      }
+      } catch (e) {}
     });
   }
-
   private addWebSiteSchema() {
     const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]')
+      this.document.querySelectorAll('script[type="application/ld+json"]'),
     ).some((script) => {
       try {
         const json = JSON.parse(script.textContent || '{}');
-        return json['@type'] === 'CollectionPage' && json['name'] === 'Безкоштовне навчання трейдингу';
+        const graph = json['@graph'] || [json];
+        return graph.some(
+          (n: any) =>
+            n['@type'] === 'CollectionPage' &&
+            n['name'] === 'Безкоштовне навчання трейдингу',
+        );
       } catch {
         return false;
       }
     });
 
-    // Если уже существует — выходим
     if (exists) return;
 
-    // Создаем новый JSON-LD
     const script = this.document.createElement('script');
     script.type = 'application/ld+json';
     script.text = JSON.stringify({
       '@context': 'https://schema.org',
-      '@type': 'CollectionPage',
-      name: 'Безкоштовне навчання трейдингу',
-      description:
-        'Понад 150 безкоштовних статей з трейдингу: Smart Money Concepts, метод Вайкоффа, технічний аналіз, криптотрейдинг. Повний курс для початківців.',
-      url: 'https://arapov.trade/uk/freestudying',
-      isPartOf: {
-        '@id': 'https://arapov.trade/#website',
-      },
-      author: {
-        '@id': 'https://arapov.trade/uk#person',
-      },
-      about: [
+      '@graph': [
         {
-          '@type': 'Thing',
-          name: 'Trading Education',
+          '@type': 'CollectionPage',
+          '@id': 'https://arapov.trade/uk/freestudying#collection',
+          name: 'Безкоштовне навчання трейдингу',
+          description:
+            'Понад 150 безкоштовних статей з трейдингу: Smart Money Concepts, метод Вайкоффа, технічний аналіз, криптотрейдинг. Повний курс для початківців.',
+          url: 'https://arapov.trade/uk/freestudying',
+          inLanguage: 'uk',
+          isPartOf: { '@id': 'https://arapov.trade/#website' },
+          author: { '@id': 'https://arapov.trade/#person' },
+          publisher: { '@id': 'https://arapov.trade/#organization' },
+          about: [
+            { '@type': 'Thing', name: 'Trading Education' },
+            { '@type': 'Thing', name: 'Smart Money Concepts' },
+            { '@type': 'Thing', name: 'Technical Analysis' },
+          ],
+          mainEntity: {
+            '@type': 'ItemList',
+            name: 'Основні теми курсу трейдингу',
+            numberOfItems: 5,
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Smart Money Concepts',
+                url: 'https://arapov.trade/uk/freestudying/smart-money-guide',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Метод Вайкоффа',
+                url: 'https://arapov.trade/uk/freestudying/wyckoff-method',
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: 'Технічний аналіз',
+                url: 'https://arapov.trade/uk/freestudying/chart-reading',
+              },
+              {
+                '@type': 'ListItem',
+                position: 4,
+                name: 'Торгові індикатори',
+                url: 'https://arapov.trade/uk/freestudying/trading-indicators',
+              },
+              {
+                '@type': 'ListItem',
+                position: 5,
+                name: 'Криптотрейдинг',
+                url: 'https://arapov.trade/uk/freestudying/crypto-basics',
+              },
+            ],
+          },
         },
         {
-          '@type': 'Thing',
-          name: 'Smart Money Concepts',
+          '@type': 'Person',
+          '@id': 'https://arapov.trade/#person',
+          name: 'Ігор Арапов',
+          url: 'https://arapov.trade/uk',
+          sameAs: [
+            'https://www.wikidata.org/wiki/Q137454477',
+            'https://scholar.google.com/citations?user=N440tWQAAAAJ',
+            'https://orcid.org/0009-0003-0430-778X',
+            'https://isni.org/isni/0000000529518564',
+            'https://www.amazon.com/stores/author/B0GBRFY457',
+            'https://github.com/ArapovTrade',
+            'https://ua.linkedin.com/in/arapovtrade',
+            'https://www.youtube.com/@ArapovTrade',
+            'https://t.me/ArapovTrade',
+          ],
         },
         {
-          '@type': 'Thing',
-          name: 'Technical Analysis',
+          '@type': 'Organization',
+          '@id': 'https://arapov.trade/#organization',
+          name: 'Arapov.Trade',
+          url: 'https://arapov.trade',
         },
       ],
-      mainEntity: {
-        '@type': 'ItemList',
-        name: 'Основні теми курсу трейдингу',
-        numberOfItems: 150,
-        itemListOrder: 'ItemListOrderDescending',
-        itemListElement: [
-          {
-            '@type': 'ListItem',
-            position: 1,
-            name: 'Smart Money Concepts',
-            url: 'https://arapov.trade/uk/freestudying/smartmoneyconceptsguide',
-          },
-          {
-            '@type': 'ListItem',
-            position: 2,
-            name: 'Метод Вайкоффа',
-            url: 'https://arapov.trade/uk/freestudying/wyckoffmethod',
-          },
-          {
-            '@type': 'ListItem',
-            position: 3,
-            name: 'Технічний аналіз',
-            url: 'https://arapov.trade/uk/freestudying/technicalanalysis',
-          },
-          {
-            '@type': 'ListItem',
-            position: 4,
-            name: 'Торгові індикатори',
-            url: 'https://arapov.trade/uk/freestudying/tradingindicators',
-          },
-          {
-            '@type': 'ListItem',
-            position: 5,
-            name: 'Криптотрейдинг',
-            url: 'https://arapov.trade/uk/freestudying/cryptocurrencytrading',
-          },
-        ],
-      },
     });
 
     this.document.head.appendChild(script);
   }
+
+  // private addWebSiteSchema() {
+  //   const exists = Array.from(
+  //     this.document.querySelectorAll('script[type="application/ld+json"]')
+  //   ).some((script) => {
+  //     try {
+  //       const json = JSON.parse(script.textContent || '{}');
+  //       return json['@type'] === 'CollectionPage' && json['name'] === 'Безкоштовне навчання трейдингу';
+  //     } catch {
+  //       return false;
+  //     }
+  //   });
+
+  //   // Если уже существует — выходим
+  //   if (exists) return;
+
+  //   // Создаем новый JSON-LD
+  //   const script = this.document.createElement('script');
+  //   script.type = 'application/ld+json';
+  //   script.text = JSON.stringify({
+  //     '@context': 'https://schema.org',
+  //     '@type': 'CollectionPage',
+  //     name: 'Безкоштовне навчання трейдингу',
+  //     description:
+  //       'Понад 150 безкоштовних статей з трейдингу: Smart Money Concepts, метод Вайкоффа, технічний аналіз, криптотрейдинг. Повний курс для початківців.',
+  //     url: 'https://arapov.trade/uk/freestudying',
+  //     isPartOf: {
+  //       '@id': 'https://arapov.trade/#website',
+  //     },
+  //     author: {
+  //       '@id': 'https://arapov.trade/uk#person',
+  //     },
+  //     about: [
+  //       {
+  //         '@type': 'Thing',
+  //         name: 'Trading Education',
+  //       },
+  //       {
+  //         '@type': 'Thing',
+  //         name: 'Smart Money Concepts',
+  //       },
+  //       {
+  //         '@type': 'Thing',
+  //         name: 'Technical Analysis',
+  //       },
+  //     ],
+  //     mainEntity: {
+  //       '@type': 'ItemList',
+  //       name: 'Основні теми курсу трейдингу',
+  //       numberOfItems: 150,
+  //       itemListOrder: 'ItemListOrderDescending',
+  //       itemListElement: [
+  //         {
+  //           '@type': 'ListItem',
+  //           position: 1,
+  //           name: 'Smart Money Concepts',
+  //           url: 'https://arapov.trade/uk/freestudying/smartmoneyconceptsguide',
+  //         },
+  //         {
+  //           '@type': 'ListItem',
+  //           position: 2,
+  //           name: 'Метод Вайкоффа',
+  //           url: 'https://arapov.trade/uk/freestudying/wyckoffmethod',
+  //         },
+  //         {
+  //           '@type': 'ListItem',
+  //           position: 3,
+  //           name: 'Технічний аналіз',
+  //           url: 'https://arapov.trade/uk/freestudying/technicalanalysis',
+  //         },
+  //         {
+  //           '@type': 'ListItem',
+  //           position: 4,
+  //           name: 'Торгові індикатори',
+  //           url: 'https://arapov.trade/uk/freestudying/tradingindicators',
+  //         },
+  //         {
+  //           '@type': 'ListItem',
+  //           position: 5,
+  //           name: 'Криптотрейдинг',
+  //           url: 'https://arapov.trade/uk/freestudying/cryptocurrencytrading',
+  //         },
+  //       ],
+  //     },
+  //   });
+
+  //   this.document.head.appendChild(script);
+  // }
 }

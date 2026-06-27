@@ -28,7 +28,7 @@ export class HomeUkBlogFiftyNineComponent implements OnInit {
     private themeService: ThemeservService,
     private artickleServ: ArticlesService,
     private renderer: Renderer2,
-    @Inject(DOCUMENT) private document: Document
+    @Inject(DOCUMENT) private document: Document,
   ) {}
   private routerSubscription!: Subscription;
   private themeSubscription!: Subscription;
@@ -56,19 +56,17 @@ export class HomeUkBlogFiftyNineComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Як торгувати пробій рівня в трейдингу | Стратегія пробою'
+      'Нейромережі та ШІ в трейдингу: що вміють | Arapov.trade',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Детальний посібник з торгівлі на пробій рівнів підтримки та опору. Дізнайтеся, як визначати справжні пробої, використовувати ретести та пін-бари для входу в угоди.',
+        'Що нейромережі реально вміють на ринку, а що їм не до снаги, чому ШІ не передбачає майбутнє і як використати його як інструмент, а не оракула.',
     });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-04-18' });this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/levelbreakoutstrategy.webp',
-    });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
+
     this.gerRandom();
   }
   randomArticleRus: any = [];
@@ -85,7 +83,6 @@ export class HomeUkBlogFiftyNineComponent implements OnInit {
       title: 'Базовий курс',
       link: 'https://arapov.trade/uk/freestudying/freeeducation',
     },
-     
   ];
 
   onGroupChange(event: Event) {
@@ -155,7 +152,7 @@ export class HomeUkBlogFiftyNineComponent implements OnInit {
     // Показываем 5 случайных статей при фокусе, если инпут пуст
     if (!this.searchQuery) {
       const shuffled = [...this.artickleServ.ukrArtickles].sort(
-        () => Math.random() - 0.5
+        () => Math.random() - 0.5,
       );
       this.displayedArticles = shuffled.slice(0, this.maxResults);
     }
@@ -170,7 +167,7 @@ export class HomeUkBlogFiftyNineComponent implements OnInit {
   onSearchChange() {
     // Логика асинхронного поиска
     const filtered = this.artickleServ.ukrArtickles.filter((a) =>
-      a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase())
+      a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase()),
     );
     this.displayedArticles = filtered.slice(0, this.maxResults);
   }
@@ -192,7 +189,7 @@ export class HomeUkBlogFiftyNineComponent implements OnInit {
     const path: string =
       this.router.url.split('/')[this.router.url.split('/').length - 1];
     let index = this.artickleServ.ukrArtickles.findIndex(
-      (a) => a.linkUkr == path
+      (a) => a.linkUkr == path,
     );
 
     if (this.artickleServ.ukrArtickles.length - 1 == index) {
@@ -209,7 +206,7 @@ export class HomeUkBlogFiftyNineComponent implements OnInit {
     const path: string =
       this.router.url.split('/')[this.router.url.split('/').length - 1];
     let index = this.artickleServ.ukrArtickles.findIndex(
-      (a) => a.linkUkr == path
+      (a) => a.linkUkr == path,
     );
 
     if (index == 1) {
@@ -234,7 +231,7 @@ export class HomeUkBlogFiftyNineComponent implements OnInit {
     ];
 
     const scripts = this.document.querySelectorAll(
-      'script[type="application/ld+json"]'
+      'script[type="application/ld+json"]',
     );
 
     scripts.forEach((script) => {
@@ -247,7 +244,7 @@ export class HomeUkBlogFiftyNineComponent implements OnInit {
 
         const shouldRemove = candidates.some(
           (entry: any) =>
-            entry['@type'] && typesToRemove.includes(entry['@type'])
+            entry['@type'] && typesToRemove.includes(entry['@type']),
         );
 
         if (shouldRemove) {
@@ -275,39 +272,37 @@ export class HomeUkBlogFiftyNineComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          headline: 'Як торгувати пробій рівня в трейдингу — повний посібник',
+          headline:
+            'ШІ в трейдингу і прогноз ціни: що нейромережі вміють і де їхня межа',
           description:
-            'Детальний посібник з торгівлі на пробій рівнів підтримки та опору. Дізнайтеся, як визначати справжні пробої, використовувати ретести та пін-бари для входу в угоди.',
-          author: {
-            '@id': 'https://arapov.trade/uk#person',
-          },
-          image: [
-            'https://arapov.trade/assets/img/content/levelbreakoutstrategy.webp',
-          ],
+            'Що нейромережі реально вміють на ринку, а що їм не до снаги, чому ШІ не передбачає майбутнє і як використати його як інструмент, а не оракула.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'Arapov Trade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
-          datePublished: '2025-04-15T00:00:00Z',
-         dateModified: '2026-04-15T00:00:00Z',
-
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://arapov.trade/uk/freestudying/levelbreakoutstrategy',
+            '@id': 'https://arapov.trade/uk/freestudying/ai-in-trading',
           },
-          articleSection: 'Трейдинг',
-          keywords: [
-            'пробій рівня',
-            'торгівля на пробій',
-            'рівні підтримки',
-            'рівні опору',
-            'ретест',
-            'пін-бар',
-          ],
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/ai-trading.jpeg',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'ШІ в трейдингу',
+          keywords:
+            'ШІ в трейдингу, прогноз ціни, нейромережа, машинне навчання, перенавчання, математичне сподівання, ймовірність, Вайкофф',
+          inLanguage: 'uk',
         },
       ],
     };
@@ -322,18 +317,18 @@ export class HomeUkBlogFiftyNineComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/uk#person',
-      name: 'Ігор Арапов',
+      '@id': 'https://arapov.trade/#person',
+      name: 'Igor Arapov',
       alternateName: [
-        'Igor Arapov',
-              'Арапов Игорь',
-              'I. Arapov',
-              'Игорь Арапов',
-              'І. В. Арапов',
-              'Арапов Ігор',
-              'Arapov Igor',
+        'Ігор Арапов',
+        'Игорь Арапов',
+        'Арапов Игорь',
+        'Арапов Ігор',
+        'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/uk',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -345,9 +340,13 @@ export class HomeUkBlogFiftyNineComponent implements OnInit {
         'https://github.com/ArapovTrade',
         'https://ua.linkedin.com/in/arapovtrade',
         'https://www.youtube.com/@ArapovTrade',
-        'https://t.me/ArapovTrade'
+        'https://t.me/ArapovTrade',
       ],
-       jobTitle: ['Незалежний дослідник', 'трейдер', 'автор і засновник arapov.trade'],
+      jobTitle: [
+        'Незалежний дослідник',
+        'трейдер',
+        'автор і засновник arapov.trade',
+      ],
       description:
         'Незалежний дослідник, практикуючий трейдер, автор книг з трейдингу та наукових публікацій. Спеціалізується на психології трейдингу та когнітивних упередженнях на фінансових ринках.',
     };
@@ -365,42 +364,42 @@ export class HomeUkBlogFiftyNineComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'Що таке пробій рівня у трейдингу?',
+          name: 'Чи може нейромережа передбачити ціну акції чи біткоїна?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Пробій рівня — це ситуація, коли ціна активу долає важливий рівень підтримки або опору та продовжує рух у напрямку пробою. Це технічний сигнал про зміну балансу сил між покупцями та продавцями.',
+            text: 'Надійно ні, і це стосується і нейромережі, і людини. ШІ непогано ловить закономірності в минулих даних і видає ймовірні сценарії, але з подовженням горизонту точність падає, і вже на дистанції в місяць-три опускається нижче половини, тобто до випадкового вгадування. Ціна змінюється тоді, коли змінюються очікування натовпу та дії великого капіталу, а не за розкладом, який можна обчислити наперед.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Як відрізнити справжній пробій від хибного?',
+          name: 'Що таке ШІ в трейдингу простими словами?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Справжній пробій супроводжується високим обсягом торгів, стійким рухом ціни за рівень та успішним ретестом пробитого рівня. Хибний пробій характеризується швидким поверненням ціни назад при низькому обсязі.',
+            text: 'Це використання нейромереж і машинного навчання, щоб розбирати ринок: перемелювати дані, знаходити закономірності та збирати ймовірні сценарії. На практиці це найчастіше чат-сервіси й аналітичні моделі, чия задача — допомогти вам думати, а не натискати кнопки за вас. Ні угод, ні управління рахунком такі сервіси зазвичай на себе не беруть.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Що таке ретест рівня і навіщо його чекати?',
+          name: 'Що нейромережа реально вміє в трейдингу?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Ретест — це повернення ціни до пробитого рівня для його перевірки. Після ретесту колишній опір стає підтримкою і навпаки. Очікування ретесту знижує ризик входу на хибному пробої.',
+            text: 'Найсильніша вона не в передбаченні ринку, а в роботі з вашою ж історією. Дайте їй журнал угод, і за хвилину отримаєте картину, де й коли ви зливаєте частіше і в які моменти руйнується дисципліна. Заодно вона відсіє неліквід, прожене логіку стратегії й тицьне в її слабкі місця. Але все це відображення вашого минулого, а не погляд у майбутнє, і прибутку вона не обіцяє.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Яку роль відіграє пін-бар у торгівлі на пробій?',
+          name: 'Чи замінить ШІ трейдера та його метод?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Пін-бар на ретесті пробитого рівня підтверджує силу пробою та показує відхилення ціни однією зі сторін ринку. Довга тінь пін-бара вказує на невдалу спробу розвернути рух.',
+            text: 'Ні. Знання нейромережі взяті з минулого, а ринок без кінця перекроюють свіжі учасники, новини й настрій натовпу, тож модель застаріває, а вигадлива ще й липне до історії через перенавчання. Її місце помічника поверх вашої системи, але не на її місці. Куди входити, де ставити стоп і яким ризиком оперувати, визначає метод і дисципліна, а не виданий моделлю відповідь.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Яке співвідношення ризику до прибутку оптимальне при торгівлі на пробій?',
+          name: 'Як заробляти, якщо ціну не можна передбачити?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Рекомендується обирати угоди зі співвідношенням ризику до прибутку не менше 1:2, а в ідеалі 1:3 або вище. Це забезпечує стабільний прибуток навіть при 40-50% успішних угод.',
+            text: 'Через позитивне математичне сподівання, а не через вгадування кожної угоди. За співвідношення ризику до прибутку 1:3 система тримається в плюсі навіть за сорока відсотків прибуткових угод. Близько третини угод неминуче збиткові, а мінуси йдуть серіями, тому ризик на угоду тримають крихітним, у районі одного-двох відсотків, і завжди зі стопом.',
           },
         },
       ],
@@ -416,39 +415,40 @@ export class HomeUkBlogFiftyNineComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'Як торгувати пробій рівня',
+      '@id': 'https://arapov.trade/uk/freestudying/ai-in-trading#howto',
+      name: 'Як розуміти ШІ в трейдингу',
       description:
-        'Покрокова інструкція з торгівлі на пробій рівнів підтримки та опору',
+        'Покроковий розбір того, що таке ШІ в трейдингу, чому точного прогнозу ціни немає і як заробляти на ймовірності та математичному сподіванні',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Визначення рівнів',
-          text: 'Знайдіть ключові рівні підтримки та опору на старших таймфреймах. Аналізуйте історичні дані та звертайте увагу на зони з багаторазовими дотиками ціни.',
+          name: 'Зрозумійте, що таке ШІ в трейдингу',
+          text: 'ШІ в трейдингу це аналітик у форматі діалогу, який перебирає дані й видає ймовірні сценарії, але угоду не виконує й рахунком не керує.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Очікування пробою',
-          text: 'Дочекайтеся чіткого пробою рівня з високим обсягом торгів. Переконайтеся, що свічка закрилася за рівнем — це підтверджує силу руху.',
+          name: 'Усвідомте, що точного прогнозу ціни немає',
+          text: 'Ні ШІ, ні людина не передбачать точну ціну; на дистанції в місяць-три точність моделі падає до випадкової, бо ціну рухають очікування натовпу та великий капітал.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Ретест рівня',
-          text: 'Після пробою дочекайтеся повернення ціни до пробитого рівня. Успішний ретест підтверджує зміну ролі рівня.',
+          name: 'Використовуйте ШІ як дзеркало своєї торгівлі',
+          text: 'Завантажте журнал угод, і ШІ покаже, коли й на чому ви втрачаєте частіше; це дзеркало минулого, а не прогноз, і перенавчання робить модель тим гіршою в сьогоденні, чим точніше її підігнано під історію.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Пошук підтверджуючого сигналу',
-          text: 'Шукайте свічкові патерни на ретесті: пін-бар, поглинання або молот. Ці формації показують відхилення ціни та підтверджують продовження руху.',
+          name: 'Тримайте ШІ асистентом поверх системи',
+          text: 'Вхід, стоп і ризик один-два відсотки вирішує твій метод по обсягу й рівнях, а не підказка моделі; дисципліну ШІ за тебе не витримає.',
         },
         {
           '@type': 'HowToStep',
           position: 5,
-          name: 'Вхід в угоду з управлінням ризиками',
-          text: 'Входьте в позицію після підтвердження сигналу. Встановіть стоп-лосс за межами патерну та тейк-профіт на наступному значущому рівні зі співвідношенням ризику до прибутку не менше 1:2.',
+          name: 'Заробляйте на ймовірності та математичному сподіванні',
+          text: 'Читай обсяг і великий капітал за Вайкоффом: за 1:3 система в плюсі навіть на сорока відсотках перемог, мінуси йдуть серіями, тому ризик на угоду крихітний і завжди зі стопом.',
         },
       ],
     };
@@ -463,68 +463,19 @@ export class HomeUkBlogFiftyNineComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Термінологія торгівлі на пробій',
-      description: 'Основні терміни стратегії пробою рівнів',
+      name: 'Глосарій термінів статті',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Пробій рівня',
+          name: 'ШІ в трейдингу',
           description:
-            'Подолання ціною значущого рівня підтримки або опору з продовженням руху в напрямку пробою',
+            'Застосування нейромереж і машинного навчання для аналізу ринку: обробки даних, пошуку закономірностей і підготовки ймовірних сценаріїв; на практиці зазвичай чат-сервіси й аналітичні моделі, що допомагають трейдеру думати, а не торгують за нього.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Ретест',
+          name: 'Перенавчання',
           description:
-            'Повернення ціни до пробитого рівня для його перевірки, після чого рівень змінює свою роль',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Пін-бар',
-          description:
-            'Свічковий патерн з довгою тінню та маленьким тілом, що вказує на відхилення ціни',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Хибний пробій',
-          description:
-            'Ситуація, коли ціна перетинає рівень, але швидко повертається назад без продовження руху',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Рівень підтримки',
-          description:
-            'Цінова зона, де покупці активно входять у ринок, зупиняючи падіння ціни',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Рівень опору',
-          description:
-            'Цінова зона, де продавці починають домінувати, зупиняючи зростання ціни',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Імпульс',
-          description:
-            'Різке прискорення цінового руху після пробою, спричинене активацією ордерів',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Обсяг торгів',
-          description:
-            'Кількість угод за певний період, що підтверджує силу або слабкість цінового руху',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Співвідношення ризику до прибутку',
-          description:
-            'Відношення потенційного збитку до потенційного прибутку в угоді',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Трейлінг-стоп',
-          description:
-            'Динамічний стоп-лосс, що переміщується слідом за ціною для фіксації прибутку',
+            'Коли модель тим точніше переказує минуле, чим безпорадніше відгукується на сьогодення, тож вилизана під історію система впадає в ступор, щойно ринок змінив поведінку.',
         },
       ],
     };

@@ -276,7 +276,6 @@ export class HomeRuBlogOnehundredSevenComponent implements OnInit {
         {
           '@type': 'Article',
           url: 'https://arapov.trade/ru/freestudying/tradingview-record',
-
           headline:
             "242 идеи, 5 лет публичного анализа и несколько Editor's Pick: полный трек-рекорд Игоря Арапова на TradingView",
           description:
@@ -284,13 +283,16 @@ export class HomeRuBlogOnehundredSevenComponent implements OnInit {
           inLanguage: 'ru',
           datePublished: '2026-02-21T00:00:00Z',
           dateModified: '2026-02-21T00:00:00Z',
+          image: [
+            'https://arapov.trade/assets/img/content/tradingview-record.png',
+          ],
           mainEntity: {
-            '@type': 'EducationalOrganization',
-            '@id': 'https://arapov.trade/#organization',
+            '@type': 'Person',
+            '@id': 'https://arapov.trade/#person',
           },
           author: {
             '@type': 'Person',
-            '@id': 'https://arapov.trade/ru#person',
+            '@id': 'https://arapov.trade/#person',
           },
           about: [
             { '@type': 'Thing', name: 'Трейдинг' },
@@ -298,10 +300,6 @@ export class HomeRuBlogOnehundredSevenComponent implements OnInit {
             { '@type': 'Thing', name: 'Bitcoin' },
             { '@type': 'Thing', name: 'Метод Вайкоффа' },
             { '@type': 'Thing', name: 'Объёмный анализ' },
-          ],
-          image: [
-            'https://arapov.trade/assets/img/content/tradingview-record.png',
-             
           ],
           mentions: [
             {
@@ -334,16 +332,16 @@ export class HomeRuBlogOnehundredSevenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/ru#person',
-       name: 'Игорь Арапов',
+      '@id': 'https://arapov.trade/#person',
+      name: 'Игорь Арапов',
       alternateName: [
         'Igor Arapov',
-              'Арапов Игорь',
-              'I. Arapov',
-              'Ігор Арапов',
-              'І. В. Арапов',
-              'Арапов Ігор',
-              'Arapov Igor',
+        'Арапов Игорь',
+        'I. Arapov',
+        'Ігор Арапов',
+        'І. В. Арапов',
+        'Арапов Ігор',
+        'Arapov Igor',
       ],
       url: 'https://arapov.trade/ru',
       image:
@@ -357,9 +355,9 @@ export class HomeRuBlogOnehundredSevenComponent implements OnInit {
         'https://github.com/ArapovTrade',
         'https://ua.linkedin.com/in/arapovtrade',
         'https://www.youtube.com/@ArapovTrade',
-        'https://t.me/ArapovTrade'
+        'https://t.me/ArapovTrade',
       ],
-      jobTitle: ['Независимый исследователь', 'трейдер', 'автор и основатель arapov.trade'],
+      jobTitle: ['Независимый исследователь', 'Трейдер'],
       description:
         'Независимый исследователь, практикующий трейдер, автор книг по трейдингу и научных публикаций. Специализируется на психологии трейдинга и когнитивных искажениях на финансовых рынках.',
     };

@@ -54,15 +54,15 @@ export class HomeEnBlogSeventeenComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Trading Myths: Debunking Popular Misconceptions | ArapovTrade',
+      'Memecoins: What They Are and Why It’s a Casino | Arapov.trade',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Examining major trading myths: from the illusion of quick riches to misconceptions about requiring large capital. Discover the truth about financial market trading.',
+        'What memecoins are, what holds their price up, why it is pure speculation on hype and how not to be left holding a worthless token.',
     });
     this.gerRandom();
   }
@@ -248,31 +248,35 @@ export class HomeEnBlogSeventeenComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          '@id': 'https://arapov.trade/en/freestudying/tradingmyths#article',
-          headline: 'Trading Myths: Debunking Popular Misconceptions',
+          headline:
+            "Memecoins: What They Are and Why It's a Casino, Not an Investment",
           description:
-            'Examining major trading myths: from the illusion of quick riches to misconceptions about requiring large capital. Discover the truth about financial market trading.',
-          image: 'https://arapov.trade/assets/img/content/tradingmyths1.webp',
-          datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
-          author: {
-            '@id': 'https://arapov.trade/en#person',
-          },
+            'What memecoins are, what holds their price up, why it is pure speculation on hype and how not to be left holding a worthless token.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
             '@id': 'https://arapov.trade/#organization',
-            name: 'ArapovTrade',
+            name: 'Arapov.Trade',
             url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://arapov.trade/en/freestudying/tradingmyths',
+            '@id': 'https://arapov.trade/en/freestudying/memecoins',
           },
-          articleSection: 'Trading Education',
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/memecoins.jpeg',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Cryptocurrency',
+          keywords: 'memecoin, cryptocurrency',
           inLanguage: 'en',
         },
       ],
@@ -288,18 +292,18 @@ export class HomeEnBlogSeventeenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/en#person',
+      '@id': 'https://arapov.trade/#person',
       name: 'Igor Arapov',
       alternateName: [
         'Ігор Арапов',
-        'Арапов Игорь',
-        'I. Arapov',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/en',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -314,12 +318,12 @@ export class HomeEnBlogSeventeenComponent implements OnInit {
         'https://t.me/ArapovTrade',
       ],
       jobTitle: [
-        'Independent researcher,',
-        'trader',
-        'author and founder of arapov.trade',
+        'Independent researcher',
+        'Trader',
+        'Author and founder of arapov.trade',
       ],
       description:
-        'Independent researcher, practicing trader, author of books on trading and scientific publications. Specializes in trading psychology and cognitive biases in financial markets.',
+        'Independent researcher, practising trader, author of trading books and scientific publications. Specialises in trading psychology and cognitive biases in financial markets.',
     };
 
     this.addJsonLdSchema(data);
@@ -332,46 +336,53 @@ export class HomeEnBlogSeventeenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
-      '@id': 'https://arapov.trade/en/freestudying/tradingmyths#faq',
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'Can you get rich quickly through trading?',
+          name: 'What is a memecoin in simple terms?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'No, trading requires months of learning and practice. Most beginners lose capital in the first year due to unrealistic expectations. Success comes through gradual development of analysis and risk management skills.',
+            text: 'It is a cryptocurrency with no real product or value, whose price is held up only by hype, memes and a community. At bottom a joke coin, worth only as much as the number of people who currently believe in it.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Do you need large capital to start trading?',
+          name: 'Can you earn on memecoins?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'No, modern brokers allow starting with minimal amounts. Demo accounts provide practice opportunities without investment. Capital size affects absolute profit but not percentage strategy returns.',
+            text: "You can, but it is a bet in a casino, not an investment. A few win, most often the coin's creators, while the majority of late participants lose. The price rests on the crowd's emotion and collapses easily.",
           },
         },
         {
           '@type': 'Question',
-          name: 'Why do professional traders also suffer losses?',
+          name: 'Why are memecoins so volatile?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Losing trades are an integral part of any trading system. Even strategies with mathematical advantage allow for a percentage of failures. Professionals manage profit-to-loss ratios through proper risk management.',
+            text: 'Because there is nothing real to value, so the price is just a live measure of attention. Most carry a huge or uncapped supply with no scarcity, and a single celebrity post can double or halve a coin in an hour. Daily swings of fifty to ninety percent are normal here, not a glitch.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Is trading gambling?',
+          name: 'Do memecoins have any real use or value?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'No, unlike casinos, skilled traders create statistical advantage through analysis and risk management. Financial markets allow forming positive mathematical expectancy with a disciplined approach.',
+            text: 'As a rule, no. Unlike Bitcoin or Ethereum, a memecoin has no product, technology or earnings behind it; its value comes only from community attention and viral hype. The moment that attention fades the price usually collapses, which is why the vast majority end up near zero.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Do you need to constantly monitor the market?',
+          name: 'What are a rug pull and a pump-and-dump?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'No, swing and position strategies require chart analysis only several times daily or weekly. Automatic orders protect positions without trader involvement. Excessive screen time often harms results.',
+            text: "A rug pull is when a coin's creators suddenly withdraw all the liquidity and vanish, crashing the price to zero. A pump-and-dump is an artificial run-up of the price followed by a dump at the peak. Both schemes leave beginners with losses.",
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Does technical analysis work on memecoins?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Poorly. In a low-liquidity memecoin the price is moved by manipulation, not the market, so the volume is distorted and there is nothing to read in it. Where a couple of whales and an emotional crowd rule, any analysis turns into guesswork.',
           },
         },
       ],
@@ -387,40 +398,34 @@ export class HomeEnBlogSeventeenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      '@id': 'https://arapov.trade/en/freestudying/tradingmyths#howto',
-      name: 'How to Avoid Common Trading Misconceptions',
+      '@id': 'https://arapov.trade/en/freestudying/memecoins#howto',
+      name: 'How to understand and apply: the memecoin',
       description:
-        'Step-by-step guide to developing realistic understanding of financial market trading',
+        'A step-by-step read of the topic and its practical use in trading',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Form realistic expectations',
-          text: 'Abandon the idea of quick riches. Trading requires months of learning and practice. Plan for gradual skill development.',
+          name: 'Understand what a memecoin is in simple terms',
+          text: 'A memecoin is a cryptocurrency with no real product, technology or usefulness, whose value rests solely on internet hype, memes and the enthusiasm of a community.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Start with a demo account',
-          text: 'Practice without risking real money. Master basic operations and test your strategy.',
+          name: 'See why memecoins are a casino: hype, liquidity and manipulation',
+          text: 'What makes memecoins a casino is their very nature.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Learn analysis fundamentals',
-          text: 'Master technical and fundamental analysis. Focus on simple strategies based on support and resistance levels.',
+          name: 'See why memecoins moon and collapse: supply, celebrities and attention',
+          text: 'Most memecoins carry a huge or uncapped supply, so there is no scarcity, and the price is just a live measure of attention.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Implement risk management',
-          text: 'Limit risk per trade to a predetermined percentage of capital. Use stop-losses to protect positions.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 5,
-          name: 'Keep a trading journal',
-          text: 'Record all trades and analyze results. Learn from mistakes and improve your strategy based on real data.',
+          name: 'Learn how to treat memecoins soberly',
+          text: 'I do not count memecoins as trading and do not trade them myself, and the reason is my method.',
         },
       ],
     };
@@ -435,68 +440,25 @@ export class HomeEnBlogSeventeenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      '@id': 'https://arapov.trade/en/freestudying/tradingmyths#glossary',
-      name: 'Trading Terms Glossary',
+      name: 'Article glossary',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Trading',
+          name: 'launchpad',
           description:
-            'Buying and selling financial instruments to profit from price changes',
+            'A platform for instantly issuing tokens without coding, where any user creates their own memecoin for a small sum, with the launch price set by a bonding curve.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Risk Management',
+          name: 'bonding curve',
           description:
-            'System for controlling risks that defines acceptable losses per trade and overall position sizes',
+            'A pricing rule on a launchpad where each new purchase raises the price of the next, so the earliest buyers sit at the cheap base of the curve and later buyers pay progressively more.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Stop-Loss',
+          name: 'Memecoin',
           description:
-            'Automatic order to close a position when a specified loss level is reached',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Technical Analysis',
-          description:
-            'Method of predicting prices based on studying charts, patterns, and indicators',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Fundamental Analysis',
-          description:
-            'Asset valuation based on economic, financial, and other qualitative factors',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Demo Account',
-          description:
-            'Practice trading account with virtual money for risk-free learning',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Volatility',
-          description:
-            'Degree of price variability of an asset over a specific time period',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Mathematical Expectancy',
-          description:
-            'Average profit or loss per trade when a trading strategy is applied repeatedly',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Support and Resistance Levels',
-          description:
-            'Price zones where historically increased buyer or seller activity was observed',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Drawdown',
-          description:
-            'Decline in trading capital from a local maximum to a local minimum',
+            'A memecoin is a cryptocurrency with no real product, technology or usefulness, whose value rests solely on internet hype, memes and the enthusiasm of a community.',
         },
       ],
     };

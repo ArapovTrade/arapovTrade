@@ -28,7 +28,7 @@ export class HomeUkBlogTwentyTwoComponent implements OnInit {
     private themeService: ThemeservService,
     private artickleServ: ArticlesService,
     private renderer: Renderer2,
-    @Inject(DOCUMENT) private document: Document
+    @Inject(DOCUMENT) private document: Document,
   ) {}
   private routerSubscription!: Subscription;
   private themeSubscription!: Subscription;
@@ -56,23 +56,19 @@ export class HomeUkBlogTwentyTwoComponent implements OnInit {
     this.grr = this.artickleServ.selectedGroups;
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
-    this.titleService.setTitle(
-      'Арбітраж криптовалют: що це і як заробити | Arapov.trade'
-    );
+    this.titleService.setTitle('DeFi: децентралізовані фінанси | Arapov.trade');
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
 
     this.meta.updateTag({
       name: 'description',
       content:
-        'Арбітраж криптовалют: повне керівництво по заробітку на різниці цін між біржами. Види арбітражу, стратегії, ризики та практичні приклади.',
+        'Що таке DeFi, як працюють обмін, кредити й стейкінг без банків на смартконтрактах і які ризики — від дір у коді до втрати коштів — тут реальні.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-21' });this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/cryptoarbitrage.webp',
-    });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
+
     this.gerRandom();
   }
   randomArticleRus: any = [];
@@ -89,7 +85,6 @@ export class HomeUkBlogTwentyTwoComponent implements OnInit {
       title: 'Базовий курс',
       link: 'https://arapov.trade/uk/freestudying/freeeducation',
     },
-     
   ];
 
   onGroupChange(event: Event) {
@@ -159,7 +154,7 @@ export class HomeUkBlogTwentyTwoComponent implements OnInit {
     // Показываем 5 случайных статей при фокусе, если инпут пуст
     if (!this.searchQuery) {
       const shuffled = [...this.artickleServ.ukrArtickles].sort(
-        () => Math.random() - 0.5
+        () => Math.random() - 0.5,
       );
       this.displayedArticles = shuffled.slice(0, this.maxResults);
     }
@@ -174,7 +169,7 @@ export class HomeUkBlogTwentyTwoComponent implements OnInit {
   onSearchChange() {
     // Логика асинхронного поиска
     const filtered = this.artickleServ.ukrArtickles.filter((a) =>
-      a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase())
+      a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase()),
     );
     this.displayedArticles = filtered.slice(0, this.maxResults);
   }
@@ -196,7 +191,7 @@ export class HomeUkBlogTwentyTwoComponent implements OnInit {
     const path: string =
       this.router.url.split('/')[this.router.url.split('/').length - 1];
     let index = this.artickleServ.ukrArtickles.findIndex(
-      (a) => a.linkUkr == path
+      (a) => a.linkUkr == path,
     );
 
     if (this.artickleServ.ukrArtickles.length - 1 == index) {
@@ -213,7 +208,7 @@ export class HomeUkBlogTwentyTwoComponent implements OnInit {
     const path: string =
       this.router.url.split('/')[this.router.url.split('/').length - 1];
     let index = this.artickleServ.ukrArtickles.findIndex(
-      (a) => a.linkUkr == path
+      (a) => a.linkUkr == path,
     );
 
     if (index == 1) {
@@ -238,7 +233,7 @@ export class HomeUkBlogTwentyTwoComponent implements OnInit {
     ];
 
     const scripts = this.document.querySelectorAll(
-      'script[type="application/ld+json"]'
+      'script[type="application/ld+json"]',
     );
 
     scripts.forEach((script) => {
@@ -251,7 +246,7 @@ export class HomeUkBlogTwentyTwoComponent implements OnInit {
 
         const shouldRemove = candidates.some(
           (entry: any) =>
-            entry['@type'] && typesToRemove.includes(entry['@type'])
+            entry['@type'] && typesToRemove.includes(entry['@type']),
         );
 
         if (shouldRemove) {
@@ -279,31 +274,35 @@ export class HomeUkBlogTwentyTwoComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          headline: 'Арбітраж криптовалют: що це і як заробити',
+          headline: 'DeFi (децентралізовані фінанси): що це і які ризики',
           description:
-            'Повне керівництво з криптовалютного арбітражу: види, стратегії, ризики та практичні приклади',
-          author: {
-            '@id': 'https://arapov.trade/uk#person',
-          },
+            'Що таке DeFi, як працюють обмін, кредити й стейкінг без банків на смартконтрактах і які ризики — від дір у коді до втрати коштів — тут реальні.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'Arapov.trade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
-          datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://arapov.trade/uk/freestudying/cryptoarbitrage',
+            '@id': 'https://arapov.trade/uk/freestudying/defi',
           },
-          image:
-            'https://arapov.trade/assets/img/content/cryptoarbitrage1.webp',
-          articleSection: 'Навчання трейдингу',
-          keywords:
-            'арбітраж криптовалют, криптоарбітраж, міжбіржовий арбітраж, трикутний арбітраж, заробіток на криптовалюті',
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/defi.jpeg',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Криптовалюта',
+          keywords: 'defi, криптовалюти',
+          inLanguage: 'uk',
         },
       ],
     };
@@ -318,18 +317,18 @@ export class HomeUkBlogTwentyTwoComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/uk#person',
-      name: 'Ігор Арапов',
+      '@id': 'https://arapov.trade/#person',
+      name: 'Igor Arapov',
       alternateName: [
-        'Igor Arapov',
-              'Арапов Игорь',
-              'I. Arapov',
-              'Игорь Арапов',
-              'І. В. Арапов',
-              'Арапов Ігор',
-              'Arapov Igor',
+        'Ігор Арапов',
+        'Игорь Арапов',
+        'Арапов Игорь',
+        'Арапов Ігор',
+        'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/uk',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -341,9 +340,13 @@ export class HomeUkBlogTwentyTwoComponent implements OnInit {
         'https://github.com/ArapovTrade',
         'https://ua.linkedin.com/in/arapovtrade',
         'https://www.youtube.com/@ArapovTrade',
-        'https://t.me/ArapovTrade'
+        'https://t.me/ArapovTrade',
       ],
-       jobTitle: ['Незалежний дослідник', 'трейдер', 'автор і засновник arapov.trade'],
+      jobTitle: [
+        'Незалежний дослідник',
+        'трейдер',
+        'автор і засновник arapov.trade',
+      ],
       description:
         'Незалежний дослідник, практикуючий трейдер, автор книг з трейдингу та наукових публікацій. Спеціалізується на психології трейдингу та когнітивних упередженнях на фінансових ринках.',
     };
@@ -361,42 +364,34 @@ export class HomeUkBlogTwentyTwoComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'Що таке арбітраж криптовалют?',
+          name: 'Що таке DeFi простими словами?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Арбітраж криптовалют — це стратегія заробітку на різниці цін одного й того ж активу на різних біржах. Трейдер купує криптовалюту на майданчику з низькою ціною і продає на біржі з вищою.',
+            text: 'Це фінансові сервіси на кшталт обміну, кредитів і відсоткового доходу, що працюють через смартконтракти в блокчейні, без банків і посередників. Доступ дає звичайний криптогаманець, а правила задає код.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Які види криптоарбітражу існують?',
+          name: 'Що можна робити в DeFi?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Основні види: міжбіржовий арбітраж, трикутний арбітраж, міжринковий арбітраж та регіональний арбітраж.',
+            text: 'Обмінювати токени через децентралізовані біржі, брати кредити під заставу токенів або давати кошти в борг під відсоток, а також брати участь у пулах ліквідності та стейкінгу. У кожної можливості свій ризик.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Скільки можна заробити на арбітражі?',
+          name: 'Який головний ризик у DeFi?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Типовий прибуток становить 0.5-3% на угоду. При активній торгівлі місячна дохідність може сягати 5-15%.',
+            text: 'Вразливість смартконтракту. Код публічний, і за наявності помилки його зламують, а кошти йдуть безповоротно. Додайте фейкові протоколи й особисту відповідальність за ключі: втратили ключ, втратили гроші.',
           },
         },
         {
           '@type': 'Question',
-          name: "Які ризики пов'язані з криптоарбітражем?",
+          name: 'Що таке непостійні втрати в пулі?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Основні ризики: затримки транзакцій, високі комісії, волатильність цін, блокування акаунтів біржами та технічні збої.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Чи потрібні боти для арбітражу?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Боти значно підвищують ефективність, автоматизуючи пошук можливостей та виконання угод.',
+            text: 'Це ризик постачальника ліквідності: коли ціна одного з активів у пулі різко змінюється, механіка пулу перерозподіляє ваші кошти не на вашу користь. У підсумку просте утримання токенів могло б виявитися вигіднішим.',
           },
         },
       ],
@@ -412,38 +407,28 @@ export class HomeUkBlogTwentyTwoComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'Як почати заробляти на арбітражі криптовалют',
-      description: 'Покрокове керівництво з криптовалютного арбітражу',
+      '@id': 'https://arapov.trade/uk/freestudying/defi#howto',
+      name: 'Як розібратися й застосувати: DeFi',
+      description:
+        'Покроковий розбір теми та її практичне застосування в торгівлі',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Зареєструйтесь на біржах',
-          text: 'Створіть акаунти на кількох надійних біржах та пройдіть верифікацію.',
+          name: 'Розберіться, що таке DeFi простими словами',
+          text: 'DeFi це децентралізовані фінанси, тобто фінансові сервіси на кшталт обміну валют, кредитування й отримання відсотків, які працюють напряму через смартконтракти в блокчейні, без банків та інших посередників.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Поповніть рахунки',
-          text: 'Розподіліть капітал між біржами. Тримайте кошти у стейблкоїнах для швидкого реагування.',
+          name: 'Розберіться, що можна робити в DeFi: обмін, кредити, пули',
+          text: 'Можливостей у DeFi чимало, і варто розуміти основні.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Налаштуйте моніторинг цін',
-          text: 'Використовуйте інструменти відстеження цін або спеціалізовані арбітражні сканери.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 4,
-          name: 'Розрахуйте комісії',
-          text: 'Врахуйте всі витрати: комісії за торгівлю, введення та виведення коштів.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 5,
-          name: 'Виконайте угоду',
-          text: 'При виявленні вигідної можливості швидко купіть актив на одній біржі та продайте на іншій.',
+          name: 'Ризики DeFi: смартконтракти, зломи та відповідальність',
+          text: 'Головний ризик DeFi це вразливість смартконтракту.',
         },
       ],
     };
@@ -458,63 +443,13 @@ export class HomeUkBlogTwentyTwoComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Глосарій криптовалютного арбітражу',
+      name: 'Глосарій термінів статті',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Арбітраж',
+          name: 'DeFi',
           description:
-            'Стратегія заробітку на різниці цін одного активу на різних ринках',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Міжбіржовий арбітраж',
-          description:
-            'Купівля криптовалюти на одній біржі та продаж на іншій з вищою ціною',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Трикутний арбітраж',
-          description:
-            'Послідовний обмін трьох валют на одній біржі для отримання прибутку',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Спред',
-          description: 'Різниця між ціною купівлі та продажу активу',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Ліквідність',
-          description:
-            'Здатність швидко купити або продати актив без суттєвого впливу на ціну',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Стейблкоїн',
-          description: "Криптовалюта з прив'язкою курсу до стабільного активу",
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'DEX',
-          description: 'Децентралізована біржа без посередників',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Арбітражний бот',
-          description:
-            'Програма для автоматичного пошуку та виконання арбітражних угод',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Сліпедж',
-          description:
-            'Різниця між очікуваною та фактичною ціною виконання ордера',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'P2P-арбітраж',
-          description: 'Арбітраж з використанням peer-to-peer платформ',
+            'DeFi це децентралізовані фінанси, тобто фінансові сервіси на кшталт обміну валют, кредитування й отримання відсотків, які працюють напряму через смартконтракти в блокчейні, без банків та інших посередників.',
         },
       ],
     };

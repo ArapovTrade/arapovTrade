@@ -54,20 +54,17 @@ export class HomeEnBlogFourtyTwoComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Cryptocurrency Risks for Beginners: How to Protect Your Capital | Arapov.trade',
+      'Trading Styles: Scalping, Day Trading, Swing | Arapov.trade',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Cryptocurrency risks for beginners: volatility, scams, technical threats. Practical methods to protect capital and trade digital assets safely.',
+        'Trading styles in simple terms: scalping, intraday, swing and position trading. How they differ and which style suits whom.',
     });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-04-03' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/cryptocurrencyrisks.webp',
-    });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
+
     this.gerRandom();
   }
   randomArticleRus: any = [];
@@ -253,36 +250,35 @@ export class HomeEnBlogFourtyTwoComponent implements OnInit {
         {
           '@type': 'Article',
           headline:
-            'Cryptocurrency Risks for Beginners: How to Protect Your Capital',
+            'Trading styles: scalping, day trading and swing — which to choose as a beginner',
           description:
-            'Comprehensive analysis of cryptocurrency market risks: volatility, fraud, regulatory threats. Practical methods to protect investments and trade safely.',
-          author: {
-            '@id': 'https://arapov.trade/en#person',
-          },
+            'Trading styles in simple terms: scalping, intraday, swing and position trading. How they differ and which style suits whom.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'Arapov.trade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
-          datePublished: '2026-03-25T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
-          image:
-            'https://arapov.trade/assets/img/content/cryptocurrencyrisks1.webp',
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://arapov.trade/en/freestudying/cryptocurrencyrisks',
+            '@id': 'https://arapov.trade/en/freestudying/trading-styles',
           },
-          articleSection: 'Cryptocurrency',
-          keywords: [
-            'cryptocurrency risks',
-            'volatility',
-            'scams',
-            'security',
-            'capital protection',
-          ],
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/trading-styles.jpeg',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Trading for beginners',
+          keywords: 'trading styles, scalping, day trading, swing trading',
+          inLanguage: 'en',
         },
       ],
     };
@@ -297,19 +293,18 @@ export class HomeEnBlogFourtyTwoComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/en#person',
+      '@id': 'https://arapov.trade/#person',
       name: 'Igor Arapov',
       alternateName: [
         'Ігор Арапов',
-        'Арапов Игорь',
-        'I. Arapov',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-
-      url: 'https://arapov.trade/en',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -324,12 +319,12 @@ export class HomeEnBlogFourtyTwoComponent implements OnInit {
         'https://t.me/ArapovTrade',
       ],
       jobTitle: [
-        'Independent researcher,',
-        'trader',
-        'author and founder of arapov.trade',
+        'Independent researcher',
+        'Trader',
+        'Author and founder of arapov.trade',
       ],
       description:
-        'Independent researcher, practicing trader, author of books on trading and scientific publications. Specializes in trading psychology and cognitive biases in financial markets.',
+        'Independent researcher, practising trader, author of trading books and scientific publications. Specialises in trading psychology and cognitive biases in financial markets.',
     };
 
     this.addJsonLdSchema(data);
@@ -345,42 +340,50 @@ export class HomeEnBlogFourtyTwoComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'What are the main cryptocurrency risks for beginners?',
+          name: 'Which trading style should a beginner choose?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Main risks include high price volatility, fraud and phishing, exchange technical failures, loss of wallet access, lack of regulation, and unpredictable legislation. Each of these factors can lead to complete loss of investments.',
+            text: "In my experience it is calmer to start with medium-term swing. Decisions are made without a rush, you don't have to sit at the screen all day, and there are fewer emotions. A fast tempo hits a discipline that is not yet fixed, and a beginner easily slides into impulsive trading. To day trading, and even more so to scalping, it is more sensible to come already prepared.",
           },
         },
         {
           '@type': 'Question',
-          name: 'How to protect cryptocurrency from scammers?',
+          name: 'How does scalping differ from day trading?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Use hardware wallets for storage, enable two-factor authentication, verify website URLs, never share private keys, avoid suspicious projects with unrealistic promises, and store your seed phrase in a secure offline location.',
+            text: 'By tempo and the size of the move. A scalper sits on seconds and minutes and makes dozens of trades for micro-moves in points. A day trader holds a trade for hours, catches a larger move and makes from one to a few trades a day, but by the close exits all positions.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Why are cryptocurrencies so volatile?',
+          name: 'What is swing trading in simple terms?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Volatility is driven by speculative market nature, low liquidity of many tokens, influence of news and public statements, actions of large holders (whales), lack of centralized regulation, and overall market immaturity.',
+            text: 'It is a style in which a position is held from several days to several weeks and you take the whole swing of a move rather than every small fluctuation. You work on the higher timeframes, more often the daily and four-hour chart, where the picture is visible rather than the noise. The style is calm and suits busy people, but it demands patience.',
           },
         },
         {
           '@type': 'Question',
-          name: 'How much money is safe to invest in cryptocurrency?',
+          name: 'Why is commission so dangerous in scalping?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Only invest funds you can afford to lose. Beginners should start with 5-10% of their investment portfolio. Never use borrowed money or funds needed for daily expenses.',
+            text: "Because commission and spread sit inside every trade, and on a tiny move they take a huge share of the profit, up to half. Multiply that by dozens of trades a day, and the mathematical expectation goes into the minus. Without the costs the odds would be roughly fifty-fifty, but it is exactly they that most often drain the scalper's account.",
           },
         },
         {
           '@type': 'Question',
-          name: 'What is a pump and dump scheme in cryptocurrency?',
+          name: 'What is the main advantage of day trading?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Pump and dump is a manipulative scheme where organizers artificially inflate the price of an obscure token through false advertising, attract investors, then sell their holdings at the peak, crashing the price and leaving others with losses.',
+            text: 'The absence of night risks: since all positions are closed by the end of the day, the trader is not touched by overnight price gaps and news coming out while the market is closed. The downside is a high load on attention and the psyche, because decisions have to be made fast and often throughout the whole day.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How does position trading differ from swing and investing?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'By horizon and by what it leans on. Swing is days and weeks on technical analysis, while position trading is months and years first of all on fundamentals. What sets it apart from investing is activity: a position trader exits when the trade idea breaks, rather than holding an asset indefinitely. It takes the least time of all the styles, but it locks up capital for a long while.',
           },
         },
       ],
@@ -396,39 +399,34 @@ export class HomeEnBlogFourtyTwoComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'How to Minimize Risks When Trading Cryptocurrency',
+      '@id': 'https://arapov.trade/en/freestudying/trading-styles#howto',
+      name: 'How to understand trading styles and choose your own',
       description:
-        'Step-by-step guide to protecting capital in the cryptocurrency market',
+        'A step-by-step breakdown of the topic and its practical use in trading',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Learn market fundamentals',
-          text: 'Master blockchain principles, cryptocurrency types, and trading mechanisms before investing.',
+          name: 'Understand what trading styles there are',
+          text: 'Styles differ above all by the horizon of the trade: from seconds in scalping to weeks in swing.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Choose a reliable platform',
-          text: 'Use established exchanges with good reputation, two-factor authentication, and insurance funds.',
+          name: 'Understand why commission eats scalping',
+          text: 'On a tiny move a fixed commission and spread take a huge share of the result, pulling the expectation below zero.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Ensure secure storage',
-          text: 'Transfer large amounts to hardware wallets, store seed phrase offline in multiple locations.',
+          name: 'Compare day trading and swing by load and time',
+          text: 'Day trading closes the day with no night risks but loads the psyche, while swing is calmer but demands patience.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Diversify your portfolio',
-          text: "Distribute capital across multiple assets, don't invest more than 10% in any single token.",
-        },
-        {
-          '@type': 'HowToStep',
-          position: 5,
-          name: 'Use protective tools',
-          text: 'Set stop-losses, define maximum acceptable loss, and follow your trading plan.',
+          name: 'Choose a style for yourself, starting with the calm one',
+          text: 'A beginner is calmer to start with medium-term swing and come to the fast tempo already with discipline.',
         },
       ],
     };
@@ -443,67 +441,37 @@ export class HomeEnBlogFourtyTwoComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Cryptocurrency Risk Glossary',
+      name: 'Glossary of terms used in the article',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Volatility',
+          name: 'Scalping',
           description:
-            'Degree of price variation of an asset over a specific time period',
+            'A trading style in which a trade lives seconds or minutes, and the trader takes a very small price move in points, making dozens or even hundreds of trades a day.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Pump and Dump',
+          name: 'Day trading',
           description:
-            'Manipulative scheme of artificially inflating price followed by selling at peak',
+            'A style of intraday trading in which a trader opens and closes all positions within one trading day, not leaving them overnight.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Phishing',
+          name: 'Swing trading',
           description:
-            'Fraudulent technique to obtain confidential data through fake websites and messages',
+            'A trading style in which a trader holds positions from several days to several weeks, aiming to take the medium-term move of the market from one reversal to another.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Private Key',
+          name: 'Position trading',
           description:
-            'Secret cryptographic code providing full access to a cryptocurrency wallet',
+            'A trading style that holds positions from several months to several years, leaning first of all on fundamentals and demanding the least screen time.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Seed Phrase',
+          name: 'Algo trading',
           description:
-            'Set of words used to recover access to a cryptocurrency wallet',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Hardware Wallet',
-          description:
-            'Physical device for secure offline storage of cryptocurrencies',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'KYC',
-          description:
-            'Know Your Customer verification procedure on cryptocurrency exchanges',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'DeFi',
-          description:
-            'Decentralized Finance, blockchain-based financial services without intermediaries',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Stop-Loss',
-          description:
-            'Automatic order to sell an asset when it reaches a specified loss level',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Liquidity',
-          description:
-            'Ability of an asset to be sold quickly without significantly affecting its price',
+            'Trading by rules wired into a program that executes trades automatically; defined not by the trade horizon but by the manner of execution.',
         },
       ],
     };

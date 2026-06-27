@@ -55,20 +55,17 @@ export class HomeEuBlogFiftySevenComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Trading Indicators: Complete Guide to RSI and MACD',
+      'VWAP Indicator: Volume Weighted Average Price | Arapov.trade',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Comprehensive guide to technical analysis indicators RSI and MACD. Learn how to use oscillators for identifying market entry and exit points.',
+        'What VWAP is, how the volume-weighted average price is calculated, why institutions use it and how to apply it in intraday trading.',
     });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-04-17' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/tradingindicators.webp',
-    });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
+
     this.gerRandom();
   }
   randomArticleRus: any = [];
@@ -254,98 +251,37 @@ export class HomeEuBlogFiftySevenComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          mainEntityOfPage: {
-            '@type': 'WebPage',
-            '@id': 'https://arapov.trade/en/freestudying/tradingindicators',
-          },
-          headline: 'Trading Indicators: Complete Guide to RSI and MACD',
+          headline:
+            'VWAP in Trading: the Volume-Weighted Average Price and How to Use It',
           description:
-            'Comprehensive guide to technical analysis indicators RSI and MACD. Learn how to use oscillators for identifying market entry and exit points.',
-          image:
-            'https://arapov.trade/assets/img/content/tradingindicators.webp',
-          datePublished: '2025-01-15T00:00:00+02:00',
-          dateModified: '2026-04-15T00:00:00Z',
-          inLanguage: 'eu',
-          author: {
-            '@id': 'https://arapov.trade/en#person',
-          },
+            'What VWAP is, how the volume-weighted average price is calculated, why institutions use it and how to apply it in intraday trading.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
             '@id': 'https://arapov.trade/#organization',
             name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
-          video: {
-            '@type': 'VideoObject',
-            name: 'Честный разговор об индикаторах в трейдинге',
-            description:
-              'Честный разговор об индикаторах в трейдинге от практика с 11-летним стажем. Игорь Арапов рассказывает, почему после 3 лет экспериментов с индикаторами полностью от них отказался и что использует вместо них.',
-            thumbnailUrl: [
-              'https://img.youtube.com/vi/t4eLSS2vh-w/maxresdefault.jpg',
-              'https://img.youtube.com/vi/t4eLSS2vh-w/hqdefault.jpg',
-            ],
-            uploadDate: '2025-11-15T00:00:00+02:00',
-            duration: 'PT12M35S',
-            contentUrl: 'https://www.youtube.com/watch?v=t4eLSS2vh-w',
-            embedUrl: 'https://www.youtube.com/embed/t4eLSS2vh-w',
-            inLanguage: 'ru',
-            keywords:
-              'индикаторы трейдинг, Stochastic, Moving Average, MACD, объемный анализ, технический анализ',
-            hasPart: [
-              {
-                '@type': 'Clip',
-                name: 'Индикаторы в трейдинге - все плюсы и минусы использования',
-                startOffset: 0,
-                endOffset: 22,
-                url: 'https://www.youtube.com/watch?v=t4eLSS2vh-w&t=0',
-              },
-              {
-                '@type': 'Clip',
-                name: 'Как трейдеры знакомятся с индикаторами',
-                startOffset: 22,
-                endOffset: 96,
-                url: 'https://www.youtube.com/watch?v=t4eLSS2vh-w&t=22',
-              },
-              {
-                '@type': 'Clip',
-                name: 'Какие бывают индикаторы',
-                startOffset: 96,
-                endOffset: 129,
-                url: 'https://www.youtube.com/watch?v=t4eLSS2vh-w&t=96',
-              },
-              {
-                '@type': 'Clip',
-                name: 'В чем проблема индикаторов',
-                startOffset: 129,
-                endOffset: 175,
-                url: 'https://www.youtube.com/watch?v=t4eLSS2vh-w&t=129',
-              },
-              {
-                '@type': 'Clip',
-                name: 'Пример работы индикаторов',
-                startOffset: 175,
-                endOffset: 285,
-                url: 'https://www.youtube.com/watch?v=t4eLSS2vh-w&t=175',
-              },
-              {
-                '@type': 'Clip',
-                name: 'Про индикатор ATR',
-                startOffset: 285,
-                endOffset: 321,
-                url: 'https://www.youtube.com/watch?v=t4eLSS2vh-w&t=285',
-              },
-              {
-                '@type': 'Clip',
-                name: 'Почему индикаторы запаздывают?',
-                startOffset: 321,
-                endOffset: 755,
-                url: 'https://www.youtube.com/watch?v=t4eLSS2vh-w&t=321',
-              },
-            ],
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': 'https://arapov.trade/en/freestudying/vwap-indicator',
           },
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/vwap1.jpg',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Technical analysis',
+          keywords:
+            'vwap, volume weighted average price, vwap explained, vwap vs moving average, anchored vwap, vwap bands, vwap support resistance',
+          inLanguage: 'en',
         },
       ],
     };
@@ -360,18 +296,18 @@ export class HomeEuBlogFiftySevenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/en#person',
+      '@id': 'https://arapov.trade/#person',
       name: 'Igor Arapov',
       alternateName: [
         'Ігор Арапов',
-        'Арапов Игорь',
-        'I. Arapov',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/en',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -386,12 +322,12 @@ export class HomeEuBlogFiftySevenComponent implements OnInit {
         'https://t.me/ArapovTrade',
       ],
       jobTitle: [
-        'Independent researcher,',
-        'trader',
-        'author and founder of arapov.trade',
+        'Independent researcher',
+        'Trader',
+        'Author and founder of arapov.trade',
       ],
       description:
-        'Independent researcher, practicing trader, author of books on trading and scientific publications. Specializes in trading psychology and cognitive biases in financial markets.',
+        'Independent researcher, practising trader, author of trading books and scientific publications. Specialises in trading psychology and cognitive biases in financial markets.',
     };
 
     this.addJsonLdSchema(data);
@@ -407,42 +343,50 @@ export class HomeEuBlogFiftySevenComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'What is the RSI indicator and how to use it?',
+          name: 'What does VWAP show in simple terms?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'RSI (Relative Strength Index) is an oscillator that measures the speed and magnitude of price changes. Values above 70 indicate overbought conditions, below 30 indicate oversold conditions. Traders use RSI to find reversal points and confirm divergence signals.',
+            text: 'The average price of the day adjusted for volume: the price at which the bulk of trades actually went through from the session open. Price above it means buyers on average paid more than the average, below it means less.',
           },
         },
         {
           '@type': 'Question',
-          name: 'How does the MACD indicator work?',
+          name: 'How does VWAP differ from a moving average?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'MACD consists of the MACD line (difference between EMA 12 and EMA 26), signal line (EMA 9 of the MACD line), and histogram. When the MACD line crosses the signal line from below, it generates a buy signal; crossing from above indicates a sell signal.',
+            text: 'A moving average counts only prices and weights them equally or exponentially. VWAP adds volume: bars where trading was busier weigh more. So VWAP reflects more accurately where the mass of participants actually was.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Which indicators are best for trend identification?',
+          name: 'On which markets and timeframes does VWAP work?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Moving averages (SMA, EMA), ADX index, Parabolic SAR, and Ichimoku are effective for trend identification. These indicators help determine price direction and assess the strength of the current trend.',
+            text: "Classically it's an intraday tool: it's counted from the session open and resets daily, so it comes into its own on stocks and futures with clear volume. There's also an anchored VWAP from a chosen point, which extends its use to longer horizons.",
           },
         },
         {
           '@type': 'Question',
-          name: 'Can RSI and MACD be used together?',
+          name: 'Why is VWAP unreliable in the first 15 minutes of the session?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Yes, combining RSI and MACD increases trading signal accuracy. RSI identifies overbought and oversold zones, while MACD confirms trend direction. When signals from both indicators align, the probability of a successful trade increases significantly.',
+            text: 'Because VWAP is cumulative from the open, so early in the session almost no volume has accumulated and every trade swings the line sharply. It only becomes a stable reference once enough volume builds through the day, which is why many traders ignore VWAP readings until the first 15-20 minutes have passed.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Which markets are RSI and MACD applicable to?',
+          name: 'Can you trade with VWAP alone?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'RSI and MACD are universal and apply to forex, stock markets, cryptocurrencies, and commodities. Period settings are adapted to the volatility of the specific market and chosen timeframe.',
+            text: "VWAP is a reference, not a ready-made system. In my experience it's weak on its own, since it's still an average of past trades. I confirm it with real volume and levels, and then it earns its keep.",
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How does an anchored VWAP differ from a regular VWAP?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: "A regular VWAP counts from the session open and resets every day, so it is intraday. An anchored VWAP is tied to a chosen point (a swing low, news, the week's open) and does not reset, so it suits swing trading on higher timeframes. The logic is the same; only the starting point changes.",
           },
         },
       ],
@@ -458,39 +402,46 @@ export class HomeEuBlogFiftySevenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'How to Trade Using RSI and MACD Indicators',
+      '@id': 'https://arapov.trade/en/freestudying/vwap-indicator#howto',
+      name: 'How to understand and use VWAP in trading',
       description:
-        'Step-by-step instruction for applying RSI and MACD indicators to find trading signals',
+        'A step-by-step walk through the topic and its practical use in trading',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Determine market condition',
-          text: 'Use ADX or moving averages to determine trend presence. ADX values above 25 indicate a trending market, below 20 suggests sideways movement.',
+          name: 'Learn what VWAP is',
+          text: "VWAP is the volume-weighted average price, the sum of each bar's typical price times its volume, divided by the total volume since the session opened.",
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Configure indicators',
-          text: 'Add RSI with period 14 and MACD with standard settings (12, 26, 9) to your chart. Adapt periods to your chosen timeframe.',
+          name: 'Understand how institutions use VWAP when entering a position',
+          text: 'Here is the reason VWAP works as a level at all.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Find RSI signal',
-          text: 'Wait for RSI to exit overbought zone (below 70) or oversold zone (above 30). Check for divergence between price and indicator.',
+          name: 'Read VWAP as intraday support and resistance',
+          text: 'Reading it here is straightforward.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Confirm with MACD',
-          text: 'Ensure MACD confirms the direction: line crossover should align with RSI signal. Rising histogram strengthens signal reliability.',
+          name: 'Trade VWAP in practice: the first 15 minutes, liquid names, and the reclaim',
+          text: 'VWAP is only as trustworthy as the volume under it, so it is unreliable early in the session and on thin names, and the reclaim reads cleaner than a bare touch.',
         },
         {
           '@type': 'HowToStep',
           position: 5,
-          name: 'Set risk levels',
-          text: 'Place stop-loss beyond the nearest support or resistance level. Calculate take-profit with a risk-to-reward ratio of at least 1:2.',
+          name: 'Apply an anchored VWAP from a chosen point for swing trading',
+          text: "An anchored VWAP counts not from the day's open but from a chosen point and does not reset, so it works for swing trading on higher timeframes.",
+        },
+        {
+          '@type': 'HowToStep',
+          position: 6,
+          name: 'Combine VWAP with volume analysis',
+          text: 'This is where VWAP comes into its own.',
         },
       ],
     };
@@ -505,68 +456,25 @@ export class HomeEuBlogFiftySevenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Technical Analysis Indicator Terms',
-      description: 'Glossary of key terms related to trading indicators',
+      name: 'Glossary of terms used in this article',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'RSI',
+          name: 'VWAP',
           description:
-            'Relative Strength Index — an oscillator measuring the speed of price changes on a scale from 0 to 100',
+            "The volume-weighted average price: the sum of each bar's typical price multiplied by its volume, divided by the total volume since the session opened.",
         },
         {
           '@type': 'DefinedTerm',
-          name: 'MACD',
+          name: 'VWAP bands',
           description:
-            'Moving Average Convergence Divergence — an indicator showing the relationship between two EMAs',
+            'Lines drawn at one, two and three standard deviations above and below VWAP; a move out to the second or third band marks a statistically stretched price that price often gets pulled back from toward the average.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Oscillator',
+          name: 'anchored VWAP',
           description:
-            'A type of indicator that fluctuates between fixed values to identify overbought and oversold conditions',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Divergence',
-          description:
-            'A discrepancy between price direction and indicator readings, signaling a potential reversal',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'EMA',
-          description:
-            'Exponential Moving Average, which gives greater weight to recent price data',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Overbought',
-          description:
-            'Market condition where an asset trades above fair value and a downward correction is likely',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Oversold',
-          description:
-            'Market condition where an asset trades below fair value and an upward bounce is likely',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'ATR',
-          description:
-            'Average True Range — a volatility indicator measuring the average amplitude of price movements',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Bollinger Bands',
-          description:
-            'A volatility indicator consisting of three lines forming a dynamic channel around price',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Signal Line',
-          description:
-            'In MACD context — a moving average of the MACD line used to generate trading signals',
+            'An anchored VWAP is a VWAP measured not from the session open but from a chosen point (a swing, news, a period open), which does not reset each day and therefore suits swing trading on higher timeframes.',
         },
       ],
     };

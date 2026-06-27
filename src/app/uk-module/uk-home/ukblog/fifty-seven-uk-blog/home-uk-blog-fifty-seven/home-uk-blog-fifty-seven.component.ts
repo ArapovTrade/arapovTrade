@@ -28,7 +28,7 @@ export class HomeUkBlogFiftySevenComponent implements OnInit {
     private themeService: ThemeservService,
     private artickleServ: ArticlesService,
     private renderer: Renderer2,
-    @Inject(DOCUMENT) private document: Document
+    @Inject(DOCUMENT) private document: Document,
   ) {}
   private routerSubscription!: Subscription;
   private themeSubscription!: Subscription;
@@ -57,19 +57,17 @@ export class HomeUkBlogFiftySevenComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Індикатори в трейдингу: повний посібник з RSI та MACD'
+      'Індикатор VWAP: середньозважена за обсягом | Arapov.trade',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Детальний посібник з індикаторів технічного аналізу RSI та MACD. Дізнайтеся, як застосовувати осцилятори для визначення точок входу та виходу з ринку.',
+        'Що таке VWAP, як рахується середньозважена за обсягом ціна, навіщо її використовують інституціонали і як застосовувати у внутрішньоденній торгівлі.',
     });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-04-17' });  this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/tradingindicators.webp',
-    });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
+
     this.gerRandom();
   }
   randomArticleRus: any = [];
@@ -86,7 +84,6 @@ export class HomeUkBlogFiftySevenComponent implements OnInit {
       title: 'Базовий курс',
       link: 'https://arapov.trade/uk/freestudying/freeeducation',
     },
-     
   ];
 
   onGroupChange(event: Event) {
@@ -156,7 +153,7 @@ export class HomeUkBlogFiftySevenComponent implements OnInit {
     // Показываем 5 случайных статей при фокусе, если инпут пуст
     if (!this.searchQuery) {
       const shuffled = [...this.artickleServ.ukrArtickles].sort(
-        () => Math.random() - 0.5
+        () => Math.random() - 0.5,
       );
       this.displayedArticles = shuffled.slice(0, this.maxResults);
     }
@@ -171,7 +168,7 @@ export class HomeUkBlogFiftySevenComponent implements OnInit {
   onSearchChange() {
     // Логика асинхронного поиска
     const filtered = this.artickleServ.ukrArtickles.filter((a) =>
-      a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase())
+      a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase()),
     );
     this.displayedArticles = filtered.slice(0, this.maxResults);
   }
@@ -193,7 +190,7 @@ export class HomeUkBlogFiftySevenComponent implements OnInit {
     const path: string =
       this.router.url.split('/')[this.router.url.split('/').length - 1];
     let index = this.artickleServ.ukrArtickles.findIndex(
-      (a) => a.linkUkr == path
+      (a) => a.linkUkr == path,
     );
 
     if (this.artickleServ.ukrArtickles.length - 1 == index) {
@@ -210,7 +207,7 @@ export class HomeUkBlogFiftySevenComponent implements OnInit {
     const path: string =
       this.router.url.split('/')[this.router.url.split('/').length - 1];
     let index = this.artickleServ.ukrArtickles.findIndex(
-      (a) => a.linkUkr == path
+      (a) => a.linkUkr == path,
     );
 
     if (index == 1) {
@@ -235,7 +232,7 @@ export class HomeUkBlogFiftySevenComponent implements OnInit {
     ];
 
     const scripts = this.document.querySelectorAll(
-      'script[type="application/ld+json"]'
+      'script[type="application/ld+json"]',
     );
 
     scripts.forEach((script) => {
@@ -248,7 +245,7 @@ export class HomeUkBlogFiftySevenComponent implements OnInit {
 
         const shouldRemove = candidates.some(
           (entry: any) =>
-            entry['@type'] && typesToRemove.includes(entry['@type'])
+            entry['@type'] && typesToRemove.includes(entry['@type']),
         );
 
         if (shouldRemove) {
@@ -276,98 +273,37 @@ export class HomeUkBlogFiftySevenComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          mainEntityOfPage: {
-            '@type': 'WebPage',
-            '@id': 'https://arapov.trade/uk/freestudying/tradingindicators',
-          },
-          headline: 'Індикатори в трейдингу: повний посібник з RSI та MACD',
+          headline:
+            'VWAP у трейдингу: середньозважена за обсягом ціна та її застосування',
           description:
-            'Детальний посібник з індикаторів технічного аналізу RSI та MACD. Дізнайтеся, як застосовувати осцилятори для визначення точок входу та виходу з ринку.',
-          image:
-            'https://arapov.trade/assets/img/content/tradingindicators.webp',
-          datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
-          inLanguage: 'uk',
-          author: {
-            '@id': 'https://arapov.trade/uk#person',
-          },
+            'Що таке VWAP, як рахується середньозважена за обсягом ціна, навіщо її використовують інституціонали і як застосовувати у внутрішньоденній торгівлі.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
             '@id': 'https://arapov.trade/#organization',
             name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
-          video: {
-            '@type': 'VideoObject',
-            name: 'Честный разговор об индикаторах в трейдинге',
-            description:
-              'Честный разговор об индикаторах в трейдинге от практика с 11-летним стажем. Игорь Арапов рассказывает, почему после 3 лет экспериментов с индикаторами полностью от них отказался и что использует вместо них.',
-            thumbnailUrl: [
-              'https://img.youtube.com/vi/t4eLSS2vh-w/maxresdefault.jpg',
-              'https://img.youtube.com/vi/t4eLSS2vh-w/hqdefault.jpg',
-            ],
-            uploadDate: '2025-12-29T00:00:00Z',
-            duration: 'PT12M35S',
-            contentUrl: 'https://www.youtube.com/watch?v=t4eLSS2vh-w',
-            embedUrl: 'https://www.youtube.com/embed/t4eLSS2vh-w',
-            inLanguage: 'ru',
-            keywords:
-              'индикаторы трейдинг, Stochastic, Moving Average, MACD, объемный анализ, технический анализ',
-            hasPart: [
-              {
-                '@type': 'Clip',
-                name: 'Индикаторы в трейдинге - все плюсы и минусы использования',
-                startOffset: 0,
-                endOffset: 22,
-                url: 'https://www.youtube.com/watch?v=t4eLSS2vh-w&t=0',
-              },
-              {
-                '@type': 'Clip',
-                name: 'Как трейдеры знакомятся с индикаторами',
-                startOffset: 22,
-                endOffset: 96,
-                url: 'https://www.youtube.com/watch?v=t4eLSS2vh-w&t=22',
-              },
-              {
-                '@type': 'Clip',
-                name: 'Какие бывают индикаторы',
-                startOffset: 96,
-                endOffset: 129,
-                url: 'https://www.youtube.com/watch?v=t4eLSS2vh-w&t=96',
-              },
-              {
-                '@type': 'Clip',
-                name: 'В чем проблема индикаторов',
-                startOffset: 129,
-                endOffset: 175,
-                url: 'https://www.youtube.com/watch?v=t4eLSS2vh-w&t=129',
-              },
-              {
-                '@type': 'Clip',
-                name: 'Пример работы индикаторов',
-                startOffset: 175,
-                endOffset: 285,
-                url: 'https://www.youtube.com/watch?v=t4eLSS2vh-w&t=175',
-              },
-              {
-                '@type': 'Clip',
-                name: 'Про индикатор ATR',
-                startOffset: 285,
-                endOffset: 321,
-                url: 'https://www.youtube.com/watch?v=t4eLSS2vh-w&t=285',
-              },
-              {
-                '@type': 'Clip',
-                name: 'Почему индикаторы запаздывают?',
-                startOffset: 321,
-                endOffset: 755,
-                url: 'https://www.youtube.com/watch?v=t4eLSS2vh-w&t=321',
-              },
-            ],
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': 'https://arapov.trade/uk/freestudying/vwap-indicator',
           },
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/vwap1.jpg',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Технічний аналіз',
+          keywords:
+            'vwap, середньозважена за обсягом ціна, vwap що це, vwap проти ковзної середньої, привʼязаний vwap, смуги vwap, vwap підтримка опір',
+          inLanguage: 'uk',
         },
       ],
     };
@@ -382,18 +318,18 @@ export class HomeUkBlogFiftySevenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/uk#person',
-      name: 'Ігор Арапов',
+      '@id': 'https://arapov.trade/#person',
+      name: 'Igor Arapov',
       alternateName: [
-        'Igor Arapov',
-              'Арапов Игорь',
-              'I. Arapov',
-              'Игорь Арапов',
-              'І. В. Арапов',
-              'Арапов Ігор',
-              'Arapov Igor',
+        'Ігор Арапов',
+        'Игорь Арапов',
+        'Арапов Игорь',
+        'Арапов Ігор',
+        'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/uk',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -405,9 +341,13 @@ export class HomeUkBlogFiftySevenComponent implements OnInit {
         'https://github.com/ArapovTrade',
         'https://ua.linkedin.com/in/arapovtrade',
         'https://www.youtube.com/@ArapovTrade',
-        'https://t.me/ArapovTrade'
+        'https://t.me/ArapovTrade',
       ],
-       jobTitle: ['Незалежний дослідник', 'трейдер', 'автор і засновник arapov.trade'],
+      jobTitle: [
+        'Незалежний дослідник',
+        'трейдер',
+        'автор і засновник arapov.trade',
+      ],
       description:
         'Незалежний дослідник, практикуючий трейдер, автор книг з трейдингу та наукових публікацій. Спеціалізується на психології трейдингу та когнітивних упередженнях на фінансових ринках.',
     };
@@ -425,42 +365,42 @@ export class HomeUkBlogFiftySevenComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'Що таке індикатор RSI і як його застосовувати?',
+          name: 'Що показує VWAP простими словами?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'RSI (Relative Strength Index) — осцилятор, що вимірює швидкість та амплітуду зміни ціни. Значення вище 70 вказують на перекупленість активу, нижче 30 — на перепроданість. Трейдери використовують RSI для пошуку точок розвороту та підтвердження сигналів дивергенції.',
+            text: 'Середню ціну за день з поправкою на обсяг: за якою ціною реально пройшла основна маса угод з відкриття сесії. Ціна вище неї означає, що покупці в середньому платили дорожче за середню, нижче означає дешевше.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Як працює індикатор MACD?',
+          name: 'Чим VWAP відрізняється від ковзної середньої?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'MACD складається з лінії MACD (різниця між EMA 12 та EMA 26), сигнальної лінії (EMA 9 від лінії MACD) та гістограми. Перетин лінії MACD із сигнальною лінією знизу вгору генерує сигнал на купівлю, зверху вниз — на продаж.',
+            text: 'Ковзна середня рахує лише ціни й надає їм рівну або експоненційну вагу. VWAP додає обсяг: бари, де торгували активніше, важать більше. Тому VWAP точніше відображає, де реально була маса учасників.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Які індикатори найкращі для визначення тренду?',
+          name: 'На яких ринках і таймфреймах працює VWAP?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Для визначення тренду ефективні ковзні середні (SMA, EMA), індекс ADX, Параболік SAR та Ichimoku. Ці індикатори допомагають виявити напрямок руху ціни та оцінити силу поточного тренду.',
+            text: 'Класично це внутрішньоденний інструмент: рахується з відкриття сесії й обнуляється щодня, тому найкраще розкривається на акціях і фʼючерсах із чітким обсягом. Є й привʼязаний VWAP від обраної точки, він розширює застосування на довші горизонти.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Чи можна використовувати RSI та MACD одночасно?',
+          name: 'Чи можна торгувати лише за VWAP?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Так, комбінація RSI та MACD підвищує точність торгових сигналів. RSI виявляє зони перекупленості та перепроданості, а MACD підтверджує напрямок тренду. Збіг сигналів обох індикаторів збільшує ймовірність успішної угоди.',
+            text: 'VWAP це орієнтир, а не готова система. За моїм досвідом поодинці він слабкуватий, адже це все ж середня за минулими угодами. Я підтверджую його реальним обсягом і рівнями, і тоді від нього є користь.',
           },
         },
         {
           '@type': 'Question',
-          name: 'На яких ринках застосовні індикатори RSI та MACD?',
+          name: 'Чим Anchored VWAP відрізняється від звичайного VWAP?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'RSI та MACD універсальні й застосовуються на форекс, фондовому ринку, криптовалютах та сировинних товарах. Налаштування періодів адаптуються під волатильність конкретного ринку та обраний таймфрейм.',
+            text: 'Звичайний VWAP рахується з відкриття сесії й щодня обнуляється, тому він внутрішньоденний. Anchored VWAP привʼязується до обраної точки (свінг-мінімум, новина, відкриття тижня) і не скидається, тому підходить для свінгу на старших таймфреймах. Логіка та сама, змінюється лише точка відліку.',
           },
         },
       ],
@@ -476,39 +416,40 @@ export class HomeUkBlogFiftySevenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'Як торгувати з використанням індикаторів RSI та MACD',
+      '@id': 'https://arapov.trade/uk/freestudying/vwap-indicator#howto',
+      name: 'Як розібратися й застосовувати VWAP у трейдингу',
       description:
-        'Покрокова інструкція із застосування індикаторів RSI та MACD для пошуку торгових сигналів',
+        'Покроковий розбір теми та її практичне застосування в торгівлі',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Визначте стан ринку',
-          text: 'Використовуйте ADX або ковзні середні для визначення наявності тренду. Значення ADX вище 25 вказує на трендовий ринок, нижче 20 — на бокове рух.',
+          name: 'Дізнайтеся, що таке VWAP',
+          text: 'VWAP це середньозважена за обсягом ціна, тобто сума добутків типової ціни кожного бара на його обсяг, поділена на сумарний обсяг від початку сесії.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Налаштуйте індикатори',
-          text: 'Додайте RSI з періодом 14 та MACD зі стандартними налаштуваннями (12, 26, 9) на графік. Адаптуйте періоди під обраний таймфрейм.',
+          name: 'Зрозумійте, як інституціонали використовують VWAP під час входу в позицію',
+          text: 'Ось тут і криється причина, чому VWAP узагалі працює як рівень.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Знайдіть сигнал RSI',
-          text: 'Дочекайтеся виходу RSI із зони перекупленості (нижче 70) або перепроданості (вище 30). Перевірте наявність дивергенції між ціною та індикатором.',
+          name: 'Читайте VWAP як рівень підтримки та опору протягом дня',
+          text: 'Читання тут нескладне.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Підтвердіть сигнал MACD',
-          text: 'Переконайтеся, що MACD підтверджує напрямок: перетин ліній має збігатися з сигналом RSI. Зростаюча гістограма підсилює надійність сигналу.',
+          name: 'Поєднуйте VWAP з обʼємним аналізом',
+          text: 'Тут VWAP розкривається найкраще.',
         },
         {
           '@type': 'HowToStep',
           position: 5,
-          name: 'Встановіть рівні ризику',
-          text: 'Розмістіть стоп-лосс за найближчим рівнем підтримки або опору. Розрахуйте тейк-профіт зі співвідношенням ризику до прибутку не менше 1:2.',
+          name: 'Застосовуйте Anchored VWAP від обраної точки для свінгу',
+          text: 'Anchored VWAP рахується не з відкриття дня, а від обраної точки і не скидається, тому годиться для свінгу на старших таймфреймах.',
         },
       ],
     };
@@ -523,69 +464,19 @@ export class HomeUkBlogFiftySevenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Терміни індикаторів технічного аналізу',
-      description:
-        "Глосарій ключових термінів, пов'язаних із торговими індикаторами",
+      name: 'Глосарій термінів статті',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'RSI',
+          name: 'VWAP',
           description:
-            'Індекс відносної сили — осцилятор, що вимірює швидкість зміни ціни в діапазоні від 0 до 100',
+            'Середньозважена за обсягом ціна, тобто сума добутків типової ціни кожного бара на його обсяг, поділена на сумарний обсяг від початку сесії.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'MACD',
+          name: 'Anchored VWAP',
           description:
-            "Збіжність/розбіжність ковзних середніх — індикатор, що відображає взаємозв'язок між двома EMA",
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Осцилятор',
-          description:
-            'Тип індикатора, що коливається між фіксованими значеннями для визначення перекупленості та перепроданості',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Дивергенція',
-          description:
-            'Розбіжність між напрямком руху ціни та показниками індикатора, що сигналізує про можливий розворот',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'EMA',
-          description:
-            'Експоненціальна ковзна середня, що надає більшу вагу останнім ціновим даним',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Перекупленість',
-          description:
-            'Стан ринку, за якого актив торгується вище справедливої вартості та ймовірна корекція вниз',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Перепроданість',
-          description:
-            'Стан ринку, за якого актив торгується нижче справедливої вартості та ймовірний відскок вгору',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'ATR',
-          description:
-            'Середній істинний діапазон — індикатор волатильності, що вимірює середню амплітуду цінових коливань',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Bollinger Bands',
-          description:
-            'Смуги Боллінджера — індикатор волатильності з трьох ліній, що формують динамічний канал навколо ціни',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Сигнальна лінія',
-          description:
-            'У контексті MACD — ковзна середня від лінії MACD, що використовується для генерації торгових сигналів',
+            'Anchored VWAP це VWAP, привʼязаний не до відкриття сесії, а до обраної точки (свінг, новина, відкриття періоду), який не обнуляється щодня і тому підходить для свінгу на старших таймфреймах.',
         },
       ],
     };

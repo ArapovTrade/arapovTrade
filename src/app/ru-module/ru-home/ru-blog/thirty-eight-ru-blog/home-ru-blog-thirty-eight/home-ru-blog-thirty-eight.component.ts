@@ -28,7 +28,7 @@ export class HomeRuBlogThirtyEightComponent implements OnInit {
     private themeService: ThemeservService,
     private artickleServ: ArticlesService,
     private renderer: Renderer2,
-    @Inject(DOCUMENT) private document: Document
+    @Inject(DOCUMENT) private document: Document,
   ) {}
   private routerSubscription!: Subscription;
   private themeSubscription!: Subscription;
@@ -58,20 +58,17 @@ export class HomeRuBlogThirtyEightComponent implements OnInit {
     this.checkedGroup = this.artickleServ.selectedGroups;
 
     this.titleService.setTitle(
-      'Безопасное хранение криптовалюты: полное руководство | ArapovTrade'
+      'Проп-трейдинг: что это и как пройти челлендж | Arapov.trade',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Узнайте, как безопасно хранить криптовалюту. Холодные и горячие кошельки, аппаратные устройства, защита приватных ключей и лучшие практики безопасности.',
+        'Что такое проп-трейдинг, как устроен челлендж проп-фирмы, её правила, выплаты и подводные камни торговли на чужом капитале.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-23' }); this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/cryptostoring.webp',
-    });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
 
     this.gerRandom();
   }
@@ -92,7 +89,6 @@ export class HomeRuBlogThirtyEightComponent implements OnInit {
       title: 'Базовый курс',
       link: 'https://arapov.trade/ru/freestudying/freeeducation',
     },
-     
   ];
 
   onGroupChange(event: Event) {
@@ -162,7 +158,7 @@ export class HomeRuBlogThirtyEightComponent implements OnInit {
     // Показываем 5 случайных статей при фокусе, если инпут пуст
     if (!this.searchQuery) {
       const shuffled = [...this.artickleServ.ukrArtickles].sort(
-        () => Math.random() - 0.5
+        () => Math.random() - 0.5,
       );
       this.displayedArticles = shuffled.slice(0, this.maxResults);
     }
@@ -177,7 +173,7 @@ export class HomeRuBlogThirtyEightComponent implements OnInit {
   onSearchChange() {
     // Логика асинхронного поиска
     const filtered = this.artickleServ.ukrArtickles.filter((a) =>
-      a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase())
+      a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase()),
     );
     this.displayedArticles = filtered.slice(0, this.maxResults);
   }
@@ -199,7 +195,7 @@ export class HomeRuBlogThirtyEightComponent implements OnInit {
     const path: string =
       this.router.url.split('/')[this.router.url.split('/').length - 1];
     let index = this.artickleServ.ukrArtickles.findIndex(
-      (a) => a.linkUkr == path
+      (a) => a.linkUkr == path,
     );
 
     if (this.artickleServ.ukrArtickles.length - 1 == index) {
@@ -216,7 +212,7 @@ export class HomeRuBlogThirtyEightComponent implements OnInit {
     const path: string =
       this.router.url.split('/')[this.router.url.split('/').length - 1];
     let index = this.artickleServ.ukrArtickles.findIndex(
-      (a) => a.linkUkr == path
+      (a) => a.linkUkr == path,
     );
 
     if (index == 1) {
@@ -241,7 +237,7 @@ export class HomeRuBlogThirtyEightComponent implements OnInit {
     ];
 
     const scripts = this.document.querySelectorAll(
-      'script[type="application/ld+json"]'
+      'script[type="application/ld+json"]',
     );
 
     scripts.forEach((script) => {
@@ -254,7 +250,7 @@ export class HomeRuBlogThirtyEightComponent implements OnInit {
 
         const shouldRemove = candidates.some(
           (entry: any) =>
-            entry['@type'] && typesToRemove.includes(entry['@type'])
+            entry['@type'] && typesToRemove.includes(entry['@type']),
         );
 
         if (shouldRemove) {
@@ -283,36 +279,34 @@ export class HomeRuBlogThirtyEightComponent implements OnInit {
         {
           '@type': 'Article',
           headline:
-            'Безопасное хранение криптовалюты: полное руководство по защите цифровых активов',
+            'Проп-трейдинг: что это такое и как пройти челлендж проп-фирмы',
           description:
-            'Подробное руководство по безопасному хранению криптовалют. Типы кошельков, защита приватных ключей, аппаратные устройства и распространённые ошибки.',
-          author: {
-            '@id': 'https://arapov.trade/ru#person',
-          },
+            'Что такое проп-трейдинг, как устроен челлендж проп-фирмы, её правила, выплаты и подводные камни торговли на чужом капитале.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'ArapovTrade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
             url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
-          datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://arapov.trade/ru/freestudying/cryptostoring',
+            '@id': 'https://arapov.trade/ru/freestudying/prop-trading',
           },
           image: {
             '@type': 'ImageObject',
-            url: 'https://arapov.trade/assets/img/content/cryptostoring1.webp',
+            url: 'https://arapov.trade/assets/img/content/prop-trading.jpeg',
             width: 1200,
             height: 630,
           },
-          articleSection: 'Криптовалюты',
-          keywords:
-            'хранение криптовалюты, криптокошелек, холодный кошелек, аппаратный кошелек',
+          articleSection: 'Трейдинг для начинающих',
+          keywords: 'проп-трейдинг, проп-фирма, проп-челлендж, funded-аккаунт',
           inLanguage: 'ru',
         },
       ],
@@ -328,18 +322,18 @@ export class HomeRuBlogThirtyEightComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/ru#person',
-      name: 'Игорь Арапов',
+      '@id': 'https://arapov.trade/#person',
+      name: 'Igor Arapov',
       alternateName: [
-        'Igor Arapov',
-              'Арапов Игорь',
-              'I. Arapov',
-              'Ігор Арапов',
-              'І. В. Арапов',
-              'Арапов Ігор',
-              'Arapov Igor',
+        'Ігор Арапов',
+        'Игорь Арапов',
+        'Арапов Игорь',
+        'Арапов Ігор',
+        'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/ru',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -351,9 +345,13 @@ export class HomeRuBlogThirtyEightComponent implements OnInit {
         'https://github.com/ArapovTrade',
         'https://ua.linkedin.com/in/arapovtrade',
         'https://www.youtube.com/@ArapovTrade',
-        'https://t.me/ArapovTrade'
+        'https://t.me/ArapovTrade',
       ],
-      jobTitle: ['Независимый исследователь', 'трейдер', 'автор и основатель arapov.trade'],
+      jobTitle: [
+        'Независимый исследователь',
+        'трейдер',
+        'автор и основатель arapov.trade',
+      ],
       description:
         'Независимый исследователь, практикующий трейдер, автор книг по трейдингу и научных публикаций. Специализируется на психологии трейдинга и когнитивных искажениях на финансовых рынках.',
     };
@@ -371,42 +369,42 @@ export class HomeRuBlogThirtyEightComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'Что такое холодный кошелёк?',
+          name: 'Что такое проп-трейдинг простыми словами?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Холодный кошелёк — это способ хранения криптовалюты без постоянного подключения к интернету. К ним относятся аппаратные кошельки (Ledger, Trezor), бумажные кошельки и металлические пластины. Они обеспечивают максимальную защиту от хакерских атак.',
+            text: 'Вы ведёте сделки на капитал проп-фирмы, а не на свой, и делите с ней прибыль. Доступ к этому капиталу открывается после платного отбора, челленджа, где надо набрать целевую прибыль и не пробить лимиты просадки. Своя прибыльная система при этом всё равно обязательна: чужой капитал её не заменяет.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Чем отличается горячий кошелёк от холодного?',
+          name: 'Сколько стоит челлендж проп-фирмы и можно ли пройти его бесплатно?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Горячий кошелёк подключён к интернету и удобен для частых транзакций. Холодный кошелёк хранит ключи офлайн и обеспечивает максимальную безопасность. Для долгосрочного хранения рекомендуются холодные кошельки.',
+            text: 'Участие платное, чаще всего это несколько сотен долларов за попытку в зависимости от размера счёта. Бесплатно пройти отбор у настоящих фирм нельзя: взнос и есть их фильтр и часть бизнес-модели. Если вам обещают капитал без всякой проверки, это повод насторожиться.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Что такое seed-фраза и зачем она нужна?',
+          name: 'Почему большинство сливает челлендж?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Seed-фраза (мнемоническая фраза) — это набор из 12-24 слов, генерируемый при создании кошелька. Она позволяет восстановить доступ к средствам при утере устройства. Фразу нужно хранить в безопасном месте и никогда не сохранять в цифровом виде.',
+            text: 'Не из-за плохих входов, а из-за нарушения лимитов: пробивают дневную потерю или общую просадку, потому что повышают риск после прибыли и пытаются отыграться после убытка. Челлендж проходит дисциплина и контроль риска, а не угадывание рынка.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Безопасно ли хранить криптовалюту на бирже?',
+          name: 'Что такое funded-аккаунт и чем он отличается от челленджа?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Хранение на бирже удобно для активной торговли, но несёт риски: биржи могут быть взломаны, заблокированы или обанкротиться. Для долгосрочного хранения рекомендуется использовать личные кошельки, где вы контролируете приватные ключи.',
+            text: 'Funded-аккаунт это счёт, который вы получаете уже после успешного челленджа и с которого можно выводить свою долю прибыли. Челлендж это экзамен, funded это работа: лимиты просадки никуда не деваются, и нарушение правил так же легко отбирает финансирование, как и на отборе.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Какой аппаратный кошелёк выбрать?',
+          name: 'Стоит ли новичку идти в проп или лучше торговать на своём депозите?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Популярные аппаратные кошельки: Ledger Nano X/S, Trezor Model T/One, SafePal. При выборе учитывайте поддержку нужных криптовалют, удобство интерфейса и репутацию производителя. Покупайте только у официальных продавцов.',
+            text: 'Если прибыльной системы ещё нет, проп ничего не решит: вы просто заплатите за челлендж и сольёте его теми же ошибками. Сначала имеет смысл выйти в плюс на небольшом своём счёте, а проп подключать как способ масштабировать уже работающий подход, а не как способ его найти.',
           },
         },
       ],
@@ -422,70 +420,34 @@ export class HomeRuBlogThirtyEightComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      '@id': 'https://arapov.trade/ru/freestudying/cryptostoring#howto',
-      name: 'Как безопасно хранить криптовалюту',
+      '@id': 'https://arapov.trade/ru/freestudying/prop-trading#howto',
+      name: 'Как разобраться в проп-трейдинге и решить, идти ли в него',
       description:
-        'Пошаговое руководство по безопасному хранению криптоактивов и защите от взломов',
+        'Пошаговый разбор проп-трейдинга: что это, как устроен челлендж, что такое funded-аккаунт и что выбрать новичку',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Определите размер и горизонт хранения',
-          text: 'Оцените сумму криптовалют, которые вы планируете хранить, и сроки хранения. Если это долгосрочное хранение крупной суммы, отдайте предпочтение холодным кошелькам. Для активной торговли малыми суммами подойдут горячие кошельки.',
+          name: 'Разберитесь, что такое проп-трейдинг и откуда у фирмы капитал',
+          text: 'Проп-трейдинг это модель, при которой трейдер торгует деньгами проп-фирмы, а прибыль они делят по заранее оговорённой доле.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Выберите тип кошелька',
-          text: 'Для долгосрочного хранения используйте холодные кошельки: аппаратные (Ledger, Trezor), бумажные или металлические пластины. Для частых транзакций - горячие кошельки: мобильные приложения или веб-кошельки. Комбинируйте оба типа для максимальной безопасности.',
+          name: 'Поймите правила челленджа: дневной лимит, общая просадка и риск на сделку',
+          text: 'Челлендж проходит не точность входов, а контроль риска: главное не пробить дневную потерю и общую просадку.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Приобретите аппаратный кошелёк у официального продавца',
-          text: 'Выберите проверенного производителя (Ledger, Trezor, SafePal). Покупайте только у официальных дилеров или сертифицированных магазинов. Избегайте б/у устройств. Проверьте целостность упаковки при получении.',
+          name: 'Узнайте, как работает funded-аккаунт, выплаты и сплит прибыли',
+          text: 'Funded-аккаунт это счёт после челленджа, с которого выводят долю прибыли, но лимиты просадки на нём остаются.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Генерируйте seed-фразу при первом использовании',
-          text: 'Во время инициализации кошелька сгенерируется 12-24 словная seed-фраза. Запишите её на бумаге в правильном порядке. Никогда не фотографируйте, не сохраняйте в облаке или на компьютере. Храните в надёжном месте - сейфе, шкатулке, сундуке.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 5,
-          name: 'Установите надёжный пароль и PIN-код',
-          text: 'Установите сложный пароль для устройства (если поддерживается). Установите 4-8 значный PIN для аппаратного кошелька. Запомните PIN, но никому его не сообщайте. Не используйте простые последовательности (1234, 0000).',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 6,
-          name: 'Проверьте адреса и отправьте тестовую сумму',
-          text: 'Перед первым крупным переводом отправьте минимальную сумму криптовалюты. Убедитесь, что адреса совпадают и транзакция прошла успешно. Это подтвердит, что кошелёк работает корректно.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 7,
-          name: 'Резервируйте seed-фразу в нескольких местах',
-          text: 'Сделайте 2-3 копии записанной seed-фразы. Храните их в разных безопасных местах: дома в сейфе, у доверенного человека, в банке. Это защитит от потери доступа при пожаре, краже или других ЧП.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 8,
-          name: 'Используйте многоуровневую защиту',
-          text: 'Разделите крупную сумму между несколькими кошельками. Используйте разные пароли для каждого. Подумайте о multi-sig кошельках, требующих несколько подписей для транзакции. Это предотвратит потерю всех средств при компрометации одного кошелька.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 9,
-          name: 'Обновляйте ПО и используйте безопасную сеть',
-          text: 'Держите ПО кошелька и устройства в актуальном состоянии. При подключении аппаратного кошелька используйте чистый компьютер без вирусов. Избегайте публичного Wi-Fi при проведении транзакций. Проверяйте скам-сайты перед вводом приватных ключей.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 10,
-          name: 'Проверяйте адреса перед каждой отправкой',
-          text: 'Всегда проверяйте адрес получателя перед подтверждением. Используйте функцию проверки на устройстве (если есть). Отправляйте сначала небольшую сумму, а потом остаток. Остерегайтесь фишинга и подменённых адресов.',
+          name: 'Решите, идти ли в проп или торговать на своём депозите',
+          text: 'Проп масштабирует уже работающую систему, но не создаёт её: без прибыльного подхода чужой капитал лишь ускоряет потери.',
         },
       ],
     };
@@ -500,67 +462,25 @@ export class HomeRuBlogThirtyEightComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Глоссарий хранения криптовалют',
+      name: 'Глоссарий терминов статьи',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Приватный ключ',
+          name: 'Проп-трейдинг',
           description:
-            'Криптографическая последовательность, дающая полный контроль над криптовалютными средствами.',
+            'Схема, в которой трейдер ведёт сделки на деньги проп-фирмы и делит с ней итоговую прибыль в заранее согласованной пропорции.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Публичный ключ',
+          name: 'Проп-челлендж',
           description:
-            'Адрес кошелька, который можно передавать для получения криптовалюты.',
+            'Платный отбор, на котором трейдер должен набрать целевую прибыль и не пробить установленные лимиты просадки, чтобы получить доступ к капиталу фирмы.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Seed-фраза',
+          name: 'Funded-аккаунт',
           description:
-            'Мнемоническая фраза из 12-24 слов для восстановления доступа к кошельку.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Холодный кошелёк',
-          description:
-            'Способ хранения криптовалюты без подключения к интернету.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Горячий кошелёк',
-          description:
-            'Кошелёк с постоянным подключением к интернету для быстрых транзакций.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Аппаратный кошелёк',
-          description:
-            'Физическое устройство для безопасного хранения приватных ключей офлайн.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Мультисиг',
-          description:
-            'Кошелёк, требующий нескольких подписей для проведения транзакции.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Кастодиальный кошелёк',
-          description:
-            'Кошелёк, где приватные ключи хранятся третьей стороной.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Некастодиальный кошелёк',
-          description:
-            'Кошелёк с полным контролем пользователя над приватными ключами.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'MFA',
-          description:
-            'Многофакторная аутентификация для дополнительной защиты аккаунта.',
+            'Финансируемый счёт, который трейдер получает после успешного челленджа и с которого выводит свою долю прибыли при условии соблюдения правил риска.',
         },
       ],
     };

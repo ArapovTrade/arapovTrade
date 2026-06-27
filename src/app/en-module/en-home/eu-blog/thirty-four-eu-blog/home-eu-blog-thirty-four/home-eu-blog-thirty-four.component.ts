@@ -54,21 +54,18 @@ export class HomeEuBlogThirtyFourComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'What is Stop-Loss and How to Set It | ArapovTrade',
+      'Types of Orders on the Exchange | Arapov.trade',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Complete guide to stop-loss in trading. How to calculate and set stop-loss properly, common mistakes, strategies for different trading styles.',
+        'Types of orders on the exchange: market, limit, stop and stop-limit. How they differ, when to use them and how they get filled.',
     });
-    this.meta.updateTag({ name: 'author', content: 'Ihor Arapov' });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-16' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/stoplossmain.png',
-    });
+
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
+
     this.gerRandom();
   }
   randomArticleRus: any = [];
@@ -254,28 +251,36 @@ export class HomeEuBlogThirtyFourComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-
-          headline: 'What is Stop-Loss and How to Set It Properly',
+          headline:
+            'Order Types on the Exchange: Every Order and How to Use It',
           description:
-            'A complete guide to stop-loss orders in trading. How to correctly calculate and set a stop-loss order, common mistakes, and strategies for different trading styles.',
-          author: {
-            '@id': 'https://arapov.trade/en#person',
-          },
+            'Types of orders on the exchange: market, limit, stop and stop-limit. How they differ, when to use them and how they get filled.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'ArapovTrade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
-          datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://arapov.trade/en/freestudying/stoploss',
+            '@id': 'https://arapov.trade/en/freestudying/order-types',
           },
-          image: 'https://arapov.trade/assets/img/content/stoploss1.png',
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/ordertypes.webp',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Exchange',
+          keywords:
+            'orders, order types, market order, limit order, stop order, stop-limit, stop-loss, trailing stop, iceberg, algorithmic orders',
           inLanguage: 'en',
         },
       ],
@@ -291,18 +296,18 @@ export class HomeEuBlogThirtyFourComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/en#person',
+      '@id': 'https://arapov.trade/#person',
       name: 'Igor Arapov',
       alternateName: [
         'Ігор Арапов',
-        'Арапов Игорь',
-        'I. Arapov',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/en',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -317,12 +322,12 @@ export class HomeEuBlogThirtyFourComponent implements OnInit {
         'https://t.me/ArapovTrade',
       ],
       jobTitle: [
-        'Independent researcher,',
-        'trader',
-        'author and founder of arapov.trade',
+        'Independent researcher',
+        'Trader',
+        'Author and founder of arapov.trade',
       ],
       description:
-        'Independent researcher, practicing trader, author of books on trading and scientific publications. Specializes in trading psychology and cognitive biases in financial markets.',
+        'Independent researcher, practising trader, author of trading books and scientific publications. Specialises in trading psychology and cognitive biases in financial markets.',
     };
 
     this.addJsonLdSchema(data);
@@ -338,42 +343,50 @@ export class HomeEuBlogThirtyFourComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'What is a stop-loss?',
+          name: 'What is the difference between a market order and a limit order?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'A stop-loss is an automatic order that closes a position when price reaches a preset loss level.',
+            text: 'A market order fills instantly at any available price: you get speed but pay the spread and possible slippage. A limit order fills only at your price or better and gives you control, but the fill is not guaranteed, since price may never reach your level.',
           },
         },
         {
           '@type': 'Question',
-          name: 'What is optimal risk?',
+          name: 'What is a stop order and how does it move price?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Optimal risk is 1-2% of deposit per trade.',
+            text: 'It is a pending order that sleeps until its level and turns into a market order the moment the stop price is touched. When a cluster of such stops triggers, they all pour into the market at once and push price further the same way, which is why stop zones act as fuel for sharp moves.',
           },
         },
         {
           '@type': 'Question',
-          name: 'How to use ATR?',
+          name: 'Where should you place a stop-loss?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Set stop-loss at 1.5-2 ATR from entry.',
+            text: "Not on a round number and not right next to your entry, but behind a structural level with a buffer, where the trade's scenario counts as broken. From that distance you size the position, risking around one to two percent of the account per trade rather than fixing the size first.",
           },
         },
         {
           '@type': 'Question',
-          name: 'What is trailing stop?',
+          name: 'Stop-limit vs stop-market: which one protects you?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Dynamic stop-loss that follows profitable price movement.',
+            text: 'A stop-market turns into a market order and always fills, but at the available price, sometimes with slippage. A stop-limit places a limit order and controls the price, but may not fill if the market jumps past it. One guarantees the exit, the other the price, so for protecting the account I take the stop-market.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Why not move stop-loss?',
+          name: 'Why does the market keep hitting my stop loss?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Moving stop-loss violates trading plan and causes losses.',
+            text: "Most often because it sits in an obvious place where the crowd's stops pile up, just under a round number or right past a visible level. Liquidity rests there, and price is sometimes pushed into the zone on purpose with a false breakout. A stop set behind the level with a buffer lowers the chance of being swept out.",
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What is an iceberg order and how do you read big players?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'An iceberg is a large order sliced into visible portions, with only the tip showing in the order book while the bulk stays hidden. The order book can be faked, but volume records already-executed trades, so big capital is read more reliably by a spike of volume without a price move at a strong level.',
           },
         },
       ],
@@ -389,37 +402,46 @@ export class HomeEuBlogThirtyFourComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'How to Set Stop-Loss',
+      '@id': 'https://arapov.trade/en/freestudying/order-types#howto',
+      name: 'How to get to grips with exchange order types',
+      description:
+        'A step-by-step walkthrough of every order: from market and limit to stop-loss, trailing stop and the hidden orders of big capital',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Define risk',
-          text: 'Set 1-2% max risk.',
+          name: 'Understand what an order is and the types that exist',
+          text: 'An order is a command to the broker to buy or sell on set conditions: a market order fills at once, a limit at your price, a stop triggers on its level.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Find level',
-          text: 'Identify support/resistance.',
+          name: 'Compare the market and limit order',
+          text: 'The market order gives speed at the cost of slippage and moves price on size, while the limit order gives price control, and it is what big capital works with.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Use ATR',
-          text: 'Account for volatility.',
+          name: 'Learn the stop order and stop-limit',
+          text: 'A stop order sleeps until its level and becomes a market order, while a stop-limit controls the price but risks not filling in a sharp move.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Size position',
-          text: 'Match risk to position.',
+          name: 'Place the stop-loss behind a structural level',
+          text: 'A protective stop goes behind a structural level with a buffer, and from that distance you size the position at around one to two percent risk per trade.',
         },
         {
           '@type': 'HowToStep',
           position: 5,
-          name: 'Check R/R',
-          text: 'Ensure 1:2 minimum.',
+          name: 'Do not leave your stop where the crowd keeps it',
+          text: 'Crowd stops pile up behind obvious levels and become liquidity for big capital, so your own stop is hidden with a buffer.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 6,
+          name: 'Read big capital by volume, not by the order book',
+          text: 'Iceberg and algorithmic orders hide the real size in the order book, but volume cannot be faked, so big capital is read by a spike of volume at a level.',
         },
       ],
     };
@@ -434,52 +456,55 @@ export class HomeEuBlogThirtyFourComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
+      name: 'Glossary of terms in this article',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Stop-Loss',
-          description: 'Protective order',
+          name: 'Order',
+          description:
+            'An instruction to the broker to buy or sell an asset under set rules; the order type determines the price and the speed of execution.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Take-Profit',
-          description: 'Profit locking order',
+          name: 'Market order',
+          description:
+            'An instruction to the broker to buy or sell an asset immediately at the best price available at that moment.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'ATR',
-          description: 'Volatility indicator',
+          name: 'Stop order',
+          description:
+            'A pending order with a set stop price that sleeps until triggered, then turns into a market order when price touches the level.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Trailing Stop',
-          description: 'Dynamic stop-loss',
+          name: 'Stop-limit order',
+          description:
+            'A pending order built from two prices: the stop price activates the order, and the limit price places a limit order that fills only at your price or better.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Risk/Reward',
-          description: 'Risk to profit ratio',
+          name: 'Stop-loss',
+          description:
+            'A protective order that automatically closes a position when price reaches a preset loss level.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Slippage',
-          description: 'Price execution difference',
-        },
-        { '@type': 'DefinedTerm', name: 'Support', description: 'Price floor' },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Resistance',
-          description: 'Price ceiling',
+          name: 'Trailing stop',
+          description:
+            'A moving stop-loss that follows price as the trade goes into profit and protects the gain already accrued.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Volatility',
-          description: 'Price variability',
+          name: 'Iceberg order',
+          description:
+            'A large exchange order split into a run of small ones, of which only a small visible share shows in the order book while the bulk stays hidden.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Risk Management',
-          description: 'Capital protection',
+          name: 'Algorithmic orders',
+          description:
+            'Large orders executed by a set algorithm and sliced into parts, so a participant can buy or sell big size without showing the market the real intent.',
         },
       ],
     };

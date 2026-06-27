@@ -266,39 +266,37 @@ export class HomeUkBlogOnehundredSevenComponent implements OnInit {
   // ============================================================
   //  ARTICLE
   // ============================================================
-  private setArticleSchema(): void {
+   private setArticleSchema(): void {
     const data = {
       '@context': 'https://schema.org',
       '@graph': [
         {
           '@type': 'Article',
           url: 'https://arapov.trade/uk/freestudying/tradingview-record',
-
           headline:
             "242 ідеї, 5 років публічного аналізу та кілька Editor's Pick: повний трек-рекорд Ігоря Арапова на TradingView",
           description:
-            'Повний розбір кожної категорії контенту, опублікованого Ігорем Арапо­вим на TradingView з жовтня 2021 по лютий 2026 року: Bitcoin, золото, форекс, фондові індекси, нафта, альткоїни, освітні серії.',
+            'Повний розбір кожної категорії контенту, опублікованого Ігорем Араповим на TradingView з жовтня 2021 по лютий 2026 року: Bitcoin, золото, форекс, фондові індекси, нафта, альткоїни, освітні серії.',
           inLanguage: 'uk',
           datePublished: '2026-02-21T00:00:00Z',
           dateModified: '2026-02-21T00:00:00Z',
           image: [
             'https://arapov.trade/assets/img/content/tradingview-record.png',
-             
           ],
           mainEntity: {
-            '@type': 'EducationalOrganization',
-            '@id': 'https://arapov.trade/#organization',
+            '@type': 'Person',
+            '@id': 'https://arapov.trade/#person',
           },
           author: {
             '@type': 'Person',
-            '@id': 'https://arapov.trade/uk#person',
+            '@id': 'https://arapov.trade/#person',
           },
           about: [
             { '@type': 'Thing', name: 'Трейдинг' },
             { '@type': 'Thing', name: 'Технічний аналіз' },
             { '@type': 'Thing', name: 'Bitcoin' },
             { '@type': 'Thing', name: 'Метод Вайкоффа' },
-            { '@type': 'Thing', name: "Об'ємний аналіз" },
+            { '@type': 'Thing', name: 'Обʼємний аналіз' },
           ],
           mentions: [
             {
@@ -327,20 +325,20 @@ export class HomeUkBlogOnehundredSevenComponent implements OnInit {
   // ============================================================
   //  PERSON
   // ============================================================
-  private setPersonSchema(): void {
+   private setPersonSchema(): void {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/uk#person',
+      '@id': 'https://arapov.trade/#person',
       name: 'Ігор Арапов',
       alternateName: [
         'Igor Arapov',
-              'Арапов Игорь',
-              'I. Arapov',
-              'Игорь Арапов',
-              'І. В. Арапов',
-              'Арапов Ігор',
-              'Arapov Igor',
+        'Арапов Игорь',
+        'I. Arapov',
+        'Игорь Арапов',
+        'І. В. Арапов',
+        'Арапов Ігор',
+        'Arapov Igor',
       ],
       url: 'https://arapov.trade/uk',
       image:
@@ -354,9 +352,9 @@ export class HomeUkBlogOnehundredSevenComponent implements OnInit {
         'https://github.com/ArapovTrade',
         'https://ua.linkedin.com/in/arapovtrade',
         'https://www.youtube.com/@ArapovTrade',
-        'https://t.me/ArapovTrade'
+        'https://t.me/ArapovTrade',
       ],
-       jobTitle: ['Незалежний дослідник', 'трейдер', 'автор і засновник arapov.trade'],
+      jobTitle: ['Незалежний дослідник', 'Трейдер'],
       description:
         'Незалежний дослідник, практикуючий трейдер, автор книг з трейдингу та наукових публікацій. Спеціалізується на психології трейдингу та когнітивних упередженнях на фінансових ринках.',
     };

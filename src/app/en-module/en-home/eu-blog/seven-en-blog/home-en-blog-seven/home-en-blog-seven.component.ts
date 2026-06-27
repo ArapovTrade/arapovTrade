@@ -54,14 +54,16 @@ export class HomeEnBlogSevenComponent implements OnInit {
     this.grr = this.artickleServ.selectedGroups;
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.titleService.setTitle('How to Make Money Trading: Complete Guide');
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
+    this.titleService.setTitle(
+      'Bitcoin ETF: What It Is and How It Affects the Market | Arapov.trade',
+    );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'How to Make Money Trading: practical guide to market selection, trading strategies and risk management for beginner traders.',
+        'What a Bitcoin ETF is, how it works, why it suits investors and how inflows into spot ETFs affect the cryptocurrency market.',
     });
     this.gerRandom();
   }
@@ -248,39 +250,36 @@ export class HomeEnBlogSevenComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          '@id':
-            'https://arapov.trade/en/freestudying/makingmoneyintrading#article',
-          headline: 'How to Make Money Trading: Practical Guide',
+          headline:
+            'Bitcoin ETF: What It Is and How It Affects the Crypto Market',
           description:
-            'How to Make Money Trading: practical guide to market selection, trading strategies and risk management.',
-          image:
-            'https://arapov.trade/assets/img/content/makingmoneyintrading1.webp',
-          datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
-          author: {
-            '@id': 'https://arapov.trade/en#person',
-          },
+            'What a Bitcoin ETF is, how it works, why it suits investors and how inflows into spot ETFs affect the cryptocurrency market.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
             '@id': 'https://arapov.trade/#organization',
-            name: 'Pair Trade',
+            name: 'Arapov.Trade',
             url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://arapov.trade/en/freestudying/makingmoneyintrading',
+            '@id': 'https://arapov.trade/en/freestudying/bitcoin-etf',
           },
-          articleSection: 'Trading',
-          keywords: [
-            'trading income',
-            'trading',
-            'Forex',
-            'trading strategies',
-          ],
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/bitcoinetf.webp',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Cryptocurrency',
+          keywords: 'bitcoin etf',
+          inLanguage: 'en',
         },
       ],
     };
@@ -295,18 +294,18 @@ export class HomeEnBlogSevenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/en#person',
+      '@id': 'https://arapov.trade/#person',
       name: 'Igor Arapov',
       alternateName: [
         'Ігор Арапов',
-        'Арапов Игорь',
-        'I. Arapov',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/en',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -321,12 +320,12 @@ export class HomeEnBlogSevenComponent implements OnInit {
         'https://t.me/ArapovTrade',
       ],
       jobTitle: [
-        'Independent researcher,',
-        'trader',
-        'author and founder of arapov.trade',
+        'Independent researcher',
+        'Trader',
+        'Author and founder of arapov.trade',
       ],
       description:
-        'Independent researcher, practicing trader, author of books on trading and scientific publications. Specializes in trading psychology and cognitive biases in financial markets.',
+        'Independent researcher, practising trader, author of trading books and scientific publications. Specialises in trading psychology and cognitive biases in financial markets.',
     };
 
     this.addJsonLdSchema(data);
@@ -339,46 +338,37 @@ export class HomeEnBlogSevenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
-      '@id': 'https://arapov.trade/en/freestudying/makingmoneyintrading#faq',
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'Can beginners really make money trading?',
+          name: 'What is a Bitcoin ETF in simple terms?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Yes, but it requires education, demo account practice, and strict risk management. About 20-30% of traders achieve consistent profits after 1-2 years of practice.',
+            text: 'It is an exchange-traded fund whose shares trade like stocks, with their price tied to bitcoin. It gives access to BTC through an ordinary brokerage account, without buying or storing the coin and private keys yourself.',
           },
         },
         {
           '@type': 'Question',
-          name: 'How much money do you need to start trading?',
+          name: 'What is the difference between a spot and a futures Bitcoin ETF?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Minimum Forex deposit is $100. For comfortable trading with proper risk management, $500-1000 is recommended.',
+            text: "A spot fund holds real bitcoins, so its price tracks the rate closely. A futures fund follows the price through derivative contracts and can drift from the asset's real value.",
           },
         },
         {
           '@type': 'Question',
-          name: 'Which market is best for beginners?',
+          name: 'When were spot Bitcoin ETFs approved?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Forex suits beginners due to high liquidity and accessibility. Cryptocurrencies are more volatile and risky for newcomers.',
+            text: 'Spot bitcoin funds were approved in the US on January 10, 2024, and trading began the next day. For more than ten years before that the regulator had rejected such applications.',
           },
         },
         {
           '@type': 'Question',
-          name: 'How much time does trading require?',
+          name: 'How does a Bitcoin ETF affect the price of bitcoin?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Depends on style: scalping requires 4-8 hours daily, swing trading needs 1-2 hours.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Why do most traders lose money?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Main reasons: lack of education, ignoring risk management, emotional decisions, and unrealistic expectations.',
+            text: 'Through demand: against inflows into the funds, managers buy real bitcoins, and that pressure shows on the market. But outflows and regulator decisions push the price down, so an ETF is a background of demand, not a guarantee of growth.',
           },
         },
       ],
@@ -394,38 +384,28 @@ export class HomeEnBlogSevenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      '@id': 'https://arapov.trade/en/freestudying/makingmoneyintrading#howto',
-      name: 'How to Start Making Money Trading',
+      '@id': 'https://arapov.trade/en/freestudying/bitcoin-etf#howto',
+      name: 'How to understand and apply: what a Bitcoin ETF is and how it affects the crypto market',
+      description:
+        'A step-by-step breakdown of the topic and its practical use in trading',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Choose a market',
-          text: 'Decide on direction: Forex, stocks, cryptocurrencies, or derivatives.',
+          name: 'What is a Bitcoin ETF and how does it work?',
+          text: 'A Bitcoin ETF is an exchange-traded fund whose shares trade on a stock exchange, with their price tied to the value of bitcoin.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Get educated',
-          text: 'Learn the basics of technical and fundamental analysis.',
+          name: 'Spot Bitcoin ETFs: which launched and at what scale',
+          text: 'The turning point came on January 10, 2024, when the US regulator approved eleven spot bitcoin fund applications at once, and trading started the next day.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Open a demo account',
-          text: 'Practice for at least 3 months without risking real money.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 4,
-          name: 'Develop a strategy',
-          text: 'Create a trading plan with clear entry and exit rules.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 5,
-          name: 'Start small',
-          text: 'Transition to a live account with minimal deposit and strict risk management.',
+          name: 'How does a Bitcoin ETF affect the BTC price and institutional demand?',
+          text: 'The main effect is not magic, it is demand.',
         },
       ],
     };
@@ -440,65 +420,13 @@ export class HomeEnBlogSevenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      '@id': 'https://arapov.trade/en/freestudying/makingmoneyintrading#terms',
+      name: 'Glossary of article terms',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Trading',
+          name: 'Bitcoin ETF',
           description:
-            'The process of buying and selling financial instruments for profit',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Leverage',
-          description:
-            'A tool allowing traders to control positions larger than their deposit',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Scalping',
-          description:
-            'Trading style with numerous quick trades for small profits',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Swing Trading',
-          description:
-            'Trading medium-term price movements with positions held for days to weeks',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Technical Analysis',
-          description:
-            'Price forecasting method based on charts and indicators',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Fundamental Analysis',
-          description: 'Asset valuation based on economic indicators',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Risk Management',
-          description:
-            'System for controlling trading risks and position sizing',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Volatility',
-          description: 'Degree of asset price variability over a period',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Liquidity',
-          description:
-            'Ability of an asset to be sold quickly without significant price change',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Derivatives',
-          description:
-            'Financial instruments whose value depends on an underlying asset',
+            'A Bitcoin ETF is an exchange-traded fund whose shares trade on a stock exchange, with their price tied to the value of bitcoin.',
         },
       ],
     };

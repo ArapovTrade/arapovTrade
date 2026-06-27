@@ -6,93 +6,451 @@
           <div class="m-right hero-section"></div>
           <div class="free-courses_main-container">
             <main lang="en">
-             <header>
-  <h1>Elliott Wave Theory in Trading: What It Is and How to Use It</h1>
-</header>
-<article>
-  <p>Elliott wave theory holds that price moves in cycles of eight waves: five run in the direction of the trend and three pull back against it. At its base is crowd psychology, not magic. The theory is popular but heavily subjective, so I treat it as a view on market mood rather than a precise forecast.</p>
+              <header>
+                <h1>
+                  Perpetual Futures and Margin in Crypto: What They Are,
+                  Funding, and How to Avoid Liquidation
+                </h1>
+              </header>
+              <article>
+                <p>
+                  The friendly name hides the real engine: a perpetual futures
+                  contract is leverage, and the leverage, not the contract, is
+                  what turns a small move against you into the loss of your
+                  whole collateral. It is a contract on an asset's price with no
+                  expiry date, held as long as you like, kept near spot by
+                  funding, the periodic payments between longs and shorts. A
+                  perp is really a convenient wrapper around an old risk:
+                  borrowed money against collateral, where big leverage stands
+                  next to a zeroed account.
+                </p>
 
-  <p>Elliott waves are a very popular thing: half the charts on the internet are marked up exactly this way. I will say plainly up front that I do not trade by them myself, and below I explain why. But it matters for a beginner to understand what they are, in order to judge other people's forecasts soberly and not mistake a pretty picture for the truth. So let's go through both the theory and its weak spot.</p>
+                <p>
+                  The word leverage sounds like a profit accelerator, and
+                  beginners grab the maximum, x50 or x100, without counting the
+                  risk. I mostly trade futures and gold, and I treat crypto
+                  perps with caution exactly because of the leverage: the
+                  instrument works, but it is dangerous for anyone who climbs in
+                  without a stop. Let's go through it in order: what a perpetual
+                  is, what funding has to do with it, how margin and leverage
+                  multiply the result, and at what price liquidation arrives.
+                </p>
 
-  <p><strong><i>In this article we'll cover:</i></strong></p>
-  <ul>
-    <li>Elliott waves are about crowd psychology: an impulse with the trend and a pullback against it;</li>
-    <li>a full cycle is eight waves, five impulsive and three corrective, plus three hard rules;</li>
-    <li>Fibonacci levels are used as guides for pullback depth and targets, but they are not a guarantee;</li>
-    <li>the theory's main problem is subjectivity: the same chart gets labeled differently by different people.</li>
-  </ul>
+                <p>
+                  <strong><i>In this article we'll cover:</i></strong>
+                </p>
+                <ul>
+                  <li>
+                    a perpetual futures contract has no expiry and is held as
+                    long as you like, tied to spot by funding;
+                  </li>
+                  <li>
+                    funding is a payment between longs and shorts several times
+                    a day, not an exchange fee;
+                  </li>
+                  <li>
+                    margin is your collateral, and leverage multiplies both the
+                    profit and the loss from a single price move;
+                  </li>
+                  <li>
+                    in my experience the main risk here is not the instrument
+                    but the leverage: at x100 a one-percent move is enough to be
+                    liquidated.
+                  </li>
+                </ul>
 
-  <p>First let's see what Elliott came up with and what a cycle consists of, then how it is measured with Fibonacci, and finally talk frankly about the limitations.</p>
+                <p>
+                  Let's start with what a perpetual futures contract even is and
+                  why it has no term.
+                </p>
 
-  <h2>What Is Elliott Wave Theory?</h2>
-  <p><dfn itemscope itemtype="https://schema.org/DefinedTerm"><span itemprop="name">Elliott wave theory</span></dfn> is a method of <a class="linkrefinto" href="https://arapov.trade/en/freestudying/technicalanalysis">technical analysis</a> that describes market movement through repeating waves reflecting crowd psychology. It was devised by the American accountant Ralph Nelson Elliott back in the 1930s, studying stock-market charts. His idea was that price moves not chaotically but in cycles, because masses of people behave similarly time after time.</p>
-  <p>A full cycle consists of eight waves. Five waves form an impulse in the direction of the trend, numbered 1 to 5. Another three are a correction against the trend, labeled A, B, C. An important feature is fractality: each large wave is itself made of smaller waves of the same shape. In essence it is about the same thing I talk about: there is a phase when the crowd piles into a move en masse, and a phase when it doubts and takes profit.</p>
+                <h2>
+                  What is a perpetual futures contract and how does it differ
+                  from a regular one?
+                </h2>
+                <p>
+                  A
+                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
+                    ><span itemprop="name"
+                      >perpetual futures contract</span
+                    ></dfn
+                  >
+                  is a derivative contract on an asset with no expiry date,
+                  which a trader can hold for an unlimited time.
+                </p>
+                <p>
+                  A regular futures contract has a settlement date, by which its
+                  price converges with the underlying asset. A perpetual has no
+                  such date, which raises the question: what keeps the
+                  contract's price near spot. The answer is funding, unpacked in
+                  the next section. So the one real difference sits in the term:
+                  a classic contract closes at its settlement date, a perpetual
+                  lives without one, and funding plays the anchoring role
+                  instead of a date.
+                </p>
+                <p>
+                  From this follows a difference in use, too. Classic futures on
+                  regulated exchanges like CME are my benchmark of honest
+                  exchange volume: through them you see the real interest of
+                  large capital, the so-called smart money. Crypto perps trade
+                  on crypto exchanges and decentralized venues, and volume there
+                  is built differently. The instrument belongs to
+                  <a
+                    class="linkrefinto"
+                    href="https://arapov.trade/en/freestudying/derivatives-futures-spot"
+                    >derivatives and futures</a
+                  >, where you trade not the asset directly but a contract on
+                  its price. The takeaway for a beginner is simple: a perp is
+                  convenient because you don't watch an expiry or roll from
+                  contract to contract, but you pay for that with funding on a
+                  long hold.
+                </p>
+                <p>
+                  <strong>In short: </strong
+                  ><i
+                    >A perpetual futures contract has no expiry and is held as
+                    long as you like; unlike a regular future it has no term,
+                    and funding keeps its price tied to spot.</i
+                  >
+                </p>
 
-  <div class="flex">
-    <img class="pictureImg" loading="lazy" src="/assets/img/content/elliottwawe1.png" alt="Structure of the Elliott wave cycle" />
-  </div>
+                <h2>What is funding (the funding rate) in simple terms?</h2>
+                <p>
+                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
+                    ><span itemprop="name">Funding</span></dfn
+                  >
+                  is a periodic payment between the two sides of a trade, which
+                  the exchange calculates several times a day, most often every
+                  eight hours, and on some exchanges more often. It is not a
+                  platform fee, it is a settlement between the traders
+                  themselves.
+                </p>
+                <p>
+                  The logic is simple. When a perp trades above spot, longs pay
+                  shorts; when below, shorts pay longs instead. That way funding
+                  works like a spring that pulls the contract's price back to
+                  the market: whoever pushed the skew is penalized in favor of
+                  the opposite side. In essence, the price is held near the
+                  market not by the exchange but by the traders themselves.
+                </p>
+                <p>
+                  Two things matter in practice. First: on a long hold funding
+                  is a cost, and if the rate runs against you, the payments add
+                  up and eat the result. So the rate is worth watching, and
+                  exchanges show it in real time. Second: a high funding rate is
+                  also a signal of overheated sentiment, when the crowd has
+                  piled into one side, and on the crypto market such skews are
+                  often followed by a sharp reversal. I look at this through the
+                  lens of volume analysis: where the crowd has piled in and who
+                  stands against it.
+                </p>
+                <p>
+                  <strong>In short: </strong
+                  ><i
+                    >Funding is a payment between longs and shorts every eight
+                    hours, not an exchange fee; it holds the perp's price near
+                    spot, and on a long hold it works as a cost against you.</i
+                  >
+                </p>
 
-  <h2>Five Impulse and Three Corrective Waves</h2>
-  <p>In the impulse each wave has its own psychology. The first is a timid start, when few notice the trend yet. The second pulls back, testing the move for strength. The third is the strongest and longest, the main crowd entering, often on the fear of missing out. The fourth is a breather and a range, and the fifth is a final push on euphoria, already on weakening volume. Then comes the three-wave A, B, C correction.</p>
-  <p>The theory has three hard rules that cannot be broken: wave two does not fall below the start of wave one, wave three is never the shortest, and wave four does not enter the price territory of wave one. Pullback depth and targets are usually estimated by <a class="linkrefinto" href="https://arapov.trade/en/freestudying/fibonaccilevels">Fibonacci levels</a>: corrections often land in the 38.2 to 61.8 percent range, and the wave-three target is frequently around 161.8 percent of wave one. Just keep in mind these are guides, not a guarantee. What is genuinely worth checking is volume: a real third wave comes on rising volume, while weakening volume on the fifth gives away an exhausting trend. These <a class="linkrefinto" href="https://arapov.trade/en/freestudying/freeeducation#phases">market phases</a> are covered in detail in the course.</p>
+                <h2>Margin and leverage: how they multiply profit and loss</h2>
+                <p>
+                  Margin trading means trades on the exchange's borrowed funds,
+                  where your own money serves as collateral, and that collateral
+                  is called margin. Leverage is the ratio of borrowed funds to
+                  your collateral: at x10 leverage, for every dollar of yours
+                  the exchange adds nine more, and you control a position ten
+                  times your own funds. In crypto, leverage can be very large,
+                  up to x100 and above.
+                </p>
+                <p>
+                  Leverage works the same in both directions, and that is the
+                  key idea. With x10, a one-percent move your way gives ten
+                  percent of profit on the collateral. Nice. But the same one
+                  percent against you takes those same ten percent. Leverage
+                  doesn't make you more right, it only multiplies the result of
+                  any move, winning or losing. Hence the unpleasant conclusion:
+                  the larger the leverage, the smaller the move against you
+                  needed to lose everything. High leverage doesn't raise your
+                  chance to earn, it only pushes the point of total loss right
+                  up to the entry price. That is exactly why I keep leverage
+                  low: I need a buffer to survive ordinary swings without flying
+                  out on liquidation for no reason. How
+                  <a
+                    class="linkrefinto"
+                    href="https://arapov.trade/en/freestudying/freeeducation#levarage"
+                    >leverage</a
+                  >
+                  itself works and why it is so dangerous I break down in detail
+                  in the course section.
+                </p>
+                <p>
+                  Worth knowing the two margin modes, since they affect risk
+                  control directly. With isolated margin, only the collateral of
+                  a specific position is at risk, and a liquidation hits only
+                  it, the rest of the account is intact. With cross margin, the
+                  whole account balance serves as collateral, and one bad
+                  position can drag everything down with it. For a beginner,
+                  isolated margin is safer: it limits the loss to one trade and
+                  doesn't let greed risk the whole account. And the main
+                  misconception about leverage I'll name plainly: many think big
+                  leverage is needed to earn more from a small account. In
+                  reality the same result comes from lower leverage and a little
+                  patience, without the risk of instant liquidation. Leverage
+                  solves the problem of position size, not the problem of
+                  profit.
+                </p>
+                <p>
+                  <strong>In short: </strong
+                  ><i
+                    >Leverage multiplies any move both ways: at x10 a
+                    one-percent gain is ten percent of profit, a one-percent
+                    loss is ten percent of the collateral; isolated margin and
+                    low leverage are safer for a beginner.</i
+                  >
+                </p>
 
-  <div class="flex">
-    <img class="pictureImg" loading="lazy" src="/assets/img/content/elliottwawe2.png" alt="Elliott wave rules and structure" />
-  </div>
+                <h2>
+                  At what price does liquidation happen and how to avoid it
+                </h2>
+                <p>
+                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
+                    ><span itemprop="name">Liquidation</span></dfn
+                  >
+                  is the forced closing of a position by the exchange when the
+                  collateral stops being enough to maintain an open leveraged
+                  trade. A margin call usually comes first, the warning that the
+                  collateral is melting; but on high leverage, from margin call
+                  to liquidation is mere moments, because the buffer is tiny.
+                </p>
+                <p>
+                  The liquidation price depends mostly on leverage: the larger
+                  the leverage, the closer the liquidation level to entry. Rough
+                  markers help you feel it. At x100 a move of about one percent
+                  against you is enough to be liquidated, at x50 about two, at
+                  x20 about five, at x10 about ten. Maintenance margin and fees
+                  shift the exact figures a little, but the order is just that.
+                  A simple example. You open a 1,000-dollar position at x50,
+                  controlling a volume of 50,000. The price moves against you by
+                  two percent, and two percent of 50,000 is exactly your 1,000
+                  of collateral. At that moment the exchange closes the
+                  position, the collateral is at zero. On the crypto market a
+                  domino effect is added: mass liquidations in one direction
+                  push the price further and trigger new ones, which is why
+                  sharp spikes on perps are often the trails of such cascades.
+                </p>
+                <p>
+                  Protection from liquidation comes down to three simple things,
+                  and they are all in your hands. Low leverage, so the
+                  liquidation level stands far away. A stop-loss before the
+                  liquidation level, so the trade is closed by your plan, not by
+                  the exchange. And small risk per trade. These rules work only
+                  together: low leverage without a stop is still dangerous, and
+                  a stop on huge leverage may not fire in time on a spike. My
+                  approach: I keep risk around one to two percent of the account
+                  and place the stop before I compute the
+                  <a
+                    class="linkrefinto"
+                    href="https://arapov.trade/en/freestudying/freeeducation#size"
+                    >position size</a
+                  >, not the other way round. If the stop is set correctly, it
+                  never comes to liquidation: you exit on your own stop far
+                  earlier and with a small loss. The exchange will never close
+                  you better than you would have closed yourself on a stop,
+                  since liquidation is a market close at the worst possible
+                  moment, often with an extra fee on top.
+                </p>
+                <p>
+                  <strong>In short: </strong
+                  ><i
+                    >The liquidation price is closer to entry the higher the
+                    leverage: at x50 two percent against you is enough to zero
+                    the account; low leverage, a stop before the liquidation
+                    level, and one to two percent risk per trade keep you away
+                    from it.</i
+                  >
+                </p>
 
-  <h2>The Limitations: Subjectivity of the Labeling</h2>
-  <p>Now frankly, as a practitioner. The main problem is subjectivity. Give the same chart to ten analysts and you get ten different labelings, often with opposite conclusions. Worse, the waves fit beautifully in hindsight: after a move it is always clear where wave one was and where wave three was. But at the right edge of the chart, where the decision is actually made, that clarity is almost never there.</p>
-  <p>This is not an attack on the tool; it is popular and some people use it successfully. The point is just that the count is interpretive and changes as price changes, which is why even its supporters stress pairing it with strict risk management and other tools.</p>
+                <h2>
+                  How it looks on the crypto market: risks on a concrete example
+                </h2>
+                <p>
+                  Let's pull it all together on a live example. Crypto futures
+                  mean enormous volatility, and not by accident: everyone comes
+                  here for easy pickings, from housewives to teachers, and that
+                  flow of speculative money is what rocks the price. On stocks
+                  there is almost none of this, where the dull participants
+                  count dividends and intrinsic value. On perps the crowd's
+                  money comes to the market and is redistributed, not in the
+                  crowd's favor. A simple illustration of the force: you buy
+                  bitcoin at 71,000, it drops in the moment to 50,000, and on
+                  the contract you lose close to a third of the value here and
+                  now, multiplied by leverage to a full wipeout.
+                </p>
+                <p>
+                  <a
+                    class="linkrefinto"
+                    href="https://arapov.trade/en/freestudying/market-microstructure"
+                    >Market makers</a
+                  >
+                  play their part too, with no conspiracy theory. A market-maker
+                  bank gives a two-sided quote, you can buy from it and sell to
+                  it, supplying the market with liquidity. But when the crowd
+                  has piled massively into longs, there is essentially no one to
+                  sell to it, and it is the large players who go short against
+                  it, at the least by agreement with the exchange to smooth the
+                  imbalance. Then a cascade of liquidations of overheated longs
+                  moves the price down, and the crowd's funds go into the
+                  market. That is why I watch volume: it shows where large
+                  capital really stands, not where the crowd is looking. How all
+                  of this works on crypto futures and why the risks are exactly
+                  here I break down with examples in the video:
+                  <a
+                    class="linkrefinto"
+                    href="https://youtu.be/Weojcfj0iW0?t=111"
+                    >risks of trading crypto futures</a
+                  >.
+                </p>
+                <p>
+                  <strong>In short: </strong
+                  ><i
+                    >On perps the crowd's money is redistributed not in its
+                    favor: the speculative inflow creates volatility, and a
+                    cascade of liquidations of overheated longs carries funds
+                    into the market; volume shows where large capital stands.</i
+                  >
+                </p>
 
-  <div class="flex">
-    <img class="pictureImg" loading="lazy" src="/assets/img/content/elliottwawe3.png" alt="Limitations and subjectivity of Elliott waves" />
-  </div>
+                <p>
+                  If you're new to crypto, I've gathered the basics in the
+                  <a
+                    class="linkrefinto"
+                    href="https://arapov.trade/en/freestudying/crypto-basics"
+                    >cryptocurrencies</a
+                  >
+                  guide.
+                </p>
 
-  <h2>My Take: A View on Mood, Not a Forecast</h2>
-  <p>I have been trading since 2013, and over time I studied Elliott waves too, but I do not trade by them now, and the main reason is the subjectivity above. I prefer to lean on more objective things: real support and resistance, volume, and phases by the Wyckoff method, where supply and demand are visible right on the chart. By my experience, levels are more informative than wave constructions. This is not advice for you personally, it is how I approach risk in general: if you do try to trade by Elliott, treat the labeling as a version rather than the truth, enter only on confirmation, keep the stop beyond the structure and the risk at one to two percent. Why I choose volume and levels is covered in <a class="linkrefinto" href="https://arapov.trade/en/freestudying/wyckoffmethod">the Wyckoff method</a>, and a live discussion of the waves themselves is in <a class="linkrefinto" href="https://youtu.be/LT2KgzT4Rqk?t=270">the main flaw of Elliott waves: subjectivity</a>.</p>
+                <section>
+                  <h2>Frequently Asked Questions</h2>
+                  <mat-accordion>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      [expanded]="true"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >What is a perpetual futures contract in simple
+                          terms?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        It is a contract on an asset's price with no expiry
+                        date, which can be held as long as you like. A regular
+                        future has a term by which its price converges with
+                        spot, a perpetual has no term, and funding keeps it near
+                        spot. Such contracts are traded with leverage, so the
+                        main risk here is not the instrument itself but the size
+                        of the leverage.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >What is funding (the funding rate)?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        Funding is a periodic payment between traders, most
+                        often every eight hours. When a perp trades above spot,
+                        longs pay shorts, when below, the other way round. It is
+                        not an exchange fee but a settlement between the sides,
+                        which holds the contract's price near the market.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >At what price does liquidation
+                          happen?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        It depends on leverage. Roughly, at x100 a move of about
+                        one percent against you is enough, at x50 about two, at
+                        x20 about five. The higher the leverage, the closer the
+                        liquidation level to the entry and the easier it is to
+                        be knocked out by ordinary market chop.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >What is the difference between isolated and cross
+                          margin?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        With isolated margin, only the collateral of a specific
+                        position is at risk, and a liquidation hits only it.
+                        With cross margin, the whole account balance serves as
+                        collateral, and one bad trade can drag everything down.
+                        For a beginner isolated is safer: it limits the loss to
+                        one trade.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >What leverage should a beginner use?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        The smaller the better: the further the liquidation
+                        level and the calmer ordinary swings are weathered. High
+                        leverage doesn't raise the chance to earn, it only
+                        pushes liquidation right up to the entry. I keep
+                        leverage low and risk per trade small, around one to two
+                        percent of the account, and always with a stop.
+                      </p>
+                    </mat-expansion-panel>
+                  </mat-accordion>
+                </section>
 
-  <section>
-    <h2>Frequently Asked Questions</h2>
-    <mat-accordion>
-      <mat-expansion-panel class="highlight-box owl_link-box" [expanded]="true">
-        <mat-expansion-panel-header>
-          <mat-panel-title>What are Elliott waves in simple terms?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>It is a theory that the market moves in repeating cycles of eight waves: five with the trend and three against it. At its base is crowd psychology. It is useful as a view on market mood, but not as a precise forecast.</p>
-      </mat-expansion-panel>
-      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
-        <mat-expansion-panel-header>
-          <mat-panel-title>What are the three main rules of Elliott waves?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>Wave two does not fall below the start of wave one. Wave three is never the shortest among the impulse waves. Wave four does not enter the price territory of wave one. Breaking any of them means an error in the labeling.</p>
-      </mat-expansion-panel>
-      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
-        <mat-expansion-panel-header>
-          <mat-panel-title>How are Elliott waves and Fibonacci levels connected?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>Fibonacci is used to estimate pullback depth (often 38.2 to 61.8 percent) and impulse targets (around 161.8 percent of wave one). These are handy guides, but not a guarantee that price will respect them.</p>
-      </mat-expansion-panel>
-      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
-        <mat-expansion-panel-header>
-          <mat-panel-title>What is the main drawback of Elliott waves?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>Subjectivity. Different traders label the same chart differently, and the waves are easily fitted in hindsight. At the right edge of the chart, where the decision is made, there is almost no certainty.</p>
-      </mat-expansion-panel>
-      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
-        <mat-expansion-panel-header>
-          <mat-panel-title>Should a beginner trade by Elliott waves?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>Understanding the theory is useful, but building trades on it is hard for a beginner because of the subjectivity. At the start it is more reliable to lean on objective levels, volume and market phases, and to use the waves only as a supporting view.</p>
-      </mat-expansion-panel>
-    </mat-accordion>
-  </section>
-
-  <section>
-    <h2>About the Author</h2>
-    <p>Author: Igor Arapov — independent researcher in the psychology of investment decisions and behavioral finance, practising trader since 2013, founder of arapov.trade, author of a trading book series (<a class="linkrefinto" href="https://openlibrary.org/authors/OL16073686A/Igor_Arapov">Open Library</a>), (<a class="linkrefinto" href="https://orcid.org/0009-0003-0430-778X">ORCID: 0009-0003-0430-778X</a>).</p>
-  </section>
-</article>
-
+                <section>
+                  <h2>About the Author</h2>
+                  <p>
+                    Author:
+                    <a class="linkrefinto" href="https://arapov.trade/en"
+                      >Igor Arapov</a
+                    >
+                    — independent researcher in the psychology of investment
+                    decisions and behavioral finance, practising trader since
+                    2013, founder of arapov.trade, author of a trading book
+                    series (<a
+                      class="linkrefinto"
+                      href="https://orcid.org/0009-0003-0430-778X"
+                      >ORCID: 0009-0003-0430-778X</a
+                    >).
+                  </p>
+                </section>
+              </article>
 
               <div
                 class=""

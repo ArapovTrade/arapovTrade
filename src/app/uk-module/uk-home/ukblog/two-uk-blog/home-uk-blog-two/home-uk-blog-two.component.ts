@@ -28,7 +28,7 @@ export class HomeUkBlogTwoComponent implements OnInit {
     private themeService: ThemeservService,
     private artickleServ: ArticlesService,
     private renderer: Renderer2,
-    @Inject(DOCUMENT) private document: Document
+    @Inject(DOCUMENT) private document: Document,
   ) {}
   private routerSubscription!: Subscription;
   private themeSubscription!: Subscription;
@@ -57,7 +57,7 @@ export class HomeUkBlogTwoComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Дивергенція в трейдингу: як знаходити розвороти тренду за допомогою індикаторів'
+      'Пули ліквідності: що це і як працюють | Arapov.trade',
     );
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
@@ -65,14 +65,12 @@ export class HomeUkBlogTwoComponent implements OnInit {
     this.meta.updateTag({
       name: 'description',
       content:
-        'Дізнайтеся, що таке дивергенція в трейдингу, як виявляти бичачу та ведмежу дивергенцію на RSI, MACD, Stochastic. Практичні стратегії торгівлі на розходженнях.',
+        'Що таке пули ліквідності, як Smart Money знаходять ліквідність за рівнями і використовують приховані зони для маніпуляції ціною.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-04-13' }); this.meta.updateTag({ name: 'dateModified', content: '2026-06-04' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/divergenceonindecators.webp',
-    });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
+
     this.gerRandom();
   }
   randomArticleRus: any = [];
@@ -83,13 +81,12 @@ export class HomeUkBlogTwoComponent implements OnInit {
   hoveredIndex: number | null = null;
 
   projects = [
-   { title: 'Книги з трейдингу', link: 'https://arapov.trade/uk/books' },
+    { title: 'Книги з трейдингу', link: 'https://arapov.trade/uk/books' },
     { title: 'Професійні курси', link: 'https://arapov.trade/uk/studying' },
     {
       title: 'Базовий курс',
       link: 'https://arapov.trade/uk/freestudying/freeeducation',
     },
-     
   ];
 
   onGroupChange(event: Event) {
@@ -159,7 +156,7 @@ export class HomeUkBlogTwoComponent implements OnInit {
     // Показываем 5 случайных статей при фокусе, если инпут пуст
     if (!this.searchQuery) {
       const shuffled = [...this.artickleServ.ukrArtickles].sort(
-        () => Math.random() - 0.5
+        () => Math.random() - 0.5,
       );
       this.displayedArticles = shuffled.slice(0, this.maxResults);
     }
@@ -174,7 +171,7 @@ export class HomeUkBlogTwoComponent implements OnInit {
   onSearchChange() {
     // Логика асинхронного поиска
     const filtered = this.artickleServ.ukrArtickles.filter((a) =>
-      a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase())
+      a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase()),
     );
     this.displayedArticles = filtered.slice(0, this.maxResults);
   }
@@ -196,7 +193,7 @@ export class HomeUkBlogTwoComponent implements OnInit {
     const path: string =
       this.router.url.split('/')[this.router.url.split('/').length - 1];
     let index = this.artickleServ.ukrArtickles.findIndex(
-      (a) => a.linkUkr == path
+      (a) => a.linkUkr == path,
     );
 
     if (this.artickleServ.ukrArtickles.length - 1 == index) {
@@ -213,7 +210,7 @@ export class HomeUkBlogTwoComponent implements OnInit {
     const path: string =
       this.router.url.split('/')[this.router.url.split('/').length - 1];
     let index = this.artickleServ.ukrArtickles.findIndex(
-      (a) => a.linkUkr == path
+      (a) => a.linkUkr == path,
     );
 
     if (index == 1) {
@@ -238,7 +235,7 @@ export class HomeUkBlogTwoComponent implements OnInit {
     ];
 
     const scripts = this.document.querySelectorAll(
-      'script[type="application/ld+json"]'
+      'script[type="application/ld+json"]',
     );
 
     scripts.forEach((script) => {
@@ -251,7 +248,7 @@ export class HomeUkBlogTwoComponent implements OnInit {
 
         const shouldRemove = candidates.some(
           (entry: any) =>
-            entry['@type'] && typesToRemove.includes(entry['@type'])
+            entry['@type'] && typesToRemove.includes(entry['@type']),
         );
 
         if (shouldRemove) {
@@ -280,30 +277,34 @@ export class HomeUkBlogTwoComponent implements OnInit {
         {
           '@type': 'Article',
           headline:
-            'Дивергенція в трейдингу: як знаходити розвороти тренду за допомогою індикаторів',
+            'Пули ліквідності у трейдингу: що це таке і як з ними працювати',
           description:
-            'Дізнайтеся, що таке дивергенція в трейдингу, як виявляти бичачу та ведмежу дивергенцію на RSI, MACD, Stochastic.',
-          image: 'https://arapov.trade/assets/img/content/divergence1.png',
-
-          datePublished: '2025-06-04T00:00:00Z',
-         dateModified: '2026-06-04T00:00:00Z',
-          author: {
-            '@id': 'https://arapov.trade/uk#person',
-          },
+            'Що таке пули ліквідності, як Smart Money знаходять ліквідність за рівнями і використовують приховані зони для маніпуляції ціною.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'Arapov.trade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id':
-              'https://arapov.trade/uk/freestudying/divergenceonindecators',
+            '@id': 'https://arapov.trade/uk/freestudying/liquidity-pools',
           },
-          articleSection: 'Технічний аналіз',
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/liquiditypools.png',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Smart Money',
+          keywords: 'пул ліквідності',
           inLanguage: 'uk',
         },
       ],
@@ -319,18 +320,18 @@ export class HomeUkBlogTwoComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/uk#person',
-      name: 'Ігор Арапов',
+      '@id': 'https://arapov.trade/#person',
+      name: 'Igor Arapov',
       alternateName: [
-        'Igor Arapov',
-              'Арапов Игорь',
-              'I. Arapov',
-              'Игорь Арапов',
-              'І. В. Арапов',
-              'Арапов Ігор',
-              'Arapov Igor',
+        'Ігор Арапов',
+        'Игорь Арапов',
+        'Арапов Игорь',
+        'Арапов Ігор',
+        'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/uk',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -342,9 +343,13 @@ export class HomeUkBlogTwoComponent implements OnInit {
         'https://github.com/ArapovTrade',
         'https://ua.linkedin.com/in/arapovtrade',
         'https://www.youtube.com/@ArapovTrade',
-        'https://t.me/ArapovTrade'
+        'https://t.me/ArapovTrade',
       ],
-       jobTitle: ['Незалежний дослідник', 'трейдер', 'автор і засновник arapov.trade'],
+      jobTitle: [
+        'Незалежний дослідник',
+        'трейдер',
+        'автор і засновник arapov.trade',
+      ],
       description:
         'Незалежний дослідник, практикуючий трейдер, автор книг з трейдингу та наукових публікацій. Спеціалізується на психології трейдингу та когнітивних упередженнях на фінансових ринках.',
     };
@@ -362,42 +367,42 @@ export class HomeUkBlogTwoComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'Що таке дивергенція в трейдингу?',
+          name: 'Що таке пул ліквідності у трейдингу?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Дивергенція — розходження між напрямком ціни та показниками індикатора, що сигналізує про послаблення тренду.',
+            text: 'Це зони на графіку, де накопичується багато стоп-ордерів і відкладених заявок, зазвичай над максимумами та під мінімумами. Вони притягують ціну, бо дають великому капіталу обсяг для виконання великих позицій. По суті це паливо для ринкових рухів.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Які індикатори використовувати для дивергенції?',
+          name: 'Що таке захоплення і зняття ліквідності?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'RSI, MACD та Stochastic — найефективніші індикатори для пошуку дивергенції.',
+            text: 'Це збір чужих стопів через хибний прокол рівня. Великий капітал спрямовує ціну до зони, де лежать стопи, вибиває їх і отримує зустрічний обсяг для своєї позиції. Так він заходить або виходить без сильного прослизання.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Чим відрізняється прихована дивергенція?',
+          name: 'Що таке стоп-хант і як від нього захиститися?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Звичайна дивергенція сигналізує про розворот, прихована — про продовження тренду.',
+            text: 'Стоп-хант це збір стопів через хибний прокол рівня. Щоб не стати його жертвою, не став стопи прямо на очевидних максимумах і мінімумах, де на них чекає весь ринок, дай їм запас. І заходь не в момент проколу, а після реакції ціни на розвороті.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Чому дивергенція дає хибні сигнали?',
+          name: 'Чому ціна часто розвертається після зняття ліквідності?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Хибні сигнали виникають у сильних трендах та на низьких таймфреймах.',
+            text: 'Бо прокол був потрібен не для руху в той бік, а щоб зібрати стопи й набрати позицію. Коли обсяг отримано, штовхати ціну в бік проколу більше немає сенсу, і вона йде в істинному напрямку. Але іноді після захоплення ринок навпаки продовжує тренд: так великий капітал добирає позицію в процесі руху.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Як підтвердити дивергенцію?',
+          name: 'Пул ліквідності у трейдингу і в DeFi це одне й те саме?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Потрібен ключовий рівень, розворотний патерн та зростання обсягу.',
+            text: 'Ні, це різні речі зі схожою назвою. У трейдингу пул ліквідності це зона стопів на графіку, куди тягнеться ціна. У DeFi пул ліквідності це запас токенів у смартконтракті, який забезпечує обмін на децентралізованій біржі. У цій статті йдеться лише про перше значення.',
           },
         },
       ],
@@ -413,37 +418,34 @@ export class HomeUkBlogTwoComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'Як торгувати за дивергенцією',
+      '@id': 'https://arapov.trade/uk/freestudying/liquidity-pools#howto',
+      name: 'Як розібратися і застосувати: Пули ліквідності у трейдингу',
+      description:
+        'Покроковий розбір теми та її практичне застосування в торгівлі',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Визначте тренд',
-          text: 'Використовуйте ковзні середні або ADX.',
+          name: 'Що таке пул ліквідності у трейдингу',
+          text: 'Пул ліквідності — це зона на графіку, де накопичується багато стоп-ордерів і відкладених заявок.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Знайдіть рівні',
-          text: 'Визначте підтримку, опір, Фібоначчі.',
+          name: 'Захоплення ліквідності та стоп-хант: як збирають стопи',
+          text: 'Механіка тут проста.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Ідентифікуйте дивергенцію',
-          text: 'Порівняйте екстремуми ціни та індикатора.',
+          name: 'Як визначити зони ліквідності на графіку',
+          text: 'Шукати пули простіше, ніж здається, бо вони лежать у найочевидніших місцях.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Підтвердіть сигнал',
-          text: 'Дочекайтеся свічкового патерну або зростання обсягу.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 5,
-          name: 'Керуйте ризиком',
-          text: 'Стоп за екстремумом, ризик до прибутку 1:2.',
+          name: 'Зняття ліквідності та хибний пробій: як входити',
+          text: 'Сам прокол це ще не сигнал на вхід, а лише привід придивитися.',
         },
       ],
     };
@@ -458,57 +460,13 @@ export class HomeUkBlogTwoComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Глосарій дивергенції',
+      name: 'Глосарій термінів статті',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Дивергенція',
-          description: 'Розходження ціни та індикатора',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Бичача дивергенція',
-          description: 'Ціна нижче, індикатор вище',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Ведмежа дивергенція',
-          description: 'Ціна вище, індикатор нижче',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Прихована дивергенція',
-          description: 'Підтверджує продовження тренду',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'RSI',
-          description: 'Індекс відносної сили 0-100',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'MACD',
-          description: 'Сходження/розходження ковзних',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Stochastic',
-          description: 'Осцилятор ціни закриття',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Імпульс',
-          description: 'Швидкість зміни ціни',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Перекупленість',
-          description: 'RSI вище 70',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Перепроданість',
-          description: 'RSI нижче 30',
+          name: 'Пул ліквідності',
+          description:
+            'Пул ліквідності це зона на графіку, де накопичується багато стоп-ордерів і відкладених заявок.',
         },
       ],
     };

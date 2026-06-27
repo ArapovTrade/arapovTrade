@@ -53,21 +53,20 @@ export class HomeEnBlogTwentyComponent implements OnInit {
     this.grr = this.artickleServ.selectedGroups;
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
-    this.titleService.setTitle('What is a Crypto Scam | Arapov.trade');
+    this.titleService.setTitle(
+      'Cryptocurrency Storage: Wallets and Security | Arapov.trade',
+    );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'What is a crypto scam: types of fraud, signs of fake projects, phishing, pyramid schemes, and ways to protect your crypto assets from scammers.',
+        'How to safely store cryptocurrency: hot and cold wallets, the seed phrase, hardware wallets and rules for protecting assets from theft.',
     });
 
     this.meta.updateTag({ name: 'author', content: 'Ihor Arapov' });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-21' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/cryptoscam.webp',
-    });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
+
     this.gerRandom();
   }
   randomArticleRus: any = [];
@@ -252,37 +251,37 @@ export class HomeEnBlogTwentyComponent implements OnInit {
       '@context': 'https://schema.org',
       '@graph': [
         {
-          '@context': 'https://schema.org',
           '@type': 'Article',
-          headline: 'What is a Crypto Scam: Types of Fraud and Protection',
+          headline: 'Storing Crypto Safely: Where to Keep Your Coins in 2026',
           description:
-            'What is a crypto scam: types of fraud, signs of fake projects, phishing, pyramid schemes, and ways to protect your crypto assets from scammers.',
-          author: {
-            '@id': 'https://arapov.trade/en#person',
-          },
+            'How to safely store cryptocurrency: hot and cold wallets, the seed phrase, hardware wallets and rules for protecting assets from theft.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'Arapov.trade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
-          datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://arapov.trade/en/freestudying/cryptoscam',
+            '@id': 'https://arapov.trade/en/freestudying/crypto-storage',
           },
-          image: 'https://arapov.trade/assets/img/content/cryptoscam1.webp',
-          articleSection: 'Trading Education',
-          keywords: [
-            'crypto scam',
-            'fraud',
-            'phishing',
-            'pyramid schemes',
-            'security',
-          ],
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/cryptostoring44.webp',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Cryptocurrency',
+          keywords:
+            'crypto storage, cold wallet, hardware wallet, seed phrase, Ledger, Trezor',
+          inLanguage: 'en',
         },
       ],
     };
@@ -297,18 +296,18 @@ export class HomeEnBlogTwentyComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/en#person',
+      '@id': 'https://arapov.trade/#person',
       name: 'Igor Arapov',
       alternateName: [
         'Ігор Арапов',
-        'Арапов Игорь',
-        'I. Arapov',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/en',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -323,12 +322,12 @@ export class HomeEnBlogTwentyComponent implements OnInit {
         'https://t.me/ArapovTrade',
       ],
       jobTitle: [
-        'Independent researcher,',
-        'trader',
-        'author and founder of arapov.trade',
+        'Independent researcher',
+        'Trader',
+        'Author and founder of arapov.trade',
       ],
       description:
-        'Independent researcher, practicing trader, author of books on trading and scientific publications. Specializes in trading psychology and cognitive biases in financial markets.',
+        'Independent researcher, practising trader, author of trading books and scientific publications. Specialises in trading psychology and cognitive biases in financial markets.',
     };
 
     this.addJsonLdSchema(data);
@@ -344,42 +343,50 @@ export class HomeEnBlogTwentyComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'What is a crypto scam?',
+          name: 'Where is the safest place to store cryptocurrency?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'A crypto scam is fraud aimed at stealing funds or personal data from cryptocurrency users. It includes fake ICOs, phishing attacks, pyramid schemes, and fake exchanges. Scammers exploit trust and lack of knowledge to deceive both beginners and experienced investors.',
+            text: 'The main capital is safer in a cold wallet with no internet connection, better on a hardware device like Ledger or Trezor. On an exchange it is worth leaving only what you are trading right now, because there the keys do not belong to you.',
           },
         },
         {
           '@type': 'Question',
-          name: 'How to recognize a cryptocurrency scam?',
+          name: 'How does a hot wallet differ from a cold one?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Signs of scams: unrealistic promises of guaranteed profits, anonymous teams without public profiles, absence of White Paper or roadmap, pressure for urgent decisions, evasion of questions about project structure.',
+            text: 'A hot wallet is connected to the internet and handy for frequent operations, but because of that link to the network it is vulnerable to hacks and phishing. A cold wallet keeps the keys offline and is protected from remote attacks, but is inconvenient for daily trading.',
           },
         },
         {
           '@type': 'Question',
-          name: 'What are the most common types of crypto scams?',
+          name: 'Can you photograph the seed phrase?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Main types: fake ICOs with professional websites but no real product, phishing sites copying exchanges, Ponzi schemes paying from new investor funds, fake exchanges preventing withdrawals, rug pulls in DeFi projects.',
+            text: 'No. The seed phrase must live offline only. A photo in the gallery, a screenshot, a note in the cloud, or a message to yourself in a messenger is a direct path to theft, because any such file can leak.',
           },
         },
         {
           '@type': 'Question',
-          name: 'How to protect crypto assets from scammers?',
+          name: 'Where should you buy a hardware wallet?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Use hardware wallets for storage, enable two-factor authentication, verify website URLs before entering data, research projects through independent sources, never share private keys or seed phrases.',
+            text: 'Only from the official manufacturer or an authorised reseller, never a marketplace listing or a private seller. A counterfeit device can ship with malware or a seed phrase already printed in the box, and funding it hands your coins straight to the scammer. A genuine wallet generates the seed in front of you on first setup; a ready-made phrase is always a trap.',
           },
         },
         {
           '@type': 'Question',
-          name: 'What to do if you become a crypto scam victim?',
+          name: 'What happens if you lose your seed phrase?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Immediately change passwords on all related accounts, report the fraud to law enforcement and the platform where it occurred, warn the community on social media, preserve all evidence for possible investigation.',
+            text: 'If you lose the seed phrase and also lose access to the device, the coins are gone for good: there is no support line and no recovery in crypto. That is why the seed is backed up by hand or on metal in two separate offline places. Losing it, not being hacked, is the most common way people lose crypto.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Is it safe to store cryptocurrency on an exchange?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Only for active trading and small amounts. On an exchange the coins essentially do not belong to you, the venue controls the keys, and it can be hacked or freeze withdrawals, which has happened more than once in the history of crypto.',
           },
         },
       ],
@@ -395,39 +402,40 @@ export class HomeEnBlogTwentyComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'How to Protect Yourself from Cryptocurrency Scams',
+      '@id': 'https://arapov.trade/en/freestudying/crypto-storage#howto',
+      name: 'How to store cryptocurrency safely',
       description:
-        'Step-by-step guide to protecting your crypto assets from fraudsters',
+        'A step-by-step breakdown: which wallet to choose, how to protect the seed phrase, and where to keep the main capital',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Research the project before investing',
-          text: 'Study the White Paper, development team, and their public profiles on LinkedIn. Check the project history and reviews on independent platforms like Reddit and BitcoinTalk.',
+          name: 'Understand how a hot wallet differs from a cold one',
+          text: 'Cryptocurrency wallet is a store not of the coins themselves but of the keys to them, and this is the point beginners miss most often.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Use reliable wallets and exchanges',
-          text: 'Store cryptocurrency on hardware wallets like Ledger or Trezor. Use only verified exchanges with licenses and good reputation.',
+          name: 'Choose a hardware wallet for long storage',
+          text: 'Hardware wallet is a small physical device made only for storing keys offline, and the most practical kind of cold storage.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Enable two-factor authentication',
-          text: 'Activate 2FA on all cryptocurrency platforms. Use authenticator apps instead of SMS for greater security.',
+          name: 'Protect the seed phrase and keep it offline only',
+          text: 'Seed phrase is a set of 12 or 24 words by which a wallet is restored on any compatible device.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Verify website URLs',
-          text: 'Always check the site address before entering data. Bookmark official sites. Beware of links from unverified sources.',
+          name: 'Set it up safely: buy from the maker, back up on metal, split the funds',
+          text: 'Buy the device only from the official manufacturer, back the seed up by hand or on metal in two places, keep about 90 percent in cold and 10 on the exchange, and use multi-signature for large sums.',
         },
         {
           '@type': 'HowToStep',
           position: 5,
-          name: 'Never share private keys',
-          text: 'Store seed phrases and private keys offline. Never enter them on websites or share with third parties, even if they claim to be support staff.',
+          name: 'Separate the exchange and the savings wallet',
+          text: 'When coins sit on an exchange, it is the exchange that controls the keys, not you.',
         },
       ],
     };
@@ -442,68 +450,31 @@ export class HomeEnBlogTwentyComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Cryptocurrency Fraud Terms',
-      description: 'Glossary of key concepts in crypto scam prevention',
+      name: 'Article glossary',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Scam',
+          name: 'cryptocurrency wallet',
           description:
-            'Fraud aimed at stealing funds or confidential information from cryptocurrency users',
+            'A store not of the coins themselves but of the keys to them; the coins always sit in the blockchain, while the wallet holds the private key that proves they are yours.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Phishing',
+          name: 'private key',
           description:
-            'A type of fraud where attackers create fake websites or apps to steal user credentials',
+            'The secret cryptographic code that proves ownership of coins and authorises moving them; whoever holds it controls the funds, which is why it is kept offline inside a wallet rather than exposed.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Ponzi Scheme',
+          name: 'hardware wallet',
           description:
-            'A fraudulent scheme where early investor returns are paid from new participant investments',
+            'A small physical device made only for storing keys offline; the private key never leaves the device, and a transaction is signed inside it.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'ICO (Initial Coin Offering)',
+          name: 'seed phrase',
           description:
-            'Initial token placement to attract investments in a cryptocurrency project',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Rug Pull',
-          description:
-            'DeFi fraud where developers drain liquidity from a pool and disappear with investor funds',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Social Engineering',
-          description:
-            'Psychological manipulation methods to obtain confidential information from victims',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Seed Phrase',
-          description:
-            'A set of words for recovering access to a crypto wallet that should never be disclosed to third parties',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: '2FA (Two-Factor Authentication)',
-          description:
-            'An account protection method requiring login confirmation through a second channel besides password',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'White Paper',
-          description:
-            "A project's technical document describing its concept, technology, and development plan",
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Hardware Wallet',
-          description:
-            'A physical device for securely storing cryptocurrency private keys offline',
+            'A set of 12 or 24 words that fully restores access to a wallet on any compatible device; it is money in text form.',
         },
       ],
     };

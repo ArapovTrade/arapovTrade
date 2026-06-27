@@ -28,7 +28,7 @@ export class HomeUkBlogTwentyEightComponent implements OnInit {
     private themeService: ThemeservService,
     private artickleServ: ArticlesService,
     private renderer: Renderer2,
-    @Inject(DOCUMENT) private document: Document
+    @Inject(DOCUMENT) private document: Document,
   ) {}
   private routerSubscription!: Subscription;
   private themeSubscription!: Subscription;
@@ -56,21 +56,17 @@ export class HomeUkBlogTwentyEightComponent implements OnInit {
     this.grr = this.artickleServ.selectedGroups;
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
-    this.titleService.setTitle(
-      'Альтернативні блокчейни: огляд та відмінності | Arapov.trade'
-    );
+    this.titleService.setTitle('Фундаментальний аналіз ринку | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Альтернативні блокчейни: повний огляд Solana, Polkadot, Avalanche, Cardano. Механізми консенсусу, переваги, недоліки та місце в екосистемі Web3.',
+        'Основи фундаментального аналізу: економічні показники, ставки центробанків, новини і як вони впливають на ринок та валютні курси.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-22' }); this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/altblockchains.webp',
-    });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
+
     this.gerRandom();
   }
   randomArticleRus: any = [];
@@ -87,7 +83,6 @@ export class HomeUkBlogTwentyEightComponent implements OnInit {
       title: 'Базовий курс',
       link: 'https://arapov.trade/uk/freestudying/freeeducation',
     },
-     
   ];
 
   onGroupChange(event: Event) {
@@ -157,7 +152,7 @@ export class HomeUkBlogTwentyEightComponent implements OnInit {
     // Показываем 5 случайных статей при фокусе, если инпут пуст
     if (!this.searchQuery) {
       const shuffled = [...this.artickleServ.ukrArtickles].sort(
-        () => Math.random() - 0.5
+        () => Math.random() - 0.5,
       );
       this.displayedArticles = shuffled.slice(0, this.maxResults);
     }
@@ -172,7 +167,7 @@ export class HomeUkBlogTwentyEightComponent implements OnInit {
   onSearchChange() {
     // Логика асинхронного поиска
     const filtered = this.artickleServ.ukrArtickles.filter((a) =>
-      a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase())
+      a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase()),
     );
     this.displayedArticles = filtered.slice(0, this.maxResults);
   }
@@ -194,7 +189,7 @@ export class HomeUkBlogTwentyEightComponent implements OnInit {
     const path: string =
       this.router.url.split('/')[this.router.url.split('/').length - 1];
     let index = this.artickleServ.ukrArtickles.findIndex(
-      (a) => a.linkUkr == path
+      (a) => a.linkUkr == path,
     );
 
     if (this.artickleServ.ukrArtickles.length - 1 == index) {
@@ -211,7 +206,7 @@ export class HomeUkBlogTwentyEightComponent implements OnInit {
     const path: string =
       this.router.url.split('/')[this.router.url.split('/').length - 1];
     let index = this.artickleServ.ukrArtickles.findIndex(
-      (a) => a.linkUkr == path
+      (a) => a.linkUkr == path,
     );
 
     if (index == 1) {
@@ -236,7 +231,7 @@ export class HomeUkBlogTwentyEightComponent implements OnInit {
     ];
 
     const scripts = this.document.querySelectorAll(
-      'script[type="application/ld+json"]'
+      'script[type="application/ld+json"]',
     );
 
     scripts.forEach((script) => {
@@ -249,7 +244,7 @@ export class HomeUkBlogTwentyEightComponent implements OnInit {
 
         const shouldRemove = candidates.some(
           (entry: any) =>
-            entry['@type'] && typesToRemove.includes(entry['@type'])
+            entry['@type'] && typesToRemove.includes(entry['@type']),
         );
 
         if (shouldRemove) {
@@ -277,31 +272,37 @@ export class HomeUkBlogTwentyEightComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          headline: 'Альтернативні блокчейни: огляд та відмінності',
+          headline:
+            'Фундаментальний аналіз у трейдингу: повний гайд з макро, ставок і новин',
           description:
-            'Повний огляд альтернативних блокчейнів: Solana, Polkadot, Avalanche, Cardano та їх місце в Web3',
-          author: {
-            '@id': 'https://arapov.trade/uk#person',
-          },
+            'Основи фундаментального аналізу: економічні показники, ставки центробанків, новини і як вони впливають на ринок та валютні курси.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'Arapov.trade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
-          datePublished: '2025-01-10T12:00:00+02:00',
-         dateModified: '2026-04-15T00:00:00Z',
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://arapov.trade/uk/freestudying/altblockchains',
+            '@id': 'https://arapov.trade/uk/freestudying/fundamental-analysis',
           },
-          image: 'https://arapov.trade/assets/img/content/altblockchains1.webp',
-          articleSection: 'Навчання трейдингу',
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/fundamentalanalysis.webp',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Фундаментальний аналіз',
           keywords:
-            'альтернативні блокчейни, Solana, Polkadot, Avalanche, Cardano, Polygon, Web3, DeFi, Layer 1',
-          inLanguage: 'ru',
+            'фундаментальний аналіз, економічні фактори, макроекономічні індикатори, ВВП, PMI, інфляція, ключова ставка, ФРС, економічний календар, торгівля на новинах, обʼємний аналіз',
+          inLanguage: 'uk',
         },
       ],
     };
@@ -316,18 +317,18 @@ export class HomeUkBlogTwentyEightComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/uk#person',
-      name: 'Ігор Арапов',
+      '@id': 'https://arapov.trade/#person',
+      name: 'Igor Arapov',
       alternateName: [
-        'Igor Arapov',
-              'Арапов Игорь',
-              'I. Arapov',
-              'Игорь Арапов',
-              'І. В. Арапов',
-              'Арапов Ігор',
-              'Arapov Igor',
+        'Ігор Арапов',
+        'Игорь Арапов',
+        'Арапов Игорь',
+        'Арапов Ігор',
+        'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/uk',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -339,9 +340,13 @@ export class HomeUkBlogTwentyEightComponent implements OnInit {
         'https://github.com/ArapovTrade',
         'https://ua.linkedin.com/in/arapovtrade',
         'https://www.youtube.com/@ArapovTrade',
-        'https://t.me/ArapovTrade'
+        'https://t.me/ArapovTrade',
       ],
-       jobTitle: ['Незалежний дослідник', 'трейдер', 'автор і засновник arapov.trade'],
+      jobTitle: [
+        'Незалежний дослідник',
+        'трейдер',
+        'автор і засновник arapov.trade',
+      ],
       description:
         'Незалежний дослідник, практикуючий трейдер, автор книг з трейдингу та наукових публікацій. Спеціалізується на психології трейдингу та когнітивних упередженнях на фінансових ринках.',
     };
@@ -359,42 +364,50 @@ export class HomeUkBlogTwentyEightComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'Що таке альтернативні блокчейни?',
+          name: 'Що таке фундаментальний аналіз простими словами?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Альтернативні блокчейни — це мережі, розроблені як покращені версії Bitcoin та Ethereum. Вони вирішують проблеми масштабованості, високих комісій та низької швидкості транзакцій.',
+            text: 'Це оцінка активу через економіку, ставки й звітність, щоб зрозуміти його справедливу вартість. Дешевше за справедливу ціну актив вважають недооціненим, дорожче переоціненим. Для довгострокового інвестора це сильний інструмент, а трейдеру він відповідає на питання чому рухається ціна, але не на питання коли входити.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Чим Solana відрізняється від Ethereum?',
+          name: 'Які економічні фактори рухають ринок?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Solana використовує механізм Proof-of-History, що забезпечує до 65,000 транзакцій на секунду з мінімальними комісіями.',
+            text: 'Ставки центральних банків, інфляція, зайнятість, торговий баланс, ділова активність PMI, ціни на сировину й золото, а також геополітика. Найсильніше на валюти впливає ставка, бо вона задає вартість грошей в економіці.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Який блокчейн кращий для DeFi?',
+          name: 'Що показує PMI і чому важлива позначка 50?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Для DeFi популярні Ethereum, Solana, Avalanche та Polygon. Вибір залежить від пріоритетів проекту.',
+            text: 'PMI це індекс ділової активності з опитувань менеджерів із закупівель. Позначка 50 це вододіл: вище неї економіка розширюється, нижче стискається. Показник випереджальний, тому ринок реагує на нього жвавіше, ніж на запізнілий ВВП.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Що таке парачейни в Polkadot?',
+          name: 'Як ставка ФРС впливає на долар і ризикові активи?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Парачейни — незалежні блокчейни, що працюють паралельно з основною мережею Polkadot.',
+            text: 'Підвищення ставки дорожчає гроші, зазвичай зміцнює долар і тисне на акції та крипту. Зниження здешевлює гроші, послаблює долар і підтримує ризикові активи й золото. Від рішення до реальної реакції економіки тягнеться лаг, як правило понад пів року.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Чи безпечні альтернативні блокчейни?',
+          name: 'Чи варто торгувати на виході економічних новин?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Безпека залежить від зрілості проекту, кількості валідаторів та проведених аудитів.',
+            text: 'У моєму досвіді в сам момент виходу лізти не варто: спред розширюється, ціну кидає в обидва боки, а подвійний викид збирає стопи навіть за правильно вгаданим напрямком. Розумніше знати про релізи заздалегідь, перечекати сплеск і ввійти вже за реакцією ціни на рівні.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Що використовувати замість фундаментального аналізу для входу?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Обʼємний аналіз. Фундаментал тримають як фон і напрямок вітру, а вхід беруть за обсягом і реакцією ціни біля сильних рівнів, де видно слід великого капіталу. Принцип простий: спершу побачити дію на графіку, потім увійти, а не вгадувати новину заздалегідь.',
           },
         },
       ],
@@ -410,38 +423,46 @@ export class HomeUkBlogTwentyEightComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'Як обрати альтернативний блокчейн для проекту',
-      description: 'Критерії вибору відповідної блокчейн-платформи',
+      '@id': 'https://arapov.trade/uk/freestudying/fundamental-analysis#howto',
+      name: 'Як трейдеру працювати з фундаментальним аналізом',
+      description:
+        'Покроковий розбір макроекономіки для трейдера: від розуміння факторів та індикаторів до роботи з календарем і входу за обсягом замість новини',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Оцініть масштабованість',
-          text: 'Визначте необхідну пропускну здатність мережі.',
+          name: 'Зрозумійте, що фундаментал відповідає на чому, а не на коли',
+          text: 'Фундаментальний аналіз оцінює справедливу вартість активу через економіку й ставки, відповідаючи на питання чому рухається ціна, але не коли входити.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Проаналізуйте комісії',
-          text: 'Порівняйте транзакційні витрати на різних платформах.',
+          name: 'Знайте, які фактори рухають ринки',
+          text: 'Ринки рухають ставки центральних банків, інфляція, зайнятість, торговий баланс, ділова активність, сировина, золото й геополітика.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Вивчіть екосистему',
-          text: 'Оцініть доступні інструменти та інтеграції.',
+          name: 'Читайте ключові індикатори: ВВП, PMI, інфляцію, зайнятість',
+          text: 'Головні індикатори це ВВП як загальне зростання, PMI як ділова активність, інфляція й дані по зайнятості.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Перевірте сумісність',
-          text: 'Виберіть платформу з підтримкою мостів за потреби.',
+          name: 'Слідкуйте за ставкою й рішеннями центральних банків',
+          text: 'Ключова ставка центрального банку це найсильніший фундаментальний важіль для долара й ризикових активів.',
         },
         {
           '@type': 'HowToStep',
           position: 5,
-          name: 'Оцініть безпеку',
-          text: 'Вивчіть історію аудитів та репутацію мережі.',
+          name: 'Використовуйте економічний календар захисно',
+          text: 'Економічний календар потрібен насамперед щоб не потрапити зненацька й не відкрити угоду прямо перед сильною новиною.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 6,
+          name: 'Входьте за обсягом біля рівня, а не за самою новиною',
+          text: 'Вхід вигідніше брати за обсягом і реакцією ціни біля сильного рівня, після того як стало видно дію великого капіталу.',
         },
       ],
     };
@@ -456,58 +477,43 @@ export class HomeUkBlogTwentyEightComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Глосарій альтернативних блокчейнів',
+      name: 'Глосарій термінів статті',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Layer 1',
+          name: 'Фундаментальний аналіз',
           description:
-            'Базовий рівень блокчейну з власним механізмом консенсусу',
+            'Це метод оцінки активу через вивчення економічних і фінансових факторів: ставок центробанків, інфляції, звітності компаній і стану галузі.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Layer 2',
-          description: 'Рішення масштабування поверх основного блокчейну',
+          name: 'ВВП',
+          description:
+            'Це сумарна вартість усіх товарів і послуг, що країна виробила за період, і головна мірка розміру й зростання економіки.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Proof-of-Stake',
-          description: 'Механізм консенсусу на основі заблокованих токенів',
+          name: 'Ключова ставка',
+          description:
+            'Це відсоток, під який центральний банк кредитує комерційні банки, головний важіль управління вартістю грошей в економіці.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Proof-of-History',
-          description: 'Механізм часових міток Solana',
+          name: 'ФРС',
+          description:
+            'Це Федеральна резервна система, центральний банк Сполучених Штатів, який керує грошовою політикою країни через відсоткову ставку й кількість грошей в економіці.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Шардинг',
-          description: 'Технологія поділу мережі на сегменти',
+          name: 'Економічний календар',
+          description:
+            'Це таблиця майбутніх економічних подій із датою, часом і ступенем їхньої важливості, де по кожній події показують прогноз, минуле значення й фактичний результат.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Парачейни',
-          description: 'Незалежні блокчейни в екосистемі Polkadot',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'TPS',
-          description: 'Кількість транзакцій на секунду',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Міст',
-          description: 'Протокол для переказу активів між блокчейнами',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'dApp',
-          description: 'Децентралізований застосунок',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Валідатор',
-          description: 'Учасник мережі, що підтверджує транзакції',
+          name: 'Торгівля на новинах',
+          description:
+            'Це стиль торгівлі, за якого трейдер намагається заробити на різкому русі ціни в момент виходу важливої економічної новини.',
         },
       ],
     };

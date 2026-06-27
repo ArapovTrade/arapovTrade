@@ -28,17 +28,7 @@ export class UkBookPageComponent implements OnInit, AfterViewInit, OnDestroy {
     private themeService: ThemeservService,
   ) {}
 
-  ngAfterViewInit() {
-    setTimeout(() => {
-      if (typeof AOS !== 'undefined') {
-        AOS.init({
-          duration: 1000,
-          once: false,
-          offset: 100,
-        });
-      }
-    }, 500); // Задержка 0.5s
-  }
+  ngAfterViewInit() {}
   isDark!: boolean;
   languages = ['ua', 'en', 'ru']; // какие языки нужны
   currentLang = 'ua';
@@ -63,14 +53,14 @@ export class UkBookPageComponent implements OnInit, AfterViewInit, OnDestroy {
         'Трейдинг, Навчання трейдингу, Технічний аналіз, Фінансова біржа, Торгова система, Ігорь Арапов',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-06-07' });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
     this.meta.updateTag({
       property: 'og:image',
       content: 'https://arapov.trade/assets/img/photo_mainpage.jpg',
     });
     this.addWebSiteSchema();
     this.addBookSchema();
-
+    this.addPersonSchema();
     this.themeSubscription = this.themeService.getTheme().subscribe((data) => {
       this.isDark = data;
       this.cdr.detectChanges();
@@ -145,10 +135,52 @@ export class UkBookPageComponent implements OnInit, AfterViewInit, OnDestroy {
         if (content['@type'] === 'ItemList') {
           script.remove();
         }
+        if (content['@type'] === 'Person') {
+          script.remove();
+        }
       } catch (e) {
         // Игнорируем некорректные JSON (например, из других источников)
       }
     });
+  }
+
+  private addPersonSchema() {
+    const exists = Array.from(
+      this.document.querySelectorAll('script[type="application/ld+json"]'),
+    ).some((script) => {
+      try {
+        const json = JSON.parse(script.textContent || '{}');
+        return (
+          json['@type'] === 'Person' &&
+          json['@id'] === 'https://arapov.trade/#person'
+        );
+      } catch {
+        return false;
+      }
+    });
+
+    // Если уже существует — выходим
+    if (exists) return;
+
+    // Создаем новый JSON-LD
+    const script = this.document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Person',
+      '@id': 'https://arapov.trade/#person',
+      name: 'Арапов Ігор Віталійович',
+      alternateName: 'Igor Arapov',
+      url: 'https://arapov.trade/uk',
+      jobTitle: 'Незалежний трейдер і дослідник',
+      sameAs: [
+        'https://orcid.org/0009-0003-0430-778X',
+        'https://www.wikidata.org/wiki/Q137454477',
+        'https://scholar.google.com/citations?user=N440tWQAAAAJ',
+      ],
+    });
+
+    this.document.head.appendChild(script);
   }
 
   private addWebSiteSchema() {
@@ -172,13 +204,13 @@ export class UkBookPageComponent implements OnInit, AfterViewInit, OnDestroy {
     script.text = JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'WebSite',
-      '@id': 'https://arapov.trade#website',
+      '@id': 'https://arapov.trade/#website',
       url: 'https://arapov.trade',
       name: 'Arapov.Trade',
       alternateName: 'Навчання трейдингу',
       description:
-        'Безкоштовне навчання трейдингу від Ігоря Арапова. 151+ статей, 78+ відеоуроків.трейдингу',
-      inLanguage: 'ua-UA',
+        'Безкоштовне навчання трейдингу від Ігоря Арапова. 151+ статей, 78+ відеоуроків.',
+      inLanguage: 'uk-UA',
       publisher: {
         '@type': 'Organization',
         '@id': 'https://arapov.trade/#organization',
@@ -190,8 +222,7 @@ export class UkBookPageComponent implements OnInit, AfterViewInit, OnDestroy {
         },
         founder: {
           '@type': 'Person',
-          '@id': 'https://arapov.trade/uk#person',
-          name: 'Арапов Ігор Віталійович',
+          '@id': 'https://arapov.trade/#person',
         },
       },
     });
@@ -218,7 +249,7 @@ export class UkBookPageComponent implements OnInit, AfterViewInit, OnDestroy {
         const json = JSON.parse(script.textContent || '{}');
         return (
           json['@type'] === 'ItemList' &&
-          json['name'] === 'Книги Игоря Арапова о трейдинге'
+          json['name'] === 'Книги Ігоря Арапова про трейдинг'
         );
       } catch {
         return false;
@@ -245,12 +276,18 @@ export class UkBookPageComponent implements OnInit, AfterViewInit, OnDestroy {
           item: {
             '@type': 'Book',
             '@id': 'https://arapov.trade/uk/books/osnovy-treydinga#book',
-            name: 'Теорія трейдингу. Основи ринку • Технічний аналіз • Об`ємний аналіз',
+            name: 'Теорія трейдингу. Основи ринку • Технічний аналіз • Обʼємний аналіз',
             isbn: '979-8-90243-730-7',
-            inLanguage: 'ru',
+            inLanguage: 'uk',
+            bookFormat: 'https://schema.org/EBook',
+            datePublished: '2025-06-07',
             author: {
               '@type': 'Person',
-              '@id': 'https://arapov.trade/uk#author',
+              '@id': 'https://arapov.trade/#person',
+            },
+            publisher: {
+              '@type': 'Organization',
+              '@id': 'https://arapov.trade/#organization',
             },
             url: 'https://arapov.trade/uk/books/osnovy-treydinga',
           },
@@ -264,9 +301,15 @@ export class UkBookPageComponent implements OnInit, AfterViewInit, OnDestroy {
             name: 'Психологія трейдингу: Як керувати емоціями та мислити як професіонал',
             isbn: '979-8-90243-504-4',
             inLanguage: 'uk',
+            bookFormat: 'https://schema.org/EBook',
+            datePublished: '2025-06-07',
             author: {
               '@type': 'Person',
-              '@id': 'https://arapov.trade/uk#author',
+              '@id': 'https://arapov.trade/#person',
+            },
+            publisher: {
+              '@type': 'Organization',
+              '@id': 'https://arapov.trade/#organization',
             },
             url: 'https://arapov.trade/uk/books/psihologiya-treydinga',
           },
@@ -278,12 +321,18 @@ export class UkBookPageComponent implements OnInit, AfterViewInit, OnDestroy {
             '@type': 'Book',
             '@id':
               'https://arapov.trade/uk/books/osnovy-treydinga-tom-two#book',
-            name: 'Методи аналізу. Технічний аналіз • Об`ємний аналіз • Практика',
+            name: 'Методи аналізу. Технічний аналіз • Обʼємний аналіз • Практика',
             isbn: '979-8-90243-732-1',
-            inLanguage: 'ru',
+            inLanguage: 'uk',
+            bookFormat: 'https://schema.org/EBook',
+            datePublished: '2025-06-07',
             author: {
               '@type': 'Person',
-              '@id': 'https://arapov.trade/uk#author',
+              '@id': 'https://arapov.trade/#person',
+            },
+            publisher: {
+              '@type': 'Organization',
+              '@id': 'https://arapov.trade/#organization',
             },
             url: 'https://arapov.trade/uk/books/osnovy-treydinga-tom-two',
           },

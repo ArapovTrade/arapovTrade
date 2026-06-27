@@ -7,87 +7,415 @@
           <div class="free-courses_main-container">
             <main lang="en">
               <header>
-  <h1>What Is Crypto Staking and How Does It Work?</h1>
-</header>
-<article>
-  <p>Crypto staking is a way to earn a reward for locking up your coins and helping a blockchain run. Yields usually sit somewhere around 3 to 12 percent a year, depending on the network and the method. The honest part up front: this is not risk-free passive income, because the coin is locked while its price can easily fall more than you earn.</p>
+                <h1>
+                  Stochastic Oscillator in Trading: What It Is and When It Works
+                </h1>
+              </header>
+              <article>
+                <p>
+                  The stochastic is a momentum indicator. It shows whether price
+                  closed near the top or the bottom of its recent range, and it
+                  gives three signals: overbought zones, oversold zones, and a
+                  crossing of two lines. In my experience it behaves more
+                  sensibly in a range than in a trend, and on its own it can't
+                  be an entry point.
+                </p>
 
-  <p>Let me be straight: I do not stake myself, I trade futures and work the market directly. But judging risk is my profession, so that is exactly the angle I will use to look at staking. I have been trading since 2013, and I learned long ago that a high promised yield almost always sits on top of a high risk, and staking is no exception. Below we will go through how it is built, what it really pays, and what it can turn into.</p>
+                <p>
+                  The stochastic is one of the first indicators almost every
+                  beginner passes through. I went through them myself, I've
+                  traded for many years, and I spent a couple of early years on
+                  indicators specifically. I don't use them for forecasting,
+                  volume aside. But since you're looking for the stochastic in
+                  particular, let me sort it out without blind faith and without
+                  blind denial: what it really shows and where its limits lie.
+                </p>
 
-  <p><strong><i>In this article we'll cover:</i></strong></p>
-  <ul>
-    <li>staking is a reward for locking coins on networks that use Proof of Stake;</li>
-    <li>you can earn by becoming a validator, or more simply by delegating coins to one;</li>
-    <li>typical yields run about 3 to 12 percent a year and constantly change;</li>
-    <li>the main risks are locked funds, penalties, and the price of the coin itself falling.</li>
-  </ul>
+                <p>
+                  <strong><i>In this article we'll cover:</i></strong>
+                </p>
+                <ul>
+                  <li>
+                    the stochastic shows the position of price within its recent
+                    range, not the future;
+                  </li>
+                  <li>
+                    its signals are zones above 80 and below 20 plus the line
+                    cross, and overbought is not a command to sell;
+                  </li>
+                  <li>
+                    in a range it's more meaningful, while in a strong trend it
+                    sticks at the edge for a long time and deceives;
+                  </li>
+                  <li>
+                    in my experience it lags, so I build the decision on volume
+                    and levels.
+                  </li>
+                </ul>
 
-  <p>Let's take it in order: what staking is, how it works and what it pays, and which risks to understand before you start.</p>
+                <p>Start with what this indicator even measures.</p>
 
-  <h2>What Is Crypto Staking?</h2>
-  <p><dfn itemscope itemtype="https://schema.org/DefinedTerm"><span itemprop="name">Crypto staking</span></dfn> is the locking of cryptocurrency to support a blockchain's operation in exchange for a reward. It works on networks that use Proof of Stake, where transactions are confirmed not by miners with powerful hardware but by participants who have put up, or staked, their coins. In effect you hand the network your assets as a pledge of reliability, and the network pays you a percentage, usually in the same coin.</p>
-  <p>The appeal is that coins do not sit idle: they earn while helping the network run. That logic is real, but before looking at the percentages it helps to understand the mechanism and the wider workings of <a class="linkrefinto" href="https://arapov.trade/en/freestudying/cryptocurrencybasics">cryptocurrency basics</a>, otherwise it is easy to mistake the yield for a gift, which it is not.</p>
+                <div class="flex">
+                  <img
+                    class="pictureImg"
+                    loading="lazy"
+                    src="/assets/img/content/stochastic3.png"
+                    alt="Stochastic oscillator"
+                  />
+                </div>
 
-  <h2>How Staking Works and How Much You Can Earn</h2>
-  <p>There are two routes in. The first is to become a validator yourself: run a node and put up a large amount, for example on <a class="linkrefinto" href="https://arapov.trade/en/freestudying/ethereum">What Is Ethereum and How Does It Work?</a> that means 32 coins plus the technical setup. That path is complex and not for a beginner. The second and most common is delegation: you pick a validator and entrust your coins without handing over your keys, while the validator takes a small fee from the reward. The simplest option for a beginner is staking through an exchange in a couple of clicks, but then the exchange effectively holds the coins and you are trusting it. There is also liquid staking, where you get a receipt token in place of the locked coins and keep access to the value, though that adds smart-contract risk.</p>
-  <p>Now the money. Yields depend heavily on the network and float constantly: Ethereum sits roughly in the 3 to 7 percent a year range, <a class="linkrefinto" href="https://arapov.trade/en/freestudying/solana">SOL</a> around 5 to 8, and some networks pay more. It looks tempting next to a bank deposit, but there is a catch: the more people stake a coin, the smaller the percentage for each, since the reward is split among everyone. And the key point, a bank deposit is insured, while your staked coins are protected by nothing but the reliability of the network itself.</p>
+                <h2>What is the stochastic oscillator (%K and %D)</h2>
+                <p>
+                  The
+                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
+                    ><span itemprop="name">stochastic</span></dfn
+                  >
+                  is a momentum indicator that compares the closing price with
+                  the range of highs and lows over a chosen period and plots the
+                  result as two lines on a scale from 0 to 100. The idea is tied
+                  to George Lane and a group of Chicago traders, worked out back
+                  in the 1950s. The logic is simple. In a rise price closes
+                  nearer the upper edge of its range, in a fall nearer the
+                  lower. A common default period is 14. On the chart you see two
+                  lines: %K is the main one, and %D is its smoothed version, an
+                  average over a few periods, running as the signal line.
+                  There's a fast and a slow stochastic. The fast one is more
+                  sensitive and errs more often, the slow one is smoothed and
+                  throws fewer false signals. At heart this is one of many
+                  technical-analysis indicators, and my general stance on them I
+                  unpack in the
+                  <a
+                    class="linkrefinto"
+                    href="https://arapov.trade/en/freestudying/freeeducation#indicatorsInTrading"
+                    >section on indicators in the course</a
+                  >.
+                </p>
+                <p>
+                  <strong>In short: </strong>
+                  <i
+                    >The stochastic is a momentum indicator: it compares the
+                    close with the range of highs and lows over a period and
+                    plots two lines from 0 to 100, where %K is the main one and
+                    %D the smoothed signal.</i
+                  >
+                </p>
 
-  <div class="flex">
-    <img class="pictureImg" loading="lazy" src="/assets/img/content/cryptostaking1.webp" alt="Benefits of crypto staking" />
-  </div>
+                <h2>
+                  Stochastic settings and the %K formula: 14, 3, 3 and fast
+                  versus slow
+                </h2>
+                <p>
+                  Under the two lines sits a simple sum. %K asks one question,
+                  where did the candle close inside its recent high-low range,
+                  and turns it into a number from 0 to 100: a close right at the
+                  top of the range gives a value near 100, right at the bottom
+                  near 0. The formula is just the close minus the lowest low,
+                  divided by the highest high minus the lowest low, times a
+                  hundred. %D is then a short average of %K, three periods by
+                  default, and it runs as the slower signal line. Knowing this
+                  much explains everything the indicator does: it is not
+                  measuring price as such, only where price sits inside its own
+                  recent range.
+                </p>
+                <p>
+                  The setting you will see written as 14, 3, 3 means a
+                  fourteen-bar lookback, a three-bar smoothing of %K, and a
+                  three-bar %D. That is the sane default. The raw, unsmoothed
+                  version is the fast stochastic, which fires constantly and
+                  mostly noise; the smoothed one most platforms show by default
+                  is the
+                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
+                    ><span itemprop="name">slow stochastic</span></dfn
+                  >, calmer and with fewer false signals. Shorten it, say to 5,
+                  3, 3, for faster scalping signals at the cost of more noise;
+                  lengthen it, to 21, 5, 5, for a slower, quieter read. As
+                  everywhere, there is no magic setting that turns the thing
+                  into a money machine: the default 14, 3, 3 covers most tasks,
+                  and hunting the perfect number on a past chart is the usual
+                  curve-fitting that falls apart on the next one.
+                </p>
+                <p>
+                  <strong>In short: </strong>
+                  <i
+                    >%K measures where the close sits in the recent high-low
+                    range from 0 to 100 and %D is its smoothed signal line; the
+                    default 14, 3, 3 (the slow stochastic) is the sane starting
+                    point, faster settings only add noise, and there is no magic
+                    number.</i
+                  >
+                </p>
 
-  <h2>Crypto Staking Risks</h2>
-  <p>This is where, as a trader, I want to put the focus. The first and most underrated risk is the price of the coin itself. You might earn, say, 6 percent a year, but if the coin falls 40 percent over that time you are deep in the red despite the pretty yield. The second is the lock-up: many networks have an unbonding period when you withdraw, sometimes up to several weeks, and during all that time you cannot sell even if the market is falling.</p>
-  <p>The third is penalties, known as slashing: if your validator breaks the rules or keeps going offline, part of your amount can be docked. Add the exchange risk if you stake through one, and the risk of bugs in smart contracts. Slashing itself is rare in practice, but the price and lock-up risks are everyday.</p>
+                <h2>
+                  Stochastic signals: the line cross and the overbought zone
+                </h2>
+                <p>
+                  The stochastic has three signals. The first is the zones. A
+                  value above 80 is called overbought, below 20 oversold. This
+                  is where beginners stumble: overbought is not a command to
+                  sell, only the fact that price closed near the top of its
+                  range. In a strong move it can hold there for a very long
+                  time. The second signal is the line cross. When %K crosses %D
+                  from below upward it's read as a reason to buy, from above
+                  downward as a reason to sell.
+                </p>
+                <p>
+                  The third signal is divergence, and Lane himself considered it
+                  the main one. Divergence is a disagreement: price prints a new
+                  high while the indicator no longer does, meaning momentum is
+                  fading. How exactly
+                  <a
+                    class="linkrefinto"
+                    href="https://arapov.trade/en/freestudying/trading-indicators"
+                    >divergences on indicators</a
+                  >
+                  are read has a separate piece. One thing I'll add: divergence
+                  is a hint, not a signal in itself, and entering on it without
+                  confirmation is risky.
+                </p>
 
-  <div class="flex">
-    <img class="pictureImg" loading="lazy" src="/assets/img/content/cryptostaking2.webp" alt="Risks of crypto staking" />
-  </div>
+                <div class="flex">
+                  <img
+                    class="pictureImg"
+                    loading="lazy"
+                    src="/assets/img/content/stochastic2.jpg"
+                    alt="Stochastic divergences"
+                  />
+                </div>
+                <p>
+                  <strong>In short: </strong>
+                  <i
+                    >The stochastic has three signals: zones above 80 and below
+                    20, the %K and %D cross, and divergence; but overbought is
+                    not a command to sell, only price closing near the top of
+                    its range.</i
+                  >
+                </p>
 
-  <h2>My Take: Staking Is Payment for Risk, Not Free Money</h2>
-  <p>Staking is not free money, it is payment for a risk you have accepted. That is the whole of it for me. I do not stake myself, I trade futures, but from a risk seat the math is plain: a yield that beats a bank by a wide margin has not removed the danger, it has just hidden it in the coin's price and in the lock-up. This is not advice for you personally, it is the principle I work by: if you do go in, treat staking as a risky slice of a portfolio rather than a deposit, never put your last or borrowed money there, and remember you cannot exit during the unbonding window. The honest limitation is that even a solid network does not protect you from the coin halving in value, so the alternative to chasing the headline yield is staking only what you would be comfortable holding through a deep drawdown.</p>
+                <h2>
+                  Stochastic in a range vs a trend: where it works and where it
+                  fails
+                </h2>
+                <p>
+                  Here is where the indicator's main trap hides. The stochastic
+                  behaves best in a sideways market. When the market moves in a
+                  range, price reliably bounces off the boundaries, and its
+                  zones of 80 and 20 really do hint at reversals inside that
+                  range. In this it's genuinely useful, though I'll be honest
+                  that those zones tend to line up with the very support and
+                  resistance of the range, which I'd be reading anyway. In a
+                  strong trend it lets you down. In a rising market the
+                  stochastic can sit above 80 for weeks. On the euro future I've
+                  seen this picture more than once: the indicator has long been
+                  in overbought while price calmly carries on higher. Selling on
+                  every such signal means cutting your profit and trading
+                  against the move. In a fall it's the reverse: it sits below
+                  20, and buying off it turns into catching knives. So the
+                  market phase is worth determining in advance. What
+                  <a
+                    class="linkrefinto"
+                    href="https://arapov.trade/en/freestudying/freeeducation#phases"
+                    >a trend and a range are, and how to tell them apart</a
+                  >, is covered in the course. Stochastic signals in a trend I'd
+                  watch only in the direction of the trend itself, not against
+                  it.
+                </p>
+                <p>
+                  <strong>In short: </strong>
+                  <i
+                    >In a range the stochastic reliably works the zones of 80
+                    and 20, while in a strong trend it sticks to the extreme
+                    zone and generates signals against the move, so in a trend I
+                    watch it only with the trend.</i
+                  >
+                </p>
 
-  <section>
-    <h2>Frequently Asked Questions</h2>
-    <mat-accordion>
-      <mat-expansion-panel class="highlight-box owl_link-box" [expanded]="true">
-        <mat-expansion-panel-header>
-          <mat-panel-title>What is staking in simple terms?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>It is locking your coins to support a blockchain's operation, for which the network pays a reward, usually in the same coin. It works on Proof of Stake networks: you give your assets as a pledge of reliability and earn a percentage for it.</p>
-      </mat-expansion-panel>
-      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
-        <mat-expansion-panel-header>
-          <mat-panel-title>How much can you earn from staking?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>Usually 3 to 12 percent a year, depending on the network and method. Ethereum is roughly 3 to 7 percent and Solana around 5 to 8. The yield changes constantly and falls as more coins in a network are staked.</p>
-      </mat-expansion-panel>
-      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
-        <mat-expansion-panel-header>
-          <mat-panel-title>Is staking safe?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>It is not risk-free income. The main risks are the coin's price falling, funds being locked during an unbonding period, penalties for a validator's faults, and exchange or smart-contract risk. There is no bank-style insurance here.</p>
-      </mat-expansion-panel>
-      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
-        <mat-expansion-panel-header>
-          <mat-panel-title>How is staking different from a bank deposit?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>The percentage is higher, but the risk is not comparable. A deposit is insured, while a staked coin can drop in value, get locked, or face a penalty. The high yield here is payment for accepted risk, not a guarantee.</p>
-      </mat-expansion-panel>
-      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
-        <mat-expansion-panel-header>
-          <mat-panel-title>Can you lose money by staking?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>Yes. Even with a positive yield you can end up at a loss if the coin's price falls more than you earn, and a lock-up can stop you selling during a crash. Slashing and platform failures can also cut into the staked amount.</p>
-      </mat-expansion-panel>
-    </mat-accordion>
-  </section>
+                <h2>
+                  Stochastic and a moving average together: why they contradict
+                  each other
+                </h2>
+                <p>
+                  Beginners often hang several indicators on the
+                  <a
+                    class="linkrefinto"
+                    href="https://arapov.trade/en/freestudying/chart-reading"
+                    >chart</a
+                  >
+                  at once, hoping for accuracy. And they get the opposite. A
+                  simple example. The stochastic shows oversold and hints at
+                  buying, while a moving average at the same time shows a
+                  downtrend and hints at selling. Whom do you believe? Both are
+                  sometimes right, sometimes not. The signals conflict, and the
+                  decision is still yours to make, only now with a muddle in
+                  your head.
+                </p>
+                <p>
+                  The reason is that almost all indicators, the stochastic and
+                  the RSI oscillator included, are derived from one and the same
+                  price. They recompute it with different formulas and
+                  inevitably lag: to get a signal a bar must close first, which
+                  means you always walk a step behind the market. So I don't
+                  pile them on top of each other. Instead I watch volume and
+                  levels. Volume shows whether there's a real large participant
+                  behind the move, and that's a cause, not a consequence. This
+                  isn't advice for you personally, it's how I work. Why
+                  indicators lose to the analysis of supply and demand in the
+                  first place I show on live charts in the video on
+                  <a
+                    class="linkrefinto"
+                    href="https://youtu.be/t4eLSS2vh-w?t=129"
+                    >why indicators don't work</a
+                  >. The stochastic isn't evil for all that, just a tool with a
+                  narrow field of use, and keeping that in mind is more honest
+                  than believing in it blindly.
+                </p>
+                <p>
+                  <strong>In short: </strong>
+                  <i
+                    >Indicators are derived from one price and lag, so stacking
+                    them on each other only piles up a muddle; instead I read
+                    volume and levels, since volume is the cause of a move, not
+                    its trace.</i
+                  >
+                </p>
 
-  <section>
-    <h2>About the Author</h2>
-    <p>Author: Igor Arapov — independent researcher in the psychology of investment decisions and behavioral finance, practising trader since 2013, founder of arapov.trade, author of a trading book series (<a class="linkrefinto" href="https://openlibrary.org/authors/OL16073686A/Igor_Arapov">Open Library</a>), (<a class="linkrefinto" href="https://orcid.org/0009-0003-0430-778X">ORCID: 0009-0003-0430-778X</a>).</p>
-  </section>
-</article>
+                <section>
+                  <h2>Frequently asked questions</h2>
+                  <mat-accordion>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      [expanded]="true"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >What does the stochastic oscillator show in simple
+                          terms?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        It shows whether price closed nearer the top or the
+                        bottom of its recent range. Near the top the value is
+                        high, near the bottom low. At bottom it's a gauge of
+                        momentum, not a predictor of the future.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >What are the standard stochastic
+                          settings?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        Most often the default is a period of 14, signal-line
+                        smoothing of 3, and zones at 80 and 20. These are
+                        starting values, tuned to the instrument and the
+                        timeframe. There are no universal numbers.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >What is the difference between the stochastic and the
+                          RSI?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        Both are momentum oscillators on a 0-to-100 scale, but
+                        they ask slightly different questions: the stochastic
+                        shows where the close sits in the recent high-low range,
+                        handy for timing entries in a range, while RSI measures
+                        the broader strength of the move. Because both are built
+                        from the same price they tend to agree, so running them
+                        together rarely gives a truly independent second
+                        opinion.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >Does overbought on the stochastic mean it is time to
+                          sell?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        No. A reading above 80 only means price closed near the
+                        top of its recent range. In a strong uptrend the
+                        stochastic can stay above 80 for weeks while price keeps
+                        rising, so selling on the reading alone trades against
+                        the move. Overbought is a reason to look closer, not a
+                        command, and it carries weight mainly in a range.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >Why does the stochastic give false signals in a
+                          trend?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        Because in a strong trend price holds at one edge of the
+                        range for a long time. The indicator sticks above 80 or
+                        below 20 and fires signal after signal against the move.
+                        In a range that problem almost vanishes, and there it's
+                        more meaningful.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >Can you trade with the stochastic
+                          alone?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        In my experience, no. It lags and is derived from price,
+                        so on its own it often deceives. If you do use it, then
+                        as a helper in a range, while I build the core of the
+                        decision on volume and levels.
+                      </p>
+                    </mat-expansion-panel>
+                  </mat-accordion>
+                </section>
+
+                <section>
+                  <h2>About the Author</h2>
+                  <p>
+                    Author:
+                    <a class="linkrefinto" href="https://arapov.trade/en"
+                      >Igor Arapov</a
+                    >
+                    — independent researcher in the psychology of investment
+                    decisions and behavioral finance, practising trader since
+                    2013, founder of arapov.trade, author of a trading book
+                    series (<a
+                      class="linkrefinto"
+                      href="https://orcid.org/0009-0003-0430-778X"
+                      >ORCID: 0009-0003-0430-778X</a
+                    >).
+                  </p>
+                </section>
+              </article>
 
               <div
                 class=""

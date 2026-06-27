@@ -56,22 +56,16 @@ export class HomeRuBlogFourtySixComponent implements OnInit {
     this.grr = this.artickleServ.selectedGroups;
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
-    this.titleService.setTitle(
-      'Bitcoin Pizza Day — первая покупка за биткоины | Значение и уроки',
-    );
+    this.titleService.setTitle('Скользящие средние в трейдинге | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Bitcoin Pizza Day — история первой покупки за биткоины 22 мая 2010 года. Узнайте, как 10 000 BTC обменяли на две пиццы и почему эта дата изменила финансовый мир.',
+        'Скользящие средние: SMA и EMA, выбор периода, пересечения и использование как динамической поддержки. Как применять и где они запаздывают.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-27' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/pizzaday.webp',
-    });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
 
     this.gerRandom();
   }
@@ -281,40 +275,36 @@ export class HomeRuBlogFourtySixComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          '@id': 'https://arapov.trade/ru/freestudying/pizzaday#article',
           headline:
-            'Bitcoin Pizza Day — первая покупка за биткоины в истории криптовалют',
+            'Скользящие средние в трейдинге: что это и где реально работают',
           description:
-            'Bitcoin Pizza Day — история первой покупки за биткоины 22 мая 2010 года. Узнайте, как 10 000 BTC обменяли на две пиццы и почему эта дата изменила финансовый мир.',
-          datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
-          author: {
-            '@id': 'https://arapov.trade/ru#person',
-          },
+            'Скользящие средние: SMA и EMA, выбор периода, пересечения и использование как динамической поддержки. Как применять и где они запаздывают.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'Arapov Trade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://arapov.trade/ru/freestudying/pizzaday',
+            '@id': 'https://arapov.trade/ru/freestudying/moving-averages',
           },
           image: {
             '@type': 'ImageObject',
-            url: 'https://arapov.trade/assets/img/content/pizzaday1.webp',
+            url: 'https://arapov.trade/assets/img/content/movingaverages.webp',
+            width: 1200,
+            height: 630,
           },
-          articleSection: 'Криптовалюты',
-          keywords: [
-            'Bitcoin Pizza Day',
-            'первая покупка за биткоины',
-            'Ласло Хейниц',
-            'история биткоина',
-            'криптовалюты',
-          ],
+          articleSection: 'Технический анализ',
+          keywords: 'скользящая средняя',
+          inLanguage: 'ru',
         },
       ],
     };
@@ -329,18 +319,18 @@ export class HomeRuBlogFourtySixComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/ru#person',
-      name: 'Игорь Арапов',
+      '@id': 'https://arapov.trade/#person',
+      name: 'Igor Arapov',
       alternateName: [
-        'Igor Arapov',
-        'Арапов Игорь',
-        'I. Arapov',
         'Ігор Арапов',
-        'І. В. Арапов',
+        'Игорь Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/ru',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -373,46 +363,45 @@ export class HomeRuBlogFourtySixComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
-      '@id': 'https://arapov.trade/ru/freestudying/pizzaday#faq',
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'Что такое Bitcoin Pizza Day?',
+          name: 'Что такое скользящая средняя простыми словами?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Bitcoin Pizza Day — это памятная дата 22 мая, когда в 2010 году программист Ласло Хейниц совершил первую зарегистрированную покупку реального товара за биткоины, обменяв 10 000 BTC на две пиццы.',
+            text: 'Это линия, которая усредняет цену за выбранное число свечей и сглаживает рыночный шум, показывая общее направление тренда. С каждой новой свечой окно расчёта сдвигается, и среднее пересчитывается заново.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Сколько стоили 10 000 биткоинов в 2010 году?',
+          name: 'В чём разница между SMA и EMA?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'На момент сделки в мае 2010 года 10 000 биткоинов стоили примерно 41 доллар США. Сегодня эта сумма оценивается в сотни миллионов долларов.',
+            text: 'SMA усредняет цены поровну и даёт самую гладкую, но медленную линию. EMA придаёт больший вес свежим ценам, поэтому реагирует быстрее. SMA удобнее для долгосрочного тренда, EMA для коротких таймфреймов, но обе запаздывают.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Кто такой Ласло Хейниц?',
+          name: 'Почему мувинги плохо работают для активной торговли?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Ласло Хейниц (Laszlo Hanyecz) — американский программист венгерского происхождения, который стал известен как человек, совершивший первую коммерческую транзакцию с использованием биткоина.',
+            text: 'Из-за запаздывания: линия строится по прошлым ценам и сообщает о развороте уже после того, как он произошёл. А во флэте цена постоянно пересекает среднюю, порождая множество ложных сигналов.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Почему Bitcoin Pizza Day важен для криптосообщества?',
+          name: 'Надёжны ли золотой и мёртвый крест?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Эта дата символизирует переход биткоина от теоретической концепции к практическому применению. Первая покупка доказала, что криптовалюта может функционировать как реальное средство обмена.',
+            text: 'Это популярные сигналы пересечения скользящих, но они сильно запаздывают. На истории выглядят убедительно, а в реальном времени дают вход уже после значительной части движения, поэтому в одиночку на них полагаться не стоит.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Как отмечают Bitcoin Pizza Day?',
+          name: 'Где скользящие средние действительно полезны?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Криптосообщество отмечает 22 мая акциями и скидками от бирж, тематическими встречами энтузиастов, обсуждениями в социальных сетях и благотворительными инициативами.',
+            text: 'На долгих горизонтах. Двухсотдневная SMA работает как грубый фильтр глобального тренда: цена выше неё это бычий режим, ниже медвежий. Это помогает отбирать акции в долгосрочный портфель, но не годится как сигнал для входа в сделку.',
           },
         },
       ],
@@ -428,40 +417,40 @@ export class HomeRuBlogFourtySixComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      '@id': 'https://arapov.trade/ru/freestudying/pizzaday#howto',
-      name: 'Как извлечь уроки из истории Bitcoin Pizza Day',
+      '@id': 'https://arapov.trade/ru/freestudying/moving-averages#howto',
+      name: 'Как разобраться и применять: Скользящие средние в трейдинге: что это и где реально работают',
       description:
-        'Пошаговое руководство по применению уроков первой криптовалютной транзакции в вашей инвестиционной стратегии.',
+        'Пошаговый разбор темы и её практическое применение в торговле',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Изучите историю биткоина',
-          text: 'Ознакомьтесь с ключевыми событиями развития криптовалют, начиная с создания биткоина Сатоши Накамото в 2009 году и первой транзакции в 2010 году.',
+          name: 'Что такое скользящие средние (Moving Average) — определение',
+          text: 'Скользящая средняя — это технический индикатор, который усредняет цену за выбранное число периодов и сглаживает колебания, помогая увидеть направление тренда.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Оцените долгосрочный потенциал',
-          text: 'Анализируйте активы не только по текущей цене, но и по их потенциальной роли в будущей экономике. История с пиццей показывает важность долгосрочного мышления.',
+          name: 'Почему мувинги не работают для внутридневной торговли',
+          text: 'Причина у мувингов одна и фундаментальная: запаздывание.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Управляйте рисками осознанно',
-          text: 'Инвестируйте только те средства, которые готовы потерять. Ранние инвестиции в криптовалюты сопряжены с высокой волатильностью.',
+          name: 'Скользящая как динамическая поддержка и сопротивление',
+          text: 'Есть у скользящих ещё одно применение, о котором любят говорить: динамическая поддержка и сопротивление.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Участвуйте в сообществе',
-          text: 'Присоединяйтесь к криптосообществам, посещайте мероприятия и обменивайтесь опытом с другими энтузиастами блокчейн-технологий.',
+          name: 'Пересечение цены со средней и лента из нескольких средних',
+          text: 'Кроме пересечения двух средних между собой есть и пересечение цены с одной средней.',
         },
         {
           '@type': 'HowToStep',
           position: 5,
-          name: 'Применяйте криптовалюты практически',
-          text: 'Используйте криптовалюты для реальных покупок, чтобы лучше понять их функционирование как средства обмена.',
+          name: 'Где скользящие средние полезны: отбор акций в долгосрочный портфель',
+          text: 'Было бы нечестно сказать, что мувинги вообще бесполезны.',
         },
       ],
     };
@@ -476,68 +465,13 @@ export class HomeRuBlogFourtySixComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      '@id': 'https://arapov.trade/ru/freestudying/pizzaday#terms',
-      name: 'Глоссарий терминов Bitcoin Pizza Day',
+      name: 'Глоссарий терминов статьи',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Bitcoin Pizza Day',
+          name: 'Скользящая средняя',
           description:
-            'Памятная дата 22 мая, когда в 2010 году была совершена первая покупка реального товара за биткоины.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Биткоин',
-          description:
-            'Первая децентрализованная криптовалюта, созданная в 2009 году анонимным разработчиком под псевдонимом Сатоши Накамото.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Криптовалюта',
-          description:
-            'Цифровой актив, использующий криптографию для обеспечения безопасности транзакций и контроля создания новых единиц.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Блокчейн',
-          description:
-            'Распределённая база данных, в которой транзакции записываются в виде цепочки блоков, обеспечивая прозрачность и неизменяемость данных.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Майнинг',
-          description:
-            'Процесс создания новых блоков в блокчейне и подтверждения транзакций с использованием вычислительных мощностей.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Волатильность',
-          description:
-            'Степень изменчивости цены актива за определённый период времени, характеризующая уровень рыночного риска.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Децентрализация',
-          description:
-            'Принцип распределения управления и контроля между множеством участников сети без единого центра власти.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Криптобиржа',
-          description:
-            'Платформа для покупки, продажи и обмена криптовалют на фиатные деньги или другие цифровые активы.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Bitcointalk',
-          description:
-            'Первый крупный интернет-форум, посвящённый обсуждению биткоина и криптовалют, основанный Сатоши Накамото.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'HODL',
-          description:
-            'Криптовалютный сленг, означающий долгосрочное удержание активов независимо от рыночных колебаний.',
+            'Скользящая средняя это технический индикатор, который усредняет цену за выбранное число периодов и сглаживает колебания, помогая увидеть направление тренда.',
         },
       ],
     };

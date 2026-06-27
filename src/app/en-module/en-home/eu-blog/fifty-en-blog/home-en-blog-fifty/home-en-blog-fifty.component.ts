@@ -53,20 +53,16 @@ export class HomeEnBlogFiftyComponent implements OnInit {
     this.grr = this.artickleServ.selectedGroups;
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
-    this.titleService.setTitle('Algorithmic Orders in Trading | ArapovTrade');
+    this.titleService.setTitle('Bollinger Bands | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Complete guide to algorithmic orders. VWAP, TWAP, Iceberg, Trailing Stop and other automated order types for effective trading.',
+        'Bollinger Bands: settings, squeeze and expansion, breakouts and bounces off the bands. How the indicator shows volatility and overheated zones.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-03-26' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/algorithmicorders.webp',
-    });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
 
     this.gerRandom();
   }
@@ -252,36 +248,36 @@ export class HomeEnBlogFiftyComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          headline: 'Algorithmic Orders on the Exchange: A Complete Guide',
+          headline:
+            'Bollinger Bands in Trading: What They Are and How to Use Them',
           description:
-            'A comprehensive guide to algorithmic orders on the exchange. Types of algorithmic orders, execution strategies, risk management and trading automation.',
-          author: {
-            '@id': 'https://arapov.trade/en#person',
-          },
+            'Bollinger Bands: settings, squeeze and expansion, breakouts and bounces off the bands. How the indicator shows volatility and overheated zones.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'ArapovTrade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
             url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
-          datePublished: '2026-03-25T00:00:00Z',
-         dateModified: '2026-04-15T00:00:00Z',
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://arapov.trade/en/freestudying/algorithmicorders',
+            '@id': 'https://arapov.trade/en/freestudying/bollinger-bands',
           },
           image: {
             '@type': 'ImageObject',
-            url: 'https://arapov.trade/assets/img/content/algorithmicorders.webp',
+            url: 'https://arapov.trade/assets/img/content/bollingerbands1.jpg',
             width: 1200,
             height: 630,
           },
           articleSection: 'Technical Analysis',
           keywords:
-            'algorithmic orders, algo trading, exchange orders, automated trading, TWAP, VWAP, order execution',
+            'bollinger bands, bollinger band squeeze, volatility indicator, bollinger bands settings, standard deviation, volume',
           inLanguage: 'en',
         },
       ],
@@ -297,19 +293,18 @@ export class HomeEnBlogFiftyComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/en#person',
+      '@id': 'https://arapov.trade/#person',
       name: 'Igor Arapov',
       alternateName: [
         'Ігор Арапов',
-        'Арапов Игорь',
-        'I. Arapov',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-
-      url: 'https://arapov.trade/en',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -324,12 +319,12 @@ export class HomeEnBlogFiftyComponent implements OnInit {
         'https://t.me/ArapovTrade',
       ],
       jobTitle: [
-        'Independent researcher,',
-        'trader',
-        'author and founder of arapov.trade',
+        'Independent researcher',
+        'Trader',
+        'Author and founder of arapov.trade',
       ],
       description:
-        'Independent researcher, practicing trader, author of books on trading and scientific publications. Specializes in trading psychology and cognitive biases in financial markets.',
+        'Independent researcher, practising trader, author of trading books and scientific publications. Specialises in trading psychology and cognitive biases in financial markets.',
     };
 
     this.addJsonLdSchema(data);
@@ -345,42 +340,50 @@ export class HomeEnBlogFiftyComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'What are algorithmic orders?',
+          name: 'What do Bollinger Bands show?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Automated orders executed by software algorithms to optimize trading.',
+            text: 'They show volatility: how far price has moved from its average. The channel widens on an active market and narrows on a calm one. About the direction of the move the bands themselves say nothing.',
           },
         },
         {
           '@type': 'Question',
-          name: 'What types exist?',
+          name: 'Does price touching the band mean overbought and time to sell?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'VWAP, TWAP, Iceberg, Trailing Stop, Pegged Orders and conditional orders.',
+            text: 'No. John Bollinger himself stressed that a tag of a band is not, in and of itself, a signal. In a trend price walks one band for a long time, printing new extremes, so selling the upper band in an uptrend just stacks losses. A touch only says the move has gone far from the average, not that it is over.',
           },
         },
         {
           '@type': 'Question',
-          name: 'What is VWAP?',
+          name: 'Can you trade bounces off the bands?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Algorithm executing at volume-weighted average price.',
+            text: 'In a flat sometimes yes, but in a trend it is dangerous: price can walk one band for a long time. I do not treat a touch of the band as a signal without confirmation from a level and volume.',
           },
         },
         {
           '@type': 'Question',
-          name: 'What is spoofing?',
+          name: 'What does a Bollinger Band squeeze mean?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Illegal manipulation using fake orders.',
+            text: 'A squeeze means volatility is dropping and the market is gathering strength before an impulse. It is an attention signal, not a direction one: where price will go the bands do not show, so you need analysis of the level and volume.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Who can use algorithmic orders?',
+          name: 'How do you measure a Bollinger Band squeeze objectively?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Institutional investors, HFT firms and retail traders through modern platforms.',
+            text: 'With the BandWidth indicator, which plots the distance between the bands as a number: a multi-month low means a real squeeze. A neater check is to overlay a Keltner Channel, when the Bollinger Bands sit entirely inside it the squeeze is on, and when they break back outside it fires. Either way the measure flags only that a move is loading, never its direction.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What are the standard Bollinger Bands settings?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: "The standard is a period of 20 and a deviation of 2, recommended by the indicator's author. A smaller period makes the bands more sensitive and noisier, a larger one smooths them. A beginner is better off starting with the default values.",
           },
         },
       ],
@@ -396,37 +399,40 @@ export class HomeEnBlogFiftyComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'How to Start Using Algorithmic Orders',
+      '@id': 'https://arapov.trade/en/freestudying/bollinger-bands#howto',
+      name: 'How to understand and use Bollinger Bands in trading',
+      description:
+        'A step-by-step breakdown of the topic and its practical use in trading',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Learn the Order Types',
-          text: 'Get familiar with VWAP, TWAP, Iceberg and other types of algorithmic orders.',
+          name: 'Understand what Bollinger Bands are and what they measure',
+          text: 'Bollinger Bands are a volatility indicator made of three lines: the middle band is a simple moving average, usually with a period of 20, and the upper and lower bands sit two standard deviations away from it.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Choose a Platform',
-          text: 'Choose a suitable platform: MetaTrader, TradingView, or crypto exchange APIs.',
+          name: 'Decide whether to trade bounces off the bands',
+          text: 'The classic idea sounds tempting: price touched the upper band, sell; touched the lower band, buy.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Test on a Demo Account',
-          text: 'Test your strategies on a demo account before trading with real money.',
+          name: 'Read the squeeze as a building impulse, not a direction',
+          text: 'A squeeze, when the channel narrows into a tight corridor, means volatility has dropped to a minimum and the market is gathering strength.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Set Up Risk Management',
-          text: 'Configure Stop-Loss and Trailing Stop to protect your capital.',
+          name: 'Measure the squeeze with BandWidth and the Keltner Channel',
+          text: 'BandWidth puts the band distance into a number and a Keltner Channel overlay turns the squeeze into a rule, but neither shows direction.',
         },
         {
           '@type': 'HowToStep',
           position: 5,
-          name: 'Go Live',
-          text: 'Start with small volumes and gradually scale up your strategy.',
+          name: 'Use the bands together with volume and a level',
+          text: 'On their own the bands show only the size of the move, but who stands behind that size shows up in volume.',
         },
       ],
     };
@@ -441,56 +447,19 @@ export class HomeEnBlogFiftyComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
+      name: 'Article glossary',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Algorithmic Order',
-          description: 'Automated order following rules',
+          name: 'Bollinger Bands',
+          description:
+            'A volatility indicator made of three lines: the middle band is a simple moving average, usually with a period of 20, and the upper and lower bands sit two standard deviations away from it.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'VWAP',
-          description: 'Volume-Weighted Average Price',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'TWAP',
-          description: 'Time-Weighted Average Price',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Iceberg Order',
-          description: 'Order with hidden volume',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'HFT',
-          description: 'High-Frequency Trading',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Trailing Stop',
-          description: 'Dynamic stop-loss',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Spoofing',
-          description: 'Illegal market manipulation',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Pegged Order',
-          description: 'Order pegged to bid/ask',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Slippage',
-          description: 'Price execution difference',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Co-Location',
-          description: 'Server placement near exchange',
+          name: 'standard deviation',
+          description:
+            'A statistical gauge of how far price scatters around its average; in Bollinger Bands it sets how wide the channel is, so the bands widen when volatility rises and contract when it falls.',
         },
       ],
     };

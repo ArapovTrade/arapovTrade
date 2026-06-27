@@ -27,7 +27,7 @@ export class HomeUkBlogThirtyOneComponent implements OnInit {
     private themeService: ThemeservService,
     private artickleServ: ArticlesService,
     private renderer: Renderer2,
-    @Inject(DOCUMENT) private document: Document
+    @Inject(DOCUMENT) private document: Document,
   ) {}
   private routerSubscription!: Subscription;
   private themeSubscription!: Subscription;
@@ -56,7 +56,7 @@ export class HomeUkBlogThirtyOneComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Рівні підтримки та опору: як будувати та торгувати за ключовими зонами'
+      'Ринок Forex: як працює та як торгувати | Arapov.trade',
     );
 
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
@@ -64,14 +64,12 @@ export class HomeUkBlogThirtyOneComponent implements OnInit {
     this.meta.updateTag({
       name: 'description',
       content:
-        'Дізнайтеся, як правильно будувати рівні підтримки та опору, визначати їхню силу та використовувати для входу в угоди. Практичний посібник для трейдерів.',
+        'Що таке ринок Forex, хто його учасники, як влаштовані валютні пари та торгові сесії і з чого почати торгівлю валютою.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-04-16' });this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/levelofsupport.webp',
-    });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
+
     this.gerRandom();
   }
   randomArticleRus: any = [];
@@ -82,13 +80,12 @@ export class HomeUkBlogThirtyOneComponent implements OnInit {
   hoveredIndex: number | null = null;
 
   projects = [
-   { title: 'Книги з трейдингу', link: 'https://arapov.trade/uk/books' },
+    { title: 'Книги з трейдингу', link: 'https://arapov.trade/uk/books' },
     { title: 'Професійні курси', link: 'https://arapov.trade/uk/studying' },
     {
       title: 'Базовий курс',
       link: 'https://arapov.trade/uk/freestudying/freeeducation',
     },
-     
   ];
 
   onGroupChange(event: Event) {
@@ -158,7 +155,7 @@ export class HomeUkBlogThirtyOneComponent implements OnInit {
     // Показываем 5 случайных статей при фокусе, если инпут пуст
     if (!this.searchQuery) {
       const shuffled = [...this.artickleServ.ukrArtickles].sort(
-        () => Math.random() - 0.5
+        () => Math.random() - 0.5,
       );
       this.displayedArticles = shuffled.slice(0, this.maxResults);
     }
@@ -173,7 +170,7 @@ export class HomeUkBlogThirtyOneComponent implements OnInit {
   onSearchChange() {
     // Логика асинхронного поиска
     const filtered = this.artickleServ.ukrArtickles.filter((a) =>
-      a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase())
+      a.titleUkr.toLowerCase().includes(this.searchQuery.toLowerCase()),
     );
     this.displayedArticles = filtered.slice(0, this.maxResults);
   }
@@ -195,7 +192,7 @@ export class HomeUkBlogThirtyOneComponent implements OnInit {
     const path: string =
       this.router.url.split('/')[this.router.url.split('/').length - 1];
     let index = this.artickleServ.ukrArtickles.findIndex(
-      (a) => a.linkUkr == path
+      (a) => a.linkUkr == path,
     );
 
     if (this.artickleServ.ukrArtickles.length - 1 == index) {
@@ -212,7 +209,7 @@ export class HomeUkBlogThirtyOneComponent implements OnInit {
     const path: string =
       this.router.url.split('/')[this.router.url.split('/').length - 1];
     let index = this.artickleServ.ukrArtickles.findIndex(
-      (a) => a.linkUkr == path
+      (a) => a.linkUkr == path,
     );
 
     if (index == 1) {
@@ -237,7 +234,7 @@ export class HomeUkBlogThirtyOneComponent implements OnInit {
     ];
 
     const scripts = this.document.querySelectorAll(
-      'script[type="application/ld+json"]'
+      'script[type="application/ld+json"]',
     );
 
     scripts.forEach((script) => {
@@ -250,7 +247,7 @@ export class HomeUkBlogThirtyOneComponent implements OnInit {
 
         const shouldRemove = candidates.some(
           (entry: any) =>
-            entry['@type'] && typesToRemove.includes(entry['@type'])
+            entry['@type'] && typesToRemove.includes(entry['@type']),
         );
 
         if (shouldRemove) {
@@ -278,34 +275,35 @@ export class HomeUkBlogThirtyOneComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          headline:
-            'Рівні підтримки та опору: як будувати та торгувати за ключовими зонами',
+          headline: 'Форекс для новачка: ринок, позиції, плече і сесії',
           description:
-            'Дізнайтеся, як правильно будувати рівні підтримки та опору, визначати їхню силу та використовувати для входу в угоди.',
-          image: {
-            '@type': 'ImageObject',
-            url: 'https://arapov.trade/assets/img/content/levelofsupport.webp',
-            width: 1200,
-            height: 630,
-          },
-          datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
-          author: {
-            '@id': 'https://arapov.trade/uk#person',
-          },
+            'Що таке ринок Forex, хто його учасники, як влаштовані валютні пари та торгові сесії і з чого почати торгівлю валютою.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'Arapov.trade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://arapov.trade/uk/freestudying/levelofsupport',
+            '@id': 'https://arapov.trade/uk/freestudying/forex-guide',
           },
-          articleSection: 'Технічний аналіз',
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/ForexMarket.webp',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Форекс',
+          keywords:
+            'форекс, валютний ринок, лонг, шорт, своп, кредитне плече, валютний ризик, кері-трейд, торгові сесії, індекс долара, DXY',
           inLanguage: 'uk',
         },
       ],
@@ -321,18 +319,18 @@ export class HomeUkBlogThirtyOneComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/uk#person',
-      name: 'Ігор Арапов',
+      '@id': 'https://arapov.trade/#person',
+      name: 'Igor Arapov',
       alternateName: [
-        'Igor Arapov',
-              'Арапов Игорь',
-              'I. Arapov',
-              'Игорь Арапов',
-              'І. В. Арапов',
-              'Арапов Ігор',
-              'Arapov Igor',
+        'Ігор Арапов',
+        'Игорь Арапов',
+        'Арапов Игорь',
+        'Арапов Ігор',
+        'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/uk',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -344,9 +342,13 @@ export class HomeUkBlogThirtyOneComponent implements OnInit {
         'https://github.com/ArapovTrade',
         'https://ua.linkedin.com/in/arapovtrade',
         'https://www.youtube.com/@ArapovTrade',
-        'https://t.me/ArapovTrade'
+        'https://t.me/ArapovTrade',
       ],
-       jobTitle: ['Незалежний дослідник', 'трейдер', 'автор і засновник arapov.trade'],
+      jobTitle: [
+        'Незалежний дослідник',
+        'трейдер',
+        'автор і засновник arapov.trade',
+      ],
       description:
         'Незалежний дослідник, практикуючий трейдер, автор книг з трейдингу та наукових публікацій. Спеціалізується на психології трейдингу та когнітивних упередженнях на фінансових ринках.',
     };
@@ -364,42 +366,50 @@ export class HomeUkBlogThirtyOneComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'Що таке рівень підтримки?',
+          name: 'Що таке Форекс простими словами?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Рівень підтримки — зона на графіку, де падіння ціни зупиняється завдяки активності покупців.',
+            text: 'Це міжнародний ринок обміну валют, де торгують парами на кшталт євро до долара. Найбільший і найліквідніший ринок світу з оборотом понад сім трильйонів доларів на день, але децентралізований: єдиної біржі немає, тому й чесного централізованого обсягу по валюті теж немає.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Що таке рівень опору?',
+          name: 'Як почати торгувати на Форексі новачку?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Рівень опору — зона, де зростання ціни сповільнюється через переважання пропозиції продавців.',
+            text: 'Почніть із демо-рахунку, оберіть одну-дві головні пари на кшталт євродолара й одну сесію, щоб навчитися її читати. Перш ніж заходити реальними грошима, засвойте ризик-менеджмент: стоп у кожній угоді, ризик близько одного-двох відсотків депозиту і скромне плече. Спочатку дисципліна, а вже потім розмір рахунку.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Як визначити силу рівня?',
+          name: 'Скільки грошей потрібно, щоб почати торгувати на Форексі?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Сила рівня визначається частотою тестування, обсягом торгів та таймфреймом формування.',
+            text: 'Рахунок можна відкрити з невеликою сумою, але фіксуватися на розмірі рахунку не варто. Важливіший ризик на угоду: тримати його близько одного-двох відсотків депозиту і вже під нього підбирати обсяг. Маленький рахунок на максимальному плечі небезпечніший за скромний рахунок із дисципліною.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Що таке дзеркальний рівень?',
+          name: 'Яке кредитне плече безпечне для новачка?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Після пробою підтримка стає опором, а опір — підтримкою.',
+            text: 'Питання не в розмірі плеча, а в ризику на угоду. Розумно тримати ризик близько одного-двох відсотків депозиту і вже під нього рахувати обсяг. Під наглядом ЄС і Британії роздробу дають приблизно 1:30 по основних парах, у США до 1:50, а офшорні брокери ваблять плечем 1:100 і вище, яке спалює рахунок найшвидше.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Як торгувати пробій рівня?',
+          name: 'Коли найкраще торгувати на Форексі?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Дочекайтеся закриття свічки за рівнем з високим обсягом, потім увійдіть після ретесту.',
+            text: 'У вікні перетину лондонської та нью-йоркської сесій, коли Європа ще торгує, а Америка вже відкрилася. У цей момент учасників і ліквідності найбільше, звідси й найсильніші рухи по головних парах із доларом, євро і фунтом. Тонкий азійський ринок, ніч і передсвяткові дні частіше дають шум.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Що таке індекс долара DXY і навіщо він трейдеру?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Це одне число, що показує силу долара проти кошика з шести валют, найважче в ньому євро. Оскільки долар є в більшості пар, індекс підказує ймовірний напрям: спершу дивляться силу долара по DXY, а конкретний вхід шукають уже на графіку самої пари за рівнем і реакцією ціни.',
           },
         },
       ],
@@ -415,37 +425,46 @@ export class HomeUkBlogThirtyOneComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'Як будувати рівні підтримки та опору',
+      '@id': 'https://arapov.trade/uk/freestudying/forex-guide#howto',
+      name: 'Як розібратися в ринку Forex з нуля',
+      description:
+        'Покроковий шлях новачка: устрій ринку, позиції, плече і ризик, сесії та індекс долара',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Виберіть таймфрейм',
-          text: 'Використовуйте старші таймфрейми D1, W1 для значущих рівнів.',
+          name: 'Зрозумійте устрій ринку Forex',
+          text: 'Forex це децентралізований ринок обміну валют без єдиної біржі, тому чесного централізованого обсягу по валюті немає, і читати її зручніше за рівнями та індексом долара.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Знайдіть екстремуми',
-          text: 'Позначте точки розвороту ціни на історичних даних.',
+          name: 'Розберіться з лонгом, шортом і свопом',
+          text: 'Лонг це ставка на зростання, шорт на падіння через продаж взятого в борг, а за перенесення позиції через ніч нараховується своп від різниці ставок.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Проведіть горизонталі',
-          text: 'Проведіть лінії через зони з багаторазовими дотиками.',
+          name: 'Візьміть під контроль плече і ризик',
+          text: 'Плече однаково множить прибуток і збиток, тому спершу рахують ризик в один-два відсотки на угоду, ставлять стоп і лише потім підбирають обсяг.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Перевірте обсяги',
-          text: 'Переконайтеся у високому обсязі торгів поблизу рівня.',
+          name: 'Враховуйте кері-трейд і його пастку',
+          text: 'Кері-трейд приносить дохід від різниці ставок через своп, але це не пасивна рента, а ставка з плечем на стабільність курсу.',
         },
         {
           '@type': 'HowToStep',
           position: 5,
-          name: 'Підтвердіть силу',
-          text: 'Комбінуйте з Фібоначчі або ковзними середніми.',
+          name: 'Торгуйте в потрібному вікні сесій',
+          text: 'Обсяг і рух максимальні на перетині Лондона і Нью-Йорка, а тонкий азійський ринок і свята краще перечекати.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 6,
+          name: 'Читайте ринок через індекс долара',
+          text: 'Індекс долара задає ймовірний напрям по більшості пар, а конкретний вхід шукають на графіку самої пари за рівнем і реакцією ціни.',
         },
       ],
     };
@@ -460,57 +479,61 @@ export class HomeUkBlogThirtyOneComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Глосарій рівнів',
+      name: 'Глосарій термінів статті',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Рівень підтримки',
-          description: 'Зона зупинки падіння ціни',
+          name: 'Пункт',
+          description:
+            'Мінімальний крок котирування на форексі, зазвичай четвертий знак після коми; у пунктах вимірюють рух ціни та величину ризику.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Рівень опору',
-          description: 'Зона зупинки зростання ціни',
+          name: 'Форекс',
+          description:
+            'Міжнародний ринок обміну валют, де одні валюти купують за інші; торгують не окремими валютами, а парами, наприклад євро до долара.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Дзеркальний рівень',
-          description: 'Рівень, що змінив роль після пробою',
+          name: 'Довга позиція',
+          description:
+            'Купівля активу в розрахунку на зростання ціни: купити дешевше, щоб згодом продати дорожче.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Пробій',
-          description: 'Проходження ціни через рівень',
+          name: 'Коротка позиція',
+          description:
+            'Продаж активу в розрахунку на падіння: продати дорожче взятий у борг інструмент, а відкупити назад дешевше, забравши різницю.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Хибний пробій',
-          description: 'Пробій зі швидким поверненням ціни',
+          name: 'Кредитне плече',
+          description:
+            'Надані брокером позикові кошти, що дають змогу керувати позицією у багато разів більшою за власний депозит, внісши лише невелику заставу.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Ретест',
-          description: 'Повторне тестування пробитого рівня',
+          name: 'Валютний ризик',
+          description:
+            'Імовірність зазнати збитку через несприятливий зсув валютного курсу проти відкритої позиції.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Психологічний рівень',
-          description: 'Круглі цінові позначки',
+          name: 'Кері-трейд',
+          description:
+            'Стратегія, за якої трейдер позичає у валюті з низькою процентною ставкою і вкладає у валюту з високою, заробляючи на різниці ставок.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Динамічний рівень',
-          description: 'Ковзні середні як підтримка/опір',
+          name: 'Торгова сесія форекс',
+          description:
+            'Період активної роботи фінансового центру певного регіону, через який проходить основний потік валютних операцій.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Зона ліквідності',
-          description: 'Область скупчення ордерів',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Півот-точка',
-          description: 'Розрахунковий рівень на основі попереднього періоду',
+          name: 'Індекс долара',
+          description:
+            'Показник сили долара США відносно кошика з шести основних світових валют, за яким судять, зміцнюється долар чи слабшає.',
         },
       ],
     };

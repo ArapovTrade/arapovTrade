@@ -198,52 +198,101 @@ export class MainpageComponent implements OnInit, AfterViewInit, OnDestroy {
     });
   }
 
-  private addWebSiteSchema() {
-    const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]')
-    ).some((script) => {
-      try {
-        const json = JSON.parse(script.textContent || '{}');
-        return json['@type'] === 'WebSite' && json['name'] === 'Arapov.Trade';
-      } catch {
-        return false;
-      }
-    });
+  // private addWebSiteSchema() {
+  //   const exists = Array.from(
+  //     this.document.querySelectorAll('script[type="application/ld+json"]')
+  //   ).some((script) => {
+  //     try {
+  //       const json = JSON.parse(script.textContent || '{}');
+  //       return json['@type'] === 'WebSite' && json['name'] === 'Arapov.Trade';
+  //     } catch {
+  //       return false;
+  //     }
+  //   });
 
-    // Если уже существует — выходим
-    if (exists) return;
+  //   // Если уже существует — выходим
+  //   if (exists) return;
 
-    // Создаем новый JSON-LD
-    const script = this.document.createElement('script');
-    script.type = 'application/ld+json';
-    script.text = JSON.stringify({
-      '@context': 'https://schema.org',
-      '@type': 'WebSite',
-      '@id': 'https://arapov.trade/#website',
-      url: 'https://arapov.trade',
-      name: 'Arapov.Trade',
-      alternateName: 'Навчання трейдингу',
-      description:
-        'Безкоштовне навчання трейдингу від Ігоря Арапова. 151+ статей, 78+ відеоуроків.',
-      inLanguage: 'uk-UA',
-      publisher: {
-        '@type': 'Organization',
-        '@id': 'https://arapov.trade/#organization',
-        name: 'Arapov.Trade',
-        url: 'https://arapov.trade',
-        logo: {
-          '@type': 'ImageObject',
-          url: 'https://arapov.trade/favicon.ico',
-        },
-        founder: {
-          '@type': 'Person',
-          '@id': 'https://arapov.trade/uk#person',
-          name: 'Арапов Ігор Віталійович',
-        },
-      },
+  //   // Создаем новый JSON-LD
+  //   const script = this.document.createElement('script');
+  //   script.type = 'application/ld+json';
+  //   script.text = JSON.stringify({
+  //     '@context': 'https://schema.org',
+  //     '@type': 'WebSite',
+  //     '@id': 'https://arapov.trade/#website',
+  //     url: 'https://arapov.trade',
+  //     name: 'Arapov.Trade',
+  //     alternateName: 'Навчання трейдингу',
+  //     description:
+  //       'Безкоштовне навчання трейдингу від Ігоря Арапова. 151+ статей, 78+ відеоуроків.',
+  //     inLanguage: 'uk-UA',
+  //     publisher: {
+  //       '@type': 'Organization',
+  //       '@id': 'https://arapov.trade/#organization',
+  //       name: 'Arapov.Trade',
+  //       url: 'https://arapov.trade',
+  //       logo: {
+  //         '@type': 'ImageObject',
+  //         url: 'https://arapov.trade/favicon.ico',
+  //       },
+  //       founder: {
+  //         '@type': 'Person',
+  //         '@id': 'https://arapov.trade/uk#person',
+  //         name: 'Арапов Ігор Віталійович',
+  //       },
+  //     },
        
-    });
+  //   });
 
-    this.document.head.appendChild(script);
-  }
+  //   this.document.head.appendChild(script);
+  // }
+
+  private addWebSiteSchema() {
+  const exists = Array.from(
+    this.document.querySelectorAll('script[type="application/ld+json"]')
+  ).some((script) => {
+    try {
+      const json = JSON.parse(script.textContent || '{}');
+      return json['@type'] === 'WebSite' && json['name'] === 'Arapov.Trade';
+    } catch {
+      return false;
+    }
+  });
+
+  // Если уже существует — выходим
+  if (exists) return;
+
+  // Создаем новый JSON-LD
+  const script = this.document.createElement('script');
+  script.type = 'application/ld+json';
+  script.text = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': 'https://arapov.trade/#website',
+    url: 'https://arapov.trade/uk',
+    name: 'Arapov.Trade',
+    alternateName: 'Навчання трейдингу',
+    description:
+      'Безкоштовне навчання трейдингу від Ігоря Арапова. 151+ статей, 78+ відеоуроків.',
+    inLanguage: 'uk-UA',
+    publisher: {
+      '@type': 'Organization',
+      '@id': 'https://arapov.trade/#organization',
+      name: 'Arapov.Trade',
+      url: 'https://arapov.trade',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://arapov.trade/favicon.ico',
+      },
+      founder: {
+        '@type': 'Person',
+        '@id': 'https://arapov.trade/#person',
+        name: 'Ігор Арапов',
+      },
+    },
+  });
+
+  this.document.head.appendChild(script);
+}
+
 }

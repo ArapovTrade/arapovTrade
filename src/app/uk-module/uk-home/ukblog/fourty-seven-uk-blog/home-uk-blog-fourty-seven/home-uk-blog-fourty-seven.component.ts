@@ -57,20 +57,18 @@ export class HomeUkBlogFourtySevenComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Фундаментальний аналіз ринку: принципи та методи оцінки активів',
+      'Індикатор MACD: сигнали та дивергенції | Arapov.trade',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Повний посібник з фундаментального аналізу фінансових ринків. Вивчіть макроекономічні показники, оцінку компаній та прогнозування трендів для інвестицій.',
+        'Індикатор MACD: налаштування, сигнальна лінія та гістограма, перетини та дивергенції. Як читати сигнали і не потрапляти на хибні.',
     });
 
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-19' });this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/fundamentalanalysis.webp',
-    });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
+
     this.gerRandom();
   }
 
@@ -277,78 +275,35 @@ export class HomeUkBlogFourtySevenComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          mainEntityOfPage: {
-            '@type': 'WebPage',
-            '@id': 'https://arapov.trade/uk/freestudying/fundamentalanalysis',
-          },
-          headline:
-            'Фундаментальний аналіз ринку: принципи та методи оцінки активів',
+          headline: 'Індикатор MACD: чому він працює гірше за очікування',
           description:
-            'Повний посібник з фундаментального аналізу фінансових ринків. Вивчіть макроекономічні показники, оцінку компаній та прогнозування трендів для інвестицій.',
-          image:
-            'https://arapov.trade/assets/img/content/fundamentalanalysis.webp',
-          datePublished: '2025-01-15T00:00:00+02:00',
-         dateModified: '2026-04-15T00:00:00Z',
-          inLanguage: 'uk',
-          author: {
-            '@id': 'https://arapov.trade/uk#person',
-          },
+            'Індикатор MACD: налаштування, сигнальна лінія та гістограма, перетини та дивергенції. Як читати сигнали і не потрапляти на хибні.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
             '@id': 'https://arapov.trade/#organization',
             name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
-          video: {
-            '@type': 'VideoObject',
-            name: 'Фундаментальный анализ рынка | Почему не работает для трейдеров',
-            description:
-              'Почему фундаментальный анализ рынка не работает для розничных трейдеров? Разбираем метод Вайкоффа и объясняем, как крупные игроки торгуют против новостей, используя инсайдерскую информацию и объёмный анализ.',
-            thumbnailUrl: [
-              'https://img.youtube.com/vi/6o21L5mLTrA/maxresdefault.jpg',
-              'https://img.youtube.com/vi/6o21L5mLTrA/hqdefault.jpg',
-            ],
-            uploadDate: '2025-11-15T00:00:00+02:00',
-            duration: 'PT8M25S',
-            contentUrl: 'https://www.youtube.com/watch?v=6o21L5mLTrA',
-            embedUrl: 'https://www.youtube.com/embed/6o21L5mLTrA',
-            inLanguage: 'ru',
-            keywords:
-              'фундаментальный анализ, метод Вайкоффа, крупные игроки, инсайдерская информация, трейдинг',
-            hasPart: [
-              {
-                '@type': 'Clip',
-                name: 'Почему мы не используем фундаментальный анализ в трейдинге',
-                startOffset: 0,
-                endOffset: 59,
-                url: 'https://www.youtube.com/watch?v=6o21L5mLTrA&t=0',
-              },
-              {
-                '@type': 'Clip',
-                name: 'Цитата Ричарда Вайкоффа о крупных операторах рынка',
-                startOffset: 59,
-                endOffset: 161,
-                url: 'https://www.youtube.com/watch?v=6o21L5mLTrA&t=59',
-              },
-              {
-                '@type': 'Clip',
-                name: 'Проницательность крупного капитала и инсайдерская информация',
-                startOffset: 161,
-                endOffset: 210,
-                url: 'https://www.youtube.com/watch?v=6o21L5mLTrA&t=161',
-              },
-              {
-                '@type': 'Clip',
-                name: 'Крупные деньги торгуют будущую стоимость, а не текущую цену',
-                startOffset: 210,
-                endOffset: 505,
-                url: 'https://www.youtube.com/watch?v=6o21L5mLTrA&t=210',
-              },
-            ],
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': 'https://arapov.trade/uk/freestudying/macd-indicator',
           },
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/macdindicator.png',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Технічний аналіз',
+          keywords: 'macd',
+          inLanguage: 'uk',
         },
       ],
     };
@@ -363,18 +318,18 @@ export class HomeUkBlogFourtySevenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/uk#person',
-      name: 'Ігор Арапов',
+      '@id': 'https://arapov.trade/#person',
+      name: 'Igor Arapov',
       alternateName: [
-        'Igor Arapov',
-        'Арапов Игорь',
-        'I. Arapov',
+        'Ігор Арапов',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/uk',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -410,42 +365,42 @@ export class HomeUkBlogFourtySevenComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'Що таке фундаментальний аналіз?',
+          name: 'Як працює індикатор MACD простими словами?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Фундаментальний аналіз — це метод оцінки активів на основі вивчення економічних, фінансових та галузевих факторів. Його мета — визначити справедливу вартість активу та виявити недооцінені або переоцінені інструменти.',
+            text: 'MACD порівнює швидку й повільну ковзні середні. Коли швидка обганяє повільну, лінія росте, коли відстає, падає. Перетин лінії MACD і сигнальної лінії вважають сигналом на купівлю або продаж.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Які показники використовуються у фундаментальному аналізі?',
+          name: 'Які налаштування MACD стандартні?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Основні показники включають: макроекономічні (ВВП, інфляція, процентні ставки), корпоративні (виручка, прибуток, P/E, P/B) та галузеві (динаміка попиту, конкурентне середовище, регуляторні зміни).',
+            text: 'Класичні параметри це 12, 26 і 9. Їх запропонував автор індикатора. Менші періоди роблять MACD чутливішим і галасливішим, більші згладжують сигнали. Новачку немає сенсу гнатися за особливим налаштуванням.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Чим фундаментальний аналіз відрізняється від технічного?',
+          name: 'Чому MACD дає хибні сигнали?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Фундаментальний аналіз вивчає економічні фактори та справедливу вартість активу для довгострокових інвестицій. Технічний аналіз фокусується на графіках, патернах та обсягах для короткострокової торгівлі.',
+            text: 'Бо він рахується з минулих цін і тому запізнюється. На розвороті й у флеті він часто малює перетин уже після руху, і сигнал виявляється хибним. Це властивість формули, а не помилка налаштування.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Для яких ринків застосовний фундаментальний аналіз?',
+          name: 'Що краще використовувати замість MACD?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Фундаментальний аналіз застосовується на фондовому ринку, валютному ринку, сировинному ринку та криптовалютному ринку. Методи адаптуються під специфіку кожного ринку.',
+            text: "За моїм досвідом перевагу дає робота з рівнями попиту й пропозиції, об'ємами та price action. Ці інструменти показують причину руху, а не його слід, і MACD за такого підходу потрібен щонайбільше для фону.",
           },
         },
         {
           '@type': 'Question',
-          name: 'Які помилки допускають при фундаментальному аналізі?',
+          name: 'Що таке дивергенція MACD?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Типові помилки: сліпа довіра фінансовим звітам, ігнорування макроекономічних факторів, відсутність диверсифікації, недооцінка впливу ринкових настроїв на короткострокову динаміку.',
+            text: "Це розходження між ціною та індикатором. Ведмежа дивергенція коли ціна оновлює максимум, а MACD ні, натякаючи на послаблення зростання; бича коли ціна оновлює мінімум, а MACD ні. Її вважають одним із найкорисніших сигналів, бо вона з'являється до розвороту, але й вона не гарантія: без підтвердження обсягом і рівнем я за нею не входжу.",
           },
         },
       ],
@@ -461,37 +416,34 @@ export class HomeUkBlogFourtySevenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'Як проводити фундаментальний аналіз',
+      '@id': 'https://arapov.trade/uk/freestudying/macd-indicator#howto',
+      name: 'Як розібратися й застосовувати: індикатор MACD і чому він працює гірше за очікування',
+      description:
+        'Покроковий розбір теми та її практичне застосування в торгівлі',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Вивчіть макроекономіку',
-          text: 'Проаналізуйте ключові показники: ВВП, інфляцію, процентні ставки центробанків, рівень безробіття.',
+          name: 'Що таке індикатор MACD і як він розраховується',
+          text: 'MACD — це індикатор сходження й розходження ковзних середніх, який показує різницю між швидкою й повільною середніми.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Оцініть галузь',
-          text: 'Вивчіть динаміку попиту та пропозиції в галузі, конкурентне середовище, регуляторні зміни та технологічні тренди.',
+          name: 'Сигнали MACD: перетин ліній, гістограма, нуль і дивергенція',
+          text: 'Чотири базові сигнали: перетин лінії MACD і сигнальної, гістограма, перетин нуля і дивергенція між ціною та індикатором.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Проаналізуйте компанію',
-          text: 'Вивчіть фінансову звітність: виручку, чистий прибуток, боргове навантаження. Розрахуйте ключові коефіцієнти P/E, P/B, ROE.',
+          name: 'MACD і стохастик: парадокс суперечливих сигналів',
+          text: 'Далі з моєї практики, і це моя позиція.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Визначте справедливу вартість',
-          text: 'Порівняйте ринкову ціну активу з розрахунковою справедливою вартістю. Недооцінені активи представляють інвестиційні можливості.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 5,
-          name: 'Врахуйте ризики',
-          text: 'Оцініть геополітичні, валютні та галузеві ризики. Диверсифікуйте портфель для зниження потенційних втрат.',
+          name: 'Чому MACD запізнюється і що ефективніше використовувати',
+          text: 'Причина запізнення в самій конструкції.',
         },
       ],
     };
@@ -506,66 +458,25 @@ export class HomeUkBlogFourtySevenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Терміни фундаментального аналізу',
+      name: 'Глосарій термінів статті',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Фундаментальний аналіз',
+          name: 'MACD',
           description:
-            'Метод оцінки активів на основі економічних, фінансових та галузевих факторів',
+            'Індикатор сходження й розходження ковзних середніх, який показує різницю між швидкою й повільною середніми.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Справедлива вартість',
+          name: 'Гістограма MACD',
           description:
-            'Розрахункова внутрішня вартість активу на основі фундаментальних показників',
+            'Гістограма MACD це різниця між лінією MACD і сигнальною лінією: зростаючі стовпчики показують посилення імпульсу, стискаючись його послаблення.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'P/E',
+          name: 'Дивергенція MACD',
           description:
-            'Коефіцієнт ціна/прибуток, що показує скільки інвестори платять за одиницю прибутку',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'P/B',
-          description:
-            'Коефіцієнт ціна/балансова вартість, що порівнює ринкову та бухгалтерську вартість',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'ВВП',
-          description:
-            'Валовий внутрішній продукт, що вимірює загальний обсяг виробництва економіки',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Інфляція',
-          description:
-            'Зростання загального рівня цін, що знижує купівельну спроможність валюти',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Процентна ставка',
-          description:
-            'Ставка центрального банку, що впливає на вартість запозичень в економіці',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Дивідендна дохідність',
-          description: 'Відношення річних дивідендів до ринкової ціни акції',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'ROE',
-          description:
-            'Рентабельність власного капіталу, що вимірює ефективність використання капіталу',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Боргове навантаження',
-          description:
-            'Співвідношення позикових коштів до власного капіталу компанії',
+            'Дивергенція MACD це розходження між ціною та індикатором: ціна оновлює екстремум, а MACD ні, що вважають раннім натяком на послаблення імпульсу.',
         },
       ],
     };

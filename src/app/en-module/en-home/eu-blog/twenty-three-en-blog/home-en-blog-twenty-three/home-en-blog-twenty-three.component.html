@@ -7,76 +7,856 @@
           <div class="free-courses_main-container">
             <main lang="en">
               <header>
-  <h1>What Is a Bitcoin ETF and How Does It Work?</h1>
-</header>
-<article>
-  <p>A Bitcoin ETF lets you invest in Bitcoin through an ordinary stock exchange, without ever opening a crypto wallet or holding the coins yourself. A spot Bitcoin ETF holds real BTC in custody, and its share price tracks the price of Bitcoin. You buy and sell it in a normal brokerage account, just like a stock.</p>
+                <h1>
+                  Market Volume Analysis: A Complete Guide to Reading Volume
+                </h1>
+              </header>
+              <article>
+                <p>
+                  Volume analysis shows not where price went, but how many real
+                  trades stand behind that move. If price rises on heavy volume,
+                  there is money and interest behind it, and the move can be
+                  trusted. If it rises on falling volume, buyers are few, and
+                  that kind of rise often turns out to be a trap. Volume reveals
+                  where a large player stepped into the market, and where it is
+                  just empty motion with no money in it.
+                </p>
 
-  <p>The arrival of spot Bitcoin ETFs in 2024 was the biggest structural change crypto has seen, and it is useful for a lot of people. I have been trading since 2013, and I think the ETF solves a real problem, the awkwardness of custody, while quietly leaving the main risk untouched. Below is what a Bitcoin ETF is, how it works, and the trade-offs I weigh before treating it as the easy answer.</p>
+                <p>
+                  I did not arrive at volume right away. At first, like almost
+                  everyone, I watched candles and figures, then I cycled through
+                  indicators hunting for the magic one. The picture only grew
+                  more honest once I added volume under the chart: price easily
+                  draws a pretty reversal that is not really there, while volume
+                  hints at whether real money stood behind the move or thin
+                  liquidity painted it in. This guide gathers into one system
+                  everything I use myself: effort and result by Wyckoff, peak
+                  levels and Volume Profile, the market profile by Steidlmayer,
+                  and an honest source of data.
+                </p>
 
-  <p><strong><i>In this article we'll cover:</i></strong></p>
-  <ul>
-    <li>a spot Bitcoin ETF holds real BTC and trades like a stock on a regulated exchange;</li>
-    <li>it gives Bitcoin exposure without wallets, keys, or crypto exchanges;</li>
-    <li>US spot Bitcoin ETFs were approved in January 2024 and now hold over 100 billion dollars;</li>
-    <li>the wrapper removes the custody hassle but not Bitcoin's volatility, and you do not hold the coins.</li>
-  </ul>
+                <p>
+                  <strong><i>In this article we'll cover:</i></strong>
+                </p>
+                <ul>
+                  <li>
+                    volume shows the money's participation behind a price move,
+                    while price itself easily misleads;
+                  </li>
+                  <li>
+                    the effort-result principle checks volume against the price
+                    move and reveals who really controls the market;
+                  </li>
+                  <li>
+                    peak levels, the POC and Market Profile show where large
+                    capital considers price fair;
+                  </li>
+                  <li>
+                    honest volume exists only on exchange instruments, on forex
+                    it is tick-based, and that has to be taken into account.
+                  </li>
+                </ul>
 
-  <p>We will start with what a Bitcoin ETF actually is.</p>
+                <p>
+                  Let's start with what even counts as volume and what exactly
+                  it measures.
+                </p>
 
-  <h2>What Is a Bitcoin ETF?</h2>
-  <p><dfn itemscope itemtype="https://schema.org/DefinedTerm"><span itemprop="name">A Bitcoin ETF</span></dfn> is an exchange-traded fund that tracks the price of Bitcoin, letting investors gain exposure through a regular brokerage account instead of holding the coins directly. A spot Bitcoin ETF does this by buying and holding actual <a class="linkrefinto" href="https://arapov.trade/en/freestudying/bitcoin">BTC</a> in custody, so each share is backed by real Bitcoin.</p>
-  <p>The simplest way to picture it is gold. Rather than buying a bar and finding somewhere safe to store it, you can buy a fund that holds the gold for you and trades as a share. A spot Bitcoin ETF works the same way: the issuer handles the storage and security, and you just hold the share. This is different from a futures ETF, which tracks Bitcoin through derivative contracts rather than holding the coin itself.</p>
+                <div class="flex">
+                  <img
+                    class="pictureImg"
+                    loading="lazy"
+                    src="/assets/img/content/volmarketanalisys1.webp"
+                    alt="Market volume analysis"
+                  />
+                </div>
 
-  <h2>How Bitcoin ETF Works and Why It Matters</h2>
-  <p>The turning point came on January 10, 2024, when the US regulator approved eleven spot Bitcoin ETFs at once, ending more than a decade of rejections, with trading starting the next day. The products come from major asset managers, and BlackRock's IBIT quickly grew into the largest, holding tens of billions of dollars in Bitcoin and a few percent of the entire supply. By early 2026, total assets across US spot Bitcoin ETFs had passed 100 billion dollars.</p>
-  <p>This matters for two reasons. For an ordinary investor, the ETF removes the friction and risk of self-custody, since there are no private keys to lose and no unregulated exchange to trust, and it fits neatly into the wider question of <a class="linkrefinto" href="https://arapov.trade/en/freestudying/tradingandinvestments">trading vs investing</a>. For the market as a whole, these funds now buy more BTC on a typical day than miners create, which adds a steady source of demand and ties Bitcoin more tightly to traditional finance. If you are still deciding how to get exposure at all, the basics are covered under <a class="linkrefinto" href="https://arapov.trade/en/freestudying/cryptocurrencytrading">Cryptocurrency Trading for Beginners: How to Start</a>.</p>
+                <h2>What market volume analysis is</h2>
+                <p>
+                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
+                    ><span itemprop="name">Volume analysis</span></dfn
+                  >
+                  is a method of reading the market by the number of trades that
+                  passed over a period, not just by the price move.
+                </p>
+                <p>
+                  Volume is how many contracts or lots really changed hands in a
+                  single bar. High volume means many participants and money in
+                  the moment, low volume means a lull. What matters is not the
+                  figure itself but its dynamic: one bar is compared with its
+                  neighbors, did volume rise or fall against what came just
+                  before. The logic of the method is simple. A large participant
+                  cannot build or unload a big position unnoticed, its activity
+                  leaves a trace in the volume. So through volume people try to
+                  make out what the money is doing, not the crowd.
+                </p>
+                <p>
+                  From this come two basic states of the market. Accumulation is
+                  when a large player gradually builds a position in a sideways
+                  range, not letting price rise noticeably. Distribution is the
+                  reverse: a large player hands out the position it built at
+                  high levels while the crowd buys. These two phases lie at the
+                  base of everything that follows, and it is precisely them that
+                  volume helps make out earlier than it becomes visible on price
+                  itself.
+                </p>
+                <p>
+                  <strong>In short: </strong
+                  ><i
+                    >Volume analysis is reading the market by the number of
+                    trades that passed, not by price alone; what matters is not
+                    the figure itself but its dynamic relative to neighboring
+                    bars, and so the phases of accumulation and distribution of
+                    large capital show through.</i
+                  >
+                </p>
 
-  <h2>My Take on the Bitcoin ETF</h2>
-  <p>The ETF fixes the part of Bitcoin people actually struggle with, custody, but it does nothing about the part that hurts them, volatility. As a clean, regulated wrapper it is a real improvement: no lost keys, no shady exchange, just a share in a normal account. That convenience is worth something, and for many people it is the sensible way to hold Bitcoin.</p>
-  <p>What it is not is a way to make Bitcoin safer as an asset. You do not hold the coins, which runs against the self-custody idea Bitcoin was built on, you pay an annual fee, and the share falls just as hard as BTC when BTC drops thirty or forty percent. An ETF is the same asset in a nicer box, not a hedge. The angle I find most useful as a trader is different: flows into and out of these funds happen on regulated venues, so that volume is honest, unlike much of the wash-traded activity on unregulated crypto exchanges, which makes ETF flows a genuine demand signal worth watching. None of this is advice for you, and none of it is financial advice; it is simply how I weigh the ETF, an approach I have followed since 2013.</p>
+                <div class="flex">
+                  <img
+                    class="pictureImg"
+                    loading="lazy"
+                    src="/assets/img/content/Wyckoff.jpg"
+                    alt="Wyckoff method market phases"
+                  />
+                </div>
 
-  <section>
-    <h2>Frequently Asked Questions</h2>
-    <mat-accordion>
-      <mat-expansion-panel class="highlight-box owl_link-box" [expanded]="true">
-        <mat-expansion-panel-header>
-          <mat-panel-title>What is a Bitcoin ETF in simple terms?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>A Bitcoin ETF is a fund that trades on a stock exchange and tracks the price of Bitcoin. A spot version holds real BTC in custody, so you get exposure to Bitcoin's price through a normal brokerage account, without a wallet.</p>
-      </mat-expansion-panel>
-      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
-        <mat-expansion-panel-header>
-          <mat-panel-title>When were spot Bitcoin ETFs approved?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>The US regulator approved eleven spot Bitcoin ETFs on January 10, 2024, with trading beginning the next day. It ended more than a decade of rejected applications and opened Bitcoin to institutional money.</p>
-      </mat-expansion-panel>
-      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
-        <mat-expansion-panel-header>
-          <mat-panel-title>What is the difference between a spot and a futures Bitcoin ETF?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>A spot Bitcoin ETF holds actual Bitcoin, so its price follows BTC closely. A futures Bitcoin ETF holds derivative contracts instead of the coin, which can track the price less precisely over time.</p>
-      </mat-expansion-panel>
-      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
-        <mat-expansion-panel-header>
-          <mat-panel-title>Is a Bitcoin ETF safer than buying Bitcoin?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>It removes custody risk, since there are no private keys to lose, and it is regulated. But it does not reduce Bitcoin's price volatility, and you do not own the coins directly. The asset behind it is exactly as volatile as Bitcoin.</p>
-      </mat-expansion-panel>
-      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
-        <mat-expansion-panel-header>
-          <mat-panel-title>Should I buy a Bitcoin ETF or Bitcoin directly?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>That depends on your goals, and no article can decide it for you. An ETF is simpler and regulated but charges a fee and holds the coins for you; direct ownership gives you the keys but more responsibility. Weigh the convenience against the cost and the loss of self-custody.</p>
-      </mat-expansion-panel>
-    </mat-accordion>
-  </section>
+                <h2>
+                  The effort-result principle: the core of the Wyckoff method
+                </h2>
+                <p>
+                  The
+                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
+                    ><span itemprop="name"
+                      >Effort and result principle</span
+                    ></dfn
+                  >
+                  is a Wyckoff rule by which volume is treated as the applied
+                  effort and the price move as its result, and these two are
+                  always checked against each other.
+                </p>
+                <p>
+                  This approach was devised by Richard Wyckoff, an American
+                  stock operator of the early twentieth century. He watched the
+                  ticker tape and noticed that there are participants who
+                  steadily earn in any trend: price is moved not by the crowd
+                  but by large capital, and it leaves a trace in the volume.
+                  Today these participants are more often called
+                  <a
+                    class="linkrefinto"
+                    href="https://arapov.trade/en/freestudying/smart-money-guide"
+                    >smart money</a
+                  >, but Wyckoff's idea was the same. And the main thing: this
+                  is not an indicator and not a set of rigid rules, but a skill
+                  of matching volume with the price reaction right on the bars.
+                </p>
+                <p>
+                  This is where the most practical part begins. Normally a big
+                  effort gives a big result: high volume and a wide candle in
+                  the direction of the move means the market really is going.
+                  But when the effort is huge, volume jumped, and price has
+                  barely shifted, that is the main signal. It means someone is
+                  absorbing the market on that volume, taking for themselves
+                  everything the crowd offers. There is no result because the
+                  opposite side is dampening the move. In my experience such
+                  places before a reversal are the most interesting of all. A
+                  simple example from practice: price is falling, on another
+                  flush down the volume sharply grows, while the fall itself
+                  slows, the bars become shorter. The effort to sell is huge,
+                  but there is no result on price, and for me that is a sign
+                  that someone is calmly buying up the supply. The logic of
+                  large capital and the very phases of accumulation and
+                  distribution I break down in detail in the course section on
+                  the
+                  <a
+                    class="linkrefinto"
+                    href="https://arapov.trade/en/freestudying/freeeducation#wyckoff"
+                    >Wyckoff method</a
+                  >.
+                </p>
+                <p>
+                  Out of this same pairing grows the climax. A selling climax is
+                  the moment when a downtrend runs out of breath: after a long
+                  decline comes a sharp flush on huge volume, and then price
+                  refuses to fall further and quickly returns back. The crowd
+                  dumps positions in panic, while large capital calmly
+                  accumulates at the low price. A buying climax is the mirror:
+                  up high, after a long rise, there is a spike of volume but
+                  price no longer rises, because the position is being handed
+                  out to those who believed in continuation. How to catch such a
+                  reversal by volume on a live bitcoin example I show in the
+                  <a
+                    class="linkrefinto"
+                    href="https://youtu.be/gpn62WWS6Pk?t=380"
+                    >video on volume divergence and pinpointing the extreme</a
+                  >.
+                </p>
+                <p>
+                  These turns at the boundaries of a range have settled names
+                  from Wyckoff himself, and they are read with the same eye for
+                  effort and result, not with an indicator:
+                </p>
+                <ul>
+                  <li>
+                    <strong>Selling Climax (SC)</strong> and
+                    <strong>Buying Climax (BC)</strong>: peak volume at the end
+                    of a move after which price refuses to continue, the effort
+                    is huge and the result is missing.
+                  </li>
+                  <li>
+                    <strong>Automatic Rally (AR)</strong>: the first bounce
+                    after a climax, it outlines the top of the future range.
+                  </li>
+                  <li>
+                    <strong>Secondary Test (ST)</strong>: a return to the climax
+                    zone on lower volume, checking whether pressure is left.
+                  </li>
+                  <li>
+                    <strong>Spring</strong> and the mirror
+                    <strong>Upthrust (UT/UTAD)</strong>: a false break through
+                    the range boundary, price runs the stops beyond the level
+                    and quickly comes back, while volume gives away that the
+                    break is empty.
+                  </li>
+                  <li>
+                    <strong>Test</strong>: a revisit to the level after a spring
+                    on low volume, supply is exhausted and the way up is open.
+                  </li>
+                  <li>
+                    <strong>Sign of Strength (SOS)</strong> and
+                    <strong>Last Point of Support (LPS)</strong>: a wide move
+                    out of the range on raised volume and a pullback to its edge
+                    from which the trend begins.
+                  </li>
+                </ul>
+                <p>
+                  These are not signals from a script but volume-recognisable
+                  places where large capital ends one phase and starts another.
+                  I do not memorise them as formulas: each one is the same
+                  question, did effort match result.
+                </p>
+                <p>
+                  <strong>In short: </strong
+                  ><i
+                    >The effort and result principle checks volume against the
+                    price move: high volume with a wide candle means the market
+                    is going, while big volume with price standing still means
+                    someone is absorbing the flow, and that is the main reversal
+                    signal.</i
+                  >
+                </p>
 
-  <section>
-    <h2>About the Author</h2>
-    <p>Author: Igor Arapov — independent researcher in the psychology of investment decisions and behavioral finance, practising trader since 2013, founder of arapov.trade, author of a trading book series (<a class="linkrefinto" href="https://openlibrary.org/authors/OL16073686A/Igor_Arapov">Open Library</a>), (<a class="linkrefinto" href="https://orcid.org/0009-0003-0430-778X">ORCID: 0009-0003-0430-778X</a>).</p>
-  </section>
-</article>
+                <div class="flex">
+                  <img
+                    class="pictureImg"
+                    loading="lazy"
+                    src="/assets/img/content/volmarketanalisys2.webp"
+                    alt="Interpreting volume data"
+                  />
+                </div>
+
+                <h2>
+                  Bullish and bearish volume: trend direction and strength
+                </h2>
+                <p>
+                  Volume is neutral in itself; the price it appears on gives it
+                  direction. A simple working rule: rising volume on down bars
+                  is seller pressure, a bearish mood, while rising volume on up
+                  bars is buyer pressure, bullish. When you see large bars
+                  precisely on the fall, the market is being given away, not
+                  bought up. Then volume tests the strength of the trend. A
+                  healthy uptrend makes new highs, and every push up goes on
+                  rising volume, while on pullbacks volume instead drops,
+                  showing that sellers are weak. A strong up candle on big
+                  volume is a real move of large capital, while the same candle
+                  on thin volume is often a dud with no force behind it.
+                </p>
+                <p>
+                  Divergence stands apart, the most valuable warning signal.
+                  Price still makes new highs, while volume is falling: there
+                  are fewer and fewer new buyers, the move holds on inertia, and
+                  the trend is losing strength. It is important to tell
+                  divergence from an ordinary pullback: on a healthy pullback
+                  volume falls and rises again on the resumption of the trend,
+                  while in divergence it does not come back even when price
+                  tries to go further. Say on the first day price travelled 84
+                  points on average volume, and the next day almost as much, 79,
+                  but volume grew about twofold while the close was weak: the
+                  effort grew, the result did not, and that is already a sign of
+                  a climax, not of strength.
+                </p>
+                <p>
+                  So I do not trust a breakout or an impulse without
+                  confirmation by volume, and weak volume on a strong move is
+                  for me a signal to stand aside, not to jump in. And here is
+                  what matters, this is my position and not a universal rule:
+                  volume hints at a reversal but does not guarantee it.
+                  Divergence and climax are probabilistic signals, sometimes a
+                  trend drags on for a long time after them, so against the
+                  trend on divergence alone I do not enter, but wait until it is
+                  confirmed by structure and the price reaction.
+                </p>
+                <p>
+                  <strong>In short: </strong
+                  ><i
+                    >Volume is neutral, direction is set by the price under it:
+                    rising volume on a fall is sellers, on a rise buyers; and
+                    divergence, when a new high comes on lower volume, warns of
+                    a reversal earlier than price itself.</i
+                  >
+                </p>
+
+                <h2>
+                  The deficit of demand and supply: why price actually moves
+                </h2>
+                <p>
+                  Here I will give an angle that turns the usual explanation on
+                  its head, and understanding it matters more than learning a
+                  dozen patterns. Most textbooks say: price falls because
+                  sellers came. In my experience it is the opposite. A
+                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
+                    ><span itemprop="name">Demand deficit</span></dfn
+                  >
+                  is a situation where large capital stops buying, and no force
+                  is left in the market ready to hold price. The logic is
+                  simple: professional money never buys expensive. If at high
+                  prices they are not interested, their demand simply disappears
+                  from the venue, and only sellers are left, competing with one
+                  another and pushing price down. So a bear trend is not where
+                  there are many aggressive sellers, but where the large buyer
+                  has left.
+                </p>
+                <p>
+                  A rise works as a mirror. The true cause of a sustained climb
+                  is a deficit of supply, not a crowd of buyers. At a level that
+                  large capital considers cheap, it builds a position and
+                  gradually buys up all the available supply. When the sellers
+                  at that level run out, there is no one left to sell to, and
+                  price has nothing left to do but go up at market. I often put
+                  it this way: the cause of a rise is always a deficit of
+                  supply, and the cause of a fall a deficit of demand. Volume is
+                  exactly what catches the moment when one of the sides runs out
+                  of breath, earlier than it becomes visible on price itself.
+                </p>
+                <p>
+                  Behind this stands the eternal problem of large capital: a
+                  deficit of liquidity. Big money would gladly buy as much as it
+                  likes at a cheap price, but there are simply no counterparties
+                  for its whole position. So it has to play with price to lure
+                  the crowd onto the unfavorable side: knock out a level with a
+                  false break, collect other people's stops and take that
+                  liquidity for itself. On volume this reads as a spike on the
+                  false break with subsequent drying-up: the supply ran out, and
+                  the large player has nothing left to do but move price its
+                  way. So the deficit of demand and supply meets the mechanics
+                  of false breakouts.
+                </p>
+                <p>
+                  Out of this same logic grows the path of least resistance.
+                  When large capital has already built a position and is
+                  interested in a rise, its trace is a skyscraper of volume on
+                  rising bars: an abnormally high column where price went up.
+                  And the reverse, when it is set on a decline, the same spikes
+                  land on falling bars. I look at which side these skyscrapers
+                  appear on, and that hints where the market finds it easier to
+                  go next. This is not a prediction but a shift of
+                  probabilities: the path the money has already walked is
+                  usually the path of least resistance.
+                </p>
+                <p>
+                  In practice I use this as a guiding filter, not a ready
+                  signal. If the volumes say the path of least resistance is
+                  down, I look not for buys but for sells off resistance, and I
+                  hold in advance the scenario's cancellation point: the price
+                  whose acceptance above it zeroes out my bearish view. A plan
+                  without a cancellation point is, for me, not a plan. And I
+                  will repeat, this is my position and how I work, not a
+                  directive to you personally: the deficit of demand and supply
+                  is not an entry button but a way to understand who actually
+                  controls the market right now.
+                </p>
+                <p>
+                  <strong>In short: </strong
+                  ><i
+                    >The cause of a fall is a deficit of demand, when the large
+                    buyer leaves, and the cause of a rise a deficit of supply; a
+                    skyscraper of volume on rising or falling bars shows the
+                    path of least resistance, and I use it as a guiding filter
+                    with a mandatory scenario cancellation point.</i
+                  >
+                </p>
+
+                <div class="flex">
+                  <img
+                    class="pictureImg"
+                    loading="lazy"
+                    src="/assets/img/content/peakvolumelevels1.png"
+                    alt="Volume Profile on the chart - POC and Value Area"
+                  />
+                </div>
+
+                <h2>Peak volume levels, Volume Profile and the POC</h2>
+                <p>
+                  A
+                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
+                    ><span itemprop="name">Peak volume level</span></dfn
+                  >
+                  is a price level at which the maximum trading volume passed
+                  over a chosen period; large capital was active there, so it
+                  works as strong support or resistance.
+                </p>
+                <p>
+                  The Volume Profile tool helps find such zones. It shows volume
+                  not by time, like ordinary columns, but by each price, as a
+                  horizontal histogram. The highest peak of this histogram is
+                  called the Point of Control, or POC: the price with the
+                  greatest traded volume, a kind of fair price around which the
+                  market revolves. Around the POC lies the value area, where
+                  about 70 percent of all volume passed, and it has two
+                  boundaries, the upper VAH and the lower VAL. Between them the
+                  market spends most of its time, and exits beyond the
+                  boundaries often become either the start of a trend or a trap
+                  with a return back. The untested, or naked, POC stands apart:
+                  a volume peak to which price never returned after it formed.
+                  Such levels work like a strong magnet, the market seems to
+                  remember the volume left there and sooner or later comes to
+                  test it.
+                </p>
+                <p>
+                  Delta helps you understand what is happening at a level, the
+                  difference between buy and sell volume. A predominance of buys
+                  speaks of an aggressive build-up of a position, a steady
+                  predominance of sells of distribution. There is also a
+                  separate phenomenon, absorption: a huge volume passes at a
+                  level while price barely moves, because a large limit player
+                  soaks up the whole flow of the crowd's market orders, not
+                  letting price through. Such absorption often precedes a
+                  reversal. Low-volume zones I read as a mirror to peaks: if
+                  inside the range there is a gap in the histogram, this is a
+                  stretch the market does not consider fair, and price is
+                  skipped through there quickly. Such voids are handy as a
+                  target reference: between two peak levels price usually flies
+                  through the thin zone in one move.
+                </p>
+                <p>
+                  The profile, meanwhile, can be built for different tasks. A
+                  session profile shows volume over one trading session and is
+                  handy for intraday trading, while a composite one stacks
+                  volume over weeks and months and draws large structural levels
+                  that hold for a long time. I usually keep a composite profile
+                  over a significant range to see the main zones, and when
+                  needed I add the current week's profile for detail: the longer
+                  the period, the weightier the peak levels, but the rarer they
+                  appear. The climactic volume stands apart, an abnormal spike
+                  at the very peak of a move: after a long rise or fall it often
+                  means a reversal, since that is how the crowd's last push
+                  looks, which large capital uses to close a position.
+                </p>
+                <p>
+                  <strong>In short: </strong
+                  ><i
+                    >A peak level is the price with the maximum volume, the POC,
+                    and around it lies the value area with boundaries VAH and
+                    VAL; delta hints at direction, while absorption and an
+                    untested POC often work as a reversal and as a magnet.</i
+                  >
+                </p>
+
+                <div class="flex">
+                  <img
+                    class="pictureImg"
+                    loading="lazy"
+                    src="/assets/img/content/steidlmayeranalysis2.png"
+                    alt="Market Profile structure"
+                  />
+                </div>
+
+                <h2>Market Profile by Steidlmayer: the value area</h2>
+                <p>
+                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
+                    ><span itemprop="name">Market Profile</span></dfn
+                  >
+                  is a way of organizing data on price, time and volume as a
+                  distribution that shows at which prices the market spent the
+                  most time and trades.
+                </p>
+                <p>
+                  This approach was devised by Peter Steidlmayer, a trader from
+                  the pit of the Chicago Board of Trade, CBOT, back in the early
+                  eighties. He noticed a simple thing: price by itself does not
+                  tell you whether it was accepted, but the time spent at a
+                  price tells almost everything. If the market stands at a level
+                  for a long time, both sides consider it fair, and if price is
+                  skipped through in seconds, then it was rejected. Hence his
+                  formula: price plus time give value, not price alone. On the
+                  chart this is drawn with letters, each letter, or TPO, means
+                  that in its half-hour slot the market traded at this price.
+                  The more letters in a row, the denser the interest, and so
+                  from vertical candles a horizontal bell is assembled, by which
+                  you immediately see the market's center of gravity.
+                </p>
+                <p>
+                  The most useful part of the profile is the value area, into
+                  which about 70 percent of the trading falls, that is the range
+                  of prices the market deemed fair. In the center the POC, at
+                  the edges the boundaries VAH and VAL. Inside the area price is
+                  fair, everything above the market in the moment considers
+                  expensive, everything below cheap. There is a working
+                  observation many have checked: if the day opens beyond
+                  yesterday's value area, price very often returns back into it.
+                  The shape of the profile also hints at the day's character: a
+                  smooth symmetric bell is a balanced day with price going
+                  nowhere, while a stretched thin profile is a trend day where
+                  looking for reversals against the move is not worth it.
+                </p>
+                <p>
+                  Out of this grow several working scenarios that I use as a
+                  reference. The first and most frequent is the return to the
+                  value area: if the day opened above yesterday's area and
+                  buyers did not lead price further, it often slumps back to
+                  fair prices, and the first target becomes the POC. The second
+                  is a bounce off the boundaries, when price approaches VAH from
+                  above or VAL from below, stalls with no volume for
+                  continuation, and turns inside the area. The third is the
+                  opposite, on a breakout: having entered a thin node of low
+                  volume, price has nothing to grip, and skips through it with a
+                  sharp impulse to the next dense node. The initial balance
+                  helps too, the range of the first hour of trading: while price
+                  is inside it, the market is in balance, while an exit beyond
+                  its bounds on volume often sets the session's direction.
+                  Separately I keep in mind single prints, single imprints the
+                  market skipped on emotion and did not accept: later price
+                  likes to return to them, refilling the missed zone.
+                </p>
+                <p>
+                  I am often asked what to choose, the profile or Wyckoff, and
+                  they expect me to name a winner. In fact they are about one
+                  and the same: both read the market as an auction and try to
+                  understand where large capital is active and where the fair
+                  price is. The difference is in emphasis. The profile answers
+                  the question where, with statistics and the value area. The
+                  Wyckoff method adds why and in which phase the market is right
+                  now. I build my trading on Wyckoff and volume, and I use the
+                  profile as a supplement, to see faster how far price has gone
+                  from the fair center.
+                </p>
+                <p>
+                  <strong>In short: </strong
+                  ><i
+                    >Market Profile is the market as an auction, where price
+                    plus time give value: the POC in the center of the value
+                    area, above expensive, below cheap; the profile answers
+                    where it is fair, and Wyckoff why and in which phase.</i
+                  >
+                </p>
+
+                <div class="flex">
+                  <img
+                    class="pictureImg"
+                    loading="lazy"
+                    src="/assets/img/content/peakvolumelevels2.webp"
+                    alt="Footprint Chart - volume cluster analysis"
+                  />
+                </div>
+
+                <h2>How I build levels and take an entry by volume</h2>
+                <p>
+                  My routine starts on the profile, hunting the fattest volume
+                  peaks, those are my key levels, and then I check whether that
+                  price carries any history: was there a reversal or a halt here
+                  earlier. When two things coincide, big volume and the market's
+                  memory, the level becomes truly strong. It is handy to tell
+                  apart high- and low-volume nodes, HVN and LVN: a dense cluster
+                  slows price and works as support, while a sparse stretch price
+                  skips through. The volume picture I build on the higher
+                  timeframe, mark the main HVNs and naked POCs, lay ordinary
+                  horizontal levels on top, and look for the entry on the lower
+                  one already. The algorithm of working with levels itself I
+                  have laid out step by step in the course section on the
+                  <a
+                    class="linkrefinto"
+                    href="https://arapov.trade/en/freestudying/freeeducation#working-with-levels"
+                    >liquidity deficit and working with levels</a
+                  >.
+                </p>
+                <p>
+                  Peak volumes rarely appear by chance, more often they land on
+                  the
+                  <a
+                    class="linkrefinto"
+                    href="https://arapov.trade/en/freestudying/wyckoff-method"
+                    >Wyckoff phases</a
+                  >. In accumulation, spikes of volume flare at the lows, large
+                  capital builds a position off frightened sellers, and on the
+                  profile this draws a fat cluster at the bottom. The
+                  characteristic point here is the spring, a false break under
+                  the bottom of the range with a collection of stops: volume
+                  flares on it while price quickly returns, and often it is
+                  precisely there that a level forms from which a rise starts.
+                  In distribution the mirror event is called an upthrust, a
+                  false exit upward on which the position is handed to the crowd
+                  that entered. So a peak level I read not on its own, but
+                  together with the phase.
+                </p>
+                <p>
+                  And about the frequent mistakes with the profile, so you do
+                  not repeat them. The first is to trade the POC mechanically,
+                  like a button, without regard for the phase and the price
+                  reaction. The second is to confuse the forex tick volume with
+                  the real exchange one and trust it as absolute truth. The
+                  third is to build the profile on too small a timeframe, where
+                  peaks are random and quickly go stale. Out of a dozen peaks on
+                  the profile I work not with all of them, but only with those
+                  that coincide with the boundary of a range, with a historical
+                  level or with an untested POC, while a lone peak in the middle
+                  of a move with no tie to structure I more often skip.
+                </p>
+                <p>
+                  At the entry itself I do not rely on the profile alone, but
+                  wait for the price reaction: a reversal candle, a slowdown, a
+                  spike of delta in my direction. Let me show on an example. An
+                  asset traded in a range for several weeks, and under the lower
+                  boundary on the profile a fat peak is visible, coinciding with
+                  a historical support level. This is my zone of interest, but I
+                  do not buy in advance. I wait for price to approach the peak
+                  again, and watch the reaction: a reversal candle appears,
+                  delta shifts to buys, and I work off the level upward with a
+                  stop just below the peak, while the target I set at the
+                  nearest large volume node above. My iron rule: peak volume is
+                  not a command to enter but a reason to take a closer look, and
+                  in a vacuum I never trade the POC. I keep a short stop and
+                  take trades where profit relates to risk at least as three to
+                  one, then even an imperfect run of entries leaves a profit
+                  over the distance. I am often asked about the percentage of
+                  winning trades, and my position here is simple: there is no
+                  need to chase a high win rate. With a short stop and a
+                  risk-to-profit of at least three to one, even a modest share
+                  of lucky entries leaves a profit, so I count not the trades I
+                  guessed but their math. This is not advice to you personally
+                  but how I work.
+                </p>
+                <p>
+                  <strong>In short: </strong
+                  ><i
+                    >A strong level is the coincidence of a fat volume peak with
+                    the market's memory and a Wyckoff phase: I mark the zones on
+                    the higher timeframe, wait for the price reaction at the
+                    entry, keep a short stop and take a risk-to-profit from
+                    three to one.</i
+                  >
+                </p>
+
+                <h2>
+                  Volume analysis versus indicators and an honest data source
+                </h2>
+                <p>
+                  Set volume analysis against technical analysis and you have a
+                  false fight: they are two layers of one picture, not rivals.
+                  Classical technical analysis works with price: levels,
+                  figures, patterns, it describes what price has already drawn.
+                  Volume analysis adds a second dimension, the participation of
+                  money, and answers the question of whether real trades stand
+                  behind the price action. So it is more honest to add them than
+                  to oppose them: a support level with large volume is more
+                  reliable than the same level in silence, and a breakout on a
+                  spike of volume is more credible than a breakout on a dry
+                  market. The problem with pure indicators is not that they do
+                  not work, but that they are derived from price and lag,
+                  whereas volume is closer to the real action of participants.
+                  Even volume tools like
+                  <a
+                    class="linkrefinto"
+                    href="https://arapov.trade/en/freestudying/vwap-indicator"
+                    >VWAP</a
+                  >
+                  remain derivatives: they average already-passed volume rather
+                  than showing the large player's intent directly. Volume, in my
+                  experience, works best on manipulations: before a strong move
+                  the large player knocks out a level with a false break and
+                  collects stops, and on the chart this is seen as a drying-up
+                  of volume, when sellers run out and the large player has
+                  nothing left to do but buy at market.
+                </p>
+                <p>
+                  And separately about the data source, because here it is easy
+                  to be fooled. Honest volume I look at only on the futures of
+                  the CME exchange, where every trade is documented by clearing
+                  and the figure can be trusted. On forex there is no single
+                  <a
+                    class="linkrefinto"
+                    href="https://arapov.trade/en/freestudying/market-microstructure"
+                    >order book</a
+                  >, only tick volume is available, the number of price changes,
+                  and it correlates with the real one with a noticeable error.
+                  In crypto, volume on different exchanges differs greatly and
+                  is easily painted, so I treat it most cautiously of all. A
+                  grail, meanwhile, I do not consider volume: it gives no
+                  hundred-percent accuracy and works only paired with levels and
+                  the market phase, not instead of them. From here it is logical
+                  to go into systematic learning, the whole base I have laid out
+                  step by step in the
+                  <a
+                    class="linkrefinto"
+                    href="https://arapov.trade/en/freestudying/freeeducation"
+                    >free trading course</a
+                  >.
+                </p>
+                <p>
+                  On futures I look not only at volume but at open interest, the
+                  number of unclosed contracts on the market. This helps tell
+                  live volume from dead: when price rises and open interest
+                  rises with it, new money is coming into the market, and the
+                  move can be trusted more. And when volume is high but open
+                  interest falls, most often old positions are being closed
+                  rather than new ones arriving, and the strength of such a move
+                  is deceptive. This is a fine layer, available precisely on the
+                  exchange, and one more reason why I prefer exchange data to
+                  over-the-counter. For a beginner open interest is not
+                  mandatory at the start, but as soon as access to exchange data
+                  appears, the habit of cross-checking volume against it
+                  noticeably cleans up the picture.
+                </p>
+                <p>
+                  <strong>In short: </strong
+                  ><i
+                    >Volume and technical analysis are layers, not rivals: a
+                    level with volume is more reliable than a level in silence;
+                    honest volume is only on CME futures, on forex it is
+                    tick-based with error, in crypto it is painted, and a grail
+                    I do not consider volume.</i
+                  >
+                </p>
+
+                <section>
+                  <h2>Frequently Asked Questions</h2>
+                  <mat-accordion>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      [expanded]="true"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >What is volume analysis in simple
+                          terms?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        It is reading the market by the number of trades, not
+                        just by price. Volume shows how much was really traded
+                        per bar. If a large volume stands behind a price move,
+                        there is money in the market, and if the volume is dry,
+                        the move is dangerous to trust.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >What does the effort-result principle
+                          mean?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        Volume is the effort, the price move is the result. A
+                        big effort should give a big move. If the volume is huge
+                        but price stands still, the opposite side is absorbing
+                        the market, and that is a frequent signal of a reversal.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >How does volume confirm a trend?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        A rising trend on rising volume is confirmed, buyers are
+                        adding. If price rises while volume falls, interest is
+                        fading and a correction is possible. High volume on a
+                        level breakout says the breakout is real.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >What are Volume Profile and POC?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        Volume Profile shows how much volume passed at each
+                        price level, not over time. POC is the level with the
+                        maximum volume, the point of greatest participant
+                        interest. Such zones often work as strong support and
+                        resistance.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >Why are there no real volumes on
+                          forex?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        Forex is an over-the-counter market with no single
+                        center, so total trade volume is not counted there. Only
+                        tick volume is available, the number of price changes
+                        over time. It correlates with real volume but with
+                        error, so it is a guide, not exact data.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >Can you trade on volume alone?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        In my experience, no. Volume gives no signals on its
+                        own, it confirms or cancels what is visible from levels
+                        and the market phase. It works best paired with levels,
+                        not instead of them.
+                      </p>
+                    </mat-expansion-panel>
+                  </mat-accordion>
+                </section>
+
+                <section>
+                  <h2>About the Author</h2>
+                  <p>
+                    Author:
+                    <a class="linkrefinto" href="https://arapov.trade/en"
+                      >Igor Arapov</a
+                    >
+                    — independent researcher in the psychology of investment
+                    decisions and behavioral finance, practising trader since
+                    2013, founder of arapov.trade, author of a trading book
+                    series (<a
+                      class="linkrefinto"
+                      href="https://orcid.org/0009-0003-0430-778X"
+                      >ORCID: 0009-0003-0430-778X</a
+                    >).
+                  </p>
+                </section>
+              </article>
 
               <div
                 class=""

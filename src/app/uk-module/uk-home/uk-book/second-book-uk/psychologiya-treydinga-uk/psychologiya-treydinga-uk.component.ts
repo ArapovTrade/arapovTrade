@@ -32,15 +32,7 @@ export class PsychologiyaTreydingaUkComponent
   ) {}
 
   ngAfterViewInit() {
-    setTimeout(() => {
-      if (typeof AOS !== 'undefined') {
-        AOS.init({
-          duration: 1000,
-          once: false,
-          offset: 100,
-        });
-      }
-    }, 500); // Задержка 0.5s
+    
   }
   isDark!: boolean;
   languages = ['ua', 'en', 'ru']; // какие языки нужны
@@ -48,7 +40,7 @@ export class PsychologiyaTreydingaUkComponent
   dropdownOpen = false;
   menuOpen: boolean = false;
   ngOnInit() {
-    this.removeExistingWebPageSchema();
+      this.removeExistingSchema();
 
     this.titleService.setTitle(
       'Психологія трейдингу — Безкоштовна книга Ігоря Арапова',
@@ -59,21 +51,18 @@ export class PsychologiyaTreydingaUkComponent
       content:
         'Безкоштовна книга Ігоря Арапова: страх, жадібність, тілт, FOMO — практичний посібник з управління емоціями та психологією успішного трейдера. ISBN 979-8-90243-504-4',
     });
+     this.injectSchema(this.bookSchema());
+    this.injectSchema(this.webPageSchema());
+    this.injectSchema(this.faqSchema());
 
     this.meta.updateTag({
       name: 'keywords',
       content:
         'книга трейдинг, навчання трейдингу, форекс для початківців, технічний аналіз, об`ємний аналіз, Ігор Арапов, Smart Money',
     });
-
-    this.meta.updateTag({
-      property: 'og:image',
-      content: 'https://arapov.trade/assets/img/photo_mainpage.jpg',
-    });
-    this.addWebSiteSchema();
-    this.addWebPageSchema();
-    this.addFAQPageSchema();
-    this.addPersoneSchema();
+this.meta.updateTag({ name: 'datePublished', content: '2025-12-18' });
+    
+     
     this.themeSubscription = this.themeService.getTheme().subscribe((data) => {
       this.isDark = data;
       this.cdr.detectChanges();
@@ -91,18 +80,9 @@ export class PsychologiyaTreydingaUkComponent
     this.isDark = !this.isDark;
     this.themeService.setTheme(this.isDark);
 
-    this.refreshAOS();
+     
   }
-  refreshAOS() {
-    if (typeof AOS !== 'undefined') {
-      setTimeout(() => {
-        AOS.refresh(); // Обновление позиций AOS
-        this.cdr.detectChanges(); // Принудительное обнаружение изменений
-      }, 100); // Задержка для синхронизации
-    } else {
-      console.warn('AOS is not defined, refresh skipped');
-    }
-  }
+  
 
   toggleDropdown() {
     this.dropdownOpen = !this.dropdownOpen;
@@ -134,55 +114,41 @@ export class PsychologiyaTreydingaUkComponent
   }
   hovered: string | null = null;
 
-  private removeExistingWebPageSchema(): void {
-    const scripts = this.document.querySelectorAll(
-      'script[type="application/ld+json"]',
-    );
+  
 
-    scripts.forEach((script) => {
-      try {
-        const content = JSON.parse(script.textContent || '{}');
-        if (content['@type'] === 'Book') {
-          script.remove();
-        }
-        if (content['@type'] === 'Person') {
-          script.remove();
-        }
-        if (content['@type'] === 'WebPage') {
-          script.remove();
-        }
-        if (content['@type'] === 'FAQPage') {
-          script.remove();
-        }
-      } catch (e) {
-        // Игнорируем некорректные JSON (например, из других источников)
-      }
-    });
+  downloadFile() {
+    const link = document.createElement('a');
+    link.href = '/assets/documents/Cover_Psihologiya_Ukrainian.jpg'; // путь к вашему файлу
+    link.download = 'Cover_Psihologiya_Ukrainian.jpg'; // имя файла для скачивания
+    link.click();
   }
 
-  private addWebSiteSchema() {
-    const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]'),
-    ).some((script) => {
-      try {
-        const json = JSON.parse(script.textContent || '{}');
-        return (
-          json['@type'] === 'Book' &&
-          json['name'] ===
-            'Психологія трейдингу: Як керувати емоціями та мислити як професіонал'
-        );
-      } catch {
-        return false;
-      }
-    });
+  openLink(url: string) {
+    window.open(url, '_blank');
+  }
 
-    // Если уже существует — выходим
-    if (exists) return;
+   private removeExistingSchema(): void {
+    this.document
+      .querySelectorAll('script[type="application/ld+json"]')
+      .forEach((script) => {
+        try {
+          const type = JSON.parse(script.textContent || '{}')['@type'];
+          if (['Book', 'WebPage', 'FAQPage'].includes(type)) script.remove();
+        } catch {
+          // ігноруємо чужий/битий JSON
+        }
+      });
+  }
 
-    // Создаем новый JSON-LD
+  private injectSchema(data: object): void {
     const script = this.document.createElement('script');
     script.type = 'application/ld+json';
-    script.text = JSON.stringify({
+    script.text = JSON.stringify(data);
+    this.document.head.appendChild(script);
+  }
+
+  private bookSchema() {
+    return {
       '@context': 'https://schema.org',
       '@type': 'Book',
       '@id': 'https://arapov.trade/uk/books/psihologiya-treydinga#book',
@@ -203,19 +169,11 @@ export class PsychologiyaTreydingaUkComponent
       numberOfPages: 60,
       bookFormat: 'https://schema.org/EBook',
       bookEdition: '1-е видання',
-      inLanguage: {
-        '@type': 'Language',
-        name: 'Ukrainian',
-        alternateName: 'ua',
-      },
+      inLanguage: { '@type': 'Language', name: 'Ukrainian', alternateName: 'uk' },
       datePublished: '2025-12-18T00:00:00Z',
       dateModified: '2025-12-19T00:00:00Z',
-
       copyrightYear: 2025,
-      copyrightHolder: {
-        '@type': 'Person',
-        '@id': 'https://arapov.trade/uk#author',
-      },
+      copyrightHolder: { '@id': 'https://arapov.trade/#person' },
       genre: ['Business', 'Finance', 'Trading', 'Education', 'Investment'],
       about: [
         {
@@ -233,39 +191,21 @@ export class PsychologiyaTreydingaUkComponent
           name: 'Технічний аналіз',
           sameAs: 'https://ru.wikipedia.org/wiki/Технический_анализ',
         },
-        {
-          '@type': 'Thing',
-          name: 'Фундаментальний аналіз',
-        },
-        {
-          '@type': 'Thing',
-          name: 'Об’ємний аналіз',
-        },
-        {
-          '@type': 'Thing',
-          name: 'Управління капіталом',
-        },
-        {
-          '@type': 'Thing',
-          name: 'Smart Money Concepts',
-        },
+        { '@type': 'Thing', name: 'Фундаментальний аналіз' },
+        { '@type': 'Thing', name: 'Обʼємний аналіз' },
+        { '@type': 'Thing', name: 'Управління капіталом' },
+        { '@type': 'Thing', name: 'Smart Money Concepts' },
       ],
       keywords:
-        'трейдинг, форекс, технічний аналіз, об’ємний аналіз, біржа, інвестиції, smart money, навчання трейдингу',
-      author: {
-        '@type': 'Person',
-        '@id': 'https://arapov.trade/uk#author',
-      },
-      publisher: {
-        '@type': 'Organization',
-        '@id': 'https://arapov.trade/#organization',
-      },
+        'трейдинг, форекс, технічний аналіз, обʼємний аналіз, біржа, інвестиції, smart money, навчання трейдингу',
+      author: { '@id': 'https://arapov.trade/#person' },
+      publisher: { '@id': 'https://arapov.trade/#organization' },
       image: {
         '@type': 'ImageObject',
         url: 'https://arapov.trade/assets/redesignArapovTrade/img/cover_psychology.jpg',
         width: 600,
         height: 900,
-        caption: '«Психологія трейдингу» - Ігор Арапов',
+        caption: '«Психологія трейдингу» — Ігор Арапов',
       },
       url: 'https://arapov.trade/uk/books/psihologiya-treydinga',
       offers: {
@@ -275,10 +215,7 @@ export class PsychologiyaTreydingaUkComponent
         availability: 'https://schema.org/InStock',
         url: 'https://arapov.trade/uk/books/psihologiya-treydinga',
         priceValidUntil: '2026-12-31',
-        seller: {
-          '@type': 'Organization',
-          '@id': 'https://arapov.trade/#organization',
-        },
+        seller: { '@id': 'https://arapov.trade/#organization' },
       },
       workExample: {
         '@type': 'Book',
@@ -286,7 +223,6 @@ export class PsychologiyaTreydingaUkComponent
         bookFormat: 'https://schema.org/EBook',
         inLanguage: 'uk',
         url: 'http://www.irbis-nbuv.gov.ua/cgi-bin/irbis64r_81/cgiirbis_64.exe?Z21ID=&I21DBN=VFEIR&P21DBN=VFEIR&S21STN=1&S21REF=10&S21FMT=fullw&C21COM=S&S21CNR=20&S21P01=3&S21P02=0&S21P03=A=&S21COLORTERMS=0&S21STR=Арапов%2C%20Ігор',
-
         provider: {
           '@type': 'Library',
           name: 'Національна бібліотека України імені В. І. Вернадського',
@@ -318,147 +254,16 @@ export class PsychologiyaTreydingaUkComponent
             '@type': 'Offer',
             price: '0',
             priceCurrency: 'USD',
-            eligibleRegion: {
-              '@type': 'Place',
-              name: 'Worldwide',
-            },
+            eligibleRegion: { '@type': 'Place', name: 'Worldwide' },
           },
         },
       },
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: '5',
-        ratingCount: '1',
-        bestRating: '5',
-        worstRating: '1',
-      },
-    });
-
-    this.document.head.appendChild(script);
+      
+    };
   }
 
-  downloadFile() {
-    const link = document.createElement('a');
-    link.href = '/assets/documents/Cover_Psihologiya_Ukrainian.jpg'; // путь к вашему файлу
-    link.download = 'Cover_Psihologiya_Ukrainian.jpg'; // имя файла для скачивания
-    link.click();
-  }
-
-  openLink(url: string) {
-    window.open(url, '_blank');
-  }
-
-  private addPersoneSchema() {
-    const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]'),
-    ).some((script) => {
-      try {
-        const json = JSON.parse(script.textContent || '{}');
-        return json['@type'] === 'Person' && json['name'] === 'Ігор Арапов';
-      } catch {
-        return false;
-      }
-    });
-
-    // Если уже существует — выходим
-    if (exists) return;
-
-    // Создаем новый JSON-LD
-    const script = this.document.createElement('script');
-    script.type = 'application/ld+json';
-    script.text = JSON.stringify({
-      '@context': 'https://schema.org',
-      '@type': 'Person',
-      '@id': 'https://arapov.trade/uk#author',
-      name: 'Ігор Арапов',
-      alternateName: [
-        'Igor Arapov',
-        'Арапов Игорь',
-        'I. Arapov',
-        'Игорь Арапов',
-        'І. В. Арапов',
-        'Арапов Ігор',
-        'Arapov Igor',
-      ],
-      givenName: 'Ігор',
-      familyName: 'Арапов',
-      description:
-        'Український трейдер із 2013 року. Творець освітньої платформи arapov.trade, автор 151+ статей та 78+ відеоуроків з трейдингу. Спеціалізується на Smart Money концепціях, методі Вайкоффа та об`ємному аналізі.',
-      url: 'https://arapov.trade',
-      image: {
-        '@type': 'ImageObject',
-        url: 'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
-        width: 400,
-        height: 400,
-        caption: 'Ігор Арапов — трейдер і автор',
-      },
-      sameAs: [
-        'https://www.youtube.com/@ArapovTrade',
-        'https://t.me/ArapovTrade',
-        'https://www.instagram.com/arapovtrade/',
-      ],
-      jobTitle: 'Трейдер',
-      hasOccupation: {
-        '@type': 'Occupation',
-        name: 'Trader',
-        description: 'Професійний трейдер на фінансових ринках',
-        occupationLocation: {
-          '@type': 'Country',
-          name: 'Ukraine',
-        },
-      },
-      nationality: {
-        '@type': 'Country',
-        name: 'Ukraine',
-        alternateName: 'Україна',
-      },
-      knowsAbout: [
-        'Trading',
-        'Smart Money Concepts',
-        'Wyckoff Method',
-        'Volume Analysis',
-        'Technical Analysis',
-        'Fundamental Analysis',
-        'FOREX',
-        'Stock Market',
-        'Risk Management',
-      ],
-      knowsLanguage: [
-        { '@type': 'Language', name: 'Russian' },
-        { '@type': 'Language', name: 'Ukrainian' },
-        { '@type': 'Language', name: 'English' },
-      ],
-      worksFor: {
-        '@type': 'Organization',
-        '@id': 'https://arapov.trade/#organization',
-      },
-    });
-
-    this.document.head.appendChild(script);
-  }
-  private addWebPageSchema() {
-    const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]'),
-    ).some((script) => {
-      try {
-        const json = JSON.parse(script.textContent || '{}');
-        return (
-          json['@type'] === 'WebPage' &&
-          json['name'] ===
-            'Психологія трейдингу: Як керувати емоціями та мислити як професіонал'
-        );
-      } catch {
-        return false;
-      }
-    });
-
-    // Если уже существует — выходим
-    if (exists) return;
-
-    // Создаем новый JSON-LD
-    const script = this.document.createElement('script');
-    script.type = 'application/ld+json';
-    script.text = JSON.stringify({
+  private webPageSchema() {
+    return {
       '@context': 'https://schema.org',
       '@type': 'WebPage',
       '@id': 'https://arapov.trade/uk/books/psihologiya-treydinga',
@@ -467,24 +272,12 @@ export class PsychologiyaTreydingaUkComponent
       description:
         'Скачати безкоштовно книгу з трейдингу. ISBN 979-8-90243-504-4',
       inLanguage: 'uk',
-      isPartOf: {
-        '@type': 'WebSite',
-        '@id': 'https://arapov.trade/#website',
-        name: 'arapov.trade',
-        url: 'https://arapov.trade',
-      },
-      about: {
-        '@type': 'Book',
-        '@id': 'https://arapov.trade/uk/books/psihologiya-treydinga#book',
-      },
-      author: {
-        '@type': 'Person',
-        '@id': 'https://arapov.trade/uk#author',
-      },
+      isPartOf: { '@id': 'https://arapov.trade/#website' },
+      about: { '@id': 'https://arapov.trade/uk/books/psihologiya-treydinga#book' },
+      author: { '@id': 'https://arapov.trade/#person' },
       datePublished: '2025-12-18T00:00:00Z',
       dateModified: '2025-12-19T00:00:00Z',
       mainEntity: {
-        '@type': 'Book',
         '@id': 'https://arapov.trade/uk/books/psihologiya-treydinga#book',
       },
       breadcrumb: {
@@ -516,34 +309,11 @@ export class PsychologiyaTreydingaUkComponent
           },
         ],
       },
-    });
-
-    this.document.head.appendChild(script);
+    };
   }
 
-  private addFAQPageSchema() {
-    const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]'),
-    ).some((script) => {
-      try {
-        const json = JSON.parse(script.textContent || '{}');
-        return (
-          json['@type'] === 'FAQPage' &&
-          json['name'] ===
-            "Питання та відповіді щодо книги 'Психологія трейдингу'"
-        );
-      } catch {
-        return false;
-      }
-    });
-
-    // Если уже существует — выходим
-    if (exists) return;
-
-    // Создаем новый JSON-LD
-    const script = this.document.createElement('script');
-    script.type = 'application/ld+json';
-    script.text = JSON.stringify({
+  private faqSchema() {
+    return {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       name: "Питання та відповіді щодо книги 'Психологія трейдингу'",
@@ -577,7 +347,7 @@ export class PsychologiyaTreydingaUkComponent
           name: 'Хто автор книги?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Автор книги – Ігор Арапов, практикуючий трейдер з 2013 року. Творець освітньої платформи arapov.trade із 130+ статтями та YouTube каналу @ArapovTrade із 70+ відеоуроками з трейдингу.',
+            text: 'Автор книги – Ігор Арапов, практикуючий трейдер з 2013 року. Творець освітньої платформи arapov.trade із 151+ статтями та YouTube каналу @ArapovTrade із 78+ відеоуроками з трейдингу.',
           },
         },
         {
@@ -589,8 +359,6 @@ export class PsychologiyaTreydingaUkComponent
           },
         },
       ],
-    });
-
-    this.document.head.appendChild(script);
+    };
   }
 }

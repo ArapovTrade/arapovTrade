@@ -54,21 +54,16 @@ export class HomeEnBlogTwentyFourComponent implements OnInit {
     this.grr = this.artickleServ.selectedGroups;
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
-    this.titleService.setTitle(
-      'Flag Pattern in Trading: How to Identify and Trade | Arapov.trade',
-    );
+    this.titleService.setTitle('Wyckoff Method | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Flag Pattern in Trading: comprehensive guide to identification, construction, and trading strategies. Learn how to use this trend continuation pattern for profitable trading.',
+        'The Wyckoff method: accumulation and distribution phases, the actions of big players and how volume analysis reveals key market levels.',
     });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-04-15' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/flagfigure.webp',
-    });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
+
     this.gerRandom();
   }
   randomArticleRus: any = [];
@@ -253,30 +248,35 @@ export class HomeEnBlogTwentyFourComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          mainEntityOfPage: {
-            '@type': 'WebPage',
-            '@id': 'https://arapov.trade/en/freestudying/flagfigure',
-          },
           headline:
-            'Flag Pattern in Trading: Complete Guide to Identification and Trading Strategies',
+            'The Wyckoff Method in Trading: Accumulation and Distribution Phases',
           description:
-            'Comprehensive guide to the Flag pattern: structure, types, trading methods, and practical recommendations for traders of all skill levels.',
-          image: 'https://arapov.trade/assets/img/content/flagfigure.webp',
-          datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
-          author: {
-            '@id': 'https://arapov.trade/en#person',
-          },
+            'The Wyckoff method: accumulation and distribution phases, the actions of big players and how volume analysis reveals key market levels.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'Arapov.trade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
-          articleSection: 'Technical Analysis',
-          wordCount: 1650,
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': 'https://arapov.trade/en/freestudying/wyckoff-method',
+          },
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/wyckoffmethod.webp',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Volume analysis',
+          keywords: 'wyckoff method',
           inLanguage: 'en',
         },
       ],
@@ -292,18 +292,18 @@ export class HomeEnBlogTwentyFourComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/en#person',
+      '@id': 'https://arapov.trade/#person',
       name: 'Igor Arapov',
       alternateName: [
         'Ігор Арапов',
-        'Арапов Игорь',
-        'I. Arapov',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/en',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -318,12 +318,12 @@ export class HomeEnBlogTwentyFourComponent implements OnInit {
         'https://t.me/ArapovTrade',
       ],
       jobTitle: [
-        'Independent researcher,',
-        'trader',
-        'author and founder of arapov.trade',
+        'Independent researcher',
+        'Trader',
+        'Author and founder of arapov.trade',
       ],
       description:
-        'Independent researcher, practicing trader, author of books on trading and scientific publications. Specializes in trading psychology and cognitive biases in financial markets.',
+        'Independent researcher, practising trader, author of trading books and scientific publications. Specialises in trading psychology and cognitive biases in financial markets.',
     };
 
     this.addJsonLdSchema(data);
@@ -339,42 +339,42 @@ export class HomeEnBlogTwentyFourComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'What is a Flag pattern in trading?',
+          name: 'What is the Wyckoff method in simple terms?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'The Flag pattern is a trend continuation chart formation consisting of two elements: the flagpole (a sharp impulse move) and the flag itself (a short consolidation within a narrow channel). After consolidation completes, price typically continues moving in the direction of the initial impulse.',
+            text: 'It is a way to read the market by volume and price so as to see the actions of large players. Knowing the current phase (accumulation, markup, distribution, or markdown), a trader stands on the side of large capital rather than against it.',
           },
         },
         {
           '@type': 'Question',
-          name: 'What types of Flag patterns exist?',
+          name: 'What is a spring in the Wyckoff method?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'There are two main types: bull flag (forms after an upward impulse, consolidation slopes downward) and bear flag (forms after a downward impulse, consolidation slopes upward). Both types signal continuation of the preceding trend.',
+            text: "A spring is a false breakdown below the lower edge of the range at the end of accumulation. Price dives under support, knocks out buyers' stops, gathers liquidity, and returns. A return into the range on rising volume confirms the market's readiness for a move up.",
           },
         },
         {
           '@type': 'Question',
-          name: 'How do you properly trade the Flag pattern?',
+          name: 'What market phases does the Wyckoff method distinguish?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'The primary method involves entering on a breakout of the flag boundary in the trend direction. Stop-loss is placed beyond the opposite boundary of consolidation. Profit target is calculated as the flagpole length projected from the breakout point.',
+            text: 'Four: accumulation, markup, distribution, and markdown. Each has its own signs in price structure and in volume.',
           },
         },
         {
           '@type': 'Question',
-          name: 'How can you distinguish a genuine Flag breakout from a false one?',
+          name: 'How do you identify the accumulation phase on a chart?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'A genuine breakout is accompanied by increased trading volume and a candle close beyond the flag boundary. False breakouts are characterized by low volume and quick price return into the consolidation range.',
+            text: 'You need a decline, after which price settles into a range with fading volume and a narrowing candle spread. Then a spring, a false break down with a quick return, followed by a secondary test on lower volume and an impulse up. Only this sequence confirms accumulation.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Which markets does the Flag pattern work in?',
+          name: 'Does the Wyckoff method work on crypto and forex?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'The Flag is universal and effective across all financial markets: Forex, stocks, cryptocurrencies, and commodities. The pattern works on any timeframe from minutes to weeks, though the most reliable signals form on H1-D1.',
+            text: 'Yes, the logic of the phases is the same everywhere. On crypto the patterns show up vividly because of capital concentration, but on small coins there is more manipulation. On forex there is no unified volume count, so currencies are analyzed by exchange futures.',
           },
         },
       ],
@@ -390,39 +390,34 @@ export class HomeEnBlogTwentyFourComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'How to Trade the Flag Pattern',
+      '@id': 'https://arapov.trade/en/freestudying/wyckoff-method#howto',
+      name: 'How to understand and apply: The Wyckoff method in trading',
       description:
-        'Step-by-step instructions for identifying and trading the Flag pattern',
+        'A step-by-step breakdown of the topic and its practical use in trading',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Identify the Impulse',
-          text: 'Locate a sharp directional price move (the flagpole) on the chart accompanied by elevated trading volume.',
+          name: 'What the Wyckoff method is and how it works',
+          text: 'The Wyckoff method is a system of market analysis through volume and price that describes the actions of large participants and divides the market into recurring phases of accumulation and distribution.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Define the Consolidation',
-          text: 'After the impulse, price enters a consolidation phase forming a narrow channel sloping against the main trend.',
+          name: 'The Wyckoff market cycle phases: accumulation, markup, distribution, markdown',
+          text: 'Large capital does not enter the market instantly: to build a position it needs sellers, and to exit it needs buyers.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Wait for the Breakout',
-          text: 'Entry is executed after a candle closes beyond the channel boundary in the direction of the initial impulse.',
+          name: 'How to identify the accumulation phase on a chart',
+          text: 'Accumulation almost always looks the same.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Confirm with Volume',
-          text: 'Ensure the breakout is accompanied by rising trading volume. Low volume increases false signal probability.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 5,
-          name: 'Set Stop and Target',
-          text: 'Place stop-loss beyond the opposite flag boundary. Profit target equals the flagpole length projected from breakout.',
+          name: 'The Wyckoff method for crypto and forex: practical application',
+          text: 'The method is universal, but the quality of volume differs across markets, and that decides how much to trust it.',
         },
       ],
     };
@@ -437,67 +432,19 @@ export class HomeEnBlogTwentyFourComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Flag Pattern Terminology',
+      name: 'Article glossary',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Flag Pattern',
+          name: 'The Wyckoff method',
           description:
-            'A trend continuation chart formation consisting of an impulse (flagpole) followed by consolidation',
+            'A system of market analysis through volume and price that describes the actions of large participants and divides the market into recurring phases of accumulation and distribution.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Flagpole',
+          name: 'Composite Man',
           description:
-            'A sharp impulse price move preceding consolidation that forms the pattern foundation',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Flag Body',
-          description:
-            'A consolidation phase within a narrow channel sloping against the main trend',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Bull Flag',
-          description:
-            'A continuation pattern in an uptrend with consolidation sloping downward',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Bear Flag',
-          description:
-            'A continuation pattern in a downtrend with consolidation sloping upward',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Flag Breakout',
-          description:
-            'Price exit beyond consolidation boundary signaling trend continuation',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'False Breakout',
-          description:
-            'Brief price excursion beyond flag boundary followed by return into range',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Target Projection',
-          description:
-            'Method of calculating target by projecting flagpole length from breakout point',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Consolidation',
-          description:
-            'Period of sideways movement reflecting temporary pause in trend',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Impulse',
-          description:
-            'Sharp unidirectional price move with high volume forming pattern beginning',
+            "Wyckoff's personification of all large operators as a single deliberate actor who accumulates, marks up, distributes and marks down, leaving traceable footprints such as the spring and the test at the edges of a trading range.",
         },
       ],
     };

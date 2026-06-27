@@ -54,20 +54,17 @@ export class HomeEuBlogFiftyThreeComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Order Block in Trading: Complete Practical Guide | Arapov.trade',
+      'How to Read a Chart: Technical Analysis Basics | Arapov.trade',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Order Block in trading: complete practical guide. Learn how to find and trade order blocks. Block types, entry strategies, risk management.',
+        'How to read a price chart: chart types, timeframes, trends, support and resistance levels. The technical analysis basics for a beginner.',
     });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-03-30' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/orderblockintrading.webp',
-    });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
+
     this.gerRandom();
   }
   randomArticleRus: any = [];
@@ -253,36 +250,36 @@ export class HomeEuBlogFiftyThreeComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          '@id':
-            'https://arapov.trade/en/freestudying/orderblockintrading#article',
-          headline: 'Order Block in Trading: Complete Practical Guide',
+          headline:
+            'How to read a price chart: technical analysis, levels, timeframes and channels',
           description:
-            'Complete guide to order blocks in trading. How to find Order Blocks, block types, trading strategies and risk management.',
-          image: {
-            '@type': 'ImageObject',
-            url: 'https://arapov.trade/assets/img/content/orderblocks.png',
-            width: 1200,
-            height: 630,
-          },
-          datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
-          author: {
-            '@id': 'https://arapov.trade/en#person',
-          },
+            'How to read a price chart: chart types, timeframes, trends, support and resistance levels. The technical analysis basics for a beginner.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
             '@id': 'https://arapov.trade/#organization',
-            name: 'Arapov.trade',
+            name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://arapov.trade/en/freestudying/orderblockintrading',
+            '@id': 'https://arapov.trade/en/freestudying/chart-reading',
           },
-          wordCount: 1443,
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/chart-reading.jpeg',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Technical analysis',
+          keywords:
+            'reading a chart, technical analysis, chart types, japanese candlesticks, timeframes, support and resistance levels, trend channels',
           inLanguage: 'en',
         },
       ],
@@ -298,18 +295,18 @@ export class HomeEuBlogFiftyThreeComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/en#person',
+      '@id': 'https://arapov.trade/#person',
       name: 'Igor Arapov',
       alternateName: [
         'Ігор Арапов',
-        'Арапов Игорь',
-        'I. Arapov',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/en',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -324,12 +321,12 @@ export class HomeEuBlogFiftyThreeComponent implements OnInit {
         'https://t.me/ArapovTrade',
       ],
       jobTitle: [
-        'Independent researcher,',
-        'trader',
-        'author and founder of arapov.trade',
+        'Independent researcher',
+        'Trader',
+        'Author and founder of arapov.trade',
       ],
       description:
-        'Independent researcher, practicing trader, author of books on trading and scientific publications. Specializes in trading psychology and cognitive biases in financial markets.',
+        'Independent researcher, practising trader, author of trading books and scientific publications. Specialises in trading psychology and cognitive biases in financial markets.',
     };
 
     this.addJsonLdSchema(data);
@@ -345,42 +342,50 @@ export class HomeEuBlogFiftyThreeComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'What is an Order Block in trading?',
+          name: 'What is technical analysis in simple terms?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Order Block is a specific price zone where large institutional participants accumulated or distributed positions before significant price movements.',
+            text: 'It is reading the price and volume chart to work out where an asset is cheap and where it is expensive, and to find an entry. It answers not why price moves but where it is cheap and where it is dear, on the assumption that everything already known to the market is baked into the quote.',
           },
         },
         {
           '@type': 'Question',
-          name: 'How to identify a bullish order block?',
+          name: 'Which chart type is best for a beginner?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'A bullish order block is identified as the last bearish candle before a strong upward impulse. Block boundaries are the high and low of this candle.',
+            text: 'Usually the candlestick. It gives you the full price for the period and reads fastest thanks to the coloured body: one glance tells you whether price went up or down. A line chart is handy for the big picture and a bar chart takes practice, so the candle is the comfortable middle ground.',
           },
         },
         {
           '@type': 'Question',
-          name: 'How does an order block differ from support level?',
+          name: 'What timeframe should a beginner choose?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Unlike standard levels, order blocks indicate specific entry points of large participants and always precede impulse movements.',
+            text: 'The higher ones, the hour and the day. They carry less noise and fewer false signals, leave more room for analysis, and the spread and commissions eat a smaller share. One more plus: a higher chart does not chain you to the screen, you can run it alongside a job.',
           },
         },
         {
           '@type': 'Question',
-          name: 'What is the best strategy for trading order blocks?',
+          name: 'How do you draw support and resistance correctly?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Classic strategy is trading on block retest. When price returns, reaction is expected. Entry with candlestick pattern confirmation increases success probability.',
+            text: 'Draw the level as a zone, not a perfect line along the very peak. Lean on several touches: the more often price responded to a patch, the firmer it is. And check it against volume, because a level that matters is one that large turnover passed through.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Where to place stop loss when trading order blocks?',
+          name: 'How do you tell a real breakout from a false one?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Stop loss is placed beyond block boundary with buffer zone. For bullish block — below zone minimum, for bearish — above maximum.',
+            text: 'By volume. A real breakout runs on raised volume and settles beyond the level, while a false break is usually sluggish: price jumps past the level, collects stops and comes straight back. So it is wiser to wait for a hold and a retest than to dive into the false break at once.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Do chart patterns actually work?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'As ready-made signals, in my experience, they work about half the time: everyone sees them, and big money harvests liquidity off them. The edge shows up when you play off zones and confirm the entry with volume, not when you guess from a drawing on the chart.',
           },
         },
       ],
@@ -396,38 +401,58 @@ export class HomeEuBlogFiftyThreeComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'How to Trade Order Blocks',
-      description: 'Step-by-step guide to identifying and trading order blocks',
+      '@id': 'https://arapov.trade/en/freestudying/chart-reading#howto',
+      name: 'How to learn to read a price chart',
+      description:
+        'A step-by-step path: from the chart type and timeframe to levels, channels and confirming the entry with volume',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Structure Analysis',
-          text: 'Determine current trend through sequence of highs and lows.',
+          name: 'Understand what technical analysis reads',
+          text: 'Technical analysis reads the behaviour of price and volume and answers where an asset is cheap and where it is expensive, and the most objective thing on the chart is a level.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Find Impulse',
-          text: 'Locate strong directional movement creating new structural points.',
+          name: 'Choose a chart type',
+          text: 'A line chart shows only the close, while a bar and a candle carry the full price data, which is why serious work is done on candles.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Identify Block',
-          text: 'Mark the last opposite candle before the impulse.',
+          name: 'Pick a timeframe to fit your style',
+          text: 'The lower the timeframe, the more noise, so a beginner is calmer starting on the higher periods.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Wait for Retest',
-          text: 'Wait for price return to block zone with confirmation.',
+          name: 'Work top down across timeframes',
+          text: 'The higher timeframe sets the direction, the lower one is only there for a precise entry in that direction.',
         },
         {
           '@type': 'HowToStep',
+          name: 'Read the market phase: trend or range',
+          text: 'First work out the phase: an up or down trend is imbalance, a range is balance and a price box of accumulation or distribution; in a range work the edges, in a trend only with the trend.',
           position: 5,
-          name: 'Entry and Management',
-          text: 'Enter in impulse direction with stop loss beyond block boundary.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 6,
+          name: 'Draw a level as a zone, not a line',
+          text: 'A level is a range across several touches, confirmed by volume, not an exact line along a peak.',
+        },
+        {
+          '@type': 'HowToStep',
+          name: 'Read the structure of the move: impulse and pullback',
+          text: 'A trend is made of impulses on raised volume and pullbacks on lower volume; while highs and lows keep updating the structure holds, and a break with a retest of the priority-change level shows control has changed.',
+          position: 7,
+        },
+        {
+          '@type': 'HowToStep',
+          position: 8,
+          name: 'Enter on reaction and volume, not on a pattern',
+          text: 'Chart patterns come out roughly fifty-fifty, so the entry comes from a level with volume confirmation, not from a drawing.',
         },
       ],
     };
@@ -442,67 +467,49 @@ export class HomeEuBlogFiftyThreeComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Order Block Terms Glossary',
+      name: 'Glossary of terms used in the article',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Order Block',
+          name: 'Technical analysis',
           description:
-            'Price zone of institutional accumulation or distribution before impulse movement.',
+            'A method of studying the market by the price chart and trading volume, without looking at news or reports, on the premise that everything the market knows is already absorbed into the quote.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Bullish Order Block',
+          name: 'Trading chart',
           description:
-            'Last bearish candle before strong upward impulse, zone of long position accumulation.',
+            "A visual representation of how an asset's price changes over time; it can be a line, a bar or a candlestick chart.",
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Bearish Order Block',
+          name: 'Timeframe',
           description:
-            'Last bullish candle before strong downward impulse, zone of position distribution.',
+            'The time interval that a single candle or bar holds; on the hourly, for instance, one candle packs in exactly an hour of trading.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Breaker Block',
+          name: 'Support and resistance level',
           description:
-            'Order block whose structure is violated by breakout, changing role from support to resistance or vice versa.',
+            'A price zone where the move has stalled or reversed before: support below, resistance above.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Mitigation Block',
+          name: 'Trading channel',
           description:
-            'Zone of inefficient price delivery where market tends to return to fill imbalance.',
+            'A price zone between two parallel trend lines that price swings inside: the upper line is dynamic resistance, the lower one dynamic support.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Retest',
+          name: 'Market phase',
           description:
-            'Price return to previously broken level or zone to verify its significance.',
+            'The current mode of price movement: an up trend, a down trend or a range; a range is balance and a price box of accumulation or distribution, a trend is imbalance and price leaving the box.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Impulse Movement',
+          name: 'Priority-change level',
           description:
-            'Strong unidirectional price movement with high momentum.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Liquidity Zone',
-          description:
-            'Area of stop order clusters that attracts price before reversal.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Smart Money',
-          description:
-            'Institutional market participants — banks, hedge funds, market makers.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Candlestick Pattern',
-          description:
-            'Candle combination signaling probable price movement direction.',
+            'A price whose break and hold show that control of the market has passed from sellers to buyers or the other way round; the change reads most reliably as a break plus a retest.',
         },
       ],
     };

@@ -78,7 +78,7 @@ export class UkStudyingHomeComponent
     this.lang.setNumber(1);
     this.removeExistingWebPageSchema();
     this.addWebSiteSchema();
-    this.addReviewSchema();
+
     this.titleService.setTitle(
       'Курси трейдингу онлайн від Ігоря Арапова | Навчання трейдингу з нуля',
     );
@@ -185,156 +185,106 @@ export class UkStudyingHomeComponent
 
     progress.style.height = `${percent * 100}%`;
   }
+
   private removeExistingWebPageSchema(): void {
     const scripts = this.document.querySelectorAll(
       'script[type="application/ld+json"]',
     );
-
     scripts.forEach((script) => {
       try {
         const content = JSON.parse(script.textContent || '{}');
-        if (content['@type'] === 'Course') {
+        const graph = content['@graph'] || [content];
+        if (graph.some((n: any) => n['@type'] === 'Course')) {
           script.remove();
         }
-        if (content['@type'] === 'WebSite') {
-          script.remove();
-        }
-      } catch (e) {
-        // Игнорируем некорректные JSON (например, из других источников)
-      }
+        // строку про WebSite убрал — не сносим сайт-узел
+      } catch (e) {}
     });
   }
-
   private addWebSiteSchema() {
     const exists = Array.from(
       this.document.querySelectorAll('script[type="application/ld+json"]'),
     ).some((script) => {
       try {
         const json = JSON.parse(script.textContent || '{}');
-        return (
-          json['@type'] === 'Course' &&
-          json['name'] === 'Професійний курс трейдингу'
+        const graph = json['@graph'] || [json];
+        return graph.some(
+          (n: any) =>
+            n['@type'] === 'Course' &&
+            n['name'] === 'Професійний курс трейдингу',
         );
       } catch {
         return false;
       }
     });
 
-    // Если уже существует — выходим
     if (exists) return;
 
-    // Создаем новый JSON-LD
     const script = this.document.createElement('script');
     script.type = 'application/ld+json';
     script.text = JSON.stringify({
       '@context': 'https://schema.org',
-      '@type': 'Course',
-      name: 'Професійний курс трейдингу',
-      description:
-        "Індивідуальне навчання трейдингу з нуля під керівництвом досвідченого трейдера. Метод Вайкоффа, об'ємний аналіз, практика на реальних рахунках.",
-      url: 'https://arapov.trade/uk/studying',
-      provider: {
-        '@type': 'Organization',
-        '@id': 'https://arapov.trade/#organization',
-        name: 'Arapov Trade',
-        description:
-          "Індивідуальне навчання трейдингу з нуля під керівництвом досвідченого трейдера. Метод Вайкоффа, об'ємний аналіз, практика на реальних рахунках.",
-
-        url: 'https://arapov.trade',
-      },
-      educationalLevel: 'Beginner to Advanced',
-      teaches: [
-        'Wyckoff Method',
-        'Volume Analysis',
-        'Technical Analysis',
-        'Risk Management',
-        'Market Psychology',
-        'Smart Money Concepts',
-      ],
-      about: [
+      '@graph': [
         {
-          '@type': 'Thing',
-          name: 'Stock Trading',
-        },
-        {
-          '@type': 'Thing',
-          name: 'Forex Trading',
-        },
-        {
-          '@type': 'Thing',
-          name: 'Cryptocurrency Trading',
-        },
-      ],
-      hasCourseInstance: {
-        '@type': 'CourseInstance',
-        courseMode: 'online',
-        courseWorkload: 'P4W',
-      },
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: '4.9',
-        bestRating: '5',
-        worstRating: '1',
-        ratingCount: '50',
-        reviewCount: '25',
-      },
-    });
-
-    this.document.head.appendChild(script);
-  }
-
-  private addReviewSchema() {
-    const exists = Array.from(
-      this.document.querySelectorAll('script[type="application/ld+json"]'),
-    ).some((script) => {
-      try {
-        const json = JSON.parse(script.textContent || '{}');
-        return (
-          json['@type'] === 'Review' &&
-          json['name'] === 'Review of Arapov.Trade'
-        );
-      } catch {
-        return false;
-      }
-    });
-
-    // Если уже существует — выходим
-    if (exists) return;
-
-    // Создаем новый JSON-LD
-    const script = this.document.createElement('script');
-    script.type = 'application/ld+json';
-    script.text = JSON.stringify({
-      '@context': 'https://schema.org',
-      '@type': 'Review',
-      reviewRating: {
-        '@type': 'Rating',
-        ratingValue: 5,
-        bestRating: 5,
-        worstRating: 1,
-      },
-      itemReviewed: {
-        '@type': 'Course',
-        name: 'Професійний курс трейдингу',
-        description:
-          "Індивідуальне навчання трейдингу з нуля під керівництвом досвідченого трейдера. Метод Вайкоффа, об'ємний аналіз, практика на реальних рахунках.",
-
-        provider: {
-          '@type': 'Organization',
-          name: 'Arapov.trade',
+          '@type': 'Course',
+          '@id': 'https://arapov.trade/uk/studying#course',
+          name: 'Професійний курс трейдингу',
           description:
             "Індивідуальне навчання трейдингу з нуля під керівництвом досвідченого трейдера. Метод Вайкоффа, об'ємний аналіз, практика на реальних рахунках.",
-
-          url: 'https://arapov.trade',
+          url: 'https://arapov.trade/uk/studying',
+          inLanguage: 'uk',
+          author: { '@id': 'https://arapov.trade/#person' },
+          provider: { '@id': 'https://arapov.trade/#organization' },
+          educationalLevel: 'Beginner to Advanced',
+          teaches: [
+            'Wyckoff Method',
+            'Volume Analysis',
+            'Technical Analysis',
+            'Risk Management',
+            'Market Psychology',
+            'Smart Money Concepts',
+          ],
+          about: [
+            { '@type': 'Thing', name: 'Stock Trading' },
+            { '@type': 'Thing', name: 'Forex Trading' },
+            { '@type': 'Thing', name: 'Cryptocurrency Trading' },
+          ],
+          hasCourseInstance: {
+            '@type': 'CourseInstance',
+            courseMode: 'online',
+            courseWorkload: 'P4W',
+            instructor: { '@id': 'https://arapov.trade/#person' },
+          },
         },
-      },
-      author: {
-        '@type': 'Person',
-        name: 'Сергій Черемисін',
-      },
-      datePublished: '2024-09-01T00:00:00+02:00',
-      reviewBody:
-        'Навчання побудоване на методі Вайкоффа та аналізі об`єму. Матеріал доступний, є практичні приклади розбору ринкових ситуацій. Підхід систематичний, без обіцянок швидкого збагачення.',
+        {
+          '@type': 'Person',
+          '@id': 'https://arapov.trade/#person',
+          name: 'Ігор Арапов',
+          url: 'https://arapov.trade/uk',
+          sameAs: [
+            'https://www.wikidata.org/wiki/Q137454477',
+            'https://scholar.google.com/citations?user=N440tWQAAAAJ',
+            'https://orcid.org/0009-0003-0430-778X',
+            'https://isni.org/isni/0000000529518564',
+            'https://www.amazon.com/stores/author/B0GBRFY457',
+            'https://github.com/ArapovTrade',
+            'https://ua.linkedin.com/in/arapovtrade',
+            'https://www.youtube.com/@ArapovTrade',
+            'https://t.me/ArapovTrade',
+          ],
+        },
+        {
+          '@type': 'Organization',
+          '@id': 'https://arapov.trade/#organization',
+          name: 'Arapov.Trade',
+          url: 'https://arapov.trade',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/favicon.ico',
+          },
+          founder: { '@id': 'https://arapov.trade/#person' },
+        },
+      ],
     });
 
     this.document.head.appendChild(script);

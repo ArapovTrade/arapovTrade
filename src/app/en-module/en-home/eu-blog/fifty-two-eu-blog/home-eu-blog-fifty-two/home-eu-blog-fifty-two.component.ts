@@ -53,16 +53,14 @@ export class HomeEuBlogFiftyTwoComponent implements OnInit {
     this.grr = this.artickleServ.selectedGroups;
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
-    this.titleService.setTitle(
-      'Market Trend Anatomy: Complete Trader`s Guide | ArapovTrade',
-    );
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
+    this.titleService.setTitle('ADX Indicator: Trend Strength | Arapov.trade');
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Learn how market trends form and evolve. Trend phases, analysis indicators, common trading mistakes, and practical strategies for trend-following trading.',
+        'What the ADX indicator shows, how to tell a strong trend from a sluggish range and why it measures the strength of a move, not its direction.',
     });
     this.gerRandom();
   }
@@ -248,29 +246,36 @@ export class HomeEuBlogFiftyTwoComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          '@id':
-            'https://arapov.trade/en/freestudying/anatomyofmarkettrends#article',
-          headline: "Market Trend Anatomy: Complete Trader's Guide",
+          headline:
+            'The ADX Indicator: What It Is and How to Measure Trend Strength',
           description:
-            'Learn how market trends form and evolve. Trend phases, analysis indicators, common trading mistakes, and practical strategies for trend-following trading.',
-          image: 'https://arapov.trade/assets/img/content/trends1.png',
-          datePublished: '2026-03-25T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
-
-          author: {
-            '@id': 'https://arapov.trade/en#person',
-          },
+            'What the ADX indicator shows, how to tell a strong trend from a sluggish range and why it measures the strength of a move, not its direction.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
             '@id': 'https://arapov.trade/#organization',
-            name: 'ArapovTrade',
+            name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
-          mainEntityOfPage:
-            'https://arapov.trade/en/freestudying/anatomyofmarkettrends',
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': 'https://arapov.trade/en/freestudying/adx-indicator',
+          },
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/adx.jpeg',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Technical analysis',
+          keywords: 'adx (average directional index), technical analysis',
+          inLanguage: 'en',
         },
       ],
     };
@@ -285,19 +290,18 @@ export class HomeEuBlogFiftyTwoComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/en#person',
+      '@id': 'https://arapov.trade/#person',
       name: 'Igor Arapov',
       alternateName: [
         'Ігор Арапов',
-        'Арапов Игорь',
-        'I. Arapov',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-
-      url: 'https://arapov.trade/en',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -312,12 +316,12 @@ export class HomeEuBlogFiftyTwoComponent implements OnInit {
         'https://t.me/ArapovTrade',
       ],
       jobTitle: [
-        'Independent researcher,',
-        'trader',
-        'author and founder of arapov.trade',
+        'Independent researcher',
+        'Trader',
+        'Author and founder of arapov.trade',
       ],
       description:
-        'Independent researcher, practicing trader, author of books on trading and scientific publications. Specializes in trading psychology and cognitive biases in financial markets.',
+        'Independent researcher, practising trader, author of trading books and scientific publications. Specialises in trading psychology and cognitive biases in financial markets.',
     };
 
     this.addJsonLdSchema(data);
@@ -333,42 +337,58 @@ export class HomeEuBlogFiftyTwoComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'What is a trend in trading?',
+          name: 'What does the ADX indicator show?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'A trend is a sustained directional price movement over a specific period. Uptrends feature higher highs and higher lows, while downtrends show lower highs and lower lows. Trends reflect the balance between supply and demand.',
+            text: 'Trend strength, but not its direction. The value runs from zero to one hundred: the higher it is, the stronger the move, no matter whether it is up or down. Low values point to a weak market or a range, high ones to a pronounced trend.',
           },
         },
         {
           '@type': 'Question',
-          name: 'What phases does a trend go through?',
+          name: 'Does ADX show the price direction?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Trends develop through four stages: accumulation (institutional position building), markup (active movement with retail participation), distribution (profit-taking by large players), and markdown (trend reversal).',
+            text: 'No. ADX measures only the strength of the move, not its side. A high value occurs in both an uptrend and a downtrend. Direction has to be read with other tools, for example by levels or by the +DI and -DI lines.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Which indicators best identify trends?',
+          name: 'What is a good ADX value?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Key trend indicators include moving averages (MA50, MA200), MACD for direction changes, RSI for momentum assessment, and ADX for trend strength measurement. Using 2-3 indicators in combination is recommended.',
+            text: 'A common guide: an ADX above twenty-five usually points to a trend, while below twenty suggests its absence and a range. The higher ADX climbs over that threshold, the more confident the move, but the value says nothing about the side, only the strength.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Why is counter-trend trading risky?',
+          name: 'How do you use ADX as a regime filter?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Trading against the trend without confirming signals increases loss risk since trends can persist far longer than expected. Wait for indicator divergence, key level breakouts, or ADX dropping below 25 before counter-trend entries.',
+            text: "Match the approach to the regime. While ADX holds above 25 the market trends, so trend-following methods and breakouts have a chance; while ADX sits below 20 it is ranging, so trend methods bleed and mean-reversion fits better. Adding a simple 'only trade when ADX is above 20' to a trend strategy skips most of the chop.",
           },
         },
         {
           '@type': 'Question',
-          name: 'How does volume help trend analysis?',
+          name: 'What are +DI and -DI in ADX?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Volume confirms trend strength: increasing volume during price movement in the trend direction validates its strength. Declining volume may signal weakening momentum. Price-volume divergence often precedes reversals.',
+            text: 'They are two auxiliary directional-movement lines inside the indicator: +DI reflects buyer strength, -DI seller strength. When +DI is above -DI, the edge is with the rise, and the other way round. They hint at the side, while the trend strength itself is shown by the ADX line, and I take the entry from levels and volume.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Can you enter a trade based on ADX?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'On its own ADX gives no entry signal. It only confirms that a strong trend exists, but does not point to the side or the entry point, and a high value often appears already in the thick of the move. It is a filter, not a signal.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What ADX period should you use?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Fourteen is the default and works on any timeframe. A shorter period like 7 reacts faster but is noisier, a longer one like 21 is slower and smoother. There is no magic setting; for most tasks the standard 14 is the sensible starting point.',
           },
         },
       ],
@@ -384,37 +404,40 @@ export class HomeEuBlogFiftyTwoComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'How to Identify and Trade with the Trend',
+      '@id': 'https://arapov.trade/en/freestudying/adx-indicator#howto',
+      name: 'How to understand and apply the ADX (Average Directional Index)',
+      description:
+        'A step-by-step look at the topic and its practical application in trading',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Determine trend direction',
-          text: 'Use MA50 and MA200 moving averages. Price above both lines indicates an uptrend, below both signals a downtrend.',
+          name: 'Understand what the ADX indicator is',
+          text: 'ADX is an indicator of directional movement strength that gauges how pronounced the current trend is, without pointing to its side, up or down.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Identify the current phase',
-          text: 'Analyze volume and volatility patterns to understand which stage of trend development the market is in.',
+          name: 'Learn how ADX measures trend strength',
+          text: 'ADX works by comparing upward and downward pressure on price through its two directional lines, +DI and -DI.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Find entry points',
-          text: 'Enter on pullbacks to support levels or moving averages. Use Fibonacci retracement levels 38.2%-61.8% for correction zones.',
+          name: 'The +DI and -DI lines and the 20/25/40 levels: how to read the indicator',
+          text: '+DI and -DI show the side, while the ADX levels show strength: below 20 a flat, 20-25 a nascent move, above 25 a trend, above 40 strong and often overheated.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Set stop-loss orders',
-          text: 'Place protective orders beyond key levels accounting for ATR. Risk no more than 1-2% of your account per trade.',
+          name: 'Use ADX as a regime filter for trend and range',
+          text: 'Above 25 the market trends and trend-following or breakouts have a chance, below 20 it ranges and mean-reversion fits better.',
         },
         {
           '@type': 'HowToStep',
           position: 5,
-          name: 'Manage the position',
-          text: 'Move stop-loss to breakeven when price moves in your favor. Take partial profits at key levels and record every trade.',
+          name: 'Grasp why ADX is a filter, not an entry signal',
+          text: 'On its own ADX does not say when to buy or sell; it confirms a trend exists, while direction and entry are taken from levels and volume.',
         },
       ],
     };
@@ -429,67 +452,19 @@ export class HomeEuBlogFiftyTwoComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Trading Terms Glossary',
+      name: 'Glossary of terms in this article',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Trend',
+          name: 'ADX (Average Directional Index)',
           description:
-            'A sustained directional price movement of an asset over a specific time period.',
+            'An indicator of directional movement strength that gauges how pronounced the current trend is, without pointing to its side, up or down.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Uptrend',
+          name: '+DI and -DI',
           description:
-            'A bullish market characterized by consecutively higher highs and higher lows.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Downtrend',
-          description:
-            'A bearish market with consecutively lower highs and lower lows.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Sideways market',
-          description:
-            'Horizontal price movement within a range without a clear directional bias.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Moving average',
-          description:
-            'An indicator that smooths price fluctuations showing average price over a selected period.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'MACD',
-          description:
-            'Moving Average Convergence Divergence indicator for determining trend strength and direction.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'RSI',
-          description:
-            'Relative Strength Index showing overbought or oversold conditions of an asset.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Accumulation phase',
-          description:
-            'Initial trend stage when institutional players build positions during low volatility.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Stop-loss',
-          description:
-            'A protective order for automatic position closure when reaching a predetermined loss level.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Volume analysis',
-          description:
-            'Market analysis method based on trading volumes to confirm price movement strength.',
+            'The two directional-movement lines inside ADX: +DI reflects buyer strength, -DI seller strength; their relative position shows which side has the edge, but not the entry point.',
         },
       ],
     };

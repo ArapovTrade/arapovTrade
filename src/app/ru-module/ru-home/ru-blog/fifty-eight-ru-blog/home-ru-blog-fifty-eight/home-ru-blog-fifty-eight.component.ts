@@ -57,21 +57,16 @@ export class HomeRuBlogFiftyEightComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
 
-    this.titleService.setTitle(
-      'Усреднение в трейдинге: стратегии, риски и практическое применение | ArapovTrade',
-    );
+    this.titleService.setTitle('Индикатор Ишимоку: облако Кумо | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Полное руководство по усреднению позиций в трейдинге. Разбираем стратегии DCA, классическое усреднение, антимартингейл. Как избежать ошибок и когда метод работает.',
+        'Индикатор Ишимоку: облако Кумо, линии Tenkan и Kijun, определение тренда и сигналов. Как читать систему и не перегружать график.',
     });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-04-04' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/averagingintrading.webp',
-    });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
+
     this.gerRandom();
   }
   randomArticleRus: any = [];
@@ -279,35 +274,34 @@ export class HomeRuBlogFiftyEightComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          '@id':
-            'https://arapov.trade/ru/freestudying/averagingintrading#article',
-          headline:
-            'Усреднение в трейдинге: стратегии, риски и практическое применение',
+          headline: 'Ишимоку (Ichimoku) в трейдинге: облако и торговые сигналы',
           description:
-            'Полное руководство по усреднению позиций в трейдинге. Разбираем стратегии DCA, классическое усреднение, антимартингейл.',
-          image:
-            'https://arapov.trade/assets/img/content/averagingintrading1.webp',
-          datePublished: '2026-03-25T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
-
-          author: {
-            '@id': 'https://arapov.trade/ru#person',
-          },
+            'Индикатор Ишимоку: облако Кумо, линии Tenkan и Kijun, определение тренда и сигналов. Как читать систему и не перегружать график.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
             '@id': 'https://arapov.trade/#organization',
-            name: 'ArapovTrade',
+            name: 'Arapov.Trade',
             url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://arapov.trade/ru/freestudying/averagingintrading',
+            '@id': 'https://arapov.trade/ru/freestudying/ichimoku-cloud',
           },
-          articleSection: 'Трейдинг для начинающих',
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/ichimoku1.png',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Технический анализ',
+          keywords: 'ишимоку',
           inLanguage: 'ru',
         },
       ],
@@ -323,18 +317,18 @@ export class HomeRuBlogFiftyEightComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/ru#person',
-      name: 'Игорь Арапов',
+      '@id': 'https://arapov.trade/#person',
+      name: 'Igor Arapov',
       alternateName: [
-        'Igor Arapov',
-        'Арапов Игорь',
-        'I. Arapov',
         'Ігор Арапов',
-        'І. В. Арапов',
+        'Игорь Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/ru',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -367,46 +361,37 @@ export class HomeRuBlogFiftyEightComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
-      '@id': 'https://arapov.trade/ru/freestudying/averagingintrading#faq',
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'Что такое усреднение в трейдинге?',
+          name: 'Что показывает индикатор Ишимоку простыми словами?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Усреднение — это метод управления позицией, при котором трейдер добавляет объём к существующей сделке по мере движения цены. Цель — снизить среднюю цену входа и улучшить точку безубыточности.',
+            text: 'Он выдаёт сразу несколько вещей: направление тренда, его силу и зоны, где цена встречала поддержку или сопротивление. Ключевой ориентир тут облако: над ним рынок склонен к росту, под ним к снижению.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Чем отличается DCA от классического усреднения?',
+          name: 'Какие настройки Ишимоку считаются стандартными?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'DCA (Dollar Cost Averaging) предполагает регулярные покупки на фиксированную сумму независимо от цены. Классическое усреднение — добавление к позиции при движении против трейдера. DCA снижает эмоциональную нагрузку и подходит для долгосрочных инвестиций.',
+            text: 'Классические значения это 9, 26 и 52. Пришли они из японской шестидневной торговой недели: 9 это около полутора недель, 26 примерно месяц, 52 примерно два месяца. Многие так и держат их по умолчанию, кто-то подгоняет под пятидневную неделю.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Когда усреднение опасно?',
+          name: 'Подходит ли Ишимоку новичку?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Усреднение особенно рискованно в сильных трендах, при торговле с высоким плечом и без чёткого плана выхода. Если актив продолжает падать без признаков разворота, каждое усреднение увеличивает убытки.',
+            text: 'Освоение даётся легко, но стартовать новичку я бы с него не стал. Пятёрка линий рождает иллюзию глубины, тогда как под ними обычные средние. Тренд и уровни проще читать напрямую, а к Ишимоку при желании подойти позже.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Сколько раз можно усреднять позицию?',
+          name: 'Можно ли торговать только по облаку Ишимоку?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Профессиональные трейдеры ограничивают усреднение 2-3 добавлениями. Каждое усреднение должно быть запланировано заранее с учётом уровней поддержки и общего размера риска на сделку.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Подходит ли усреднение для криптовалют?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'DCA хорошо работает для долгосрочного накопления биткоина и эфириума. Классическое усреднение на крипторынке рискованно из-за высокой волатильности — коррекции на 30-50% не редкость.',
+            text: 'Как трендовый индикатор на старших таймфреймах облако держится неплохо. А вот единственным входным инструментом оно запаздывает, ведь каждая линия выводится из уже прошедшей цены. Я бы подтверждал картину объёмом и реальными уровнями, а не доверялся одному облаку.',
           },
         },
       ],
@@ -422,40 +407,34 @@ export class HomeRuBlogFiftyEightComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      '@id': 'https://arapov.trade/ru/freestudying/averagingintrading#howto',
-      name: 'Как безопасно применять усреднение в трейдинге',
+      '@id': 'https://arapov.trade/ru/freestudying/ichimoku-cloud#howto',
+      name: 'Как разобраться и применять: Ишимоку (Ichimoku) в трейдинге: облако и торговые сигналы',
       description:
-        'Пошаговое руководство по грамотному использованию усреднения позиций',
+        'Пошаговый разбор темы и её практическое применение в торговле',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Определите тип рынка',
-          text: 'Проанализируйте, находится ли актив в тренде или боковике. Усреднение эффективнее в боковом рынке и на откатах в тренде.',
+          name: 'Что такое индикатор Ишимоку — определение и составляющие',
+          text: 'Ишимоку — это индикатор технического анализа из пяти линий, который на одном экране выдаёт направление тренда, его силу и зоны поддержки с сопротивлением.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Рассчитайте уровни входа',
-          text: 'Определите 2-3 уровня для потенциального усреднения на основе поддержек, Фибоначчи или зон спроса.',
+          name: 'Облако Ишимоку: как определять тренд и поддержку',
+          text: 'Облако Кумо это закрашенная область между линиями Сэнкоу А и Сэнкоу Б, и это сердце всего инструмента.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Распределите капитал',
-          text: 'Разделите выделенный на сделку капитал на части. Типичное распределение: 40% на первый вход, 35% и 25% на усреднения.',
+          name: 'Сигналы Ишимоку: пересечение линий Tenkan и Kijun',
+          text: 'Главный сигнал зовут TK Cross, это пересечение быстрой Тенкан и медленной Кидзюн.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Установите стоп-лосс',
-          text: 'Определите максимальный убыток для всей позиции. Стоп должен находиться за последним уровнем усреднения.',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 5,
-          name: 'Зафиксируйте план выхода',
-          text: 'Заранее определите цели по прибыли и условия закрытия позиции. Следуйте плану независимо от эмоций.',
+          name: 'Ишимоку для начинающих: насколько сложно освоить',
+          text: 'Освоить Ишимоку реально, обычно хватает пары вечеров, чтобы заучить пять линий и правила облака.',
         },
       ],
     };
@@ -470,66 +449,13 @@ export class HomeRuBlogFiftyEightComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      '@id': 'https://arapov.trade/ru/freestudying/averagingintrading#terms',
-      name: 'Глоссарий терминов усреднения',
+      name: 'Глоссарий терминов статьи',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Усреднение',
+          name: 'Ишимоку',
           description:
-            'Метод добавления к существующей позиции для улучшения средней цены входа',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'DCA (Dollar Cost Averaging)',
-          description:
-            'Стратегия регулярных покупок на фиксированную сумму независимо от текущей цены актива',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Антимартингейл',
-          description:
-            'Увеличение позиции после прибыльных сделок, противоположность классическому усреднению',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Маржин-колл',
-          description:
-            'Требование брокера внести дополнительное обеспечение при падении маржи ниже минимума',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Кредитное плечо',
-          description: 'Соотношение собственных и заёмных средств в торговле',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Уровень поддержки',
-          description:
-            'Ценовая зона, где спрос превышает предложение и цена склонна отскакивать вверх',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Волатильность',
-          description: 'Степень колебания цены актива за определённый период',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Риск-менеджмент',
-          description:
-            'Система управления рисками для защиты торгового капитала',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Стоп-лосс',
-          description:
-            'Ордер на автоматическое закрытие позиции при достижении заданного уровня убытка',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Точка безубыточности',
-          description:
-            'Цена, при которой позиция не приносит ни прибыли, ни убытка',
+            'Ишимоку это индикатор технического анализа из пяти линий, который на одном экране выдаёт направление тренда, его силу и зоны поддержки с сопротивлением.',
         },
       ],
     };

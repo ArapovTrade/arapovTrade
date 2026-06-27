@@ -7,87 +7,429 @@
           <div class="free-courses_main-container">
             <main lang="en">
               <header>
-  <h1>Bitcoin Pizza Day: The Story Behind It</h1>
-</header>
-<article>
-  <p>On May 22, 2010, a programmer handed over ten thousand bitcoins for two pizzas. It was the first purchase in history of a real product with cryptocurrency. Back then those coins were worth around forty dollars; today their value runs into hundreds of millions. People love the story as a joke about the most expensive pizza ever, but for a trader it hides far more useful lessons.</p>
+                <h1>
+                  Moving Averages in Trading: What They Are and Where They Work
+                </h1>
+              </header>
+              <article>
+                <p>
+                  A moving average is a line that averages price over a chosen
+                  number of candles and smooths the market noise, showing the
+                  general direction of the trend. It comes in a simple form and
+                  an exponential one that leans on recent prices. Its defining
+                  trait is lag: the line is built from the past, so for active
+                  intraday trading it's almost useless, while as a rough filter
+                  of the long-term trend it works perfectly well.
+                </p>
 
-  <p>I have been trading since 2013, and I keep this date in mind not for the laugh. It shows perfectly how unpredictable value is in young markets. And I have my own version of the same story: when I first heard about bitcoin it cost around six hundred dollars, I decided it was a scam, and I did not buy. So the loudest laugh at the pizza buyer usually comes from someone who once walked past it themselves.</p>
+                <p>
+                  The moving average is the best-known indicator in trading,
+                  with mountains of books written about it. Let me state my
+                  position up front: aside from volume I respect no indicator,
+                  and I don't trade off moving averages myself. But the topic
+                  can't be skipped, since a beginner runs into it anyway. So
+                  here it is calmly: what it is, why moving averages are almost
+                  useless for active trading, and where they do bring real
+                  value.
+                </p>
 
-  <p><strong><i>In this article we'll cover:</i></strong></p>
-  <ul>
-    <li>what exactly happened on May 22, 2010 and why the deal counts as the first purchase with bitcoin;</li>
-    <li>how much those 10,000 bitcoins were worth then and what their price has become today;</li>
-    <li>why the pizza buyer should not be called a fool, since the coin's future was impossible to predict;</li>
-    <li>what practical lessons a trader can take from this story about value and patience.</li>
-  </ul>
+                <p>
+                  <strong><i>In this article we'll cover:</i></strong>
+                </p>
+                <ul>
+                  <li>
+                    a moving average is an averaged line of price that smooths
+                    noise and shows the trend
+                  </li>
+                  <li>
+                    SMA weights prices equally, EMA gives more weight to fresh
+                    data and reacts faster
+                  </li>
+                  <li>
+                    the main downside is lag, so for intraday trading moving
+                    averages are almost useless
+                  </li>
+                  <li>
+                    the one real use is a rough filter of the long-term trend
+                    for screening stocks into a portfolio
+                  </li>
+                </ul>
 
-  <p>Let's start with what Bitcoin Pizza Day actually is.</p>
+                <p>
+                  Take it in order: what a moving average even is, why it works
+                  poorly for active trading, and where it has an honest use.
+                </p>
 
-  <h2>What Is Bitcoin Pizza Day and What Happened on May 22, 2010?</h2>
-  <p><dfn itemscope itemtype="https://schema.org/DefinedTerm"><span itemprop="name">Bitcoin Pizza Day</span></dfn> is the anniversary of the first purchase in history of a real product with bitcoin, marked every year on May 22. In 2010 a Florida programmer, Laszlo Hanyecz, offered 10,000 bitcoins on a forum to anyone who would order him two pizzas. A few days later another member took up the offer, ordered two Papa John's pizzas, and received the coins for it. That was the first deal where bitcoin paid for a real product.</p>
-  <p>Until that moment <a class="linkrefinto" href="https://arapov.trade/en/freestudying/bitcoin">BTC</a> lived only inside the circle of enthusiasts and miners, and many treated it as digital play money. The pizza deal proved a simple but important thing: you really could buy something with it. That is what made the date stick, since it turned a theoretical experiment into actual money.</p>
+                <div class="flex">
+                  <img
+                    class="pictureImg"
+                    loading="lazy"
+                    src="/assets/img/content/movingavarage.png"
+                    alt="Example of moving averages on a chart"
+                  />
+                </div>
 
-  <div class="flex">
-    <img class="pictureImg" loading="lazy" src="/assets/img/content/pizzaday1.webp" alt="Bitcoin Pizza Day historic transaction" />
-  </div>
+                <h2>What is a moving average, and how SMA differs from EMA</h2>
+                <p>
+                  A
+                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
+                    ><span itemprop="name">moving average</span></dfn
+                  >
+                  is a technical indicator that averages price over a chosen
+                  number of periods and smooths the swings, helping you see the
+                  direction of the trend. The name says it all: with each new
+                  candle the calculation window shifts, and the average is
+                  recomputed from scratch.
+                </p>
+                <p>
+                  It's a basic tool of
+                  <a
+                    class="linkrefinto"
+                    href="https://arapov.trade/en/freestudying/chart-reading"
+                    >technical analysis</a
+                  >, trend-following at heart: its job is to show where the
+                  market is looking overall. There are several kinds, but two
+                  matter in practice. The simple average, the SMA, adds up the
+                  closing prices over a period and divides by their count,
+                  giving every candle equal weight. The result is the smoothest
+                  line, and also the most sluggish. The exponential average, the
+                  EMA, gives more weight to recent prices, so it reacts faster,
+                  and it's more often placed on short timeframes. The longer the
+                  period, the smoother and more inert the line; the 200-day SMA,
+                  for instance, is treated as a classic gauge of the global
+                  trend. The key thing to grasp at once is that any average is
+                  merely the arithmetic of past prices, not a forecast of the
+                  future, and all its strength and weakness grow from exactly
+                  there. From that follows a simple rule for choosing the
+                  period. A short average, say 9 or 20, hugs price and reacts
+                  fast, but it's noisier too, throwing more false signals. A
+                  long one, like 50 or 200, shows the general course more calmly
+                  but turns with a big delay. There's no universal answer for
+                  the right period: it all depends on the horizon you work on,
+                  and any attempt to fit the perfect number to a past chart is
+                  curve-fitting that usually falls apart on future data.
+                </p>
+                <p>
+                  <strong>In short: </strong>
+                  <i
+                    >An average is an averaged line of past prices; the SMA is
+                    smooth and slow, the EMA faster thanks to the weight on
+                    fresh data, but both speak of the past.</i
+                  >
+                </p>
 
-  <h2>What Those Pizzas Would Be Worth Today</h2>
-  <p>Now the curious part. On the day of the deal those 10,000 bitcoins were worth roughly forty dollars, and the pizzas themselves cost about twenty-five. For the time it was an ordinary, if oddly paid, purchase. But bitcoin has come a long way since. By 2026 those same 10,000 coins would be worth hundreds of millions of dollars, in the region of three-quarters of a billion depending on the price. So two pizzas became the most expensive meal in history.</p>
-  <p>Behind that rise sits the rarity of the asset itself. There are only 21 million bitcoins, and over time new ones are issued ever more slowly because of the <a class="linkrefinto" href="https://arapov.trade/en/freestudying/halving">BTC halving</a>. That scarcity, together with growing demand, is what drove the price so high. But here is the key point: back in 2010 none of this was obvious, and judging that deal with today's eyes is simply unfair.</p>
+                <h2>Why moving averages don't work for day trading</h2>
+                <p>
+                  There's one fundamental reason behind moving averages: lag.
+                  Across all my years of practice I've found no use for moving
+                  averages in my own trading, and aside from volume I respect no
+                  indicator. The line is built from past prices, so it reports a
+                  reversal only after it has already happened. For intraday
+                  trading, where the decision has to be made here and now,
+                  that's almost a death sentence.
+                </p>
+                <p>
+                  Add a range on top of that. The moment the market drifts
+                  sideways, price keeps poking back and forth across the
+                  average, and the indicator spews a barrage of false signals
+                  that make it easy to bleed an account dry. The same goes for
+                  the popular crossings like the golden cross and the death
+                  cross: on historical charts they look convincing, while in
+                  real time they hand you an entry after a large part of the
+                  move. So you get a vicious circle: to make the average quieter
+                  you lengthen it, but then it lags even more, and to make it
+                  react faster you shorten it, and then false signals only
+                  multiply. There simply is no ideal setting here. Let me show
+                  on a plain example why this hits the account. Say you go long
+                  when the fast average crosses the slow one from below. Price
+                  jerked, you got in, and three candles later the market pulled
+                  back, the averages crossed back, and the signal tells you to
+                  exit at a loss. Then another reversal, another entry, another
+                  stop. In a range these false crossings come one after another,
+                  and each one costs you the spread, the commission and your
+                  nerves, and the upshot is a slow bleeding of the account
+                  without a single big mistake. I prefer to watch not an
+                  averaged line but what actually moves price: volume and the
+                  reaction off levels. That's not advice for you, it's how I
+                  act. Volume and trend analysis along with
+                  <a
+                    class="linkrefinto"
+                    href="https://arapov.trade/en/freestudying/freeeducation#working-with-levels"
+                    >working with levels</a
+                  >
+                  is covered separately. And why lag in particular is the main
+                  trouble with moving averages I show in the
+                  <a
+                    class="linkrefinto"
+                    href="https://youtu.be/ykS2QMzM954?t=237"
+                    >video on the main problem with moving averages</a
+                  >.
+                </p>
+                <p>
+                  <strong>In short: </strong>
+                  <i
+                    >An average reports a reversal after the fact, and in a
+                    range it scatters false signals, and no ideal setting exists
+                    between noise and lag.</i
+                  >
+                </p>
 
-  <div class="flex">
-    <img class="pictureImg" loading="lazy" src="/assets/img/content/pizzaday2.webp" alt="Evolution of crypto payments" />
-  </div>
+                <div class="flex">
+                  <img
+                    class="pictureImg"
+                    loading="lazy"
+                    src="/assets/img/content/movingavarage2.png"
+                    alt="Moving average lag on a chart"
+                  />
+                </div>
 
-  <h2>Lessons of Bitcoin Pizza Day for a Trader</h2>
-  <p>The first lesson is unexpected: do not rush to laugh at Laszlo. At the moment of the deal not a single person on the planet knew bitcoin would take off. Laszlo himself, by the way, does not regret the purchase; he says it was exactly the thing that proved bitcoin could be money. He did what he found interesting at a time when the coin cost pennies, and judging him in hindsight is easy, while back then it was just a bold experiment.</p>
-  <p>The second lesson is far more practical: value in a young market cannot be predicted. Building your trading on fantasies like "I should have held" or "this coin will surely do a hundred times" is pointless. What I learned long ago is that the market does not reward dreams, it rewards discipline. A trader does not guess the future price; they read what the market shows right now, through levels and volume. Regret and envy of someone else's multiples are the worst advisors in trading, because they push you to chase what has already risen and to buy at the very top.</p>
+                <h2>Moving averages as dynamic support and resistance</h2>
+                <p>
+                  The most popular way people actually trade an average is as a
+                  moving floor or ceiling. In a clean uptrend price often pulls
+                  back to a short average like the 21 or 50 EMA, touches it, and
+                  pushes on, so traders treat that line as dynamic support and
+                  buy the touch; in a downtrend the same line caps rallies as
+                  dynamic resistance. There is something real beneath this. When
+                  enough traders watch the same 21 or 50 EMA, their orders
+                  gather around it, and for a while the level genuinely holds, a
+                  small self-fulfilling effect that is worth knowing about.
+                </p>
+                <p>
+                  But I read it with care. An average has no memory of why any
+                  level ever mattered; it simply slides along under price, so
+                  this support is soft and shifts a little with every candle. I
+                  would rather mark a real horizontal level, a price where the
+                  market actually turned before, and watch the volume there,
+                  because that is where orders truly sit. If a moving average
+                  happens to line up with such a level, good, it adds a touch of
+                  weight, but on its own a bounce off a sliding line is not a
+                  reason for me to enter. So I treat dynamic support as context
+                  at best, never as the trigger. This is not advice for you, it
+                  is how I keep a real level apart from a drawn one.
+                </p>
+                <p>
+                  <strong>In short: </strong>
+                  <i
+                    >People trade an average as dynamic support or resistance,
+                    buying the pullback to a 21 or 50 EMA; it works partly
+                    because everyone watches it, but the line slides every
+                    candle, so I treat it as context and trust a real horizontal
+                    level and volume instead.</i
+                  >
+                </p>
 
-  <h2>My Take: Trade the Instrument, Not the Lottery Ticket</h2>
-  <p>There is a real difference between a trader and an investor hiding in this pizza story, and it is the one I want to leave you with. The tale is about long-term holding, not about trading, and I treat bitcoin as a trading instrument rather than a lottery ticket. This is not advice for you personally, it is my approach: trying to repeat someone's fairy-tale multiple is more dangerous than calmly working a system on what is in front of you. Far more useful than forever glancing back at a missed chance is steadily running your own method on the market as it is now. The honest limitation is that no one, myself included, can tell you which of today's pennies becomes tomorrow's fortune, so the alternative to betting on that dream is the dull discipline that actually pays. The difference between the two mindsets is covered in the <a class="linkrefinto" href="https://arapov.trade/en/freestudying/tradingandinvestments">difference</a>.</p>
+                <h2>
+                  Where moving averages actually help: the 200-day trend filter
+                </h2>
+                <p>
+                  It would be dishonest to call moving averages useless
+                  altogether. They have one worthy use, and it's tied not to
+                  speculation but to long horizons. On big horizons the lag
+                  stops getting in the way, because what you care about isn't
+                  the entry point but the bare fact: is the market in a rising
+                  phase or a falling one.
+                </p>
+                <p>
+                  The classic move is the 200-day SMA as a filter of the global
+                  trend. If a stock or an index holds steadily above its 200-day
+                  average, that's a bullish regime, and such instruments are
+                  worth considering for a long-term portfolio. If price has
+                  slipped beneath it, that's a bearish regime, and it's sensible
+                  to hold off buying. Here the average works not as a trade
+                  signal but as a rough filter of direction, helping to weed out
+                  plainly weak assets. Investors have an even rougher but honest
+                  method on these same horizons: tracking the relative position
+                  of the 50-day and 200-day averages. While the fast one is
+                  above the slow one the regime counts as bullish, below it
+                  bearish. On a daily horizon that works not as a precise signal
+                  but as a general traffic light: red means don't trade against
+                  the trend, while green merely lets you look for buys, and you
+                  still find the entry itself with a different tool. In short,
+                  for me a moving average isn't an entry tool but more of a
+                  museum piece: useful to know, not to trade by. I build my work
+                  on volume and levels, because they speak of what's happening
+                  now, while an average by definition tells of the past. A
+                  rear-view mirror is useful, but you don't steer by it. The
+                  average shows where the market has already been, yet says
+                  nothing about where it will turn next. When a beginner stacks
+                  three averages on the chart and waits for signals from them,
+                  he's essentially staring into the rear-view mirror and
+                  wondering why he keeps hitting a lamppost. But I deliberately
+                  won't call moving averages useless, that would be overreach:
+                  that honest role of a background filter on big horizons is
+                  real, and for an investor it works. Just don't confuse a
+                  direction filter with an entry signal, those are different
+                  jobs. The principle itself, why price-derived indicators lag,
+                  I unpack in the section on
+                  <a
+                    class="linkrefinto"
+                    href="https://arapov.trade/en/freestudying/freeeducation#indicatorsInTrading"
+                    >indicators in trading</a
+                  >.
+                </p>
+                <p>
+                  Since we are on the rough trend filter, two crossings are
+                  worth naming because people search for them by name. The
+                  <dfn itemscope itemtype="https://schema.org/DefinedTerm"
+                    ><span itemprop="name">golden cross</span></dfn
+                  >
+                  is when the fast average, usually over 50 periods, crosses the
+                  slow one over 200 from below: the market reads it as a shift
+                  into a long-term rise. The death cross is the mirror, the fast
+                  drops under the slow, and that is read as a turn down. It
+                  sounds grand, but remember the nature of an average: both
+                  crosses are built from long-closed prices and therefore lag
+                  badly, by the time of a golden cross a sizeable part of the
+                  move is already behind. I do not enter on the cross itself,
+                  for me it is only a rough mark of the regime on a higher
+                  scale, and the decision still rests on the level and volume.
+                </p>
+                <p>
+                  <strong>In short: </strong>
+                  <i
+                    >The one honest role of an average is a rough trend filter
+                    on long horizons, such as the 200-day SMA, but as an entry
+                    signal it's no good.</i
+                  >
+                </p>
 
-  <section>
-    <h2>Frequently Asked Questions</h2>
-    <mat-accordion>
-      <mat-expansion-panel class="highlight-box owl_link-box" [expanded]="true">
-        <mat-expansion-panel-header>
-          <mat-panel-title>What is Bitcoin Pizza Day?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>It is the anniversary of the first purchase of a real product with bitcoin, marked on May 22. In 2010 the programmer Laszlo Hanyecz gave 10,000 bitcoins for two pizzas. That is when bitcoin first worked as real money.</p>
-      </mat-expansion-panel>
-      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
-        <mat-expansion-panel-header>
-          <mat-panel-title>How many bitcoins were paid for the pizzas?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>Ten thousand bitcoins for two Papa John's pizzas. Back then that was roughly forty dollars. By 2026 the same amount in coins would be worth hundreds of millions of dollars.</p>
-      </mat-expansion-panel>
-      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
-        <mat-expansion-panel-header>
-          <mat-panel-title>Why is Bitcoin Pizza Day so important?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>It was the first deal where bitcoin paid for a real product. Before that it lived only among enthusiasts. The deal proved that cryptocurrency could serve as a medium of exchange.</p>
-      </mat-expansion-panel>
-      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
-        <mat-expansion-panel-header>
-          <mat-panel-title>Does the buyer regret the deal?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>By his own account, no. He believes that this very purchase proved the practical value of bitcoin. Besides, the coin cost pennies at the time, and predicting its rise was impossible.</p>
-      </mat-expansion-panel>
-      <mat-expansion-panel class="highlight-box owl_link-box" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
-        <mat-expansion-panel-header>
-          <mat-panel-title>What is the lesson of this story for a trader?</mat-panel-title>
-        </mat-expansion-panel-header>
-        <p>Value in a young market cannot be predicted, and trading on regrets like "I should have held" is pointless. A trader reads what the market shows now rather than dreaming about the past.</p>
-      </mat-expansion-panel>
-    </mat-accordion>
-  </section>
+                <section>
+                  <h2>Frequently asked questions</h2>
+                  <mat-accordion>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      [expanded]="true"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >What is a moving average in simple
+                          terms?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        It's a line that averages price over a chosen number of
+                        candles and smooths the market noise, showing the
+                        general direction of the trend. With each new candle the
+                        calculation window shifts and the average is recomputed.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >What's the difference between SMA and
+                          EMA?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        SMA averages prices equally and gives the smoothest but
+                        slowest line. EMA puts more weight on recent prices, so
+                        it reacts faster. SMA is handier for a long-term trend,
+                        EMA for short timeframes, but both lag.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >Can you use a moving average as support or
+                          resistance?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        Many traders do: in an uptrend price often pulls back to
+                        a 21 or 50 EMA and bounces, so the line is treated as
+                        dynamic support, and as dynamic resistance in a
+                        downtrend. It works partly because everyone watches the
+                        same average, but the line slides every candle, so I
+                        treat it as context and trust a real horizontal level
+                        with volume instead.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >Why do moving averages work poorly for active
+                          trading?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        Because of lag: the line is built from past prices and
+                        reports a reversal only after it has already happened.
+                        And in a range, price keeps crossing the average,
+                        throwing off a stream of false signals.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >Are the golden cross and death cross
+                          reliable?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        They're popular moving-average crossover signals, but
+                        they lag heavily. On historical charts they look
+                        convincing, while in real time they give an entry after
+                        a large part of the move is done, so leaning on them
+                        alone is unwise.
+                      </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel
+                      class="highlight-box owl_link-box"
+                      (opened)="panelOpenState.set(true)"
+                      (closed)="panelOpenState.set(false)"
+                    >
+                      <mat-expansion-panel-header>
+                        <mat-panel-title
+                          >Where are moving averages actually
+                          useful?</mat-panel-title
+                        >
+                      </mat-expansion-panel-header>
+                      <p>
+                        On long horizons. The 200-day SMA works as a rough
+                        filter of the global trend: price above it is a bullish
+                        regime, below it bearish. That helps screen stocks for a
+                        long-term portfolio, but it's no good as a signal to
+                        enter a trade.
+                      </p>
+                    </mat-expansion-panel>
+                  </mat-accordion>
+                </section>
 
-  <section>
-    <h2>About the Author</h2>
-    <p>Author: Igor Arapov — independent researcher in the psychology of investment decisions and behavioral finance, practising trader since 2013, founder of arapov.trade, author of a trading book series (<a class="linkrefinto" href="https://openlibrary.org/authors/OL16073686A/Igor_Arapov">Open Library</a>), (<a class="linkrefinto" href="https://orcid.org/0009-0003-0430-778X">ORCID: 0009-0003-0430-778X</a>).</p>
-  </section>
-</article>
+                <section>
+                  <h2>About the Author</h2>
+                  <p>
+                    Author:
+                    <a class="linkrefinto" href="https://arapov.trade/en"
+                      >Igor Arapov</a
+                    >
+                    — independent researcher in the psychology of investment
+                    decisions and behavioral finance, practising trader since
+                    2013, founder of arapov.trade, author of a trading book
+                    series (<a
+                      class="linkrefinto"
+                      href="https://orcid.org/0009-0003-0430-778X"
+                      >ORCID: 0009-0003-0430-778X</a
+                    >).
+                  </p>
+                </section>
+              </article>
 
               <div
                 class=""

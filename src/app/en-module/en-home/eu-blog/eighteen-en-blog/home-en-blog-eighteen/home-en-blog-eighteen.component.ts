@@ -53,14 +53,14 @@ export class HomeEnBlogEighteenComponent implements OnInit {
     this.grr = this.artickleServ.selectedGroups;
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
-    this.titleService.setTitle('Volume Analysis in Trading | ArapovTrade');
+    this.titleService.setTitle('Stablecoins and Tether (USDT) | Arapov.trade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Complete guide to market volume analysis. Volume Profile, Delta Volume, Footprint Charts and practical strategies for analyzing trading volumes.',
+        'What stablecoins are, how they hold the dollar peg, how USDT differs from algorithmic coins and what risks stablecoins carry.',
     });
 
     this.gerRandom();
@@ -248,119 +248,36 @@ export class HomeEnBlogEighteenComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          mainEntityOfPage: {
-            '@type': 'WebPage',
-            '@id': 'https://arapov.trade/en/freestudying/volmarketanalisys',
-          },
-          headline: 'Volume Analysis in Trading | ArapovTrade',
+          headline:
+            'Stablecoins and Tether: What They Are, Why a Trader Needs Them, and the Risk',
           description:
-            'Complete guide to market volume analysis. Volume Profile, Delta Volume, Footprint Charts and practical strategies for analyzing trading volumes.',
-          image:
-            'https://arapov.trade/assets/img/content/volmarketanalisys.webp',
-          datePublished: '2025-09-15T00:00:00+03:00',
-          dateModified: '2026-04-15T00:00:00Z',
-          inLanguage: 'en',
-          author: {
-            '@id': 'https://arapov.trade/en#person',
-          },
+            'What stablecoins are, how they hold the dollar peg, how USDT differs from algorithmic coins and what risks stablecoins carry.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
             '@id': 'https://arapov.trade/#organization',
             name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
-          video: {
-            '@type': 'VideoObject',
-            name: 'Индикатор объема - ключевой инструмент технического анализа',
-            description:
-              'Индикатор объема - ключевой инструмент технического анализа для трейдера. Разбираю основы объемного анализа: как читать объемы, определять дисбаланс спроса и предложения, находить Smart Money на рынке.',
-            thumbnailUrl: [
-              'https://img.youtube.com/vi/0pXHZRfVW9E/maxresdefault.jpg',
-              'https://img.youtube.com/vi/0pXHZRfVW9E/hqdefault.jpg',
-            ],
-            uploadDate: '2025-09-19T00:00:00+02:00',
-            duration: 'PT6M54S',
-            contentUrl: 'https://www.youtube.com/watch?v=0pXHZRfVW9E',
-            embedUrl: 'https://www.youtube.com/embed/0pXHZRfVW9E',
-            inLanguage: 'ru',
-            keywords:
-              'объемы в трейдинге, индикатор объема, анализ объемов, Smart Money, биржевой стакан',
-            hasPart: [
-              {
-                '@type': 'Clip',
-                name: 'Откуда берется объем на бирже',
-                startOffset: 39,
-                endOffset: 56,
-                url: 'https://www.youtube.com/watch?v=0pXHZRfVW9E&t=39',
-              },
-              {
-                '@type': 'Clip',
-                name: 'Биржевой стакан - что это и как работает',
-                startOffset: 56,
-                endOffset: 80,
-                url: 'https://www.youtube.com/watch?v=0pXHZRfVW9E&t=56',
-              },
-              {
-                '@type': 'Clip',
-                name: 'Механика движения цены на рынке',
-                startOffset: 80,
-                endOffset: 90,
-                url: 'https://www.youtube.com/watch?v=0pXHZRfVW9E&t=80',
-              },
-              {
-                '@type': 'Clip',
-                name: 'Как увидеть дисбаланс спроса и предложения',
-                startOffset: 90,
-                endOffset: 150,
-                url: 'https://www.youtube.com/watch?v=0pXHZRfVW9E&t=90',
-              },
-              {
-                '@type': 'Clip',
-                name: 'Анализ больших объемов профессионалов',
-                startOffset: 150,
-                endOffset: 160,
-                url: 'https://www.youtube.com/watch?v=0pXHZRfVW9E&t=150',
-              },
-              {
-                '@type': 'Clip',
-                name: 'Как правильно анализировать объемы',
-                startOffset: 160,
-                endOffset: 260,
-                url: 'https://www.youtube.com/watch?v=0pXHZRfVW9E&t=160',
-              },
-              {
-                '@type': 'Clip',
-                name: 'Логика Smart Money в трейдинге',
-                startOffset: 260,
-                endOffset: 316,
-                url: 'https://www.youtube.com/watch?v=0pXHZRfVW9E&t=260',
-              },
-              {
-                '@type': 'Clip',
-                name: 'Медвежий объем - объем продаж',
-                startOffset: 316,
-                endOffset: 327,
-                url: 'https://www.youtube.com/watch?v=0pXHZRfVW9E&t=316',
-              },
-              {
-                '@type': 'Clip',
-                name: 'Бычий объем - объем покупок',
-                startOffset: 327,
-                endOffset: 356,
-                url: 'https://www.youtube.com/watch?v=0pXHZRfVW9E&t=327',
-              },
-              {
-                '@type': 'Clip',
-                name: 'Захват ликвидности профессионалами',
-                startOffset: 356,
-                endOffset: 414,
-                url: 'https://www.youtube.com/watch?v=0pXHZRfVW9E&t=356',
-              },
-            ],
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': 'https://arapov.trade/en/freestudying/stablecoins-tether',
           },
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/stablecoins.webp',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Cryptocurrency',
+          keywords: 'stablecoin, USDT, Tether, USDC, DAI, dollar peg, depeg',
+          inLanguage: 'en',
         },
       ],
     };
@@ -375,18 +292,18 @@ export class HomeEnBlogEighteenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/en#person',
+      '@id': 'https://arapov.trade/#person',
       name: 'Igor Arapov',
       alternateName: [
         'Ігор Арапов',
-        'Арапов Игорь',
-        'I. Arapov',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/en',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -401,12 +318,12 @@ export class HomeEnBlogEighteenComponent implements OnInit {
         'https://t.me/ArapovTrade',
       ],
       jobTitle: [
-        'Independent researcher,',
-        'trader',
-        'author and founder of arapov.trade',
+        'Independent researcher',
+        'Trader',
+        'Author and founder of arapov.trade',
       ],
       description:
-        'Independent researcher, practicing trader, author of books on trading and scientific publications. Specializes in trading psychology and cognitive biases in financial markets.',
+        'Independent researcher, practising trader, author of trading books and scientific publications. Specialises in trading psychology and cognitive biases in financial markets.',
     };
 
     this.addJsonLdSchema(data);
@@ -422,42 +339,42 @@ export class HomeEnBlogEighteenComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'What is market volume analysis?',
+          name: 'What is a stablecoin in simple terms?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Volume analysis is a technical analysis method based on studying trading volumes. It helps identify the true intentions of large players and determine where they direct liquidity by analyzing the number of trades at different price levels.',
+            text: "It is a crypto coin deliberately held near a stable mark, usually near the dollar in a one-to-one proportion. It is needed to store and move value inside crypto without bitcoin's swings, and for a trader it serves both as a wallet for pauses and as a pair for settlements.",
           },
         },
         {
           '@type': 'Question',
-          name: 'What are the main volume analysis tools?',
+          name: 'How do USDT, USDC, and DAI differ?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Main tools include: Volume Profile (volume distribution by price), Delta Volume (difference between buys and sells), Footprint Charts (detailed order analysis), Open Interest (open positions on futures markets).',
+            text: "USDT is the largest and most liquid of all and rests on its issuer's reserves. USDC is issued by Circle, dollar-based too, but it wins on the openness of its reports. DAI stands apart: it is decentralized and relies not on dollars in a bank, but on crypto-collateral in smart contracts.",
           },
         },
         {
           '@type': 'Question',
-          name: 'How does volume confirm a trend?',
+          name: 'What backs USDT?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Rising trend with increasing volume confirms movement strength. Declining volume during price rise signals trend weakening. High volume on level breakout confirms its validity.',
+            text: "Behind it stand the issuer's live assets, and more than eighty percent of them are short US government bonds, the rest gold and other things. There is still no full guarantee, no insurance like a deposit either, so it is reasonable to hold in USDT only the share you would not be afraid to part with.",
           },
         },
         {
           '@type': 'Question',
-          name: 'How to distinguish true breakout from false one?',
+          name: 'Can a stablecoin issuer freeze your tokens?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'True breakout is accompanied by sharp volume increase and continued movement. False breakout is characterized by low volume or its decline after breakout, often leading to price returning to the range.',
+            text: 'Yes, for centralized coins. The issuer of USDT or USDC keeps the ability to freeze or blacklist tokens at any address, and both Circle and Tether have done so on sanctions and law-enforcement orders. It almost never touches an ordinary user, but it means a centralized stablecoin is an IOU from a company, not untouchable cash. A decentralized coin like DAI has no single freeze switch, but carries smart-contract risk instead.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Which platforms are best for volume analysis?',
+          name: 'What happened to UST in 2022?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Best platforms for volume analysis: TradingView (basic indicators), ATAS (professional order flow analysis), Bookmap (liquidity heatmaps). Choice depends on market and trading style.',
+            text: 'In spring 2022 the algorithmic UST broke off the dollar. Holders ran for the exit at once, a loop unwound: the token was burned, the linked LUNA swelled in volume, and within days both coins settled almost to zero. It is a textbook failure of an algorithmic scheme.',
           },
         },
       ],
@@ -473,39 +390,40 @@ export class HomeEnBlogEighteenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'How to Conduct Market Volume Analysis',
+      '@id': 'https://arapov.trade/en/freestudying/stablecoins-tether#howto',
+      name: 'How to understand and apply: stablecoins and Tether, what they are and the risk',
       description:
-        'Step-by-step process of analyzing market volumes for making trading decisions',
+        'A step-by-step breakdown of the topic and its practical use in trading',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Determine Market Context',
-          text: 'Assess current market phase: trend, range, or consolidation. Volume levels work differently depending on market conditions.',
+          name: "Understand what holds a stablecoin's peg to the dollar",
+          text: 'Stablecoin is a cryptocurrency whose price is pegged to a stable asset, most often to the US dollar at a rate of one to one.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Use Multiple Timeframe Analysis',
-          text: 'Analyze volumes on higher timeframes to identify global liquidity levels, on lower timeframes to find entry points.',
+          name: 'Compare USDT, USDC, and DAI',
+          text: 'Take the trio a trader meets most often, because it is in these that he holds cash and counts trades.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Find Key Volume Levels',
-          text: 'Use Volume Profile to identify POC (Point of Control) and volume accumulation zones where liquidity concentrates.',
+          name: 'Figure out what backs Tether in 2026',
+          text: 'USDT is the stablecoin of the company Tether with a one-to-one peg to the dollar, issued back in 2014 and over time becoming the largest in the world.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Analyze Delta Volume',
-          text: 'Evaluate the ratio of buys to sells. Positive delta indicates buyer dominance, negative indicates seller dominance.',
+          name: 'Know that a centralized issuer can freeze your tokens',
+          text: "A centralized stablecoin is an IOU from a company that can freeze or blacklist tokens at any address on a regulator's order, as Circle and Tether have both done.",
         },
         {
           '@type': 'HowToStep',
           position: 5,
-          name: 'Confirm Price Action Signals',
-          text: 'Combine volume analysis with candlestick patterns and support/resistance levels to improve entry accuracy.',
+          name: 'Account for depeg risk and hold a conscious share',
+          text: 'The word stable lulls your vigilance, and in vain, and the best lesson here was given by the collapse of TerraUSD in May 2022.',
         },
       ],
     };
@@ -520,68 +438,25 @@ export class HomeEnBlogEighteenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Volume Analysis Terms in Trading',
-      description: 'Glossary of key volume analysis terms in trading',
+      name: 'Glossary of article terms',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Volume Analysis',
+          name: 'stablecoin',
           description:
-            'Technical analysis method studying trading volumes to determine market participant activity and large player intentions',
+            'Stablecoin is a cryptocurrency whose price is pegged to a stable asset, most often to the US dollar at a rate of one to one.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Volume Profile',
+          name: 'USDT',
           description:
-            'Indicator showing distribution of trading volumes across different price levels over a specific period',
+            'USDT is the stablecoin of the company Tether with a one-to-one peg to the dollar, issued back in 2014 and over time becoming the largest in the world.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Delta Volume',
+          name: 'depeg',
           description:
-            'Difference between market buy and sell volume, showing real buyer or seller pressure',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'POC',
-          description:
-            'Point of Control — price level with maximum trading volume, often acting as a price attraction zone',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Footprint Charts',
-          description:
-            'Charts showing detailed volume distribution within each candle, broken down into buys and sells',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Open Interest',
-          description:
-            'Number of open positions in futures market, showing participant involvement in current trend',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Accumulation Zone',
-          description:
-            'Price range where large players gradually build positions before significant price movement',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Distribution Zone',
-          description:
-            'Price range where large players gradually close positions, preparing for trend reversal',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Tick Volume',
-          description:
-            'Number of price changes per time period, used in markets without centralized real volume tracking',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'VWAP',
-          description:
-            'Volume Weighted Average Price — volume-weighted average price showing fair asset value',
+            "The loss of a stablecoin's peg to its target price, when the coin trades meaningfully below or above one dollar; it can be a brief wobble in a panic or, for algorithmic coins, a total collapse.",
         },
       ],
     };

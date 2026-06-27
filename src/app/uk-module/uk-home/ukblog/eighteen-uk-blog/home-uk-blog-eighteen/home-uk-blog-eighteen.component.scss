@@ -1,5 +1,5 @@
 .hero-section {
-    background: url(/assets/img/content/volmarketanalisys.webp) no-repeat bottom right;
+    background: url(/assets/img/content/stablecoins.webp) no-repeat bottom right;
     background-size: 100% 100%;
     color: white;
     height: 250px;
@@ -79,24 +79,7 @@ h1 {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //main block!!!!!!!@!#!@#!@#!@#!@#!@#!
-  .author-page_main-block_title-block{
-    line-height: 40px;
-  }
 .free-courses_main-container{
     display: flex;
     width: 1170px;
@@ -105,9 +88,9 @@ h1 {
      margin-top: 70px; 
     //  margin-bottom: 150px;
 }
-    header h1 {
+    header h1 { 
         margin-top: 0;
-    }
+    }  
  .container main{
     width: 815px;
     margin: 0 !important;
@@ -296,7 +279,7 @@ width: 100%;
 width: 86%;
     text-align: center;
       font-size: 18px;
-      margin-bottom: 10px;
+      margin-bottom:10px;
 }
 .three-block{
     margin-top: 35px;
@@ -566,7 +549,6 @@ vertical-align: bottom;
 
 
 @media (min-width: 767px) and (max-width: 1200px) {
-  
 .container main{
   width: 100%;  
 }
@@ -706,18 +688,15 @@ width: 70%;
 
 
 
-.three-block{
-  line-height: 120%;
-}
 
 
 
 
 @media (max-width: 766px) {
-
 header{
   margin-top: 20px;
 }
+
 .container main{
   width: 100%;  
 }
@@ -824,4 +803,7 @@ letter-spacing: 0px;
 .three-block{
   line-height: 40px;
 }
+}.three-block{
+  line-height: 120%;
 }
+

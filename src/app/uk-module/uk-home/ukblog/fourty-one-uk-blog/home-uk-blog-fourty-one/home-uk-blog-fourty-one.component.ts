@@ -57,15 +57,16 @@ export class HomeUkBlogFourtyOneComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Правила успішного трейдингу: повний посібник | Arapov.trade',
+      'Трейдинг для початківців: з чого почати | Arapov.trade',
     );
-    this.meta.updateTag({ name: 'robots', content: 'index, follow' });this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
+    this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
 
-  this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Правила успішного трейдингу: торгова стратегія, ризик-менеджмент, емоційна дисципліна. Повний посібник для прибуткової торгівлі на фінансових ринках.',
+        'Трейдинг для початківців з нуля: як влаштовані ринки, які потрібні навички, перші кроки та типові помилки новачків. Гайд від Arapov.trade.',
     });
 
     this.gerRandom();
@@ -84,7 +85,6 @@ export class HomeUkBlogFourtyOneComponent implements OnInit {
       title: 'Базовий курс',
       link: 'https://arapov.trade/uk/freestudying/freeeducation',
     },
-     
   ];
 
   onGroupChange(event: Event) {
@@ -210,8 +210,9 @@ export class HomeUkBlogFourtyOneComponent implements OnInit {
     let index = this.artickleServ.ukrArtickles.findIndex(
       (a) => a.linkUkr == path,
     );
-
-    if (index == 1) {
+    console.log('path:', path);
+    console.log('index:', index);
+    if (index == 0) {
       nextpage =
         this.artickleServ.ukrArtickles[
           this.artickleServ.ukrArtickles.length - 1
@@ -273,28 +274,35 @@ export class HomeUkBlogFourtyOneComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          '@id':
-            'https://arapov.trade/uk/freestudying/successfultrading#article',
-          headline: 'Правила успішного трейдингу: повний посібник',
+          headline: 'Трейдинг з нуля для новачка: з чого почати у 2026 році',
           description:
-            'Комплексний посібник з успішного трейдингу: вибір стратегії, управління ризиками, контроль емоцій, вибір брокера.',
-          datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
-          author: {
-            '@id': 'https://arapov.trade/uk#person',
-          },
+            'Трейдинг для початківців з нуля: як влаштовані ринки, які потрібні навички, перші кроки та типові помилки новачків. Гайд від Arapov.trade.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
             '@id': 'https://arapov.trade/#organization',
-            name: 'Arapov.trade',
+            name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
-          image:
-            'https://arapov.trade/assets/img/content/successfultrading1.webp',
-          articleSection: 'Навчання трейдингу',
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': 'https://arapov.trade/uk/freestudying/trading-for-beginners',
+          },
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/tradingbasics.webp',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Трейдинг для початківців',
+          keywords:
+            'трейдинг для початківців, трейдинг з нуля, лонг і шорт, демо-рахунок, помилки новачків',
           inLanguage: 'uk',
         },
       ],
@@ -310,18 +318,18 @@ export class HomeUkBlogFourtyOneComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/uk#person',
-      name: 'Ігор Арапов',
+      '@id': 'https://arapov.trade/#person',
+      name: 'Igor Arapov',
       alternateName: [
-        'Igor Arapov',
-              'Арапов Игорь',
-              'I. Arapov',
-              'Игорь Арапов',
-              'І. В. Арапов',
-              'Арапов Ігор',
-              'Arapov Igor',
+        'Ігор Арапов',
+        'Игорь Арапов',
+        'Арапов Игорь',
+        'Арапов Ігор',
+        'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/uk',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -333,9 +341,13 @@ export class HomeUkBlogFourtyOneComponent implements OnInit {
         'https://github.com/ArapovTrade',
         'https://ua.linkedin.com/in/arapovtrade',
         'https://www.youtube.com/@ArapovTrade',
-        'https://t.me/ArapovTrade'
+        'https://t.me/ArapovTrade',
       ],
-       jobTitle: ['Незалежний дослідник', 'трейдер', 'автор і засновник arapov.trade'],
+      jobTitle: [
+        'Незалежний дослідник',
+        'трейдер',
+        'автор і засновник arapov.trade',
+      ],
       description:
         'Незалежний дослідник, практикуючий трейдер, автор книг з трейдингу та наукових публікацій. Спеціалізується на психології трейдингу та когнітивних упередженнях на фінансових ринках.',
     };
@@ -350,46 +362,53 @@ export class HomeUkBlogFourtyOneComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
-      '@id': 'https://arapov.trade/uk/freestudying/successfultrading#faq',
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'Яку торгову стратегію обрати новачку?',
+          name: 'Що таке трейдинг простими словами?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Новачкам рекомендується свінг-трейдинг на денних графіках. Цей стиль дає більше часу на аналіз та не вимагає постійної присутності біля терміналу.',
+            text: 'Це спосіб заробляти на русі ціни: берете актив дешевше, віддаєте дорожче, або навпаки в шорт. Від інвестицій відрізняється строком, тут хвилини і тижні, а не роки. І це ремесло з порогом входу, де прибуток проявляється лише на довгій череді угод.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Скільки капіталу ризикувати на одну угоду?',
+          name: 'З чого почати трейдинг новачкові у 2026 році?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Професійне правило: не більше 1-2% від депозиту на угоду. При капіталі 10000$ максимальний збиток — 100-200$.',
+            text: 'Спочатку теорія і вибір методу, потім тренування на демо до рівного плюса на серії, далі брокер під регуляцією і лише після цього невеликий живий рахунок зі стопом і скромним ризиком. На старті найважливіше не гнати і не ставити багато.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Чому важливий торговий журнал?',
+          name: 'Чим лонг відрізняється від шорта?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Журнал виявляє патерни помилок, допомагає оцінити ефективність стратегії та відстежити вплив емоцій на результати.',
+            text: 'Лонг це купівля з розрахунком на ріст ціни, шорт це продаж узятого в борг активу з розрахунком на падіння. Шорт складніший і небезпечніший для новачка: збиток у ньому теоретично не обмежений зверху, бо ціна вгору може йти скільки завгодно.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Як обрати надійного брокера?',
+          name: 'Скільки угод зі ста бувають збитковими?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Перевіряйте ліцензію регулятора, вивчайте відгуки, тестуйте на демо-рахунку, порівнюйте спреди та комісії.',
+            text: 'Мінусові угоди є й у робочої системи, грубо тридцять зі ста, і це норма. Небезпечніший розкид: червоні входи вміють іти чередою по пʼять-десять поспіль, і на великому ризику така смуга випалює рахунок, хоча по дистанції ви були б у плюсі.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Як контролювати емоції в трейдингу?',
+          name: 'Скільки часу потрібно, щоб стати стабільним трейдером?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Торгуйте за планом, використовуйте фіксований ризик, робіть перерви після збитків, ведіть щоденник емоцій.',
+            text: 'Не тижні, а роки практики. Сам метод береться за пару-трійку місяців, важче напрацювати витримку: триматися правил, не задирати ризик і не мстити ринку. Прискорюють дорогу практика і щоденник угод, а не гора переглянутих відео.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Чи можна швидко розбагатіти на трейдингу?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Ні. Це професія, а не каса швидких грошей: дохід приходить через навчання, дисципліну і час, а мисливці за легким зазвичай його і втрачають. Прибуткова торгівля нудна на вигляд, це повтор одних і тих самих кроків за правилами.',
           },
         },
       ],
@@ -405,38 +424,82 @@ export class HomeUkBlogFourtyOneComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      '@id': 'https://arapov.trade/uk/freestudying/successfultrading#howto',
-      name: 'Як стати успішним трейдером',
+      '@id': 'https://arapov.trade/uk/freestudying/trading-for-beginners#howto',
+      name: 'Як почати трейдинг з нуля новачкові',
+      description:
+        'Покроковий шлях початківця: від розуміння основ до переходу на реальний рахунок',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Оберіть стратегію',
-          text: 'Визначте стиль торгівлі: скальпінг, дейтрейдинг, свінг або позиційна торгівля.',
+          name: 'Що таке трейдинг простими словами',
+          text: 'Трейдинг це робота з фінансовими активами: їх купують і продають, щоб заробити на русі ціни.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Впровадьте ризик-менеджмент',
-          text: 'Встановіть правило 1-2% ризику на угоду. Завжди використовуйте стоп-лоси.',
+          name: 'Чи варто взагалі йти в трейдинг і кому він не підходить',
+          text: 'Перш ніж учитися як, чесно дайте собі відповідь на питання чи варто.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Опануйте аналіз',
-          text: 'Вивчіть технічний і фундаментальний аналіз. Комбінуйте методи.',
+          name: 'Лонг і шорт: як заробляють на зростанні і на падінні',
+          text: 'Заробити в трейдингу можна в обидва боки, і це перше, що варто вкласти в голову.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Розвивайте дисципліну',
-          text: 'Торгуйте за планом. Ведіть торговий журнал. Контролюйте емоції.',
+          name: 'Який метод обрати новачкові: чому я дивлюся обсяг, а не індикатори',
+          text: 'Метод це те, на що ви дивитеся, коли вирішуєте, купувати чи продавати.',
         },
         {
           '@type': 'HowToStep',
           position: 5,
-          name: 'Постійно навчайтесь',
-          text: 'Аналізуйте угоди, вивчайте нові методики, адаптуйтесь до змін ринку.',
+          name: 'Що торгувати новачкові: один інструмент замість десяти',
+          text: 'Найчастіша помилка на старті щодо вибору це розпорошення: новачок одночасно дивиться акції, крипту, валюту і десяток монет.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 6,
+          name: 'Як почати торгувати на біржі: покроковий шлях',
+          text: 'Дорогу новачка я ділю на щаблі, і важливіша тут не швидкість, а черговість.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 7,
+          name: 'Скільки грошей потрібно для старту і яка дохідність реальна',
+          text: 'Питання з якої суми заходити новачок ставить першим, хоча на старті воно не головне.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 8,
+          name: 'Як влаштована одна угода: вхід, стоп і точка виходу',
+          text: 'Раз мова дійшла до реального рахунку, розберемо, з чого взагалі складається одна угода.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 9,
+          name: 'Демо-рахунок: чого він реально вчить, а чого ні',
+          text: 'Демо це інструмент, який хвалять усі, але мало хто чесно говорить про його межі.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 10,
+          name: 'Головні помилки новачків, через які втрачають депозит',
+          text: 'Рік за роком картина втрат одна: ринок майже не винен, джерело сидить у самій людині.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 11,
+          name: 'Самонавчання трейдингу: дорожня карта і щоденник угод',
+          text: 'Опанувати торгівлю самотужки реально, я живе тому підтвердження.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 12,
+          name: 'Що відрізняє успішного трейдера і скільки займає шлях',
+          text: 'Від відповіді чекають якогось секрету чи диво-стратегії.',
         },
       ],
     };
@@ -451,63 +514,37 @@ export class HomeUkBlogFourtyOneComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      '@id': 'https://arapov.trade/uk/freestudying/successfultrading#glossary',
-      name: 'Глосарій трейдингу',
+      name: 'Глосарій термінів статті',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Ризик-менеджмент',
+          name: 'Трейдинг',
           description:
-            'Система управління торговими ризиками через контроль розміру позицій.',
+            'Купівля і продаж фінансових активів з метою заробити на зміні їхньої ціни на короткому горизонті.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Стоп-лос',
+          name: 'Лонг',
           description:
-            'Захисний ордер для автоматичного закриття збиткової позиції.',
+            'Довга позиція: купівля активу з розрахунком на ріст його ціни і заробіток на цьому рості.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Тейк-профіт',
-          description: 'Ордер для автоматичної фіксації прибутку.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Свінг-трейдинг',
+          name: 'Шорт',
           description:
-            'Стиль торгівлі з утриманням позицій від кількох днів до тижнів.',
+            'Коротка позиція: продаж узятого в борг активу з розрахунком викупити його дешевше після падіння ціни.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Скальпінг',
-          description: 'Короткострокова торгівля з безліччю угод за сесію.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Таймфрейм',
-          description: 'Часовий інтервал для відображення цінових даних.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Спред',
-          description: 'Різниця між ціною купівлі та продажу активу.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Кредитне плече',
+          name: 'Демо-рахунок',
           description:
-            "Інструмент для збільшення торгового об'єму за рахунок позикових коштів.",
+            'Тренувальний рахунок з віртуальними грошима і реальними котируваннями, на якому відпрацьовують торгівлю без ризику для капіталу.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Торговий журнал',
-          description: 'Записи про угоди для аналізу ефективності системи.',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Risk-to-Reward',
+          name: 'Усереднення збитку',
           description:
-            'Співвідношення потенційного збитку до потенційного прибутку.',
+            'Долив до збиткової позиції замість закриття за стопом у надії відігратися, через що трейдер збільшує ризик і втрати.',
         },
       ],
     };

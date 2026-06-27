@@ -55,15 +55,15 @@ export class HomeEnBlogTwentyOneComponent implements OnInit {
     this.checkedGroup = this.artickleServ.selectedGroups;
 
     this.titleService.setTitle(
-      'Market Maker in Trading: Complete Guide | Arapov.trade',
+      'Solana (SOL): Cryptocurrency Guide | Arapov.trade',
     );
-    this.meta.updateTag({ name: 'datePublished', content: '2025-01-30' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Market Maker in Trading: who they are, how they operate, and how to use their strategies in your trading. Complete guide by Igor Arapov.',
+        'What Solana is, how the SOL blockchain works, its DeFi and NFT ecosystem, the speed advantages and the risks for traders and investors.',
     });
 
     this.gerRandom();
@@ -250,36 +250,35 @@ export class HomeEnBlogTwentyOneComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          headline: 'Market Maker in Trading: Complete Guide',
+          headline: 'Solana (SOL) in Trading: Analysis and Characteristics',
           description:
-            'Market Maker in Trading: who they are, how they operate, and how to use their strategies in your trading.',
-          image: 'https://arapov.trade/assets/img/content/marketmaker1.webp',
-          datePublished: '2026-03-15T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
-          author: {
-            '@id': 'https://arapov.trade/en#person',
-          },
+            'What Solana is, how the SOL blockchain works, its DeFi and NFT ecosystem, the speed advantages and the risks for traders and investors.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'Arapov Trade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
             url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://arapov.trade/en/freestudying/marketmaker',
+            '@id': 'https://arapov.trade/en/freestudying/solana-guide',
           },
-          articleSection: 'Trading Education',
-          keywords: [
-            'market maker',
-            'liquidity provider',
-            'market manipulation',
-            'Smart Money',
-            'order flow',
-          ],
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/sol1.jpg',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Cryptocurrency',
+          keywords: 'solana',
+          inLanguage: 'en',
         },
       ],
     };
@@ -294,19 +293,18 @@ export class HomeEnBlogTwentyOneComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/en#person',
+      '@id': 'https://arapov.trade/#person',
       name: 'Igor Arapov',
       alternateName: [
         'Ігор Арапов',
-        'Арапов Игорь',
-        'I. Arapov',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-
-      url: 'https://arapov.trade/en',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -321,12 +319,12 @@ export class HomeEnBlogTwentyOneComponent implements OnInit {
         'https://t.me/ArapovTrade',
       ],
       jobTitle: [
-        'Independent researcher,',
-        'trader',
-        'author and founder of arapov.trade',
+        'Independent researcher',
+        'Trader',
+        'Author and founder of arapov.trade',
       ],
       description:
-        'Independent researcher, practicing trader, author of books on trading and scientific publications. Specializes in trading psychology and cognitive biases in financial markets.',
+        'Independent researcher, practising trader, author of trading books and scientific publications. Specialises in trading psychology and cognitive biases in financial markets.',
     };
 
     this.addJsonLdSchema(data);
@@ -342,42 +340,50 @@ export class HomeEnBlogTwentyOneComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'What is a market maker in simple terms?',
+          name: 'What is Solana in simple terms?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'A market maker is a major market participant (bank, hedge fund, or specialized firm) that provides liquidity by continuously placing buy and sell orders. Thanks to market makers, traders can execute trades quickly at fair prices without significant slippage.',
+            text: 'It is a fast blockchain and its token SOL, launched in 2020. The network bets on high speed and cheap fees, so there are many DeFi applications, NFTs, and memecoins on it. For a trader SOL is a large but very volatile asset.',
           },
         },
         {
           '@type': 'Question',
-          name: 'How do market makers make money?',
+          name: 'How does Solana differ from Ethereum?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Market makers profit from several sources: the spread between bid and ask prices, rebates from exchanges for providing liquidity, and directional trading based on order flow analysis and informational advantages.',
+            text: "Solana is faster and cheaper in fees, but there are questions about its network's reliability because of past outages. Ethereum is slower and pricier, but is considered more established and decentralized. These are different bets: performance against reliability.",
           },
         },
         {
           '@type': 'Question',
-          name: 'Do market makers manipulate the market?',
+          name: 'What is SOL used for and can you stake it?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Market makers use various liquidity management techniques that may appear as manipulation: creating false breakouts, stop hunting, and spoofing. However, their primary function is providing liquidity, not manipulating prices against retail traders.',
+            text: "SOL pays the network's fees and is used for staking, where you lock it with a validator to help secure the network and earn a reward. The reward comes from new issuance, so it is not free money: you lock the coin, you carry validator risk, and unlike bitcoin SOL has no hard supply cap.",
           },
         },
         {
           '@type': 'Question',
-          name: 'How to identify market maker activity on charts?',
+          name: 'How do you analyze SOL?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Signs of market maker activity: volume spikes without price movement, false breakouts with quick reversals, long candle wicks at key levels, unusual activity during low liquidity periods, sudden spread widening.',
+            text: "I read it by market structure and key levels, not by indicators. Round psychological marks work well. I check the real volume on CME futures, because the volume of unregulated crypto exchanges can't be trusted.",
           },
         },
         {
           '@type': 'Question',
-          name: 'How to trade alongside market makers?',
+          name: 'What are the risks of trading Solana?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'To trade in the direction of market makers: analyze volume for position accumulation, avoid entries at obvious levels, wait for confirmation after false breakouts, place stops beyond liquidity hunting zones.',
+            text: 'High volatility: SOL drops harder than the market on a fall. Plus a history of network outages and thin liquidity in moments of panic. So it is worth holding a small position and laying in risk in advance, not climbing in on hype.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What is Proof of History in Solana?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: "It is Solana's cryptographic clock: a mechanism that stamps transactions with a time and lines them up in order in advance, before validators reach consensus. On top of Proof of Stake it lets the network process thousands of transactions per second at a very low fee. The flip side of this chase for speed is load-driven outages that have stalled the network several times.",
           },
         },
       ],
@@ -393,39 +399,40 @@ export class HomeEnBlogTwentyOneComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'How to Identify and Trade with Market Maker Activity',
+      '@id': 'https://arapov.trade/en/freestudying/solana-guide#howto',
+      name: 'How to understand and apply: Solana in trading, analysis and characteristics',
       description:
-        'Step-by-step guide to detecting market maker actions and using this information to improve trading results.',
+        'A step-by-step breakdown of the topic and its practical use in trading',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Volume Analysis',
-          text: 'Study volume indicators using Volume Profile and Delta Volume. Look for anomalies: high volume without price movement indicates position accumulation by market makers.',
+          name: 'What is Solana and how does it differ from Ethereum?',
+          text: 'Solana is a high-speed blockchain and its token SOL, launched in 2020 by the team of Anatoly Yakovenko, a former Qualcomm engineer.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Identify Key Levels',
-          text: 'Mark liquidity zones: areas beyond obvious support and resistance levels where retail traders place stop orders.',
+          name: "Under Solana's hood: Proof of History, speed, and the price for it",
+          text: "Solana's speed comes from Proof of History on top of Proof of Stake: thousands of TPS and cheap fees, but that same chase for speed is the cause of network outages.",
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Watch for False Breakouts',
-          text: 'Monitor breakouts of key levels. If price quickly returns to the range after a breakout, it signals liquidity collection by market makers.',
+          name: 'What SOL is for: fees, staking, and supply',
+          text: "SOL is the network's working token: it pays the fees, it secures the chain through staking, and its supply has no hard cap.",
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Confirm Entry',
-          text: 'Wait for confirming signals before entry: candlestick patterns, delta volume changes, level retests without new breakouts.',
+          name: 'Technical analysis of SOL: levels and market structure',
+          text: 'I invent no special magic for SOL, I read it with the same eyes as a futures contract or gold.',
         },
         {
           '@type': 'HowToStep',
           position: 5,
-          name: 'Position Management',
-          text: 'Place stop-losses beyond obvious liquidity zones. Use ATR to calculate safe stop distance.',
+          name: 'Risks of trading Solana: volatility and liquidity',
+          text: 'Here it is important to soberly understand what you are getting into.',
         },
       ],
     };
@@ -440,67 +447,19 @@ export class HomeEnBlogTwentyOneComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Market Making Terminology Glossary',
+      name: 'Glossary of article terms',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Market Maker',
+          name: 'Solana',
           description:
-            'A major market participant providing liquidity by continuously placing buy and sell orders for assets',
+            'Solana is a high-speed blockchain and its token SOL, launched in 2020 by the team of Anatoly Yakovenko, a former Qualcomm engineer.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Liquidity',
+          name: 'Proof of History',
           description:
-            "The market's ability to facilitate quick trade execution without significantly impacting asset price",
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Spread',
-          description:
-            'The difference between the best bid price and best ask price for an asset',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'False Breakout',
-          description:
-            'A short-term price movement beyond a key level followed by quick return to the previous range',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Stop Hunting',
-          description:
-            'Price movement toward zones of clustered stop orders to trigger them and collect liquidity',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Spoofing',
-          description:
-            'Placing large fictitious orders to create illusion of demand or supply with subsequent cancellation',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Order Flow',
-          description:
-            'Analysis of the sequence and volume of market orders to understand participant intentions',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Volume Profile',
-          description:
-            'An analysis tool displaying volume distribution across price levels over a specific period',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Delta Volume',
-          description:
-            'The difference between buying and selling volume at a specific price level',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'HFT',
-          description:
-            'High-Frequency Trading using algorithms to execute trades in milliseconds',
+            'Proof of History is a Solana mechanism that stamps transactions with a time and lines them up in order before validators reach consensus; on top of Proof of Stake it gives the network its high speed.',
         },
       ],
     };

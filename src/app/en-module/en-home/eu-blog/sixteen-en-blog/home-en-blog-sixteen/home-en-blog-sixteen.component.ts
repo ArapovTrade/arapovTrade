@@ -54,20 +54,17 @@ export class HomeEnBlogSixteenComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Trend Channels in Trading: How to Build and Trade | Arapov.trade',
+      'How to Analyze and Trade Ethereum (ETH) | Arapov.trade',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Trend Channels in Trading: comprehensive guide to construction, types, and trading strategies. Learn how to use price channels for profitable trading in Forex, stocks, and cryptocurrencies.',
+        'What Ethereum is, how smart contracts and dApps work, how ETH differs from bitcoin and what prospects the network has.',
     });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-04-15' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-04-15' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/trandingchannels.webp',
-    });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
+
     this.gerRandom();
   }
   randomArticleRus: any = [];
@@ -253,40 +250,34 @@ export class HomeEnBlogSixteenComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          mainEntityOfPage: {
-            '@type': 'WebPage',
-            '@id': 'https://arapov.trade/en/freestudying/trandingchannels',
-          },
-          headline:
-            'Trend Channels in Trading: Complete Guide to Construction and Trading Strategies',
+          headline: 'Ethereum in Trading: How to Analyze ETH',
           description:
-            'Comprehensive guide to trend channels: channel types, construction methods, trading strategies, and practical recommendations for traders of all skill levels.',
-          image:
-            'https://arapov.trade/assets/img/content/trandingchannels.webp',
-
-          datePublished: '2025-04-15T00:00:00Z',
-          dateModified: '2026-04-15T00:00:00Z',
-          author: {
-            '@id': 'https://arapov.trade/en#person',
-          },
+            'What Ethereum is, how smart contracts and dApps work, how ETH differs from bitcoin and what prospects the network has.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
-            name: 'Arapov.trade',
+            '@id': 'https://arapov.trade/#organization',
+            name: 'Arapov.Trade',
+            url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
-            url: 'https://arapov.trade',
           },
-          articleSection: 'Technical Analysis',
-          keywords: [
-            'trend channels',
-            'price channel',
-            'technical analysis',
-            'support line',
-            'resistance line',
-          ],
-          wordCount: 1650,
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': 'https://arapov.trade/en/freestudying/ethereum-guide',
+          },
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/ethereum.webp',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Cryptocurrency',
+          keywords: 'ethereum',
           inLanguage: 'en',
         },
       ],
@@ -302,18 +293,18 @@ export class HomeEnBlogSixteenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/en#person',
+      '@id': 'https://arapov.trade/#person',
       name: 'Igor Arapov',
       alternateName: [
         'Ігор Арапов',
-        'Арапов Игорь',
-        'I. Arapov',
         'Игорь Арапов',
-        'І. В. Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/en',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -328,12 +319,12 @@ export class HomeEnBlogSixteenComponent implements OnInit {
         'https://t.me/ArapovTrade',
       ],
       jobTitle: [
-        'Independent researcher,',
-        'trader',
-        'author and founder of arapov.trade',
+        'Independent researcher',
+        'Trader',
+        'Author and founder of arapov.trade',
       ],
       description:
-        'Independent researcher, practicing trader, author of books on trading and scientific publications. Specializes in trading psychology and cognitive biases in financial markets.',
+        'Independent researcher, practising trader, author of trading books and scientific publications. Specialises in trading psychology and cognitive biases in financial markets.',
     };
 
     this.addJsonLdSchema(data);
@@ -349,42 +340,50 @@ export class HomeEnBlogSixteenComponent implements OnInit {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'What is a trend channel in trading?',
+          name: 'How does Ethereum differ from Bitcoin?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'A trend channel is a technical analysis tool consisting of two parallel lines that contain price movement. The lower line (support) connects local lows, while the upper line (resistance) connects highs. Channels help determine trend direction and identify optimal entry points.',
+            text: 'Bitcoin is first of all digital money with an emission cap of 21 million coins. Ethereum is a platform for smart contracts and applications, and its coin ETH also pays for operations in the network. <strong>In short:  </strong> bitcoin is about storing value, ether is about programmability.',
           },
         },
         {
           '@type': 'Question',
-          name: 'What types of trend channels exist?',
+          name: 'What is a smart contract in simple terms?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'There are three main types: ascending channel (bullish trend with rising highs and lows), descending channel (bearish trend with declining extremes), and horizontal channel (range-bound sideways movement within a defined price band).',
+            text: 'It is a self-executing program on the blockchain that runs by itself when its conditions are met, with no person and no off-switch in the middle. Like a vending machine: the right input gives a guaranteed output. DeFi, NFTs and stablecoins are all built from such contracts, and every action on them is paid for in ETH.',
           },
         },
         {
           '@type': 'Question',
-          name: 'How do you properly construct a trend channel?',
+          name: 'How do you analyze Ethereum?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'For an ascending channel: identify two consecutive lows (second higher than first), connect them with a support line, then draw a parallel resistance line through the high between them. For descending channels, use the same approach but start with highs.',
+            text: "Just like any market: through support and resistance levels and through volume. I look for the traces of large capital and false breakouts. The only caveat is that volumes on unregulated exchanges can't be trusted blindly.",
           },
         },
         {
           '@type': 'Question',
-          name: 'What trading strategies work with trend channels?',
+          name: 'Why is the ETH/BTC ratio important?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Two primary strategies: range trading within the channel (buying at support, selling at resistance) and breakout trading (entering after a candle closes beyond the channel boundary with volume confirmation). Experienced traders often combine both approaches.',
+            text: 'Because ether depends heavily on bitcoin and often moves after it. The ratio of ETH to BTC shows relative strength: rising means ether is stronger than the market, falling means weaker. It is useful context before a trade.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Which timeframes work best for trend channels?',
+          name: 'What are the risks of trading Ethereum?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Higher timeframes provide more reliable signals: daily (D1), weekly (W1), and monthly (MN). They filter market noise and reveal significant price movements. Lower timeframes (M5, H1) suit scalping but require additional confirmation.',
+            text: "High volatility, dependence on bitcoin, and thinner liquidity than BTC's, plus regulatory and technical risks. That is why risk control, a stop-loss, and entering only with funds you can afford to lose are especially important.",
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What is gas in Ethereum and why do fees spike?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Gas is the payment for every operation in the network, counted in gwei (fractions of ETH). The size of the fee depends on the network load: the more people want to push transactions through, the dearer the gas. So at peak hours transfers and trades cost noticeably more, and sharp spikes in fees usually coincide with surges of activity in the network.',
           },
         },
       ],
@@ -400,39 +399,46 @@ export class HomeEnBlogSixteenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      name: 'How to Build and Use a Trend Channel',
+      '@id': 'https://arapov.trade/en/freestudying/ethereum-guide#howto',
+      name: 'How to understand and apply: Ethereum in trading and how to analyze ETH',
       description:
-        'Step-by-step instructions for constructing a trend channel and applying it in trading',
+        'A step-by-step breakdown of the topic and its practical use in trading',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Identify the Trend Direction',
-          text: 'Analyze the chart to determine whether price is forming higher highs and lows (uptrend), lower highs and lows (downtrend), or moving horizontally (sideways).',
+          name: 'What is Ethereum and how does it differ from Bitcoin?',
+          text: 'Ethereum is a decentralized blockchain platform for smart contracts and applications, with its own coin ETH that works both as an asset and as the payment for operations in the network.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Locate Key Reference Points',
-          text: 'For an uptrend, find at least two consecutive swing lows where the second is higher than the first. For a downtrend, find two swing highs where the second is lower than the first.',
+          name: 'What defines ETH: smart contracts, gas, staking, and The Merge',
+          text: 'Four pillars of ETH: smart contracts, gas (the payment for operations), staking, and The Merge (the move to Proof of Stake).',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Draw the Primary Line',
-          text: 'Connect the identified points with a straight line. In an ascending channel, this becomes the support line; in a descending channel, it becomes the resistance line.',
+          name: 'Smart contracts: what they are and why their bugs are dangerous',
+          text: 'A smart contract is self-executing code with no off-switch, and once it is live its bugs usually cannot be patched.',
         },
         {
           '@type': 'HowToStep',
           position: 4,
-          name: 'Add the Parallel Line',
-          text: 'Find the extreme point between your reference points and draw a line through it parallel to the primary line. Verify that both lines form a clear channel structure.',
+          name: 'Technical analysis of Ethereum: levels and volumes',
+          text: 'Good news for a trader: ETH is the same kind of chart as any other, and it trades by the same laws of supply and demand.',
         },
         {
           '@type': 'HowToStep',
           position: 5,
-          name: 'Apply the Channel in Trading',
-          text: 'Use channel boundaries for entries: buy near support in uptrends, sell near resistance in downtrends. When price breaks through a boundary with volume, enter in the breakout direction.',
+          name: 'ETH/BTC correlation: how the ratio affects trading',
+          text: 'The main thing to keep in mind when trading ETH: it depends heavily on bitcoin.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 6,
+          name: 'Risks of trading Ethereum: liquidity and volatility',
+          text: 'The risks of ETH are the same as those of all crypto, only it is useful to know them well.',
         },
       ],
     };
@@ -447,67 +453,31 @@ export class HomeEnBlogSixteenComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      name: 'Trend Channel Terminology Glossary',
+      name: 'Glossary of article terms',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Trend Channel',
+          name: 'Ethereum',
           description:
-            'A technical analysis tool consisting of two parallel lines that contain price movement within a trend',
+            'Ethereum is a decentralized blockchain platform for smart contracts and applications, with its own coin ETH that works both as an asset and as the payment for operations in the network.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Support Line',
+          name: 'gas (the gas fee)',
           description:
-            'The lower boundary of a channel connecting local price lows where buyers typically become active',
+            'Gas (the gas fee) is the payment for every operation in the Ethereum network, measured in gwei; under heavy network load the fee rises.',
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Resistance Line',
+          name: 'The Merge',
           description:
-            'The upper boundary of a channel connecting local price highs where sellers begin to dominate',
+            "The Merge is Ethereum's move in September 2022 from mining (Proof of Work) to staking (Proof of Stake), which sharply cut the network's energy use.",
         },
         {
           '@type': 'DefinedTerm',
-          name: 'Ascending Channel',
+          name: 'smart contract',
           description:
-            'A price channel sloping upward characterizing a bullish trend with rising highs and lows',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Descending Channel',
-          description:
-            'A price channel sloping downward characterizing a bearish trend with declining extremes',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Horizontal Channel',
-          description:
-            'A sideways price range without a pronounced trend, also known as consolidation or ranging market',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Channel Breakout',
-          description:
-            'Price movement beyond a channel boundary with a candle close outside the line, signaling potential trend change',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Level Retest',
-          description:
-            'Price returning to a broken channel line to test it before continuing the movement',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Touch Point',
-          description:
-            'An instance when price reaches a channel boundary and reverses, confirming the boundary significance',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'False Breakout',
-          description:
-            'A brief price excursion beyond a channel boundary followed by a return inside the range',
+            'A smart contract is a self-executing program stored on the blockchain that runs automatically when its conditions are met, with no intermediary and no off-switch, and whose code usually cannot be changed once it is deployed.',
         },
       ],
     };

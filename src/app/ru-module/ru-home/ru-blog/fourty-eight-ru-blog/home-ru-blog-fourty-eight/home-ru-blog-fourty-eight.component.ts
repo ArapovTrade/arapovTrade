@@ -57,20 +57,17 @@ export class HomeRuBlogFourtyEightComponent implements OnInit {
     this.updateArticleCounts();
     this.checkedGroup = this.artickleServ.selectedGroups;
     this.titleService.setTitle(
-      'Самостоятельное обучение трейдингу: полное руководство для начинающих | Игорь Арапов',
+      'Волны Эллиотта: основы и структура | Arapov.trade',
     );
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
     this.meta.updateTag({
       name: 'description',
       content:
-        'Полное руководство по самостоятельному обучению трейдингу: от базовых понятий до профессиональных стратегий. Практические советы для начинающих трейдеров.',
+        'Теория волн Эллиотта: импульсы и коррекции, структура из пяти и трёх волн, принципы разметки и ограничения метода в реальной торговле.',
     });
-    this.meta.updateTag({ name: 'datePublished', content: '2025-04-03' });
-    this.meta.updateTag({ name: 'dateModified', content: '2026-06-04' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content: '/assets/img/content/selfstudying.webp',
-    });
+    this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
+    this.meta.updateTag({ name: 'dateModified', content: '2026-06-25' });
+
     this.gerRandom();
   }
   randomArticleRus: any = [];
@@ -278,39 +275,35 @@ export class HomeRuBlogFourtyEightComponent implements OnInit {
       '@graph': [
         {
           '@type': 'Article',
-          '@id': 'https://arapov.trade/ru/freestudying/selfstudying#article',
-          headline:
-            'Самостоятельное обучение трейдингу: полное руководство для начинающих',
+          headline: 'Волны Эллиотта в трейдинге: что это и как применять',
           description:
-            'Полное руководство по самостоятельному обучению трейдингу: от базовых понятий до профессиональных стратегий. Практические советы для начинающих трейдеров.',
-          image: 'https://arapov.trade/assets/img/content/selfstudying1.webp',
-          datePublished: '2025-06-04T00:00:00Z',
-          dateModified: '2026-06-04T00:00:00Z',
-          author: {
-            '@id': 'https://arapov.trade/ru#person',
-          },
+            'Теория волн Эллиотта: импульсы и коррекции, структура из пяти и трёх волн, принципы разметки и ограничения метода в реальной торговле.',
+          author: { '@id': 'https://arapov.trade/#person' },
           publisher: {
             '@type': 'Organization',
             '@id': 'https://arapov.trade/#organization',
-            name: 'Arapov Trade',
+            name: 'Arapov.Trade',
             url: 'https://arapov.trade',
             logo: {
               '@type': 'ImageObject',
               url: 'https://arapov.trade/assets/img/favicon.ico',
             },
           },
+          datePublished: '2026-06-25T00:00:00Z',
+          dateModified: '2026-06-25T00:00:00Z',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://arapov.trade/ru/freestudying/selfstudying',
+            '@id': 'https://arapov.trade/ru/freestudying/elliott-waves',
           },
-          articleSection: 'Обучение трейдингу',
-          keywords: [
-            'самостоятельное обучение',
-            'трейдинг для начинающих',
-            'как начать торговать',
-            'обучение торговле',
-            'демо-счёт',
-          ],
+          image: {
+            '@type': 'ImageObject',
+            url: 'https://arapov.trade/assets/img/content/wavesofelliott.webp',
+            width: 1200,
+            height: 630,
+          },
+          articleSection: 'Технический анализ',
+          keywords: 'волновая теория эллиотта',
+          inLanguage: 'ru',
         },
       ],
     };
@@ -325,18 +318,18 @@ export class HomeRuBlogFourtyEightComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      '@id': 'https://arapov.trade/ru#person',
-      name: 'Игорь Арапов',
+      '@id': 'https://arapov.trade/#person',
+      name: 'Igor Arapov',
       alternateName: [
-        'Igor Arapov',
-        'Арапов Игорь',
-        'I. Arapov',
         'Ігор Арапов',
-        'І. В. Арапов',
+        'Игорь Арапов',
+        'Арапов Игорь',
         'Арапов Ігор',
         'Arapov Igor',
+        'I. Arapov',
+        'І. В. Арапов',
       ],
-      url: 'https://arapov.trade/ru',
+      url: 'https://arapov.trade/',
       image:
         'https://arapov.trade/assets/redesignArapovTrade/img/imageAuthor-light.png',
       sameAs: [
@@ -369,46 +362,37 @@ export class HomeRuBlogFourtyEightComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
-      '@id': 'https://arapov.trade/ru/freestudying/selfstudying#faq',
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'Можно ли научиться трейдингу самостоятельно без курсов?',
+          name: 'Что такое волны Эллиотта простыми словами?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Да, самостоятельное обучение трейдингу вполне возможно. Многие успешные трейдеры начинали именно так. Главное — систематический подход: изучение терминологии, освоение технического и фундаментального анализа, практика на демо-счёте и постепенный переход к реальной торговле с минимальными суммами.',
+            text: 'Это теория, по которой рынок движется повторяющимися циклами из восьми волн: пять в сторону тренда и три против. В её основе психология толпы. Полезна как взгляд на настроение рынка, но не как точный прогноз.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Сколько времени нужно для освоения трейдинга?',
+          name: 'Какие три главных правила волн Эллиотта?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Базовые навыки можно освоить за 3-6 месяцев интенсивного обучения. Однако для стабильной прибыльной торговли требуется 1-2 года практики. Скорость обучения зависит от количества времени, которое вы готовы посвящать изучению рынка и анализу своих сделок.',
+            text: 'Вторая волна не опускается ниже начала первой. Третья никогда не бывает самой короткой среди импульсных. Четвёртая не заходит на ценовую территорию первой. Если хоть одно правило нарушено, разметка неверна.',
           },
         },
         {
           '@type': 'Question',
-          name: 'С какой суммы лучше начинать торговать?',
+          name: 'Как связаны волны Эллиотта и Фибоначчи?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Рекомендуется начинать с суммы, потерю которой вы можете себе позволить — обычно это $100-500. Сначала отработайте стратегию на демо-счёте минимум 1-2 месяца, затем переходите на реальный счёт с минимальным депозитом, рискуя не более 1-2% капитала на сделку.',
+            text: 'Уровни Фибоначчи используют как ориентиры: коррекции часто ложатся в диапазон от 38 до 62 процентов, а цель третьей волны нередко около 162 процентов длины первой. Но это ориентиры вероятности, а не гарантия.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Какой рынок лучше выбрать для начала?',
+          name: 'Почему волны Эллиотта критикуют?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Для начинающих оптимален рынок Форекс благодаря высокой ликвидности, низким спредам и обилию обучающих материалов. Популярные валютные пары вроде EUR/USD имеют предсказуемые движения. После освоения Форекса можно переходить к фондовому рынку или криптовалютам.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Как контролировать эмоции в трейдинге?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Контроль эмоций достигается через строгое следование торговому плану, использование стоп-лоссов, ограничение дневных убытков и регулярные перерывы. Важно вести дневник сделок для анализа ошибок и не торговать в состоянии стресса или после серии убытков.',
+            text: 'За субъективность: один график десять аналитиков размечают по-разному, а сами волны легко подгоняются задним числом. В правом краю графика, где принимается решение, ясности обычно нет. Поэтому я предпочитаю уровни и объём.',
           },
         },
       ],
@@ -424,51 +408,28 @@ export class HomeRuBlogFourtyEightComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
-      '@id': 'https://arapov.trade/ru/freestudying/selfstudying#howto',
-      name: 'Как самостоятельно научиться трейдингу',
+      '@id': 'https://arapov.trade/ru/freestudying/elliott-waves#howto',
+      name: 'Как разобраться и применять: Волны Эллиотта в трейдинге: что это и как применять',
       description:
-        'Пошаговое руководство по освоению трейдинга без платных курсов',
-      totalTime: 'P6M',
-      estimatedCost: {
-        '@type': 'MonetaryAmount',
-        currency: 'USD',
-        value: '100-500',
-      },
+        'Пошаговый разбор темы и её практическое применение в торговле',
       step: [
         {
           '@type': 'HowToStep',
           position: 1,
-          name: 'Изучите базовую терминологию',
-          text: 'Освойте ключевые понятия: лонг, шорт, спред, ликвидность, волатильность, маржа, леверидж. Используйте глоссарии авторитетных ресурсов и создайте собственный словарь терминов.',
-          url: 'https://arapov.trade/ru/freestudying/selfstudying#terminology',
+          name: 'Что такое волновая теория Эллиотта',
+          text: 'Волновая теория Эллиотта — это метод технического анализа, который описывает движение рынка через повторяющиеся волны, отражающие психологию толпы.',
         },
         {
           '@type': 'HowToStep',
           position: 2,
-          name: 'Освойте методы анализа рынка',
-          text: 'Изучите технический анализ (графики, индикаторы, уровни поддержки и сопротивления) и фундаментальный анализ (экономические показатели, новости, отчёты компаний).',
-          url: 'https://arapov.trade/ru/freestudying/selfstudying#analysis',
+          name: 'Пять импульсных и три коррекционных волны: структура',
+          text: 'В импульсе у каждой волны своя психология.',
         },
         {
           '@type': 'HowToStep',
           position: 3,
-          name: 'Выберите рынок и инструменты',
-          text: 'Определитесь с рынком (Форекс, акции, криптовалюты) и конкретными инструментами для торговли. Начните с одного рынка и наиболее ликвидных активов.',
-          url: 'https://arapov.trade/ru/freestudying/selfstudying#markets',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 4,
-          name: 'Практикуйтесь на демо-счёте',
-          text: 'Откройте демо-счёт у надёжного брокера и отрабатывайте стратегии без риска потери реальных денег минимум 1-2 месяца до достижения стабильных результатов.',
-          url: 'https://arapov.trade/ru/freestudying/selfstudying#demo',
-        },
-        {
-          '@type': 'HowToStep',
-          position: 5,
-          name: 'Перейдите к реальной торговле',
-          text: 'Начните торговать с минимальным депозитом, строго соблюдая риск-менеджмент (1-2% на сделку). Ведите дневник сделок и регулярно анализируйте результаты.',
-          url: 'https://arapov.trade/ru/freestudying/selfstudying#real-trading',
+          name: 'Ограничения теории Эллиотта: субъективность разметки',
+          text: 'Теперь как практик.',
         },
       ],
     };
@@ -483,68 +444,13 @@ export class HomeRuBlogFourtyEightComponent implements OnInit {
     const data = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
-      '@id': 'https://arapov.trade/ru/freestudying/selfstudying#terms',
-      name: 'Термины трейдинга',
+      name: 'Глоссарий терминов статьи',
       hasDefinedTerm: [
         {
           '@type': 'DefinedTerm',
-          name: 'Лонг',
+          name: 'Волновая теория Эллиотта',
           description:
-            'Открытие позиции на покупку актива с расчётом на рост его цены',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Шорт',
-          description:
-            'Открытие позиции на продажу актива с расчётом на падение его цены',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Ликвидность',
-          description:
-            'Способность актива быстро продаваться или покупаться без существенного изменения цены',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Спред',
-          description:
-            'Разница между ценой покупки (Ask) и ценой продажи (Bid) актива',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Волатильность',
-          description:
-            'Показатель изменчивости цены актива за определённый период времени',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Стоп-лосс',
-          description:
-            'Защитный ордер для автоматического закрытия убыточной позиции при достижении заданного уровня',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Тейк-профит',
-          description:
-            'Ордер для автоматической фиксации прибыли при достижении целевой цены',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Демо-счёт',
-          description:
-            'Учебный торговый счёт с виртуальными деньгами для отработки навыков без риска',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Риск-менеджмент',
-          description:
-            'Система управления рисками в торговле для защиты капитала от крупных потерь',
-        },
-        {
-          '@type': 'DefinedTerm',
-          name: 'Торговый план',
-          description:
-            'Документ с правилами торговли, включающий стратегию, управление капиталом и критерии входа/выхода',
+            'Волновая теория Эллиотта это метод технического анализа, который описывает движение рынка через повторяющиеся волны, отражающие психологию толпы.',
         },
       ],
     };
