@@ -218,8 +218,7 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
     this.flagTrue = false;
   }
   
-
-  /**
+/**
    * Author page — trilingual JSON-LD (uk / ru / en).
    *
    * ONE method, called per language. Call on each page:
@@ -231,8 +230,8 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
    * (arapov.trade/#person, not /uk#person), so all three pages describe the SAME entity.
    * Only the ProfilePage node + a few localized text strings change per language.
    *
-   * Aligned with Wikidata Q137454477. Amazon/ASIN excluded. Open Library included.
-   * NUFT = Q4315127 (confirmed).
+   * NOTE: the Event's location is a standalone Place (NO @id) so it does not collide
+   * with the CollegeOrUniversity node that owns #nuft. organizer still references #nuft.
    */
   private addAuthorPageSchema(lang: 'uk' | 'ru' | 'en'): void {
     const SCRIPT_ID = 'author-page-schema';
@@ -432,7 +431,7 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
           dateModified: '2026-06-20T00:00:00+02:00',
         },
 
-        // ── WebSite (define fully in your global schema; reference here) ──
+        // ── WebSite ──
         {
           '@type': 'WebSite',
           '@id': WEBSITE_ID,
@@ -779,7 +778,7 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
           url: 'https://nuft.edu.ua/news/podiyi/pppro-trejding-i-birzhovu-diyalnist-%E2%80%93-zdobuvacham-osvitnoyi-programi',
           location: {
             '@type': 'Place',
-            '@id': NUFT_ID,
+            name: L.nuftName,
             address: {
               '@type': 'PostalAddress',
               streetAddress: 'вул. Володимирська, 68',
@@ -808,4 +807,5 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
     script.text = JSON.stringify(schema);
     this.document.head.appendChild(script);
   }
+
 }

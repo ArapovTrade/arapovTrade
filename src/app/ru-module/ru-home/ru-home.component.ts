@@ -225,35 +225,11 @@ export class RuHomeComponent implements OnInit, AfterViewInit, OnDestroy {
     }
   }
 
-  private removeExistingWebPageSchema(): void {
-    const scripts = this.document.querySelectorAll(
-      'script[type="application/ld+json"]',
-    );
-
-    scripts.forEach((script) => {
-      try {
-        const content = JSON.parse(script.textContent || '{}');
-        if (content['@type'] === 'Person') {
-          script.remove();
-        }
-        if (content['@type'] === 'ProfilePage') {
-          script.remove();
-        }
-        if (content['@type'] === 'Event') {
-          script.remove();
-        }
-        if (content['@type'] === 'Book') {
-          script.remove();
-        }
-      } catch (e) {
-        // Игнорируем некорректные JSON (например, из других источников)
-      }
-    });
-  }
+   
 
   
 
-  /**
+ /**
    * Author page — trilingual JSON-LD (uk / ru / en).
    *
    * ONE method, called per language. Call on each page:
@@ -265,8 +241,8 @@ export class RuHomeComponent implements OnInit, AfterViewInit, OnDestroy {
    * (arapov.trade/#person, not /uk#person), so all three pages describe the SAME entity.
    * Only the ProfilePage node + a few localized text strings change per language.
    *
-   * Aligned with Wikidata Q137454477. Amazon/ASIN excluded. Open Library included.
-   * NUFT = Q4315127 (confirmed).
+   * NOTE: the Event's location is a standalone Place (NO @id) so it does not collide
+   * with the CollegeOrUniversity node that owns #nuft. organizer still references #nuft.
    */
   private addAuthorPageSchema(lang: 'uk' | 'ru' | 'en'): void {
     const SCRIPT_ID = 'author-page-schema';
@@ -466,7 +442,7 @@ export class RuHomeComponent implements OnInit, AfterViewInit, OnDestroy {
           dateModified: '2026-06-20T00:00:00+02:00',
         },
 
-        // ── WebSite (define fully in your global schema; reference here) ──
+        // ── WebSite ──
         {
           '@type': 'WebSite',
           '@id': WEBSITE_ID,
@@ -646,13 +622,13 @@ export class RuHomeComponent implements OnInit, AfterViewInit, OnDestroy {
               name: 'Про трейдинг і біржову діяльність – здобувачам освітньої програми «Цифровий бізнес»',
               headline:
                 'Про трейдинг і біржову діяльність – здобувачам освітньої програми «Цифровий бізнес»',
-                 author: {
+              author: {
                 '@type': 'Organization',
                 name: 'National University of Food Technologies',
                 url: 'https://nuft.edu.ua/',
               },
               url: 'https://nuft.edu.ua/news/podiyi/pppro-trejding-i-birzhovu-diyalnist-%E2%80%93-zdobuvacham-osvitnoyi-programi',
-              datePublished: '2026-03-19T09:00:00+02:00',
+              datePublished: '2026-03-19T14:00:00+02:00',
               inLanguage: 'uk',
               image:
                 'https://nuft.edu.ua/assets/images/News/2026/03/19/ekonomteoriya1-18-03-2026.jpg',
@@ -660,16 +636,17 @@ export class RuHomeComponent implements OnInit, AfterViewInit, OnDestroy {
             },
             {
               '@type': 'NewsArticle',
-             headline:
-                "Незважаючи на війну та кризи: Ігор Арапов пояснює, хто завжди заробляє на фондових ринках",
-              name: "Незважаючи на війну та кризи: Ігор Арапов пояснює, хто завжди заробляє на фондових ринках",
+              headline:
+                'Незважаючи на війну та кризи: Ігор Арапов пояснює, хто завжди заробляє на фондових ринках',
+              name: 'Незважаючи на війну та кризи: Ігор Арапов пояснює, хто завжди заробляє на фондових ринках',
               author: {
                 '@type': 'Organization',
                 name: 'ua.news',
                 url: 'https://ua.news/',
               },
               datePublished: '2026-04-15T19:00:00+02:00',
-              "image": "https://cdn-cabinet.ua.news/uploads/images/sulzhenko/kaver_arapov.webp",
+              image:
+                'https://cdn-cabinet.ua.news/uploads/images/sulzhenko/kaver_arapov.webp',
               url: 'https://ua.news/ua/money/nezvazhaiuchi-na-viinu-ta-krizi-igor-arapov-poiasniuie-khto-zavzhdi-zarobliaie-na-fondovikh-rinkakh',
               inLanguage: 'uk',
               publisher: {
@@ -718,7 +695,7 @@ export class RuHomeComponent implements OnInit, AfterViewInit, OnDestroy {
           headline:
             'Psychology of Investment Decisions: Cognitive Biases of Retail Traders in Financial Markets',
           inLanguage: 'uk',
-          datePublished: '2026-02-17T09:00:00+02:00',
+          datePublished: '2026-02-17T14:00:00+02:00',
           author: [{ '@id': PERSON_ID }, { '@id': COAUTHOR_ID }],
           url: 'https://nayka.com.ua/index.php/investplan/article/view/9062/9212',
           sameAs: [
@@ -748,7 +725,7 @@ export class RuHomeComponent implements OnInit, AfterViewInit, OnDestroy {
             "From Tilt to System: A Practitioner's Framework for Managing Cognitive Biases in Retail Trading",
           creativeWorkStatus: 'Preprint',
           inLanguage: 'en',
-          datePublished: '2026-02-17T09:00:00+02:00',
+          datePublished: '2026-02-17T14:00:00+02:00',
           author: { '@id': PERSON_ID },
           url: 'https://ssrn.com/abstract=6254718',
           sameAs: [
@@ -777,7 +754,7 @@ export class RuHomeComponent implements OnInit, AfterViewInit, OnDestroy {
           bookFormat: 'https://schema.org/EBook',
           inLanguage: ['uk', 'ru', 'en'],
           author: { '@id': PERSON_ID },
-          datePublished: '2025-12-25T09:00:00+02:00',
+          datePublished: '2025-12-25T14:00:00+02:00',
           sameAs: [
             'https://www.wikidata.org/wiki/Q137644825',
             'https://uk.wikibooks.org/wiki/Основи_трейдингу',
@@ -812,13 +789,13 @@ export class RuHomeComponent implements OnInit, AfterViewInit, OnDestroy {
           url: 'https://nuft.edu.ua/news/podiyi/pppro-trejding-i-birzhovu-diyalnist-%E2%80%93-zdobuvacham-osvitnoyi-programi',
           location: {
             '@type': 'Place',
-            '@id': NUFT_ID,
+            name: L.nuftName,
             address: {
               '@type': 'PostalAddress',
               streetAddress: 'вул. Володимирська, 68',
               addressLocality: 'Київ',
-              addressCountry: 'UA',
               postalCode: '01601',
+              addressCountry: 'UA',
             },
           },
           organizer: { '@id': NUFT_ID },
@@ -841,4 +818,5 @@ export class RuHomeComponent implements OnInit, AfterViewInit, OnDestroy {
     script.text = JSON.stringify(schema);
     this.document.head.appendChild(script);
   }
+
 }
