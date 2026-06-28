@@ -26,7 +26,7 @@ $projectArapov-theme: mat.define-theme(
 @font-face {
   font-family: 'Lato';
   // src: url('assets/fonts/lato-regular.ttf') format('truetype');
-  src:url(/assets/fonts/Lato/Lato-Regular.ttf) format('truetype');
+  src:url(/assets/fonts/Lato/Lato-Regular.woff2) format('truetype');
   font-weight: 400; /* Regular */
   font-style: normal;
     font-display: swap;
@@ -35,7 +35,7 @@ $projectArapov-theme: mat.define-theme(
 @font-face {
   font-family: 'Lato';
   // src: url('assets/fonts/lato-bold.ttf') format('truetype');
-  src:url(/assets/fonts/Lato/Lato-SemiBold.ttf) format('truetype');
+  src:url(/assets/fonts/Lato/Lato-SemiBold.woff2) format('truetype');
   font-weight: 700; /* Bold */
   font-style: normal;
     font-display: swap;
@@ -44,7 +44,7 @@ $projectArapov-theme: mat.define-theme(
 @font-face {
   font-family: 'Lato';
    
-  src:url(/assets/fonts/Lato/Lato-LightItalic.ttf) format('truetype');
+  src:url(/assets/fonts/Lato/Lato-LightItalic.woff2) format('truetype');
   font-weight: 400;  
   font-style: italic;
     font-display: swap;
@@ -52,7 +52,7 @@ $projectArapov-theme: mat.define-theme(
 @font-face {
   font-family: 'Lato';
    
-  src:url(/assets/fonts/Lato/Lato-Light.ttf) format('truetype');
+  src:url(/assets/fonts/Lato/Lato-Light.woff2) format('truetype');
   font-weight: 300;  
   font-style: normal;
     font-display: swap;
@@ -61,7 +61,7 @@ $projectArapov-theme: mat.define-theme(
 @font-face {
   font-family: 'Lato';
    
-  src:url(../public/assets/fonts/Lato/Lato-SemiBoldItalic.ttf) format('truetype');
+  src:url(../public/assets/fonts/Lato/Lato-SemiBoldItalic.woff2) format('truetype');
   font-weight: 500;  
   font-style: italic;
     font-display: swap;
