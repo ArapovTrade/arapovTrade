@@ -52,7 +52,7 @@ export class HomeRuBlogOnehundredSixComponent implements OnInit {
     this.meta.updateTag({
       name: 'description',
       content:
-        'Образовательная платформа Игоря Арапова: 151+ статья, 9 книг с ISBN, 78+ видеоуроков на 3 языках. Бесплатное обучение трейдингу: Smart Money, метод Вайкоффа, объёмный анализ.',
+        'Образовательная платформа Игоря Арапова: 51+ статья, 9 книг с ISBN, 78+ видеоуроков на 3 языках. Бесплатное обучение трейдингу: Smart Money, метод Вайкоффа, объёмный анализ.',
     });
 
     this.themeSubscription = this.themeService.getTheme().subscribe((data) => {

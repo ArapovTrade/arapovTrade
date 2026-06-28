@@ -65,7 +65,7 @@ export class HomeEnBlogOnehundredSixComponent implements OnInit {
     this.meta.updateTag({
       name: 'description',
       content:
-        'Igor Arapov`s trading education platform: 151+ articles, 9 books with ISBN, 78+ video lessons in 3 languages. Free trading education: Smart Money, Wyckoff method, volume analysis.',
+        'Igor Arapov`s trading education platform: 51+ articles, 9 books with ISBN, 78+ video lessons in 3 languages. Free trading education: Smart Money, Wyckoff method, volume analysis.',
     });
 
     this.gerRandom();
