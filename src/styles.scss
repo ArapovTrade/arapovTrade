@@ -3331,11 +3331,12 @@ border: 2.667px solid rgba(0, 130, 204, 0.08);
 .in-20 {
   flex-shrink: 0;
   position: relative;
-  width: 1170px;
+  width: 100%;
   height: 1px;
-  background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-09-24/EWkO6E3gHR.png)
-    no-repeat center;
-  background-size: cover;
+   
+  // border: 1px solid gray;
+   background: rgba(255, 255, 255, 0.3);
+   
   z-index: 4;
 }
 .component-21 {
@@ -3373,17 +3374,7 @@ border: 2.667px solid rgba(0, 130, 204, 0.08);
   white-space: nowrap;
   z-index: 7;
 }
-.pic-14 {
-  flex-shrink: 0;
-  position: relative;
-  width: 20px;
-  height: 20px;
-  background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-09-24/M2sybKf3qX.png)
-    no-repeat center;
-  background-size: cover;
-  z-index: 8;
-  overflow: hidden;
-}
+ 
 .text-2e {
   flex-shrink: 0;
   flex-basis: auto;

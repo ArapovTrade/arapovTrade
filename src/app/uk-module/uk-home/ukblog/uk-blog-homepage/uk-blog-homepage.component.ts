@@ -95,6 +95,7 @@ export class UkBlogHomepageComponent implements OnInit {
     this.activateRout.queryParams.subscribe((params) => {
       const selectedGroup = params['group'];
       if (selectedGroup) {
+         
         this.artickleServ.selectedGroups = [selectedGroup];
         this.grr = [...this.artickleServ.selectedGroups];
         this.checkedGroup = [...this.artickleServ.selectedGroups];
@@ -163,12 +164,7 @@ export class UkBlogHomepageComponent implements OnInit {
   checkedGroup!: any;
 
   onGroupChangeFromEvent(value: string) {
-    // if (this.artickleServ.selectedGroups.includes(value)) {
-    //   this.artickleServ.selectedGroups = [];
-    // } else {
-
-    //   this.artickleServ.selectedGroups = [value];
-    // }
+    
 
     // Обновляем фильтрованные статьи
     this.filteredArticles = this.artickleServ.ukrainiansArticles();
@@ -210,10 +206,7 @@ export class UkBlogHomepageComponent implements OnInit {
     this.currentPage = event.pageIndex;
     this.pageSize = event.pageSize;
     this.updatePaginatedArticles();
-    // this.scrollToTop.nativeElement.scrollIntoView({
-    //   behavior: 'smooth',
-    //   block: 'start',
-    // });
+   
     const topPosition = this.scrollToTop.nativeElement.offsetTop;
     window.scrollTo({
       top: topPosition,
@@ -397,7 +390,7 @@ export class UkBlogHomepageComponent implements OnInit {
           '@id': 'https://arapov.trade/uk/freestudying#collection',
           name: 'Безкоштовне навчання трейдингу',
           description:
-            'Понад 150 безкоштовних статей з трейдингу: Smart Money Concepts, метод Вайкоффа, технічний аналіз, криптотрейдинг. Повний курс для початківців.',
+            'Понад 50+ безкоштовних статей з трейдингу: Smart Money Concepts, метод Вайкоффа, технічний аналіз, криптотрейдинг. Повний курс для початківців.',
           url: 'https://arapov.trade/uk/freestudying',
           inLanguage: 'uk',
           isPartOf: { '@id': 'https://arapov.trade/#website' },
@@ -475,91 +468,5 @@ export class UkBlogHomepageComponent implements OnInit {
     this.document.head.appendChild(script);
   }
 
-  // private addWebSiteSchema() {
-  //   const exists = Array.from(
-  //     this.document.querySelectorAll('script[type="application/ld+json"]')
-  //   ).some((script) => {
-  //     try {
-  //       const json = JSON.parse(script.textContent || '{}');
-  //       return json['@type'] === 'CollectionPage' && json['name'] === 'Безкоштовне навчання трейдингу';
-  //     } catch {
-  //       return false;
-  //     }
-  //   });
-
-  //   // Если уже существует — выходим
-  //   if (exists) return;
-
-  //   // Создаем новый JSON-LD
-  //   const script = this.document.createElement('script');
-  //   script.type = 'application/ld+json';
-  //   script.text = JSON.stringify({
-  //     '@context': 'https://schema.org',
-  //     '@type': 'CollectionPage',
-  //     name: 'Безкоштовне навчання трейдингу',
-  //     description:
-  //       'Понад 150 безкоштовних статей з трейдингу: Smart Money Concepts, метод Вайкоффа, технічний аналіз, криптотрейдинг. Повний курс для початківців.',
-  //     url: 'https://arapov.trade/uk/freestudying',
-  //     isPartOf: {
-  //       '@id': 'https://arapov.trade/#website',
-  //     },
-  //     author: {
-  //       '@id': 'https://arapov.trade/uk#person',
-  //     },
-  //     about: [
-  //       {
-  //         '@type': 'Thing',
-  //         name: 'Trading Education',
-  //       },
-  //       {
-  //         '@type': 'Thing',
-  //         name: 'Smart Money Concepts',
-  //       },
-  //       {
-  //         '@type': 'Thing',
-  //         name: 'Technical Analysis',
-  //       },
-  //     ],
-  //     mainEntity: {
-  //       '@type': 'ItemList',
-  //       name: 'Основні теми курсу трейдингу',
-  //       numberOfItems: 150,
-  //       itemListOrder: 'ItemListOrderDescending',
-  //       itemListElement: [
-  //         {
-  //           '@type': 'ListItem',
-  //           position: 1,
-  //           name: 'Smart Money Concepts',
-  //           url: 'https://arapov.trade/uk/freestudying/smartmoneyconceptsguide',
-  //         },
-  //         {
-  //           '@type': 'ListItem',
-  //           position: 2,
-  //           name: 'Метод Вайкоффа',
-  //           url: 'https://arapov.trade/uk/freestudying/wyckoffmethod',
-  //         },
-  //         {
-  //           '@type': 'ListItem',
-  //           position: 3,
-  //           name: 'Технічний аналіз',
-  //           url: 'https://arapov.trade/uk/freestudying/technicalanalysis',
-  //         },
-  //         {
-  //           '@type': 'ListItem',
-  //           position: 4,
-  //           name: 'Торгові індикатори',
-  //           url: 'https://arapov.trade/uk/freestudying/tradingindicators',
-  //         },
-  //         {
-  //           '@type': 'ListItem',
-  //           position: 5,
-  //           name: 'Криптотрейдинг',
-  //           url: 'https://arapov.trade/uk/freestudying/cryptocurrencytrading',
-  //         },
-  //       ],
-  //     },
-  //   });
-
-  //   this.document.head.appendChild(script);
-  // }
+  
 }

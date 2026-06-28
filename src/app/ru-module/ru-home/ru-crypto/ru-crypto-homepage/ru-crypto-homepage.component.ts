@@ -209,6 +209,11 @@ export class RuCryptoHomepageComponent  implements OnInit, AfterViewInit, OnDest
 
 
 
+  protected goToGroup(text:string){
+     this.router.navigate(['/ru/freestudying'], {
+      queryParams: { group: text },
+    });
+   }
 
 
 

@@ -244,4 +244,17 @@ export class EnCryptoHomepageComponent
 
     this.document.head.appendChild(script);
   }
+
+
+
+    protected goToGroup(text:string){
+     this.router.navigate(['/en/freestudying'], {
+      queryParams: { group: text },
+    });
+   }
+
+
+
+
+   
 }

@@ -264,7 +264,7 @@
                 class="tekst-opisanye"
                 [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
                 >Бесплатное обучение трейдингу с нуля — здесь собрано всё что
-                нужно начинающему трейдеру: 150+ статей, 70+ видеоуроков  на основе метода
+                нужно начинающему трейдеру: 50+ статей, 70+ видеоуроков  на основе метода
                 Вайкоффа.
                 <span>
                   Все материалы в открытом доступе, без регистрации и скрытых
@@ -503,6 +503,102 @@
     <div *ngIf="!isDark" class="bg-shape-1"></div>
   </div>
 
+
+   <div class="sections-nav">
+    <h2
+      [ngClass]="{
+        'sections-nav_title': true,
+        'gradient-orange': isDark,
+        'gradient-blue': !isDark,
+      }"
+    >
+      Выберите направление обучения
+    </h2>
+
+    <div class="sections-nav_grid">
+      <!-- Трейдинг для початківців -->
+      <div
+        (click)="goToGroup('Трейдинг для начинающих')"
+        [ngClass]="{ tab: true, 'tab-dark': isDark, 'tab-light': !isDark }"
+      >
+        <span class="tab-text">Трейдинг для начинающих</span>
+      </div>
+
+      <!-- Технічний аналіз -->
+      <div
+        (click)="goToGroup('Технический анализ')"
+        [ngClass]="{ tab: true, 'tab-dark': isDark, 'tab-light': !isDark }"
+      >
+        <span class="tab-text">Технический анализ</span>
+      </div>
+
+      <!-- Об`ємний аналіз ринку (ВНИМАНИЕ: backtick U+0060 в строке группы) -->
+      <div
+        (click)="goToGroup('Объемный анализ рынка')"
+        [ngClass]="{ tab: true, 'tab-dark': isDark, 'tab-light': !isDark }"
+      >
+        <span class="tab-text">Объемный анализ рынка</span>
+      </div>
+
+      <!-- Концепція Смарт Мані -->
+      <div
+        (click)="goToGroup('Концепция Смарт Мани')"
+        [ngClass]="{ tab: true, 'tab-dark': isDark, 'tab-light': !isDark }"
+      >
+        <span class="tab-text">Концепция Смарт Мани</span>
+      </div>
+
+      <!-- Криптовалюта -->
+      <div
+        (click)="goToGroup('Криптовалюта')"
+        [ngClass]="{ tab: true, 'tab-dark': isDark, 'tab-light': !isDark }"
+      >
+        <span class="tab-text">Криптовалюта</span>
+      </div>
+
+      <!-- Психологія трейдингу -->
+      <div
+        (click)="goToGroup('Психология трейдинга')"
+        [ngClass]="{ tab: true, 'tab-dark': isDark, 'tab-light': !isDark }"
+      >
+        <span class="tab-text">Психология трейдинга</span>
+      </div>
+
+      <!-- Словник трейдера -->
+      <div
+        (click)="goToGroup('Словарь трейдера')"
+        [ngClass]="{ tab: true, 'tab-dark': isDark, 'tab-light': !isDark }"
+      >
+        <span class="tab-text">Словарь трейдера</span>
+      </div>
+
+      <!-- Фундаментальний аналіз -->
+      <div
+        (click)="goToGroup('Фундаментальный анали')"
+        [ngClass]="{ tab: true, 'tab-dark': isDark, 'tab-light': !isDark }"
+      >
+        <span class="tab-text">Фундаментальный анализ</span>
+      </div>
+    </div>
+
+    <!-- Кнопка "усі курси" -->
+    <div
+      (click)="navigateTo('ru/freestudying')"
+      [ngClass]="{
+        'sections-nav_all': true,
+        'gradient-block-orange': isDark,
+        'gradient-block-blue': !isDark,
+      }"
+    >
+      <span
+        class="sections-nav_all-text"
+        [ngStyle]="{ color: !isDark ? '#ffffff' : '#03314b' }"
+        >Все бесплатные курсы</span
+      >
+    </div>
+  </div>
+
+<!-- 
   <div class="flex-row-ba" id="section1">
     <div class="row" data-aos="fade-up" data-aos-delay="300">
       <div class="left">
@@ -613,9 +709,9 @@
       }"
     ></div>
     <div class="about-bg" *ngIf="isDark"></div>
-  </div>
+  </div> -->
 
-  <div class="about" data-aos="fade-up" data-aos-delay="300">
+  <div class="about"  style="margin-bottom: 50px">
     <div class="left-text">
       <span
         [ngClass]="{
@@ -681,7 +777,11 @@
             ><span
               class="feature-8"
               [ngStyle]="{ color: isDark ? '#ffffff' : '#6D7D89' }"
-              >Независимый исследователь в области психологии инвестиционных
+              ><a
+                class="youtube-kanali"
+                [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+                href="https://arapov.trade/ru"
+                >Независимый исследователь</a>  в области психологии инвестиционных
               решений и поведенческих финансов, автор серии книг по трейдингу с
               международными ISBN (Bowker USA)</span
             >
@@ -740,7 +840,7 @@
       >
         <div class="articles-count">
           <span class="articles-recommendations"
-            >150+ обучающих статей<br /></span
+            >50+ обучающих статей<br /></span
           ><span class="graphics">с практическими рекомендациями </span>
         </div>
       </div>
@@ -764,7 +864,7 @@
       </div>
     </div>
   </div>
-
+<!-- 
   <div class="flex-row">
     <div class="background-shape"></div>
 
@@ -943,7 +1043,7 @@
       </div>
     </div>
   </div>
-  <div class="six_block" data-aos="fade-up" data-aos-delay="300">
+  <div class="six_block"  >
     <div class="six_block-left">
       <div
         [ngClass]="{
@@ -1014,7 +1114,7 @@
       </div>
     </div>
   </div>
-  <div class="seventh-block" data-aos="fade-up" data-aos-delay="300">
+  <div class="seventh-block"  >
     <div class="bg-36">
       <div class="seventh-block_left">
         <div class="flex-column">
@@ -1335,7 +1435,7 @@
         >
       </div>
     </div>
-  </div>
+  </div> -->
 
   <div class="footer">
     <div class="footer-main-block">

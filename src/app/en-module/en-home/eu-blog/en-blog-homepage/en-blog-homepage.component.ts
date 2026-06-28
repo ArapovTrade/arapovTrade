@@ -330,110 +330,7 @@ export class EnBlogHomepageComponent implements OnInit {
       } catch (e) {}
     });
   }
-  // private removeExistingWebPageSchema(): void {
-  //   const scripts = this.document.querySelectorAll(
-  //     'script[type="application/ld+json"]'
-  //   );
-
-  //   scripts.forEach((script) => {
-  //     try {
-  //       const content = JSON.parse(script.textContent || '{}');
-  //       if (content['@type'] === 'CollectionPage') {
-  //         script.remove();
-  //       }
-  //     } catch (e) {
-  //       // Игнорируем некорректные JSON (например, из других источников)
-  //     }
-  //   });
-  // }
-
-  // private addWebSiteSchema() {
-  //   const exists = Array.from(
-  //     this.document.querySelectorAll('script[type="application/ld+json"]')
-  //   ).some((script) => {
-  //     try {
-  //       const json = JSON.parse(script.textContent || '{}');
-  //       return json['@type'] === 'CollectionPage' && json['name'] === 'Free Trading Education';
-  //     } catch {
-  //       return false;
-  //     }
-  //   });
-
-  //   // Если уже существует — выходим
-  //   if (exists) return;
-
-  //   // Создаем новый JSON-LD
-  //   const script = this.document.createElement('script');
-  //   script.type = 'application/ld+json';
-  //   script.text = JSON.stringify({
-  //     '@context': 'https://schema.org',
-  //     '@type': 'CollectionPage',
-  //     name: 'Free Trading Education',
-  //     description:
-  //       'Over 150 free trading articles: Smart Money Concepts, Wyckoff Method, Technical Analysis, Crypto Trading. Complete course for beginners.',
-  //     url: 'https://arapov.trade/en/freestudying',
-  //     isPartOf: {
-  //       '@id': 'https://arapov.trade/en/main#website',
-  //     },
-  //     author: {
-  //       '@id': 'https://arapov.trade/en#person',
-  //     },
-  //     about: [
-  //       {
-  //         '@type': 'Thing',
-  //         name: 'Trading Education',
-  //       },
-  //       {
-  //         '@type': 'Thing',
-  //         name: 'Smart Money Concepts',
-  //       },
-  //       {
-  //         '@type': 'Thing',
-  //         name: 'Technical Analysis',
-  //       },
-  //     ],
-  //     mainEntity: {
-  //       '@type': 'ItemList',
-  //       name: 'Main Trading Course Topics',
-  //       numberOfItems: 150,
-  //       itemListOrder: 'ItemListOrderDescending',
-  //       itemListElement: [
-  //         {
-  //           '@type': 'ListItem',
-  //           position: 1,
-  //           name: 'Smart Money Concepts',
-  //           url: 'https://arapov.trade/en/freestudying/smartmoneyconceptsguide',
-  //         },
-  //         {
-  //           '@type': 'ListItem',
-  //           position: 2,
-  //           name: 'Wyckoff Method',
-  //           url: 'https://arapov.trade/en/freestudying/wyckoffmethod',
-  //         },
-  //         {
-  //           '@type': 'ListItem',
-  //           position: 3,
-  //           name: 'Technical Analysis',
-  //           url: 'https://arapov.trade/en/freestudying/technicalanalysis',
-  //         },
-  //         {
-  //           '@type': 'ListItem',
-  //           position: 4,
-  //           name: 'Trading Indicators',
-  //           url: 'https://arapov.trade/en/freestudying/tradingindicators',
-  //         },
-  //         {
-  //           '@type': 'ListItem',
-  //           position: 5,
-  //           name: 'Cryptocurrency Trading',
-  //           url: 'https://arapov.trade/en/freestudying/cryptocurrencytrading',
-  //         },
-  //       ],
-  //     },
-  //   });
-
-  //   this.document.head.appendChild(script);
-  // }
+  
 
   private addWebSiteSchema() {
     const exists = Array.from(
@@ -464,7 +361,7 @@ export class EnBlogHomepageComponent implements OnInit {
           '@id': 'https://arapov.trade/en/freestudying#collection',
           name: 'Free Trading Education',
           description:
-            'Over 150 free trading articles: Smart Money Concepts, Wyckoff Method, Technical Analysis, Crypto Trading. Complete course for beginners.',
+            'Over 50+ free trading articles: Smart Money Concepts, Wyckoff Method, Technical Analysis, Crypto Trading. Complete course for beginners.',
           url: 'https://arapov.trade/en/freestudying',
           inLanguage: 'en',
           isPartOf: { '@id': 'https://arapov.trade/#website' },

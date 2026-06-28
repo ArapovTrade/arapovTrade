@@ -258,15 +258,19 @@
                     'gradient-orange': isDark,
                     'gradient-blue': !isDark,
                   }"
-                  >  для початківців</span
+                >
+                  для початківців</span
                 >
               </h1>
               <span
                 class="tekst-opisanye"
                 [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-                >Безкоштовне навчання трейдингу з нуля — тут зібрано все що потрібно початківцю: 150+ статей, 70+ відеоуроків на основі методу Вайкоффа.
+                >Безкоштовне навчання трейдингу з нуля — тут зібрано все що
+                потрібно початківцю: 50+ статей, 70+ відеоуроків на основі
+                методу Вайкоффа.
                 <span>
-                  Всі матеріали у відкритому доступі, без реєстрації та прихованих платежів.</span
+                  Всі матеріали у відкритому доступі, без реєстрації та
+                  прихованих платежів.</span
                 >
               </span>
               <div class="authot_button_block">
@@ -512,7 +516,101 @@
     <div *ngIf="!isDark" class="bg-shape-1"></div>
   </div>
 
-  <div class="flex-row-ba" id="section1">
+  <div class="sections-nav">
+    <h2
+      [ngClass]="{
+        'sections-nav_title': true,
+        'gradient-orange': isDark,
+        'gradient-blue': !isDark,
+      }"
+    >
+      Оберіть напрям навчання
+    </h2>
+
+    <div class="sections-nav_grid">
+      <!-- Трейдинг для початківців -->
+      <div
+        (click)="goToGroup('Трейдинг для початківців')"
+        [ngClass]="{ tab: true, 'tab-dark': isDark, 'tab-light': !isDark }"
+      >
+        <span class="tab-text">Трейдинг для початківців</span>
+      </div>
+
+      <!-- Технічний аналіз -->
+      <div
+        (click)="goToGroup('Технічний аналіз')"
+        [ngClass]="{ tab: true, 'tab-dark': isDark, 'tab-light': !isDark }"
+      >
+        <span class="tab-text">Технічний аналіз</span>
+      </div>
+
+      <!-- Об`ємний аналіз ринку (ВНИМАНИЕ: backtick U+0060 в строке группы) -->
+      <div
+        (click)="goToGroup('Об`ємний аналіз ринку')"
+        [ngClass]="{ tab: true, 'tab-dark': isDark, 'tab-light': !isDark }"
+      >
+        <span class="tab-text">Об'ємний аналіз і Вайкофф</span>
+      </div>
+
+      <!-- Концепція Смарт Мані -->
+      <div
+        (click)="goToGroup('Концепція Смарт Мані')"
+        [ngClass]="{ tab: true, 'tab-dark': isDark, 'tab-light': !isDark }"
+      >
+        <span class="tab-text">Концепція Смарт Мані</span>
+      </div>
+
+      <!-- Криптовалюта -->
+      <div
+        (click)="goToGroup('Криптовалюта')"
+        [ngClass]="{ tab: true, 'tab-dark': isDark, 'tab-light': !isDark }"
+      >
+        <span class="tab-text">Криптовалюта</span>
+      </div>
+
+      <!-- Психологія трейдингу -->
+      <div
+        (click)="goToGroup('Психологія трейдингу')"
+        [ngClass]="{ tab: true, 'tab-dark': isDark, 'tab-light': !isDark }"
+      >
+        <span class="tab-text">Психологія трейдингу</span>
+      </div>
+
+      <!-- Словник трейдера -->
+      <div
+        (click)="goToGroup('Словник трейдера')"
+        [ngClass]="{ tab: true, 'tab-dark': isDark, 'tab-light': !isDark }"
+      >
+        <span class="tab-text">Словник трейдера</span>
+      </div>
+
+      <!-- Фундаментальний аналіз -->
+      <div
+        (click)="goToGroup('Фундаментальний аналіз')"
+        [ngClass]="{ tab: true, 'tab-dark': isDark, 'tab-light': !isDark }"
+      >
+        <span class="tab-text">Фундаментальний аналіз</span>
+      </div>
+    </div>
+
+    <!-- Кнопка "усі курси" -->
+    <div
+      (click)="navigateTo('uk/freestudying')"
+      [ngClass]="{
+        'sections-nav_all': true,
+        'gradient-block-orange': isDark,
+        'gradient-block-blue': !isDark,
+      }"
+    >
+      <span
+        class="sections-nav_all-text"
+        [ngStyle]="{ color: !isDark ? '#ffffff' : '#03314b' }"
+        >Усі безкоштовні курси</span
+      >
+    </div>
+  </div>
+
+  <!-- <div class="flex-row-ba" id="section1">
     <div class="row" data-aos="fade-up" data-aos-delay="300">
       <div class="left">
         <div class="bg-figure">
@@ -610,19 +708,7 @@
             [ngStyle]="{ color: !isDark ? '#ffffff' : '#03314b' }"
             >переглянути YouTube-канал</a
           >
-          <!-- <span
-            [ngClass]="{
-              'icon-button': true,
-              'icon-button-dark': isDark,
-              'icon-button-light': !isDark
-            }"
-            ><a
-              href="https://www.youtube.com/@ArapovTrade"
-              target="_blank"
-              class="primary-button"
-            >
-            </a
-          ></span> -->
+          
         </div>
       </div>
     </div>
@@ -634,9 +720,9 @@
       }"
     ></div>
     <div class="about-bg" *ngIf="isDark"></div>
-  </div>
+  </div> -->
 
-  <div class="about" data-aos="fade-up" data-aos-delay="300">
+  <div class="about" style="margin-bottom: 50px">
     <div class="left-text">
       <span
         [ngClass]="{
@@ -702,9 +788,16 @@
             ><span
               class="feature-8"
               [ngStyle]="{ color: isDark ? '#ffffff' : '#6D7D89' }"
-              >Незалежний дослідник у галузі психології інвестиційних рішень та
-              поведінкових фінансів, автор серії книг з трейдингу із
-              міжнародними ISBN (Bowker USA)</span
+            >
+              <a
+                class="youtube-kanali"
+                [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+                href="https://arapov.trade/uk"
+                >Незалежний дослідник</a
+              >
+              у галузі психології інвестиційних рішень та поведінкових фінансів,
+              автор серії книг з трейдингу із міжнародними ISBN (Bowker
+              USA)</span
             >
           </div>
         </div>
@@ -761,7 +854,7 @@
       >
         <div class="articles-count">
           <span class="articles-recommendations"
-            >150+ навчальних статей<br /></span
+            >50+ навчальних статей<br /></span
           ><span class="graphics">з практичними рекомендаціями </span>
         </div>
       </div>
@@ -786,7 +879,7 @@
     </div>
   </div>
 
-  <div class="flex-row">
+  <!-- <div class="flex-row">
     <div class="background-shape"></div>
 
     <div class="base">
@@ -961,8 +1054,8 @@
         </div>
       </div>
     </div>
-  </div>
-  <div class="six_block" data-aos="fade-up" data-aos-delay="300">
+  </div> -->
+  <!-- <div class="six_block"  >
     <div class="six_block-left">
       <div
         [ngClass]="{
@@ -1032,8 +1125,8 @@
         </div>
       </div>
     </div>
-  </div>
-  <div class="seventh-block" data-aos="fade-up" data-aos-delay="300">
+  </div> -->
+  <!-- <div class="seventh-block" data-aos="fade-up" data-aos-delay="300">
     <div class="bg-36">
       <div class="seventh-block_left">
         <div class="flex-column">
@@ -1218,9 +1311,9 @@
         'bg_seventh-light': !isDark,
       }"
     ></div>
-  </div>
+  </div> -->
 
-  <div class="eighth-block">
+  <!-- <div class="eighth-block">
     <div class="eighth-block_main" data-aos="fade-up" data-aos-delay="300">
       <div class="eighth-block_main-left">
         <div class="img-18"></div>
@@ -1310,7 +1403,7 @@
           }"
         >
           <div class=" ">
-            <!-- [ngStyle]="{ 'border-left': isDark? '5px solid #ffcd29' : '5px solid #0082CC' }" -->
+         
             <span
               class="quote-text-eight-block"
               [ngStyle]="{
@@ -1353,7 +1446,7 @@
         >
       </div>
     </div>
-  </div>
+  </div> -->
 
   <div class="footer">
     <div class="footer-main-block">
@@ -1402,8 +1495,7 @@
           </div>
         </div>
         <div class="menu">
-          <span class="menu-title">Посилання</span
-          >
+          <span class="menu-title">Посилання</span>
           <!-- <a
             href="/assets/documents/PublicOfferAgreementNew.docx"
             download
@@ -1446,145 +1538,8 @@
           </a>
         </div>
       </div>
-      <!-- <div class="popular-artickles">
-        <div class="in-20"></div>
-
-        <div class="popular-artickles_title">
-          <p class="menu-title">ПОПУЛЯРНІ ЗАПИТИ</p>
-        </div>
-        <div class="popular-artickles_container">
-          <div class="popular-artickles_artickle">
-            <a
-              href="https://arapov.trade/uk/freestudying/wyckoffmethod"
-              target="_blank"
-              class="menu-title-block menu-title_text"
-              >Метод Вайкоффа</a
-            >
-          </div>
-          <div class="popular-artickles_artickle">
-            <a
-              href="https://arapov.trade/uk/freestudying/volmarketanalisys"
-              target="_blank"
-              class="menu-title-block menu-title_text"
-              >Об'ємний аналіз</a
-            >
-          </div>
-          <div class="popular-artickles_artickle">
-            <a
-              href="https://arapov.trade/uk/freestudying/technicalanalysis"
-              target="_blank"
-              class="menu-title-block menu-title_text"
-              >Технічний аналіз</a
-            >
-          </div>
-          <div class="popular-artickles_artickle">
-            <a
-              href="https://arapov.trade/uk/freestudying/tradingindicators"
-              target="_blank"
-              class="menu-title-block menu-title_text"
-              >Торгові індикатори</a
-            >
-          </div>
-          <div class="popular-artickles_artickle">
-            <a
-              href="https://arapov.trade/uk/freestudying/cryptocurrencytrading"
-              target="_blank"
-              class="menu-title-block menu-title_text"
-              >Криптотрейдинг</a
-            >
-          </div>
-          <div class="popular-artickles_artickle">
-            <a
-              href="https://arapov.trade/uk/freestudying/practic"
-              target="_blank"
-              class="menu-title-block menu-title_text"
-              >Стратегії трейдингу</a
-            >
-          </div>
-          <div class="popular-artickles_artickle">
-            <a
-              href="https://arapov.trade/uk/freestudying/fundamentalanalysis"
-              target="_blank"
-              class="menu-title-block menu-title_text"
-              >Фундаментальний аналіз</a
-            >
-          </div>
-          <div class="popular-artickles_artickle">
-            <a
-              href="https://arapov.trade/uk/freestudying/smartmoneyconceptsguide"
-              target="_blank"
-              class="menu-title-block menu-title_text"
-              >Концепція смарт мані</a
-            >
-          </div>
-          <div class="popular-artickles_artickle">
-            <a
-              href="https://arapov.trade/uk/freestudying/smartmoneystrategies"
-              target="_blank"
-              class="menu-title-block menu-title_text"
-              >Точки входу за Smart Money</a
-            >
-          </div>
-          <div class="popular-artickles_artickle">
-            <a
-              href="https://arapov.trade/uk/freestudying/smartmoneycontrol"
-              target="_blank"
-              class="menu-title-block menu-title_text"
-              >Smart Money та ліквідність</a
-            >
-          </div>
-          <div class="popular-artickles_artickle">
-            <a
-              href="https://arapov.trade/uk/freestudying/stockorderbook"
-              target="_blank"
-              class="menu-title-block menu-title_text"
-              >Біржовий стакан</a
-            >
-          </div>
-          <div class="popular-artickles_artickle">
-            <a
-              href="https://arapov.trade/uk/freestudying/blogmarketphases"
-              target="_blank"
-              class="menu-title-block menu-title_text"
-              >Структура ринку</a
-            >
-          </div>
-          <div class="popular-artickles_artickle">
-            <a
-              href="https://arapov.trade/uk/freestudying/divergenceonindecators"
-              target="_blank"
-              class="menu-title-block menu-title_text"
-              >Дивергенція</a
-            >
-          </div>
-          <div class="popular-artickles_artickle">
-            <a
-              href="https://arapov.trade/uk/freestudying/volatility"
-              target="_blank"
-              class="menu-title-block menu-title_text"
-              >Волатильність</a
-            >
-          </div>
-          <div class="popular-artickles_artickle">
-            <a
-              href="https://arapov.trade/uk/freestudying/avoidlosingmoney"
-              target="_blank"
-              class="menu-title-block menu-title_text"
-              >Маржинальна торгівля</a
-            >
-          </div>
-          <div class="popular-artickles_artickle">
-            <a
-              href="https://arapov.trade/uk/freestudying/pricingandliquidity"
-              target="_blank"
-              class="menu-title-block menu-title_text"
-              >Ліквідність</a
-            >
-          </div>
-        </div>
-      </div> -->
     </div>
-    <br/>
+    <br />
     <div class="component-1f">
       <div class="in-20"></div>
       <div class="component-21">

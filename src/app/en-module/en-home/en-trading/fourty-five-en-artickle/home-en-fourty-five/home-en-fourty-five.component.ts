@@ -390,7 +390,7 @@ export class HomeEnFourtyFiveComponent implements OnInit {
           name: 'Can I really learn trading without paying for courses?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: "Absolutely. This course contains 151+ articles and 78+ video lessons covering everything from basics to advanced Smart Money strategies. It's designed to give you a complete education without any paid upsells.",
+            text: "Absolutely. This course contains 51+ articles and 78+ video lessons covering everything from basics to advanced Smart Money strategies. It's designed to give you a complete education without any paid upsells.",
           },
         },
         {
@@ -652,7 +652,7 @@ export class HomeEnFourtyFiveComponent implements OnInit {
       hasCourse: {
         '@type': 'Course',
         name: 'Training in trading from scratch',
-        description: 'Over 151+ articles and 78+ video tutorials on trading',
+        description: 'Over 51+ articles and 78+ video tutorials on trading',
         provider: { '@id': 'https://arapov.trade/#person' }, // ← было инлайн 'Ihor Arapov'
       },
     });
