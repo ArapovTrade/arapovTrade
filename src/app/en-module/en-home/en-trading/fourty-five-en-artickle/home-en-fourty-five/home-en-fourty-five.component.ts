@@ -67,7 +67,7 @@ export class HomeEnFourtyFiveComponent implements OnInit {
     this.meta.updateTag({
       name: 'description',
       content:
-        'Free trading course from scratch: technical analysis, Wyckoff method, volume analysis, complete trading system with positive mathematical expectancy. 18 sections, live trade breakdowns.',
+        'Free trading course from scratch: technical analysis, Wyckoff method, volume analysis, complete trading system with positive mathematical expectancy. 32 sections, live trade breakdowns.',
     });
 
     this.meta.updateTag({ name: 'datePublished', content: '2026-06-25' });
@@ -301,7 +301,7 @@ export class HomeEnFourtyFiveComponent implements OnInit {
           '@id': 'https://arapov.trade/en/freestudying/freeeducation#article', // ← было /ru/ (баг A)
           headline: 'Free Trading Course for Beginners — Igor Arapov',
           description:
-            'Free trading course from scratch: technical analysis, Wyckoff method, volume analysis, complete trading system with positive mathematical expectancy. 18 sections, live trade breakdowns.',
+            'Free trading course from scratch: technical analysis, Wyckoff method, volume analysis, complete trading system with positive mathematical expectancy. 32 sections, live trade breakdowns.',
           datePublished: '2025-01-15T00:00:00+02:00',
           dateModified: '2026-06-25T00:00:00+02:00', // ← было '2026-05-29T00:00:00Z+02:00' (баг B)
           author: { '@id': 'https://arapov.trade/#person' },
