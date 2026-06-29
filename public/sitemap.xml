@@ -71,7 +71,37 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://arapov.trade/en"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://arapov.trade/uk"/>
   </url>
-
+<!-- Disclaimer -->
+ <url>
+    <loc>https://arapov.trade/uk/disclaimer</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://arapov.trade/uk/disclaimer"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://arapov.trade/ru/disclaimer"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arapov.trade/en/disclaimer"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arapov.trade/uk/disclaimer"/>
+  </url>
+  <url>
+    <loc>https://arapov.trade/ru/disclaimer</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://arapov.trade/uk/disclaimer"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://arapov.trade/ru/disclaimer"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arapov.trade/en/disclaimer"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arapov.trade/uk/disclaimer"/>
+  </url>
+  <url>
+    <loc>https://arapov.trade/en/disclaimer</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://arapov.trade/uk/disclaimer"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://arapov.trade/ru/disclaimer"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arapov.trade/en/disclaimer"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arapov.trade/uk/disclaimer"/>
+  </url>
   <!-- ============================================ -->
   <!-- РАЗДЕЛЫ / SECTION INDEX PAGES -->
   <!-- ============================================ -->

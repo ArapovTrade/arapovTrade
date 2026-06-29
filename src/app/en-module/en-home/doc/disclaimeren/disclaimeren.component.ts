@@ -15,7 +15,7 @@ export class DisclaimerenComponent {
     this.lang.setNumber(3);
     this.titleService.setTitle('Disclaimer - ArapovTrade');
 this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-this.meta.addTag({
+this.meta.updateTag({
   name: 'description',
   content:
     "Any information posted on this website or provided during the training process is of a general nature and may only be used for educational or informational purposes.",

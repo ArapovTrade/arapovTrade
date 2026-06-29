@@ -18,7 +18,7 @@ export class DisclaimerComponent {
     this.lang.setNumber(2);
     this.titleService.setTitle('Отказ от ответственности | ArapovTrade');
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.addTag({
+    this.meta.updateTag({
       name: 'description',
       content:
         'Информация, размещенная на этом веб-ресурсе, носит общий характер и предназначена исключительно для образовательных или познавательных целей.',
