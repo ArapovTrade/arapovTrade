@@ -4,7 +4,7 @@
 >
   <div style="padding: 0 20px">
     <div>
-      <div class="header-new_block" data-aos="fade-down" data-aos-delay="300">
+      <div class="header-new_block"  >
         <div class="header-logo-block">
           <div
             class="header-logo"
@@ -12,7 +12,7 @@
               background: isDark
                 ? 'url(assets/redesignArapovTrade/img/logo-new.png) no-repeat center'
                 : 'url(assets/redesignArapovTrade/img/logo-new-light.png) no-repeat center',
-            }" 
+            }"
           ></div>
           <span
             class="loog-text"
@@ -27,15 +27,45 @@
             class="nav-list desktop-nav"
             [ngClass]="{ 'menu-item-dark': isDark, 'menu-item-light': !isDark }"
           >
-            <li
+            <!-- <li
               (click)="navigateTo('')"
               [ngStyle]="{ color: isDark ? '#FFCD29' : '#0082CC' }"
             >
               Головна
-            </li>
-            <li (click)="navigateTo('uk/freestudying')">безкоштовнi курси</li>
+            </li> -->
+            <!-- <li (click)="navigateTo('uk/freestudying')">безкоштовнi курси</li>
             <li (click)="navigateTo('uk')">Про автора</li>
-            <li (click)="navigateTo('uk/studying')">Професiйнi курси</li>
+            <li (click)="navigateTo('uk/studying')">Професiйнi курси</li> -->
+            <li>
+              <a
+                [ngStyle]="{ color: isDark ? '#FFCD29' : '#0082CC' }"
+                href="/"
+                (click)="$event.preventDefault(); navigateTo('')"
+              >
+                Головна
+              </a>
+            </li>
+            <li>
+              <a
+                href="/uk/freestudying"
+                (click)="$event.preventDefault(); navigateTo('uk/freestudying')"
+              >
+                Безкоштовні курси
+              </a>
+            </li>
+            <li>
+              <a href="/uk" (click)="$event.preventDefault(); navigateTo('uk')">
+                Про автора
+              </a>
+            </li>
+            <li>
+              <a
+                href="/uk/studying"
+                (click)="$event.preventDefault(); navigateTo('uk/studying')"
+              >
+                Професійні курси
+              </a>
+            </li>
           </ul>
         </div>
 
@@ -82,7 +112,7 @@
               *ngIf="dropdownOpen"
               [ngStyle]="{ background: isDark ? '#2c2a06' : '#DBE2E7' }"
             >
-              <li
+              <!-- <li
                 [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
                 (click)="selectLang('ua'); navigateTo('/')"
               >
@@ -99,6 +129,44 @@
                 (click)="selectLang('en'); navigateTo('en/main')"
               >
                 EN
+              </li> -->
+
+              <li>
+                <a
+                  [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
+                  href="/"
+                  (click)="
+                    $event.preventDefault(); selectLang('ua'); navigateTo('/')
+                  "
+                >
+                  UA
+                </a>
+              </li>
+              <li>
+                <a
+                  [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
+                  href="/ru/main"
+                  (click)="
+                    $event.preventDefault();
+                    selectLang('ru');
+                    navigateTo('ru/main')
+                  "
+                >
+                  RU
+                </a>
+              </li>
+              <li>
+                <a
+                  [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
+                  href="/en/main"
+                  (click)="
+                    $event.preventDefault();
+                    selectLang('en');
+                    navigateTo('en/main')
+                  "
+                >
+                  EN
+                </a>
               </li>
             </ul>
           </div>
@@ -194,7 +262,52 @@
           }"
         >
           <ul>
-            <li
+            <li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+              <a
+                href="/"
+                (click)="$event.preventDefault(); navigateTo('')"
+                [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+              >
+                ГОЛОВНА
+              </a>
+            </li>
+            <li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+              <a
+                href="/uk/freestudying"
+                (click)="$event.preventDefault(); navigateTo('uk/freestudying')"
+                [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+              >
+                БЕЗКОШТОВНІ КУРСИ
+              </a>
+            </li>
+            <li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+              <a
+                href="/uk"
+                (click)="$event.preventDefault(); navigateTo('uk')"
+                [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+              >
+                ПРО АВТОРА
+              </a>
+            </li>
+            <li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+              <a
+                href="/uk/studying"
+                (click)="$event.preventDefault(); navigateTo('uk/studying')"
+                [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+              >
+                ПРОФЕСІЙНІ КУРСИ
+              </a>
+            </li>
+            <li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+              <a
+                href="/uk/books"
+                (click)="$event.preventDefault(); navigateTo('uk/books')"
+                [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+              >
+                МОЇ КНИГИ
+              </a>
+            </li>
+            <!-- <li
               (click)="navigateTo('')"
               [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
               [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
@@ -228,14 +341,14 @@
               [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
             >
               МОЇ КНИГИ
-            </li>
+            </li> -->
           </ul>
         </div>
       </div>
 
       <div class="hero-section-main">
         <div class="flex-row-e">
-          <div class="flex-row-f" data-aos="fade-up" data-aos-delay="300">
+          <div class="flex-row-f"  >
             <div class="coins"></div>
             <div class="text-block_one-block">
               <div
@@ -1476,6 +1589,42 @@
         <div class="menu">
           <span class="menu-title">Меню</span>
           <div class="menu-title-block">
+            <a
+              href="/"
+              (click)="$event.preventDefault(); navigateTo('')"
+              class="menu-title_text"
+            >
+              Головна
+            </a>
+          </div>
+          <div class="menu-title-block">
+            <a
+              href="/uk"
+              (click)="$event.preventDefault(); navigateTo('uk')"
+              class="menu-title_text"
+            >
+              Про автора курсу
+            </a>
+          </div>
+          <div class="menu-title-block">
+            <a
+              href="/uk/studying"
+              (click)="$event.preventDefault(); navigateTo('uk/studying')"
+              class="menu-title_text"
+            >
+              Курси з трейдингу
+            </a>
+          </div>
+          <div class="menu-title-block">
+            <a
+              href="/uk/freestudying"
+              (click)="$event.preventDefault(); navigateTo('uk/freestudying')"
+              class="menu-title_text"
+            >
+              Безкоштовне навчання трейдингу
+            </a>
+          </div>
+          <!-- <div class="menu-title-block">
             <a (click)="navigateTo('')" class="menu-title_text">Головна</a>
           </div>
           <div class="menu-title-block">
@@ -1492,7 +1641,7 @@
             <a (click)="navigateTo('uk/freestudying')" class="menu-title_text"
               >Безкоштовне навчання трейдингу</a
             >
-          </div>
+          </div> -->
         </div>
         <div class="menu">
           <span class="menu-title">Посилання</span>

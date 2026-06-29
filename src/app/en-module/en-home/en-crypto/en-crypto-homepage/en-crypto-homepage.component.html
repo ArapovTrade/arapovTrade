@@ -27,15 +27,37 @@
             class="nav-list desktop-nav"
             [ngClass]="{ 'menu-item-dark': isDark, 'menu-item-light': !isDark }"
           >
-            <li
-              (click)="navigateTo('en/main')"
-              [ngStyle]="{ color: isDark ? '#FFCD29' : '#0082CC' }"
-            >
-              Main
+            <li>
+              <a
+                href="/en/main"
+                (click)="$event.preventDefault(); navigateTo('en/main')"
+                [ngStyle]="{ color: isDark ? '#FFCD29' : '#0082CC' }"
+              >
+                Main
+              </a>
             </li>
-            <li (click)="navigateTo('en/freestudying')">free courses</li>
-            <li (click)="navigateTo('en')">About the author</li>
-            <li (click)="navigateTo('en/studying')">Professional courses</li>
+            <li>
+              <a
+                href="/en/freestudying"
+                (click)="$event.preventDefault(); navigateTo('en/freestudying')"
+              >
+                free courses
+              </a>
+            </li>
+            <li>
+              <a href="/en" (click)="$event.preventDefault(); navigateTo('en')">
+                About the author
+              </a>
+            </li>
+            <li>
+              <a
+                href="/en/studying"
+                (click)="$event.preventDefault(); navigateTo('en/studying')"
+              >
+                Professional courses
+              </a>
+            </li>
+             
           </ul>
         </div>
 
@@ -82,24 +104,41 @@
               *ngIf="dropdownOpen"
               [ngStyle]="{ background: isDark ? '#2c2a06' : '#DBE2E7' }"
             >
-              <li
-                [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-                (click)="selectLang('ua'); navigateTo('/')"
-              >
-                UA
+              <li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+                <a
+                  href="/"
+                  (click)="
+                    $event.preventDefault(); selectLang('ua'); navigateTo('/')
+                  "
+                >
+                  UA
+                </a>
               </li>
-              <li
-                [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-                (click)="selectLang('ru'); navigateTo('ru/main')"
-              >
-                RU
+              <li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+                <a
+                  href="/ru/main"
+                  (click)="
+                    $event.preventDefault();
+                    selectLang('ru');
+                    navigateTo('ru/main')
+                  "
+                >
+                  RU
+                </a>
               </li>
-              <li
-                [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-                (click)="selectLang('en'); navigateTo('en/main')"
-              >
-                EN
+              <li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+                <a
+                  href="/en/main"
+                  (click)="
+                    $event.preventDefault();
+                    selectLang('en');
+                    navigateTo('en/main')
+                  "
+                >
+                  EN
+                </a>
               </li>
+              
             </ul>
           </div>
           <div
@@ -193,7 +232,52 @@
           }"
         >
           <ul>
-            <li
+            <li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+              <a
+                href="/en/main"
+                (click)="$event.preventDefault(); navigateTo('en/main')"
+                [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+              >
+                MAIN
+              </a>
+            </li>
+            <li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+              <a
+                href="/en/freestudying"
+                (click)="$event.preventDefault(); navigateTo('en/freestudying')"
+                [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+              >
+                FREE COURSES
+              </a>
+            </li>
+            <li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+              <a
+                href="/en"
+                (click)="$event.preventDefault(); navigateTo('en')"
+                [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+              >
+                ABOUT THE AUTHOR
+              </a>
+            </li>
+            <li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+              <a
+                href="/en/studying"
+                (click)="$event.preventDefault(); navigateTo('en/studying')"
+                [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+              >
+                PROFESSIONAL COURSES
+              </a>
+            </li>
+            <li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+              <a
+                href="/en/books"
+                (click)="$event.preventDefault(); navigateTo('en/books')"
+                [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+              >
+                MY BOOKS
+              </a>
+            </li>
+            <!-- <li
               (click)="navigateTo('en/main')"
               [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
               [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
@@ -227,7 +311,7 @@
               [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
             >
               MY BOOKS
-            </li>
+            </li> -->
           </ul>
         </div>
       </div>
@@ -240,7 +324,7 @@
                 class="bezkoshtovniy-kurs"
                 [ngStyle]="{ color: isDark ? '#ffffff' : '#03314B' }"
               >
-               WYCKOFF METHOD
+                WYCKOFF METHOD
               </div>
 
               <div class="rectangle"></div>
@@ -262,9 +346,12 @@
               <span
                 class="tekst-opisanye"
                 [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-                >Free trading education from scratch — everything a beginner needs in one place: 50+ articles, 70+ video lessons based on the Wyckoff method.
+                >Free trading education from scratch — everything a beginner
+                needs in one place: 50+ articles, 70+ video lessons based on the
+                Wyckoff method.
                 <span>
-                  All materials are openly available, no registration or hidden payments required.</span
+                  All materials are openly available, no registration or hidden
+                  payments required.</span
                 >
               </span>
               <div class="authot_button_block">
@@ -499,8 +586,7 @@
     <div *ngIf="!isDark" class="bg-shape-1"></div>
   </div>
 
-
- <div class="sections-nav">
+  <div class="sections-nav">
     <h2
       [ngClass]="{
         'sections-nav_title': true,
@@ -593,7 +679,6 @@
       >
     </div>
   </div>
-
 
   <!-- <div class="flex-row-ba" id="section1">
     <div class="row" data-aos="fade-up" data-aos-delay="300">
@@ -777,7 +862,11 @@
                 class="youtube-kanali"
                 [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
                 href="https://arapov.trade/en"
-                >Independent researcher</a>  in the field of psychology, investment decisions and behavioral finance, author of a series of books on trading with international ISBNs (Bowker USA)</span
+                >Independent researcher</a
+              >
+              in the field of psychology, investment decisions and behavioral
+              finance, author of a series of books on trading with international
+              ISBNs (Bowker USA)</span
             >
           </div>
         </div>
@@ -1458,6 +1547,42 @@
         <div class="menu">
           <span class="menu-title">Menu</span>
           <div class="menu-title-block">
+            <a
+              href="/en/main"
+              (click)="$event.preventDefault(); navigateTo('en/main')"
+              class="menu-title_text"
+            >
+              Main page
+            </a>
+          </div>
+          <div class="menu-title-block">
+            <a
+              href="/en"
+              (click)="$event.preventDefault(); navigateTo('en')"
+              class="menu-title_text"
+            >
+              About the author of the course
+            </a>
+          </div>
+          <div class="menu-title-block">
+            <a
+              href="/en/studying"
+              (click)="$event.preventDefault(); navigateTo('en/studying')"
+              class="menu-title_text"
+            >
+              Trading courses
+            </a>
+          </div>
+          <div class="menu-title-block">
+            <a
+              href="/en/freestudying"
+              (click)="$event.preventDefault(); navigateTo('en/freestudying')"
+              class="menu-title_text"
+            >
+              Free Trading Education
+            </a>
+          </div>
+          <!-- <div class="menu-title-block">
             <a (click)="navigateTo('en/main')" class="menu-title_text"
               >Main page</a
             >
@@ -1476,11 +1601,10 @@
             <a (click)="navigateTo('en/freestudying')" class="menu-title_text"
               >Free Trading Education
             </a>
-          </div>
+          </div> -->
         </div>
         <div class="menu">
-          <span class="menu-title">Links</span
-          >
+          <span class="menu-title">Links</span>
           <!-- <a
             href="/assets/documents/PublicOfferAgreementNew.docx"
             download
@@ -1662,7 +1786,7 @@
         </div>
       </div> -->
     </div>
-    <br/>
+    <br />
     <div class="component-1f">
       <div class="in-20"></div>
       <div class="component-21">

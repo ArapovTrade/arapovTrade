@@ -186,7 +186,7 @@ export class EnBlogHomepageComponent implements OnInit {
   }
   paginatedArticles = []; // Статьи для отображения на текущей странице
   currentPage = 0;
-  pageSize = 10;
+  pageSize = 60;
   onPageChange(event: PageEvent) {
     this.currentPage = event.pageIndex;
     this.pageSize = event.pageSize;

@@ -10,7 +10,7 @@
       }"
     >
       <ul>
-        <li
+        <!-- <li
           (click)="navigateTo('')"
           [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
           [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
@@ -44,6 +44,51 @@
           [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
         >
           МОЇ КНИГИ
+        </li> -->
+        <li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+          <a
+            href="/"
+            (click)="$event.preventDefault(); navigateTo('')"
+            [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+          >
+            ГОЛОВНА
+          </a>
+        </li>
+        <li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+          <a
+            href="/uk/freestudying"
+            (click)="$event.preventDefault(); navigateTo('uk/freestudying')"
+            [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+          >
+            БЕЗКОШТОВНІ КУРСИ
+          </a>
+        </li>
+        <li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+          <a
+            href="/uk"
+            (click)="$event.preventDefault(); navigateTo('uk')"
+            [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+          >
+            ПРО АВТОРА
+          </a>
+        </li>
+        <li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+          <a
+            href="/uk/studying"
+            (click)="$event.preventDefault(); navigateTo('uk/studying')"
+            [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+          >
+            ПРОФЕСІЙНІ КУРСИ
+          </a>
+        </li>
+        <li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+          <a
+            href="/uk/books"
+            (click)="$event.preventDefault(); navigateTo('uk/books')"
+            [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+          >
+            МОЇ КНИГИ
+          </a>
         </li>
       </ul>
     </div>
@@ -71,7 +116,7 @@
           class="nav-list desktop-nav"
           [ngClass]="{ 'menu-item-dark': isDark, 'menu-item-light': !isDark }"
         >
-          <li (click)="navigateTo('')">Головна</li>
+          <!-- <li (click)="navigateTo('')">Головна</li>
           <li (click)="navigateTo('uk/freestudying')">безкоштовнi курси</li>
           <li
             (click)="navigateTo('uk')"
@@ -79,7 +124,37 @@
           >
             Про автора
           </li>
-          <li (click)="navigateTo('uk/studying')">Професiйнi курси</li>
+          <li (click)="navigateTo('uk/studying')">Професiйнi курси</li> -->
+          <li>
+            <a href="/" (click)="$event.preventDefault(); navigateTo('')">
+              Головна
+            </a>
+          </li>
+          <li>
+            <a
+              href="/uk/freestudying"
+              (click)="$event.preventDefault(); navigateTo('uk/freestudying')"
+            >
+              безкоштовнi курси
+            </a>
+          </li>
+          <li>
+            <a
+              href="/uk"
+              (click)="$event.preventDefault(); navigateTo('uk')"
+              [ngStyle]="{ color: isDark ? '#FFCD29' : '#0082CC' }"
+            >
+              Про автора
+            </a>
+          </li>
+          <li>
+            <a
+              href="/uk/studying"
+              (click)="$event.preventDefault(); navigateTo('uk/studying')"
+            >
+              Професiйнi курси
+            </a>
+          </li>
         </ul>
       </div>
 
@@ -126,7 +201,7 @@
             *ngIf="dropdownOpen"
             [ngStyle]="{ background: isDark ? '#2c2a06' : '#DBE2E7' }"
           >
-            <li
+            <!-- <li
               [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
               (click)="selectLang('ru'); navigateTo('ru')"
             >
@@ -144,6 +219,36 @@
               (click)="selectLang('en'); navigateTo('en')"
             >
               EN
+            </li> -->
+            <li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+              <a
+                href="/ru"
+                (click)="
+                  $event.preventDefault(); selectLang('ru'); navigateTo('ru')
+                "
+              >
+                RU
+              </a>
+            </li>
+            <li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+              <a
+                href="/uk"
+                (click)="
+                  $event.preventDefault(); selectLang('ua'); navigateTo('uk')
+                "
+              >
+                UA
+              </a>
+            </li>
+            <li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+              <a
+                href="/en"
+                (click)="
+                  $event.preventDefault(); selectLang('en'); navigateTo('en')
+                "
+              >
+                EN
+              </a>
             </li>
           </ul>
         </div>
@@ -490,9 +595,8 @@
           [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
         >
           Незалежний дослідник у галузі психології інвестиційних рішень та
-          поведінкових фінансів. Практикуючий учасник фінансових ринків з
-
-          2013 року . Кандидат у майстри спорту з шахів. ( ORCID:
+          поведінкових фінансів. Практикуючий учасник фінансових ринків з 2013
+          року . Кандидат у майстри спорту з шахів. ( ORCID:
 
           <a
             [ngStyle]="{
@@ -603,7 +707,8 @@
                 class="linkrefinto"
                 style="text-decoration: underline"
                 href="https://www.wikidata.org/wiki/Q138504696"
-                > УДК 336.76:159.9 </a
+              >
+                УДК 336.76:159.9 </a
               >).
             </div>
           </div>
@@ -829,8 +934,6 @@
     </div>
   </div>
 
-   
-
   <div id="registration"></div>
   <div
     class="author-page_section-three"
@@ -1029,7 +1132,7 @@
       <div class="links">
         <div class="menu">
           <span class="menu-title">Меню</span>
-          <div class="menu-title-block">
+          <!-- <div class="menu-title-block">
             <a (click)="navigateTo('')" class="menu-title_text">Головна</a>
           </div>
           <div class="menu-title-block">
@@ -1046,11 +1149,46 @@
             <a (click)="navigateTo('uk/freestudying')" class="menu-title_text"
               >Безкоштовне навчання трейдингу</a
             >
+          </div> -->
+          <div class="menu-title-block">
+            <a
+              href="/"
+              (click)="$event.preventDefault(); navigateTo('')"
+              class="menu-title_text"
+            >
+              Головна
+            </a>
+          </div>
+          <div class="menu-title-block">
+            <a
+              href="/uk"
+              (click)="$event.preventDefault(); navigateTo('uk')"
+              class="menu-title_text"
+            >
+              Про автора курсу
+            </a>
+          </div>
+          <div class="menu-title-block">
+            <a
+              href="/uk/studying"
+              (click)="$event.preventDefault(); navigateTo('uk/studying')"
+              class="menu-title_text"
+            >
+              Курси з трейдингу
+            </a>
+          </div>
+          <div class="menu-title-block">
+            <a
+              href="/uk/freestudying"
+              (click)="$event.preventDefault(); navigateTo('uk/freestudying')"
+              class="menu-title_text"
+            >
+              Безкоштовне навчання трейдингу
+            </a>
           </div>
         </div>
         <div class="menu">
-          <span class="menu-title">Посилання</span
-          >
+          <span class="menu-title">Посилання</span>
           <!-- <a
             href="/assets/documents/PublicOfferAgreementNew.docx"
             download
@@ -1230,9 +1368,8 @@
           </div>
         </div>
       </div> -->
-      
     </div>
-    <br/>
+    <br />
     <div class="component-1f">
       <div class="in-20"></div>
       <div class="component-21">

@@ -2887,7 +2887,7 @@ button {
   color: white;
 }
 
-.nav-list.desktop-nav li {
+.nav-list.desktop-nav li a{
   font-family: "Lato", sans-serif;
   font-weight: 600;
   font-size: 16px;
@@ -2897,12 +2897,18 @@ button {
 .menu-item-dark li {
   color: #ffffff;
 }
+.menu-item-dark li a{
+  color: #ffffff;
+}
 .menu-item-dark li:hover {
   color: #fcdb35;
   transition: all 0.3s ease-in-out;
 }
 
 .menu-item-light li {
+  color: #0c263a;
+}
+.menu-item-light li a{
   color: #0c263a;
 }
 .menu-item-light li:hover {
@@ -3807,7 +3813,7 @@ letter-spacing: 0%;
     padding: 4px 6px;
     height: 28px;
   }
-  .nav-list.desktop-nav {
+  .nav-list.desktop-nav a{
     display: none;  
   }
   .dropdown {

@@ -10,7 +10,37 @@
       }"
     >
       <ul>
-        <li
+        <li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+  <a href="/en/main" (click)="$event.preventDefault(); navigateTo('en/main')"
+     [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }">
+    MAIN
+  </a>
+</li>
+<li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+  <a href="/en/freestudying" (click)="$event.preventDefault(); navigateTo('en/freestudying')"
+     [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }">
+    FREE COURSES
+  </a>
+</li>
+<li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+  <a href="/en" (click)="$event.preventDefault(); navigateTo('en')"
+     [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }">
+    ABOUT THE AUTHOR
+  </a>
+</li>
+<li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+  <a href="/en/studying" (click)="$event.preventDefault(); navigateTo('en/studying')"
+     [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }">
+    PROFESSIONAL COURSES
+  </a>
+</li>
+<li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+  <a href="/en/books" (click)="$event.preventDefault(); navigateTo('en/books')"
+     [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }">
+    MY BOOKS
+  </a>
+</li>
+        <!-- <li
           (click)="navigateTo('en/main')"
           [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
           [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
@@ -44,7 +74,7 @@
           [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
         >
           MY BOOKS
-        </li>
+        </li> -->
       </ul>
     </div>
   </div>
@@ -72,7 +102,7 @@
           class="nav-list desktop-nav"
           [ngClass]="{ 'menu-item-dark': isDark, 'menu-item-light': !isDark }"
         >
-          <li (click)="navigateTo('en/main')">Main</li>
+          <!-- <li (click)="navigateTo('en/main')">Main</li>
           <li (click)="navigateTo('en/freestudying')">Free Courses</li>
           <li
             (click)="navigateTo('en')"
@@ -80,7 +110,28 @@
           >
             About the Author
           </li>
-          <li (click)="navigateTo('en/studying')">Professional Courses</li>
+          <li (click)="navigateTo('en/studying')">Professional Courses</li> -->
+          <li>
+  <a href="/en/main" (click)="$event.preventDefault(); navigateTo('en/main')">
+    Main
+  </a>
+</li>
+<li>
+  <a href="/en/freestudying" (click)="$event.preventDefault(); navigateTo('en/freestudying')">
+    Free Courses
+  </a>
+</li>
+<li>
+  <a href="/en" (click)="$event.preventDefault(); navigateTo('en')"
+     [ngStyle]="{ color: isDark ? '#FFCD29' : '#0082CC' }">
+    About the Author
+  </a>
+</li>
+<li>
+  <a href="/en/studying" (click)="$event.preventDefault(); navigateTo('en/studying')">
+    Professional Courses
+  </a>
+</li>
         </ul>
       </div>
 
@@ -127,7 +178,7 @@
             *ngIf="dropdownOpen"
             [ngStyle]="{ background: isDark ? '#2c2a06' : '#DBE2E7' }"
           >
-            <li
+            <!-- <li
               [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
               (click)="selectLang('ua'); navigateTo('uk')"
             >
@@ -144,7 +195,22 @@
               (click)="selectLang('en'); navigateTo('en')"
             >
               EN
-            </li>
+            </li> -->
+            <li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+  <a href="/uk" (click)="$event.preventDefault(); selectLang('ua'); navigateTo('uk')">
+    UA
+  </a>
+</li>
+<li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+  <a href="/ru" (click)="$event.preventDefault(); selectLang('ru'); navigateTo('ru')">
+    RU
+  </a>
+</li>
+<li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+  <a href="/en" (click)="$event.preventDefault(); selectLang('en'); navigateTo('en')">
+    EN
+  </a>
+</li>
           </ul>
         </div>
         <div
@@ -1026,7 +1092,7 @@
       <div class="links">
         <div class="menu">
           <span class="menu-title">Menu</span>
-          <div class="menu-title-block">
+          <!-- <div class="menu-title-block">
             <a (click)="navigateTo('en/main')" class="menu-title_text"
               >Main page</a
             >
@@ -1045,7 +1111,27 @@
             <a (click)="navigateTo('en/freestudying')" class="menu-title_text"
               >Free trading training</a
             >
-          </div>
+          </div> -->
+          <div class="menu-title-block">
+  <a href="/en/main" (click)="$event.preventDefault(); navigateTo('en/main')" class="menu-title_text">
+    Main page
+  </a>
+</div>
+<div class="menu-title-block">
+  <a href="/en" (click)="$event.preventDefault(); navigateTo('en')" class="menu-title_text">
+    About the course author
+  </a>
+</div>
+<div class="menu-title-block">
+  <a href="/en/studying" (click)="$event.preventDefault(); navigateTo('en/studying')" class="menu-title_text">
+    Trading courses
+  </a>
+</div>
+<div class="menu-title-block">
+  <a href="/en/freestudying" (click)="$event.preventDefault(); navigateTo('en/freestudying')" class="menu-title_text">
+    Free trading training
+  </a>
+</div>
         </div>
 
         <div class="menu">
