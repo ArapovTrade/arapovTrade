@@ -31,15 +31,36 @@
           class="nav-list desktop-nav"
           [ngClass]="{ 'menu-item-dark': isDark, 'menu-item-light': !isDark }"
         >
-          <li (click)="navigateTo('')">Головна</li>
-          <li
-            (click)="navigateTo('uk/freestudying')"
-            [ngStyle]="{ color: isDark ? '#FFCD29' : '#0082CC' }"
-          >
-            безкоштовнi курси
+          <li>
+            <a href="/" (click)="$event.preventDefault(); navigateTo('')">
+              Головна
+            </a>
           </li>
-          <li (click)="navigateTo('uk')">Про автора</li>
-          <li (click)="navigateTo('uk/studying')">Професiйнi курси</li>
+
+          <li>
+            <a
+              href="/uk/freestudying"
+              (click)="$event.preventDefault(); navigateTo('uk/freestudying')"
+              [ngStyle]="{ color: isDark ? '#FFCD29' : '#0082CC' }"
+            >
+              безкоштовнi курси
+            </a>
+          </li>
+
+          <li>
+            <a href="/uk" (click)="$event.preventDefault(); navigateTo('uk')">
+              Про автора
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="/uk/studying"
+              (click)="$event.preventDefault(); navigateTo('uk/studying')"
+            >
+              Професiйнi курси
+            </a>
+          </li>
         </ul>
       </div>
 
@@ -211,39 +232,57 @@
     >
       <ul>
         <li
-          (click)="navigateTo('')"
           [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
           [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
         >
-          ГОЛОВНА
+          <a href="/" (click)="$event.preventDefault(); navigateTo('')">
+            ГОЛОВНА
+          </a>
         </li>
+
         <li
-          (click)="navigateTo('uk/freestudying')"
           [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
           [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
         >
-          БЕЗКОШТОВНІ КУРСИ
+          <a
+            href="/uk/freestudying"
+            (click)="$event.preventDefault(); navigateTo('uk/freestudying')"
+          >
+            БЕЗКОШТОВНІ КУРСИ
+          </a>
         </li>
+
         <li
-          (click)="navigateTo('uk')"
           [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
           [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
         >
-          ПРО АВТОРА
+          <a href="/uk" (click)="$event.preventDefault(); navigateTo('uk')">
+            ПРО АВТОРА
+          </a>
         </li>
+
         <li
-          (click)="navigateTo('uk/studying')"
           [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
           [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
         >
-          ПРОФЕСІЙНІ КУРСИ
+          <a
+            href="/uk/studying"
+            (click)="$event.preventDefault(); navigateTo('uk/studying')"
+          >
+            ПРОФЕСІЙНІ КУРСИ
+          </a>
         </li>
+
         <li
-          (click)="navigateTo('uk/books')"
           [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
           [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
         >
-          МОЇ КНИГИ
+          <a
+            href="/uk/books"
+            (click)="$event.preventDefault(); navigateTo('uk/books')"
+          >
+            МОЇ КНИГИ
+          </a>
         </li>
       </ul>
     </div>
@@ -252,14 +291,18 @@
   <router-outlet> </router-outlet>
 
   <div class="ad-inarticle">
-  <ins class="adsbygoogle"
-       style="display:block; text-align:center;"
-       data-ad-layout="in-article"
-       data-ad-format="fluid"
-       data-ad-client="ca-pub-3531945003419158"
-       data-ad-slot="2795658068"></ins>
-  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
+    <ins
+      class="adsbygoogle"
+      style="display: block; text-align: center"
+      data-ad-layout="in-article"
+      data-ad-format="fluid"
+      data-ad-client="ca-pub-3531945003419158"
+      data-ad-slot="2795658068"
+    ></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
   <!-- Footer -->
   <div class="footer">
     <div class="footer-main-block">
@@ -279,7 +322,8 @@
             </div>
           </div>
           <span class="footer-text"
-            >100% безкоштовна теорія трейдингу та практичні рекомендації для новачків і досвідчених трейдерів.</span
+            >100% безкоштовна теорія трейдингу та практичні рекомендації для
+            новачків і досвідчених трейдерів.</span
           >
         </div>
       </div>
@@ -288,30 +332,47 @@
         <div class="menu">
           <span class="menu-title">Меню</span>
           <div class="menu-title-block">
-            <a (click)="navigateTo('')" class="menu-title_text">Головна</a>
-          </div>
-          <div class="menu-title-block">
-            <a (click)="navigateTo('uk')" class="menu-title_text"
-              >Про автора курсу</a
+            <a
+              href="/"
+              (click)="$event.preventDefault(); navigateTo('')"
+              class="menu-title_text"
             >
+              Головна
+            </a>
           </div>
-          <div class="menu-title-block">
-            <a (click)="navigateTo('uk/studying')" class="menu-title_text"
-              >Курси з трейдингу</a
-            >
-          </div>
+
           <div class="menu-title-block">
             <a
-              href="https://arapov.trade/uk/freestudying"
+              href="/uk"
+              (click)="$event.preventDefault(); navigateTo('uk')"
               class="menu-title_text"
-              >Безкоштовне навчання трейдингу</a
             >
+              Про автора курсу
+            </a>
           </div>
-          
+
+          <div class="menu-title-block">
+            <a
+              href="/uk/studying"
+              (click)="$event.preventDefault(); navigateTo('uk/studying')"
+              class="menu-title_text"
+            >
+              Курси з трейдингу
+            </a>
+          </div>
+
+          <div class="menu-title-block">
+            <a
+              href="/uk/freestudying"
+              (click)="$event.preventDefault(); navigateTo('uk/freestudying')"
+              class="menu-title_text"
+            >
+              Безкоштовне навчання трейдингу
+            </a>
+          </div>
         </div>
         <div class="menu">
-          <span class="menu-title">Посилання</span
-          >
+          <span class="menu-title">Посилання</span>
           <!-- <a
             href="/assets/documents/PublicOfferAgreementNew.docx"
             download
@@ -325,39 +386,37 @@
             >Політика конфіденційності</a
           >
           <a
-            (click)="navigateTo('uk/disclaimer')"
+            href="/uk/disclaimer"
+            (click)="$event.preventDefault(); navigateTo('uk/disclaimer')"
             class="menu-title-block menu-title_text"
             >Відмова від відповідальності</a
           >
-          
         </div>
 
         <div class="menu">
           <span class="menu-title">Нашi проекти</span>
           <a
-            (click)="navigateTo('uk/freestudying/about')"
+            href="/uk/freestudying/about"
+            (click)="
+              $event.preventDefault(); navigateTo('uk/freestudying/about')
+            "
             class="menu-title-block menu-title_text"
             >Про ARAPOV.TRADE</a
           >
           <div class="menu-title-block">
-            <a (click)="navigateTo('uk/books')" class="menu-title_text">
+            <a
+              href="/uk/books"
+              (click)="$event.preventDefault(); navigateTo('uk/books')"
+              class="menu-title_text"
+            >
               МОЇ КНИГИ</a
             >
           </div>
-          <a
-            href="https://arapov.trade/uk/studying"
-            target="_blank"
-            class="menu-title-block menu-title_text"
-          >
-            <span class="menu-title-block menu-title_text">
-              Професійні курси</span
-            >
-          </a>
            
         </div>
       </div>
-       
-    </div> <br/>
+    </div>
+    <br />
     <div class="component-1f">
       <div class="in-20"></div>
       <div class="component-21">
