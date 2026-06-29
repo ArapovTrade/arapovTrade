@@ -43,7 +43,7 @@ const routes: Routes = [
           ),
       },
       {
-        path: 'imbalance-fvg',
+        path: 'imbalance-fvg', 
         loadChildren: () =>
           import('./one-en-blog/one-en-blog.module').then(
             (m) => m.OneEnBlogModule,
@@ -258,7 +258,7 @@ const routes: Routes = [
           import('./thirty-one-eu-blog/thirty-one-eu-blog.module').then(
             (m) => m.ThirtyOneEuBlogModule,
           ),
-      },
+      }, 
       {
         path: 'how-exchange-works', //32
         loadChildren: () =>

@@ -57,7 +57,6 @@
                 Professional courses
               </a>
             </li>
-             
           </ul>
         </div>
 
@@ -138,7 +137,6 @@
                   EN
                 </a>
               </li>
-              
             </ul>
           </div>
           <div
@@ -277,41 +275,6 @@
                 MY BOOKS
               </a>
             </li>
-            <!-- <li
-              (click)="navigateTo('en/main')"
-              [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-              [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-            >
-              MAIN
-            </li>
-            <li
-              (click)="navigateTo('en/freestudying')"
-              [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-              [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-            >
-              FREE COURSES
-            </li>
-            <li
-              (click)="navigateTo('en')"
-              [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-              [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-            >
-              ABOUT THE AUTHOR
-            </li>
-            <li
-              (click)="navigateTo('en/studying')"
-              [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-              [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-            >
-              PROFESSIONAL COURSES
-            </li>
-            <li
-              (click)="navigateTo('en/books')"
-              [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-              [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-            >
-              MY BOOKS
-            </li> -->
           </ul>
         </div>
       </div>
@@ -356,17 +319,23 @@
               </span>
               <div class="authot_button_block">
                 <div
-                  (click)="navigateTo('en/freestudying/freeeducation')"
                   [ngClass]="{
                     'btn-section-one': true,
                     'gradient-block-orange': isDark,
                     'gradient-block-blue': !isDark,
                   }"
                 >
-                  <span
-                    class="pochaty-navchannya"
-                    [ngStyle]="{ color: !isDark ? '#ffffff' : '#03314b' }"
-                    >Start learning</span
+                  <a
+                    href="/en/freestudying/freeeducation"
+                    (click)="
+                      $event.preventDefault();
+                      navigateTo('en/freestudying/freeeducation')
+                    "
+                    ><span
+                      class="pochaty-navchannya"
+                      [ngStyle]="{ color: !isDark ? '#ffffff' : '#03314b' }"
+                      >Start learning</span
+                    ></a
                   >
                 </div>
 
@@ -665,17 +634,20 @@
 
     <!-- Кнопка "усі курси" -->
     <div
-      (click)="navigateTo('en/freestudying')"
       [ngClass]="{
         'sections-nav_all': true,
         'gradient-block-orange': isDark,
         'gradient-block-blue': !isDark,
       }"
     >
-      <span
-        class="sections-nav_all-text"
-        [ngStyle]="{ color: !isDark ? '#ffffff' : '#03314b' }"
-        >All courses are free</span
+      <a
+        href="/en/freestudying"
+        (click)="$event.preventDefault(); navigateTo('en/freestudying')"
+        ><span
+          class="sections-nav_all-text"
+          [ngStyle]="{ color: !isDark ? '#ffffff' : '#03314b' }"
+          >All courses are free</span
+        ></a
       >
     </div>
   </div>
@@ -1582,35 +1554,10 @@
               Free Trading Education
             </a>
           </div>
-          <!-- <div class="menu-title-block">
-            <a (click)="navigateTo('en/main')" class="menu-title_text"
-              >Main page</a
-            >
-          </div>
-          <div class="menu-title-block">
-            <a (click)="navigateTo('en')" class="menu-title_text"
-              >About the author of the course</a
-            >
-          </div>
-          <div class="menu-title-block">
-            <a (click)="navigateTo('en/studying')" class="menu-title_text"
-              >Trading courses</a
-            >
-          </div>
-          <div class="menu-title-block">
-            <a (click)="navigateTo('en/freestudying')" class="menu-title_text"
-              >Free Trading Education
-            </a>
-          </div> -->
         </div>
         <div class="menu">
           <span class="menu-title">Links</span>
-          <!-- <a
-            href="/assets/documents/PublicOfferAgreementNew.docx"
-            download
-            class="menu-title-block menu-title_text"
-            >Public Offer Agreement</a
-          > -->
+
           <a
             href="/assets/documents/PrivacyPolicyUK.DOCX"
             download
@@ -1618,7 +1565,8 @@
             >Privacy Policy</a
           >
           <a
-            (click)="navigateTo('uk/disclaimer')"
+            href="/uk/disclaimer"
+            (click)="$event.preventDefault(); navigateTo('uk/disclaimer')"
             class="menu-title-block menu-title_text"
             >Disclaimer</a
           >
@@ -1627,12 +1575,19 @@
         <div class="menu">
           <span class="menu-title">Our Projects</span>
           <a
-            (click)="navigateTo('en/freestudying/about')"
+            href="/en/freestudying/about"
+            (click)="
+              $event.preventDefault(); navigateTo('en/freestudying/about')
+            "
             class="menu-title-block menu-title_text"
             >About ARAPOV.TRADE</a
           >
           <div class="menu-title-block">
-            <a (click)="navigateTo('en/books')" class="menu-title_text"
+            <a
+              href="/en/books"
+              (click)="$event.preventDefault(); navigateTo('en/books')"
+               
+              class="menu-title_text"
               >MY BOOKS</a
             >
           </div>
