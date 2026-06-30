@@ -73,9 +73,11 @@
           class="nav-list desktop-nav"
           [ngClass]="{ 'menu-item-dark': isDark, 'menu-item-light': !isDark }"
         >
-         
           <li>
-            <a href="/ru/main" (click)="$event.preventDefault(); navigateTo('ru/main')">
+            <a
+              href="/ru/main"
+              (click)="$event.preventDefault(); navigateTo('ru/main')"
+            >
               Главная
             </a>
           </li>
@@ -84,7 +86,7 @@
               href="/ru/freestudying"
               (click)="$event.preventDefault(); navigateTo('ru/freestudying')"
             >
-             Бесплатные курсы
+              Бесплатные курсы
             </a>
           </li>
           <li>
@@ -97,7 +99,7 @@
               href="/ru/studying"
               (click)="$event.preventDefault(); navigateTo('ru/studying')"
             >
-             Профессиональные курсы
+              Профессиональные курсы
             </a>
           </li>
         </ul>
@@ -146,8 +148,7 @@
             *ngIf="dropdownOpen"
             [ngStyle]="{ background: isDark ? '#2c2a06' : '#DBE2E7' }"
           >
-            
-             <li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+            <li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
               <a
                 href="/uk/books"
                 (click)="
@@ -582,9 +583,30 @@
             </div>
           </div>
           <span class="footer-text"
-            >Бесплатное обучение трейдингу и практические рекомендации для
-            новичков и профессионалов, чтобы не потерять депозит.</span
+            >100% бесплатная теория трейдинга и практические рекомендации для
+            новичков и опытных трейдеров.</span
           >
+        </div>
+        <div style="display: flex; flex-direction: row; ">
+           <div class="menu-title-block" style="width: 25px !important; font-size: 14px!important;line-height: 2!important;">
+          <a style="font-size: 14px !important; "
+            href="/en/books"
+            (click)="$event.preventDefault(); navigateTo('en/books')"
+            class="menu-title_text"
+          >
+            EN 
+          </a>  
+        </div>
+        <div><span style="color: gray; width: 25px; font-size: 25px; ">-</span></div>
+        <div class="menu-title-block" style="width: 25px !important; margin-left: 5px; line-height: 2!important;font-size: 14px!important;">
+          <a style="font-size: 14px !important; "
+            href="/uk/books"
+            (click)="$event.preventDefault(); navigateTo('uk/books')"
+            class="menu-title_text"
+          >
+            UA
+          </a>
+        </div>
         </div>
       </div>
 
@@ -592,7 +614,7 @@
         <div class="menu">
           <span class="menu-title">Меню</span>
           <div class="menu-title-block">
-            <a 
+            <a
               href="/ru/main"
               (click)="$event.preventDefault(); navigateTo('ru/main')"
               class="menu-title_text"
@@ -600,35 +622,42 @@
             >
           </div>
           <div class="menu-title-block">
-            <a href="/ru"
-              (click)="$event.preventDefault(); navigateTo('ru')" class="menu-title_text"
+            <a
+              href="/ru"
+              (click)="$event.preventDefault(); navigateTo('ru')"
+              class="menu-title_text"
               >Об авторе курса</a
             >
           </div>
           <div class="menu-title-block">
-            <a href="/ru/studying"
-              (click)="$event.preventDefault(); navigateTo('ru/studying')" class="menu-title_text"
+            <a
+              href="/ru/studying"
+              (click)="$event.preventDefault(); navigateTo('ru/studying')"
+              class="menu-title_text"
               >Курсы по трейдингу</a
             >
           </div>
           <div class="menu-title-block">
-            <a  href="/ru/freestudying"
-              (click)="$event.preventDefault(); navigateTo('ru/freestudying')" class="menu-title_text"
+            <a
+              href="/ru/freestudying"
+              (click)="$event.preventDefault(); navigateTo('ru/freestudying')"
+              class="menu-title_text"
               >Бесплатное обучение трейдингу</a
             >
           </div>
         </div>
         <div class="menu">
           <span class="menu-title">Ссылки</span>
-          
+
           <a
             href="/assets/documents/PrivacyPolicyRU.DOCX"
             download
             class="menu-title-block menu-title_text"
             >Политика конфиденциальности</a
           >
-          <a href="/ru/disclaimer" (click)="$event.preventDefault(); navigateTo('ru/disclaimer')"
-             
+          <a
+            href="/ru/disclaimer"
+            (click)="$event.preventDefault(); navigateTo('ru/disclaimer')"
             class="menu-title-block menu-title_text"
             >Отказ от ответственности</a
           >
@@ -636,8 +665,11 @@
 
         <div class="menu">
           <span class="menu-title">Наши проекты</span>
-          <a href="/ru/freestudying/about" (click)="$event.preventDefault(); navigateTo('ru/freestudying/about')"
-            
+          <a
+            href="/ru/freestudying/about"
+            (click)="
+              $event.preventDefault(); navigateTo('ru/freestudying/about')
+            "
             class="menu-title-block menu-title_text"
             >Про ARAPOV.TRADE</a
           >

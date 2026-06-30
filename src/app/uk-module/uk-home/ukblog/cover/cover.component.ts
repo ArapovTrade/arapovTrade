@@ -1,6 +1,13 @@
-import { ChangeDetectorRef, Component, Renderer2, RendererFactory2,
-   
-  Inject,   AfterViewInit, OnDestroy,OnInit} from '@angular/core';
+import {
+  ChangeDetectorRef,
+  Component,
+  Renderer2,
+  RendererFactory2,
+  Inject,
+  AfterViewInit,
+  OnDestroy,
+  OnInit,
+} from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ArticlesService } from '../../../../servises/articles.service';
 import { LangService } from '../../../../servises/lang.service';
@@ -12,90 +19,71 @@ import { NavigationEnd } from '@angular/router';
 import { Meta, Title } from '@angular/platform-browser';
 import { filter } from 'rxjs/operators';
 import { MetaservService } from '../../../../servises/metaserv.service';
- import { takeUntil } from 'rxjs/operators';
+import { takeUntil } from 'rxjs/operators';
 import { Subscription } from 'rxjs';
 declare var AOS: any;
 import { ThemeservService } from '../../../../servises/themeserv.service';
 
 import { isPlatformBrowser } from '@angular/common';
-import {   PLATFORM_ID } from '@angular/core';
+import { PLATFORM_ID } from '@angular/core';
 @Component({
   selector: 'app-cover',
   templateUrl: './cover.component.html',
-  styleUrl: './cover.component.scss'
+  styleUrl: './cover.component.scss',
 })
-export class CoverComponent implements OnInit, AfterViewInit, OnDestroy{
-dropdownOpen = false;
+export class CoverComponent implements OnInit, AfterViewInit, OnDestroy {
+  dropdownOpen = false;
   checkLang!: number;
   private destroy$ = new Subject<void>();
   private renderer: Renderer2;
   breadcrumbs: any[] = []; // Массив для хлебных крошек
 
   jsonLd: any; // Объект для JSON-LD
-  
 
-   
-  constructor( private router: Router,
-      private route: ActivatedRoute,
-      private artickle: ArticlesService,
-      private lan: LangService,
-      private cdr: ChangeDetectorRef,
-      private searchSer: SearchServiceService,
-      private languageService: ServLangueageService,
-      private themeService:ThemeservService,
-      private rendererFactory: RendererFactory2,
-     @Inject(DOCUMENT) private document: Document,
-      private meta: Meta,
-         private titleService: Title,
-         private metaTegServ: MetaservService, @Inject(PLATFORM_ID) private platformId: Object
-    ) {
-        this.renderer = rendererFactory.createRenderer(null, null);
-
-           
-     
-    
-     
-   
-     
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    private artickle: ArticlesService,
+    private lan: LangService,
+    private cdr: ChangeDetectorRef,
+    private searchSer: SearchServiceService,
+    private languageService: ServLangueageService,
+    private themeService: ThemeservService,
+    private rendererFactory: RendererFactory2,
+    @Inject(DOCUMENT) private document: Document,
+    private meta: Meta,
+    private titleService: Title,
+    private metaTegServ: MetaservService,
+    @Inject(PLATFORM_ID) private platformId: Object,
+  ) {
+    this.renderer = rendererFactory.createRenderer(null, null);
   }
-
 
   ngAfterViewInit() {
- if (!isPlatformBrowser(this.platformId)) {
-    return;
+    if (!isPlatformBrowser(this.platformId)) {
+      return;
+    }
+
+    setTimeout(() => {
+      try {
+        (window as any).adsbygoogle = (window as any).adsbygoogle || [];
+
+        (window as any).adsbygoogle.push({});
+      } catch (e) {
+        console.error('adsbygoogle error', e);
+      }
+    }, 300);
+     
   }
 
-  setTimeout(() => {
-    try {
-      (window as any).adsbygoogle =
-        (window as any).adsbygoogle || [];
-
-      (window as any).adsbygoogle.push({});
-    } catch (e) {
-      console.error('adsbygoogle error', e);
-    }
-  }, 300);
-    // setTimeout(() => {
-    //   try {
-    //     (window.adsbygoogle = window.adsbygoogle || []).push({});
-    //   } catch (e) {
-    //     console.error('adsbygoogle error', e);
-    //   }
-    // }, 300);
-
-
-   
-}
-  
-
-   
   changeLanguage(lang: string) {
     // Получение текущего пути и параметров маршрута
     const currentPath = this.router.url;
     const pathSegments = currentPath.split('/');
-     
+
     // Замена языка в пути
-    if (// тут тоже нужна логика для мейн пейдж
+    if (
+      // тут тоже нужна логика для мейн пейдж
       pathSegments[1] === 'uk' ||
       pathSegments[1] === 'en' ||
       pathSegments[1] === 'ru'
@@ -114,13 +102,13 @@ dropdownOpen = false;
       window.scrollTo(0, 0);
     });
   }
-menuOpen: boolean = false;
+  menuOpen: boolean = false;
   isMenuOpen = false;
-isDark!:boolean  ;
+  isDark!: boolean;
   languages = ['ua', 'en', 'ru']; // какие языки нужны
   currentLang = 'ua';
-   private routerSubscription!: Subscription;
-    private themeSubscription!: Subscription;
+  private routerSubscription!: Subscription;
+  private themeSubscription!: Subscription;
   openMenu() {
     this.isMenuOpen = true;
   }
@@ -147,7 +135,7 @@ isDark!:boolean  ;
   }
   registForm: any;
 
- //popup
+  //popup
   flag1: boolean = false;
   flagTrue1: boolean = true;
   searchtoggle(event: Event) {
@@ -155,13 +143,11 @@ isDark!:boolean  ;
     this.flagTrue1 = !this.flagTrue1;
   }
 
-
   ngOnInit(): void {
-    this.themeSubscription =this.themeService.getTheme().subscribe(data=>{
-      this.isDark=data;
-        this.cdr.detectChanges();
-    })
-
+    this.themeSubscription = this.themeService.getTheme().subscribe((data) => {
+      this.isDark = data;
+      this.cdr.detectChanges();
+    });
 
     this.routerSubscription = this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
@@ -171,65 +157,48 @@ isDark!:boolean  ;
       }
     });
 
+    this.metaTegServ.addOrganizationSchema();
+    this.languageService.languageCode$.subscribe((code) => {
+      this.checkLang = code;
+      this.searchSer.setLange(this.checkLang);
+    });
+    //  this.setDefaultMetaTags();
 
+    this.router.events
+      .pipe(filter((event) => event instanceof NavigationEnd))
+      .subscribe(() => {
+        this.removeMetaDescriptionIfExists();
+      });
+  }
 
-
-       this.metaTegServ.addOrganizationSchema();
-      this.languageService.languageCode$.subscribe((code) => {
-        this.checkLang = code;
+   
+  getLang() {
+    this.lan
+      .getNumber()
+      .pipe(takeUntil(this.destroy$))
+      .subscribe((value) => {
+        this.checkLang = value;
         this.searchSer.setLange(this.checkLang);
       });
-        //  this.setDefaultMetaTags();
-  
-       
-  
-      this.router.events
-        .pipe(filter((event) => event instanceof NavigationEnd))
-        .subscribe(() => {
-      this.removeMetaDescriptionIfExists()
-          
-          
-        });
-    }
-
-
-
-
-
-
-
-    private setDefaultMetaTags() {
-    
   }
-   getLang() {
-      this.lan
-        .getNumber()
-        .pipe(takeUntil(this.destroy$))
-        .subscribe((value) => {
-          this.checkLang = value;
-          this.searchSer.setLange(this.checkLang);
-        });
+  ngAfterViewChecked() {
+    this.cdr.detectChanges();
+  }
+  ngOnDestroy() {
+    this.destroy$.next();
+    this.destroy$.complete();
+    if (this.routerSubscription) {
+      this.routerSubscription.unsubscribe();
     }
-    ngAfterViewChecked() {
-      this.cdr.detectChanges();
+    if (this.themeSubscription) {
+      this.themeSubscription.unsubscribe();
     }
-    ngOnDestroy() {
-      this.destroy$.next();
-      this.destroy$.complete();
-      if (this.routerSubscription) {
-        this.routerSubscription.unsubscribe();
-      }
-      if (this.themeSubscription) {
-        this.themeSubscription.unsubscribe();
-      }
-    }
-    toggleTheme() {
+  }
+  toggleTheme() {
     this.isDark = !this.isDark;
-    this.themeService.setTheme(this.isDark)
-     
-     this.refreshAOS();
+    this.themeService.setTheme(this.isDark);
 
-
+    this.refreshAOS();
   }
   refreshAOS() {
     if (typeof AOS !== 'undefined') {
@@ -241,159 +210,23 @@ isDark!:boolean  ;
       console.warn('AOS is not defined, refresh skipped');
     }
   }
-   hovered: string | null = null;
-     //delete description
+  hovered: string | null = null;
+  //delete description
   private removeMetaDescriptionIfExists() {
-  const head = this.document.head;
-  const metaDescription = head.querySelector('meta[name="description"]');
-  if (metaDescription) {
-    head.removeChild(metaDescription);
-  }
-}
-// hreflang
-  private updateHreflangTags() {
-    // Удаляем существующие hreflang теги, чтобы избежать дублирования
-    const existingHreflangTags = this.document.querySelectorAll(
-      'link[rel="alternate"][hreflang]'
-    );
-    existingHreflangTags.forEach((tag) => tag.remove());
-    // Определяем текущий путь без параметров запроса
-    const urlPath = this.router.url.split('?')[0].replace(/^\/|\/$/g, '');
-    const segments = urlPath.split('/');
-    const currentLang =
-      segments[0] === 'uk' || segments[0] === 'ru' || segments[0] === 'en' ? segments[0] : 'uk';
-    // Определяем базовый путь без языка
-    const basePath =
-      (segments[0] === 'uk' || segments[0] === 'ru'|| segments[0] === 'en' ) && segments.length > 1
-        ? segments.slice(1).join('/')
-        : '';
-    // Для корневой страницы (arapov.trade/) добавляем только hreflang="uk"
-    if (urlPath === '') {
-      const link = this.renderer.createElement('link');
-      this.renderer.setAttribute(link, 'rel', 'alternate');
-      this.renderer.setAttribute(link, 'hreflang', 'uk');
-      this.renderer.setAttribute(link, 'href', 'https://arapov.trade/');
-      this.renderer.appendChild(this.document.head, link);
-      
-      return;
+    const head = this.document.head;
+    const metaDescription = head.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      head.removeChild(metaDescription);
     }
-    // Для остальных страниц (arapov.trade/uk, arapov.trade/ru и других)
-    const supportedLanguages = [
-      { code: 'uk', hreflang: 'uk' },
-      { code: 'ru', hreflang: 'ru' },
-      { code: 'en', hreflang: 'en' },
-    ];
-    // Добавляем тег hreflang для каждого языка
-    supportedLanguages.forEach((lang) => {
-      const href =
-        lang.code === 'uk'
-          ? `https://arapov.trade/${basePath ? 'uk/' + basePath : 'uk'}`
-          : lang.code === 'en'
-    ? `https://arapov.trade/${basePath ? 'en/' + basePath : 'en'}`
-          : `https://arapov.trade/${basePath ? 'ru/' + basePath : 'ru'}`;
-      const link = this.renderer.createElement('link');
-      this.renderer.setAttribute(link, 'rel', 'alternate');
-      this.renderer.setAttribute(link, 'hreflang', lang.hreflang);
-      this.renderer.setAttribute(link, 'href', href);
-      this.renderer.appendChild(this.document.head, link);
-    });
-    // Добавляем hreflang="x-default" (используем русскую версию как дефолтную)
-    const defaultHref =
-      basePath === ''
-        ? 'https://arapov.trade/ru'
-        : `https://arapov.trade/ru/${basePath}`;
-    const defaultLink = this.renderer.createElement('link');
-    this.renderer.setAttribute(defaultLink, 'rel', 'alternate');
-    this.renderer.setAttribute(defaultLink, 'hreflang', 'x-default');
-    this.renderer.setAttribute(defaultLink, 'href', defaultHref);
-    this.renderer.appendChild(this.document.head, defaultLink);
-   
   }
+  // hreflang
 
-   
   // Метод для динамического обновления JSON-LD в DOMъъъ
 
-private generateBreadcrumbs() {
-  const urlPath = this.router.url.split('?')[0].replace(/^\/|\/$/g, '');
-  const segments = urlPath.split('/');
-  const lang = ['ru', 'uk', 'en'].includes(segments[0]) ? segments[0] : 'ru';
-  this.breadcrumbs = [];
-
-  // Базовые URL для языков
-  const baseUrls: Record<string, string> = {
-    ru: 'https://arapov.trade/ru',
-    uk: 'https://arapov.trade/uk',
-    en: 'https://arapov.trade/en',
-  };
-
-  // Названия страниц по языкам
-  const names: Record<string, Record<string, string>> = {
-    main: { ru: 'Главная', uk: 'Головна', en: 'Main' },
-    author: { ru: 'Автор курса', uk: 'Автор курсу', en: 'Author of the Course' },
-    studying: { ru: 'Обучение трейдингу', uk: 'Навчання трейдингу', en: 'Trading training' },
-    freestudying: { ru: 'Бесплатное обучение трейдингу', uk: 'Безкоштовне навчання трейдингу', en: 'Free trading education' },
-    freeeducation: { ru: 'Бесплатные курсы по трейдингу', uk: 'Безкоштовні курси з трейдингу', en: 'Free Trading Courses' },
-    practic: { ru: 'Торговая система трейдера', uk: 'Торгова система трейдера', en: "Trader's trading system" },
-    disclaimer: { ru: 'Отказ от ответственности', uk: 'Відмова від відповідальності', en: 'Disclaimer' },
-    theory: { ru: 'Теория по трейдингу', uk: 'Теорія з трейдингу', en: 'Trading Theory' },
-  };
-
-  // Функция для добавления крошки
-  const addBreadcrumb = (key: string, suffix?: string) => {
-    const url = suffix ? `${baseUrls[lang]}/${suffix}` : baseUrls[lang];
-    this.breadcrumbs.push({ name: names[key][lang], url });
-  };
-
-  // Главная крошка
-  if (!urlPath) {
-    this.breadcrumbs.push({ name: names['main'][lang], url: 'https://arapov.trade' });
-  } else {
-    addBreadcrumb('main');   // Главная
-    addBreadcrumb('author'); // Автор курса
-
-    const page = segments[1];
-
-    if (page === 'studying') {
-      addBreadcrumb('studying', 'studying');
-    } else if (page === 'freestudying') {
-      addBreadcrumb('freestudying', 'freestudying');
-
-      if (segments[2] === 'freeeducation') {
-        addBreadcrumb('freeeducation', 'freestudying/freeeducation');
-      } else if (segments[2] === 'practic') {
-        addBreadcrumb('practic', 'freestudying/practic');
-      } else if (segments[2]) {
-        addBreadcrumb('theory', `freestudying/${segments[2]}`);
-      }
-    } else if (page === 'disclaimer') {
-      addBreadcrumb('disclaimer', 'disclaimer');
-    }
-  }
-
-  // Генерация JSON-LD
-  this.jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: this.breadcrumbs.map((breadcrumb, index) => ({
-      '@type': 'ListItem',
-      position: index + 1,
-      name: breadcrumb.name,
-      item: breadcrumb.url,
-    })),
-  };
-
-  // Обновляем <script> JSON-LD в DOM
-  this.updateJsonLdScript();
-}
-
-
-
-
-  
   private updateJsonLdScript() {
     // Удаляем старый скрипт, если он есть
     const existingScript = this.document.querySelector(
-      'script[type="application/ld+json"]'
+      'script[type="application/ld+json"]',
     );
     if (existingScript) {
       existingScript.remove();
@@ -404,33 +237,28 @@ private generateBreadcrumbs() {
     this.renderer.setProperty(
       script,
       'textContent',
-      JSON.stringify(this.jsonLd)
+      JSON.stringify(this.jsonLd),
     );
     // this.renderer.appendChild(this.document.head, script);
     this.renderer.insertBefore(
       this.document.head,
       script,
-      this.document.head.firstChild
+      this.document.head.firstChild,
     );
   }
 
-  navigateTo(link:string){
-    this.menuOpen=false;
-    
+  navigateTo(link: string) {
+    this.menuOpen = false;
+
     this.router.navigate([link]);
-
-
   }
 
-   toggleDropdown() {
+  toggleDropdown() {
     this.dropdownOpen = !this.dropdownOpen;
   }
   selectLang(lang: string) {
     this.currentLang = lang;
 
     this.dropdownOpen = false;
-
-     
   }
-   
 }

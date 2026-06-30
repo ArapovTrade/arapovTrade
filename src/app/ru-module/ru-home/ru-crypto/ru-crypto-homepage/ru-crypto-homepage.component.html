@@ -1516,6 +1516,27 @@
             новичков и опытных трейдеров.</span
           >
         </div>
+        <div style="display: flex; flex-direction: row; ">
+           <div class="menu-title-block" style="width: 25px !important; font-size: 14px!important;line-height: 2!important;">
+          <a style="font-size: 14px !important; "
+            href="/"
+            (click)="$event.preventDefault(); navigateTo('')"
+            class="menu-title_text"
+          >
+            UA  
+          </a>  
+        </div>
+        <div><span style="color: gray; width: 25px; font-size: 25px; ">-</span></div>
+        <div class="menu-title-block" style="width: 25px !important; margin-left: 5px; line-height: 2!important;font-size: 14px!important;">
+          <a style="font-size: 14px !important; "
+            href="/en/main"
+            (click)="$event.preventDefault(); navigateTo('en/main')"
+            class="menu-title_text"
+          >
+            EN
+          </a>
+        </div>
+        </div>
       </div>
 
       <div class="links">
