@@ -10,40 +10,50 @@
       }"
     >
       <ul>
-        <li
-          (click)="navigateTo('en/main')"
-          [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-          [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-        >
-          MAIN
+        <li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+          <a
+            href="/en/main"
+            (click)="$event.preventDefault(); navigateTo('en/main')"
+            [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+          >
+            MAIN
+          </a>
         </li>
-        <li
-          (click)="navigateTo('en/freestudying')"
-          [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-          [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-        >
-          FREE COURSES
+        <li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+          <a
+            href="/en/freestudying"
+            (click)="$event.preventDefault(); navigateTo('en/freestudying')"
+            [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+          >
+            FREE COURSES
+          </a>
         </li>
-        <li
-          (click)="navigateTo('en')"
-          [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-          [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-        >
-          ABOUT THE AUTHOR
+        <li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+          <a
+            href="/en"
+            (click)="$event.preventDefault(); navigateTo('en')"
+            [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+          >
+            ABOUT THE AUTHOR
+          </a>
         </li>
-        <li
-          (click)="navigateTo('en/studying')"
-          [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-          [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-        >
-          PROFESSIONAL COURSES
+        <li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+          <a
+            href="/en/studying"
+            (click)="$event.preventDefault(); navigateTo('en/studying')"
+            [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+          >
+            PROFESSIONAL COURSES
+          </a>
         </li>
-        <li
-          (click)="navigateTo('en/books')"
-          [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-          [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-        >
-          MY BOOKS
+        <li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+          <a
+            href="/en/books"
+            (click)="$event.preventDefault(); navigateTo('en/books')"
+            [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+          >
+            MY BOOKS
+          </a>
         </li>
       </ul>
     </div>
@@ -72,14 +82,35 @@
           class="nav-list desktop-nav"
           [ngClass]="{ 'menu-item-dark': isDark, 'menu-item-light': !isDark }"
         >
-          <li (click)="navigateTo('en/main')">Main</li>
-          <li (click)="navigateTo('en/freestudying')">free courses</li>
-          <li (click)="navigateTo('en')">About the author</li>
-          <li
-            (click)="navigateTo('en/studying')"
-            [ngStyle]="{ color: isDark ? '#FFCD29' : '#0082CC' }"
-          >
-            Professional courses
+          <li>
+            <a
+              href="/en/main"
+              (click)="$event.preventDefault(); navigateTo('en/main')"
+            >
+              Main
+            </a>
+          </li>
+          <li>
+            <a
+              href="/en/freestudying"
+              (click)="$event.preventDefault(); navigateTo('en/freestudying')"
+            >
+              free courses
+            </a>
+          </li>
+          <li>
+            <a href="/en" (click)="$event.preventDefault(); navigateTo('en')">
+              About the author
+            </a>
+          </li>
+          <li>
+            <a
+              href="/en/studying"
+              (click)="$event.preventDefault(); navigateTo('en/studying')"
+              [ngStyle]="{ color: isDark ? '#FFCD29' : '#0082CC' }"
+            >
+              Professional courses
+            </a>
           </li>
         </ul>
       </div>
@@ -127,24 +158,41 @@
             *ngIf="dropdownOpen"
             [ngStyle]="{ background: isDark ? '#2c2a06' : '#DBE2E7' }"
           >
-            <li
-              [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-              (click)="selectLang('ru'); navigateTo('ru/studying')"
-            >
-              RU
+            <li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+              <a
+                href="/ru/studying"
+                (click)="
+                  $event.preventDefault();
+                  selectLang('ru');
+                  navigateTo('ru/studying')
+                "
+              >
+                RU
+              </a>
             </li>
-            <li
-              [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-              (click)="selectLang('ua'); navigateTo('uk/studying')"
-            >
-              UA
+            <li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+              <a
+                href="/uk/studying"
+                (click)="
+                  $event.preventDefault();
+                  selectLang('ua');
+                  navigateTo('uk/studying')
+                "
+              >
+                UA
+              </a>
             </li>
-
-            <li
-              [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-              (click)="selectLang('en'); navigateTo('en/studying')"
-            >
-              EN
+            <li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+              <a
+                href="/en/studying"
+                (click)="
+                  $event.preventDefault();
+                  selectLang('en');
+                  navigateTo('en/studying')
+                "
+              >
+                EN
+              </a>
             </li>
           </ul>
         </div>
@@ -295,7 +343,7 @@
             online via Zoom — individually or in a small group.
           </span>
         </div>
-        <!-- (click)="navigateTo('uk/freestudying')" -->
+
         <div
           (click)="navigateToHomeWithId()"
           [ngClass]="{
@@ -575,7 +623,7 @@
           : 'linear-gradient(90deg, rgba(0, 130, 204,  0.12) )',
       }"
     >
-      <div class="third-section_text-block" style="    margin-bottom: 30px;">
+      <div class="third-section_text-block" style="margin-bottom: 30px">
         <div
           [ngClass]="{
             'second-section_programm-block-title': true,
@@ -595,7 +643,6 @@
           of opening trades under the guidance of a practicing trader, the
           course mentor.
         </div>
-         
       </div>
       <div class="third-image-block">
         <div class="third-block_image-container">
@@ -801,7 +848,7 @@
           and support to confidently navigate financial markets and make
           well-informed trading decisions. <br />
           <br />
-           
+
           Want to learn more? Submit a request, and I will personally tell you
           about the training format and how it can be beneficial for you.
         </div>
@@ -838,8 +885,6 @@
     </div>
   </div>
 
-  
-
   <div class="seventh-block-section" data-aos="fade-up" data-aos-delay="300">
     <div
       class="third-section seventh-block-section_container"
@@ -861,7 +906,8 @@
         >
           Want to become an experienced trader?
         </div>
-        <div  style="    margin-bottom: 30px;"
+        <div
+          style="margin-bottom: 30px"
           class="author-page_main-block_description-text seventh-section-descr"
           [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
         >
@@ -878,7 +924,6 @@
           mathematical expectancy and risk control in every trade — this is what
           ensures a stable approach over the long run.
         </div>
-        
       </div>
       <div class="third-image-block">
         <div class="seventh-block_image-container">
@@ -916,7 +961,8 @@
             </div>
           </div>
           <span class="footer-text"
-            >100% free trading theory and practical recommendations for beginners and experienced traders.</span
+            >100% free trading theory and practical recommendations for
+            beginners and experienced traders.</span
           >
         </div>
       </div>
@@ -925,28 +971,44 @@
         <div class="menu">
           <span class="menu-title">Menu</span>
           <div class="menu-title-block">
-            <a (click)="navigateTo('en/main')" class="menu-title_text">Main</a>
+            <a
+              href="/en/main"
+              (click)="$event.preventDefault(); navigateTo('en/main')"
+              class="menu-title_text"
+            >
+              Main
+            </a>
           </div>
           <div class="menu-title-block">
-            <a (click)="navigateTo('en')" class="menu-title_text"
-              >About the author of the course</a
+            <a
+              href="/en"
+              (click)="$event.preventDefault(); navigateTo('en')"
+              class="menu-title_text"
             >
+              About the author of the course
+            </a>
           </div>
           <div class="menu-title-block">
-            <a (click)="navigateTo('en/studying')" class="menu-title_text"
-              >Trading courses</a
+            <a
+              href="/en/studying"
+              (click)="$event.preventDefault(); navigateTo('en/studying')"
+              class="menu-title_text"
             >
+              Trading courses
+            </a>
           </div>
           <div class="menu-title-block">
-            <a (click)="navigateTo('en/freestudying')" class="menu-title_text"
-              >Free trading education</a
+            <a
+              href="/en/freestudying"
+              (click)="$event.preventDefault(); navigateTo('en/freestudying')"
+              class="menu-title_text"
             >
+              Free trading education
+            </a>
           </div>
-          
         </div>
         <div class="menu">
-          <span class="menu-title">Links</span
-          >
+          <span class="menu-title">Links</span>
           <!-- <a
             href="/assets/documents/PublicOfferAgreementNew.docx"
             download
@@ -960,22 +1022,24 @@
             >Privacy Policy</a
           >
           <a
-            (click)="navigateTo('uk/disclaimer')"
+          href="/en/disclaimer" (click)="$event.preventDefault(); navigateTo('en/disclaimer')"
+            
             class="menu-title-block menu-title_text"
             >Disclaimer</a
           >
-          
         </div>
 
         <div class="menu">
           <span class="menu-title">Our Projects</span>
-         <a
-            (click)="navigateTo('en/freestudying/about')"
+          <a href="/en/freestudying/about" (click)="$event.preventDefault(); navigateTo('en/freestudying/about')"
+          
             class="menu-title-block menu-title_text"
             >About ARAPOV.TRADE</a
           >
           <div class="menu-title-block">
-            <a (click)="navigateTo('en/books')" class="menu-title_text"
+            <a 
+              href="/en/books" (click)="$event.preventDefault(); navigateTo('en/books')"
+              class="menu-title_text"
               >MY BOOKS</a
             >
           </div>
@@ -988,7 +1052,6 @@
               Professional Courses</span
             >
           </a>
-           
         </div>
       </div>
       <!-- <div class="popular-artickles">
@@ -1129,7 +1192,7 @@
         </div>
       </div> -->
     </div>
-     <br/>
+    <br />
     <div class="component-1f">
       <div class="in-20"></div>
       <div class="component-21">

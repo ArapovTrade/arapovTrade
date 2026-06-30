@@ -18,7 +18,7 @@
           class="author-page_main-block_description-text"
           [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
           >Уся теорія трейдингу — безкоштовно і без обмежень. Детальні
-          відеоуроки, статті з реальними прикладами та  покрокові розбори
+          відеоуроки, статті з реальними прикладами та покрокові розбори
           ключових тем . Від основ ринку до просунутих торгових стратегій —
           навчайтесь у своєму темпі, без дедлайнів і прихованих платежів. <br />
           <br />
@@ -28,18 +28,22 @@
       </div>
       <div class="authot_button_block">
         <div
-          (click)="navigateTo('uk/freestudying/freeeducation')"
+           
           [ngClass]="{
             'btn-section-one': true,
             'gradient-block-orange': isDark,
             'gradient-block-blue': !isDark,
           }"
         >
-          <span
+          <a
+            href="/uk/freestudying/freeeducation"
+            (click)="$event.preventDefault(); navigateTo('uk/freestudying/freeeducation')"
+          ><span
             class="author-page_main-block_btn-text"
             [ngStyle]="{ color: !isDark ? '#ffffff' : '#03314b' }"
             >Почати навчання</span
-          >
+          ></a>
+          
         </div>
 
         <div
@@ -50,7 +54,11 @@
           }"
         >
           <span class="text-p"
-            ><a (click)="navigateTo('uk/books')">Книги з трейдингу</a>
+            ><a
+              href="/uk/books"
+              (click)="$event.preventDefault(); navigateTo('uk/books')"
+              >Книги з трейдингу</a
+            >
           </span>
         </div>
       </div>
@@ -732,7 +740,6 @@
                 'side-bar_groups-item_dark': isDark,
                 'side-bar_groups-item_light': !isDark,
               }"
-              
             >
               <input
                 type="checkbox"

@@ -6,38 +6,45 @@
     <div
       class="menu-dropdown"
       [ngStyle]="{
-            background: isDark ? 'rgba(1, 1, 1, 1)' : 'rgba(255, 255, 255, 1)',
-             
-          }"
+        background: isDark ? 'rgba(1, 1, 1, 1)' : 'rgba(255, 255, 255, 1)',
+      }"
     >
       <ul>
-        <li
-          (click)="navigateTo('ru/main')"
-          [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-          [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-        >
-          ГЛАВНАЯ
+        <li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+          <a
+            href="/ru/main"
+            (click)="$event.preventDefault(); navigateTo('ru/main')"
+            [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+          >
+            ГЛАВНАЯ
+          </a>
         </li>
-        <li
-          (click)="navigateTo('ru/freestudying')"
-          [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-          [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-        >
-          БЕСПЛАТНЫЕ КУРСЫ
+        <li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+          <a
+            href="/ru/freestudying"
+            (click)="$event.preventDefault(); navigateTo('ru/freestudying')"
+            [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+          >
+            БЕСПЛАТНЫЕ КУРСЫ
+          </a>
         </li>
-        <li
-          (click)="navigateTo('ru')"
-          [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-          [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-        >
-          ОБ АВТОРЕ
+        <li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+          <a
+            href="/ru"
+            (click)="$event.preventDefault(); navigateTo('ru')"
+            [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+          >
+            ОБ АВТОРЕ
+          </a>
         </li>
-        <li
-          (click)="navigateTo('ru/studying')"
-          [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-          [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-        >
-          ПРОФЕССИОНАЛЬНЫЕ КУРСЫ
+        <li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+          <a
+            href="/ru/studying"
+            (click)="$event.preventDefault(); navigateTo('ru/studying')"
+            [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+          >
+            ПРОФЕССИОНАЛЬНЫЕ КУРСЫ
+          </a>
         </li>
       </ul>
     </div>
@@ -51,7 +58,7 @@
           [ngStyle]="{
             background: isDark
               ? 'url(assets/redesignArapovTrade/img/logo-new.png) no-repeat center'
-              : 'url(assets/redesignArapovTrade/img/logo-new-light.png) no-repeat center'
+              : 'url(assets/redesignArapovTrade/img/logo-new-light.png) no-repeat center',
           }"
         ></div>
         <span
@@ -66,10 +73,32 @@
           class="nav-list desktop-nav"
           [ngClass]="{ 'menu-item-dark': isDark, 'menu-item-light': !isDark }"
         >
-          <li (click)="navigateTo('ru/main')">Главная</li>
-          <li (click)="navigateTo('ru/freestudying')">Бесплатные курсы</li>
-          <li (click)="navigateTo('ru')">Об авторе</li>
-          <li (click)="navigateTo('ru/studying')">Профессиональные курсы</li>
+           <li>
+            <a href="/ru/main" (click)="$event.preventDefault(); navigateTo('ru/main')">
+              Главная
+            </a>
+          </li>
+          <li>
+            <a
+              href="/ru/freestudying"
+              (click)="$event.preventDefault(); navigateTo('ru/freestudying')"
+            >
+             Бесплатные курсы
+            </a>
+          </li>
+          <li>
+            <a href="/ru" (click)="$event.preventDefault(); navigateTo('ru')">
+              Об авторе
+            </a>
+          </li>
+          <li>
+            <a
+              href="/ru/studying"
+              (click)="$event.preventDefault(); navigateTo('ru/studying')"
+            >
+             Профессиональные курсы
+            </a>
+          </li>
         </ul>
       </div>
 
@@ -116,32 +145,42 @@
             *ngIf="dropdownOpen"
             [ngStyle]="{ background: isDark ? '#2c2a06' : '#DBE2E7' }"
           >
-            <li
-              [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-              (click)="
-                selectLang('ua');
-                navigateTo('uk/books/osnovy-treydinga-tom-two')
-              "
-            >
-              UA
+             
+            <li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+              <a
+                href="/uk/books/osnovy-treydinga-tom-two"
+                (click)="
+                  $event.preventDefault();
+                  selectLang('ua');
+                  navigateTo('uk/books/osnovy-treydinga-tom-two')
+                "
+              >
+                UA
+              </a>
             </li>
-            <li
-              [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-              (click)="
-                selectLang('ru');
-                navigateTo('ru/books/osnovy-treydinga-tom-two')
-              "
-            >
-              RU
+            <li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+              <a
+                href="/ru/books/osnovy-treydinga-tom-two"
+                (click)="
+                  $event.preventDefault();
+                  selectLang('ru');
+                  navigateTo('ru/books/osnovy-treydinga-tom-two')
+                "
+              >
+                RU
+              </a>
             </li>
-            <li
-              [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-              (click)="
-                selectLang('en');
-                navigateTo('en/books/osnovy-treydinga-tom-two')
-              "
-            >
-              EN
+            <li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+              <a
+                href="/en/books/osnovy-treydinga-tom-two"
+                (click)="
+                  $event.preventDefault();
+                  selectLang('en');
+                  navigateTo('en/books/osnovy-treydinga-tom-two')
+                "
+              >
+                EN
+              </a>
             </li>
           </ul>
         </div>
@@ -241,7 +280,7 @@
           [ngClass]="{
             'isbn-block': true,
             'gradient-block-orange': isDark,
-            'podrobnee-light': !isDark
+            'podrobnee-light': !isDark,
           }"
         >
           <p
@@ -263,7 +302,7 @@
             class="author_descr_span"
             [ngClass]="{
               'gradient-orange': isDark,
-              'gradient-blue_author-page': !isDark
+              'gradient-blue_author-page': !isDark,
             }"
           >
             Методическое пособие для начинающих трейдеров
@@ -329,7 +368,17 @@
           <span
             class="author-page_main-block_description-text"
             [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-            >Второй том серии «Основы трейдинга» представляет собой практическое методическое пособие для тех, кто уже освоил базовые концепции и готов перейти к реальной торговле. Рассматриваются фазы рыночного движения, уровни смены приоритета, характеристики разворотных движений. Объёмный анализ включает вертикальные объёмы, принцип «усилие — результат» и анализ действий профессиональных участников. Описаны методы входа в рынок: работа с откатами, пробоями и ложными пробоями. Освещаются вопросы управления рисками, психологии торговли и математической модели (соотношение риск/прибыль, вероятность, торговая система). Приводятся практические примеры сделок на Bitcoin, Nasdaq и EUR/USD.
+            >Второй том серии «Основы трейдинга» представляет собой практическое
+            методическое пособие для тех, кто уже освоил базовые концепции и
+            готов перейти к реальной торговле. Рассматриваются фазы рыночного
+            движения, уровни смены приоритета, характеристики разворотных
+            движений. Объёмный анализ включает вертикальные объёмы, принцип
+            «усилие — результат» и анализ действий профессиональных участников.
+            Описаны методы входа в рынок: работа с откатами, пробоями и ложными
+            пробоями. Освещаются вопросы управления рисками, психологии торговли
+            и математической модели (соотношение риск/прибыль, вероятность,
+            торговая система). Приводятся практические примеры сделок на
+            Bitcoin, Nasdaq и EUR/USD.
           </span>
         </div>
         <div class="authot_button_block">
@@ -338,7 +387,7 @@
             [ngClass]="{
               'btn-section-one': true,
               'gradient-block-orange': isDark,
-              'gradient-block-blue': !isDark
+              'gradient-block-blue': !isDark,
             }"
           >
             <span
@@ -356,7 +405,7 @@
       [ngStyle]="{
         background: isDark
           ? 'url(/assets/redesignArapovTrade/img/author-page_main-block_bg.png)  no-repeat center'
-          : 'url(/assets/redesignArapovTrade/img/author-page_main-block_bg-light.png) no-repeat center'
+          : 'url(/assets/redesignArapovTrade/img/author-page_main-block_bg-light.png) no-repeat center',
       }"
     ></div>
     <div
@@ -364,7 +413,7 @@
       [ngStyle]="{
         background: isDark
           ? 'url(/assets/redesignArapovTrade/img/author-page_main-block_bg-image.png) no-repeat'
-          : 'url(/assets/redesignArapovTrade/img/author-page_main-block_bg-image-light.png) no-repeat'
+          : 'url(/assets/redesignArapovTrade/img/author-page_main-block_bg-image-light.png) no-repeat',
       }"
     ></div>
   </div>
@@ -552,7 +601,7 @@
         background: isDark
           ? 'rgba(255, 255, 255, 0.08)'
           : 'rgba(0, 131, 205, 0.08)',
-        border: isDark ? ' 1px solid #46483A' : '1px solid #C5E2F2'
+        border: isDark ? ' 1px solid #46483A' : '1px solid #C5E2F2',
       }"
     >
       <div class="author-page_main-block_title-block three-block">
@@ -560,7 +609,7 @@
           class=" "
           [ngClass]="{
             'gradient-orange': isDark,
-            'gradient-blue_author-page': !isDark
+            'gradient-blue_author-page': !isDark,
           }"
           >Хотите профессиональное обучение?</span
         >
@@ -584,7 +633,7 @@
           class=" "
           [ngClass]="{
             'gradient-orange': isDark,
-            'gradient-blue_author-page': !isDark
+            'gradient-blue_author-page': !isDark,
           }"
           >Выберите удобный способ для связи</span
         >
@@ -599,7 +648,7 @@
             [ngClass]="{
               'three-block_social-links_item': true,
               'three-block_social-links_item-dark': isDark,
-              'three-block_social-links_item-light': !isDark
+              'three-block_social-links_item-light': !isDark,
             }"
             [ngStyle]="{
               background: isDark
@@ -607,7 +656,7 @@
                 : 'rgba(0, 130, 204, 0.10)',
               border: isDark
                 ? '1px solid rgba(255, 205, 41, 0.30)'
-                : '1px solid rgba(0, 130, 204, 0.30)'
+                : '1px solid rgba(0, 130, 204, 0.30)',
             }"
           >
             <svg
@@ -620,7 +669,7 @@
               <path
                 [ngClass]="{
                   'svg-link-dark': isDark,
-                  'svg-link-light': !isDark
+                  'svg-link-light': !isDark,
                 }"
                 fill-rule="evenodd"
                 clip-rule="evenodd"
@@ -637,7 +686,7 @@
             [ngClass]="{
               'three-block_social-links_item': true,
               'three-block_social-links_item-dark': isDark,
-              'three-block_social-links_item-light': !isDark
+              'three-block_social-links_item-light': !isDark,
             }"
             [ngStyle]="{
               background: isDark
@@ -645,7 +694,7 @@
                 : 'rgba(0, 130, 204, 0.10)',
               border: isDark
                 ? '1px solid rgba(255, 205, 41, 0.30)'
-                : '1px solid rgba(0, 130, 204, 0.30)'
+                : '1px solid rgba(0, 130, 204, 0.30)',
             }"
           >
             <svg
@@ -658,7 +707,7 @@
               <path
                 [ngClass]="{
                   'svg-link-dark': isDark,
-                  'svg-link-light': !isDark
+                  'svg-link-light': !isDark,
                 }"
                 fill-rule="evenodd"
                 clip-rule="evenodd"
@@ -676,7 +725,7 @@
             [ngClass]="{
               'three-block_social-links_item': true,
               'three-block_social-links_item-dark': isDark,
-              'three-block_social-links_item-light': !isDark
+              'three-block_social-links_item-light': !isDark,
             }"
             [ngStyle]="{
               background: isDark
@@ -684,7 +733,7 @@
                 : 'rgba(0, 130, 204, 0.10)',
               border: isDark
                 ? '1px solid rgba(255, 205, 41, 0.30)'
-                : '1px solid rgba(0, 130, 204, 0.30)'
+                : '1px solid rgba(0, 130, 204, 0.30)',
             }"
           >
             <svg
@@ -697,7 +746,7 @@
               <path
                 [ngClass]="{
                   'svg-link-dark': isDark,
-                  'svg-link-light': !isDark
+                  'svg-link-light': !isDark,
                 }"
                 fill-rule="evenodd"
                 clip-rule="evenodd"
@@ -722,7 +771,7 @@
                 [ngStyle]="{
                   background: isDark
                     ? 'url(assets/redesignArapovTrade/img/logo-new.png) no-repeat center'
-                    : 'url(assets/redesignArapovTrade/img/logo-new-light.png) no-repeat center'
+                    : 'url(assets/redesignArapovTrade/img/logo-new-light.png) no-repeat center',
                 }"
               ></div>
               <span class="loog-text hg">Arapov.Trade</span>
@@ -739,35 +788,35 @@
         <div class="menu">
           <span class="menu-title">Меню</span>
           <div class="menu-title-block">
-            <a (click)="navigateTo('ru/main')" class="menu-title_text"
+            <a 
+              href="/ru/main"
+              (click)="$event.preventDefault(); navigateTo('ru/main')"
+              class="menu-title_text"
               >Главная</a
             >
           </div>
           <div class="menu-title-block">
-            <a (click)="navigateTo('ru')" class="menu-title_text"
+            <a href="/ru"
+              (click)="$event.preventDefault(); navigateTo('ru')" class="menu-title_text"
               >Об авторе курса</a
             >
           </div>
           <div class="menu-title-block">
-            <a (click)="navigateTo('ru/studying')" class="menu-title_text"
+            <a href="/ru/studying"
+              (click)="$event.preventDefault(); navigateTo('ru/studying')" class="menu-title_text"
               >Курсы по трейдингу</a
             >
           </div>
           <div class="menu-title-block">
-            <a (click)="navigateTo('ru/freestudying')" class="menu-title_text"
+            <a  href="/ru/freestudying"
+              (click)="$event.preventDefault(); navigateTo('ru/freestudying')" class="menu-title_text"
               >Бесплатное обучение трейдингу</a
             >
           </div>
         </div>
         <div class="menu">
-          <span class="menu-title">Ссылки</span
-          >
-          <!-- <a
-            href="/assets/documents/PublicOfferAgreementNewRU.docx"
-            download
-            class="menu-title-block menu-title_text"
-            >Договор публичной оферты</a
-          > -->
+          <span class="menu-title">Ссылки</span>
+         
           <a
             href="/assets/documents/PrivacyPolicyRU.DOCX"
             download
@@ -775,7 +824,7 @@
             >Политика конфиденциальности</a
           >
           <a
-            (click)="navigateTo('ru/disclaimer')"
+            href="/ru/disclaimer" (click)="$event.preventDefault(); navigateTo('ru/disclaimer')"
             class="menu-title-block menu-title_text"
             >Отказ от ответственности</a
           >
@@ -784,7 +833,7 @@
         <div class="menu">
           <span class="menu-title">Наши проекты</span>
           <a
-            (click)="navigateTo('ru/freestudying/about')"
+            href="/ru/freestudying/about" (click)="$event.preventDefault(); navigateTo('ru/freestudying/about')"
             class="menu-title-block menu-title_text"
             >Про ARAPOV.TRADE</a
           >
@@ -797,7 +846,6 @@
               Профессиональные курсы</span
             >
           </a>
-           
         </div>
       </div>
     </div>
@@ -816,7 +864,7 @@
             class="fb"
             [ngClass]="{
               'links-dark': isDark,
-              'links-light': !isDark
+              'links-light': !isDark,
             }"
           >
             <a href="https://www.facebook.com/igor.arapov.75">
@@ -839,7 +887,7 @@
             class="fb"
             [ngClass]="{
               'links-dark': isDark,
-              'links-light': !isDark
+              'links-light': !isDark,
             }"
           >
             <a
@@ -864,7 +912,7 @@
             class="fb"
             [ngClass]="{
               'links-dark': isDark,
-              'links-light': !isDark
+              'links-light': !isDark,
             }"
           >
             <a href="https://ru.tradingview.com/u/Igor_Arapov/">
@@ -888,7 +936,7 @@
             class="fb"
             [ngClass]="{
               'links-dark-special': isDark,
-              'links-light-special': !isDark
+              'links-light-special': !isDark,
             }"
           >
             <a href="https://www.youtube.com/@ArapovTrade">
@@ -917,7 +965,7 @@
             [ngClass]="{
               'links-dark-special': isDark,
 
-              'links-light-special': !isDark
+              'links-light-special': !isDark,
             }"
           >
             <a href="https://telegram.me/+380506308200">
@@ -944,7 +992,7 @@
             class="fb"
             [ngClass]="{
               'links-dark': isDark,
-              'links-light': !isDark
+              'links-light': !isDark,
             }"
           >
             <a href="https://www.instagram.com/arapovtrade/">
@@ -969,7 +1017,7 @@
       [ngClass]="{
         'bg-shapes-footer': true,
         'bg-shapes-footer-dark': isDark,
-        'bg-shapes-footer-light': !isDark
+        'bg-shapes-footer-light': !isDark,
       }"
     ></div>
   </div>

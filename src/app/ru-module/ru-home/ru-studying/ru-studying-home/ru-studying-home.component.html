@@ -10,40 +10,50 @@
       }"
     >
       <ul>
-        <li
-          (click)="navigateTo('ru/main')"
-          [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-          [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-        >
-          ГЛАВНАЯ
+        <li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+          <a
+            href="/ru/main"
+            (click)="$event.preventDefault(); navigateTo('ru/main')"
+            [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+          >
+            ГЛАВНАЯ
+          </a>
         </li>
-        <li
-          (click)="navigateTo('ru/freestudying')"
-          [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-          [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-        >
-          БЕСПЛАТНЫЕ КУРСЫ
+        <li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+          <a
+            href="/ru/freestudying"
+            (click)="$event.preventDefault(); navigateTo('ru/freestudying')"
+            [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+          >
+            БЕСПЛАТНЫЕ КУРСЫ
+          </a>
         </li>
-        <li
-          (click)="navigateTo('ru')"
-          [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-          [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-        >
-          ОБ АВТОРЕ
+        <li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+          <a
+            href="/ru"
+            (click)="$event.preventDefault(); navigateTo('ru')"
+            [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+          >
+            ОБ АВТОРЕ
+          </a>
         </li>
-        <li
-          (click)="navigateTo('ru/studying')"
-          [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-          [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-        >
-          ПРОФЕССИОНАЛЬНЫЕ КУРСЫ
+        <li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+          <a
+            href="/ru/studying"
+            (click)="$event.preventDefault(); navigateTo('ru/studying')"
+            [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+          >
+            ПРОФЕССИОНАЛЬНЫЕ КУРСЫ
+          </a>
         </li>
-        <li
-          (click)="navigateTo('ru/books')"
-          [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-          [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-        >
-          МОИ КНИГИ
+        <li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+          <a
+            href="/ru/books"
+            (click)="$event.preventDefault(); navigateTo('ru/books')"
+            [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+          >
+            МОИ КНИГИ
+          </a>
         </li>
       </ul>
     </div>
@@ -72,14 +82,35 @@
           class="nav-list desktop-nav"
           [ngClass]="{ 'menu-item-dark': isDark, 'menu-item-light': !isDark }"
         >
-          <li (click)="navigateTo('ru/main')">Главная</li>
-          <li (click)="navigateTo('ru/freestudying')">бесплатные курсы</li>
-          <li (click)="navigateTo('ru')">Об авторе</li>
-          <li
-            (click)="navigateTo('ru/studying')"
-            [ngStyle]="{ color: isDark ? '#FFCD29' : '#0082CC' }"
-          >
-            Профессиональные курсы
+          <li>
+            <a
+              href="/ru/main"
+              (click)="$event.preventDefault(); navigateTo('ru/main')"
+            >
+              Главная
+            </a>
+          </li>
+          <li>
+            <a
+              href="/ru/freestudying"
+              (click)="$event.preventDefault(); navigateTo('ru/freestudying')"
+            >
+              бесплатные курсы
+            </a>
+          </li>
+          <li>
+            <a href="/ru" (click)="$event.preventDefault(); navigateTo('ru')">
+              Об авторе
+            </a>
+          </li>
+          <li>
+            <a
+              href="/ru/studying"
+              (click)="$event.preventDefault(); navigateTo('ru/studying')"
+              [ngStyle]="{ color: isDark ? '#FFCD29' : '#0082CC' }"
+            >
+              Профессиональные курсы
+            </a>
           </li>
         </ul>
       </div>
@@ -127,24 +158,41 @@
             *ngIf="dropdownOpen"
             [ngStyle]="{ background: isDark ? '#2c2a06' : '#DBE2E7' }"
           >
-            <li
-              [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-              (click)="selectLang('ru'); navigateTo('ru/studying')"
-            >
-              RU
+            <li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+              <a
+                href="/ru/studying"
+                (click)="
+                  $event.preventDefault();
+                  selectLang('ru');
+                  navigateTo('ru/studying')
+                "
+              >
+                RU
+              </a>
             </li>
-            <li
-              [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-              (click)="selectLang('ua'); navigateTo('uk/studying')"
-            >
-              UA
+            <li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+              <a
+                href="/uk/studying"
+                (click)="
+                  $event.preventDefault();
+                  selectLang('ua');
+                  navigateTo('uk/studying')
+                "
+              >
+                UA
+              </a>
             </li>
-
-            <li
-              [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-              (click)="selectLang('en'); navigateTo('en/studying')"
-            >
-              EN
+            <li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+              <a
+                href="/en/studying"
+                (click)="
+                  $event.preventDefault();
+                  selectLang('en');
+                  navigateTo('en/studying')
+                "
+              >
+                EN
+              </a>
             </li>
           </ul>
         </div>
@@ -295,7 +343,7 @@
             группе.
           </span>
         </div>
-        <!-- (click)="navigateTo('uk/freestudying')" -->
+
         <div
           (click)="navigateToHomeWithId()"
           [ngClass]="{
@@ -572,7 +620,7 @@
           : 'linear-gradient(90deg, rgba(0, 130, 204,  0.12) )',
       }"
     >
-      <div class="third-section_text-block" style="    margin-bottom: 30px;">
+      <div class="third-section_text-block" style="margin-bottom: 30px">
         <div
           [ngClass]="{
             'second-section_programm-block-title': true,
@@ -592,7 +640,6 @@
           открытия сделок под руководством практикующего трейдера, наставника
           курса.
         </div>
-         
       </div>
       <div class="third-image-block">
         <div class="third-block_image-container">
@@ -799,7 +846,7 @@
           поддержку, чтобы уверенно ориентироваться на финансовых рынках и
           принимать обоснованные торговые решения. <br />
           <br />
-           
+
           Хотите узнать больше? Оставьте заявку, и я лично расскажу о формате
           обучения и как оно может быть полезным именно для вас.
         </div>
@@ -836,8 +883,6 @@
     </div>
   </div>
 
-  
-
   <div class="seventh-block-section" data-aos="fade-up" data-aos-delay="300">
     <div
       class="third-section seventh-block-section_container"
@@ -859,7 +904,8 @@
         >
           Хотите стать опытным трейдером?
         </div>
-        <div style="    margin-bottom: 30px;"
+        <div
+          style="margin-bottom: 30px"
           class="author-page_main-block_description-text seventh-section-descr"
           [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
         >
@@ -875,7 +921,6 @@
           ожиданием и контролем рисков в каждой сделке — именно это обеспечивает
           стабильность подхода на дистанции.
         </div>
-         
       </div>
       <div class="third-image-block">
         <div class="seventh-block_image-container">
@@ -923,54 +968,69 @@
         <div class="menu">
           <span class="menu-title">Меню</span>
           <div class="menu-title-block">
-            <a (click)="navigateTo('ru/main')" class="menu-title_text"
-              >Главная</a
+            <a
+              href="/ru/main"
+              (click)="$event.preventDefault(); navigateTo('ru/main')"
+              class="menu-title_text"
             >
+              Главная
+            </a>
           </div>
           <div class="menu-title-block">
-            <a (click)="navigateTo('ru')" class="menu-title_text"
-              >Об авторе курса</a
+            <a
+              href="/ru"
+              (click)="$event.preventDefault(); navigateTo('ru')"
+              class="menu-title_text"
             >
+              Об авторе курса
+            </a>
           </div>
           <div class="menu-title-block">
-            <a (click)="navigateTo('ru/studying')" class="menu-title_text"
-              >Курсы по трейдингу</a
+            <a
+              href="/ru/studying"
+              (click)="$event.preventDefault(); navigateTo('ru/studying')"
+              class="menu-title_text"
             >
+              Курсы по трейдингу
+            </a>
           </div>
           <div class="menu-title-block">
-            <a (click)="navigateTo('ru/freestudying')" class="menu-title_text"
-              >Бесплатное обучение трейдингу</a
+            <a
+              href="/ru/freestudying"
+              (click)="$event.preventDefault(); navigateTo('ru/freestudying')"
+              class="menu-title_text"
             >
+              Бесплатное обучение трейдингу
+            </a>
           </div>
-          
         </div>
         <div class="menu">
-          <span class="menu-title">Ссылки</span
-          >
-           
+          <span class="menu-title">Ссылки</span>
+
           <a
             href="/assets/documents/PrivacyPolicyUK.DOCX"
             download
             class="menu-title-block menu-title_text"
             >Политика конфиденциальности</a
           >
-          <a
-            (click)="navigateTo('ru/disclaimer')"
+          <a href="/ru/disclaimer" (click)="$event.preventDefault(); navigateTo('ru/disclaimer')"
+            
             class="menu-title-block menu-title_text"
             >Отказ от ответственности</a
           >
-         
         </div>
 
         <div class="menu">
           <span class="menu-title">Наши проекты</span>
-           <a
-            (click)="navigateTo('ru/freestudying/about')"
+          <a href="/ru/freestudying/about" (click)="$event.preventDefault(); navigateTo('ru/freestudying/about')"
+            
             class="menu-title-block menu-title_text"
             >Про ARAPOV.TRADE</a
           >
           <div class="menu-title-block">
-            <a (click)="navigateTo('ru/books')" class="menu-title_text"
+            <a 
+            href="/ru/books" (click)="$event.preventDefault(); navigateTo('ru/books')"
+              class="menu-title_text"
               >МОИ КНИГИ</a
             >
           </div>
@@ -1123,7 +1183,7 @@
         </div>
       </div> -->
     </div>
-    <br/>
+    <br />
     <div class="component-1f">
       <div class="in-20"></div>
       <div class="component-21">

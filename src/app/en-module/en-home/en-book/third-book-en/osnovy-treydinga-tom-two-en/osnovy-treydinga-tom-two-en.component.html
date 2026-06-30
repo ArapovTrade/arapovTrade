@@ -10,33 +10,41 @@
       }"
     >
       <ul>
-        <li
-          (click)="navigateTo('en/main')"
-          [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-          [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-        >
-          Main
+        <li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+          <a
+            href="/en/main"
+            (click)="$event.preventDefault(); navigateTo('en/main')"
+            [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+          >
+            Main
+          </a>
         </li>
-        <li
-          (click)="navigateTo('en/freestudying')"
-          [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-          [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-        >
-          Free Courses
+        <li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+          <a
+            href="/en/freestudying"
+            (click)="$event.preventDefault(); navigateTo('en/freestudying')"
+            [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+          >
+            free courses
+          </a>
         </li>
-        <li
-          (click)="navigateTo('en')"
-          [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-          [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-        >
-          About the Author
+        <li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+          <a
+            href="/en"
+            (click)="$event.preventDefault(); navigateTo('en')"
+            [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+          >
+            About the author
+          </a>
         </li>
-        <li
-          (click)="navigateTo('en/studying')"
-          [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
-          [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-        >
-          Professional Courses
+        <li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+          <a
+            href="/en/studying"
+            (click)="$event.preventDefault(); navigateTo('en/studying')"
+            [ngStyle]="{ color: isDark ? '#ffffff' : '#0C263A' }"
+          >
+            Professional courses
+          </a>
         </li>
       </ul>
     </div>
@@ -65,10 +73,35 @@
           class="nav-list desktop-nav"
           [ngClass]="{ 'menu-item-dark': isDark, 'menu-item-light': !isDark }"
         >
-          <li (click)="navigateTo('en/main')">Main</li>
-          <li (click)="navigateTo('en/freestudying')">Free Courses</li>
-          <li (click)="navigateTo('en')">About the Author</li>
-          <li (click)="navigateTo('en/studying')">Professional Courses</li>
+           <li>
+            <a
+              href="/en/main"
+              (click)="$event.preventDefault(); navigateTo('en/main')"
+            >
+              Main
+            </a>
+          </li>
+          <li>
+            <a
+              href="/en/freestudying"
+              (click)="$event.preventDefault(); navigateTo('en/freestudying')"
+            >
+              free courses
+            </a>
+          </li>
+          <li>
+            <a href="/en" (click)="$event.preventDefault(); navigateTo('en')">
+              About the author
+            </a>
+          </li>
+          <li>
+            <a
+              href="/en/studying"
+              (click)="$event.preventDefault(); navigateTo('en/studying')"
+            >
+              Professional courses
+            </a>
+          </li>
         </ul>
       </div>
 
@@ -115,32 +148,42 @@
             *ngIf="dropdownOpen"
             [ngStyle]="{ background: isDark ? '#2c2a06' : '#DBE2E7' }"
           >
-            <li
-              [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-              (click)="
-                selectLang('ua');
-                navigateTo('uk/books/osnovy-treydinga-tom-two')
-              "
-            >
-              UA
+           
+            <li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+              <a
+                href="/uk/books/osnovy-treydinga-tom-two"
+                (click)="
+                  $event.preventDefault();
+                  selectLang('ua');
+                  navigateTo('uk/books/osnovy-treydinga-tom-two')
+                "
+              >
+                UA
+              </a>
             </li>
-            <li
-              [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-              (click)="
-                selectLang('ru');
-                navigateTo('ru/books/osnovy-treydinga-tom-two')
-              "
-            >
-              RU
+            <li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+              <a
+                href="/ru/books/osnovy-treydinga-tom-two"
+                (click)="
+                  $event.preventDefault();
+                  selectLang('ru');
+                  navigateTo('ru/books/osnovy-treydinga-tom-two')
+                "
+              >
+                RU
+              </a>
             </li>
-            <li
-              [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }"
-              (click)="
-                selectLang('en');
-                navigateTo('en/books/osnovy-treydinga-tom-two')
-              "
-            >
-              EN
+            <li [ngClass]="{ 'drop-dark': isDark, 'drop-light': !isDark }">
+              <a
+                href="/en/books/osnovy-treydinga-tom-two"
+                (click)="
+                  $event.preventDefault();
+                  selectLang('en');
+                  navigateTo('en/books/osnovy-treydinga-tom-two')
+                "
+              >
+                EN
+              </a>
             </li>
           </ul>
         </div>
@@ -749,36 +792,37 @@
       <div class="links">
         <div class="menu">
           <span class="menu-title">Menu</span>
-          <div class="menu-title-block">
-            <a (click)="navigateTo('en/main')" class="menu-title_text"
+         <div class="menu-title-block">
+            <a 
+              href="/en/main"
+              (click)="$event.preventDefault(); navigateTo('en/main')"
+              class="menu-title_text"
               >Main page</a
             >
           </div>
           <div class="menu-title-block">
-            <a (click)="navigateTo('en')" class="menu-title_text"
+            <a href="/en"
+              (click)="$event.preventDefault(); navigateTo('en')" class="menu-title_text"
               >About the author of the course</a
             >
           </div>
           <div class="menu-title-block">
-            <a (click)="navigateTo('en/studying')" class="menu-title_text"
+            <a href="/en/studying"
+              (click)="$event.preventDefault(); navigateTo('en/studying')" class="menu-title_text"
               >Trading courses</a
             >
           </div>
           <div class="menu-title-block">
-            <a (click)="navigateTo('en/freestudying')" class="menu-title_text"
-              >Free Trading Education
-            </a>
+            <a  href="/en/freestudying"
+              (click)="$event.preventDefault(); navigateTo('en/freestudying')" class="menu-title_text"
+              >Free Trading Education</a
+            >
           </div>
         </div>
         <div class="menu">
           <span class="menu-title">Links</span
           >
-          <!-- <a
-            href="/assets/documents/PublicOfferAgreementNew.docx"
-            download
-            class="menu-title-block menu-title_text"
-            >Public Offer Agreement</a
-          > -->
+          
           <a
             href="/assets/documents/PrivacyPolicyUK.DOCX"
             download
@@ -786,7 +830,7 @@
             >Privacy Policy</a
           >
           <a
-            (click)="navigateTo('uk/disclaimer')"
+            href="/en/disclaimer" (click)="$event.preventDefault(); navigateTo('en/disclaimer')"
             class="menu-title-block menu-title_text"
             >Disclaimer</a
           >
@@ -795,7 +839,7 @@
         <div class="menu">
           <span class="menu-title">Our Projects</span>
           <a
-            (click)="navigateTo('en/freestudying/about')"
+            href="/en/freestudying/about" (click)="$event.preventDefault(); navigateTo('en/freestudying/about')"
             class="menu-title-block menu-title_text"
             >About ARAPOV.TRADE</a
           >
