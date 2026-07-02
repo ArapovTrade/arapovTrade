@@ -158,8 +158,8 @@ export class RuBookPageComponent implements OnInit, AfterViewInit, OnDestroy {
       '@context': 'https://schema.org',
       '@type': 'Person',
       '@id': 'https://arapov.trade/#person',
-      name: 'Арапов Игорь Витальевич',
-      alternateName: 'Igor Arapov',
+      name: 'Igor Arapov',
+      alternateName: 'Игорь Арапов',
       url: 'https://arapov.trade/ru',
       jobTitle: 'Независимый трейдер и исследователь',
       sameAs: [

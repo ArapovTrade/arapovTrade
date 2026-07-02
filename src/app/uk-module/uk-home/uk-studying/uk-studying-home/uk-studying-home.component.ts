@@ -259,7 +259,7 @@ export class UkStudyingHomeComponent
         {
           '@type': 'Person',
           '@id': 'https://arapov.trade/#person',
-          name: 'Ігор Арапов',
+          name: 'Igor Arapov',
           url: 'https://arapov.trade/uk',
           sameAs: [
             'https://www.wikidata.org/wiki/Q137454477',

@@ -237,11 +237,12 @@ export class MainpageComponent implements OnInit, AfterViewInit, OnDestroy {
         '@type': 'ImageObject',
         url: 'https://arapov.trade/favicon.ico',
       },
-      founder: {
-        '@type': 'Person',
-        '@id': 'https://arapov.trade/#person',
-        name: 'Ігор Арапов',
-      },
+     founder: {
+       '@type': 'Person',
+       '@id': 'https://arapov.trade/#person',
+       name: 'Igor Arapov',
+     },
+
     },
   });
 

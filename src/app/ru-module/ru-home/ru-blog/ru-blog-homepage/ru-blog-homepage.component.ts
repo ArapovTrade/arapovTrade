@@ -340,8 +340,6 @@ export class RuBlogHomepageComponent implements OnInit {
     });
   }
 
-   
-
   private addWebSiteSchema() {
     const exists = Array.from(
       this.document.querySelectorAll('script[type="application/ld+json"]'),
@@ -423,7 +421,7 @@ export class RuBlogHomepageComponent implements OnInit {
         {
           '@type': 'Person',
           '@id': 'https://arapov.trade/#person',
-          name: 'Игорь Арапов',
+          name: 'Igor Arapov',
           url: 'https://arapov.trade/ru',
           sameAs: [
             'https://www.wikidata.org/wiki/Q137454477',

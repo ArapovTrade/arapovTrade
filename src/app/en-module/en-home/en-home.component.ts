@@ -221,17 +221,15 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
   /**
    * Author page — trilingual JSON-LD (uk / ru / en).
    *
-   * ONE method, called per language. Call on each page:
+   * ONE method, called per language:
    *   this.addAuthorPageSchema('uk');   // on /uk
    *   this.addAuthorPageSchema('ru');   // on /ru
    *   this.addAuthorPageSchema('en');   // on /en
    *
-   * Key idea: entities (Person, books, articles, org, event) use LANGUAGE-NEUTRAL @ids
-   * (arapov.trade/#person, not /uk#person), so all three pages describe the SAME entity.
-   * Only the ProfilePage node + a few localized text strings change per language.
-   *
-   * NOTE: the Event's location is a standalone Place (NO @id) so it does not collide
-   * with the CollegeOrUniversity node that owns #nuft. organizer still references #nuft.
+   * Person uses a language-neutral @id (#person) AND a canonical, language-neutral
+   * name ('Igor Arapov') identical on all three pages — otherwise Google merges the
+   * three nodes by @id and picks one name at random. Localized display name lives
+   * only in ProfilePage.name (which has its own per-language @id).
    */
   private addAuthorPageSchema(lang: 'uk' | 'ru' | 'en'): void {
     const SCRIPT_ID = 'author-page-schema';
@@ -276,6 +274,8 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
         : `https://arapov.trade/${lang}/main`;
 
     // ── Localized strings (the only things that differ per language) ──
+    // NOTE: personName is intentionally NOT applied to Person.name anymore
+    // (Person.name is canonical 'Igor Arapov'). Kept here only for reference.
     const L = {
       uk: {
         inLanguage: 'uk-UA',
@@ -448,21 +448,19 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
         // References below ({ '@id': ORG_ID }) resolve to that global node, since
         // Google merges all JSON-LD scripts on the page into one graph by @id.
 
-        // ── Person (canonical, language-neutral @id) ──
+        // ── Person (canonical, language-neutral @id AND name) ──
         {
           '@type': 'Person',
           '@id': PERSON_ID,
-          name: L.personName,
+          name: 'Igor Arapov',
           alternateName: [
-            'Igor Arapov',
             'Ігор Арапов',
             'Игорь Арапов',
             'I. V. Arapov',
             'І. В. Арапов',
           ],
-          givenName: lang === 'en' ? 'Igor' : lang === 'ru' ? 'Игорь' : 'Ігор',
-          familyName:
-            lang === 'en' ? 'Arapov' : lang === 'ru' ? 'Арапов' : 'Арапов',
+          givenName: 'Igor',
+          familyName: 'Arapov',
           birthDate: '1990-09-30',
           jobTitle: L.jobTitle,
           description: L.description,

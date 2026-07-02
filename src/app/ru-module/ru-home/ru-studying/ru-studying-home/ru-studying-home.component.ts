@@ -261,7 +261,7 @@ export class RuStudyingHomeComponent
         {
           '@type': 'Person',
           '@id': 'https://arapov.trade/#person',
-          name: 'Игорь Арапов',
+          name: 'Igor Arapov',
           url: 'https://arapov.trade/ru',
           sameAs: [
             'https://www.wikidata.org/wiki/Q137454477',

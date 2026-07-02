@@ -401,9 +401,9 @@ export class HomeRuFourtyFiveComponent implements OnInit, AfterViewInit {
       '@context': 'https://schema.org',
       '@type': 'Person',
       '@id': 'https://arapov.trade/#person',
-      name: 'Игорь Арапов',
+      name: 'Igor Arapov',
       alternateName: [
-        'Igor Arapov',
+        'Игорь Арапов',
         'Арапов Игорь',
         'I. Arapov',
         'Ігор Арапов',

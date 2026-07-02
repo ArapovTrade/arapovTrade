@@ -169,8 +169,8 @@ export class UkBookPageComponent implements OnInit, AfterViewInit, OnDestroy {
       '@context': 'https://schema.org',
       '@type': 'Person',
       '@id': 'https://arapov.trade/#person',
-      name: 'Арапов Ігор Віталійович',
-      alternateName: 'Igor Arapov',
+      name: 'Igor Arapov',
+      alternateName: 'Ігор Арапов',
       url: 'https://arapov.trade/uk',
       jobTitle: 'Незалежний трейдер і дослідник',
       sameAs: [

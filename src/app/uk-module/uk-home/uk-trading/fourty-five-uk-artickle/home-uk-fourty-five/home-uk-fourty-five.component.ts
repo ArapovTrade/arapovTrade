@@ -362,9 +362,9 @@ export class HomeUkFourtyFiveComponent implements OnInit {
       '@context': 'https://schema.org',
       '@type': 'Person',
       '@id': 'https://arapov.trade/#person',
-      name: 'Ігор Арапов',
+      name: 'Igor Arapov',
       alternateName: [
-        'Igor Arapov',
+        'Ігор Арапов',
         'Арапов Игорь',
         'I. Arapov',
         'Игорь Арапов',

@@ -187,10 +187,11 @@ export class RuCryptoHomepageComponent  implements OnInit, AfterViewInit, OnDest
         url: 'https://arapov.trade/favicon.ico',
       },
       founder: {
-        '@type': 'Person',
-        '@id': 'https://arapov.trade/#person',
-        name: 'Игорь Арапов',
-      },
+       '@type': 'Person',
+       '@id': 'https://arapov.trade/#person',
+       name: 'Igor Arapov',
+     },
+
     },
     potentialAction: {
       '@type': 'SearchAction',

@@ -95,7 +95,6 @@ export class UkBlogHomepageComponent implements OnInit {
     this.activateRout.queryParams.subscribe((params) => {
       const selectedGroup = params['group'];
       if (selectedGroup) {
-         
         this.artickleServ.selectedGroups = [selectedGroup];
         this.grr = [...this.artickleServ.selectedGroups];
         this.checkedGroup = [...this.artickleServ.selectedGroups];
@@ -164,8 +163,6 @@ export class UkBlogHomepageComponent implements OnInit {
   checkedGroup!: any;
 
   onGroupChangeFromEvent(value: string) {
-    
-
     // Обновляем фильтрованные статьи
     this.filteredArticles = this.artickleServ.ukrainiansArticles();
     this.updatePaginatedArticles();
@@ -206,7 +203,7 @@ export class UkBlogHomepageComponent implements OnInit {
     this.currentPage = event.pageIndex;
     this.pageSize = event.pageSize;
     this.updatePaginatedArticles();
-   
+
     const topPosition = this.scrollToTop.nativeElement.offsetTop;
     window.scrollTo({
       top: topPosition,
@@ -442,7 +439,7 @@ export class UkBlogHomepageComponent implements OnInit {
         {
           '@type': 'Person',
           '@id': 'https://arapov.trade/#person',
-          name: 'Ігор Арапов',
+          name: 'Igor Arapov',
           url: 'https://arapov.trade/uk',
           sameAs: [
             'https://www.wikidata.org/wiki/Q137454477',
@@ -467,6 +464,4 @@ export class UkBlogHomepageComponent implements OnInit {
 
     this.document.head.appendChild(script);
   }
-
-  
 }
