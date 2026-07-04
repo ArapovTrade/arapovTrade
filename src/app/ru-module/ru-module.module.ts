@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { RuHomePageComponent } from './ru-home/ru-home-page/ru-home-page.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DisclaimerComponent } from './ru-home/doc/disclaimer/disclaimer.component';
+import { PrivacyPolicyRuComponent } from './ru-home/doc/privacy-policy-ru/privacy-policy-ru.component';
 
 const routes: Routes = [
   {
@@ -19,10 +20,14 @@ const routes: Routes = [
     component: DisclaimerComponent,
   },
   {
+    path: 'privacy-policy',
+    component: PrivacyPolicyRuComponent,
+  },
+  {
     path: 'studying',
     loadChildren: () =>
       import('./ru-home/ru-studying/ru-studying.module').then(
-        (m) => m.RuStudyingModule
+        (m) => m.RuStudyingModule,
       ),
   },
 
@@ -35,7 +40,7 @@ const routes: Routes = [
     path: 'main',
     loadChildren: () =>
       import('./ru-home/ru-crypto/ru-crypto.module').then(
-        (m) => m.RuCryptoModule
+        (m) => m.RuCryptoModule,
       ),
   },
   {
@@ -46,7 +51,12 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [RuHomeComponent, RuHomePageComponent, DisclaimerComponent],
+  declarations: [
+    RuHomeComponent,
+    RuHomePageComponent,
+    DisclaimerComponent,
+    PrivacyPolicyRuComponent,
+  ],
   imports: [
     CommonModule,
     FormsModule,

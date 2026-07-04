@@ -102,6 +102,39 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://arapov.trade/en/disclaimer"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://arapov.trade/uk/disclaimer"/>
   </url>
+
+
+  <!-- Privacy Policy -->
+  <url>
+    <loc>https://arapov.trade/uk/privacy-policy</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://arapov.trade/uk/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://arapov.trade/ru/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arapov.trade/en/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arapov.trade/uk/privacy-policy"/>
+  </url>
+  <url>
+    <loc>https://arapov.trade/ru/privacy-policy</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://arapov.trade/uk/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://arapov.trade/ru/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arapov.trade/en/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arapov.trade/uk/privacy-policy"/>
+  </url>
+  <url>
+    <loc>https://arapov.trade/en/privacy-policy</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://arapov.trade/uk/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://arapov.trade/ru/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arapov.trade/en/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arapov.trade/uk/privacy-policy"/>
+  </url>
   <!-- ============================================ -->
   <!-- РАЗДЕЛЫ / SECTION INDEX PAGES -->
   <!-- ============================================ -->

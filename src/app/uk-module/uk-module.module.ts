@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { UkHomePageComponent } from './uk-home/uk-home-page/uk-home-page.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DisclaimeruaComponent } from './uk-home/doc/disclaimerua/disclaimerua.component';
+import { PrivacyPolicyUaComponent } from './uk-home/doc/privacy-policy-ua/privacy-policy-ua.component';
 
 const routes: Routes = [
    
@@ -17,6 +18,10 @@ const routes: Routes = [
   {
     path: 'disclaimer',
     component: DisclaimeruaComponent,
+  },
+  {
+    path: 'privacy-policy',
+    component: PrivacyPolicyUaComponent,
   },
   {
     path: 'studying',
@@ -39,7 +44,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [UkHomeComponent, UkHomePageComponent, DisclaimeruaComponent],
+  declarations: [UkHomeComponent, UkHomePageComponent, DisclaimeruaComponent, PrivacyPolicyUaComponent],
   imports: [
     CommonModule,
     FormsModule,
