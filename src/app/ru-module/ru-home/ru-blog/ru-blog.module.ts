@@ -21,7 +21,7 @@ const routes: Routes = [
           import('../ru-trading/fourty-five-ru-artickle/fourty-five-ru-artickle.module').then(
             (m) => m.FourtyFiveRuArtickleModule,
           ),
-      },
+      }, 
       {
         path: 'about', //106
         loadChildren: () =>
