@@ -333,7 +333,7 @@
 
       <div class="links">
         <div class="menu">
-          <span class="menu-title">Menu</span>
+          <!-- <span class="menu-title">Menu</span> -->
           <div class="menu-title-block">
             <a
               href="/en/main"
@@ -366,44 +366,70 @@
             >
           </div>
         </div>
-        <!-- <div class="menu">
-          <span class="menu-title">Links</span>
+          <div class="menu">
+          <!-- <span class="menu-title">Ссылки</span> -->
+
           <a
-            href="/assets/documents/PublicOfferAgreementNew.docx"
-            download
+            href="/en/freestudying/wyckoff-method"
+            (click)="
+              $event.preventDefault();
+              navigateTo('en/freestudying/wyckoff-method')
+            "
             class="menu-title-block menu-title_text"
-            >Public Offer Agreement</a
+            >Wyckoff Method</a
           >
-          <a
-            href="/assets/documents/PrivacyPolicyUK.DOCX"
-            download
+           <a
+            href="/en/freestudying/crypto-basics"
+            (click)="
+              $event.preventDefault();
+              navigateTo('en/freestudying/crypto-basics')
+            "
             class="menu-title-block menu-title_text"
-            >Privacy Policy</a
+            >Crypto for Beginners</a
           >
-          <a
-            href="/en/disclaimer"
-            (click)="$event.preventDefault(); navigateTo('en/disclaimer')"
+           <a
+            href="/en/freestudying/trading-indicators"
+            (click)="
+              $event.preventDefault();
+              navigateTo('en/freestudying/trading-indicators')
+            "
             class="menu-title-block menu-title_text"
-            >Disclaimer</a
+            >Trading Indicators</a
           >
+        
         </div>
 
         <div class="menu">
-          <span class="menu-title">Our Projects</span>
-          <a href="/en/freestudying/about" (click)="$event.preventDefault(); navigateTo('en/freestudying/about')"
-            
+         
+            <a
+            href="/en/freestudying/trading-for-beginners"
+            (click)="
+              $event.preventDefault();
+              navigateTo('en/freestudying/trading-for-beginners')
+            "
             class="menu-title-block menu-title_text"
-            >About ARAPOV.TRADE</a
+            >Trading for Beginners</a
           >
-          <div class="menu-title-block">
-            <a 
-            href="/en/books" (click)="$event.preventDefault(); navigateTo('en/books')"
-              class="menu-title_text"
-              >MY BOOKS</a
-            >
-          </div>
+           <a
+            href="/en/freestudying/smart-money-guide"
+            (click)="
+              $event.preventDefault();
+              navigateTo('en/freestudying/smart-money-guide')
+            "
+            class="menu-title-block menu-title_text"
+            >Smart Money Concept</a
+          >
+           <a
+            href="/en/freestudying/freeeducation"
+            (click)="
+              $event.preventDefault();
+              navigateTo('en/freestudying/freeeducation')
+            "
+            class="menu-title-block menu-title_text"
+            >Free Trading Course</a
+          >
            
-        </div> -->
+        </div>
       </div>
     </div>
     <br />

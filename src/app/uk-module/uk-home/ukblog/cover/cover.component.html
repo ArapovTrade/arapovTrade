@@ -330,7 +330,7 @@
 
       <div class="links">
         <div class="menu">
-          <span class="menu-title">Меню</span>
+          <!-- <span class="menu-title">Меню</span> -->
           <div class="menu-title-block">
             <a
               href="/"
@@ -371,48 +371,70 @@
             </a>
           </div>
         </div>
-        <!-- <div class="menu">
-          <span class="menu-title">Посилання</span>
+         <div class="menu">
+          <!-- <span class="menu-title">Ссылки</span> -->
+
           <a
-            href="/assets/documents/PublicOfferAgreementNew.docx"
-            download
+            href="/uk/freestudying/wyckoff-method"
+            (click)="
+              $event.preventDefault();
+              navigateTo('uk/freestudying/wyckoff-method')
+            "
             class="menu-title-block menu-title_text"
-            >Договір публічної оферти</a
+            >Метод Вайкоффа</a
           >
-          <a
-             href="/uk/privacy-policy" (click)="$event.preventDefault(); navigateTo('uk/privacy-policy')"
+           <a
+            href="/uk/freestudying/crypto-basics"
+            (click)="
+              $event.preventDefault();
+              navigateTo('uk/freestudying/crypto-basics')
+            "
             class="menu-title-block menu-title_text"
-            >Політика конфіденційності</a
+            >Криптовалюта з нуля</a
           >
-          <a
-            href="/uk/disclaimer"
-            (click)="$event.preventDefault(); navigateTo('uk/disclaimer')"
+           <a
+            href="/uk/freestudying/trading-indicators"
+            (click)="
+              $event.preventDefault();
+              navigateTo('uk/freestudying/trading-indicators')
+            "
             class="menu-title-block menu-title_text"
-            >Відмова від відповідальності</a
+            >Індикатори для трейдингу</a
           >
+        
         </div>
 
         <div class="menu">
-          <span class="menu-title">Нашi проекти</span>
-          <a
-            href="/uk/freestudying/about"
+         
+            <a
+            href="/uk/freestudying/trading-for-beginners"
             (click)="
-              $event.preventDefault(); navigateTo('uk/freestudying/about')
+              $event.preventDefault();
+              navigateTo('uk/freestudying/trading-for-beginners')
             "
             class="menu-title-block menu-title_text"
-            >Про ARAPOV.TRADE</a
+            >Трейдинг з нуля</a
           >
-          <div class="menu-title-block">
-            <a
-              href="/uk/books"
-              (click)="$event.preventDefault(); navigateTo('uk/books')"
-              class="menu-title_text"
-            >
-              МОЇ КНИГИ</a
-            >
-          </div>
+           <a
+            href="/uk/freestudying/smart-money-guide"
+            (click)="
+              $event.preventDefault();
+              navigateTo('uk/freestudying/smart-money-guide')
+            "
+            class="menu-title-block menu-title_text"
+            >Smart Money</a
+          >
+           <a
+            href="/uk/freestudying/freeeducation"
+            (click)="
+              $event.preventDefault();
+              navigateTo('uk/freestudying/freeeducation')
+            "
+            class="menu-title-block menu-title_text"
+            >Безкоштовний курс з трейдингу</a
+          >
            
-        </div> -->
+        </div>
       </div>
     </div>
     <br />
