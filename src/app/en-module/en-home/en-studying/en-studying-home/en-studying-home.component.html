@@ -345,17 +345,21 @@
         </div>
 
         <div
-          (click)="navigateToHomeWithId()"
           [ngClass]="{
             'author-page_main-block_btn': true,
             'gradient-block-orange': isDark,
             'gradient-block-blue': !isDark,
           }"
         >
-          <span
-            class="author-page_main-block_btn-text"
-            [ngStyle]="{ color: !isDark ? '#ffffff' : '#03314b' }"
-            >Apply Now</span
+          <a
+            rel="nofollow"
+            href="https://telegram.me/+380506308200"
+            target="_blank"
+            ><span
+              class="author-page_main-block_btn-text"
+              [ngStyle]="{ color: !isDark ? '#ffffff' : '#03314b' }"
+              >Apply Now</span
+            ></a
           >
         </div>
       </div>
@@ -853,7 +857,6 @@
           about the training format and how it can be beneficial for you.
         </div>
         <div
-          (click)="navigateToHomeWithId()"
           [ngClass]="{
             'author-page_main-block_btn': true,
             'third-block-btn': true,
@@ -861,10 +864,15 @@
             'gradient-block-blue': !isDark,
           }"
         >
-          <span
-            class="author-page_main-block_btn-text"
-            [ngStyle]="{ color: !isDark ? '#ffffff' : '#03314b' }"
-            >Apply Now</span
+          <a
+            rel="nofollow"
+            href="https://telegram.me/+380506308200"
+            target="_blank"
+            ><span
+              class="author-page_main-block_btn-text"
+              [ngStyle]="{ color: !isDark ? '#ffffff' : '#03314b' }"
+              >Apply Now</span
+            ></a
           >
         </div>
       </div>
@@ -965,26 +973,45 @@
             beginners and experienced traders.</span
           >
         </div>
-        <div style="display: flex; flex-direction: row; ">
-           <div class="menu-title-block" style="width: 25px !important; font-size: 14px!important;line-height: 2!important;">
-          <a style="font-size: 14px !important; "
-            href="/uk/studying"
-            (click)="$event.preventDefault(); navigateTo('uk/studying')"
-            class="menu-title_text"
+        <div style="display: flex; flex-direction: row">
+          <div
+            class="menu-title-block"
+            style="
+              width: 25px !important;
+              font-size: 14px !important;
+              line-height: 2 !important;
+            "
           >
-            UA 
-          </a>  
-        </div>
-        <div><span style="color: gray; width: 25px; font-size: 25px; ">-</span></div>
-        <div class="menu-title-block" style="width: 25px !important; margin-left: 5px; line-height: 2!important;font-size: 14px!important;">
-          <a style="font-size: 14px !important; "
-            href="/ru/studying"
-            (click)="$event.preventDefault(); navigateTo('ru/studying')"
-            class="menu-title_text"
+            <a
+              style="font-size: 14px !important"
+              href="/uk/studying"
+              (click)="$event.preventDefault(); navigateTo('uk/studying')"
+              class="menu-title_text"
+            >
+              UA
+            </a>
+          </div>
+          <div>
+            <span style="color: gray; width: 25px; font-size: 25px">-</span>
+          </div>
+          <div
+            class="menu-title-block"
+            style="
+              width: 25px !important;
+              margin-left: 5px;
+              line-height: 2 !important;
+              font-size: 14px !important;
+            "
           >
-            RU
-          </a>
-        </div>
+            <a
+              style="font-size: 14px !important"
+              href="/ru/studying"
+              (click)="$event.preventDefault(); navigateTo('ru/studying')"
+              class="menu-title_text"
+            >
+              RU
+            </a>
+          </div>
         </div>
       </div>
 
@@ -1037,13 +1064,14 @@
             >Public offer agreement</a
           > -->
           <a
-             href="/en/privacy-policy" (click)="$event.preventDefault(); navigateTo('en/privacy-policy')"
+            href="/en/privacy-policy"
+            (click)="$event.preventDefault(); navigateTo('en/privacy-policy')"
             class="menu-title-block menu-title_text"
             >Privacy Policy</a
           >
           <a
-          href="/en/disclaimer" (click)="$event.preventDefault(); navigateTo('en/disclaimer')"
-            
+            href="/en/disclaimer"
+            (click)="$event.preventDefault(); navigateTo('en/disclaimer')"
             class="menu-title-block menu-title_text"
             >Disclaimer</a
           >
@@ -1051,14 +1079,18 @@
 
         <div class="menu">
           <span class="menu-title">Our Projects</span>
-          <a href="/en/freestudying/about" (click)="$event.preventDefault(); navigateTo('en/freestudying/about')"
-          
+          <a
+            href="/en/freestudying/about"
+            (click)="
+              $event.preventDefault(); navigateTo('en/freestudying/about')
+            "
             class="menu-title-block menu-title_text"
             >About ARAPOV.TRADE</a
           >
           <div class="menu-title-block">
-            <a 
-              href="/en/books" (click)="$event.preventDefault(); navigateTo('en/books')"
+            <a
+              href="/en/books"
+              (click)="$event.preventDefault(); navigateTo('en/books')"
               class="menu-title_text"
               >MY BOOKS</a
             >
@@ -1224,7 +1256,6 @@
             >Sole Proprietor Arapov I. V. TIN 3314507171</span
           >
         </div>
-        
       </div>
     </div>
     <div

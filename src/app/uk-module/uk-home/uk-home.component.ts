@@ -129,18 +129,9 @@ export class UkHomeComponent implements OnInit, OnDestroy {
     this.isDark = !this.isDark;
     this.themeService.setTheme(this.isDark);
 
-    this.refreshAOS();
+     
   }
-  refreshAOS() {
-    if (typeof AOS !== 'undefined') {
-      setTimeout(() => {
-        AOS.refresh(); // Обновление позиций AOS
-        this.cdr.detectChanges(); // Принудительное обнаружение изменений
-      }, 100); // Задержка для синхронизации
-    } else {
-      console.warn('AOS is not defined, refresh skipped');
-    }
-  }
+  
 
   toggleDropdown() {
     this.dropdownOpen = !this.dropdownOpen;

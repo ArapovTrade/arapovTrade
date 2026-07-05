@@ -62,7 +62,6 @@ export class ArticlesService {
     );
   }
   ukrainiansArticles() {
-     
     if (this.selectedGroups.length === 0) {
       return this.ukrArtickles;
     }
@@ -97,12 +96,30 @@ export class ArticlesService {
     return this.groupsEng;
   }
   getRandomUkArticles() {
-    const shuffled = [...this.ukrArtickles].sort(() => 0.5 - Math.random());
-    return shuffled.slice(0, 4);
+    // const shuffled = [...this.ukrArtickles].sort(() => 0.5 - Math.random());
+    // return shuffled.slice(0, 4);
+     const targetLinks = [
+      'chart-reading',
+      'volume-analysis',
+      'market-microstructure',
+      'risk-management',
+    ];
+    return this.ukrArtickles.filter((article) =>
+      targetLinks.includes(article.linkUkr),
+    );
   }
   getRandomUkArticlesFive() {
-    const shuffled = [...this.ukrArtickles].sort(() => 0.5 - Math.random());
-    return shuffled.slice(0, 5);
+    // const shuffled = [...this.ukrArtickles].sort(() => 0.5 - Math.random());
+    // return shuffled.slice(0, 5);
+    const targetLinks = [
+      'chart-reading',
+      'volume-analysis',
+      'market-microstructure',
+      'risk-management',
+    ];
+    return this.ukrArtickles.filter((article) =>
+      targetLinks.includes(article.linkUkr),
+    );
   }
 
   ukrArtickles: artickle[] = [
@@ -895,7 +912,7 @@ export class ArticlesService {
       groupsEng: ['Cryptocurrency'],
       id: 38,
     },
-    
+
     // {
     //   titleUkr: 'Аналіз ринку криптовалют',
     //   linkUkr: 'crypto-market-analysis',

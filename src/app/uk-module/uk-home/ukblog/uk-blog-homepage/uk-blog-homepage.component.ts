@@ -54,15 +54,7 @@ export class UkBlogHomepageComponent implements OnInit {
   }
 
   ngAfterViewInit() {
-    setTimeout(() => {
-      if (typeof AOS !== 'undefined') {
-        AOS.init({
-          duration: 1000,
-          once: false,
-          offset: 100,
-        });
-      }
-    }, 500); // Задержка 0.5s
+     
   }
   isMenuOpen = false;
 
@@ -74,9 +66,7 @@ export class UkBlogHomepageComponent implements OnInit {
     this.isMenuOpen = false;
   }
 
-  // toggleMenu() {
-  //   this.isMenuOpen = !this.isMenuOpen;
-  // }
+   
   toggleMenu(): void {
     this.menuOpen = !this.menuOpen;
     if (this.menuOpen) {

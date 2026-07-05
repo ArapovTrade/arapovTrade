@@ -345,17 +345,21 @@
         </div>
 
         <div
-          (click)="navigateToHomeWithId()"
           [ngClass]="{
             'author-page_main-block_btn': true,
             'gradient-block-orange': isDark,
             'gradient-block-blue': !isDark,
           }"
         >
-          <span
-            class="author-page_main-block_btn-text"
-            [ngStyle]="{ color: !isDark ? '#ffffff' : '#03314b' }"
-            >Оставить заявку</span
+          <a
+            rel="nofollow"
+            href="https://telegram.me/+380506308200"
+            target="_blank"
+            ><span
+              class="author-page_main-block_btn-text"
+              [ngStyle]="{ color: !isDark ? '#ffffff' : '#03314b' }"
+              >Оставить заявку</span
+            ></a
           >
         </div>
       </div>
@@ -851,7 +855,6 @@
           обучения и как оно может быть полезным именно для вас.
         </div>
         <div
-          (click)="navigateToHomeWithId()"
           [ngClass]="{
             'author-page_main-block_btn': true,
             'third-block-btn': true,
@@ -859,10 +862,15 @@
             'gradient-block-blue': !isDark,
           }"
         >
-          <span
-            class="author-page_main-block_btn-text"
-            [ngStyle]="{ color: !isDark ? '#ffffff' : '#03314b' }"
-            >Оставить заявку</span
+          <a
+            rel="nofollow"
+            href="https://telegram.me/+380506308200"
+            target="_blank"
+            ><span
+              class="author-page_main-block_btn-text"
+              [ngStyle]="{ color: !isDark ? '#ffffff' : '#03314b' }"
+              >Оставить заявку</span
+            ></a
           >
         </div>
       </div>
@@ -963,26 +971,45 @@
           >
         </div>
 
-        <div style="display: flex; flex-direction: row; ">
-           <div class="menu-title-block" style="width: 25px !important; font-size: 14px!important;line-height: 2!important;">
-          <a style="font-size: 14px !important; "
-            href="/uk/studying"
-            (click)="$event.preventDefault(); navigateTo('uk/studying')"
-            class="menu-title_text"
+        <div style="display: flex; flex-direction: row">
+          <div
+            class="menu-title-block"
+            style="
+              width: 25px !important;
+              font-size: 14px !important;
+              line-height: 2 !important;
+            "
           >
-            UA 
-          </a>  
-        </div>
-        <div><span style="color: gray; width: 25px; font-size: 25px; ">-</span></div>
-        <div class="menu-title-block" style="width: 25px !important; margin-left: 5px; line-height: 2!important;font-size: 14px!important;">
-          <a style="font-size: 14px !important; "
-            href="/en/studying"
-            (click)="$event.preventDefault(); navigateTo('en/studying')"
-            class="menu-title_text"
+            <a
+              style="font-size: 14px !important"
+              href="/uk/studying"
+              (click)="$event.preventDefault(); navigateTo('uk/studying')"
+              class="menu-title_text"
+            >
+              UA
+            </a>
+          </div>
+          <div>
+            <span style="color: gray; width: 25px; font-size: 25px">-</span>
+          </div>
+          <div
+            class="menu-title-block"
+            style="
+              width: 25px !important;
+              margin-left: 5px;
+              line-height: 2 !important;
+              font-size: 14px !important;
+            "
           >
-            EN
-          </a>
-        </div>
+            <a
+              style="font-size: 14px !important"
+              href="/en/studying"
+              (click)="$event.preventDefault(); navigateTo('en/studying')"
+              class="menu-title_text"
+            >
+              EN
+            </a>
+          </div>
         </div>
       </div>
 
@@ -1030,12 +1057,14 @@
           <span class="menu-title">Ссылки</span>
 
           <a
-            href="/ru/privacy-policy" (click)="$event.preventDefault(); navigateTo('ru/privacy-policy')"
+            href="/ru/privacy-policy"
+            (click)="$event.preventDefault(); navigateTo('ru/privacy-policy')"
             class="menu-title-block menu-title_text"
             >Политика конфиденциальности</a
           >
-          <a href="/ru/disclaimer" (click)="$event.preventDefault(); navigateTo('ru/disclaimer')"
-            
+          <a
+            href="/ru/disclaimer"
+            (click)="$event.preventDefault(); navigateTo('ru/disclaimer')"
             class="menu-title-block menu-title_text"
             >Отказ от ответственности</a
           >
@@ -1043,14 +1072,18 @@
 
         <div class="menu">
           <span class="menu-title">Наши проекты</span>
-          <a href="/ru/freestudying/about" (click)="$event.preventDefault(); navigateTo('ru/freestudying/about')"
-            
+          <a
+            href="/ru/freestudying/about"
+            (click)="
+              $event.preventDefault(); navigateTo('ru/freestudying/about')
+            "
             class="menu-title-block menu-title_text"
             >Про ARAPOV.TRADE</a
           >
           <div class="menu-title-block">
-            <a 
-            href="/ru/books" (click)="$event.preventDefault(); navigateTo('ru/books')"
+            <a
+              href="/ru/books"
+              (click)="$event.preventDefault(); navigateTo('ru/books')"
               class="menu-title_text"
               >МОИ КНИГИ</a
             >
@@ -1214,7 +1247,6 @@
           <span class="text-2e">2025-2026. Все права защищены.</span>
           <span class="text-2e">ФЛП Арапов И.В. ИНН 3314507171</span>
         </div>
-         
       </div>
     </div>
     <div
