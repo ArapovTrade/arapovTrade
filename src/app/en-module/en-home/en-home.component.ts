@@ -584,6 +584,9 @@ export class EnHomeComponent implements OnInit, AfterViewInit, OnDestroy {
           ],
           sameAs: [
             'https://www.wikidata.org/wiki/Q137454477',
+            'https://oerworldmap.org/resource/urn%3Auuid%3A65bc96c8-d184-4aa1-aecc-52b9b6b709c7',
+            'https://oerworldmap.org/resource/urn%3Auuid%3A79e1c3e7-ee3d-49ba-9117-aa3fdf2fcd26',
+            'https://www.merlot.org/merlot/viewMember.htm?id=1501779',
             'https://orcid.org/0009-0003-0430-778X',
             'https://isni.org/isni/0000000529518564',
             `https://scholar.google.com/citations?user=N440tWQAAAAJ&hl=${lang}`,
